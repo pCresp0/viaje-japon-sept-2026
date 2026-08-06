@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Compass, Route, Plane, Wallet, X, Menu, CalendarDays, MessageCircle, Backpack, ShieldAlert, Train, Heart, Map, Cloud, Clock } from "lucide-react";
+import { Compass, Route, Plane, Wallet, X, Menu, CalendarDays, MessageCircle, Backpack, ShieldAlert, Train, Heart, Map, Cloud, Clock, ListTodo } from "lucide-react";
 
 export const tabs = [
+  { id: "pendientes",   label: "Cosas pendientes", icon: ListTodo, alert: true },
   { id: "hoy",          label: "Hoy",          icon: Compass      },
   { id: "calendario",   label: "Calendario",   icon: CalendarDays },
   { id: "itinerario",   label: "Itinerario",   icon: Route        },
@@ -40,14 +41,18 @@ function NavItems({ active, onChange, onClose }) {
         style={{
           padding: "11px 16px",
           borderRadius: 10,
-          background: isActive ? "rgba(255,255,255,0.15)" : "transparent",
-          color: isActive ? "#fff" : "rgba(255,255,255,0.8)",
+          background: isActive
+            ? "rgba(255,255,255,0.15)"
+            : t.alert ? "rgba(255,255,255,0.07)" : "transparent",
+          color: isActive ? "#fff" : t.alert ? "#fff" : "rgba(255,255,255,0.8)",
           borderLeft: isActive ? "3px solid #e8b74a" : "3px solid transparent",
-          fontWeight: isActive ? 700 : 500,
+          fontWeight: isActive || t.alert ? 700 : 500,
+          marginBottom: t.alert ? 8 : 0,
         }}
       >
-        <Icon size={17} strokeWidth={isActive ? 2.4 : 2} />
+        <Icon size={17} strokeWidth={isActive || t.alert ? 2.4 : 2} />
         <span style={{ fontSize: 14, letterSpacing: "0.01em" }}>{t.label}</span>
+        {t.alert && <span className="alert-dot" aria-hidden="true" />}
       </button>
     );
   });
