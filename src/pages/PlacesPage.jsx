@@ -93,18 +93,23 @@ export default function PlacesPage() {
               style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
               {/* header */}
               <div className="flex items-center gap-3 px-5 py-4"
-                style={{ borderBottom: "1px solid var(--line)" }}>
+                style={{ background: category.color }}>
                 <div style={{
                   width: 36, height: 36, borderRadius: 10,
-                  background: `${category.color}15`,
+                  background: "rgba(255,255,255,0.18)",
                   display: "flex", alignItems: "center", justifyContent: "center",
+                  flexShrink: 0,
                 }}>
-                  <Icon size={18} style={{ color: category.color }} />
+                  <Icon size={18} style={{ color: "white" }} />
                 </div>
                 <div className="flex-1">
-                  <p style={{ fontSize: 15, fontWeight: 700, color: "var(--ink)" }}>{category.category}</p>
+                  <p style={{ fontSize: 15, fontWeight: 700, color: "white" }}>{category.category}</p>
                 </div>
-                <span style={{ fontSize: 12, color: "var(--ink-soft)", fontWeight: 500 }}>
+                <span style={{
+                  fontSize: 11.5, color: "white", fontWeight: 700,
+                  background: "rgba(255,255,255,0.18)",
+                  padding: "3px 9px", borderRadius: 20,
+                }}>
                   {categoryVisited}/{category.items.length}
                 </span>
               </div>
