@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { days, blocks } from "../data/trip";
 import DayCard from "../components/DayCard";
 import { X } from "lucide-react";
@@ -34,6 +35,16 @@ days.forEach((d) => {
 export default function CalendarPage() {
   const [selectedDayNum, setSelectedDayNum] = useState(null);
   const selectedDay = selectedDayNum ? days.find(d => d.num === selectedDayNum) : null;
+
+  // Lock body scroll while the mobile modal is open, so the page behind
+  // it can't move and the close button/backdrop stay reachable.
+  useEffect(() => {
+    if (selectedDay && window.innerWidth < 1024) {
+      const prevOverflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => { document.body.style.overflow = prevOverflow; };
+    }
+  }, [selectedDay]);
 
   return (
     <div style={{ display: "flex", height: "100%", gap: 16 }}>
@@ -144,9 +155,8 @@ export default function CalendarPage() {
 
       {/* Day detail panel — right side (desktop only, fixed width) */}
       {selectedDay && (
-        <div style={{
-          display: "none",
-          "@media (min-width: 1024px)": { display: "flex" },
+        <div data-detail-panel style={{
+          display: "flex",
           width: 380,
           flexDirection: "column",
           borderLeft: "1px solid var(--line)",
@@ -156,72 +166,51 @@ export default function CalendarPage() {
           paddingLeft: 20,
           paddingBottom: 24,
           overflowY: "auto",
-          minHeight: "100vh",
+          height: "100%",
+          flexShrink: 0,
         }}>
           <button
             onClick={() => setSelectedDayNum(null)}
             style={{
-              position: "absolute",
-              top: 12,
-              right: 12,
-              background: "none",
-              border: "none",
+              position: "sticky",
+              top: 0,
+              float: "right",
+              marginLeft: 12,
+              marginBottom: -32,
+              background: "var(--paper)",
+              border: "1px solid var(--line)",
+              borderRadius: "50%",
+              width: 32,
+              height: 32,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
               cursor: "pointer",
               color: "var(--ink-soft)",
-              padding: 4,
+              zIndex: 5,
             }}
           >
-            <X size={18} />
+            <X size={16} />
           </button>
           <DayCard day={selectedDay} defaultOpenHistory={true} />
         </div>
       )}
 
-      {/* Mobile modal overlay for day detail */}
-      {selectedDay && (
-        <div style={{
-          display: "block",
-          "@media (min-width: 1024px)": { display: "none" },
-          position: "fixed",
-          inset: 0,
-          background: "rgba(0,0,0,0.5)",
-          zIndex: 40,
-          backdropFilter: "blur(2px)",
-        }} onClick={() => setSelectedDayNum(null)}>
-          <div
-            style={{
-              position: "fixed",
-              bottom: 0, left: 0, right: 0,
-              background: "var(--paper-raised)",
-              borderTopLeftRadius: 24,
-              borderTopRightRadius: 24,
-              padding: 24,
-              maxHeight: "85vh",
-              overflowY: "auto",
-              zIndex: 50,
-            }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={() => setSelectedDayNum(null)}
-              style={{
-                position: "absolute",
-                top: 16,
-                right: 16,
-                background: "none",
-                border: "none",
-                cursor: "pointer",
-                color: "var(--ink-soft)",
-                padding: 4,
-              }}
-            >
-              <X size={18} />
+      {/* Mobile modal overlay for day detail — portaled to <body> so
+          position:fixed is always relative to the real viewport, never
+          to a scrolling ancestor (an iOS Safari quirk). */}
+      {selectedDay && createPortal(
+        <div data-mobile-modal className="modal-overlay" onClick={() => setSelectedDayNum(null)}>
+          <div className="modal-sheet" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close-btn" onClick={() => setSelectedDayNum(null)}>
+              <X size={16} />
             </button>
-            <div style={{ paddingRight: 20 }}>
+            <div style={{ clear: "both" }}>
               <DayCard day={selectedDay} defaultOpenHistory={true} />
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );

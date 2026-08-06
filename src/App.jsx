@@ -26,13 +26,13 @@ export default function App() {
   }
 
   return (
-    <div style={{ display: "flex", height: "100vh", background: "var(--paper)" }}>
+    <div style={{ display: "flex", height: "100vh", height: "100dvh", background: "var(--paper)" }}>
 
       {/* Desktop sidebar — fixed height, no scroll */}
       <Sidebar active={tab} onChange={setTab} />
 
       {/* Right column — scrollable */}
-      <div style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0, overflowY: "auto", height: "100vh" }}>
+      <div style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0, overflowY: "auto", height: "100%" }}>
 
         {/* Mobile top bar + drawer */}
         <Nav active={tab} onChange={setTab} />

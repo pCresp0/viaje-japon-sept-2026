@@ -103,3 +103,63 @@ main > div > * {
     display: none !important;
   }
 }
+
+/* ── Modal / bottom-sheet system ──────────────────────────────────────
+   Fixed positioning inside a scrolling ancestor can misbehave on iOS
+   Safari (it sometimes anchors to the nearest scroll container instead
+   of the viewport). Using position:fixed on a dedicated top-level
+   overlay class, plus dvh units, keeps it pinned to the real viewport
+   and properly scrollable/closable on every device. */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.modal-sheet {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  max-height: 88dvh;
+  max-height: 88vh; /* fallback for browsers without dvh */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background: var(--paper-raised);
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  padding: 24px 20px calc(24px + env(safe-area-inset-bottom));
+}
+
+.modal-close-btn {
+  position: sticky;
+  top: 0;
+  float: right;
+  margin-left: 12px;
+  margin-bottom: -32px;
+  z-index: 5;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  .modal-overlay {
+    align-items: center;
+  }
+  .modal-sheet {
+    border-radius: 20px;
+    max-height: 85vh;
+  }
+}
