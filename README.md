@@ -119,3 +119,4 @@ Basta con editar ese fichero y hacer `git push` a `main`: el despliegue es autom
 ---
 
 *Construido con la ayuda de Claude a partir de la planificación original del viaje (Word + Excel).*
+
