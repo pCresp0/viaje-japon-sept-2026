@@ -198,14 +198,19 @@ export default function CalendarPage() {
 
       {/* Mobile modal overlay for day detail — portaled to <body> so
           position:fixed is always relative to the real viewport, never
-          to a scrolling ancestor (an iOS Safari quirk). */}
+          to a scrolling ancestor (an iOS Safari quirk). Anchored near
+          the top of the screen (not a full bottom-sheet) so it never
+          collides with the mobile topbar, with its own sticky header
+          and scrollable body so long content is always reachable. */}
       {selectedDay && createPortal(
         <div data-mobile-modal className="modal-overlay" onClick={() => setSelectedDayNum(null)}>
           <div className="modal-sheet" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close-btn" onClick={() => setSelectedDayNum(null)}>
-              <X size={16} />
-            </button>
-            <div style={{ clear: "both" }}>
+            <div className="modal-sheet-header">
+              <button className="modal-close-btn" onClick={() => setSelectedDayNum(null)}>
+                <X size={16} />
+              </button>
+            </div>
+            <div className="modal-sheet-body">
               <DayCard day={selectedDay} defaultOpenHistory={true} />
             </div>
           </div>

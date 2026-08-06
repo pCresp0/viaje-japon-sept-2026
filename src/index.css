@@ -121,39 +121,57 @@ main > div > * {
    Safari (it sometimes anchors to the nearest scroll container instead
    of the viewport). Using position:fixed on a dedicated top-level
    overlay class, plus dvh units, keeps it pinned to the real viewport
-   and properly scrollable/closable on every device. */
+   and properly scrollable/closable on every device.
+
+   The sheet is anchored near the top of the screen (not full bottom-
+   sheet) with real top/bottom margins, so it never collides with the
+   mobile topbar above or gets cut off below — and always leaves room
+   to scroll its own content when it's tall. */
 .modal-overlay {
   position: fixed;
   inset: 0;
   z-index: 100;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(2px);
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: center;
+  padding: calc(64px + env(safe-area-inset-top)) 12px calc(16px + env(safe-area-inset-bottom));
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .modal-sheet {
   position: relative;
   width: 100%;
   max-width: 640px;
-  max-height: 88dvh;
-  max-height: 88vh; /* fallback for browsers without dvh */
+  max-height: 100%;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   background: var(--paper-raised);
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
-  padding: 24px 20px calc(24px + env(safe-area-inset-bottom));
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+  margin: auto;
+}
+
+.modal-sheet-header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 12px 12px 0;
+  background: var(--paper-raised);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.modal-sheet-body {
+  padding: 4px 20px calc(24px + env(safe-area-inset-bottom));
 }
 
 .modal-close-btn {
-  position: sticky;
-  top: 0;
-  float: right;
-  margin-left: 12px;
-  margin-bottom: -32px;
-  z-index: 5;
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -164,15 +182,13 @@ main > div > * {
   justify-content: center;
   color: var(--ink-soft);
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 @media (min-width: 640px) {
   .modal-overlay {
     align-items: center;
-  }
-  .modal-sheet {
-    border-radius: 20px;
-    max-height: 85vh;
+    padding: 24px 16px;
   }
 }
 
