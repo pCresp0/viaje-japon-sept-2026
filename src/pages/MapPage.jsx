@@ -93,7 +93,7 @@ export default function MapPage() {
       </div>
 
       {/* Full interactive map with all pins + route */}
-      <div className="rounded-2xl overflow-hidden mb-6 border" style={{ borderColor: "var(--line)", height: 480 }}>
+      <div className="rounded-2xl overflow-hidden mb-6 border" style={{ borderColor: "var(--line)", height: 480, position: "relative", isolation: "isolate" }}>
         <MapContainer
           center={[36.0, 137.5]}
           zoom={6}

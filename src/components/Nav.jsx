@@ -59,15 +59,16 @@ function Drawer({ active, onChange, open, onClose }) {
     <>
       {open && (
         <div
-          className="fixed inset-0 z-40"
-          style={{ background: "rgba(0,0,0,0.5)", backdropFilter: "blur(2px)" }}
+          className="fixed inset-0"
+          style={{ background: "rgba(0,0,0,0.5)", backdropFilter: "blur(2px)", zIndex: 200 }}
           onClick={onClose}
         />
       )}
       <aside
-        className="fixed top-0 left-0 h-full z-50 flex flex-col"
+        className="fixed top-0 left-0 h-full flex flex-col"
         style={{
           width: 252,
+          zIndex: 210,
           ...sidebarBg,
           transform: open ? "translateX(0)" : "translateX(-100%)",
           transition: "transform 0.3s cubic-bezier(.4,0,.2,1)",
@@ -117,9 +118,10 @@ function Drawer({ active, onChange, open, onClose }) {
 export function TopBar({ active, onOpenDrawer }) {
   const currentTab = tabs.find((t) => t.id === active);
   return (
-    <header className="fixed top-0 left-0 right-0 z-30 flex items-center gap-3 px-4"
+    <header className="fixed top-0 left-0 right-0 flex items-center gap-3 px-4"
       style={{
         height: 54,
+        zIndex: 150,
         background: "var(--indigo)",
         borderBottom: "1px solid rgba(255,255,255,0.08)",
         boxShadow: "0 2px 12px rgba(0,0,0,0.2)",

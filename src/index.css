@@ -173,3 +173,20 @@ main > div > * {
     max-height: 85vh;
   }
 }
+
+/* ── Leaflet z-index containment ───────────────────────────────────────
+   Leaflet's internal panes (tiles, markers, controls, popups) use z-index
+   values up to ~1000 by default, which floats above our own overlays
+   (mobile topbar=150, nav drawer=200/210, modal=100). Force its stacking
+   context to stay low so it can never bleed through them. */
+.leaflet-container {
+  z-index: 0;
+}
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 10 !important;
+}
+.leaflet-popup {
+  z-index: 15 !important;
+}
