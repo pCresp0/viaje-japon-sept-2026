@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { MessageCircle, Utensils, TrainFront, ShoppingBag, Info } from "lucide-react";
+import { MessageCircle, Utensils, TrainFront, ShoppingBag, Info, Volume2 } from "lucide-react";
+import { useJapaneseSpeech } from "../utils/useJapaneseSpeech";
 
 const categories = [
   {
@@ -74,6 +75,7 @@ const etiquette = [
 export default function PhrasesPage() {
   const [activeCategory, setActiveCategory] = useState("basics");
   const current = categories.find(c => c.id === activeCategory);
+  const { supported, speakingId, speak } = useJapaneseSpeech();
 
   return (
     <div className="px-4 pt-6 pb-12 max-w-3xl mx-auto">
@@ -82,6 +84,11 @@ export default function PhrasesPage() {
         <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>
           Frases y etiqueta
         </h2>
+        {supported && (
+          <p style={{ fontSize: 12, color: "var(--ink-soft)", marginTop: 6 }}>
+            Pulsa <Volume2 size={12} style={{ display: "inline", verticalAlign: -1 }} /> junto a cualquier frase para escuchar la pronunciación real en japonés.
+          </p>
+        )}
       </div>
 
       {/* Category tabs */}
@@ -111,20 +118,47 @@ export default function PhrasesPage() {
       {/* Phrase list */}
       <div className="rounded-2xl border overflow-hidden mb-10"
         style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
-        {current.phrases.map((p, idx) => (
-          <div key={idx} className="px-5 py-4"
-            style={{ borderBottom: idx < current.phrases.length - 1 ? "1px solid var(--line)" : "none" }}>
-            <div className="flex items-baseline justify-between gap-3 mb-1">
-              <span style={{ fontSize: 17, fontWeight: 600, color: "var(--ink)", fontFamily: "var(--font-display)" }}>
-                {p.jp}
-              </span>
-              <span style={{ fontSize: 12, color: current.color, fontWeight: 600, fontStyle: "italic", whiteSpace: "nowrap" }}>
-                {p.romaji}
-              </span>
+        {current.phrases.map((p, idx) => {
+          const id = `${current.id}-${idx}`;
+          const isSpeaking = speakingId === id;
+          return (
+            <div key={idx} className="px-5 py-4 flex items-start gap-3"
+              style={{ borderBottom: idx < current.phrases.length - 1 ? "1px solid var(--line)" : "none" }}>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-baseline justify-between gap-3 mb-1">
+                  <span style={{ fontSize: 17, fontWeight: 600, color: "var(--ink)", fontFamily: "var(--font-display)" }}>
+                    {p.jp}
+                  </span>
+                  <span style={{ fontSize: 12, color: current.color, fontWeight: 600, fontStyle: "italic", whiteSpace: "nowrap" }}>
+                    {p.romaji}
+                  </span>
+                </div>
+                <p style={{ fontSize: 13, color: "var(--ink-soft)" }}>{p.es}</p>
+              </div>
+
+              {supported && (
+                <button
+                  onClick={() => speak(p.jp, id)}
+                  aria-label={`Escuchar "${p.jp}" en japonés`}
+                  style={{
+                    flexShrink: 0, marginTop: 2,
+                    width: 34, height: 34, borderRadius: "50%",
+                    display: "flex", alignItems: "center", justifyContent: "center",
+                    background: isSpeaking ? current.color : `${current.color}15`,
+                    border: "none", cursor: "pointer",
+                    transition: "background 0.15s",
+                  }}
+                >
+                  <Volume2
+                    size={16}
+                    style={{ color: isSpeaking ? "#fff" : current.color }}
+                    className={isSpeaking ? "speaking-pulse" : ""}
+                  />
+                </button>
+              )}
             </div>
-            <p style={{ fontSize: 13, color: "var(--ink-soft)" }}>{p.es}</p>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Etiquette section */}

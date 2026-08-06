@@ -217,6 +217,20 @@ main > div > * {
   .alert-dot { animation: none; }
 }
 
+/* ── Speaking indicator (frases con pronunciación) ────────────────── */
+.speaking-pulse {
+  animation: speakPulse 0.9s ease-in-out infinite;
+}
+
+@keyframes speakPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.15); opacity: 0.75; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .speaking-pulse { animation: none; }
+}
+
 /* ── Leaflet z-index containment ───────────────────────────────────────
    Leaflet's internal panes (tiles, markers, controls, popups) use z-index
    values up to ~1000 by default, which floats above our own overlays
