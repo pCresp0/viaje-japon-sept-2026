@@ -1,0 +1,543 @@
+// Datos del viaje — extraídos de la planificación y el resumen de reservas
+export const tripMeta = {
+  title: "Viaje Morisqueño a Japón",
+  subtitle: "Septiembre 2026",
+  start: "2026-09-06",
+  end: "2026-09-21",
+  people: 5,
+};
+
+export const flights = {
+  out: {
+    label: "Ida",
+    date: "2026-09-06",
+    text: "Salida Dom 6 sept desde Madrid a las 09:05 (Qatar Airways QR148). Escala en Doha. Llegada a Narita (NRT) el Lun 7 sept a las 12:55.",
+    flightNumber: "QR148",
+    trackUrl: "https://es.flightaware.com/live/flight/QTR148",
+    depart: { city: "Madrid", time: "2026-09-06T09:05" },
+    arrive: { city: "Narita (NRT)", time: "2026-09-07T12:55" },
+  },
+  back: {
+    label: "Vuelta",
+    date: "2026-09-21",
+    text: "Salida Lun 21 sept desde Narita a las 17:25 (Qatar Airways QR809). Escala en Doha. Llegada a Madrid el Mar 22 sept a las 08:15.",
+    flightNumber: "QR809",
+    trackUrl: "https://es.flightaware.com/live/flight/QTR809",
+    depart: { city: "Narita (NRT)", time: "2026-09-21T17:25" },
+    arrive: { city: "Madrid", time: "2026-09-22T08:15" },
+  },
+};
+
+// Bloques del viaje (tramos con línea de "metro" temática)
+export const blocks = [
+  {
+    id: "kioto",
+    emoji: "⛩️",
+    title: "Kioto, Nara y Osaka",
+    color: "#BC4749", // shu-iro / rojo torii
+    days: [1, 2, 3, 4, 5],
+    sleepSummary: "En Kioto (4 noches)",
+    bestArea:
+      "Cerca de la Estación de Kioto (máxima comodidad para trenes) o en Karasuma / Kawaramachi (más ambiente nocturno y restaurantes).",
+  },
+  {
+    id: "alpes",
+    emoji: "🏔️",
+    title: "Alpes Japoneses y Ruta Nakasendo",
+    color: "#2E7D5B", // verde bosque
+    days: [6, 7, 8],
+    sleepSummary: "Kanazawa → Takayama → Magome/Tsumago (1 noche cada uno)",
+    bestArea:
+      "Kanazawa: cerca de la estación o del mercado Omicho. Takayama: casco histórico o cerca de la estación. Magome/Tsumago: un Minshuku rural en plena ruta.",
+    logisticaTip:
+      "La mañana del día 6 enviáis las maletas grandes desde el hotel de Kioto directo al hotel de Tokio por unos 15€/maleta. Viajáis estos días solo con mochila.",
+  },
+  {
+    id: "tokio",
+    emoji: "🗻",
+    title: "Tokio y Excursión al Fuji",
+    color: "#1D3557", // azul índigo
+    days: [9, 10, 11, 12, 13, 14, 15],
+    sleepSummary: "En Tokio (6 noches)",
+    bestArea:
+      "Shinjuku o Shibuya (mucha vida nocturna y conexión directa al aeropuerto y Fuji) o Ueno/Akihabara (más barato, mejor para cultura pop).",
+    fujiStrategy:
+      "No pernoctaremos en el Fuji para no arriesgarnos a que amanezca nublado. Objetivo: contratar un \"Tour Monte Fuji de un día completo con guía en español\" con ken kaneshima (Excursiones Fujiyama). Se reservará para 3-4 días consecutivos y se ejecutará el primero que amanezca despejado, cancelando el resto. Confirmar antes que la política de cancelación del guía lo permite.",
+  },
+];
+
+// Alojamientos reservados (de la hoja "Resumen Planificación")
+export const stays = [
+  {
+    id: "kioto",
+    city: "Kioto",
+    nights: "Del 7 al 12 sept (5 noches)",
+    afterDay: 1,
+    options: [
+      {
+        name: "Hotel Keihan Kyoto Hachijoguchi",
+        total: "668€",
+        pin: "2281",
+        url: "https://secure.booking.com/app_link/myreservations.es.html?stid=325542&bn=6312220075&aid=332731",
+      },
+      {
+        name: "Kyoto Tower Hotel Annex",
+        total: "694€",
+        pin: "3350",
+        url: "https://secure.booking.com/app_link/myreservations.es.html?stid=325542&bn=6839107626&aid=332731",
+      },
+    ],
+  },
+  {
+    id: "kanazawa",
+    city: "Kanazawa",
+    nights: "Del 12 al 13 sept (1 noche)",
+    afterDay: 6,
+    options: [
+      {
+        name: "Hotel Resol Trinity Kanazawa",
+        total: "161,46€",
+        url: "https://www.booking.com/Share-s71Tsa",
+      },
+    ],
+  },
+  {
+    id: "takayama",
+    city: "Takayama",
+    nights: "Del 13 al 14 sept (1 noche)",
+    afterDay: 7,
+    options: [
+      {
+        name: "Hida Takayama Washington Hotel Plaza",
+        total: "168,68€",
+        pin: "6364",
+        url: "https://secure.booking.com/app_link/myreservations.es.html?stid=325542&bn=5667063583&aid=332731",
+      },
+      {
+        name: "Hotel Wood Takayama",
+        total: "274,25€",
+        pin: "7717",
+        url: "https://secure.booking.com/app_link/myreservations.es.html?stid=325542&bn=6080544403&aid=332731",
+      },
+    ],
+  },
+  {
+    id: "tsumago",
+    city: "Tsumago / Magome",
+    nights: "Del 14 al 15 sept (1 noche)",
+    afterDay: 8,
+    warning:
+      "⚠️ Los nombres de estos hoteles (Tsumagoi, Manza Kogen) corresponden a una zona de onsen en Gunma, distinta del pueblo Tsumago de la ruta Nakasendo. Merece la pena revisar que la reserva sea del alojamiento rural correcto antes de viajar.",
+    options: [
+      {
+        name: "Tsumagoi Prince Hotel",
+        total: "243€",
+        pin: "5848",
+        url: "https://secure.booking.com/app_link/myreservations.es.html?stid=325542&bn=5698715044&aid=332731",
+      },
+      {
+        name: "Manza Kogen Hotel",
+        total: "150,39€",
+        pin: "3979",
+        url: "https://secure.booking.com/app_link/myreservations.es.html?stid=325542&bn=6724332172&aid=332731",
+      },
+    ],
+  },
+  {
+    id: "tokio",
+    city: "Tokio",
+    nights: "Del 15 al 21 sept (6 noches)",
+    afterDay: 9,
+    options: [
+      {
+        name: "KOKO HOTEL Residence Asakusa Kappabashi",
+        total: "1922,03€",
+        pin: "3322",
+        url: "https://secure.booking.com/app_link/myreservations.es.html?stid=325542&bn=5660174287&aid=332731",
+      },
+      {
+        name: "Hotel Keihan Asakusa",
+        total: "1598,62€",
+        pin: "8953",
+        url: "https://secure.booking.com/app_link/myreservations.es.html?stid=325542&bn=6217736065&aid=332731",
+      },
+    ],
+  },
+];
+
+// Detalle día a día (de la Planificación docx)
+export const days = [
+  {
+    num: 1,
+    date: "2026-09-07",
+    weekday: "Lunes",
+    block: "kioto",
+    title: "Llegada a Japón",
+    cities: "Narita, Tokio, Kioto",
+    summary:
+      "Aterrizaje en el aeropuerto de Narita, trámites de aduana y recogida de equipajes. Traslado directo en tren hasta Kioto para hacer el check-in en el hotel. Terminaremos la jornada con una primera toma de contacto con la ciudad, cenando algo rápido por los alrededores de la estación.",
+    history:
+      "Kioto fue la capital imperial de Japón durante más de mil años, desde 794 hasta 1868. Es el corazón cultural y espiritual del país. Al haber sobrevivido casi intacta a los bombardeos de la Segunda Guerra Mundial, conserva gran parte de su milenaria arquitectura tradicional de madera.",
+    schedule: [
+      { time: "12:55", text: "Aterrizaje en Narita y trámites de aduana (aprox. 1h 30m)." },
+      { time: "15:00", text: "Salida del aeropuerto en el Narita Express (N'EX), unos 19€, 1h exacta hasta la Estación de Tokio." },
+      { time: "16:30", text: "En la Estación de Tokio, transbordo al Shinkansen Hikari (tren bala) hasta Kioto (aprox. 90€, 2h 30m). Sentaos en el lado derecho para ver el Monte Fuji si está despejado." },
+      { time: "19:00", text: "Llegada a Kioto, check-in en el hotel y cena." },
+    ],
+    money: "Aprox. 40€ (comidas) + transportes",
+  },
+  {
+    num: 2,
+    date: "2026-09-08",
+    weekday: "Martes",
+    block: "kioto",
+    title: "Kioto Sur y Nara",
+    cities: "Kioto, Nara",
+    summary:
+      "Empezaremos muy temprano en el icónico Fushimi Inari para recorrer sus toriis rojos evitando multitudes. Después, tren directo hacia Nara para ver a sus famosos ciervos y el imponente Gran Buda. La jornada acaba de vuelta en Kioto con un paseo al atardecer por los callejones tradicionales de geishas.",
+    history:
+      "Fushimi Inari está dedicado a Inari, la deidad sintoísta del arroz, elemento fundamental para la antigua economía japonesa. Nara fue la primera capital permanente de Japón en el siglo VIII y es la cuna del budismo en el país.",
+    schedule: [
+      { time: "07:00", text: "Despertar." },
+      { time: "08:00", text: "Santuario Fushimi Inari. Línea D de JR Nara desde Estación de Kioto hasta Inari Station (aprox. 1€, 5 min)." },
+      { time: "10:30", text: "Desde Inari, seguimos en la línea JR directo a Nara (45 min)." },
+      { time: "11:30", text: "Visita al Gran Buda (Todai-ji) y parque de los ciervos. Comida en Nara." },
+      { time: "16:00", text: "Tren de vuelta a Kioto." },
+      { time: "17:00", text: "Paseo al atardecer por Pontocho y el barrio de geishas de Miyagawacho." },
+    ],
+    money: "Aprox. 40€ (comidas)",
+  },
+  {
+    num: 3,
+    date: "2026-09-09",
+    weekday: "Miércoles",
+    block: "kioto",
+    title: "Kioto Noroeste y Bambú",
+    cities: "Kioto (Arashiyama)",
+    summary:
+      "Exploraremos el noroeste empezando por el brillante Pabellón Dorado y el sendero Kinukake no Michi. Al mediodía, un tranvía nos lleva a Arashiyama, priorizando la zona histórica superior antes de bajar por el famoso bosque de bambú.",
+    history:
+      "El Kinkakuji (Pabellón Dorado) fue la suntuosa villa de retiro del shogun Ashikaga Yoshimitsu a finales del siglo XIV. Arashiyama lleva siendo destino vacacional de la nobleza imperial desde el periodo Heian.",
+    schedule: [
+      { time: "07:30", text: "Despertar." },
+      { time: "08:30", text: "Kinkakuji: línea verde de metro (Karasuma Line) hasta Kitaoji Station y luego bus 205." },
+      { time: "10:30", text: "Sendero Kinukake no Michi: templos Kinkakuji, Ryoan-ji y Ninna-ji, en ese orden." },
+      { time: "12:30", text: "Desde Ninna-ji, tranvía Randen hasta Arashiyama (20 min). Comida rápida." },
+      { time: "13:30", text: "Subida andando al distrito histórico de Saga-Toriimoto y templo Otagi (cierra a las 16h, subir primero)." },
+      { time: "15:30", text: "Bajada cruzando el bosque de bambú hacia el centro del barrio." },
+      { time: "17:00", text: "Regreso a Kioto en tren JR, Línea San-In (2€, 15 min directo)." },
+    ],
+    money: "Aprox. 40€ (comidas)",
+  },
+  {
+    num: 4,
+    date: "2026-09-10",
+    weekday: "Jueves",
+    block: "kioto",
+    title: "Ruta Norte de Higashiyama y Geishas",
+    cities: "Kioto",
+    summary:
+      "Recorreremos la parte este de la ciudad, desde el Pabellón de Plata bajando a pie por el Paseo de la Filosofía a lo largo del canal. Comeremos en el Mercado de Nishiki y pasaremos la tarde descubriendo a fondo los históricos barrios de geishas.",
+    history:
+      "El Pabellón de Plata (Ginkakuji) representa la refinada cultura Higashiyama del periodo Muromachi, centrada en la estética wabi-sabi. Los hanamachi (barrios de geishas) florecieron durante el periodo Edo como centros de artes escénicas de alto nivel.",
+    schedule: [
+      { time: "08:30", text: "Llegada en bus al Templo Ginkakuji (Pabellón de Plata)." },
+      { time: "10:00", text: "A pie hacia el sur por el Paseo de la Filosofía, siguiendo el canal." },
+      { time: "11:00", text: "Visita a los templos Eikando y Nanzen-ji." },
+      { time: "13:30", text: "Desde Nanzen-ji, caminamos a la estación de metro Keage al centro. Comida en el Mercado de Nishiki." },
+      { time: "16:00", text: "Barrios de geishas: Pontocho, cruzando el río Kamogawa hasta Miyagawacho." },
+      { time: "17:30", text: "Paseo por Gion: calle Hanamikoji hasta la casa de té Ichiriki, riachuelo Shirakawa y santuario Tatsumi." },
+    ],
+    money: "Aprox. 40€ (comidas)",
+  },
+  {
+    num: 5,
+    date: "2026-09-11",
+    weekday: "Viernes",
+    block: "kioto",
+    title: "Kioto Tradicional y Castillo de Osaka",
+    cities: "Kioto, Osaka",
+    summary:
+      "Última mañana en Kioto visitando el monumental Kiyomizu-dera y bajando por las cuestas de Higashiyama. Al mediodía, tren rápido a Osaka para su castillo histórico y la locura gastronómica de Dotonbori.",
+    history:
+      "Kiyomizu-dera se fundó en el año 778; su terraza se construyó sin usar un solo clavo. El Castillo de Osaka fue el epicentro militar de Toyotomi Hideyoshi, figura clave en la unificación de Japón en el siglo XVI.",
+    schedule: [
+      { time: "07:30", text: "Despertar." },
+      { time: "08:30", text: "Templo Kiyomizu-dera (tren JR o bus directo, aprox 40 min puerta a puerta)." },
+      { time: "10:30", text: "Bajada por las cuestas de Higashiyama hasta Yasaka Jinja, cruzando el Parque Maruyama hasta el Templo Chion-in." },
+      { time: "12:30", text: "Caminando hasta el Canal Okazaki y el Templo Heian Jingu." },
+      { time: "13:30", text: "Comida en Kioto." },
+      { time: "14:30", text: "Tren rápido a Osaka (Línea JR, 30 min)." },
+      { time: "15:30", text: "Jardines y Castillo de Osaka con luz de día." },
+      { time: "18:00", text: "Neones y comida callejera por Dotonbori y Shinsekai." },
+      { time: "21:30", text: "Tren rápido de vuelta a dormir a Kioto." },
+    ],
+    money: "Aprox. 40€ (comidas)",
+  },
+  {
+    num: 6,
+    date: "2026-09-12",
+    weekday: "Sábado",
+    block: "alpes",
+    title: "Kanazawa",
+    cities: "Kanazawa",
+    summary:
+      "Despacharemos el equipaje grande a Tokio y viajaremos ligeros hacia la costa del Mar de Japón. Día en Kanazawa: Kenroku-en (uno de los mejores jardines del país), marisco y antiguos barrios samuráis.",
+    history:
+      "Kanazawa fue el dominio del poderoso clan Maeda durante el periodo Edo, rivalizando con Kioto en riqueza y cultura. Al esquivar los bombardeos modernos, conserva su trazado urbano feudal.",
+    schedule: [
+      { time: "07:30", text: "Despertar y envío de maletas en recepción." },
+      { time: "08:30", text: "Tren Thunderbird directo de Kioto a Kanazawa (2h)." },
+      { time: "11:00", text: "Jardín Kenroku-en y barrio samurái de Nagamachi." },
+      { time: "14:00", text: "Comida en el mercado Omicho (el mejor marisco de Japón)." },
+      { time: "16:30", text: "Paseo por el barrio de geishas de Higashi Chaya." },
+    ],
+    money: "Aprox. 40€ (comidas) + 15€ envío maleta",
+  },
+  {
+    num: 7,
+    date: "2026-09-13",
+    weekday: "Domingo",
+    block: "alpes",
+    title: "Shirakawa-go y Takayama",
+    cities: "Shirakawa-go, Takayama",
+    summary:
+      "Autobús matutino hasta la aislada aldea tradicional de Shirakawa-go. Por la tarde, ruta hasta la pintoresca Takayama para pasear por su casco antiguo y disfrutar de una cena premium.",
+    history:
+      "Shirakawa-go es famosa por sus casas gassho-zukuri, con tejados de paja muy inclinados para soportar la nieve. Takayama prosperó como rica ciudad de mercaderes bajo el shogunato Tokugawa, gracias a sus carpinteros.",
+    schedule: [
+      { time: "07:30", text: "Despertar." },
+      { time: "08:30", text: "Bus de Kanazawa a Shirakawa-go (1h 15m). Reservar con semanas de antelación online." },
+      { time: "10:00", text: "Paseo por la aldea de casitas de paja." },
+      { time: "13:00", text: "Bus a Takayama (50 min)." },
+      { time: "14:00", text: "Casco antiguo de calles de madera (Sanmachi Suji)." },
+      { time: "19:00", text: "Cena con la famosa ternera wagyu de Hida, rival de la de Kobe." },
+    ],
+    money: "Aprox. 40€ + cena premium wagyu",
+  },
+  {
+    num: 8,
+    date: "2026-09-14",
+    weekday: "Lunes",
+    block: "alpes",
+    title: "La Ruta Nakasendo",
+    cities: "Takayama, Magome, Tsumago",
+    summary:
+      "Viajaremos en un precioso tren panorámico y luego en autobús hasta Magome para iniciar una suave ruta de senderismo por un bosque milenario. Caminaremos hasta Tsumago, donde pasaremos la noche en una posada rural.",
+    history:
+      "La Nakasendo era una de las cinco grandes rutas feudales del periodo Edo que conectaban Kioto con Edo (Tokio). Magome y Tsumago operaban como \"estaciones de posta\" (juku) donde samuráis, daimyos y mercaderes descansaban en sus viajes a pie.",
+    schedule: [
+      { time: "07:00", text: "Despertar." },
+      { time: "08:00", text: "Mercadillos matutinos en Takayama junto al río." },
+      { time: "09:30", text: "Tren panorámico Hida Express a Nagoya (2h 30m)." },
+      { time: "12:30", text: "Enlace en tren+bus local hasta Magome (1h 15m). Comida rápida." },
+      { time: "14:00", text: "Ruta a pie de Magome a Tsumago por el bosque (8 km, muy fácil, aprox 2.5h). Hay envío de mochilas entre pueblos por unos 5€." },
+      { time: "17:30", text: "Check-in en el Minshuku y cena casera local a las 18:30 (fija)." },
+    ],
+    money: "Aprox. 40€ (comidas)",
+  },
+  {
+    num: 9,
+    date: "2026-09-15",
+    weekday: "Martes",
+    block: "tokio",
+    title: "Tránsito a Tokio y Akihabara",
+    cities: "Akihabara (Tokio)",
+    summary:
+      "Abandonaremos los Alpes para viajar en tren bala hacia Tokio, donde nos reencontraremos con el equipaje grande. Tarde inmersiva en Akihabara, paraíso de tecnología, anime y cultura otaku.",
+    history:
+      "Edo (la antigua Tokio) se transformó de pueblo pesquero al centro político de Japón en 1603. Tras la Segunda Guerra Mundial, Akihabara resurgió como mercado de componentes de radio, evolucionando hasta ser el epicentro de la cultura pop japonesa.",
+    schedule: [
+      { time: "08:00", text: "Desayuno tradicional temprano." },
+      { time: "09:00", text: "Bus y tren de vuelta a Nagoya (1h 30m)." },
+      { time: "11:00", text: "Shinkansen directo desde Nagoya hasta la Estación de Tokio (1h 40m)." },
+      { time: "13:00", text: "Llegada a Tokio y check-in en el hotel (con las maletas grandes ya allí)." },
+      { time: "15:00", text: "Tarde en Akihabara: tiendas de electrónica, coleccionismo de figuras, Mandarake, salones recreativos." },
+    ],
+    money: "Aprox. 40€ (comidas)",
+  },
+  {
+    num: 10,
+    date: "2026-09-16",
+    weekday: "Miércoles",
+    block: "tokio",
+    title: "Asakusa, Ueno y Odaiba",
+    cities: "Asakusa, Ueno, Odaiba",
+    summary:
+      "Templo Senso-ji en Asakusa, cruzando la puerta Kaminarimon. Paseo por el mercadillo de Ameyoko junto al parque de Ueno. Por la tarde, tren futurista sin conductor hacia Odaiba para ver el atardecer sobre la bahía.",
+    history:
+      "El templo Senso-ji, el más antiguo de Tokio, fue fundado en el año 628. Odaiba nació en el siglo XIX como islas-fortaleza para defender Tokio de los barcos occidentales.",
+    schedule: [
+      { time: "09:00", text: "Templo Senso-ji en Asakusa, cruzando la icónica puerta Kaminarimon." },
+      { time: "11:30", text: "Parque de Ueno y mercadillo de Ameyoko, ideal para compras baratas de té y dulces." },
+      { time: "14:30", text: "Tren Yurikamome hacia Odaiba cruzando el Rainbow Bridge (sentaos en el primer vagón)." },
+      { time: "15:30", text: "Gundam a tamaño real y atardecer desde el paseo marítimo con el skyline de Tokio." },
+    ],
+    money: "Aprox. 40€ (comidas)",
+  },
+  {
+    num: 11,
+    date: "2026-09-17",
+    weekday: "Jueves",
+    block: "tokio",
+    title: "Shibuya, Harajuku y Shinjuku",
+    cities: "Shibuya, Harajuku, Shinjuku",
+    summary:
+      "Día intenso: cruce de Shibuya y cultura juvenil de Harajuku. Terminamos bajo los neones de Shinjuku con sus callejones gastronómicos.",
+    history:
+      "Estos distritos crecieron tras el Gran Terremoto de Kanto de 1923, impulsados por la expansión del tren urbano. Shinjuku alberga hoy la estación más transitada del planeta.",
+    schedule: [
+      { time: "09:30", text: "Cruce de Shibuya y Miyashita Park. Parada en el Pokémon Center Shibuya." },
+      { time: "13:00", text: "Paseo hacia Harajuku por la calle Takeshita, terminando en el santuario Meiji en el parque Yoyogi." },
+      { time: "17:00", text: "Noche en Shinjuku: mirador gratuito del Gobierno Metropolitano, cena en Omoide Yokocho, neones de Kabukicho." },
+    ],
+    money: "Aprox. 40€ (comidas)",
+  },
+  {
+    num: 12,
+    date: "2026-09-18",
+    weekday: "Viernes",
+    block: "tokio",
+    title: "Gastronomía, Lujo y Miradores",
+    cities: "Toyosu, Ginza, Roppongi",
+    summary:
+      "Madrugón para el mejor sushi fresco del mundo, paseo por Ginza y su arquitectura elegante. La tarde culmina en Roppongi, subiendo al mirador de la torre Mori.",
+    history:
+      "Ginza significa \"asiento de plata\", sitio original de la ceca gubernamental en el periodo Edo. Tras un incendio a finales del XIX se reconstruyó con arquitectura occidental, escaparate de la modernización de Japón.",
+    schedule: [
+      { time: "08:30", text: "Desayuno premium de sushi en el mercado mayorista de Toyosu (sucesor de Tsukiji)." },
+      { time: "11:30", text: "Estación de Tokio, explanada del Palacio Imperial y rascacielos de Shiodome." },
+      { time: "14:00", text: "Paseo por la arquitectura moderna de Ginza." },
+      { time: "17:30", text: "Atardecer en el mirador Tokyo City View de la torre Mori (Roppongi), vistas a la Torre de Tokio." },
+    ],
+    money: "Aprox. 40€ (comidas)",
+  },
+  {
+    num: 13,
+    date: "2026-09-19",
+    weekday: "Sábado",
+    block: "tokio",
+    title: "Ruta Nintendo y Compras",
+    cities: "Ikebukuro, Nakano",
+    summary:
+      "Día de coleccionismo y videojuegos: tiendas oficiales de Nintendo y Pokémon. Por la tarde, Nakano Broadway, el mejor lugar para artículos retro y frikis a precio justo.",
+    history:
+      "La industria del videojuego japonesa, liderada por Nintendo, revitalizó la economía cultural del país en los 80. Nakano Broadway nació en los 60 como complejo residencial de lujo, hoy meca del coleccionismo underground.",
+    schedule: [
+      { time: "10:00", text: "Mega Pokémon Center Ikebukuro y Nintendo Store Tokyo." },
+      { time: "13:30", text: "Comida temática en el Pokémon Café. ⚠️ Reservar online exactamente 31 días antes, se agota en segundos." },
+      { time: "16:00", text: "Tarde de compras de coleccionismo retro, manga y figuras en Nakano Broadway." },
+    ],
+    money: "Aprox. 40€ (comidas) + compras",
+  },
+  {
+    num: 14,
+    date: "2026-09-20",
+    weekday: "Domingo",
+    block: "tokio",
+    title: "Día comodín para el Fuji",
+    cities: "Tokio o Fuji",
+    summary:
+      "Día marcado como comodín para la excursión al Monte Fuji con ken kaneshima. Si el clima fue mejor los días 10, 11 o 12, la visita ya se habrá hecho y este día se usa para cubrir la ruta de Tokio que se desplazó.",
+    history:
+      "El Monte Fuji (3.776m) es el pico más alto de Japón, estratovolcán sagrado que ha inspirado el arte sintoísta durante siglos. Ver su cima despejada se considera un poderoso símbolo de buena fortuna.",
+    schedule: [
+      { time: "Día completo", text: "Tour Monte Fuji de un día completo con guía en español. Si ya se hizo: día libre para compras en Shibuya, explorar Shimokitazawa, o empaquetar compras." },
+    ],
+    money: "Excursión Fuji (extra) / aprox. 40€",
+  },
+  {
+    num: 15,
+    date: "2026-09-21",
+    weekday: "Lunes",
+    block: "tokio",
+    title: "Vuelta a casa",
+    cities: "Tokio, Narita",
+    summary:
+      "Últimas horas en Japón: compras de última hora en farmacias locales o paseo de despedida cerca del hotel. Tren hacia Narita con tiempo de sobra para facturar.",
+    history:
+      "Tras dos intensas semanas recorriendo la historia de los shogunes, la filosofía zen y la tecnología del archipiélago, el viaje concluye. Narita es el principal puerto de entrada y salida internacional de la región de Kanto desde 1978.",
+    schedule: [
+      { time: "09:00", text: "Último paseo por el barrio y compras de souvenirs (Kit-Kats de sabores)." },
+      { time: "13:00", text: "Narita Express (N'EX) al aeropuerto (1h exacta)." },
+      { time: "14:30", text: "Facturación y controles de seguridad en Narita." },
+      { time: "17:25", text: "Vuelo QR809 de vuelta hacia España." },
+    ],
+    money: "Aprox. 40€ (comidas)",
+  },
+];
+
+// Transportes con coste real vs coste ya cubierto por JR Pass (hoja "Transportes")
+export const transports = [
+  { day: 1, date: "2026-09-07", name: "Narita Express (N'EX)", from: "Aeropuerto de Narita", to: "Estación de Tokio", type: "Línea JR", real: 19, jrPass: 0 },
+  { day: 1, date: "2026-09-07", name: "Shinkansen Hikari", from: "Estación de Tokio", to: "Kioto", type: "Línea JR (Tren Bala)", real: 85, jrPass: 0 },
+  { day: 2, date: "2026-09-08", name: "Tren Línea JR Nara", from: "Kioto", to: "Inari Station", type: "Línea JR Local", real: 1, jrPass: 0 },
+  { day: 2, date: "2026-09-08", name: "Tren Línea JR Nara", from: "Inari Station", to: "Nara", type: "Línea JR Local", real: 4.2, jrPass: 0 },
+  { day: 2, date: "2026-09-08", name: "Tren Línea JR Nara", from: "Nara", to: "Kioto", type: "Línea JR Local", real: 4.5, jrPass: 0 },
+  { day: 3, date: "2026-09-09", name: "Metro y Bus 205", from: "Kioto", to: "Kinkakuji", type: "Operador Privado / Local", real: 3, jrPass: 3 },
+  { day: 3, date: "2026-09-09", name: "Tranvía Randen", from: "Ninna-ji", to: "Arashiyama", type: "Operador Privado", real: 1.5, jrPass: 1.5 },
+  { day: 3, date: "2026-09-09", name: "Tren JR Línea San-In", from: "Arashiyama", to: "Kioto", type: "Línea JR Local", real: 1.5, jrPass: 0 },
+  { day: 4, date: "2026-09-10", name: "Bus y Metro", from: "Kioto", to: "Mercado Nishiki / Gion", type: "Operador Privado / Local", real: 4, jrPass: 4 },
+  { day: 5, date: "2026-09-11", name: "Tren rápido JR (ida y vuelta)", from: "Kioto", to: "Osaka", type: "Línea JR Local", real: 7, jrPass: 0 },
+  { day: 6, date: "2026-09-12", name: "Tren Thunderbird", from: "Kioto", to: "Kanazawa", type: "Línea JR Exprés", real: 43.5, jrPass: 0 },
+  { day: 7, date: "2026-09-13", name: "Autobús Nohi Bus", from: "Kanazawa", to: "Shirakawa-go", type: "Operador Privado (Bus)", real: 16, jrPass: 16 },
+  { day: 7, date: "2026-09-13", name: "Autobús Nohi Bus", from: "Shirakawa-go", to: "Takayama", type: "Operador Privado (Bus)", real: 16, jrPass: 16 },
+  { day: 8, date: "2026-09-14", name: "Tren panorámico Hida Express", from: "Takayama", to: "Nagoya", type: "Línea JR Exprés", real: 34, jrPass: 0 },
+  { day: 8, date: "2026-09-14", name: "Tren JR Shinano y Bus local", from: "Nagoya", to: "Magome", type: "Mixta (JR + Bus Privado)", real: 12, jrPass: 4 },
+  { day: 9, date: "2026-09-15", name: "Bus local y Tren JR Shinano", from: "Tsumago / Nagiso", to: "Nagoya", type: "Mixta (JR + Bus Privado)", real: 18, jrPass: 3 },
+  { day: 9, date: "2026-09-15", name: "Shinkansen", from: "Nagoya", to: "Tokio (o zona Fuji)", type: "Línea JR (Tren Bala)", real: 50, jrPass: 0 },
+  { day: 10, date: "2026-09-16", name: "Tren elevado Yurikamome", from: "Tokio", to: "Isla de Odaiba", type: "Operador Privado", real: 2, jrPass: 2 },
+  { day: "10-14", date: "16-20 sept", name: "Metro y trenes locales (5 días)", from: "Tokio", to: "Tokio (varios)", type: "Operador Privado / Local", real: 25, jrPass: 25 },
+  { day: 15, date: "2026-09-21", name: "Narita Express (N'EX)", from: "Estación de Tokio", to: "Aeropuerto de Narita", type: "Línea JR (fuera de plazo JR Pass)", real: 19, jrPass: 19 },
+];
+
+export const transportTotals = { real: 366.2, jrPass: 93.5 };
+
+// Presupuesto estimado para 5 personas
+export const budget = {
+  people: 5,
+  note: "Calculado con precios realistas y el yen actual, muy barato para Europa.",
+  categories: [
+    {
+      title: "Vuelos internacionales",
+      perPerson: "900€ – 1.000€",
+      total: "4.500€ – 5.000€",
+      details: [],
+    },
+    {
+      title: "Alojamiento (14 noches)",
+      perPerson: "~950€",
+      total: "~4.750€",
+      details: [
+        "Hoteles ciudad (Kioto, Kanazawa, Takayama, Tokio): ~50€–60€ noche/persona.",
+        "Alojamiento rural Nakasendo (con cena y desayuno): ~100€ noche/persona.",
+        "Ryokan Monte Fuji (onsen + cena kaiseki): ~150€–200€ noche/persona.",
+      ],
+    },
+    {
+      title: "Transporte nacional",
+      perPerson: "~410€",
+      total: "~2.050€",
+      details: [
+        "Trenes sueltos sin JR Pass (NEX, Shinkansen Kioto, ruta Alpes, Fuji, Tokio): ~330€/persona.",
+        "Transporte local (tarjeta Suica): ~80€/persona.",
+      ],
+    },
+    {
+      title: "Comidas y bebidas (14 días)",
+      perPerson: "~500€ – 550€",
+      total: "~2.600€",
+      details: [
+        "Desayuno ~5€, comida casual/ramen ~10€, cena buena/sushi ~20€. Aprox. 40€/día (sin contar las 2 cenas caras ya incluidas en alojamientos tradicionales).",
+      ],
+    },
+    {
+      title: "Entradas y extras",
+      perPerson: "~150€",
+      total: "~750€",
+      details: ["Templos, museos, mirador de Roppongi, TeamLab, envío de maletas Takkyubin de Kioto a Tokio."],
+    },
+  ],
+  totalPerPerson: "2.950€ – 3.100€ (vuelos incluidos)",
+  totalGroup: "14.750€ – 15.500€ (5 personas)",
+};

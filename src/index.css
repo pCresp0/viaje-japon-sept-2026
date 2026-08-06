@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #1b1f27;
+  --ink-soft: #4a5160;
+  --paper: #f3f4ee;
+  --paper-raised: #ffffff;
+  --indigo: #1d3557;
+  --indigo-deep: #12213a;
+  --shu: #bc4749;
+  --forest: #2e7d5b;
+  --gold: #c9a227;
+  --line: #d8d9cf;
+
+  --font-display: Georgia, "Iowan Old Style", "Palatino Linotype", "Noto Serif", serif;
+  --font-body: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  overscroll-behavior-y: none;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* stamp-like eyebrow labels */
+.eyebrow {
+  font-family: var(--font-display);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+::selection {
+  background: var(--shu);
+  color: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
