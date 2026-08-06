@@ -21,7 +21,7 @@ export default function DayCard({ day, defaultOpenHistory = false }) {
       style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}
     >
       <header className="px-5 pt-5 pb-4" style={{ background: block.color }}>
-        <p className="eyebrow text-white/80">
+        <p className="eyebrow" style={{ color: "rgba(255,255,255,0.95)" }}>
           {block.emoji} Día {day.num} · {formatDateLong(day.date)}
         </p>
         <h2 className="font-display text-2xl text-white mt-1 leading-tight">{day.title}</h2>

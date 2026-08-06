@@ -46,7 +46,10 @@ body {
   text-transform: uppercase;
   font-size: 0.68rem;
   font-weight: 600;
-  color: var(--ink-soft);
+  /* Hereda el color del contenedor. Antes forzaba var(--ink-soft), lo que
+     pisaba silenciosamente a utilidades como text-white/80 y dejaba texto
+     gris ilegible sobre fondos de color. */
+  color: inherit;
 }
 
 /* Japanese-style thin horizontal rule */

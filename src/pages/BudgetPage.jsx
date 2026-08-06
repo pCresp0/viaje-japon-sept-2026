@@ -18,7 +18,7 @@ export default function BudgetPage() {
       </div>
 
       <div className="rounded-2xl p-6 text-center" style={{ background: "var(--indigo)" }}>
-        <p className="eyebrow text-white/70">Total por persona</p>
+        <p className="eyebrow" style={{ color: "rgba(255,255,255,0.9)" }}>Total por persona</p>
         <p className="font-display text-3xl text-white my-1">{budget.totalPerPerson}</p>
         <p className="text-white/70 text-xs mt-2">Grupo ({budget.people} pax): {budget.totalGroup}</p>
       </div>
