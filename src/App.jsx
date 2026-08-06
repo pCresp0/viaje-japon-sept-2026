@@ -29,7 +29,7 @@ export default function App() {
   // Scroll to top of the scrollable container when tab changes
   useEffect(() => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollTo(0, 0);
+      scrollContainerRef.current.scrollTo({ top: 0, behavior: "auto" });
     }
   }, [tab]);
 
