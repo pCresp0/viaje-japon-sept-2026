@@ -92,11 +92,19 @@ export async function fetchWikiImage(searchTerm) {
         result = extractResult(page);
       }
 
+      if (!result && import.meta.env?.DEV) {
+        // eslint-disable-next-line no-console
+        console.warn(`[wikiImage] Sin foto para "${searchTerm}". Página encontrada:`, page?.title ?? "(ninguna)");
+      }
+
       cache.set(searchTerm, result);
       return result;
-    } catch {
+    } catch (err) {
       // Sin conexión, timeout o API caída: no se muestra imagen, el resto
-      // de la guía sigue funcionando igual.
+      // de la guía sigue funcionando igual. Se deja constancia en consola
+      // para poder diagnosticar qué término falla y por qué.
+      // eslint-disable-next-line no-console
+      console.warn(`[wikiImage] Fallo al buscar "${searchTerm}":`, err?.message || err);
       cache.set(searchTerm, null);
       return null;
     } finally {
