@@ -1,7 +1,9 @@
 import { useState } from "react";
 import Nav, { Sidebar } from "./components/Nav";
+import Footer from "./components/Footer";
 import PasswordGate from "./components/PasswordGate";
 import Home from "./pages/Home";
+import CalendarPage from "./pages/CalendarPage";
 import Itinerary from "./pages/Itinerary";
 import InfoPage from "./pages/InfoPage";
 import BudgetPage from "./pages/BudgetPage";
@@ -28,27 +30,28 @@ export default function App() {
       {/* Desktop sidebar */}
       <Sidebar active={tab} onChange={setTab} />
 
-      {/* Main content */}
+      {/* Main content column */}
       <div className="flex-1 flex flex-col min-w-0">
 
         {/* Mobile top bar + drawer */}
         <Nav active={tab} onChange={setTab} />
 
-        {/* Page content */}
+        {/* Page */}
         <main
-          className="flex-1 w-full mx-auto px-0 md:px-8 md:py-8"
+          className="flex-1 w-full mx-auto"
           style={{
             maxWidth: 1100,
-            paddingTop: "calc(56px + env(safe-area-inset-top))",
+            paddingTop: "calc(54px + env(safe-area-inset-top))",
           }}
         >
-          {/* On desktop remove the mobile top-padding */}
-          <div className="md:[padding-top:0]">
+          <div className="md:pt-0">
             {tab === "hoy"          && <Home onGoToDay={goToDay} />}
+            {tab === "calendario"   && <CalendarPage />}
             {tab === "itinerario"   && <Itinerary openDay={openDay} setOpenDay={setOpenDay} />}
             {tab === "info"         && <InfoPage />}
             {tab === "presupuesto"  && <BudgetPage />}
           </div>
+          <Footer />
         </main>
       </div>
     </div>

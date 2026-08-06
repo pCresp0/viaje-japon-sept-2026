@@ -2,15 +2,15 @@
 
 :root {
   --ink: #1b1f27;
-  --ink-soft: #4a5160;
-  --paper: #f3f4ee;
+  --ink-soft: #5a6070;
+  --paper: #f0f1eb;
   --paper-raised: #ffffff;
   --indigo: #1d3557;
   --indigo-deep: #12213a;
   --shu: #bc4749;
   --forest: #2e7d5b;
   --gold: #c9a227;
-  --line: #d8d9cf;
+  --line: #dddecf;
 
   --font-display: Georgia, "Iowan Old Style", "Palatino Linotype", "Noto Serif", serif;
   --font-body: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
@@ -18,6 +18,7 @@
 
 * {
   -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
 }
 
 html, body, #root {
@@ -29,6 +30,7 @@ body {
   color: var(--ink);
   font-family: var(--font-body);
   overscroll-behavior-y: none;
+  -webkit-font-smoothing: antialiased;
 }
 
 .font-display {
@@ -37,10 +39,26 @@ body {
 
 /* stamp-like eyebrow labels */
 .eyebrow {
-  font-family: var(--font-display);
-  letter-spacing: 0.14em;
+  font-family: var(--font-body);
+  letter-spacing: 0.13em;
   text-transform: uppercase;
-  font-size: 0.7rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+/* Japanese-style thin horizontal rule */
+.kosen {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 1.5rem 0;
+}
+
+/* Card base */
+.card {
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: 14px;
 }
 
 ::selection {
@@ -48,6 +66,23 @@ body {
   color: white;
 }
 
+/* Smooth page transitions */
+main > div > * {
+  animation: fadeIn 0.18s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0);   }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+/* Desktop: remove mobile top padding */
+@media (min-width: 768px) {
+  main {
+    padding-top: 0 !important;
+  }
 }

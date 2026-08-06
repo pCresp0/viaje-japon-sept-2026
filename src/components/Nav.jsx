@@ -1,194 +1,184 @@
 import { useState } from "react";
-import { Compass, Route, Plane, Wallet, X, Menu } from "lucide-react";
+import { Compass, Route, Plane, Wallet, X, Menu, CalendarDays } from "lucide-react";
 
-const tabs = [
-  { id: "hoy",          label: "Hoy",          icon: Compass },
-  { id: "itinerario",   label: "Itinerario",   icon: Route   },
-  { id: "info",         label: "Viaje",         icon: Plane   },
-  { id: "presupuesto",  label: "Presupuesto",  icon: Wallet  },
+export const tabs = [
+  { id: "hoy",          label: "Hoy",          icon: Compass     },
+  { id: "calendario",   label: "Calendario",   icon: CalendarDays },
+  { id: "itinerario",   label: "Itinerario",   icon: Route       },
+  { id: "info",         label: "Viaje",         icon: Plane       },
+  { id: "presupuesto",  label: "Presupuesto",  icon: Wallet      },
 ];
 
-/* ── Drawer (mobile) ─────────────────────────────────────────────────── */
+const sidebarBg = {
+  backgroundImage: "url('/waves-sidebar.webp')",
+  backgroundSize: "cover",
+  backgroundPosition: "center top",
+};
+
+const overlay = {
+  position: "absolute", inset: 0,
+  background: "linear-gradient(160deg, rgba(18,33,58,0.93) 0%, rgba(29,53,87,0.88) 100%)",
+};
+
+function NavItems({ active, onChange, onClose }) {
+  return tabs.map((t) => {
+    const Icon = t.icon;
+    const isActive = active === t.id;
+    return (
+      <button
+        key={t.id}
+        onClick={() => { onChange(t.id); onClose?.(); }}
+        className="flex items-center gap-3 w-full text-left transition-all"
+        style={{
+          padding: "11px 16px",
+          borderRadius: 10,
+          background: isActive ? "rgba(255,255,255,0.13)" : "transparent",
+          color: isActive ? "#fff" : "rgba(255,255,255,0.55)",
+          borderLeft: isActive ? "3px solid #bc4749" : "3px solid transparent",
+          fontWeight: isActive ? 600 : 400,
+        }}
+      >
+        <Icon size={17} strokeWidth={isActive ? 2.4 : 1.8} />
+        <span style={{ fontSize: 14, letterSpacing: "0.01em" }}>{t.label}</span>
+      </button>
+    );
+  });
+}
+
+/* ── Drawer (mobile) ─────────────────────────────────────────────── */
 function Drawer({ active, onChange, open, onClose }) {
   return (
     <>
-      {/* backdrop */}
       {open && (
         <div
           className="fixed inset-0 z-40"
-          style={{ background: "rgba(0,0,0,0.4)" }}
+          style={{ background: "rgba(0,0,0,0.5)", backdropFilter: "blur(2px)" }}
           onClick={onClose}
         />
       )}
-
-      {/* panel */}
       <aside
         className="fixed top-0 left-0 h-full z-50 flex flex-col"
         style={{
-          width: 240,
-          background: "var(--indigo)",
+          width: 252,
+          ...sidebarBg,
           transform: open ? "translateX(0)" : "translateX(-100%)",
-          transition: "transform 0.28s cubic-bezier(.4,0,.2,1)",
-          boxShadow: open ? "4px 0 24px rgba(0,0,0,0.3)" : "none",
+          transition: "transform 0.3s cubic-bezier(.4,0,.2,1)",
+          boxShadow: open ? "6px 0 32px rgba(0,0,0,0.4)" : "none",
         }}
       >
-        {/* header */}
-        <div
-          className="flex items-center justify-between px-5 py-5"
-          style={{ borderBottom: "1px solid rgba(255,255,255,0.1)" }}
-        >
-          <div className="flex items-center gap-2">
-            <span className="text-xl">🇯🇵</span>
-            <span
-              className="text-sm font-semibold tracking-wide"
-              style={{ color: "rgba(255,255,255,0.9)", fontFamily: "var(--font-display)" }}
-            >
-              Japón 2026
-            </span>
+        <div style={{ ...overlay, display: "flex", flexDirection: "column" }}>
+          {/* header */}
+          <div className="flex items-center justify-between px-5 pt-12 pb-5"
+            style={{ borderBottom: "1px solid rgba(255,255,255,0.1)" }}>
+            <div>
+              <div className="flex items-center gap-2 mb-0.5">
+                <span style={{ fontSize: 20 }}>🇯🇵</span>
+                <span style={{
+                  fontFamily: "var(--font-display)", fontSize: 15,
+                  fontWeight: 700, color: "#fff", letterSpacing: "0.02em"
+                }}>Japón 2026</span>
+              </div>
+              <p style={{ fontSize: 11, color: "rgba(255,255,255,0.4)", letterSpacing: "0.08em" }}>
+                SEPT 6 – 22 · 5 VIAJEROS
+              </p>
+            </div>
+            <button onClick={onClose}
+              style={{ color: "rgba(255,255,255,0.5)", padding: 4 }}>
+              <X size={18} />
+            </button>
           </div>
-          <button onClick={onClose} style={{ color: "rgba(255,255,255,0.6)" }}>
-            <X size={20} />
-          </button>
-        </div>
 
-        {/* items */}
-        <nav className="flex flex-col gap-1 p-3 flex-1">
-          {tabs.map((t) => {
-            const Icon = t.icon;
-            const isActive = active === t.id;
-            return (
-              <button
-                key={t.id}
-                onClick={() => { onChange(t.id); onClose(); }}
-                className="flex items-center gap-3 px-4 py-3 rounded-xl text-left transition-all"
-                style={{
-                  background: isActive ? "rgba(255,255,255,0.12)" : "transparent",
-                  color: isActive ? "#fff" : "rgba(255,255,255,0.6)",
-                  borderLeft: isActive ? "3px solid var(--shu)" : "3px solid transparent",
-                }}
-              >
-                <Icon size={18} strokeWidth={isActive ? 2.4 : 1.8} />
-                <span className="text-sm font-medium">{t.label}</span>
-              </button>
-            );
-          })}
-        </nav>
+          {/* nav */}
+          <nav className="flex flex-col gap-0.5 p-3 flex-1">
+            <NavItems active={active} onChange={onChange} onClose={onClose} />
+          </nav>
 
-        {/* footer */}
-        <div className="px-5 py-4" style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}>
-          <p className="text-xs" style={{ color: "rgba(255,255,255,0.35)" }}>
-            6 – 22 septiembre 2026
-          </p>
+          {/* footer */}
+          <div className="px-5 py-4" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+            <p style={{ fontSize: 11, color: "rgba(255,255,255,0.28)", lineHeight: 1.6 }}>
+              Qatar Airways · QR148 / QR809
+            </p>
+          </div>
         </div>
       </aside>
     </>
   );
 }
 
-/* ── Mobile top bar ──────────────────────────────────────────────────── */
+/* ── Mobile top bar ──────────────────────────────────────────────── */
 export function TopBar({ active, onOpenDrawer }) {
   const currentTab = tabs.find((t) => t.id === active);
   return (
-    <header
-      className="fixed top-0 left-0 right-0 z-30 flex items-center gap-3 px-4"
+    <header className="fixed top-0 left-0 right-0 z-30 flex items-center gap-3 px-4"
       style={{
-        height: 56,
+        height: 54,
         background: "var(--indigo)",
-        boxShadow: "0 1px 8px rgba(0,0,0,0.2)",
+        borderBottom: "1px solid rgba(255,255,255,0.08)",
+        boxShadow: "0 2px 12px rgba(0,0,0,0.2)",
         paddingTop: "env(safe-area-inset-top)",
       }}
     >
-      <button
-        onClick={onOpenDrawer}
-        className="flex items-center justify-center rounded-lg"
-        style={{ color: "rgba(255,255,255,0.85)", width: 36, height: 36 }}
-      >
-        <Menu size={22} />
+      <button onClick={onOpenDrawer}
+        style={{ color: "rgba(255,255,255,0.8)", padding: 4 }}>
+        <Menu size={21} />
       </button>
-      <span
-        className="text-sm font-semibold tracking-wide"
-        style={{ color: "#fff", fontFamily: "var(--font-display)" }}
-      >
+      <span style={{
+        fontFamily: "var(--font-display)", fontSize: 15,
+        fontWeight: 600, color: "#fff", flex: 1,
+      }}>
         {currentTab?.label}
       </span>
-      <span className="ml-auto text-lg">🇯🇵</span>
+      <span style={{ fontSize: 20 }}>🇯🇵</span>
     </header>
   );
 }
 
-/* ── Desktop sidebar ─────────────────────────────────────────────────── */
+/* ── Desktop sidebar ─────────────────────────────────────────────── */
 export function Sidebar({ active, onChange }) {
   return (
     <aside
-      className="hidden md:flex flex-col h-screen sticky top-0"
-      style={{
-        width: 220,
-        minWidth: 220,
-        background: "var(--indigo)",
-        boxShadow: "2px 0 16px rgba(0,0,0,0.12)",
-      }}
+      className="hidden md:flex flex-col h-screen sticky top-0 shrink-0"
+      style={{ width: 230, ...sidebarBg }}
     >
-      {/* logo */}
-      <div
-        className="flex items-center gap-3 px-6 py-6"
-        style={{ borderBottom: "1px solid rgba(255,255,255,0.1)" }}
-      >
-        <span className="text-2xl">🇯🇵</span>
-        <div>
-          <p
-            className="text-sm font-bold"
-            style={{ color: "#fff", fontFamily: "var(--font-display)" }}
-          >
-            Japón 2026
-          </p>
-          <p className="text-xs" style={{ color: "rgba(255,255,255,0.45)" }}>
-            Sept 6 – 22
+      <div style={{ ...overlay, display: "flex", flexDirection: "column" }}>
+        {/* logo */}
+        <div className="px-6 pt-8 pb-6"
+          style={{ borderBottom: "1px solid rgba(255,255,255,0.1)" }}>
+          <div className="flex items-center gap-2 mb-1">
+            <span style={{ fontSize: 22 }}>🇯🇵</span>
+            <span style={{
+              fontFamily: "var(--font-display)", fontSize: 16,
+              fontWeight: 700, color: "#fff",
+            }}>Japón 2026</span>
+          </div>
+          <p style={{ fontSize: 11, color: "rgba(255,255,255,0.38)", letterSpacing: "0.09em" }}>
+            SEPT 6 – 22 · 5 VIAJEROS
           </p>
         </div>
-      </div>
 
-      {/* nav items */}
-      <nav className="flex flex-col gap-1 p-3 flex-1">
-        {tabs.map((t) => {
-          const Icon = t.icon;
-          const isActive = active === t.id;
-          return (
-            <button
-              key={t.id}
-              onClick={() => onChange(t.id)}
-              className="flex items-center gap-3 px-4 py-3 rounded-xl text-left transition-all"
-              style={{
-                background: isActive ? "rgba(255,255,255,0.12)" : "transparent",
-                color: isActive ? "#fff" : "rgba(255,255,255,0.6)",
-                borderLeft: isActive ? "3px solid var(--shu)" : "3px solid transparent",
-              }}
-            >
-              <Icon size={18} strokeWidth={isActive ? 2.4 : 1.8} />
-              <span className="text-sm font-medium">{t.label}</span>
-            </button>
-          );
-        })}
-      </nav>
+        {/* nav */}
+        <nav className="flex flex-col gap-0.5 p-3 flex-1">
+          <NavItems active={active} onChange={onChange} />
+        </nav>
 
-      <div className="px-6 py-5" style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}>
-        <p className="text-xs" style={{ color: "rgba(255,255,255,0.3)" }}>
-          Grupo de 5 · Qatar Airways
-        </p>
+        {/* footer */}
+        <div className="px-5 py-5" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+          <p style={{ fontSize: 11, color: "rgba(255,255,255,0.28)", lineHeight: 1.7 }}>
+            Qatar Airways<br />QR148 · QR809
+          </p>
+        </div>
       </div>
     </aside>
   );
 }
 
-/* ── Combined export (mobile uses Drawer + TopBar) ───────────────────── */
+/* ── Mobile export ───────────────────────────────────────────────── */
 export default function Nav({ active, onChange }) {
   const [open, setOpen] = useState(false);
   return (
-    <>
-      {/* mobile */}
-      <div className="md:hidden">
-        <TopBar active={active} onOpenDrawer={() => setOpen(true)} />
-        <Drawer active={active} onChange={onChange} open={open} onClose={() => setOpen(false)} />
-      </div>
-    </>
+    <div className="md:hidden">
+      <TopBar active={active} onOpenDrawer={() => setOpen(true)} />
+      <Drawer active={active} onChange={onChange} open={open} onClose={() => setOpen(false)} />
+    </div>
   );
 }
