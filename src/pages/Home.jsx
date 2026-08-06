@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { tripMeta, flights, blocks, days } from "../data/trip";
 import { getTripStatus, formatDateLong, diffDays } from "../utils/date";
 import DayCard from "../components/DayCard";
-import RouteLine from "../components/RouteLine";
 import { PlaneTakeoff, PlaneLanding } from "lucide-react";
 
 // Departure moment used for the live countdown (Madrid local time)
@@ -38,9 +37,7 @@ export default function Home({ onGoToDay }) {
           </h1>
         </div>
 
-        <RouteLine currentDay={status.day?.num} onSelectDay={onGoToDay} />
-
-        <div style={{ marginTop: 32 }}>
+        <div style={{ marginTop: 24 }}>
           {status.phase === "before" && <BeforeTrip />}
           {status.phase === "during" && status.day && (
             <div>

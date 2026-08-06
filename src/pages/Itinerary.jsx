@@ -1,8 +1,7 @@
 import { useEffect, useRef } from "react";
 import { days, blocks } from "../data/trip";
-import { formatDateShort, getTripStatus } from "../utils/date";
+import { formatDateShort } from "../utils/date";
 import DayCard from "../components/DayCard";
-import RouteLine from "../components/RouteLine";
 import { ChevronRight } from "lucide-react";
 
 const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
@@ -16,8 +15,6 @@ export default function Itinerary({ openDay, setOpenDay }) {
     }
   }, [openDay]);
 
-  const currentDay = getTripStatus().day?.num;
-
   return (
     <div className="pt-5 pb-8 max-w-lg mx-auto">
       <div className="px-4">
@@ -28,10 +25,6 @@ export default function Itinerary({ openDay, setOpenDay }) {
           Itinerario completo
         </h1>
       </div>
-      <div className="px-4">
-        <RouteLine currentDay={currentDay} onSelectDay={setOpenDay} />
-      </div>
-
       <div className="px-4 mt-3 space-y-2.5">
         {days.map((d) => {
           const block = blockById[d.block];
