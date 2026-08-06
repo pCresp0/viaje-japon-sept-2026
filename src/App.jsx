@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Nav, { Sidebar } from "./components/Nav";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -19,11 +19,19 @@ import { getTripStatus } from "./utils/date";
 export default function App() {
   const [tab, setTab] = useState("hoy");
   const [openDay, setOpenDay] = useState(getTripStatus().day?.num ?? 1);
+  const scrollContainerRef = useRef(null);
 
   function goToDay(num) {
     setOpenDay(num);
     setTab("itinerario");
   }
+
+  // Scroll to top of the scrollable container when tab changes
+  useEffect(() => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTo(0, 0);
+    }
+  }, [tab]);
 
   return (
     <div style={{ display: "flex", height: "100vh", height: "100dvh", background: "var(--paper)" }}>
@@ -32,7 +40,7 @@ export default function App() {
       <Sidebar active={tab} onChange={setTab} />
 
       {/* Right column — scrollable */}
-      <div style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0, overflowY: "auto", height: "100%" }}>
+      <div ref={scrollContainerRef} style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0, overflowY: "auto", height: "100%" }}>
 
         {/* Mobile top bar + drawer */}
         <Nav active={tab} onChange={setTab} />
