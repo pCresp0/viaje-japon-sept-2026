@@ -75,7 +75,7 @@ const etiquette = [
 export default function PhrasesPage() {
   const [activeCategory, setActiveCategory] = useState("basics");
   const current = categories.find(c => c.id === activeCategory);
-  const { supported, speakingId, speak } = useJapaneseSpeech();
+  const { supported, speakingId, lastError, speak } = useJapaneseSpeech();
 
   return (
     <div className="px-4 pt-6 pb-12 max-w-3xl mx-auto">
@@ -88,6 +88,16 @@ export default function PhrasesPage() {
           <p style={{ fontSize: 12, color: "var(--ink-soft)", marginTop: 6 }}>
             Pulsa <Volume2 size={12} style={{ display: "inline", verticalAlign: -1 }} /> junto a cualquier frase para escuchar la pronunciación real en japonés.
           </p>
+        )}
+        {lastError && (
+          <div style={{
+            marginTop: 10, padding: "8px 12px", borderRadius: 8,
+            background: "#bc474915", border: "1px solid #bc474933",
+          }}>
+            <p style={{ fontSize: 11.5, color: "var(--shu)", lineHeight: 1.5, margin: 0 }}>
+              No se ha podido reproducir el audio ({lastError}). Si estás en iPhone, comprueba que el interruptor lateral de silencio esté desactivado y que el volumen esté subido — la lectura en voz no suena con el móvil en silencio.
+            </p>
+          </div>
         )}
       </div>
 
