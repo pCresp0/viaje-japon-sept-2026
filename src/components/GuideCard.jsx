@@ -1,7 +1,14 @@
 import { useState, useEffect } from "react";
-import { BookOpen, ChevronDown, Lightbulb, Sparkles } from "lucide-react";
+import { BookOpen, ChevronDown, Lightbulb, Sparkles, Clapperboard } from "lucide-react";
 import { guides } from "../data/guides";
+import { popCulture } from "../data/popCulture";
 import { fetchWikiImage } from "../utils/wikiImage";
+
+const franchiseStyle = {
+  pokemon: { label: "Pokémon", emoji: "⚡", color: "#d9720a" },
+  digimon: { label: "Digimon", emoji: "🔷", color: "#1d6fb8" },
+  pelicula: { label: "Película", emoji: "🎬", color: "#6b3fa0" },
+};
 
 /**
  * Tarjeta plegable con la guía detallada de un lugar.
@@ -14,6 +21,7 @@ export default function GuideCard({ id, accent = "#1d3557" }) {
   // idle | loading | found | not-found | error
   const [imgState, setImgState] = useState("idle");
   const guide = guides[id];
+  const refs = popCulture[id];
 
   function loadImage() {
     if (!guide?.wiki) return;
@@ -88,6 +96,13 @@ export default function GuideCard({ id, accent = "#1d3557" }) {
             <span style={{ fontSize: 11.5, color: "var(--ink-soft)" }}>
               {guide.jp}
             </span>
+            {refs?.length > 0 && (
+              <span title="Tiene referencias de Pokémon/Digimon/cine" style={{ fontSize: 12 }}>
+                {refs.some(r => r.franchise === "pokemon") && "⚡"}
+                {refs.some(r => r.franchise === "digimon") && "🔷"}
+                {refs.some(r => r.franchise === "pelicula") && "🎬"}
+              </span>
+            )}
           </div>
           <p style={{ fontSize: 12, color: "var(--ink-soft)", lineHeight: 1.5, marginTop: 2 }}>
             {open ? guide.founded : guide.tagline}
@@ -206,6 +221,37 @@ export default function GuideCard({ id, accent = "#1d3557" }) {
               </p>
             </div>
           ))}
+
+          {refs?.length > 0 && (
+            <div style={{ marginTop: 4, marginBottom: 14, display: "flex", flexDirection: "column", gap: 8 }}>
+              {refs.map((ref, i) => {
+                const fs = franchiseStyle[ref.franchise];
+                return (
+                  <div key={i} style={{
+                    border: `1px solid ${fs.color}33`,
+                    background: `${fs.color}0d`,
+                    borderRadius: 10, padding: "10px 12px",
+                  }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 5 }}>
+                      <span style={{
+                        fontSize: 10, fontWeight: 700, color: "#fff",
+                        background: fs.color, padding: "2px 8px", borderRadius: 20,
+                        letterSpacing: "0.02em", display: "inline-flex", alignItems: "center", gap: 4,
+                      }}>
+                        {fs.emoji} {fs.label}
+                      </span>
+                      <span style={{ fontSize: 12, fontWeight: 700, color: "var(--ink)" }}>
+                        {ref.title}
+                      </span>
+                    </div>
+                    <p style={{ fontSize: 12.5, color: "var(--ink)", lineHeight: 1.6, margin: 0 }}>
+                      {ref.detail}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          )}
 
           {guide.curiosities?.length > 0 && (
             <div style={{
