@@ -2,9 +2,6 @@
 
 Guía de viaje interactiva para un grupo de amigos, pensada para usarse **desde el móvil, durante el viaje, con o sin conexión**. Sustituye al típico documento de Word / Excel por una web ligera, instalable como app, que centraliza itinerario, vuelos, alojamientos y presupuesto.
 
-🔗 **Producción:** https://pcresp0.github.io/viaje-japon-sept-2026/
-🔒 Acceso restringido al grupo mediante contraseña (ver [Acceso y seguridad](#-acceso-y-seguridad)).
-
 ---
 
 ## ✨ Funcionalidades
@@ -14,7 +11,6 @@ Guía de viaje interactiva para un grupo de amigos, pensada para usarse **desde 
 - **Viaje** — vuelos confirmados (con seguimiento en vivo) y alojamientos de cada noche, con enlace directo a la reserva y a Google Maps.
 - **Presupuesto** — desglose por categorías (vuelos, alojamiento, transporte, comida, extras) y detalle día a día de los transportes, con coste real vs. coste cubierto por JR Pass.
 - **Funciona sin conexión** — Progressive Web App (PWA): instalable en la pantalla de inicio (Android/iOS/escritorio) y con todo el contenido cacheado para consultarlo sin datos móviles.
-- **Acceso con contraseña** — pantalla de bloqueo antes de mostrar ningún contenido del viaje.
 
 ## 🧱 Stack técnico
 
@@ -37,7 +33,6 @@ src/
 │   └── trip.js          # Única fuente de verdad: vuelos, días, alojamientos, presupuesto, transportes
 ├── utils/
 │   ├── date.js           # Lógica de "¿qué día del viaje es hoy?"
-│   ├── auth.js            # Hash de la contraseña de acceso (SHA-256 vía Web Crypto)
 │   └── maps.js             # Generador de enlaces a Google Maps
 ├── components/
 │   ├── PasswordGate.jsx     # Pantalla de bloqueo inicial
@@ -69,15 +64,6 @@ Tipografía: fuentes de sistema (serif para titulares tipo sello, sans para el c
 
 **Elemento distintivo:** `RouteLine.jsx` dibuja los 15 días como estaciones de una línea de metro/tren, coloreadas por bloque del viaje, con el día actual resaltado — un guiño directo a los mapas de líneas de tren japonesas que vais a usar constantemente durante el viaje.
 
-## 🔒 Acceso y seguridad
-
-La web pide una contraseña antes de mostrar nada. Importante entender **qué protege y qué no**:
-
-- La contraseña **no se guarda en texto plano** en el código: solo se guarda su hash SHA-256 (`src/utils/auth.js`), y se compara contra el hash de lo que el usuario escribe.
-- Esto **no es seguridad real de nivel producción**: el repositorio es público, así que el hash es visible, y una contraseña corta podría romperse por fuerza bruta offline por alguien con conocimientos técnicos y motivación.
-- Su objetivo es más modesto y realista para este caso de uso: **evitar que un visitante casual del repo de GitHub vea el contenido del viaje** (fechas, hoteles, códigos PIN de reserva, etc.), no protegerlo de un atacante decidido.
-- Una vez introducida correctamente, la contraseña se recuerda en el dispositivo (`localStorage`) para no tener que repetirla en cada visita.
-
 ## 📴 Offline / PWA
 
 `vite-plugin-pwa` genera un Service Worker (Workbox) que cachea el "app shell" (HTML, JS, CSS) y todos los datos del viaje en el primer acceso con conexión. A partir de ahí, la web funciona sin datos móviles — útil para consultarla en el metro o en zonas sin cobertura.
@@ -99,9 +85,7 @@ npm run preview     # sirve el build de producción localmente
 
 ## 🚀 Despliegue
 
-Automático vía GitHub Actions (`.github/workflows/deploy.yml`): cada `push` a `main` dispara un build (`npm ci && npm run build`) y publica `dist/` en GitHub Pages a través de `actions/deploy-pages`.
-
-**Requisito de configuración (una sola vez):** en el repo → *Settings → Pages → Build and deployment → Source* debe estar puesto en **"GitHub Actions"** (no "Deploy from a branch").
+Automático vía [Vercel](https://vercel.com): el proyecto está conectado al repositorio, y cada `push` a `main` dispara un build (`npm run build`) y publica el contenido de `dist/` automáticamente. No requiere configuración manual adicional — Vercel detecta el framework (Vite) y aplica los ajustes correctos.
 
 ## ✏️ Cómo actualizar el contenido
 
