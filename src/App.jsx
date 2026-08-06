@@ -25,34 +25,35 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen flex" style={{ background: "var(--paper)" }}>
+    <div style={{ display: "flex", height: "100vh", background: "var(--paper)" }}>
 
-      {/* Desktop sidebar */}
+      {/* Desktop sidebar — fixed height, no scroll */}
       <Sidebar active={tab} onChange={setTab} />
 
-      {/* Main content column */}
-      <div className="flex-1 flex flex-col min-w-0">
+      {/* Right column — scrollable */}
+      <div style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0, overflowY: "auto", height: "100vh" }}>
 
         {/* Mobile top bar + drawer */}
         <Nav active={tab} onChange={setTab} />
 
-        {/* Page */}
-        <main
-          className="flex-1 w-full mx-auto"
-          style={{
-            maxWidth: 1100,
-            paddingTop: "calc(54px + env(safe-area-inset-top))",
-          }}
-        >
-          <div className="md:pt-0">
+        {/* Page content — grows to fill space */}
+        <main style={{
+          flex: 1,
+          width: "100%",
+          maxWidth: 1100,
+          margin: "0 auto",
+          paddingTop: "calc(54px + env(safe-area-inset-top))",
+        }}>
+          <div className="md-no-top-pad">
             {tab === "hoy"          && <Home onGoToDay={goToDay} />}
             {tab === "calendario"   && <CalendarPage />}
             {tab === "itinerario"   && <Itinerary openDay={openDay} setOpenDay={setOpenDay} />}
             {tab === "info"         && <InfoPage />}
             {tab === "presupuesto"  && <BudgetPage />}
           </div>
-          <Footer />
         </main>
+
+        <Footer />
       </div>
     </div>
   );
