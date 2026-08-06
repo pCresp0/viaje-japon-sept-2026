@@ -1,0 +1,44 @@
+name: Backup diario de main
+
+# Se ejecuta todos los días a las 23:55 hora de España (CEST, UTC+2).
+# GitHub Actions solo admite cron en UTC, así que 23:55 CEST = 21:55 UTC.
+# ⚠️ Durante el horario de invierno (CET, UTC+1) esto se ejecutará a
+# las 22:55 hora local en vez de las 23:55. Ajustar a "55 22 * * *" si
+# se necesita precisión exacta fuera del horario de verano.
+on:
+  schedule:
+    - cron: "55 21 * * *"
+  workflow_dispatch: {} # permite lanzarlo manualmente para pruebas
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout main con historial completo
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Contar commits de hoy en main
+        id: count
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          COUNT=$(git log main --since="${TODAY} 00:00:00" --until="${TODAY} 23:59:59" --oneline | wc -l | tr -d ' ')
+          echo "date=$(date -u +%Y%m%d)" >> "$GITHUB_OUTPUT"
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+          echo "Commits de hoy ($TODAY) en main: $COUNT"
+
+      - name: Crear rama de backup si hubo commits hoy
+        if: steps.count.outputs.count != '0'
+        run: |
+          BRANCH="Backup_${{ steps.count.outputs.date }}_${{ steps.count.outputs.count }}Commits"
+          echo "Creando rama: $BRANCH"
+          git checkout -b "$BRANCH"
+          git push origin "$BRANCH"
+
+      - name: Sin commits hoy — no se crea backup
+        if: steps.count.outputs.count == '0'
+        run: echo "No ha habido commits hoy en main. No se crea rama de backup."
