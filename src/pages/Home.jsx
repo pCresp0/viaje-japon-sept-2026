@@ -201,21 +201,51 @@ function FlightCard({ flight, icon: Icon }) {
             <div style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)" }}>
               {formatTime(depTime)}
             </div>
+            {flight.depart.terminal && (
+              <div style={{ fontSize: 9.5, color: "var(--ink-soft)", marginTop: 1 }}>
+                Terminal {flight.depart.terminal}
+              </div>
+            )}
           </div>
           <div style={{ textAlign: "center" }}>
             <div style={{ fontSize: 10, fontWeight: 600, color: "var(--shu)" }}>Duración</div>
             <div style={{ fontSize: 13, fontWeight: 700, color: "var(--shu)" }}>
               {totalDuration}h
             </div>
+            {flight.layover && (
+              <div style={{ fontSize: 9.5, color: "var(--ink-soft)", marginTop: 1 }}>
+                vía {flight.layover.city}
+              </div>
+            )}
           </div>
           <div style={{ textAlign: "right" }}>
             <div style={{ fontSize: 10, color: "var(--ink-soft)" }}>Llegada</div>
             <div style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)" }}>
               {formatTime(arrTime)} {arrTime.getDate() !== depTime.getDate() ? "+1" : ""}
             </div>
+            {flight.arrive.terminal && (
+              <div style={{ fontSize: 9.5, color: "var(--ink-soft)", marginTop: 1 }}>
+                Terminal {flight.arrive.terminal}
+              </div>
+            )}
           </div>
         </div>
       </div>
+      
+      {/* Connection info */}
+      {flight.layover && (
+        <div style={{
+          background: "var(--paper)", borderRadius: 10,
+          padding: "10px 12px", marginBottom: 14,
+        }}>
+          <div style={{ fontSize: 11, fontWeight: 700, color: "var(--ink)", marginBottom: 3 }}>
+            🛫 Escala en {flight.layover.city} · {flight.layover.terminal}
+          </div>
+          <p style={{ fontSize: 11, color: "var(--ink-soft)", lineHeight: 1.55, margin: 0 }}>
+            {flight.layover.connection}
+          </p>
+        </div>
+      )}
       
       {/* Details text */}
       <p style={{ fontSize: 13, color: "var(--ink)", lineHeight: 1.6, marginBottom: 12 }}>

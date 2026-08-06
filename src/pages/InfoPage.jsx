@@ -149,7 +149,7 @@ function FlightRow({ flight, icon: Icon }) {
             <div>
               <div style={{ fontSize: 10, fontWeight: 600, color: "var(--ink-soft)" }}>LEG 1 (Vuelo principal)</div>
               <div style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)" }}>
-                {isOutbound ? "Madrid" : "Narita"} → {isOutbound ? "Doha" : "Doha"}
+                {isOutbound ? "Madrid" : "Narita"} → Doha
               </div>
             </div>
             <div style={{ textAlign: "right" }}>
@@ -161,10 +161,16 @@ function FlightRow({ flight, icon: Icon }) {
             <div>
               <div style={{ color: "var(--ink-soft)", fontSize: 10 }}>{formatDate(depTime)}</div>
               <div style={{ color: "var(--indigo)", fontWeight: 700 }}>{formatTime(depTime)}</div>
+              {flight.depart.terminal && (
+                <div style={{ color: "var(--ink-soft)", fontSize: 10, marginTop: 1 }}>Terminal {flight.depart.terminal}</div>
+              )}
             </div>
             <div style={{ textAlign: "right" }}>
               <div style={{ color: "var(--ink-soft)", fontSize: 10 }}>{formatDate(leg1End)}</div>
               <div style={{ color: "var(--indigo)", fontWeight: 700 }}>{formatTime(leg1End)}</div>
+              {flight.layover?.terminal && (
+                <div style={{ color: "var(--ink-soft)", fontSize: 10, marginTop: 1 }}>Doha</div>
+              )}
             </div>
           </div>
         </div>
@@ -179,9 +185,19 @@ function FlightRow({ flight, icon: Icon }) {
               ~2h
             </div>
           </div>
-          <div style={{ fontSize: 10, color: "var(--ink-soft)", marginTop: 4 }}>
-            Cambio de avión, trámites técnicos
-          </div>
+          {flight.layover && (
+            <div style={{
+              marginTop: 8, padding: "8px 10px",
+              background: "var(--paper-raised)", borderRadius: 8,
+            }}>
+              <div style={{ fontSize: 10.5, fontWeight: 700, color: "var(--ink)", marginBottom: 3 }}>
+                🛫 {flight.layover.airport} — {flight.layover.terminal}
+              </div>
+              <p style={{ fontSize: 10.5, color: "var(--ink-soft)", lineHeight: 1.55, margin: 0 }}>
+                {flight.layover.connection}
+              </p>
+            </div>
+          )}
         </div>
         
         {/* Leg 2 */}
@@ -202,11 +218,15 @@ function FlightRow({ flight, icon: Icon }) {
             <div>
               <div style={{ color: "var(--ink-soft)", fontSize: 10 }}>{formatDate(leg2Start)}</div>
               <div style={{ color: "var(--indigo)", fontWeight: 700 }}>{formatTime(leg2Start)}</div>
+              <div style={{ color: "var(--ink-soft)", fontSize: 10, marginTop: 1 }}>Doha</div>
             </div>
             <div style={{ textAlign: "right" }}>
               <div style={{ color: "var(--ink-soft)", fontSize: 10 }}>{formatDate(arrTime)}</div>
               <div style={{ color: "var(--indigo)", fontWeight: 700 }}>{formatTime(arrTime)}</div>
               {arrTime.getDate() !== depTime.getDate() && <div style={{ fontSize: 9, color: "var(--shu)", fontWeight: 700 }}>+1 día</div>}
+              {flight.arrive.terminal && (
+                <div style={{ color: "var(--ink-soft)", fontSize: 10, marginTop: 1 }}>Terminal {flight.arrive.terminal}</div>
+              )}
             </div>
           </div>
         </div>

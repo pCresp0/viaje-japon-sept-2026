@@ -11,20 +11,34 @@ export const flights = {
   out: {
     label: "Ida",
     date: "2026-09-06",
-    text: "Salida Dom 6 sept desde Madrid a las 09:05 (Qatar Airways QR148). Escala en Doha. Llegada a Narita (NRT) el Lun 7 sept a las 12:55.",
+    text: "Salida Dom 6 sept desde Madrid (T4S) a las 09:05 (Qatar Airways QR148). Escala en Doha (aeropuerto de terminal única). Llegada a Narita (NRT), Terminal 2, el Lun 7 sept a las 12:55.",
     flightNumber: "QR148",
     trackUrl: "https://es.flightaware.com/live/flight/QTR148",
-    depart: { city: "Madrid", time: "2026-09-06T09:05" },
-    arrive: { city: "Narita (NRT)", time: "2026-09-07T12:55" },
+    depart: { city: "Madrid", time: "2026-09-06T09:05", terminal: "T4S (Satélite)" },
+    arrive: { city: "Narita (NRT)", time: "2026-09-07T12:55", terminal: "T2" },
+    layover: {
+      city: "Doha (DOH)",
+      airport: "Hamad International",
+      terminal: "Terminal única — todos los vuelos Qatar Airways",
+      connection:
+        "Aeropuerto de terminal única: no hay que cambiar de edificio ni volver a facturar. De concourse A a E se tarda unos 15 min andando; entre concourses cercanos, unos 9 min de media (90 seg en tren). La puerta de embarque cierra 20 min antes de la salida.",
+    },
   },
   back: {
     label: "Vuelta",
     date: "2026-09-21",
-    text: "Salida Lun 21 sept desde Narita a las 17:25 (Qatar Airways QR809). Escala en Doha. Llegada a Madrid el Mar 22 sept a las 08:15.",
+    text: "Salida Lun 21 sept desde Narita (Terminal 2) a las 17:25 (Qatar Airways QR809). Escala en Doha. Llegada a Madrid (T4S) el Mar 22 sept a las 08:15.",
     flightNumber: "QR809",
     trackUrl: "https://es.flightaware.com/live/flight/QTR809",
-    depart: { city: "Narita (NRT)", time: "2026-09-21T17:25" },
-    arrive: { city: "Madrid", time: "2026-09-22T08:15" },
+    depart: { city: "Narita (NRT)", time: "2026-09-21T17:25", terminal: "T2" },
+    arrive: { city: "Madrid", time: "2026-09-22T08:15", terminal: "T4S (Satélite)" },
+    layover: {
+      city: "Doha (DOH)",
+      airport: "Hamad International",
+      terminal: "Terminal única — todos los vuelos Qatar Airways",
+      connection:
+        "Mismo aeropuerto de terminal única que a la ida: sin cambio de edificio. Seguir los carteles morados de tránsito hasta la puerta de conexión; el trayecto más largo (entre extremos del aeropuerto) son unos 15 min andando.",
+    },
   },
 };
 
