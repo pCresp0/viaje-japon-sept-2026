@@ -82,9 +82,19 @@ export default function TransportPage() {
             <div key={idx} className="rounded-2xl border overflow-hidden"
               style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
               {/* day header */}
-              <div className="px-5 py-3" style={{ background: "var(--paper)", borderBottom: "1px solid var(--line)" }}>
-                <p style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)", margin: 0 }}>
-                  {item.day.weekday} {item.day.num} sep — {item.day.cities}
+              <div className="px-5 py-3.5 flex items-center gap-3"
+                style={{ background: "var(--indigo)" }}>
+                <div style={{
+                  width: 30, height: 30, borderRadius: 8,
+                  background: "rgba(255,255,255,0.15)",
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  flexShrink: 0,
+                  fontSize: 13, fontWeight: 700, color: "white",
+                }}>
+                  {item.day.num}
+                </div>
+                <p style={{ fontSize: 13.5, fontWeight: 700, color: "white", margin: 0, lineHeight: 1.3 }}>
+                  {item.day.weekday} {item.day.num} sep <span style={{ color: "rgba(255,255,255,0.6)", fontWeight: 500 }}>— {item.day.cities}</span>
                 </p>
               </div>
 
