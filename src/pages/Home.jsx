@@ -162,6 +162,17 @@ function AfterTrip() {
 }
 
 function FlightCard({ flight, icon: Icon }) {
+  const isOutbound = flight.label === "Ida";
+  const depTime = new Date(flight.depart.time);
+  const arrTime = new Date(flight.arrive.time);
+  
+  const formatTime = (date) => date.toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit" });
+  
+  // Calculate durations
+  const leg1Duration = isOutbound ? 7 : 8;
+  const leg2Duration = isOutbound ? 8 : 7;
+  const totalDuration = Math.floor((arrTime - depTime) / (1000 * 60 * 60));
+  
   return (
     <div style={{
       background: "var(--paper-raised)",
@@ -171,14 +182,49 @@ function FlightCard({ flight, icon: Icon }) {
       marginBottom: 32,
     }}>
       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
-        <Icon size={18} style={{ color: "var(--indigo)" }} />
-        <p className="eyebrow" style={{ margin: 0, color: "var(--ink-soft)" }}>
+        <Icon size={18} style={{ color: "var(--shu)" }} />
+        <p className="eyebrow" style={{ margin: 0, color: "var(--shu)" }}>
           {flight.label} · {flight.flightNumber}
         </p>
       </div>
-      <p style={{ fontSize: 14, color: "var(--ink)", lineHeight: 1.6, marginBottom: 12 }}>
+      
+      {/* Route summary */}
+      <div style={{
+        background: "var(--paper)",
+        borderRadius: 12,
+        padding: 14,
+        marginBottom: 14,
+      }}>
+        <div style={{ fontSize: 12, fontWeight: 700, color: "var(--indigo)", marginBottom: 8 }}>
+          {isOutbound ? "Madrid → Doha → Narita" : "Narita → Doha → Madrid"}
+        </div>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <div>
+            <div style={{ fontSize: 10, color: "var(--ink-soft)" }}>Salida</div>
+            <div style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)" }}>
+              {formatTime(depTime)}
+            </div>
+          </div>
+          <div style={{ textAlign: "center" }}>
+            <div style={{ fontSize: 10, fontWeight: 600, color: "var(--shu)" }}>Duración</div>
+            <div style={{ fontSize: 13, fontWeight: 700, color: "var(--shu)" }}>
+              {totalDuration}h
+            </div>
+          </div>
+          <div style={{ textAlign: "right" }}>
+            <div style={{ fontSize: 10, color: "var(--ink-soft)" }}>Llegada</div>
+            <div style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)" }}>
+              {formatTime(arrTime)} {arrTime.getDate() !== depTime.getDate() ? "+1" : ""}
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Details text */}
+      <p style={{ fontSize: 13, color: "var(--ink)", lineHeight: 1.6, marginBottom: 12 }}>
         {flight.text}
       </p>
+      
       <a
         href={flight.trackUrl}
         target="_blank"

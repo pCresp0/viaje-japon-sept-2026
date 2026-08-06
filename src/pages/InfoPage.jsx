@@ -93,58 +93,126 @@ export default function InfoPage() {
 }
 
 function FlightRow({ flight, icon: Icon }) {
-  // Calculate duration in hours
-  const departure = new Date(flight.depart.time);
-  const arrival = new Date(flight.arrive.time);
-  const durationMs = arrival - departure;
-  const durationHours = Math.floor(durationMs / (1000 * 60 * 60));
-  const durationMins = Math.floor((durationMs % (1000 * 60 * 60)) / (1000 * 60));
+  // For round trip flights, we need to parse the journey
+  // Ida: Madrid -> Doha -> Narita
+  // Vuelta: Narita -> Doha -> Madrid
+  
+  const isOutbound = flight.label === "Ida";
+  
+  // Parse times
+  const depTime = new Date(flight.depart.time);
+  const arrTime = new Date(flight.arrive.time);
+  
+  // Format time helper
+  const formatTime = (date) => date.toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit" });
+  const formatDate = (date) => date.toLocaleDateString("es-ES", { weekday: "short", month: "short", day: "numeric" });
+  
+  // Calculate leg times (Madrid-Doha ~7h, Doha-Narita ~8h for outbound)
+  let leg1End, leg2Start;
+  if (isOutbound) {
+    // Outbound: Madrid 09:05 -> Doha (7h flight) + 2h stopover -> Narita 12:55 next day
+    leg1End = new Date(depTime.getTime() + 7 * 60 * 60 * 1000); // 7 hours
+    leg2Start = new Date(leg1End.getTime() + 2 * 60 * 60 * 1000); // 2h stopover
+  } else {
+    // Return: Narita 17:25 -> Doha (8h flight) + 2h stopover -> Madrid 08:15 next day
+    leg1End = new Date(depTime.getTime() + 8 * 60 * 60 * 1000); // 8 hours
+    leg2Start = new Date(leg1End.getTime() + 2 * 60 * 60 * 1000); // 2h stopover
+  }
+  
+  const totalDuration = Math.floor((arrTime - depTime) / (1000 * 60 * 60));
+  const totalMins = Math.floor(((arrTime - depTime) % (1000 * 60 * 60)) / (1000 * 60));
+  
+  const leg1Duration = 7; // Madrid-Doha
+  const leg2Duration = 8; // Doha-Narita or reverse
   
   return (
     <div className="rounded-2xl p-4" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
-      <div className="flex items-center gap-2 mb-4" style={{ color: "var(--indigo)" }}>
+      <div className="flex items-center gap-2 mb-4" style={{ color: "var(--shu)" }}>
         <Icon size={18} />
-        <p className="eyebrow">{flight.label} · {flight.flightNumber}</p>
+        <p className="eyebrow font-semibold">{flight.label} · {flight.flightNumber}</p>
       </div>
       
-      {/* Route visualization */}
-      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16 }}>
-        {/* Departure */}
-        <div style={{ textAlign: "center", flex: "0 0 auto" }}>
-          <div style={{ fontSize: 11, fontWeight: 600, color: "var(--ink)", marginBottom: 2 }}>
-            {departure.toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit" })}
+      {/* Route overview */}
+      <div style={{
+        background: "var(--paper)",
+        borderRadius: 12,
+        padding: "12px",
+        marginBottom: 12,
+      }}>
+        <div style={{ fontSize: 11, color: "var(--ink-soft)", marginBottom: 8, fontWeight: 600, textTransform: "uppercase" }}>
+          Ruta completa: {totalDuration}h {totalMins}m
+        </div>
+        
+        {/* Leg 1 */}
+        <div style={{ marginBottom: 10, paddingBottom: 10, borderBottom: "1px solid var(--line)" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
+            <div>
+              <div style={{ fontSize: 10, fontWeight: 600, color: "var(--ink-soft)" }}>LEG 1 (Vuelo principal)</div>
+              <div style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)" }}>
+                {isOutbound ? "Madrid" : "Narita"} → {isOutbound ? "Doha" : "Doha"}
+              </div>
+            </div>
+            <div style={{ textAlign: "right" }}>
+              <div style={{ fontSize: 11, fontWeight: 600, color: "var(--shu)" }}>{leg1Duration}h</div>
+              <div style={{ fontSize: 10, color: "var(--ink-soft)" }}>vuelo</div>
+            </div>
           </div>
-          <div style={{ fontSize: 11, color: "var(--ink-soft)", fontWeight: 500 }}>
-            {flight.depart.city}
+          <div style={{ display: "flex", justifyContent: "space-between", fontSize: 12, fontWeight: 500 }}>
+            <div>
+              <div style={{ color: "var(--ink-soft)", fontSize: 10 }}>{formatDate(depTime)}</div>
+              <div style={{ color: "var(--indigo)", fontWeight: 700 }}>{formatTime(depTime)}</div>
+            </div>
+            <div style={{ textAlign: "right" }}>
+              <div style={{ color: "var(--ink-soft)", fontSize: 10 }}>{formatDate(leg1End)}</div>
+              <div style={{ color: "var(--indigo)", fontWeight: 700 }}>{formatTime(leg1End)}</div>
+            </div>
           </div>
         </div>
-
-        {/* Arrow + duration */}
-        <div style={{ flex: 1, textAlign: "center" }}>
-          <div style={{ fontSize: 12, color: "var(--ink-soft)", marginBottom: 2 }}>
-            ↙ ↗
+        
+        {/* Stopover */}
+        <div style={{ marginBottom: 10, paddingBottom: 10, borderBottom: "1px solid var(--line)" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <div style={{ fontSize: 11, fontWeight: 600, color: "var(--ink-soft)" }}>
+              ⏸ ESCALA EN DOHA
+            </div>
+            <div style={{ fontSize: 11, fontWeight: 600, color: "var(--forest)" }}>
+              ~2h
+            </div>
           </div>
-          <div style={{ fontSize: 10, color: "var(--shu)", fontWeight: 600 }}>
-            {durationHours}h {durationMins}m
+          <div style={{ fontSize: 10, color: "var(--ink-soft)", marginTop: 4 }}>
+            Cambio de avión, trámites técnicos
           </div>
         </div>
-
-        {/* Arrival */}
-        <div style={{ textAlign: "center", flex: "0 0 auto" }}>
-          <div style={{ fontSize: 11, fontWeight: 600, color: "var(--ink)", marginBottom: 2 }}>
-            {arrival.toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit" })}
-            {arrival.getDate() !== departure.getDate() ? <span style={{ fontSize: 9 }}> +1</span> : ""}
+        
+        {/* Leg 2 */}
+        <div>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
+            <div>
+              <div style={{ fontSize: 10, fontWeight: 600, color: "var(--ink-soft)" }}>LEG 2 (Continuación)</div>
+              <div style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)" }}>
+                Doha → {isOutbound ? "Narita" : "Madrid"}
+              </div>
+            </div>
+            <div style={{ textAlign: "right" }}>
+              <div style={{ fontSize: 11, fontWeight: 600, color: "var(--shu)" }}>{leg2Duration}h</div>
+              <div style={{ fontSize: 10, color: "var(--ink-soft)" }}>vuelo</div>
+            </div>
           </div>
-          <div style={{ fontSize: 11, color: "var(--ink-soft)", fontWeight: 500 }}>
-            {flight.arrive.city}
+          <div style={{ display: "flex", justifyContent: "space-between", fontSize: 12, fontWeight: 500 }}>
+            <div>
+              <div style={{ color: "var(--ink-soft)", fontSize: 10 }}>{formatDate(leg2Start)}</div>
+              <div style={{ color: "var(--indigo)", fontWeight: 700 }}>{formatTime(leg2Start)}</div>
+            </div>
+            <div style={{ textAlign: "right" }}>
+              <div style={{ color: "var(--ink-soft)", fontSize: 10 }}>{formatDate(arrTime)}</div>
+              <div style={{ color: "var(--indigo)", fontWeight: 700 }}>{formatTime(arrTime)}</div>
+              {arrTime.getDate() !== depTime.getDate() && <div style={{ fontSize: 9, color: "var(--shu)", fontWeight: 700 }}>+1 día</div>}
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Details */}
-      <p className="text-xs mt-3" style={{ color: "var(--ink-soft)", lineHeight: 1.5 }}>{flight.text}</p>
       
-      <a href={flight.trackUrl} target="_blank" rel="noreferrer" className="inline-block mt-3 text-xs font-medium" style={{ color: "var(--shu)" }}>
+      <a href={flight.trackUrl} target="_blank" rel="noreferrer" className="inline-block text-xs font-medium" style={{ color: "var(--shu)" }}>
         Seguir vuelo en vivo ↗
       </a>
     </div>
