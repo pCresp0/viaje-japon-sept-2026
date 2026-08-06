@@ -10,9 +10,16 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.png', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png'],
+      includeAssets: [
+        'favicon.ico',
+        'icon-16.png',
+        'icon-32.png',
+        'icon-180.png',
+        'apple-touch-icon.png',
+        'og-image.png',
+      ],
       manifest: {
-        name: 'Viaje a Japón — Sept 2026',
+        name: 'Viaje a Japón — Septiembre 2026',
         short_name: 'Japón 2026',
         description: 'Guía del viaje a Japón, septiembre 2026',
         start_url: '/viaje-japon-sept-2026/',
