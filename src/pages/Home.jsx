@@ -8,77 +8,149 @@ export default function Home({ onGoToDay }) {
   const status = getTripStatus();
 
   return (
-    <div className="px-4 pt-5 pb-8 max-w-lg mx-auto space-y-5">
-      <div>
-        <p className="eyebrow" style={{ color: "var(--shu)" }}>
-          {tripMeta.subtitle}
-        </p>
-        <h1 className="font-display text-3xl leading-tight" style={{ color: "var(--indigo)" }}>
-          {tripMeta.title}
-        </h1>
+    <div style={{ background: "var(--paper)" }}>
+      {/* Hero header */}
+      <div style={{
+        background: "linear-gradient(135deg, var(--indigo) 0%, #0f1f35 100%)",
+        padding: "48px 24px",
+        color: "white",
+      }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <div style={{ marginBottom: 32 }}>
+            <p style={{
+              fontSize: 12, fontWeight: 600, letterSpacing: "0.15em",
+              color: "rgba(255,255,255,0.5)", textTransform: "uppercase", marginBottom: 8
+            }}>
+              {tripMeta.subtitle}
+            </p>
+            <h1 style={{
+              fontFamily: "var(--font-display)", fontSize: 48,
+              fontWeight: 400, lineHeight: 1.2, marginBottom: 16
+            }}>
+              {tripMeta.title}
+            </h1>
+            <p style={{ fontSize: 16, color: "rgba(255,255,255,0.75)", maxWidth: 600, lineHeight: 1.6 }}>
+              Una aventura de 15 días por Kioto, los Alpes Japoneses y Tokio. Del 6 al 22 de septiembre de 2026.
+            </p>
+          </div>
+
+          {/* Stats row */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 24, marginTop: 32 }}>
+            <div>
+              <p style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", letterSpacing: "0.1em", textTransform: "uppercase" }}>Duración</p>
+              <p style={{ fontSize: 20, fontWeight: 600, marginTop: 4 }}>15 días</p>
+            </div>
+            <div>
+              <p style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", letterSpacing: "0.1em", textTransform: "uppercase" }}>Viajeros</p>
+              <p style={{ fontSize: 20, fontWeight: 600, marginTop: 4 }}>5 personas</p>
+            </div>
+            <div>
+              <p style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", letterSpacing: "0.1em", textTransform: "uppercase" }}>Regiones</p>
+              <p style={{ fontSize: 20, fontWeight: 600, marginTop: 4 }}>3 bloques</p>
+            </div>
+            <div>
+              <p style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", letterSpacing: "0.1em", textTransform: "uppercase" }}>Aerolínea</p>
+              <p style={{ fontSize: 20, fontWeight: 600, marginTop: 4 }}>Qatar Airways</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <RouteLine
-        currentDay={status.day?.num}
-        onSelectDay={onGoToDay}
-      />
+      {/* Main content */}
+      <div style={{ padding: "32px 24px 0", maxWidth: 1100, margin: "0 auto" }}>
+        <RouteLine currentDay={status.day?.num} onSelectDay={onGoToDay} />
 
-      {status.phase === "before" && <BeforeTrip daysUntil={status.daysUntil} />}
-      {status.phase === "during" && status.day && (
-        <div>
-          <p className="eyebrow mb-2" style={{ color: "var(--ink-soft)" }}>
-            Hoy
-          </p>
-          <DayCard day={status.day} defaultOpenHistory={false} />
+        <div style={{ marginTop: 40 }}>
+          {status.phase === "before" && <BeforeTrip daysUntil={status.daysUntil} />}
+          {status.phase === "during" && status.day && (
+            <div>
+              <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>Hoy</p>
+              <DayCard day={status.day} defaultOpenHistory={false} />
+            </div>
+          )}
+          {status.phase === "during" && !status.day && <TransitDay />}
+          {status.phase === "after" && <AfterTrip />}
         </div>
-      )}
-      {status.phase === "during" && !status.day && <TransitDay />}
-      {status.phase === "after" && <AfterTrip />}
+
+        <div style={{ marginTop: 40, marginBottom: 40 }}>
+          <FlightCard flight={flights.out} icon={PlaneTakeoff} />
+          <BlocksOverview />
+        </div>
+      </div>
     </div>
   );
 }
 
 function BeforeTrip({ daysUntil }) {
   return (
-    <div className="space-y-4">
-      <div
-        className="rounded-2xl p-6 text-center"
-        style={{ background: "var(--indigo)" }}
-      >
-        <p className="eyebrow text-white/70">Faltan</p>
-        <p className="font-display text-5xl text-white my-1">{daysUntil}</p>
-        <p className="text-white/80 text-sm">
-          {daysUntil === 1 ? "día para el despegue ✈️" : "días para el despegue ✈️"}
+    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginBottom: 40 }}>
+      <div style={{
+        background: "var(--paper-raised)",
+        border: "1px solid var(--line)",
+        borderRadius: 16,
+        padding: 32,
+        textAlign: "center",
+      }}>
+        <p className="eyebrow" style={{ color: "var(--shu)" }}>Faltan</p>
+        <p style={{
+          fontFamily: "var(--font-display)",
+          fontSize: 56, fontWeight: 400,
+          color: "var(--indigo)", margin: "12px 0"
+        }}>
+          {daysUntil}
+        </p>
+        <p style={{ fontSize: 14, color: "var(--ink-soft)" }}>
+          {daysUntil === 1 ? "día para despegar" : "días para despegar"}
         </p>
       </div>
-      <FlightCard flight={flights.out} icon={PlaneTakeoff} />
-      <BlocksOverview />
+
+      <div style={{
+        background: "var(--paper-raised)",
+        border: "1px solid var(--line)",
+        borderRadius: 16,
+        padding: 24,
+      }}>
+        <p className="eyebrow mb-3" style={{ color: "var(--indigo)" }}>SIGUIENTE</p>
+        <p style={{ fontSize: 16, fontWeight: 600, color: "var(--ink)", marginBottom: 8 }}>Día 1 — Lunes 7 de septiembre</p>
+        <p style={{ fontSize: 13, color: "var(--ink-soft)", lineHeight: 1.6 }}>
+          Llegada a Japón. Aterrizaje en Narita y traslado a Kioto en Shinkansen.
+        </p>
+      </div>
     </div>
   );
 }
 
 function TransitDay() {
   return (
-    <div className="space-y-4">
-      <div className="rounded-2xl p-5" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
-        <p className="eyebrow" style={{ color: "var(--shu)" }}>
-          Hoy: día de viaje
-        </p>
-        <p className="text-sm mt-1" style={{ color: "var(--ink)" }}>
-          Salida hacia Japón — el itinerario detallado empieza al aterrizar.
-        </p>
-      </div>
-      <FlightCard flight={flights.out} icon={PlaneTakeoff} />
+    <div style={{
+      background: "var(--paper-raised)",
+      border: "1px solid var(--shu)",
+      borderRadius: 16,
+      padding: 24,
+      marginBottom: 32,
+    }}>
+      <p className="eyebrow mb-2" style={{ color: "var(--shu)" }}>Hoy · Día de viaje</p>
+      <p style={{ fontSize: 16, fontWeight: 600, color: "var(--ink)", marginBottom: 8 }}>Salida hacia Japón</p>
+      <p style={{ fontSize: 14, color: "var(--ink-soft)", lineHeight: 1.6 }}>
+        El itinerario detallado comienza cuando aterricemos. Mientras tanto, disfruta revisando el calendario y el presupuesto.
+      </p>
     </div>
   );
 }
 
 function AfterTrip() {
   return (
-    <div className="rounded-2xl p-6 text-center" style={{ background: "var(--indigo)" }}>
-      <p className="font-display text-2xl text-white">お帰りなさい 🇯🇵</p>
-      <p className="text-white/80 text-sm mt-2">
-        El viaje ha terminado. Podéis seguir consultando el itinerario y el presupuesto cuando queráis recordarlo.
+    <div style={{
+      background: "linear-gradient(135deg, var(--indigo) 0%, rgba(29,53,87,0.8) 100%)",
+      borderRadius: 16,
+      padding: 32,
+      textAlign: "center",
+      color: "white",
+      marginBottom: 32,
+    }}>
+      <p style={{ fontFamily: "var(--font-display)", fontSize: 28, marginBottom: 8 }}>おかえりなさい 🇯🇵</p>
+      <p style={{ fontSize: 14, color: "rgba(255,255,255,0.8)", lineHeight: 1.6 }}>
+        El viaje ha terminado. Aquí están todos los recuerdos, detalles y documentos. ¡Que vuelva pronto!
       </p>
     </div>
   );
@@ -86,20 +158,38 @@ function AfterTrip() {
 
 function FlightCard({ flight, icon: Icon }) {
   return (
-    <div className="rounded-2xl p-5" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
-      <div className="flex items-center gap-2" style={{ color: "var(--indigo)" }}>
-        <Icon size={18} />
-        <p className="eyebrow">{flight.label} · {flight.flightNumber}</p>
+    <div style={{
+      background: "var(--paper-raised)",
+      border: "1px solid var(--line)",
+      borderRadius: 16,
+      padding: 24,
+      marginBottom: 32,
+    }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
+        <Icon size={18} style={{ color: "var(--indigo)" }} />
+        <p className="eyebrow" style={{ margin: 0, color: "var(--ink-soft)" }}>
+          {flight.label} · {flight.flightNumber}
+        </p>
       </div>
-      <p className="text-sm mt-2" style={{ color: "var(--ink)" }}>
+      <p style={{ fontSize: 14, color: "var(--ink)", lineHeight: 1.6, marginBottom: 12 }}>
         {flight.text}
       </p>
       <a
         href={flight.trackUrl}
         target="_blank"
         rel="noreferrer"
-        className="inline-block mt-3 text-sm font-medium"
-        style={{ color: "var(--shu)" }}
+        style={{
+          display: "inline-block",
+          fontSize: 13,
+          fontWeight: 500,
+          color: "var(--shu)",
+          textDecoration: "none",
+          borderBottom: "1px solid var(--shu)",
+          paddingBottom: 2,
+          transition: "opacity 0.2s",
+        }}
+        onMouseEnter={e => e.currentTarget.style.opacity = "0.7"}
+        onMouseLeave={e => e.currentTarget.style.opacity = "1"}
       >
         Seguir vuelo en vivo ↗
       </a>
@@ -109,24 +199,43 @@ function FlightCard({ flight, icon: Icon }) {
 
 function BlocksOverview() {
   return (
-    <div className="space-y-2">
-      {blocks.map((b) => (
-        <div
-          key={b.id}
-          className="rounded-xl p-4 flex items-start gap-3"
-          style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}
-        >
-          <span className="text-xl leading-none mt-0.5">{b.emoji}</span>
-          <div>
-            <p className="font-medium text-sm" style={{ color: b.color }}>
-              {b.title}
-            </p>
-            <p className="text-xs mt-0.5" style={{ color: "var(--ink-soft)" }}>
-              Días {b.days[0]}–{b.days[b.days.length - 1]} · {b.sleepSummary}
-            </p>
+    <div>
+      <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>Los 3 bloques</p>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 16 }}>
+        {blocks.map((b) => (
+          <div
+            key={b.id}
+            style={{
+              background: "var(--paper-raised)",
+              border: "1px solid var(--line)",
+              borderRadius: 12,
+              padding: 20,
+              cursor: "pointer",
+              transition: "all 0.2s",
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.borderColor = b.color;
+              e.currentTarget.style.boxShadow = `0 4px 16px rgba(${parseInt(b.color.slice(1,3),16)}, ${parseInt(b.color.slice(3,5),16)}, ${parseInt(b.color.slice(5,7),16)}, 0.1)`;
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.borderColor = "var(--line)";
+              e.currentTarget.style.boxShadow = "none";
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
+              <span style={{ fontSize: 28 }}>{b.emoji}</span>
+              <div style={{ flex: 1 }}>
+                <p style={{ fontSize: 15, fontWeight: 600, color: b.color, marginBottom: 2 }}>
+                  {b.title}
+                </p>
+                <p style={{ fontSize: 12, color: "var(--ink-soft)", lineHeight: 1.5 }}>
+                  Días {b.days[0]}–{b.days[b.days.length - 1]} · {b.sleepSummary}
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
