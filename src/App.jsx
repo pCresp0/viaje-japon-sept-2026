@@ -6,8 +6,13 @@ import CalendarPage from "./pages/CalendarPage";
 import Itinerary from "./pages/Itinerary";
 import InfoPage from "./pages/InfoPage";
 import BudgetPage from "./pages/BudgetPage";
+import TransportPage from "./pages/TransportPage";
+import PlacesPage from "./pages/PlacesPage";
+import MapPage from "./pages/MapPage";
+import WeatherPage from "./pages/WeatherPage";
 import PhrasesPage from "./pages/PhrasesPage";
 import PrepPage from "./pages/PrepPage";
+import UtilsPage from "./pages/UtilsPage";
 import EmergencyPage from "./pages/EmergencyPage";
 import { getTripStatus } from "./utils/date";
 
@@ -45,9 +50,14 @@ export default function App() {
             {tab === "calendario"   && <CalendarPage />}
             {tab === "itinerario"   && <Itinerary openDay={openDay} setOpenDay={setOpenDay} />}
             {tab === "info"         && <InfoPage />}
+            {tab === "transporte"   && <TransportPage />}
             {tab === "presupuesto"  && <BudgetPage />}
+            {tab === "lugares"      && <PlacesPage />}
+            {tab === "mapa"         && <MapPage />}
+            {tab === "clima"        && <WeatherPage />}
             {tab === "frases"       && <PhrasesPage />}
             {tab === "preparativos" && <PrepPage />}
+            {tab === "herramientas" && <UtilsPage />}
             {tab === "emergencias"  && <EmergencyPage />}
           </div>
         </main>
