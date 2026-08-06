@@ -52,7 +52,7 @@ export default function App() {
           width: "100%",
           maxWidth: 1100,
           margin: "0 auto",
-          paddingTop: "calc(54px + env(safe-area-inset-top))",
+          paddingTop: "calc(58px + env(safe-area-inset-top))",
         }}>
           <div className="md-no-top-pad">
             {tab === "pendientes"   && <PendingPage />}

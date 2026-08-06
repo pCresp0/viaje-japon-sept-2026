@@ -125,7 +125,7 @@ export function TopBar({ active, onOpenDrawer }) {
   return (
     <header className="fixed top-0 left-0 right-0 flex items-center gap-3 px-4"
       style={{
-        height: 54,
+        height: 58,
         zIndex: 150,
         background: "var(--shu-darker)",
         borderBottom: "1px solid rgba(255,255,255,0.08)",
@@ -138,8 +138,9 @@ export function TopBar({ active, onOpenDrawer }) {
         <Menu size={21} />
       </button>
       <span style={{
-        fontFamily: "var(--font-display)", fontSize: 15,
-        fontWeight: 600, color: "#fff", flex: 1,
+        fontFamily: "var(--font-display)", fontSize: 20,
+        fontWeight: 700, color: "#fff", flex: 1,
+        letterSpacing: "0.01em",
       }}>
         {currentTab?.label}
       </span>
