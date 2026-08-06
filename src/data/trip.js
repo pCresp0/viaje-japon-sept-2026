@@ -35,7 +35,7 @@ export const blocks = [
     emoji: "⛩️",
     title: "Kioto, Nara y Osaka",
     color: "#BC4749", // shu-iro / rojo torii
-    days: [1, 2, 3, 4, 5],
+    days: [0, 1, 2, 3, 4, 5],
     sleepSummary: "En Kioto (4 noches)",
     bestArea:
       "Cerca de la Estación de Kioto (máxima comodidad para trenes) o en Karasuma / Kawaramachi (más ambiente nocturno y restaurantes).",
@@ -167,6 +167,25 @@ export const stays = [
 
 // Detalle día a día (de la Planificación docx)
 export const days = [
+  {
+    num: 0,
+    date: "2026-09-06",
+    weekday: "Domingo",
+    block: "kioto",
+    title: "Día de viaje",
+    cities: "Madrid → Doha → Narita",
+    summary:
+      "Salida temprana desde Madrid en vuelo directo con Qatar Airways. Largo viaje transatlántico con escala en Doha. Llegaremos a Narita el lunes por la tarde, local.",
+    history:
+      "Qatar Airways es la aerolínea nacional de Catar y una de las más valoradas del mundo. Doha es el hub central de la compañía en Oriente Medio, punto de conexión entre Europa y Asia.",
+    schedule: [
+      { time: "09:05", text: "Salida desde el Aeropuerto Adolfo Suárez Madrid-Barajas en vuelo QR148 (Qatar Airways)." },
+      { time: "13:35+", text: "Llegada a Doha (Aeropuerto Internacional de Hamad, HIA). Escala técnica, cambio de avión. Tiempo en escala: aprox. 2 horas." },
+      { time: "15:35+", text: "Salida desde Doha hacia Narita (NRT) en el vuelo QR148 (continuación del mismo número de vuelo)." },
+      { time: "12:55 (+1 día)", text: "Llegada a Narita (lunes 7 sept). Aduanas y recogida de equipajes. Luego: traslado en Narita Express + Shinkansen a Kioto." },
+    ],
+    money: "Vuelo incluido en el presupuesto de grupo",
+  },
   {
     num: 1,
     date: "2026-09-07",

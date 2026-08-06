@@ -93,14 +93,58 @@ export default function InfoPage() {
 }
 
 function FlightRow({ flight, icon: Icon }) {
+  // Calculate duration in hours
+  const departure = new Date(flight.depart.time);
+  const arrival = new Date(flight.arrive.time);
+  const durationMs = arrival - departure;
+  const durationHours = Math.floor(durationMs / (1000 * 60 * 60));
+  const durationMins = Math.floor((durationMs % (1000 * 60 * 60)) / (1000 * 60));
+  
   return (
     <div className="rounded-2xl p-4" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
-      <div className="flex items-center gap-2" style={{ color: "var(--indigo)" }}>
+      <div className="flex items-center gap-2 mb-4" style={{ color: "var(--indigo)" }}>
         <Icon size={18} />
         <p className="eyebrow">{flight.label} · {flight.flightNumber}</p>
       </div>
-      <p className="text-sm mt-2" style={{ color: "var(--ink)" }}>{flight.text}</p>
-      <a href={flight.trackUrl} target="_blank" rel="noreferrer" className="inline-block mt-2 text-sm font-medium" style={{ color: "var(--shu)" }}>
+      
+      {/* Route visualization */}
+      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16 }}>
+        {/* Departure */}
+        <div style={{ textAlign: "center", flex: "0 0 auto" }}>
+          <div style={{ fontSize: 11, fontWeight: 600, color: "var(--ink)", marginBottom: 2 }}>
+            {departure.toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit" })}
+          </div>
+          <div style={{ fontSize: 11, color: "var(--ink-soft)", fontWeight: 500 }}>
+            {flight.depart.city}
+          </div>
+        </div>
+
+        {/* Arrow + duration */}
+        <div style={{ flex: 1, textAlign: "center" }}>
+          <div style={{ fontSize: 12, color: "var(--ink-soft)", marginBottom: 2 }}>
+            ↙ ↗
+          </div>
+          <div style={{ fontSize: 10, color: "var(--shu)", fontWeight: 600 }}>
+            {durationHours}h {durationMins}m
+          </div>
+        </div>
+
+        {/* Arrival */}
+        <div style={{ textAlign: "center", flex: "0 0 auto" }}>
+          <div style={{ fontSize: 11, fontWeight: 600, color: "var(--ink)", marginBottom: 2 }}>
+            {arrival.toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit" })}
+            {arrival.getDate() !== departure.getDate() ? <span style={{ fontSize: 9 }}> +1</span> : ""}
+          </div>
+          <div style={{ fontSize: 11, color: "var(--ink-soft)", fontWeight: 500 }}>
+            {flight.arrive.city}
+          </div>
+        </div>
+      </div>
+
+      {/* Details */}
+      <p className="text-xs mt-3" style={{ color: "var(--ink-soft)", lineHeight: 1.5 }}>{flight.text}</p>
+      
+      <a href={flight.trackUrl} target="_blank" rel="noreferrer" className="inline-block mt-3 text-xs font-medium" style={{ color: "var(--shu)" }}>
         Seguir vuelo en vivo ↗
       </a>
     </div>
