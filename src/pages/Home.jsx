@@ -1,67 +1,47 @@
+import { useState, useEffect } from "react";
 import { tripMeta, flights, blocks, days } from "../data/trip";
 import { getTripStatus, formatDateLong, diffDays } from "../utils/date";
 import DayCard from "../components/DayCard";
 import RouteLine from "../components/RouteLine";
 import { PlaneTakeoff, PlaneLanding } from "lucide-react";
 
+// Departure moment used for the live countdown (Madrid local time)
+const DEPARTURE_ISO = `${flights.out.date}T09:05:00`;
+
+function getCountdown() {
+  const now = new Date();
+  const target = new Date(DEPARTURE_ISO);
+  const diff = target - now;
+  if (diff <= 0) return null;
+
+  const days = Math.floor(diff / 86400000);
+  const hours = Math.floor((diff % 86400000) / 3600000);
+  const minutes = Math.floor((diff % 3600000) / 60000);
+  const seconds = Math.floor((diff % 60000) / 1000);
+  return { days, hours, minutes, seconds };
+}
+
 export default function Home({ onGoToDay }) {
   const status = getTripStatus();
 
   return (
     <div style={{ background: "var(--paper)" }}>
-      {/* Hero header */}
-      <div style={{
-        background: "linear-gradient(135deg, var(--indigo) 0%, #0f1f35 100%)",
-        padding: "48px 24px",
-        color: "white",
-      }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div style={{ marginBottom: 32 }}>
-            <p style={{
-              fontSize: 12, fontWeight: 600, letterSpacing: "0.15em",
-              color: "rgba(255,255,255,0.5)", textTransform: "uppercase", marginBottom: 8
-            }}>
-              {tripMeta.subtitle}
-            </p>
-            <h1 style={{
-              fontFamily: "var(--font-display)", fontSize: 48,
-              fontWeight: 400, lineHeight: 1.2, marginBottom: 16
-            }}>
-              {tripMeta.title}
-            </h1>
-            <p style={{ fontSize: 16, color: "rgba(255,255,255,0.75)", maxWidth: 600, lineHeight: 1.6 }}>
-              Una aventura de 15 días por Kioto, los Alpes Japoneses y Tokio. Del 6 al 22 de septiembre de 2026.
-            </p>
-          </div>
-
-          {/* Stats row */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 24, marginTop: 32 }}>
-            <div>
-              <p style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", letterSpacing: "0.1em", textTransform: "uppercase" }}>Duración</p>
-              <p style={{ fontSize: 20, fontWeight: 600, marginTop: 4 }}>15 días</p>
-            </div>
-            <div>
-              <p style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", letterSpacing: "0.1em", textTransform: "uppercase" }}>Viajeros</p>
-              <p style={{ fontSize: 20, fontWeight: 600, marginTop: 4 }}>5 personas</p>
-            </div>
-            <div>
-              <p style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", letterSpacing: "0.1em", textTransform: "uppercase" }}>Regiones</p>
-              <p style={{ fontSize: 20, fontWeight: 600, marginTop: 4 }}>3 bloques</p>
-            </div>
-            <div>
-              <p style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", letterSpacing: "0.1em", textTransform: "uppercase" }}>Aerolínea</p>
-              <p style={{ fontSize: 20, fontWeight: 600, marginTop: 4 }}>Qatar Airways</p>
-            </div>
-          </div>
+      <div style={{ padding: "24px 24px 0", maxWidth: 1100, margin: "0 auto" }}>
+        {/* Simple page title */}
+        <div style={{ marginBottom: 8 }}>
+          <p className="eyebrow" style={{ color: "var(--shu)" }}>{tripMeta.subtitle}</p>
+          <h1 style={{
+            fontFamily: "var(--font-display)", fontSize: 32,
+            fontWeight: 400, color: "var(--indigo)", lineHeight: 1.2,
+          }}>
+            {tripMeta.title}
+          </h1>
         </div>
-      </div>
 
-      {/* Main content */}
-      <div style={{ padding: "32px 24px 0", maxWidth: 1100, margin: "0 auto" }}>
         <RouteLine currentDay={status.day?.num} onSelectDay={onGoToDay} />
 
-        <div style={{ marginTop: 40 }}>
-          {status.phase === "before" && <BeforeTrip daysUntil={status.daysUntil} />}
+        <div style={{ marginTop: 32 }}>
+          {status.phase === "before" && <BeforeTrip />}
           {status.phase === "during" && status.day && (
             <div>
               <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>Hoy</p>
@@ -81,27 +61,52 @@ export default function Home({ onGoToDay }) {
   );
 }
 
-function BeforeTrip({ daysUntil }) {
+function BeforeTrip() {
+  const [countdown, setCountdown] = useState(getCountdown);
+
+  useEffect(() => {
+    const timer = setInterval(() => setCountdown(getCountdown()), 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  if (!countdown) return null;
+
+  const units = [
+    { label: "Días", value: countdown.days },
+    { label: "Horas", value: countdown.hours },
+    { label: "Min", value: countdown.minutes },
+    { label: "Seg", value: countdown.seconds },
+  ];
+
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginBottom: 40 }}>
+    <div className="before-trip-grid" style={{ display: "grid", gap: 20, marginBottom: 40 }}>
+      {/* Live countdown */}
       <div style={{
-        background: "var(--paper-raised)",
-        border: "1px solid var(--line)",
+        background: "linear-gradient(135deg, var(--indigo) 0%, #0f1f35 100%)",
         borderRadius: 16,
-        padding: 32,
-        textAlign: "center",
+        padding: 28,
+        color: "white",
       }}>
-        <p className="eyebrow" style={{ color: "var(--shu)" }}>Faltan</p>
-        <p style={{
-          fontFamily: "var(--font-display)",
-          fontSize: 56, fontWeight: 400,
-          color: "var(--indigo)", margin: "12px 0"
-        }}>
-          {daysUntil}
+        <p className="eyebrow" style={{ color: "rgba(255,255,255,0.55)", marginBottom: 16 }}>
+          Faltan para despegar
         </p>
-        <p style={{ fontSize: 14, color: "var(--ink-soft)" }}>
-          {daysUntil === 1 ? "día para despegar" : "días para despegar"}
-        </p>
+        <div style={{ display: "flex", gap: 12, justifyContent: "space-between" }}>
+          {units.map((u) => (
+            <div key={u.label} style={{ textAlign: "center", flex: 1 }}>
+              <p style={{
+                fontFamily: "var(--font-display)",
+                fontSize: 32, fontWeight: 400,
+                fontVariantNumeric: "tabular-nums",
+                lineHeight: 1,
+              }}>
+                {String(u.value).padStart(2, "0")}
+              </p>
+              <p style={{ fontSize: 10, color: "rgba(255,255,255,0.5)", letterSpacing: "0.08em", textTransform: "uppercase", marginTop: 6 }}>
+                {u.label}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div style={{

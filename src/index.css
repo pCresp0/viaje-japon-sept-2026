@@ -91,6 +91,16 @@ main > div > * {
   }
 }
 
+/* Home page: countdown + next-day cards stack on mobile, side by side on desktop */
+.before-trip-grid {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) {
+  .before-trip-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 /* Show/hide detail panel based on screen size */
 @media (max-width: 1023px) {
   [data-detail-panel] {
