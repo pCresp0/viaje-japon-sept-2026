@@ -12,7 +12,12 @@
 const cache = new Map();
 const inFlight = new Map();
 
-const ENDPOINT = "https://es.wikipedia.org/w/api.php";
+// La Wikipedia en inglés tiene muchísima mejor cobertura de artículos e
+// imágenes para monumentos japoneses que la española (a menudo el artículo
+// en español no existe o no tiene foto). El texto de la app sigue en
+// español; sólo la fuente de la foto cambia.
+const ENDPOINT = "https://en.wikipedia.org/w/api.php";
+const TIMEOUT_MS = 8000;
 
 export async function fetchWikiImage(searchTerm) {
   if (cache.has(searchTerm)) return cache.get(searchTerm);
@@ -33,8 +38,11 @@ export async function fetchWikiImage(searchTerm) {
   });
 
   const promise = (async () => {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+
     try {
-      const res = await fetch(`${ENDPOINT}?${params}`);
+      const res = await fetch(`${ENDPOINT}?${params}`, { signal: controller.signal });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
       const page = data?.query?.pages?.[0];
@@ -52,10 +60,13 @@ export async function fetchWikiImage(searchTerm) {
       cache.set(searchTerm, result);
       return result;
     } catch {
-      // Sin conexión o API caída: no se muestra imagen, el resto sigue igual.
+      // Sin conexión, timeout o API caída: no se muestra imagen, el resto
+      // de la guía sigue funcionando igual. Nunca se deja la petición
+      // colgada indefinidamente gracias al AbortController de arriba.
       cache.set(searchTerm, null);
       return null;
     } finally {
+      clearTimeout(timer);
       inFlight.delete(searchTerm);
     }
   })();

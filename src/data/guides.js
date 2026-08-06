@@ -219,7 +219,7 @@ export const guides = {
     name: "Gion y los barrios de geishas",
     jp: "祇園",
     founded: "Siglo XVI",
-    wiki: "Gion Kioto",
+    wiki: "Gion, Kyoto",
     tagline: "El distrito de geishas más famoso de Japón, donde todavía trabajan unas 200 profesionales.",
     sections: [
       {
@@ -251,7 +251,7 @@ export const guides = {
     name: "Mercado de Nishiki",
     jp: "錦市場",
     founded: "Siglo XIV",
-    wiki: "Mercado Nishiki",
+    wiki: "Nishiki Market",
     tagline: "'La cocina de Kioto': 400 metros de callejón cubierto con 130 puestos, muchos con siglos de historia.",
     sections: [
       {
@@ -279,7 +279,7 @@ export const guides = {
     name: "Osaka: castillo y Dotonbori",
     jp: "大阪",
     founded: "Castillo: 1583",
-    wiki: "Castillo de Osaka",
+    wiki: "Osaka Castle",
     tagline: "La cocina de Japón y la ciudad de los mercaderes, con un castillo que es puro símbolo.",
     sections: [
       {
@@ -343,7 +343,7 @@ export const guides = {
     name: "Shirakawa-go",
     jp: "白川郷",
     founded: "Casas de los siglos XVII-XIX",
-    wiki: "Shirakawa-gō",
+    wiki: "Shirakawa-go",
     tagline: "Aldea de casas con tejados de paja a dos aguas, Patrimonio de la Humanidad, en un valle aislado por la nieve.",
     sections: [
       {
@@ -375,7 +375,7 @@ export const guides = {
     name: "Takayama",
     jp: "高山",
     founded: "Casco antiguo: siglo XVII",
-    wiki: "Takayama Gifu",
+    wiki: "Takayama, Gifu",
     tagline: "Un casco histórico de madera oscura intacto, en una ciudad que fue gobernada directamente por el shogun.",
     sections: [
       {
@@ -479,7 +479,7 @@ export const guides = {
     name: "Meiji Jingū",
     jp: "明治神宮",
     founded: "1920 (reconstruido en 1958)",
-    wiki: "Santuario Meiji",
+    wiki: "Meiji Shrine",
     tagline: "Un bosque de 100.000 árboles plantado a mano en pleno Tokio, dedicado al emperador de la modernización.",
     sections: [
       {
@@ -511,7 +511,7 @@ export const guides = {
     name: "Shibuya",
     jp: "渋谷",
     founded: "Cruce actual: 1973",
-    wiki: "Cruce de Shibuya",
+    wiki: "Shibuya Crossing",
     tagline: "El cruce peatonal más transitado del mundo y el perro que esperó nueve años.",
     sections: [
       {
@@ -599,7 +599,7 @@ export const guides = {
     name: "Monte Fuji",
     jp: "富士山",
     founded: "Cono actual: hace 10.000 años",
-    wiki: "Monte Fuji",
+    wiki: "Mount Fuji",
     tagline: "Volcán activo, montaña sagrada y el símbolo más reconocible de Japón — cuando se deja ver.",
     sections: [
       {

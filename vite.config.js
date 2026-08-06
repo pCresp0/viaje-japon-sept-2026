@@ -51,7 +51,7 @@ export default defineConfig({
           {
             // Respuestas de la API de Wikipedia (qué imagen corresponde
             // a cada lugar).
-            urlPattern: /^https:\/\/es\.wikipedia\.org\/w\/api\.php.*/i,
+            urlPattern: /^https:\/\/en\.wikipedia\.org\/w\/api\.php.*/i,
             handler: 'StaleWhileRevalidate',
             options: {
               cacheName: 'wikipedia-api',

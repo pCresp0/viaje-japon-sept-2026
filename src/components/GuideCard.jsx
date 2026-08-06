@@ -104,7 +104,7 @@ export default function GuideCard({ id, accent = "#1d3557" }) {
             </div>
           )}
 
-          {image && (
+          {imgState === "done" && image && (
             <figure style={{ margin: "0 0 14px" }}>
               <img
                 src={image.src}
@@ -132,6 +132,10 @@ export default function GuideCard({ id, accent = "#1d3557" }) {
               </figcaption>
             </figure>
           )}
+
+          {/* Ni petición en curso ni imagen: no se encontró foto o falló
+              la conexión. Se omite en silencio, sin dejar un hueco raro
+              ni un "cargando" perpetuo. */}
 
           {guide.sections.map((s, i) => (
             <div key={i} style={{ marginBottom: 14 }}>
