@@ -46,24 +46,38 @@ const stops = [
 
 const routeLine = stops.map(s => [s.lat, s.lng]);
 
-// Custom emoji marker icon
-function createIcon(emoji, color) {
+// Custom emoji marker icon with a small order-number badge
+function createIcon(emoji, color, order) {
   return L.divIcon({
     html: `
-      <div style="
-        width: 40px; height: 40px;
-        background: ${color};
-        border-radius: 50% 50% 50% 0;
-        transform: rotate(-45deg);
-        border: 3px solid white;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-        display: flex; align-items: center; justify-content: center;
-      ">
-        <span style="transform: rotate(45deg); font-size: 18px;">${emoji}</span>
+      <div style="position: relative; width: 40px; height: 46px;">
+        <div style="
+          width: 40px; height: 40px;
+          background: ${color};
+          border-radius: 50% 50% 50% 0;
+          transform: rotate(-45deg);
+          border: 3px solid white;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+          display: flex; align-items: center; justify-content: center;
+        ">
+          <span style="transform: rotate(45deg); font-size: 18px;">${emoji}</span>
+        </div>
+        <div style="
+          position: absolute; top: -6px; right: -6px;
+          width: 20px; height: 20px;
+          background: var(--indigo, #1d3557);
+          color: white;
+          border: 2px solid white;
+          border-radius: 50%;
+          display: flex; align-items: center; justify-content: center;
+          font-size: 11px; font-weight: 700;
+          font-family: -apple-system, sans-serif;
+          box-shadow: 0 1px 4px rgba(0,0,0,0.35);
+        ">${order}</div>
       </div>
     `,
     className: "",
-    iconSize: [40, 40],
+    iconSize: [40, 46],
     iconAnchor: [20, 40],
     popupAnchor: [0, -40],
   });
@@ -112,15 +126,16 @@ export default function MapPage() {
           />
 
           {/* Markers for every stop */}
-          {stops.map((stop) => (
+          {stops.map((stop, idx) => (
             <Marker
               key={stop.id}
               position={[stop.lat, stop.lng]}
-              icon={createIcon(stop.emoji, stop.color)}
+              icon={createIcon(stop.emoji, stop.color, idx + 1)}
               eventHandlers={{ click: () => setSelected(stop.id) }}
             >
               <Popup>
                 <div style={{ fontFamily: "var(--font-body)", minWidth: 140 }}>
+                  <p style={{ fontSize: 11, color: stop.color, fontWeight: 700, marginBottom: 2 }}>PARADA {idx + 1}</p>
                   <p style={{ fontWeight: 700, fontSize: 14, marginBottom: 2 }}>{stop.name}</p>
                   <p style={{ fontSize: 12, color: "#5a6070", marginBottom: 6 }}>{stop.detail}</p>
                   <a
@@ -141,9 +156,9 @@ export default function MapPage() {
       </div>
 
       {/* Quick list below for reference */}
-      <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>Paradas del viaje</p>
+      <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>Paradas del viaje, en orden</p>
       <div className="grid gap-2" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))" }}>
-        {stops.map((stop) => (
+        {stops.map((stop, idx) => (
           <a
             key={stop.id}
             href={`https://www.google.com/maps/search/?api=1&query=${stop.lat},${stop.lng}`}
@@ -154,6 +169,14 @@ export default function MapPage() {
             onMouseEnter={e => e.currentTarget.style.borderColor = stop.color}
             onMouseLeave={e => e.currentTarget.style.borderColor = "var(--line)"}
           >
+            <div style={{
+              width: 22, height: 22, borderRadius: "50%",
+              background: "var(--indigo)", color: "white",
+              display: "flex", alignItems: "center", justifyContent: "center",
+              fontSize: 11, fontWeight: 700, flexShrink: 0,
+            }}>
+              {idx + 1}
+            </div>
             <span style={{ fontSize: 18 }}>{stop.emoji}</span>
             <div className="flex-1 min-w-0">
               <p style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)" }}>{stop.name}</p>
