@@ -1,4 +1,5 @@
 import { flights, blocks, stays } from "../data/trip";
+import { mapsUrl } from "../utils/maps";
 import { PlaneTakeoff, PlaneLanding, MapPin } from "lucide-react";
 
 export default function InfoPage() {
@@ -39,20 +40,27 @@ export default function InfoPage() {
             )}
             <div className="mt-2 space-y-2">
               {s.options.map((o, i) => (
-                <a
-                  key={i}
-                  href={o.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="block rounded-lg px-3 py-2 text-sm"
-                  style={{ background: "var(--paper)" }}
-                >
-                  <span className="font-medium" style={{ color: "var(--ink)" }}>{o.name}</span>
+                <div key={i} className="rounded-lg px-3 py-2 text-sm" style={{ background: "var(--paper)" }}>
+                  <span className="font-medium block" style={{ color: "var(--ink)" }}>{o.name}</span>
                   <span className="block text-xs mt-0.5" style={{ color: "var(--ink-soft)" }}>
                     {o.total}
-                    {o.pin ? ` · PIN ${o.pin}` : ""} · Ver reserva ↗
+                    {o.pin ? ` · PIN ${o.pin}` : ""}
                   </span>
-                </a>
+                  <span className="flex items-center gap-3 mt-1.5">
+                    <a href={o.url} target="_blank" rel="noreferrer" className="text-xs font-medium" style={{ color: "var(--indigo)" }}>
+                      Ver reserva ↗
+                    </a>
+                    <a
+                      href={mapsUrl(`${o.name}, ${s.city}, Japan`)}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center gap-1 text-xs font-medium"
+                      style={{ color: "var(--shu)" }}
+                    >
+                      <MapPin size={12} /> Cómo llegar ↗
+                    </a>
+                  </span>
+                </div>
               ))}
             </div>
           </div>

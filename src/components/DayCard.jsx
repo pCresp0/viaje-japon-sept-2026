@@ -2,6 +2,8 @@ import { useState } from "react";
 import { ScrollText, Wallet, ChevronDown } from "lucide-react";
 import { blocks, stays } from "../data/trip";
 import { formatDateLong } from "../utils/date";
+import { mapsUrl } from "../utils/maps";
+import { MapPin } from "lucide-react";
 
 const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
 
@@ -62,22 +64,33 @@ export default function DayCard({ day, defaultOpenHistory = false }) {
             )}
             <div className="mt-2 space-y-2">
               {stay.options.map((o, i) => (
-                <a
+                <div
                   key={i}
-                  href={o.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="block rounded-lg px-3 py-2 text-sm border"
+                  className="rounded-lg px-3 py-2 text-sm border"
                   style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}
                 >
-                  <span className="font-medium" style={{ color: "var(--ink)" }}>
+                  <span className="font-medium block" style={{ color: "var(--ink)" }}>
                     {o.name}
                   </span>
                   <span className="block text-xs mt-0.5" style={{ color: "var(--ink-soft)" }}>
                     {o.total}
-                    {o.pin ? ` · PIN ${o.pin}` : ""} · Ver reserva ↗
+                    {o.pin ? ` · PIN ${o.pin}` : ""}
                   </span>
-                </a>
+                  <span className="flex items-center gap-3 mt-1.5">
+                    <a href={o.url} target="_blank" rel="noreferrer" className="text-xs font-medium" style={{ color: "var(--indigo)" }}>
+                      Ver reserva ↗
+                    </a>
+                    <a
+                      href={mapsUrl(`${o.name}, ${stay.city}, Japan`)}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center gap-1 text-xs font-medium"
+                      style={{ color: "var(--shu)" }}
+                    >
+                      <MapPin size={12} /> Cómo llegar ↗
+                    </a>
+                  </span>
+                </div>
               ))}
             </div>
           </div>
