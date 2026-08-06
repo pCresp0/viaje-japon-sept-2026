@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Viaje a Japón 2026 🇯🇵</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --indigo: #1D3557;
+            --shu: #BC4749;
+            --forest: #2E7D5B;
+            --gold: #C9A227;
+            --paper: #F4F5F0;
+            --paper-raised: #ffffff;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--paper);
+            color: #1b1f27;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        header {
+            background: var(--indigo);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .section {
+            background: var(--paper-raised);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .section h2 {
+            color: var(--indigo);
+            border-bottom: 3px solid var(--shu);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        
+        .flight-info {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 0.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .flight-info strong {
+            display: block;
+            color: var(--indigo);
+            margin-bottom: 0.3rem;
+        }
+        
+        .day-card {
+            border-left: 4px solid var(--indigo);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .day-card.kioto { border-left-color: var(--shu); }
+        .day-card.alpes { border-left-color: var(--forest); }
+        .day-card.tokio { border-left-color: var(--indigo); }
+        
+        .day-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .day-num {
+            font-weight: bold;
+            color: white;
+            background: var(--indigo);
+            padding: 0.2rem 0.6rem;
+            border-radius: 0.3rem;
+            font-size: 0.9rem;
+        }
+        
+        .day-date {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .day-title {
+            font-weight: bold;
+            color: var(--indigo);
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .day-summary {
+            font-size: 0.95rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stay-info {
+            background: #faf8f3;
+            padding: 0.8rem;
+            border-radius: 0.3rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .stay-info strong {
+            color: var(--shu);
+        }
+        
+        .budget-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .budget-item:last-child {
+            border-bottom: none;
+        }
+        
+        .budget-total {
+            background: var(--indigo);
+            color: white;
+            padding: 1rem;
+            border-radius: 0.3rem;
+            margin-top: 1rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            flex: 1;
+            min-width: 120px;
+            padding: 0.7rem;
+            border: none;
+            background: #e0e0e0;
+            border-radius: 0.3rem;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        
+        .tab-btn.active {
+            background: var(--indigo);
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .timeline {
+            margin-top: 1rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--gold);
+        }
+        
+        .timeline-item {
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+        
+        .timeline-time {
+            font-weight: bold;
+            color: var(--gold);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🗻 Viaje a Japón 2026</h1>
+        <p>Guía del grupo • Septiembre 6–21</p>
+    </header>
+    
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('hoy')">Hoy</button>
+            <button class="tab-btn" onclick="switchTab('itinerario')">Itinerario</button>
+            <button class="tab-btn" onclick="switchTab('viaje')">Viaje</button>
+            <button class="tab-btn" onclick="switchTab('presupuesto')">Presupuesto</button>
+        </div>
+        
+        <!-- TAB: HOY -->
+        <div id="hoy" class="tab-content active">
+            <div class="section">
+                <h2>Bienvenido al Viaje</h2>
+                <p style="margin-bottom: 1rem;">Esta guía contiene todo lo que necesitas saber sobre nuestro viaje a Japón. Usa las pestañas de arriba para navegar entre itinerario, vuelos/alojamientos y presupuesto.</p>
+                <p style="color: #666; font-size: 0.95rem;"><strong>Nota:</strong> Si esta web no está accesible, puedes consultar este documento (que funciona sin conexión) en cualquier momento.</p>
+            </div>
+        </div>
+        
+        <!-- TAB: ITINERARIO -->
+        <div id="itinerario" class="tab-content">
+            <div class="section">
+                <h2>📅 Itinerario Completo</h2>
+                
+                <div class="day-card kioto">
+                    <div class="day-header">
+                        <span class="day-num">Día 1</span>
+                        <span class="day-date">Lun 6 Sept</span>
+                    </div>
+                    <div class="day-title">Vuelo QR148 Madrid → Narita</div>
+                    <div class="day-summary">Salida a las 09:05 desde Madrid, llegada 12:55 (local).</div>
+                </div>
+                
+                <div class="day-card kioto">
+                    <div class="day-header">
+                        <span class="day-num">Día 2</span>
+                        <span class="day-date">Mar 7 Sept</span>
+                    </div>
+                    <div class="day-title">Kyoto • Primer día en Japón</div>
+                    <div class="day-summary">Llegada y traslado a Kyoto. Instalación en hotel. Primeros pasos en la ciudad.</div>
+                    <div class="stay-info"><strong>Alojamiento:</strong> Área de Kyoto (5 noches)</div>
+                </div>
+                
+                <div class="day-card kioto">
+                    <div class="day-header">
+                        <span class="day-num">Día 3</span>
+                        <span class="day-date">Mié 8 Sept</span>
+                    </div>
+                    <div class="day-title">Kyoto • Templos y Tradición</div>
+                    <div class="day-summary">Exploración de templos, santuarios y jardines zen.</div>
+                </div>
+                
+                <div class="day-card kioto">
+                    <div class="day-header">
+                        <span class="day-num">Día 4</span>
+                        <span class="day-date">Jue 9 Sept</span>
+                    </div>
+                    <div class="day-title">Kyoto • Arashiyama y Nara</div>
+                    <div class="day-summary">Bosque de bambú y excursión a Nara. Venados y templos antiguos.</div>
+                </div>
+                
+                <div class="day-card kioto">
+                    <div class="day-header">
+                        <span class="day-num">Día 5</span>
+                        <span class="day-date">Vie 10 Sept</span>
+                    </div>
+                    <div class="day-title">Kyoto • Exploración local</div>
+                    <div class="day-summary">Día libre para explorar a tu ritmo.</div>
+                </div>
+                
+                <div class="day-card kioto">
+                    <div class="day-header">
+                        <span class="day-num">Día 6</span>
+                        <span class="day-date">Sáb 11 Sept</span>
+                    </div>
+                    <div class="day-title">Kyoto • Última noche</div>
+                    <div class="day-summary">Enviar equipaje grande a Tokio (Takkyubin ~15€/bolsa).</div>
+                </div>
+                
+                <div class="day-card alpes">
+                    <div class="day-header">
+                        <span class="day-num">Día 7</span>
+                        <span class="day-date">Dom 12 Sept</span>
+                    </div>
+                    <div class="day-title">Kanazawa • Ruta hacia los Alpes</div>
+                    <div class="day-summary">Tren a Kanazawa (Nohi Bus a Shirakawa-go debe estar reservado).</div>
+                    <div class="stay-info"><strong>Alojamiento:</strong> Kanazawa (1 noche)</div>
+                </div>
+                
+                <div class="day-card alpes">
+                    <div class="day-header">
+                        <span class="day-num">Día 8</span>
+                        <span class="day-date">Lun 13 Sept</span>
+                    </div>
+                    <div class="day-title">Takayama • Corazón de los Alpes</div>
+                    <div class="day-summary">Ruta hacia Takayama. Minshuku (posada rural) con cena a las 18:30.</div>
+                    <div class="stay-info"><strong>Alojamiento:</strong> Takayama (1 noche)</div>
+                </div>
+                
+                <div class="day-card alpes">
+                    <div class="day-header">
+                        <span class="day-num">Día 9</span>
+                        <span class="day-date">Mar 14 Sept</span>
+                    </div>
+                    <div class="day-title">Tsumago • Ruta Nakasendo</div>
+                    <div class="day-summary">Recorrido histórico entre pueblos. Servicio de mochila (~5€).</div>
+                    <div class="stay-info"><strong>Alojamiento:</strong> Tsumago (1 noche) ⚠️ Verificar: es onsen en Gunma, no el pueblecito de Nakasendo</div>
+                </div>
+                
+                <div class="day-card tokio">
+                    <div class="day-header">
+                        <span class="day-num">Día 10</span>
+                        <span class="day-date">Mié 15 Sept</span>
+                    </div>
+                    <div class="day-title">Tokio • Megópolis</div>
+                    <div class="day-summary">Llegada a Tokio. Instalación en Asakusa.</div>
+                    <div class="stay-info"><strong>Alojamiento:</strong> Asakusa, Tokio (6 noches)</div>
+                </div>
+                
+                <div class="day-card tokio">
+                    <div class="day-header">
+                        <span class="day-num">Día 11</span>
+                        <span class="day-date">Jue 16 Sept</span>
+                    </div>
+                    <div class="day-title">Tokio • Barrios emblemáticos</div>
+                    <div class="day-summary">Shibuya, Shinjuku, Harajuku, Meiji.</div>
+                </div>
+                
+                <div class="day-card tokio">
+                    <div class="day-header">
+                        <span class="day-num">Día 12</span>
+                        <span class="day-date">Vie 17 Sept</span>
+                    </div>
+                    <div class="day-title">Tokio • Pokémon Center & Cultura Pop</div>
+                    <div class="day-summary">Cafés temáticos, museos, exploración otaku. 🔴 Reservar Pokémon Café con 31 días de antelación.</div>
+                </div>
+                
+                <div class="day-card tokio">
+                    <div class="day-header">
+                        <span class="day-num">Día 13</span>
+                        <span class="day-date">Sáb 18 Sept</span>
+                    </div>
+                    <div class="day-title">Monte Fuji • Excursión</div>
+                    <div class="day-summary">Tour con "Ken Kaneshima" — elegir 3–4 días consecutivos, ejecutar en primer día despejado.</div>
+                </div>
+                
+                <div class="day-card tokio">
+                    <div class="day-header">
+                        <span class="day-num">Día 14</span>
+                        <span class="day-date">Dom 19 Sept</span>
+                    </div>
+                    <div class="day-title">Tokio • Tiempo libre</div>
+                    <div class="day-summary">Día flexible para relajarse o explorar áreas pendientes.</div>
+                </div>
+                
+                <div class="day-card tokio">
+                    <div class="day-header">
+                        <span class="day-num">Día 15</span>
+                        <span class="day-date">Lun 20 Sept</span>
+                    </div>
+                    <div class="day-title">Tokio • Última noche</div>
+                    <div class="day-summary">Despedida. Preparar equipaje para salida.</div>
+                </div>
+                
+                <div class="day-card">
+                    <div class="day-header">
+                        <span class="day-num">Día 16</span>
+                        <span class="day-date">Mar 21 Sept</span>
+                    </div>
+                    <div class="day-title">Vuelo QR809 Narita → Madrid</div>
+                    <div class="day-summary">Salida 17:25 local, llegada 08:15+1 en Madrid.</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- TAB: VIAJE -->
+        <div id="viaje" class="tab-content">
+            <div class="section">
+                <h2>✈️ Vuelos</h2>
+                <div class="flight-info">
+                    <strong>IDA: Lunes 6 Septiembre</strong>
+                    Qatar Airways QR148<br>
+                    Madrid (MAD) 09:05 → Narita (NRT) 12:55 (+1 día)
+                </div>
+                <div class="flight-info">
+                    <strong>VUELTA: Martes 21 Septiembre</strong>
+                    Qatar Airways QR809<br>
+                    Narita (NRT) 17:25 → Madrid (MAD) 08:15 (+1 día)
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🏨 Alojamientos</h2>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <strong style="color: var(--indigo);">Kyoto • 7–12 Sept (5 noches)</strong>
+                    <div style="font-size: 0.9rem; color: #666; margin-top: 0.3rem;">
+                        Opción 1: Hotel Keihan Kyoto Hachijoguchi (668€, PIN: 2281)<br>
+                        Opción 2: Kyoto Tower Hotel Annex (694€, PIN: 3350)
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <strong style="color: var(--indigo);">Kanazawa • 12–13 Sept (1 noche)</strong>
+                    <div style="font-size: 0.9rem; color: #666; margin-top: 0.3rem;">
+                        Hotel Resol Trinity Kanazawa (161€, PIN: —)
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <strong style="color: var(--indigo);">Takayama • 13–14 Sept (1 noche)</strong>
+                    <div style="font-size: 0.9rem; color: #666; margin-top: 0.3rem;">
+                        Opción 1: Hida Takayama Washington Hotel Plaza (168€, PIN: 6364)<br>
+                        Opción 2: Hotel Wood Takayama (274€, PIN: 7717)
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <strong style="color: var(--indigo);">Tsumago • 14–15 Sept (1 noche)</strong>
+                    <div style="font-size: 0.9rem; color: #666; margin-top: 0.3rem;">
+                        Opción 1: Tsumagoi Prince Hotel (243€, PIN: 5848)<br>
+                        Opción 2: Manza Kogen Hotel (150€, PIN: 3979)<br>
+                        <strong style="color: var(--shu);">⚠️ VERIFICAR:</strong> Estas opciones son onsen en Gunma, no Tsumago post-town (Nakasendo). Confirmar reserva.
+                    </div>
+                </div>
+                
+                <div>
+                    <strong style="color: var(--indigo);">Tokio • 15–21 Sept (6 noches)</strong>
+                    <div style="font-size: 0.9rem; color: #666; margin-top: 0.3rem;">
+                        Opción 1: KOKO HOTEL Residence Asakusa Kappabashi (1922€, PIN: 3322)<br>
+                        Opción 2: Hotel Keihan Asakusa (1598€, PIN: 8953)
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- TAB: PRESUPUESTO -->
+        <div id="presupuesto" class="tab-content">
+            <div class="section">
+                <h2>💰 Presupuesto Estimado</h2>
+                
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--indigo); margin-bottom: 1rem;">Por Persona</h3>
+                    <div class="budget-item">
+                        <span>Vuelos (ida + vuelta)</span>
+                        <span>~700–800€</span>
+                    </div>
+                    <div class="budget-item">
+                        <span>Alojamientos (10 noches)</span>
+                        <span>~700–800€</span>
+                    </div>
+                    <div class="budget-item">
+                        <span>Transporte interno (JR Pass 7d + local)</span>
+                        <span>~150–200€</span>
+                    </div>
+                    <div class="budget-item">
+                        <span>Comidas & Restaurantes</span>
+                        <span>~400–500€</span>
+                    </div>
+                    <div class="budget-item">
+                        <span>Actividades & Extras</span>
+                        <span>~200–300€</span>
+                    </div>
+                    <div class="budget-total">
+                        Total por persona: 2.150€ – 2.600€
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 style="color: var(--indigo); margin-bottom: 1rem;">Total Grupo (5 personas)</h3>
+                    <div class="budget-item" style="font-weight: bold;">
+                        <span>Rango estimado:</span>
+                        <span>10.750€ – 13.000€</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🚆 Transportes</h2>
+                <p style="margin-bottom: 1rem; font-size: 0.95rem;">
+                    <strong>JR Pass de 7 días (flexible, no consecutivos):</strong> Cubre la mayoría de trayectos entre Kyoto → Kanazawa → Takayama → Tokio, más metro en Tokio.
+                </p>
+                <p style="margin-bottom: 1rem; font-size: 0.95rem;">
+                    <strong>Coste estimado sin JR Pass:</strong> ~366€ por persona<br>
+                    <strong>Con JR Pass 7d (140€):</strong> ~93€ por persona (ahorro ~273€)
+                </p>
+                <p style="font-size: 0.9rem; color: #666;">
+                    <strong>Notas:</strong> Reservar con antelación: Nohi Bus Kanazawa↔Shirakawa-go (especialmente si hay poco aforo), Pokémon Café (31 días exactos).
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Guía generada: Agosto 2026</p>
+        <p style="margin-top: 1rem; font-size: 0.85rem;">💾 Este documento es una copia offline de la web interactiva.<br>Funciona sin conexión — ¡perfecto para el viaje!</p>
+    </footer>
+    
+    <script>
+        function switchTab(tabName) {
+            // Hide all tabs
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(c => c.classList.remove('active'));
+            
+            // Deactivate all buttons
+            const btns = document.querySelectorAll('.tab-btn');
+            btns.forEach(b => b.classList.remove('active'));
+            
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            
+            // Activate button
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

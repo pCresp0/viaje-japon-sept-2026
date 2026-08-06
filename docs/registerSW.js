@@ -1,1 +1,0 @@
-if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/viaje-japon-sept-2026/sw.js', { scope: '/viaje-japon-sept-2026/' })})}
