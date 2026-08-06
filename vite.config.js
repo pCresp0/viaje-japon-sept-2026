@@ -34,6 +34,13 @@ export default defineConfig({
         ],
       },
       workbox: {
+        // Sin esto, un service worker nuevo se instala pero se queda
+        // "esperando" hasta que se cierren todas las pestañas/instancias
+        // de la app antes de activarse — en una PWA instalada eso puede
+        // tardar días. Con skipWaiting + clientsClaim, la nueva versión
+        // (con sus fixes) toma el control en cuanto termina de instalarse.
+        skipWaiting: true,
+        clientsClaim: true,
         globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
         navigateFallback: '/index.html',
         runtimeCaching: [

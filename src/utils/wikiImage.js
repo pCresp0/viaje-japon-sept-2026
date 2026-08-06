@@ -17,56 +17,89 @@ const inFlight = new Map();
 // en español no existe o no tiene foto). El texto de la app sigue en
 // español; sólo la fuente de la foto cambia.
 const ENDPOINT = "https://en.wikipedia.org/w/api.php";
-const TIMEOUT_MS = 8000;
+const TIMEOUT_MS = 6000;
+
+async function fetchWithTimeout(url, ms) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), ms);
+  try {
+    const res = await fetch(url, { signal: controller.signal });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return await res.json();
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+function extractResult(page) {
+  if (!page?.thumbnail?.source) return null;
+  return {
+    src: page.thumbnail.source,
+    width: page.thumbnail.width,
+    height: page.thumbnail.height,
+    pageTitle: page.title,
+    pageUrl: page.fullurl,
+  };
+}
 
 export async function fetchWikiImage(searchTerm) {
   if (cache.has(searchTerm)) return cache.get(searchTerm);
   if (inFlight.has(searchTerm)) return inFlight.get(searchTerm);
 
-  const params = new URLSearchParams({
-    action: "query",
-    generator: "search",
-    gsrsearch: searchTerm,
-    gsrlimit: "1",
-    prop: "pageimages|info",
-    piprop: "thumbnail",
-    pithumbsize: "800",
-    inprop: "url",
-    format: "json",
-    formatversion: "2",
-    origin: "*",
-  });
-
   const promise = (async () => {
-    const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
-
     try {
-      const res = await fetch(`${ENDPOINT}?${params}`, { signal: controller.signal });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const data = await res.json();
-      const page = data?.query?.pages?.[0];
+      // 1) Búsqueda restringida a artículos (namespace 0), para no caer
+      //    en categorías/plantillas que no tienen imagen aunque el sitio
+      //    real sí la tenga.
+      const searchParams = new URLSearchParams({
+        action: "query",
+        generator: "search",
+        gsrsearch: searchTerm,
+        gsrnamespace: "0",
+        gsrlimit: "1",
+        prop: "pageimages|info",
+        piprop: "thumbnail",
+        pithumbsize: "800",
+        inprop: "url",
+        format: "json",
+        formatversion: "2",
+        origin: "*",
+      });
 
-      const result = page?.thumbnail?.source
-        ? {
-            src: page.thumbnail.source,
-            width: page.thumbnail.width,
-            height: page.thumbnail.height,
-            pageTitle: page.title,
-            pageUrl: page.fullurl,
-          }
-        : null;
+      let data = await fetchWithTimeout(`${ENDPOINT}?${searchParams}`, TIMEOUT_MS);
+      let page = data?.query?.pages?.[0];
+      let result = extractResult(page);
+
+      // 2) Si el resultado de búsqueda no trae foto (p. ej. el artículo
+      //    real es distinto al que devolvió gsrsearch), reintentar con el
+      //    término como título exacto + redirects, que a veces encuentra
+      //    la página correcta cuando la búsqueda de texto libre falla.
+      if (!result) {
+        const titleParams = new URLSearchParams({
+          action: "query",
+          titles: searchTerm,
+          redirects: "1",
+          prop: "pageimages|info",
+          piprop: "thumbnail",
+          pithumbsize: "800",
+          inprop: "url",
+          format: "json",
+          formatversion: "2",
+          origin: "*",
+        });
+        data = await fetchWithTimeout(`${ENDPOINT}?${titleParams}`, TIMEOUT_MS);
+        page = data?.query?.pages?.[0];
+        result = extractResult(page);
+      }
 
       cache.set(searchTerm, result);
       return result;
     } catch {
       // Sin conexión, timeout o API caída: no se muestra imagen, el resto
-      // de la guía sigue funcionando igual. Nunca se deja la petición
-      // colgada indefinidamente gracias al AbortController de arriba.
+      // de la guía sigue funcionando igual.
       cache.set(searchTerm, null);
       return null;
     } finally {
-      clearTimeout(timer);
       inFlight.delete(searchTerm);
     }
   })();

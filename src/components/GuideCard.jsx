@@ -15,17 +15,29 @@ export default function GuideCard({ id, accent = "#1d3557" }) {
   const guide = guides[id];
 
   // La imagen se pide sólo la primera vez que se abre la tarjeta, para no
-  // lanzar 19 peticiones al cargar la página.
+  // lanzar 19 peticiones al cargar la página. fetchWikiImage ya tiene su
+  // propio timeout interno (6s) y SIEMPRE resuelve la promesa (con imagen
+  // o con null), así que este estado nunca debería quedarse en "loading"
+  // más allá de eso. Como red de seguridad adicional, aquí se fuerza el
+  // paso a "done" a los 7s pase lo que pase, para que la tarjeta nunca
+  // muestre "Cargando..." de forma indefinida.
   useEffect(() => {
     if (!open || !guide?.wiki || imgState !== "idle") return;
     let cancelled = false;
     setImgState("loading");
+
+    const safety = setTimeout(() => {
+      if (!cancelled) setImgState((s) => (s === "loading" ? "done" : s));
+    }, 7000);
+
     fetchWikiImage(guide.wiki).then((result) => {
       if (cancelled) return;
+      clearTimeout(safety);
       setImage(result);
       setImgState("done");
     });
-    return () => { cancelled = true; };
+
+    return () => { cancelled = true; clearTimeout(safety); };
   }, [open, guide, imgState]);
 
   if (!guide) return null;
