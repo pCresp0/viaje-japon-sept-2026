@@ -1,5 +1,17 @@
 import { useState } from "react";
 import { Heart, MapPin, Utensils, Coffee } from "lucide-react";
+import GuideCard from "../components/GuideCard";
+
+// Lugares que tienen guía detallada disponible (id del lugar → id de la guía)
+const guideFor = {
+  kiyomizu: "kiyomizu-dera",
+  fushimi: "fushimi-inari",
+  arashiyama: "arashiyama",
+  kinkaku: "kinkaku-ji",
+  ginkaku: "ginkaku-ji",
+  senso: "senso-ji",
+  meiji: "meiji-jingu",
+};
 
 const STORAGE_KEY = "trip-favorites-v1";
 
@@ -116,50 +128,56 @@ export default function PlacesPage() {
 
               {/* places */}
               {category.items.map((place, idx) => (
-                <button
+                <div
                   key={place.id}
-                  onClick={() => toggleFavorite(place.id)}
-                  className="flex items-start gap-3 w-full text-left px-5 py-4 transition-all"
                   style={{
                     borderTop: idx > 0 ? "1px solid var(--line)" : "none",
                     background: favorites[place.id] ? `${category.color}08` : "transparent",
+                    transition: "background 0.15s",
                   }}
-                  onMouseEnter={e => e.currentTarget.style.background = `${category.color}08`}
-                  onMouseLeave={e => e.currentTarget.style.background = favorites[place.id] ? `${category.color}08` : "transparent"}
                 >
-                  <button
-                    onClick={(e) => { e.stopPropagation(); toggleFavorite(place.id); }}
-                    style={{
-                      background: "none",
-                      border: "none",
-                      cursor: "pointer",
-                      padding: 0,
-                      marginTop: 1,
-                      flexShrink: 0,
-                    }}
-                  >
-                    {favorites[place.id]
-                      ? <Heart size={18} style={{ color: category.color, fill: category.color }} />
-                      : <Heart size={18} style={{ color: "var(--line)", fill: "none" }} />
-                    }
-                  </button>
+                  <div className="flex items-start gap-3 w-full text-left px-5 py-4">
+                    <button
+                      onClick={() => toggleFavorite(place.id)}
+                      aria-label={favorites[place.id] ? "Quitar de visitados" : "Marcar como visitado"}
+                      style={{
+                        background: "none",
+                        border: "none",
+                        cursor: "pointer",
+                        padding: 0,
+                        marginTop: 1,
+                        flexShrink: 0,
+                      }}
+                    >
+                      {favorites[place.id]
+                        ? <Heart size={18} style={{ color: category.color, fill: category.color }} />
+                        : <Heart size={18} style={{ color: "var(--line)", fill: "none" }} />
+                      }
+                    </button>
 
-                  <div className="flex-1">
-                    <p style={{
-                      fontSize: 14, fontWeight: 700,
-                      color: favorites[place.id] ? category.color : "var(--ink)",
-                      textDecoration: favorites[place.id] ? "line-through" : "none",
-                    }}>
-                      {place.name}
-                    </p>
-                    <p style={{ fontSize: 12, color: "var(--ink-soft)", marginBottom: 2 }}>
-                      {place.city}
-                    </p>
-                    <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.5 }}>
-                      {place.desc}
-                    </p>
+                    <div className="flex-1 min-w-0">
+                      <p style={{
+                        fontSize: 14, fontWeight: 700,
+                        color: favorites[place.id] ? category.color : "var(--ink)",
+                        textDecoration: favorites[place.id] ? "line-through" : "none",
+                      }}>
+                        {place.name}
+                      </p>
+                      <p style={{ fontSize: 12, color: "var(--ink-soft)", marginBottom: 2 }}>
+                        {place.city}
+                      </p>
+                      <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.5 }}>
+                        {place.desc}
+                      </p>
+
+                      {guideFor[place.id] && (
+                        <div style={{ marginTop: 10 }}>
+                          <GuideCard id={guideFor[place.id]} accent={category.color} />
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </button>
+                </div>
               ))}
             </div>
           );

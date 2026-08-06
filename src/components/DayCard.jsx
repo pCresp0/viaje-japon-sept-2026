@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { ScrollText, Wallet, ChevronDown } from "lucide-react";
 import { blocks, stays } from "../data/trip";
+import { guidesByDay } from "../data/guides";
+import GuideCard from "./GuideCard";
 import { formatDateLong } from "../utils/date";
 import { mapsUrl } from "../utils/maps";
 import { MapPin } from "lucide-react";
@@ -11,6 +13,7 @@ export default function DayCard({ day, defaultOpenHistory = false }) {
   const [showHistory, setShowHistory] = useState(defaultOpenHistory);
   const block = blockById[day.block];
   const stay = stays.find((s) => s.afterDay === day.num);
+  const dayGuides = guidesByDay[day.num] || [];
 
   return (
     <article
@@ -48,6 +51,19 @@ export default function DayCard({ day, defaultOpenHistory = false }) {
             ))}
           </ol>
         </div>
+
+        {dayGuides.length > 0 && (
+          <div>
+            <p className="eyebrow mb-2" style={{ color: "var(--ink-soft)" }}>
+              📖 Qué vamos a ver
+            </p>
+            <div className="space-y-2">
+              {dayGuides.map((gid) => (
+                <GuideCard key={gid} id={gid} accent={block.color} />
+              ))}
+            </div>
+          </div>
+        )}
 
         {stay && (
           <div className="rounded-xl p-4" style={{ background: "var(--paper)" }}>
