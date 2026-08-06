@@ -36,6 +36,30 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
         navigateFallback: '/index.html',
+        runtimeCaching: [
+          {
+            // Fotos de las guías (Wikimedia). Una vez vistas quedan
+            // guardadas, así siguen disponibles sin conexión en Japón.
+            urlPattern: /^https:\/\/upload\.wikimedia\.org\/.*/i,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'wikimedia-images',
+              expiration: { maxEntries: 60, maxAgeSeconds: 60 * 60 * 24 * 90 },
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
+          {
+            // Respuestas de la API de Wikipedia (qué imagen corresponde
+            // a cada lugar).
+            urlPattern: /^https:\/\/es\.wikipedia\.org\/w\/api\.php.*/i,
+            handler: 'StaleWhileRevalidate',
+            options: {
+              cacheName: 'wikipedia-api',
+              expiration: { maxEntries: 40, maxAgeSeconds: 60 * 60 * 24 * 90 },
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
+        ],
       },
     }),
   ],

@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BookOpen, ChevronDown, Lightbulb, Sparkles } from "lucide-react";
 import { guides } from "../data/guides";
+import { fetchWikiImage } from "../utils/wikiImage";
 
 /**
  * Tarjeta plegable con la guía detallada de un lugar.
@@ -9,7 +10,23 @@ import { guides } from "../data/guides";
  */
 export default function GuideCard({ id, accent = "#1d3557" }) {
   const [open, setOpen] = useState(false);
+  const [image, setImage] = useState(null);
+  const [imgState, setImgState] = useState("idle"); // idle | loading | done
   const guide = guides[id];
+
+  // La imagen se pide sólo la primera vez que se abre la tarjeta, para no
+  // lanzar 19 peticiones al cargar la página.
+  useEffect(() => {
+    if (!open || !guide?.wiki || imgState !== "idle") return;
+    let cancelled = false;
+    setImgState("loading");
+    fetchWikiImage(guide.wiki).then((result) => {
+      if (cancelled) return;
+      setImage(result);
+      setImgState("done");
+    });
+    return () => { cancelled = true; };
+  }, [open, guide, imgState]);
 
   if (!guide) return null;
 
@@ -76,6 +93,46 @@ export default function GuideCard({ id, accent = "#1d3557" }) {
       {/* Contenido desplegado */}
       {open && (
         <div className="px-4 pb-4" style={{ borderTop: "1px solid var(--line)", paddingTop: 14 }}>
+          {/* Foto del lugar (Wikipedia, licencia libre) */}
+          {imgState === "loading" && (
+            <div style={{
+              width: "100%", aspectRatio: "16 / 10", borderRadius: 10,
+              background: "var(--paper)", marginBottom: 14,
+              display: "flex", alignItems: "center", justifyContent: "center",
+            }}>
+              <span style={{ fontSize: 11.5, color: "var(--ink-soft)" }}>Cargando foto…</span>
+            </div>
+          )}
+
+          {image && (
+            <figure style={{ margin: "0 0 14px" }}>
+              <img
+                src={image.src}
+                alt={guide.name}
+                loading="lazy"
+                style={{
+                  width: "100%", aspectRatio: "16 / 10", objectFit: "cover",
+                  borderRadius: 10, display: "block",
+                  background: "var(--paper)",
+                }}
+                onError={() => setImage(null)}
+              />
+              <figcaption style={{
+                fontSize: 10.5, color: "var(--ink-soft)", marginTop: 5,
+                display: "flex", justifyContent: "flex-end",
+              }}>
+                <a
+                  href={image.pageUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "var(--ink-soft)", textDecoration: "none" }}
+                >
+                  Foto: Wikimedia Commons ↗
+                </a>
+              </figcaption>
+            </figure>
+          )}
+
           {guide.sections.map((s, i) => (
             <div key={i} style={{ marginBottom: 14 }}>
               <p style={{

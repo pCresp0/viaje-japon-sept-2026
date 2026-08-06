@@ -19,6 +19,7 @@ export const guides = {
     name: "Fushimi Inari Taisha",
     jp: "伏見稲荷大社",
     founded: "Año 711",
+    wiki: "Fushimi Inari-taisha",
     tagline: "El santuario de los diez mil torii rojos, dedicado al dios del arroz y la prosperidad.",
     sections: [
       {
@@ -54,6 +55,7 @@ export const guides = {
     name: "Todai-ji y el Gran Buda",
     jp: "東大寺",
     founded: "Año 752",
+    wiki: "Tōdai-ji",
     tagline: "El edificio de madera más grande del mundo durante siglos, con un Buda de bronce de 15 metros.",
     sections: [
       {
@@ -85,6 +87,7 @@ export const guides = {
     name: "Kinkaku-ji (Pabellón Dorado)",
     jp: "金閣寺",
     founded: "1397 (edificio actual: 1955)",
+    wiki: "Kinkaku-ji",
     tagline: "Un pabellón cubierto de pan de oro sobre un estanque — y una reconstrucción tras un incendio provocado.",
     sections: [
       {
@@ -116,6 +119,7 @@ export const guides = {
     name: "Ginkaku-ji (Pabellón de Plata)",
     jp: "銀閣寺",
     founded: "1482",
+    wiki: "Ginkaku-ji",
     tagline: "El pabellón que nunca fue plateado, y donde nació buena parte de la estética japonesa moderna.",
     sections: [
       {
@@ -147,6 +151,7 @@ export const guides = {
     name: "Kiyomizu-dera",
     jp: "清水寺",
     founded: "Año 778 (edificios actuales: 1633)",
+    wiki: "Kiyomizu-dera",
     tagline: "Una plataforma de madera suspendida sobre el vacío, construida sin un solo clavo.",
     sections: [
       {
@@ -182,6 +187,7 @@ export const guides = {
     name: "Arashiyama y el bosque de bambú",
     jp: "嵐山",
     founded: "Periodo Heian (s. VIII-XII)",
+    wiki: "Arashiyama",
     tagline: "El retiro aristocrático de la corte Heian, con un bosque de bambú que suena distinto a todo.",
     sections: [
       {
@@ -213,6 +219,7 @@ export const guides = {
     name: "Gion y los barrios de geishas",
     jp: "祇園",
     founded: "Siglo XVI",
+    wiki: "Gion Kioto",
     tagline: "El distrito de geishas más famoso de Japón, donde todavía trabajan unas 200 profesionales.",
     sections: [
       {
@@ -244,6 +251,7 @@ export const guides = {
     name: "Mercado de Nishiki",
     jp: "錦市場",
     founded: "Siglo XIV",
+    wiki: "Mercado Nishiki",
     tagline: "'La cocina de Kioto': 400 metros de callejón cubierto con 130 puestos, muchos con siglos de historia.",
     sections: [
       {
@@ -271,6 +279,7 @@ export const guides = {
     name: "Osaka: castillo y Dotonbori",
     jp: "大阪",
     founded: "Castillo: 1583",
+    wiki: "Castillo de Osaka",
     tagline: "La cocina de Japón y la ciudad de los mercaderes, con un castillo que es puro símbolo.",
     sections: [
       {
@@ -306,6 +315,7 @@ export const guides = {
     name: "Jardín Kenroku-en",
     jp: "兼六園",
     founded: "Siglo XVII",
+    wiki: "Kenroku-en",
     tagline: "Uno de los tres grandes jardines de Japón, diseñado para cumplir seis atributos imposibles a la vez.",
     sections: [
       {
@@ -333,6 +343,7 @@ export const guides = {
     name: "Shirakawa-go",
     jp: "白川郷",
     founded: "Casas de los siglos XVII-XIX",
+    wiki: "Shirakawa-gō",
     tagline: "Aldea de casas con tejados de paja a dos aguas, Patrimonio de la Humanidad, en un valle aislado por la nieve.",
     sections: [
       {
@@ -364,6 +375,7 @@ export const guides = {
     name: "Takayama",
     jp: "高山",
     founded: "Casco antiguo: siglo XVII",
+    wiki: "Takayama Gifu",
     tagline: "Un casco histórico de madera oscura intacto, en una ciudad que fue gobernada directamente por el shogun.",
     sections: [
       {
@@ -395,6 +407,7 @@ export const guides = {
     name: "Ruta Nakasendō: Magome y Tsumago",
     jp: "中山道",
     founded: "Siglo XVII",
+    wiki: "Nakasendō",
     tagline: "8 km del camino real del periodo Edo, entre dos pueblos-posta congelados en el tiempo.",
     sections: [
       {
@@ -430,6 +443,7 @@ export const guides = {
     name: "Senso-ji y Asakusa",
     jp: "浅草寺",
     founded: "Año 645 (edificio actual: 1958)",
+    wiki: "Sensō-ji",
     tagline: "El templo más antiguo de Tokio, reconstruido en hormigón tras los bombardeos de 1945.",
     sections: [
       {
@@ -465,6 +479,7 @@ export const guides = {
     name: "Meiji Jingū",
     jp: "明治神宮",
     founded: "1920 (reconstruido en 1958)",
+    wiki: "Santuario Meiji",
     tagline: "Un bosque de 100.000 árboles plantado a mano en pleno Tokio, dedicado al emperador de la modernización.",
     sections: [
       {
@@ -496,6 +511,7 @@ export const guides = {
     name: "Shibuya",
     jp: "渋谷",
     founded: "Cruce actual: 1973",
+    wiki: "Cruce de Shibuya",
     tagline: "El cruce peatonal más transitado del mundo y el perro que esperó nueve años.",
     sections: [
       {
@@ -523,6 +539,7 @@ export const guides = {
     name: "Akihabara",
     jp: "秋葉原",
     founded: "Como barrio electrónico: 1945",
+    wiki: "Akihabara",
     tagline: "De mercado negro de radios en la posguerra a capital mundial del anime y el manga.",
     sections: [
       {
@@ -554,6 +571,7 @@ export const guides = {
     name: "teamLab",
     jp: "チームラボ",
     founded: "2001 (colectivo)",
+    wiki: "TeamLab",
     tagline: "Arte digital inmersivo donde las obras reaccionan a tu presencia y nunca se repiten.",
     sections: [
       {
@@ -581,6 +599,7 @@ export const guides = {
     name: "Monte Fuji",
     jp: "富士山",
     founded: "Cono actual: hace 10.000 años",
+    wiki: "Monte Fuji",
     tagline: "Volcán activo, montaña sagrada y el símbolo más reconocible de Japón — cuando se deja ver.",
     sections: [
       {
