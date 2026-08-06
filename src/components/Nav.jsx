@@ -1,12 +1,15 @@
 import { useState } from "react";
-import { Compass, Route, Plane, Wallet, X, Menu, CalendarDays } from "lucide-react";
+import { Compass, Route, Plane, Wallet, X, Menu, CalendarDays, MessageCircle, Backpack, ShieldAlert } from "lucide-react";
 
 export const tabs = [
-  { id: "hoy",          label: "Hoy",          icon: Compass     },
+  { id: "hoy",          label: "Hoy",          icon: Compass      },
   { id: "calendario",   label: "Calendario",   icon: CalendarDays },
-  { id: "itinerario",   label: "Itinerario",   icon: Route       },
-  { id: "info",         label: "Viaje",         icon: Plane       },
-  { id: "presupuesto",  label: "Presupuesto",  icon: Wallet      },
+  { id: "itinerario",   label: "Itinerario",   icon: Route        },
+  { id: "info",         label: "Viaje",         icon: Plane        },
+  { id: "presupuesto",  label: "Presupuesto",  icon: Wallet       },
+  { id: "frases",       label: "Frases",       icon: MessageCircle },
+  { id: "preparativos", label: "Preparativos", icon: Backpack     },
+  { id: "emergencias",  label: "Emergencias",  icon: ShieldAlert  },
 ];
 
 const sidebarBg = {

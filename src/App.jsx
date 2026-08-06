@@ -6,6 +6,9 @@ import CalendarPage from "./pages/CalendarPage";
 import Itinerary from "./pages/Itinerary";
 import InfoPage from "./pages/InfoPage";
 import BudgetPage from "./pages/BudgetPage";
+import PhrasesPage from "./pages/PhrasesPage";
+import PrepPage from "./pages/PrepPage";
+import EmergencyPage from "./pages/EmergencyPage";
 import { getTripStatus } from "./utils/date";
 
 export default function App() {
@@ -43,6 +46,9 @@ export default function App() {
             {tab === "itinerario"   && <Itinerary openDay={openDay} setOpenDay={setOpenDay} />}
             {tab === "info"         && <InfoPage />}
             {tab === "presupuesto"  && <BudgetPage />}
+            {tab === "frases"       && <PhrasesPage />}
+            {tab === "preparativos" && <PrepPage />}
+            {tab === "emergencias"  && <EmergencyPage />}
           </div>
         </main>
 

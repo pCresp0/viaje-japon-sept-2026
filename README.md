@@ -7,9 +7,13 @@ Guía de viaje interactiva para un grupo de amigos, pensada para usarse **desde 
 ## ✨ Funcionalidades
 
 - **Hoy** — detecta automáticamente en qué día del viaje estás (según la fecha del dispositivo) y muestra el plan de ese día sin tener que buscarlo.
+- **Calendario** — vista mensual de septiembre 2026 con los días coloreados por bloque geográfico; al hacer clic en un día se abre su detalle completo.
 - **Itinerario** — los 15 días del viaje, navegables mediante una línea de "mapa de metro" que agrupa los días por bloque geográfico (Kioto/Nara/Osaka, Alpes Japoneses, Tokio).
 - **Viaje** — vuelos confirmados (con seguimiento en vivo) y alojamientos de cada noche, con enlace directo a la reserva y a Google Maps.
 - **Presupuesto** — desglose por categorías (vuelos, alojamiento, transporte, comida, extras) y detalle día a día de los transportes, con coste real vs. coste cubierto por JR Pass.
+- **Frases y etiqueta** — frases básicas en japonés organizadas por contexto (saludos, restaurante, transporte, compras) y normas de comportamiento local (propinas, palillos, onsen, colas...).
+- **Preparativos** — checklist interactiva de documentación, electrónica, ropa y extras, con progreso guardado en el dispositivo.
+- **Emergencias** — números de emergencia japoneses, contacto de la Embajada de España en Tokio y recordatorio del seguro de viaje.
 - **Funciona sin conexión** — Progressive Web App (PWA): instalable en la pantalla de inicio (Android/iOS/escritorio) y con todo el contenido cacheado para consultarlo sin datos móviles.
 
 ## 🧱 Stack técnico
@@ -41,9 +45,13 @@ src/
 │   └── DayCard.jsx              # Tarjeta de detalle de un día (resumen, horario, alojamiento, contexto histórico)
 ├── pages/
 │   ├── Home.jsx           # Pestaña "Hoy"
-│   ├── Itinerary.jsx       # Pestaña "Itinerario" (acordeón de los 15 días)
-│   ├── InfoPage.jsx         # Pestaña "Viaje" (vuelos + alojamientos)
-│   └── BudgetPage.jsx        # Pestaña "Presupuesto"
+│   ├── CalendarPage.jsx    # Pestaña "Calendario" (vista mensual + detalle por día)
+│   ├── Itinerary.jsx        # Pestaña "Itinerario" (acordeón de los 15 días)
+│   ├── InfoPage.jsx          # Pestaña "Viaje" (vuelos + alojamientos)
+│   ├── BudgetPage.jsx         # Pestaña "Presupuesto"
+│   ├── PhrasesPage.jsx         # Pestaña "Frases" (idioma + etiqueta)
+│   ├── PrepPage.jsx             # Pestaña "Preparativos" (checklist)
+│   └── EmergencyPage.jsx         # Pestaña "Emergencias"
 ├── App.jsx                # Enrutado por pestañas (estado local, sin react-router)
 └── main.jsx                # Punto de entrada
 ```
