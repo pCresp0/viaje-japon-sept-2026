@@ -40,13 +40,13 @@ function NavItems({ active, onChange, onClose }) {
         style={{
           padding: "11px 16px",
           borderRadius: 10,
-          background: isActive ? "rgba(255,255,255,0.13)" : "transparent",
-          color: isActive ? "#fff" : "rgba(255,255,255,0.55)",
+          background: isActive ? "rgba(255,255,255,0.15)" : "transparent",
+          color: isActive ? "#fff" : "rgba(255,255,255,0.8)",
           borderLeft: isActive ? "3px solid #e8b74a" : "3px solid transparent",
-          fontWeight: isActive ? 600 : 400,
+          fontWeight: isActive ? 700 : 500,
         }}
       >
-        <Icon size={17} strokeWidth={isActive ? 2.4 : 1.8} />
+        <Icon size={17} strokeWidth={isActive ? 2.4 : 2} />
         <span style={{ fontSize: 14, letterSpacing: "0.01em" }}>{t.label}</span>
       </button>
     );
