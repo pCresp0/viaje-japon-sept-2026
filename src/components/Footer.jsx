@@ -1,8 +1,7 @@
 export default function Footer() {
   return (
     <footer style={{
-      borderTop: "1px solid var(--line)",
-      background: "var(--paper-raised)",
+      background: "linear-gradient(160deg, var(--shu-darker) 0%, var(--shu-deep) 100%)",
       padding: "40px 24px 32px",
       marginTop: "auto",
     }}>
@@ -14,7 +13,7 @@ export default function Footer() {
           gap: 32,
           marginBottom: 32,
           paddingBottom: 32,
-          borderBottom: "1px solid var(--line)",
+          borderBottom: "1px solid rgba(255,255,255,0.12)",
         }}>
           {/* Left — branding & description */}
           <div>
@@ -22,7 +21,7 @@ export default function Footer() {
               <p style={{
                 fontSize: 13,
                 fontWeight: 600,
-                color: "var(--ink)",
+                color: "#fff",
                 letterSpacing: "0.08em",
                 textTransform: "uppercase",
                 margin: 0,
@@ -31,7 +30,7 @@ export default function Footer() {
               </p>
               <p style={{
                 fontSize: 12,
-                color: "var(--ink-soft)",
+                color: "rgba(255,255,255,0.6)",
                 marginTop: 4,
                 lineHeight: 1.6,
               }}>
@@ -45,29 +44,29 @@ export default function Footer() {
             <div>
               <p style={{
                 fontWeight: 600,
-                color: "var(--ink)",
+                color: "#fff",
                 marginBottom: 8,
                 fontSize: 12,
                 letterSpacing: "0.06em",
               }}>Explorar</p>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
-                <li><a href="#/" style={{ color: "var(--ink-soft)", textDecoration: "none" }} onMouseEnter={e => e.target.style.color = "var(--indigo)"} onMouseLeave={e => e.target.style.color = "var(--ink-soft)"}>Itinerario</a></li>
-                <li><a href="#/" style={{ color: "var(--ink-soft)", textDecoration: "none" }} onMouseEnter={e => e.target.style.color = "var(--indigo)"} onMouseLeave={e => e.target.style.color = "var(--ink-soft)"}>Calendario</a></li>
-                <li><a href="#/" style={{ color: "var(--ink-soft)", textDecoration: "none" }} onMouseEnter={e => e.target.style.color = "var(--indigo)"} onMouseLeave={e => e.target.style.color = "var(--ink-soft)"}>Presupuesto</a></li>
+                <li><a href="#/" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }} onMouseEnter={e => e.target.style.color = "#e8b74a"} onMouseLeave={e => e.target.style.color = "rgba(255,255,255,0.6)"}>Itinerario</a></li>
+                <li><a href="#/" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }} onMouseEnter={e => e.target.style.color = "#e8b74a"} onMouseLeave={e => e.target.style.color = "rgba(255,255,255,0.6)"}>Calendario</a></li>
+                <li><a href="#/" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }} onMouseEnter={e => e.target.style.color = "#e8b74a"} onMouseLeave={e => e.target.style.color = "rgba(255,255,255,0.6)"}>Presupuesto</a></li>
               </ul>
             </div>
 
             <div>
               <p style={{
                 fontWeight: 600,
-                color: "var(--ink)",
+                color: "#fff",
                 marginBottom: 8,
                 fontSize: 12,
                 letterSpacing: "0.06em",
               }}>Contacto</p>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
-                <li><a href="https://www.linkedin.com/in/pablocrespobellido/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--ink-soft)", textDecoration: "none" }} onMouseEnter={e => e.target.style.color = "#0077b5"} onMouseLeave={e => e.target.style.color = "var(--ink-soft)"}>LinkedIn</a></li>
-                <li><a href="https://github.com/pCresp0/viaje-japon-sept-2026" target="_blank" rel="noopener noreferrer" style={{ color: "var(--ink-soft)", textDecoration: "none" }} onMouseEnter={e => e.target.style.color = "var(--ink)"} onMouseLeave={e => e.target.style.color = "var(--ink-soft)"}>GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/pablocrespobellido/" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }} onMouseEnter={e => e.target.style.color = "#4db5e8"} onMouseLeave={e => e.target.style.color = "rgba(255,255,255,0.6)"}>LinkedIn</a></li>
+                <li><a href="https://github.com/pCresp0/viaje-japon-sept-2026" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }} onMouseEnter={e => e.target.style.color = "#fff"} onMouseLeave={e => e.target.style.color = "rgba(255,255,255,0.6)"}>GitHub</a></li>
               </ul>
             </div>
           </div>
@@ -91,22 +90,22 @@ export default function Footer() {
               style={{
                 width: 36, height: 36,
                 borderRadius: "50%",
-                background: "var(--paper)",
-                border: "1px solid var(--line)",
+                background: "rgba(255,255,255,0.08)",
+                border: "1px solid rgba(255,255,255,0.18)",
                 display: "flex", alignItems: "center", justifyContent: "center",
-                color: "var(--ink-soft)",
+                color: "rgba(255,255,255,0.75)",
                 transition: "all 0.2s",
                 textDecoration: "none",
               }}
               onMouseEnter={e => {
-                e.currentTarget.style.borderColor = "#0077b5";
-                e.currentTarget.style.color = "#0077b5";
-                e.currentTarget.style.background = "rgba(0,119,181,0.05)";
+                e.currentTarget.style.borderColor = "#4db5e8";
+                e.currentTarget.style.color = "#4db5e8";
+                e.currentTarget.style.background = "rgba(77,181,232,0.1)";
               }}
               onMouseLeave={e => {
-                e.currentTarget.style.borderColor = "var(--line)";
-                e.currentTarget.style.color = "var(--ink-soft)";
-                e.currentTarget.style.background = "var(--paper)";
+                e.currentTarget.style.borderColor = "rgba(255,255,255,0.18)";
+                e.currentTarget.style.color = "rgba(255,255,255,0.75)";
+                e.currentTarget.style.background = "rgba(255,255,255,0.08)";
               }}
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
@@ -125,22 +124,22 @@ export default function Footer() {
               style={{
                 width: 36, height: 36,
                 borderRadius: "50%",
-                background: "var(--paper)",
-                border: "1px solid var(--line)",
+                background: "rgba(255,255,255,0.08)",
+                border: "1px solid rgba(255,255,255,0.18)",
                 display: "flex", alignItems: "center", justifyContent: "center",
-                color: "var(--ink-soft)",
+                color: "rgba(255,255,255,0.75)",
                 transition: "all 0.2s",
                 textDecoration: "none",
               }}
               onMouseEnter={e => {
-                e.currentTarget.style.borderColor = "var(--ink)";
-                e.currentTarget.style.color = "var(--ink)";
-                e.currentTarget.style.background = "rgba(27,31,39,0.05)";
+                e.currentTarget.style.borderColor = "#fff";
+                e.currentTarget.style.color = "#fff";
+                e.currentTarget.style.background = "rgba(255,255,255,0.14)";
               }}
               onMouseLeave={e => {
-                e.currentTarget.style.borderColor = "var(--line)";
-                e.currentTarget.style.color = "var(--ink-soft)";
-                e.currentTarget.style.background = "var(--paper)";
+                e.currentTarget.style.borderColor = "rgba(255,255,255,0.18)";
+                e.currentTarget.style.color = "rgba(255,255,255,0.75)";
+                e.currentTarget.style.background = "rgba(255,255,255,0.08)";
               }}
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
@@ -151,14 +150,14 @@ export default function Footer() {
 
           <div style={{
             fontSize: 12,
-            color: "var(--ink-soft)",
+            color: "rgba(255,255,255,0.6)",
             lineHeight: 1.6,
           }}>
             <p style={{ margin: 0, marginBottom: 4 }}>
               Web diseñada y desarrollada por{" "}
-              <strong style={{ color: "var(--ink)", fontWeight: 600 }}>Pablo Crespo Bellido</strong>
+              <strong style={{ color: "#fff", fontWeight: 600 }}>Pablo Crespo Bellido</strong>
             </p>
-            <p style={{ margin: 0, fontSize: 11, color: "var(--ink-soft)", opacity: 0.7 }}>
+            <p style={{ margin: 0, fontSize: 11, color: "rgba(255,255,255,0.4)" }}>
               © 2026 · Viaje Japón
             </p>
           </div>

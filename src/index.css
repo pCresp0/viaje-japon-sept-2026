@@ -3,14 +3,16 @@
 :root {
   --ink: #1b1f27;
   --ink-soft: #5a6070;
-  --paper: #f0f1eb;
-  --paper-raised: #ffffff;
+  --paper: #f7f0e3;
+  --paper-raised: #fffdf8;
   --indigo: #1d3557;
   --indigo-deep: #12213a;
   --shu: #bc4749;
+  --shu-deep: #7a2c2e;
+  --shu-darker: #4d1c1e;
   --forest: #2e7d5b;
   --gold: #c9a227;
-  --line: #dddecf;
+  --line: #e6dcc4;
 
   --font-display: Georgia, "Iowan Old Style", "Palatino Linotype", "Noto Serif", serif;
   --font-body: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;

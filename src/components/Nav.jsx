@@ -25,7 +25,7 @@ const sidebarBg = {
 
 const overlay = {
   position: "absolute", inset: 0,
-  background: "linear-gradient(160deg, rgba(18,33,58,0.93) 0%, rgba(29,53,87,0.88) 100%)",
+  background: "linear-gradient(160deg, rgba(77,28,30,0.94) 0%, rgba(122,44,46,0.89) 100%)",
 };
 
 function NavItems({ active, onChange, onClose }) {
@@ -42,7 +42,7 @@ function NavItems({ active, onChange, onClose }) {
           borderRadius: 10,
           background: isActive ? "rgba(255,255,255,0.13)" : "transparent",
           color: isActive ? "#fff" : "rgba(255,255,255,0.55)",
-          borderLeft: isActive ? "3px solid #bc4749" : "3px solid transparent",
+          borderLeft: isActive ? "3px solid #e8b74a" : "3px solid transparent",
           fontWeight: isActive ? 600 : 400,
         }}
       >
@@ -122,7 +122,7 @@ export function TopBar({ active, onOpenDrawer }) {
       style={{
         height: 54,
         zIndex: 150,
-        background: "var(--indigo)",
+        background: "var(--shu-darker)",
         borderBottom: "1px solid rgba(255,255,255,0.08)",
         boxShadow: "0 2px 12px rgba(0,0,0,0.2)",
         paddingTop: "env(safe-area-inset-top)",
