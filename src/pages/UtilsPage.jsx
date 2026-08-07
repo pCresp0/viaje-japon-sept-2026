@@ -1,15 +1,65 @@
 import { useState, useEffect } from "react";
-import { Clock, DollarSign } from "lucide-react";
+import { RefreshCw, CheckCircle2, WifiOff } from "lucide-react";
 import { fmtDateTZ } from "../utils/date";
 
 export default function UtilsPage() {
   const [time, setTime] = useState(new Date());
-  const [euroToYen, setEuroToYen] = useState(160); // Approximate rate
+  
+  const [rate, setRate] = useState(() => {
+    try {
+      const saved = localStorage.getItem("jpy_rate");
+      return saved ? parseFloat(saved) : 160;
+    } catch {
+      return 160;
+    }
+  });
+
+  const [lastUpdated, setLastUpdated] = useState(() => {
+    try {
+      return localStorage.getItem("jpy_rate_date") || null;
+    } catch {
+      return null;
+    }
+  });
+
+  const [loadingRate, setLoadingRate] = useState(false);
+  const [isLive, setIsLive] = useState(false);
+  
   const [eurInput, setEurInput] = useState(100);
-  const [yenInput, setYenInput] = useState(16000);
+  const [yenInput, setYenInput] = useState(() => Math.round(100 * rate));
+
+  // Fetch live exchange rate from free API
+  async function fetchLiveRate() {
+    setLoadingRate(true);
+    try {
+      const res = await fetch("https://open.er-api.com/v6/latest/EUR");
+      if (!res.ok) throw new Error("Network response was not ok");
+      const data = await res.json();
+      if (data && data.rates && data.rates.JPY) {
+        const liveJpy = Math.round(data.rates.JPY * 100) / 100;
+        setRate(liveJpy);
+        setIsLive(true);
+        const timeStr = new Date().toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit" });
+        setLastUpdated(timeStr);
+        setYenInput(Math.round(eurInput * liveJpy));
+        try {
+          localStorage.setItem("jpy_rate", liveJpy.toString());
+          localStorage.setItem("jpy_rate_date", timeStr);
+        } catch {
+          /* ignore */
+        }
+      }
+    } catch (err) {
+      console.warn("Using offline / cached rate:", err);
+      setIsLive(false);
+    } finally {
+      setLoadingRate(false);
+    }
+  }
 
   useEffect(() => {
     const timer = setInterval(() => setTime(new Date()), 1000);
+    fetchLiveRate();
     return () => clearInterval(timer);
   }, []);
 
@@ -21,12 +71,12 @@ export default function UtilsPage() {
 
   const handleEurChange = (val) => {
     setEurInput(val);
-    setYenInput(Math.round(val * euroToYen));
+    setYenInput(Math.round(val * rate));
   };
 
   const handleYenChange = (val) => {
     setYenInput(val);
-    setEurInput(Math.round(val / euroToYen * 100) / 100);
+    setEurInput(Math.round((val / rate) * 100) / 100);
   };
 
   return (
@@ -80,10 +130,50 @@ export default function UtilsPage() {
 
       {/* Currency converter */}
       <div>
-        <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>Conversor EUR ↔ JPY</p>
-        <p style={{ fontSize: 12, color: "var(--ink-soft)", marginBottom: 4 }}>
-          Tipo aproximado: 1€ = {euroToYen}¥ (consultable en tiempo real en XE.com)
-        </p>
+        <div className="flex items-center justify-between mb-3">
+          <p className="eyebrow" style={{ color: "var(--ink-soft)" }}>Conversor EUR ↔ JPY</p>
+          <button
+            onClick={fetchLiveRate}
+            disabled={loadingRate}
+            className="flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full border transition-all"
+            style={{
+              background: "var(--paper-raised)",
+              borderColor: "var(--line)",
+              color: "var(--ink)",
+              cursor: loadingRate ? "not-allowed" : "pointer"
+            }}
+          >
+            <RefreshCw size={12} className={loadingRate ? "animate-spin" : ""} />
+            {loadingRate ? "Actualizando..." : "Actualizar"}
+          </button>
+        </div>
+
+        {/* Live rate status card */}
+        <div
+          className="rounded-xl p-3.5 mb-4 flex items-center justify-between"
+          style={{
+            background: isLive ? "rgba(46,125,91,0.08)" : "rgba(201,162,39,0.1)",
+            border: isLive ? "1px solid rgba(46,125,91,0.2)" : "1px solid rgba(201,162,39,0.3)",
+          }}
+        >
+          <div className="flex items-center gap-2">
+            {isLive ? (
+              <CheckCircle2 size={16} style={{ color: "var(--forest)" }} />
+            ) : (
+              <WifiOff size={16} style={{ color: "#b08500" }} />
+            )}
+            <div>
+              <p style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)", margin: 0 }}>
+                1 € = {rate} ¥
+              </p>
+              <p style={{ fontSize: 11, color: "var(--ink-soft)", margin: 0 }}>
+                {isLive
+                  ? `Cambio oficial en directo ${lastUpdated ? `(${lastUpdated})` : ""}`
+                  : `Cambio guardado offline ${lastUpdated ? `(actualizado ${lastUpdated})` : ""}`}
+              </p>
+            </div>
+          </div>
+        </div>
 
         <div className="space-y-4">
           {/* EUR input */}
@@ -162,7 +252,7 @@ export default function UtilsPage() {
 
         <div className="rounded-xl p-4 mt-4" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
           <p style={{ fontSize: 12, color: "var(--ink-soft)", margin: 0 }}>
-            💱 Actualiza el tipo en XE.com si quieres precisión en tiempo real. Los cajeros automáticos de Japón suelen ofrecer mejor tipo de cambio que oficinas de cambio.
+            💱 Tipo de cambio oficial obtenido en directo desde API pública (ExchangeRate-API). Si no hay cobertura en el metro o montaña, se utiliza automáticamente la última cotización guardada en el dispositivo.
           </p>
         </div>
       </div>

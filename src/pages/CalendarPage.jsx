@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { useContent, useT } from "../i18n/LanguageContext";
 import DayCard from "../components/DayCard";
-import { X } from "lucide-react";
+import { X, CalendarPlus, Download, ExternalLink } from "lucide-react";
 import { days } from "../data/trip";
+import { downloadIcsCalendar } from "../utils/exportCalendar";
 
 // blockColors removed, we use blocks from context now
 const blockEmoji = { kioto: "⛩️", alpes: "🏔️", tokio: "🗼" };
@@ -38,6 +39,7 @@ export default function CalendarPage() {
   const { days, blocks } = useContent();
   const t = useT();
   const [selectedDayNum, setSelectedDayNum] = useState(null);
+  const [showExportModal, setShowExportModal] = useState(false);
   const selectedDay = selectedDayNum !== null ? days.find(d => d.num === selectedDayNum) : null;
   
   // blocks is an array, build a dictionary by id
@@ -55,26 +57,43 @@ export default function CalendarPage() {
 
   // Lock body scroll while the mobile modal is open
   useEffect(() => {
-    if (selectedDay && window.innerWidth < 1024) {
+    if ((selectedDay || showExportModal) && window.innerWidth < 1024) {
       const prevOverflow = document.body.style.overflow;
       document.body.style.overflow = "hidden";
       return () => { document.body.style.overflow = prevOverflow; };
     }
-  }, [selectedDay]);
+  }, [selectedDay, showExportModal]);
 
   return (
     <div style={{ display: "flex", height: "100%", gap: 16 }}>
       {/* Calendar grid — left side */}
       <div className="flex-1 px-4 pt-3 pb-12 overflow-y-auto" style={{ maxWidth: "none" }}>
-        {/* title */}
-        <div className="mb-6">
-          <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{t("calendar.eyebrow")}</p>
-          <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>
-            {t("calendar.title")}
-          </h2>
-          <p style={{ fontSize: 13, color: "var(--ink-soft)", marginTop: 6, lineHeight: 1.6 }}>
-            {t("calendar.intro")}
-          </p>
+        {/* title + export button */}
+        <div className="flex items-start justify-between gap-3 mb-6">
+          <div>
+            <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{t("calendar.eyebrow")}</p>
+            <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>
+              {t("calendar.title")}
+            </h2>
+            <p style={{ fontSize: 13, color: "var(--ink-soft)", marginTop: 6, lineHeight: 1.6 }}>
+              {t("calendar.intro")}
+            </p>
+          </div>
+
+          <button
+            onClick={() => setShowExportModal(true)}
+            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold shrink-0 transition-all hover:opacity-90 mt-1"
+            style={{
+              background: "var(--shu)",
+              color: "#ffffff",
+              border: "none",
+              cursor: "pointer",
+              boxShadow: "0 2px 8px rgba(188,71,73,0.3)"
+            }}
+          >
+            <CalendarPlus size={15} />
+            <span>Exportar</span>
+          </button>
         </div>
 
         {/* legend */}
@@ -244,6 +263,83 @@ export default function CalendarPage() {
             </button>
             <div style={{ padding: 0 }}>
               <DayCard day={selectedDay} defaultOpenHistory={true} />
+            </div>
+          </div>
+        </div>,
+        document.body
+      )}
+
+      {/* Export Calendar Modal */}
+      {showExportModal && createPortal(
+        <div className="modal-overlay" onClick={() => setShowExportModal(false)}>
+          <div
+            className="modal-sheet p-6"
+            onClick={(e) => e.stopPropagation()}
+            style={{ maxWidth: 440, borderRadius: 24, background: "var(--paper-raised)" }}
+          >
+            <div className="flex justify-between items-center mb-4">
+              <div className="flex items-center gap-2">
+                <CalendarPlus size={22} style={{ color: "var(--shu)" }} />
+                <h3 className="font-bold text-lg" style={{ color: "var(--ink)", margin: 0 }}>
+                  Exportar itinerario
+                </h3>
+              </div>
+              <button
+                onClick={() => setShowExportModal(false)}
+                className="w-8 h-8 rounded-full flex items-center justify-center border"
+                style={{ background: "var(--paper)", borderColor: "var(--line)", color: "var(--ink-soft)" }}
+              >
+                <X size={16} />
+              </button>
+            </div>
+
+            <p style={{ fontSize: 13, color: "var(--ink-soft)", marginBottom: 18, lineHeight: 1.5 }}>
+              Añade automáticamente los 16 días del viaje con sus títulos, ciudades y detalles a la aplicación de calendario de tu móvil u ordenador.
+            </p>
+
+            <div className="space-y-3 mb-4">
+              {/* Apple Calendar / iCal */}
+              <button
+                onClick={() => {
+                  downloadIcsCalendar(days);
+                  setShowExportModal(false);
+                }}
+                className="w-full flex items-center gap-3.5 p-4 rounded-2xl border text-left transition-all hover:bg-black/5"
+                style={{ background: "var(--paper)", borderColor: "var(--line)" }}
+              >
+                <span className="text-2xl shrink-0">🍏</span>
+                <div className="flex-1">
+                  <p className="font-bold text-sm" style={{ color: "var(--ink)", margin: 0 }}>
+                    Apple Calendar (iPhone / Mac)
+                  </p>
+                  <p className="text-xs mt-0.5" style={{ color: "var(--ink-soft)", margin: 0 }}>
+                    Descarga el archivo .ics y lo abre directamente en iCal.
+                  </p>
+                </div>
+                <Download size={18} style={{ color: "var(--indigo)" }} />
+              </button>
+
+              {/* Google Calendar */}
+              <button
+                onClick={() => {
+                  downloadIcsCalendar(days);
+                  window.open("https://calendar.google.com/calendar/u/0/r/settings/export", "_blank");
+                  setShowExportModal(false);
+                }}
+                className="w-full flex items-center gap-3.5 p-4 rounded-2xl border text-left transition-all hover:bg-black/5"
+                style={{ background: "var(--paper)", borderColor: "var(--line)" }}
+              >
+                <span className="text-2xl shrink-0">🌐</span>
+                <div className="flex-1">
+                  <p className="font-bold text-sm" style={{ color: "var(--ink)", margin: 0 }}>
+                    Google Calendar
+                  </p>
+                  <p className="text-xs mt-0.5" style={{ color: "var(--ink-soft)", margin: 0 }}>
+                    Descarga el .ics y abre la web de importación de Google.
+                  </p>
+                </div>
+                <ExternalLink size={18} style={{ color: "var(--forest)" }} />
+              </button>
             </div>
           </div>
         </div>,
