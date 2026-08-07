@@ -10,6 +10,7 @@ import BudgetPage from "./pages/BudgetPage";
 import TransportPage from "./pages/TransportPage";
 import HotelsPage from "./pages/HotelsPage";
 import PlacesPage from "./pages/PlacesPage";
+import FoodsPage from "./pages/FoodsPage";
 import MapPage from "./pages/MapPage";
 import WeatherPage from "./pages/WeatherPage";
 import PhrasesPage from "./pages/PhrasesPage";
@@ -76,6 +77,7 @@ export default function App() {
             {tab === "transportes"  && <TransportPage />}
             {tab === "presupuesto"  && <BudgetPage />}
             {tab === "lugares"      && <PlacesPage />}
+            {tab === "comidas"      && <FoodsPage />}
             {tab === "mapa"         && <MapPage />}
             {tab === "clima"        && <WeatherPage />}
             {tab === "frases"       && <PhrasesPage />}
