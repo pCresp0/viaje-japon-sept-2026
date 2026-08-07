@@ -93,9 +93,6 @@ function Drawer({ active, onChange, open, onClose }) {
                   fontWeight: 700, color: "#fff", letterSpacing: "0.02em"
                 }}>Japón 2026</span>
               </div>
-              <p style={{ fontSize: 11, color: "rgba(255,255,255,0.4)", letterSpacing: "0.08em" }}>
-                SEPT 6 – 22 · 5 VIAJEROS
-              </p>
             </div>
             <button onClick={onClose}
               style={{ color: "rgba(255,255,255,0.5)", padding: 4 }}>
@@ -108,12 +105,6 @@ function Drawer({ active, onChange, open, onClose }) {
             <NavItems active={active} onChange={onChange} onClose={onClose} />
           </nav>
 
-          {/* footer */}
-          <div className="px-5 py-4" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-            <p style={{ fontSize: 11, color: "rgba(255,255,255,0.28)", lineHeight: 1.6 }}>
-              Qatar Airways · QR148 / QR809
-            </p>
-          </div>
         </div>
       </aside>
     </>
@@ -168,9 +159,6 @@ export function Sidebar({ active, onChange }) {
               fontWeight: 700, color: "#fff",
             }}>Japón 2026</span>
           </div>
-          <p style={{ fontSize: 11, color: "rgba(255,255,255,0.38)", letterSpacing: "0.09em" }}>
-            SEPT 6 – 22 · 5 VIAJEROS
-          </p>
         </div>
 
         {/* nav */}
@@ -178,12 +166,6 @@ export function Sidebar({ active, onChange }) {
           <NavItems active={active} onChange={onChange} />
         </nav>
 
-        {/* footer */}
-        <div className="px-5 py-5" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-          <p style={{ fontSize: 11, color: "rgba(255,255,255,0.28)", lineHeight: 1.7 }}>
-            Qatar Airways<br />QR148 · QR809
-          </p>
-        </div>
       </div>
     </aside>
   );
