@@ -4,6 +4,7 @@ import { useContent, useT } from "../i18n/LanguageContext";
 
 function PeriodCard({ period, defaultOpen = false }) {
   const [open, setOpen] = useState(defaultOpen);
+  const { guides } = useContent();
 
   return (
     <div className="rounded-2xl border overflow-hidden mb-3"

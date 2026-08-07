@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ScrollText, ChevronDown, ChevronUp } from "lucide-react";
-import { blocks, stays } from "../data/trip";
+import { useContent } from "../i18n/LanguageContext";
 import { guidesByDay } from "../data/guides";
 import GuideCard from "./GuideCard";
 import StayOption from "./StayOption";
@@ -18,10 +18,10 @@ function getScheduleEmoji(text) {
   return null;
 }
 
-const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
-
 export default function DayCard({ day, defaultOpenHistory = false, onClose }) {
   const [showHistory, setShowHistory] = useState(defaultOpenHistory);
+  const { blocks, stays } = useContent();
+  const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
   const block = blockById[day.block];
   const stay = stays.find((s) => s.afterDay === day.num);
   const dayGuides = guidesByDay[day.num] || [];
