@@ -6,6 +6,10 @@ import { searchGlobal } from "../data/searchIndex";
 /**
  * Buscador global (contenido en español). Icono al lado del idioma;
  * al abrir, panel con input y resultados a partir de 3 caracteres.
+ *
+ * variant:
+ *  - "bar"     → móvil (lupa + texto corto)
+ *  - "desktop" → cabecera PC (lupa + «Buscar»)
  */
 export default function GlobalSearch({ onNavigate, variant = "bar" }) {
   const [open, setOpen] = useState(false);
@@ -14,7 +18,7 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
   const btnRef = useRef(null);
   const inputRef = useRef(null);
   const listId = useId();
-  const onBar = variant === "bar";
+  const isDesktop = variant === "desktop";
 
   const results = searchGlobal(query);
 
@@ -71,21 +75,27 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          gap: 5,
-          padding: onBar ? "5px 9px" : "6px 10px",
+          gap: isDesktop ? 7 : 5,
+          padding: isDesktop ? "7px 14px" : "6px 11px",
           borderRadius: 999,
           background: open
-            ? "rgba(255,255,255,0.22)"
-            : onBar
-              ? "rgba(255,255,255,0.14)"
-              : "rgba(255,255,255,0.1)",
-          border: "1px solid rgba(255,255,255,0.18)",
+            ? "rgba(255,255,255,0.24)"
+            : "rgba(255,255,255,0.16)",
+          border: "1px solid rgba(255,255,255,0.28)",
           cursor: "pointer",
           flexShrink: 0,
           color: "#fff",
         }}
       >
-        <Search size={15} strokeWidth={2.4} />
+        <Search size={isDesktop ? 17 : 16} strokeWidth={2.5} />
+        <span style={{
+          fontSize: isDesktop ? 13 : 12,
+          fontWeight: 700,
+          letterSpacing: "0.02em",
+          lineHeight: 1,
+        }}>
+          Buscar
+        </span>
       </button>
 
       {open && coords && createPortal(

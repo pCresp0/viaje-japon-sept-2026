@@ -142,11 +142,8 @@ export function TopBar({ active, onOpenDrawer, onNavigate }) {
   return (
     <header className="fixed top-0 left-0 right-0 flex items-center gap-3 px-4"
       style={{
-        // Más alta que el offset de <main>: el "seal" inferior tapa el
-        // hueco donde se filtraba el fondo de olas bajo la cabecera.
-        height: "calc(var(--mobile-topbar) + var(--mobile-topbar-seal))",
+        height: "var(--mobile-topbar)",
         paddingTop: "env(safe-area-inset-top, 0px)",
-        paddingBottom: "var(--mobile-topbar-seal)",
         boxSizing: "border-box",
         zIndex: 150,
         backgroundColor: "var(--shu-darker)",
@@ -156,7 +153,8 @@ export function TopBar({ active, onOpenDrawer, onNavigate }) {
         left: 0,
         right: 0,
         borderBottom: "none",
-        boxShadow: "0 2px 12px rgba(0,0,0,0.15)",
+        // Sombra de color sólido: tapa franjas subpíxel sin desalinear el contenido
+        boxShadow: "0 2px 0 0 var(--shu-darker), 0 4px 14px rgba(0,0,0,0.18)",
       }}
     >
       <div style={chromeOverlay} />
@@ -228,7 +226,7 @@ export function DesktopTopBar({ active, onNavigate }) {
         )}
       </div>
       <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", gap: 8 }}>
-        <GlobalSearch variant="bar" onNavigate={onNavigate} />
+        <GlobalSearch variant="desktop" onNavigate={onNavigate} />
         <LanguageSwitcher variant="bar" />
       </div>
     </header>

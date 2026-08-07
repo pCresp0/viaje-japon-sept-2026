@@ -80,7 +80,7 @@ export default function App() {
             width: "100%",
             maxWidth: 1100,
             margin: "0 auto",
-            // Solo móvil: offset bajo la top bar fija (+ seal que tapa el hueco del fondo)
+            // Solo móvil: offset bajo la top bar fija
             paddingTop: "var(--mobile-topbar)",
           }}>
             <div>
