@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Compass, Route, Plane, Wallet, X, Menu, CalendarDays, MessageCircle, Backpack, ShieldAlert, Train, Heart, Map, Cloud, Clock, ListTodo, Landmark, Hotel, UtensilsCrossed } from "lucide-react";
+import { Compass, Route, Plane, Wallet, X, Menu, CalendarDays, MessageCircle, Backpack, ShieldAlert, Train, Heart, Map, Cloud, Clock, ListTodo, Landmark, Hotel, UtensilsCrossed, Home } from "lucide-react";
 
 export const tabs = [
   { id: "pendientes",   label: "Cosas pendientes", icon: ListTodo, alert: true },
   { id: "historia",     label: "Historia de Japón", icon: Landmark },
+  { id: "inicio",       label: "Inicio",       icon: Home         },
   { id: "hoy",          label: "Hoy",          icon: Compass      },
   { id: "calendario",   label: "Calendario",   icon: CalendarDays },
   { id: "itinerario",   label: "Itinerario",   icon: Route        },

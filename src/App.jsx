@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import Nav, { Sidebar } from "./components/Nav";
 import Footer from "./components/Footer";
 import AccessGate, { isUnlocked } from "./components/AccessGate";
+import InicioPage from "./pages/InicioPage";
 import Home from "./pages/Home";
 import CalendarPage from "./pages/CalendarPage";
 import Itinerary from "./pages/Itinerary";
@@ -21,9 +22,14 @@ import PendingPage from "./pages/PendingPage";
 import HistoryPage from "./pages/HistoryPage";
 import { getTripStatus } from "./utils/date";
 
+function defaultTab() {
+  // Antes del viaje → Inicio. Cuando empieza (o ya terminó) → Hoy.
+  return getTripStatus().phase === "before" ? "inicio" : "hoy";
+}
+
 export default function App() {
   const [unlocked, setUnlocked] = useState(() => isUnlocked());
-  const [tab, setTab] = useState("hoy");
+  const [tab, setTab] = useState(defaultTab);
   const [openDay, setOpenDay] = useState(getTripStatus().day?.num ?? null);
   const scrollContainerRef = useRef(null);
 
@@ -69,6 +75,7 @@ export default function App() {
           <div className="md-no-top-pad">
             {tab === "pendientes"   && <PendingPage />}
             {tab === "historia"     && <HistoryPage />}
+            {tab === "inicio"       && <InicioPage onNavigate={setTab} />}
             {tab === "hoy"          && <Home onGoToDay={goToDay} />}
             {tab === "calendario"   && <CalendarPage />}
             {tab === "itinerario"   && <Itinerary openDay={openDay} setOpenDay={setOpenDay} />}
