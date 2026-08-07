@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ScrollText, Wallet, ChevronDown, ChevronUp } from "lucide-react";
+import { ScrollText, ChevronDown, ChevronUp } from "lucide-react";
 import { blocks, stays } from "../data/trip";
 import { guidesByDay } from "../data/guides";
 import GuideCard from "./GuideCard";
@@ -130,11 +130,6 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose }) {
             </div>
           </div>
         )}
-
-        <div className="flex items-center gap-2 text-sm" style={{ color: "var(--gold)" }}>
-          <Wallet size={16} />
-          <span className="font-medium">{day.money}</span>
-        </div>
 
         <button
           onClick={() => setShowHistory((v) => !v)}
