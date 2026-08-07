@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, BookOpen, Headphones, MapPinned, Scroll } from "lucide-react";
-import { historyPeriods, furtherReading } from "../data/history";
-import { guides } from "../data/guides";
+import { useContent, useT } from "../i18n/LanguageContext";
 
 function PeriodCard({ period, defaultOpen = false }) {
   const [open, setOpen] = useState(defaultOpen);
@@ -90,6 +89,8 @@ function PeriodCard({ period, defaultOpen = false }) {
 }
 
 export default function HistoryPage() {
+  const { historyPeriods, furtherReading, guides } = useContent();
+  const t = useT();
   return (
     <div className="px-4 pt-3 pb-12">
       <div className="mb-6">

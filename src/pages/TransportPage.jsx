@@ -1,4 +1,4 @@
-import { transports, transportTotals, days } from "../data/trip";
+import { useContent, useT } from "../i18n/LanguageContext";
 import { Train, Bus, Zap } from "lucide-react";
 
 // Determina el icono del trayecto.
@@ -25,6 +25,8 @@ function jrCoverage(t) {
 }
 
 export default function TransportPage() {
+  const { transports, transportTotals, days } = useContent();
+  const t = useT();
   // Group transports by day key, preserving insertion order
   const seenKeys = [];
   const groups = {};

@@ -1,7 +1,28 @@
 // Superposición de traducción — tl
 // Sólo contiene texto traducido; todo lo demás se hereda.
 
+import { days } from "./trip_days_tl";
+import { historyPeriods, furtherReading } from "./history_tl";
+import { guides } from "./guides_tl";
+import { popCulture } from "./popCulture_tl";
+import { tripMeta, flights, blocks, stays, transports, budget } from "./trip_extra_tl";
+import { stops as mapStops, filterData as mapFilterData, mapLabels } from "./mapData_tl";
+import { weatherData, dailyWeather, weatherLabels } from "./weatherData_tl";
+
 export default {
+  weatherData, dailyWeather, weatherLabels,
+  mapStops, mapFilterData, mapLabels,
+  tripMeta,
+  flights,
+  blocks,
+  stays,
+  transports,
+  budget,
+  popCulture,
+  guides,
+  historyPeriods,
+  furtherReading,
+  days,
   foodCategories: [
     { title: "Dapat subukan" },
     { title: "Ayon sa lugar ng biyahe" },

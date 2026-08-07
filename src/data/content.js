@@ -18,6 +18,8 @@ import { foods, foodCategories } from "./foods";
 import { pendingItems, categoryLabels, urgencyConfig } from "./pending";
 import { popCulture } from "./popCulture";
 import { guideImages } from "./guideImages";
+import { stops as mapStops, filterData as mapFilterData, mapLabels } from "./mapData";
+import { weatherData, dailyWeather, weatherLabels } from "./weatherData";
 
 import en from "./locales/en";
 import fr from "./locales/fr";
@@ -34,6 +36,8 @@ const base = {
   pendingItems, categoryLabels, urgencyConfig,
   popCulture,
   guideImages,
+  mapStops, mapFilterData, mapLabels,
+  weatherData, dailyWeather, weatherLabels,
 };
 
 function isPlainObject(v) {

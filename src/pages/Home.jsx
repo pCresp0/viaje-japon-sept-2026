@@ -1,9 +1,10 @@
-import { tripMeta, days } from "../data/trip";
+import { useContent } from "../i18n/LanguageContext";
 import { getTripStatus } from "../utils/date";
 import DayCard from "../components/DayCard";
 import { Info } from "lucide-react";
 
 export default function Home({ onGoToDay }) {
+  const { tripMeta, days } = useContent();
   const status = getTripStatus();
   const day1 = days.find((d) => d.num === 1);
 

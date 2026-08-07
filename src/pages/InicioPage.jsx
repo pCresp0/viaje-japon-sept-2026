@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { tripMeta, flights } from "../data/trip";
+import { useContent, useT } from "../i18n/LanguageContext";
 import { PlaneTakeoff, Route, CalendarDays, Hotel, Train, Heart, UtensilsCrossed, Map, MessageCircle, Backpack, Wallet, Compass, ListTodo, Landmark } from "lucide-react";
 
 const DEPARTURE_ISO = `${flights.out.date}T09:05:00`;
@@ -35,6 +35,7 @@ const sections = [
 ];
 
 export default function InicioPage({ onNavigate }) {
+  const { tripMeta, flights } = useContent();
   const [countdown, setCountdown] = useState(getCountdown);
 
   useEffect(() => {
@@ -58,10 +59,13 @@ export default function InicioPage({ onNavigate }) {
         <h1 className="font-display text-3xl" style={{ color: "var(--indigo)", margin: 0, lineHeight: 1.2 }}>
           {tripMeta.title}
         </h1>
-        <p style={{ fontSize: 14.5, color: "var(--ink-soft)", marginTop: 10, lineHeight: 1.55, maxWidth: 640 }}>
-          Guía privada del grupo: itinerario, reservas, hoteles, transporte, mapa y tips.
-          Todo lo que necesitamos en el móvil, sin depender de chats ni PDFs sueltos.
-        </p>
+        <div className="space-y-4 mt-6 mb-8">
+          {tripMeta.welcomeParagraphs?.map((paragraph, idx) => (
+            <p key={idx} style={{ fontSize: 14.5, color: "var(--ink-soft)", lineHeight: 1.55, maxWidth: 640 }}>
+              {paragraph}
+            </p>
+          ))}
+        </div>
       </div>
 
       {/* Countdown */}

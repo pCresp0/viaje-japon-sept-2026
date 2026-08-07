@@ -1,7 +1,28 @@
 // Superposición de traducción — fr
 // Sólo contiene texto traducido; todo lo demás se hereda.
 
+import { days } from "./trip_days_fr";
+import { historyPeriods, furtherReading } from "./history_fr";
+import { guides } from "./guides_fr";
+import { popCulture } from "./popCulture_fr";
+import { tripMeta, flights, blocks, stays, transports, budget } from "./trip_extra_fr";
+import { stops as mapStops, filterData as mapFilterData, mapLabels } from "./mapData_fr";
+import { weatherData, dailyWeather, weatherLabels } from "./weatherData_fr";
+
 export default {
+  weatherData, dailyWeather, weatherLabels,
+  mapStops, mapFilterData, mapLabels,
+  tripMeta,
+  flights,
+  blocks,
+  stays,
+  transports,
+  budget,
+  popCulture,
+  guides,
+  historyPeriods,
+  furtherReading,
+  days,
   foodCategories: [
     { title: "Incontournables" },
     { title: "Par zone du voyage" },

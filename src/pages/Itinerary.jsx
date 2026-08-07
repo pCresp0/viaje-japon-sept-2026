@@ -1,13 +1,13 @@
 import { useEffect, useRef } from "react";
-import { days, blocks } from "../data/trip";
+import { useContent } from "../i18n/LanguageContext";
 import { formatDateShort } from "../utils/date";
 import DayCard from "../components/DayCard";
 import PlaceText from "../components/PlaceText";
 import { ChevronRight } from "lucide-react";
 
-const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
-
 export default function Itinerary({ openDay, setOpenDay }) {
+  const { days, blocks } = useContent();
+  const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
   const refs = useRef({});
 
   useEffect(() => {

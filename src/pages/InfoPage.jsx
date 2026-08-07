@@ -1,8 +1,11 @@
-import { flights } from "../data/trip";
+import { useContent, useT } from "../i18n/LanguageContext";
 import { fmtDate } from "../utils/date";
 import { PlaneTakeoff, PlaneLanding } from "lucide-react";
 
 export default function InfoPage() {
+  const { flights } = useContent();
+  const t = useT();
+
   return (
     <div className="px-4 pt-3 pb-8">
       <div className="mb-6">

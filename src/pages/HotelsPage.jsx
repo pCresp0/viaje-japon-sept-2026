@@ -1,4 +1,4 @@
-import { stays } from "../data/trip";
+import { useContent, useT } from "../i18n/LanguageContext";
 import { mapsUrl } from "../utils/maps";
 import { MapPin, Phone, KeyRound, CalendarCheck, CalendarX, BedDouble, ExternalLink } from "lucide-react";
 
@@ -179,6 +179,8 @@ function HotelCard({ stay, index }) {
 }
 
 export default function HotelsPage() {
+  const { stays } = useContent();
+  const t = useT();
   const totalGroup = stays.reduce((sum, s) => {
     const raw = s.options[0]?.total;
     if (!raw) return sum;

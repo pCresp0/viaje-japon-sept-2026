@@ -1,8 +1,10 @@
-import { budget, transports, transportTotals } from "../data/trip";
+import { useContent, useT } from "../i18n/LanguageContext";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 export default function BudgetPage() {
+  const { budget, transports, transportTotals } = useContent();
+  const t = useT();
   const [showTransports, setShowTransports] = useState(false);
 
   return (

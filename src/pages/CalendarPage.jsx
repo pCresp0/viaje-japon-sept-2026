@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { days, blocks } from "../data/trip";
+import { useContent, useT } from "../i18n/LanguageContext";
 import DayCard from "../components/DayCard";
 import { X } from "lucide-react";
 
@@ -40,6 +40,8 @@ for (let wi = 0; wi < grid.length / 7; wi++) {
 }
 
 export default function CalendarPage() {
+  const { days, blocks } = useContent();
+  const t = useT();
   const [selectedDayNum, setSelectedDayNum] = useState(null);
   const selectedDay = selectedDayNum !== null ? days.find(d => d.num === selectedDayNum) : null;
 
@@ -59,10 +61,13 @@ export default function CalendarPage() {
       <div className="flex-1 px-4 pt-3 pb-12 overflow-y-auto" style={{ maxWidth: "none" }}>
         {/* title */}
         <div className="mb-6">
-          <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Septiembre 2026</p>
+          <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{t("calendar.eyebrow")}</p>
           <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>
-            Calendario del viaje
+            {t("calendar.title")}
           </h2>
+          <p style={{ fontSize: 13, color: "var(--ink-soft)", marginTop: 6, lineHeight: 1.6 }}>
+            {t("calendar.intro")}
+          </p>
         </div>
 
         {/* legend */}

@@ -1,7 +1,28 @@
 // Superposición de traducción — en
 // Sólo contiene texto traducido; todo lo demás se hereda.
 
+import { days } from "./trip_days_en";
+import { historyPeriods, furtherReading } from "./history_en";
+import { guides } from "./guides_en";
+import { popCulture } from "./popCulture_en";
+import { tripMeta, flights, blocks, stays, transports, budget } from "./trip_extra_en";
+import { stops as mapStops, filterData as mapFilterData, mapLabels } from "./mapData_en";
+import { weatherData, dailyWeather, weatherLabels } from "./weatherData_en";
+
 export default {
+  weatherData, dailyWeather, weatherLabels,
+  mapStops, mapFilterData, mapLabels,
+  tripMeta,
+  flights,
+  blocks,
+  stays,
+  transports,
+  budget,
+  popCulture,
+  guides,
+  historyPeriods,
+  furtherReading,
+  days,
   foodCategories: [
     { title: "Must-try" },
     { title: "By trip area" },

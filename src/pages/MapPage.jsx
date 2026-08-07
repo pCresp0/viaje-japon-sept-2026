@@ -4,142 +4,7 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { ExternalLink } from "lucide-react";
 
-// Hasta 15 paradas principales, en orden cronológico del viaje
-const stops = [
-  {
-    id: "narita", name: "Narita", city: "Aeropuerto NRT",
-    lat: 35.7719, lng: 140.3929,
-    emoji: "✈️", color: "#c9a227",
-    day: "Día 1",
-    detail: "Llegada · N'EX a Tokio / Shinkansen a Kioto",
-  },
-  {
-    id: "kioto", name: "Kioto", city: "Kioto",
-    lat: 35.0116, lng: 135.7681,
-    emoji: "⛩️", color: "#bc4749",
-    day: "Días 1–5",
-    detail: "Base 5 noches · Fushimi, Gion, Nishiki, Kiyomizu…",
-  },
-  {
-    id: "nara", name: "Nara", city: "Nara",
-    lat: 34.6890, lng: 135.8398,
-    emoji: "🦌", color: "#bc4749",
-    day: "Día 2",
-    detail: "Todai-ji, Gran Buda y parque de los ciervos",
-  },
-  {
-    id: "arashiyama", name: "Arashiyama", city: "Kioto",
-    lat: 35.0173, lng: 135.6721,
-    emoji: "🎋", color: "#bc4749",
-    day: "Día 3",
-    detail: "Bosque de bambú, Saga-Toriimoto y Otagi",
-  },
-  {
-    id: "osaka", name: "Osaka", city: "Osaka",
-    lat: 34.6873, lng: 135.5262,
-    emoji: "🏯", color: "#bc4749",
-    day: "Día 5",
-    detail: "Castillo, Dotonbori y Shinsekai",
-  },
-  {
-    id: "kanazawa", name: "Kanazawa", city: "Ishikawa",
-    lat: 36.5613, lng: 136.6562,
-    emoji: "🌸", color: "#2e7d5b",
-    day: "Día 6",
-    detail: "1 noche · Kenroku-en, Omicho, Higashi Chaya",
-  },
-  {
-    id: "shirakawa", name: "Shirakawa-go", city: "Gifu",
-    lat: 36.2577, lng: 136.9063,
-    emoji: "🏡", color: "#2e7d5b",
-    day: "Día 7",
-    detail: "Aldea gassho-zukuri · parada Nohi Bus",
-  },
-  {
-    id: "takayama", name: "Takayama", city: "Gifu",
-    lat: 36.1461, lng: 137.2522,
-    emoji: "🏮", color: "#2e7d5b",
-    day: "Días 7–8",
-    detail: "1 noche · Sanmachi Suji y Hida beef",
-  },
-  {
-    id: "magome", name: "Magome", city: "Nakatsugawa",
-    lat: 35.5244, lng: 137.5647,
-    emoji: "⛰️", color: "#2e7d5b",
-    day: "Día 8",
-    detail: "1 noche · Magome Chaya · inicio Nakasendo",
-  },
-  {
-    id: "tsumago", name: "Tsumago", city: "Nagano",
-    lat: 35.5776, lng: 137.5957,
-    emoji: "🚶", color: "#2e7d5b",
-    day: "Día 8",
-    detail: "Final de la caminata Magome → Tsumago (8 km)",
-  },
-  {
-    id: "asakusa", name: "Asakusa", city: "Tokio",
-    lat: 35.7148, lng: 139.7967,
-    emoji: "🗼", color: "#1d3557",
-    day: "Días 9–15",
-    detail: "Base 6 noches · Senso-ji y hotel KOKO",
-  },
-  {
-    id: "akihabara", name: "Akihabara", city: "Tokio",
-    lat: 35.6984, lng: 139.7731,
-    emoji: "🎮", color: "#1d3557",
-    day: "Día 9",
-    detail: "Electrónica, figuras y cultura otaku",
-  },
-  {
-    id: "odaiba", name: "Odaiba", city: "Tokio",
-    lat: 35.6295, lng: 139.7794,
-    emoji: "🌉", color: "#1d3557",
-    day: "Día 10",
-    detail: "Yurikamome, Gundam y skyline",
-  },
-  {
-    id: "shibuya", name: "Shibuya", city: "Tokio",
-    lat: 35.6595, lng: 139.7005,
-    emoji: "🚦", color: "#1d3557",
-    day: "Día 11",
-    detail: "Cruce, Harajuku y Meiji Jingu cerca",
-  },
-  {
-    id: "fuji", name: "Monte Fuji", city: "Yamanashi",
-    lat: 35.5009, lng: 138.7606,
-    emoji: "🗻", color: "#1d3557",
-    day: "Día 14",
-    detail: "Excursión con Ken Kaneshima · Chureito / lagos",
-  },
-];
-
-const routeLine = stops.map((s) => [s.lat, s.lng]);
-
-const filterData = {
-  ruta: stops,
-  hoteles: [
-    { id: "h-kioto", name: "Hotel Keihan Kyoto", day: "Kioto", lat: 34.9811, lng: 135.7589, emoji: "🏨", color: "#BC4749", detail: "Base 5 noches" },
-    { id: "h-kanazawa", name: "Hotel Resol Trinity", day: "Kanazawa", lat: 36.5613, lng: 136.6562, emoji: "🏨", color: "#2E7D5B", detail: "1 noche" },
-    { id: "h-takayama", name: "Hotel Wood Takayama", day: "Takayama", lat: 36.1461, lng: 137.2522, emoji: "🏨", color: "#2E7D5B", detail: "1 noche" },
-    { id: "h-magome", name: "Magome Chaya", day: "Magome", lat: 35.5244, lng: 137.5647, emoji: "🏨", color: "#2E7D5B", detail: "1 noche · Minshuku" },
-    { id: "h-tokio", name: "KOKO HOTEL", day: "Tokio", lat: 35.7148, lng: 139.7967, emoji: "🏨", color: "#1D3557", detail: "Base 6 noches" },
-  ],
-  excursiones: [
-    { id: "e-nara", name: "Nara", day: "Excursión", lat: 34.6890, lng: 135.8398, emoji: "🦌", color: "#bc4749", detail: "Todai-ji y parque de ciervos" },
-    { id: "e-arashiyama", name: "Arashiyama", day: "Excursión", lat: 35.0173, lng: 135.6721, emoji: "🎋", color: "#bc4749", detail: "Bosque de bambú" },
-    { id: "e-osaka", name: "Osaka", day: "Excursión", lat: 34.6873, lng: 135.5262, emoji: "🏯", color: "#bc4749", detail: "Castillo y Dotonbori" },
-    { id: "e-shirakawa", name: "Shirakawa-go", day: "Parada", lat: 36.2577, lng: 136.9063, emoji: "🏡", color: "#2e7d5b", detail: "Aldea gassho-zukuri" },
-    { id: "e-tsumago", name: "Ruta Nakasendo", day: "Excursión", lat: 35.5776, lng: 137.5957, emoji: "🚶", color: "#2e7d5b", detail: "Caminata de 8 km" },
-    { id: "e-fuji", name: "Monte Fuji", day: "Excursión", lat: 35.5009, lng: 138.7606, emoji: "🗻", color: "#1d3557", detail: "Tour de día completo" },
-  ],
-  transportes: [
-    { id: "t-narita", name: "Aeropuerto Narita", day: "Vuelos", lat: 35.7719, lng: 140.3929, emoji: "✈️", color: "#c9a227", detail: "Llegada y salida" },
-    { id: "t-kioto", name: "Est. Kioto", day: "Tren", lat: 34.9858, lng: 135.7587, emoji: "🚄", color: "#bc4749", detail: "Shinkansen y N'EX" },
-    { id: "t-kanazawa", name: "Est. Kanazawa", day: "Tren", lat: 36.5780, lng: 136.6480, emoji: "🚆", color: "#2e7d5b", detail: "Thunderbird" },
-    { id: "t-takayama", name: "Nohi Bus Center", day: "Autobús", lat: 36.1415, lng: 137.2513, emoji: "🚌", color: "#2e7d5b", detail: "Bus a Shirakawa-go" },
-    { id: "t-tokio", name: "Est. Tokio", day: "Tren", lat: 35.6812, lng: 139.7671, emoji: "🚄", color: "#1d3557", detail: "Shinkansen y Yamanote" },
-  ]
-};
+import { useContent } from "../data/content";
 
 function createIcon(emoji, color, order) {
   return L.divIcon({
@@ -193,25 +58,28 @@ export default function MapPage() {
   const [selected, setSelected] = useState(null);
   const [filter, setFilter] = useState("ruta");
 
+  const { mapStops, mapFilterData, mapLabels } = useContent();
+  const routeLine = mapStops.map((s) => [s.lat, s.lng]);
+
   const filters = [
-    { id: "ruta", label: "Ruta completa" },
-    { id: "hoteles", label: "Hoteles" },
-    { id: "excursiones", label: "Excursiones" },
-    { id: "transportes", label: "Transportes" },
+    { id: "ruta", label: mapLabels.filterRuta },
+    { id: "hoteles", label: mapLabels.filterHoteles },
+    { id: "excursiones", label: mapLabels.filterExcursiones },
+    { id: "transportes", label: mapLabels.filterTransportes },
   ];
 
-  const currentMarkers = filterData[filter] || [];
+  const currentMarkers = mapFilterData[filter] || [];
 
   return (
     <div className="px-4 pt-3 pb-12">
       <div className="mb-4">
-        <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Ubicaciones clave</p>
-        <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>Mapa de la ruta</h2>
+        <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{mapLabels.ubicacionesClave}</p>
+        <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>{mapLabels.mapaDeLaRuta}</h2>
         <p style={{ fontSize: 13, color: "var(--ink-soft)", marginTop: 6, lineHeight: 1.5 }}>
-          {filter === "ruta" && `${stops.length} paradas principales en orden cronológico del viaje.`}
-          {filter === "hoteles" && `Nuestros alojamientos base durante el viaje.`}
-          {filter === "excursiones" && `Puntos de interés y excursiones de 1 día.`}
-          {filter === "transportes" && `Estaciones principales y nodos de transporte.`}
+          {filter === "ruta" && `${mapStops.length} ${mapLabels.descRuta}`}
+          {filter === "hoteles" && `${mapLabels.descHoteles}`}
+          {filter === "excursiones" && `${mapLabels.descExcursiones}`}
+          {filter === "transportes" && `${mapLabels.descTransportes}`}
         </p>
       </div>
 
@@ -269,7 +137,7 @@ export default function MapPage() {
               <Popup>
                 <div style={{ fontFamily: "var(--font-body)", minWidth: 160 }}>
                   <p style={{ fontSize: 11, color: stop.color, fontWeight: 700, marginBottom: 2 }}>
-                    {filter === "ruta" ? `PARADA ${idx + 1} · ` : `Nº ${idx + 1} · `}{stop.day}
+                    {filter === "ruta" ? `${mapLabels.parada} ${idx + 1} · ` : `${mapLabels.no} ${idx + 1} · `}{stop.day}
                   </p>
                   <p style={{ fontWeight: 700, fontSize: 14, marginBottom: 2 }}>{stop.name}</p>
                   <p style={{ fontSize: 12, color: "#5a6070", marginBottom: 6 }}>{stop.detail}</p>
@@ -279,7 +147,7 @@ export default function MapPage() {
                     rel="noopener noreferrer"
                     style={{ fontSize: 12, color: stop.color, fontWeight: 600, textDecoration: "none" }}
                   >
-                    Abrir en Google Maps ↗
+                    {mapLabels.abrirGoogleMaps}
                   </a>
                 </div>
               </Popup>
@@ -291,7 +159,7 @@ export default function MapPage() {
       </div>
 
       <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>
-        {currentMarkers.length} {filter === "ruta" ? "paradas · en orden del viaje" : "ubicaciones"}
+        {currentMarkers.length} {filter === "ruta" ? mapLabels.paradasOrden : mapLabels.ubicaciones}
       </p>
       <div className="grid gap-2" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }}>
         {currentMarkers.map((stop, idx) => {
