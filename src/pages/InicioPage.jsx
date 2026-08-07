@@ -32,9 +32,10 @@ export default function InicioPage({ onNavigate }) {
 
   const units = countdown
     ? [
-        { label: "Horas", value: countdown.hours },
-        { label: "Min", value: countdown.minutes },
-        { label: "Seg", value: countdown.seconds },
+        { label: t("home.countdownDays"), value: countdown.days },
+        { label: t("home.countdownHours"), value: countdown.hours },
+        { label: t("home.countdownMinutes"), value: countdown.minutes },
+        { label: t("home.countdownSeconds"), value: countdown.seconds },
       ]
     : null;
 
