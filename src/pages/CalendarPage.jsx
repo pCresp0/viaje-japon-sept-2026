@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 import { useContent, useT } from "../i18n/LanguageContext";
 import DayCard from "../components/DayCard";
 import { X } from "lucide-react";
+import { days } from "../data/trip";
 
 const blockColors = {
   kioto: { bg: "#bc4749", label: "Kioto · Nara · Osaka" },
