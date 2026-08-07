@@ -28,16 +28,18 @@ html, body, #root {
 }
 
 /* ── Textura de olas sobre el fondo de la app ────────────────────────
-   z-index: -1 garantiza que la textura queda por debajo de todo el
-   contenido, incluidos los divs sin position declarada. */
+   Misma imagen que el panel lateral (waves-sidebar.webp) pero con
+   opacidad reducida y un leve blur para que sea más difuminada.
+   inset: -12px compensa el sangrado de bordes del filtro blur. */
 body::before {
   content: "";
   position: fixed;
-  inset: 0;
+  inset: -12px;
   background-image: url('/waves-sidebar.webp');
-  background-size: 700px auto;
-  background-repeat: repeat;
-  opacity: 0.06;
+  background-size: cover;
+  background-position: center top;
+  opacity: 0.11;
+  filter: blur(2px);
   pointer-events: none;
   z-index: -1;
 }
