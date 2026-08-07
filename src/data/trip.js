@@ -6,11 +6,16 @@ export const tripMeta = {
   end: "2026-09-21",
   people: 5,
   welcomeParagraphs: [
-    "¡Bienvenidos al Viaje Morisqueño a Japón! Esta web es la base del viaje de los 5. Aquí están los vuelos, hoteles con PIN y confirmación, buses ya reservados, el plan día a día y lo que aún falta por cerrar.",
-    "Es la guía privada del grupo: itinerario, reservas, hoteles, transporte, mapa y tips. Todo lo que necesitamos en el móvil, sin depender de chats ni PDFs sueltos.",
-    "Todos los apartados de abajo son clicables para entrar al detalle de cada sección. Cuando empiece el viaje (desde el 6–7 sept), la web abrirá sola en la pestaña 'Hoy', con el detalle del día que toque.",
-    "Además, puedes cambiar el idioma de la aplicación en cualquier momento (Español, English, Français, Tagalog) usando el botón de la parte superior."
+    "¡Bienvenidos al Viaje Morisqueño a Japón! Esta web es la <strong>base del viaje de los 5</strong>. Aquí están los vuelos, hoteles con PIN y confirmación, buses ya reservados, el plan día a día y lo que aún falta por cerrar.",
+    "Es la <strong>guía privada del grupo</strong>: itinerario, reservas, hoteles, transporte, mapa y tips. Todo lo que necesitamos en el móvil, sin depender de chats ni PDFs sueltos.",
+    "Todos los apartados de abajo son clicables para entrar al detalle de cada sección. También puedes usar el <strong>menú de la parte superior izquierda</strong> para navegar rápidamente por todos los apartados en cualquier momento. Cuando empiece el viaje (desde el 6–7 sept), la web abrirá sola en la pestaña 'Hoy', con el detalle del día que toque.",
+    "Además, puedes <strong>cambiar el idioma</strong> de la aplicación en cualquier momento (Español, English, Français, Tagalog) usando el botón de la parte superior."
   ],
+  about: {
+    title: "Sobre la web",
+    description: "Esta aplicación web ha sido construida a medida para nuestro viaje utilizando React, Vite y TailwindCSS. Su diseño prioriza la velocidad, accesibilidad offline (como PWA) y una estética moderna sin sacrificar el rendimiento. Todo el código fuente es público y se puede consultar libremente en nuestro repositorio.",
+    github: "Ver código fuente en GitHub"
+  }
 };
 
 export const flights = {

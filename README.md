@@ -13,11 +13,13 @@ Sustituye a los tradicionales documentos en PDF/Excel por una aplicación estát
 - 🚇 **Itinerario (15 Días)** — Navegación visual mediante un componente custom (`RouteLine`) inspirado en los diagramas de tránsito metropolitano de Tokio, separando lógicamente el viaje en 3 clústeres geográficos (Kansai, Alpes Japoneses y Gran Tokio).
 - ✈️ **Vuelos & Hoteles** — Integración centralizada de telemetría de vuelos (Qatar Airways QR148/QR809) y geolocalización de alojamientos mediante enlaces profundos (Deep Links) a Google Maps y códigos PIN de Booking.
 - 🚆 **Transportes** — Guía operativa sobre logística ferroviaria (Shinkansen, tarjetas IC) y logística de equipajes (Takkyubin).
-- 🗺️ **Mapa Interactivo (Leaflet)** — Renderizado espacial interactivo sin dependencias de APIs de pago comerciales, situando coordenadas geoespaciales clave de la ruta.
+- 🗺️ **Mapa Interactivo (Leaflet)** — Renderizado espacial interactivo sin dependencias de APIs de pago comerciales, situando coordenadas geoespaciales clave de la ruta. Incluye sistema de **filtros por categorías** (Ruta completa, Hoteles, Excursiones, Transportes) para facilitar la visualización.
+- 🌤️ **Clima Dinámico** — Sistema de previsión meteorológica simulado para las fechas del viaje (basado en promedios históricos de septiembre) con información sobre temperaturas, lluvias, ropa recomendada y eventos naturales.
 - 🗣️ **Frases y TTS (Text-to-Speech)** — Glosario interactivo en japonés que aprovecha la **Web Speech API (`window.speechSynthesis`)** nativa del navegador para síntesis de voz en tiempo real sin requerir *assets* de audio externos.
+- 🌍 **Sistema Multi-idioma (i18n)** — Arquitectura de internacionalización centralizada (`LanguageContext`) mediante React Context, soportando **4 idiomas simultáneos** (Español, English, Français, Tagalog) sin duplicar datos estructurados ni requerir dependencias pesadas como `react-i18next`.
 - 📋 **Preparativos** — Checklist interactivo de tareas organizativas implementando **persistencia de estado local (`localStorage`)** para mantener la sincronización entre sesiones.
 - 💰 **Presupuesto** — Desglose financiero calculado dinámicamente desde el modelo de datos.
-- 🛠️ **Herramientas & Clima** — Reloj sincronizado con el huso horario oficial de Japón (JST) y conversor de divisas interactivo JPY ↔ EUR.
+- 🛠️ **Herramientas** — Reloj sincronizado con el huso horario oficial de Japón (JST) y conversor de divisas interactivo JPY ↔ EUR.
 
 ---
 
@@ -47,10 +49,11 @@ viaje-japon-sept-2026/
 │   ├── components/         # Módulos de UI reutilizables
 │   │   ├── Nav.jsx         # Controlador maestro de navegación (TopBar Mobile + Sidebar Desktop)
 │   │   ├── AccessGate.jsx  # Capa de seguridad y control de acceso inicial
-│   │   ├── RouteLine.jsx   # Gráfico SVG/CSS interactivo para líneas de itinerario
 │   │   └── ...
 │   ├── data/
-│   │   └── trip.js         # Single Source of Truth (SSOT). JSON de datos puros.
+│   │   ├── trip.js         # Single Source of Truth (SSOT). Datos base en Español.
+│   │   └── locales/        # Superposiciones de traducción (EN, FR, TL).
+│   ├── i18n/               # Sistema centralizado de internacionalización (Context & Hooks).
 │   ├── pages/              # Módulos de vistas enrutadas
 │   ├── utils/
 ├── index.html              # HTML5 semántico, metas de viewport-fit=cover y theme-color (#4d1c1e)

@@ -2,11 +2,16 @@ export const tripMeta = {
   title: "Morisqueño Trip sa Japan",
   subtitle: "Setyembre 2026",
   welcomeParagraphs: [
-    "Maligayang pagdating sa Morisqueño Trip sa Japan! Ang website na ito ang basehan para sa ating lima. Nandito ang ating mga flight, hotel na may PIN at kumpirmasyon, mga bus na nai-book na, ang plano araw-araw, at kung ano pa ang kailangang tapusin.",
-    "Ito ang ating pribadong gabay: itinerary, mga reserbasyon, hotel, transportasyon, mapa, at mga tip. Lahat ng kailangan natin sa ating mga telepono, nang hindi umaasa sa mga chat o nakakalat na PDF.",
-    "Lahat ng mga seksyon sa ibaba ay pwedeng i-click para makita ang mga detalye. Kapag nagsimula na ang biyahe (mula Sept 6–7), awtomatikong magbubukas ang web sa tab na 'Ngayon' kasama ang mga detalye para sa araw na iyon.",
-    "Maaari mo ring baguhin ang wika ng application anumang oras (Español, English, Français, Tagalog) gamit ang pindutan sa itaas."
+    "Maligayang pagdating sa Morisqueño Trip sa Japan! Ang website na ito ang <strong>basehan para sa ating lima</strong>. Nandito ang ating mga flight, hotel na may PIN at kumpirmasyon, mga bus na nai-book na, ang plano araw-araw, at kung ano pa ang kailangang tapusin.",
+    "Ito ang ating <strong>pribadong gabay</strong>: itinerary, mga reserbasyon, hotel, transportasyon, mapa, at mga tip. Lahat ng kailangan natin sa ating mga telepono, nang hindi umaasa sa mga chat o nakakalat na PDF.",
+    "Lahat ng mga seksyon sa ibaba ay pwedeng i-click para makita ang mga detalye. Maaari mo ring gamitin ang <strong>menu sa itaas sa kaliwa</strong> upang mabilis na mag-navigate sa lahat ng mga seksyon anumang oras. Kapag nagsimula na ang biyahe (mula Sept 6–7), awtomatikong magbubukas ang web sa tab na 'Ngayon' kasama ang mga detalye para sa araw na iyon.",
+    "Maaari mo ring <strong>baguhin ang wika</strong> ng application anumang oras (Español, English, Français, Tagalog) gamit ang pindutan sa itaas."
   ],
+  about: {
+    title: "Tungkol sa web",
+    description: "Ang web application na ito ay pasadyang ginawa para sa aming biyahe gamit ang React, Vite, at TailwindCSS. Ang disenyo nito ay nagbibigay-priyoridad sa bilis, offline accessibility (bilang isang PWA), at modernong aesthetics nang hindi isinasakripisyo ang performance. Ang lahat ng source code ay pampubliko at maaaring malayang konsultahin sa aming repository.",
+    github: "Tingnan ang source code sa GitHub"
+  }
 };
 
 export const flights = {
