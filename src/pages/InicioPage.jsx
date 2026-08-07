@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { tripMeta, flights, blocks } from "../data/trip";
+import { tripMeta, flights } from "../data/trip";
 import { PlaneTakeoff, Route, CalendarDays, Hotel, Train, Heart, UtensilsCrossed, Map, MessageCircle, Backpack, Wallet, Compass, ListTodo, Landmark } from "lucide-react";
 
 const DEPARTURE_ISO = `${flights.out.date}T09:05:00`;
@@ -163,7 +163,7 @@ export default function InicioPage({ onNavigate }) {
       </section>
 
       {/* Flight teaser */}
-      <section className="mb-8">
+      <section>
         <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>Vuelo de ida</p>
         <div className="rounded-2xl p-5" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
           <div className="flex items-center gap-2 mb-3" style={{ color: "var(--shu)" }}>
@@ -184,26 +184,6 @@ export default function InicioPage({ onNavigate }) {
           >
             Ver vuelos ↗
           </button>
-        </div>
-      </section>
-
-      {/* Blocks */}
-      <section>
-        <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>Los 3 bloques</p>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 240px), 1fr))", gap: 12 }}>
-          {blocks.map((b) => (
-            <div
-              key={b.id}
-              className="rounded-xl p-4"
-              style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}
-            >
-              <span style={{ fontSize: 24 }}>{b.emoji}</span>
-              <p style={{ fontSize: 14.5, fontWeight: 700, color: b.color, margin: "8px 0 4px" }}>{b.title}</p>
-              <p style={{ fontSize: 12, color: "var(--ink-soft)", lineHeight: 1.45, margin: 0 }}>
-                Días {b.days[0]}–{b.days[b.days.length - 1]} · {b.sleepSummary}
-              </p>
-            </div>
-          ))}
         </div>
       </section>
     </div>
