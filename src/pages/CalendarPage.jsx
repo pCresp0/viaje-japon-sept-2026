@@ -269,7 +269,7 @@ export default function CalendarPage() {
       {/* Mobile modal overlay for day detail */}
       {selectedDay && createPortal(
         <div data-mobile-modal className="modal-overlay" onClick={() => setSelectedDayNum(null)}>
-          <div className="modal-sheet" onClick={(e) => e.stopPropagation()} style={{ position: "relative", overflow: "hidden" }}>
+          <div className="modal-sheet" onClick={(e) => e.stopPropagation()} style={{ position: "relative" }}>
             <button
               onClick={() => setSelectedDayNum(null)}
               aria-label="Cerrar"
