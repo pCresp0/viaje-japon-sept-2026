@@ -1,116 +1,130 @@
-# 🗻 Viaje a Japón — Septiembre 2026
+# 🗻 Viaje a Japón — Septiembre 2026 🇯🇵
 
-Guía de viaje interactiva para un grupo de amigos, pensada para usarse **desde el móvil, durante el viaje, con o sin conexión**. Sustituye al típico documento de Word / Excel por una web ligera, instalable como app, que centraliza itinerario, vuelos, alojamientos y presupuesto.
+Guía de viaje interactiva, *mobile-first* e instalable como **Progressive Web App (PWA)**, diseñada para un grupo de 5 amigos (*"Viaje Morisqueño"*) durante su ruta por Japón del **6 al 21 de septiembre de 2026**.
+
+Sustituye a los tradicionales documentos en PDF/Excel por una aplicación estática de alto rendimiento, optimizada para **funcionar al 100% sin conexión a internet** durante el viaje (en el metro, zonas rurales o sin cobertura de datos).
 
 ---
 
-## ✨ Funcionalidades
+## ✨ Funcionalidades y Módulos
 
-- **Hoy** — detecta automáticamente en qué día del viaje estás (según la fecha del dispositivo) y muestra el plan de ese día sin tener que buscarlo.
-- **Calendario** — vista mensual de septiembre 2026 con los días coloreados por bloque geográfico; al hacer clic en un día se abre su detalle completo.
-- **Itinerario** — los 15 días del viaje, navegables mediante una línea de "mapa de metro" que agrupa los días por bloque geográfico (Kioto/Nara/Osaka, Alpes Japoneses, Tokio).
-- **Viaje** — vuelos confirmados (con seguimiento en vivo) y alojamientos de cada noche, con enlace directo a la reserva y a Google Maps.
-- **Presupuesto** — desglose por categorías (vuelos, alojamiento, transporte, comida, extras) y detalle día a día de los transportes, con coste real vs. coste cubierto por JR Pass.
-- **Frases y etiqueta** — frases básicas en japonés organizadas por contexto (saludos, restaurante, transporte, compras) y normas de comportamiento local (propinas, palillos, onsen, colas...).
-- **Preparativos** — checklist interactiva de documentación, electrónica, ropa y extras, con progreso guardado en el dispositivo.
-- **Emergencias** — números de emergencia japoneses, contacto de la Embajada de España en Tokio y recordatorio del seguro de viaje.
-- **Funciona sin conexión** — Progressive Web App (PWA): instalable en la pantalla de inicio (Android/iOS/escritorio) y con todo el contenido cacheado para consultarlo sin datos móviles.
+- 🏠 **Inicio & Hoy** — Detección automática en tiempo real del día del viaje en función de la fecha del dispositivo (mostrando el itinerario activo del día) o cuenta atrás interactiva hasta la salida con resumen del primer día.
+- 📅 **Calendario** — Vista mensual interactiva de Septiembre 2026 en cuadrícula, coloreada por bloques geográficos. Al pulsar en cualquier día se despliega una hoja modal con la agenda completa.
+- 🚇 **Itinerario (15 Días)** — Navegación visual mediante un componente estilizado de mapa de metro/tren japonés (`RouteLine`), separando el viaje en 3 tramos (Kansai, Alpes Japoneses y Tokio) con horarios, actividades y contexto.
+- ✈️ **Vuelos & Hoteles (Info)** — Registro completo de vuelos confirmados con **Qatar Airways** (QR148/QR809 vía Doha) con enlace de seguimiento en vivo (*FlightAware*), así como alojamientos de cada noche con PIN de reserva de Booking y acceso directo a Google Maps.
+- 🚆 **Transportes** — Guía de tarjetas IC (Suica/Pasmo), billetes de Shinkansen, envíos de equipaje (*Takkyubin*) y comparativa financiera del coste real vs. pases JR Pass.
+- 🏛️ **Lugares Imprescindibles** — Catálogo de monumentos, templos y puntos de interés agrupados por regiones con etiquetas descriptivas.
+- 🍜 **Gastronomía (Comidas)** — Guía de platos típicos de la cocina japonesa (Ramen, Takoyaki, Kaiseki, Okonomiyaki...) con consejos de consumo y dónde probarlos.
+- 🗺️ **Mapa Interactivo** — Renderizado espacial interactivo con **Leaflet** que sitúa las paradas clave, aeropuertos y nodos de transporte del recorrido.
+- 🌤️ **Clima** — Previsiones meteorológicas por ciudades para el mes de septiembre y recomendaciones prácticas de vestimenta.
+- 🗣️ **Frases y Etiqueta Cultural** — Glosario interactivo en japonés con **síntesis de voz nativa (TTS vía Web Speech API)** para escuchar la pronunciación correcta, acompañado de normas de comportamiento local (onsen, propinas, palillos, colas).
+- 📋 **Preparativos** — Checklist interactivo de documentación (Pasaporte, Visit Japan Web), electrónica, seguro y divisas, con **persistencia de estado local (`localStorage`)**.
+- 💰 **Presupuesto** — Desglose de costes estimados (totales y por persona) categorizados por vuelos, alojamientos, transporte, comidas y entradas.
+- 🛠️ **Herramientas** — Reloj con hora oficial de Japón (JST) en tiempo real y conversor interactivo de divisas Yen (JPY) ↔ Euro (EUR).
+- 🚨 **Emergencias** — Teléfonos de urgencia en Japón (110 Policía, 119 Ambulancia/Fuego), contacto de la Embajada de España en Tokio y datos del seguro de viaje.
+- 📝 **Cosas Pendientes** — Checklist de tareas organizativas del grupo previas al viaje, con contador de progreso e **indicador visual animado** en la navegación.
+- 📜 **Historia de Japón** — Resumen divulgativo por épocas históricas para contextualizar los lugares a visitar.
 
-## 🧱 Stack técnico
+---
 
-| Capa | Elección | Por qué |
+## 🧱 Stack Técnico e Infraestructura
+
+| Capa | Tecnología | Fundamentación Técnica |
 |---|---|---|
-| Framework | [React 19](https://react.dev/) + [Vite](https://vite.dev/) | SPA ligera, build rápido, sin necesidad de servidor (todo estático) |
-| Estilos | [Tailwind CSS v4](https://tailwindcss.com/) (`@tailwindcss/vite`) | Utilidades atómicas + tokens de diseño propios vía CSS variables |
-| Iconos | [lucide-react](https://lucide.dev/) | Set de iconos ligero, sin dependencias de red |
-| PWA / offline | [vite-plugin-pwa](https://vite-pwa-org.netlify.app/) (Workbox) | Genera el Service Worker y el manifest automáticamente en el build |
-| Hosting | GitHub Pages | Gratuito, no requiere backend — todo el contenido es estático |
-| CI/CD | GitHub Actions (`.github/workflows/deploy.yml`) | Build y despliegue automático en cada `push` a `main` |
+| **Core Framework** | [React 19](https://react.dev/) + [Vite 8](https://vite.dev/) | Arquitectura SPA estática, tiempos de compilación instantáneos y cero dependencia de backend. |
+| **Estilos & UI** | [Tailwind CSS v4](https://tailwindcss.com/) (`@tailwindcss/vite`) | Utilidades atómicas de última generación combinadas con variables CSS nativas para el sistema de diseño. |
+| **Componentes de Mapa** | [Leaflet](https://leafletjs.com/) + [React-Leaflet](https://react-leaflet.js.org/) | Renderizado de mapas vectoriales interactivos sin necesidad de APIs de pago o librerías pesadas. |
+| **Audio / TTS** | Web Speech API (`window.speechSynthesis`) | Pronunciación nativa de japonés sin carga de archivos de audio externos. |
+| **PWA & Cacheing** | [vite-plugin-pwa](https://vite-pwa-org.netlify.app/) (Workbox) | Service Worker automático con estrategias `skipWaiting` y `clientsClaim` para actualización inmediata de activos offline. |
+| **Iconografía** | [Lucide React](https://lucide.dev/) | Librería de iconos SVG ligeros integrados en el bundle, eliminando peticiones HTTP externas. |
+| **Hosting & CI/CD** | [Vercel](https://vercel.com/) | Despliegue continuo automatizado en cada `push` a la rama `main`. |
 
-No hay backend ni base de datos: **todo el contenido del viaje vive en un único fichero de datos** (`src/data/trip.js`), extraído de la planificación original (Word + Excel). Esto hace que actualizar el itinerario sea editar ese archivo y hacer `push` — el resto de la web (UI, navegación, PWA) no cambia.
-
-## 🗂️ Arquitectura y estructura de carpetas
+### 📂 Estructura de Proyecto
 
 ```
-src/
-├── data/
-│   └── trip.js          # Única fuente de verdad: vuelos, días, alojamientos, presupuesto, transportes
-├── utils/
-│   ├── date.js           # Lógica de "¿qué día del viaje es hoy?"
-│   └── maps.js             # Generador de enlaces a Google Maps
-├── components/
-│   ├── PasswordGate.jsx     # Pantalla de bloqueo inicial
-│   ├── BottomNav.jsx         # Navegación inferior (4 pestañas, mobile-first)
-│   ├── RouteLine.jsx          # El "mapa de metro" — elemento de navegación visual entre los 15 días
-│   └── DayCard.jsx              # Tarjeta de detalle de un día (resumen, horario, alojamiento, contexto histórico)
-├── pages/
-│   ├── Home.jsx           # Pestaña "Hoy"
-│   ├── CalendarPage.jsx    # Pestaña "Calendario" (vista mensual + detalle por día)
-│   ├── Itinerary.jsx        # Pestaña "Itinerario" (acordeón de los 15 días)
-│   ├── InfoPage.jsx          # Pestaña "Viaje" (vuelos + alojamientos)
-│   ├── BudgetPage.jsx         # Pestaña "Presupuesto"
-│   ├── PhrasesPage.jsx         # Pestaña "Frases" (idioma + etiqueta)
-│   ├── PrepPage.jsx             # Pestaña "Preparativos" (checklist)
-│   └── EmergencyPage.jsx         # Pestaña "Emergencias"
-├── App.jsx                # Enrutado por pestañas (estado local, sin react-router)
-└── main.jsx                # Punto de entrada
+viaje-japon-sept-2026/
+├── public/                 # Favicons, manifest de la PWA e imágenes estáticas (olas, og-image)
+├── src/
+│   ├── components/         # Componentes reutilizables
+│   │   ├── Nav.jsx         # Cabecera fija móvil (TopBar) + menú lateral desplegable (Drawer)
+│   │   ├── BottomNav.jsx   # Barra de navegación móvil inferior
+│   │   ├── DayCard.jsx     # Tarjeta de detalle diario
+│   │   ├── GuideCard.jsx   # Tarjetas de guías temáticas
+│   │   ├── RouteLine.jsx   # Componente visual "Línea de Metro/Tren" del itinerario
+│   │   └── Footer.jsx      # Pie de página global
+│   ├── data/
+│   │   └── trip.js         # Única fuente de verdad: vuelos, alojamientos, presupuesto, días y transportes
+│   ├── pages/              # 16 Vistas independientes (Home, Calendario, Itinerario, Info, etc.)
+│   ├── utils/
+│   │   ├── date.js         # Cálculo inteligente del día del viaje y estado actual
+│   │   └── maps.js         # Generación de URLs dinámicas a Google Maps
+│   ├── App.jsx             # Enrutado por estado local (`useState`) para máxima velocidad y compatibilidad PWA
+│   ├── index.css           # Tokens de diseño, fuentes de sistema y animaciones
+│   └── main.jsx            # Punto de entrada de React
+├── index.html              # HTML5 semántico, metas de viewport-fit=cover y theme-color (#4d1c1e)
+├── vite.config.js          # Configuración del empaquetador y plugins de PWA/Tailwind
+└── package.json            # Dependencias y scripts de construcción
 ```
-
-**Por qué no hay router de verdad:** al ser una app de 4 pestañas sin URLs que compartir por separado, un `useState` en `App.jsx` es más simple y evita problemas de recarga en GitHub Pages (que no sirve rutas del lado del servidor).
-
-## 🎨 Sistema de diseño
-
-Paleta y tipografía definidas como variables CSS en `src/index.css`:
-
-- **Índigo** (`--indigo`, `#1D3557`) — color de marca, cabecera, bloque "Tokio".
-- **Rojo shu/torii** (`--shu`, `#BC4749`) — acento de interacción, bloque "Kioto".
-- **Verde bosque** (`--forest`, `#2E7D5B`) — bloque "Alpes Japoneses".
-- **Oro** (`--gold`) — cifras de presupuesto.
-- **Papel** (`--paper`) — fondo neutro, pensado para legibilidad al aire libre / luz solar directa.
-
-Tipografía: fuentes de sistema (serif para titulares tipo sello, sans para el cuerpo) — **sin dependencias de Google Fonts**, para que la web no dependa de red externa incluso en el primer arranque offline.
-
-**Elemento distintivo:** `RouteLine.jsx` dibuja los 15 días como estaciones de una línea de metro/tren, coloreadas por bloque del viaje, con el día actual resaltado — un guiño directo a los mapas de líneas de tren japonesas que vais a usar constantemente durante el viaje.
-
-## 📴 Offline / PWA
-
-`vite-plugin-pwa` genera un Service Worker (Workbox) que cachea el "app shell" (HTML, JS, CSS) y todos los datos del viaje en el primer acceso con conexión. A partir de ahí, la web funciona sin datos móviles — útil para consultarla en el metro o en zonas sin cobertura.
-
-**Para instalarla en el móvil:**
-- **Android (Chrome):** menú ⋮ → "Añadir a pantalla de inicio".
-- **iOS (Safari):** botón compartir → "Añadir a pantalla de inicio".
-
-Los enlaces externos (reservas de Booking.com, Google Maps, seguimiento de vuelos) sí requieren conexión — solo el contenido propio de la guía funciona sin ella.
-
-## 🛠️ Desarrollo local
-
-```bash
-npm install
-npm run dev       # servidor de desarrollo con recarga en caliente
-npm run build      # build de producción a dist/
-npm run preview     # sirve el build de producción localmente
-```
-
-## 🚀 Despliegue
-
-Automático vía [Vercel](https://vercel.com): el proyecto está conectado al repositorio, y cada `push` a `main` dispara un build (`npm run build`) y publica el contenido de `dist/` automáticamente. No requiere configuración manual adicional — Vercel detecta el framework (Vite) y aplica los ajustes correctos.
-
-## ✏️ Cómo actualizar el contenido
-
-Todo el contenido vive en `src/data/trip.js`:
-
-- `flights` — vuelos de ida y vuelta.
-- `blocks` — los 3 bloques/tramos del viaje (Kioto/Nara/Osaka, Alpes, Tokio).
-- `stays` — alojamientos de cada noche (nombre, precio, PIN de reserva, enlace).
-- `days` — array con los 15 días (resumen, horario detallado, contexto histórico, gasto estimado).
-- `transports` — coste de cada trayecto, con y sin JR Pass.
-- `budget` — desglose de presupuesto estimado.
-
-Basta con editar ese fichero y hacer `git push` a `main`: el despliegue es automático.
 
 ---
 
-*Construido con la ayuda de Claude a partir de la planificación original del viaje (Word + Excel).*
+## 🎨 Sistema de Diseño y UX
 
+- **Paleta Temática Japonesa:**
+  - **Rojo Shu/Torii** (`#4d1c1e` / `#bc4749`): Color primario de marca, cabeceras y bloque Kansai (Kioto/Nara/Osaka).
+  - **Verde Bosque** (`#2e7d5b`): Bloque geográfico de los Alpes Japoneses.
+  - **Azul Índigo** (`#1d3557`): Bloque geográfico de Tokio y elementos de transporte.
+  - **Oro** (`#c9a227`): Acentos de presupuestos y cifras destacadas.
+  - **Papel Washi** (`#f7f0e3`): Fondo cálido neutro optimizado para legibilidad bajo luz solar directa.
+- **Tipografía Nativa:** Uso de fuentes del sistema (Serif para encabezados y Sans-Serif para cuerpo) para garantizar rendimiento extremo y renderizado inmediato sin depender de Google Fonts ni red externa.
+- **Header Móvil Permanente:** La cabecera móvil (`TopBar`) está anclada de forma fija al *viewport* con integración de la safe-area de iOS/Android (`env(safe-area-inset-top)`), permitiendo alternar entre secciones al instante desde cualquier punto de scroll.
 
+---
 
+## 📴 Soporte Offline / PWA (Progressive Web App)
+
+El Service Worker generado por Workbox cachea automáticamente el *app shell* (HTML, JS, CSS) y todos los datos estáticos en el primer acceso.
+
+### 📱 Instalación en Dispositivos Móviles:
+- **iOS (Safari):** Pulsar el botón **Compartir** ➔ **"Añadir a la pantalla de inicio"**.
+- **Android (Chrome):** Pulsar el menú **⋮** ➔ **"Instalar aplicación"** o **"Añadir a pantalla de inicio"**.
+
+---
+
+## 🛠️ Desarrollo Local
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/pCresp0/viaje-japon-sept-2026.git
+   cd viaje-japon-sept-2026
+   ```
+
+2. **Instalar dependencias:**
+   ```bash
+   npm install
+   ```
+
+3. **Iniciar el servidor de desarrollo:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Construir para producción:**
+   ```bash
+   npm run build
+   ```
+
+5. **Previsualizar la build local:**
+   ```bash
+   npm run preview
+   ```
+
+---
+
+## ✏️ Mantenimiento de Contenidos
+
+Para actualizar cualquier información del viaje (fechas, precios, hoteles, itinerarios o tareas pendientes), **basta con modificar el archivo `src/data/trip.js`** y hacer un `git push` a `main`. Vercel desplegará los cambios en producción automáticamente en segundos.
+
+---
+
+*Desarrollado para el Viaje Morisqueño a Japón 2026 🇯🇵*
