@@ -239,7 +239,7 @@ export default {
   "nav.desc.transportes": "Mga tren, bus at pang-araw-araw na gastos",
   "nav.desc.lugares": "Mga templo, restaurant at pamamasyal sa Fuji",
   "nav.desc.comidas": "Kung ano ang dapat subukan sa bawat lugar",
-  "nav.desc.mapa": "15 pangunahing hinto nang sunod-sunod, may link sa Maps",
+  "nav.desc.mapa": "20 pangunahing hinto nang sunod-sunod, may link sa Maps",
   "nav.desc.frases": "Kapaki-pakinabang na Japanese para mag-order, umikot at bumati",
   "nav.desc.preparativos": "Listahan ng damit, dokumento at mga dadalhin",
   "nav.desc.presupuesto": "Gastos kada tao at breakdown ng grupo",

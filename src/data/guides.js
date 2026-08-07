@@ -32,7 +32,7 @@ export const guides = {
       },
       {
         title: "Los torii y por qué son tantos",
-        body: "El camino de torii (senbon torii, 'mil torii', aunque en realidad son más de 10.000) empezó a formarse en el periodo Edo. Cada torii es una donación de una persona o empresa que pide o agradece prosperidad. En la parte trasera de cada uno están grabados el nombre del donante y la fecha. Los precios van desde unos 400.000 yenes por uno pequeño hasta más de un millón por los grandes. Cuando uno se pudre, se retira y se vende el espacio de nuevo, así que el túnel está en renovación constante.",
+        body: "El camino de torii (senbon torii, 'mil torii', aunque en realidad son más de 10.000) empezó a formarse en el periodo Edo. Cada torii es una donación de una persona o empresa que pide o agradece prosperidad. En la parte trasera de cada uno están grabados el nombre del donante y la fecha. Los precios van desde unos 400.000 ¥ por uno pequeño hasta más de un millón por los grandes. Cuando uno se pudre, se retira y se vende el espacio de nuevo, así que el túnel está en renovación constante.",
       },
       {
         title: "Los zorros",
@@ -240,7 +240,7 @@ export const guides = {
       },
     ],
     curiosities: [
-      "Desde 2019 está prohibido hacer fotografías en las calles privadas de Gion, con multas de 10.000 yenes. En 2024 se cerraron varios callejones al turismo por el acoso a las maiko.",
+      "Desde 2019 está prohibido hacer fotografías en las calles privadas de Gion, con multas de 10.000 ¥. En 2024 se cerraron varios callejones al turismo por el acoso a las maiko.",
       "El número de geiko y maiko ha caído de unas 80.000 en los años 20 a unas 1.000 en todo Japón, de las cuales unas 200 están en Kioto.",
       "El riachuelo Shirakawa, con sus sauces y casas de madera, es probablemente el rincón más fotografiado de Kioto al atardecer.",
     ],
@@ -562,7 +562,7 @@ export const guides = {
     curiosities: [
       "Los domingos por la tarde la calle principal, Chūō-dōri, se cierra al tráfico y se convierte en 'paraíso peatonal' (hokōsha tengoku).",
       "El nombre viene de un santuario dedicado a un dios del fuego que estuvo aquí — irónico para un barrio que ardió repetidamente.",
-      "Super Potato tiene en la última planta un salón recreativo con máquinas de los 80 en funcionamiento y a 100 yenes la partida.",
+      "Super Potato tiene en la última planta un salón recreativo con máquinas de los 80 en funcionamiento y a 100 ¥ la partida.",
     ],
     tip: "Los precios de segunda mano en Mandarake y Book-Off son sorprendentemente buenos, y el estado de conservación de los artículos japoneses de segunda mano suele ser impecable.",
   },

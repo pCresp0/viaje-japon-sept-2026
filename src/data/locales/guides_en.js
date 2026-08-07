@@ -17,7 +17,7 @@ export const guides = {
       },
       {
         title: "The torii gates and why there are so many",
-        body: "The torii path (senbon torii, 'thousand torii', although in reality there are more than 10,000) began to form in the Edo period. Each torii is a donation from a person or company asking for or giving thanks for prosperity. On the back of each one, the donor's name and the date are engraved. Prices range from about 400,000 yen for a small one to over a million for the large ones. When one rots, it is removed and the space is sold again, so the tunnel is constantly being renewed.",
+        body: "The torii path (senbon torii, 'thousand torii', although in reality there are more than 10,000) began to form in the Edo period. Each torii is a donation from a person or company asking for or giving thanks for prosperity. On the back of each one, the donor's name and the date are engraved. Prices range from about 400,000 ¥ for a small one to over a million for the large ones. When one rots, it is removed and the space is sold again, so the tunnel is constantly being renewed.",
       },
       {
         title: "The foxes",
@@ -207,7 +207,7 @@ export const guides = {
       },
     ],
     curiosities: [
-      "Since 2019 it is forbidden to take photographs in the private streets of Gion, with fines of 10,000 yen. In 2024 several alleys were closed to tourism due to harassment of maiko.",
+      "Since 2019 it is forbidden to take photographs in the private streets of Gion, with fines of 10,000 ¥. In 2024 several alleys were closed to tourism due to harassment of maiko.",
       "The number of geiko and maiko has dropped from some 80,000 in the 1920s to about 1,000 in all of Japan, of which some 200 are in Kyoto.",
       "The Shirakawa stream, with its willows and wooden houses, is probably the most photographed corner of Kyoto at dusk.",
     ],
@@ -331,7 +331,7 @@ export const guides = {
       "Along the trail, you will see 'bear bells' (kuma-yoke no kane) that hikers are encouraged to ring to scare away Asiatic black bears.",
       "Tsumago was the pioneer of Japan's architectural preservation movement. In 1968, residents agreed on a charter: no selling, no renting, and no destroying their historic homes.",
     ],
-    tip: "Use the luggage forwarding service (approx. 1000 yen per bag) available between the tourist information centers in Magome and Tsumago to hike hands-free.",
+    tip: "Use the luggage forwarding service (approx. 1000 ¥ per bag) available between the tourist information centers in Magome and Tsumago to hike hands-free.",
   },
 
   // ══════════════════════════════════════════════════════════════════

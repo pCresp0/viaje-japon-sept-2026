@@ -144,7 +144,7 @@ export const transports = [
 ];
 
 export const budget = {
-  note: "Calculé avec des prix réalistes et le yen actuel, très bon marché pour l'Europe.",
+  note: "Calculé avec des prix réalistes et le ¥ actuel, très bon marché pour l'Europe.",
   categories: [
     {
       title: "Vols Internationaux",

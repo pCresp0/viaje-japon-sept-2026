@@ -234,7 +234,7 @@ export default {
   "nav.desc.transportes": "Trains, bus et coûts journaliers",
   "nav.desc.lugares": "Temples, restaurants et l'excursion au Fuji",
   "nav.desc.comidas": "Ce qu'il faut goûter dans chaque région",
-  "nav.desc.mapa": "15 arrêts principaux dans l'ordre, avec lien Maps",
+  "nav.desc.mapa": "20 arrêts principaux dans l'ordre, avec lien Maps",
   "nav.desc.frases": "Japonais utile pour commander, se déplacer et saluer",
   "nav.desc.preparativos": "Liste des vêtements, documents et choses à emporter",
   "nav.desc.presupuesto": "Coût par personne et répartition du groupe",

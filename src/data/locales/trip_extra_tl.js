@@ -144,7 +144,7 @@ export const transports = [
 ];
 
 export const budget = {
-  note: "Kinakalkula gamit ang mga makatotohanang presyo at ang kasalukuyang yen, napakamura para sa Europe.",
+  note: "Kinakalkula gamit ang mga makatotohanang presyo at ang kasalukuyang ¥, napakamura para sa Europe.",
   categories: [
     {
       title: "Mga International Flight",

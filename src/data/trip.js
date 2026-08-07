@@ -557,7 +557,7 @@ export const transportTotals = { real: 373.35, jrPass: 100.65 };
 // Presupuesto estimado para 5 personas
 export const budget = {
   people: 5,
-  note: "Calculado con precios realistas y el yen actual, muy barato para Europa.",
+  note: "Calculado con precios realistas y el ¥ actual, muy barato para Europa.",
   categories: [
     {
       title: "Vuelos internacionales",

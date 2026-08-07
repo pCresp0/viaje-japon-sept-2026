@@ -144,7 +144,7 @@ export const transports = [
 ];
 
 export const budget = {
-  note: "Calculated with realistic prices and the current yen, very cheap for Europe.",
+  note: "Calculated with realistic prices and the current ¥, very cheap for Europe.",
   categories: [
     {
       title: "International Flights",
