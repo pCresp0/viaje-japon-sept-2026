@@ -59,17 +59,10 @@ export default function InicioPage({ onNavigate }) {
         <h1 className="font-display text-3xl" style={{ color: "var(--indigo)", margin: 0, lineHeight: 1.2 }}>
           {tripMeta.title}
         </h1>
-        <div className="space-y-4 mt-6 mb-8">
-          {tripMeta.welcomeParagraphs?.map((paragraph, idx) => (
-            <p key={idx} style={{ fontSize: 14.5, color: "var(--ink-soft)", lineHeight: 1.55, maxWidth: 640 }}>
-              {paragraph}
-            </p>
-          ))}
-        </div>
       </div>
 
       {/* Countdown */}
-      <div className="before-trip-grid" style={{ display: "grid", gap: 16, marginBottom: 28 }}>
+      <div style={{ marginBottom: 28 }}>
         <div style={{
           background: "linear-gradient(135deg, var(--indigo) 0%, #0f1f35 100%)",
           borderRadius: 16, padding: 28, color: "white",
@@ -99,31 +92,17 @@ export default function InicioPage({ onNavigate }) {
             </p>
           )}
         </div>
-
-        <div style={{
-          background: "var(--paper-raised)", border: "1px solid var(--line)",
-          borderRadius: 16, padding: 24,
-        }}>
-          <p className="eyebrow mb-3" style={{ color: "var(--indigo)" }}>Siguiente</p>
-          <p style={{ fontSize: 16, fontWeight: 600, color: "var(--ink)", marginBottom: 8, marginTop: 0 }}>
-            Día 1 — 7-sept-2026
-          </p>
-          <p style={{ fontSize: 13, color: "var(--ink-soft)", lineHeight: 1.6, margin: 0 }}>
-            Llegada a Japón. Aterrizaje en Narita y traslado a Kioto en Shinkansen.
-          </p>
-        </div>
       </div>
 
       {/* Qué es esto */}
       <section className="mb-8">
         <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>Para el grupo</p>
-        <div className="rounded-2xl p-5" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
-          <p style={{ fontSize: 14.5, color: "var(--ink)", lineHeight: 1.6, margin: 0 }}>
-            Esta web es la base del viaje de los 5. Aquí están los vuelos, hoteles con PIN y confirmación,
-            buses ya reservados, el plan día a día y lo que aún falta por cerrar.
-            Cuando empiece el viaje (desde el 6–7 sept), la web abrirá sola en <strong>Hoy</strong>,
-            con el detalle del día que toque.
-          </p>
+        <div className="rounded-2xl p-5 space-y-3" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
+          {tripMeta.welcomeParagraphs?.map((paragraph, idx) => (
+            <p key={idx} style={{ fontSize: 14.5, color: "var(--ink)", lineHeight: 1.6, margin: 0 }}>
+              {paragraph}
+            </p>
+          ))}
         </div>
       </section>
 
