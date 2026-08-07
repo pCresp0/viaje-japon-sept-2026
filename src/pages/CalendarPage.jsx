@@ -39,6 +39,10 @@ export default function CalendarPage() {
   const t = useT();
   const [selectedDayNum, setSelectedDayNum] = useState(null);
   const selectedDay = selectedDayNum !== null ? days.find(d => d.num === selectedDayNum) : null;
+  
+  // blocks is an array, build a dictionary by id
+  const blockMap = Object.fromEntries((blocks || []).map(b => [b.id, b]));
+
   const WEEKDAYS = [
     t("calendar.weekdays.0"),
     t("calendar.weekdays.1"),
@@ -49,8 +53,7 @@ export default function CalendarPage() {
     t("calendar.weekdays.6"),
   ];
 
-  // Lock body scroll while the mobile modal is open, so the page behind
-  // it can't move and the close button/backdrop stay reachable.
+  // Lock body scroll while the mobile modal is open
   useEffect(() => {
     if (selectedDay && window.innerWidth < 1024) {
       const prevOverflow = document.body.style.overflow;
@@ -76,11 +79,11 @@ export default function CalendarPage() {
 
         {/* legend */}
         <div className="flex flex-wrap gap-3 mb-6">
-          {Object.entries(blocks).map(([k, v]) => (
-            <div key={k} className="flex items-center gap-1.5">
-              <span className="inline-block w-3 h-3 rounded-sm" style={{ background: v.color }} />
-              <span className="text-xs" style={{ color: "var(--ink-soft)" }}>
-                {blockEmoji[k]} {v.title}
+          {Array.isArray(blocks) && blocks.map((b) => (
+            <div key={b.id} className="flex items-center gap-1.5">
+              <span className="inline-block w-3 h-3 rounded-sm" style={{ background: b.color }} />
+              <span className="text-xs font-medium" style={{ color: "var(--ink)" }}>
+                {blockEmoji[b.id] || b.emoji} {b.title}
               </span>
             </div>
           ))}
@@ -104,8 +107,8 @@ export default function CalendarPage() {
               style={{ borderBottom: wi < weeks.length - 1 ? "1px solid var(--line)" : "none" }}>
               {week.map((dateNum, di) => {
                 const tripDay = dateNum ? dayByDate[dateNum] : null;
-                const blockData = tripDay ? blocks[tripDay.block] : null;
-                const color = blockData ? blockData.color : null;
+                const blockData = tripDay ? blockMap[tripDay.block] : null;
+                const color = blockData ? blockData.color : "#bc4749";
                 const isWeekend = di >= 5;
                 const isSelected = tripDay && tripDay.num === selectedDayNum;
                 
@@ -115,8 +118,9 @@ export default function CalendarPage() {
                     onClick={() => tripDay && setSelectedDayNum(tripDay.num)}
                     style={{
                       borderRight: di < 6 ? "1px solid var(--line)" : "none",
-                      background: isSelected ? `${color}15` : tripDay ? `${color}08` : "transparent",
-                      border: isSelected ? `2px solid ${color}` : "none",
+                      borderTop: tripDay ? `3px solid ${color}` : "none",
+                      background: isSelected ? `${color}35` : tripDay ? `${color}15` : "transparent",
+                      boxShadow: isSelected ? `inset 0 0 0 2px ${color}` : "none",
                       cursor: tripDay ? "pointer" : "default",
                       minHeight: 80,
                       padding: 8,
@@ -125,10 +129,10 @@ export default function CalendarPage() {
                       transition: "all 0.15s",
                     }}
                     onMouseEnter={(e) => {
-                      if (tripDay) e.currentTarget.style.background = `${color}12`;
+                      if (tripDay) e.currentTarget.style.background = `${color}28`;
                     }}
                     onMouseLeave={(e) => {
-                      if (tripDay && !isSelected) e.currentTarget.style.background = `${color}08`;
+                      if (tripDay && !isSelected) e.currentTarget.style.background = `${color}15`;
                     }}
                   >
                     {dateNum && (
@@ -142,7 +146,7 @@ export default function CalendarPage() {
                             {dateNum}
                           </span>
                           {tripDay && (
-                            <span style={{ fontSize: 13 }}>{blockEmoji[tripDay.block]}</span>
+                            <span style={{ fontSize: 13 }}>{blockEmoji[tripDay.block] || blockData?.emoji}</span>
                           )}
                         </div>
                         {tripDay && (
@@ -153,7 +157,7 @@ export default function CalendarPage() {
                             </span>
                             <p style={{
                               fontSize: 10, lineHeight: 1.2, color: "var(--ink)",
-                              fontWeight: 500, display: "-webkit-box",
+                              fontWeight: 600, display: "-webkit-box",
                               WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden"
                             }}>
                               {tripDay.title}
@@ -178,24 +182,23 @@ export default function CalendarPage() {
           flexDirection: "column",
           borderLeft: "1px solid var(--line)",
           background: "var(--paper-raised)",
-          paddingTop: 24,
-          paddingRight: 20,
-          paddingLeft: 20,
-          paddingBottom: 24,
+          padding: 20,
           overflowY: "auto",
           height: "100%",
           flexShrink: 0,
+          position: "relative",
         }}>
           <button
             onClick={() => setSelectedDayNum(null)}
+            aria-label="Cerrar"
             style={{
-              position: "sticky",
-              top: 0,
-              float: "right",
-              marginLeft: 12,
-              marginBottom: -32,
-              background: "var(--paper)",
-              border: "1px solid var(--line)",
+              position: "absolute",
+              top: 28,
+              right: 28,
+              zIndex: 30,
+              background: "rgba(0, 0, 0, 0.4)",
+              color: "#ffffff",
+              border: "1px solid rgba(255, 255, 255, 0.3)",
               borderRadius: "50%",
               width: 32,
               height: 32,
@@ -203,31 +206,43 @@ export default function CalendarPage() {
               alignItems: "center",
               justifyContent: "center",
               cursor: "pointer",
-              color: "var(--ink-soft)",
-              zIndex: 5,
+              boxShadow: "0 2px 8px rgba(0,0,0,0.2)"
             }}
           >
-            <X size={16} />
+            <X size={18} />
           </button>
           <DayCard day={selectedDay} defaultOpenHistory={true} />
         </div>
       )}
 
-      {/* Mobile modal overlay for day detail — portaled to <body> so
-          position:fixed is always relative to the real viewport, never
-          to a scrolling ancestor (an iOS Safari quirk). Anchored near
-          the top of the screen (not a full bottom-sheet) so it never
-          collides with the mobile topbar, with its own sticky header
-          and scrollable body so long content is always reachable. */}
+      {/* Mobile modal overlay for day detail */}
       {selectedDay && createPortal(
         <div data-mobile-modal className="modal-overlay" onClick={() => setSelectedDayNum(null)}>
-          <div className="modal-sheet" onClick={(e) => e.stopPropagation()}>
-            <div className="modal-sheet-header">
-              <button className="modal-close-btn" onClick={() => setSelectedDayNum(null)}>
-                <X size={16} />
-              </button>
-            </div>
-            <div className="modal-sheet-body">
+          <div className="modal-sheet" onClick={(e) => e.stopPropagation()} style={{ position: "relative", overflow: "hidden" }}>
+            <button
+              onClick={() => setSelectedDayNum(null)}
+              aria-label="Cerrar"
+              style={{
+                position: "absolute",
+                top: 14,
+                right: 14,
+                zIndex: 30,
+                width: 32,
+                height: 32,
+                borderRadius: "50%",
+                background: "rgba(0, 0, 0, 0.4)",
+                color: "#ffffff",
+                border: "1px solid rgba(255, 255, 255, 0.3)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.2)"
+              }}
+            >
+              <X size={18} />
+            </button>
+            <div style={{ padding: 0 }}>
               <DayCard day={selectedDay} defaultOpenHistory={true} />
             </div>
           </div>
