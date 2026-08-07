@@ -27,17 +27,31 @@ html, body, #root {
   height: 100%;
 }
 
+/* ── Textura de olas sobre el fondo de la app ────────────────────────
+   Pseudo-elemento fijo sobre body. Usar ::before en body es más fiable
+   que en #root porque no hay riesgo de que un z-index hijo lo tape.
+   La imagen es la misma del panel lateral (waves-sidebar.webp).
+   opacity: 0.12 es claramente visible sin tapar el contenido. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url('/waves-sidebar.webp');
+  background-size: 700px auto;
+  background-repeat: repeat;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+
 body {
+  position: relative;
   background-color: var(--paper);
   color: var(--ink);
   font-family: var(--font-body);
   overscroll-behavior-y: none;
   -webkit-font-smoothing: antialiased;
 }
-
-/* ── Textura de olas en el área de contenido ────────────────────────
-   Se aplica directamente como background del contenedor scrollable en
-   App.jsx mediante un gradiente superpuesto que controla la opacidad. */
 
 .font-display {
   font-family: var(--font-display);
