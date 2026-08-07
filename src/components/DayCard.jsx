@@ -54,11 +54,11 @@ export default function DayCard({ day, defaultOpenHistory = false }) {
                     className="absolute -left-[21px] top-1 w-2.5 h-2.5 rounded-full"
                     style={{ background: block.color }}
                   />
-                  <p className="font-display text-sm font-bold" style={{ color: block.color }}>
-                    {s.time}
+                  <p className="font-display text-sm font-bold flex items-center gap-1" style={{ color: block.color }}>
+                    {emoji && <span>{emoji}</span>}{s.time}
                   </p>
                   <p className="text-[14px] leading-snug mt-0.5" style={{ color: "var(--ink)" }}>
-                    {emoji && <span className="mr-1">{emoji}</span>}{s.text}
+                    {s.text}
                   </p>
                 </li>
               );
