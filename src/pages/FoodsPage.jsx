@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { UtensilsCrossed } from "lucide-react";
-import { foods, foodCategories } from "../data/foods";
+import { useContent, useT } from "../i18n/LanguageContext";
 
 function FoodCard({ food, accent }) {
   const [imgOk, setImgOk] = useState(true);
+  const t = useT();
 
   return (
     <article
@@ -36,21 +37,26 @@ function FoodCard({ food, accent }) {
       </div>
 
       <div className="p-4">
-        <div className="flex items-baseline justify-between gap-2">
-          <h3 className="font-display text-lg" style={{ color: "var(--indigo)", margin: 0, lineHeight: 1.2 }}>
-            {food.name}
-          </h3>
-          {food.price && (
-            <span style={{ fontSize: 12, fontWeight: 700, color: "var(--shu)", whiteSpace: "nowrap" }}>
-              {food.price}
-            </span>
-          )}
-        </div>
-        <p style={{ fontSize: 12, color: "var(--ink-soft)", margin: "4px 0 0" }}>{food.jp}</p>
-        <p style={{ fontSize: 12, color: accent, fontWeight: 600, margin: "6px 0 0" }}>{food.where}</p>
-        <p style={{ fontSize: 13.5, color: "var(--ink)", lineHeight: 1.5, margin: "10px 0 0" }}>
-          {food.desc}
-        </p>
+            <div className="flex justify-between items-start mb-2">
+              <h3 className="font-bold text-lg leading-tight" style={{ color: "var(--ink)" }}>
+                {food.name}
+              </h3>
+              <span className="font-bold text-sm px-2 py-0.5 rounded-full" style={{ background: `${accent}15`, color: accent }}>
+                {food.price}
+              </span>
+            </div>
+            
+            <p className="text-[12.5px] font-medium mb-3" style={{ color: "var(--ink-soft)" }}>
+              {food.jp}
+            </p>
+
+            <div className="flex gap-2 items-start mb-3">
+              <span style={{ color: accent, marginTop: 2 }}><UtensilsCrossed size={14} /></span>
+              <p className="text-sm font-medium" style={{ color: "var(--ink)" }}>
+                <span className="opacity-70 mr-1">{t("foods.whereToTry")}:</span>
+                {food.where}
+              </p>
+            </div>
         {food.tip && (
           <p className="rounded-lg px-3 py-2 mt-3" style={{
             fontSize: 12.5, margin: "10px 0 0", lineHeight: 1.45,
@@ -65,15 +71,19 @@ function FoodCard({ food, accent }) {
 }
 
 export default function FoodsPage() {
+  const { foods, foodCategories } = useContent();
+  const [activeCat, setActiveCat] = useState("must");
+  const t = useT();
+  
   return (
     <div className="px-4 pt-3 pb-12">
       <div className="mb-6">
-        <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Gastronomía</p>
+        <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{t("foods.eyebrow")}</p>
         <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>
-          Comidas típicas
+          {t("foods.title")}
         </h2>
         <p style={{ fontSize: 13.5, color: "var(--ink-soft)", marginTop: 6, lineHeight: 1.5 }}>
-          Qué probar en el viaje, dónde encaja en la ruta y un tip práctico.
+          {t("foods.intro")}
         </p>
       </div>
 

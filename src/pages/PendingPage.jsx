@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
-import { pendingItems, categoryLabels, urgencyConfig } from "../data/pending";
+import { useContent, useT } from "../i18n/LanguageContext";
 import { Check } from "lucide-react";
 
 const STORAGE_KEY = "trip-pending-v1";
 
 export default function PendingPage() {
+  const { pendingItems, categoryLabels, urgencyConfig } = useContent();
+  const t = useT();
   const [done, setDone] = useState({});
 
   useEffect(() => {
@@ -38,10 +40,10 @@ export default function PendingPage() {
   return (
     <div className="px-4 pt-3 pb-12">
       <div className="mb-5">
-        <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Antes de viajar</p>
-        <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>Cosas pendientes</h2>
+        <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{t("pending.eyebrow")}</p>
+        <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>{t("pending.title")}</h2>
         <p style={{ fontSize: 13, color: "var(--ink-soft)", marginTop: 6, lineHeight: 1.6 }}>
-          Decisiones por tomar y reservas que hay que hacer con antelación. Marca cada una cuando la tengas resuelta.
+          {t("pending.intro")}
         </p>
       </div>
 
@@ -59,8 +61,8 @@ export default function PendingPage() {
             </p>
             <p style={{ fontSize: 12, color: "rgba(255,255,255,0.7)", marginTop: 4 }}>
               {remaining === 0
-                ? "¡Todo resuelto!"
-                : remaining === 1 ? "cosa pendiente" : "cosas pendientes"}
+                ? t("pending.allDone")
+                : remaining === 1 ? t("pending.remainingOne") : t("pending.remaining")}
             </p>
           </div>
           <p style={{ fontSize: 13, color: "rgba(255,255,255,0.7)" }}>
@@ -107,7 +109,7 @@ export default function PendingPage() {
                     {/* Checkbox */}
                     <button
                       onClick={() => toggle(item.id)}
-                      aria-label={isDone ? "Marcar como pendiente" : "Marcar como hecho"}
+                      aria-label={isDone ? t("pending.markPending") : t("pending.markDone")}
                       style={{
                         width: 24, height: 24, borderRadius: 7, flexShrink: 0, marginTop: 2,
                         border: isDone ? "none" : "2px solid var(--line)",
