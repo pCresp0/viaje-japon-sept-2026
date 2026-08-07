@@ -9,8 +9,25 @@ import { downloadIcsCalendar } from "../utils/exportCalendar";
 // blockColors removed, we use blocks from context now
 const blockEmoji = { kioto: "⛩️", alpes: "🏔️", tokio: "🗼" };
 
-const SEP_START_DOW = 1;
-// WEEKDAYS removed, generated dynamically in the component
+const dayHighlights = {
+  0: { highlight: "✈️ Vuelo QR148 MAD", stay: "En vuelo" },
+  1: { highlight: "✈️ Aterrizaje NRT", stay: "🏨 Keihan Kioto" },
+  2: { highlight: "🦌 Excursión Nara", stay: "🏨 Keihan Kioto" },
+  3: { highlight: "🏯 Kinkaku & Kiyomizu", stay: "🏨 Keihan Kioto" },
+  4: { highlight: "🎋 Arashiyama & Gion", stay: "🏨 Keihan Kioto" },
+  5: { highlight: "🏯 Excursión Osaka", stay: "🏨 Keihan Kioto" },
+  6: { highlight: "🌸 Kenroku-en", stay: "🏨 Resol Kanazawa" },
+  7: { highlight: "🚌 Nohi Bus Shirakawa", stay: "🏨 Wood Takayama" },
+  8: { highlight: "⛰️ Nakasendo (8km)", stay: "🏨 Magome Chaya" },
+  9: { highlight: "🚄 Shinkansen Tokio", stay: "🏨 KOKO Tokio" },
+  10: { highlight: "🌉 teamLab Planets", stay: "🏨 KOKO Tokio" },
+  11: { highlight: "🚦 Shibuya & Meiji", stay: "🏨 KOKO Tokio" },
+  12: { highlight: "🎮 Akihabara & Ueno", stay: "🏨 KOKO Tokio" },
+  13: { highlight: "🌃 Shinjuku Yokocho", stay: "🏨 KOKO Tokio" },
+  14: { highlight: "🗻 Tour Monte Fuji", stay: "🏨 KOKO Tokio" },
+  15: { highlight: "✈️ Vuelta NRT QR809", stay: "Regreso" },
+};
+
 function buildGrid() {
   const cells = [];
   const offset = 1;
@@ -130,6 +147,7 @@ export default function CalendarPage() {
                 const color = blockData ? blockData.color : "#bc4749";
                 const isWeekend = di >= 5;
                 const isSelected = tripDay && tripDay.num === selectedDayNum;
+                const meta = tripDay ? dayHighlights[tripDay.num] : null;
                 
                 return (
                   <button
@@ -141,8 +159,8 @@ export default function CalendarPage() {
                       background: isSelected ? `${color}35` : tripDay ? `${color}15` : "transparent",
                       boxShadow: isSelected ? `inset 0 0 0 2px ${color}` : "none",
                       cursor: tripDay ? "pointer" : "default",
-                      minHeight: 80,
-                      padding: 8,
+                      minHeight: 96,
+                      padding: 6,
                       display: "flex",
                       flexDirection: "column",
                       transition: "all 0.15s",
@@ -158,29 +176,43 @@ export default function CalendarPage() {
                       <>
                         <div className="flex items-center justify-between mb-1">
                           <span style={{
-                            fontSize: 13, fontWeight: tripDay ? 700 : 400,
+                            fontSize: 12.5, fontWeight: tripDay ? 700 : 400,
                             color: tripDay ? color : isWeekend ? "var(--ink-soft)" : "var(--ink)",
                             fontFamily: tripDay ? "var(--font-display)" : "inherit",
                           }}>
                             {dateNum}
                           </span>
                           {tripDay && (
-                            <span style={{ fontSize: 13 }}>{blockEmoji[tripDay.block] || blockData?.emoji}</span>
+                            <span style={{ fontSize: 12 }}>{blockEmoji[tripDay.block] || blockData?.emoji}</span>
                           )}
                         </div>
                         {tripDay && (
-                          <div className="text-left flex-1">
-                            <span className="inline-block px-1.5 py-0.5 rounded text-white mb-1"
-                              style={{ fontSize: 8, fontWeight: 700, background: color, letterSpacing: "0.05em" }}>
-                              DÍA {tripDay.num}
-                            </span>
-                            <p style={{
-                              fontSize: 10, lineHeight: 1.2, color: "var(--ink)",
-                              fontWeight: 600, display: "-webkit-box",
-                              WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden"
-                            }}>
-                              {tripDay.title}
-                            </p>
+                          <div className="text-left flex-1 flex flex-col justify-between min-w-0">
+                            <div>
+                              <span className="inline-block px-1 py-0.5 rounded text-white mb-1"
+                                style={{ fontSize: 7.5, fontWeight: 700, background: color, letterSpacing: "0.05em" }}>
+                                DÍA {tripDay.num}
+                              </span>
+                              <p style={{
+                                fontSize: 10, lineHeight: 1.15, color: "var(--ink)",
+                                fontWeight: 700, display: "-webkit-box",
+                                WebkitLineClamp: 1, WebkitBoxOrient: "vertical", overflow: "hidden",
+                                marginBottom: 2
+                              }}>
+                                {tripDay.title}
+                              </p>
+                            </div>
+
+                            {meta && (
+                              <div className="space-y-0.5 mt-0.5">
+                                <div className="text-[8.5px] font-semibold px-1 py-0.5 rounded bg-black/5 truncate" style={{ color: "var(--ink)" }}>
+                                  {meta.highlight}
+                                </div>
+                                <div className="text-[8px] font-medium opacity-80 truncate" style={{ color: "var(--ink-soft)" }}>
+                                  {meta.stay}
+                                </div>
+                              </div>
+                            )}
                           </div>
                         )}
                       </>
