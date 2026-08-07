@@ -42,10 +42,6 @@ export default defineConfig({
         skipWaiting: true,
         clientsClaim: true,
         globPatterns: ['**/*.{js,css,html,png,svg,ico,webp}'],
-        // No precachear imágenes mayores de 1 MB para no saturar la caché
-        // del SW en la primera instalación. Las imágenes grandes se sirven
-        // desde red (o caché del navegador).
-        maximumFileSizeToCacheInBytes: 1024 * 1024,
         navigateFallback: '/index.html',
       },
     }),

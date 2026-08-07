@@ -1,41 +1,25 @@
-import fushimiInari from "../img/fushimi-inari.jpg";
-import todaiji      from "../img/todai-ji.jpg";
-import kinkakuji    from "../img/kinkaku-ji.jpg";
-import ginkakuji    from "../img/ginkaku-ji.jpg";
-import kiyomizudera from "../img/kiyomizu-dera.jpg";
-import arashiyama   from "../img/arashiyama.jpg";
-import gion         from "../img/gion.jpg";
-import nishiki      from "../img/nishiki.jpg";
-import osaka        from "../img/osaka.jpg";
-import kenrokuEn    from "../img/kenroku-en.jpg";
-import shirakawago  from "../img/shirakawa-go.jpg";
-import takayama     from "../img/takayama.jpg";
-import nakasendo    from "../img/nakasendo.jpg";
-import sensoji      from "../img/senso-ji.jpg";
-import meijiJingu   from "../img/meiji-jingu.jpg";
-import shibuya      from "../img/shibuya.jpg";
-import akihabara    from "../img/akihabara.png";
-import teamlab      from "../img/teamlab.jpg";
-import fuji         from "../img/fuji.jpg";
-
+// Rutas estáticas a las imágenes en public/img/.
+// Al estar en public/ Vite las sirve directamente sin procesarlas,
+// lo que evita que el plugin PWA intente meterlas en el precache
+// del service worker (algunas pesan varios MB).
 export const guideImages = {
-  "fushimi-inari": fushimiInari,
-  "todai-ji":      todaiji,
-  "kinkaku-ji":    kinkakuji,
-  "ginkaku-ji":    ginkakuji,
-  "kiyomizu-dera": kiyomizudera,
-  "arashiyama":    arashiyama,
-  "gion":          gion,
-  "nishiki":       nishiki,
-  "osaka":         osaka,
-  "kenroku-en":    kenrokuEn,
-  "shirakawa-go":  shirakawago,
-  "takayama":      takayama,
-  "nakasendo":     nakasendo,
-  "senso-ji":      sensoji,
-  "meiji-jingu":   meijiJingu,
-  "shibuya":       shibuya,
-  "akihabara":     akihabara,
-  "teamlab":       teamlab,
-  "fuji":          fuji,
+  "fushimi-inari": "/img/fushimi-inari.jpg",
+  "todai-ji":      "/img/todai-ji.jpg",
+  "kinkaku-ji":    "/img/kinkaku-ji.jpg",
+  "ginkaku-ji":    "/img/ginkaku-ji.jpg",
+  "kiyomizu-dera": "/img/kiyomizu-dera.jpg",
+  "arashiyama":    "/img/arashiyama.jpg",
+  "gion":          "/img/gion.jpg",
+  "nishiki":       "/img/nishiki.jpg",
+  "osaka":         "/img/osaka.jpg",
+  "kenroku-en":    "/img/kenroku-en.jpg",
+  "shirakawa-go":  "/img/shirakawa-go.jpg",
+  "takayama":      "/img/takayama.jpg",
+  "nakasendo":     "/img/nakasendo.jpg",
+  "senso-ji":      "/img/senso-ji.jpg",
+  "meiji-jingu":   "/img/meiji-jingu.jpg",
+  "shibuya":       "/img/shibuya.jpg",
+  "akihabara":     "/img/akihabara.png",
+  "teamlab":       "/img/teamlab.jpg",
+  "fuji":          "/img/fuji.jpg",
 };
