@@ -97,7 +97,7 @@ export default function MapPage() {
   const [selected, setSelected] = useState(null);
 
   return (
-    <div className="px-4 pt-6 pb-12 max-w-3xl mx-auto">
+    <div className="px-4 pt-6 pb-12">
       <div className="mb-6">
         <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Ubicaciones clave</p>
         <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>Mapa de la ruta</h2>

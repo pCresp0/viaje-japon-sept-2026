@@ -6,8 +6,8 @@ export default function BudgetPage() {
   const [showTransports, setShowTransports] = useState(false);
 
   return (
-    <div className="px-4 pt-5 pb-8 max-w-lg mx-auto space-y-5">
-      <div>
+    <div className="px-4 pt-5 pb-8">
+      <div className="mb-5">
         <p className="eyebrow" style={{ color: "var(--shu)" }}>
           Para {budget.people} personas
         </p>
@@ -17,13 +17,18 @@ export default function BudgetPage() {
         <p className="text-xs mt-1" style={{ color: "var(--ink-soft)" }}>{budget.note}</p>
       </div>
 
-      <div className="rounded-2xl p-6 text-center" style={{ background: "var(--indigo)" }}>
+      <div className="rounded-2xl p-6 text-center mb-5" style={{ background: "var(--indigo)" }}>
         <p className="eyebrow" style={{ color: "rgba(255,255,255,0.9)" }}>Total por persona</p>
         <p className="font-display text-3xl text-white my-1">{budget.totalPerPerson}</p>
         <p className="text-white/70 text-xs mt-2">Grupo ({budget.people} pax): {budget.totalGroup}</p>
       </div>
 
-      <div className="space-y-2.5">
+      <div style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 340px), 1fr))",
+        gap: 10,
+        marginBottom: 20,
+      }}>
         {budget.categories.map((c) => (
           <div key={c.title} className="rounded-2xl p-4" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
             <div className="flex items-baseline justify-between">

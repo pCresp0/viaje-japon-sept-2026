@@ -45,7 +45,7 @@ export default function TransportPage() {
   const totalCost = Object.values(transportData).flat().reduce((sum, t) => sum + (t.cost || 0), 0);
 
   return (
-    <div className="px-4 pt-6 pb-12 max-w-3xl mx-auto">
+    <div className="px-4 pt-6 pb-12">
       <div className="mb-2">
         <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Movimientos</p>
         <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>Transporte</h2>
@@ -77,7 +77,12 @@ export default function TransportPage() {
       {/* Transport by day */}
       <div className="mb-6">
         <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>Trayectos por día</p>
-        <div className="space-y-3">
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 420px), 1fr))",
+          gap: 12,
+          alignItems: "start",
+        }}>
           {tripsWithTransport.map((item, idx) => (
             <div key={idx} className="rounded-2xl border overflow-hidden"
               style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>

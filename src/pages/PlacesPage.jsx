@@ -86,7 +86,7 @@ export default function PlacesPage() {
   const totalPlaces = places.reduce((sum, cat) => sum + cat.items.length, 0);
 
   return (
-    <div className="px-4 pt-6 pb-12 max-w-3xl mx-auto">
+    <div className="px-4 pt-6 pb-12">
       <div className="mb-2">
         <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Lugares imprescindibles</p>
         <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>Lugares favoritos</h2>
@@ -95,7 +95,12 @@ export default function PlacesPage() {
         {totalVisited} de {totalPlaces} visitados — pulsa el corazón para marcar.
       </p>
 
-      <div className="space-y-6">
+      <div style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 400px), 1fr))",
+        gap: 20,
+        alignItems: "start",
+      }}>
         {places.map((category, catIdx) => {
           const Icon = category.icon;
           const categoryVisited = category.items.filter(i => favorites[i.id]).length;

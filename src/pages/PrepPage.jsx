@@ -127,7 +127,7 @@ export default function PrepPage() {
   const totalChecked = Object.values(checked).filter(Boolean).length;
 
   return (
-    <div className="px-4 pt-6 pb-12 max-w-3xl mx-auto">
+    <div className="px-4 pt-6 pb-12">
       <div className="mb-2">
         <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Antes del viaje</p>
         <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>Preparativos</h2>
@@ -149,7 +149,12 @@ export default function PrepPage() {
         }} />
       </div>
 
-      <div className="space-y-6">
+      <div style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 380px), 1fr))",
+        gap: 20,
+        alignItems: "start",
+      }}>
         {sections.map((section) => {
           const Icon = section.icon;
           const sectionChecked = section.items.filter(i => checked[i.id]).length;

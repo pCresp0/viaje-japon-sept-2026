@@ -29,7 +29,7 @@ const dailyWeather = [
 
 export default function WeatherPage() {
   return (
-    <div className="px-4 pt-6 pb-12 max-w-3xl mx-auto">
+    <div className="px-4 pt-6 pb-12">
       <div className="mb-6">
         <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Previsiones</p>
         <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>Clima por ciudad</h2>

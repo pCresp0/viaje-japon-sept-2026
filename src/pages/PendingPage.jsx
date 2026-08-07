@@ -36,7 +36,7 @@ export default function PendingPage() {
   }));
 
   return (
-    <div className="px-4 pt-6 pb-12 max-w-3xl mx-auto">
+    <div className="px-4 pt-6 pb-12">
       <div className="mb-5">
         <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Antes de viajar</p>
         <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>Cosas pendientes</h2>
@@ -77,6 +77,12 @@ export default function PendingPage() {
       </div>
 
       {/* Items grouped by category */}
+      <div style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 400px), 1fr))",
+        gap: 8,
+        alignItems: "start",
+      }}>
       {grouped.map(({ cat, items }) => (
         <div key={cat} className="mb-8">
           <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>
@@ -173,6 +179,7 @@ export default function PendingPage() {
           </div>
         </div>
       ))}
+      </div>
     </div>
   );
 }

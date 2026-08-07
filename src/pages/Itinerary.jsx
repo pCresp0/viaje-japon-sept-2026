@@ -16,8 +16,8 @@ export default function Itinerary({ openDay, setOpenDay }) {
   }, [openDay]);
 
   return (
-    <div className="pt-5 pb-8 max-w-lg mx-auto">
-      <div className="px-4">
+    <div className="pt-5 pb-8 px-4">
+      <div>
         <p className="eyebrow" style={{ color: "var(--shu)" }}>
           Los 15 días
         </p>
@@ -25,7 +25,14 @@ export default function Itinerary({ openDay, setOpenDay }) {
           Itinerario completo
         </h1>
       </div>
-      <div className="px-4 mt-3 space-y-2.5">
+      <div
+        className="mt-3"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 420px), 1fr))",
+          gap: 10,
+        }}
+      >
         {days.map((d) => {
           const block = blockById[d.block];
           const isOpen = openDay === d.num;
@@ -34,6 +41,7 @@ export default function Itinerary({ openDay, setOpenDay }) {
               key={d.num}
               ref={(el) => (refs.current[d.num] = el)}
               className="scroll-mt-4"
+              style={isOpen ? { gridColumn: "1 / -1" } : undefined}
             >
               {isOpen ? (
                 <DayCard day={d} />

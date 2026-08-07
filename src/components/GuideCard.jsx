@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
-import { BookOpen, ChevronDown, Lightbulb, Sparkles, Clapperboard } from "lucide-react";
+import { useState } from "react";
+import { BookOpen, ChevronDown, Lightbulb, Sparkles } from "lucide-react";
 import { guides } from "../data/guides";
 import { popCulture } from "../data/popCulture";
-import { fetchWikiImage } from "../utils/wikiImage";
+import { guideImages } from "../data/guideImages";
 
 const franchiseStyle = {
   pokemon: { label: "Pokémon", emoji: "⚡", color: "#d9720a" },
@@ -17,48 +17,9 @@ const franchiseStyle = {
  */
 export default function GuideCard({ id, accent = "#1d3557" }) {
   const [open, setOpen] = useState(false);
-  const [image, setImage] = useState(null);
-  // idle | loading | found | not-found | error
-  const [imgState, setImgState] = useState("idle");
   const guide = guides[id];
   const refs = popCulture[id];
-
-  function loadImage() {
-    if (!guide?.wiki) return;
-    let cancelled = false;
-    setImgState("loading");
-
-    // fetchWikiImage tiene su propio timeout interno (6s) y SIEMPRE
-    // resuelve la promesa (con imagen o con null). Esta red de seguridad
-    // adicional (7s) garantiza que, pase lo que pase, la tarjeta nunca se
-    // quede en "Cargando..." de forma indefinida.
-    const safety = setTimeout(() => {
-      if (!cancelled) setImgState((s) => (s === "loading" ? "error" : s));
-    }, 7000);
-
-    fetchWikiImage(guide.wiki)
-      .then((result) => {
-        if (cancelled) return;
-        clearTimeout(safety);
-        setImage(result);
-        setImgState(result ? "found" : "not-found");
-      })
-      .catch(() => {
-        if (cancelled) return;
-        clearTimeout(safety);
-        setImgState("error");
-      });
-
-    return () => { cancelled = true; clearTimeout(safety); };
-  }
-
-  // La imagen se pide sólo la primera vez que se abre la tarjeta, para no
-  // lanzar 19 peticiones al cargar la página.
-  useEffect(() => {
-    if (!open || imgState !== "idle") return;
-    return loadImage();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [open, guide, imgState]);
+  const localImage = guideImages[id] ?? null;
 
   if (!guide) return null;
 
@@ -132,21 +93,11 @@ export default function GuideCard({ id, accent = "#1d3557" }) {
       {/* Contenido desplegado */}
       {open && (
         <div className="px-4 pb-4" style={{ borderTop: "1px solid var(--line)", paddingTop: 14 }}>
-          {/* Foto del lugar (Wikipedia, licencia libre) */}
-          {imgState === "loading" && (
-            <div style={{
-              width: "100%", aspectRatio: "16 / 10", borderRadius: 10,
-              background: "var(--paper)", marginBottom: 14,
-              display: "flex", alignItems: "center", justifyContent: "center",
-            }}>
-              <span style={{ fontSize: 11.5, color: "var(--ink-soft)" }}>Cargando foto…</span>
-            </div>
-          )}
-
-          {imgState === "found" && image && (
+          {/* Foto del lugar (Wikimedia Commons, licencia libre, imagen local) */}
+          {localImage && (
             <figure style={{ margin: "0 0 14px" }}>
               <img
-                src={image.src}
+                src={localImage}
                 alt={guide.name}
                 loading="lazy"
                 style={{
@@ -154,58 +105,14 @@ export default function GuideCard({ id, accent = "#1d3557" }) {
                   borderRadius: 10, display: "block",
                   background: "var(--paper)",
                 }}
-                onError={() => setImgState("error")}
               />
               <figcaption style={{
                 fontSize: 10.5, color: "var(--ink-soft)", marginTop: 5,
                 display: "flex", justifyContent: "flex-end",
               }}>
-                <a
-                  href={image.pageUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "var(--ink-soft)", textDecoration: "none" }}
-                >
-                  Foto: Wikimedia Commons ↗
-                </a>
+                Foto: Wikimedia Commons
               </figcaption>
             </figure>
-          )}
-
-          {/* No se encontró foto para este término, o falló la conexión:
-              en vez de dejar un hueco mudo, se ofrece reintentar y un
-              enlace directo para buscarla a mano si hace falta. */}
-          {(imgState === "not-found" || imgState === "error") && (
-            <div style={{
-              width: "100%", borderRadius: 10,
-              background: "var(--paper)", marginBottom: 14,
-              padding: "14px 16px",
-              display: "flex", alignItems: "center", justifyContent: "space-between",
-              gap: 10, flexWrap: "wrap",
-            }}>
-              <span style={{ fontSize: 12, color: "var(--ink-soft)" }}>
-                {imgState === "error" ? "No se pudo cargar la foto." : "No se encontró foto para este lugar."}
-              </span>
-              <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
-                <button
-                  onClick={() => setImgState("idle")}
-                  style={{
-                    fontSize: 11.5, fontWeight: 700, color: accent,
-                    background: "none", border: "none", cursor: "pointer", padding: 0,
-                  }}
-                >
-                  Reintentar
-                </button>
-                <a
-                  href={`https://en.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(guide.wiki)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ fontSize: 11.5, color: "var(--ink-soft)", textDecoration: "underline" }}
-                >
-                  Buscar en Wikipedia ↗
-                </a>
-              </div>
-            </div>
           )}
 
           {guide.sections.map((s, i) => (

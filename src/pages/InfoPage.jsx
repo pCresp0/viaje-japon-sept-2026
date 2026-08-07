@@ -4,8 +4,8 @@ import { PlaneTakeoff, PlaneLanding, MapPin } from "lucide-react";
 
 export default function InfoPage() {
   return (
-    <div className="px-4 pt-5 pb-8 max-w-lg mx-auto space-y-6">
-      <div>
+    <div className="px-4 pt-5 pb-8">
+      <div className="mb-6">
         <p className="eyebrow" style={{ color: "var(--shu)" }}>
           Logística
         </p>
@@ -14,19 +14,26 @@ export default function InfoPage() {
         </h1>
       </div>
 
-      <section className="space-y-3">
-        <h2 className="eyebrow" style={{ color: "var(--ink-soft)" }}>
-          ✈️ Vuelos confirmados
-        </h2>
-        <FlightRow flight={flights.out} icon={PlaneTakeoff} />
-        <FlightRow flight={flights.back} icon={PlaneLanding} />
-      </section>
+      <div style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 380px), 1fr))",
+        gap: 24,
+        alignItems: "start",
+      }}>
+        <section className="space-y-3">
+          <h2 className="eyebrow" style={{ color: "var(--ink-soft)" }}>
+            ✈️ Vuelos confirmados
+          </h2>
+          <FlightRow flight={flights.out} icon={PlaneTakeoff} />
+          <FlightRow flight={flights.back} icon={PlaneLanding} />
+        </section>
 
-      <section className="space-y-3">
-        <h2 className="eyebrow" style={{ color: "var(--ink-soft)" }}>
-          🏨 Dónde dormimos
-        </h2>
-        {stays.map((s) => (
+        <div className="space-y-6">
+          <section className="space-y-3">
+            <h2 className="eyebrow" style={{ color: "var(--ink-soft)" }}>
+              🏨 Dónde dormimos
+            </h2>
+            {stays.map((s) => (
           <div key={s.id} className="rounded-2xl p-4" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
             <div className="flex items-center gap-2">
               <MapPin size={16} style={{ color: "var(--shu)" }} />
@@ -87,7 +94,9 @@ export default function InfoPage() {
             )}
           </div>
         ))}
-      </section>
+          </section>
+        </div>
+      </div>
     </div>
   );
 }

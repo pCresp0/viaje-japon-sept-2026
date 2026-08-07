@@ -49,7 +49,7 @@ export default function CalendarPage() {
   return (
     <div style={{ display: "flex", height: "100%", gap: 16 }}>
       {/* Calendar grid — left side */}
-      <div className="flex-1 px-4 pt-6 pb-12 max-w-2xl overflow-y-auto">
+      <div className="flex-1 px-4 pt-6 pb-12 overflow-y-auto" style={{ maxWidth: "none" }}>
         {/* title */}
         <div className="mb-6">
           <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Septiembre 2026</p>
