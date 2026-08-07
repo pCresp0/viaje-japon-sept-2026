@@ -11,9 +11,15 @@ export default function Itinerary({ openDay, setOpenDay }) {
   const refs = useRef({});
 
   useEffect(() => {
-    if (openDay != null && refs.current[openDay]) {
-      refs.current[openDay].scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    if (openDay == null) return;
+    const el = refs.current[openDay];
+    if (!el) return;
+    // Esperar a que la DayCard se monte y mida, para ir al borde superior
+    // de la card (no al título a medias bajo la cabecera fija).
+    const t = window.setTimeout(() => {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 50);
+    return () => window.clearTimeout(t);
   }, [openDay]);
 
   return (
@@ -34,7 +40,7 @@ export default function Itinerary({ openDay, setOpenDay }) {
             <div
               key={d.num}
               ref={(el) => (refs.current[d.num] = el)}
-              className="scroll-mt-4"
+              className="itinerary-day-anchor"
             >
               {isOpen ? (
                 <DayCard day={d} onClose={() => setOpenDay(null)} />
