@@ -1,52 +1,120 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { ExternalLink } from "lucide-react";
 
-// Real coordinates verified via Google Places
+// Hasta 15 paradas principales, en orden cronológico del viaje
 const stops = [
   {
-    id: "narita", name: "Narita", city: "Aeropuerto",
-    lat: 35.770178, lng: 140.3843215,
+    id: "narita", name: "Narita", city: "Aeropuerto NRT",
+    lat: 35.7719, lng: 140.3929,
     emoji: "✈️", color: "#c9a227",
-    detail: "Llegada · Día 1",
+    day: "Día 1",
+    detail: "Llegada · N'EX a Tokio / Shinkansen a Kioto",
   },
   {
     id: "kioto", name: "Kioto", city: "Kioto",
-    lat: 35.011564, lng: 135.7681489,
+    lat: 35.0116, lng: 135.7681,
     emoji: "⛩️", color: "#bc4749",
-    detail: "5 noches · Días 1–5",
+    day: "Días 1–5",
+    detail: "Base 5 noches · Fushimi, Gion, Nishiki, Kiyomizu…",
+  },
+  {
+    id: "nara", name: "Nara", city: "Nara",
+    lat: 34.6890, lng: 135.8398,
+    emoji: "🦌", color: "#bc4749",
+    day: "Día 2",
+    detail: "Todai-ji, Gran Buda y parque de los ciervos",
+  },
+  {
+    id: "arashiyama", name: "Arashiyama", city: "Kioto",
+    lat: 35.0173, lng: 135.6721,
+    emoji: "🎋", color: "#bc4749",
+    day: "Día 3",
+    detail: "Bosque de bambú, Saga-Toriimoto y Otagi",
+  },
+  {
+    id: "osaka", name: "Osaka", city: "Osaka",
+    lat: 34.6873, lng: 135.5262,
+    emoji: "🏯", color: "#bc4749",
+    day: "Día 5",
+    detail: "Castillo, Dotonbori y Shinsekai",
   },
   {
     id: "kanazawa", name: "Kanazawa", city: "Ishikawa",
-    lat: 36.5597341, lng: 136.6520376,
-    emoji: "🏯", color: "#2e7d5b",
-    detail: "1 noche · Día 6",
+    lat: 36.5613, lng: 136.6562,
+    emoji: "🌸", color: "#2e7d5b",
+    day: "Día 6",
+    detail: "1 noche · Kenroku-en, Omicho, Higashi Chaya",
+  },
+  {
+    id: "shirakawa", name: "Shirakawa-go", city: "Gifu",
+    lat: 36.2577, lng: 136.9063,
+    emoji: "🏡", color: "#2e7d5b",
+    day: "Día 7",
+    detail: "Aldea gassho-zukuri · parada Nohi Bus",
   },
   {
     id: "takayama", name: "Takayama", city: "Gifu",
-    lat: 36.1461317, lng: 137.252159,
+    lat: 36.1461, lng: 137.2522,
     emoji: "🏮", color: "#2e7d5b",
-    detail: "2 noches · Días 7–8",
+    day: "Días 7–8",
+    detail: "1 noche · Sanmachi Suji y Hida beef",
   },
   {
-    id: "tsumago", name: "Tsumago-juku", city: "Nagano",
-    lat: 35.5775876, lng: 137.5956667,
+    id: "magome", name: "Magome", city: "Nakatsugawa",
+    lat: 35.5244, lng: 137.5647,
+    emoji: "⛰️", color: "#2e7d5b",
+    day: "Día 8",
+    detail: "1 noche · Magome Chaya · inicio Nakasendo",
+  },
+  {
+    id: "tsumago", name: "Tsumago", city: "Nagano",
+    lat: 35.5776, lng: 137.5957,
     emoji: "🚶", color: "#2e7d5b",
-    detail: "1 noche · Día 8",
+    day: "Día 8",
+    detail: "Final de la caminata Magome → Tsumago (8 km)",
   },
   {
-    id: "tokio", name: "Tokio", city: "Tokio",
-    lat: 35.6764225, lng: 139.650027,
+    id: "asakusa", name: "Asakusa", city: "Tokio",
+    lat: 35.7148, lng: 139.7967,
     emoji: "🗼", color: "#1d3557",
-    detail: "6 noches · Días 9–15",
+    day: "Días 9–15",
+    detail: "Base 6 noches · Senso-ji y hotel KOKO",
+  },
+  {
+    id: "akihabara", name: "Akihabara", city: "Tokio",
+    lat: 35.6984, lng: 139.7731,
+    emoji: "🎮", color: "#1d3557",
+    day: "Día 9",
+    detail: "Electrónica, figuras y cultura otaku",
+  },
+  {
+    id: "odaiba", name: "Odaiba", city: "Tokio",
+    lat: 35.6295, lng: 139.7794,
+    emoji: "🌉", color: "#1d3557",
+    day: "Día 10",
+    detail: "Yurikamome, Gundam y skyline",
+  },
+  {
+    id: "shibuya", name: "Shibuya", city: "Tokio",
+    lat: 35.6595, lng: 139.7005,
+    emoji: "🚦", color: "#1d3557",
+    day: "Día 11",
+    detail: "Cruce, Harajuku y Meiji Jingu cerca",
+  },
+  {
+    id: "fuji", name: "Monte Fuji", city: "Yamanashi",
+    lat: 35.5009, lng: 138.7606,
+    emoji: "🗻", color: "#1d3557",
+    day: "Día 14",
+    detail: "Excursión con Ken Kaneshima · Chureito / lagos",
   },
 ];
 
-const routeLine = stops.map(s => [s.lat, s.lng]);
+const routeLine = stops.map((s) => [s.lat, s.lng]);
 
-// Custom emoji marker icon with a small order-number badge
 function createIcon(emoji, color, order) {
   return L.divIcon({
     html: `
@@ -60,17 +128,17 @@ function createIcon(emoji, color, order) {
           box-shadow: 0 2px 8px rgba(0,0,0,0.3);
           display: flex; align-items: center; justify-content: center;
         ">
-          <span style="transform: rotate(45deg); font-size: 18px;">${emoji}</span>
+          <span style="transform: rotate(45deg); font-size: 16px; line-height: 1;">${emoji}</span>
         </div>
         <div style="
           position: absolute; top: -6px; right: -6px;
           width: 20px; height: 20px;
-          background: var(--indigo, #1d3557);
+          background: #1d3557;
           color: white;
           border: 2px solid white;
           border-radius: 50%;
           display: flex; align-items: center; justify-content: center;
-          font-size: 11px; font-weight: 700;
+          font-size: 10px; font-weight: 700;
           font-family: -apple-system, sans-serif;
           box-shadow: 0 1px 4px rgba(0,0,0,0.35);
         ">${order}</div>
@@ -83,13 +151,12 @@ function createIcon(emoji, color, order) {
   });
 }
 
-// Fit map bounds to show all markers
 function FitBounds() {
   const map = useMap();
-  useState(() => {
-    const bounds = L.latLngBounds(stops.map(s => [s.lat, s.lng]));
-    map.fitBounds(bounds, { padding: [40, 40] });
-  });
+  useEffect(() => {
+    const bounds = L.latLngBounds(stops.map((s) => [s.lat, s.lng]));
+    map.fitBounds(bounds, { padding: [36, 36] });
+  }, [map]);
   return null;
 }
 
@@ -101,13 +168,12 @@ export default function MapPage() {
       <div className="mb-6">
         <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Ubicaciones clave</p>
         <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>Mapa de la ruta</h2>
-        <p style={{ fontSize: 13, color: "var(--ink-soft)", marginTop: 6 }}>
-          Toda la ruta de un vistazo: Narita → Kioto → Kanazawa → Takayama → Tsumago → Tokio.
+        <p style={{ fontSize: 13, color: "var(--ink-soft)", marginTop: 6, lineHeight: 1.5 }}>
+          {stops.length} paradas principales en orden: aeropuerto, ciudades base, pueblos de los Alpes y barrios de Tokio.
         </p>
       </div>
 
-      {/* Full interactive map with all pins + route */}
-      <div className="rounded-2xl overflow-hidden mb-6 border" style={{ borderColor: "var(--line)", height: 480, position: "relative", isolation: "isolate" }}>
+      <div className="rounded-2xl overflow-hidden mb-6 border" style={{ borderColor: "var(--line)", height: 520, position: "relative", isolation: "isolate" }}>
         <MapContainer
           center={[36.0, 137.5]}
           zoom={6}
@@ -119,23 +185,24 @@ export default function MapPage() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
           />
 
-          {/* Route line connecting all stops */}
           <Polyline
             positions={routeLine}
-            pathOptions={{ color: "#1d3557", weight: 3, opacity: 0.6, dashArray: "8, 8" }}
+            pathOptions={{ color: "#1d3557", weight: 3, opacity: 0.55, dashArray: "8, 8" }}
           />
 
-          {/* Markers for every stop */}
           {stops.map((stop, idx) => (
             <Marker
               key={stop.id}
               position={[stop.lat, stop.lng]}
               icon={createIcon(stop.emoji, stop.color, idx + 1)}
               eventHandlers={{ click: () => setSelected(stop.id) }}
+              opacity={selected && selected !== stop.id ? 0.7 : 1}
             >
               <Popup>
-                <div style={{ fontFamily: "var(--font-body)", minWidth: 140 }}>
-                  <p style={{ fontSize: 11, color: stop.color, fontWeight: 700, marginBottom: 2 }}>PARADA {idx + 1}</p>
+                <div style={{ fontFamily: "var(--font-body)", minWidth: 160 }}>
+                  <p style={{ fontSize: 11, color: stop.color, fontWeight: 700, marginBottom: 2 }}>
+                    PARADA {idx + 1} · {stop.day}
+                  </p>
                   <p style={{ fontWeight: 700, fontSize: 14, marginBottom: 2 }}>{stop.name}</p>
                   <p style={{ fontSize: 12, color: "#5a6070", marginBottom: 6 }}>{stop.detail}</p>
                   <a
@@ -155,36 +222,49 @@ export default function MapPage() {
         </MapContainer>
       </div>
 
-      {/* Quick list below for reference */}
-      <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>Paradas del viaje, en orden</p>
-      <div className="grid gap-2" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))" }}>
-        {stops.map((stop, idx) => (
-          <a
-            key={stop.id}
-            href={`https://www.google.com/maps/search/?api=1&query=${stop.lat},${stop.lng}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 rounded-xl p-3 transition-all"
-            style={{ background: "var(--paper-raised)", border: "1px solid var(--line)", textDecoration: "none" }}
-            onMouseEnter={e => e.currentTarget.style.borderColor = stop.color}
-            onMouseLeave={e => e.currentTarget.style.borderColor = "var(--line)"}
-          >
-            <div style={{
-              width: 22, height: 22, borderRadius: "50%",
-              background: "var(--indigo)", color: "white",
-              display: "flex", alignItems: "center", justifyContent: "center",
-              fontSize: 11, fontWeight: 700, flexShrink: 0,
-            }}>
-              {idx + 1}
-            </div>
-            <span style={{ fontSize: 18 }}>{stop.emoji}</span>
-            <div className="flex-1 min-w-0">
-              <p style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)" }}>{stop.name}</p>
-              <p style={{ fontSize: 11, color: "var(--ink-soft)" }}>{stop.detail}</p>
-            </div>
-            <ExternalLink size={13} style={{ color: "var(--ink-soft)", flexShrink: 0 }} />
-          </a>
-        ))}
+      <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>
+        {stops.length} paradas · en orden del viaje
+      </p>
+      <div className="grid gap-2" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }}>
+        {stops.map((stop, idx) => {
+          const isActive = selected === stop.id;
+          return (
+            <a
+              key={stop.id}
+              href={`https://www.google.com/maps/search/?api=1&query=${stop.lat},${stop.lng}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 rounded-xl p-3 transition-all"
+              style={{
+                background: isActive ? `${stop.color}12` : "var(--paper-raised)",
+                border: `1px solid ${isActive ? stop.color : "var(--line)"}`,
+                textDecoration: "none",
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.borderColor = stop.color; }}
+              onMouseLeave={(e) => {
+                if (!isActive) e.currentTarget.style.borderColor = "var(--line)";
+              }}
+              onClick={() => setSelected(stop.id)}
+            >
+              <div style={{
+                width: 24, height: 24, borderRadius: "50%",
+                background: stop.color, color: "white",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                fontSize: 11, fontWeight: 700, flexShrink: 0,
+              }}>
+                {idx + 1}
+              </div>
+              <span style={{ fontSize: 18 }}>{stop.emoji}</span>
+              <div className="flex-1 min-w-0">
+                <p style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)", margin: 0 }}>{stop.name}</p>
+                <p style={{ fontSize: 11, color: "var(--ink-soft)", margin: 0 }}>
+                  {stop.day} · {stop.detail}
+                </p>
+              </div>
+              <ExternalLink size={13} style={{ color: "var(--ink-soft)", flexShrink: 0 }} />
+            </a>
+          );
+        })}
       </div>
     </div>
   );
