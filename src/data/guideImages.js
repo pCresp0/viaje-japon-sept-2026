@@ -19,7 +19,7 @@ export const guideImages = {
   "senso-ji":      "/img/senso-ji.jpg",
   "meiji-jingu":   "/img/meiji-jingu.jpg",
   "shibuya":       "/img/shibuya.jpg",
-  "akihabara":     "/img/akihabara.png",
+  "akihabara":     "/img/akihabara.jpg",
   "teamlab":       "/img/teamlab.jpg",
   "fuji":          "/img/fuji.jpg",
 };
