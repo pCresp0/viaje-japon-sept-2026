@@ -180,30 +180,47 @@ export default function TransportPage() {
         })}
       </div>
 
-      {/* Cost summary with JR Pass comparison */}
-      <div className="rounded-2xl p-5" style={{ background: "var(--indigo)", color: "white" }}>
-        <p style={{ fontSize: 12, color: "rgba(255,255,255,0.6)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 12 }}>
-          Coste total de transporte · por persona
-        </p>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>
-          <div>
-            <p style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", marginBottom: 4 }}>Sin JR Pass</p>
-            <p style={{ fontSize: 28, fontWeight: 700, fontFamily: "var(--font-display)", margin: 0 }}>
-              {transportTotals.real}€
+      {/* Cost summary & JR Pass evaluation */}
+      <div className="rounded-2xl p-6 border mb-6" style={{ background: "var(--paper-raised)", borderColor: "var(--line)" }}>
+        <div className="flex items-center gap-2 mb-3">
+          <span className="text-xl">📊</span>
+          <h3 className="font-bold text-lg" style={{ color: "var(--ink)", margin: 0 }}>
+            ¿Merece la pena el Japan Rail Pass (JR Pass)?
+          </h3>
+        </div>
+
+        <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl mb-4" style={{ background: "rgba(188,71,73,0.1)", border: "1px solid rgba(188,71,73,0.2)" }}>
+          <span style={{ fontSize: 16 }}>❌</span>
+          <p className="text-xs font-bold" style={{ color: "var(--shu)", margin: 0 }}>
+            VERDICTO ACTUAL: NO MERECE LA PENA (Ahorramos ~48 € / 7.500 ¥ por persona)
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+          <div className="p-4 rounded-xl border" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
+            <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Opción A: Billetes Sueltos (Recomendado)</p>
+            <p className="text-2xl font-bold font-display" style={{ color: "var(--forest)", margin: 0 }}>
+              ~293 € <span className="text-xs font-normal opacity-75">(~47.000 ¥)</span>
+            </p>
+            <p className="text-xs text-gray-600 mt-2 leading-relaxed">
+              Pagando solo los trayectos reales (N'EX, Shinkansen Hikari/Nozomi, Thunderbird, Hida Express). Permite usar los Shinkansen <strong>Nozomi</strong> (los más rápidos y frecuentes).
             </p>
           </div>
-          <div>
-            <p style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", marginBottom: 4 }}>Con JR Pass</p>
-            <p style={{ fontSize: 28, fontWeight: 700, fontFamily: "var(--font-display)", margin: 0 }}>
-              {transportTotals.jrPass}€
+
+          <div className="p-4 rounded-xl border" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
+            <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Opción B: JR Pass Nacional (7 días)</p>
+            <p className="text-2xl font-bold font-display" style={{ color: "var(--shu)", margin: 0 }}>
+              ~341 € <span className="text-xs font-normal opacity-75">(50.000 ¥)</span>
+            </p>
+            <p className="text-xs text-gray-600 mt-2 leading-relaxed">
+              Tras la subida de precios (+65%), el pass de 7 días cuesta 50.000 ¥ (~341 €). En nuestro itinerario <strong>perderíamos ~48 € por persona</strong> (~240 € en total para el grupo).
             </p>
           </div>
         </div>
-        <div style={{ paddingTop: 12, borderTop: "1px solid rgba(255,255,255,0.2)" }}>
-          <p style={{ fontSize: 13, color: "rgba(255,255,255,0.8)", lineHeight: 1.5 }}>
-            El JR Pass cubre <strong>{savings}€/persona</strong> en trayectos JR, pero el propio pass cuesta ~300–350€.
-            Con este itinerario <strong>no sale a cuenta</strong> comprarlo. Pendiente confirmación final.
-          </p>
+
+        <div className="text-xs text-gray-600 space-y-1.5 pl-2 border-l-2" style={{ borderColor: "var(--shu)" }}>
+          <p>• <strong>Buses no cubiertos:</strong> Los autobuses Nohi Bus (Kanazawa → Shirakawa-go → Takayama) no están incluidos en el JR Pass (~39 € extra).</p>
+          <p>• <strong>Transporte local:</strong> El metro de Tokio y el tranvía de Kioto tampoco entran en el JR Pass; se pagan con la tarjeta Suica (¥).</p>
         </div>
       </div>
     </div>

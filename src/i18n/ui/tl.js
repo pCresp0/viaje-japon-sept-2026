@@ -266,7 +266,7 @@ export default {
 
   "transport.icCardInfo": "Mga pangunahing istasyon, ticket machines",
   "transport.icCardCostLabel": "Paunang gastos",
-  "transport.icCardCostValue": "2,000 yen · (1,500 magagamit + 500 deposito)",
+  "transport.icCardCostValue": "2,000 ¥ · (1,500 magagamit + 500 deposito)",
   "transport.icCardWarning": "Ang mga pribadong operator (lokal na subway, Randen tram, Yurikamome, Nohi Bus) ay <strong>hindi</strong> sakop ng JR Pass.",
   "transport.tripsByDay": "Mga biyahe kada araw",
   "transport.withJrPass": "na may JR Pass",

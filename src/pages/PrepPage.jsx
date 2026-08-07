@@ -109,7 +109,7 @@ const sections = [
       { id: "escarpines", text: "Escarpines" },
       { id: "repelente-mosquitos", text: "Repelente de mosquitos" },
       { id: "aparato-mosquitos", text: "Aparato de los mosquitos" },
-      { id: "dinero", text: "Dinero / yenes" },
+      { id: "dinero", text: "Dinero en efectivo (¥)" },
       { id: "suica", text: "Tarjeta Suica/Pasmo o eSIM Suica en el iPhone" },
     ],
   },

@@ -261,7 +261,7 @@ export default {
 
   "transport.icCardInfo": "Main stations, ticket machines",
   "transport.icCardCostLabel": "Initial cost",
-  "transport.icCardCostValue": "2,000 yen · (1,500 usable + 500 deposit)",
+  "transport.icCardCostValue": "2,000 ¥ · (1,500 usable + 500 deposit)",
   "transport.icCardWarning": "Private operators (local subway, Randen tram, Yurikamome, Nohi Bus) are <strong>not</strong> covered by the JR Pass.",
   "transport.tripsByDay": "Trips by day",
   "transport.withJrPass": "with JR Pass",
