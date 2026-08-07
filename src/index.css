@@ -28,10 +28,8 @@ html, body, #root {
 }
 
 /* ── Textura de olas sobre el fondo de la app ────────────────────────
-   Pseudo-elemento fijo sobre body. Usar ::before en body es más fiable
-   que en #root porque no hay riesgo de que un z-index hijo lo tape.
-   La imagen es la misma del panel lateral (waves-sidebar.webp).
-   opacity: 0.12 es claramente visible sin tapar el contenido. */
+   z-index: -1 garantiza que la textura queda por debajo de todo el
+   contenido, incluidos los divs sin position declarada. */
 body::before {
   content: "";
   position: fixed;
@@ -39,9 +37,9 @@ body::before {
   background-image: url('/waves-sidebar.webp');
   background-size: 700px auto;
   background-repeat: repeat;
-  opacity: 0.12;
+  opacity: 0.06;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
 }
 
 body {
