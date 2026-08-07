@@ -1,0 +1,225 @@
+// Mga teksto ng interface — Tagalog.
+//
+// Nota: en tagalo contemporáneo es normal y natural conservar ciertos
+// términos técnicos o de viaje en inglés (check-in, budget, map), como
+// se hace en el habla real. Se ha optado por ese registro en lugar de
+// traducciones forzadas que sonarían artificiales.
+
+export default {
+  // ── Nabigasyon ────────────────────────────────────────────────────
+  "nav.pendientes": "Mga dapat gawin",
+  "nav.inicio": "Simula",
+  "nav.calendario": "Kalendaryo",
+  "nav.itinerario": "Itineraryo",
+  "nav.hoy": "Ngayon",
+  "nav.vuelos": "Mga flight",
+  "nav.hoteles": "Mga hotel",
+  "nav.transportes": "Transportasyon",
+  "nav.lugares": "Mga lugar",
+  "nav.comidas": "Pagkaing Hapon",
+  "nav.mapa": "Mapa",
+  "nav.clima": "Panahon",
+  "nav.historia": "Kasaysayan ng Japan",
+  "nav.frases": "Mga parirala",
+  "nav.preparativos": "Paghahanda",
+  "nav.presupuesto": "Badyet",
+  "nav.herramientas": "Mga kagamitan",
+  "nav.emergencias": "Emergency",
+
+  // ── Pangkalahatan ─────────────────────────────────────────────────
+  "common.day": "Araw",
+  "common.days": "araw",
+  "common.night": "gabi",
+  "common.nights": "gabi",
+  "common.hours": "oras",
+  "common.minutes": "minuto",
+  "common.seconds": "segundo",
+  "common.hoursShort": "o",
+  "common.minutesShort": "min",
+  "common.secondsShort": "seg",
+  "common.perPerson": "bawat tao",
+  "common.total": "Kabuuan",
+  "common.close": "Isara",
+  "common.open": "Buksan",
+  "common.seeMore": "Alamin pa",
+  "common.seeLess": "Itago",
+  "common.retry": "Subukan ulit",
+  "common.loading": "Naglo-load…",
+  "common.viewOnMap": "Tingnan sa mapa",
+  "common.openInMaps": "Buksan sa Google Maps",
+  "common.language": "Wika",
+  "common.selectLanguage": "Pumili ng wika",
+
+  // ── Simula ────────────────────────────────────────────────────────
+  "home.eyebrow": "Setyembre 2026",
+  "home.countdownTitle": "Bago ang alis",
+  "home.countdownDays": "Araw",
+  "home.countdownHours": "Oras",
+  "home.countdownMinutes": "Min",
+  "home.countdownSeconds": "Seg",
+  "home.next": "Susunod",
+  "home.today": "Ngayon",
+  "home.tripStarted": "Nagsimula na ang biyahe!",
+  "home.tripEnded": "Tapos na ang biyahe",
+  "home.guideTitle": "Ano ang laman ng bawat bahagi",
+
+  // ── Mga dapat gawin ───────────────────────────────────────────────
+  "pending.eyebrow": "Bago bumiyahe",
+  "pending.title": "Mga dapat gawin",
+  "pending.intro":
+    "Mga desisyong kailangang gawin at mga booking na dapat maaga pang asikasuhin. Markahan ang bawat isa kapag tapos na.",
+  "pending.remaining": "bagay na dapat asikasuhin",
+  "pending.remainingOne": "bagay na dapat asikasuhin",
+  "pending.allDone": "Ayos na ang lahat!",
+  "pending.markDone": "Markahan bilang tapos",
+  "pending.markPending": "Markahan bilang hindi pa tapos",
+  "pending.deadline": "Huling araw",
+
+  // ── Kalendaryo ────────────────────────────────────────────────────
+  "calendar.eyebrow": "Buwanang tingin",
+  "calendar.title": "Kalendaryo",
+  "calendar.intro": "Pindutin ang kahit anong araw para makita ang buong detalye.",
+
+  // ── Itineraryo ────────────────────────────────────────────────────
+  "itinerary.eyebrow": "Araw-araw",
+  "itinerary.title": "Itineraryo",
+  "itinerary.schedule": "Plano para sa araw",
+  "itinerary.history": "Kasaysayan ng lugar",
+  "itinerary.whatWeSee": "Ano ang makikita natin",
+  "itinerary.whereWeSleep": "Saan tayo matutulog",
+
+  // ── Mga flight ────────────────────────────────────────────────────
+  "flights.eyebrow": "Logistics",
+  "flights.title": "Mga flight",
+  "flights.confirmed": "Mga kumpirmadong flight",
+  "flights.outbound": "Papunta",
+  "flights.return": "Pabalik",
+  "flights.departure": "Alis",
+  "flights.arrival": "Dating",
+  "flights.duration": "Tagal",
+  "flights.terminal": "Terminal",
+  "flights.layover": "Layover",
+  "flights.fullRoute": "Buong ruta",
+  "flights.leg": "Bahagi",
+  "flights.mainFlight": "Pangunahing flight",
+  "flights.continuation": "Karugtong",
+  "flights.trackLive": "Subaybayan ang flight",
+  "flights.nextDay": "+1 araw",
+  "flights.via": "sa pamamagitan ng",
+
+  // ── Mga hotel ─────────────────────────────────────────────────────
+  "hotels.eyebrow": "Matutuluyan",
+  "hotels.title": "Mga hotel",
+  "hotels.checkIn": "Check-in",
+  "hotels.checkOut": "Check-out",
+  "hotels.pin": "PIN",
+  "hotels.address": "Address",
+  "hotels.price": "Presyo",
+  "hotels.viewBooking": "Tingnan sa Booking",
+
+  // ── Transportasyon ────────────────────────────────────────────────
+  "transport.eyebrow": "Paano tayo maglalakbay",
+  "transport.title": "Transportasyon",
+  "transport.byDay": "Mga biyahe kada araw",
+  "transport.totalCost": "Kabuuang gastos",
+  "transport.suicaTitle": "Suica card",
+  "transport.suicaSubtitle": "Awtomatikong binabawas ang bayad sa bawat biyahe",
+
+  // ── Mga lugar ─────────────────────────────────────────────────────
+  "places.eyebrow": "Mga hindi dapat palampasin",
+  "places.title": "Mga lugar",
+  "places.temples": "Mga templo",
+  "places.restaurants": "Mga restawran",
+  "places.cafes": "Mga café at kapehan",
+
+  // ── Pagkain ───────────────────────────────────────────────────────
+  "foods.eyebrow": "Pagkain at inumin",
+  "foods.title": "Pagkaing Hapon",
+  "foods.intro": "Ano ang dapat tikman sa bawat lugar, at paano ito kinakain.",
+  "foods.whereToTry": "Saan ito matitikman",
+
+  // ── Mapa ──────────────────────────────────────────────────────────
+  "map.eyebrow": "Mahahalagang lugar",
+  "map.title": "Mapa ng ruta",
+  "map.intro": "Ang buong ruta sa isang tingin, ayon sa pagkakasunod-sunod.",
+  "map.stops": "Mga hinto sa biyahe, sunod-sunod",
+  "map.filterAll": "Lahat",
+  "map.filterHotels": "Mga hotel",
+  "map.filterExcursions": "Mga excursion",
+  "map.filterTransport": "Transportasyon",
+  "map.stop": "Hinto",
+
+  // ── Panahon ───────────────────────────────────────────────────────
+  "weather.eyebrow": "Ano ang aasahan",
+  "weather.title": "Panahon",
+  "weather.intro":
+    "Inaasahang temperatura at tsansa ng ulan para sa Setyembre sa bawat lungsod.",
+  "weather.rain": "Ulan",
+  "weather.max": "Pinakamataas",
+  "weather.min": "Pinakamababa",
+
+  // ── Kasaysayan ────────────────────────────────────────────────────
+  "history.eyebrow": "Para maintindihan ang makikita ninyo",
+  "history.title": "Kasaysayan ng Japan",
+  "history.intro":
+    "Isang paglalakbay sa mahigit 2,000 taong kasaysayan ng Japan, nakaayos ayon sa panahon, na may direktang ugnayan sa mga tiyak na lugar na pupuntahan ninyo sa biyahe. Pindutin ang bawat panahon para buksan ito.",
+  "history.seeOnTrip": "Makikita ninyo ito sa biyahe",
+  "history.readingEyebrow": "Para malaman pa",
+  "history.readingTitle": "Mga inirerekomendang libro at podcast",
+  "history.readingIntro":
+    "Kung may kuwento rito na nagpausisa sa inyo, narito kung saan pwedeng magpatuloy.",
+  "history.books": "Mga libro",
+  "history.podcasts": "Mga podcast",
+
+  // ── Mga parirala ──────────────────────────────────────────────────
+  "phrases.eyebrow": "Wika at kultura",
+  "phrases.title": "Mga parirala at asal",
+  "phrases.audioHint":
+    "Pindutin ang speaker sa tabi ng kahit anong parirala para marinig ang tunay na bigkas sa Hapon.",
+  "phrases.listen": "Pakinggan sa Hapon",
+  "phrases.audioError":
+    "Hindi ma-play ang audio. Kung iPhone ang gamit ninyo, tiyaking naka-off ang silent switch sa gilid at nakataas ang volume.",
+  "phrases.catBasics": "Pangunahin",
+  "phrases.catRestaurant": "Restawran",
+  "phrases.catTransport": "Transportasyon",
+  "phrases.catShopping": "Pamimili",
+  "phrases.etiquette": "Asal at kaugalian",
+
+  // ── Paghahanda ────────────────────────────────────────────────────
+  "prep.eyebrow": "Bago ang biyahe",
+  "prep.title": "Paghahanda",
+  "prep.intro": "Listahan ng dala at mga aasikasuhin. Markahan ang tapos na.",
+  "prep.progress": "tapos na",
+
+  // ── Badyet ────────────────────────────────────────────────────────
+  "budget.eyebrow": "Magkano ang gastos",
+  "budget.title": "Badyet",
+  "budget.perPerson": "Kabuuan bawat tao",
+  "budget.category": "Kategorya",
+
+  // ── Mga kagamitan ─────────────────────────────────────────────────
+  "utils.eyebrow": "Mga gamit",
+  "utils.title": "Mga kagamitan",
+  "utils.clockTitle": "Oras ngayon",
+  "utils.spain": "Espanya",
+  "utils.japan": "Japan",
+  "utils.converterTitle": "Currency converter",
+  "utils.rate": "Palitan",
+
+  // ── Emergency ─────────────────────────────────────────────────────
+  "emergency.eyebrow": "Sakaling kailanganin",
+  "emergency.title": "Emergency",
+  "emergency.numbers": "Mga emergency number sa Japan",
+  "emergency.embassy": "Embahada ng Espanya",
+  "emergency.embassy24h": "Emergency 24 oras",
+  "emergency.insurance": "Tandaan na laging nasa kamay ang travel insurance ninyo.",
+
+  // ── Gabay sa mga lugar ────────────────────────────────────────────
+  "guide.curiosities": "Alam ninyo ba",
+  "guide.tip": "Tip",
+  "guide.popCulture": "Pop culture",
+  "guide.founded": "Itinatag",
+
+  // ── Footer ────────────────────────────────────────────────────────
+  "footer.madeBy": "Website na dinisenyo at ginawa ni",
+};

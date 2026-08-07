@@ -1,8 +1,15 @@
 import { transports, transportTotals, days } from "../data/trip";
 import { Train, Bus, Zap } from "lucide-react";
 
-// Determine icon based on transport type
-function iconKind(type) {
+// Determina el icono del trayecto.
+// Se prioriza el campo estable `kind` del dato; el análisis del texto es
+// sólo un respaldo para entradas antiguas que aún no lo tengan. Sin esto,
+// al traducir la app los iconos serían incorrectos, porque la detección
+// dependía de palabras en español ("Bala", "Operador Privado").
+function iconKind(transport) {
+  if (transport?.kind) return transport.kind;
+
+  const type = transport?.type || "";
   if (type === "Operador Privado (Bus)") return "bus";
   if (type.includes("Bala")) return "shinkansen";
   return "train";
@@ -115,7 +122,7 @@ export default function TransportPage() {
 
               {/* Transport rows */}
               {items.map((t, ti) => {
-                const kind = iconKind(t.type);
+                const kind = iconKind(t);
                 const jr = jrCoverage(t);
                 return (
                   <div

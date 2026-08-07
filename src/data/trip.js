@@ -11,6 +11,7 @@ export const flights = {
   booking: { ref: "40-892227078", pin: "2534" },
   price: { perPerson: "890€", total: "4.450€", people: 5 },
   out: {
+    dir: "out",
     label: "Ida",
     date: "2026-09-06",
     text: "Salida Dom 6 sept desde Madrid (T4S) a las 09:05 (Qatar Airways QR148). Escala en Doha (aeropuerto de terminal única). Llegada a Narita (NRT), Terminal 2, el Lun 7 sept a las 12:55.",
@@ -29,6 +30,7 @@ export const flights = {
     },
   },
   back: {
+    dir: "back",
     label: "Vuelta",
     date: "2026-09-21",
     text: "Salida Lun 21 sept desde Narita (Terminal 2) a las 17:25 (Qatar Airways QR809). Escala en Doha. Llegada a Madrid (T4S) el Mar 22 sept a las 08:15.",

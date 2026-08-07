@@ -1,25 +1,29 @@
 import { useState } from "react";
 import { Compass, Route, Plane, Wallet, X, Menu, CalendarDays, MessageCircle, Backpack, ShieldAlert, Train, Heart, Map, Cloud, Clock, ListTodo, Landmark, Hotel, UtensilsCrossed, Home } from "lucide-react";
+import { useT } from "../i18n";
+import LanguageSwitcher from "./LanguageSwitcher";
 
+// El campo `labelKey` se resuelve en tiempo de render con la función de
+// traducción, para que el menú cambie de idioma sin recargar la página.
 export const tabs = [
-  { id: "pendientes",   label: "Cosas pendientes", icon: ListTodo, alert: true },
-  { id: "inicio",       label: "Inicio",       icon: Home         },
-  { id: "calendario",   label: "Calendario",   icon: CalendarDays },
-  { id: "itinerario",   label: "Itinerario",   icon: Route        },
-  { id: "hoy",          label: "Hoy",          icon: Compass      },
-  { id: "vuelos",       label: "Vuelos",       icon: Plane        },
-  { id: "hoteles",      label: "Hoteles",      icon: Hotel        },
-  { id: "transportes",  label: "Transportes",  icon: Train        },
-  { id: "lugares",      label: "Lugares",      icon: Heart        },
-  { id: "comidas",      label: "Comidas típicas", icon: UtensilsCrossed },
-  { id: "mapa",         label: "Mapa",         icon: Map          },
-  { id: "clima",        label: "Clima",        icon: Cloud        },
-  { id: "historia",     label: "Historia de Japón", icon: Landmark },
-  { id: "frases",       label: "Frases",       icon: MessageCircle },
-  { id: "preparativos", label: "Preparativos", icon: Backpack     },
-  { id: "presupuesto",  label: "Presupuesto",  icon: Wallet       },
-  { id: "herramientas", label: "Herramientas", icon: Clock        },
-  { id: "emergencias",  label: "Emergencias",  icon: ShieldAlert  },
+  { id: "pendientes",   labelKey: "nav.pendientes",   icon: ListTodo, alert: true },
+  { id: "inicio",       labelKey: "nav.inicio",       icon: Home         },
+  { id: "calendario",   labelKey: "nav.calendario",   icon: CalendarDays },
+  { id: "itinerario",   labelKey: "nav.itinerario",   icon: Route        },
+  { id: "hoy",          labelKey: "nav.hoy",          icon: Compass      },
+  { id: "vuelos",       labelKey: "nav.vuelos",       icon: Plane        },
+  { id: "hoteles",      labelKey: "nav.hoteles",      icon: Hotel        },
+  { id: "transportes",  labelKey: "nav.transportes",  icon: Train        },
+  { id: "lugares",      labelKey: "nav.lugares",      icon: Heart        },
+  { id: "comidas",      labelKey: "nav.comidas",      icon: UtensilsCrossed },
+  { id: "mapa",         labelKey: "nav.mapa",         icon: Map          },
+  { id: "clima",        labelKey: "nav.clima",        icon: Cloud        },
+  { id: "historia",     labelKey: "nav.historia",     icon: Landmark },
+  { id: "frases",       labelKey: "nav.frases",       icon: MessageCircle },
+  { id: "preparativos", labelKey: "nav.preparativos", icon: Backpack     },
+  { id: "presupuesto",  labelKey: "nav.presupuesto",  icon: Wallet       },
+  { id: "herramientas", labelKey: "nav.herramientas", icon: Clock        },
+  { id: "emergencias",  labelKey: "nav.emergencias",  icon: ShieldAlert  },
 ];
 
 const sidebarBg = {
@@ -47,29 +51,30 @@ const chromeOverlay = {
 };
 
 function NavItems({ active, onChange, onClose }) {
-  return tabs.map((t) => {
-    const Icon = t.icon;
-    const isActive = active === t.id;
+  const t = useT();
+  return tabs.map((tab) => {
+    const Icon = tab.icon;
+    const isActive = active === tab.id;
     return (
       <button
-        key={t.id}
-        onClick={() => { onChange(t.id); onClose?.(); }}
+        key={tab.id}
+        onClick={() => { onChange(tab.id); onClose?.(); }}
         className="flex items-center gap-3 w-full text-left transition-all"
         style={{
           padding: "11px 16px",
           borderRadius: 10,
           background: isActive
             ? "rgba(255,255,255,0.15)"
-            : t.alert ? "rgba(255,255,255,0.07)" : "transparent",
-          color: isActive ? "#fff" : t.alert ? "#fff" : "rgba(255,255,255,0.8)",
+            : tab.alert ? "rgba(255,255,255,0.07)" : "transparent",
+          color: isActive ? "#fff" : tab.alert ? "#fff" : "rgba(255,255,255,0.8)",
           borderLeft: isActive ? "3px solid #e8b74a" : "3px solid transparent",
-          fontWeight: isActive || t.alert ? 700 : 500,
-          marginBottom: t.alert ? 8 : 0,
+          fontWeight: isActive || tab.alert ? 700 : 500,
+          marginBottom: tab.alert ? 8 : 0,
         }}
       >
-        <Icon size={17} strokeWidth={isActive || t.alert ? 2.4 : 2} />
-        <span style={{ fontSize: 14, letterSpacing: "0.01em" }}>{t.label}</span>
-        {t.alert && <span className="alert-dot" aria-hidden="true" />}
+        <Icon size={17} strokeWidth={isActive || tab.alert ? 2.4 : 2} />
+        <span style={{ fontSize: 14, letterSpacing: "0.01em" }}>{t(tab.labelKey)}</span>
+        {tab.alert && <span className="alert-dot" aria-hidden="true" />}
       </button>
     );
   });
@@ -130,7 +135,8 @@ function Drawer({ active, onChange, open, onClose }) {
 
 /* ── Mobile top bar ──────────────────────────────────────────────── */
 export function TopBar({ active, onOpenDrawer }) {
-  const currentTab = tabs.find((t) => t.id === active);
+  const t = useT();
+  const currentTab = tabs.find((tab) => tab.id === active);
   return (
     <header className="fixed top-0 left-0 right-0 flex items-center gap-3 px-4"
       style={{
@@ -156,9 +162,11 @@ export function TopBar({ active, onOpenDrawer }) {
         letterSpacing: "0.01em",
         position: "relative", zIndex: 1,
       }}>
-        {currentTab?.label}
+        {currentTab ? t(currentTab.labelKey) : ""}
       </span>
-      <span style={{ fontSize: 20, position: "relative", zIndex: 1 }}>🇯🇵</span>
+      <div style={{ position: "relative", zIndex: 1 }}>
+        <LanguageSwitcher variant="bar" />
+      </div>
     </header>
   );
 }
@@ -178,8 +186,9 @@ export function Sidebar({ active, onChange }) {
             <span style={{ fontSize: 22 }}>🇯🇵</span>
             <span style={{
               fontFamily: "var(--font-display)", fontSize: 16,
-              fontWeight: 700, color: "#fff",
+              fontWeight: 700, color: "#fff", flex: 1,
             }}>Japón 2026</span>
+            <LanguageSwitcher variant="sidebar" />
           </div>
         </div>
 

@@ -10,21 +10,21 @@ const weatherData = [
 ];
 
 const dailyWeather = [
-  { day: 1, city: "Kioto", high: 31, low: 23, condition: "Soleado", rain: 10 },
-  { day: 2, city: "Kioto", high: 30, low: 22, condition: "Parcialmente nublado", rain: 20 },
-  { day: 3, city: "Kioto", high: 29, low: 21, condition: "Parcialmente nublado", rain: 30 },
-  { day: 4, city: "Kioto", high: 28, low: 20, condition: "Lluvia ligera", rain: 60 },
-  { day: 5, city: "Kioto", high: 29, low: 21, condition: "Soleado", rain: 10 },
-  { day: 6, city: "Kanazawa", high: 27, low: 20, condition: "Lluvia intermitente", rain: 70 },
-  { day: 7, city: "Takayama", high: 25, low: 18, condition: "Nublado", rain: 40 },
-  { day: 8, city: "Tsumago", high: 23, low: 16, condition: "Soleado", rain: 5 },
-  { day: 9, city: "Tokio", high: 30, low: 22, condition: "Soleado", rain: 10 },
-  { day: 10, city: "Tokio", high: 29, low: 21, condition: "Parcialmente nublado", rain: 25 },
-  { day: 11, city: "Tokio", high: 28, low: 20, condition: "Soleado", rain: 15 },
-  { day: 12, city: "Tokio", high: 27, low: 19, condition: "Lluvia ligera", rain: 50 },
-  { day: 13, city: "Tokio", high: 28, low: 20, condition: "Parcialmente nublado", rain: 30 },
-  { day: 14, city: "Tokio", high: 29, low: 21, condition: "Soleado", rain: 10 },
-  { day: 15, city: "Tokio", high: 30, low: 22, condition: "Soleado", rain: 5 },
+  { day: 1, city: "Kioto", high: 31, low: 23, sky: "sun", condition: "Soleado", rain: 10 },
+  { day: 2, city: "Kioto", high: 30, low: 22, sky: "partly", condition: "Parcialmente nublado", rain: 20 },
+  { day: 3, city: "Kioto", high: 29, low: 21, sky: "partly", condition: "Parcialmente nublado", rain: 30 },
+  { day: 4, city: "Kioto", high: 28, low: 20, sky: "rain", condition: "Lluvia ligera", rain: 60 },
+  { day: 5, city: "Kioto", high: 29, low: 21, sky: "sun", condition: "Soleado", rain: 10 },
+  { day: 6, city: "Kanazawa", high: 27, low: 20, sky: "rain", condition: "Lluvia intermitente", rain: 70 },
+  { day: 7, city: "Takayama", high: 25, low: 18, sky: "cloud", condition: "Nublado", rain: 40 },
+  { day: 8, city: "Tsumago", high: 23, low: 16, sky: "sun", condition: "Soleado", rain: 5 },
+  { day: 9, city: "Tokio", high: 30, low: 22, sky: "sun", condition: "Soleado", rain: 10 },
+  { day: 10, city: "Tokio", high: 29, low: 21, sky: "partly", condition: "Parcialmente nublado", rain: 25 },
+  { day: 11, city: "Tokio", high: 28, low: 20, sky: "sun", condition: "Soleado", rain: 15 },
+  { day: 12, city: "Tokio", high: 27, low: 19, sky: "rain", condition: "Lluvia ligera", rain: 50 },
+  { day: 13, city: "Tokio", high: 28, low: 20, sky: "partly", condition: "Parcialmente nublado", rain: 30 },
+  { day: 14, city: "Tokio", high: 29, low: 21, sky: "sun", condition: "Soleado", rain: 10 },
+  { day: 15, city: "Tokio", high: 30, low: 22, sky: "sun", condition: "Soleado", rain: 5 },
 ];
 
 export default function WeatherPage() {
@@ -64,15 +64,18 @@ export default function WeatherPage() {
       <p className="eyebrow mb-3 mt-6" style={{ color: "var(--ink-soft)" }}>Previsión día a día</p>
       <div className="space-y-3">
         {dailyWeather.map((d, idx) => {
+          // El icono se elige por la clave estable `sky`, no analizando el
+          // texto: al traducir la app, buscar "Soleado" o "Lluvia" fallaría
+          // y todos los días saldrían con el icono genérico de nube.
           let bg = "linear-gradient(135deg, #606C88 0%, #3F4C6B 100%)";
           let Icon = Cloud;
-          if (d.condition.includes("Soleado")) {
+          if (d.sky === "sun") {
             bg = "linear-gradient(135deg, #FF7E5F 0%, #FEB47B 100%)";
             Icon = Sun;
-          } else if (d.condition.includes("Parcialmente")) {
+          } else if (d.sky === "partly") {
             bg = "linear-gradient(135deg, #4FACFE 0%, #00F2FE 100%)";
             Icon = CloudSun;
-          } else if (d.condition.includes("Lluvia")) {
+          } else if (d.sky === "rain") {
             bg = "linear-gradient(135deg, #3A7BD5 0%, #3A6073 100%)";
             Icon = CloudRain;
           }

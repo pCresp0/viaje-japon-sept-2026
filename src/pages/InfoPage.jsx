@@ -53,7 +53,9 @@ function FlightRow({ flight, icon: Icon }) {
   // Ida: Madrid -> Doha -> Narita
   // Vuelta: Narita -> Doha -> Madrid
   
-  const isOutbound = flight.label === "Ida";
+  // Se compara contra un campo estable, nunca contra el texto visible:
+  // el label se traduce y la comparación se rompería.
+  const isOutbound = flight.dir === "out";
   
   // Parse times
   const depTime = new Date(flight.depart.time);
