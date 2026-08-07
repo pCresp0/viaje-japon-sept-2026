@@ -75,8 +75,8 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          gap: isDesktop ? 7 : 5,
-          padding: isDesktop ? "7px 14px" : "6px 11px",
+          gap: isDesktop ? 8 : 5,
+          padding: isDesktop ? "9px 18px" : "6px 11px",
           borderRadius: 999,
           background: open
             ? "rgba(255,255,255,0.24)"
@@ -87,9 +87,9 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
           color: "#fff",
         }}
       >
-        <Search size={isDesktop ? 17 : 16} strokeWidth={2.5} />
+        <Search size={isDesktop ? 20 : 16} strokeWidth={2.5} />
         <span style={{
-          fontSize: isDesktop ? 13 : 12,
+          fontSize: isDesktop ? 15 : 12,
           fontWeight: 700,
           letterSpacing: "0.02em",
           lineHeight: 1,

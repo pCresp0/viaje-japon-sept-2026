@@ -188,9 +188,9 @@ export function DesktopTopBar({ active, onNavigate }) {
   const currentTab = tabs.find((tab) => tab.id === active);
   return (
     <header
-      className="hidden md:flex items-center gap-4 px-5 shrink-0"
+      className="hidden md:flex items-center gap-5 px-6 shrink-0"
       style={{
-        height: 56,
+        height: 68,
         boxSizing: "border-box",
         zIndex: 150,
         backgroundColor: "var(--shu-darker)",
@@ -202,22 +202,22 @@ export function DesktopTopBar({ active, onNavigate }) {
       <div style={chromeOverlay} />
       <div style={{
         position: "relative", zIndex: 1,
-        display: "flex", alignItems: "center", gap: 8,
+        display: "flex", alignItems: "center", gap: 10,
         flex: 1, minWidth: 0,
       }}>
-        <span style={{ fontSize: 20, lineHeight: 1 }}>🇯🇵</span>
+        <span style={{ fontSize: 26, lineHeight: 1 }}>🇯🇵</span>
         <span style={{
-          fontFamily: "var(--font-display)", fontSize: 17,
+          fontFamily: "var(--font-display)", fontSize: 22,
           fontWeight: 700, color: "#fff", letterSpacing: "0.01em",
         }}>
           Japón 2026
         </span>
         {currentTab && (
           <>
-            <span style={{ color: "rgba(255,255,255,0.35)", fontSize: 16, margin: "0 2px" }}>·</span>
+            <span style={{ color: "rgba(255,255,255,0.35)", fontSize: 20, margin: "0 4px" }}>·</span>
             <span style={{
-              fontFamily: "var(--font-display)", fontSize: 15,
-              fontWeight: 600, color: "rgba(255,255,255,0.78)",
+              fontFamily: "var(--font-display)", fontSize: 19,
+              fontWeight: 600, color: "rgba(255,255,255,0.82)",
               overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap",
             }}>
               {t(currentTab.labelKey)}
@@ -225,9 +225,9 @@ export function DesktopTopBar({ active, onNavigate }) {
           </>
         )}
       </div>
-      <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", gap: 8 }}>
+      <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", gap: 10 }}>
         <GlobalSearch variant="desktop" onNavigate={onNavigate} />
-        <LanguageSwitcher variant="bar" />
+        <LanguageSwitcher variant="desktop" />
       </div>
     </header>
   );
