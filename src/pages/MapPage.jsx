@@ -262,14 +262,14 @@ export default function MapPage() {
             <Marker
               key={stop.id}
               position={[stop.lat, stop.lng]}
-              icon={createIcon(stop.emoji, stop.color, filter === "ruta" ? idx + 1 : null)}
+              icon={createIcon(stop.emoji, stop.color, idx + 1)}
               eventHandlers={{ click: () => setSelected(stop.id) }}
               opacity={selected && selected !== stop.id ? 0.7 : 1}
             >
               <Popup>
                 <div style={{ fontFamily: "var(--font-body)", minWidth: 160 }}>
                   <p style={{ fontSize: 11, color: stop.color, fontWeight: 700, marginBottom: 2 }}>
-                    {filter === "ruta" ? `PARADA ${idx + 1} · ` : ""}{stop.day}
+                    {filter === "ruta" ? `PARADA ${idx + 1} · ` : `Nº ${idx + 1} · `}{stop.day}
                   </p>
                   <p style={{ fontWeight: 700, fontSize: 14, marginBottom: 2 }}>{stop.name}</p>
                   <p style={{ fontSize: 12, color: "#5a6070", marginBottom: 6 }}>{stop.detail}</p>
@@ -320,12 +320,12 @@ export default function MapPage() {
                 display: "flex", alignItems: "center", justifyContent: "center",
                 fontSize: 11, fontWeight: 700, flexShrink: 0,
               }}>
-                {filter === "ruta" && <span className="mr-1">{idx + 1}</span>}
+                <span className="mr-1">{idx + 1}</span>
                 <span style={{ fontSize: 12 }}>{stop.emoji}</span>
               </div>
               <div style={{ flex: 1 }}>
                 <p style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)", marginBottom: 1 }}>
-                  {filter === "ruta" ? `${idx + 1}. ` : ""}{stop.name}
+                  {idx + 1}. {stop.name}
                 </p>
                 <p style={{ fontSize: 12, color: "var(--ink-soft)" }}>{stop.day}</p>
               </div>
