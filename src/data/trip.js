@@ -8,11 +8,15 @@ export const tripMeta = {
 };
 
 export const flights = {
+  booking: { ref: "40-892227078", pin: "2534" },
+  price: { perPerson: "890€", total: "4.450€", people: 5 },
   out: {
     label: "Ida",
     date: "2026-09-06",
     text: "Salida Dom 6 sept desde Madrid (T4S) a las 09:05 (Qatar Airways QR148). Escala en Doha (aeropuerto de terminal única). Llegada a Narita (NRT), Terminal 2, el Lun 7 sept a las 12:55.",
-    flightNumber: "QR148",
+    flightNumber: "QR148 + QR808",
+    leg1: { number: "QR148", operator: "Qatar Airways", duration: "7h", route: "Madrid → Doha" },
+    leg2: { number: "QR808", operator: "Qatar Airways", duration: "8h 50m", route: "Doha → Narita" },
     trackUrl: "https://es.flightaware.com/live/flight/QTR148",
     depart: { city: "Madrid", time: "2026-09-06T09:05", terminal: "T4S (Satélite)" },
     arrive: { city: "Narita (NRT)", time: "2026-09-07T12:55", terminal: "T2" },
@@ -28,7 +32,9 @@ export const flights = {
     label: "Vuelta",
     date: "2026-09-21",
     text: "Salida Lun 21 sept desde Narita (Terminal 2) a las 17:25 (Qatar Airways QR809). Escala en Doha. Llegada a Madrid (T4S) el Mar 22 sept a las 08:15.",
-    flightNumber: "QR809",
+    flightNumber: "QR809 + QR6952",
+    leg1: { number: "QR809", operator: "Qatar Airways", duration: "8h", route: "Narita → Doha" },
+    leg2: { number: "QR6952", operator: "Qatar Airways / Iberia", duration: "7h 50m", route: "Doha → Madrid" },
     trackUrl: "https://es.flightaware.com/live/flight/QTR809",
     depart: { city: "Narita (NRT)", time: "2026-09-21T17:25", terminal: "T2" },
     arrive: { city: "Madrid", time: "2026-09-22T08:15", terminal: "T4S (Satélite)" },
@@ -168,7 +174,7 @@ export const days = [
     schedule: [
       { time: "09:05", text: "Salida desde el Aeropuerto Adolfo Suárez Madrid-Barajas en vuelo QR148 (Qatar Airways)." },
       { time: "13:35+", text: "Llegada a Doha (Aeropuerto Internacional de Hamad, HIA). Escala técnica, cambio de avión. Tiempo en escala: aprox. 2 horas." },
-      { time: "15:35+", text: "Salida desde Doha hacia Narita (NRT) en el vuelo QR148 (continuación del mismo número de vuelo)." },
+      { time: "15:35+", text: "Salida desde Doha hacia Narita (NRT) en el vuelo QR808 (Qatar Airways)." },
       { time: "12:55 (+1 día)", text: "Llegada a Narita (lunes 7 sept). Aduanas y recogida de equipajes. Luego: traslado en Narita Express + Shinkansen a Kioto." },
     ],
     money: "Vuelo incluido en el presupuesto de grupo",
@@ -469,7 +475,7 @@ export const days = [
       { time: "09:00", text: "Último paseo por el barrio y compras de souvenirs (Kit-Kats de sabores)." },
       { time: "13:00", text: "Narita Express (N'EX) al aeropuerto (1h exacta)." },
       { time: "14:30", text: "Facturación y controles de seguridad en Narita." },
-      { time: "17:25", text: "Vuelo QR809 de vuelta hacia España." },
+      { time: "17:25", text: "Vuelo QR809 Narita → Doha (Qatar Airways, ~8h). Escala en Doha, luego vuelo QR6952 Doha → Madrid (Iberia). Llegada a Madrid el mar 22 sept a las 08:15." },
     ],
     money: "Aprox. 40€ (comidas)",
   },
@@ -509,9 +515,14 @@ export const budget = {
   categories: [
     {
       title: "Vuelos internacionales",
-      perPerson: "900€ – 1.000€",
-      total: "4.500€ – 5.000€",
-      details: [],
+      perPerson: "890€",
+      total: "4.450€ ✓",
+      details: [
+        "Qatar Airways Madrid ↔ Tokio (vía Doha). 5 personas × 890€.",
+        "Ida: QR148 MAD→DOH + QR808 DOH→NRT (6 sept, 09:05 → 7 sept, 12:55, 20h 50m).",
+        "Vuelta: QR809 NRT→DOH + QR6952 DOH→MAD (21 sept, 17:25 → 22 sept, 08:15, 21h 50m).",
+        "Reserva: ref. 40-892227078 · PIN 2534.",
+      ],
     },
     {
       title: "Alojamiento (14 noches)",
@@ -550,6 +561,6 @@ export const budget = {
       details: ["Templos, museos, mirador de Roppongi, TeamLab, envío de maletas Takkyubin de Kioto a Tokio."],
     },
   ],
-  totalPerPerson: "~2.570€ – 2.670€ (vuelos incluidos)",
-  totalGroup: "~12.850€ – 13.350€ (5 personas)",
+  totalPerPerson: "~2.560€ – 2.660€ (vuelos incluidos)",
+  totalGroup: "~12.800€ – 13.300€ (5 personas)",
 };

@@ -26,6 +26,23 @@ export default function InfoPage() {
           </h2>
           <FlightRow flight={flights.out} icon={PlaneTakeoff} />
           <FlightRow flight={flights.back} icon={PlaneLanding} />
+          <div className="rounded-xl p-3.5" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10 }}>
+              <div>
+                <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 3 }}>Referencia</p>
+                <p style={{ fontSize: 12, fontWeight: 700, color: "var(--ink)", fontFamily: "monospace" }}>{flights.booking.ref}</p>
+              </div>
+              <div>
+                <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 3 }}>PIN</p>
+                <p style={{ fontSize: 12, fontWeight: 700, color: "var(--ink)", fontFamily: "monospace" }}>{flights.booking.pin}</p>
+              </div>
+              <div>
+                <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 3 }}>{flights.price.people} personas</p>
+                <p style={{ fontSize: 13, fontWeight: 700, color: "var(--shu)" }}>{flights.price.total}</p>
+                <p style={{ fontSize: 10, color: "var(--ink-soft)" }}>{flights.price.perPerson}/persona</p>
+              </div>
+            </div>
+          </div>
         </section>
 
         <div className="space-y-6">
@@ -156,13 +173,15 @@ function FlightRow({ flight, icon: Icon }) {
         <div style={{ marginBottom: 10, paddingBottom: 10, borderBottom: "1px solid var(--line)" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
             <div>
-              <div style={{ fontSize: 10, fontWeight: 600, color: "var(--ink-soft)" }}>LEG 1 (Vuelo principal)</div>
+              <div style={{ fontSize: 10, fontWeight: 600, color: "var(--ink-soft)" }}>
+                {flight.leg1 ? flight.leg1.number : "LEG 1"} · {flight.leg1?.operator ?? "Qatar Airways"}
+              </div>
               <div style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)" }}>
                 {isOutbound ? "Madrid" : "Narita"} → Doha
               </div>
             </div>
             <div style={{ textAlign: "right" }}>
-              <div style={{ fontSize: 11, fontWeight: 600, color: "var(--shu)" }}>{leg1Duration}h</div>
+              <div style={{ fontSize: 11, fontWeight: 600, color: "var(--shu)" }}>{flight.leg1?.duration ?? `${leg1Duration}h`}</div>
               <div style={{ fontSize: 10, color: "var(--ink-soft)" }}>vuelo</div>
             </div>
           </div>
@@ -213,13 +232,15 @@ function FlightRow({ flight, icon: Icon }) {
         <div>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
             <div>
-              <div style={{ fontSize: 10, fontWeight: 600, color: "var(--ink-soft)" }}>LEG 2 (Continuación)</div>
+              <div style={{ fontSize: 10, fontWeight: 600, color: "var(--ink-soft)" }}>
+                {flight.leg2 ? flight.leg2.number : "LEG 2"} · {flight.leg2?.operator ?? "Qatar Airways"}
+              </div>
               <div style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)" }}>
                 Doha → {isOutbound ? "Narita" : "Madrid"}
               </div>
             </div>
             <div style={{ textAlign: "right" }}>
-              <div style={{ fontSize: 11, fontWeight: 600, color: "var(--shu)" }}>{leg2Duration}h</div>
+              <div style={{ fontSize: 11, fontWeight: 600, color: "var(--shu)" }}>{flight.leg2?.duration ?? `${leg2Duration}h`}</div>
               <div style={{ fontSize: 10, color: "var(--ink-soft)" }}>vuelo</div>
             </div>
           </div>
