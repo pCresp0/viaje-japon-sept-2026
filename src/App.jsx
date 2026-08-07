@@ -52,6 +52,9 @@ export default function App() {
   return (
     <div style={{ display: "flex", height: "100vh", height: "100dvh" }}>
 
+      {/* Mobile top bar + drawer (placed at root level so fixed positioning anchors to window viewport) */}
+      <Nav active={tab} onChange={setTab} />
+
       {/* Desktop sidebar — fixed height, no scroll */}
       <Sidebar active={tab} onChange={setTab} />
 
@@ -60,9 +63,6 @@ export default function App() {
         flex: 1, display: "flex", flexDirection: "column",
         minWidth: 0, overflowY: "auto", height: "100%",
       }}>
-
-        {/* Mobile top bar + drawer */}
-        <Nav active={tab} onChange={setTab} />
 
         {/* Page content — grows to fill space */}
         <main style={{
