@@ -4,7 +4,8 @@ export const tripMeta = {
   welcomeParagraphs: [
     "Maligayang pagdating sa Morisqueño Trip sa Japan! Ang website na ito ang basehan para sa ating lima. Nandito ang ating mga flight, hotel na may PIN at kumpirmasyon, mga bus na nai-book na, ang plano araw-araw, at kung ano pa ang kailangang tapusin.",
     "Ito ang ating pribadong gabay: itinerary, mga reserbasyon, hotel, transportasyon, mapa, at mga tip. Lahat ng kailangan natin sa ating mga telepono, nang hindi umaasa sa mga chat o nakakalat na PDF.",
-    "Lahat ng mga seksyon sa ibaba ay pwedeng i-click para makita ang mga detalye. Kapag nagsimula na ang biyahe (mula Sept 6–7), awtomatikong magbubukas ang web sa tab na 'Ngayon' kasama ang mga detalye para sa araw na iyon."
+    "Lahat ng mga seksyon sa ibaba ay pwedeng i-click para makita ang mga detalye. Kapag nagsimula na ang biyahe (mula Sept 6–7), awtomatikong magbubukas ang web sa tab na 'Ngayon' kasama ang mga detalye para sa araw na iyon.",
+    "Maaari mo ring baguhin ang wika ng application anumang oras (Español, English, Français, Tagalog) gamit ang pindutan sa itaas."
   ],
 };
 

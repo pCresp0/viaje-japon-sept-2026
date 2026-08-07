@@ -4,7 +4,8 @@ export const tripMeta = {
   welcomeParagraphs: [
     "Welcome to the Morisqueño Trip to Japan! This website is the base for the 5 of us. Here you can find our flights, hotels with PINs and confirmations, booked buses, the day-by-day plan, and what's still pending.",
     "This is our private group guide: itinerary, reservations, hotels, transport, map, and tips. Everything we need on our phones, without relying on chats or loose PDFs.",
-    "All the sections below are clickable so you can see the details. Once the trip begins (around Sept 6–7), the web will automatically open on the 'Today' tab with the details for that day."
+    "All the sections below are clickable so you can see the details. Once the trip begins (around Sept 6–7), the web will automatically open on the 'Today' tab with the details for that day.",
+    "Additionally, you can change the application language at any time (Español, English, Français, Tagalog) using the button at the top."
   ],
 };
 
