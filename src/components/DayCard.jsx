@@ -7,6 +7,17 @@ import { formatDateLong } from "../utils/date";
 import { mapsUrl } from "../utils/maps";
 import { MapPin } from "lucide-react";
 
+// Auto-detect transport type from schedule text and return matching emoji
+function getScheduleEmoji(text) {
+  if (/\bvuelo\b|aterriza|\bavión\b/i.test(text)) return "✈️";
+  if (/shinkansen|nozomi|hikari/i.test(text)) return "🚄";
+  if (/\bbus\b|nohi|autobús/i.test(text)) return "🚌";
+  if (/tranvía|randen/i.test(text)) return "🚋";
+  if (/\bmetro\b/i.test(text)) return "🚇";
+  if (/\btren\b|\bJR\b|narita express|hida express|thunderbird|shinano|yurikamome/i.test(text)) return "🚂";
+  return null;
+}
+
 const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
 
 export default function DayCard({ day, defaultOpenHistory = false }) {
@@ -35,20 +46,23 @@ export default function DayCard({ day, defaultOpenHistory = false }) {
 
         <div>
           <ol className="relative border-l-2 pl-4 space-y-4" style={{ borderColor: "var(--line)" }}>
-            {day.schedule.map((s, i) => (
-              <li key={i} className="relative">
-                <span
-                  className="absolute -left-[21px] top-1 w-2.5 h-2.5 rounded-full"
-                  style={{ background: block.color }}
-                />
-                <p className="font-display text-sm font-bold" style={{ color: block.color }}>
-                  {s.time}
-                </p>
-                <p className="text-[14px] leading-snug mt-0.5" style={{ color: "var(--ink)" }}>
-                  {s.text}
-                </p>
-              </li>
-            ))}
+            {day.schedule.map((s, i) => {
+              const emoji = getScheduleEmoji(s.text);
+              return (
+                <li key={i} className="relative">
+                  <span
+                    className="absolute -left-[21px] top-1 w-2.5 h-2.5 rounded-full"
+                    style={{ background: block.color }}
+                  />
+                  <p className="font-display text-sm font-bold" style={{ color: block.color }}>
+                    {s.time}
+                  </p>
+                  <p className="text-[14px] leading-snug mt-0.5" style={{ color: "var(--ink)" }}>
+                    {emoji && <span className="mr-1">{emoji}</span>}{s.text}
+                  </p>
+                </li>
+              );
+            })}
           </ol>
         </div>
 
