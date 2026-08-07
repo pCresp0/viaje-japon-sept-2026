@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import Nav, { Sidebar } from "./components/Nav";
+import Nav, { Sidebar, DesktopTopBar } from "./components/Nav";
 import Footer from "./components/Footer";
 import AccessGate, { isUnlocked } from "./components/AccessGate";
 import InicioPage from "./pages/InicioPage";
@@ -39,6 +39,11 @@ export default function App() {
     setTab("itinerario");
   }
 
+  function handleSearchNavigate({ tab: nextTab, day }) {
+    if (day != null) setOpenDay(day);
+    setTab(nextTab);
+  }
+
   // Scroll to top of the scrollable container when tab changes
   useEffect(() => {
     if (scrollContainerRef.current) {
@@ -51,52 +56,58 @@ export default function App() {
   }
 
   return (
-    <div style={{ display: "flex", height: "100vh", height: "100dvh" }}>
+    <div style={{ display: "flex", flexDirection: "column", height: "100vh", height: "100dvh" }}>
 
-      {/* Mobile top bar + drawer (placed at root level so fixed positioning anchors to window viewport) */}
-      <Nav active={tab} onChange={setTab} />
+      {/* Desktop: cabecera a todo el ancho (lupa + idioma a la derecha) */}
+      <DesktopTopBar active={tab} onNavigate={handleSearchNavigate} />
 
-      {/* Desktop sidebar — fixed height, no scroll */}
-      <Sidebar active={tab} onChange={setTab} />
+      <div style={{ display: "flex", flex: 1, minHeight: 0 }}>
 
-      {/* Right column — scrollable */}
-      <div ref={scrollContainerRef} style={{
-        flex: 1, display: "flex", flexDirection: "column",
-        minWidth: 0, overflowY: "auto", height: "100%",
-      }}>
+        {/* Mobile top bar + drawer */}
+        <Nav active={tab} onChange={setTab} onNavigate={handleSearchNavigate} />
 
-        {/* Page content — grows to fill space */}
-        <main style={{
-          flex: 1,
-          width: "100%",
-          maxWidth: 1100,
-          margin: "0 auto",
-          paddingTop: "calc(58px + env(safe-area-inset-top, 0px))",
+        {/* Desktop sidebar */}
+        <Sidebar active={tab} onChange={setTab} />
+
+        {/* Right column — scrollable */}
+        <div ref={scrollContainerRef} style={{
+          flex: 1, display: "flex", flexDirection: "column",
+          minWidth: 0, overflowY: "auto", height: "100%",
         }}>
-          <div>
-            {tab === "pendientes"   && <PendingPage />}
-            {tab === "historia"     && <HistoryPage />}
-            {tab === "inicio"       && <InicioPage onNavigate={setTab} />}
-            {tab === "hoy"          && <Home onGoToDay={goToDay} />}
-            {tab === "calendario"   && <CalendarPage />}
-            {tab === "itinerario"   && <Itinerary openDay={openDay} setOpenDay={setOpenDay} />}
-            {tab === "vuelos"       && <InfoPage />}
-            {tab === "hoteles"      && <HotelsPage />}
-            {tab === "transportes"  && <TransportPage />}
-            {tab === "presupuesto"  && <BudgetPage />}
-            {tab === "lugares"      && <PlacesPage />}
-            {tab === "comidas"      && <FoodsPage />}
-            {tab === "mapa"         && <MapPage />}
-            {tab === "clima"        && <WeatherPage />}
-            {tab === "frases"       && <PhrasesPage />}
-            {tab === "preparativos" && <PrepPage />}
-            {tab === "herramientas" && <UtilsPage />}
-            {tab === "emergencias"  && <EmergencyPage />}
-            {tab === "about"        && <AboutPage />}
-          </div>
-        </main>
 
-        <Footer />
+          <main style={{
+            flex: 1,
+            width: "100%",
+            maxWidth: 1100,
+            margin: "0 auto",
+            // Solo móvil: offset bajo la top bar fija (+ seal que tapa el hueco del fondo)
+            paddingTop: "var(--mobile-topbar)",
+          }}>
+            <div>
+              {tab === "pendientes"   && <PendingPage />}
+              {tab === "historia"     && <HistoryPage />}
+              {tab === "inicio"       && <InicioPage onNavigate={setTab} />}
+              {tab === "hoy"          && <Home onGoToDay={goToDay} />}
+              {tab === "calendario"   && <CalendarPage />}
+              {tab === "itinerario"   && <Itinerary openDay={openDay} setOpenDay={setOpenDay} />}
+              {tab === "vuelos"       && <InfoPage />}
+              {tab === "hoteles"      && <HotelsPage />}
+              {tab === "transportes"  && <TransportPage />}
+              {tab === "presupuesto"  && <BudgetPage />}
+              {tab === "lugares"      && <PlacesPage />}
+              {tab === "comidas"      && <FoodsPage />}
+              {tab === "mapa"         && <MapPage />}
+              {tab === "clima"        && <WeatherPage />}
+              {tab === "frases"       && <PhrasesPage />}
+              {tab === "preparativos" && <PrepPage />}
+              {tab === "herramientas" && <UtilsPage />}
+              {tab === "emergencias"  && <EmergencyPage />}
+              {tab === "about"        && <AboutPage />}
+            </div>
+          </main>
+
+          <Footer />
+        </div>
       </div>
     </div>
   );

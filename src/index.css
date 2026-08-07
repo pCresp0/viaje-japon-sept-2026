@@ -16,6 +16,11 @@
 
   --font-display: Georgia, "Iowan Old Style", "Palatino Linotype", "Noto Serif", serif;
   --font-body: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+
+  /* Cabecera móvil: 58px útiles + safe-area. El "seal" tapa el hueco
+     subpíxel / padding superior donde se veía el fondo de olas. */
+  --mobile-topbar: calc(58px + env(safe-area-inset-top, 0px));
+  --mobile-topbar-seal: 12px;
 }
 
 * {

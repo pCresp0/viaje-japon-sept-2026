@@ -11,7 +11,7 @@ export default function Itinerary({ openDay, setOpenDay }) {
   const refs = useRef({});
 
   useEffect(() => {
-    if (openDay && refs.current[openDay]) {
+    if (openDay != null && refs.current[openDay]) {
       refs.current[openDay].scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [openDay]);
