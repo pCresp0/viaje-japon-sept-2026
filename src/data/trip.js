@@ -90,7 +90,7 @@ export const stays = [
     options: [
       {
         name: "Hotel Keihan Kyoto Hachijoguchi",
-        total: "668€",
+        total: "678,68€",
         pin: "2281",
         url: "https://secure.booking.com/app_link/myreservations.es.html?stid=325542&bn=6312220075&aid=332731",
       },
@@ -104,7 +104,7 @@ export const stays = [
     options: [
       {
         name: "Hotel Resol Trinity Kanazawa",
-        total: "161,46€",
+        total: "164,02€",
         url: "https://www.booking.com/Share-s71Tsa",
       },
     ],
@@ -117,7 +117,7 @@ export const stays = [
     options: [
       {
         name: "Hotel Wood Takayama",
-        total: "274,25€",
+        total: "278,60€",
         pin: "7717",
         url: "https://secure.booking.com/app_link/myreservations.es.html?stid=325542&bn=6080544403&aid=332731",
       },
@@ -144,7 +144,7 @@ export const stays = [
     options: [
       {
         name: "KOKO HOTEL Residence Asakusa Kappabashi",
-        total: "1922,03€",
+        total: "1.952,50€",
         pin: "3322",
         url: "https://secure.booking.com/app_link/myreservations.es.html?stid=325542&bn=5660174287&aid=332731",
       },
@@ -515,20 +515,23 @@ export const budget = {
     },
     {
       title: "Alojamiento (14 noches)",
-      perPerson: "~950€",
-      total: "~4.750€",
+      perPerson: "650,56€",
+      total: "3.252,78€ ✓",
       details: [
-        "Hoteles ciudad (Kioto, Kanazawa, Takayama, Tokio): ~50€–60€ noche/persona.",
-        "Alojamiento rural Nakasendo (con cena y desayuno): ~100€ noche/persona.",
-        "Ryokan Monte Fuji (onsen + cena kaiseki): ~150€–200€ noche/persona.",
+        "Hotel Keihan Kyoto Hachijoguchi (7–12 sept, 5 noches): 678,68€ grupo · 135,74€/persona.",
+        "Hotel Resol Trinity Kanazawa (12–13 sept, 1 noche): 164,02€ grupo · 32,80€/persona.",
+        "Hotel Wood Takayama (13–14 sept, 1 noche): 278,60€ grupo · 55,72€/persona.",
+        "Magome Chaya (14–15 sept, 1 noche, con cena y desayuno): 178,98€ grupo · 35,80€/persona.",
+        "KOKO HOTEL Residence Asakusa Kappabashi (15–21 sept, 6 noches): 1.952,50€ grupo · 390,50€/persona.",
       ],
     },
     {
       title: "Transporte nacional",
-      perPerson: "~410€",
-      total: "~2.050€",
+      perPerson: "~373€",
+      total: "~1.867€",
       details: [
-        "Trenes sueltos sin JR Pass (NEX, Shinkansen Kioto, ruta Alpes, Fuji, Tokio): ~330€/persona.",
+        "Trenes sueltos sin JR Pass (NEX, Shinkansen, ruta Alpes, Tokio): ~293€/persona.",
+        "Nohi Bus Kanazawa–Shirakawa-go–Takayama (reservado): 39,15€/persona.",
         "Transporte local (tarjeta Suica): ~80€/persona.",
       ],
     },
@@ -537,7 +540,7 @@ export const budget = {
       perPerson: "~500€ – 550€",
       total: "~2.600€",
       details: [
-        "Desayuno ~5€, comida casual/ramen ~10€, cena buena/sushi ~20€. Aprox. 40€/día (sin contar las 2 cenas caras ya incluidas en alojamientos tradicionales).",
+        "Desayuno ~5€, comida casual/ramen ~10€, cena buena/sushi ~20€. Aprox. 40€/día (sin contar las 2 cenas incluidas en alojamientos: Magome Chaya y cena wagyu en Takayama).",
       ],
     },
     {
@@ -547,6 +550,6 @@ export const budget = {
       details: ["Templos, museos, mirador de Roppongi, TeamLab, envío de maletas Takkyubin de Kioto a Tokio."],
     },
   ],
-  totalPerPerson: "2.950€ – 3.100€ (vuelos incluidos)",
-  totalGroup: "14.750€ – 15.500€ (5 personas)",
+  totalPerPerson: "~2.570€ – 2.670€ (vuelos incluidos)",
+  totalGroup: "~12.850€ – 13.350€ (5 personas)",
 };
