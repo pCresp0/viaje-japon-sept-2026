@@ -29,12 +29,29 @@ export function diffDays(fromISO, toISO) {
   return Math.round((b - a) / 86400000);
 }
 
-export function formatDateLong(iso) {
-  const d = new Date(iso + "T00:00:00");
-  return d.toLocaleDateString("es-ES", { weekday: "long", day: "numeric", month: "long" });
+const MONTHS = ["ene","feb","mar","abr","may","jun","jul","ago","sept","oct","nov","dic"];
+const WEEKDAYS = ["dom","lun","mar","mié","jue","vie","sáb"];
+
+// Formatea un Date en una zona horaria dada como "dd-mmm-yyyy"
+export function fmtDateTZ(date, tz) {
+  const f = new Intl.DateTimeFormat("es-ES", { timeZone: tz, day: "numeric", month: "numeric", year: "numeric" });
+  const p = Object.fromEntries(f.formatToParts(date).map(({ type, value }) => [type, value]));
+  return `${p.day}-${MONTHS[+p.month - 1]}-${p.year}`;
 }
 
+// Formatea un objeto Date como "dd-mmm-yyyy" (p.ej. "7-sept-2026")
+export function fmtDate(date) {
+  return `${date.getDate()}-${MONTHS[date.getMonth()]}-${date.getFullYear()}`;
+}
+
+// "dom 7-sept-2026"
+export function formatDateLong(iso) {
+  const d = new Date(iso + "T00:00:00");
+  return `${WEEKDAYS[d.getDay()]} ${d.getDate()}-${MONTHS[d.getMonth()]}-${d.getFullYear()}`;
+}
+
+// "7-sept-2026"
 export function formatDateShort(iso) {
   const d = new Date(iso + "T00:00:00");
-  return d.toLocaleDateString("es-ES", { day: "numeric", month: "short" });
+  return fmtDate(d);
 }

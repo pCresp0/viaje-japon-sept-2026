@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Clock, DollarSign } from "lucide-react";
+import { fmtDateTZ } from "../utils/date";
 
 export default function UtilsPage() {
   const [time, setTime] = useState(new Date());
@@ -15,8 +16,8 @@ export default function UtilsPage() {
   // Timezone calculation
   const spainTime = time.toLocaleTimeString("es-ES", { timeZone: "Europe/Madrid" });
   const japanTime = time.toLocaleTimeString("ja-JP", { timeZone: "Asia/Tokyo" });
-  const spainDate = time.toLocaleDateString("es-ES", { timeZone: "Europe/Madrid" });
-  const japanDate = time.toLocaleDateString("ja-JP", { timeZone: "Asia/Tokyo" });
+  const spainDate = fmtDateTZ(time, "Europe/Madrid");
+  const japanDate = fmtDateTZ(time, "Asia/Tokyo");
 
   const handleEurChange = (val) => {
     setEurInput(val);

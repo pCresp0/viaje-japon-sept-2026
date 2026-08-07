@@ -1,5 +1,6 @@
 import { flights, blocks, stays } from "../data/trip";
 import { mapsUrl } from "../utils/maps";
+import { fmtDate } from "../utils/date";
 import { PlaneTakeoff, PlaneLanding, MapPin } from "lucide-react";
 
 export default function InfoPage() {
@@ -131,7 +132,7 @@ function FlightRow({ flight, icon: Icon }) {
   
   // Format time helper
   const formatTime = (date) => date.toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit" });
-  const formatDate = (date) => date.toLocaleDateString("es-ES", { weekday: "short", month: "short", day: "numeric" });
+  const formatDate = (date) => fmtDate(date);
   
   // Calculate leg times (Madrid-Doha ~7h, Doha-Narita ~8h for outbound)
   let leg1End, leg2Start;
