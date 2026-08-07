@@ -15,6 +15,7 @@ import PrepPage from "./pages/PrepPage";
 import UtilsPage from "./pages/UtilsPage";
 import EmergencyPage from "./pages/EmergencyPage";
 import PendingPage from "./pages/PendingPage";
+import HistoryPage from "./pages/HistoryPage";
 import { getTripStatus } from "./utils/date";
 
 export default function App() {
@@ -56,6 +57,7 @@ export default function App() {
         }}>
           <div className="md-no-top-pad">
             {tab === "pendientes"   && <PendingPage />}
+            {tab === "historia"     && <HistoryPage />}
             {tab === "hoy"          && <Home onGoToDay={goToDay} />}
             {tab === "calendario"   && <CalendarPage />}
             {tab === "itinerario"   && <Itinerary openDay={openDay} setOpenDay={setOpenDay} />}
