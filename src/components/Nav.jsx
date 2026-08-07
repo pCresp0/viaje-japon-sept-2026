@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Compass, Route, Plane, Wallet, X, Menu, CalendarDays, MessageCircle, Backpack, ShieldAlert, Train, Heart, Map, Cloud, Clock, ListTodo, Landmark } from "lucide-react";
+import { Compass, Route, Plane, Wallet, X, Menu, CalendarDays, MessageCircle, Backpack, ShieldAlert, Train, Heart, Map, Cloud, Clock, ListTodo, Landmark, Hotel } from "lucide-react";
 
 export const tabs = [
   { id: "pendientes",   label: "Cosas pendientes", icon: ListTodo, alert: true },
@@ -8,6 +8,7 @@ export const tabs = [
   { id: "calendario",   label: "Calendario",   icon: CalendarDays },
   { id: "itinerario",   label: "Itinerario",   icon: Route        },
   { id: "info",         label: "Viaje",        icon: Plane        },
+  { id: "hoteles",      label: "Hoteles",      icon: Hotel        },
   { id: "transporte",   label: "Transporte",   icon: Train        },
   { id: "presupuesto",  label: "Presupuesto",  icon: Wallet       },
   { id: "lugares",      label: "Lugares",      icon: Heart        },

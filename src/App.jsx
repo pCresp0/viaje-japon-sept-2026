@@ -7,6 +7,7 @@ import Itinerary from "./pages/Itinerary";
 import InfoPage from "./pages/InfoPage";
 import BudgetPage from "./pages/BudgetPage";
 import TransportPage from "./pages/TransportPage";
+import HotelsPage from "./pages/HotelsPage";
 import PlacesPage from "./pages/PlacesPage";
 import MapPage from "./pages/MapPage";
 import WeatherPage from "./pages/WeatherPage";
@@ -65,6 +66,7 @@ export default function App() {
             {tab === "calendario"   && <CalendarPage />}
             {tab === "itinerario"   && <Itinerary openDay={openDay} setOpenDay={setOpenDay} />}
             {tab === "info"         && <InfoPage />}
+            {tab === "hoteles"      && <HotelsPage />}
             {tab === "transporte"   && <TransportPage />}
             {tab === "presupuesto"  && <BudgetPage />}
             {tab === "lugares"      && <PlacesPage />}
