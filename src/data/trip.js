@@ -94,12 +94,6 @@ export const stays = [
         pin: "2281",
         url: "https://secure.booking.com/app_link/myreservations.es.html?stid=325542&bn=6312220075&aid=332731",
       },
-      {
-        name: "Kyoto Tower Hotel Annex",
-        total: "694€",
-        pin: "3350",
-        url: "https://secure.booking.com/app_link/myreservations.es.html?stid=325542&bn=6839107626&aid=332731",
-      },
     ],
   },
   {
@@ -122,12 +116,6 @@ export const stays = [
     afterDay: 7,
     options: [
       {
-        name: "Hida Takayama Washington Hotel Plaza",
-        total: "168,68€",
-        pin: "6364",
-        url: "https://secure.booking.com/app_link/myreservations.es.html?stid=325542&bn=5667063583&aid=332731",
-      },
-      {
         name: "Hotel Wood Takayama",
         total: "274,25€",
         pin: "7717",
@@ -136,24 +124,15 @@ export const stays = [
     ],
   },
   {
-    id: "tsumago",
-    city: "Tsumago / Magome",
+    id: "magome",
+    city: "Magome",
     nights: "Del 14 al 15 sept (1 noche)",
     afterDay: 8,
-    warning:
-      "⚠️ Los nombres de estos hoteles (Tsumagoi, Manza Kogen) corresponden a una zona de onsen en Gunma, distinta del pueblo Tsumago de la ruta Nakasendo. Merece la pena revisar que la reserva sea del alojamiento rural correcto antes de viajar.",
     options: [
       {
-        name: "Tsumagoi Prince Hotel",
-        total: "243€",
-        pin: "5848",
-        url: "https://secure.booking.com/app_link/myreservations.es.html?stid=325542&bn=5698715044&aid=332731",
-      },
-      {
-        name: "Manza Kogen Hotel",
-        total: "150,39€",
-        pin: "3979",
-        url: "https://secure.booking.com/app_link/myreservations.es.html?stid=325542&bn=6724332172&aid=332731",
+        name: "Magome Chaya",
+        total: "178,98€",
+        url: "https://www.booking.com/hotel/jp/magome-chaya.es.html",
       },
     ],
   },
@@ -168,12 +147,6 @@ export const stays = [
         total: "1922,03€",
         pin: "3322",
         url: "https://secure.booking.com/app_link/myreservations.es.html?stid=325542&bn=5660174287&aid=332731",
-      },
-      {
-        name: "Hotel Keihan Asakusa",
-        total: "1598,62€",
-        pin: "8953",
-        url: "https://secure.booking.com/app_link/myreservations.es.html?stid=325542&bn=6217736065&aid=332731",
       },
     ],
   },

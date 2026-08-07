@@ -3,57 +3,6 @@
 // requieren reserva anticipada y avisos logísticos.
 
 export const pendingItems = [
-  // ── DECISIONES DE ALOJAMIENTO ──────────────────────────────────────
-  {
-    id: "hotel-kioto",
-    category: "alojamiento",
-    urgency: "media",
-    title: "Elegir hotel en Kioto",
-    detail: "Hay dos reservas activas para las mismas 5 noches (7–12 sept). Hay que quedarse con una y cancelar la otra.",
-    options: [
-      { name: "Hotel Keihan Kyoto Hachijoguchi", note: "668€ · PIN 2281" },
-      { name: "Kyoto Tower Hotel Annex", note: "694€ · PIN 3350" },
-    ],
-    deadline: "Antes de que expire la cancelación gratuita",
-  },
-  {
-    id: "hotel-takayama",
-    category: "alojamiento",
-    urgency: "media",
-    title: "Elegir hotel en Takayama",
-    detail: "Dos reservas para la misma noche (13–14 sept). Hay 105€ de diferencia entre ambas.",
-    options: [
-      { name: "Hida Takayama Washington Hotel Plaza", note: "168,68€ · PIN 6364" },
-      { name: "Hotel Wood Takayama", note: "274,25€ · PIN 7717" },
-    ],
-    deadline: "Antes de que expire la cancelación gratuita",
-  },
-  {
-    id: "hotel-tsumago",
-    category: "alojamiento",
-    urgency: "alta",
-    title: "Revisar y elegir alojamiento en Tsumago",
-    detail:
-      "⚠️ Importante: los dos hoteles reservados (Tsumagoi Prince y Manza Kogen) están en una zona de onsen de Gunma, NO en el pueblo de Tsumago de la ruta Nakasendo (Nagano). Están a varias horas de distancia. Conviene verificar la reserva y, si es un error, buscar un minshuku en Tsumago o Magome.",
-    options: [
-      { name: "Tsumagoi Prince Hotel", note: "243€ · PIN 5848 — ¿Gunma?" },
-      { name: "Manza Kogen Hotel", note: "150,39€ · PIN 3979 — ¿Gunma?" },
-    ],
-    deadline: "Cuanto antes — puede requerir buscar alojamiento nuevo",
-  },
-  {
-    id: "hotel-tokio",
-    category: "alojamiento",
-    urgency: "media",
-    title: "Elegir hotel en Tokio",
-    detail: "Dos reservas para las mismas 6 noches (15–21 sept). Es la reserva más cara del viaje, con 323€ de diferencia.",
-    options: [
-      { name: "KOKO HOTEL Residence Asakusa Kappabashi", note: "1922,03€ · PIN 3322" },
-      { name: "Hotel Keihan Asakusa", note: "1598,62€ · PIN 8953" },
-    ],
-    deadline: "Antes de que expire la cancelación gratuita",
-  },
-
   // ── RESERVAS CON FECHA CRÍTICA ─────────────────────────────────────
   {
     id: "pokemon-cafe",
@@ -106,10 +55,10 @@ export const pendingItems = [
     id: "cena-minshuku",
     category: "logistica",
     urgency: "baja",
-    title: "Confirmar cena en el minshuku",
+    title: "Confirmar cena en Magome Chaya",
     detail:
-      "La cena casera del minshuku (día 8) es a las 18:30 en punto y no admite retrasos. Hay que ajustar la caminata de la Nakasendo para llegar con margen y confirmar la hora al reservar.",
-    deadline: "Al confirmar el alojamiento de Tsumago",
+      "La cena casera del minshuku (día 8) es a las 18:30 en punto y no admite retrasos. Hay que ajustar la caminata de la Nakasendo para llegar con margen. Confirmar la hora con Magome Chaya antes de viajar.",
+    deadline: "Antes del viaje — contactar con Magome Chaya para confirmar",
   },
   {
     id: "jr-pass",
@@ -132,7 +81,6 @@ export const pendingItems = [
 ];
 
 export const categoryLabels = {
-  alojamiento: { label: "Alojamiento", emoji: "🏨" },
   reserva: { label: "Reservas", emoji: "🎟️" },
   logistica: { label: "Logística", emoji: "📦" },
 };
