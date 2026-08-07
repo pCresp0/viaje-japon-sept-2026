@@ -312,11 +312,11 @@ export const days = [
     history:
       "Shirakawa-go es famosa por sus casas gassho-zukuri, con tejados de paja muy inclinados para soportar la nieve. Takayama prosperó como rica ciudad de mercaderes bajo el shogunato Tokugawa, gracias a sus carpinteros.",
     schedule: [
-      { time: "07:30", text: "Despertar." },
-      { time: "08:30", text: "Bus de Kanazawa a Shirakawa-go (1h 15m). Reservar con semanas de antelación online." },
-      { time: "10:00", text: "Paseo por la aldea de casitas de paja." },
-      { time: "13:00", text: "Bus a Takayama (50 min)." },
-      { time: "14:00", text: "Casco antiguo de calles de madera (Sanmachi Suji)." },
+      { time: "07:30", text: "Despertar y desayuno rápido." },
+      { time: "08:40", text: "Nohi Bus Kanazawa → Shirakawa-go (1h 15m). Reserva 12GO31991741 — 5 asientos confirmados." },
+      { time: "10:00", text: "Llegada a Shirakawa-go. Paseo por la aldea de casas gassho-zukuri (tejados de paja inclinados)." },
+      { time: "13:15", text: "Nohi Bus Shirakawa-go → Takayama (50 min). Reserva 12GO31992254 — 5 asientos confirmados." },
+      { time: "14:15", text: "Llegada a Takayama. Casco antiguo de calles de madera (Sanmachi Suji)." },
       { time: "19:00", text: "Cena con la famosa ternera wagyu de Hida, rival de la de Kobe." },
     ],
     money: "Aprox. 40€ + cena premium wagyu",
@@ -488,8 +488,8 @@ export const transports = [
   { day: 4, date: "2026-09-10", name: "Bus y Metro", from: "Kioto", to: "Mercado Nishiki / Gion", type: "Operador Privado / Local", real: 4, jrPass: 4 },
   { day: 5, date: "2026-09-11", name: "Tren rápido JR (ida y vuelta)", from: "Kioto", to: "Osaka", type: "Línea JR Local", real: 7, jrPass: 0 },
   { day: 6, date: "2026-09-12", name: "Tren Thunderbird", from: "Kioto", to: "Kanazawa", type: "Línea JR Exprés", real: 43.5, jrPass: 0 },
-  { day: 7, date: "2026-09-13", name: "Autobús Nohi Bus", from: "Kanazawa", to: "Shirakawa-go", type: "Operador Privado (Bus)", real: 16, jrPass: 16 },
-  { day: 7, date: "2026-09-13", name: "Autobús Nohi Bus", from: "Shirakawa-go", to: "Takayama", type: "Operador Privado (Bus)", real: 16, jrPass: 16 },
+  { day: 7, date: "2026-09-13", name: "Nohi Bus Kanazawa → Shirakawa-go", from: "Kanazawa Sta.", to: "Shirakawa-go Bus Terminal", type: "Operador Privado (Bus)", real: 19.12, jrPass: 19.12, note: "✓ Reservado · Booking 12GO31991741 · Salida 08:40 · 5 asientos confirmados" },
+  { day: 7, date: "2026-09-13", name: "Nohi Bus Shirakawa-go → Takayama", from: "Shirakawa-go Bus Terminal", to: "Takayama Nohi Bus Center", type: "Operador Privado (Bus)", real: 20.03, jrPass: 20.03, note: "✓ Reservado · Booking 12GO31992254 · Salida 13:15 · 5 asientos confirmados" },
   { day: 8, date: "2026-09-14", name: "Tren panorámico Hida Express", from: "Takayama", to: "Nagoya", type: "Línea JR Exprés", real: 34, jrPass: 0 },
   { day: 8, date: "2026-09-14", name: "Tren JR Shinano y Bus local", from: "Nagoya", to: "Magome", type: "Mixta (JR + Bus Privado)", real: 12, jrPass: 4 },
   { day: 9, date: "2026-09-15", name: "Bus local Magome → Nakatsugawa", from: "Magome", to: "Nakatsugawa", type: "Operador Privado (Bus)", real: 3, jrPass: 3, note: "⚠️ Poca frecuencia — revisar horario la noche anterior (sale ~08:50 ó 09:10)" },
@@ -500,7 +500,7 @@ export const transports = [
   { day: 15, date: "2026-09-21", name: "Narita Express (N'EX)", from: "Estación de Tokio", to: "Aeropuerto de Narita", type: "Línea JR (fuera de plazo JR Pass)", real: 19, jrPass: 19 },
 ];
 
-export const transportTotals = { real: 366.2, jrPass: 93.5 };
+export const transportTotals = { real: 373.35, jrPass: 100.65 };
 
 // Presupuesto estimado para 5 personas
 export const budget = {

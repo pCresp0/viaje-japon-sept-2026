@@ -23,15 +23,6 @@ export const pendingItems = [
     deadline: "Con semanas de antelación — confirmar antes la política de cancelación",
   },
   {
-    id: "bus-shirakawa",
-    category: "reserva",
-    urgency: "alta",
-    title: "Reservar Nohi Bus (Kanazawa → Shirakawa-go → Takayama)",
-    detail:
-      "Día 7 (13 sept): dos tramos en bus privado Nohi Bus. Tramo 1: Kanazawa → Shirakawa-go (1h 15m, 16€/persona). Tramo 2: Shirakawa-go → Takayama (50 min, 16€/persona). Los asientos son reservados y en temporada alta se llenan con semanas de antelación. Reservar ambos tramos en nouhibus.co.jp.",
-    deadline: "Con varias semanas de antelación",
-  },
-  {
     id: "hida-express-reserva",
     category: "reserva",
     urgency: "alta",
