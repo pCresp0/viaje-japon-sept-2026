@@ -46,7 +46,7 @@ export default function TransportPage() {
     <div className="px-4 pt-6 pb-12">
       <div className="mb-6">
         <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Movimientos</p>
-        <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>Transporte</h2>
+        <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>Transportes</h2>
       </div>
 
       {/* Suica card */}

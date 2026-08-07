@@ -1,7 +1,6 @@
-import { flights, blocks, stays } from "../data/trip";
+import { flights } from "../data/trip";
 import { fmtDate } from "../utils/date";
-import { PlaneTakeoff, PlaneLanding, MapPin } from "lucide-react";
-import StayOption from "../components/StayOption";
+import { PlaneTakeoff, PlaneLanding } from "lucide-react";
 
 export default function InfoPage() {
   return (
@@ -11,88 +10,38 @@ export default function InfoPage() {
           Logística
         </p>
         <h1 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>
-          Vuelos y alojamientos
+          Vuelos
         </h1>
+        <p style={{ fontSize: 13.5, color: "var(--ink-soft)", marginTop: 6, lineHeight: 1.5 }}>
+          Ida y vuelta confirmadas · Qatar Airways vía Doha
+        </p>
       </div>
 
       <div style={{
         display: "grid",
         gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 380px), 1fr))",
-        gap: 24,
+        gap: 16,
         alignItems: "start",
       }}>
-        <section className="space-y-3">
-          <h2 className="eyebrow" style={{ color: "var(--ink-soft)" }}>
-            ✈️ Vuelos confirmados
-          </h2>
-          <FlightRow flight={flights.out} icon={PlaneTakeoff} />
-          <FlightRow flight={flights.back} icon={PlaneLanding} />
-          <div className="rounded-xl p-3.5" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10 }}>
-              <div>
-                <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 3 }}>Referencia</p>
-                <p style={{ fontSize: 12, fontWeight: 700, color: "var(--ink)", fontFamily: "monospace" }}>{flights.booking.ref}</p>
-              </div>
-              <div>
-                <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 3 }}>PIN</p>
-                <p style={{ fontSize: 12, fontWeight: 700, color: "var(--ink)", fontFamily: "monospace" }}>{flights.booking.pin}</p>
-              </div>
-              <div>
-                <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 3 }}>{flights.price.people} personas</p>
-                <p style={{ fontSize: 13, fontWeight: 700, color: "var(--shu)" }}>{flights.price.total}</p>
-                <p style={{ fontSize: 10, color: "var(--ink-soft)" }}>{flights.price.perPerson}/persona</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <FlightRow flight={flights.out} icon={PlaneTakeoff} />
+        <FlightRow flight={flights.back} icon={PlaneLanding} />
+      </div>
 
-        <div className="space-y-6">
-          <section className="space-y-3">
-            <h2 className="eyebrow" style={{ color: "var(--ink-soft)" }}>
-              🏨 Dónde dormimos
-            </h2>
-            {stays.map((s) => (
-          <div key={s.id} className="rounded-2xl p-4" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
-            <div className="flex items-center gap-2">
-              <MapPin size={16} style={{ color: "var(--shu)" }} />
-              <p className="font-medium" style={{ color: "var(--ink)" }}>{s.city}</p>
-            </div>
-            <p className="text-xs mt-0.5" style={{ color: "var(--ink-soft)" }}>{s.nights}</p>
-            {s.warning && (
-              <p className="text-xs mt-2 rounded-lg p-2" style={{ background: "#FBEAEA", color: "var(--shu)" }}>
-                {s.warning}
-              </p>
-            )}
-            <div className="mt-2 space-y-2">
-              {s.options.map((o, i) => (
-                <StayOption key={i} option={o} city={s.city} />
-              ))}
-            </div>
+      <div className="rounded-xl p-4 mt-4" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))", gap: 14 }}>
+          <div>
+            <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 3 }}>Referencia</p>
+            <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", fontFamily: "monospace", margin: 0 }}>{flights.booking.ref}</p>
           </div>
-        ))}
-      </section>
-
-      <section className="space-y-3">
-        <h2 className="eyebrow" style={{ color: "var(--ink-soft)" }}>
-          📍 Mejor zona por bloque
-        </h2>
-        {blocks.map((b) => (
-          <div key={b.id} className="rounded-2xl p-4" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
-            <p className="font-medium text-sm" style={{ color: b.color }}>{b.emoji} {b.title}</p>
-            <p className="text-sm mt-1.5" style={{ color: "var(--ink)" }}>{b.bestArea}</p>
-            {b.logisticaTip && (
-              <p className="text-xs mt-2 rounded-lg p-2" style={{ background: "var(--paper)", color: "var(--ink-soft)" }}>
-                💡 {b.logisticaTip}
-              </p>
-            )}
-            {b.fujiStrategy && (
-              <p className="text-xs mt-2 rounded-lg p-2" style={{ background: "var(--paper)", color: "var(--ink-soft)" }}>
-                🗻 {b.fujiStrategy}
-              </p>
-            )}
+          <div>
+            <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 3 }}>PIN</p>
+            <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", fontFamily: "monospace", margin: 0 }}>{flights.booking.pin}</p>
           </div>
-        ))}
-          </section>
+          <div>
+            <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 3 }}>{flights.price.people} personas</p>
+            <p style={{ fontSize: 16, fontWeight: 700, color: "var(--shu)", margin: 0 }}>{flights.price.total}</p>
+            <p style={{ fontSize: 11, color: "var(--ink-soft)", margin: 0 }}>{flights.price.perPerson}/persona</p>
+          </div>
         </div>
       </div>
     </div>

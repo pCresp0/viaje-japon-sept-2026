@@ -3,7 +3,7 @@ import { Compass, Route, Plane, Wallet } from "lucide-react";
 const tabs = [
   { id: "hoy", label: "Hoy", icon: Compass },
   { id: "itinerario", label: "Itinerario", icon: Route },
-  { id: "info", label: "Viaje", icon: Plane },
+  { id: "info", label: "Vuelos", icon: Plane },
   { id: "presupuesto", label: "Presupuesto", icon: Wallet },
 ];
 

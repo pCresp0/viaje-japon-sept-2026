@@ -65,9 +65,9 @@ export default function App() {
             {tab === "hoy"          && <Home onGoToDay={goToDay} />}
             {tab === "calendario"   && <CalendarPage />}
             {tab === "itinerario"   && <Itinerary openDay={openDay} setOpenDay={setOpenDay} />}
-            {tab === "info"         && <InfoPage />}
+            {tab === "vuelos"       && <InfoPage />}
             {tab === "hoteles"      && <HotelsPage />}
-            {tab === "transporte"   && <TransportPage />}
+            {tab === "transportes"  && <TransportPage />}
             {tab === "presupuesto"  && <BudgetPage />}
             {tab === "lugares"      && <PlacesPage />}
             {tab === "mapa"         && <MapPage />}
