@@ -44,7 +44,7 @@ export default function Itinerary({ openDay, setOpenDay }) {
               style={isOpen ? { gridColumn: "1 / -1" } : undefined}
             >
               {isOpen ? (
-                <DayCard day={d} />
+                <DayCard day={d} onClose={() => setOpenDay(null)} />
               ) : (
                 <button
                   onClick={() => setOpenDay(d.num)}

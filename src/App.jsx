@@ -20,7 +20,7 @@ import { getTripStatus } from "./utils/date";
 
 export default function App() {
   const [tab, setTab] = useState("hoy");
-  const [openDay, setOpenDay] = useState(getTripStatus().day?.num ?? 1);
+  const [openDay, setOpenDay] = useState(getTripStatus().day?.num ?? null);
   const scrollContainerRef = useRef(null);
 
   function goToDay(num) {

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ScrollText, Wallet, ChevronDown } from "lucide-react";
+import { ScrollText, Wallet, ChevronDown, ChevronUp } from "lucide-react";
 import { blocks, stays } from "../data/trip";
 import { guidesByDay } from "../data/guides";
 import GuideCard from "./GuideCard";
@@ -20,7 +20,7 @@ function getScheduleEmoji(text) {
 
 const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
 
-export default function DayCard({ day, defaultOpenHistory = false }) {
+export default function DayCard({ day, defaultOpenHistory = false, onClose }) {
   const [showHistory, setShowHistory] = useState(defaultOpenHistory);
   const block = blockById[day.block];
   const stay = stays.find((s) => s.afterDay === day.num);
@@ -31,12 +31,24 @@ export default function DayCard({ day, defaultOpenHistory = false }) {
       className="rounded-2xl overflow-hidden border"
       style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}
     >
-      <header className="px-5 pt-5 pb-4" style={{ background: block.color }}>
-        <p className="eyebrow" style={{ color: "rgba(255,255,255,0.95)" }}>
-          {block.emoji} Día {day.num} · {formatDateLong(day.date)}
-        </p>
-        <h2 className="font-display text-2xl text-white mt-1 leading-tight">{day.title}</h2>
-        <p className="text-white/85 text-sm mt-1">{day.cities}</p>
+      <header className="px-5 pt-5 pb-4 flex items-start justify-between gap-3" style={{ background: block.color }}>
+        <div>
+          <p className="eyebrow" style={{ color: "rgba(255,255,255,0.95)" }}>
+            {block.emoji} Día {day.num} · {formatDateLong(day.date)}
+          </p>
+          <h2 className="font-display text-2xl text-white mt-1 leading-tight">{day.title}</h2>
+          <p className="text-white/85 text-sm mt-1">{day.cities}</p>
+        </div>
+        {onClose && (
+          <button
+            onClick={onClose}
+            aria-label="Cerrar"
+            className="shrink-0 mt-0.5 rounded-full p-1"
+            style={{ background: "rgba(255,255,255,0.18)", color: "white" }}
+          >
+            <ChevronUp size={18} />
+          </button>
+        )}
       </header>
 
       <div className="p-5 space-y-4">
