@@ -17,7 +17,7 @@ export default function Itinerary({ openDay, setOpenDay }) {
   }, [openDay]);
 
   return (
-    <div className="pt-5 pb-8 px-4">
+    <div className="pt-3 pb-8 px-4">
       <div>
         <p className="eyebrow" style={{ color: "var(--shu)" }}>
           Los 15 días

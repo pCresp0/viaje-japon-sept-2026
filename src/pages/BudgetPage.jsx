@@ -6,7 +6,7 @@ export default function BudgetPage() {
   const [showTransports, setShowTransports] = useState(false);
 
   return (
-    <div className="px-4 pt-5 pb-8">
+    <div className="px-4 pt-3 pb-8">
       <div className="mb-5">
         <p className="eyebrow" style={{ color: "var(--shu)" }}>
           Para {budget.people} personas

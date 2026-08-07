@@ -157,7 +157,7 @@ main > div > * {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: calc(64px + env(safe-area-inset-top)) 12px calc(16px + env(safe-area-inset-bottom));
+  padding: calc(64px + env(safe-area-inset-top, 0px)) 12px calc(16px + env(safe-area-inset-bottom, 0px));
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -189,7 +189,7 @@ main > div > * {
 }
 
 .modal-sheet-body {
-  padding: 4px 20px calc(24px + env(safe-area-inset-bottom));
+  padding: 4px 20px calc(24px + env(safe-area-inset-bottom, 0px));
 }
 
 .modal-close-btn {

@@ -91,7 +91,7 @@ function PeriodCard({ period, defaultOpen = false }) {
 
 export default function HistoryPage() {
   return (
-    <div className="px-4 pt-6 pb-12">
+    <div className="px-4 pt-3 pb-12">
       <div className="mb-6">
         <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Para entender lo que vais a ver</p>
         <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>

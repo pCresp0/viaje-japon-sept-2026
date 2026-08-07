@@ -52,7 +52,7 @@ export default function InicioPage({ onNavigate }) {
     : null;
 
   return (
-    <div className="px-4 pt-6 pb-12">
+    <div className="px-4 pt-3 pb-12">
       <div className="mb-6">
         <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{tripMeta.subtitle}</p>
         <h1 className="font-display text-3xl" style={{ color: "var(--indigo)", margin: 0, lineHeight: 1.2 }}>

@@ -8,7 +8,7 @@ export default function Home({ onGoToDay }) {
   const day1 = days.find((d) => d.num === 1);
 
   return (
-    <div className="px-4 pt-6 pb-12">
+    <div className="px-4 pt-3 pb-12">
       <div className="mb-5">
         <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{tripMeta.subtitle}</p>
         <h1 className="font-display text-2xl" style={{ color: "var(--indigo)", margin: 0 }}>

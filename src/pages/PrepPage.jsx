@@ -128,7 +128,7 @@ export default function PrepPage() {
   const totalChecked = Object.values(checked).filter(Boolean).length;
 
   return (
-    <div className="px-4 pt-6 pb-12">
+    <div className="px-4 pt-3 pb-12">
       <div className="mb-2">
         <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Antes del viaje</p>
         <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>Preparativos</h2>

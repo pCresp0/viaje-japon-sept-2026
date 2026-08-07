@@ -16,7 +16,7 @@ const embassy = {
 
 export default function EmergencyPage() {
   return (
-    <div className="px-4 pt-6 pb-12">
+    <div className="px-4 pt-3 pb-12">
       <div className="mb-6">
         <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Por si acaso</p>
         <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>
