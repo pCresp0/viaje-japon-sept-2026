@@ -1,5 +1,8 @@
 import { MapPin, Utensils, Coffee, Mountain } from "lucide-react";
 import GuideCard from "../components/GuideCard";
+import { days } from "../data/trip";
+import { formatDateShort } from "../utils/date";
+import { useT } from "../i18n/LanguageContext";
 
 // Lugares que tienen guía detallada disponible (id del lugar → id de la guía)
 const guideFor = {
@@ -13,20 +16,30 @@ const guideFor = {
   fuji: "fuji",
 };
 
+const dayByNum = Object.fromEntries(days.map((d) => [d.num, d]));
+
+function dayLabel(dayNum) {
+  if (dayNum == null) return null;
+  const d = dayByNum[dayNum];
+  if (!d) return `Día ${dayNum}`;
+  return `Día ${dayNum} · ${formatDateShort(d.date)}`;
+}
+
+/** Orden cronológico del viaje. `day` = nº de día del itinerario (null = flexible / opcional). */
 const places = [
   {
     category: "Templos",
     icon: MapPin,
     color: "#bc4749",
     items: [
-      { id: "kiyomizu", name: "Kiyomizu-dera", city: "Kioto", desc: "Templo de madera suspendido sobre acantilado — icónico." },
-      { id: "fushimi", name: "Fushimi Inari", city: "Kioto", desc: "Miles de torii rojos — uno de los lugares más fotografiados de Japón." },
-      { id: "arashiyama", name: "Arashiyama Bamboo Grove", city: "Kioto", desc: "Bosque de bambú — sereno y místico." },
-      { id: "kinkaku", name: "Kinkaku-ji (Templo Dorado)", city: "Kioto", desc: "Pabellón cubierto de oro — espectacular reflejado en el agua." },
-      { id: "ginkaku", name: "Ginkaku-ji (Templo Plateado)", city: "Kioto", desc: "Complemento del Dorado — diferente pero igualmente hermoso." },
-      { id: "senso", name: "Senso-ji", city: "Tokio", desc: "Templo budista más antiguo de Tokio, en Asakusa." },
-      { id: "meiji", name: "Meiji Jingu", city: "Tokio", desc: "Santuario sintoísta rodeado de bosque — muy tranquilo." },
-      { id: "tsurugaoka", name: "Tsurugaoka Hachimangu", city: "Kamakura", desc: "Santuario histórico — si hay tiempo de parada." },
+      { id: "fushimi", name: "Fushimi Inari", city: "Kioto", day: 2, desc: "Miles de torii rojos — uno de los lugares más fotografiados de Japón." },
+      { id: "kinkaku", name: "Kinkaku-ji (Templo Dorado)", city: "Kioto", day: 3, desc: "Pabellón cubierto de oro — espectacular reflejado en el agua." },
+      { id: "arashiyama", name: "Arashiyama Bamboo Grove", city: "Kioto", day: 3, desc: "Bosque de bambú — sereno y místico." },
+      { id: "ginkaku", name: "Ginkaku-ji (Templo Plateado)", city: "Kioto", day: 4, desc: "Complemento del Dorado — diferente pero igualmente hermoso." },
+      { id: "kiyomizu", name: "Kiyomizu-dera", city: "Kioto", day: 5, desc: "Templo de madera suspendido sobre acantilado — icónico." },
+      { id: "senso", name: "Senso-ji", city: "Tokio", day: 10, desc: "Templo budista más antiguo de Tokio, en Asakusa." },
+      { id: "meiji", name: "Meiji Jingu", city: "Tokio", day: 11, desc: "Santuario sintoísta rodeado de bosque — muy tranquilo." },
+      { id: "tsurugaoka", name: "Tsurugaoka Hachimangu", city: "Kamakura", day: null, desc: "Santuario histórico — si hay tiempo de parada." },
     ],
   },
   {
@@ -34,13 +47,13 @@ const places = [
     icon: Utensils,
     color: "#2e7d5b",
     items: [
-      { id: "sushi-sakura", name: "Sushi Sakura", city: "Kioto", desc: "Sushi fresco, ambiente tradicional." },
-      { id: "okonomiyaki", name: "Okonomiyaki Kiji", city: "Kioto", desc: "Okonomiyaki casero — lo mejor de lo mejor." },
-      { id: "sukiyaki-yama", name: "Sukiyaki Yamamoto", city: "Kioto", desc: "Sukiyaki de wagyu premium." },
-      { id: "ramen-ippudo", name: "Ippudo Ramen", city: "Múltiples", desc: "Cadena buena, confiable, en varias ciudades." },
-      { id: "tonkatsu-katsukura", name: "Tonkatsu Katsukura", city: "Tokio", desc: "Milanesa de cerdo crujiente — adictivo." },
-      { id: "tsukiji-sushi", name: "Tsukiji Outer Market Sushi", city: "Tokio", desc: "Sushi al lado del mercado — ultra fresco." },
-      { id: "kawakami", name: "Kawakami", city: "Takayama", desc: "Hida beef — carne local premium de la región." },
+      { id: "sushi-sakura", name: "Sushi Sakura", city: "Kioto", day: 1, desc: "Sushi fresco, ambiente tradicional." },
+      { id: "sukiyaki-yama", name: "Sukiyaki Yamamoto", city: "Kioto", day: 3, desc: "Sukiyaki de wagyu premium." },
+      { id: "okonomiyaki", name: "Okonomiyaki Kiji", city: "Kioto", day: 4, desc: "Okonomiyaki casero — lo mejor de lo mejor." },
+      { id: "kawakami", name: "Kawakami", city: "Takayama", day: 7, desc: "Hida beef — carne local premium de la región." },
+      { id: "tonkatsu-katsukura", name: "Tonkatsu Katsukura", city: "Tokio", day: 11, desc: "Milanesa de cerdo crujiente — adictivo." },
+      { id: "tsukiji-sushi", name: "Tsukiji Outer Market Sushi", city: "Tokio", day: 12, desc: "Sushi al lado del mercado — ultra fresco." },
+      { id: "ramen-ippudo", name: "Ippudo Ramen", city: "Múltiples", day: null, desc: "Cadena buena, confiable, en varias ciudades." },
     ],
   },
   {
@@ -48,15 +61,22 @@ const places = [
     icon: Coffee,
     color: "#1d3557",
     items: [
-      { id: "cafe-yusui", name: "Café Yusui", city: "Kioto", desc: "Café tradicional con vistas al río — ambiente perfecto." },
-      { id: "vermillion-cafe", name: "Vermillion Café", city: "Kioto", desc: "Café moderno, buenas vistas de la ciudad." },
-      { id: "starbucks-asakusa", name: "Starbucks Asakusa", city: "Tokio", desc: "Starbucks con vistas al Senso-ji — surreal." },
-      { id: "blue-bottle", name: "Blue Bottle Coffee", city: "Tokio", desc: "Café de especialidad, ambiente hipster." },
-      { id: "komeda", name: "Komeda Coffee", city: "Múltiples", desc: "Cadena japonesa asequible con buen ambiente." },
+      { id: "vermillion-cafe", name: "Vermillion Café", city: "Kioto", day: 2, desc: "Cerca de Fushimi Inari — café moderno con buenas vistas." },
+      { id: "cafe-yusui", name: "Café Yusui", city: "Kioto", day: 4, desc: "Café tradicional con vistas al río — ambiente perfecto." },
+      { id: "starbucks-asakusa", name: "Starbucks Asakusa", city: "Tokio", day: 10, desc: "Starbucks con vistas al Senso-ji — surreal." },
+      { id: "blue-bottle", name: "Blue Bottle Coffee", city: "Tokio", day: 11, desc: "Café de especialidad, ambiente hipster." },
+      { id: "komeda", name: "Komeda Coffee", city: "Múltiples", day: null, desc: "Cadena japonesa asequible con buen ambiente." },
     ],
   },
 ];
-import { useT } from "../i18n/LanguageContext";
+
+function sortByTripDay(items) {
+  return [...items].sort((a, b) => {
+    const da = a.day == null ? 999 : a.day;
+    const db = b.day == null ? 999 : b.day;
+    return da - db;
+  });
+}
 
 export default function PlacesPage() {
   const t = useT();
@@ -65,6 +85,9 @@ export default function PlacesPage() {
       <div className="mb-6">
         <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{t("places.eyebrow")}</p>
         <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>{t("places.title")}</h2>
+        <p style={{ fontSize: 13, color: "var(--ink-soft)", marginTop: 6, lineHeight: 1.45, marginBottom: 0 }}>
+          Ordenados según el itinerario del viaje.
+        </p>
       </div>
 
       {/* Excursión Monte Fuji — destacada */}
@@ -79,7 +102,12 @@ export default function PlacesPage() {
             <Mountain size={18} style={{ color: "white" }} />
           </div>
           <div className="flex-1">
-            <p style={{ fontSize: 15, fontWeight: 700, color: "white", margin: 0 }}>Excursión al Monte Fuji</p>
+            <p style={{ fontSize: 15, fontWeight: 700, color: "white", margin: 0 }}>
+              Excursión al Monte Fuji{" "}
+              <span style={{ fontWeight: 500, opacity: 0.85 }}>
+                ({dayLabel(14)})
+              </span>
+            </p>
             <p style={{ fontSize: 11.5, color: "rgba(255,255,255,0.7)", margin: 0 }}>Pendiente de reservar · día comodín</p>
           </div>
         </div>
@@ -128,6 +156,7 @@ export default function PlacesPage() {
       }}>
         {places.map((category, catIdx) => {
           const Icon = category.icon;
+          const items = sortByTripDay(category.items);
 
           return (
             <div key={catIdx} className="rounded-2xl border overflow-hidden"
@@ -150,34 +179,40 @@ export default function PlacesPage() {
                   background: "rgba(255,255,255,0.18)",
                   padding: "3px 9px", borderRadius: 20,
                 }}>
-                  {category.items.length}
+                  {items.length}
                 </span>
               </div>
 
-              {category.items.map((place, idx) => (
-                <div
-                  key={place.id}
-                  style={{ borderTop: idx > 0 ? "1px solid var(--line)" : "none" }}
-                >
-                  <div className="px-5 py-4">
-                    <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", margin: 0 }}>
-                      {place.name}
-                    </p>
-                    <p style={{ fontSize: 12, color: "var(--ink-soft)", marginBottom: 2 }}>
-                      {place.city}
-                    </p>
-                    <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.5, margin: 0 }}>
-                      {place.desc}
-                    </p>
+              {items.map((place, idx) => {
+                const when = dayLabel(place.day);
+                return (
+                  <div
+                    key={place.id}
+                    style={{ borderTop: idx > 0 ? "1px solid var(--line)" : "none" }}
+                  >
+                    <div className="px-5 py-4">
+                      <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", margin: 0 }}>
+                        {place.name}
+                        <span style={{ fontWeight: 500, color: "var(--shu)", marginLeft: 4 }}>
+                          {when ? `(${when})` : "(flexible)"}
+                        </span>
+                      </p>
+                      <p style={{ fontSize: 12, color: "var(--ink-soft)", marginBottom: 2 }}>
+                        {place.city}
+                      </p>
+                      <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.5, margin: 0 }}>
+                        {place.desc}
+                      </p>
 
-                    {guideFor[place.id] && (
-                      <div style={{ marginTop: 10 }}>
-                        <GuideCard id={guideFor[place.id]} accent={category.color} />
-                      </div>
-                    )}
+                      {guideFor[place.id] && (
+                        <div style={{ marginTop: 10 }}>
+                          <GuideCard id={guideFor[place.id]} accent={category.color} />
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           );
         })}
