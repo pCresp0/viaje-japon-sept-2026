@@ -56,13 +56,15 @@ const places = [
     ],
   },
 ];
+import { useT } from "../i18n/LanguageContext";
 
 export default function PlacesPage() {
+  const t = useT();
   return (
     <div className="px-4 pt-3 pb-12">
       <div className="mb-6">
-        <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Lugares imprescindibles</p>
-        <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>Lugares</h2>
+        <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{t("places.eyebrow")}</p>
+        <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>{t("places.title")}</h2>
       </div>
 
       {/* Excursión Monte Fuji — destacada */}

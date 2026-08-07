@@ -18,25 +18,11 @@ function getCountdown() {
   return { days, hours, minutes, seconds };
 }
 
-const sections = [
-  { id: "itinerario", label: "Itinerario", desc: "Los 15 días, hora a hora, con lugares clicables a Maps", icon: Route, color: "#bc4749" },
-  { id: "calendario", label: "Calendario", desc: "Vista mensual de septiembre con el detalle de cada día", icon: CalendarDays, color: "#1d3557" },
-  { id: "vuelos", label: "Vuelos", desc: "Ida y vuelta, números de vuelo, referencia y PIN", icon: PlaneTakeoff, color: "#bc4749" },
-  { id: "hoteles", label: "Hoteles", desc: "Check-in/out, confirmación, PIN, dirección y Booking", icon: Hotel, color: "#2e7d5b" },
-  { id: "transportes", label: "Transportes", desc: "Trenes, buses y costes día a día", icon: Train, color: "#1d3557" },
-  { id: "lugares", label: "Lugares", desc: "Templos, restaurantes y la excursión al Fuji", icon: Heart, color: "#bc4749" },
-  { id: "comidas", label: "Comidas típicas", desc: "Qué probar en cada zona del viaje", icon: UtensilsCrossed, color: "#c9a227" },
-  { id: "mapa", label: "Mapa", desc: "15 paradas principales en orden, con enlace a Maps", icon: Map, color: "#2e7d5b" },
-  { id: "frases", label: "Frases", desc: "Japonés útil para pedir, moveros y saludar", icon: MessageCircle, color: "#1d3557" },
-  { id: "preparativos", label: "Preparativos", desc: "Lista de ropa, documentos y cosas a llevar", icon: Backpack, color: "#2e7d5b" },
-  { id: "presupuesto", label: "Presupuesto", desc: "Coste por persona y desglose del grupo", icon: Wallet, color: "#c9a227" },
-  { id: "hoy", label: "Hoy", desc: "Cuando empiece el viaje, aquí veréis el día en curso", icon: Compass, color: "#bc4749" },
-  { id: "pendientes", label: "Cosas pendientes", desc: "Reservas y tareas que aún hay que cerrar", icon: ListTodo, color: "#bc4749" },
-  { id: "historia", label: "Historia de Japón", desc: "Contexto histórico ligado a lo que vamos a ver", icon: Landmark, color: "#1d3557" },
-];
-
+// sections removed since they will be imported from Nav.tabs
+import { tabs as navTabs } from "../components/Nav";
 export default function InicioPage({ onNavigate }) {
   const { tripMeta, flights } = useContent();
+  const t = useT();
   const [countdown, setCountdown] = useState(getCountdown);
 
   useEffect(() => {
@@ -46,7 +32,6 @@ export default function InicioPage({ onNavigate }) {
 
   const units = countdown
     ? [
-        { label: "Días", value: countdown.days },
         { label: "Horas", value: countdown.hours },
         { label: "Min", value: countdown.minutes },
         { label: "Seg", value: countdown.seconds },
@@ -69,7 +54,7 @@ export default function InicioPage({ onNavigate }) {
           borderRadius: 16, padding: 28, color: "white",
         }}>
           <p className="eyebrow" style={{ color: "rgba(255,255,255,0.55)", marginBottom: 16 }}>
-            {units ? "Faltan para despegar" : "¡Ya despegamos!"}
+            {units ? t("home.countdownTitle") : t("home.countdownFinished")}
           </p>
           {units ? (
             <div style={{ display: "flex", gap: 12, justifyContent: "space-between" }}>
@@ -88,33 +73,36 @@ export default function InicioPage({ onNavigate }) {
               ))}
             </div>
           ) : (
-            <p style={{ fontSize: 15, opacity: 0.85, margin: 0 }}>
-              El contador ha llegado a cero. Abrí la pestaña <strong>Hoy</strong> para el día en curso.
-            </p>
+            <p style={{ fontSize: 15, opacity: 0.85, margin: 0 }} dangerouslySetInnerHTML={{ __html: t("home.countdownZero") }} />
           )}
         </div>
       </div>
 
       {/* Qué es esto */}
       <section className="mb-8">
-        <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>Para el grupo</p>
+        <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>{t("home.forTheGroup")}</p>
         <div className="rounded-2xl p-5 space-y-4" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
           {tripMeta.welcomeParagraphs?.map((paragraph, idx) => (
-            <p key={idx} style={{ fontSize: 14.5, color: "var(--ink)", lineHeight: 1.6, margin: 0 }} dangerouslySetInnerHTML={{ __html: paragraph }} />
+            <p key={idx} style={{ fontSize: 14.5, color: "var(--ink)", lineHeight: 1.6 }} dangerouslySetInnerHTML={{ __html: paragraph }} />
           ))}
         </div>
       </section>
 
       {/* Apartados */}
       <section className="mb-8">
-        <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>Apartados principales</p>
+        <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>{t("home.mainSections")}</p>
         <div style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 260px), 1fr))",
           gap: 10,
         }}>
-          {sections.map((s) => {
+          {navTabs.filter(s => s.id !== "inicio").map((s) => {
             const Icon = s.icon;
+            let iconColor = "var(--indigo)";
+            if (["vuelos", "itinerario", "hoy", "pendientes", "lugares"].includes(s.id)) iconColor = "#bc4749";
+            if (["hoteles", "mapa", "preparativos"].includes(s.id)) iconColor = "#2e7d5b";
+            if (["comidas", "presupuesto"].includes(s.id)) iconColor = "#c9a227";
+
             return (
               <button
                 key={s.id}
@@ -129,14 +117,14 @@ export default function InicioPage({ onNavigate }) {
               >
                 <div style={{
                   width: 34, height: 34, borderRadius: 10, flexShrink: 0,
-                  background: `${s.color}14`,
+                  background: `${iconColor}14`,
                   display: "flex", alignItems: "center", justifyContent: "center",
                 }}>
-                  <Icon size={16} style={{ color: s.color }} />
+                  <Icon size={16} style={{ color: iconColor }} />
                 </div>
                 <div>
-                  <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", margin: 0 }}>{s.label}</p>
-                  <p style={{ fontSize: 12, color: "var(--ink-soft)", lineHeight: 1.4, margin: "3px 0 0" }}>{s.desc}</p>
+                  <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", margin: 0 }}>{t(s.labelKey)}</p>
+                  <p style={{ fontSize: 12, color: "var(--ink-soft)", lineHeight: 1.4, margin: "3px 0 0" }}>{t(s.descKey)}</p>
                 </div>
               </button>
             );
@@ -146,17 +134,17 @@ export default function InicioPage({ onNavigate }) {
 
       {/* Flight teaser */}
       <section>
-        <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>Vuelo de ida</p>
+        <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>{t("home.outboundFlight")}</p>
         <div className="rounded-2xl p-5" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
           <div className="flex items-center gap-2 mb-3" style={{ color: "var(--shu)" }}>
             <PlaneTakeoff size={16} />
-            <p className="eyebrow" style={{ margin: 0 }}>Ida · {flights.out.flightNumber}</p>
+            <p className="eyebrow" style={{ margin: 0 }}>{t("home.outbound")} · {flights.out.flightNumber}</p>
           </div>
           <p style={{ fontSize: 14, fontWeight: 600, color: "var(--ink)", margin: "0 0 6px" }}>
             Madrid → Doha → Narita
           </p>
           <p style={{ fontSize: 13, color: "var(--ink-soft)", lineHeight: 1.5, margin: 0 }}>
-            Salida 6-sept-2026 · 09:05 (T4S) · llegada 7-sept · 12:55 (T2). Detalle completo en la pestaña Vuelos.
+            {t("home.flightDesc")}
           </p>
           <button
             type="button"
@@ -164,7 +152,7 @@ export default function InicioPage({ onNavigate }) {
             className="mt-3 text-sm font-medium"
             style={{ color: "var(--shu)", background: "none", border: "none", padding: 0, cursor: "pointer" }}
           >
-            Ver vuelos ↗
+            {t("home.viewFlights")}
           </button>
         </div>
       </section>
@@ -192,6 +180,37 @@ export default function InicioPage({ onNavigate }) {
           </div>
         </section>
       )}
+      {/* Sobre la web */}
+      {tripMeta.about && (
+        <section className="mb-8">
+          <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>{tripMeta.about.title}</p>
+          <div className="rounded-2xl p-5" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
+            <p style={{ fontSize: 14, color: "var(--ink)", lineHeight: 1.6, margin: 0, marginBottom: 16 }}>
+              {tripMeta.about.description}
+            </p>
+            <a
+              href="https://github.com/pCresp0/viaje-japon-sept-2026"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                fontSize: 13,
+                fontWeight: 600,
+                color: "var(--shu)",
+                textDecoration: "none",
+                background: "rgba(188,71,73,0.1)",
+                padding: "8px 16px",
+                borderRadius: 20
+              }}
+            >
+              {tripMeta.about.github} ↗
+            </a>
+          </div>
+        </section>
+      )}
+
     </div>
   );
 }

@@ -5,17 +5,11 @@ import DayCard from "../components/DayCard";
 import { X } from "lucide-react";
 import { days } from "../data/trip";
 
-const blockColors = {
-  kioto: { bg: "#bc4749", label: "Kioto · Nara · Osaka" },
-  alpes: { bg: "#2e7d5b", label: "Alpes Japoneses"      },
-  tokio: { bg: "#1d3557", label: "Tokio"                },
-};
-
+// blockColors removed, we use blocks from context now
 const blockEmoji = { kioto: "⛩️", alpes: "🏔️", tokio: "🗼" };
 
 const SEP_START_DOW = 1;
-const WEEKDAYS = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"];
-
+// WEEKDAYS removed, generated dynamically in the component
 function buildGrid() {
   const cells = [];
   const offset = 1;
@@ -45,6 +39,15 @@ export default function CalendarPage() {
   const t = useT();
   const [selectedDayNum, setSelectedDayNum] = useState(null);
   const selectedDay = selectedDayNum !== null ? days.find(d => d.num === selectedDayNum) : null;
+  const WEEKDAYS = [
+    t("calendar.weekdays.0"),
+    t("calendar.weekdays.1"),
+    t("calendar.weekdays.2"),
+    t("calendar.weekdays.3"),
+    t("calendar.weekdays.4"),
+    t("calendar.weekdays.5"),
+    t("calendar.weekdays.6"),
+  ];
 
   // Lock body scroll while the mobile modal is open, so the page behind
   // it can't move and the close button/backdrop stay reachable.
@@ -73,11 +76,11 @@ export default function CalendarPage() {
 
         {/* legend */}
         <div className="flex flex-wrap gap-3 mb-6">
-          {Object.entries(blockColors).map(([k, v]) => (
+          {Object.entries(blocks).map(([k, v]) => (
             <div key={k} className="flex items-center gap-1.5">
-              <span className="inline-block w-3 h-3 rounded-sm" style={{ background: v.bg }} />
+              <span className="inline-block w-3 h-3 rounded-sm" style={{ background: v.color }} />
               <span className="text-xs" style={{ color: "var(--ink-soft)" }}>
-                {blockEmoji[k]} {v.label}
+                {blockEmoji[k]} {v.title}
               </span>
             </div>
           ))}
@@ -101,7 +104,8 @@ export default function CalendarPage() {
               style={{ borderBottom: wi < weeks.length - 1 ? "1px solid var(--line)" : "none" }}>
               {week.map((dateNum, di) => {
                 const tripDay = dateNum ? dayByDate[dateNum] : null;
-                const color = tripDay ? blockColors[tripDay.block]?.bg : null;
+                const blockData = tripDay ? blocks[tripDay.block] : null;
+                const color = blockData ? blockData.color : null;
                 const isWeekend = di >= 5;
                 const isSelected = tripDay && tripDay.num === selectedDayNum;
                 

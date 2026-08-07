@@ -37,9 +37,9 @@ export const historyPeriods = [
       },
     ],
     seeOnTrip: [
-      { note: "Le grand Bouddha et le temple qui a presque ruiné les coffres du Japon de Nara au VIIIe siècle." },
-      { note: "Fondé en 778, avant même le transfert de la capitale à Heian-kyō." },
-      { note: "Établi en 711, avant même que Kyoto ne soit une capitale." },
+      { id: "todai-ji", note: "Le grand Bouddha et le temple qui a presque ruiné les coffres du Japon de Nara au VIIIe siècle." },
+      { id: "kiyomizu-dera", note: "Fondé en 778, avant même le transfert de la capitale à Heian-kyō." },
+      { id: "fushimi-inari", note: "Établi en 711, avant même que Kyoto ne soit une capitale." },
     ],
   },
 
@@ -65,9 +65,9 @@ export const historyPeriods = [
       },
     ],
     seeOnTrip: [
-      { note: "Villa de retraite d'Ashikaga Yoshimitsu (1397), reconstruite après un incendie en 1955." },
-      { note: "Construit en 1482 par son petit-fils Ashikaga Yoshimasa, tandis que Kyoto brûlait pendant la guerre d'Ōnin." },
-      { note: "L'itinéraire et ses villes-relais se consolideront en tant que réseau de communication lors de la période Edo suivante, mais le col de la montagne était utilisé bien avant." },
+      { id: "kinkaku-ji", note: "Villa de retraite d'Ashikaga Yoshimitsu (1397), reconstruite après un incendie en 1955." },
+      { id: "ginkaku-ji", note: "Construit en 1482 par son petit-fils Ashikaga Yoshimasa, tandis que Kyoto brûlait pendant la guerre d'Ōnin." },
+      { id: "nakasendo", note: "L'itinéraire et ses villes-relais se consolideront en tant que réseau de communication lors de la période Edo suivante, mais le col de la montagne était utilisé bien avant." },
     ],
   },
 
@@ -93,10 +93,10 @@ export const historyPeriods = [
       },
     ],
     seeOnTrip: [
-      { note: "Le réseau routier qui soutenait le système sankin-kōtai ; Tsumago a été la première ville du Japon à restaurer systématiquement son aspect de cette période, en 1968." },
-      { note: "Sous l'administration directe du shogunat à partir de 1692 en raison de la valeur de ses forêts de bois." },
-      { note: "L'isolement de la vallée, plus géographique que politique, a préservé les maisons gasshō-zukuri pratiquement intactes." },
-      { note: "Le château, construit par Hideyoshi en 1583, a été détruit par Tokugawa Ieyasu en 1615, précisément pour éliminer le clan rival." },
+      { id: "nakasendo", note: "Le réseau routier qui soutenait le système sankin-kōtai ; Tsumago a été la première ville du Japon à restaurer systématiquement son aspect de cette période, en 1968." },
+      { id: "takayama", note: "Sous l'administration directe du shogunat à partir de 1692 en raison de la valeur de ses forêts de bois." },
+      { id: "shirakawa-go", note: "L'isolement de la vallée, plus géographique que politique, a préservé les maisons gasshō-zukuri pratiquement intactes." },
+      { id: "osaka", note: "Le château, construit par Hideyoshi en 1583, a été détruit par Tokugawa Ieyasu en 1615, précisément pour éliminer le clan rival." },
     ],
   },
 
@@ -118,8 +118,8 @@ export const historyPeriods = [
       },
     ],
     seeOnTrip: [
-      { note: "Sanctuaire dédié à cet empereur, construit en 1920 avec une forêt de 100 000 arbres plantés à la main." },
-      { note: "La tour actuelle du château, en béton armé, date de 1931 — en plein dans l'ère moderne qui a commencé avec Meiji." },
+      { id: "meiji-jingu", note: "Sanctuaire dédié à cet empereur, construit en 1920 avec une forêt de 100 000 arbres plantés à la main." },
+      { id: "osaka", note: "La tour actuelle du château, en béton armé, date de 1931 — en plein dans l'ère moderne qui a commencé avec Meiji." },
     ],
   },
 
@@ -145,9 +145,9 @@ export const historyPeriods = [
       },
     ],
     seeOnTrip: [
-      { note: "Rasé lors du bombardement de 1945 ; le bâtiment actuel est une reconstruction de 1958, en béton pour qu'il ne brûle plus." },
-      { note: "Littéralement né des ruines de l'après-guerre, en tant que marché noir de composants électroniques." },
-      { note: "Nara, tout comme Kyoto, a été épargnée par les grands bombardements en raison de sa valeur patrimoniale." },
+      { id: "senso-ji", note: "Rasé lors du bombardement de 1945 ; le bâtiment actuel est une reconstruction de 1958, en béton pour qu'il ne brûle plus." },
+      { id: "akihabara", note: "Littéralement né des ruines de l'après-guerre, en tant que marché noir de composants électroniques." },
+      { id: "todai-ji", note: "Nara, tout comme Kyoto, a été épargnée par les grands bombardements en raison de sa valeur patrimoniale." },
     ],
   },
 
@@ -169,9 +169,9 @@ export const historyPeriods = [
       },
     ],
     seeOnTrip: [
-      { note: "L'épicentre physique de l'explosion culturelle des mangas, animes et jeux vidéo japonais." },
-      { note: "Le symbole visuel le plus reproduit du Japon urbain contemporain dans les films et séries du monde entier." },
-      { note: "L'art numérique japonais le plus récent, héritier direct de siècles d'esthétique visuelle unique." },
+      { id: "akihabara", note: "L'épicentre physique de l'explosion culturelle des mangas, animes et jeux vidéo japonais." },
+      { id: "shibuya", note: "Le symbole visuel le plus reproduit du Japon urbain contemporain dans les films et séries du monde entier." },
+      { id: "teamlab", note: "L'art numérique japonais le plus récent, héritier direct de siècles d'esthétique visuelle unique." },
     ],
   },
 ];

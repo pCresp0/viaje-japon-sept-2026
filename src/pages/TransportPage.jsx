@@ -46,7 +46,7 @@ export default function TransportPage() {
       }
     }
     // "10-14" range entry
-    return { badge: "~", title: "Días 10–14 · 16-20 sept", sub: "Tokio" };
+    return { badge: "~", title: t("transport.tokioDays"), sub: "Tokio" };
   }
 
   const savings = (transportTotals.real - transportTotals.jrPass).toFixed(1);
@@ -54,8 +54,8 @@ export default function TransportPage() {
   return (
     <div className="px-4 pt-3 pb-12">
       <div className="mb-6">
-        <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Movimientos</p>
-        <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>Transportes</h2>
+        <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{t("transport.eyebrow")}</p>
+        <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>{t("transport.title")}</h2>
       </div>
 
       {/* Suica card */}
@@ -67,22 +67,21 @@ export default function TransportPage() {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
           <div>
             <p style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 4 }}>Dónde comprar</p>
-            <p style={{ fontSize: 12, fontWeight: 600 }}>Estaciones principales, máquinas expendedoras</p>
+            <p style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 4 }}>{t("transport.icCardInfo")}</p>
+            <p style={{ fontSize: 12, fontWeight: 600 }}>{t("transport.icCardInfo")}</p>
           </div>
           <div>
-            <p style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 4 }}>Coste inicial</p>
-            <p style={{ fontSize: 12, fontWeight: 600 }}>2 000 yen · (1 500 usables + 500 caución)</p>
+            <p style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 4 }}>{t("transport.icCardCostLabel")}</p>
+            <p style={{ fontSize: 12, fontWeight: 600 }}>{t("transport.icCardCostValue")}</p>
           </div>
         </div>
         <div style={{ marginTop: 12, paddingTop: 12, borderTop: "1px solid rgba(255,255,255,0.2)" }}>
-          <p style={{ fontSize: 12, color: "rgba(255,255,255,0.7)" }}>
-            Operadores privados (metro local, tranvía Randen, Yurikamome, Nohi Bus) <strong>no</strong> están cubiertos por el JR Pass.
-          </p>
+          <p style={{ fontSize: 12, color: "rgba(255,255,255,0.7)" }} dangerouslySetInnerHTML={{ __html: t("transport.icCardWarning") }} />
         </div>
       </div>
 
       {/* Trayectos por día */}
-      <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>Trayectos por día</p>
+      <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>{t("transport.tripsByDay")}</p>
       <div
         className="mb-8"
         style={{
@@ -123,9 +122,9 @@ export default function TransportPage() {
               </div>
 
               {/* Transport rows */}
-              {items.map((t, ti) => {
-                const kind = iconKind(t);
-                const jr = jrCoverage(t);
+              {items.map((tItem, ti) => {
+                const kind = iconKind(tItem);
+                const jr = jrCoverage(tItem);
                 return (
                   <div
                     key={ti}
@@ -147,30 +146,30 @@ export default function TransportPage() {
 
                     <div className="flex-1 min-w-0">
                       <p style={{ fontSize: 13, fontWeight: 600, color: "var(--ink)", marginBottom: 1 }}>
-                        {t.name}
+                        {tItem.name}
                       </p>
                       <p style={{ fontSize: 11.5, color: "var(--ink-soft)" }}>
-                        {t.from} → {t.to}
+                        {tItem.from} → {tItem.to}
                       </p>
-                      {t.note && (
+                      {tItem.note && (
                         <p style={{ fontSize: 11, color: "var(--ink-soft)", fontStyle: "italic", marginTop: 3, lineHeight: 1.4 }}>
-                          {t.note}
+                          {tItem.note}
                         </p>
                       )}
                     </div>
 
                     <div style={{ textAlign: "right", whiteSpace: "nowrap", flexShrink: 0 }}>
                       <p style={{ fontSize: 12.5, fontWeight: 700, color: "var(--shu)" }}>
-                        {t.real}€
+                        {tItem.real}€
                       </p>
                       {jr === "covered" && (
-                        <p style={{ fontSize: 10, color: "#2e7d5b", fontWeight: 600 }}>JR Pass ✓</p>
+                        <p style={{ fontSize: 10, color: "#2e7d5b", fontWeight: 600 }}>{t("transport.jrPassCovered")}</p>
                       )}
                       {jr === "partial" && (
-                        <p style={{ fontSize: 10, color: "#c9a227", fontWeight: 600 }}>JR parcial</p>
+                        <p style={{ fontSize: 10, color: "#c9a227", fontWeight: 600 }}>{t("transport.jrPassPartial")}</p>
                       )}
                       {jr === "none" && (
-                        <p style={{ fontSize: 10, color: "var(--ink-soft)" }}>Op. privado</p>
+                        <p style={{ fontSize: 10, color: "var(--ink-soft)" }}>{t("transport.jrPassNone")}</p>
                       )}
                     </div>
                   </div>

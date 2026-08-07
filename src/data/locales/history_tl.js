@@ -37,9 +37,9 @@ export const historyPeriods = [
       },
     ],
     seeOnTrip: [
-      { note: "Ang Great Buddha at ang templo na muntik nang sumira sa kabang-yaman ng 8th-century Nara Japan." },
-      { note: "Itinatag noong 778, bago pa man lumipat ang kabisera sa Heian-kyō." },
-      { note: "Itinatag noong 711, bago pa naging kabisera ang Kyoto." },
+      { id: "todai-ji", note: "Ang Great Buddha at ang templo na muntik nang sumira sa kabang-yaman ng 8th-century Nara Japan." },
+      { id: "kiyomizu-dera", note: "Itinatag noong 778, bago pa man lumipat ang kabisera sa Heian-kyō." },
+      { id: "fushimi-inari", note: "Itinatag noong 711, bago pa naging kabisera ang Kyoto." },
     ],
   },
 
@@ -65,9 +65,9 @@ export const historyPeriods = [
       },
     ],
     seeOnTrip: [
-      { note: "Retirement villa ng Ashikaga Yoshimitsu (1397), itinayong muli matapos masunog noong 1955." },
-      { note: "Itinayo noong 1482 ng kanyang apong si Ashikaga Yoshimasa, habang nasusunog ang Kyoto sa Digmaang Ōnin." },
-      { note: "Ang ruta at ang mga post town nito ay magsasama bilang network ng mga komunikasyon sa susunod na panahon ng Edo, ngunit matagal nang ginamit ang mountain pass." },
+      { id: "kinkaku-ji", note: "Retirement villa ng Ashikaga Yoshimitsu (1397), itinayong muli matapos masunog noong 1955." },
+      { id: "ginkaku-ji", note: "Itinayo noong 1482 ng kanyang apong si Ashikaga Yoshimasa, habang nasusunog ang Kyoto sa Digmaang Ōnin." },
+      { id: "nakasendo", note: "Ang ruta at ang mga post town nito ay magsasama bilang network ng mga komunikasyon sa susunod na panahon ng Edo, ngunit matagal nang ginamit ang mountain pass." },
     ],
   },
 
@@ -93,10 +93,10 @@ export const historyPeriods = [
       },
     ],
     seeOnTrip: [
-      { note: "Ang road network na nagbigay ng suporta sa sistemang sankin-kōtai; Tsumago ang naging unang bayan sa Japan na sistematikong nagbalik ng anyo nito mula sa panahong ito, noong 1968." },
-      { note: "Sa ilalim ng direktang pamamahala ng shogunate simula 1692 dahil sa halaga ng mga kagubatan ng troso nito." },
-      { note: "Ang paghihiwalay ng lambak, na mas geograpiko kaysa sa pulitikal, ang nagpapanatiling buo sa mga bahay ng gasshō-zukuri." },
-      { note: "Ang kastilyo, na ginawa ni Hideyoshi noong 1583, ay sinira ni Tokugawa Ieyasu noong 1615, upang tumpak na alisin ang kalabang angkan." },
+      { id: "nakasendo", note: "Ang road network na nagbigay ng suporta sa sistemang sankin-kōtai; Tsumago ang naging unang bayan sa Japan na sistematikong nagbalik ng anyo nito mula sa panahong ito, noong 1968." },
+      { id: "takayama", note: "Sa ilalim ng direktang pamamahala ng shogunate simula 1692 dahil sa halaga ng mga kagubatan ng troso nito." },
+      { id: "shirakawa-go", note: "Ang paghihiwalay ng lambak, na mas geograpiko kaysa sa pulitikal, ang nagpapanatiling buo sa mga bahay ng gasshō-zukuri." },
+      { id: "osaka", note: "Ang kastilyo, na ginawa ni Hideyoshi noong 1583, ay sinira ni Tokugawa Ieyasu noong 1615, upang tumpak na alisin ang kalabang angkan." },
     ],
   },
 
@@ -118,8 +118,8 @@ export const historyPeriods = [
       },
     ],
     seeOnTrip: [
-      { note: "Ginawa ang Shrine para kay emperor noong 1920 na may kagubatang may 100,000 na puno na itinanim nang manu-mano." },
-      { note: "Ang kasalukuyang kastilyo ng tore, na gawa sa reinforced na semento, ay mula sa 1931 — ganap na mula sa makabagong panahong nagsimula sa Meiji." },
+      { id: "meiji-jingu", note: "Ginawa ang Shrine para kay emperor noong 1920 na may kagubatang may 100,000 na puno na itinanim nang manu-mano." },
+      { id: "osaka", note: "Ang kasalukuyang kastilyo ng tore, na gawa sa reinforced na semento, ay mula sa 1931 — ganap na mula sa makabagong panahong nagsimula sa Meiji." },
     ],
   },
 
@@ -145,9 +145,9 @@ export const historyPeriods = [
       },
     ],
     seeOnTrip: [
-      { note: "Pinatag sa 1945 na pagbobomba; ang kasalukuyang building ay mula sa 1958 na paggawa, na semento upang hindi na muling masunog." },
-      { note: "Literal na nabuo sa mga guho mula sa postwar, bilang black market para sa mga electronic component." },
-      { note: "Iniligtas ang Nara at Kyoto sa mga pangunahing pagbobomba dahil sa mahalaga ang mga itong pamana." },
+      { id: "senso-ji", note: "Pinatag sa 1945 na pagbobomba; ang kasalukuyang building ay mula sa 1958 na paggawa, na semento upang hindi na muling masunog." },
+      { id: "akihabara", note: "Literal na nabuo sa mga guho mula sa postwar, bilang black market para sa mga electronic component." },
+      { id: "todai-ji", note: "Iniligtas ang Nara at Kyoto sa mga pangunahing pagbobomba dahil sa mahalaga ang mga itong pamana." },
     ],
   },
 
@@ -169,9 +169,9 @@ export const historyPeriods = [
       },
     ],
     seeOnTrip: [
-      { note: "Ang pisikal na sentro ng pagsabog sa kultura ng Japanese na manga, anime, at video game." },
-      { note: "Ang pinakamaraming iginawang visual na simbolo sa kasalukuyang lungsod ng Japan, para sa mga pelikula at serye sa buong mundo." },
-      { note: "Ang pinakabagong Japanese na digital na art, direktang taga-pagmana ng nagdaang siglo na natatanging mga visual aesthetic." },
+      { id: "akihabara", note: "Ang pisikal na sentro ng pagsabog sa kultura ng Japanese na manga, anime, at video game." },
+      { id: "shibuya", note: "Ang pinakamaraming iginawang visual na simbolo sa kasalukuyang lungsod ng Japan, para sa mga pelikula at serye sa buong mundo." },
+      { id: "teamlab", note: "Ang pinakabagong Japanese na digital na art, direktang taga-pagmana ng nagdaang siglo na natatanging mga visual aesthetic." },
     ],
   },
 ];
