@@ -1,6 +1,6 @@
 import { Cloud, CloudRain, Sun, CloudSun, MapPin, Droplets } from "lucide-react";
 
-import { useContent } from "../data/content";
+import { useContent } from "../i18n/LanguageContext";
 
 export default function WeatherPage() {
   const { weatherData, dailyWeather, weatherLabels } = useContent();

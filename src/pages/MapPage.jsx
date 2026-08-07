@@ -4,7 +4,7 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { ExternalLink } from "lucide-react";
 
-import { useContent } from "../data/content";
+import { useContent } from "../i18n/LanguageContext";
 
 function createIcon(emoji, color, order) {
   return L.divIcon({
