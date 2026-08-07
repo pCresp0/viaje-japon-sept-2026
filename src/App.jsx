@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Nav, { Sidebar } from "./components/Nav";
 import Footer from "./components/Footer";
+import AccessGate, { isUnlocked } from "./components/AccessGate";
 import Home from "./pages/Home";
 import CalendarPage from "./pages/CalendarPage";
 import Itinerary from "./pages/Itinerary";
@@ -20,6 +21,7 @@ import HistoryPage from "./pages/HistoryPage";
 import { getTripStatus } from "./utils/date";
 
 export default function App() {
+  const [unlocked, setUnlocked] = useState(() => isUnlocked());
   const [tab, setTab] = useState("hoy");
   const [openDay, setOpenDay] = useState(getTripStatus().day?.num ?? null);
   const scrollContainerRef = useRef(null);
@@ -35,6 +37,10 @@ export default function App() {
       scrollContainerRef.current.scrollTo({ top: 0, behavior: "auto" });
     }
   }, [tab]);
+
+  if (!unlocked) {
+    return <AccessGate onUnlock={() => setUnlocked(true)} />;
+  }
 
   return (
     <div style={{ display: "flex", height: "100vh", height: "100dvh" }}>
