@@ -38,6 +38,7 @@ const sections = [
     icon: Backpack,
     color: "#2e7d5b",
     items: [
+      { id: "chubasquero", text: "Chubasquero" },
       { id: "sudaderas", text: "Sudaderas" },
       { id: "pantalones-cortos", text: "Pantalones cortos" },
       { id: "pantalones-largos", text: "Pantalones largos" },

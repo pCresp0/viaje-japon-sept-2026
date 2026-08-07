@@ -41,32 +41,12 @@ export default defineConfig({
         // (con sus fixes) toma el control en cuanto termina de instalarse.
         skipWaiting: true,
         clientsClaim: true,
-        globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+        globPatterns: ['**/*.{js,css,html,png,svg,ico,webp}'],
+        // No precachear imágenes mayores de 1 MB para no saturar la caché
+        // del SW en la primera instalación. Las imágenes grandes se sirven
+        // desde red (o caché del navegador).
+        maximumFileSizeToCacheInBytes: 1024 * 1024,
         navigateFallback: '/index.html',
-        runtimeCaching: [
-          {
-            // Fotos de las guías (Wikimedia). Una vez vistas quedan
-            // guardadas, así siguen disponibles sin conexión en Japón.
-            urlPattern: /^https:\/\/upload\.wikimedia\.org\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'wikimedia-images',
-              expiration: { maxEntries: 60, maxAgeSeconds: 60 * 60 * 24 * 90 },
-              cacheableResponse: { statuses: [0, 200] },
-            },
-          },
-          {
-            // Respuestas de la API de Wikipedia (qué imagen corresponde
-            // a cada lugar).
-            urlPattern: /^https:\/\/en\.wikipedia\.org\/w\/api\.php.*/i,
-            handler: 'StaleWhileRevalidate',
-            options: {
-              cacheName: 'wikipedia-api',
-              expiration: { maxEntries: 40, maxAgeSeconds: 60 * 60 * 24 * 90 },
-              cacheableResponse: { statuses: [0, 200] },
-            },
-          },
-        ],
       },
     }),
   ],
