@@ -36,13 +36,20 @@ export default function App() {
   }, [tab]);
 
   return (
-    <div style={{ display: "flex", height: "100vh", height: "100dvh", background: "var(--paper)" }}>
+    <div style={{ display: "flex", height: "100vh", height: "100dvh" }}>
 
       {/* Desktop sidebar — fixed height, no scroll */}
       <Sidebar active={tab} onChange={setTab} />
 
-      {/* Right column — scrollable */}
-      <div ref={scrollContainerRef} style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0, overflowY: "auto", height: "100%" }}>
+      {/* Right column — scrollable, with wave texture as direct background */}
+      <div ref={scrollContainerRef} style={{
+        flex: 1, display: "flex", flexDirection: "column",
+        minWidth: 0, overflowY: "auto", height: "100%",
+        backgroundColor: "var(--paper)",
+        backgroundImage: "linear-gradient(rgba(247,240,227,0.82), rgba(247,240,227,0.82)), url('/waves-sidebar.webp')",
+        backgroundSize: "auto, 700px auto",
+        backgroundRepeat: "no-repeat, repeat",
+      }}>
 
         {/* Mobile top bar + drawer */}
         <Nav active={tab} onChange={setTab} />

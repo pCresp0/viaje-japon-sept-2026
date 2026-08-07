@@ -27,37 +27,17 @@ html, body, #root {
   height: 100%;
 }
 
-/* Textura de olas casi imperceptible sobre el fondo general de la app.
-   Se aplica como pseudo-elemento para no interferir con el color de fondo
-   ni con ningún elemento del layout. La opacidad (0.035) es tan baja que
-   sólo se aprecia mirando fijamente — el efecto es añadir riqueza visual
-   sutil al fondo sin cambiar el color ni distraer del contenido. */
-#root {
-  position: relative;
-}
-#root::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image: url('/waves-sidebar.webp');
-  background-size: 600px auto;
-  background-repeat: repeat;
-  opacity: 0.18;
-  pointer-events: none;
-  z-index: 0;
-}
-#root > * {
-  position: relative;
-  z-index: 1;
-}
-
 body {
-  background: var(--paper);
+  background-color: var(--paper);
   color: var(--ink);
   font-family: var(--font-body);
   overscroll-behavior-y: none;
   -webkit-font-smoothing: antialiased;
 }
+
+/* ── Textura de olas en el área de contenido ────────────────────────
+   Se aplica directamente como background del contenedor scrollable en
+   App.jsx mediante un gradiente superpuesto que controla la opacidad. */
 
 .font-display {
   font-family: var(--font-display);

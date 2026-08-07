@@ -24,7 +24,7 @@ export default function Home({ onGoToDay }) {
   const status = getTripStatus();
 
   return (
-    <div style={{ background: "var(--paper)" }}>
+    <div>
       <div style={{ padding: "24px 24px 0", maxWidth: 1100, margin: "0 auto" }}>
         {/* Simple page title */}
         <div style={{ marginBottom: 8 }}>
