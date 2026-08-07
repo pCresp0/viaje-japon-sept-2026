@@ -100,8 +100,9 @@ function Drawer({ active, onChange, open, onClose }) {
             </button>
           </div>
 
-          {/* nav */}
-          <nav className="flex flex-col gap-0.5 p-3 flex-1">
+          {/* nav — scrollable si hay más items de los que caben */}
+          <nav className="flex flex-col gap-0.5 p-3"
+            style={{ flex: 1, overflowY: "auto", overflowX: "hidden" }}>
             <NavItems active={active} onChange={onChange} onClose={onClose} />
           </nav>
 
@@ -161,8 +162,9 @@ export function Sidebar({ active, onChange }) {
           </div>
         </div>
 
-        {/* nav */}
-        <nav className="flex flex-col gap-0.5 p-3 flex-1">
+        {/* nav — scrollable si no caben todos los items */}
+        <nav className="flex flex-col gap-0.5 p-3"
+          style={{ flex: 1, overflowY: "auto", overflowX: "hidden" }}>
           <NavItems active={active} onChange={onChange} />
         </nav>
 
