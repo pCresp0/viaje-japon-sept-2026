@@ -26,6 +26,8 @@ export const foods = [
   {
     id: "ramen",
     category: "must",
+    type: "salado",
+    meal: ["comida", "cena"],
     name: "Ramen",
     jp: "ラーメン",
     where: "Todo el país · Ippudo y locales",
@@ -37,6 +39,8 @@ export const foods = [
   {
     id: "sushi",
     category: "must",
+    type: "salado",
+    meal: ["comida", "cena"],
     name: "Sushi / sashimi",
     jp: "寿司 · 刺身",
     where: "Toyosu, mercados, kaiten-zushi",
@@ -48,6 +52,8 @@ export const foods = [
   {
     id: "tempura",
     category: "must",
+    type: "salado",
+    meal: ["comida", "cena"],
     name: "Tempura",
     jp: "天ぷら",
     where: "Kioto, Tokio",
@@ -59,6 +65,8 @@ export const foods = [
   {
     id: "tonkatsu",
     category: "must",
+    type: "salado",
+    meal: ["comida", "cena"],
     name: "Tonkatsu",
     jp: "とんかつ",
     where: "Tokio · Katsukura y similares",
@@ -70,6 +78,8 @@ export const foods = [
   {
     id: "yakiniku-wagyu",
     category: "must",
+    type: "salado",
+    meal: ["cena"],
     name: "Wagyu / yakiniku",
     jp: "焼肉 · 和牛",
     where: "Takayama (Hida beef), Tokio",
@@ -81,6 +91,8 @@ export const foods = [
   {
     id: "okonomiyaki",
     category: "regional",
+    type: "salado",
+    meal: ["comida", "cena"],
     name: "Okonomiyaki",
     jp: "お好み焼き",
     where: "Osaka · Dotonbori / Shinsekai",
@@ -92,6 +104,8 @@ export const foods = [
   {
     id: "takoyaki",
     category: "regional",
+    type: "salado",
+    meal: ["comida", "cena", "snack"],
     name: "Takoyaki",
     jp: "たこ焼き",
     where: "Osaka · callejero",
@@ -103,6 +117,8 @@ export const foods = [
   {
     id: "kushikatsu",
     category: "regional",
+    type: "salado",
+    meal: ["cena", "snack"],
     name: "Kushikatsu",
     jp: "串カツ",
     where: "Osaka · Shinsekai",
@@ -114,6 +130,8 @@ export const foods = [
   {
     id: "kaiseki",
     category: "regional",
+    type: "salado",
+    meal: ["comida", "cena"],
     name: "Kaiseki",
     jp: "懐石",
     where: "Kioto",
@@ -125,6 +143,8 @@ export const foods = [
   {
     id: "matcha-wagashi",
     category: "regional",
+    type: "dulce",
+    meal: ["desayuno", "snack"],
     name: "Matcha y wagashi",
     jp: "抹茶 · 和菓子",
     where: "Kioto · Uji / Gion",
@@ -136,6 +156,8 @@ export const foods = [
   {
     id: "hida-street",
     category: "regional",
+    type: "salado",
+    meal: ["snack"],
     name: "Hida beef bun / mitarashi",
     jp: "飛騨牛 · みたらし",
     where: "Takayama · casco antiguo",
@@ -147,6 +169,8 @@ export const foods = [
   {
     id: "unagi",
     category: "regional",
+    type: "salado",
+    meal: ["comida", "cena"],
     name: "Unagi (anguila)",
     jp: "うなぎ",
     where: "Tokio, Kioto",
@@ -158,6 +182,8 @@ export const foods = [
   {
     id: "onigiri",
     category: "street",
+    type: "salado",
+    meal: ["desayuno", "snack"],
     name: "Onigiri",
     jp: "おにぎり",
     where: "Konbini (7-Eleven, FamilyMart, Lawson)",
@@ -169,6 +195,8 @@ export const foods = [
   {
     id: "gyoza",
     category: "street",
+    type: "salado",
+    meal: ["comida", "cena", "snack"],
     name: "Gyoza",
     jp: "餃子",
     where: "Ramen shops y izakayas",
@@ -180,6 +208,8 @@ export const foods = [
   {
     id: "yakitori",
     category: "street",
+    type: "salado",
+    meal: ["cena", "snack"],
     name: "Yakitori",
     jp: "焼き鳥",
     where: "Shinjuku · Omoide Yokocho, izakayas",
@@ -191,6 +221,8 @@ export const foods = [
   {
     id: "karaage",
     category: "street",
+    type: "salado",
+    meal: ["comida", "cena", "snack"],
     name: "Karaage",
     jp: "唐揚げ",
     where: "Izakayas, konbinis",
@@ -202,6 +234,8 @@ export const foods = [
   {
     id: "udon-soba",
     category: "street",
+    type: "salado",
+    meal: ["comida", "cena"],
     name: "Udon / soba",
     jp: "うどん · そば",
     where: "Estaciones, Kioto, Tokio",
@@ -213,6 +247,8 @@ export const foods = [
   {
     id: "ekiben",
     category: "street",
+    type: "salado",
+    meal: ["desayuno", "comida"],
     name: "Ekiben",
     jp: "駅弁",
     where: "Estaciones de Shinkansen",
@@ -224,6 +260,8 @@ export const foods = [
   {
     id: "taiyaki-mochi",
     category: "sweet",
+    type: "dulce",
+    meal: ["snack"],
     name: "Taiyaki / mochi",
     jp: "たい焼き · 餅",
     where: "Asakusa, ferias, Nakamise",
@@ -235,6 +273,8 @@ export const foods = [
   {
     id: "sake",
     category: "sweet",
+    type: "bebida",
+    meal: ["cena"],
     name: "Sake / highball",
     jp: "日本酒 · ハイボール",
     where: "Izakayas, Takayama, Kioto",
@@ -246,6 +286,8 @@ export const foods = [
   {
     id: "desayuno",
     category: "sweet",
+    type: "salado",
+    meal: ["desayuno"],
     name: "Desayuno japonés",
     jp: "和食朝食",
     where: "Hoteles, kissaten",
