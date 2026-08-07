@@ -61,6 +61,15 @@ export const pendingItems = [
 
   // ── LOGÍSTICA A ORGANIZAR ──────────────────────────────────────────
   {
+    id: "bus-magome-horario",
+    category: "logistica",
+    urgency: "baja",
+    title: "Revisar horario bus Magome → Nakatsugawa (Día 9)",
+    detail:
+      "La mañana del día 9 (15 sept) hay que coger un bus local desde Magome hasta la estación de Nakatsugawa (~25 min, ~3€). Al ser una ruta rural, los autobuses son poco frecuentes. Suele salir alrededor de las 08:50 ó 09:10. Este bus es el primer eslabón de la cadena: enlaza con el JR Shinano a Nagoya y después con el Shinkansen Nozomi de las 11:00.",
+    deadline: "Revisar la noche del 14 sept (mientras estáis en Magome Chaya)",
+  },
+  {
     id: "takkyubin",
     category: "logistica",
     urgency: "media",

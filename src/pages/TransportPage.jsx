@@ -143,6 +143,11 @@ export default function TransportPage() {
                       <p style={{ fontSize: 11.5, color: "var(--ink-soft)" }}>
                         {t.from} → {t.to}
                       </p>
+                      {t.note && (
+                        <p style={{ fontSize: 11, color: "var(--ink-soft)", fontStyle: "italic", marginTop: 3, lineHeight: 1.4 }}>
+                          {t.note}
+                        </p>
+                      )}
                     </div>
 
                     <div style={{ textAlign: "right", whiteSpace: "nowrap", flexShrink: 0 }}>
