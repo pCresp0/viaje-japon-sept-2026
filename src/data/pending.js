@@ -26,10 +26,37 @@ export const pendingItems = [
     id: "bus-shirakawa",
     category: "reserva",
     urgency: "alta",
-    title: "Reservar Nohi Bus a Shirakawa-go",
+    title: "Reservar Nohi Bus (Kanazawa → Shirakawa-go → Takayama)",
     detail:
-      "Bus de Kanazawa a Shirakawa-go (día 7, 1h 15m). Los asientos son reservados y en temporada alta se llena con semanas de antelación. Reservar online.",
+      "Día 7 (13 sept): dos tramos en bus privado Nohi Bus. Tramo 1: Kanazawa → Shirakawa-go (1h 15m, 16€/persona). Tramo 2: Shirakawa-go → Takayama (50 min, 16€/persona). Los asientos son reservados y en temporada alta se llenan con semanas de antelación. Reservar ambos tramos en nouhibus.co.jp.",
     deadline: "Con varias semanas de antelación",
+  },
+  {
+    id: "hida-express-reserva",
+    category: "reserva",
+    urgency: "alta",
+    title: "Reservar tren Hida Express panorámico (Takayama → Nagoya)",
+    detail:
+      "Día 8 (14 sept): tren panorámico Hida Express de Takayama a Nagoya (2h 30m, ~34€ sin JR Pass). Tren muy popular en septiembre, los asientos reservados se agotan. Con JR Pass la reserva de asiento es gratuita; sin él hay que comprar el billete con antelación en JR Central.",
+    deadline: "Con varias semanas de antelación",
+  },
+  {
+    id: "thunderbird-reserva",
+    category: "reserva",
+    urgency: "media",
+    title: "Reservar tren Thunderbird (Kioto → Kanazawa)",
+    detail:
+      "Día 6 (12 sept): tren Thunderbird de Kioto a Kanazawa (2h, ~43,50€ sin JR Pass). Septiembre es temporada alta en Kanazawa. Con JR Pass la reserva de asiento es gratuita; sin él comprar billete en JR West o taquilla.",
+    deadline: "Con algunas semanas de antelación",
+  },
+  {
+    id: "shinkansen-asientos",
+    category: "reserva",
+    urgency: "media",
+    title: "Reservar asientos en los Shinkansen",
+    detail:
+      "Dos trenes bala clave del viaje: Día 1 (7 sept) Shinkansen Hikari de Estación de Tokio a Kioto (2h 30m, ~85€ sin JR Pass) y Día 9 (15 sept) Shinkansen Nagoya → Tokio (1h 40m, ~50€ sin JR Pass). Con JR Pass la reserva de asiento es gratuita. Sin él, comprar billetes online (Shinkansen booking, Klook) o en taquilla en Narita.",
+    deadline: "Resolver el JR Pass primero, luego reservar con semanas de antelación",
   },
 
   // ── LOGÍSTICA A ORGANIZAR ──────────────────────────────────────────
