@@ -32,9 +32,16 @@ days.forEach((d) => {
   dayByDate[dateNum] = d;
 });
 
+// Solo semanas con algún día del viaje (quita la fila del 28–30, vacía)
+const weeks = [];
+for (let wi = 0; wi < grid.length / 7; wi++) {
+  const week = grid.slice(wi * 7, wi * 7 + 7);
+  if (week.some((d) => d && dayByDate[d])) weeks.push(week);
+}
+
 export default function CalendarPage() {
   const [selectedDayNum, setSelectedDayNum] = useState(null);
-  const selectedDay = selectedDayNum ? days.find(d => d.num === selectedDayNum) : null;
+  const selectedDay = selectedDayNum !== null ? days.find(d => d.num === selectedDayNum) : null;
 
   // Lock body scroll while the mobile modal is open, so the page behind
   // it can't move and the close button/backdrop stay reachable.
@@ -83,10 +90,10 @@ export default function CalendarPage() {
           </div>
 
           {/* weeks */}
-          {Array.from({ length: grid.length / 7 }).map((_, wi) => (
+          {weeks.map((week, wi) => (
             <div key={wi} className="grid grid-cols-7"
-              style={{ borderBottom: wi < grid.length / 7 - 1 ? "1px solid var(--line)" : "none" }}>
-              {grid.slice(wi * 7, wi * 7 + 7).map((dateNum, di) => {
+              style={{ borderBottom: wi < weeks.length - 1 ? "1px solid var(--line)" : "none" }}>
+              {week.map((dateNum, di) => {
                 const tripDay = dateNum ? dayByDate[dateNum] : null;
                 const color = tripDay ? blockColors[tripDay.block]?.bg : null;
                 const isWeekend = di >= 5;
