@@ -59,7 +59,6 @@ export default function MapPage() {
   const [filter, setFilter] = useState("ruta");
 
   const { mapStops, mapFilterData, mapLabels } = useContent();
-  const routeLine = mapStops.map((s) => [s.lat, s.lng]);
 
   const filters = [
     { id: "ruta", label: mapLabels.filterRuta },
@@ -69,6 +68,11 @@ export default function MapPage() {
   ];
 
   const currentMarkers = mapFilterData[filter] || [];
+  // Ruta, hoteles y transportes: línea en orden cronológico del viaje
+  const showChronoLine = filter === "ruta" || filter === "hoteles" || filter === "transportes";
+  const chronoLine = showChronoLine
+    ? currentMarkers.map((s) => [s.lat, s.lng])
+    : [];
 
   return (
     <div className="px-4 pt-3 pb-12">
@@ -119,9 +123,9 @@ export default function MapPage() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
           />
 
-          {filter === "ruta" && (
+          {showChronoLine && chronoLine.length > 1 && (
             <Polyline
-              positions={routeLine}
+              positions={chronoLine}
               pathOptions={{ color: "#1d3557", weight: 3, opacity: 0.55, dashArray: "8, 8" }}
             />
           )}
@@ -159,7 +163,7 @@ export default function MapPage() {
       </div>
 
       <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>
-        {currentMarkers.length} {filter === "ruta" ? mapLabels.paradasOrden : mapLabels.ubicaciones}
+        {currentMarkers.length} {showChronoLine ? mapLabels.paradasOrden : mapLabels.ubicaciones}
       </p>
       <div className="grid gap-2" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }}>
         {currentMarkers.map((stop, idx) => {
