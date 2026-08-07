@@ -140,6 +140,7 @@ export function TopBar({ active, onOpenDrawer }) {
         zIndex: 150,
         backgroundColor: "#4d1c1e",
         ...chromeBg,
+        position: "fixed",
         borderBottom: "1px solid rgba(255,255,255,0.08)",
         boxShadow: "0 2px 12px rgba(0,0,0,0.15)",
       }}

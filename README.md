@@ -2,65 +2,57 @@
 
 Guía de viaje interactiva, *mobile-first* e instalable como **Progressive Web App (PWA)**, diseñada para un grupo de 5 amigos (*"Viaje Morisqueño"*) durante su ruta por Japón del **6 al 21 de septiembre de 2026**.
 
-Sustituye a los tradicionales documentos en PDF/Excel por una aplicación estática de alto rendimiento, optimizada para **funcionar al 100% sin conexión a internet** durante el viaje (en el metro, zonas rurales o sin cobertura de datos).
+Sustituye a los tradicionales documentos en PDF/Excel por una aplicación estática de alto rendimiento, optimizada para **funcionar al 100% sin conexión a internet** mediante la interceptación de peticiones de red vía Service Workers. Ideal para su uso en movimiento (metro, zonas rurales o áreas sin cobertura de datos).
 
 ---
 
 ## ✨ Funcionalidades y Módulos
 
-- 🏠 **Inicio & Hoy** — Detección automática en tiempo real del día del viaje en función de la fecha del dispositivo (mostrando el itinerario activo del día) o cuenta atrás interactiva hasta la salida con resumen del primer día.
-- 📅 **Calendario** — Vista mensual interactiva de Septiembre 2026 en cuadrícula, coloreada por bloques geográficos. Al pulsar en cualquier día se despliega una hoja modal con la agenda completa.
-- 🚇 **Itinerario (15 Días)** — Navegación visual mediante un componente estilizado de mapa de metro/tren japonés (`RouteLine`), separando el viaje en 3 tramos (Kansai, Alpes Japoneses y Tokio) con horarios, actividades y contexto.
-- ✈️ **Vuelos & Hoteles (Info)** — Registro completo de vuelos confirmados con **Qatar Airways** (QR148/QR809 vía Doha) con enlace de seguimiento en vivo (*FlightAware*), así como alojamientos de cada noche con PIN de reserva de Booking y acceso directo a Google Maps.
-- 🚆 **Transportes** — Guía de tarjetas IC (Suica/Pasmo), billetes de Shinkansen, envíos de equipaje (*Takkyubin*) y comparativa financiera del coste real vs. pases JR Pass.
-- 🏛️ **Lugares Imprescindibles** — Catálogo de monumentos, templos y puntos de interés agrupados por regiones con etiquetas descriptivas.
-- 🍜 **Gastronomía (Comidas)** — Guía de platos típicos de la cocina japonesa (Ramen, Takoyaki, Kaiseki, Okonomiyaki...) con consejos de consumo y dónde probarlos.
-- 🗺️ **Mapa Interactivo** — Renderizado espacial interactivo con **Leaflet** que sitúa las paradas clave, aeropuertos y nodos de transporte del recorrido.
-- 🌤️ **Clima** — Previsiones meteorológicas por ciudades para el mes de septiembre y recomendaciones prácticas de vestimenta.
-- 🗣️ **Frases y Etiqueta Cultural** — Glosario interactivo en japonés con **síntesis de voz nativa (TTS vía Web Speech API)** para escuchar la pronunciación correcta, acompañado de normas de comportamiento local (onsen, propinas, palillos, colas).
-- 📋 **Preparativos** — Checklist interactivo de documentación (Pasaporte, Visit Japan Web), electrónica, seguro y divisas, con **persistencia de estado local (`localStorage`)**.
-- 💰 **Presupuesto** — Desglose de costes estimados (totales y por persona) categorizados por vuelos, alojamientos, transporte, comidas y entradas.
-- 🛠️ **Herramientas** — Reloj con hora oficial de Japón (JST) en tiempo real y conversor interactivo de divisas Yen (JPY) ↔ Euro (EUR).
-- 🚨 **Emergencias** — Teléfonos de urgencia en Japón (110 Policía, 119 Ambulancia/Fuego), contacto de la Embajada de España en Tokio y datos del seguro de viaje.
-- 📝 **Cosas Pendientes** — Checklist de tareas organizativas del grupo previas al viaje, con contador de progreso e **indicador visual animado** en la navegación.
-- 📜 **Historia de Japón** — Resumen divulgativo por épocas históricas para contextualizar los lugares a visitar.
+- 🏠 **Inicio & Hoy** — Detección automática en tiempo real del día del viaje iterando sobre el estado temporal local. Muestra el itinerario activo del día o una cuenta atrás algorítmica hasta el despegue.
+- 📅 **Calendario** — Vista mensual interactiva renderizada en CSS Grid. Al pulsar en cualquier nodo diario, se invoca un componente modal con la agenda completa.
+- 🚇 **Itinerario (15 Días)** — Navegación visual mediante un componente custom (`RouteLine`) inspirado en los diagramas de tránsito metropolitano de Tokio, separando lógicamente el viaje en 3 clústeres geográficos (Kansai, Alpes Japoneses y Gran Tokio).
+- ✈️ **Vuelos & Hoteles** — Integración centralizada de telemetría de vuelos (Qatar Airways QR148/QR809) y geolocalización de alojamientos mediante enlaces profundos (Deep Links) a Google Maps y códigos PIN de Booking.
+- 🚆 **Transportes** — Guía operativa sobre logística ferroviaria (Shinkansen, tarjetas IC) y logística de equipajes (Takkyubin).
+- 🗺️ **Mapa Interactivo (Leaflet)** — Renderizado espacial interactivo sin dependencias de APIs de pago comerciales, situando coordenadas geoespaciales clave de la ruta.
+- 🗣️ **Frases y TTS (Text-to-Speech)** — Glosario interactivo en japonés que aprovecha la **Web Speech API (`window.speechSynthesis`)** nativa del navegador para síntesis de voz en tiempo real sin requerir *assets* de audio externos.
+- 📋 **Preparativos** — Checklist interactivo de tareas organizativas implementando **persistencia de estado local (`localStorage`)** para mantener la sincronización entre sesiones.
+- 💰 **Presupuesto** — Desglose financiero calculado dinámicamente desde el modelo de datos.
+- 🛠️ **Herramientas & Clima** — Reloj sincronizado con el huso horario oficial de Japón (JST) y conversor de divisas interactivo JPY ↔ EUR.
 
 ---
 
-## 🧱 Stack Técnico e Infraestructura
+## 🧱 Arquitectura y Stack Técnico
+
+El proyecto está diseñado siguiendo principios arquitectónicos modernos de **Jamstack (JavaScript, APIs, and Markup)**, maximizando el rendimiento (TTFB/LCP) y garantizando la robustez offline.
 
 | Capa | Tecnología | Fundamentación Técnica |
 |---|---|---|
-| **Core Framework** | [React 19](https://react.dev/) + [Vite 8](https://vite.dev/) | Arquitectura SPA estática, tiempos de compilación instantáneos y cero dependencia de backend. |
-| **Estilos & UI** | [Tailwind CSS v4](https://tailwindcss.com/) (`@tailwindcss/vite`) | Utilidades atómicas de última generación combinadas con variables CSS nativas para el sistema de diseño. |
-| **Componentes de Mapa** | [Leaflet](https://leafletjs.com/) + [React-Leaflet](https://react-leaflet.js.org/) | Renderizado de mapas vectoriales interactivos sin necesidad de APIs de pago o librerías pesadas. |
-| **Audio / TTS** | Web Speech API (`window.speechSynthesis`) | Pronunciación nativa de japonés sin carga de archivos de audio externos. |
-| **PWA & Cacheing** | [vite-plugin-pwa](https://vite-pwa-org.netlify.app/) (Workbox) | Service Worker automático con estrategias `skipWaiting` y `clientsClaim` para actualización inmediata de activos offline. |
-| **Iconografía** | [Lucide React](https://lucide.dev/) | Librería de iconos SVG ligeros integrados en el bundle, eliminando peticiones HTTP externas. |
-| **Hosting & CI/CD** | [Vercel](https://vercel.com/) | Despliegue continuo automatizado en cada `push` a la rama `main`. |
+| **Core Framework** | [React 19](https://react.dev/) + [Vite 8](https://vite.dev/) | Arquitectura SPA estática. Vite proporciona Hot Module Replacement (HMR) casi instantáneo y una fase de *build* ultra-optimizada mediante Rollup. |
+| **Estilos & UI** | [Tailwind CSS v4](https://tailwindcss.com/) (`@tailwindcss/vite`) | Motor de utilidades atómicas *just-in-time* (JIT). Diseño completamente *responsive* implementando flexbox avanzado y soporte nativo para *Safe Area Insets* (`env(safe-area-inset-top)`) en dispositivos iOS/Android. |
+| **Mapas Vectoriales**| [Leaflet](https://leafletjs.com/) + React-Leaflet | Renderizado de mapas DOM-basados, proporcionando una huella de memoria minúscula frente a alternativas WebGL. |
+| **Soporte Offline PWA**| [vite-plugin-pwa](https://vite-pwa-org.netlify.app/) (Workbox) | Service Worker autogenerado con estrategias `skipWaiting` y `clientsClaim`. Caché exhaustiva de todos los *assets* estáticos (HTML, JS, CSS, WebP). |
+| **Iconografía** | [Lucide React](https://lucide.dev/) | Iconos SVG optimizados mediante *tree-shaking*, integrados en el *bundle* de JavaScript para evitar latencia de red. |
+| **Hosting & CI/CD** | [Vercel](https://vercel.com/) | Entorno de *Edge Computing*. Despliegues inmutables automatizados con cada `push` a la rama `main` en GitHub. |
 
-### 📂 Estructura de Proyecto
+### 📂 Topología de Directorios y Arquitectura de UI
+
+La interfaz de usuario implementa un patrón **Dual Layout**: 
+- **Desktop (`>= 768px`)**: Barra lateral adhesiva (*Sticky Sidebar*) clásica de aplicaciones web.
+- **Mobile (`< 768px`)**: Implementación estricta *Mobile-First* con un encabezado anclado al Viewport (`position: fixed`) y un panel lateral deslizable (*Drawer*) fuera del flujo de scroll principal, evitando problemas de recálculo de layouts y comportamientos anómalos (rubber-banding) en iOS Safari.
 
 ```
 viaje-japon-sept-2026/
-├── public/                 # Favicons, manifest de la PWA e imágenes estáticas (olas, og-image)
+├── public/                 # Assets estáticos (Favicons, manifest PWA, imágenes WebP)
 ├── src/
-│   ├── components/         # Componentes reutilizables
-│   │   ├── Nav.jsx         # Cabecera fija móvil (TopBar) + menú lateral desplegable (Drawer)
-│   │   ├── BottomNav.jsx   # Barra de navegación móvil inferior
-│   │   ├── DayCard.jsx     # Tarjeta de detalle diario
-│   │   ├── GuideCard.jsx   # Tarjetas de guías temáticas
-│   │   ├── RouteLine.jsx   # Componente visual "Línea de Metro/Tren" del itinerario
-│   │   └── Footer.jsx      # Pie de página global
+│   ├── components/         # Módulos de UI reutilizables
+│   │   ├── Nav.jsx         # Controlador maestro de navegación (TopBar Mobile + Sidebar Desktop)
+│   │   ├── AccessGate.jsx  # Capa de seguridad y control de acceso inicial
+│   │   ├── RouteLine.jsx   # Gráfico SVG/CSS interactivo para líneas de itinerario
+│   │   └── ...
 │   ├── data/
-│   │   └── trip.js         # Única fuente de verdad: vuelos, alojamientos, presupuesto, días y transportes
-│   ├── pages/              # 16 Vistas independientes (Home, Calendario, Itinerario, Info, etc.)
+│   │   └── trip.js         # Single Source of Truth (SSOT). JSON de datos puros.
+│   ├── pages/              # Módulos de vistas enrutadas
 │   ├── utils/
-│   │   ├── date.js         # Cálculo inteligente del día del viaje y estado actual
-│   │   └── maps.js         # Generación de URLs dinámicas a Google Maps
-│   ├── App.jsx             # Enrutado por estado local (`useState`) para máxima velocidad y compatibilidad PWA
-│   ├── index.css           # Tokens de diseño, fuentes de sistema y animaciones
-│   └── main.jsx            # Punto de entrada de React
 ├── index.html              # HTML5 semántico, metas de viewport-fit=cover y theme-color (#4d1c1e)
 ├── vite.config.js          # Configuración del empaquetador y plugins de PWA/Tailwind
 └── package.json            # Dependencias y scripts de construcción
