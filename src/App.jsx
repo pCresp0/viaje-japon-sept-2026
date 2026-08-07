@@ -70,9 +70,9 @@ export default function App() {
           width: "100%",
           maxWidth: 1100,
           margin: "0 auto",
-          paddingTop: "calc(58px + env(safe-area-inset-top))",
+          paddingTop: "calc(58px + env(safe-area-inset-top, 0px))",
         }}>
-          <div className="md-no-top-pad">
+          <div>
             {tab === "pendientes"   && <PendingPage />}
             {tab === "historia"     && <HistoryPage />}
             {tab === "inicio"       && <InicioPage onNavigate={setTab} />}

@@ -37,7 +37,6 @@ const overlay = {
 const chromeBg = {
   ...sidebarBg,
   position: "relative",
-  overflow: "hidden",
 };
 
 const chromeOverlay = {
@@ -135,12 +134,14 @@ export function TopBar({ active, onOpenDrawer }) {
   return (
     <header className="fixed top-0 left-0 right-0 flex items-center gap-3 px-4"
       style={{
-        height: 58,
+        // height total = 58 + safe-area (coincide con el paddingTop de <main>)
+        height: "calc(58px + env(safe-area-inset-top, 0px))",
+        paddingTop: "env(safe-area-inset-top, 0px)",
+        boxSizing: "border-box",
         zIndex: 150,
         ...chromeBg,
         borderBottom: "1px solid rgba(255,255,255,0.08)",
         boxShadow: "0 2px 12px rgba(0,0,0,0.2)",
-        paddingTop: "env(safe-area-inset-top)",
       }}
     >
       <div style={chromeOverlay} />

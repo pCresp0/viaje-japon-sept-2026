@@ -2,20 +2,34 @@ export default function Footer() {
   return (
     <footer style={{
       position: "relative",
-      overflow: "hidden",
-      backgroundImage: "url('/waves-sidebar.webp')",
-      backgroundSize: "cover",
-      backgroundPosition: "center bottom",
+      flexShrink: 0,
+      width: "100%",
       padding: "32px 24px",
+      paddingBottom: "calc(32px + env(safe-area-inset-bottom, 0px))",
       marginTop: "auto",
     }}>
+      {/* Fondo de olas (capa absoluta, no recorta el contenido) */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+          inset: 0,
+          backgroundImage: "url('/waves-sidebar.webp')",
+          backgroundSize: "cover",
+          backgroundPosition: "center bottom",
+          pointerEvents: "none",
+        }}
+      />
       {/* Overlay más opaco que el menú lateral → olas más atenuadas */}
-      <div style={{
-        position: "absolute",
-        inset: 0,
-        background: "linear-gradient(160deg, rgba(77,28,30,0.97) 0%, rgba(122,44,46,0.95) 100%)",
-        pointerEvents: "none",
-      }} />
+      <div
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: "linear-gradient(160deg, rgba(77,28,30,0.97) 0%, rgba(122,44,46,0.95) 100%)",
+          pointerEvents: "none",
+        }}
+      />
 
       <div style={{
         position: "relative",
