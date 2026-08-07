@@ -92,6 +92,13 @@ body {
   color: white;
 }
 
+/* Placeholder del acceso: asteriscos muy difuminados */
+.access-pass-input::placeholder {
+  color: var(--ink-soft);
+  opacity: 0.28;
+  letter-spacing: 0.18em;
+}
+
 /* Smooth page transitions */
 main > div > * {
   animation: fadeIn 0.18s ease-out;

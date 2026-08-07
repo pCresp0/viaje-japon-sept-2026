@@ -178,14 +178,14 @@ export default function AccessGate({ onUnlock }) {
               setValue(e.target.value);
               if (error) setError(false);
             }}
-            placeholder="••••••••"
+            placeholder="************"
             aria-label="Clave"
-            className="w-full rounded-xl px-3.5 py-3.5 text-sm outline-none"
+            className="w-full rounded-xl px-3.5 py-3.5 text-sm outline-none access-pass-input"
             style={{
               background: "var(--paper)",
               border: `1.5px solid ${error ? "var(--shu)" : "var(--line)"}`,
               color: "var(--ink)",
-              letterSpacing: "0.12em",
+              letterSpacing: "0.18em",
               transition: "border-color 0.15s",
             }}
           />
