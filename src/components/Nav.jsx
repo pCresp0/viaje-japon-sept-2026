@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Compass, Route, Plane, Wallet, X, Menu, CalendarDays, MessageCircle, Backpack, ShieldAlert, Train, Heart, Map, Cloud, Clock, ListTodo, Landmark, Hotel, UtensilsCrossed, Home } from "lucide-react";
+import { Compass, Route, Plane, Wallet, X, Menu, CalendarDays, MessageCircle, Backpack, ShieldAlert, Train, Heart, Map, Cloud, Clock, ListTodo, Landmark, Hotel, UtensilsCrossed, Home, Info } from "lucide-react";
 import { useT } from "../i18n";
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -24,6 +24,7 @@ export const tabs = [
   { id: "presupuesto",  labelKey: "nav.presupuesto",  descKey: "nav.desc.presupuesto",  icon: Wallet       },
   { id: "herramientas", labelKey: "nav.herramientas", descKey: "nav.desc.herramientas", icon: Clock        },
   { id: "emergencias",  labelKey: "nav.emergencias",  descKey: "nav.desc.emergencias",  icon: ShieldAlert  },
+  { id: "about",        labelKey: "nav.about",        descKey: "nav.desc.about",        icon: Info         },
 ];
 
 const sidebarBg = {

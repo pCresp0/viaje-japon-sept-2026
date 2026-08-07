@@ -244,6 +244,7 @@ export default {
   "nav.desc.historia": "Contexto histórico ligado a lo que vamos a ver",
   "nav.desc.herramientas": "Hora JST y conversor de moneda JPY-EUR",
   "nav.desc.emergencias": "Seguro médico, embajada y teléfonos útiles",
+  "nav.desc.about": "Detalles técnicos, stack y repositorio del proyecto",
 
   "today.previewTitle": "Vista previa · aún no ha empezado el viaje",
   "today.previewDesc": "Cuando empiece el viaje (desde el 6–7 sept 2026), esta pestaña será la que abra la web por defecto. Aquí veréis automáticamente el día en curso, con horarios, sitios y dónde dormimos. Mientras tanto, se muestra el <strong>Día 1</strong> como ejemplo.",
@@ -285,4 +286,14 @@ export default {
   "places.eyebrow": "Ruta y Puntos de Interés",
   "places.title": "Lugares",
   "places.all": "Todos los lugares",
+
+  "nav.about": "Sobre la web",
+  "about.eyebrow": "Desarrollo",
+  "about.title": "Sobre la web",
+  "about.archTitle": "Arquitectura y Stack",
+  "about.reactDesc": "Para una carga rápida y experiencia de usuario fluida (SPA).",
+  "about.pwaDesc": "Cacheo de recursos usando Workbox para que funcione sin conexión en Japón.",
+  "about.tailwindDesc": "Diseño escalable, utilidades atómicas y estricto enfoque Mobile-First.",
+  "about.i18nDesc": "Arquitectura propia sin dependencias pesadas, fusionando un dataset base estructurado con diccionarios de idiomas.",
+  "about.mapDesc": "Alternativa ligera sin coste a Google Maps API."
 };

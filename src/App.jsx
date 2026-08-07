@@ -20,6 +20,7 @@ import UtilsPage from "./pages/UtilsPage";
 import EmergencyPage from "./pages/EmergencyPage";
 import PendingPage from "./pages/PendingPage";
 import HistoryPage from "./pages/HistoryPage";
+import AboutPage from "./pages/AboutPage";
 import { getTripStatus } from "./utils/date";
 
 function defaultTab() {
@@ -91,6 +92,7 @@ export default function App() {
             {tab === "preparativos" && <PrepPage />}
             {tab === "herramientas" && <UtilsPage />}
             {tab === "emergencias"  && <EmergencyPage />}
+            {tab === "about"        && <AboutPage />}
           </div>
         </main>
 
