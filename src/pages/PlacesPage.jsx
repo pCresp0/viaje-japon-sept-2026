@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Heart, MapPin, Utensils, Coffee } from "lucide-react";
+import { MapPin, Utensils, Coffee, Mountain } from "lucide-react";
 import GuideCard from "../components/GuideCard";
 
 // Lugares que tienen guía detallada disponible (id del lugar → id de la guía)
@@ -11,23 +10,8 @@ const guideFor = {
   ginkaku: "ginkaku-ji",
   senso: "senso-ji",
   meiji: "meiji-jingu",
+  fuji: "fuji",
 };
-
-const STORAGE_KEY = "trip-favorites-v1";
-
-function loadFavorites() {
-  try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-  } catch {
-    return {};
-  }
-}
-
-function saveFavorites(obj) {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(obj));
-  } catch {}
-}
 
 const places = [
   {
@@ -74,26 +58,65 @@ const places = [
 ];
 
 export default function PlacesPage() {
-  const [favorites, setFavorites] = useState(loadFavorites);
-
-  function toggleFavorite(id) {
-    const next = { ...favorites, [id]: !favorites[id] };
-    setFavorites(next);
-    saveFavorites(next);
-  }
-
-  const totalVisited = Object.values(favorites).filter(Boolean).length;
-  const totalPlaces = places.reduce((sum, cat) => sum + cat.items.length, 0);
-
   return (
     <div className="px-4 pt-6 pb-12">
-      <div className="mb-2">
+      <div className="mb-6">
         <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Lugares imprescindibles</p>
-        <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>Lugares favoritos</h2>
+        <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>Lugares</h2>
       </div>
-      <p style={{ fontSize: 13, color: "var(--ink-soft)", marginBottom: 24 }}>
-        {totalVisited} de {totalPlaces} visitados — pulsa el corazón para marcar.
-      </p>
+
+      {/* Excursión Monte Fuji — destacada */}
+      <div className="rounded-2xl overflow-hidden border mb-6" style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
+        <div className="flex items-center gap-3 px-5 py-4" style={{ background: "#1d3557" }}>
+          <div style={{
+            width: 36, height: 36, borderRadius: 10,
+            background: "rgba(255,255,255,0.18)",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            flexShrink: 0,
+          }}>
+            <Mountain size={18} style={{ color: "white" }} />
+          </div>
+          <div className="flex-1">
+            <p style={{ fontSize: 15, fontWeight: 700, color: "white", margin: 0 }}>Excursión al Monte Fuji</p>
+            <p style={{ fontSize: 11.5, color: "rgba(255,255,255,0.7)", margin: 0 }}>Pendiente de reservar · día comodín</p>
+          </div>
+        </div>
+
+        <div className="px-5 py-4 space-y-3">
+          <p style={{ fontSize: 14, color: "var(--ink)", lineHeight: 1.55, margin: 0 }}>
+            Tour de día completo con guía en español. Grupos pequeños, Chureito Pagoda, cataratas Shiraito, bosque Aokigahara y más.
+          </p>
+
+          <div className="rounded-xl p-3.5" style={{ background: "rgba(201,162,39,0.12)", border: "1px solid rgba(201,162,39,0.25)" }}>
+            <p style={{ fontSize: 12.5, color: "var(--ink)", lineHeight: 1.5, margin: 0 }}>
+              <strong>Estrategia:</strong> reservar varios días seguidos (3–4). La noche anterior miráis el tiempo; si amanece despejado, vais ese día y canceláis el resto. En septiembre el Fuji se nubla con facilidad.
+            </p>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 180px), 1fr))", gap: 12 }}>
+            <div>
+              <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 3, fontWeight: 600 }}>Guía</p>
+              <p style={{ fontSize: 13.5, fontWeight: 600, color: "var(--ink)", margin: 0 }}>Ken Kaneshima</p>
+            </div>
+            <div>
+              <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 3, fontWeight: 600 }}>Teléfono</p>
+              <a href="tel:+819058631635" style={{ fontSize: 13.5, fontWeight: 600, color: "var(--indigo)", textDecoration: "none" }}>
+                +81 90-5863-1635
+              </a>
+            </div>
+            <div>
+              <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 3, fontWeight: 600 }}>Empresa</p>
+              <a href="https://excursionesfujiyama.com/" target="_blank" rel="noreferrer" style={{ fontSize: 13.5, fontWeight: 600, color: "var(--shu)", textDecoration: "none" }}>
+                excursionesfujiyama.com ↗
+              </a>
+            </div>
+          </div>
+
+          <div style={{ marginTop: 4 }}>
+            <GuideCard id="fuji" accent="#1d3557" />
+          </div>
+        </div>
+      </div>
 
       <div style={{
         display: "grid",
@@ -103,12 +126,10 @@ export default function PlacesPage() {
       }}>
         {places.map((category, catIdx) => {
           const Icon = category.icon;
-          const categoryVisited = category.items.filter(i => favorites[i.id]).length;
-          
+
           return (
             <div key={catIdx} className="rounded-2xl border overflow-hidden"
               style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
-              {/* header */}
               <div className="flex items-center gap-3 px-5 py-4"
                 style={{ background: category.color }}>
                 <div style={{
@@ -120,67 +141,38 @@ export default function PlacesPage() {
                   <Icon size={18} style={{ color: "white" }} />
                 </div>
                 <div className="flex-1">
-                  <p style={{ fontSize: 15, fontWeight: 700, color: "white" }}>{category.category}</p>
+                  <p style={{ fontSize: 15, fontWeight: 700, color: "white", margin: 0 }}>{category.category}</p>
                 </div>
                 <span style={{
                   fontSize: 11.5, color: "white", fontWeight: 700,
                   background: "rgba(255,255,255,0.18)",
                   padding: "3px 9px", borderRadius: 20,
                 }}>
-                  {categoryVisited}/{category.items.length}
+                  {category.items.length}
                 </span>
               </div>
 
-              {/* places */}
               {category.items.map((place, idx) => (
                 <div
                   key={place.id}
-                  style={{
-                    borderTop: idx > 0 ? "1px solid var(--line)" : "none",
-                    background: favorites[place.id] ? `${category.color}08` : "transparent",
-                    transition: "background 0.15s",
-                  }}
+                  style={{ borderTop: idx > 0 ? "1px solid var(--line)" : "none" }}
                 >
-                  <div className="flex items-start gap-3 w-full text-left px-5 py-4">
-                    <button
-                      onClick={() => toggleFavorite(place.id)}
-                      aria-label={favorites[place.id] ? "Quitar de visitados" : "Marcar como visitado"}
-                      style={{
-                        background: "none",
-                        border: "none",
-                        cursor: "pointer",
-                        padding: 0,
-                        marginTop: 1,
-                        flexShrink: 0,
-                      }}
-                    >
-                      {favorites[place.id]
-                        ? <Heart size={18} style={{ color: category.color, fill: category.color }} />
-                        : <Heart size={18} style={{ color: "var(--line)", fill: "none" }} />
-                      }
-                    </button>
+                  <div className="px-5 py-4">
+                    <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", margin: 0 }}>
+                      {place.name}
+                    </p>
+                    <p style={{ fontSize: 12, color: "var(--ink-soft)", marginBottom: 2 }}>
+                      {place.city}
+                    </p>
+                    <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.5, margin: 0 }}>
+                      {place.desc}
+                    </p>
 
-                    <div className="flex-1 min-w-0">
-                      <p style={{
-                        fontSize: 14, fontWeight: 700,
-                        color: favorites[place.id] ? category.color : "var(--ink)",
-                        textDecoration: favorites[place.id] ? "line-through" : "none",
-                      }}>
-                        {place.name}
-                      </p>
-                      <p style={{ fontSize: 12, color: "var(--ink-soft)", marginBottom: 2 }}>
-                        {place.city}
-                      </p>
-                      <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.5 }}>
-                        {place.desc}
-                      </p>
-
-                      {guideFor[place.id] && (
-                        <div style={{ marginTop: 10 }}>
-                          <GuideCard id={guideFor[place.id]} accent={category.color} />
-                        </div>
-                      )}
-                    </div>
+                    {guideFor[place.id] && (
+                      <div style={{ marginTop: 10 }}>
+                        <GuideCard id={guideFor[place.id]} accent={category.color} />
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}

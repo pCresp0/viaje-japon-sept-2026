@@ -5,22 +5,13 @@
 export const pendingItems = [
   // ── RESERVAS CON FECHA CRÍTICA ─────────────────────────────────────
   {
-    id: "pokemon-cafe",
-    category: "reserva",
-    urgency: "alta",
-    title: "Reservar Pokémon Café (Tokio)",
-    detail:
-      "Se reserva online exactamente 31 días antes y se agota en segundos. Para la comida del día 13 (19 sept), la reserva se abre el 19 de agosto.",
-    deadline: "19 de agosto de 2026 — exactamente 31 días antes",
-  },
-  {
     id: "tour-fuji",
     category: "reserva",
     urgency: "alta",
-    title: "Contratar tour al Monte Fuji",
+    title: "Reservar excursión al Monte Fuji (Ken Kaneshima)",
     detail:
-      "Tour de día completo con guía en español, con ken kaneshima (Excursiones Fujiyama). La estrategia es reservar 3–4 días consecutivos y hacer el primero que amanezca despejado, cancelando el resto. Confirmar antes que su política de cancelación lo permite.",
-    deadline: "Con semanas de antelación — confirmar antes la política de cancelación",
+      "Tour de día completo con guía en español · Excursiones Fujiyama (excursionesfujiyama.com). Contacto: Ken Kaneshima, +81 90-5863-1635. Estrategia: reservar 3–4 días consecutivos; la noche anterior miráis el tiempo y si amanece despejado vais ese día, cancelando el resto. Confirmar antes su política de cancelación.",
+    deadline: "Con semanas de antelación — pendiente de reservar",
   },
   {
     id: "hida-express-reserva",

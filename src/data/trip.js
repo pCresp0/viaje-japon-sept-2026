@@ -82,7 +82,7 @@ export const blocks = [
     bestArea:
       "Shinjuku o Shibuya (mucha vida nocturna y conexión directa al aeropuerto y Fuji) o Ueno/Akihabara (más barato, mejor para cultura pop).",
     fujiStrategy:
-      "No pernoctaremos en el Fuji para no arriesgarnos a que amanezca nublado. Objetivo: contratar un \"Tour Monte Fuji de un día completo con guía en español\" con ken kaneshima (Excursiones Fujiyama). Se reservará para 3-4 días consecutivos y se ejecutará el primero que amanezca despejado, cancelando el resto. Confirmar antes que la política de cancelación del guía lo permite.",
+      "No pernoctaremos en el Fuji para no arriesgarnos a que amanezca nublado. Tour de día completo con guía en español: Ken Kaneshima · Excursiones Fujiyama (excursionesfujiyama.com · +81 90-5863-1635). Pendiente de reservar. Lo ideal: reservar 3–4 días consecutivos, mirar el tiempo la noche anterior y hacer el primero que amanezca despejado, cancelando el resto. Confirmar antes la política de cancelación.",
   },
 ];
 
@@ -472,7 +472,7 @@ export const days = [
       "La industria del videojuego japonesa, liderada por Nintendo, revitalizó la economía cultural del país en los 80. Nakano Broadway nació en los 60 como complejo residencial de lujo, hoy meca del coleccionismo underground.",
     schedule: [
       { time: "10:00", text: "Mega Pokémon Center Ikebukuro y Nintendo Store Tokyo." },
-      { time: "13:30", text: "Comida temática en el Pokémon Café. ⚠️ Reservar online exactamente 31 días antes, se agota en segundos." },
+      { time: "13:30", text: "Comida por la zona de Ikebukuro." },
       { time: "16:00", text: "Tarde de compras de coleccionismo retro, manga y figuras en Nakano Broadway." },
     ],
     money: "Aprox. 40€ (comidas) + compras",
@@ -485,11 +485,11 @@ export const days = [
     title: "Día comodín para el Fuji",
     cities: "Tokio o Fuji",
     summary:
-      "Día marcado como comodín para la excursión al Monte Fuji con ken kaneshima. Si el clima fue mejor los días 10, 11 o 12, la visita ya se habrá hecho y este día se usa para cubrir la ruta de Tokio que se desplazó.",
+      "Día marcado como comodín para la excursión al Monte Fuji con Ken Kaneshima (Excursiones Fujiyama). Pendiente de reservar. Lo suyo es bloquear varios días y decidir la noche anterior según el tiempo. Si el clima fue mejor los días 10–12, la visita ya se habrá hecho y este día se usa para cubrir la ruta de Tokio que se desplazó.",
     history:
       "El Monte Fuji (3.776m) es el pico más alto de Japón, estratovolcán sagrado que ha inspirado el arte sintoísta durante siglos. Ver su cima despejada se considera un poderoso símbolo de buena fortuna.",
     schedule: [
-      { time: "Día completo", text: "Tour Monte Fuji de un día completo con guía en español. Si ya se hizo: día libre para compras en Shibuya, explorar Shimokitazawa, o empaquetar compras." },
+      { time: "Día completo", text: "Tour Monte Fuji con Ken Kaneshima (+81 90-5863-1635 · excursionesfujiyama.com): Chureito Pagoda, cataratas Shiraito, Aokigahara… Si ya se hizo otro día: libre en Shibuya / Shimokitazawa o empaquetar compras." },
     ],
     money: "Excursión Fuji (extra) / aprox. 40€",
   },

@@ -89,7 +89,6 @@ const PLACE_ENTRIES = [
   ["Pokémon Center Shibuya", "Pokemon Center Shibuya"],
   ["Pokémon Center Ikebukuro", "Pokemon Center Mega Tokyo Ikebukuro"],
   ["Nintendo Store Tokyo", "Nintendo TOKYO"],
-  ["Pokémon Café", "Pokemon Cafe Tokyo"],
   ["Nakano Broadway", "Nakano Broadway Tokyo"],
   ["Miyashita Park", "Miyashita Park Shibuya"],
   ["calle Takeshita", "Takeshita Street Harajuku"],

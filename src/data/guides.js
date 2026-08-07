@@ -624,7 +624,7 @@ export const guides = {
       "Hay un dicho japonés: 'Es sabio subir el Fuji una vez, y necio subirlo dos'.",
       "El primer sueño del año con el Fuji se considera de muy buena suerte, especialmente combinado con un halcón y una berenjena.",
     ],
-    tip: "Si el día amanece despejado, la vista se pierde a menudo antes del mediodía. Salir temprano no es opcional.",
+    tip: "Pendiente de reservar con Ken Kaneshima (Excursiones Fujiyama · +81 90-5863-1635 · excursionesfujiyama.com). Reservad varios días y decidid la noche anterior según el tiempo: si amanece despejado, ese es el día.",
   },
 };
 
