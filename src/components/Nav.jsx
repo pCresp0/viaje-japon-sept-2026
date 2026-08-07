@@ -3,11 +3,10 @@ import { Compass, Route, Plane, Wallet, X, Menu, CalendarDays, MessageCircle, Ba
 
 export const tabs = [
   { id: "pendientes",   label: "Cosas pendientes", icon: ListTodo, alert: true },
-  { id: "historia",     label: "Historia de Japón", icon: Landmark },
   { id: "inicio",       label: "Inicio",       icon: Home         },
-  { id: "hoy",          label: "Hoy",          icon: Compass      },
   { id: "calendario",   label: "Calendario",   icon: CalendarDays },
   { id: "itinerario",   label: "Itinerario",   icon: Route        },
+  { id: "hoy",          label: "Hoy",          icon: Compass      },
   { id: "vuelos",       label: "Vuelos",       icon: Plane        },
   { id: "hoteles",      label: "Hoteles",      icon: Hotel        },
   { id: "transportes",  label: "Transportes",  icon: Train        },
@@ -15,6 +14,7 @@ export const tabs = [
   { id: "comidas",      label: "Comidas típicas", icon: UtensilsCrossed },
   { id: "mapa",         label: "Mapa",         icon: Map          },
   { id: "clima",        label: "Clima",        icon: Cloud        },
+  { id: "historia",     label: "Historia de Japón", icon: Landmark },
   { id: "frases",       label: "Frases",       icon: MessageCircle },
   { id: "preparativos", label: "Preparativos", icon: Backpack     },
   { id: "presupuesto",  label: "Presupuesto",  icon: Wallet       },
