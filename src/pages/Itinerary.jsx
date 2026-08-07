@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { days, blocks } from "../data/trip";
 import { formatDateShort } from "../utils/date";
 import DayCard from "../components/DayCard";
+import PlaceText from "../components/PlaceText";
 import { ChevronRight } from "lucide-react";
 
 const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
@@ -58,11 +59,16 @@ export default function Itinerary({ openDay, setOpenDay }) {
                     {d.num}
                   </span>
                   <span className="flex-1 min-w-0">
-                    <span className="block text-[15px] font-medium truncate" style={{ color: "var(--ink)" }}>
-                      {d.title}
-                    </span>
+                    <PlaceText
+                      as="span"
+                      text={d.title}
+                      className="block text-[15px] font-medium truncate"
+                      style={{ color: "var(--ink)" }}
+                      linkStyle={{ color: "var(--shu)" }}
+                    />
                     <span className="block text-xs" style={{ color: "var(--ink-soft)" }}>
-                      {formatDateShort(d.date)} · {d.cities}
+                      {formatDateShort(d.date)} ·{" "}
+                      <PlaceText text={d.cities} linkStyle={{ color: "var(--shu)" }} />
                     </span>
                   </span>
                   <ChevronRight size={18} style={{ color: "var(--ink-soft)" }} />

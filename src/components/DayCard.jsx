@@ -4,6 +4,7 @@ import { blocks, stays } from "../data/trip";
 import { guidesByDay } from "../data/guides";
 import GuideCard from "./GuideCard";
 import StayOption from "./StayOption";
+import PlaceText from "./PlaceText";
 import { formatDateLong } from "../utils/date";
 
 // Auto-detect transport type from schedule text and return matching emoji
@@ -35,8 +36,18 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose }) {
           <p className="eyebrow" style={{ color: "rgba(255,255,255,0.95)" }}>
             {block.emoji} Día {day.num} · {formatDateLong(day.date)}
           </p>
-          <h2 className="font-display text-2xl text-white mt-1 leading-tight">{day.title}</h2>
-          <p className="text-white/85 text-sm mt-1">{day.cities}</p>
+          <PlaceText
+            as="h2"
+            text={day.title}
+            className="font-display text-2xl text-white mt-1 leading-tight"
+            linkStyle={{ color: "white", textDecorationColor: "rgba(255,255,255,0.7)" }}
+          />
+          <PlaceText
+            as="p"
+            text={day.cities}
+            className="text-white/85 text-sm mt-1"
+            linkStyle={{ color: "white", textDecorationColor: "rgba(255,255,255,0.7)" }}
+          />
         </div>
         {onClose && (
           <button
@@ -51,9 +62,13 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose }) {
       </header>
 
       <div className="p-5 space-y-4">
-        <p className="text-[15px] leading-relaxed" style={{ color: "var(--ink)" }}>
-          {day.summary}
-        </p>
+        <PlaceText
+          as="p"
+          text={day.summary}
+          className="text-[15px] leading-relaxed"
+          style={{ color: "var(--ink)" }}
+          linkStyle={{ color: "var(--shu)" }}
+        />
 
         <div>
           <ol className="relative border-l-2 pl-4 space-y-4" style={{ borderColor: "var(--line)" }}>
@@ -68,9 +83,13 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose }) {
                   <p className="font-display text-sm font-bold flex items-center gap-1" style={{ color: block.color }}>
                     {emoji && <span>{emoji}</span>}{s.time}
                   </p>
-                  <p className="text-[14px] leading-snug mt-0.5" style={{ color: "var(--ink)" }}>
-                    {s.text}
-                  </p>
+                  <PlaceText
+                    as="p"
+                    text={s.text}
+                    className="text-[14px] leading-snug mt-0.5"
+                    style={{ color: "var(--ink)" }}
+                    linkStyle={{ color: "var(--shu)" }}
+                  />
                 </li>
               );
             })}
@@ -93,7 +112,8 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose }) {
         {stay && (
           <div className="rounded-xl p-4" style={{ background: "var(--paper)" }}>
             <p className="eyebrow" style={{ color: "var(--indigo)" }}>
-              🏨 Dónde dormimos — {stay.city}
+              🏨 Dónde dormimos —{" "}
+              <PlaceText text={stay.city} linkStyle={{ color: "var(--shu)" }} />
             </p>
             <p className="text-xs mt-0.5" style={{ color: "var(--ink-soft)" }}>
               {stay.nights}
@@ -126,9 +146,13 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose }) {
           <ChevronDown size={16} className={`transition-transform ${showHistory ? "rotate-180" : ""}`} />
         </button>
         {showHistory && (
-          <p className="text-[13.5px] leading-relaxed italic" style={{ color: "var(--ink-soft)" }}>
-            {day.history}
-          </p>
+          <PlaceText
+            as="p"
+            text={day.history}
+            className="text-[13.5px] leading-relaxed italic"
+            style={{ color: "var(--ink-soft)" }}
+            linkStyle={{ color: "var(--shu)", fontStyle: "normal" }}
+          />
         )}
       </div>
     </article>
