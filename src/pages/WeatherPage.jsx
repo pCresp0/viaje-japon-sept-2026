@@ -78,46 +78,46 @@ export default function WeatherPage() {
           }
 
           return (
-            <div key={idx} className="rounded-2xl p-4 shadow-sm relative overflow-hidden" 
+            <div key={idx} className="rounded-[14px] py-2.5 px-3.5 shadow-sm relative overflow-hidden" 
               style={{ background: bg, color: "white" }}>
               {/* Decorational circles for glassmorphism / modern feel */}
               <div style={{
-                position: "absolute", top: "-25%", right: "-10%",
-                width: "160px", height: "160px",
+                position: "absolute", top: "-30%", right: "-5%",
+                width: "120px", height: "120px",
                 background: "rgba(255,255,255,0.12)",
                 borderRadius: "50%", pointerEvents: "none"
               }} />
               <div style={{
-                position: "absolute", bottom: "-30%", right: "15%",
-                width: "100px", height: "100px",
+                position: "absolute", bottom: "-40%", right: "20%",
+                width: "80px", height: "80px",
                 background: "rgba(255,255,255,0.08)",
                 borderRadius: "50%", pointerEvents: "none"
               }} />
 
-              <div className="relative z-10 flex justify-between items-start">
-                <div className="flex items-center gap-2">
-                  <Icon size={18} strokeWidth={2.5} />
-                  <span className="font-semibold" style={{ fontSize: 14, letterSpacing: "0.02em", textShadow: "0 1px 2px rgba(0,0,0,0.1)" }}>
+              <div className="relative z-10 flex justify-between items-center mb-1.5">
+                <div className="flex items-center gap-1.5">
+                  <Icon size={15} strokeWidth={2.5} />
+                  <span className="font-semibold" style={{ fontSize: 13, letterSpacing: "0.02em", textShadow: "0 1px 2px rgba(0,0,0,0.1)" }}>
                     {d.condition}
                   </span>
                 </div>
-                <div className="font-semibold opacity-95" style={{ fontSize: 13, textShadow: "0 1px 2px rgba(0,0,0,0.1)" }}>
+                <div className="font-semibold opacity-95" style={{ fontSize: 12, textShadow: "0 1px 2px rgba(0,0,0,0.1)" }}>
                   Día {d.day}
                 </div>
               </div>
 
-              <div className="relative z-10 flex justify-between items-end mt-5">
-                <div className="flex items-baseline gap-1.5" style={{ textShadow: "0 1px 3px rgba(0,0,0,0.15)" }}>
-                  <span className="font-display font-bold" style={{ fontSize: 36, lineHeight: 1 }}>{d.high}°</span>
-                  <span className="font-medium" style={{ fontSize: 18, opacity: 0.85 }}>/ {d.low}°</span>
+              <div className="relative z-10 flex justify-between items-end">
+                <div className="flex items-baseline gap-1" style={{ textShadow: "0 1px 3px rgba(0,0,0,0.15)" }}>
+                  <span className="font-display font-bold" style={{ fontSize: 28, lineHeight: 1 }}>{d.high}°</span>
+                  <span className="font-medium" style={{ fontSize: 15, opacity: 0.85 }}>/ {d.low}°</span>
                 </div>
                 <div className="text-right">
-                  <div className="flex items-center justify-end gap-1.5 mb-1.5" style={{ fontSize: 12, opacity: 0.9 }}>
-                    <Droplets size={12} strokeWidth={2.5} />
+                  <div className="flex items-center justify-end gap-1 mb-0.5" style={{ fontSize: 11, opacity: 0.9 }}>
+                    <Droplets size={11} strokeWidth={2.5} />
                     <span className="font-medium">{d.rain}% lluvia</span>
                   </div>
-                  <div className="flex items-center justify-end gap-1.5 font-bold" style={{ fontSize: 14, textShadow: "0 1px 2px rgba(0,0,0,0.1)" }}>
-                    <MapPin size={14} strokeWidth={2.5} />
+                  <div className="flex items-center justify-end gap-1 font-bold" style={{ fontSize: 13, textShadow: "0 1px 2px rgba(0,0,0,0.1)" }}>
+                    <MapPin size={12} strokeWidth={2.5} />
                     {d.city}
                   </div>
                 </div>
