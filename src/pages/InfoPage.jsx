@@ -1,7 +1,7 @@
 import { flights, blocks, stays } from "../data/trip";
-import { mapsUrl } from "../utils/maps";
 import { fmtDate } from "../utils/date";
 import { PlaneTakeoff, PlaneLanding, MapPin } from "lucide-react";
+import StayOption from "../components/StayOption";
 
 export default function InfoPage() {
   return (
@@ -65,27 +65,7 @@ export default function InfoPage() {
             )}
             <div className="mt-2 space-y-2">
               {s.options.map((o, i) => (
-                <div key={i} className="rounded-lg px-3 py-2 text-sm" style={{ background: "var(--paper)" }}>
-                  <span className="font-medium block" style={{ color: "var(--ink)" }}>{o.name}</span>
-                  <span className="block text-xs mt-0.5" style={{ color: "var(--ink-soft)" }}>
-                    {o.total}
-                    {o.pin ? ` · PIN ${o.pin}` : ""}
-                  </span>
-                  <span className="flex items-center gap-3 mt-1.5">
-                    <a href={o.url} target="_blank" rel="noreferrer" className="text-xs font-medium" style={{ color: "var(--indigo)" }}>
-                      Ver reserva ↗
-                    </a>
-                    <a
-                      href={mapsUrl(`${o.name}, ${s.city}, Japan`)}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-1 text-xs font-medium"
-                      style={{ color: "var(--shu)" }}
-                    >
-                      <MapPin size={12} /> Cómo llegar ↗
-                    </a>
-                  </span>
-                </div>
+                <StayOption key={i} option={o} city={s.city} />
               ))}
             </div>
           </div>

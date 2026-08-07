@@ -3,9 +3,8 @@ import { ScrollText, Wallet, ChevronDown, ChevronUp } from "lucide-react";
 import { blocks, stays } from "../data/trip";
 import { guidesByDay } from "../data/guides";
 import GuideCard from "./GuideCard";
+import StayOption from "./StayOption";
 import { formatDateLong } from "../utils/date";
-import { mapsUrl } from "../utils/maps";
-import { MapPin } from "lucide-react";
 
 // Auto-detect transport type from schedule text and return matching emoji
 function getScheduleEmoji(text) {
@@ -106,33 +105,7 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose }) {
             )}
             <div className="mt-2 space-y-2">
               {stay.options.map((o, i) => (
-                <div
-                  key={i}
-                  className="rounded-lg px-3 py-2 text-sm border"
-                  style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}
-                >
-                  <span className="font-medium block" style={{ color: "var(--ink)" }}>
-                    {o.name}
-                  </span>
-                  <span className="block text-xs mt-0.5" style={{ color: "var(--ink-soft)" }}>
-                    {o.total}
-                    {o.pin ? ` · PIN ${o.pin}` : ""}
-                  </span>
-                  <span className="flex items-center gap-3 mt-1.5">
-                    <a href={o.url} target="_blank" rel="noreferrer" className="text-xs font-medium" style={{ color: "var(--indigo)" }}>
-                      Ver reserva ↗
-                    </a>
-                    <a
-                      href={mapsUrl(`${o.name}, ${stay.city}, Japan`)}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-1 text-xs font-medium"
-                      style={{ color: "var(--shu)" }}
-                    >
-                      <MapPin size={12} /> Cómo llegar ↗
-                    </a>
-                  </span>
-                </div>
+                <StayOption key={i} option={o} city={stay.city} />
               ))}
             </div>
           </div>
