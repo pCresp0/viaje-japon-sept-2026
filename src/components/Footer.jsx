@@ -1,11 +1,25 @@
 export default function Footer() {
   return (
     <footer style={{
-      background: "linear-gradient(160deg, var(--shu-darker) 0%, var(--shu-deep) 100%)",
+      position: "relative",
+      overflow: "hidden",
+      backgroundImage: "url('/waves-sidebar.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center bottom",
       padding: "32px 24px",
       marginTop: "auto",
     }}>
+      {/* Overlay más opaco que el menú lateral → olas más atenuadas */}
       <div style={{
+        position: "absolute",
+        inset: 0,
+        background: "linear-gradient(160deg, rgba(77,28,30,0.97) 0%, rgba(122,44,46,0.95) 100%)",
+        pointerEvents: "none",
+      }} />
+
+      <div style={{
+        position: "relative",
+        zIndex: 1,
         maxWidth: 1100,
         margin: "0 auto",
         display: "flex",

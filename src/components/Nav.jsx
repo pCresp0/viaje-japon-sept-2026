@@ -33,6 +33,20 @@ const overlay = {
   background: "linear-gradient(160deg, rgba(77,28,30,0.94) 0%, rgba(122,44,46,0.89) 100%)",
 };
 
+// Cabecera / footer: mismas olas, overlay más opaco → patrón más atenuado
+const chromeBg = {
+  ...sidebarBg,
+  position: "relative",
+  overflow: "hidden",
+};
+
+const chromeOverlay = {
+  position: "absolute",
+  inset: 0,
+  background: "linear-gradient(160deg, rgba(77,28,30,0.97) 0%, rgba(122,44,46,0.95) 100%)",
+  pointerEvents: "none",
+};
+
 function NavItems({ active, onChange, onClose }) {
   return tabs.map((t) => {
     const Icon = t.icon;
@@ -123,24 +137,26 @@ export function TopBar({ active, onOpenDrawer }) {
       style={{
         height: 58,
         zIndex: 150,
-        background: "var(--shu-darker)",
+        ...chromeBg,
         borderBottom: "1px solid rgba(255,255,255,0.08)",
         boxShadow: "0 2px 12px rgba(0,0,0,0.2)",
         paddingTop: "env(safe-area-inset-top)",
       }}
     >
+      <div style={chromeOverlay} />
       <button onClick={onOpenDrawer}
-        style={{ color: "rgba(255,255,255,0.8)", padding: 4 }}>
+        style={{ color: "rgba(255,255,255,0.8)", padding: 4, position: "relative", zIndex: 1 }}>
         <Menu size={21} />
       </button>
       <span style={{
         fontFamily: "var(--font-display)", fontSize: 20,
         fontWeight: 700, color: "#fff", flex: 1,
         letterSpacing: "0.01em",
+        position: "relative", zIndex: 1,
       }}>
         {currentTab?.label}
       </span>
-      <span style={{ fontSize: 20 }}>🇯🇵</span>
+      <span style={{ fontSize: 20, position: "relative", zIndex: 1 }}>🇯🇵</span>
     </header>
   );
 }
