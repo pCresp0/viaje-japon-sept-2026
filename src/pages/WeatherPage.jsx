@@ -1,4 +1,4 @@
-import { Cloud, CloudRain, Sun, Wind } from "lucide-react";
+import { Cloud, CloudRain, Sun, CloudSun, MapPin, Droplets } from "lucide-react";
 
 // Approximate weather for September 2026 in Japan (based on historical patterns)
 const weatherData = [
@@ -61,29 +61,70 @@ export default function WeatherPage() {
       </div>
 
       {/* Day-by-day forecast */}
-      <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>Previsión día a día</p>
-      <div className="space-y-2">
-        {dailyWeather.map((d, idx) => (
-          <div key={idx} className="rounded-lg p-3 flex items-center justify-between"
-            style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
-            <div>
-              <p style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)" }}>
-                Día {d.day} — {d.city}
-              </p>
-              <p style={{ fontSize: 12, color: "var(--ink-soft)", marginTop: 2 }}>
-                {d.condition}
-              </p>
+      <p className="eyebrow mb-3 mt-6" style={{ color: "var(--ink-soft)" }}>Previsión día a día</p>
+      <div className="space-y-3">
+        {dailyWeather.map((d, idx) => {
+          let bg = "linear-gradient(135deg, #606C88 0%, #3F4C6B 100%)";
+          let Icon = Cloud;
+          if (d.condition.includes("Soleado")) {
+            bg = "linear-gradient(135deg, #FF7E5F 0%, #FEB47B 100%)";
+            Icon = Sun;
+          } else if (d.condition.includes("Parcialmente")) {
+            bg = "linear-gradient(135deg, #4FACFE 0%, #00F2FE 100%)";
+            Icon = CloudSun;
+          } else if (d.condition.includes("Lluvia")) {
+            bg = "linear-gradient(135deg, #3A7BD5 0%, #3A6073 100%)";
+            Icon = CloudRain;
+          }
+
+          return (
+            <div key={idx} className="rounded-2xl p-4 shadow-sm relative overflow-hidden" 
+              style={{ background: bg, color: "white" }}>
+              {/* Decorational circles for glassmorphism / modern feel */}
+              <div style={{
+                position: "absolute", top: "-25%", right: "-10%",
+                width: "160px", height: "160px",
+                background: "rgba(255,255,255,0.12)",
+                borderRadius: "50%", pointerEvents: "none"
+              }} />
+              <div style={{
+                position: "absolute", bottom: "-30%", right: "15%",
+                width: "100px", height: "100px",
+                background: "rgba(255,255,255,0.08)",
+                borderRadius: "50%", pointerEvents: "none"
+              }} />
+
+              <div className="relative z-10 flex justify-between items-start">
+                <div className="flex items-center gap-2">
+                  <Icon size={18} strokeWidth={2.5} />
+                  <span className="font-semibold" style={{ fontSize: 14, letterSpacing: "0.02em", textShadow: "0 1px 2px rgba(0,0,0,0.1)" }}>
+                    {d.condition}
+                  </span>
+                </div>
+                <div className="font-semibold opacity-95" style={{ fontSize: 13, textShadow: "0 1px 2px rgba(0,0,0,0.1)" }}>
+                  Día {d.day}
+                </div>
+              </div>
+
+              <div className="relative z-10 flex justify-between items-end mt-5">
+                <div className="flex items-baseline gap-1.5" style={{ textShadow: "0 1px 3px rgba(0,0,0,0.15)" }}>
+                  <span className="font-display font-bold" style={{ fontSize: 36, lineHeight: 1 }}>{d.high}°</span>
+                  <span className="font-medium" style={{ fontSize: 18, opacity: 0.85 }}>/ {d.low}°</span>
+                </div>
+                <div className="text-right">
+                  <div className="flex items-center justify-end gap-1.5 mb-1.5" style={{ fontSize: 12, opacity: 0.9 }}>
+                    <Droplets size={12} strokeWidth={2.5} />
+                    <span className="font-medium">{d.rain}% lluvia</span>
+                  </div>
+                  <div className="flex items-center justify-end gap-1.5 font-bold" style={{ fontSize: 14, textShadow: "0 1px 2px rgba(0,0,0,0.1)" }}>
+                    <MapPin size={14} strokeWidth={2.5} />
+                    {d.city}
+                  </div>
+                </div>
+              </div>
             </div>
-            <div style={{ textAlign: "right" }}>
-              <p style={{ fontSize: 13, fontWeight: 700, color: "var(--indigo)" }}>
-                {d.high}° / {d.low}°
-              </p>
-              <p style={{ fontSize: 10, color: "var(--ink-soft)", marginTop: 1 }}>
-                {d.rain}% lluvia
-              </p>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Tips */}
