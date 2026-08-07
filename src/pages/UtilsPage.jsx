@@ -2,9 +2,30 @@ import { useState, useEffect } from "react";
 import { RefreshCw, CheckCircle2, WifiOff } from "lucide-react";
 import { fmtDateTZ } from "../utils/date";
 
+/** Formato ES: 1.234.567 o 12,5 */
+function formatEs(n, { maxDecimals = 0 } = {}) {
+  const num = Number(n);
+  if (!Number.isFinite(num)) return "0";
+  return num.toLocaleString("es-ES", {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: maxDecimals,
+  });
+}
+
+/** Parsea "1.234,56" o "1234.56" → number */
+function parseEs(str) {
+  const raw = String(str ?? "").trim();
+  if (!raw) return 0;
+  const cleaned = raw.includes(",")
+    ? raw.replace(/\./g, "").replace(",", ".")
+    : raw.replace(/[^\d.-]/g, "");
+  const n = parseFloat(cleaned.replace(/[^\d.-]/g, ""));
+  return Number.isFinite(n) ? n : 0;
+}
+
 export default function UtilsPage() {
   const [time, setTime] = useState(new Date());
-  
+
   const [rate, setRate] = useState(() => {
     try {
       const saved = localStorage.getItem("jpy_rate");
@@ -24,11 +45,12 @@ export default function UtilsPage() {
 
   const [loadingRate, setLoadingRate] = useState(false);
   const [isLive, setIsLive] = useState(false);
-  
+
   const [eurInput, setEurInput] = useState(100);
   const [yenInput, setYenInput] = useState(() => Math.round(100 * rate));
+  const [eurText, setEurText] = useState(() => formatEs(100, { maxDecimals: 2 }));
+  const [yenText, setYenText] = useState(() => formatEs(Math.round(100 * rate)));
 
-  // Fetch live exchange rate from free API
   async function fetchLiveRate() {
     setLoadingRate(true);
     try {
@@ -41,7 +63,9 @@ export default function UtilsPage() {
         setIsLive(true);
         const timeStr = new Date().toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit" });
         setLastUpdated(timeStr);
-        setYenInput(Math.round(eurInput * liveJpy));
+        const nextYen = Math.round(eurInput * liveJpy);
+        setYenInput(nextYen);
+        setYenText(formatEs(nextYen));
         try {
           localStorage.setItem("jpy_rate", liveJpy.toString());
           localStorage.setItem("jpy_rate_date", timeStr);
@@ -63,20 +87,27 @@ export default function UtilsPage() {
     return () => clearInterval(timer);
   }, []);
 
-  // Timezone calculation
   const spainTime = time.toLocaleTimeString("es-ES", { timeZone: "Europe/Madrid" });
   const japanTime = time.toLocaleTimeString("ja-JP", { timeZone: "Asia/Tokyo" });
   const spainDate = fmtDateTZ(time, "Europe/Madrid");
   const japanDate = fmtDateTZ(time, "Asia/Tokyo");
 
-  const handleEurChange = (val) => {
+  const handleEurChange = (raw) => {
+    setEurText(raw);
+    const val = parseEs(raw);
     setEurInput(val);
-    setYenInput(Math.round(val * rate));
+    const nextYen = Math.round(val * rate);
+    setYenInput(nextYen);
+    setYenText(formatEs(nextYen));
   };
 
-  const handleYenChange = (val) => {
+  const handleYenChange = (raw) => {
+    setYenText(raw);
+    const val = parseEs(raw);
     setYenInput(val);
-    setEurInput(Math.round((val / rate) * 100) / 100);
+    const nextEur = Math.round((val / rate) * 100) / 100;
+    setEurInput(nextEur);
+    setEurText(formatEs(nextEur, { maxDecimals: 2 }));
   };
 
   return (
@@ -86,11 +117,9 @@ export default function UtilsPage() {
         <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>Hora local y divisas</h2>
       </div>
 
-      {/* Time section */}
       <div className="mb-8">
         <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>Hora actual</p>
         <div className="grid gap-3" style={{ gridTemplateColumns: "1fr 1fr" }}>
-          {/* Spain */}
           <div className="rounded-2xl p-5" style={{ background: "linear-gradient(135deg, rgba(29,53,87,0.1) 0%, rgba(188,71,73,0.1) 100%)", border: "1px solid var(--line)" }}>
             <div className="flex items-center gap-2 mb-3">
               <span style={{ fontSize: 20 }}>🇪🇸</span>
@@ -105,7 +134,6 @@ export default function UtilsPage() {
             <p style={{ fontSize: 11, color: "var(--ink-soft)" }}>{spainDate}</p>
           </div>
 
-          {/* Japan */}
           <div className="rounded-2xl p-5" style={{ background: "linear-gradient(135deg, rgba(46,125,91,0.1) 0%, rgba(201,162,39,0.1) 100%)", border: "1px solid var(--line)" }}>
             <div className="flex items-center gap-2 mb-3">
               <span style={{ fontSize: 20 }}>🇯🇵</span>
@@ -128,7 +156,6 @@ export default function UtilsPage() {
         </div>
       </div>
 
-      {/* Currency converter */}
       <div>
         <div className="flex items-center justify-between mb-3">
           <p className="eyebrow" style={{ color: "var(--ink-soft)" }}>Conversor EUR ↔ JPY</p>
@@ -148,7 +175,6 @@ export default function UtilsPage() {
           </button>
         </div>
 
-        {/* Live rate status card */}
         <div
           className="rounded-xl p-3.5 mb-4 flex items-center justify-between"
           style={{
@@ -164,7 +190,7 @@ export default function UtilsPage() {
             )}
             <div>
               <p style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)", margin: 0 }}>
-                1 € = {rate} ¥
+                1 € = {formatEs(rate, { maxDecimals: 2 })} ¥
               </p>
               <p style={{ fontSize: 11, color: "var(--ink-soft)", margin: 0 }}>
                 {isLive
@@ -176,25 +202,27 @@ export default function UtilsPage() {
         </div>
 
         <div className="space-y-4">
-          {/* EUR input */}
           <div>
             <label style={{ display: "block", fontSize: 12, fontWeight: 600, color: "var(--ink)", marginBottom: 6 }}>
               Euros (€)
             </label>
             <div className="flex gap-2">
               <input
-                type="number"
-                value={eurInput}
-                onChange={(e) => handleEurChange(parseFloat(e.target.value) || 0)}
+                type="text"
+                inputMode="decimal"
+                value={eurText}
+                onChange={(e) => handleEurChange(e.target.value)}
+                onBlur={() => setEurText(formatEs(eurInput, { maxDecimals: 2 }))}
                 style={{
                   flex: 1,
                   padding: "10px 12px",
                   borderRadius: 10,
                   border: "1px solid var(--line)",
-                  fontSize: 14,
+                  fontSize: 16,
                   fontWeight: 600,
                   color: "var(--ink)",
                   background: "var(--paper-raised)",
+                  fontVariantNumeric: "tabular-nums",
                 }}
               />
               <span style={{
@@ -211,28 +239,29 @@ export default function UtilsPage() {
             </div>
           </div>
 
-          {/* Conversion arrow */}
           <div style={{ textAlign: "center", color: "var(--ink-soft)" }}>↕</div>
 
-          {/* YEN input */}
           <div>
             <label style={{ display: "block", fontSize: 12, fontWeight: 600, color: "var(--ink)", marginBottom: 6 }}>
               Yenes (¥)
             </label>
             <div className="flex gap-2">
               <input
-                type="number"
-                value={yenInput}
-                onChange={(e) => handleYenChange(parseFloat(e.target.value) || 0)}
+                type="text"
+                inputMode="numeric"
+                value={yenText}
+                onChange={(e) => handleYenChange(e.target.value)}
+                onBlur={() => setYenText(formatEs(Math.round(yenInput)))}
                 style={{
                   flex: 1,
                   padding: "10px 12px",
                   borderRadius: 10,
                   border: "1px solid var(--line)",
-                  fontSize: 14,
+                  fontSize: 16,
                   fontWeight: 600,
                   color: "var(--ink)",
                   background: "var(--paper-raised)",
+                  fontVariantNumeric: "tabular-nums",
                 }}
               />
               <span style={{
