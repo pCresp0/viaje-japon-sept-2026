@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from "react";
+import { pickBestVoice } from "./voicePicker";
 
 // Reproduce texto en japonés usando la Web Speech API (SpeechSynthesis),
 // nativa del navegador — sin backend, sin coste, sin depender de ningún
@@ -8,13 +9,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 // aproximación fonética.
 
 function pickJapaneseVoice(voices) {
-  // Prioridad: voz específica ja-JP > cualquier voz cuyo lang empiece
-  // por "ja" (por si algún navegador usa otra variante regional).
-  return (
-    voices.find((v) => v.lang === "ja-JP") ||
-    voices.find((v) => v.lang?.toLowerCase().startsWith("ja")) ||
-    null
-  );
+  return pickBestVoice(voices, "ja-JP");
 }
 
 export function useJapaneseSpeech() {

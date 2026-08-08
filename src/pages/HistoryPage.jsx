@@ -14,6 +14,13 @@ function periodSpeechText(period) {
   return parts.filter(Boolean).join("  ");
 }
 
+// Color de acento del periodo. Se usa el valor hexadecimal literal (no
+// "var(--shu)") porque hace falta concatenarle un sufijo de opacidad
+// (p. ej. SHU + "18" = "#bc474918"), y eso sólo funciona con strings de
+// color reales — con una referencia var() la concatenación no es CSS
+// válido y el navegador la descarta en silencio.
+const SHU = "#bc4749";
+
 function PeriodCard({ period, isOpen, onToggle, speak, stop, speakingId, supported }) {
   const { guides } = useContent();
   const isSpeaking = speakingId === period.id;
@@ -21,30 +28,34 @@ function PeriodCard({ period, isOpen, onToggle, speak, stop, speakingId, support
   return (
     <div className="rounded-2xl border overflow-hidden mb-3"
       style={{
-        borderColor: isOpen ? "var(--shu)55" : "var(--line)",
+        borderColor: isOpen ? SHU + "55" : "var(--line)",
         background: "var(--paper-raised)",
         transition: "border-color 0.2s",
       }}>
       <div className="flex items-start gap-2 px-4 py-4"
-        style={{ background: isOpen ? "var(--shu)12" : "transparent", transition: "background 0.2s" }}>
+        style={{ background: isOpen ? SHU + "14" : "transparent", transition: "background 0.2s" }}>
 
         {/* Altavoz — arriba a la izquierda, lee el periodo completo */}
         {supported && (
           <button
             onClick={(e) => { e.stopPropagation(); speak(periodSpeechText(period), period.id); }}
             aria-label="Escuchar este periodo"
+            className="speaker-btn"
             style={{
               flexShrink: 0, marginTop: 1,
-              width: 30, height: 30, borderRadius: "50%",
+              width: 32, height: 32, borderRadius: "50%",
               display: "flex", alignItems: "center", justifyContent: "center",
-              background: isSpeaking ? "var(--shu)" : "var(--shu)15",
-              border: "none", cursor: "pointer",
-              transition: "background 0.15s",
+              background: isSpeaking ? SHU : SHU + "1c",
+              border: `1.5px solid ${isSpeaking ? SHU : SHU + "40"}`,
+              boxShadow: isSpeaking
+                ? `0 2px 8px ${SHU}55`
+                : "0 1px 3px rgba(0,0,0,0.08)",
+              cursor: "pointer",
             }}
           >
             <Volume2
-              size={14}
-              style={{ color: isSpeaking ? "#fff" : "var(--shu)" }}
+              size={15}
+              style={{ color: isSpeaking ? "#fff" : SHU }}
               className={isSpeaking ? "speaking-pulse" : ""}
             />
           </button>
@@ -57,10 +68,10 @@ function PeriodCard({ period, isOpen, onToggle, speak, stop, speakingId, support
         >
           <div style={{
             width: 34, height: 34, borderRadius: 10, flexShrink: 0, marginTop: 1,
-            background: "var(--shu)18",
+            background: SHU + "18",
             display: "flex", alignItems: "center", justifyContent: "center",
           }}>
-            <Scroll size={17} style={{ color: "var(--shu)" }} />
+            <Scroll size={17} style={{ color: SHU }} />
           </div>
 
           <div className="flex-1 min-w-0">

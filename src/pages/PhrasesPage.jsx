@@ -150,13 +150,17 @@ export default function PhrasesPage() {
                 <button
                   onClick={() => speak(p.jp, id)}
                   aria-label={`Escuchar "${p.jp}" en japonés`}
+                  className="speaker-btn"
                   style={{
                     flexShrink: 0, marginTop: 2,
                     width: 34, height: 34, borderRadius: "50%",
                     display: "flex", alignItems: "center", justifyContent: "center",
-                    background: isSpeaking ? current.color : `${current.color}15`,
-                    border: "none", cursor: "pointer",
-                    transition: "background 0.15s",
+                    background: isSpeaking ? current.color : `${current.color}1c`,
+                    border: `1.5px solid ${isSpeaking ? current.color : current.color + "40"}`,
+                    boxShadow: isSpeaking
+                      ? `0 2px 8px ${current.color}55`
+                      : "0 1px 3px rgba(0,0,0,0.08)",
+                    cursor: "pointer",
                   }}
                 >
                   <Volume2

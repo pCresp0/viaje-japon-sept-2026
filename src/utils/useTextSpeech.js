@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from "react";
+import { pickBestVoice } from "./voicePicker";
 
 // Versión genérica de useJapaneseSpeech: lee texto en el idioma que se le
 // indique (BCP-47), en vez de estar fijado siempre a japonés. Se usa para
@@ -13,12 +14,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 const BCP47 = { es: "es-ES", en: "en-US", fr: "fr-FR", tl: "fil-PH" };
 
 function pickVoice(voices, bcp47) {
-  const short = bcp47.slice(0, 2);
-  return (
-    voices.find((v) => v.lang === bcp47) ||
-    voices.find((v) => v.lang?.toLowerCase().startsWith(short)) ||
-    null
-  );
+  return pickBestVoice(voices, bcp47);
 }
 
 export function useTextSpeech(langCode) {
