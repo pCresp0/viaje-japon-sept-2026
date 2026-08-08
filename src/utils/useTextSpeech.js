@@ -79,7 +79,7 @@ export function useTextSpeech(langCode) {
       if (voiceRef.current && voiceLangRef.current === bcp47) {
         utterance.voice = voiceRef.current;
       }
-      utterance.rate = 0.95;
+      utterance.rate = 1.0; // cadencia natural; los ritmos lentos acentúan lo "robótico" en motores de voz más débiles
       utterance.volume = 1;
       utterance.onend = () => setSpeakingId(null);
       utterance.onerror = (e) => {

@@ -50,5 +50,20 @@ export function pickBestVoice(voices, bcp47) {
     }
   }
 
+  // Diagnóstico visible en la consola del navegador (F12 → Console).
+  // No afecta a nadie que no la abra, pero permite ver exactamente qué
+  // voces detecta el dispositivo y cuál se ha elegido — imprescindible
+  // para saber si "no mejora nada" es porque sólo hay una voz disponible
+  // para ese idioma (lo más habitual en móvil) o por otra causa.
+  if (typeof window !== "undefined") {
+    const candidates = voices
+      .filter((v) => v.lang?.toLowerCase().startsWith(bcp47.slice(0, 2).toLowerCase()))
+      .map((v) => `${v.name} (${v.lang}${v.localService ? ", local" : ", red"})`);
+    // eslint-disable-next-line no-console
+    console.log(
+      `[voz ${bcp47}] ${candidates.length} voz(ces) disponible(s): ${candidates.join(" | ") || "ninguna"} → elegida: ${best?.name || "voz por defecto del sistema"}`
+    );
+  }
+
   return bestScore >= 0 ? best : null;
 }
