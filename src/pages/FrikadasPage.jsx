@@ -1,10 +1,57 @@
 import { useState } from "react";
-import { ChevronDown, Sparkles } from "lucide-react";
+import { AlertTriangle, CalendarDays, ChevronDown, ExternalLink, MapPin, Sparkles, Ticket } from "lucide-react";
 import { useT } from "../i18n/LanguageContext";
 import { frikSections } from "../data/frikadas";
-import { TripGeekStops } from "./GeekPage";
+import { geekStops } from "../data/popCulture";
+import { days } from "../data/trip";
 
-function SectionCard({ section, isOpen, onToggle }) {
+const stopStyle = {
+  "en-ruta": { label: "Ya está en la ruta", color: "#2e7d5b" },
+  "desvio-corto": { label: "Desvío corto", color: "#1d6fb8" },
+  "requiere-reserva": { label: "Reserva necesaria", color: "#b47808" },
+  confirmar: { label: "Confirmar antes", color: "#a65a18" },
+  "no-disponible": { label: "No estará disponible", color: "#bc4749" },
+};
+
+const dayInfo = Object.fromEntries(days.map((day) => [day.num, day]));
+const stopsBySection = {
+  pokemon: ["pokemon-kyoto-inspiration", "shibuya-parco", "mega-tokyo"],
+  digimon: ["digimon-tokyo"],
+  tekken: ["akihabara", "nakano-broadway"],
+  nintendo: ["nintendo-kyoto"],
+  ghibli: ["ghibli-mitaka"],
+  godzilla: ["godzilla-shinjuku"],
+};
+const standaloneStops = ["teamlab-planets", "gundam-odaiba"];
+const stopById = Object.fromEntries(geekStops.map((stop) => [stop.id, stop]));
+
+function RouteStop({ stop }) {
+  const state = stopStyle[stop.status];
+  const day = dayInfo[stop.day];
+  return (
+    <article className="rounded-xl overflow-hidden border mt-4" style={{ borderColor: state.color + "55", background: "var(--paper)" }}>
+      <div className="px-3 py-2 flex items-center gap-2" style={{ background: state.color + "12", borderBottom: `1px solid ${state.color}30` }}>
+        <CalendarDays size={14} style={{ color: state.color }} />
+        <span style={{ fontSize: 12, fontWeight: 700, color: "var(--ink)" }}>Día {stop.day} · {day?.weekday} {day?.date.slice(8)} sept</span>
+        <span style={{ marginLeft: "auto", fontSize: 10, fontWeight: 700, color: "white", background: state.color, padding: "3px 7px", borderRadius: 99 }}>{state.label}</span>
+      </div>
+      <div className="p-3.5">
+        <p style={{ fontSize: 14, fontWeight: 700, color: "var(--indigo)", margin: 0 }}>{stop.title}</p>
+        <p className="flex items-center gap-1.5" style={{ color: "var(--ink-soft)", fontSize: 12, margin: "6px 0 10px" }}><MapPin size={13} />{stop.place}</p>
+        <p style={{ fontSize: 12.5, color: "var(--ink)", lineHeight: 1.55, margin: "0 0 8px" }}><strong>En vuestro día:</strong> {stop.plan}</p>
+        <div className="rounded-lg p-2.5 flex gap-2" style={{ background: "rgba(29,53,87,.055)" }}>
+          <Ticket size={14} style={{ color: "var(--indigo)", flexShrink: 0, marginTop: 2 }} />
+          <p style={{ fontSize: 12, color: "var(--ink-soft)", lineHeight: 1.45, margin: 0 }}>{stop.access}</p>
+        </div>
+        <a href={stop.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 mt-2.5" style={{ color: "var(--shu)", fontSize: 12, fontWeight: 700, textDecoration: "none" }}>
+          Fuente oficial <ExternalLink size={12} />
+        </a>
+      </div>
+    </article>
+  );
+}
+
+function SectionCard({ section, stops = [], isOpen, onToggle }) {
   return (
     <div className="rounded-2xl border overflow-hidden mb-3"
       style={{
@@ -57,6 +104,7 @@ function SectionCard({ section, isOpen, onToggle }) {
               </p>
             </div>
           ))}
+          {stops.map((stop) => <RouteStop key={stop.id} stop={stop} />)}
         </div>
       )}
     </div>
@@ -85,16 +133,27 @@ export default function FrikadasPage() {
         </p>
       </div>
 
+      <div className="rounded-xl p-3 mb-5 flex gap-2" style={{ background: "rgba(188,71,73,.08)", border: "1px solid rgba(188,71,73,.22)" }}>
+        <AlertTriangle size={16} style={{ color: "var(--shu)", flexShrink: 0, marginTop: 2 }} />
+        <p style={{ margin: 0, fontSize: 12.5, color: "var(--ink)", lineHeight: 1.5 }}>En cada franquicia, las tarjetas de ruta indican el día, si realmente pasáis por allí y si hace falta entrada o reserva. Comprueba antes los avisos marcados como «Confirmar antes».</p>
+      </div>
+
       {frikSections.map((section) => (
         <SectionCard
           key={section.id}
           section={section}
+          stops={(stopsBySection[section.id] || []).map((id) => stopById[id])}
           isOpen={openId === section.id}
           onToggle={() => handleToggle(section.id)}
         />
       ))}
 
-      <TripGeekStops />
+      <SectionCard
+        section={{ id: "ruta-especial", label: "Gundam y arte digital", emoji: "🤖", color: "#4b5c84", intro: "Dos experiencias de la ruta que no pertenecen a las franquicias anteriores." , items: [] }}
+        stops={standaloneStops.map((id) => stopById[id])}
+        isOpen={openId === "ruta-especial"}
+        onToggle={() => handleToggle("ruta-especial")}
+      />
     </div>
   );
 }
