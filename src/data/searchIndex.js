@@ -1,9 +1,15 @@
-import { flights, stays, days, transports } from "./trip";
+import { flights, stays, days, transports, budget } from "./trip";
 import { foods } from "./foods";
 import { guides, guidesByDay } from "./guides";
 import { pendingItems } from "./pending";
 import { frikSections } from "./frikadas";
 import { geekStops } from "./popCulture";
+import { historyPeriods, furtherReading } from "./history";
+import { weatherData, dailyWeather } from "./weatherData";
+import { stops as mapStops } from "./mapData";
+import { categories as phraseCategories, etiquette } from "../pages/PhrasesPage";
+import { sections as prepSections } from "../pages/PrepPage";
+import { emergencyNumbers, embassy } from "../pages/EmergencyPage";
 
 function normalize(s) {
   return String(s || "")
@@ -253,6 +259,49 @@ function buildSearchIndex() {
     }));
   }
 
+  // ── Historia ──────────────────────────────────────────────────────
+  for (const period of historyPeriods) {
+    items.push(entry({ id: `history-${period.id}`, title: period.title, subtitle: "Historia de Japón", category: "Historia", tab: "historia", terms: [period.title, period.summary, ...(period.content || []).map((block) => block.text)] }));
+  }
+  for (const kind of ["books", "podcasts"]) {
+    for (const item of furtherReading[kind] || []) {
+      items.push(entry({ id: `history-${kind}-${item.title}`, title: item.title, subtitle: kind === "books" ? "Libro recomendado · Historia" : "Podcast recomendado · Historia", category: "Historia", tab: "historia", terms: [item.title, item.author, item.description, item.text, "historia", "japon"] }));
+    }
+  }
+
+  // ── Clima, mapa y presupuesto ─────────────────────────────────────
+  for (const weather of weatherData) {
+    items.push(entry({ id: `weather-${weather.city}`, title: `Clima en ${weather.city}`, subtitle: `${weather.condition} · ${weather.min}–${weather.max} °C`, category: "Clima", tab: "clima", terms: [weather.city, weather.condition, weather.precip, "temperatura", "lluvia", "humedad", "septiembre"] }));
+  }
+  for (const weather of dailyWeather) {
+    items.push(entry({ id: `weather-day-${weather.day}`, title: `Tiempo · Día ${weather.day} · ${weather.city}`, subtitle: `${weather.condition} · ${weather.low}–${weather.high} °C · ${weather.rain}% lluvia`, category: "Clima", tab: "clima", terms: [weather.city, weather.condition, `dia ${weather.day}`, "temperatura", "lluvia", "paraguas"] }));
+  }
+  for (const stop of mapStops) {
+    items.push(entry({ id: `map-${stop.id}`, title: stop.name, subtitle: `Mapa · ${stop.day} · ${stop.city}`, category: "Mapa", tab: "mapa", terms: [stop.name, stop.city, stop.detail, stop.day, "mapa", "ubicacion", "ubicación"] }));
+  }
+  for (const [index, category] of budget.categories.entries()) {
+    items.push(entry({ id: `budget-${index}`, title: category.title, subtitle: `Presupuesto · ${category.total}`, category: "Presupuesto", tab: "presupuesto", terms: [category.title, category.total, ...(category.details || []), "presupuesto", "coste", "precio", "euros"] }));
+  }
+
+  // ── Frases, preparativos y emergencias ─────────────────────────────
+  for (const category of phraseCategories) {
+    for (const phrase of category.phrases) {
+      items.push(entry({ id: `phrase-${category.id}-${phrase.romaji}`, title: phrase.es, subtitle: `Frases · ${phrase.romaji} · ${phrase.jp}`, category: "Frases", tab: "frases", terms: [category.title, phrase.es, phrase.romaji, phrase.jp, "japones", "japonés"] }));
+    }
+  }
+  for (const rule of etiquette) {
+    items.push(entry({ id: `etiquette-${rule.title}`, title: rule.title, subtitle: "Etiqueta en Japón", category: "Frases", tab: "frases", terms: [rule.title, rule.text, "etiqueta", "costumbres"] }));
+  }
+  for (const section of prepSections) {
+    for (const item of section.items) {
+      items.push(entry({ id: `prep-${item.id}`, title: item.text, subtitle: `Preparativos · ${section.title}`, category: "Preparativos", tab: "preparativos", terms: [section.title, item.id, item.text, "maleta", "checklist"] }));
+    }
+  }
+  for (const emergency of emergencyNumbers) {
+    items.push(entry({ id: `emergency-${emergency.number}`, title: `${emergency.label} · ${emergency.number}`, subtitle: emergency.note, category: "Emergencias", tab: "emergencias", terms: [emergency.label, emergency.number, emergency.note, "emergencia", "urgencia"] }));
+  }
+  items.push(entry({ id: "emergency-embassy", title: embassy.name, subtitle: embassy.emergencyPhone, category: "Emergencias", tab: "emergencias", terms: [embassy.name, embassy.address, embassy.phone, embassy.emergencyPhone, embassy.note, "consulado", "emergencia consular"] }));
+
   // ── Pendientes ────────────────────────────────────────────────────
   for (const p of pendingItems) {
     items.push(entry({
@@ -357,9 +406,9 @@ function buildSearchIndex() {
 
 export const searchIndex = buildSearchIndex();
 
-export function searchGlobal(query, { limit = 12 } = {}) {
+export function searchGlobal(query, { limit = 12, minChars = 3 } = {}) {
   const q = normalize(query);
-  if (q.length < 3) return [];
+  if (q.length < minChars) return [];
 
   const scored = [];
   for (const item of searchIndex) {

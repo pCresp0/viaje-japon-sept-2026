@@ -22,6 +22,7 @@ import PendingPage from "./pages/PendingPage";
 import HistoryPage from "./pages/HistoryPage";
 import AboutPage from "./pages/AboutPage";
 import FrikadasPage from "./pages/FrikadasPage";
+import SearchResultHighlight from "./components/SearchResultHighlight";
 import { getTripStatus } from "./utils/date";
 
 function defaultTab() {
@@ -33,6 +34,7 @@ export default function App() {
   const [unlocked, setUnlocked] = useState(() => isUnlocked());
   const [tab, setTab] = useState(defaultTab);
   const [openDay, setOpenDay] = useState(getTripStatus().day?.num ?? null);
+  const [searchResult, setSearchResult] = useState(null);
   const scrollContainerRef = useRef(null);
 
   function goToDay(num) {
@@ -40,7 +42,9 @@ export default function App() {
     setTab("itinerario");
   }
 
-  function handleSearchNavigate({ tab: nextTab, day }) {
+  function handleSearchNavigate(result) {
+    const { tab: nextTab, day } = result;
+    setSearchResult(result);
     if (day != null) setOpenDay(day);
     setTab(nextTab);
   }
@@ -84,6 +88,7 @@ export default function App() {
             // Solo móvil: offset bajo la top bar fija
             paddingTop: "var(--mobile-topbar)",
           }}>
+            {searchResult?.tab === tab && <SearchResultHighlight result={searchResult} onClear={() => setSearchResult(null)} />}
             <div>
               {tab === "pendientes"   && <PendingPage />}
               {tab === "historia"     && <HistoryPage />}

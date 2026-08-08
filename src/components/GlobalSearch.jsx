@@ -20,7 +20,9 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
   const listId = useId();
   const isDesktop = variant === "desktop";
 
-  const results = searchGlobal(query);
+  const shortCode = /^(jr|ic|qr)$/i.test(query.trim());
+  const minChars = shortCode ? 2 : 3;
+  const results = searchGlobal(query, { minChars });
 
   function openPanel() {
     if (btnRef.current) {
@@ -59,8 +61,8 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
     closePanel();
   }
 
-  const showHint = query.trim().length > 0 && query.trim().length < 3;
-  const showEmpty = query.trim().length >= 3 && results.length === 0;
+  const showHint = query.trim().length > 0 && query.trim().length < minChars;
+  const showEmpty = query.trim().length >= minChars && results.length === 0;
 
   return (
     <>
@@ -134,7 +136,7 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
                 type="search"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Buscar vuelo, hotel, ciudad…"
+                placeholder="Buscar vuelo, hotel, Pokémon, seguro…"
                 autoComplete="off"
                 autoCorrect="off"
                 spellCheck={false}
@@ -176,7 +178,7 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
                   color: "var(--ink-soft)",
                   lineHeight: 1.45,
                 }}>
-                  Escribe al menos 3 caracteres. Vuelos, hoteles, códigos, ciudades, comidas…
+                  Escribe al menos 3 caracteres. Vuelos, hoteles, códigos, ciudades, frases, frikadas…
                 </p>
               )}
 
@@ -187,7 +189,7 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
                   fontSize: 12.5,
                   color: "var(--ink-soft)",
                 }}>
-                  Sigue escribiendo… ({3 - query.trim().length} más)
+                  Sigue escribiendo… ({minChars - query.trim().length} más)
                 </p>
               )}
 

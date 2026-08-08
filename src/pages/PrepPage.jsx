@@ -17,7 +17,7 @@ function saveChecked(obj) {
   } catch {}
 }
 
-const sections = [
+export const sections = [
   {
     id: "docs",
     title: "Documentación",

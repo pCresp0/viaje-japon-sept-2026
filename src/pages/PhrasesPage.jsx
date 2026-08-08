@@ -2,7 +2,7 @@ import { useState } from "react";
 import { MessageCircle, Utensils, TrainFront, ShoppingBag, Info, Volume2 } from "lucide-react";
 import { useJapaneseSpeech } from "../utils/useJapaneseSpeech";
 
-const categories = [
+export const categories = [
   {
     id: "basics",
     title: "Básicos",
@@ -61,7 +61,7 @@ const categories = [
   },
 ];
 
-const etiquette = [
+export const etiquette = [
   { title: "Propinas", text: "No se dan propinas en Japón — ni en restaurantes, ni en taxis, ni en hoteles. Insistir puede resultar incluso incómodo para quien la recibe." },
   { title: "Palillos", text: "Nunca se clavan verticalmente en el arroz (recuerda a los rituales funerarios) ni se pasa comida de palillos a palillos." },
   { title: "Volumen y móvil", text: "En el transporte público se habla bajo y las llamadas de teléfono están mal vistas. El modo silencio es la norma." },

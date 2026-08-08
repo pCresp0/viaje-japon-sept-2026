@@ -1,12 +1,12 @@
 import { Phone, MapPin, ShieldAlert, Building2, Hospital } from "lucide-react";
 
-const emergencyNumbers = [
+export const emergencyNumbers = [
   { label: "Policía", number: "110", note: "Emergencias con la policía japonesa" },
   { label: "Ambulancia / Bomberos", number: "119", note: "Emergencias médicas o incendios" },
   { label: "Línea de ayuda turística (JNTO)", number: "050-3816-2787", note: "24h, en inglés — para cualquier problema como turista" },
 ];
 
-const embassy = {
+export const embassy = {
   name: "Embajada de España en Tokio",
   address: "1-3-29 Roppongi, Minato-ku, Tokio 106-0032",
   phone: "+81 3-3583-8531",
