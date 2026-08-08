@@ -17,9 +17,14 @@ export const guideImages = {
   "shirakawa-go":  "/img/places/shirakawa-go.jpg",
   "takayama":      "/img/places/takayama.jpg",
   "nakasendo":     "/img/places/nakasendo.jpg",
-  "senso-ji":      "/img/places/senso-ji.jpg",
+  // "senso-ji" y "shibuya" quitados temporalmente: los ficheros
+  // public/img/places/senso-ji.jpg y shibuya.jpg están corruptos (son
+  // literalmente un cuadrado negro sólido, verificado visualmente el
+  // 2026-08-07 — no es un problema de CSS ni de carga, el archivo en sí
+  // no contiene ninguna foto). Sin entrada aquí, GuideCard simplemente
+  // no muestra imagen para ellos en vez de mostrar el negro. Sustituir
+  // ambos ficheros por fotos reales y volver a añadir la entrada.
   "meiji-jingu":   "/img/places/meiji-jingu.jpg",
-  "shibuya":       "/img/places/shibuya.jpg",
   "akihabara":     "/img/places/akihabara.jpg",
   "teamlab":       "/img/places/teamlab.jpg",
   "fuji":          "/img/places/fuji.jpg",

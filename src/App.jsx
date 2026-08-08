@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import Nav, { Sidebar, DesktopTopBar } from "./components/Nav";
 import Footer from "./components/Footer";
 import AccessGate, { isUnlocked } from "./components/AccessGate";
-import VoiceDebugPanel from "./components/VoiceDebugPanel";
 import InicioPage from "./pages/InicioPage";
 import Home from "./pages/Home";
 import CalendarPage from "./pages/CalendarPage";
@@ -110,8 +109,6 @@ export default function App() {
           <Footer />
         </div>
       </div>
-
-      <VoiceDebugPanel />
     </div>
   );
 }
