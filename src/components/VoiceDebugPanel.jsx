@@ -91,8 +91,10 @@ export default function VoiceDebugPanel() {
           <p style={{ color: "#e8b74a", fontWeight: 700 }}>{lang} ({list.length})</p>
           {list.map((v, i) => (
             <p key={i} style={{ marginLeft: 8 }}>
-              • {v.name} — {v.localService ? "local (más robótica)" : "red (mejor calidad)"}
+              • {v.name} — {v.localService ? "local" : "red (mejor calidad)"}
               {v.default ? " · por defecto" : ""}
+              <br />
+              <span style={{ color: "#888", fontSize: 9.5 }}>{v.voiceURI}</span>
             </p>
           ))}
         </div>

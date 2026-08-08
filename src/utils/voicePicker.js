@@ -31,6 +31,16 @@ function scoreVoice(voice, bcp47) {
   // mejor que el motor offline compacto del dispositivo.
   if (voice.localService === false) score += 20;
 
+  // En iOS/macOS, cuando se descarga la versión Enhanced o Premium de una
+  // voz (Ajustes > Accesibilidad > Contenido hablado > Voces), aparece
+  // con el MISMO nombre que la compacta (p. ej. las dos se llaman
+  // "Kyoko") pero distinto voiceURI interno, que sí suele llevar la
+  // pista de calidad. Sin esto, ambas puntuarían igual y se cogería la
+  // que llegara primero en la lista — a menudo la compacta.
+  const uri = voice.voiceURI?.toLowerCase() || "";
+  if (QUALITY_HINTS.some((hint) => uri.includes(hint))) score += 25;
+  if (uri.includes("compact")) score -= 15;
+
   return score;
 }
 
