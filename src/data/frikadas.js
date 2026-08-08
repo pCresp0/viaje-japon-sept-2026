@@ -132,4 +132,51 @@ export const frikSections = [
       },
     ],
   },
+  {
+    id: "nintendo",
+    label: "Nintendo",
+    emoji: "🎮",
+    color: "#c9302c",
+    intro:
+      "Nintendo es de Kioto — literalmente, tiene su sede allí desde 1889 — y su museo oficial está a apenas 25-30 minutos de donde vais a dormir 5 noches.",
+    items: [
+      {
+        title: "El Nintendo Museum de Uji, a un salto de vuestro hotel en Kioto",
+        body:
+          "Poca gente lo sabe, pero Nintendo nació en Kioto en 1889 como fabricante de cartas hanafuda (todavía las venden) y nunca se ha movido de la ciudad. En octubre de 2024 abrió el Nintendo Museum, en la antigua fábrica de Uji, a solo 10 km del centro — unos 25-30 minutos en el tren de la línea Kintetsu Kyoto desde la propia estación de Kioto, bajando en Ogura.\n\nDentro no hay grandes atracciones: es un recorrido cronológico por toda la historia de la empresa desde las cartas de 1889 hasta hoy, con una sala interactiva donde juegas con un sistema de 'monedas' incluidas en la entrada, un taller para hacer tus propias hanafuda y una cafetería temática con hamburguesas gigantes inspiradas en los power-ups de Mario.\n\n⚠️ El aviso importante: las entradas se venden solo por sorteo mensual a través de una cuenta gratuita de Nintendo, no hay venta en taquilla ni el mismo día — es de las reservas más difíciles de conseguir de todo Japón, a la altura del Ghibli Museum. Si os interesa, hay que entrar en el sorteo desde la web oficial (museum.nintendo.com) con bastante antelación al viaje.",
+      },
+    ],
+  },
+
+  {
+    id: "ghibli",
+    label: "Studio Ghibli",
+    emoji: "🌳",
+    color: "#4d7c4d",
+    intro:
+      "El parque temático oficial de Ghibli está a las afueras de Nagoya — demasiado lejos para meterlo en esta ruta, pero merece la pena que sepáis que existe ahí, tan cerca.",
+    items: [
+      {
+        title: "Ghibli Park, en Nagakute (Aichi), a las afueras de Nagoya",
+        body:
+          "Desde 2022 existe un parque temático oficial de Studio Ghibli (Mi vecino Totoro, El viaje de Chihiro, El castillo ambulante...), dentro del recinto de la antigua Expo de Aichi 2005, en Nagakute — un municipio pegado a Nagoya. No es un parque de atracciones al uso: no hay montañas rusas ni colas, es un recorrido inmersivo por recreaciones a tamaño real de escenas de las películas, repartidas en cinco zonas temáticas (el Gran Almacén de Ghibli, la Colina de la Juventud, el Bosque Dondoko con la casa de Satsuki y Mei, la Aldea de Mononoke y el Valle de las Brujas con el Castillo de Howl).\n\nSon unos 50 minutos desde la estación de Nagoya en tren + el Linimo, un tren de levitación magnética que conecta directamente con el parque. Con el margen de tiempo que tenéis en Nagoya en este viaje (una parada de trasbordo, no una pernocta) no da para meterlo sin descuadrar el resto del itinerario — pero si alguna vez volvéis a la zona de Nagoya con un día entero libre, ya sabéis que está ahí. Las entradas, además, se venden por fecha y hora fija, sólo online, y se agotan en horas.",
+      },
+    ],
+  },
+
+  {
+    id: "godzilla",
+    label: "Godzilla",
+    emoji: "🦖",
+    color: "#3d5c3d",
+    intro:
+      "Si en algún momento os movéis por Shinjuku, hay una cabeza de Godzilla de tamaño real asomando por la azotea de un hotel.",
+    items: [
+      {
+        title: "La cabeza de Godzilla del Hotel Gracery Shinjuku",
+        body:
+          "En la terraza de la octava planta del edificio Shinjuku Toho, en pleno Kabukicho, hay una cabeza de Godzilla a escala real: 12 metros de alto, unas 80 toneladas, instalada en 2015 para la inauguración del edificio y pensada para quedarse de forma permanente por lo bien que funcionó. Cada hora en punto, entre las 12:00 y las 20:00, ruge y echa humo por la boca. Se ve gratis desde la calle, y de cerca se puede acceder desde el Café Bonjour del vestíbulo del Hotel Gracery (aunque el acceso a la propia terraza puede estar restringido a clientes).\n\nGodzilla nació en 1954 en un estudio de cine japonés, el propio Toho, como metáfora nada disimulada del trauma nuclear de Hiroshima y Nagasaki — el director Ishirō Honda lo planteó explícitamente así. Es otro ejemplo más de cómo la cultura pop japonesa que os gusta está construida, una y otra vez, sobre la misma memoria histórica del siglo XX que vais a leer en el apartado de Historia de esta app. No está en vuestra ruta de Asakusa, pero si alguna tarde os acercáis a Shinjuku, es gratis y está a la vista desde la calle.",
+      },
+    ],
+  },
 ];
