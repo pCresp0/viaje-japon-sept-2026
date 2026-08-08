@@ -1,50 +1,92 @@
 import { useState } from "react";
-import { ChevronDown, BookOpen, Headphones, MapPinned, Scroll } from "lucide-react";
-import { useContent, useT } from "../i18n/LanguageContext";
+import { ChevronDown, BookOpen, Headphones, MapPinned, Scroll, Volume2 } from "lucide-react";
+import { useContent, useT, useLang } from "../i18n/LanguageContext";
+import { useTextSpeech } from "../utils/useTextSpeech";
 
-function PeriodCard({ period, defaultOpen = false }) {
-  const [open, setOpen] = useState(defaultOpen);
+// Concatena el contenido de un periodo en un único texto legible en voz
+// alta: título, resumen y cada bloque (encabezado + texto).
+function periodSpeechText(period) {
+  const parts = [period.title, period.summary];
+  period.content?.forEach((block) => {
+    if (block.heading) parts.push(block.heading + ".");
+    if (block.text) parts.push(block.text);
+  });
+  return parts.filter(Boolean).join("  ");
+}
+
+function PeriodCard({ period, isOpen, onToggle, speak, stop, speakingId, supported }) {
   const { guides } = useContent();
+  const isSpeaking = speakingId === period.id;
 
   return (
     <div className="rounded-2xl border overflow-hidden mb-3"
-      style={{ borderColor: open ? "var(--shu)44" : "var(--line)", background: "var(--paper-raised)" }}>
-      <button
-        onClick={() => setOpen((o) => !o)}
-        className="w-full text-left flex items-start gap-3 px-5 py-4"
-        style={{ background: open ? "var(--shu)0d" : "transparent" }}
-      >
-        <div style={{
-          width: 34, height: 34, borderRadius: 10, flexShrink: 0, marginTop: 1,
-          background: "var(--shu)18",
-          display: "flex", alignItems: "center", justifyContent: "center",
-        }}>
-          <Scroll size={17} style={{ color: "var(--shu)" }} />
-        </div>
+      style={{
+        borderColor: isOpen ? "var(--shu)55" : "var(--line)",
+        background: "var(--paper-raised)",
+        transition: "border-color 0.2s",
+      }}>
+      <div className="flex items-start gap-2 px-4 py-4"
+        style={{ background: isOpen ? "var(--shu)12" : "transparent", transition: "background 0.2s" }}>
 
-        <div className="flex-1 min-w-0">
-          <p style={{ fontSize: 11, fontWeight: 700, color: "var(--shu)", letterSpacing: "0.04em" }}>
-            {period.era}
-          </p>
-          <p style={{ fontSize: 16, fontWeight: 700, color: "var(--ink)", fontFamily: "var(--font-display)", marginTop: 1 }}>
-            {period.title}
-          </p>
-          <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.5, marginTop: 3 }}>
-            {period.summary}
-          </p>
-        </div>
+        {/* Altavoz — arriba a la izquierda, lee el periodo completo */}
+        {supported && (
+          <button
+            onClick={(e) => { e.stopPropagation(); speak(periodSpeechText(period), period.id); }}
+            aria-label="Escuchar este periodo"
+            style={{
+              flexShrink: 0, marginTop: 1,
+              width: 30, height: 30, borderRadius: "50%",
+              display: "flex", alignItems: "center", justifyContent: "center",
+              background: isSpeaking ? "var(--shu)" : "var(--shu)15",
+              border: "none", cursor: "pointer",
+              transition: "background 0.15s",
+            }}
+          >
+            <Volume2
+              size={14}
+              style={{ color: isSpeaking ? "#fff" : "var(--shu)" }}
+              className={isSpeaking ? "speaking-pulse" : ""}
+            />
+          </button>
+        )}
 
-        <ChevronDown
-          size={16}
-          style={{
-            color: "var(--shu)", flexShrink: 0, marginTop: 8,
-            transform: open ? "rotate(180deg)" : "none",
-            transition: "transform 0.2s",
-          }}
-        />
-      </button>
+        {/* Cabecera pulsable — abre/cierra el acordeón */}
+        <button
+          onClick={() => { if (isSpeaking) stop(); onToggle(); }}
+          className="flex-1 text-left flex items-start gap-3"
+        >
+          <div style={{
+            width: 34, height: 34, borderRadius: 10, flexShrink: 0, marginTop: 1,
+            background: "var(--shu)18",
+            display: "flex", alignItems: "center", justifyContent: "center",
+          }}>
+            <Scroll size={17} style={{ color: "var(--shu)" }} />
+          </div>
 
-      {open && (
+          <div className="flex-1 min-w-0">
+            <p style={{ fontSize: 11, fontWeight: 700, color: "var(--shu)", letterSpacing: "0.04em" }}>
+              {period.era}
+            </p>
+            <p style={{ fontSize: 16, fontWeight: 700, color: "var(--ink)", fontFamily: "var(--font-display)", marginTop: 1 }}>
+              {period.title}
+            </p>
+            <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.5, marginTop: 3 }}>
+              {period.summary}
+            </p>
+          </div>
+
+          <ChevronDown
+            size={16}
+            style={{
+              color: "var(--shu)", flexShrink: 0, marginTop: 8,
+              transform: isOpen ? "rotate(180deg)" : "none",
+              transition: "transform 0.2s",
+            }}
+          />
+        </button>
+      </div>
+
+      {isOpen && (
         <div className="px-5 pb-5" style={{ borderTop: "1px solid var(--line)", paddingTop: 16 }}>
           {period.content.map((block, i) => (
             <div key={i} style={{ marginBottom: 14 }}>
@@ -92,6 +134,17 @@ function PeriodCard({ period, defaultOpen = false }) {
 export default function HistoryPage() {
   const { historyPeriods, furtherReading, guides } = useContent();
   const t = useT();
+  const { lang } = useLang();
+  const { supported, speakingId, speak, stop } = useTextSpeech(lang);
+
+  // Acordeón exclusivo: sólo un periodo abierto a la vez. Al abrir uno
+  // distinto se cierra automáticamente el que estuviera abierto.
+  const [openId, setOpenId] = useState(null);
+
+  function handleToggle(id) {
+    setOpenId((current) => (current === id ? null : id));
+  }
+
   return (
     <div className="px-4 pt-3 pb-12">
       <div className="mb-6">
@@ -100,12 +153,21 @@ export default function HistoryPage() {
           Historia de Japón
         </h2>
         <p style={{ fontSize: 13, color: "var(--ink-soft)", marginTop: 8, lineHeight: 1.6 }}>
-          Un recorrido por más de 2.000 años de historia japonesa, organizado por periodos, con referencias directas a los lugares concretos que vais a visitar durante el viaje. Pulsa cada periodo para desplegarlo.
+          Un recorrido por más de 2.000 años de historia japonesa, organizado por periodos, con referencias directas a los lugares concretos que vais a visitar durante el viaje. Pulsa cada periodo para desplegarlo, o el altavoz para escucharlo.
         </p>
       </div>
 
       {historyPeriods.map((period) => (
-        <PeriodCard key={period.id} period={period} />
+        <PeriodCard
+          key={period.id}
+          period={period}
+          isOpen={openId === period.id}
+          onToggle={() => handleToggle(period.id)}
+          speak={speak}
+          stop={stop}
+          speakingId={speakingId}
+          supported={supported}
+        />
       ))}
 
       {/* Further reading */}
