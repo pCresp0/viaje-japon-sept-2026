@@ -21,6 +21,7 @@ export default {
   "nav.presupuesto": "Presupuesto",
   "nav.herramientas": "Herramientas",
   "nav.emergencias": "Emergencias",
+  "nav.frikadas": "Frikadas",
 
   // ── Genéricos ─────────────────────────────────────────────────────
   "common.day": "Día",
@@ -245,6 +246,7 @@ export default {
   "nav.desc.herramientas": "Hora JST y conversor de moneda JPY-EUR",
   "nav.desc.emergencias": "Seguro médico, embajada y teléfonos útiles",
   "nav.desc.about": "Detalles técnicos, stack y repositorio del proyecto",
+  "nav.desc.frikadas": "Pokémon, Digimon, Dragon Ball y todo lo freak que hay cerca de la ruta",
 
   "today.previewTitle": "Vista previa · aún no ha empezado el viaje",
   "today.previewDesc": "Cuando empiece el viaje (desde el 6–7 sept 2026), esta pestaña será la que abra la web por defecto. Aquí veréis automáticamente el día en curso, con horarios, sitios y dónde dormimos. Mientras tanto, se muestra el <strong>Día 1</strong> como ejemplo.",
@@ -288,6 +290,8 @@ export default {
   "places.all": "Todos los lugares",
 
   "nav.about": "Sobre la web",
+  "frikadas.eyebrow": "Para frikis",
+  "frikadas.title": "Frikadas",
   "about.eyebrow": "Desarrollo",
   "about.title": "Sobre la web",
   "about.archTitle": "Arquitectura y Stack",
