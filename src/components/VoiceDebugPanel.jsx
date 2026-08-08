@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 /**
  * Panel de diagnóstico de voces disponibles para síntesis de voz.
@@ -10,6 +10,7 @@ import { useState, useEffect } from "react";
 export default function VoiceDebugPanel() {
   const [enabled, setEnabled] = useState(false);
   const [voices, setVoices] = useState([]);
+  const [filter, setFilter] = useState("");
 
   useEffect(() => {
     try {
@@ -29,26 +30,62 @@ export default function VoiceDebugPanel() {
     return () => window.speechSynthesis.removeEventListener("voiceschanged", load);
   }, [enabled]);
 
+  const filtered = useMemo(() => {
+    if (!filter) return voices;
+    const f = filter.toLowerCase();
+    return voices.filter((v) => v.lang?.toLowerCase().startsWith(f));
+  }, [voices, filter]);
+
   if (!enabled) return null;
 
-  const grouped = voices.reduce((acc, v) => {
+  const grouped = filtered.reduce((acc, v) => {
     const key = v.lang || "?";
     (acc[key] ||= []).push(v);
     return acc;
   }, {});
 
+  const quickFilters = [
+    { code: "", label: `Todas (${voices.length})` },
+    { code: "ja", label: "Japonés" },
+    { code: "es", label: "Español" },
+    { code: "en", label: "Inglés" },
+    { code: "fr", label: "Francés" },
+    { code: "tl", label: "Tagalo" },
+    { code: "fil", label: "Filipino" },
+  ];
+
   return (
     <div style={{
       position: "fixed", bottom: 12, left: 12, right: 12,
-      maxHeight: "50vh", overflowY: "auto",
-      background: "rgba(20,20,20,0.94)", color: "#fff",
+      maxHeight: "60vh", overflowY: "auto",
+      background: "rgba(20,20,20,0.96)", color: "#fff",
       borderRadius: 12, padding: 14, zIndex: 99999,
       fontSize: 11, fontFamily: "monospace", lineHeight: 1.5,
     }}>
       <p style={{ fontWeight: 700, marginBottom: 8 }}>
         🔊 Voces detectadas ({voices.length} total)
       </p>
-      {voices.length === 0 && <p>Ninguna voz cargada todavía…</p>}
+
+      <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 10 }}>
+        {quickFilters.map((qf) => (
+          <button
+            key={qf.code}
+            onClick={() => setFilter(qf.code)}
+            style={{
+              fontSize: 10.5, padding: "4px 10px", borderRadius: 20,
+              border: "1px solid rgba(255,255,255,0.25)",
+              background: filter === qf.code ? "#e8b74a" : "transparent",
+              color: filter === qf.code ? "#1b1f27" : "#fff",
+              fontWeight: filter === qf.code ? 700 : 400,
+              cursor: "pointer",
+            }}
+          >
+            {qf.label}
+          </button>
+        ))}
+      </div>
+
+      {filtered.length === 0 && <p>Sin resultados para este filtro.</p>}
       {Object.entries(grouped).sort().map(([lang, list]) => (
         <div key={lang} style={{ marginBottom: 8 }}>
           <p style={{ color: "#e8b74a", fontWeight: 700 }}>{lang} ({list.length})</p>
