@@ -299,5 +299,7 @@ export default {
   "about.pwaDesc": "Cacheo de recursos usando Workbox para que funcione sin conexión en Japón.",
   "about.tailwindDesc": "Diseño escalable, utilidades atómicas y estricto enfoque Mobile-First.",
   "about.i18nDesc": "Arquitectura propia sin dependencias pesadas, fusionando un dataset base estructurado con diccionarios de idiomas.",
-  "about.mapDesc": "Alternativa ligera sin coste a Google Maps API."
+  "about.mapDesc": "Alternativa ligera sin coste a Google Maps API.",
+  "geek.eyebrow": "Anime, juegos y cine",
+  "geek.title": "Frikadas en la ruta"
 };

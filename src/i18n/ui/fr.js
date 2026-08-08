@@ -15,6 +15,7 @@ export default {
   "nav.mapa": "Carte",
   "nav.clima": "Météo",
   "nav.historia": "Histoire du Japon",
+  "nav.frikadas": "Culture geek",
   "nav.frases": "Phrases",
   "nav.preparativos": "Préparatifs",
   "nav.presupuesto": "Budget",

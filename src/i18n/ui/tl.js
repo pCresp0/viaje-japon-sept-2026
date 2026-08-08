@@ -20,6 +20,7 @@ export default {
   "nav.mapa": "Mapa",
   "nav.clima": "Panahon",
   "nav.historia": "Kasaysayan ng Japan",
+  "nav.frikadas": "Geek na hinto",
   "nav.frases": "Mga parirala",
   "nav.preparativos": "Paghahanda",
   "nav.presupuesto": "Badyet",

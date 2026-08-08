@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ChevronDown, Sparkles } from "lucide-react";
 import { useT } from "../i18n/LanguageContext";
 import { frikSections } from "../data/frikadas";
+import { TripGeekStops } from "./GeekPage";
 
 function SectionCard({ section, isOpen, onToggle }) {
   return (
@@ -92,6 +93,8 @@ export default function FrikadasPage() {
           onToggle={() => handleToggle(section.id)}
         />
       ))}
+
+      <TripGeekStops />
     </div>
   );
 }
