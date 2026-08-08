@@ -184,7 +184,7 @@ export const historyPeriods = [
       },
       {
         heading: "Del samurái al robot: la imagen exterior de Japón",
-        text: "El Japón que hoy fascina a viajeros de todo el mundo combina de forma muy visible ambas caras de su historia: templos y jardines de más de mil años conviviendo con los neones de Shibuya o Akihabara. No es casualidad que estudios de videojuegos y animación hayan bebido tan directamente de ese patrimonio histórico real para construir sus propios mundos de ficción — desde el Kinkaku-ji reconvertido en la Bell Tower de Pokémon hasta el cruce de Shibuya inmortalizado en Digimon y en decenas de películas.",
+        text: "El Japón que hoy fascina a viajeros de todo el mundo combina de forma muy visible ambas caras de su historia: templos y jardines de más de mil años conviviendo con los neones de Shibuya o Akihabara. No es casualidad que estudios de videojuegos y animación hayan bebido tan directamente de ese patrimonio histórico real para construir sus propios mundos de ficción — desde el Kinkaku-ji reconvertido en la Torre Campana de Pokémon hasta el cruce de Shibuya inmortalizado en Digimon y en decenas de películas.",
       },
       {
         heading: "La era Reiwa",

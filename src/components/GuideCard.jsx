@@ -151,7 +151,7 @@ export default function GuideCard({ id, accent = "#1d3557" }) {
                         {ref.title}
                       </span>
                     </div>
-                    <p style={{ fontSize: 12.5, color: "var(--ink)", lineHeight: 1.6, margin: 0 }}>
+                    <p style={{ fontSize: 12.5, color: "var(--ink)", lineHeight: 1.6, margin: 0, whiteSpace: "pre-line" }}>
                       {ref.detail}
                     </p>
                   </div>

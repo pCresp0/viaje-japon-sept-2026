@@ -3,34 +3,45 @@
 // rodajes de películas famosas. Contenido opcional, mismo patrón que las
 // guías: no aparece salvo que se abra explícitamente.
 //
-// Fuentes: Bulbapedia, Wikimon, y reportajes de viaje especializados en
-// localizaciones reales (Whimsy Soul, TheGamer, Sakuraco, Movie Locations,
-// Tokyo Fox, Japan Travel/JNTO). Cada dato incluido tiene respaldo directo
-// en esas fuentes; se ha evitado especular sobre conexiones no confirmadas.
+// NOMBRES EN ESPAÑOL DE ESPAÑA: todos los topónimos, títulos de juego y
+// nombres de episodio usan la localización de España (no la de
+// Hispanoamérica, que en varios casos difiere — p. ej. "Ciudad Iris" en
+// España es "Ciudad Ecruteak" en Hispanoamérica; "Ciudad Malva" es
+// "Ciudad Violeta"). Cuando el nombre inglés original es útil para
+// buscar más información, se indica entre paréntesis.
+//
+// Fuentes: Bulbapedia, Wikidex y Pokémon Wiki en español, WikiDex,
+// Doblaje España Wiki, la web oficial de episodios de Digimon España,
+// y reportajes de viaje especializados en localizaciones reales
+// (Whimsy Soul, TheGamer, Sakuraco, Movie Locations, Tokyo Fox).
+// Cada dato incluido tiene respaldo directo en esas fuentes; donde la
+// conexión es una interpretación muy extendida pero no una confirmación
+// oficial del estudio, se indica explícitamente en vez de darla por
+// hecho.
 
 export const popCulture = {
   "kinkaku-ji": [
     {
       franchise: "pokemon",
-      title: "Bell Tower de Ecruteak City",
+      title: "La Torre Campana de Ciudad Iris, y el origen de Ho-Oh",
       detail:
-        "El Kinkaku-ji es la inspiración directa y confirmada de la Bell Tower de Ecruteak City en Pokémon Oro/Plata/Cristal. El motivo definitivo: sobre el tejado del Kinkaku-ji hay una estatua dorada de un fénix (hō-ō, 鳳凰), y de ahí sale directamente el nombre y diseño del Pokémon legendario Ho-Oh. En el juego, Ho-Oh resucita a los tres Pokémon legendarios tras el incendio de la Burned Tower — un eco casi literal de que el propio Kinkaku-ji ardió en 1950 y fue reconstruido.",
+        "El Kinkaku-ji es, con diferencia, la conexión Pokémon más citada de todo Kioto. Sobre su tejado hay una estatua dorada de un fénix (hō-ō, 鳳凰) — y de ahí sale, letra por letra, el nombre del Pokémon legendario Ho-Oh. Su silueta dorada y emplumada también coincide con el diseño real de la estatua. Esta conexión nunca ha sido confirmada oficialmente por Game Freak, pero es la interpretación más repetida entre fans y guías de viaje especializadas, y la coincidencia visual es difícil de ignorar una vez la ves en persona. \n\nEn el juego, Ho-Oh habita en la Torre Campana (llamada Torre Hojalata en las versiones originales Pokémon Oro y Plata de 1999/2000 y en Pokémon Cristal; renombrada Torre Campana en los remakes Pokémon Oro HeartGold y Plata SoulSilver de 2009/2010), situada en Ciudad Iris — la ciudad de Johto que representa al Kioto tradicional. Ho-Oh es, además, el Pokémon de portada de Pokémon Oro y de Pokémon Oro HeartGold (Lugia es el de Plata/Plata SoulSilver).\n\nHay un segundo paralelismo, todavía más fuerte: el Kinkaku-ji real ardió por completo en 1950 (un monje novicio le prendió fuego) y fue reconstruido en 1955. En el juego, la Torre Quemada (antes Torre Latón) — el otro edificio gemelo de Ciudad Iris, hoy en ruinas — ardió hace siglos con los tres Pokémon legendarios (Raikou, Entei y Suicune) atrapados dentro. Fue el propio Ho-Oh quien descendió y los revivió entre las cenizas. Un templo que arde y resurge, junto a otro que también ardió y resurgió: la coincidencia temática es total.",
     },
   ],
   "ginkaku-ji": [
     {
       franchise: "pokemon",
-      title: "Referencia junto al Kinkaku-ji",
+      title: "El otro pabellón de Ciudad Iris",
       detail:
-        "Kinkaku-ji (Pabellón Dorado) y Ginkaku-ji (Pabellón Plateado) son, como pareja, la referencia visual detrás de Ecruteak City al completo en Pokémon Oro/Plata: la ciudad de Johto que representa el Kioto tradicional, con sus torres, danzas y arquitectura histórica.",
+        "Kinkaku-ji (Pabellón Dorado) y Ginkaku-ji (Pabellón Plateado) funcionan como pareja visual: son la referencia real detrás del ambiente completo de Ciudad Iris (Ecruteak City) en Pokémon Oro, Plata y Cristal — la ciudad más tradicional y 'antigua' de la región de Johto, con sus torres gemelas, sus danzas de las Chicas Kimono y su arquitectura de madera oscura. Si el Kinkaku-ji es la Torre Campana con Ho-Oh, el Ginkaku-ji representa el mismo espíritu de refinamiento sobrio que impregna toda la ciudad en el juego.",
     },
   ],
   "todai-ji": [
     {
       franchise: "pokemon",
-      title: "Sprout Tower de Violet City",
+      title: "Ciudad Malva y la Torre Bellsprout",
       detail:
-        "Nara es la referencia real detrás de Violet City en Pokémon Oro/Plata, y sus pagodas de madera (especialmente Kōfuku-ji, muy cerca de Todai-ji) inspiraron la Sprout Tower, el primer gimnasio del juego. La zona de Nara —templos antiguos, tono espiritual, ciervos sueltos— se corresponde con el ambiente inicial y 'educativo' de esa parte del juego.",
+        "Nara es la referencia real detrás de Ciudad Malva (Violet City en inglés; Ciudad Violeta en el doblaje de Hispanoamérica), la tercera ciudad de Johto en Pokémon Oro, Plata y Cristal. El propio Bulbapedia (la enciclopedia Pokémon de referencia) confirma que el diseño de la Torre Bellsprout — la gran pagoda oscilante que domina la ciudad, custodiada por los 'Pensadores' — está inspirado directamente en templos budistas de la prefectura de Nara, citando expresamente el Kōfuku-ji (a un paseo del Todai-ji) y el Hōryū-ji.\n\nOjo con un matiz importante que mucha gente confunde: la Torre Bellsprout NO es el gimnasio de Ciudad Malva. Es una prueba previa opcional donde hay que vencer a varios Pensadores para conseguir la MT Destello. El gimnasio real de Ciudad Malva —de tipo Volador, con Pegaso (Falkner en inglés) como líder— es un edificio distinto, en el centro de la ciudad. Ambos aparecen en Pokémon Oro y Plata (1999/2000), Pokémon Cristal, y en los remakes Pokémon Oro HeartGold y Plata SoulSilver (2009/2010).",
     },
   ],
   "gion": [
@@ -60,9 +71,9 @@ export const popCulture = {
   "shibuya": [
     {
       franchise: "digimon",
-      title: "Shibuya en Digimon Adventure y Tamers",
+      title: "\"Pumpkinmon y Gotsumon. Dos Digimons de Shibuya\" — Digimon Adventure, episodio 33",
       detail:
-        "La estación de Shibuya aparece como localización real y explícita en Digimon Adventure (Yamato, Gabumon, Takeru y Patamon la usan como punto de partida en un episodio) y el cruce de Shibuya es una localización recurrente en Digimon Tamers. Tokio, y especialmente el eje Odaiba–Shibuya, es el escenario real sobre el que se construye todo el universo de Digimon Adventure.",
+        "Shibuya tiene su propio episodio dedicado dentro de la serie original Digimon Adventure (1999), la primera temporada de la franquicia, tal y como se emitió y tituló en España: el episodio 33, 'Pumpkinmon y Gotsumon. Dos Digimons de Shibuya'. Forma parte del tramo final de la temporada, cuando los Digimon compañeros llegan al Tokio real (Hikarigaoka, la bahía de Tokio, Odaiba y Shibuya aparecen todos por nombre en títulos de episodios consecutivos de este arco) huyendo del Digimundo. Es uno de los pocos momentos de todo el anime clásico de Digimon en el que un barrio real y reconocible de Tokio se convierte en el título explícito de un episodio.",
     },
     {
       franchise: "pelicula",
