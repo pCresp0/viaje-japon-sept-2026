@@ -2,6 +2,8 @@ import { flights, stays, days, transports } from "./trip";
 import { foods } from "./foods";
 import { guides, guidesByDay } from "./guides";
 import { pendingItems } from "./pending";
+import { frikSections } from "./frikadas";
+import { geekStops } from "./popCulture";
 
 function normalize(s) {
   return String(s || "")
@@ -210,6 +212,44 @@ function buildSearchIndex() {
       category: "Lugares",
       tab: "lugares",
       terms: [g.name, g.jp, gid.replace(/-/g, " "), g.tagline],
+    }));
+  }
+
+  // ── Frikadas ──────────────────────────────────────────────────────
+  // Un resultado por tema para que una búsqueda lleve directamente al
+  // apartado correcto, tanto si se busca una franquicia como un personaje,
+  // lugar, tienda o término concreto de cultura pop.
+  const franchiseTerms = {
+    pokemon: ["pokemon", "pokémon", "pikachu", "mewtwo", "ho oh", "ho-oh", "lugia", "raikou", "entei", "suicune", "johto", "ciudad iris", "ecruteak", "torre campana", "torre quemada", "ciudad malva", "violet city", "bellsprout", "campana", "pokemon center", "pokecenter"],
+    digimon: ["digimon", "digimon adventure", "agumon", "gabumon", "tai", "taichi", "matt", "yamato", "patamon", "gatomon", "pumpkinmon", "gotsumon", "odaiba", "digimundo"],
+    dragonball: ["dragon ball", "dragonball", "goku", "son goku", "vegeta", "bulma", "toriyama", "akira toriyama", "kamehameha", "namek", "saiyan", "saiyan", "shonen jump"],
+    doraemon: ["doraemon", "doraemon", "nobita", "dorayaki", "fujiko f fujio", "puerta magica", "dokodemo door", "kawasaki"],
+    shinchan: ["shin chan", "shinchan", "crayon shin chan", "crayon shin-chan", "shinnosuke", "nohara", "kasukabe"],
+    tekken: ["tekken", "heihachi", "kazuya", "jin kazama", "mishima", "mishima zaibatsu", "bandai namco", "arcade", "maquinas recreativas"],
+    nintendo: ["nintendo", "mario", "super mario", "zelda", "link", "kirby", "splatoon", "animal crossing", "pokemon", "game boy", "switch", "hanafuda", "nintendo museum", "nintendo tokyo", "nintendo kyoto"],
+    ghibli: ["ghibli", "studio ghibli", "miyazaki", "totoro", "chihiro", "el viaje de chihiro", "mononoke", "howl", "castillo ambulante", "kiki", "ghibli park", "museo ghibli", "mitaka"],
+    godzilla: ["godzilla", "gojira", "kaiju", "toho", "kabukicho", "kabukichō", "hotel gracery", "shinjuku"],
+  };
+  for (const section of frikSections) {
+    for (const [index, item] of section.items.entries()) {
+      items.push(entry({
+        id: `frikada-${section.id}-${index}`,
+        title: `${section.label} · ${item.title}`,
+        subtitle: "Frikadas",
+        category: "Frikadas",
+        tab: "frikadas",
+        terms: [section.label, section.intro, item.title, item.body, ...(franchiseTerms[section.id] || [])],
+      }));
+    }
+  }
+  for (const stop of geekStops) {
+    items.push(entry({
+      id: `frikada-ruta-${stop.id}`,
+      title: `${stop.franchise} · ${stop.title}`,
+      subtitle: `Frikadas · Día ${stop.day} · ${stop.place}`,
+      category: "Frikadas",
+      tab: "frikadas",
+      terms: [stop.franchise, stop.title, stop.place, stop.relation, stop.plan, stop.access, "frikadas", "friki", "freak", "anime", "manga", "videojuegos", "juegos"],
     }));
   }
 
