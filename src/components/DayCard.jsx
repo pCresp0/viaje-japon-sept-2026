@@ -6,6 +6,7 @@ import GuideCard from "./GuideCard";
 import StayOption from "./StayOption";
 import PlaceText from "./PlaceText";
 import { formatDateLong } from "../utils/date";
+import { parseDayNumbers } from "../utils/mapDay";
 
 // Auto-detect transport type from schedule text and return matching emoji
 function getScheduleEmoji(text) {
@@ -20,11 +21,14 @@ function getScheduleEmoji(text) {
 
 export default function DayCard({ day, defaultOpenHistory = false, onClose, onViewMap }) {
   const [showHistory, setShowHistory] = useState(defaultOpenHistory);
-  const { blocks, stays } = useContent();
+  const { blocks, stays, mapStops } = useContent();
   const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
   const block = blockById[day.block];
   const stay = stays.find((s) => s.afterDay === day.num);
   const dayGuides = guidesByDay[day.num] || [];
+  // Días de puro traslado (vuelo de ida/vuelta) no tienen ninguna parada
+  // propia en el mapa — en esos casos no tiene sentido ofrecer "Ver mapa".
+  const hasMapStops = mapStops.some((s) => parseDayNumbers(s.day).includes(day.num));
 
   return (
     <article
@@ -49,9 +53,9 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
             linkStyle={{ color: "white", textDecorationColor: "rgba(255,255,255,0.7)" }}
           />
         </div>
-        {(onViewMap || onClose) && (
+        {((onViewMap && hasMapStops) || onClose) && (
           <div className="shrink-0 mt-0.5 flex items-center gap-2">
-            {onViewMap && (
+            {onViewMap && hasMapStops && (
               <button
                 onClick={onViewMap}
                 className="flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium"
