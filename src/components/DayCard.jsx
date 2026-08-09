@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ScrollText, ChevronDown, ChevronUp } from "lucide-react";
+import { ScrollText, ChevronDown, ChevronUp, Map } from "lucide-react";
 import { useContent } from "../i18n/LanguageContext";
 import { guidesByDay } from "../data/guides";
 import GuideCard from "./GuideCard";
@@ -18,7 +18,7 @@ function getScheduleEmoji(text) {
   return null;
 }
 
-export default function DayCard({ day, defaultOpenHistory = false, onClose }) {
+export default function DayCard({ day, defaultOpenHistory = false, onClose, onViewMap }) {
   const [showHistory, setShowHistory] = useState(defaultOpenHistory);
   const { blocks, stays } = useContent();
   const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
@@ -49,15 +49,29 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose }) {
             linkStyle={{ color: "white", textDecorationColor: "rgba(255,255,255,0.7)" }}
           />
         </div>
-        {onClose && (
-          <button
-            onClick={onClose}
-            aria-label="Cerrar"
-            className="shrink-0 mt-0.5 rounded-full p-1"
-            style={{ background: "rgba(255,255,255,0.18)", color: "white" }}
-          >
-            <ChevronUp size={18} />
-          </button>
+        {(onViewMap || onClose) && (
+          <div className="shrink-0 mt-0.5 flex items-center gap-2">
+            {onViewMap && (
+              <button
+                onClick={onViewMap}
+                className="flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium"
+                style={{ background: "rgba(255,255,255,0.18)", color: "white" }}
+              >
+                <Map size={14} />
+                Ver mapa
+              </button>
+            )}
+            {onClose && (
+              <button
+                onClick={onClose}
+                aria-label="Cerrar"
+                className="rounded-full p-1"
+                style={{ background: "rgba(255,255,255,0.18)", color: "white" }}
+              >
+                <ChevronUp size={18} />
+              </button>
+            )}
+          </div>
         )}
       </header>
 

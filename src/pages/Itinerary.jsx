@@ -7,7 +7,7 @@ import { ChevronRight } from "lucide-react";
 import { useHighlight } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 
-export default function Itinerary({ openDay, setOpenDay }) {
+export default function Itinerary({ openDay, setOpenDay, onGoToMapDay }) {
   const { days, blocks } = useContent();
   const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
   const refs = useRef({});
@@ -47,7 +47,7 @@ export default function Itinerary({ openDay, setOpenDay }) {
               className={"itinerary-day-anchor" + (isHighlighted ? " search-highlight-pulse" : "")}
             >
               {isOpen ? (
-                <DayCard day={d} onClose={() => setOpenDay(null)} />
+                <DayCard day={d} onClose={() => setOpenDay(null)} onViewMap={() => onGoToMapDay?.(d.num)} />
               ) : (
                 <button
                   onClick={() => setOpenDay(d.num)}

@@ -66,10 +66,10 @@ function parseDayNumbers(dayStr) {
   return matches.map(Number);
 }
 
-export default function MapPage({ onGoToDay }) {
+export default function MapPage({ onGoToDay, initialDay }) {
   const [selected, setSelected] = useState(null);
-  const [filter, setFilter] = useState("ruta");
-  const [subDay, setSubDay] = useState(null); // día concreto dentro del filtro "dias", null = todos
+  const [filter, setFilter] = useState(initialDay != null ? "dias" : "ruta");
+  const [subDay, setSubDay] = useState(initialDay ?? null); // día concreto dentro del filtro "dias", null = todos
 
   const { mapStops, mapFilterData, mapLabels, days } = useContent();
   const dayInfo = Object.fromEntries(days.map((d) => [d.num, d]));
@@ -282,6 +282,15 @@ export default function MapPage({ onGoToDay }) {
       <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>
         {currentMarkers.length} {showChronoLine ? mapLabels.paradasOrden : mapLabels.ubicaciones}
       </p>
+
+      {isSingleDayDetail && currentMarkers.length === 0 && (
+        <div className="rounded-xl p-4 mb-4" style={{ background: "var(--paper)", border: "1px solid var(--line)" }}>
+          <p style={{ fontSize: 13, color: "var(--ink-soft)", lineHeight: 1.5 }}>
+            El {mapLabels.diaLabel.toLowerCase()} {subDay} es de viaje/traslado y no tiene paradas propias en el mapa.
+          </p>
+        </div>
+      )}
+
       <div className="grid gap-2" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }}>
         {currentMarkers.map((stop, idx) => {
           const isActive = selected === stop.id;

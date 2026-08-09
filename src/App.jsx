@@ -37,6 +37,7 @@ export default function App() {
   const [tab, setTab] = useState(defaultTab);
   const [openDay, setOpenDay] = useState(getTripStatus().day?.num ?? null);
   const [searchResult, setSearchResult] = useState(null);
+  const [mapInitialDay, setMapInitialDay] = useState(null);
   const scrollContainerRef = useRef(null);
   const { triggerHighlight } = useHighlight();
 
@@ -46,6 +47,14 @@ export default function App() {
     // Mismo pulso dorado que usa el buscador: confirma visualmente a qué
     // día concreto se ha saltado, venga la navegación de "Hoy" o del mapa.
     window.setTimeout(() => triggerHighlight(slug("itinerary-day", num)), 120);
+  }
+
+  function goToMapDay(num) {
+    setMapInitialDay(num);
+    setTab("mapa");
+    // Se consume una sola vez al montar MapPage: si luego se vuelve al
+    // Mapa desde el menú normal, que no arrastre el filtro de este día.
+    window.setTimeout(() => setMapInitialDay(null), 300);
   }
 
   function handleSearchNavigate(result) {
@@ -107,14 +116,14 @@ export default function App() {
               {tab === "inicio"       && <InicioPage onNavigate={setTab} />}
               {tab === "hoy"          && <Home onGoToDay={goToDay} />}
               {tab === "calendario"   && <CalendarPage />}
-              {tab === "itinerario"   && <Itinerary openDay={openDay} setOpenDay={setOpenDay} />}
+              {tab === "itinerario"   && <Itinerary openDay={openDay} setOpenDay={setOpenDay} onGoToMapDay={goToMapDay} />}
               {tab === "vuelos"       && <InfoPage />}
               {tab === "hoteles"      && <HotelsPage />}
               {tab === "transportes"  && <TransportPage />}
               {tab === "presupuesto"  && <BudgetPage />}
               {tab === "lugares"      && <PlacesPage />}
               {tab === "comidas"      && <FoodsPage />}
-              {tab === "mapa"         && <MapPage onGoToDay={goToDay} />}
+              {tab === "mapa"         && <MapPage onGoToDay={goToDay} initialDay={mapInitialDay} />}
               {tab === "clima"        && <WeatherPage />}
               {tab === "frases"       && <PhrasesPage />}
               {tab === "preparativos" && <PrepPage />}
