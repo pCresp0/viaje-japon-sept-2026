@@ -56,25 +56,50 @@ function FitBounds({ markers }) {
   return null;
 }
 
+// Extrae los números de día de un texto tipo "Día 3", "Días 7–8",
+// "Day 1", "Jour 14"... Funciona igual en cualquier idioma porque sólo
+// busca dígitos, no palabras — así no depende de cómo esté traducida la
+// etiqueta. Un rango como "7–8" devuelve [7, 8]; un día suelto, [3].
+function parseDayNumbers(dayStr) {
+  const matches = String(dayStr || "").match(/\d+/g);
+  if (!matches) return [];
+  return matches.map(Number);
+}
+
 export default function MapPage() {
   const [selected, setSelected] = useState(null);
   const [filter, setFilter] = useState("ruta");
+  const [subDay, setSubDay] = useState(null); // día concreto dentro del filtro "dias", null = todos
 
   const { mapStops, mapFilterData, mapLabels } = useContent();
 
   const filters = [
     { id: "ruta", label: mapLabels.filterRuta },
+    { id: "dias", label: mapLabels.filterDias },
     { id: "hoteles", label: mapLabels.filterHoteles },
     { id: "excursiones", label: mapLabels.filterExcursiones },
     { id: "transportes", label: mapLabels.filterTransportes },
   ];
 
-  const currentMarkers = mapFilterData[filter] || [];
-  // Ruta, hoteles y transportes: línea en orden cronológico del viaje
-  const showChronoLine = filter === "ruta" || filter === "hoteles" || filter === "transportes";
+  // Días que realmente tienen alguna parada en el mapa, en orden.
+  const availableDays = [...new Set(mapStops.flatMap((s) => parseDayNumbers(s.day)))].sort((a, b) => a - b);
+
+  const isDaysFilter = filter === "dias";
+  const currentMarkers = isDaysFilter
+    ? (subDay == null ? mapStops : mapStops.filter((s) => parseDayNumbers(s.day).includes(subDay)))
+    : (mapFilterData[filter] || []);
+
+  // Ruta, hoteles, transportes y días: línea en orden cronológico del viaje
+  const showChronoLine = filter === "ruta" || filter === "hoteles" || filter === "transportes" || isDaysFilter;
   const chronoLine = showChronoLine
     ? currentMarkers.map((s) => [s.lat, s.lng])
     : [];
+
+  function selectFilter(id) {
+    setFilter(id);
+    setSelected(null);
+    if (id !== "dias") setSubDay(null);
+  }
 
   return (
     <div className="px-4 pt-3 pb-12">
@@ -83,6 +108,7 @@ export default function MapPage() {
         <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>{mapLabels.mapaDeLaRuta}</h2>
         <p style={{ fontSize: 13, color: "var(--ink-soft)", marginTop: 6, lineHeight: 1.5 }}>
           {filter === "ruta" && `${mapStops.length} ${mapLabels.descRuta}`}
+          {filter === "dias" && mapLabels.descDias}
           {filter === "hoteles" && `${mapLabels.descHoteles}`}
           {filter === "excursiones" && `${mapLabels.descExcursiones}`}
           {filter === "transportes" && `${mapLabels.descTransportes}`}
@@ -93,7 +119,7 @@ export default function MapPage() {
         {filters.map((f) => (
           <button
             key={f.id}
-            onClick={() => { setFilter(f.id); setSelected(null); }}
+            onClick={() => selectFilter(f.id)}
             className="px-4 py-1.5 rounded-full shrink-0 transition-colors"
             style={{
               fontSize: 14,
@@ -108,6 +134,42 @@ export default function MapPage() {
           </button>
         ))}
       </div>
+
+      {isDaysFilter && (
+        <div className="flex gap-1.5 overflow-x-auto pb-4 mb-2" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+          <button
+            onClick={() => setSubDay(null)}
+            className="px-3 py-1 rounded-full shrink-0 transition-colors"
+            style={{
+              fontSize: 12.5,
+              fontWeight: 600,
+              backgroundColor: subDay == null ? "var(--indigo)" : "rgba(0,0,0,0.03)",
+              color: subDay == null ? "#fff" : "var(--ink-soft)",
+              border: subDay == null ? "1px solid var(--indigo)" : "1px solid rgba(0,0,0,0.1)",
+              WebkitTapHighlightColor: "transparent",
+            }}
+          >
+            {mapLabels.todosLosDias}
+          </button>
+          {availableDays.map((n) => (
+            <button
+              key={n}
+              onClick={() => setSubDay(n)}
+              className="px-3 py-1 rounded-full shrink-0 transition-colors"
+              style={{
+                fontSize: 12.5,
+                fontWeight: 600,
+                backgroundColor: subDay === n ? "var(--indigo)" : "rgba(0,0,0,0.03)",
+                color: subDay === n ? "#fff" : "var(--ink-soft)",
+                border: subDay === n ? "1px solid var(--indigo)" : "1px solid rgba(0,0,0,0.1)",
+                WebkitTapHighlightColor: "transparent",
+              }}
+            >
+              {mapLabels.diaLabel} {n}
+            </button>
+          ))}
+        </div>
+      )}
 
       <style dangerouslySetInnerHTML={{__html: `
         .flex.gap-2::-webkit-scrollbar { display: none; }
@@ -132,18 +194,24 @@ export default function MapPage() {
             />
           )}
 
-          {currentMarkers.map((stop, idx) => (
+          {currentMarkers.map((stop, idx) => {
+            const primaryDay = parseDayNumbers(stop.day)[0];
+            const badge = isDaysFilter && primaryDay != null ? primaryDay : idx + 1;
+            return (
             <Marker
               key={stop.id}
               position={[stop.lat, stop.lng]}
-              icon={createIcon(stop.emoji, stop.color, idx + 1)}
+              icon={createIcon(stop.emoji, stop.color, badge)}
               eventHandlers={{ click: () => setSelected(stop.id) }}
               opacity={selected && selected !== stop.id ? 0.7 : 1}
             >
               <Popup>
                 <div style={{ fontFamily: "var(--font-body)", minWidth: 160 }}>
                   <p style={{ fontSize: 11, color: stop.color, fontWeight: 700, marginBottom: 2 }}>
-                    {filter === "ruta" ? `${mapLabels.parada} ${idx + 1} · ` : `${mapLabels.no} ${idx + 1} · `}{stop.day}
+                    {isDaysFilter
+                      ? (primaryDay != null ? `${mapLabels.diaLabel} ${primaryDay} · ` : "")
+                      : (filter === "ruta" ? `${mapLabels.parada} ${idx + 1} · ` : `${mapLabels.no} ${idx + 1} · `)}
+                    {stop.day}
                   </p>
                   <p style={{ fontWeight: 700, fontSize: 14, marginBottom: 2 }}>{stop.name}</p>
                   <p style={{ fontSize: 12, color: "#5a6070", marginBottom: 6 }}>{stop.detail}</p>
@@ -158,7 +226,8 @@ export default function MapPage() {
                 </div>
               </Popup>
             </Marker>
-          ))}
+            );
+          })}
 
           <FitBounds markers={currentMarkers} />
         </MapContainer>
@@ -170,6 +239,8 @@ export default function MapPage() {
       <div className="grid gap-2" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }}>
         {currentMarkers.map((stop, idx) => {
           const isActive = selected === stop.id;
+          const primaryDay = parseDayNumbers(stop.day)[0];
+          const badge = isDaysFilter && primaryDay != null ? primaryDay : idx + 1;
           return (
             <Highlightable key={stop.id} id={slug("map", stop.id)}>
             <a
@@ -194,12 +265,12 @@ export default function MapPage() {
                 display: "flex", alignItems: "center", justifyContent: "center",
                 fontSize: 11, fontWeight: 700, flexShrink: 0,
               }}>
-                <span className="mr-1">{idx + 1}</span>
+                <span className="mr-1">{badge}</span>
                 <span style={{ fontSize: 12 }}>{stop.emoji}</span>
               </div>
               <div style={{ flex: 1 }}>
                 <p style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)", marginBottom: 1 }}>
-                  {idx + 1}. {stop.name}
+                  {isDaysFilter ? stop.name : `${idx + 1}. ${stop.name}`}
                 </p>
                 <p style={{ fontSize: 12, color: "var(--ink-soft)" }}>{stop.day}</p>
               </div>
