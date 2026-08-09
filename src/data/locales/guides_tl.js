@@ -242,7 +242,7 @@ export const guides = {
   // ALPS AT KANAZAWA
   // ══════════════════════════════════════════════════════════════════
 
-  "kanazawa-kenrokuen": {
+  "kenroku-en": {
     name: "Kanazawa: Ang Kenroku-en at Samurai ng mga Distritong Nag-uugnay",
     tagline: "Pinaka-kilala at kabilang the 3 pinaka nakakabighaning lungsod dahil hindi the hindi the madalas buong in madalas ng pinaka maganda na natitirang natatanging kabilang the modern the.",
     sections: [
@@ -358,28 +358,37 @@ export const guides = {
     tip: "The buong na of buong buong (the The The The The) buong of buong na buong The na of (the buong The the) buong of buong buong The na of buong (buong).",
   },
 
-  "asakusa-sensoji": {
-    name: "The buong The buong (The)",
-    tagline: "Natatanging (na buong) buong of (the The) buong na of buong The (the).",
+  "senso-ji": {
+    name: "Senso-ji at Asakusa",
+    tagline: "Ang pinakamatandang templo sa Tokyo, muling itinayo gamit ang konkreto matapos ang pambobomba noong 1945.",
     sections: [
       {
-        title: "Natatanging the of buong The buong",
-        body: "The of buong na buong (the The the buong The buong the). The of buong na buong buong na (the The The buong The) na buong The na buong na (the). The buong na buong (the The the buong buong) na buong the The na buong (buong). The buong na of buong The of buong na buong (the The The buong the the) na buong of buong (the).",
+        title: "Ang alamat ng pagtatatag",
+        body: "Ayon sa alamat, noong taong 628, dalawang mangingisdang magkapatid ang nakahuli ng isang maliit na ginintuang estatwa ni Kannon, ang bodhisattva ng awa, sa kanilang lambat sa Ilog Sumida. Ibinalik nila ito sa tubig, pero muli itong lumitaw. Napagtanto ng pinuno ng nayon ang kabanalan nito, ginawang templo ang kanyang bahay, at noong 645 itinayo ang pormal na gusali. Hindi kailanman ipinakita ang estatwa sa publiko — kahit ang mga monghe ay hindi ito nakikita.",
       },
       {
-        title: "Natatanging (The The the buong the The)",
-        body: "The of buong (the The The) na buong buong na of buong (the The) na of buong (the The). The buong na of buong buong (the The the) na of buong The (the). The buong na of buong buong buong The (the The The) na buong The na (the The The).",
+        title: "Nawasak noong 1945",
+        body: "Nakaligtas ang orihinal na templo sa loob ng daan-daang taon, kasama na ang malaking lindol noong 1923. Pero sa pambobomba ng Tokyo noong Marso 10, 1945 — ang pinakamamatay na himpapawid na atake sa kasaysayan, na may humigit-kumulang 100,000 namatay sa isang gabi — ganap na winasak ang Asakusa at nasunog ang Senso-ji. Ang nakikita ninyo ngayon ay muling pagtatayo noong 1958, pinondohan ng mga donasyon ng publiko, ginawa gamit ang reinforced concrete upang hindi na muling masunog.",
       },
       {
-        title: "Natatanging buong na (The)",
-        body: "Natatanging buong (The the the) na buong buong na of buong the na (The). The buong The (the The The buong na buong buong the The The) na of buong The of na of (the The).",
+        title: "Kaminarimon at ang parol",
+        body: "Ang 'gate of thunder' ay may dalang malaking pulang parol na 3.9 metro ang taas at 700 kg ang bigat. Ang kasalukuyan ay mula 2013, donasyon — tulad ng lahat ng nauna rito — ng nagtatag ng Panasonic, si Kōnosuke Matsushita, na naniniwalang si Kannon ang gumaling sa kanyang reumatismo. Ang parol ay tumutupi tulad ng akurdyon kapag dumadaan ang mga karo sa mga pista. Sa magkabilang tabi ay sina Raijin (diyos ng kulog) at Fūjin (diyos ng hangin).",
+      },
+      {
+        title: "Nakamise-dōri",
+        body: "Ang 250-metrong kalyeng ito na dumadaan mula Kaminarimon papunta sa templo ay tumatakbo na mula pa noong unang bahagi ng ika-18 siglo, at isa ito sa pinakamatandang shopping street sa Japan. Nagsimula ito nang bigyan ng karapatan ang mga residenteng naglilinis ng lugar na magtayo ng puwesto. Ngayon, mayroon itong halos 90 tindahan ng tradisyunal na kendi, pamaypay, at handicraft.",
+      },
+      {
+        title: "Ang omikuji",
+        body: "Sikat dito ang sistema ng panghuhula: iginagalaw ang isang metal na kahon, lumalabas ang isang stick na may numero, at kukunin ang papel mula sa katumbas na drawer. Kilala ang Senso-ji sa pagbibigay ng maraming kyō (malas) — sinasabing halos 30%, samantalang mas mababa ito sa ibang templo. Kung malas ang lumabas, itinatali ito sa mga metal na bar sa loob ng lugar para iwan doon.",
       },
     ],
     curiosities: [
-      "The of buong (the The the The buong) na buong The of (the The buong) na of buong The na of buong The of (the) na of buong na of buong The na buong na of buong The (the).",
-      "Natatanging (na buong) the buong The na (the The the the buong buong buong) of (the The) buong na buong (the) na buong The of na buong (the The).",
+      "Nakaligtas sa pambobomba ang puno ng ginkgo sa loob ng lugar at buhay pa rin ito, kasama ang mga makikitang peklat.",
+      "Ang usok mula sa malaking insensaryo (jōkōro) ay hinihila gamit ang kamay papunta sa bahagi ng katawan na gustong pagalingin.",
+      "Mula sa kabilang ibayo ng ilog, makikita ang Tokyo Skytree (634 m), ang pinakamataas na tore sa Japan, direktang katapat ng templo.",
     ],
-    tip: "The of buong na (the The the The). The buong The (the The The buong buong) buong of buong na buong the buong (the) na buong the The na buong (buong).",
+    tip: "Napakaganda ng templo sa gabi: nananatiling naka-ilaw mula paglubog ng araw hanggang mga alas-11 ng gabi, nagsasara ang Nakamise street mga alas-6-7 ng gabi, at mas kaunti ng 70-80% ang tao kumpara sa umaga — ibang-iba talaga ang karanasan. Sa tapat mismo ng Kaminarimon gate ay ang Asakusa Culture Tourist Information Center (gusaling gawa sa kahoy at salamin, dinisenyo ni Kengo Kuma): libreng pasukan, at ang libreng observation deck nito sa ika-8 palapag ay bukas hanggang alas-10 ng gabi, may tanawin ng gate, Nakamise street, ang naka-ilaw na templo, at ang Tokyo Skytree sa likod. Dahil naka-base kayo sa Asakusa sa buong bahaging ito ng biyahe, hindi na kailangang itakda sa isang partikular na araw — puwede kayong dumaan anumang gabi nang hindi lumiliko sa ruta.",
   },
 
   "shibuya": {

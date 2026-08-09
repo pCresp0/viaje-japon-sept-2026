@@ -242,7 +242,7 @@ export const guides = {
   // ALPES ET KANAZAWA
   // ══════════════════════════════════════════════════════════════════
 
-  "kanazawa-kenrokuen": {
+  "kenroku-en": {
     name: "Kanazawa : Kenroku-en et Quartiers Samouraïs",
     tagline: "L'un des trois plus beaux jardins du Japon et une ville épargnée par les guerres modernes.",
     sections: [
@@ -358,7 +358,7 @@ export const guides = {
     tip: "Ne restez pas seulement au rez-de-chaussée ; les boutiques les plus intéressantes (et parfois bizarres) se trouvent souvent dans les étages supérieurs de bâtiments étroits.",
   },
 
-  "asakusa-sensoji": {
+  "senso-ji": {
     name: "Asakusa et Senso-ji",
     tagline: "Le plus vieux temple de Tokyo et l'atmosphère traditionnelle de la 'ville basse'.",
     sections: [
@@ -379,7 +379,7 @@ export const guides = {
       "Les omikuji (papiers de fortune) au Senso-ji sont connus pour avoir un pourcentage élevé de 'malchance' (kyō) par rapport aux autres temples. Si vous en obtenez un, attachez-le aux supports désignés pour laisser la malchance derrière vous.",
       "Asakusa était le principal quartier de divertissement de Tokyo (théâtre et cinéma) pendant la première moitié du XXe siècle avant d'être dévasté pendant la Seconde Guerre mondiale.",
     ],
-    tip: "Visitez le Senso-ji la nuit. Les salles principales ferment à 17h00, mais les terrains restent ouverts et la pagode et les portes illuminées sont superbes sans la foule de la journée.",
+    tip: "De nuit, le temple est spectaculaire : l'illumination reste allumée du coucher du soleil jusqu'à 23h environ, la rue Nakamise ferme vers 18h-19h, et le site compte jusqu'à 70-80 % de visiteurs en moins que la journée — une visite complètement différente. Juste en face de la porte Kaminarimon se trouve l'Asakusa Culture Tourist Information Center (un bâtiment en bois et verre de l'architecte Kengo Kuma) : entrée libre, et son belvédère gratuit du 8e étage reste ouvert jusqu'à 22h, avec vue sur la porte, la rue Nakamise, le temple illuminé et la Tokyo Skytree en arrière-plan. Comme vous logez à Asakusa pendant toute cette partie du voyage, pas besoin de caler ça un jour précis : vous pouvez y passer n'importe quel soir sans faire de détour.",
   },
 
   "shibuya": {

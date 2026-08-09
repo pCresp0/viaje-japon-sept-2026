@@ -242,7 +242,7 @@ export const guides = {
   // ALPS AND KANAZAWA
   // ══════════════════════════════════════════════════════════════════
 
-  "kanazawa-kenrokuen": {
+  "kenroku-en": {
     name: "Kanazawa: Kenroku-en and Samurai Districts",
     tagline: "One of the three best gardens in Japan and a city untouched by modern wars.",
     sections: [
@@ -358,7 +358,7 @@ export const guides = {
     tip: "Don't just stay on the ground floor; the most interesting (and sometimes bizarre) shops are often found on the upper floors of narrow buildings.",
   },
 
-  "asakusa-sensoji": {
+  "senso-ji": {
     name: "Asakusa & Senso-ji",
     tagline: "Tokyo's oldest temple and the traditional atmosphere of the 'low city'.",
     sections: [
@@ -379,7 +379,7 @@ export const guides = {
       "The omikuji (fortune papers) at Senso-ji are notorious for having a high percentage of 'bad luck' (kyō) compared to other temples. If you get one, tie it to the designated racks to leave the bad luck behind.",
       "Asakusa was Tokyo's main entertainment district (theater and cinema) during the first half of the 20th century before being devastated in WWII.",
     ],
-    tip: "Visit Senso-ji at night. The main halls close at 5:00 PM, but the grounds remain open and the illuminated pagoda and gates are stunning without the daytime crowds.",
+    tip: "At night the temple is spectacular: the illumination stays on from sunset until around 11 PM, Nakamise street closes around 6–7 PM, and the grounds see up to 70–80% fewer visitors than during the day — a completely different visit. Right across from the Kaminarimon gate is the Asakusa Culture Tourist Information Center (a wood-and-glass building by architect Kengo Kuma): free entry, and its free 8th-floor observation deck stays open until 10 PM, with views of the gate, Nakamise street, the illuminated temple and Tokyo Skytree in the background. Since you're based in Asakusa for this whole part of the trip, there's no need to fit it into a specific day — you can drop by any evening without going out of your way.",
   },
 
   "shibuya": {

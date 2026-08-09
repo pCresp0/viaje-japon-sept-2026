@@ -472,7 +472,7 @@ export const guides = {
       "El humo del incensario grande (jōkōro) se atrae con la mano hacia la parte del cuerpo que se quiere curar.",
       "Desde el otro lado del río se ve el Tokyo Skytree (634 m), la torre más alta de Japón, en contraste directo con el templo.",
     ],
-    tip: "De noche el templo está iluminado, la calle Nakamise cierra y el recinto queda casi vacío. Es una visita completamente distinta.",
+    tip: "De noche el templo queda espectacular: la iluminación se mantiene encendida desde el atardecer hasta las 23:00 aprox., la calle Nakamise cierra sobre las 18:00-19:00 y el recinto se queda con hasta un 70-80% menos de gente que de día — una visita completamente distinta. Justo enfrente de la puerta Kaminarimon está el Asakusa Culture Tourist Information Center (edificio de madera y cristal del arquitecto Kengo Kuma): entrada libre, y su mirador gratuito de la 8ª planta abre hasta las 22:00, con vistas de la puerta, la calle Nakamise, el templo iluminado y el Tokyo Skytree de fondo. Como os alojáis en Asakusa toda esa parte del viaje, no hace falta encajarlo en un día concreto: podéis acercaros cualquier noche sin desviaros de la ruta.",
   },
 
   "meiji-jingu": {
