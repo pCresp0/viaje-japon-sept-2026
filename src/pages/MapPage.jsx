@@ -71,7 +71,8 @@ export default function MapPage() {
   const [filter, setFilter] = useState("ruta");
   const [subDay, setSubDay] = useState(null); // día concreto dentro del filtro "dias", null = todos
 
-  const { mapStops, mapFilterData, mapLabels } = useContent();
+  const { mapStops, mapFilterData, mapLabels, days } = useContent();
+  const dayInfo = Object.fromEntries(days.map((d) => [d.num, d]));
 
   const filters = [
     { id: "ruta", label: mapLabels.filterRuta },
@@ -84,10 +85,37 @@ export default function MapPage() {
   // Días que realmente tienen alguna parada en el mapa, en orden.
   const availableDays = [...new Set(mapStops.flatMap((s) => parseDayNumbers(s.day)))].sort((a, b) => a - b);
 
+  // "Ruta completa": una única chincheta por día en vez de una por parada.
+  // Se usan las coordenadas de la primera parada de ese día (por donde
+  // empieza la jornada), pero el contenido del pin resume el día entero:
+  // título, fecha y todos los sitios que se ven, no sólo ese primer sitio.
+  const dayOverviewMarkers = availableDays.map((n) => {
+    const first = mapStops.find((s) => parseDayNumbers(s.day)[0] === n) || mapStops.find((s) => parseDayNumbers(s.day).includes(n));
+    const stopsThatDay = mapStops.filter((s) => parseDayNumbers(s.day).includes(n));
+    const info = dayInfo[n];
+    return {
+      id: `day-${n}`,
+      lat: first.lat, lng: first.lng,
+      emoji: first.emoji, color: first.color,
+      day: first.day,
+      dayNum: n,
+      name: info ? info.title : `${mapLabels.diaLabel} ${n}`,
+      cities: info ? info.cities : "",
+      detail: stopsThatDay.map((s) => s.name).join(" · "),
+    };
+  });
+
   const isDaysFilter = filter === "dias";
-  const currentMarkers = isDaysFilter
-    ? (subDay == null ? mapStops : mapStops.filter((s) => parseDayNumbers(s.day).includes(subDay)))
-    : (mapFilterData[filter] || []);
+  const isRutaFilter = filter === "ruta";
+  const currentMarkers = isRutaFilter
+    ? dayOverviewMarkers
+    : isDaysFilter
+      ? (subDay == null ? mapStops : mapStops.filter((s) => parseDayNumbers(s.day).includes(subDay)))
+      : (mapFilterData[filter] || []);
+
+  // Cuando hay un día concreto elegido en "Días", los números pasan a ser
+  // el orden de visita dentro de ESE día (1, 2, 3...), no el número de día.
+  const isSingleDayDetail = isDaysFilter && subDay != null;
 
   // Ruta, hoteles, transportes y días: línea en orden cronológico del viaje
   const showChronoLine = filter === "ruta" || filter === "hoteles" || filter === "transportes" || isDaysFilter;
@@ -107,8 +135,8 @@ export default function MapPage() {
         <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{mapLabels.ubicacionesClave}</p>
         <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>{mapLabels.mapaDeLaRuta}</h2>
         <p style={{ fontSize: 13, color: "var(--ink-soft)", marginTop: 6, lineHeight: 1.5 }}>
-          {filter === "ruta" && `${mapStops.length} ${mapLabels.descRuta}`}
-          {filter === "dias" && mapLabels.descDias}
+          {filter === "ruta" && `${dayOverviewMarkers.length} ${mapLabels.descRuta}`}
+          {filter === "dias" && (isSingleDayDetail ? `${currentMarkers.length} ${mapLabels.paradasOrden}` : mapLabels.descDias)}
           {filter === "hoteles" && `${mapLabels.descHoteles}`}
           {filter === "excursiones" && `${mapLabels.descExcursiones}`}
           {filter === "transportes" && `${mapLabels.descTransportes}`}
@@ -195,8 +223,12 @@ export default function MapPage() {
           )}
 
           {currentMarkers.map((stop, idx) => {
-            const primaryDay = parseDayNumbers(stop.day)[0];
-            const badge = isDaysFilter && primaryDay != null ? primaryDay : idx + 1;
+            const primaryDay = isRutaFilter ? stop.dayNum : parseDayNumbers(stop.day)[0];
+            const badge = isRutaFilter
+              ? primaryDay
+              : isSingleDayDetail
+                ? idx + 1
+                : (isDaysFilter && primaryDay != null ? primaryDay : idx + 1);
             return (
             <Marker
               key={stop.id}
@@ -206,23 +238,37 @@ export default function MapPage() {
               opacity={selected && selected !== stop.id ? 0.7 : 1}
             >
               <Popup>
-                <div style={{ fontFamily: "var(--font-body)", minWidth: 160 }}>
-                  <p style={{ fontSize: 11, color: stop.color, fontWeight: 700, marginBottom: 2 }}>
-                    {isDaysFilter
-                      ? (primaryDay != null ? `${mapLabels.diaLabel} ${primaryDay} · ` : "")
-                      : (filter === "ruta" ? `${mapLabels.parada} ${idx + 1} · ` : `${mapLabels.no} ${idx + 1} · `)}
-                    {stop.day}
-                  </p>
-                  <p style={{ fontWeight: 700, fontSize: 14, marginBottom: 2 }}>{stop.name}</p>
-                  <p style={{ fontSize: 12, color: "#5a6070", marginBottom: 6 }}>{stop.detail}</p>
-                  <a
-                    href={`https://www.google.com/maps/search/?api=1&query=${stop.lat},${stop.lng}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ fontSize: 12, color: stop.color, fontWeight: 600, textDecoration: "none" }}
-                  >
-                    {mapLabels.abrirGoogleMaps}
-                  </a>
+                <div style={{ fontFamily: "var(--font-body)", minWidth: 170 }}>
+                  {isRutaFilter ? (
+                    <>
+                      <p style={{ fontSize: 11, color: stop.color, fontWeight: 700, marginBottom: 2 }}>
+                        {mapLabels.diaLabel} {stop.dayNum}{stop.cities ? ` · ${stop.cities}` : ""}
+                      </p>
+                      <p style={{ fontWeight: 700, fontSize: 14, marginBottom: 4 }}>{stop.name}</p>
+                      <p style={{ fontSize: 11.5, color: "#5a6070", lineHeight: 1.5 }}>{stop.detail}</p>
+                    </>
+                  ) : (
+                    <>
+                      <p style={{ fontSize: 11, color: stop.color, fontWeight: 700, marginBottom: 2 }}>
+                        {isSingleDayDetail
+                          ? `${mapLabels.diaLabel} ${subDay} · ${idx + 1}/${currentMarkers.length} · `
+                          : isDaysFilter
+                            ? (primaryDay != null ? `${mapLabels.diaLabel} ${primaryDay} · ` : "")
+                            : (filter === "ruta" ? `${mapLabels.parada} ${idx + 1} · ` : `${mapLabels.no} ${idx + 1} · `)}
+                        {stop.day}
+                      </p>
+                      <p style={{ fontWeight: 700, fontSize: 14, marginBottom: 2 }}>{stop.name}</p>
+                      <p style={{ fontSize: 12, color: "#5a6070", marginBottom: 6 }}>{stop.detail}</p>
+                      <a
+                        href={`https://www.google.com/maps/search/?api=1&query=${stop.lat},${stop.lng}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ fontSize: 12, color: stop.color, fontWeight: 600, textDecoration: "none" }}
+                      >
+                        {mapLabels.abrirGoogleMaps}
+                      </a>
+                    </>
+                  )}
                 </div>
               </Popup>
             </Marker>
@@ -239,12 +285,19 @@ export default function MapPage() {
       <div className="grid gap-2" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }}>
         {currentMarkers.map((stop, idx) => {
           const isActive = selected === stop.id;
-          const primaryDay = parseDayNumbers(stop.day)[0];
-          const badge = isDaysFilter && primaryDay != null ? primaryDay : idx + 1;
+          const primaryDay = isRutaFilter ? stop.dayNum : parseDayNumbers(stop.day)[0];
+          const badge = isRutaFilter
+            ? primaryDay
+            : isSingleDayDetail
+              ? idx + 1
+              : (isDaysFilter && primaryDay != null ? primaryDay : idx + 1);
+          const href = isRutaFilter
+            ? `https://www.google.com/maps/search/?api=1&query=${stop.lat},${stop.lng}`
+            : `https://www.google.com/maps/search/?api=1&query=${stop.lat},${stop.lng}`;
           return (
             <Highlightable key={stop.id} id={slug("map", stop.id)}>
             <a
-              href={`https://www.google.com/maps/search/?api=1&query=${stop.lat},${stop.lng}`}
+              href={href}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 rounded-xl p-3 transition-all"
@@ -257,7 +310,18 @@ export default function MapPage() {
               onMouseLeave={(e) => {
                 if (!isActive) e.currentTarget.style.borderColor = "var(--line)";
               }}
-              onClick={() => setSelected(stop.id)}
+              onClick={(e) => {
+                if (isRutaFilter) {
+                  // Un clic en la tarjeta-resumen de un día te lleva
+                  // directamente al detalle de ese día en el filtro "Días".
+                  e.preventDefault();
+                  setFilter("dias");
+                  setSubDay(stop.dayNum);
+                  setSelected(null);
+                } else {
+                  setSelected(stop.id);
+                }
+              }}
             >
               <div style={{
                 width: 24, height: 24, borderRadius: "50%",
@@ -268,11 +332,18 @@ export default function MapPage() {
                 <span className="mr-1">{badge}</span>
                 <span style={{ fontSize: 12 }}>{stop.emoji}</span>
               </div>
-              <div style={{ flex: 1 }}>
+              <div style={{ flex: 1, minWidth: 0 }}>
                 <p style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)", marginBottom: 1 }}>
-                  {isDaysFilter ? stop.name : `${idx + 1}. ${stop.name}`}
+                  {isRutaFilter || isDaysFilter ? stop.name : `${idx + 1}. ${stop.name}`}
                 </p>
-                <p style={{ fontSize: 12, color: "var(--ink-soft)" }}>{stop.day}</p>
+                <p style={{
+                  fontSize: 12, color: "var(--ink-soft)",
+                  overflow: isRutaFilter ? "hidden" : undefined,
+                  textOverflow: isRutaFilter ? "ellipsis" : undefined,
+                  whiteSpace: isRutaFilter ? "nowrap" : undefined,
+                }}>
+                  {isRutaFilter ? stop.detail : stop.day}
+                </p>
               </div>
               <ExternalLink size={13} style={{ color: "var(--ink-soft)", flexShrink: 0 }} />
             </a>

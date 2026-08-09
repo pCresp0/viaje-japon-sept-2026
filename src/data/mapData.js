@@ -91,6 +91,13 @@ export const stops = [
     detail: "Distrito tradicional de geishas y maikos",
   },
   {
+    id: "kiyomizu-dera", name: "Kiyomizu-dera", city: "Kioto",
+    lat: 34.9949, lng: 135.785,
+    emoji: "🏯", color: "#bc4749",
+    day: "Día 5",
+    detail: "Gran terraza de madera y vistas de Kioto",
+  },
+  {
     id: "yasaka-chionin", name: "Yasaka Jinja y Chion-in", city: "Kioto",
     lat: 35.0032, lng: 135.7811,
     emoji: "⛩️", color: "#bc4749",
@@ -103,13 +110,6 @@ export const stops = [
     emoji: "🏛️", color: "#bc4749",
     day: "Día 5",
     detail: "Santuario de 1895, réplica a escala del antiguo palacio imperial",
-  },
-  {
-    id: "kiyomizu-dera", name: "Kiyomizu-dera", city: "Kioto",
-    lat: 34.9949, lng: 135.785,
-    emoji: "🏯", color: "#bc4749",
-    day: "Día 5",
-    detail: "Gran terraza de madera y vistas de Kioto",
   },
   {
     id: "osaka", name: "Osaka", city: "Osaka",
@@ -182,18 +182,18 @@ export const stops = [
     detail: "Enlace en tránsito · parada de ekiben antes del Shinkansen",
   },
   {
-    id: "akihabara", name: "Akihabara", city: "Tokio",
-    lat: 35.6984, lng: 139.7731,
-    emoji: "🎮", color: "#1d3557",
-    day: "Día 9",
-    detail: "Electrónica, figuras y cultura otaku",
-  },
-  {
     id: "asakusa", name: "Asakusa y Senso-ji", city: "Tokio",
     lat: 35.7148, lng: 139.7967,
     emoji: "🗼", color: "#1d3557",
     day: "Día 9",
     detail: "Base 6 noches · Senso-ji y Nakamise",
+  },
+  {
+    id: "akihabara", name: "Akihabara", city: "Tokio",
+    lat: 35.6984, lng: 139.7731,
+    emoji: "🎮", color: "#1d3557",
+    day: "Día 9",
+    detail: "Electrónica, figuras y cultura otaku",
   },
   {
     id: "ueno", name: "Ueno y Ameyoko", city: "Tokio",
