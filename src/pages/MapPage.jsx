@@ -66,7 +66,7 @@ function parseDayNumbers(dayStr) {
   return matches.map(Number);
 }
 
-export default function MapPage() {
+export default function MapPage({ onGoToDay }) {
   const [selected, setSelected] = useState(null);
   const [filter, setFilter] = useState("ruta");
   const [subDay, setSubDay] = useState(null); // día concreto dentro del filtro "dias", null = todos
@@ -291,36 +291,35 @@ export default function MapPage() {
             : isSingleDayDetail
               ? idx + 1
               : (isDaysFilter && primaryDay != null ? primaryDay : idx + 1);
-          const href = isRutaFilter
-            ? `https://www.google.com/maps/search/?api=1&query=${stop.lat},${stop.lng}`
-            : `https://www.google.com/maps/search/?api=1&query=${stop.lat},${stop.lng}`;
+          const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${stop.lat},${stop.lng}`;
+
+          function handleCardClick() {
+            if (primaryDay != null && onGoToDay) {
+              // Lleva directamente al día correspondiente en el Itinerario,
+              // donde ese día se resalta con el mismo pulso del buscador.
+              onGoToDay(primaryDay);
+            } else {
+              // Hoteles/Excursiones/Transportes no tienen un día numérico
+              // real al que saltar: se quedan resaltando el pin en el mapa.
+              setSelected(stop.id);
+            }
+          }
+
           return (
             <Highlightable key={stop.id} id={slug("map", stop.id)}>
-            <a
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 rounded-xl p-3 transition-all"
+            <div
+              role="button"
+              tabIndex={0}
+              onClick={handleCardClick}
+              onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") handleCardClick(); }}
+              className="flex items-center gap-3 rounded-xl p-3 transition-all cursor-pointer"
               style={{
                 background: isActive ? `${stop.color}12` : "var(--paper-raised)",
                 border: `1px solid ${isActive ? stop.color : "var(--line)"}`,
-                textDecoration: "none",
               }}
               onMouseEnter={(e) => { e.currentTarget.style.borderColor = stop.color; }}
               onMouseLeave={(e) => {
                 if (!isActive) e.currentTarget.style.borderColor = "var(--line)";
-              }}
-              onClick={(e) => {
-                if (isRutaFilter) {
-                  // Un clic en la tarjeta-resumen de un día te lleva
-                  // directamente al detalle de ese día en el filtro "Días".
-                  e.preventDefault();
-                  setFilter("dias");
-                  setSubDay(stop.dayNum);
-                  setSelected(null);
-                } else {
-                  setSelected(stop.id);
-                }
               }}
             >
               <div style={{
@@ -345,8 +344,25 @@ export default function MapPage() {
                   {isRutaFilter ? stop.detail : stop.day}
                 </p>
               </div>
-              <ExternalLink size={13} style={{ color: "var(--ink-soft)", flexShrink: 0 }} />
-            </a>
+              <a
+                href={mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                aria-label={mapLabels.abrirGoogleMaps}
+                title={mapLabels.abrirGoogleMaps}
+                style={{
+                  flexShrink: 0,
+                  width: 30, height: 30, borderRadius: "50%",
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  background: "var(--paper)",
+                  border: "1px solid var(--line)",
+                  color: "var(--ink-soft)",
+                }}
+              >
+                <ExternalLink size={13} />
+              </a>
+            </div>
             </Highlightable>
           );
         })}

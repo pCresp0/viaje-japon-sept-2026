@@ -24,6 +24,7 @@ import AboutPage from "./pages/AboutPage";
 import FrikadasPage from "./pages/FrikadasPage";
 import SearchResultHighlight from "./components/SearchResultHighlight";
 import { useHighlight } from "./context/HighlightContext";
+import { slug } from "./utils/slug";
 import { getTripStatus } from "./utils/date";
 
 function defaultTab() {
@@ -42,6 +43,9 @@ export default function App() {
   function goToDay(num) {
     setOpenDay(num);
     setTab("itinerario");
+    // Mismo pulso dorado que usa el buscador: confirma visualmente a qué
+    // día concreto se ha saltado, venga la navegación de "Hoy" o del mapa.
+    window.setTimeout(() => triggerHighlight(slug("itinerary-day", num)), 120);
   }
 
   function handleSearchNavigate(result) {
@@ -110,7 +114,7 @@ export default function App() {
               {tab === "presupuesto"  && <BudgetPage />}
               {tab === "lugares"      && <PlacesPage />}
               {tab === "comidas"      && <FoodsPage />}
-              {tab === "mapa"         && <MapPage />}
+              {tab === "mapa"         && <MapPage onGoToDay={goToDay} />}
               {tab === "clima"        && <WeatherPage />}
               {tab === "frases"       && <PhrasesPage />}
               {tab === "preparativos" && <PrepPage />}
