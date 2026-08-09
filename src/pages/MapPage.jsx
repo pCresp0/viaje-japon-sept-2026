@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, CalendarDays } from "lucide-react";
 
 import { useContent } from "../i18n/LanguageContext";
 import { Highlightable } from "../context/HighlightContext";
@@ -292,76 +292,81 @@ export default function MapPage({ onGoToDay, initialDay }) {
               ? idx + 1
               : (isDaysFilter && primaryDay != null ? primaryDay : idx + 1);
           const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${stop.lat},${stop.lng}`;
-
-          function handleCardClick() {
-            if (primaryDay != null && onGoToDay) {
-              // Lleva directamente al día correspondiente en el Itinerario,
-              // donde ese día se resalta con el mismo pulso del buscador.
-              onGoToDay(primaryDay);
-            } else {
-              // Hoteles/Excursiones/Transportes no tienen un día numérico
-              // real al que saltar: se quedan resaltando el pin en el mapa.
-              setSelected(stop.id);
-            }
-          }
+          const canGoToItinerary = primaryDay != null && !!onGoToDay;
 
           return (
             <Highlightable key={stop.id} id={slug("map", stop.id)}>
             <div
-              role="button"
-              tabIndex={0}
-              onClick={handleCardClick}
-              onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") handleCardClick(); }}
-              className="flex items-center gap-3 rounded-xl p-3 transition-all cursor-pointer"
+              className="rounded-xl p-3 transition-all"
               style={{
                 background: isActive ? `${stop.color}12` : "var(--paper-raised)",
                 border: `1px solid ${isActive ? stop.color : "var(--line)"}`,
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.borderColor = stop.color; }}
-              onMouseLeave={(e) => {
-                if (!isActive) e.currentTarget.style.borderColor = "var(--line)";
-              }}
             >
-              <div style={{
-                width: 24, height: 24, borderRadius: "50%",
-                background: stop.color, color: "white",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                fontSize: 11, fontWeight: 700, flexShrink: 0,
-              }}>
-                <span className="mr-1">{badge}</span>
-                <span style={{ fontSize: 12 }}>{stop.emoji}</span>
-              </div>
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <p style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)", marginBottom: 1 }}>
-                  {isRutaFilter || isDaysFilter ? stop.name : `${idx + 1}. ${stop.name}`}
-                </p>
-                <p style={{
-                  fontSize: 12, color: "var(--ink-soft)",
-                  overflow: isRutaFilter ? "hidden" : undefined,
-                  textOverflow: isRutaFilter ? "ellipsis" : undefined,
-                  whiteSpace: isRutaFilter ? "nowrap" : undefined,
-                }}>
-                  {isRutaFilter ? stop.detail : stop.day}
-                </p>
-              </div>
-              <a
-                href={mapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                aria-label={mapLabels.abrirGoogleMaps}
-                title={mapLabels.abrirGoogleMaps}
-                style={{
-                  flexShrink: 0,
-                  width: 30, height: 30, borderRadius: "50%",
+              <div className="flex items-center gap-3 mb-2.5">
+                <div style={{
+                  width: 24, height: 24, borderRadius: "50%",
+                  background: stop.color, color: "white",
                   display: "flex", alignItems: "center", justifyContent: "center",
-                  background: "var(--paper)",
-                  border: "1px solid var(--line)",
-                  color: "var(--ink-soft)",
-                }}
-              >
-                <ExternalLink size={13} />
-              </a>
+                  fontSize: 11, fontWeight: 700, flexShrink: 0,
+                }}>
+                  <span className="mr-1">{badge}</span>
+                  <span style={{ fontSize: 12 }}>{stop.emoji}</span>
+                </div>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <p style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)", marginBottom: 1 }}>
+                    {isRutaFilter || isDaysFilter ? stop.name : `${idx + 1}. ${stop.name}`}
+                  </p>
+                  <p style={{
+                    fontSize: 12, color: "var(--ink-soft)",
+                    overflow: isRutaFilter ? "hidden" : undefined,
+                    textOverflow: isRutaFilter ? "ellipsis" : undefined,
+                    whiteSpace: isRutaFilter ? "nowrap" : undefined,
+                  }}>
+                    {isRutaFilter ? stop.detail : stop.day}
+                  </p>
+                </div>
+              </div>
+
+              {/* Dos botones claros y separados: qué hace cada uno se ve
+                  a simple vista, en vez de tener que adivinar qué pasa al
+                  tocar la tarjeta o un icono suelto. */}
+              <div className="flex gap-1.5">
+                {canGoToItinerary && (
+                  <button
+                    onClick={() => onGoToDay(primaryDay)}
+                    className="flex-1 flex items-center justify-center gap-1.5 rounded-lg py-1.5 px-2 transition-colors"
+                    style={{
+                      background: "var(--indigo)",
+                      color: "white",
+                      fontSize: 11.5,
+                      fontWeight: 600,
+                      border: "none",
+                    }}
+                  >
+                    <CalendarDays size={13} />
+                    <span className="truncate">{mapLabels.verEnItinerario}</span>
+                  </button>
+                )}
+                <a
+                  href={mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setSelected(stop.id)}
+                  className="flex-1 flex items-center justify-center gap-1.5 rounded-lg py-1.5 px-2 transition-colors"
+                  style={{
+                    background: "var(--paper)",
+                    color: "var(--ink)",
+                    fontSize: 11.5,
+                    fontWeight: 600,
+                    border: "1px solid var(--line)",
+                    textDecoration: "none",
+                  }}
+                >
+                  <ExternalLink size={13} />
+                  <span className="truncate">{mapLabels.verEnGoogleMaps}</span>
+                </a>
+              </div>
             </div>
             </Highlightable>
           );

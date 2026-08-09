@@ -325,6 +325,8 @@ export const mapLabels = {
   parada: "PARADA",
   no: "Nº",
   abrirGoogleMaps: "Abrir en Google Maps ↗",
+  verEnItinerario: "Ver en itinerario",
+  verEnGoogleMaps: "Ver en Google Maps",
   paradasOrden: "paradas · en orden del viaje",
   ubicaciones: "ubicaciones",
 };

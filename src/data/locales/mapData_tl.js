@@ -84,6 +84,8 @@ export const mapLabels = {
   parada: "HINTO",
   no: "No.",
   abrirGoogleMaps: "Buksan sa Google Maps ↗",
+  verEnItinerario: "Tingnan sa itinerary",
+  verEnGoogleMaps: "Tingnan sa Google Maps",
   paradasOrden: "mga hinto · sunod-sunod sa biyahe",
   ubicaciones: "mga lokasyon",
 };
