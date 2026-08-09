@@ -1,5 +1,7 @@
 import { useContent, useT } from "../i18n/LanguageContext";
 import { Train, Bus, Zap } from "lucide-react";
+import { Highlightable } from "../context/HighlightContext";
+import { slug } from "../utils/slug";
 
 // Determina el icono del trayecto.
 // Se prioriza el campo estable `kind` del dato; el análisis del texto es
@@ -126,11 +128,11 @@ export default function TransportPage() {
                 const kind = iconKind(tItem);
                 const jr = jrCoverage(tItem);
                 return (
-                  <div
-                    key={ti}
-                    className="px-5 py-3 flex gap-3 items-center"
-                    style={{ borderTop: ti > 0 ? "1px solid var(--line)" : "none" }}
-                  >
+                  <Highlightable key={ti} id={slug("transport", tItem.day, tItem.name)}>
+                    <div
+                      className="px-5 py-3 flex gap-3 items-center"
+                      style={{ borderTop: ti > 0 ? "1px solid var(--line)" : "none" }}
+                    >
                     <div style={{
                       width: 32, height: 32, borderRadius: 8, flexShrink: 0,
                       display: "flex", alignItems: "center", justifyContent: "center",
@@ -173,6 +175,7 @@ export default function TransportPage() {
                       )}
                     </div>
                   </div>
+                  </Highlightable>
                 );
               })}
             </div>

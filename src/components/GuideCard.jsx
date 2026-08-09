@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { BookOpen, ChevronDown, Lightbulb, Sparkles } from "lucide-react";
 import { guides } from "../data/guides";
 import { popCulture } from "../data/popCulture";
 import { guideImages } from "../data/guideImages";
+import { useHighlight } from "../context/HighlightContext";
+import { slug } from "../utils/slug";
 
 const franchiseStyle = {
   pokemon: { label: "Pokémon", emoji: "⚡", color: "#d9720a" },
@@ -20,12 +22,30 @@ export default function GuideCard({ id, accent = "#1d3557" }) {
   const guide = guides[id];
   const refs = popCulture[id];
   const localImage = guideImages[id] ?? null;
+  const { highlightId } = useHighlight();
+  const anchorId = slug("guide", id);
+  const isHighlighted = highlightId === anchorId;
+  const cardRef = useRef(null);
+
+  // Si llegamos desde el buscador apuntando a este lugar, se abre solo
+  // (aunque estuviera cerrado) y se hace scroll hasta él.
+  useEffect(() => {
+    if (isHighlighted) {
+      setOpen(true);
+      const t = window.setTimeout(() => {
+        cardRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 80);
+      return () => window.clearTimeout(t);
+    }
+  }, [isHighlighted]);
 
   if (!guide) return null;
 
   return (
     <div
-      className="rounded-xl border overflow-hidden"
+      id={anchorId}
+      ref={cardRef}
+      className={"rounded-xl border overflow-hidden" + (isHighlighted ? " search-highlight-pulse" : "")}
       style={{
         borderColor: open ? accent + "44" : "var(--line)",
         background: "var(--paper-raised)",

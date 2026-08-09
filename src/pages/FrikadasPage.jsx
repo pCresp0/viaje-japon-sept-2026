@@ -1,28 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { AlertTriangle, CalendarDays, ChevronDown, ExternalLink, MapPin, Sparkles, Ticket } from "lucide-react";
 import { useT } from "../i18n/LanguageContext";
 import { frikSections } from "../data/frikadas";
 import { geekStops } from "../data/popCulture";
 import { days } from "../data/trip";
-
-const stopStyle = {
-  "en-ruta": { label: "Ya está en la ruta", color: "#2e7d5b" },
-  "desvio-corto": { label: "Desvío corto", color: "#1d6fb8" },
-  "requiere-reserva": { label: "Reserva necesaria", color: "#b47808" },
-  confirmar: { label: "Confirmar antes", color: "#a65a18" },
-  "no-disponible": { label: "No estará disponible", color: "#bc4749" },
-};
+import { stopStyle, stopsBySection, standaloneStops } from "../data/geekRouteMap";
+import { useHighlight } from "../context/HighlightContext";
+import { slug } from "../utils/slug";
 
 const dayInfo = Object.fromEntries(days.map((day) => [day.num, day]));
-const stopsBySection = {
-  pokemon: ["pokemon-kyoto-inspiration", "shibuya-parco", "mega-tokyo"],
-  digimon: ["digimon-tokyo"],
-  tekken: ["akihabara", "nakano-broadway"],
-  nintendo: ["nintendo-kyoto"],
-  ghibli: ["ghibli-mitaka"],
-  godzilla: ["godzilla-shinjuku"],
-};
-const standaloneStops = ["teamlab-planets", "gundam-odaiba"];
 const stopById = Object.fromEntries(geekStops.map((stop) => [stop.id, stop]));
 
 function RouteStop({ stop }) {
@@ -52,8 +38,25 @@ function RouteStop({ stop }) {
 }
 
 function SectionCard({ section, stops = [], isOpen, onToggle }) {
+  const { highlightId } = useHighlight();
+  const anchorId = slug("frikadas", section.id);
+  const ref = useRef(null);
+  const isHighlighted = highlightId === anchorId;
+
+  useEffect(() => {
+    if (isHighlighted && ref.current) {
+      const t = window.setTimeout(() => {
+        ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 60);
+      return () => window.clearTimeout(t);
+    }
+  }, [isHighlighted]);
+
   return (
-    <div className="rounded-2xl border overflow-hidden mb-3"
+    <div
+      id={anchorId}
+      ref={ref}
+      className={"rounded-2xl border overflow-hidden mb-3" + (isHighlighted ? " search-highlight-pulse" : "")}
       style={{
         borderColor: isOpen ? section.color + "55" : "var(--line)",
         background: "var(--paper-raised)",
@@ -114,10 +117,20 @@ function SectionCard({ section, stops = [], isOpen, onToggle }) {
 export default function FrikadasPage() {
   const t = useT();
   const [openId, setOpenId] = useState(null);
+  const { highlightId } = useHighlight();
 
   function handleToggle(id) {
     setOpenId((current) => (current === id ? null : id));
   }
+
+  // Si llegamos desde una búsqueda que apunta a una sección de Frikadas,
+  // se abre automáticamente ese acordeón (si venía cerrado) antes de que
+  // SectionCard intente hacer scroll hasta él.
+  useEffect(() => {
+    if (!highlightId) return;
+    const match = highlightId.match(/^frikadas-(.+)$/);
+    if (match) setOpenId(match[1]);
+  }, [highlightId]);
 
   return (
     <div className="px-4 pt-3 pb-12">

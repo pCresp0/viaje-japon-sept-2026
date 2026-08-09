@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ChevronDown, BookOpen, Headphones, MapPinned, Scroll, Volume2 } from "lucide-react";
 import { useContent, useT, useLang } from "../i18n/LanguageContext";
 import { useTextSpeech } from "../utils/useTextSpeech";
+import { useHighlight, Highlightable } from "../context/HighlightContext";
+import { slug } from "../utils/slug";
 
 // Concatena el contenido de un periodo en un único texto legible en voz
 // alta: título, resumen y cada bloque (encabezado + texto).
@@ -23,10 +25,26 @@ const SHU = "#bc4749";
 
 function PeriodCard({ period, isOpen, onToggle, speak, stop, speakingId, supported }) {
   const { guides } = useContent();
+  const { highlightId } = useHighlight();
   const isSpeaking = speakingId === period.id;
+  const anchorId = slug("history", period.id);
+  const isHighlighted = highlightId === anchorId;
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    if (isHighlighted && cardRef.current) {
+      const t = window.setTimeout(() => {
+        cardRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 60);
+      return () => window.clearTimeout(t);
+    }
+  }, [isHighlighted]);
 
   return (
-    <div className="rounded-2xl border overflow-hidden mb-3"
+    <div
+      id={anchorId}
+      ref={cardRef}
+      className={"rounded-2xl border overflow-hidden mb-3" + (isHighlighted ? " search-highlight-pulse" : "")}
       style={{
         borderColor: isOpen ? SHU + "55" : "var(--line)",
         background: "var(--paper-raised)",
@@ -151,10 +169,19 @@ export default function HistoryPage() {
   // Acordeón exclusivo: sólo un periodo abierto a la vez. Al abrir uno
   // distinto se cierra automáticamente el que estuviera abierto.
   const [openId, setOpenId] = useState(null);
+  const { highlightId } = useHighlight();
 
   function handleToggle(id) {
     setOpenId((current) => (current === id ? null : id));
   }
+
+  // Si llegamos desde el buscador apuntando a un periodo concreto, se
+  // abre automáticamente antes de que PeriodCard intente hacer scroll.
+  useEffect(() => {
+    if (!highlightId) return;
+    const match = historyPeriods.find((p) => slug("history", p.id) === highlightId);
+    if (match) setOpenId(match.id);
+  }, [highlightId, historyPeriods]);
 
   return (
     <div className="px-4 pt-3 pb-12">
@@ -199,12 +226,14 @@ export default function HistoryPage() {
             <span style={{ fontSize: 13, fontWeight: 700, color: "#fff" }}>Libros</span>
           </div>
           {furtherReading.books.map((b, i) => (
-            <div key={i} className="px-5 py-4"
-              style={{ borderBottom: i < furtherReading.books.length - 1 ? "1px solid var(--line)" : "none" }}>
-              <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)" }}>{b.title}</p>
-              <p style={{ fontSize: 12, color: "var(--shu)", fontWeight: 600, marginTop: 1, marginBottom: 5 }}>{b.author}</p>
-              <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.6 }}>{b.note}</p>
-            </div>
+            <Highlightable key={i} id={slug("history", "books", b.title)}>
+              <div className="px-5 py-4"
+                style={{ borderBottom: i < furtherReading.books.length - 1 ? "1px solid var(--line)" : "none" }}>
+                <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)" }}>{b.title}</p>
+                <p style={{ fontSize: 12, color: "var(--shu)", fontWeight: 600, marginTop: 1, marginBottom: 5 }}>{b.author}</p>
+                <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.6 }}>{b.note}</p>
+              </div>
+            </Highlightable>
           ))}
         </div>
 
@@ -216,12 +245,14 @@ export default function HistoryPage() {
             <span style={{ fontSize: 13, fontWeight: 700, color: "#fff" }}>Podcasts</span>
           </div>
           {furtherReading.podcasts.map((p, i) => (
-            <div key={i} className="px-5 py-4"
-              style={{ borderBottom: i < furtherReading.podcasts.length - 1 ? "1px solid var(--line)" : "none" }}>
-              <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)" }}>{p.title}</p>
-              <p style={{ fontSize: 12, color: "var(--forest)", fontWeight: 600, marginTop: 1, marginBottom: 5 }}>{p.show}</p>
-              <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.6 }}>{p.note}</p>
-            </div>
+            <Highlightable key={i} id={slug("history", "podcasts", p.title)}>
+              <div className="px-5 py-4"
+                style={{ borderBottom: i < furtherReading.podcasts.length - 1 ? "1px solid var(--line)" : "none" }}>
+                <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)" }}>{p.title}</p>
+                <p style={{ fontSize: 12, color: "var(--forest)", fontWeight: 600, marginTop: 1, marginBottom: 5 }}>{p.show}</p>
+                <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.6 }}>{p.note}</p>
+              </div>
+            </Highlightable>
           ))}
         </div>
       </div>

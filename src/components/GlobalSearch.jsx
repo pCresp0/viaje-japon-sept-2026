@@ -2,27 +2,32 @@ import { useState, useRef, useEffect, useId } from "react";
 import { createPortal } from "react-dom";
 import { Search, X } from "lucide-react";
 import { searchGlobal } from "../data/searchIndex";
+import { useLang } from "../i18n/LanguageContext";
 
 /**
- * Buscador global (contenido en español). Icono al lado del idioma;
- * al abrir, panel con input y resultados a partir de 3 caracteres.
+ * Buscador global. Icono al lado del idioma; al abrir, panel con input
+ * y resultados a partir de 3 caracteres. El índice y los textos de la
+ * interfaz siguen el idioma activo de la app (useLang).
  *
  * variant:
  *  - "bar"     → móvil (lupa + texto corto)
  *  - "desktop" → cabecera PC (lupa + «Buscar»)
  */
 export default function GlobalSearch({ onNavigate, variant = "bar" }) {
+  const { lang, t } = useLang();
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [coords, setCoords] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(-1);
   const btnRef = useRef(null);
   const inputRef = useRef(null);
+  const listRef = useRef(null);
   const listId = useId();
   const isDesktop = variant === "desktop";
 
   const shortCode = /^(jr|ic|qr)$/i.test(query.trim());
   const minChars = shortCode ? 2 : 3;
-  const results = searchGlobal(query, { minChars });
+  const results = searchGlobal(query, { minChars, lang });
 
   function openPanel() {
     if (btnRef.current) {
@@ -41,6 +46,7 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
   function closePanel() {
     setOpen(false);
     setQuery("");
+    setActiveIndex(-1);
   }
 
   useEffect(() => {
@@ -56,13 +62,40 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
     };
   }, [open]);
 
+  // El índice activo se resetea cada vez que cambian los resultados,
+  // para no dejar seleccionada una fila que ya no existe.
+  useEffect(() => {
+    setActiveIndex(-1);
+  }, [query]);
+
+  useEffect(() => {
+    if (activeIndex < 0 || !listRef.current) return;
+    const row = listRef.current.querySelector(`[data-result-index="${activeIndex}"]`);
+    row?.scrollIntoView({ block: "nearest" });
+  }, [activeIndex]);
+
   function selectResult(item) {
-    onNavigate?.({ tab: item.tab, day: item.day });
+    onNavigate?.({ tab: item.tab, day: item.day, targetId: item.targetId });
     closePanel();
   }
 
-  const showHint = query.trim().length > 0 && query.trim().length < minChars;
-  const showEmpty = query.trim().length >= minChars && results.length === 0;
+  function onInputKeyDown(e) {
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      if (results.length > 0) setActiveIndex((i) => (i + 1) % results.length);
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      if (results.length > 0) setActiveIndex((i) => (i <= 0 ? results.length - 1 : i - 1));
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      const target = activeIndex >= 0 ? results[activeIndex] : results[0];
+      if (target) selectResult(target);
+    }
+  }
+
+  const trimmed = query.trim();
+  const showHint = trimmed.length > 0 && trimmed.length < minChars;
+  const showEmpty = trimmed.length >= minChars && results.length === 0;
 
   return (
     <>
@@ -70,7 +103,7 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
         ref={btnRef}
         type="button"
         onClick={() => (open ? closePanel() : openPanel())}
-        aria-label="Buscar"
+        aria-label={t("search.ariaLabel")}
         aria-expanded={open}
         aria-controls={open ? listId : undefined}
         style={{
@@ -96,7 +129,7 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
           letterSpacing: "0.02em",
           lineHeight: 1,
         }}>
-          Buscar
+          {t("search.button")}
         </span>
       </button>
 
@@ -109,7 +142,7 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
           <div
             id={listId}
             role="dialog"
-            aria-label="Buscador"
+            aria-label={t("search.dialogLabel")}
             style={{
               position: "fixed",
               top: coords.top,
@@ -136,10 +169,15 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
                 type="search"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Buscar vuelo, hotel, Pokémon, seguro…"
+                onKeyDown={onInputKeyDown}
+                placeholder={t("search.placeholder")}
                 autoComplete="off"
                 autoCorrect="off"
                 spellCheck={false}
+                role="combobox"
+                aria-expanded={results.length > 0}
+                aria-activedescendant={activeIndex >= 0 ? `${listId}-opt-${activeIndex}` : undefined}
+                aria-autocomplete="list"
                 style={{
                   flex: 1,
                   border: "none",
@@ -154,7 +192,7 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
                 <button
                   type="button"
                   onClick={() => setQuery("")}
-                  aria-label="Borrar"
+                  aria-label={t("search.clear")}
                   style={{
                     padding: 4,
                     color: "var(--ink-soft)",
@@ -169,8 +207,8 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
               )}
             </div>
 
-            <div style={{ maxHeight: "min(52vh, 360px)", overflowY: "auto" }}>
-              {!query.trim() && (
+            <div ref={listRef} role="listbox" style={{ maxHeight: "min(52vh, 360px)", overflowY: "auto" }}>
+              {!trimmed && (
                 <p style={{
                   margin: 0,
                   padding: "14px 14px 16px",
@@ -178,7 +216,7 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
                   color: "var(--ink-soft)",
                   lineHeight: 1.45,
                 }}>
-                  Escribe al menos 3 caracteres. Vuelos, hoteles, códigos, ciudades, frases, frikadas…
+                  {t("search.hintDefault")}
                 </p>
               )}
 
@@ -189,7 +227,7 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
                   fontSize: 12.5,
                   color: "var(--ink-soft)",
                 }}>
-                  Sigue escribiendo… ({minChars - query.trim().length} más)
+                  {t("search.hintMore", { count: minChars - trimmed.length })}
                 </p>
               )}
 
@@ -200,66 +238,69 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
                   fontSize: 13,
                   color: "var(--ink-soft)",
                 }}>
-                  Sin resultados para «{query.trim()}»
+                  {t("search.empty", { query: trimmed })}
                 </p>
               )}
 
-              {results.map((item) => (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={() => selectResult(item)}
-                  style={{
-                    display: "block",
-                    width: "100%",
-                    padding: "11px 14px",
-                    textAlign: "left",
-                    background: "transparent",
-                    border: "none",
-                    borderBottom: "1px solid var(--line)",
-                    cursor: "pointer",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = "var(--paper)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = "transparent";
-                  }}
-                >
-                  <span style={{
-                    display: "block",
-                    fontSize: 10.5,
-                    fontWeight: 700,
-                    letterSpacing: "0.04em",
-                    textTransform: "uppercase",
-                    color: "var(--shu)",
-                    marginBottom: 3,
-                  }}>
-                    {item.category}
-                    {item.day != null ? ` · Día ${item.day}` : ""}
-                  </span>
-                  <span style={{
-                    display: "block",
-                    fontSize: 14,
-                    fontWeight: 600,
-                    color: "var(--ink)",
-                    lineHeight: 1.25,
-                  }}>
-                    {item.title}
-                  </span>
-                  {item.subtitle && (
+              {results.map((item, index) => {
+                const active = index === activeIndex;
+                return (
+                  <button
+                    key={item.id}
+                    id={`${listId}-opt-${index}`}
+                    data-result-index={index}
+                    role="option"
+                    aria-selected={active}
+                    type="button"
+                    onClick={() => selectResult(item)}
+                    onMouseEnter={() => setActiveIndex(index)}
+                    style={{
+                      display: "block",
+                      width: "100%",
+                      padding: "11px 14px",
+                      textAlign: "left",
+                      background: active ? "var(--paper)" : "transparent",
+                      border: "none",
+                      borderBottom: "1px solid var(--line)",
+                      borderLeft: active ? "3px solid var(--shu)" : "3px solid transparent",
+                      cursor: "pointer",
+                    }}
+                  >
                     <span style={{
                       display: "block",
-                      fontSize: 12,
-                      color: "var(--ink-soft)",
-                      marginTop: 2,
-                      lineHeight: 1.35,
+                      fontSize: 10.5,
+                      fontWeight: 700,
+                      letterSpacing: "0.04em",
+                      textTransform: "uppercase",
+                      color: "var(--shu)",
+                      marginBottom: 3,
                     }}>
-                      {item.subtitle}
+                      {item.category}
+                      {item.day != null ? ` · ${t("search.day", { day: item.day })}` : ""}
                     </span>
-                  )}
-                </button>
-              ))}
+                    <span style={{
+                      display: "block",
+                      fontSize: 14,
+                      fontWeight: 600,
+                      color: "var(--ink)",
+                      lineHeight: 1.25,
+                    }}>
+                      {item.title}
+                    </span>
+                    {item.subtitle && (
+                      <span style={{
+                        display: "block",
+                        fontSize: 12,
+                        color: "var(--ink-soft)",
+                        marginTop: 2,
+                        lineHeight: 1.35,
+                      }}>
+                        {item.subtitle}
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
             </div>
           </div>
         </>,

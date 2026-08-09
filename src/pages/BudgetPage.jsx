@@ -1,6 +1,8 @@
 import { useContent, useT } from "../i18n/LanguageContext";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { Highlightable } from "../context/HighlightContext";
+import { slug } from "../utils/slug";
 
 export default function BudgetPage() {
   const { budget, transports, transportTotals } = useContent();
@@ -31,8 +33,9 @@ export default function BudgetPage() {
         gap: 10,
         marginBottom: 20,
       }}>
-        {budget.categories.map((c) => (
-          <div key={c.title} className="rounded-2xl p-4" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
+        {budget.categories.map((c, index) => (
+          <Highlightable key={c.title} id={slug("budget", index)}>
+          <div className="rounded-2xl p-4" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
             <div className="flex items-baseline justify-between">
               <p className="font-medium text-sm" style={{ color: "var(--ink)" }}>{c.title}</p>
               <p className="font-display text-sm" style={{ color: "var(--gold)" }}>{c.perPerson} /pax</p>
@@ -48,6 +51,7 @@ export default function BudgetPage() {
               </ul>
             )}
           </div>
+          </Highlightable>
         ))}
       </div>
 

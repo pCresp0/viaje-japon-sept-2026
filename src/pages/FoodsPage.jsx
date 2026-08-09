@@ -1,14 +1,31 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { UtensilsCrossed } from "lucide-react";
 import { useContent, useT } from "../i18n/LanguageContext";
+import { useHighlight } from "../context/HighlightContext";
+import { slug } from "../utils/slug";
 
 function FoodCard({ food, accent }) {
   const [imgOk, setImgOk] = useState(true);
   const t = useT();
+  const { highlightId } = useHighlight();
+  const anchorId = slug("food", food.id);
+  const isHighlighted = highlightId === anchorId;
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    if (isHighlighted && cardRef.current) {
+      const timer = window.setTimeout(() => {
+        cardRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 60);
+      return () => window.clearTimeout(timer);
+    }
+  }, [isHighlighted]);
 
   return (
     <article
-      className="rounded-2xl overflow-hidden border flex flex-col justify-between"
+      id={anchorId}
+      ref={cardRef}
+      className={"rounded-2xl overflow-hidden border flex flex-col justify-between" + (isHighlighted ? " search-highlight-pulse" : "")}
       style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}
     >
       <div>

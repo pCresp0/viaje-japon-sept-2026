@@ -1,4 +1,6 @@
 import { Phone, MapPin, ShieldAlert, Building2, Hospital } from "lucide-react";
+import { Highlightable } from "../context/HighlightContext";
+import { slug } from "../utils/slug";
 
 export const emergencyNumbers = [
   { label: "Policía", number: "110", note: "Emergencias con la policía japonesa" },
@@ -35,8 +37,8 @@ export default function EmergencyPage() {
         </div>
         <div className="grid gap-3" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }}>
           {emergencyNumbers.map((e, idx) => (
+            <Highlightable key={idx} id={slug("emergency", e.number)}>
             <a
-              key={idx}
               href={`tel:${e.number}`}
               className="rounded-xl p-4 flex items-center gap-3 transition-all"
               style={{ background: "var(--paper-raised)", border: "1px solid var(--line)", textDecoration: "none" }}
@@ -57,6 +59,7 @@ export default function EmergencyPage() {
                 <p style={{ fontSize: 11, color: "var(--ink-soft)", marginTop: 2 }}>{e.note}</p>
               </div>
             </a>
+            </Highlightable>
           ))}
         </div>
       </div>
@@ -67,6 +70,7 @@ export default function EmergencyPage() {
           <Building2 size={16} style={{ color: "var(--indigo)" }} />
           <p className="eyebrow" style={{ margin: 0, color: "var(--ink-soft)" }}>Embajada de España</p>
         </div>
+        <Highlightable id="emergency-embassy">
         <div className="rounded-2xl p-5" style={{ background: "var(--indigo)", color: "white" }}>
           <p style={{ fontSize: 16, fontWeight: 700, marginBottom: 12, fontFamily: "var(--font-display)" }}>{embassy.name}</p>
 
@@ -92,6 +96,7 @@ export default function EmergencyPage() {
             {embassy.note}
           </p>
         </div>
+        </Highlightable>
       </div>
 
       {/* Insurance reminder */}

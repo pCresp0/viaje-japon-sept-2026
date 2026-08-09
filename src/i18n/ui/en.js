@@ -45,6 +45,15 @@ export default {
   "common.openInMaps": "Open in Google Maps",
   "common.language": "Language",
   "common.selectLanguage": "Select language",
+  "search.button": "Search",
+  "search.ariaLabel": "Search",
+  "search.dialogLabel": "Search",
+  "search.placeholder": "Search flight, hotel, Pokémon, insurance…",
+  "search.clear": "Clear",
+  "search.hintDefault": "Type at least 3 characters. Flights, hotels, codes, cities, phrases, geeky stuff…",
+  "search.hintMore": "Keep typing… ({count} more)",
+  "search.empty": "No results for \"{query}\"",
+  "search.day": "Day {day}",
 
   // ── Home ──────────────────────────────────────────────────────────
   "home.eyebrow": "September 2026",

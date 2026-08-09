@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { MessageCircle, Utensils, TrainFront, ShoppingBag, Info, Volume2 } from "lucide-react";
 import { useJapaneseSpeech } from "../utils/useJapaneseSpeech";
+import { Highlightable } from "../context/HighlightContext";
+import { slug } from "../utils/slug";
 
 export const categories = [
   {
@@ -132,7 +134,8 @@ export default function PhrasesPage() {
           const id = `${current.id}-${idx}`;
           const isSpeaking = speakingId === id;
           return (
-            <div key={idx} className="px-5 py-4 flex items-start gap-3"
+            <Highlightable key={idx} id={slug("phrase", current.id, p.romaji)}>
+            <div className="px-5 py-4 flex items-start gap-3"
               style={{ borderBottom: idx < current.phrases.length - 1 ? "1px solid var(--line)" : "none" }}>
               <div className="flex-1 min-w-0">
                 <div className="flex items-baseline justify-between gap-3 mb-1">
@@ -171,6 +174,7 @@ export default function PhrasesPage() {
                 </button>
               )}
             </div>
+            </Highlightable>
           );
         })}
       </div>
@@ -183,11 +187,13 @@ export default function PhrasesPage() {
 
       <div className="grid gap-3" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))" }}>
         {etiquette.map((e, idx) => (
-          <div key={idx} className="rounded-xl p-4"
+          <Highlightable key={idx} id={slug("etiquette", e.title)}>
+          <div className="rounded-xl p-4"
             style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
             <p style={{ fontSize: 13.5, fontWeight: 700, color: "var(--indigo)", marginBottom: 4 }}>{e.title}</p>
             <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.55 }}>{e.text}</p>
           </div>
+          </Highlightable>
         ))}
       </div>
     </div>

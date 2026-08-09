@@ -5,6 +5,8 @@ import "leaflet/dist/leaflet.css";
 import { ExternalLink } from "lucide-react";
 
 import { useContent } from "../i18n/LanguageContext";
+import { Highlightable } from "../context/HighlightContext";
+import { slug } from "../utils/slug";
 
 function createIcon(emoji, color, order) {
   return L.divIcon({
@@ -169,8 +171,8 @@ export default function MapPage() {
         {currentMarkers.map((stop, idx) => {
           const isActive = selected === stop.id;
           return (
+            <Highlightable key={stop.id} id={slug("map", stop.id)}>
             <a
-              key={stop.id}
               href={`https://www.google.com/maps/search/?api=1&query=${stop.lat},${stop.lng}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -203,6 +205,7 @@ export default function MapPage() {
               </div>
               <ExternalLink size={13} style={{ color: "var(--ink-soft)", flexShrink: 0 }} />
             </a>
+            </Highlightable>
           );
         })}
       </div>

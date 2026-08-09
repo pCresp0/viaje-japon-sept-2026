@@ -1,6 +1,8 @@
 import { Cloud, CloudRain, Sun, CloudSun, MapPin, Droplets } from "lucide-react";
 
 import { useContent } from "../i18n/LanguageContext";
+import { Highlightable } from "../context/HighlightContext";
+import { slug } from "../utils/slug";
 
 export default function WeatherPage() {
   const { weatherData, dailyWeather, weatherLabels } = useContent();
@@ -16,7 +18,8 @@ export default function WeatherPage() {
       <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>{weatherLabels.condicionesGrales}</p>
       <div className="grid gap-3 mb-8" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))" }}>
         {weatherData.map((w, idx) => (
-          <div key={idx} className="rounded-xl p-4 border"
+          <Highlightable key={idx} id={slug("weather", w.city)}>
+          <div className="rounded-xl p-4 border"
             style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
             <div className="flex items-center justify-between mb-2">
               <span style={{ fontSize: 20 }}>{w.emoji}</span>
@@ -34,6 +37,7 @@ export default function WeatherPage() {
               {weatherLabels.lluvia} {w.precip}
             </p>
           </div>
+          </Highlightable>
         ))}
       </div>
 
@@ -58,7 +62,8 @@ export default function WeatherPage() {
           }
 
           return (
-            <div key={idx} className="rounded-[10px] py-2 px-3 shadow-sm relative overflow-hidden" 
+            <Highlightable key={idx} id={slug("weather-day", d.day)}>
+            <div className="rounded-[10px] py-2 px-3 shadow-sm relative overflow-hidden" 
               style={{ background: bg, color: "white" }}>
               {/* Decorational circles for glassmorphism / modern feel */}
               <div style={{
@@ -103,6 +108,7 @@ export default function WeatherPage() {
                 </div>
               </div>
             </div>
+            </Highlightable>
           );
         })}
       </div>

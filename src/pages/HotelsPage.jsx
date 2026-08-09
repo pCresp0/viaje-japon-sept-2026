@@ -1,6 +1,9 @@
+import { useEffect, useRef } from "react";
 import { useContent, useT } from "../i18n/LanguageContext";
 import { mapsUrl } from "../utils/maps";
 import { MapPin, Phone, KeyRound, CalendarCheck, CalendarX, BedDouble, ExternalLink } from "lucide-react";
+import { useHighlight } from "../context/HighlightContext";
+import { slug } from "../utils/slug";
 
 function Field({ label, children, mono = false }) {
   if (!children) return null;
@@ -26,8 +29,21 @@ function Field({ label, children, mono = false }) {
   );
 }
 
-function HotelCard({ stay, index }) {
+function HotelCard({ stay, index, anchorId }) {
   const hotel = stay.options[0];
+  const { highlightId } = useHighlight();
+  const isHighlighted = anchorId && highlightId === anchorId;
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    if (isHighlighted && cardRef.current) {
+      const t = window.setTimeout(() => {
+        cardRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 60);
+      return () => window.clearTimeout(t);
+    }
+  }, [isHighlighted]);
+
   if (!hotel) return null;
 
   const mapQuery = hotel.address
@@ -36,7 +52,9 @@ function HotelCard({ stay, index }) {
 
   return (
     <article
-      className="rounded-2xl overflow-hidden border"
+      id={anchorId}
+      ref={cardRef}
+      className={"rounded-2xl overflow-hidden border" + (isHighlighted ? " search-highlight-pulse" : "")}
       style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}
     >
       {/* Header */}
@@ -227,7 +245,7 @@ export default function HotelsPage() {
         }}
       >
         {stays.map((stay, i) => (
-          <HotelCard key={stay.id} stay={stay} index={i} />
+          <HotelCard key={stay.id} stay={stay} index={i} anchorId={slug("hotel", stay.id)} />
         ))}
       </div>
     </div>

@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useContent, useT } from "../i18n/LanguageContext";
 import { Check } from "lucide-react";
+import { Highlightable } from "../context/HighlightContext";
+import { slug } from "../utils/slug";
 
 const STORAGE_KEY = "trip-pending-v1";
 
@@ -97,7 +99,8 @@ export default function PendingPage() {
               const urg = urgencyConfig[item.urgency];
 
               return (
-                <div key={item.id}
+                <Highlightable key={item.id} id={slug("pending", item.id)}>
+                <div
                   className="rounded-2xl border overflow-hidden"
                   style={{
                     borderColor: isDone ? "var(--line)" : urg.color + "44",
@@ -176,6 +179,7 @@ export default function PendingPage() {
                     </div>
                   </div>
                 </div>
+                </Highlightable>
               );
             })}
           </div>

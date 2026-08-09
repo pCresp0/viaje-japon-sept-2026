@@ -4,11 +4,14 @@ import { formatDateShort } from "../utils/date";
 import DayCard from "../components/DayCard";
 import PlaceText from "../components/PlaceText";
 import { ChevronRight } from "lucide-react";
+import { useHighlight } from "../context/HighlightContext";
+import { slug } from "../utils/slug";
 
 export default function Itinerary({ openDay, setOpenDay }) {
   const { days, blocks } = useContent();
   const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
   const refs = useRef({});
+  const { highlightId } = useHighlight();
 
   useEffect(() => {
     if (openDay == null) return;
@@ -36,11 +39,12 @@ export default function Itinerary({ openDay, setOpenDay }) {
         {days.map((d) => {
           const block = blockById[d.block];
           const isOpen = openDay === d.num;
+          const isHighlighted = highlightId === slug("itinerary-day", d.num);
           return (
             <div
               key={d.num}
               ref={(el) => (refs.current[d.num] = el)}
-              className="itinerary-day-anchor"
+              className={"itinerary-day-anchor" + (isHighlighted ? " search-highlight-pulse" : "")}
             >
               {isOpen ? (
                 <DayCard day={d} onClose={() => setOpenDay(null)} />

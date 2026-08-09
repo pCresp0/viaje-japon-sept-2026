@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { CheckCircle2, Circle, FileText, Plug, Umbrella, Backpack, Droplets } from "lucide-react";
+import { Highlightable } from "../context/HighlightContext";
+import { slug } from "../utils/slug";
 
 const STORAGE_KEY = "trip-checklist-v1";
 
@@ -191,8 +193,8 @@ export default function PrepPage() {
               {/* items */}
               <div>
                 {section.items.map((item, idx) => (
+                  <Highlightable key={item.id} id={slug("prep", item.id)}>
                   <button
-                    key={item.id}
                     onClick={() => toggle(item.id)}
                     className="flex items-start gap-3 w-full text-left px-5 py-3 transition-colors"
                     style={{
@@ -214,6 +216,7 @@ export default function PrepPage() {
                       {item.text}
                     </span>
                   </button>
+                  </Highlightable>
                 ))}
               </div>
             </div>

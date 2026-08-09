@@ -50,6 +50,15 @@ export default {
   "common.openInMaps": "Buksan sa Google Maps",
   "common.language": "Wika",
   "common.selectLanguage": "Pumili ng wika",
+  "search.button": "Maghanap",
+  "search.ariaLabel": "Maghanap",
+  "search.dialogLabel": "Paghahanap",
+  "search.placeholder": "Maghanap ng flight, hotel, Pokémon, insurance…",
+  "search.clear": "Burahin",
+  "search.hintDefault": "Mag-type ng hindi bababa sa 3 letra. Mga flight, hotel, code, lungsod, parirala, mga friki na bagay…",
+  "search.hintMore": "Magpatuloy sa pag-type… ({count} pa)",
+  "search.empty": "Walang resulta para sa \"{query}\"",
+  "search.day": "Araw {day}",
 
   // ── Simula ────────────────────────────────────────────────────────
   "home.eyebrow": "Setyembre 2026",

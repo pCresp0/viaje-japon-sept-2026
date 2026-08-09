@@ -46,6 +46,15 @@ export default {
   "common.openInMaps": "Abrir en Google Maps",
   "common.language": "Idioma",
   "common.selectLanguage": "Seleccionar idioma",
+  "search.button": "Buscar",
+  "search.ariaLabel": "Buscar",
+  "search.dialogLabel": "Buscador",
+  "search.placeholder": "Buscar vuelo, hotel, Pokémon, seguro…",
+  "search.clear": "Borrar",
+  "search.hintDefault": "Escribe al menos 3 caracteres. Vuelos, hoteles, códigos, ciudades, frases, frikadas…",
+  "search.hintMore": "Sigue escribiendo… ({count} más)",
+  "search.empty": "Sin resultados para «{query}»",
+  "search.day": "Día {day}",
 
   // ── Inicio ────────────────────────────────────────────────────────
   "home.eyebrow": "Septiembre 2026",

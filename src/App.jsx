@@ -23,6 +23,7 @@ import HistoryPage from "./pages/HistoryPage";
 import AboutPage from "./pages/AboutPage";
 import FrikadasPage from "./pages/FrikadasPage";
 import SearchResultHighlight from "./components/SearchResultHighlight";
+import { useHighlight } from "./context/HighlightContext";
 import { getTripStatus } from "./utils/date";
 
 function defaultTab() {
@@ -36,6 +37,7 @@ export default function App() {
   const [openDay, setOpenDay] = useState(getTripStatus().day?.num ?? null);
   const [searchResult, setSearchResult] = useState(null);
   const scrollContainerRef = useRef(null);
+  const { triggerHighlight } = useHighlight();
 
   function goToDay(num) {
     setOpenDay(num);
@@ -43,10 +45,16 @@ export default function App() {
   }
 
   function handleSearchNavigate(result) {
-    const { tab: nextTab, day } = result;
+    const { tab: nextTab, day, targetId } = result;
     setSearchResult(result);
     if (day != null) setOpenDay(day);
     setTab(nextTab);
+    // Se dispara con un pequeño margen para dar tiempo a que la nueva
+    // página (y, si hace falta, el día/acordeón correspondiente) se
+    // monten antes de intentar el scrollIntoView.
+    if (targetId) {
+      window.setTimeout(() => triggerHighlight(targetId), 120);
+    }
   }
 
   // Scroll to top of the scrollable container when tab changes
