@@ -314,14 +314,15 @@ export default function MapPage({ onGoToDay, initialDay }) {
                   <span style={{ fontSize: 12 }}>{stop.emoji}</span>
                 </div>
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <p style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)", marginBottom: 1 }}>
+                  <p style={{
+                    fontSize: 13, fontWeight: 700, color: "var(--ink)", marginBottom: 1,
+                    overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap",
+                  }}>
                     {isRutaFilter || isDaysFilter ? stop.name : `${idx + 1}. ${stop.name}`}
                   </p>
                   <p style={{
                     fontSize: 12, color: "var(--ink-soft)",
-                    overflow: isRutaFilter ? "hidden" : undefined,
-                    textOverflow: isRutaFilter ? "ellipsis" : undefined,
-                    whiteSpace: isRutaFilter ? "nowrap" : undefined,
+                    overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap",
                   }}>
                     {isRutaFilter ? stop.detail : stop.day}
                   </p>
@@ -331,7 +332,7 @@ export default function MapPage({ onGoToDay, initialDay }) {
               {/* Dos botones claros y separados: qué hace cada uno se ve
                   a simple vista, en vez de tener que adivinar qué pasa al
                   tocar la tarjeta o un icono suelto. */}
-              <div className="flex gap-1.5">
+              <div className="flex gap-1.5" style={{ minWidth: 0 }}>
                 {canGoToItinerary && (
                   <button
                     onClick={() => onGoToDay(primaryDay)}
@@ -342,9 +343,11 @@ export default function MapPage({ onGoToDay, initialDay }) {
                       fontSize: 11.5,
                       fontWeight: 600,
                       border: "none",
+                      minWidth: 0,
+                      overflow: "hidden",
                     }}
                   >
-                    <CalendarDays size={13} />
+                    <CalendarDays size={13} style={{ flexShrink: 0 }} />
                     <span className="truncate">{mapLabels.verEnItinerario}</span>
                   </button>
                 )}
@@ -361,9 +364,11 @@ export default function MapPage({ onGoToDay, initialDay }) {
                     fontWeight: 600,
                     border: "1px solid var(--line)",
                     textDecoration: "none",
+                    minWidth: 0,
+                    overflow: "hidden",
                   }}
                 >
-                  <ExternalLink size={13} />
+                  <ExternalLink size={13} style={{ flexShrink: 0 }} />
                   <span className="truncate">{mapLabels.verEnGoogleMaps}</span>
                 </a>
               </div>
