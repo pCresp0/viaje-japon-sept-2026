@@ -60,7 +60,11 @@ function GuideBlock({ id, accentColor }) {
         <img
           src={img}
           alt={g.name}
-          style={{ width: "100%", height: "auto", display: "block" }}
+          style={{
+            display: "block", margin: "0 auto",
+            maxWidth: "100%", maxHeight: "65mm", // ~1/4 de una hoja A4
+            width: "auto", height: "auto",
+          }}
         />
       )}
       <div style={{ padding: "10px 12px" }}>
