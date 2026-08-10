@@ -1,9 +1,10 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useContent } from "../i18n/LanguageContext";
 import { formatDateShort } from "../utils/date";
 import DayCard from "../components/DayCard";
 import PlaceText from "../components/PlaceText";
-import { ChevronRight } from "lucide-react";
+import ItineraryPrintView from "../components/ItineraryPrintView";
+import { ChevronRight, FileDown, Loader2 } from "lucide-react";
 import { useHighlight } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 
@@ -12,6 +13,17 @@ export default function Itinerary({ openDay, setOpenDay, onGoToMapDay }) {
   const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
   const refs = useRef({});
   const { highlightId } = useHighlight();
+  const [exporting, setExporting] = useState(false);
+
+  function handleExportPdf() {
+    setExporting(true);
+    // Pequeño margen para que el estado "generando..." se pinte antes de
+    // que window.print() bloquee el hilo principal con el diálogo nativo.
+    window.setTimeout(() => {
+      window.print();
+      setExporting(false);
+    }, 80);
+  }
 
   useEffect(() => {
     if (openDay == null) return;
@@ -27,14 +39,26 @@ export default function Itinerary({ openDay, setOpenDay, onGoToMapDay }) {
 
   return (
     <div className="pt-3 pb-8 px-4">
-      <div>
-        <p className="eyebrow" style={{ color: "var(--shu)" }}>
-          Los 15 días
-        </p>
-        <h1 className="font-display text-2xl mb-3" style={{ color: "var(--indigo)" }}>
-          Itinerario completo
-        </h1>
+      <div className="flex items-start justify-between gap-3">
+        <div>
+          <p className="eyebrow" style={{ color: "var(--shu)" }}>
+            Los 15 días
+          </p>
+          <h1 className="font-display text-2xl mb-3" style={{ color: "var(--indigo)" }}>
+            Itinerario completo
+          </h1>
+        </div>
+        <button
+          onClick={handleExportPdf}
+          disabled={exporting}
+          className="shrink-0 flex items-center gap-1.5 rounded-full px-3.5 py-2 text-xs font-semibold"
+          style={{ background: "var(--indigo)", color: "white", border: "none" }}
+        >
+          {exporting ? <Loader2 size={14} className="animate-spin" /> : <FileDown size={14} />}
+          Exportar a PDF
+        </button>
       </div>
+      <ItineraryPrintView days={days} />
       <div className="mt-3 space-y-2.5">
         {days.map((d) => {
           const block = blockById[d.block];
