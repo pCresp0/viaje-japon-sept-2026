@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useContent, useT } from "../i18n/LanguageContext";
-import { PlaneTakeoff, Route, CalendarDays, Hotel, Train, Heart, UtensilsCrossed, Map, MessageCircle, Backpack, Wallet, Compass, ListTodo, Landmark } from "lucide-react";
+import { PlaneTakeoff } from "lucide-react";
 import { flights } from "../data/trip";
 
 const DEPARTURE_ISO = `${flights.out.date}T09:05:00`;

@@ -35,9 +35,8 @@ export default function AccessGate({ onUnlock }) {
 
   return (
     <div
+      className="full-viewport-min-height"
       style={{
-        minHeight: "100vh",
-        minHeight: "100dvh",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",

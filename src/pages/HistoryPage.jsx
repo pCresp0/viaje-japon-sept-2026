@@ -139,7 +139,7 @@ function PeriodCard({ period, isOpen, onToggle, speak, stop, speakingId, support
                   fontSize: 11, fontWeight: 700, color: "var(--ink-soft)",
                   letterSpacing: "0.05em", textTransform: "uppercase",
                 }}>
-                  Lo veréis en el viaje
+                  {t("history.seeOnTrip")}
                 </span>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
@@ -161,7 +161,7 @@ function PeriodCard({ period, isOpen, onToggle, speak, stop, speakingId, support
 }
 
 export default function HistoryPage() {
-  const { historyPeriods, furtherReading, guides } = useContent();
+  const { historyPeriods, furtherReading } = useContent();
   const t = useT();
   const { lang } = useLang();
   const { supported, speakingId, speak, stop } = useTextSpeech(lang);
@@ -186,12 +186,12 @@ export default function HistoryPage() {
   return (
     <div className="px-4 pt-3 pb-12">
       <div className="mb-6">
-        <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Para entender lo que vais a ver</p>
+        <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{t("history.eyebrow")}</p>
         <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>
-          Historia de Japón
+          {t("history.title")}
         </h2>
         <p style={{ fontSize: 13, color: "var(--ink-soft)", marginTop: 8, lineHeight: 1.6 }}>
-          Un recorrido por más de 2.000 años de historia japonesa, organizado por periodos, con referencias directas a los lugares concretos que vais a visitar durante el viaje. Pulsa cada periodo para desplegarlo, o el altavoz para escucharlo.
+          {t("history.intro")}
         </p>
       </div>
 
@@ -210,12 +210,12 @@ export default function HistoryPage() {
 
       {/* Further reading */}
       <div style={{ marginTop: 32 }}>
-        <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Para profundizar</p>
+        <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{t("history.readingEyebrow")}</p>
         <h3 className="font-display text-xl" style={{ color: "var(--indigo)", marginBottom: 4 }}>
-          Libros y podcasts recomendados
+          {t("history.readingTitle")}
         </h3>
         <p style={{ fontSize: 12.5, color: "var(--ink-soft)", marginBottom: 16, lineHeight: 1.6 }}>
-          Si alguna de estas historias os ha dejado con ganas de más, aquí tenéis por dónde seguir tirando del hilo.
+          {t("history.readingIntro")}
         </p>
 
         {/* Books */}
@@ -223,7 +223,7 @@ export default function HistoryPage() {
           style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
           <div className="flex items-center gap-2 px-5 py-3" style={{ background: "var(--indigo)" }}>
             <BookOpen size={16} color="#fff" />
-            <span style={{ fontSize: 13, fontWeight: 700, color: "#fff" }}>Libros</span>
+            <span style={{ fontSize: 13, fontWeight: 700, color: "#fff" }}>{t("history.books")}</span>
           </div>
           {furtherReading.books.map((b, i) => (
             <Highlightable key={i} id={slug("history", "books", b.title)}>
@@ -242,7 +242,7 @@ export default function HistoryPage() {
           style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
           <div className="flex items-center gap-2 px-5 py-3" style={{ background: "var(--forest)" }}>
             <Headphones size={16} color="#fff" />
-            <span style={{ fontSize: 13, fontWeight: 700, color: "#fff" }}>Podcasts</span>
+            <span style={{ fontSize: 13, fontWeight: 700, color: "#fff" }}>{t("history.podcasts")}</span>
           </div>
           {furtherReading.podcasts.map((p, i) => (
             <Highlightable key={i} id={slug("history", "podcasts", p.title)}>

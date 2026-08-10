@@ -10,10 +10,10 @@ export default function InfoPage() {
     <div className="px-4 pt-3 pb-8">
       <div className="mb-6">
         <p className="eyebrow" style={{ color: "var(--shu)" }}>
-          Logística
+          {t("flights.eyebrow")}
         </p>
         <h1 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>
-          Vuelos
+          {t("flights.title")}
         </h1>
         <p style={{ fontSize: 13.5, color: "var(--ink-soft)", marginTop: 6, lineHeight: 1.5 }}>
           Ida y vuelta confirmadas · Qatar Airways vía Doha
@@ -33,7 +33,7 @@ export default function InfoPage() {
       <div className="rounded-xl p-4 mt-4" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))", gap: 14 }}>
           <div>
-            <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 3 }}>Referencia</p>
+            <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 3 }}>{t("flights.reference")}</p>
             <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", fontFamily: "monospace", margin: 0 }}>{flights.booking.ref}</p>
           </div>
           <div>

@@ -31,6 +31,7 @@ function Field({ label, children, mono = false }) {
 
 function HotelCard({ stay, index, anchorId }) {
   const hotel = stay.options[0];
+  const t = useT();
   const { highlightId } = useHighlight();
   const isHighlighted = anchorId && highlightId === anchorId;
   const cardRef = useRef(null);
@@ -73,7 +74,7 @@ function HotelCard({ stay, index, anchorId }) {
           </div>
           {hotel.total && (
             <div style={{ textAlign: "right", flexShrink: 0 }}>
-              <p style={{ fontSize: 10, opacity: 0.65, margin: 0, textTransform: "uppercase" }}>Total</p>
+              <p style={{ fontSize: 10, opacity: 0.65, margin: 0, textTransform: "uppercase" }}>{t("common.total")}</p>
               <p className="font-display" style={{ fontSize: 20, fontWeight: 700, margin: 0 }}>
                 {hotel.total}
               </p>
@@ -209,8 +210,8 @@ export default function HotelsPage() {
   return (
     <div className="px-4 pt-3 pb-12">
       <div className="mb-6">
-        <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Alojamiento</p>
-        <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>Hoteles</h2>
+        <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{t("hotels.eyebrow")}</p>
+        <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>{t("hotels.title")}</h2>
         <p style={{ fontSize: 13.5, color: "var(--ink-soft)", marginTop: 6, lineHeight: 1.5 }}>
           Todo lo necesario para el check-in: confirmación, PIN, horarios, dirección y enlace a la reserva.
         </p>
@@ -220,15 +221,15 @@ export default function HotelsPage() {
       <div className="rounded-2xl px-5 py-4 mb-6" style={{ background: "var(--indigo)", color: "white" }}>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12 }}>
           <div>
-            <p style={{ fontSize: 10, opacity: 0.6, textTransform: "uppercase", letterSpacing: "0.05em", margin: 0 }}>Estancias</p>
+            <p style={{ fontSize: 10, opacity: 0.6, textTransform: "uppercase", letterSpacing: "0.05em", margin: 0 }}>{t("hotels.stays")}</p>
             <p className="font-display" style={{ fontSize: 22, fontWeight: 700, margin: "2px 0 0" }}>{stays.length}</p>
           </div>
           <div>
-            <p style={{ fontSize: 10, opacity: 0.6, textTransform: "uppercase", letterSpacing: "0.05em", margin: 0 }}>Noches</p>
+            <p style={{ fontSize: 10, opacity: 0.6, textTransform: "uppercase", letterSpacing: "0.05em", margin: 0 }}>{t("hotels.nights")}</p>
             <p className="font-display" style={{ fontSize: 22, fontWeight: 700, margin: "2px 0 0" }}>14</p>
           </div>
           <div>
-            <p style={{ fontSize: 10, opacity: 0.6, textTransform: "uppercase", letterSpacing: "0.05em", margin: 0 }}>Total grupo</p>
+            <p style={{ fontSize: 10, opacity: 0.6, textTransform: "uppercase", letterSpacing: "0.05em", margin: 0 }}>{t("hotels.groupTotal")}</p>
             <p className="font-display" style={{ fontSize: 22, fontWeight: 700, margin: "2px 0 0" }}>
               {totalGroup.toLocaleString("es-ES", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}€
             </p>

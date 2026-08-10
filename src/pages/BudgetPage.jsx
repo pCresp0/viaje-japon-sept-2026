@@ -22,7 +22,7 @@ export default function BudgetPage() {
       </div>
 
       <div className="rounded-2xl p-6 text-center mb-5" style={{ background: "var(--indigo)" }}>
-        <p className="eyebrow" style={{ color: "rgba(255,255,255,0.9)" }}>Total por persona</p>
+        <p className="eyebrow" style={{ color: "rgba(255,255,255,0.9)" }}>{t("budget.perPerson")}</p>
         <p className="font-display text-3xl text-white my-1">{budget.totalPerPerson}</p>
         <p className="text-white/70 text-xs mt-2">Grupo ({budget.people} pax): {budget.totalGroup}</p>
       </div>
@@ -77,17 +77,22 @@ export default function BudgetPage() {
                 </div>
                 <div className="text-right shrink-0">
                   <p style={{ color: "var(--ink)" }}>{t.real.toFixed(2)}€</p>
-                  <p style={{ color: "var(--forest)" }}>{t.jrPass.toFixed(2)}€ c/pass</p>
+                  <p style={{ color: "var(--forest)" }}>{t.jrPass.toFixed(2)}€ sin cubrir</p>
                 </div>
               </div>
             ))}
             <div className="flex items-center justify-between text-sm font-medium pt-1">
-              <span style={{ color: "var(--ink)" }}>Total por persona</span>
+              <span style={{ color: "var(--ink)" }}>{t("budget.perPerson")}</span>
               <span style={{ color: "var(--ink)" }}>
                 {transportTotals.real}€
-                <span style={{ color: "var(--forest)" }}> · {transportTotals.jrPass}€ con JR Pass</span>
               </span>
             </div>
+            <p style={{ fontSize: 10.5, color: "var(--ink-soft)", lineHeight: 1.5, marginTop: 4 }}>
+              Con JR Pass todavía quedarían {transportTotals.jrPass}€/persona en trayectos que el
+              pase no cubre — sin contar el precio del propio pase (~270-505€ según los días,
+              siempre por encima de lo que cuesta pagar suelto en este itinerario). Ver "Decidir si
+              comprar JR Pass" en Cosas pendientes.
+            </p>
           </div>
         )}
       </div>

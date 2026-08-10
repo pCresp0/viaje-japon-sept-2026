@@ -27,15 +27,15 @@ function jrCoverage(t) {
 }
 
 export default function TransportPage() {
-  const { transports, transportTotals, days } = useContent();
+  const { transports, days } = useContent();
   const t = useT();
   // Group transports by day key, preserving insertion order
   const seenKeys = [];
   const groups = {};
-  for (const t of transports) {
-    const k = String(t.day);
+  for (const item of transports) {
+    const k = String(item.day);
     if (!groups[k]) { groups[k] = []; seenKeys.push(k); }
-    groups[k].push(t);
+    groups[k].push(item);
   }
 
   function headerFor(key) {
@@ -51,7 +51,11 @@ export default function TransportPage() {
     return { badge: "~", title: t("transport.tokioDays"), sub: "Tokio" };
   }
 
-  const savings = (transportTotals.real - transportTotals.jrPass).toFixed(1);
+  // (Antes había aquí un cálculo de "ahorro" real-jrPass sin usar en
+  // ningún sitio. Se ha quitado: habría repetido el mismo error que se
+  // corrigió en Presupuesto — transportTotals.jrPass son sólo los tramos
+  // que el JR Pass no cubre, no el coste total con el pase, así que
+  // restarlo del total sin pase no da un "ahorro" real.)
 
   return (
     <div className="px-4 pt-3 pb-12">

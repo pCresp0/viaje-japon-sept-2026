@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { RefreshCw, CheckCircle2, WifiOff } from "lucide-react";
 import { fmtDateTZ } from "../utils/date";
 
@@ -51,6 +51,17 @@ export default function UtilsPage() {
   const [eurText, setEurText] = useState(() => formatEs(100, { maxDecimals: 2 }));
   const [yenText, setYenText] = useState(() => formatEs(Math.round(100 * rate)));
 
+  // fetchLiveRate() se lanza una sola vez al montar (no en cada cambio del
+  // campo de euros, o cada tecla dispararía una llamada de red). Pero si
+  // se deja que capture "eurInput" por closure, al resolver la petición
+  // usaría el valor que había EN EL MOMENTO DE MONTAR (100 por defecto) y
+  // no el que el usuario haya escrito mientras tanto — sobrescribiendo su
+  // valor de yenes con un cálculo basado en un euro obsoleto. Esta ref
+  // siempre apunta al valor más reciente, sin necesidad de reiniciar el
+  // efecto ni provocar una llamada de red en cada pulsación.
+  const eurInputRef = useRef(eurInput);
+  useEffect(() => { eurInputRef.current = eurInput; }, [eurInput]);
+
   async function fetchLiveRate() {
     setLoadingRate(true);
     try {
@@ -63,7 +74,7 @@ export default function UtilsPage() {
         setIsLive(true);
         const timeStr = new Date().toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit" });
         setLastUpdated(timeStr);
-        const nextYen = Math.round(eurInput * liveJpy);
+        const nextYen = Math.round(eurInputRef.current * liveJpy);
         setYenInput(nextYen);
         setYenText(formatEs(nextYen));
         try {

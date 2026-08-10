@@ -112,6 +112,7 @@ export default {
   "flights.trackLive": "Seguir vuelo en vivo",
   "flights.nextDay": "+1 día",
   "flights.via": "vía",
+  "flights.reference": "Referencia",
 
   // ── Hoteles ───────────────────────────────────────────────────────
   "hotels.eyebrow": "Alojamiento",
@@ -122,6 +123,9 @@ export default {
   "hotels.address": "Dirección",
   "hotels.price": "Precio",
   "hotels.viewBooking": "Ver en Booking",
+  "hotels.stays": "Estancias",
+  "hotels.nights": "Noches",
+  "hotels.groupTotal": "Total grupo",
 
   // ── Transportes ───────────────────────────────────────────────────
   "transport.eyebrow": "Cómo nos movemos",
@@ -290,12 +294,8 @@ export default {
   "today.endThanks": "おかえりなさい 🇯🇵",
   "today.endMessage": "El viaje ha terminado. El itinerario, hoteles y recuerdos siguen aquí.",
 
-  "transport.eyebrow": "Movimientos",
-  "transport.title": "Transportes",
   "transport.tokioDays": "Días 10–14 · 16-20 sept",
   
-  "places.eyebrow": "Ruta y Puntos de Interés",
-  "places.title": "Lugares",
   "places.all": "Todos los lugares",
 
   "nav.about": "Sobre la web",

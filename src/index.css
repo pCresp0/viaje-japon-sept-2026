@@ -329,3 +329,19 @@ main > div > * {
 .leaflet-popup {
   z-index: 15 !important;
 }
+
+/* ── Altura de viewport con fallback real ────────────────────────────
+   En un objeto de estilos de React (JS) no se pueden repetir claves —
+   "height: 100vh, height: 100dvh" en el mismo objeto sólo aplicaría la
+   segunda, perdiendo el fallback en navegadores sin soporte de dvh. En
+   CSS de verdad sí se puede: el navegador aplica la última declaración
+   que entienda e ignora la que no reconoce, dando el fallback real. */
+.full-viewport-height {
+  height: 100vh;
+  height: 100dvh;
+}
+.full-viewport-min-height {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+

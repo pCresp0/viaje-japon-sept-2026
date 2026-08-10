@@ -82,7 +82,7 @@ export default function App() {
   }
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", height: "100vh", height: "100dvh" }}>
+    <div className="full-viewport-height" style={{ display: "flex", flexDirection: "column" }}>
 
       {/* Desktop: cabecera a todo el ancho (lupa + idioma a la derecha) */}
       <DesktopTopBar active={tab} onNavigate={handleSearchNavigate} />

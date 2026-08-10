@@ -111,6 +111,7 @@ export default {
   "flights.trackLive": "Track flight live",
   "flights.nextDay": "+1 day",
   "flights.via": "via",
+  "flights.reference": "Reference",
 
   // ── Hotels ────────────────────────────────────────────────────────
   "hotels.eyebrow": "Accommodation",
@@ -121,6 +122,9 @@ export default {
   "hotels.address": "Address",
   "hotels.price": "Price",
   "hotels.viewBooking": "View on Booking",
+  "hotels.stays": "Stays",
+  "hotels.nights": "Nights",
+  "hotels.groupTotal": "Group total",
 
   // ── Transport ─────────────────────────────────────────────────────
   "transport.eyebrow": "Getting around",
@@ -287,11 +291,7 @@ export default {
   "today.endThanks": "おかえりなさい 🇯🇵 (Welcome back)",
   "today.endMessage": "The trip is over. The itinerary, hotels and memories are still here.",
 
-  "transport.eyebrow": "Movements",
-  "transport.title": "Transport",
   "transport.tokioDays": "Days 10–14 · Sep 16-20",
 
-  "places.eyebrow": "Route and POIs",
-  "places.title": "Places",
   "places.all": "All places",
 };

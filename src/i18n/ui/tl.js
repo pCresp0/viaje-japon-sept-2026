@@ -116,6 +116,7 @@ export default {
   "flights.trackLive": "Subaybayan ang flight",
   "flights.nextDay": "+1 araw",
   "flights.via": "sa pamamagitan ng",
+  "flights.reference": "Reference number",
 
   // ── Mga hotel ─────────────────────────────────────────────────────
   "hotels.eyebrow": "Matutuluyan",
@@ -126,6 +127,9 @@ export default {
   "hotels.address": "Address",
   "hotels.price": "Presyo",
   "hotels.viewBooking": "Tingnan sa Booking",
+  "hotels.stays": "Mga Tuluyan",
+  "hotels.nights": "Mga Gabi",
+  "hotels.groupTotal": "Kabuuan ng grupo",
 
   // ── Transportasyon ────────────────────────────────────────────────
   "transport.eyebrow": "Paano tayo maglalakbay",
@@ -292,11 +296,7 @@ export default {
   "today.endThanks": "おかえりなさい 🇯🇵 (Maligayang pagbabalik)",
   "today.endMessage": "Tapos na ang biyahe. Ang itinerary, hotel at mga alaala ay nandito pa rin.",
 
-  "transport.eyebrow": "Mga Paggalaw",
-  "transport.title": "Transportasyon",
   "transport.tokioDays": "Araw 10–14 · Set 16-20",
 
-  "places.eyebrow": "Ruta at mga POI",
-  "places.title": "Mga Lugar",
   "places.all": "Lahat ng lugar",
 };
