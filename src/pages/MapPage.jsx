@@ -8,6 +8,7 @@ import { useContent } from "../i18n/LanguageContext";
 import { Highlightable } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 import { parseDayNumbers } from "../utils/mapDay";
+import PlaceText from "../components/PlaceText";
 
 function createIcon(emoji, color, order) {
   return L.divIcon({
@@ -187,6 +188,24 @@ export default function MapPage({ onGoToDay, initialDay }) {
               {mapLabels.diaLabel} {n}
             </button>
           ))}
+        </div>
+      )}
+
+      {isSingleDayDetail && dayInfo[subDay] && (
+        <div className="rounded-2xl p-4 mb-4" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
+          <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>
+            {mapLabels.diaLabel} {subDay} · {dayInfo[subDay].weekday} {dayInfo[subDay].date?.slice(8)} sept
+          </p>
+          <p style={{ fontSize: 15, fontWeight: 700, color: "var(--indigo)", fontFamily: "var(--font-display)", marginBottom: 6 }}>
+            {dayInfo[subDay].title}
+          </p>
+          <PlaceText
+            as="p"
+            text={dayInfo[subDay].summary}
+            className="text-sm leading-relaxed"
+            style={{ color: "var(--ink)" }}
+            linkStyle={{ color: "var(--shu)" }}
+          />
         </div>
       )}
 
