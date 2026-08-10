@@ -2,15 +2,12 @@ import { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { ExternalLink, CalendarDays, DownloadCloud, Check, X as XIcon } from "lucide-react";
+import { ExternalLink, CalendarDays } from "lucide-react";
 
 import { useContent } from "../i18n/LanguageContext";
 import { Highlightable } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 import { parseDayNumbers } from "../utils/mapDay";
-import { prefetchTripTiles } from "../utils/offlineMapTiles";
-
-const OFFLINE_TILES_KEY = "map-tiles-downloaded-at";
 
 function createIcon(emoji, color, order) {
   return L.divIcon({
@@ -67,36 +64,6 @@ export default function MapPage({ onGoToDay, initialDay }) {
 
   const { mapStops, mapFilterData, mapLabels, days } = useContent();
   const dayInfo = Object.fromEntries(days.map((d) => [d.num, d]));
-
-  // Descarga de teselas para uso sin conexión
-  const [offlineState, setOfflineState] = useState("idle"); // idle | downloading | done | error
-  const [offlineProgress, setOfflineProgress] = useState({ done: 0, total: 0 });
-  const [offlineDownloadedAt, setOfflineDownloadedAt] = useState(() => {
-    try { return localStorage.getItem(OFFLINE_TILES_KEY); } catch { return null; }
-  });
-  const [offlineCancel, setOfflineCancel] = useState(null);
-  const offlineSupported = typeof window !== "undefined" && "caches" in window;
-
-  function startOfflineDownload() {
-    if (!offlineSupported || offlineState === "downloading") return;
-    setOfflineState("downloading");
-    const { cancel, result, total } = prefetchTripTiles(mapStops, (done, tot, failed) => {
-      setOfflineProgress({ done, total: tot, failed });
-    });
-    setOfflineProgress({ done: 0, total, failed: 0 });
-    setOfflineCancel(() => cancel);
-    result.then(({ cancelled }) => {
-      setOfflineCancel(null);
-      if (cancelled) {
-        setOfflineState("idle");
-        return;
-      }
-      setOfflineState("done");
-      const now = new Date().toISOString();
-      try { localStorage.setItem(OFFLINE_TILES_KEY, now); } catch { /* ignore */ }
-      setOfflineDownloadedAt(now);
-    }).catch(() => setOfflineState("error"));
-  }
 
   const filters = [
     { id: "ruta", label: mapLabels.filterRuta },
@@ -166,73 +133,6 @@ export default function MapPage({ onGoToDay, initialDay }) {
           {filter === "transportes" && `${mapLabels.descTransportes}`}
         </p>
       </div>
-
-      {offlineSupported && (
-        <div className="rounded-xl p-3.5 mb-4" style={{
-          background: offlineState === "downloading" ? "#1d355708" : "var(--paper-raised)",
-          border: "1px solid var(--line)",
-        }}>
-          {offlineState === "downloading" ? (
-            <div>
-              <div className="flex items-center justify-between mb-2">
-                <p style={{ fontSize: 12.5, fontWeight: 600, color: "var(--indigo)" }}>
-                  Descargando mapa para uso sin conexión…
-                </p>
-                <button
-                  onClick={() => offlineCancel?.()}
-                  aria-label="Cancelar descarga"
-                  style={{ color: "var(--ink-soft)", background: "none", border: "none", cursor: "pointer" }}
-                >
-                  <XIcon size={15} />
-                </button>
-              </div>
-              <div style={{ height: 6, borderRadius: 3, background: "var(--line)", overflow: "hidden" }}>
-                <div style={{
-                  height: "100%",
-                  width: offlineProgress.total ? `${(offlineProgress.done / offlineProgress.total) * 100}%` : "0%",
-                  background: "var(--indigo)",
-                  transition: "width 0.2s",
-                }} />
-              </div>
-              <p style={{ fontSize: 11, color: "var(--ink-soft)", marginTop: 4 }}>
-                {offlineProgress.done} / {offlineProgress.total} imágenes del mapa
-              </p>
-            </div>
-          ) : (
-            <div className="flex items-center gap-3">
-              <div style={{
-                width: 34, height: 34, borderRadius: 10, flexShrink: 0,
-                background: offlineState === "done" ? "#2e7d5b18" : "#1d355712",
-                display: "flex", alignItems: "center", justifyContent: "center",
-              }}>
-                {offlineState === "done"
-                  ? <Check size={16} style={{ color: "var(--forest)" }} />
-                  : <DownloadCloud size={16} style={{ color: "var(--indigo)" }} />}
-              </div>
-              <div className="flex-1" style={{ minWidth: 0 }}>
-                <p style={{ fontSize: 12.5, fontWeight: 600, color: "var(--ink)" }}>
-                  {offlineState === "done" ? "Mapa disponible sin conexión" : "Descargar mapa para uso sin conexión"}
-                </p>
-                <p style={{ fontSize: 11, color: "var(--ink-soft)", marginTop: 1 }}>
-                  {offlineDownloadedAt
-                    ? `Última descarga: ${new Date(offlineDownloadedAt).toLocaleDateString("es-ES", { day: "numeric", month: "short" })} — vuelve a pulsar para actualizar`
-                    : "~8 MB con WiFi, cubre toda la ruta del viaje"}
-                </p>
-              </div>
-              <button
-                onClick={startOfflineDownload}
-                style={{
-                  flexShrink: 0, padding: "7px 14px", borderRadius: 999,
-                  background: "var(--indigo)", color: "white",
-                  border: "none", fontSize: 12, fontWeight: 600, cursor: "pointer",
-                }}
-              >
-                {offlineDownloadedAt ? "Actualizar" : "Descargar"}
-              </button>
-            </div>
-          )}
-        </div>
-      )}
 
       <div className="flex gap-2 overflow-x-auto pb-4 mb-2" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
         {filters.map((f) => (
