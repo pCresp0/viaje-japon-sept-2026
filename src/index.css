@@ -344,3 +344,30 @@ main > div > * {
   min-height: 100vh;
   min-height: 100dvh;
 }
+
+/* ── Exportar itinerario a PDF ────────────────────────────────────────
+   Se usa la impresión nativa del navegador (Guardar como PDF) en vez de
+   una librería tipo jsPDF: así el texto sale real y seleccionable, los
+   enlaces (Google Maps, reservas...) quedan clicables de verdad en el
+   PDF, y las imágenes se insertan a su calidad original — todo eso hay
+   que reconstruirlo a mano con jsPDF y es mucho más frágil.
+
+   El contenido de impresión vive siempre en el DOM (montado vía portal
+   en <body>, ver ItineraryPrintView.jsx) pero oculto en pantalla; sólo
+   se muestra dentro de @media print, momento en el que se oculta el
+   resto de la app (menú, cabecera, footer...). */
+.print-only {
+  display: none;
+}
+
+@media print {
+  .app-shell {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  @page {
+    margin: 14mm 12mm;
+  }
+}

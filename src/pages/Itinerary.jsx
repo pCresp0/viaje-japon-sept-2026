@@ -3,6 +3,7 @@ import { useContent } from "../i18n/LanguageContext";
 import { formatDateShort } from "../utils/date";
 import DayCard from "../components/DayCard";
 import PlaceText from "../components/PlaceText";
+import ItineraryPrintView from "../components/ItineraryPrintView";
 import { ChevronRight, FileDown, Loader2 } from "lucide-react";
 import { useHighlight } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
@@ -13,25 +14,15 @@ export default function Itinerary({ openDay, setOpenDay, onGoToMapDay }) {
   const refs = useRef({});
   const { highlightId } = useHighlight();
   const [exporting, setExporting] = useState(false);
-  const [exportProgress, setExportProgress] = useState(null);
 
-  async function handleExportPdf() {
-    if (exporting) return;
+  function handleExportPdf() {
     setExporting(true);
-    setExportProgress(null);
-    try {
-      // jsPDF (con html2canvas de propina, que no se usa aquí pero pesa
-      // ~200KB) sólo se descarga cuando de verdad hace falta, al pulsar
-      // el botón — así el resto de la app no paga ese peso de más en
-      // cada visita si nadie exporta nunca un PDF.
-      const { exportItineraryPdf } = await import("../utils/exportItineraryPdf");
-      await exportItineraryPdf(days, {
-        onProgress: (done, total) => setExportProgress({ done, total }),
-      });
-    } finally {
+    // Pequeño margen para que el estado "generando..." se pinte antes de
+    // que window.print() bloquee el hilo principal con el diálogo nativo.
+    window.setTimeout(() => {
+      window.print();
       setExporting(false);
-      setExportProgress(null);
-    }
+    }, 80);
   }
 
   useEffect(() => {
@@ -61,14 +52,13 @@ export default function Itinerary({ openDay, setOpenDay, onGoToMapDay }) {
           onClick={handleExportPdf}
           disabled={exporting}
           className="shrink-0 flex items-center gap-1.5 rounded-full px-3.5 py-2 text-xs font-semibold"
-          style={{ background: "var(--indigo)", color: "white", border: "none", opacity: exporting ? 0.75 : 1 }}
+          style={{ background: "var(--indigo)", color: "white", border: "none" }}
         >
           {exporting ? <Loader2 size={14} className="animate-spin" /> : <FileDown size={14} />}
-          {exporting
-            ? (exportProgress ? `Generando… ${exportProgress.done}/${exportProgress.total}` : "Generando…")
-            : "Exportar a PDF"}
+          Exportar a PDF
         </button>
       </div>
+      <ItineraryPrintView days={days} />
       <div className="mt-3 space-y-2.5">
         {days.map((d) => {
           const block = blockById[d.block];
