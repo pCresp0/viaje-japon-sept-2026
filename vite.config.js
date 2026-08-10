@@ -43,6 +43,24 @@ export default defineConfig({
         clientsClaim: true,
         globPatterns: ['**/*.{js,css,html,png,svg,ico,webp}'],
         navigateFallback: '/index.html',
+        runtimeCaching: [
+          {
+            // Teselas del mapa (CartoDB). CacheFirst: una vez descargada
+            // una tesela no hace falta volver a pedirla — el mapa de una
+            // zona no cambia de un día para otro. Esto cubre dos casos:
+            // 1) cualquier tesela que se vea alguna vez en la app queda
+            //    guardada sola, sin que el usuario tenga que hacer nada;
+            // 2) el botón "Descargar mapa sin conexión" de la pestaña
+            //    Mapa, que precarga de golpe toda la zona del viaje.
+            urlPattern: /^https:\/\/[a-d]\.basemaps\.cartocdn\.com\/.*/i,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'map-tiles',
+              expiration: { maxEntries: 3000, maxAgeSeconds: 60 * 60 * 24 * 180 },
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
+        ],
       },
     }),
   ],

@@ -23,6 +23,7 @@ import HistoryPage from "./pages/HistoryPage";
 import AboutPage from "./pages/AboutPage";
 import FrikadasPage from "./pages/FrikadasPage";
 import SearchResultHighlight from "./components/SearchResultHighlight";
+import ErrorBoundary from "./components/ErrorBoundary";
 import { useHighlight } from "./context/HighlightContext";
 import { slug } from "./utils/slug";
 import { getTripStatus } from "./utils/date";
@@ -110,28 +111,30 @@ export default function App() {
             paddingTop: "var(--mobile-topbar)",
           }}>
             {searchResult?.tab === tab && <SearchResultHighlight result={searchResult} onClear={() => setSearchResult(null)} />}
-            <div>
-              {tab === "pendientes"   && <PendingPage />}
-              {tab === "historia"     && <HistoryPage />}
-              {tab === "inicio"       && <InicioPage onNavigate={setTab} />}
-              {tab === "hoy"          && <Home onGoToDay={goToDay} />}
-              {tab === "calendario"   && <CalendarPage />}
-              {tab === "itinerario"   && <Itinerary openDay={openDay} setOpenDay={setOpenDay} onGoToMapDay={goToMapDay} />}
-              {tab === "vuelos"       && <InfoPage />}
-              {tab === "hoteles"      && <HotelsPage />}
-              {tab === "transportes"  && <TransportPage />}
-              {tab === "presupuesto"  && <BudgetPage />}
-              {tab === "lugares"      && <PlacesPage />}
-              {tab === "comidas"      && <FoodsPage />}
-              {tab === "mapa"         && <MapPage onGoToDay={goToDay} initialDay={mapInitialDay} />}
-              {tab === "clima"        && <WeatherPage />}
-              {tab === "frases"       && <PhrasesPage />}
-              {tab === "preparativos" && <PrepPage />}
-              {tab === "herramientas" && <UtilsPage />}
-              {tab === "emergencias"  && <EmergencyPage />}
-              {tab === "frikadas"     && <FrikadasPage />}
-              {tab === "about"        && <AboutPage />}
-            </div>
+            <ErrorBoundary resetKey={tab}>
+              <div>
+                {tab === "pendientes"   && <PendingPage />}
+                {tab === "historia"     && <HistoryPage />}
+                {tab === "inicio"       && <InicioPage onNavigate={setTab} />}
+                {tab === "hoy"          && <Home onGoToDay={goToDay} />}
+                {tab === "calendario"   && <CalendarPage />}
+                {tab === "itinerario"   && <Itinerary openDay={openDay} setOpenDay={setOpenDay} onGoToMapDay={goToMapDay} />}
+                {tab === "vuelos"       && <InfoPage />}
+                {tab === "hoteles"      && <HotelsPage />}
+                {tab === "transportes"  && <TransportPage />}
+                {tab === "presupuesto"  && <BudgetPage />}
+                {tab === "lugares"      && <PlacesPage />}
+                {tab === "comidas"      && <FoodsPage />}
+                {tab === "mapa"         && <MapPage onGoToDay={goToDay} initialDay={mapInitialDay} />}
+                {tab === "clima"        && <WeatherPage />}
+                {tab === "frases"       && <PhrasesPage />}
+                {tab === "preparativos" && <PrepPage />}
+                {tab === "herramientas" && <UtilsPage />}
+                {tab === "emergencias"  && <EmergencyPage />}
+                {tab === "frikadas"     && <FrikadasPage />}
+                {tab === "about"        && <AboutPage />}
+              </div>
+            </ErrorBoundary>
           </main>
 
           <Footer />

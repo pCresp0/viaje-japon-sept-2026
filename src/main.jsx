@@ -4,13 +4,16 @@ import './index.css'
 import App from './App.jsx'
 import { LanguageProvider } from './i18n'
 import { HighlightProvider } from './context/HighlightContext'
+import ErrorBoundary from './components/ErrorBoundary'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <LanguageProvider>
-      <HighlightProvider>
-        <App />
-      </HighlightProvider>
-    </LanguageProvider>
+    <ErrorBoundary resetKey="app-shell">
+      <LanguageProvider>
+        <HighlightProvider>
+          <App />
+        </HighlightProvider>
+      </LanguageProvider>
+    </ErrorBoundary>
   </StrictMode>,
 )
