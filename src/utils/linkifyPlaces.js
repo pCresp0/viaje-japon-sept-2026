@@ -1,5 +1,8 @@
 import { mapsUrl } from "./maps";
 
+// Regex para detectar URLs completas y dominios web conocidos
+const URL_PATTERN = /(?:https?:\/\/[^\s)]+|(?:[a-zA-Z0-9-]+\.)+(?:com|es|org|jp|net|io)(?:\/[^\s)]*)?)/gi;
+
 // Alias (cómo aparece en el texto) → query de Google Maps.
 // Ordenar de más largo a más corto para evitar matches parciales.
 const PLACE_ENTRIES = [
@@ -9,6 +12,9 @@ const PLACE_ENTRIES = [
   ["Gobierno Metropolitano", "Tokyo Metropolitan Government Building"],
   ["Estación de Tokio", "Tokyo Station Japan"],
   ["Estación de Kioto", "Kyoto Station Japan"],
+  ["Estación de Mishima", "Mishima Station Japan"],
+  ["Estación de tren bala Shin-Fuji", "Shin-Fuji Station Japan"],
+  ["Estación Shin-Fuji", "Shin-Fuji Station Japan"],
   ["estación de Nagoya", "Nagoya Station Japan"],
   ["estación de metro Keage", "Keage Station Kyoto"],
   ["Inari Station", "Inari Station Kyoto"],
@@ -80,6 +86,25 @@ const PLACE_ENTRIES = [
   ["Takayama", "Takayama Gifu Japan"],
   ["Kanazawa", "Kanazawa Japan"],
 
+  // Monte Fuji
+  ["Pagoda Chureito", "Chureito Pagoda Japan"],
+  ["Santuario Kitaguchi Hongu Fuji Sengen Jinja", "Kitaguchi Hongu Fuji Sengen Shrine"],
+  ["Kitaguchi Hongu", "Kitaguchi Hongu Fuji Sengen Shrine"],
+  ["Oshino Hakkai", "Oshino Hakkai Japan"],
+  ["Bosque de Aokigahara", "Aokigahara Forest Japan"],
+  ["Aokigahara", "Aokigahara Forest Japan"],
+  ["Cataratas Shiraito", "Shiraito Falls Fujinomiya"],
+  ["Shiraito", "Shiraito Falls Fujinomiya"],
+  ["Lagos del Fuji", "Fuji Five Lakes Japan"],
+  ["Lago Yamanakako", "Lake Yamanaka Japan"],
+  ["Yamanakako", "Lake Yamanaka Japan"],
+  ["Lago Saiko", "Lake Saiko Japan"],
+  ["Saiko", "Lake Saiko Japan"],
+  ["Lago Motosuko", "Lake Motosu Japan"],
+  ["Motosuko", "Lake Motosu Japan"],
+  ["Monte Fuji", "Mount Fuji Japan"],
+  ["Fuji", "Mount Fuji Japan"],
+
   // Tokio
   ["Palacio Imperial", "Imperial Palace Tokyo"],
   ["Tokyo City View", "Tokyo City View Mori Tower"],
@@ -118,8 +143,6 @@ const PLACE_ENTRIES = [
   ["Nakano", "Nakano Broadway Tokyo"],
   ["Shimokitazawa", "Shimokitazawa Tokyo"],
   ["Shiodome", "Shiodome Tokyo"],
-  ["Monte Fuji", "Mount Fuji Japan"],
-  ["Fuji", "Mount Fuji Japan"],
   ["teamLab", "teamLab Planets Tokyo"],
   ["Tokio", "Tokyo Japan"],
   ["Tokyo", "Tokyo Japan"],
@@ -128,7 +151,7 @@ const PLACE_ENTRIES = [
   ["Madrid", "Madrid Spain"],
 ];
 
-// Deduplicate keeping first (longest-first if we sort)
+// Deduplicate keeping first (longest-first)
 const seen = new Set();
 export const mapPlaces = PLACE_ENTRIES
   .sort((a, b) => b[0].length - a[0].length)
@@ -139,8 +162,8 @@ export const mapPlaces = PLACE_ENTRIES
     return true;
   });
 
-const pattern = new RegExp(
-  `(${mapPlaces.map(([a]) => a.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`,
+const placePattern = new RegExp(
+  `\\b(${mapPlaces.map(([a]) => a.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})\\b`,
   "gi"
 );
 
@@ -149,18 +172,51 @@ export function placeMapsUrl(alias) {
   return mapsUrl(found ? found[1] : `${alias}, Japan`);
 }
 
-/** Split text into plain strings and place-link descriptors */
+/** Split text into plain strings, web URLs, and place-link descriptors */
 export function tokenizePlaces(text) {
   if (!text) return [];
-  const parts = [];
-  let last = 0;
-  const re = new RegExp(pattern.source, "gi");
-  let m;
-  while ((m = re.exec(text)) !== null) {
-    if (m.index > last) parts.push({ type: "text", value: text.slice(last, m.index) });
-    parts.push({ type: "place", value: m[0] });
-    last = m.index + m[0].length;
+  const textStr = String(text);
+  
+  // 1. Primero extraemos las URLs completas para que no sean divididas por nombres de lugares
+  const chunks = [];
+  let lastIndex = 0;
+  let urlMatch;
+  const urlRe = new RegExp(URL_PATTERN.source, "gi");
+
+  while ((urlMatch = urlRe.exec(textStr)) !== null) {
+    if (urlMatch.index > lastIndex) {
+      chunks.push({ type: "raw", value: textStr.slice(lastIndex, urlMatch.index) });
+    }
+    chunks.push({ type: "url", value: urlMatch[0] });
+    lastIndex = urlMatch.index + urlMatch[0].length;
   }
-  if (last < text.length) parts.push({ type: "text", value: text.slice(last) });
-  return parts.length ? parts : [{ type: "text", value: text }];
+  if (lastIndex < textStr.length) {
+    chunks.push({ type: "raw", value: textStr.slice(lastIndex) });
+  }
+
+  // 2. En los bloques de texto no-URL, aplicamos la detección de lugares
+  const finalParts = [];
+  for (const chunk of chunks) {
+    if (chunk.type === "url") {
+      finalParts.push(chunk);
+      continue;
+    }
+
+    let rawLast = 0;
+    let placeMatch;
+    const placeRe = new RegExp(placePattern.source, "gi");
+
+    while ((placeMatch = placeRe.exec(chunk.value)) !== null) {
+      if (placeMatch.index > rawLast) {
+        finalParts.push({ type: "text", value: chunk.value.slice(rawLast, placeMatch.index) });
+      }
+      finalParts.push({ type: "place", value: placeMatch[0] });
+      rawLast = placeMatch.index + placeMatch[0].length;
+    }
+    if (rawLast < chunk.value.length) {
+      finalParts.push({ type: "text", value: chunk.value.slice(rawLast) });
+    }
+  }
+
+  return finalParts.length ? finalParts : [{ type: "text", value: textStr }];
 }

@@ -291,24 +291,6 @@ export const days = [
     "money": "Tinatayang €40 (pagkain)"
   },
   {
-    "title": "Shibuya, Harajuku at Shinjuku",
-    "cities": "Shibuya, Harajuku, Shinjuku",
-    "summary": "Matinding araw: Shibuya crossing at kabataang kultura ng Harajuku. Nagtapos kami sa ilalim ng neon lights ng Shinjuku kasama ang mga maliliit na eskinita ng pagkain nito.",
-    "history": "Ang mga distritong ito ay lumago pagkatapos ng Great Kanto Earthquake noong 1923, pinalakas ng pagpapalawak ng tren sa lunsod. Ang Shinjuku ngayon ay naglalaman ng pinaka-abalang istasyon ng tren sa planeta.",
-    "schedule": [
-      {
-        "text": "Shibuya Crossing at Miyashita Park. Huminto sa Pokémon Center Shibuya."
-      },
-      {
-        "text": "Maglakad papuntang Harajuku sa Takeshita Street, nagtatapos sa Meiji Shrine sa Yoyogi Park."
-      },
-      {
-        "text": "Gabi sa Shinjuku: libreng Metropolitan Government observation deck, hapunan sa Omoide Yokocho, neons ng Kabukicho."
-      }
-    ],
-    "money": "Tinatayang €40 (pagkain)"
-  },
-  {
     "title": "Eksklusibong Pamamasyal sa Mount Fuji",
     "cities": "Mishima, Chureito Pagoda, Oshino Hakkai, Aokigahara, Shiraito, Mga Lawa ng Fuji",
     "summary": "Buong araw na tour (8 oras) sakay ng pribadong minivan kasama ang opisyal na Spanish-speaking guide (Ken Kaneshima · Excursiones Fujiyama). Pagbisita sa Chureito Pagoda, lumang dambana ng Kitaguchi Hongu, tradisyunal na nayon ng Oshino Hakkai, gubat ng Aokigahara, talon ng Shiraito at ruta ng mga lawa. Tikman ang Houtou noodles.",
@@ -349,6 +331,24 @@ export const days = [
       }
     ],
     "money": "13,000 ¥ tour (kasama ang tiket at minivan) + Shinkansen + pagkain"
+  },
+  {
+    "title": "Shibuya, Harajuku at Shinjuku",
+    "cities": "Shibuya, Harajuku, Shinjuku",
+    "summary": "Matinding araw: Shibuya crossing at kultura ng kabataan sa Harajuku. Pagtatapos sa ilalim ng mga ilaw ng Shinjuku kasama ang mga eskinita ng pagkain.",
+    "history": "Lumago ang mga distritong ito pagkatapos ng Great Kanto Earthquake noong 1923. Ang Shinjuku ngayon ang may pinaka-abalang istasyon ng tren sa mundo.",
+    "schedule": [
+      {
+        "text": "Shibuya Crossing at Miyashita Park. Huminto sa Pokémon Center Shibuya."
+      },
+      {
+        "text": "Maglakad papuntang Harajuku sa Takeshita Street, patungo sa Meiji Shrine sa Yoyogi Park."
+      },
+      {
+        "text": "Gabi sa Shinjuku: libreng Metropolitan Government observation deck, hapunan sa Omoide Yokocho, mga neon sa Kabukicho."
+      }
+    ],
+    "money": "Humigit-kumulang €40 (pagkain)"
   },
   {
     "title": "Nintendo Route at Shopping",

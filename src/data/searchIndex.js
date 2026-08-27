@@ -154,12 +154,11 @@ function buildSearchIndex(lang) {
     { terms: ["takayama", "hida"], day: 7, title: "Takayama", subtitle: "Días 7–8" },
     { terms: ["magome", "tsumago", "nakasendo"], day: 8, title: "Magome / Tsumago", subtitle: "Día 8 · Nakasendo" },
     { terms: ["asakusa", "senso"], day: 10, title: "Asakusa", subtitle: "Días 9–15 · hotel en Asakusa" },
-    { terms: ["akihabara"], day: 9, title: "Akihabara", subtitle: "Día 9" },
-    { terms: ["odaiba"], day: 10, title: "Odaiba", subtitle: "Día 10" },
-    { terms: ["shibuya", "harajuku", "shinjuku"], day: 11, title: "Shibuya / Harajuku / Shinjuku", subtitle: "Día 11" },
-    { terms: ["fuji", "monte fuji", "kaneshima", "fujiyama"], day: 14, title: "Monte Fuji", subtitle: "Día 14 · excursión" },
+    { terms: ["odaiba", "gundam", "teamlab"], day: 10, title: "Odaiba / teamLab", subtitle: "Día 10" },
+    { terms: ["fuji", "monte fuji", "kaneshima", "fujiyama", "chureito", "aokigahara", "shiraito", "oshino", "houtou", "mishima", "shin-fuji", "excursionesfujiyama", "isfujivisible", "mtfujitoday"], day: 11, title: "Monte Fuji", subtitle: "Día 11 · excursión exclusiva" },
+    { terms: ["shibuya", "harajuku", "shinjuku", "meiji", "takeshita", "omoide"], day: 12, title: "Shibuya / Harajuku / Shinjuku", subtitle: "Día 12" },
     { terms: ["ikebukuro", "nakano", "nintendo", "pokemon"], day: 13, title: "Ikebukuro / Nakano", subtitle: "Día 13" },
-    { terms: ["toyosu", "ginza", "roppongi"], day: 12, title: "Toyosu / Ginza / Roppongi", subtitle: "Día 12" },
+    { terms: ["toyosu", "ginza", "roppongi", "mori tower", "sushi"], day: 14, title: "Toyosu / Ginza / Roppongi", subtitle: "Día 14" },
   ];
   for (const c of cityDayHints) {
     items.push(entry({

@@ -105,11 +105,11 @@ export default function PlacesPage() {
             <p style={{ fontSize: 15, fontWeight: 700, color: "white", margin: 0 }}>
               Excursión Exclusiva al Monte Fuji{" "}
               <span style={{ fontWeight: 500, opacity: 0.85 }}>
-                ({dayLabel(12)})
+                ({dayLabel(11)})
               </span>
             </p>
             <p style={{ fontSize: 11.5, color: "rgba(255,255,255,0.7)", margin: 0 }}>
-              Viernes 18 de septiembre · Tour de 8 horas en mini-van privada
+              Jueves 17 de septiembre · Tour de 8 horas en mini-van privada
             </p>
           </div>
         </div>

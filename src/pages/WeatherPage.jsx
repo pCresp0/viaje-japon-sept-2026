@@ -125,7 +125,7 @@ export default function WeatherPage() {
         <div className="flex items-center gap-2 mb-2">
           <span style={{ fontSize: 18 }}>🗻</span>
           <p style={{ fontSize: 14, fontWeight: 700, color: "var(--indigo)", margin: 0 }}>
-            Visibilidad en Directo del Monte Fuji (Día 12 · 18 sept)
+            Visibilidad en Directo del Monte Fuji (Día 11 · 17 sept)
           </p>
         </div>
         <p style={{ fontSize: 12, color: "var(--ink-soft)", lineHeight: 1.5, marginBottom: 10 }}>

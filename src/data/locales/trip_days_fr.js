@@ -291,24 +291,6 @@ export const days = [
     "money": "Env. 40 € (repas)"
   },
   {
-    "title": "Shibuya, Harajuku et Shinjuku",
-    "cities": "Shibuya, Harajuku, Shinjuku",
-    "summary": "Journée intense : carrefour de Shibuya et culture des jeunes de Harajuku. Nous terminons sous les néons de Shinjuku avec ses ruelles gastronomiques.",
-    "history": "Ces quartiers se sont développés après le grand tremblement de terre du Kanto de 1923, portés par l'expansion des trains urbains. Shinjuku abrite aujourd'hui la gare la plus fréquentée de la planète.",
-    "schedule": [
-      {
-        "text": "Carrefour de Shibuya et parc Miyashita. Arrêt au Pokémon Center Shibuya."
-      },
-      {
-        "text": "Marche vers Harajuku via la rue Takeshita, en terminant au sanctuaire Meiji dans le parc Yoyogi."
-      },
-      {
-        "text": "Nuit à Shinjuku : pont d'observation gratuit du gouvernement métropolitain, dîner à Omoide Yokocho, néons de Kabukicho."
-      }
-    ],
-    "money": "Env. 40 € (repas)"
-  },
-  {
     "title": "Excursion Exclusive au Mont Fuji",
     "cities": "Mishima, Pagode Chureito, Oshino Hakkai, Aokigahara, Shiraito, Lacs du Fuji",
     "summary": "Tour d'une journée complète (8 heures) en mini-van privée avec guide officiel hispanophone (Ken Kaneshima · Excursiones Fujiyama). Visite de la pagode Chureito, sanctuaire millénaire Kitaguchi Hongu, village traditionnel d'Oshino Hakkai, forêt d'Aokigahara, cascades de Shiraito et route des lacs. Repas typique avec dégustation de nouilles Houtou.",
@@ -349,6 +331,24 @@ export const days = [
       }
     ],
     "money": "13 000 ¥ tour (entrées et minivan inc.) + Shinkansen + repas Houtou"
+  },
+  {
+    "title": "Shibuya, Harajuku et Shinjuku",
+    "cities": "Shibuya, Harajuku, Shinjuku",
+    "summary": "Journée intense : carrefour de Shibuya et culture jeune d'Harajuku. Fin de journée sous les néons de Shinjuku et ses ruelles gourmandes.",
+    "history": "Ces quartiers se sont développés après le grand tremblement de terre de Kanto de 1923, portés par l'expansion ferroviaire urbaine. Shinjuku accueille aujourd'hui la gare la plus fréquentée de la planète.",
+    "schedule": [
+      {
+        "text": "Carrefour de Shibuya et parc Miyashita. Arrêt au Pokémon Center Shibuya."
+      },
+      {
+        "text": "Promenade vers Harajuku par la rue Takeshita, sanctuaire Meiji dans le parc Yoyogi."
+      },
+      {
+        "text": "Soirée à Shinjuku : observatoire gratuit du gouvernement métropolitain, dîner à Omoide Yokocho, néons de Kabukicho."
+      }
+    ],
+    "money": "Env. 40 € (repas)"
   },
   {
     "title": "Route Nintendo et Shopping",

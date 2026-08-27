@@ -291,24 +291,6 @@ export const days = [
     "money": "Approx. €40 (meals)"
   },
   {
-    "title": "Shibuya, Harajuku and Shinjuku",
-    "cities": "Shibuya, Harajuku, Shinjuku",
-    "summary": "Intense day: Shibuya crossing and youth culture of Harajuku. We end under the neon lights of Shinjuku with its gastronomic alleys.",
-    "history": "These districts grew after the Great Kanto Earthquake of 1923, driven by urban train expansion. Shinjuku today hosts the busiest train station on the planet.",
-    "schedule": [
-      {
-        "text": "Shibuya Crossing and Miyashita Park. Stop at the Pokémon Center Shibuya."
-      },
-      {
-        "text": "Walk to Harajuku via Takeshita Street, ending at the Meiji Shrine in Yoyogi Park."
-      },
-      {
-        "text": "Night in Shinjuku: free Metropolitan Government observation deck, dinner in Omoide Yokocho, neons of Kabukicho."
-      }
-    ],
-    "money": "Approx. €40 (meals)"
-  },
-  {
     "title": "Exclusive Mount Fuji Excursion",
     "cities": "Mishima, Chureito Pagoda, Oshino Hakkai, Aokigahara, Shiraito, Fuji Lakes",
     "summary": "Full-day tour (8 hours) in a private minivan with an official Spanish-speaking guide (Ken Kaneshima · Excursiones Fujiyama). Small group visiting Chureito Pagoda, ancient Kitaguchi Hongu shrine, traditional thatched-roof village of Oshino Hakkai, Aokigahara forest, Shiraito waterfalls and lake route. Tasting local star dish: Houtou noodles.",
@@ -349,6 +331,24 @@ export const days = [
       }
     ],
     "money": "13,000 ¥ tour (tickets & minivan inc.) + Shinkansen + Houtou lunch"
+  },
+  {
+    "title": "Shibuya, Harajuku and Shinjuku",
+    "cities": "Shibuya, Harajuku, Shinjuku",
+    "summary": "Intense day: Shibuya crossing and youth culture of Harajuku. We end under the neon lights of Shinjuku with its gastronomic alleys.",
+    "history": "These districts grew after the Great Kanto Earthquake of 1923, driven by urban train expansion. Shinjuku today hosts the busiest train station on the planet.",
+    "schedule": [
+      {
+        "text": "Shibuya Crossing and Miyashita Park. Stop at the Pokémon Center Shibuya."
+      },
+      {
+        "text": "Walk to Harajuku via Takeshita Street, ending at the Meiji Shrine in Yoyogi Park."
+      },
+      {
+        "text": "Night in Shinjuku: free Metropolitan Government observation deck, dinner in Omoide Yokocho, neons of Kabukicho."
+      }
+    ],
+    "money": "Approx. €40 (meals)"
   },
   {
     "title": "Nintendo Route and Shopping",

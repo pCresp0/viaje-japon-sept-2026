@@ -440,24 +440,6 @@ export const days = [
     date: "2026-09-17",
     weekday: "Jueves",
     block: "tokio",
-    title: "Shibuya, Harajuku y Shinjuku",
-    cities: "Shibuya, Harajuku, Shinjuku",
-    summary:
-      "Día intenso: cruce de Shibuya y cultura juvenil de Harajuku. Terminamos bajo los neones de Shinjuku con sus callejones gastronómicos.",
-    history:
-      "Estos distritos crecieron tras el Gran Terremoto de Kanto de 1923, impulsados por la expansión del tren urbano. Shinjuku alberga hoy la estación más transitada del planeta.",
-    schedule: [
-      { time: "09:30", text: "Cruce de Shibuya y Miyashita Park. Parada en el Pokémon Center Shibuya." },
-      { time: "13:00", text: "Paseo hacia Harajuku por la calle Takeshita, terminando en el santuario Meiji en el parque Yoyogi." },
-      { time: "17:00", text: "Noche en Shinjuku: mirador gratuito del Gobierno Metropolitano, cena en Omoide Yokocho, neones de Kabukicho." },
-    ],
-    money: "Aprox. 40€ (comidas)",
-  },
-  {
-    num: 12,
-    date: "2026-09-18",
-    weekday: "Viernes",
-    block: "tokio",
     title: "Excursión Exclusiva al Monte Fuji",
     cities: "Mishima, Pagoda Chureito, Oshino Hakkai, Aokigahara, Shiraito, Lagos del Fuji",
     summary:
@@ -478,6 +460,24 @@ export const days = [
       { time: "17:30", text: "Llegada a la Estación de tren bala Shin-Fuji y regreso en Shinkansen a Tokio (~60 min)." },
     ],
     money: "13.000 ¥ tour (entradas y mini-van inc.) + Shinkansen + comida Houtou",
+  },
+  {
+    num: 12,
+    date: "2026-09-18",
+    weekday: "Viernes",
+    block: "tokio",
+    title: "Shibuya, Harajuku y Shinjuku",
+    cities: "Shibuya, Harajuku, Shinjuku",
+    summary:
+      "Día intenso: cruce de Shibuya y cultura juvenil de Harajuku. Terminamos bajo los neones de Shinjuku con sus callejones gastronómicos.",
+    history:
+      "Estos distritos crecieron tras el Gran Terremoto de Kanto de 1923, impulsados por la expansión del tren urbano. Shinjuku alberga hoy la estación más transitada del planeta.",
+    schedule: [
+      { time: "09:30", text: "Cruce de Shibuya y Miyashita Park. Parada en el Pokémon Center Shibuya." },
+      { time: "13:00", text: "Paseo hacia Harajuku por la calle Takeshita, terminando en el santuario Meiji en el parque Yoyogi." },
+      { time: "17:00", text: "Noche en Shinjuku: mirador gratuito del Gobierno Metropolitano, cena en Omoide Yokocho, neones de Kabukicho." },
+    ],
+    money: "Aprox. 40€ (comidas)",
   },
   {
     num: 13,
