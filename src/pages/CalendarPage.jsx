@@ -22,9 +22,9 @@ const dayHighlights = {
   9: { highlight: "🚄 Shinkansen Tokio", stay: "🏨 KOKO Tokio" },
   10: { highlight: "🌉 teamLab Planets", stay: "🏨 KOKO Tokio" },
   11: { highlight: "🚦 Shibuya & Meiji", stay: "🏨 KOKO Tokio" },
-  12: { highlight: "🎮 Akihabara & Ueno", stay: "🏨 KOKO Tokio" },
-  13: { highlight: "🌃 Shinjuku Yokocho", stay: "🏨 KOKO Tokio" },
-  14: { highlight: "🗻 Tour Monte Fuji", stay: "🏨 KOKO Tokio" },
+  12: { highlight: "🗻 Tour Monte Fuji (Ken)", stay: "🏨 KOKO Tokio" },
+  13: { highlight: "🕹️ Ikebukuro & Nakano", stay: "🏨 KOKO Tokio" },
+  14: { highlight: "🏙️ Toyosu, Ginza & Mori", stay: "🏨 KOKO Tokio" },
   15: { highlight: "✈️ Vuelta NRT QR809", stay: "Regreso" },
 };
 

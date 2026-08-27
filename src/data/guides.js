@@ -615,16 +615,28 @@ export const guides = {
         body: "Esto es clave para planificar: el Fuji está despejado bastante menos de lo que la gente espera. En verano, la visibilidad clara es de apenas unos días al mes por la humedad y las nubes que genera la propia montaña. Los mejores meses son de noviembre a febrero. En septiembre las probabilidades son intermedias, y casi siempre mejores a primera hora de la mañana, antes de que el calor forme nubes. De ahí que la estrategia de reservar varios días y ejecutar el que amanezca despejado tenga todo el sentido.",
       },
       {
-        title: "Hokusai y las Treinta y seis vistas",
-        body: "La serie de grabados de Katsushika Hokusai (1830-1832), que incluye 'La gran ola de Kanagawa', convirtió al Fuji en icono visual mundial. Hokusai tenía 70 años cuando la publicó. La serie tuvo tanto éxito que añadió diez estampas más, manteniendo el título de treinta y seis.",
+        title: "Tour Exclusivo: Lugares a Visitar",
+        body: "El recorrido de 8h en mini-van con Ken Kaneshima incluye los enclaves más espectaculares de la región:\n1. Pagoda Chureito (Arakurayama Sengen): la postal clásica de 5 pisos con el Fuji al fondo.\n2. Santuario Kitaguchi Hongu Fuji Sengen Jinja: inicio histórico de peregrinos entre cedros gigantes.\n3. Aldea Oshino Hakkai: 8 estanques cristalinos de deshielo volcánico y casas con tejados de paja.\n4. Bosque de Aokigahara: el 'Mar de Árboles' sobre roca de lava endurecida.\n5. Cataratas Shiraito: cascada natural que brota de la roca como hilos de seda blanca.\n6. Ruta de los Lagos: vistas panorámicas desde las orillas de Yamanakako, Saiko y Motosuko.",
+      },
+      {
+        title: "Gastronomía Local: Fideos Houtou",
+        body: "Al mediodía parada en restaurante tradicional para degustar Houtou (fideos planos y anchos cocinados a fuego lento en caldo caliente de miso con calabaza y verduras de temporada de la montaña), el plato insignia de la prefectura de Yamanashi.",
+      },
+      {
+        title: "Logística y Precios",
+        body: "• Precio: 13.000 ¥ / persona (incluye mini-van privada y todas las entradas a los recintos). Comidas y bebidas no incluidas.\n• Punto de inicio: Estación de Mishima (Salida Sur) a las 08:20 AM (~50 min desde Tokio en Shinkansen).\n• Punto final: Estación de tren bala Shin-Fuji sobre las 17:30 (~60 min a Tokio en Shinkansen).\n• Idioma: Guía oficial en español (Ken Kaneshima · excursionesfujiyama.com · +81 90-5863-1635).",
+      },
+      {
+        title: "Predicción de Visibilidad y Cámaras Web",
+        body: "• isfujivisible.com: Algoritmo técnico con puntuación de 1 a 10 y previsión por tramos horarios.\n• mtfujitoday.com: Previsión a 7 días y acceso directo a webcams en directo de la zona.\n• La Regla de Oro: Abrir las cámaras web a las 06:30 AM desde el hotel en Tokio. Si a las 07:00 AM no se ve, es altamente improbable que aparezca más tarde (a partir de las 09:00 AM el calor evapora humedad y crea nubes sobre el cono).",
       },
     ],
     curiosities: [
-      "La temporada oficial de ascenso es de julio a principios de septiembre; fuera de esas fechas las estaciones de montaña cierran y subir es peligroso.",
+      "La temporada oficial de ascenso a pie es de julio a principios de septiembre; fuera de esas fechas las estaciones cierran y subir es peligroso.",
       "Hay un dicho japonés: 'Es sabio subir el Fuji una vez, y necio subirlo dos'.",
       "El primer sueño del año con el Fuji se considera de muy buena suerte, especialmente combinado con un halcón y una berenjena.",
     ],
-    tip: "Pendiente de reservar con Ken Kaneshima (Excursiones Fujiyama · +81 90-5863-1635 · excursionesfujiyama.com). Reservad varios días y decidid la noche anterior según el tiempo: si amanece despejado, ese es el día.",
+    tip: "Tour confirmado el Viernes 18 de septiembre (Día 12) con Ken Kaneshima (Excursiones Fujiyama · +81 90-5863-1635 · excursionesfujiyama.com). Comprobar cámaras web a las 06:30 AM.",
   },
 };
 
@@ -641,8 +653,8 @@ export const guidesByDay = {
   9: ["akihabara"],
   10: ["senso-ji"],
   11: ["meiji-jingu", "shibuya"],
-  12: ["teamlab"],
+  12: ["fuji"],
   13: [],
-  14: ["fuji"],
+  14: ["teamlab"],
   15: [],
 };

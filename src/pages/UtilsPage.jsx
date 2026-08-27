@@ -214,9 +214,24 @@ export default function UtilsPage() {
 
         <div className="space-y-4">
           <div>
-            <label style={{ display: "block", fontSize: 12, fontWeight: 600, color: "var(--ink)", marginBottom: 6 }}>
-              Euros (€)
-            </label>
+            <div className="flex items-center justify-between mb-1.5">
+              <label style={{ fontSize: 12, fontWeight: 600, color: "var(--ink)" }}>
+                Euros (€)
+              </label>
+              <div className="flex gap-1.5">
+                {[10, 50, 100, 500].map((val) => (
+                  <button
+                    key={val}
+                    type="button"
+                    onClick={() => handleEurChange(String(val))}
+                    className="text-[11px] font-semibold px-2 py-0.5 rounded-lg border transition-all hover:bg-black/5"
+                    style={{ background: "var(--paper-raised)", borderColor: "var(--line)", color: "var(--indigo)" }}
+                  >
+                    {formatEs(val)} €
+                  </button>
+                ))}
+              </div>
+            </div>
             <div className="flex gap-2">
               <input
                 type="text"
@@ -253,9 +268,24 @@ export default function UtilsPage() {
           <div style={{ textAlign: "center", color: "var(--ink-soft)" }}>↕</div>
 
           <div>
-            <label style={{ display: "block", fontSize: 12, fontWeight: 600, color: "var(--ink)", marginBottom: 6 }}>
-              Yenes (¥)
-            </label>
+            <div className="flex items-center justify-between mb-1.5">
+              <label style={{ fontSize: 12, fontWeight: 600, color: "var(--ink)" }}>
+                Yenes (¥)
+              </label>
+              <div className="flex flex-wrap gap-1.5 justify-end">
+                {[1000, 5000, 10000, 50000, 100000].map((val) => (
+                  <button
+                    key={val}
+                    type="button"
+                    onClick={() => handleYenChange(String(val))}
+                    className="text-[11px] font-semibold px-2 py-0.5 rounded-lg border transition-all hover:bg-black/5"
+                    style={{ background: "var(--paper-raised)", borderColor: "var(--line)", color: "var(--forest)" }}
+                  >
+                    {formatEs(val)} ¥
+                  </button>
+                ))}
+              </div>
+            </div>
             <div className="flex gap-2">
               <input
                 type="text"

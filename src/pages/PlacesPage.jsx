@@ -103,41 +103,94 @@ export default function PlacesPage() {
           </div>
           <div className="flex-1">
             <p style={{ fontSize: 15, fontWeight: 700, color: "white", margin: 0 }}>
-              Excursión al Monte Fuji{" "}
+              Excursión Exclusiva al Monte Fuji{" "}
               <span style={{ fontWeight: 500, opacity: 0.85 }}>
-                ({dayLabel(14)})
+                ({dayLabel(12)})
               </span>
             </p>
-            <p style={{ fontSize: 11.5, color: "rgba(255,255,255,0.7)", margin: 0 }}>Pendiente de reservar · día comodín</p>
+            <p style={{ fontSize: 11.5, color: "rgba(255,255,255,0.7)", margin: 0 }}>
+              Viernes 18 de septiembre · Tour de 8 horas en mini-van privada
+            </p>
           </div>
         </div>
 
-        <div className="px-5 py-4 space-y-3">
-          <p style={{ fontSize: 14, color: "var(--ink)", lineHeight: 1.55, margin: 0 }}>
-            Tour de día completo con guía en español. Grupos pequeños, Chureito Pagoda, cataratas Shiraito, bosque Aokigahara y más.
+        <div className="px-5 py-4 space-y-4">
+          <p style={{ fontSize: 13.5, color: "var(--ink)", lineHeight: 1.6, margin: 0 }}>
+            Descubrid la esencia del Japón rural con este tour de día completo para grupos reducidos con <strong>guía oficial en español</strong> (Ken Kaneshima). Recorreremos la Pagoda Chureito, santuarios milenarios, aldeas tradicionales de paja, el místico bosque de lava y las cataratas de la falda del volcán.
           </p>
 
-          <div className="rounded-xl p-3.5" style={{ background: "rgba(201,162,39,0.12)", border: "1px solid rgba(201,162,39,0.25)" }}>
-            <p style={{ fontSize: 12.5, color: "var(--ink)", lineHeight: 1.5, margin: 0 }}>
-              <strong>Estrategia:</strong> reservar varios días seguidos (3–4). La noche anterior miráis el tiempo; si amanece despejado, vais ese día y canceláis el resto. En septiembre el Fuji se nubla con facilidad.
-            </p>
+          {/* Quick specs grid */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 150px), 1fr))", gap: 10 }}>
+            <div className="p-2.5 rounded-xl border" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
+              <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 2, fontWeight: 600 }}>Precio</p>
+              <p style={{ fontSize: 13, fontWeight: 700, color: "var(--shu)", margin: 0 }}>13.000 ¥ / pers.</p>
+              <p style={{ fontSize: 9.5, color: "var(--ink-soft)", margin: 0 }}>Entradas + mini-van inc.</p>
+            </div>
+            <div className="p-2.5 rounded-xl border" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
+              <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 2, fontWeight: 600 }}>Punto de inicio</p>
+              <p style={{ fontSize: 12, fontWeight: 700, color: "var(--ink)", margin: 0 }}>Mishima Sta. (08:20 AM)</p>
+              <p style={{ fontSize: 9.5, color: "var(--ink-soft)", margin: 0 }}>Salida Sur · 50 min de Tokio</p>
+            </div>
+            <div className="p-2.5 rounded-xl border" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
+              <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 2, fontWeight: 600 }}>Punto de fin</p>
+              <p style={{ fontSize: 12, fontWeight: 700, color: "var(--ink)", margin: 0 }}>Shin-Fuji Sta. (~17:30)</p>
+              <p style={{ fontSize: 9.5, color: "var(--ink-soft)", margin: 0 }}>Tren bala · 60 min a Tokio</p>
+            </div>
+            <div className="p-2.5 rounded-xl border" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
+              <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 2, fontWeight: 600 }}>Contacto Guía</p>
+              <p style={{ fontSize: 12, fontWeight: 700, color: "var(--ink)", margin: 0 }}>Ken Kaneshima</p>
+              <a href="tel:+819058631635" style={{ fontSize: 10.5, color: "var(--indigo)", fontWeight: 600, textDecoration: "none" }}>+81 90-5863-1635</a>
+            </div>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 180px), 1fr))", gap: 12 }}>
-            <div>
-              <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 3, fontWeight: 600 }}>Guía</p>
-              <p style={{ fontSize: 13.5, fontWeight: 600, color: "var(--ink)", margin: 0 }}>Ken Kaneshima</p>
-            </div>
-            <div>
-              <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 3, fontWeight: 600 }}>Teléfono</p>
-              <a href="tel:+819058631635" style={{ fontSize: 13.5, fontWeight: 600, color: "var(--indigo)", textDecoration: "none" }}>
-                +81 90-5863-1635
+          {/* Lugares a visitar */}
+          <div className="p-3.5 rounded-xl border" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
+            <p style={{ fontSize: 12, fontWeight: 700, color: "var(--ink)", marginBottom: 6 }}>🗺️ Itinerario del Tour (6 Paradas Principales):</p>
+            <ol style={{ fontSize: 12, color: "var(--ink)", paddingLeft: 18, lineHeight: 1.6, margin: 0 }} className="space-y-1">
+              <li><strong>Pagoda Chureito:</strong> La postal icónica de 5 pisos con el Monte Fuji de fondo.</li>
+              <li><strong>Santuario Kitaguchi Hongu:</strong> Inicio histórico de peregrinos entre cedros gigantes milenarios.</li>
+              <li><strong>Aldea Oshino Hakkai:</strong> Estanques cristalinos de agua de deshielo y casas de tejado de paja.</li>
+              <li><strong>Comida típica (Houtou):</strong> Parada para probar los famosos fideos anchos en sopa caliente de miso.</li>
+              <li><strong>Bosque de Aokigahara:</strong> El 'Mar de Árboles' sobre suelo de lava volcánica y raíces retorcidas.</li>
+              <li><strong>Cataratas Shiraito & Lagos:</strong> Cascadas en hilos de seda blanca y ruta panorámica de lagos (Yamanakako, Saiko, Motosuko).</li>
+            </ol>
+          </div>
+
+          {/* Herramientas de predicción de visibilidad y webcams */}
+          <div className="rounded-xl p-3.5" style={{ background: "rgba(29,53,87,0.06)", border: "1px solid rgba(29,53,87,0.18)" }}>
+            <p style={{ fontSize: 12.5, fontWeight: 700, color: "var(--indigo)", marginBottom: 4 }}>
+              📷 Predicción de Visibilidad y Cámaras Web en Directo
+            </p>
+            <p style={{ fontSize: 11.5, color: "var(--ink)", lineHeight: 1.5, marginBottom: 8 }}>
+              <strong>La Regla de Oro:</strong> Las mañanas tempranas son la garantía. Abrid las webcams en directo desde el hotel a las <strong>06:30 AM</strong>; si la montaña no es visible a las 07:00 AM, es improbable que se despeje más tarde (a partir de las 09:00 AM el calor forma nubes).
+            </p>
+            <div className="flex flex-wrap gap-2">
+              <a
+                href="https://isfujivisible.com"
+                target="_blank"
+                rel="noreferrer"
+                className="text-xs font-semibold px-2.5 py-1.5 rounded-lg border flex items-center gap-1"
+                style={{ background: "white", borderColor: "var(--line)", color: "var(--indigo)", textDecoration: "none" }}
+              >
+                🌐 isfujivisible.com (Score 1-10) ↗
               </a>
-            </div>
-            <div>
-              <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 3, fontWeight: 600 }}>Empresa</p>
-              <a href="https://excursionesfujiyama.com/" target="_blank" rel="noreferrer" style={{ fontSize: 13.5, fontWeight: 600, color: "var(--shu)", textDecoration: "none" }}>
-                excursionesfujiyama.com ↗
+              <a
+                href="https://mtfujitoday.com"
+                target="_blank"
+                rel="noreferrer"
+                className="text-xs font-semibold px-2.5 py-1.5 rounded-lg border flex items-center gap-1"
+                style={{ background: "white", borderColor: "var(--line)", color: "var(--forest)", textDecoration: "none" }}
+              >
+                📹 mtfujitoday.com (Webcams) ↗
+              </a>
+              <a
+                href="https://excursionesfujiyama.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-xs font-semibold px-2.5 py-1.5 rounded-lg border flex items-center gap-1"
+                style={{ background: "white", borderColor: "var(--line)", color: "var(--shu)", textDecoration: "none" }}
+              >
+                🚐 excursionesfujiyama.com ↗
               </a>
             </div>
           </div>

@@ -119,6 +119,39 @@ export default function WeatherPage() {
           {weatherLabels.tipTexto}
         </p>
       </div>
+
+      {/* Visibilidad y Webcams del Monte Fuji */}
+      <div className="rounded-2xl p-4 mt-6 border" style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
+        <div className="flex items-center gap-2 mb-2">
+          <span style={{ fontSize: 18 }}>🗻</span>
+          <p style={{ fontSize: 14, fontWeight: 700, color: "var(--indigo)", margin: 0 }}>
+            Visibilidad en Directo del Monte Fuji (Día 12 · 18 sept)
+          </p>
+        </div>
+        <p style={{ fontSize: 12, color: "var(--ink-soft)", lineHeight: 1.5, marginBottom: 10 }}>
+          <strong>La regla de oro:</strong> Comprobad las webcams en directo a las <strong>06:30 AM</strong> desde el hotel. Si a las 07:00 AM no se ve, no suele despejarse más tarde (a partir de las 09:00 AM el calor forma nubes).
+        </p>
+        <div className="flex flex-wrap gap-2">
+          <a
+            href="https://isfujivisible.com"
+            target="_blank"
+            rel="noreferrer"
+            className="text-xs font-semibold px-3 py-2 rounded-xl border flex items-center gap-1.5"
+            style={{ background: "var(--paper)", borderColor: "var(--line)", color: "var(--indigo)", textDecoration: "none" }}
+          >
+            🌐 isfujivisible.com (Índice 1-10) ↗
+          </a>
+          <a
+            href="https://mtfujitoday.com"
+            target="_blank"
+            rel="noreferrer"
+            className="text-xs font-semibold px-3 py-2 rounded-xl border flex items-center gap-1.5"
+            style={{ background: "var(--paper)", borderColor: "var(--line)", color: "var(--forest)", textDecoration: "none" }}
+          >
+            📹 mtfujitoday.com (Webcams en Vivo) ↗
+          </a>
+        </div>
+      </div>
     </div>
   );
 }

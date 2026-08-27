@@ -241,21 +241,21 @@ export const stops = [
     id: "toyosu", name: "Mercado de Toyosu", city: "Tokio",
     lat: 35.6433, lng: 139.7817,
     emoji: "🍣", color: "#1d3557",
-    day: "Día 12",
+    day: "Día 14",
     detail: "Sucesor de Tsukiji, desayuno de sushi mayorista",
   },
   {
     id: "ginza", name: "Ginza", city: "Tokio",
     lat: 35.6717, lng: 139.765,
     emoji: "💎", color: "#1d3557",
-    day: "Día 12",
+    day: "Día 14",
     detail: "Arquitectura moderna y grandes marcas de lujo",
   },
   {
     id: "roppongi", name: "Roppongi (Mori Tower)", city: "Tokio",
     lat: 35.6606, lng: 139.7292,
     emoji: "🌆", color: "#1d3557",
-    day: "Día 12",
+    day: "Día 14",
     detail: "Mirador Tokyo City View con vistas a la Torre de Tokio",
   },
   {
@@ -276,8 +276,8 @@ export const stops = [
     id: "fuji", name: "Monte Fuji", city: "Yamanashi",
     lat: 35.5009, lng: 138.7606,
     emoji: "🗻", color: "#1d3557",
-    day: "Día 14",
-    detail: "Excursión con Ken Kaneshima · Chureito / lagos",
+    day: "Día 12",
+    detail: "Tour exclusivo con Ken Kaneshima · Chureito, Aokigahara, Shiraito y lagos",
   },
 ];
 
