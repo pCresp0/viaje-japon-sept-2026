@@ -90,52 +90,25 @@ export const days = [
     "history": "Le Kinkakuji (Pavillon d'Or) était la somptueuse villa de retraite du shogun Ashikaga Yoshimitsu à la fin du XIVe siècle. Arashiyama est une destination de vacances pour la noblesse impériale depuis l'époque de Heian.",
     "schedule": [
       {
-        "text": "Réveil et petit-déjeuner."
+        "text": "Réveil."
       },
       {
-        "text": "Départ de l'hôtel."
+        "text": "Kinkakuji : ligne verte de métro (Karasuma Line) jusqu'à la gare de Kitaoji puis bus 205."
       },
       {
-        "text": "🚇 Transport vers Kinkaku-ji : Ligne Karasuma de Kyoto Station à Kitaoji Station puis bus 204/205 jusqu'à Kinkakuji-michi. Évitez le bus 205 direct depuis Kyoto Station car il est souvent encombré."
+        "text": "Sentier Kinukake no Michi : temples Kinkakuji, Ryoan-ji et Ninna-ji, dans cet ordre."
       },
       {
-        "text": "🏯 Kinkaku-ji (Pavillon d'Or). Arrivez à l'ouverture pour éviter la foule. La visite est relativement courte ; prévoyez environ 60 minutes. 💡 Conseil : allez-y tôt. Le parcours est à sens unique et le pavillon se contemple de l'extérieur ; on ne peut pas y entrer."
+        "text": "Depuis Ninna-ji, tramway Randen vers Arashiyama (20 min). Déjeuner rapide."
       },
       {
-        "text": "🚶 Kinkaku-ji → Ryoan-ji par Kinukake-no-Michi (~18 min)."
+        "text": "Montée vers le quartier historique de Saga-Toriimoto et le temple Otagi (ferme à 16h, montez d'abord)."
       },
       {
-        "text": "🪨 Ryoan-ji. Visite du célèbre jardin sec karesansui et du domaine."
+        "text": "Descente à travers la bambouseraie vers le centre du quartier."
       },
       {
-        "text": "🚶 Ryoan-ji → Ninna-ji par Kinukake-no-Michi (~11 min)."
-      },
-      {
-        "text": "🏯 Ninna-ji. Visite du complexe principal. En septembre, il ouvre à 09:00."
-      },
-      {
-        "text": "🚋 Tramway Randen d'Omuro-Ninnaji à Arashiyama. Environ 20–30 min selon les correspondances. Aucune réservation requise ; payez avec la carte IC quand c'est possible. 🍜 Déjeuner rapide en arrivant à Arashiyama."
-      },
-      {
-        "text": "🚕/🚌 Montée vers Saga-Toriimoto. Si fatigués, utilisez un taxi pour gagner du temps et éviter la montée."
-      },
-      {
-        "text": "🏯 Adashino Nenbutsu-ji et quartier historique de Saga-Toriimoto. Le temple est célèbre pour ses nombreuses statues de pierre et se trouve sur le chemin vers Otagi. À visiter avant de redescendre vers la bambouseraie."
-      },
-      {
-        "text": "🚶 Descente par Saga-Toriimoto → bambouseraie → centre d'Arashiyama. Priorisez les rues traditionnelles de Saga-Toriimoto puis la Bambouseraie. 💡 La bambouseraie sera assez fréquentée même l'après-midi. Ne vous y attardez pas trop : l'essentiel est de la traverser pour continuer vers le centre."
-      },
-      {
-        "text": "Optionnel si on a le temps : Tenryu-ji ou promenade jusqu'au pont Togetsukyo."
-      },
-      {
-        "text": "🚆 Retour à Kyoto en train JR depuis Saga-Arashiyama, ligne San-In (Sagano Line), direct. Trajet d'environ 15–20 min. Aucune réservation requise."
-      },
-      {
-        "text": "🎫 RÉSERVATIONS : Aucune réservation n'est nécessaire à l'avance pour les transports ni pour les visites principales d'aujourd'hui. Les billets pour Kinkaku-ji, Ryoan-ji, Ninna-ji et Adashino Nenbutsu-ji s'achètent sur place. Le Randen et les trains JR sont des services régionaux sans réservation de siège."
-      },
-      {
-        "text": "⚠️ IMPORTANT : Otagi Nenbutsu-ji est exclu de cette journée car il est fermé le mercredi 9 septembre. Si nous voulons le visiter, il faudra le déplacer à un autre jour (hors mercredi et samedi)."
+        "text": "Retour à Kyoto en train JR, Ligne San-In (2 €, 15 min direct)."
       }
     ],
     "money": "Env. 40 € (repas)"
