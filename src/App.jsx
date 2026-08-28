@@ -103,9 +103,6 @@ export default function App() {
           minWidth: 0, overflowY: "auto", height: "100%",
         }}>
 
-          {/* Banner global de aviso de visibilidad y cancelaciones del Monte Fuji */}
-          <FujiAlertBanner />
-
           <main style={{
             flex: 1,
             width: "100%",
@@ -114,6 +111,9 @@ export default function App() {
             // Solo móvil: offset bajo la top bar fija
             paddingTop: "var(--mobile-topbar)",
           }}>
+            {/* Banner global de aviso de visibilidad y cancelaciones del Monte Fuji (activo del 12 al 20 de sept) */}
+            <FujiAlertBanner />
+
             {searchResult?.tab === tab && <SearchResultHighlight result={searchResult} onClear={() => setSearchResult(null)} />}
             <ErrorBoundary resetKey={tab}>
               <div>

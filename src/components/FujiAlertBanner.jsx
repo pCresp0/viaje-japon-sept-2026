@@ -1,63 +1,71 @@
 import { useState } from "react";
-import { Mountain, ExternalLink, X, AlertTriangle, CheckCircle2, Clock, MapPin, Eye, Info, Calendar } from "lucide-react";
+import { Mountain, ExternalLink, X, AlertTriangle, MapPin, Eye, Info, Calendar } from "lucide-react";
 import { gygFujiActivity, kenFujiActivity, visibilityTools } from "../data/fujiBookings";
+import { todayISO } from "../utils/date";
 
 export default function FujiAlertBanner() {
   const [dismissed, setDismissed] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
+  // El banner solo debe mostrarse a partir del 12 de septiembre y hasta el 20 de septiembre (ventana de decisión del Fuji)
+  // Permitimos forzarlo con query param ?fujiBanner=1 si se desea previsualizar
+  const today = todayISO();
+  const isDateActive = today >= "2026-09-12" && today <= "2026-09-20";
+  const forcePreview = typeof window !== "undefined" && window.location.search.includes("fujiBanner=1");
+
+  if (!isDateActive && !forcePreview) return null;
   if (dismissed) return null;
 
   return (
     <>
       <aside
         aria-label="Aviso de visibilidad del Monte Fuji"
-        className="relative border-b shadow-sm transition-all"
+        className="relative mx-3 sm:mx-4 mt-2 mb-4 rounded-2xl shadow-lg border overflow-hidden transition-all animate-fadeIn"
         style={{
-          background: "linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #1e1b4b 100%)",
-          borderColor: "rgba(255, 255, 255, 0.12)",
+          background: "linear-gradient(135deg, #1e293b 0%, #0f172a 60%, #1e1b4b 100%)",
+          borderColor: "rgba(255, 255, 255, 0.15)",
           color: "white",
         }}
       >
-        <div className="max-w-6xl mx-auto px-4 py-3 sm:px-6">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+        <div className="px-4 py-3.5 sm:px-5 sm:py-4">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-3.5">
             
             {/* Left: Icon & Core Alert Message */}
-            <div className="flex items-start gap-3 flex-1 min-w-0 pr-6 md:pr-0">
+            <div className="flex items-start gap-3 flex-1 min-w-0 pr-8 lg:pr-0">
               <div
-                className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 shadow-md"
+                className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 shadow-md mt-0.5"
                 style={{ background: "linear-gradient(135deg, #f59e0b 0%, #ea580c 100%)" }}
               >
                 <Mountain size={20} className="text-white" />
               </div>
               <div className="min-w-0">
                 <div className="flex items-center gap-2 flex-wrap">
-                  <span className="bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[11px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
+                  <span className="bg-amber-500/25 text-amber-300 border border-amber-500/40 text-[10.5px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">
                     Estrategia Fuji 🗻
                   </span>
                   <span className="text-xs text-slate-300 font-medium hidden sm:inline">
                     4 Reservas GetYourGuide + Tour con Ken (20 Sept)
                   </span>
                 </div>
-                <p className="text-sm font-semibold text-white mt-0.5 leading-snug">
+                <p className="text-sm font-bold text-white mt-1 leading-snug">
                   Revisa la visibilidad 24h antes y cancela gratis las fechas con nubes
                 </p>
-                <p className="text-xs text-slate-300 line-clamp-1 mt-0.5">
-                  La regla de oro: Abre las webcams a las 06:30 AM. Si a las 07:00 AM no se ve el pico, cancela antes del límite de 24h.
+                <p className="text-xs text-slate-300 mt-0.5 leading-relaxed">
+                  La regla de oro: Comprueba las webcams a las <strong>06:30 AM</strong>. Si a las 07:00 AM no se ve el pico, cancela antes del límite de 24h en GetYourGuide.
                 </p>
               </div>
             </div>
 
-            {/* Right: Quick Action Buttons */}
-            <div className="flex items-center gap-2 flex-wrap w-full md:w-auto justify-start md:justify-end shrink-0 pt-1 md:pt-0">
+            {/* Right: Action Buttons */}
+            <div className="flex items-center gap-2 flex-wrap w-full lg:w-auto justify-start lg:justify-end shrink-0 pt-1 lg:pt-0">
               <a
                 href={visibilityTools.isFujiVisible.url}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/10 hover:bg-white/20 text-slate-100 border border-white/15 transition-colors"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-white/10 hover:bg-white/20 text-slate-100 border border-white/15 transition-colors"
                 title="Puntuación de visibilidad de 1 a 10"
               >
-                <Eye size={14} className="text-amber-400" />
+                <Eye size={13} className="text-amber-400" />
                 isfujivisible.com ↗
               </a>
 
@@ -65,17 +73,17 @@ export default function FujiAlertBanner() {
                 href={visibilityTools.mtFujiToday.url}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/10 hover:bg-white/20 text-slate-100 border border-white/15 transition-colors"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-white/10 hover:bg-white/20 text-slate-100 border border-white/15 transition-colors"
                 title="Webcams en directo y previsión"
               >
-                <ExternalLink size={14} className="text-sky-400" />
+                <ExternalLink size={13} className="text-sky-400" />
                 mtfujitoday.com ↗
               </a>
 
               <button
                 type="button"
                 onClick={() => setShowModal(true)}
-                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 shadow-md transition-all active:scale-95"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 shadow-md transition-all active:scale-95"
               >
                 <Info size={14} />
                 Ver 4 Reservas & Códigos
@@ -86,8 +94,8 @@ export default function FujiAlertBanner() {
             <button
               type="button"
               onClick={() => setDismissed(true)}
-              aria-label="Cerrar banner durante esta sesión"
-              className="absolute top-2.5 right-2.5 p-1 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
+              aria-label="Cerrar aviso temporalmente"
+              className="absolute top-3 right-3 p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/15 transition-colors"
             >
               <X size={18} />
             </button>
