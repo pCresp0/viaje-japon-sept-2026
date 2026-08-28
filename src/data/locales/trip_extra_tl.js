@@ -9,7 +9,7 @@ export const tripMeta = {
   ],
   about: {
     title: "Tungkol sa web",
-    description: "Ang web application na ito ay pasadyang ginawa para sa aming biyahe gamit ang React, Vite, at TailwindCSS. Ang disenyo nito ay nagbibigay-priyoridad sa bilis, offline accessibility (bilang isang PWA), at modernong aesthetics nang hindi isinasakripisyo ang performance. Ang lahat ng source code ay pampubliko at maaaring malayang konsultahin sa aming repository.",
+    description: "Ang web application na ito ay pasadyang binuo gamit ang React ecosystem, na-bundle sa Vite para sa napakabilis na HMR, at may estilo gamit ang TailwindCSS. Ito ay isang PWA na pinapagana ng Service Workers para garantiyahan ang offline access sa Japan. Nagtatampok ang interface ng mga micro-animation (Framer Motion), i18n support para sa 4 na wika, at modular na mga bahagi (SSOT sa trip.js). Naka-deploy sa Vercel na may Edge caching para sa pinakamabilis na performance. Open-source ang code sa GitHub.",
     github: "Tingnan ang source code sa GitHub"
   }
 };

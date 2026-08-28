@@ -9,7 +9,7 @@ export const tripMeta = {
   ],
   about: {
     title: "À propos du site",
-    description: "Cette application web a été créée sur mesure pour notre voyage en utilisant React, Vite et TailwindCSS. Son design privilégie la vitesse, l'accessibilité hors ligne (en tant que PWA) et une esthétique moderne sans sacrifier les performances. Tout le code source est public et peut être consulté librement dans notre dépôt.",
+    description: "Cette application web a été créée sur mesure en utilisant l'écosystème React, empaquetée avec Vite pour un HMR ultra-rapide et stylisée avec TailwindCSS pour un design responsive. Il s'agit d'une PWA avec Service Workers pour garantir un accès hors ligne au Japon. L'interface intègre des micro-animations avec Framer Motion, un support i18n pour 4 langues et des composants modulaires (SSOT sur trip.js). Déployée sur Vercel avec Edge caching pour une vitesse maximale. Tout le code source est open-source sur GitHub.",
     github: "Voir le code source sur GitHub"
   }
 };

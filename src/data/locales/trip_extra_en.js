@@ -9,7 +9,7 @@ export const tripMeta = {
   ],
   about: {
     title: "About the web",
-    description: "This web application was custom-built for our trip using React, Vite, and TailwindCSS. Its design prioritizes speed, offline accessibility (as a PWA), and modern aesthetics without sacrificing performance. All source code is public and can be freely consulted in our repository.",
+    description: "This web application was custom-built using the React ecosystem, bundled with Vite for ultra-fast HMR, and styled with TailwindCSS for a responsive design. It is a PWA (Progressive Web App) powered by Service Workers to guarantee offline access throughout Japan. The interface features micro-animations with Framer Motion, i18n support for 4 languages, and modular components (SSOT on trip.js). Deployed on Vercel with Edge caching for maximum speed. All source code is open-source on GitHub.",
     github: "View source code on GitHub"
   }
 };
