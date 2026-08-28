@@ -106,7 +106,7 @@ export default function PlacesPage() {
               <p style={{ fontSize: 15, fontWeight: 700, color: "white", margin: 0 }}>
                 Estrategia GetYourGuide · Monte Fuji, Lago Kawaguchi y Chureito
               </p>
-              <span className="bg-amber-400 text-slate-950 text-[10px] font-extrabold px-2 py-0.5 rounded-full uppercase">
+              <span className="bg-blue-200 dark:bg-blue-900 text-blue-950 dark:text-blue-100 text-[10px] font-extrabold px-2 py-0.5 rounded-full uppercase">
                 4 Días Reservados
               </span>
             </div>
@@ -147,11 +147,11 @@ export default function PlacesPage() {
           </div>
 
           {/* Logística y aviso de comida */}
-          <div className="p-3.5 rounded-xl border bg-amber-50/70 dark:bg-amber-950/30 border-amber-200 dark:border-amber-900/50 space-y-2">
-            <p className="text-xs font-bold text-amber-900 dark:text-amber-300">
-              ⚠️ Información Clave de la Excursión (GetYourGuide):
+          <div className="p-3.5 rounded-xl border bg-blue-50/70 dark:bg-blue-950/30 border-blue-200 dark:border-blue-900/50 space-y-2">
+            <p className="text-xs font-bold text-blue-900 dark:text-blue-300">
+              ℹ️ Información Clave de la Excursión (GetYourGuide):
             </p>
-            <ul className="text-xs text-amber-950 dark:text-amber-200/90 space-y-1 pl-4 list-disc">
+            <ul className="text-xs text-blue-950 dark:text-blue-200/90 space-y-1 pl-4 list-disc">
               <li><strong>Punto de encuentro:</strong> Tokyo Mode Gakuen (1-7-3 Nishishinjuku, Shinjuku). Llegar antes de las <strong>08:25 AM</strong> (salida a las 08:30 AM).</li>
               <li><strong>🍱 Comida NO incluida:</strong> La actividad no incluye comida. No está permitido comer dentro del autobús. Conviene comprar snacks/desayuno antes de subir y llevar <strong>efectivo ¥</strong> para comprar en los puestos locales de Oshino Hakkai y Saiko.</li>
               <li><strong>👟 400 escalones:</strong> Llevar calzado cómodo para subir al mirador de la Pagoda Chureito en el Parque Arakurayama Sengen.</li>
