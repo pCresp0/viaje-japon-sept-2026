@@ -13,11 +13,13 @@ export default function AboutPage() {
 
       <div className="rounded-2xl border overflow-hidden mb-6" style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
         <div className="px-5 py-4 space-y-4">
-          <p style={{ fontSize: 14.5, color: "var(--ink)", lineHeight: 1.6, margin: 0 }}>
-            {tripMeta.about.description}
-          </p>
+          <div className="space-y-3">
+            {tripMeta.about.description.split('\n\n').map((paragraph, idx) => (
+              <p key={idx} style={{ fontSize: 14.5, color: "var(--ink)", lineHeight: 1.6, margin: 0 }} dangerouslySetInnerHTML={{ __html: paragraph }} />
+            ))}
+          </div>
           
-          <div style={{ padding: "16px", background: "rgba(188,71,73,0.05)", borderRadius: "12px", border: "1px solid rgba(188,71,73,0.15)" }}>
+          <div style={{ marginTop: "32px", padding: "16px", background: "rgba(188,71,73,0.05)", borderRadius: "12px", border: "1px solid rgba(188,71,73,0.15)" }}>
             <h3 style={{ fontSize: 14, fontWeight: 700, color: "var(--shu)", marginBottom: 8, margin: 0 }}>{t("about.archTitle")}</h3>
             <ul style={{ paddingLeft: 18, margin: "8px 0 0", fontSize: 13.5, color: "var(--ink)", lineHeight: 1.6 }} className="space-y-1">
               <li><strong>React & Vite:</strong> {t("about.reactDesc")}</li>
