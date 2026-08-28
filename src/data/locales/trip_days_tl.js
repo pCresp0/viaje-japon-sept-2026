@@ -27,6 +27,9 @@ export const days = [
     "history": "Ang Kyoto ang naging kabisera ng imperyo ng Japan sa loob ng mahigit isang libong taon, mula 794 hanggang 1868. Ito ang kultural at espirituwal na puso ng bansa. Matapos makaligtas nang buo sa mga pambobomba noong Ikalawang Digmaang Pandaigdig, napanatili nito ang halos lahat ng kanyang sinaunang tradisyunal na arkitektura ng kahoy.",
     "schedule": [
       {
+        "text": "Mga praktikal na tip: Karaniwang almusal: halos 07:00–09:00. Tanghalian: halos 11:30–14:00. Hapunan: halos 17:30–21:00. Maraming maliliit na restawran ang nagsasara sa pagitan ng tanghalian at hapunan. Sa mga araw na maagang aalis, bumili na ng almusal sa konbini gabi pa lang. Sa mga trip na gipit sa oras, magdala ng emergency onigiri/sandwich. Ang mga konbini (7-Eleven, Lawson, FamilyMart) ay praktikal at murang opsyon para sa onigiri, sandwich, bento, prutas, yogurt, karaage, at inumin. Ang simpleng ramen/udon/donburi meal ay nagkakahalaga ng halos ¥500–1,500. Karaniwang hindi na kailangan mag-reserve para sa ramen, udon, donburi, Japanese fast food, kaswal na izakaya, o food stalls. Mag-reserve lang sa mga sikat na restawran kung gusto niyo talagang kumain doon. Sa mga palengke at street food area, sundin ang mga lokal na patakaran kung saan pwede kumain. Sa Japan, hindi karaniwang kumain habang naglalakad; sa Nishiki Market, mahigpit itong ipinagbabawal."
+      },
+      {
         "text": "Paglapag sa Narita at mga pamamaraan sa customs (tinatayang 1h 30m). Tandaan na ihanda ang iyong Visit Japan Web QR code upang mapabilis ang border control."
       },
       {
@@ -37,6 +40,12 @@ export const days = [
       },
       {
         "text": "Ang Nozomi ay darating sa JR Kyoto Station. Bumaba sa Shinkansen at sundan ang mga palatandaan sa Hachijo East Exit (八条東口). Umalis sa istasyon sa pamamagitan ng exit na iyon at sa halos 5 minutong paglalakad ay makakarating ka sa hotel (Hotel Keihan Kyoto Hachijoguchi). Check-in at hapunan."
+      },
+      {
+        "text": "Mabilisang hapunan sa Kyoto Station. Pagkatapos ng byahe, huwag nang pahirapan ang sarili sa mahabang hapunan. Ang Kyoto Station ang pinakamagandang lugar para maghapunan sa unang gabi. Mga opsyon: ramen; udon/soba; Japanese curry; donburi; ekiben/bento kung pagod na. Tiyak na opsyon: Kyoto Ramen Koji, sa 10th floor ng Kyoto Station, mabilis na opsyon para makatikim ng ramen nang hindi lumalayo sa hotel. Oras: halos 11:00–22:00. Mabilis na alternatibo: bumili ng bento/ekiben sa loob ng Kyoto Station."
+      },
+      {
+        "text": "⚠️ Bumili na ngayong gabi ng almusal para sa Day 2 sa konbini dahil masyadong maaga ang alis para mag-almusal sa hotel. Inirerekomenda: 1–2 onigiri kada tao; egg sandwich; saging/prutas; kape o inumin; yogurt."
       }
     ],
     "money": "Tinatayang €40 (pagkain) + transportasyon"
@@ -48,7 +57,7 @@ export const days = [
     "history": "Ang Fushimi Inari ay nakatuon kay Inari, ang diyos ng Shinto ng bigas, isang pangunahing elemento para sa sinaunang ekonomiya ng Hapon. Ang Nara ay ang unang permanenteng kabisera ng Japan noong ika-8 siglo at siya ring pinagmulan ng Budismo sa bansa.",
     "schedule": [
       {
-        "text": "Gumising."
+        "text": "Gumising. 🍙 Takeaway almusal na binili kagabi. Kainin bago dumating sa Fushimi Inari o habang nagbibyahe."
       },
       {
         "text": "🚆 JR Nara Line: Kyoto Station → Inari Station (~5 min). Walang reserbasyon. Gumamit ng IC card o bumili ng single ticket sa istasyon. Ang Inari Station ay nasa tabi mismo ng Fushimi Inari."
@@ -78,7 +87,7 @@ export const days = [
         "text": "🚆 JR Nara → Kyoto. Sakyan ang susunod na maginhawang byahe papuntang Kyoto. Walang kailangang reserbasyon. Gumamit ng IC card o bumili ng single ticket. Kung mayroong maginhawang Miyakoji Rapid, pwede itong sakyan upang mapabilis ang byahe."
       },
       {
-        "text": "🌇 Paglalakad sa Pontocho, Kamogawa, Miyagawacho, at Gion. Ang paglubog ng araw ay bandang 18:15, kaya mae-enjoy mo rin ang blue hour. Opsiyonal ang Yasaka Jinja kung may sapat na oras. 🚶 Pagdating sa Gion/Pontocho area, dapat gawin ang paglilibot sa pamamagitan ng paglalakad."
+        "text": "🌇 Paglalakad sa Pontocho, Kamogawa, Miyagawacho, at Gion. Ang paglubog ng araw ay bandang 18:15, kaya mae-enjoy mo rin ang blue hour. Opsiyonal ang Yasaka Jinja kung may sapat na oras. 🚶 Pagdating sa Gion/Pontocho area, dapat gawin ang paglilibot sa pamamagitan ng paglalakad. Magandang gabi ito para maghapunan sa paligid ng Pontocho/Gion. Mga inirerekomenda: gyukatsu; yakitori; ramen; izakaya; okonomiyaki. Tiyak na opsyon: GYUKATSU Kyoto Katsugyu Pontocho Honten: gyukatsu, halos ¥2,000–6,000, bukas hanggang halos 22:30."
       },
       {
         "text": "🎫 MGA RESERBASYON: hindi kailangan ng maagang reserbasyon para sa alinmang tren ngayong araw. Ang lahat ng byahe sa tren ngayong araw ay mga regional/local na serbisyo. Pwedeng magbayad gamit ang IC card o single ticket na binili sa mga makina sa istasyon. Wala tayong Japan Rail Pass at hindi ito kailangan para sa araw na ito."
@@ -93,7 +102,7 @@ export const days = [
     "history": "Ang Kinkakuji (Golden Pavilion) ay ang marangyang rest house ng shogun Ashikaga Yoshimitsu noong huling bahagi ng ika-14 na siglo. Ang Arashiyama ay naging destinasyon para magbakasyon ng imperyal na maharlika simula noong panahon ng Heian.",
     "schedule": [
       {
-        "text": "Gumising."
+        "text": "Gumising. 🍳 Almusal sa hotel mula 07:00 o magaang almusal na binili nang maaga."
       },
       {
         "text": "🚇 Hotel → Kinkaku-ji. Maglakad mula sa hotel hanggang Kyoto Station. Sakyan ang Kyoto Subway Karasuma Line: Kyoto → Kitaoji. Sa Kitaoji: sundan ang mga sign papuntang Kitaoji Bus Terminal; gamitin ang asul na zone; sakyan ang bus No. 204 o 205 papuntang Kinkaku-ji; bumaba sa Kinkakuji-michi. Mula Kinkakuji-michi: halos 5 min na lakad papunta sa pasukan. Ang kombinasyon na ito ay mas mabuti kaysa sa direktang 205 bus mula Kyoto Station dahil iniiwasan nito ang ilang trapik at karamihan. Walang reserbasyon. Gumamit ng IC card."
@@ -114,7 +123,7 @@ export const days = [
         "text": "🚋 Ninna-ji → Arashiyama. Maglakad hanggang Omuro-Ninnaji Station. Sakyan ang Randen Kitano Line hanggang Katabiranotsuji. Sa Katabiranotsuji lumipat sa Randen Arashiyama Line patungong Arashiyama. Bumaba sa Arashiyama Station. Kabuuang oras: 20–25 min. MAHALAGA: Ang Randen ay HINDI JR train. Hindi mo kailangan ng Japan Rail Pass. Kasalukuyang pamasahe sa Randen: ¥250 bawat matanda. Maaaring magbayad gamit ang IC card. Sa pag-akyat, HUWAG i-tap ang IC card. Magbayad pagbaba / sa istasyon. Walang reserbasyon."
       },
       {
-        "text": "🍜 Mabilisang tanghalian sa Arashiyama. Panatilihing mabilis ang pagkain upang hindi maapektuhan ang pagbisita sa Otagi."
+        "text": "🍜 Mabilisang tanghalian sa Arashiyama. Panatilihing mabilis ang pagkain upang hindi maapektuhan ang pagbisita sa Otagi. 🍜 Mabilisang tanghalian sa Arashiyama. Panatilihing mabilis ang pagkain upang hindi maapektuhan ang pagbisita sa Otagi. ⚠️ Huwag patagalin ang tanghalian. Sa Arashiyama, maraming restawran ang huling order ay bandang 14:00 at may mga nagsasara na ng kusina sa hapon. Mga pwedeng kainin: udon; soba; tempura; donburi; curry; onigiri/bento kung nagmamadali. Kung gipit sa oras, bumili ng onigiri/sandwich/bento sa Arashiyama at magpatuloy. Mas mainam ito kaysa mag-aksaya ng oras sa paghihintay ng upuan."
       },
       {
         "text": "🚌 Arashiyama → Otagi Nenbutsu-ji. MAHALAGA: HUWAG maglakad pataas nang buong daan mula sa Arashiyama. Inirerekomenda ng mismong website ng Otagi na dumating sakay ng taxi o bus tapos ay maglakad pababa. Inirerekomendang opsyon: Kyoto Bus No. 94 patungong Kiyotaki. Sumakay sa bus stop sa Arashiyama at bumaba sa Otagidera-mae. Halos 20–25 min. Alternatibo: Taxi mula sa Arashiyama. Mas mahal ang taxi pero nakakatipid ng oras kung nagmamadali. Huwag mag-book sa bus."
@@ -126,10 +135,10 @@ export const days = [
         "text": "🚶 Saga-Toriimoto. Mula sa Otagi, simulan ang paglalakad pababa. Maglakad sa makasaysayang Saga-Toriimoto area. MAHALAGA: Ang direksyon na ito ay sinadya: Otagi → Saga-Toriimoto → bamboo grove → sentro ng Arashiyama. Ito ang rutang inirerekomenda ng mismong templo."
       },
       {
-        "text": "🎋 Arashiyama Bamboo Grove. Maglakad pababa sa sentro sa pamamagitan ng bamboo grove. Tip: Huwag asahang makita ang grove na ganap na walang tao. Isa itong napaka-busy na lugar. Ang daan mula Saga-Toriimoto patungong grove ay nagbibigay daan para sa maayos na paglipat mula sa rural/makasaysayang lugar papunta sa mas sikat na Arashiyama."
+        "text": "🎋 Arashiyama Bamboo Grove. Maglakad pababa sa sentro sa pamamagitan ng bamboo grove. Tip: Huwag asahang makita ang grove na ganap na walang tao. Isa itong napaka-busy na lugar. Ang daan mula Saga-Toriimoto patungong grove ay nagbibigay daan para sa maayos na paglipat mula sa rural/makasaysayang lugar papunta sa mas sikat na Arashiyama. 🍵 Opsiyonal na meryenda pagkatapos ng bamboo grove: matcha; dango; taiyaki; ice cream; melon pan."
       },
       {
-        "text": "🚆 Pabalik sa Kyoto. Maglakad papuntang JR Saga-Arashiyama Station. Sakyan ang JR Sagano/San-in Line: Saga-Arashiyama → Kyoto. Direktang byahe, halos 15–20 min. Walang reserbasyon. Gumamit ng IC card o single ticket. MAHALAGA: Ang tren na ito ay JR, pero HINDI kailangan ng Japan Rail Pass. Maaari kang magbayad nang normal gamit ang IC card."
+        "text": "🚆 Pabalik sa Kyoto. Maglakad papuntang JR Saga-Arashiyama Station. Sakyan ang JR Sagano/San-in Line: Saga-Arashiyama → Kyoto. Direktang byahe, halos 15–20 min. Walang reserbasyon. Gumamit ng IC card o single ticket. MAHALAGA: Ang tren na ito ay JR, pero HINDI kailangan ng Japan Rail Pass. Maaari kang magbayad nang normal gamit ang IC card. Maaaring maganda ang gabing ito para sa tahimik na hapunan malapit sa Kyoto Station o Pontocho, depende sa lakas."
       },
       {
         "text": "🎫 MGA RESERBASYON: HUWAG mag-book ng anumang transportasyon ngayong araw. Huwag mag-book: Subway, Bus 204/205, Randen, Kyoto Bus No. 94, JR Saga-Arashiyama → Kyoto. Hindi mo rin kailangang i-book ang: Kinkaku-ji, Ryoan-ji, Ninna-ji, Otagi Nenbutsu-ji. Bumili ng tiket nang direkta sa bawat site. JAPAN RAIL PASS: Wala tayong Japan Rail Pass. HUWAG baguhin ang itinerary dahil dito. Ang mga transportasyon ngayon ay maaaring magamit at bayaran nang isa-isa. IC card: Kyoto Subway, Kyoto City Bus, Randen, Kyoto Bus, local JR."
@@ -153,13 +162,13 @@ export const days = [
         "text": "Pagbisita sa mga templo ng Eikando at Nanzen-ji."
       },
       {
-        "text": "Mula Nanzen-ji, maglakad patungo sa istasyon ng subway ng Keage sa sentro. Tanghalian sa Nishiki Market."
+        "text": "Mula Nanzen-ji, maglakad patungo sa istasyon ng subway ng Keage sa sentro. Tanghalian sa Nishiki Market. 🍣 Kumain dito higit sa lahat sa pagtikim ng iba't ibang specialty, hindi kailangang formal na kainan. Mga hahanapin: dashimaki tamago; yuba; tofu; tsukemono; fu; matcha; handang isda/seafood. HUWAG kumain habang naglalakad. Bumili → tumabi → kumain sa harap ng stall o sa loob ng tindahan. ⚠️ MAHALAGA: Miyerkules ngayon, Setyembre 9. HINDI buong nagsasara ang Nishiki Market, pero maraming indibidwal na tindahan ang nagpapahinga tuwing Miyerkules. Kaya huwag umasa nang buo sa Nishiki para sa pagkain. Kung masyadong maraming sarado, maghanap ng pagkain sa Shijo/Teramachi/Kawaramachi, panatilihin ang pangkalahatang ruta."
       },
       {
         "text": "Distrito ng geisha: Pontocho, pagtawid sa ilog Kamogawa hanggang Miyagawacho."
       },
       {
-        "text": "Mamasyal sa Gion: Hanamikoji street hanggang Ichiriki teahouse, batis ng Shirakawa, at Tatsumi shrine."
+        "text": "Mamasyal sa Gion: Hanamikoji street hanggang Ichiriki teahouse, batis ng Shirakawa, at Tatsumi shrine. Kung gusto niyong maghapunan sa Gion/Pontocho, mas mainam magsimula ng 18:00 hanggang 19:00. Para sa mga kaiseki o sikat na restawran, magpareserba; para sa kaswal, panatilihing magaan ang plano."
       }
     ],
     "money": "Tinatayang €40 (pagkain)"
@@ -171,7 +180,7 @@ export const days = [
     "history": "Ang Kiyomizu-dera ay itinatag noong 778; ang terrace nito ay itinayo nang hindi gumagamit ng isang pako. Ang Osaka Castle ay ang sentro ng militar ni Toyotomi Hideyoshi, isang pangunahing tauhan sa pag-iisa ng Japan noong ika-16 na siglo.",
     "schedule": [
       {
-        "text": "Gumising."
+        "text": "Gumising. 🍳 Almusal sa hotel ng 07:00. Masyadong maagang nagbubukas ang Kiyomizu-dera kaya hindi dapat ma-late ang pag-alis."
       },
       {
         "text": "🚍 HOTEL → KIYOMIZU-DERA. Maglakad mula Hotel Keihan Kyoto Hachijoguchi papuntang Kyoto Station. Pangunahing opsyon: Kyoto City Bus 100 o 206 mula Kyoto Station. Bumaba sa Gojozaka. Maglakad ng halos 10 min papuntang Kiyomizu-dera. Alternatibo: Gamitin ang bagong Okoshi Bus Kiyomizu-dera Line, available tuwing weekdays mula Hulyo 2026, kung angkop sa iskedyul. Walang reserbasyon. Magbayad gamit ang IC card o ticket. Madalas ma-traffic ang mga bus sa Higashiyama. Umalis nang may sapat na oras."
@@ -192,7 +201,7 @@ export const days = [
         "text": "⛩️ HEIAN JINGU. Bisitahin ang shrine at ang malaking torii. Nagbubukas ang grounds mula 06:00. Kung nais bisitahin ang hardin (Shin-en), ang oras nito sa Setyembre 11 ay halos 08:30–18:00, huling pasok ay 17:30. Walang kailangang reserbasyon."
       },
       {
-        "text": "🍜 TANGHALIAN SA KYOTO. MAHALAGA: Subukang matapos bandang 14:15 para may oras pa sa pag-tren papuntang Osaka."
+        "text": "🍜 TANGHALIAN SA KYOTO. MAHALAGA: Subukang matapos bandang 14:15 para may oras pa sa pag-tren papuntang Osaka. 🍜 TANGHALIAN SA KYOTO. MAHALAGA: Subukang matapos bandang 14:15 para may oras pa sa pag-tren papuntang Osaka. ⚠️ Dapat mabilis ang pagkaing ito. May tren tayo pa-Osaka ng 14:30. Inirerekomenda: kumain malapit sa daan papuntang Kyoto Station; ramen; udon/soba; curry; donburi; mabilis na teishoku. Huwag mag-book ng restawran para sa pagkaing ito. Alternatibo: Bumili ng bento/ekiben sa Kyoto Station kung nagmamadali."
       },
       {
         "text": "🚶 Paglipat sa Kyoto Station."
@@ -213,13 +222,19 @@ export const days = [
         "text": "🚇 OSAKA CASTLE → DOTONBORI. Mula Morinomiya gamitin ang Osaka Metro papuntang Namba/Dotonbori area. Walang reserbasyon. Gumamit ng IC card."
       },
       {
-        "text": "🌃 DOTONBORI + SHINSEKAI. Panggabing paglalakad at street food. Unahin: Dotonbori, Glico, Ebisu Bridge, Hozenji Yokocho. Kung may oras at lakas pa, tumuloy sa Shinsekai. 💡 Tips: Sa Dotonbori, hindi na kailangan mag-reserve para tumikim ng street food; pumili ng tindahan habang naglilibot. Ang Dotonbori ay mas maganda lalo na kapag gabi na, kaya magandang panatilihin ang pagdating bandang 18:30."
+        "text": "🌃 DOTONBORI + SHINSEKAI. Panggabing paglalakad at street food. Unahin: Dotonbori, Glico, Ebisu Bridge, Hozenji Yokocho. Kung may oras at lakas pa, tumuloy sa Shinsekai. 💡 Tips: Sa Dotonbori, hindi na kailangan mag-reserve para tumikim ng street food; pumili ng tindahan habang naglilibot. Ang Dotonbori ay mas maganda lalo na kapag gabi na, kaya magandang panatilihin ang pagdating bandang 18:30. 🍜 Osaka Food Crawl — ano ang susubukan: 1. Takoyaki 🐙 (Mag-share ng isang portion. Opsyon: Takoyaki Wanaka Dotonbori. Badyet: ¥500–1,000). 2. Okonomiyaki (Mag-share o umorder ng isa kada tao. Opsyon: CHIBO Dotonbori. Badyet: ¥2,000–3,000/tao). 3. Kushikatsu (Kung makarating ng Shinsekai, tikman ang iba't ibang skewers. Isang makasaysayang specialty ng lugar). 4. Hozenji Yokocho (Magandang alternatibo para makaiwas sa pinakamaraming turista sa Dotonbori). ⚠️ Huwag basta pumasok sa restawran na may pinakamalaking karatula sa Dotonbori. Touristy ang main area kaya minsan mas mahal. Mula halos 18:00 hanggang 22:00 sobrang daming tao sa Dotonbori. Panatilihing magkakasama ang grupo ng 5 at magkaroon ng malinaw na meeting point. 💴 Gastos sa Osaka: Para sa simpleng food crawl sa Dotonbori/Shinsekai, maglaan ng halos ¥2,500–4,000 kada tao kung pagsasamahin ang takoyaki + okonomiyaki/kushikatsu + inumin, depende kung gaano kalakas kumain."
       },
       {
         "text": "🚆 OSAKA → KYOTO. Bumalik sa Kyoto sakay ng JR. Walang reserbasyon. Gumamit ng IC card o single ticket."
       },
       {
         "text": "🎫 MGA RESERBASYON PARA SA ARAW NA ITO: HUWAG mag-book ng anumang transportasyon. HUWAG gumamit ng SmartEX. HUWAG gumamit ng JR-WEST Online. Hindi natin kailangan ng Japan Rail Pass. Lahat ng byahe ay pwedeng bayaran nang isa-isa gamit ang IC card. BUOD NG TRANSPORTASYON: Hotel → Kiyomizu: Bus 100/206 o Kiyomizu-dera Line → IC card/ticket. Kiyomizu → Yasaka → Maruyama → Chion-in → Heian: Paglalakad. Heian → Kyoto Station: Paglalakad + urban transit kung kailangan. Kyoto → Osaka: JR Kyoto Line Special Rapid → IC card/ticket. Osaka → Morinomiya: JR Osaka Loop Line → IC card/ticket. Morinomiya → Osaka Castle: Paglalakad. Osaka Castle → Dotonbori: Osaka Metro → IC card. Dotonbori → Kyoto: JR/metro depende sa lokasyon → IC card/ticket."
+      },
+      {
+        "text": "Bago ang isang araw na may maagang byahe, bumili sa gabi ng: 1–2 onigiri; egg sandwich; prutas/saging; inumin; kape kung gusto. Ang mga konbini sa Japan ay perpekto para sa almusal at mabilisang pagkain."
+      },
+      {
+        "text": "Huwag kumain habang naglalakad sa Nishiki Market. Sa mga food stall, kumain sa lugar na itinakda ng nagbebenta. Sa maliliit na restawran, suriin kung tumatanggap ng card; magdala ng pera. Huwag mag-iwan ng tip. Sa maraming restawran, nagbabayad sa kaha, hindi sa mesa. Pwedeng higupin ang noodles nang maingay; walang problema rito. Kung napakahaba ng pila sa isang restawran, maghanap ng iba sa kabilang kalye. Huwag asahan na ang 'bukas mula 17:00 hanggang 23:00' ay ibig sabihin tatanggap ng order hanggang 23:00; palaging suriin ang last order time."
       }
     ],
     "money": "Tinatayang €40 (pagkain)"

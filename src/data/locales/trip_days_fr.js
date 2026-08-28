@@ -27,6 +27,9 @@ export const days = [
     "history": "Kyoto a été la capitale impériale du Japon pendant plus de mille ans, de 794 à 1868. C'est le cœur culturel et spirituel du pays. Ayant survécu presque intacte aux bombardements de la Seconde Guerre mondiale, elle conserve une grande partie de son architecture traditionnelle millénaire en bois.",
     "schedule": [
       {
+        "text": "Conseils pratiques : Petit-déjeuner habituel : env. 07:00–09:00. Déjeuner : env. 11:30–14:00. Dîner : env. 17:30–21:00. Beaucoup de petits restaurants ferment entre le déjeuner et le dîner. Pour les jours avec un départ très matinal, achetez le petit-déjeuner la veille au soir dans un konbini. Pour les excursions avec des horaires serrés, prenez un onigiri/sandwich de secours. Les konbini (7-Eleven, Lawson, FamilyMart) sont une option pratique et bon marché pour les onigiri, sandwichs, bentos, fruits, yaourts, karaage et boissons. Un repas simple de ramen/udon/donburi peut coûter environ 500–1 500 ¥. Normalement, on ne réserve pas pour les ramen, udon, donburi, restauration rapide japonaise, izakaya décontractés ou stands de nourriture. Ne réservez que les restaurants spéciaux/populaires où vous voulez vraiment dîner. Dans les marchés et zones de street food, respectez les règles locales sur l'endroit où manger. Au Japon, il n'est pas courant de manger en marchant dans les rues commerçantes ; c'est expressément déconseillé au marché de Nishiki."
+      },
+      {
         "text": "Atterrissage à Narita et formalités douanières (env. 1h 30m). N'oubliez pas d'avoir votre code QR Visit Japan Web prêt pour accélérer le contrôle aux frontières."
       },
       {
@@ -37,6 +40,12 @@ export const days = [
       },
       {
         "text": "Le Nozomi arrive à la gare JR de Kyoto. Descendez du Shinkansen et suivez les panneaux vers Hachijo East Exit (八条東口). Sortez de la gare par cette sortie et à environ 5 minutes de marche, vous atteindrez l'hôtel (Hotel Keihan Kyoto Hachijoguchi). Check-in et dîner."
+      },
+      {
+        "text": "Dîner facile à Kyoto Station. Après le voyage, ne vous compliquez pas la vie avec un long dîner. Kyoto Station est le meilleur quartier pour dîner ce premier soir. Options : ramen ; udon/soba ; curry japonais ; donburi ; ekiben/bento si vous êtes fatigués. Option précise : Kyoto Ramen Koji, au 10ème étage de Kyoto Station, est une option simple pour goûter des ramen sans s'éloigner de l'hôtel. Horaires approx. 11:00–22:00. Alternative rapide : acheter un bento/ekiben à l'intérieur de Kyoto Station."
+      },
+      {
+        "text": "⚠️ Achetez ce soir le petit-déjeuner du Jour 2 dans un konbini car le départ est trop matinal pour prendre un petit-déjeuner tranquille à l'hôtel. Recommandation : 1–2 onigiri par personne ; sandwich aux œufs ; banane/fruit ; café ou boisson ; yaourt facultatif."
       }
     ],
     "money": "Env. 40 € (repas) + transport"
@@ -48,7 +57,7 @@ export const days = [
     "history": "Fushimi Inari est dédié à Inari, la divinité shinto de riz, un élément fondamental pour l'ancienne économie japonaise. Nara a été la première capitale permanente du Japon au VIIIe siècle et est le berceau du bouddhisme dans le pays.",
     "schedule": [
       {
-        "text": "Réveil."
+        "text": "Réveil. 🍙 Petit-déjeuner à emporter acheté la veille. À manger avant d'arriver à Fushimi Inari ou pendant le trajet."
       },
       {
         "text": "🚆 Ligne JR Nara : Kyoto Station → Inari Station (~5 min). Aucune réservation. Utilisez une carte IC ou achetez un billet simple à la gare. Inari Station est juste à côté de Fushimi Inari."
@@ -78,7 +87,7 @@ export const days = [
         "text": "🚆 JR Nara → Kyoto. Prenez le prochain service pratique vers Kyoto. Aucune réservation requise. Utilisez une carte IC ou achetez un billet simple. S'il y a un service Miyakoji Rapid pratique, vous pouvez l'emprunter pour réduire le temps de trajet."
       },
       {
-        "text": "🌇 Promenade dans Pontocho, Kamogawa, Miyagawacho et Gion. Le coucher du soleil sera vers 18h15, ce qui permet de profiter de l'heure bleue. Yasaka Jinja peut être visité en option si on a le temps. 🚶 Une fois dans le quartier de Gion/Pontocho, faites le parcours principalement à pied."
+        "text": "🌇 Promenade dans Pontocho, Kamogawa, Miyagawacho et Gion. Le coucher du soleil sera vers 18h15, ce qui permet de profiter de l'heure bleue. Yasaka Jinja peut être visité en option si on a le temps. 🚶 Une fois dans le quartier de Gion/Pontocho, faites le parcours principalement à pied. C'est une bonne soirée pour dîner du côté de Pontocho/Gion. Catégories recommandées : gyukatsu ; yakitori ; ramen ; izakaya ; okonomiyaki. Option précise : GYUKATSU Kyoto Katsugyu Pontocho Honten : gyukatsu, env. 2 000–6 000 ¥, ouvert jusqu'à env. 22:30."
       },
       {
         "text": "🎫 RÉSERVATIONS : il n'est pas nécessaire de réserver à l'avance aucun des trains de cette journée. Tous les trajets ferroviaires du jour sont des services régionaux/locaux. Ils peuvent être payés sur place avec une carte IC ou un billet simple acheté aux distributeurs de la gare. Nous n'avons pas de Japan Rail Pass et ce n'est pas nécessaire pour aujourd'hui."
@@ -93,7 +102,7 @@ export const days = [
     "history": "Le Kinkakuji (Pavillon d'Or) était la somptueuse villa de retraite du shogun Ashikaga Yoshimitsu à la fin du XIVe siècle. Arashiyama est une destination de vacances pour la noblesse impériale depuis l'époque de Heian.",
     "schedule": [
       {
-        "text": "Réveil."
+        "text": "Réveil. 🍳 Petit-déjeuner à l'hôtel à partir de 07:00 ou petit-déjeuner léger acheté au préalable."
       },
       {
         "text": "🚇 Hôtel → Kinkaku-ji. Depuis l'hôtel, marchez jusqu'à Kyoto Station. Prenez la Kyoto Subway Karasuma Line : Kyoto → Kitaoji. À Kitaoji : suivez les panneaux vers Kitaoji Bus Terminal ; utilisez la zone bleue ; prenez le bus n° 204 ou 205 vers Kinkaku-ji ; descendez à Kinkakuji-michi. Depuis Kinkakuji-michi : environ 5 min à pied jusqu'à l'entrée. Cette combinaison est préférable au bus direct 205 de Kyoto Station car elle évite une partie du trafic et de la foule. Aucune réservation. Utilisez la carte IC."
@@ -114,7 +123,7 @@ export const days = [
         "text": "🚋 Ninna-ji → Arashiyama. Marchez jusqu'à Omuro-Ninnaji Station. Prenez la Randen Kitano Line vers Katabiranotsuji. À Katabiranotsuji, transférez sur la Randen Arashiyama Line vers Arashiyama. Descendez à Arashiyama Station. Durée totale environ 20–25 min. IMPORTANT : Le Randen N'EST PAS un train JR. Il ne nécessite pas de Japan Rail Pass. Tarif actuel du Randen : 250 ¥ par adulte et par trajet. Peut être payé avec une carte IC. En montant, NE BIPEZ PAS la carte IC. Vous payez en descendant / à la gare selon le cas. Aucune réservation."
       },
       {
-        "text": "🍜 Déjeuner rapide à Arashiyama. Gardez un repas rapide pour ne pas compromettre la partie Otagi."
+        "text": "🍜 Déjeuner rapide à Arashiyama. Gardez un repas rapide pour ne pas compromettre la partie Otagi. 🍜 Déjeuner rapide à Arashiyama. Gardez un repas rapide pour ne pas compromettre la partie Otagi. ⚠️ Ne retardez pas trop le repas. À Arashiyama, beaucoup de restaurants prennent la dernière commande vers 14:00 et certains ferment la cuisine l'après-midi. Que manger : udon ; soba ; tempura ; donburi ; curry ; onigiri/bento si vous êtes pressés. Si vous manquez de temps, achetez un onigiri/sandwich/bento dans la zone d'Arashiyama et continuez. Mieux vaut cela que perdre du temps à attendre une table."
       },
       {
         "text": "🚌 Arashiyama → Otagi Nenbutsu-ji. IMPORTANT : Ne montez PAS à pied depuis Arashiyama. Le site web d'Otagi recommande d'arriver en taxi ou en bus puis de faire le parcours en descente. Option recommandée : Kyoto Bus n° 94 vers Kiyotaki. Montez à un arrêt dans la zone d'Arashiyama et descendez à Otagidera-mae. Environ 20–25 min. Alternative : Taxi depuis la zone d'Arashiyama. Le taxi est plus cher mais peut faire gagner du temps si vous êtes pressés. Ne réservez pas le bus."
@@ -126,10 +135,10 @@ export const days = [
         "text": "🚶 Saga-Toriimoto. Depuis Otagi, commencez la descente à pied. Traversez le quartier historique de Saga-Toriimoto. IMPORTANT : Ce sens de parcours est délibéré : Otagi → Saga-Toriimoto → bambouseraie → centre d'Arashiyama. C'est le sens recommandé par le temple lui-même."
       },
       {
-        "text": "🎋 Bambouseraie d'Arashiyama. Descendez à pied vers le centre à travers la bambouseraie. Conseil : Ne vous attendez pas à trouver la forêt complètement vide. C'est une zone très fréquentée. Le tronçon de Saga-Toriimoto à la forêt permet de profiter d'une transition progressive entre la zone rurale/historique et l'Arashiyama plus touristique."
+        "text": "🎋 Bambouseraie d'Arashiyama. Descendez à pied vers le centre à travers la bambouseraie. Conseil : Ne vous attendez pas à trouver la forêt complètement vide. C'est une zone très fréquentée. Le tronçon de Saga-Toriimoto à la forêt permet de profiter d'une transition progressive entre la zone rurale/historique et l'Arashiyama plus touristique. 🍵 En-cas optionnel après la bambouseraie : matcha ; dango ; taiyaki ; glace ; melon pan."
       },
       {
-        "text": "🚆 Retour à Kyoto. Marchez jusqu'à JR Saga-Arashiyama Station. Prenez la ligne JR Sagano/San-in : Saga-Arashiyama → Kyoto. Trajet direct, environ 15–20 min. Aucune réservation. Utilisez la carte IC ou un billet simple. IMPORTANT : Ce train EST un JR, mais AUCUN Japan Rail Pass n'est requis. Vous pouvez payer normalement avec une carte IC."
+        "text": "🚆 Retour à Kyoto. Marchez jusqu'à JR Saga-Arashiyama Station. Prenez la ligne JR Sagano/San-in : Saga-Arashiyama → Kyoto. Trajet direct, environ 15–20 min. Aucune réservation. Utilisez la carte IC ou un billet simple. IMPORTANT : Ce train EST un JR, mais AUCUN Japan Rail Pass n'est requis. Vous pouvez payer normalement avec une carte IC. Ce soir pourrait être bien pour un dîner tranquille près de Kyoto Station ou Pontocho, selon votre énergie."
       },
       {
         "text": "🎫 RÉSERVATIONS : NE RÉSERVEZ AUCUN transport aujourd'hui. Ne réservez pas : Métro, Bus 204/205, Randen, Kyoto Bus n° 94, JR Saga-Arashiyama → Kyoto. Vous n'avez pas non plus besoin de réserver : Kinkaku-ji, Ryoan-ji, Ninna-ji, Otagi Nenbutsu-ji. Achetez les billets directement sur chaque site. JAPAN RAIL PASS : Nous n'avons pas de Japan Rail Pass. NE MODIFIEZ PAS l'itinéraire pour cette raison. Les transports d'aujourd'hui peuvent être utilisés et payés individuellement. Carte IC : Kyoto Subway, Kyoto City Bus, Randen, Kyoto Bus, JR local."
@@ -159,7 +168,7 @@ export const days = [
         "text": "Quartiers des geishas : Pontocho, traversée de la rivière Kamogawa jusqu'à Miyagawacho."
       },
       {
-        "text": "Promenade dans Gion : rue Hanamikoji jusqu'à la maison de thé Ichiriki, ruisseau Shirakawa et sanctuaire Tatsumi."
+        "text": "Promenade dans Gion : rue Hanamikoji jusqu'à la maison de thé Ichiriki, ruisseau Shirakawa et sanctuaire Tatsumi. Si vous voulez dîner à Gion/Pontocho, il vaut mieux commencer entre 18:00 et 19:00. Pour les restaurants kaiseki ou très populaires, réservez à l'avance ; pour les options décontractées, restez flexibles."
       }
     ],
     "money": "Env. 40 € (repas)"
@@ -171,7 +180,7 @@ export const days = [
     "history": "Le Kiyomizu-dera a été fondé en 778 ; sa terrasse a été construite sans utiliser un seul clou. Le château d'Osaka était l'épicentre militaire de Toyotomi Hideyoshi, figure clé de l'unification du Japon au XVIe siècle.",
     "schedule": [
       {
-        "text": "Réveil."
+        "text": "Réveil. 🍳 Petit-déjeuner à l'hôtel à 07:00. Kiyomizu-dera ouvre très tôt, il ne faut donc pas retarder le départ."
       },
       {
         "text": "🚍 HÔTEL → KIYOMIZU-DERA. Marchez depuis l'Hôtel Keihan Kyoto Hachijoguchi jusqu'à Kyoto Station. Option principale : Kyoto City Bus 100 ou 206 depuis Kyoto Station. Descendez à Gojozaka. Marchez environ 10 min jusqu'à Kiyomizu-dera. Alternative : Utilisez la nouvelle ligne Kiyomizu-dera de Okoshi Bus, disponible en semaine depuis juillet 2026, si l'horaire convient. Aucune réservation. Payez avec une carte IC ou le billet correspondant. Les bus d'Higashiyama peuvent être encombrés. Prévoyez de la marge."
@@ -192,7 +201,7 @@ export const days = [
         "text": "⛩️ HEIAN JINGU. Visitez le sanctuaire et son grand torii. Le domaine ouvre à 06:00. Si vous souhaitez visiter le jardin (Shin-en), ses horaires le 11 septembre sont environ 08:30–18:00, dernière entrée à 17:30. Aucune réservation requise."
       },
       {
-        "text": "🍜 DÉJEUNER À KYOTO. IMPORTANT : Essayez de terminer vers 14:15 pour garder une marge pour le train vers Osaka."
+        "text": "🍜 DÉJEUNER À KYOTO. IMPORTANT : Essayez de terminer vers 14:15 pour garder une marge pour le train vers Osaka. 🍜 DÉJEUNER À KYOTO. IMPORTANT : Essayez de terminer vers 14:15 pour garder une marge pour le train vers Osaka. ⚠️ Ce repas doit être rapide. Nous avons le train vers Osaka à 14:30. Recommandation : mangez près du chemin vers Kyoto Station ; ramen ; udon/soba ; curry ; donburi ; teishoku rapide. Ne réservez pas de restaurant pour ce repas. Alternative : Achetez un bento/ekiben à Kyoto Station si vous êtes pressés."
       },
       {
         "text": "🚶 Transfert vers Kyoto Station."
@@ -213,13 +222,19 @@ export const days = [
         "text": "🚇 OSAKA CASTLE → DOTONBORI. Depuis Morinomiya, utilisez l'Osaka Metro vers la zone de Namba/Dotonbori. Aucune réservation. Utilisez la carte IC."
       },
       {
-        "text": "🌃 DOTONBORI + SHINSEKAI. Promenade nocturne et nourriture de rue. Priorité : Dotonbori, Glico, Pont d'Ebisu, Hozenji Yokocho. S'il reste du temps et de l'énergie, continuez vers Shinsekai. 💡 Conseils : À Dotonbori, nul besoin de réserver pour la cuisine de rue ; choisissez les stands/restaurants sur place. Dotonbori est particulièrement intéressant après la tombée de la nuit, il est donc conseillé de maintenir l'arrivée vers 18:30."
+        "text": "🌃 DOTONBORI + SHINSEKAI. Promenade nocturne et nourriture de rue. Priorité : Dotonbori, Glico, Pont d'Ebisu, Hozenji Yokocho. S'il reste du temps et de l'énergie, continuez vers Shinsekai. 💡 Conseils : À Dotonbori, nul besoin de réserver pour la cuisine de rue ; choisissez les stands/restaurants sur place. Dotonbori est particulièrement intéressant après la tombée de la nuit, il est donc conseillé de maintenir l'arrivée vers 18:30. 🍜 Osaka Food Crawl — que goûter : 1. Takoyaki 🐙 (Partagez une portion. Option : Takoyaki Wanaka Dotonbori. Budget approx : 500–1 000 ¥). 2. Okonomiyaki (Partagez ou commandez-en un par personne. Option : CHIBO Dotonbori. Budget approx : 2 000–3 000 ¥/personne). 3. Kushikatsu (Si nous arrivons à Shinsekai. Goûtez plusieurs brochettes. Spécialité historique). 4. Hozenji Yokocho (Bonne alternative pour sortir du tronçon le plus touristique). ⚠️ N'entrez pas automatiquement dans le restaurant avec la plus grande enseigne de Dotonbori. La zone principale est très touristique et certains endroits font payer plus cher l'emplacement. Entre env. 18:00 et 22:00, Dotonbori est très bondé. Gardez le groupe de 5 ensemble et ayez un point de rencontre clair. 💴 Budget gastronomique Osaka : Pour une soirée food crawl simple à Dotonbori/Shinsekai, comptez env. 2 500–4 000 ¥ par personne si on combine takoyaki + okonomiyaki/kushikatsu + boisson, bien que cela dépende de combien on mange."
       },
       {
         "text": "🚆 OSAKA → KYOTO. Retour à Kyoto par JR. Aucune réservation. Utilisez la carte IC ou un billet simple."
       },
       {
         "text": "🎫 RÉSERVATIONS DU JOUR : NE RÉSERVEZ AUCUN transport. N'UTILISEZ PAS SmartEX. N'UTILISEZ PAS JR-WEST Online. Nous n'avons pas besoin du Japan Rail Pass. Tous les trajets peuvent être payés individuellement avec une carte IC. RÉSUMÉ DES TRANSPORTS : Hôtel → Kiyomizu : Bus 100/206 ou Ligne Kiyomizu-dera → Carte IC/billet. Kiyomizu → Yasaka → Maruyama → Chion-in → Heian : À pied. Heian → Kyoto Station : À pied + transport urbain si besoin. Kyoto → Osaka : JR Kyoto Line Special Rapid → Carte IC/billet. Osaka → Morinomiya : JR Osaka Loop Line → Carte IC/billet. Morinomiya → Osaka Castle : À pied. Osaka Castle → Dotonbori : Osaka Metro → Carte IC. Dotonbori → Kyoto : JR/métro selon emplacement → Carte IC/billet."
+      },
+      {
+        "text": "Avant une journée avec un départ très matinal, achetez la veille : 1–2 onigiri ; sandwich aux œufs ; fruit/banane ; boisson ; café si vous voulez. Les konbini japonais sont une solution tout à fait normale pour les petits-déjeuners et repas rapides."
+      },
+      {
+        "text": "Ne mangez pas en marchant au marché de Nishiki. Aux stands de nourriture, mangez dans la zone indiquée par le vendeur. Dans les petits restaurants, vérifiez s'ils acceptent les cartes ; prévoyez du liquide. Ne laissez pas de pourboire. Dans beaucoup de restaurants, on paie à la caisse, pas forcément à table. Les nouilles peuvent être aspirées bruyamment ; ne vous en faites pas. Si un restaurant a une file énorme, cherchez une alternative une ou deux rues plus loin. Ne présumez pas qu''ouvert de 17:00 à 23:00' signifie que la cuisine prend des commandes jusqu'à 23:00 ; vérifiez toujours la dernière commande."
       }
     ],
     "money": "Env. 40 € (repas)"
