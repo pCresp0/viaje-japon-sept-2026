@@ -182,6 +182,33 @@ export default function VisitJapanQRCard() {
             </button>
           </div>
         )}
+
+        {/* Web Oficial Visit Japan Web */}
+        <div
+          className="p-3 rounded-xl border flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-xs"
+          style={{ background: "rgba(30, 58, 138, 0.04)", borderColor: "rgba(30, 58, 138, 0.15)" }}
+        >
+          <div className="flex items-center gap-2">
+            <span className="text-base">🌐</span>
+            <span style={{ color: "var(--ink-soft)" }}>
+              También puedes ver o generar tu QR directamente en la web oficial del Gobierno de Japón:
+            </span>
+          </div>
+          <a
+            href="https://www.vjw.digital.go.jp/"
+            target="_blank"
+            rel="noreferrer"
+            className="font-bold px-3 py-1.5 rounded-lg border flex items-center gap-1 shrink-0 w-fit"
+            style={{
+              background: "var(--paper-raised)",
+              borderColor: "var(--line)",
+              color: "var(--indigo)",
+              textDecoration: "none",
+            }}
+          >
+            vjw.digital.go.jp ↗
+          </a>
+        </div>
       </div>
 
       {/* Modal Paso 1: Elegir quién eres de los 5 */}
@@ -406,7 +433,7 @@ export default function VisitJapanQRCard() {
               Muestra este código directamente en los lectores de inmigración y aduanas de Narita.
             </p>
 
-            <div className="w-full flex gap-2 mt-5">
+            <div className="w-full flex flex-col sm:flex-row gap-2 mt-4">
               <a
                 href={selectedMember.qrPath || "/images/visit-japan-qr.png"}
                 download={`Visit_Japan_QR_${selectedMember.name.replace(/\s+/g, "_")}.png`}
@@ -422,6 +449,17 @@ export default function VisitJapanQRCard() {
               >
                 Listo
               </button>
+            </div>
+
+            <div className="mt-3 pt-2.5 border-t border-slate-100 w-full">
+              <a
+                href="https://www.vjw.digital.go.jp/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-[11px] text-blue-600 font-semibold hover:underline flex items-center justify-center gap-1"
+              >
+                🌐 Web oficial del Gobierno: vjw.digital.go.jp ↗
+              </a>
             </div>
           </div>
         </div>
