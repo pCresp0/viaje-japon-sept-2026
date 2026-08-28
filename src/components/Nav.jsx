@@ -196,8 +196,8 @@ export function DesktopTopBar({ active, onNavigate }) {
         zIndex: 150,
         backgroundColor: "var(--shu-darker)",
         ...chromeBg,
-        borderBottom: "1px solid rgba(255,255,255,0.08)",
-        boxShadow: "0 2px 12px rgba(0,0,0,0.12)",
+        borderBottom: "none",
+        boxShadow: "0 2px 0 0 var(--shu-darker), 0 4px 14px rgba(0,0,0,0.12)",
       }}
     >
       <div style={chromeOverlay} />
