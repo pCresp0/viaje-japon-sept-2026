@@ -333,28 +333,49 @@ export const days = [
     "history": "Ang Nakasendo ay isa sa limang mahusay na ruta ng pyudal sa panahon ng Edo na kumokonekta sa Kyoto sa Edo (Tokyo). Ang Magome at Tsumago ay nagpapatakbo bilang mga 'post town' (juku) kung saan ang samurai, daimyo, at mangangalakal ay nagpapahinga sa kanilang mga paglalakbay sa paglalakad.",
     "schedule": [
       {
-        "text": "Paggising."
+        "text": "🍙 Gumising at mabilisang almusal. Hindi dapat Hotel Wood Takayama ang almusalan kung wala sa booking. Bumili ng almusal sa nakaraang gabi: onigiri, sandwich, tinapay, prutas, kape/inumin. Kumain bago umalis o dalhin sa bus. 💡 Tip: Umalis nang handa dahil may bus tayong naka-book ng 08:00."
       },
       {
-        "text": "Morning markets sa Takayama sa tabi ng ilog."
+        "text": "🚶 Lumabas ng Hotel Wood Takayama papuntang Takayama Nohi Bus Center. Ang lakad ay halos 10–15 min. Dumating nang may sapat na oras bago mag 08:00."
       },
       {
-        "text": "Hida Express panoramic train patungong Nagoya (2h 30m)."
+        "text": "🚌 Direktang Nohi Bus Takayama → Magome. Alis: Takayama Nohi Bus Center (08:00). Dating: Magome (10:45). Tagal: halos 2h 45m. Presyo: ¥5,000/tao. MAHALAGA: Kailangan mag-reserve rito nang maaga. Hindi gumagamit ng Japan Rail Pass. Hindi ito tren. Hindi kailangan ng IC card. Mag-reserve online sa Japan Bus Online / Nohi Bus para sa 5 tao. ⚠️ MAG-RESERVE NANG MAAGA: Iniiwasan ng bus na ito ang Takayama → Nagoya → Nakatsugawa → Magome. Mas madali at tamang-tama ang oras sa umaga para sa Nakasendo trail. Kumpirmahin ang booking para sa 09/14/2026."
       },
       {
-        "text": "Transfer sa pamamagitan ng lokal na tren+bus papuntang Magome (1h 15m). Mabilis na tanghalian."
+        "text": "📍 Pagdating sa Magome ng 10:45. Dito magsisimula ang Nakasendo Trail. Bago maglakad, iwan ang malalaking bagahe sa baggage forwarding service."
       },
       {
-        "text": "Hike mula Magome papuntang Tsumago dumaan sa kagubatan (8 km, napakadali, humigit-kumulang 2.5h). Ang luggage forwarding sa pagitan ng mga bayan ay magagamit para sa humigit-kumulang na €5."
+        "text": "🧳 IPADALA ANG BAGAHE SA TSUMAGO (10:45–11:15). Pwedeng iwan ang bagahe sa Magome tourist office mula 08:30 hanggang 11:30 (¥500/piraso). Kukunin natin ito sa Tsumago pagkalipas ng 13:00. MAHALAGA: Dating natin ng 10:45, kaya may oras pa para iwan bago mag 11:30. Magdala lang ng maliit na backpack para sa lakad na may tubig, ID, mobile, power bank, at pera. HUWAG magdala ng malaking maleta sa trail (mabato at paakyat)."
       },
       {
-        "text": "Check-in sa Minshuku at lokal na lutong bahay na hapunan ng 6:30 PM (fixed time)."
+        "text": "🥾 Nakasendo Trail: Magome → Tsumago. Halos 8 km at 3 oras sa banayad na bilis. Ang direksyong Magome → Tsumago ay mas kaunti ang paakyat. Praktikal na info: madali–katamtaman ang hirap; malinaw ang daan; may gubat at aspalto; magdala ng tubig. May mga bear bells sa daan, patunugin ito pagdaan."
       },
       {
-        "text": "⚠️ MAHALAGA — MAGOME SA HAPON. Karamihan sa mga tindahan at restawran sa Magome ay nagsasara pagkalipas ng 17:00. Napakakaunti ng mga opsyon sa hapunan sa bayan at paiba-iba ang oras nila. Kaya HINDI tayo dapat umasa na makakahanap ng alternatibong restawran on the spot. Kumpirmahin ang hapunan sa tinutuluyan at itago ang kumpirmasyon. TANGHALIAN SA MAGOME: Dahil maagang nagsasara ang mga tindahan, huwag patagalin ang tanghalian. Kung makahanap ng bukas na restawran habang bumibisita, samantalahin na."
+        "text": "🍙 TANGHALIAN / SNACK SA TRAIL (12:30–13:00). Magdala ng pagkain mula sa Takayama/Magome. Huwag umasang may bukas na kainan sa trail. Bumili ng: onigiri, sandwich, prutas, inumin. Ang prayoridad ay huwag patagalin ang lakad dahil kukuha pa ng bagahe at sasakay ng bus pabalik sa Magome. Kung may bukas na teahouse, pwede huminto, pero huwag asahan."
       },
       {
-        "text": "🍙 ALMUSAL BUKAS. HINDI kasama ang almusal sa accommodation. Bumili ng almusal sa nakaraang araw sa Takayama o sa isang convenience store bago dumating sa Magome. HUWAG isipin na may bukas na konbini sa Magome sa umaga. Bumili bago dumating: onigiri; sandwich; tinapay; prutas; inumin; kape. Itago ang almusal sa backpack para kinabukasan."
+        "text": "🏘️ Pagdating sa Tsumago bandang 14:15. Maikling lakad sa Tsumago habang papunta sa tourist office. Ang pangunahing layunin sa Tsumago ngayon ay tapusin ang trail at kunin ang bagahe."
+      },
+      {
+        "text": "🧳 Kunin ang bagahe & BUS TSUMAGO → MAGOME (14:15–14:22). Kunin ang bagahe sa tourist office (bukas 08:30–17:00). 🚍 14:22 — Lokal na Magome Line BUS. Alis Tsumago: 14:22. Dating Magome: 14:50. Tagal: 28 min. Presyo: ¥1,000/tao. Walang JR Pass. Hindi kailangan mag-reserve. Cash sa driver o bumili sa opisina. MAHALAGA: Kailangan ang bus na ito para makabalik at matulog sa Magome."
+      },
+      {
+        "text": "📍 Pagbabalik sa Magome ng 14:50. Nasa atin na ang mga bagahe."
+      },
+      {
+        "text": "Relax na paglalakad sa Magome-juku (15:00–17:30), mga tradisyonal nitong bahay at kalye. Oras ito para mag: check-in, iwan ang bagahe, magpahinga, maligo, at mag-enjoy sa nayon. MAHALAGA: Maraming tindahan at kainan ang maagang nagsasara. Huwag ipagpabukas ang pamimili o pagkain."
+      },
+      {
+        "text": "🍱 HAPUNAN SA MAGOME CHAYA (18:00). Ise-serve ang hapunan EKSAKTONG 18:00 at matatapos ng halos 19:00. Presyo: ¥3,630/tao (¥18,150 para sa 5). Dapat kumpirmado ang hapunan. MAHALAGA: Huwag ma-late. Nasa tapat lang ng accommodation ang restawran. ⚠️ WALANG ALMUSAL kinabukasan: Wala nang almusal sa Magome Chaya. Bumili nang maaga, walang bukas na tindahan nang maaga sa bayan."
+      },
+      {
+        "text": "🎫 MGA KAILANGANG RESERBASYON: NAKAPAG-RESERVE NA: Hotel Wood Takayama, Magome Chaya. I-RESERVE: 🚌 Nohi Bus Takayama → Magome (09/14/2026, 08:00, 5 tao). HUWAG I-RESERVE: 🚍 Tsumago → Magome (lokal na bus 14:22). BAGAHE: 🧳 Magome → Tsumago (iwan 08:30-11:30, kunin paglampas 13:00, ¥500/piraso)."
+      },
+      {
+        "text": "🚍 BUOD NG TRANSPORTASYON: 🏨 Hotel Wood Takayama ↓ 10–15 min na lakad ↓ 🚌 Takayama Nohi Bus Center ↓ 08:00–10:45 🚌 Direktang Nohi Bus ↓ 📍 Magome ↓ iwan ang bagahe ↓ 🥾 8 km / ~3 h ↓ 📍 Tsumago ↓ kunin ang bagahe ↓ 🚌 14:22–14:50 ↓ 📍 Magome ↓ 🏨 Magome Chaya ↓ 🍱 Hapunan 18:00."
+      },
+      {
+        "text": "💡 NAKASENDO TIPS: 🥤 Magdala ng sapat na tubig at magaan na pagkain bago magsimula. 🍵 May mga teahouse pero paiba-iba ang oras. 🌙 Maagang nagsasara ang Magome, ang hapunan ng 18:00 ay pinakasigurado. 🥾 Kumportableng sapatos na may magandang swelas. 🌧️ Mag-ingat sa putik kung umulan. 🐻 Gamitin ang bear bells. 🎒 Maglakad lang nang may maliit na backpack gamit ang luggage service. 📸 Huwag magmadali, i-enjoy ang trail."
       }
     ],
     "money": "Tinatayang €40 (pagkain)"

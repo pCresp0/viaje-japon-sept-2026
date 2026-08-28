@@ -333,28 +333,49 @@ export const days = [
     "history": "The Nakasendo was one of the five great feudal routes of the Edo period connecting Kyoto with Edo (Tokyo). Magome and Tsumago operated as 'post towns' (juku) where samurai, daimyos, and merchants rested on their journeys on foot.",
     "schedule": [
       {
-        "text": "Wake up."
+        "text": "🍙 Wake up and quick breakfast. Hotel Wood Takayama should not be our breakfast source this morning if not included. Buy breakfast the night before: onigiri, sandwich, bread, fruit, coffee/drink. Eat before leaving or take it for the bus. 💡 Tip: Leave fully prepared because we have a bus booked at 08:00."
       },
       {
-        "text": "Morning markets in Takayama by the river."
+        "text": "🚶 Leave Hotel Wood Takayama towards Takayama Nohi Bus Center. The walk is about 10–15 minutes. Arrive with plenty of time before 08:00."
       },
       {
-        "text": "Hida Express panoramic train to Nagoya (2h 30m)."
+        "text": "🚌 Direct Nohi Bus Takayama → Magome. Departure: Takayama Nohi Bus Center (08:00). Arrival: Magome (10:45). Duration: approx 2h 45m. Guideline price: ¥5,000/person. IMPORTANT: This service requires prior reservation. Does not use Japan Rail Pass. It is not a train. We do not need an IC card. Book online via Japan Bus Online / Nohi Bus. Book for 5 people. ⚠️ BOOK IN ADVANCE: This bus avoids Takayama → Nagoya → Nakatsugawa → Magome. It is much easier and leaves the morning perfectly timed for the Nakasendo trail. Confirm booking for 09/14/2026."
       },
       {
-        "text": "Transfer by local train+bus to Magome (1h 15m). Quick lunch."
+        "text": "📍 Arrival in Magome at 10:45. We start the Nakasendo Trail here. Before starting the hike, leave large luggage at the baggage forwarding service."
       },
       {
-        "text": "Hike from Magome to Tsumago through the forest (8 km, very easy, approx. 2.5h). Luggage forwarding between towns is available for about €5."
+        "text": "🧳 SEND LUGGAGE TO TSUMAGO (10:45–11:15). The service allows dropping bags at Magome tourist office between 08:30 and 11:30 (¥500/piece). We will pick them up in Tsumago after 13:00. IMPORTANT: We arrive at 10:45, plenty of time to drop off before 11:30. Carry only a small backpack during the hike with water, ID, mobile, power bank, and money. DO NOT carry large bags on the trail (it has rocks and elevation)."
       },
       {
-        "text": "Check-in at the Minshuku and local homemade dinner at 6:30 PM (fixed time)."
+        "text": "🥾 Nakasendo Trail: Magome → Tsumago. Approx 8 km and 3 hours at a leisurely pace. The Magome → Tsumago direction has less uphill. Practical info: easy–moderate difficulty; well-marked trail; forest and asphalt sections; bring water. There are bear bells along the way, ring them as you pass."
       },
       {
-        "text": "⚠️ IMPORTANT — MAGOME IN THE AFTERNOON. Most shops and restaurants in Magome close after 17:00. There are very few dinner options in town and their hours vary. Therefore, we SHOULD NOT rely on finding an alternative restaurant spontaneously. Confirm dinner with the accommodation and keep the confirmation. LUNCH IN MAGOME: As shops can close early, do not delay lunch too much. If we find an open restaurant during the visit, take the opportunity."
+        "text": "🍙 LUNCH / SNACK ON THE TRAIL (12:30–13:00). Bring food from Takayama/Magome. Do not rely on finding a restaurant during the hike. Buy: onigiri, sandwich, fruit, drink. Priority is not prolonging the hike as we must pick up luggage and catch the bus back to Magome. If an open teahouse is found, we can stop, but do not count on it."
       },
       {
-        "text": "🍙 NEXT DAY'S BREAKFAST. The accommodation DOES NOT include breakfast. Buy breakfast the day before in Takayama or at a convenience store before arriving in Magome. DO NOT assume there will be an open konbini in Magome in the morning. Buy before arriving: onigiri; sandwiches; bread; fruit; drinks; coffee. Keep breakfast in your backpack for the next morning."
+        "text": "🏘️ Arrival in Tsumago approx 14:15. Short walk through Tsumago while heading to the tourist office. The main goal in Tsumago today is finishing the trail and picking up luggage."
+      },
+      {
+        "text": "🧳 Pick up luggage & BUS TSUMAGO → MAGOME (14:15–14:22). Pick up bags at tourist office (open 08:30–17:00). 🚍 14:22 — Local Magome Line BUS. Departure Tsumago: 14:22. Arrival Magome: 14:50. Duration: 28 min. Price: ¥1,000/person. No JR Pass. No reservation needed. Cash to the driver or buy at Tsumago office. IMPORTANT: This bus is essential to return to Magome to sleep."
+      },
+      {
+        "text": "📍 Return to Magome at 14:50. We now have our luggage."
+      },
+      {
+        "text": "Leisurely walk through Magome-juku (15:00–17:30), its traditional houses and historic streets. This time is for: check-in, dropping off luggage, resting, showering, and enjoying the village. IMPORTANT: Many shops and restaurants close early. Do not leave shopping or food for the last minute."
+      },
+      {
+        "text": "🍱 DINNER AT MAGOME CHAYA (18:00). Dinner is served EXACTLY at 18:00 and ends approx 19:00. Price: ¥3,630/person (¥18,150 for 5). Dinner must be confirmed in advance. IMPORTANT: Do not be late. The restaurant is right across from the accommodation. ⚠️ NO BREAKFAST next morning: Magome Chaya no longer offers breakfast. Buy in advance, the town has no shops open early."
+      },
+      {
+        "text": "🎫 REQUIRED RESERVATIONS: ALREADY BOOKED: Hotel Wood Takayama, Magome Chaya. TO BOOK: 🚌 Nohi Bus Takayama → Magome (09/14/2026, 08:00, 5 pax). DO NOT BOOK: 🚍 Tsumago → Magome (local bus 14:22). LUGGAGE: 🧳 Magome → Tsumago (drop 08:30-11:30, pick up after 13:00, ¥500/piece)."
+      },
+      {
+        "text": "🚍 TRANSPORT SUMMARY: 🏨 Hotel Wood Takayama ↓ 10–15 min walk ↓ 🚌 Takayama Nohi Bus Center ↓ 08:00–10:45 🚌 Direct Nohi Bus ↓ 📍 Magome ↓ drop luggage ↓ 🥾 8 km / ~3 h ↓ 📍 Tsumago ↓ pick up luggage ↓ 🚌 14:22–14:50 ↓ 📍 Magome ↓ 🏨 Magome Chaya ↓ 🍱 Dinner 18:00."
+      },
+      {
+        "text": "💡 NAKASENDO TIPS: 🥤 Bring enough water and light food before starting. 🍵 Teahouses exist but with variable hours. 🌙 Magome closes early, dinner at 18:00 is the safe bet. 🥾 Comfortable shoes with good soles. 🌧️ Watch for mud if it rains. 🐻 Use bear bells. 🎒 Hike only with a small backpack using the luggage service. 📸 Don't rush, enjoy the trail."
       }
     ],
     "money": "Approx. €40 (meals)"
