@@ -424,7 +424,7 @@ export const days = [
     title: "Asakusa, Ueno y Odaiba",
     cities: "Asakusa, Ueno, Odaiba",
     summary:
-      "Templo Senso-ji en Asakusa, cruzando la puerta Kaminarimon. Paseo por el mercadillo de Ameyoko junto al parque de Ueno. Por la tarde, tren futurista sin conductor hacia Odaiba para ver el atardecer sobre la bahía.",
+      "Templo Senso-ji en Asakusa, cruzando la puerta Kaminarimon. Paseo por el mercadillo de Ameyoko junto al parque de Ueno. Por la tarde, tren futurista sin conductor hacia Odaiba para ver el atardecer sobre la bahía. (Fecha con reserva flexible de GetYourGuide GYGX7M7NZBNL).",
     history:
       "El templo Senso-ji, el más antiguo de Tokio, fue fundado en el año 628. Odaiba nació en el siglo XIX como islas-fortaleza para defender Tokio de los barcos occidentales.",
     schedule: [

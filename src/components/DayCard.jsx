@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ScrollText, ChevronDown, ChevronUp, Map } from "lucide-react";
 import { useContent } from "../i18n/LanguageContext";
 import { guidesByDay } from "../data/guides";
+import DayFujiOptionCard from "./DayFujiOptionCard";
 import GuideCard from "./GuideCard";
 import StayOption from "./StayOption";
 import PlaceText from "./PlaceText";
@@ -80,6 +81,9 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
       </header>
 
       <div className="p-5 space-y-4">
+        {/* Opción de Excursión Monte Fuji con GetYourGuide (Días 10 al 13) */}
+        <DayFujiOptionCard dayNum={day.num} />
+
         <PlaceText
           as="p"
           text={day.summary}
