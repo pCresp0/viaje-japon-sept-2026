@@ -385,28 +385,22 @@ export const days = [
     "cities": "Akihabara (Tokyo)",
     "summary": "Nous quitterons les Alpes pour voyager en train à grande vitesse vers Tokyo, où nous retrouverons nos gros bagages. Après-midi immersif à Akihabara, paradis de la technologie, de l'anime et de la culture otaku.",
     "history": "Edo (l'ancienne Tokyo) est passée d'un village de pêcheurs au centre politique du Japon en 1603. Après la Seconde Guerre mondiale, Akihabara a réémergé comme marché de composants radio, évoluant pour être l'épicentre de la culture pop japonaise.",
-    "schedule": [
-      {
-        "text": "Petit-déjeuner au Magome Chaya et récupération des sacs à dos."
-      },
-      {
-        "text": "⚠️ Bus local de Magome à Nakatsugawa (~25 min). Peu fréquent dans la zone rurale — vérifiez les horaires la veille (départ généralement ~08:50 ou 09:10)."
-      },
-      {
-        "text": "JR Shinano Limited Express de Nakatsugawa à Nagoya (~50 min). Arrivée à Nagoya ~10h30."
-      },
-      {
-        "text": "Marge de 30 min à la gare de Nagoya — juste assez de temps pour s'orienter et acheter un ekiben (bento de train) pour le Shinkansen."
-      },
-      {
-        "text": "Shinkansen Nozomi de Nagoya à la gare de Tokyo (1h 40m). Départs toutes les 10-15 min — aucun risque de le rater."
-      },
-      {
-        "text": "Arrivée à la gare de Tokyo. Métro vers l'hôtel à Asakusa (~35 min). Enregistrement et retrouvailles avec les gros bagages."
-      },
-      {
-        "text": "Après-midi à Akihabara : magasins d'électronique, collection de figurines, Mandarake, salles d'arcade."
-      }
+        "schedule": [
+      { "text": "🍙 07:00 — PETIT-DÉJEUNER\nMagome Chaya N'OFFRE PLUS de petit-déjeuner depuis 2026.\nAchetez le petit-déjeuner la veille.\nRecommandation : onigiri, sandwich, pain, fruit, café/boisson.\nMangez avant de partir ou emportez-le pour le bus.\nNE comptez PAS trouver un petit-déjeuner ouvert à Magome le matin." },
+      { "text": "🚌 08:15 — BUS LOCAL MAGOME → NAKATSUGAWA\nDépart : Magome — 08:15\nArrivée : Nakatsugawa Station — 08:40\nDurée : env. 25 min.\nType : bus local.\nRéservation : NE PEUT PAS être réservé.\nJapan Rail Pass : NON inclus.\nPaiement : acheter/payer localement selon les instructions de l'opérateur.\nPrix estimé : ¥800/personne.\nIMPORTANT : Le 15 septembre 2026 est un mardi, les horaires de semaine s'appliquent.\nArrivez à l'arrêt quelques minutes en avance.\nCe bus est nécessaire pour relier Magome au réseau ferroviaire JR." },
+      { "text": "08:40 — Arrivée à Nakatsugawa Station. Nous avons une marge suffisante pour trouver le quai du Limited Express Shinano." },
+      { "text": "🚆 09:57 — JR Limited Express SHINANO 4\nNakatsugawa → Nagoya\nDépart : 09:57\nArrivée : 10:53\nDurée : env. 56 min.\nRecommandation : SIÈGE RÉSERVÉ pour les 5 voyageurs.\nNous n'avons pas besoin de Japan Rail Pass.\nLe Limited Express nécessite un billet + supplément Limited Express.\n\n⚠️ RÉSERVATION RECOMMANDÉE\nBien que ce ne soit pas un train aussi critique que le Shinkansen, pour 5 personnes je réserverais les 5 sièges ensemble pour éviter d'être séparés.\nLes sièges réservés peuvent être achetés/réservés à l'avance via les canaux officiels de JR Central ou dans une gare JR.\nN'utilisez PAS de carte IC comme substitut au billet complet du Limited Express." },
+      { "text": "10:53 — Arrivée à Nagoya. Correspondance pour le Tokaido Shinkansen. Nous avons environ 20–30 minutes selon le Shinkansen choisi.\nAchetez un EKIBEN ici si nous n'avons pas encore mangé.\nNe vous asseyez pas pour manger dans la gare : achetez à emporter et mangez dans le Shinkansen.\nRecommandation : ekiben, sandwich, sushi/bento, boisson." },
+      { "text": "🍱 DÉJEUNER\nAchetez un ekiben à Nagoya Station et mangez pendant le Shinkansen.\nC'est l'un des moyens les plus pratiques de rentabiliser le trajet.\nNe réservez pas de restaurant pour ce repas." },
+      { "text": "🚅 ~11:15–11:30 — Tokaido Shinkansen NOZOMI\nNagoya → Tokyo\nDurée : env. 1h40.\nArrivée approximative : ~13:00.\n\nIMPORTANT :\nRÉSERVER À L'AVANCE pour 5 personnes.\nPréférence : sièges ensemble.\nNous n'avons pas besoin de Japan Rail Pass.\nRéservez via Smart EX / Tokaido Sanyo Kyushu Shinkansen Online Reservation.\nPuisque nous sommes 5, réservez les cinq sièges ensemble si possible.\n\n🧳 Si nous voyageons avec de grandes valises :\nVérifiez les dimensions avant de réserver.\nSi une valise a des dimensions totales supérieures à 160 cm, réservez un siège avec espace bagage hors format.\nNe présumez pas que nous pouvons placer une grande valise où nous voulons." },
+      { "text": "~13:00 — Arrivée à Tokyo Station. De Tokyo Station, continuez en transports en commun jusqu'au KOKO HOTEL Residence Asakusa Kappabashi." },
+      { "text": "🚇 TOKYO STATION → KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI\nL'hôtel est au : 3-24-2 Nishi-Asakusa, Taito-ku.\nOptions :\nOption simple : JR de Tokyo → Ueno + Tokyo Metro Ginza Line Ueno → Tawaramachi + 10 min à pied de l'hôtel.\nAlternativement : Tokyo → Ueno puis taxi si nous avons beaucoup de bagages.\nL'hôtel est à environ :\n- 4 min à pied de Tsukuba Express Asakusa Station B\n- 10 min de Tawaramachi Station\n- 10 min d'Iriya Station.\n\nNe réservez pas ce transport.\nPayez sur place par carte IC/billet.\nÀ 5 personnes avec valises, si fatigués, envisagez un taxi de Tokyo Station directement à l'hôtel. Il n'est pas obligatoire de le réserver." },
+      { "text": "HÔTEL\nArrivée au KOKO HOTEL Residence Asakusa Kappabashi.\nCheck-in officiel à partir de 15:00.\nSi nous arrivons plus tôt, laissez les valises à la réception si l'hôtel le permet et partez pour Akihabara.\nL'hôtel est très bien situé pour continuer vers Akihabara en transports en commun." },
+      { "text": "Après-midi à Akihabara.\nVisitez : Akihabara Electric Town, Radio Kaikan, Mandarake, magasins d'électronique, anime/manga, figurines, arcades, boutiques d'occasion.\n\nMandarake Complex : 12:00–20:00. Ouvert tous les jours. Par conséquent, la visite à 15:00 convient parfaitement." },
+      { "text": "DÉJEUNER/DÎNER\nDÉJEUNER\nComme le petit-déjeuner sera tôt et le repas principal dans le Shinkansen, il n'est pas nécessaire de réserver un repas à Akihabara.\nSi nous avons faim en arrivant, mangez un morceau rapide à Akihabara. Options typiques : ramen, curry, gyudon, kaiten sushi, tonkatsu, fast-food japonais.\n\nDÎNER\nLaissez le dîner pour Akihabara ou Asakusa.\nNe présumez pas que tous les restaurants restent ouverts très tard.\nPour un restaurant précis et à 5 personnes, réservez si vous en choisissez un populaire." },
+      { "text": "1. 🚌 Magome → Nakatsugawa : 08:15 → 08:40. Sans réservation. ¥800 env. Paiement local.\n2. 🚆 Nakatsugawa → Nagoya : Limited Express Shinano 4. 09:57 → 10:53.\n\nRÉSERVATION RECOMMANDÉE pour 5.\n3. 🚅 Nagoya → Tokyo : Nozomi. ~11:15–11:30 → ~13:00.\n\nRÉSERVER À L'AVANCE pour 5.\n4. 🚇 Tokyo → Asakusa/Kappabashi : Métro/JR. Sans réservation. Carte IC.\n5. 🚇 Asakusa → Akihabara : Transports urbains. Sans réservation. Carte IC." },
+      { "text": "🔴 HAUTE PRIORITÉ\n\nRÉSERVER Shinkansen Nozomi Nagoya → Tokyo pour 5 personnes.\n\n🟠 PRIORITÉ MOYENNE\n\nRÉSERVER Limited Express Shinano 4 Nakatsugawa → Nagoya pour 5 personnes.\n\n🟢 NE PAS RÉSERVER\nBus local Magome → Nakatsugawa.\n\n🟢 NE PAS RÉSERVER\nTokyo → hôtel.\n\n🟢 NE PAS RÉSERVER\nTransports urbains à Tokyo." },
+      { "text": "\n⚠️ Ne vous fiez pas aux anciens horaires de 08:50 et 09:30 qui figuraient auparavant : ils ne correspondent pas aux services que nous devons utiliser le 15/09/2026.\n\n⚠️ Achetez le petit-déjeuner la veille car Magome Chaya n'en propose pas.\n\n⚠️ Puisque nous sommes 5, réservez les deux trains avec places assises ensemble dans la mesure du possible.\n\n⚠️ Le Shinkansen est le moyen de transport que nous avons le plus intérêt à sécuriser à l'avance." }
     ],
     "money": "Env. 40 € (repas)"
   },

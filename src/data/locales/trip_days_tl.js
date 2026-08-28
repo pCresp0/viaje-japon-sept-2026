@@ -385,28 +385,22 @@ export const days = [
     "cities": "Akihabara (Tokyo)",
     "summary": "Aalis tayo sa Alps upang maglakbay sakay ng bullet train papuntang Tokyo, kung saan makikita nating muli ang aming malaking bagahe. Nakaka-engganyong hapon sa Akihabara, isang paraiso ng teknolohiya, anime, at kulturang otaku.",
     "history": "Ang Edo (sinaunang Tokyo) ay nagbago mula sa nayon ng mga mangingisda patungo sa pampulitikang sentro ng Japan noong 1603. Pagkatapos ng Ikalawang Digmaang Pandaigdig, muling lumitaw ang Akihabara bilang isang merkado ng bahagi ng radyo, na nagbago bilang sentro ng kultura ng pop ng Hapon.",
-    "schedule": [
-      {
-        "text": "Agahan sa Magome Chaya at pagkuha ng backpack."
-      },
-      {
-        "text": "⚠️ Lokal na bus mula sa Magome patungong Nakatsugawa (~25 mins). Bihira sa kanayunan — suriin ang iskedyul bago matulog (kadalasan umaalis ng ~08:50 o 09:10)."
-      },
-      {
-        "text": "JR Shinano Limited Express mula Nakatsugawa papuntang Nagoya (~50 mins). Pagdating sa Nagoya ~10:30."
-      },
-      {
-        "text": "30 min buffer sa istasyon ng Nagoya — sapat lang ang oras para makapag-orient at bumili ng ekiben (train bento) para sa Shinkansen."
-      },
-      {
-        "text": "Shinkansen Nozomi mula Nagoya patungong Tokyo Station (1h 40m). Umaalis tuwing 10-15 mins — walang panganib na makaligtaan ito."
-      },
-      {
-        "text": "Pagdating sa Tokyo Station. Subway sa hotel sa Asakusa (~35 mins). Check-in at kitain muli ang malalaking bagahe."
-      },
-      {
-        "text": "Hapon sa Akihabara: electronics stores, figure collecting, Mandarake, arcades."
-      }
+        "schedule": [
+      { "text": "🍙 07:00 — ALMUSAL\nHINDI na nag-aalok ang Magome Chaya ng almusal mula 2026.\nBumili ng almusal bago ang araw ng byahe.\nRekomendasyon: onigiri, sandwich, tinapay, prutas, kape/inumin.\nKumain bago umalis o dalhin sa bus.\nHUWAG umasa na makakahanap ng bukas na bilihan ng almusal sa Magome sa umaga." },
+      { "text": "🚌 08:15 — LOKAL NA BUS MAGOME → NAKATSUGAWA\nAlis: Magome — 08:15\nDating: Nakatsugawa Station — 08:40\nTagal: halos 25 min.\nUri: lokal na bus.\nReserbasyon: HINDI pwedeng i-reserve.\nJapan Rail Pass: HINDI kasama.\nBayad: bumili/magbayad on the spot sundin ang instructions ng operator.\nEstimated presyo: ¥800/tao.\nIMPORTANTE: Setyembre 15, 2026 ay Martes, kaya't weekday schedule ang susundin.\nDumating sa bus stop nang maaga ng ilang minuto.\nKailangan ang bus na ito para makakonekta ang Magome sa JR rail network." },
+      { "text": "08:40 — Dating sa Nakatsugawa Station. May sapat na oras para hanapin ang platform ng Limited Express Shinano." },
+      { "text": "🚆 09:57 — JR Limited Express SHINANO 4\nNakatsugawa → Nagoya\nAlis: 09:57\nDating: 10:53\nTagal: halos 56 min.\nRekomendasyon: NAKA-RESERBANG UPUAN para sa 5 byahero.\nHindi natin kailangan ng Japan Rail Pass.\nKailangan ng tiket + Limited Express supplement ang Limited Express.\n\n⚠️ INIREREKOMENDA ANG RESERBASYON\nKahit hindi kasing-kritikal ng Shinkansen, dahil 5 tayo mas mainam na i-reserve nang magkakatabi ang 5 upuan para iwas-hiwalay.\nPwedeng bilhin/i-reserve nang maaga ang mga reserved seats sa mga official channel ng JR Central o sa JR station.\nHUWAG gumamit ng IC card pamalit sa buong Limited Express ticket." },
+      { "text": "10:53 — Dating sa Nagoya. Lipat sa Tokaido Shinkansen. May halos 20–30 minuto depende sa napiling Shinkansen.\nBumili ng EKIBEN dito kung hindi pa tayo nakakain.\nHuwag umupo at kumain sa istasyon: bumili ng takeout at kainin sa Shinkansen.\nRekomendasyon: ekiben, sandwich, sushi/bento, inumin." },
+      { "text": "🍱 TANGHALIAN\nBumili ng ekiben sa Nagoya Station at kainin habang nasa Shinkansen.\nIto ang isa sa mga pinakapraktikal na paraan para sulitin ang byahe.\nHuwag mag-reserve ng restaurant para sa pagkain na ito." },
+      { "text": "🚅 ~11:15–11:30 — Tokaido Shinkansen NOZOMI\nNagoya → Tokyo\nTagal: halos 1h40.\nTinantiyang dating: ~13:00.\n\nIMPORTANTE:\nMAG-RESERVE NANG MAAGA para sa 5 tao.\nPreferensya: magkakatabing upuan.\nHindi natin kailangan ng Japan Rail Pass.\nMag-reserve via Smart EX / Tokaido Sanyo Kyushu Shinkansen Online Reservation.\nDahil 5 tayo, i-reserve nang magkakatabi ang lima hangga't maaari.\n\n🧳 Kung may malaking maleta:\nSuriin ang sukat bago mag-book.\nKung ang maleta ay may kabuuang sukat na higit 160 cm, mag-reserve ng upuan na may oversized baggage space.\nHuwag ipagpalagay na pwedeng ilagay ang malaking maleta kahit saan natin gusto." },
+      { "text": "~13:00 — Dating sa Tokyo Station. Mula Tokyo Station magpatuloy sa pampublikong transportasyon papuntang KOKO HOTEL Residence Asakusa Kappabashi." },
+      { "text": "🚇 TOKYO STATION → KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI\nAng hotel ay nasa: 3-24-2 Nishi-Asakusa, Taito-ku.\nMga Opsyon:\nSimpleng opsyon: JR mula Tokyo → Ueno + Tokyo Metro Ginza Line Ueno → Tawaramachi + 10 min lakad pa-hotel.\nAlternatibo: Tokyo → Ueno at mag-taxi kung marami tayong bagahe.\nAng hotel ay halos:\n- 4 min lakad mula sa Tsukuba Express Asakusa Station B\n- 10 min mula sa Tawaramachi Station\n- 10 min mula sa Iriya Station.\n\nHuwag i-reserve ang transportasyong ito.\nIbabayad doon gamit ang IC card/tiket.\nDahil 5 tao at may maleta, kung pagod, i-konsidera ang taxi mula Tokyo Station direkta sa hotel. Hindi obligadong i-reserve." },
+      { "text": "HOTEL\nDating sa KOKO HOTEL Residence Asakusa Kappabashi.\nOpisyal na check-in mula 15:00.\nKung dumating ng maaga, iwanan ang maleta sa reception kung pwede at dumiretso sa Akihabara.\nNapakaganda ng lokasyon ng hotel para pumunta ng Akihabara gamit ang pampublikong transportasyon." },
+      { "text": "Hapon sa Akihabara.\nBisitahin: Akihabara Electric Town, Radio Kaikan, Mandarake, mga tindahan ng electronics, anime/manga, figures, arcades, second-hand shops.\n\nMandarake Complex: 12:00–20:00. Bukas araw-araw. Kaya't ang pagbisita ng 15:00 ay saktong-sakto." },
+      { "text": "TANGHALIAN/HAPUNAN\nTANGHALIAN\nDahil maaga ang almusal at sa Shinkansen ang pangunahing tanghalian, hindi na kailangang mag-reserve ng tanghalian sa Akihabara.\nKung nagugutom pagdating, kumain ng mabilis sa Akihabara. Mga karaniwang opsyon: ramen, curry, gyudon, kaiten sushi, tonkatsu, Japanese fast food.\n\nHAPUNAN\nIwan ang hapunan para sa Akihabara o Asakusa.\nHuwag ipagpalagay na lahat ng restaurant ay bukas hanggang gabi.\nPara sa isang partikular na restaurant at dahil 5 tao, mag-reserve kung sikat ang napili." },
+      { "text": "1. 🚌 Magome → Nakatsugawa: 08:15 → 08:40. Walang reserbasyon. ¥800 approx. Bayad lokal.\n2. 🚆 Nakatsugawa → Nagoya: Limited Express Shinano 4. 09:57 → 10:53.\n\nINIREREKOMENDA ANG RESERBASYON para sa 5.\n3. 🚅 Nagoya → Tokyo: Nozomi. ~11:15–11:30 → ~13:00.\n\nMAG-RESERVE NANG MAAGA para sa 5.\n4. 🚇 Tokyo → Asakusa/Kappabashi: Metro/JR. Walang reserbasyon. IC card.\n5. 🚇 Asakusa → Akihabara: Urban transport. Walang reserbasyon. IC card." },
+      { "text": "🔴 MATAAS NA PRAYORIDAD\n\nMAG-BOOK ng Shinkansen Nozomi Nagoya → Tokyo para sa 5 tao.\n\n🟠 KATAMTAMANG PRAYORIDAD\n\nMAG-BOOK ng Limited Express Shinano 4 Nakatsugawa → Nagoya para sa 5 tao.\n\n🟢 HUWAG MAG-BOOK\nLokal na bus Magome → Nakatsugawa.\n\n🟢 HUWAG MAG-BOOK\nTokyo → hotel.\n\n🟢 HUWAG MAG-BOOK\nUrban transport sa Tokyo." },
+      { "text": "\n⚠️ Huwag magtiwala sa mga lumang oras na 08:50 at 09:30 na nakita dati: hindi ito tumutugma sa mga serbisyong kailangan nating sakyan sa 15/09/2026.\n\n⚠️ Bumili ng almusal bago ang araw ng byahe dahil walang almusal sa Magome Chaya.\n\n⚠️ Dahil tayo ay 5, i-reserve nang sabay ang dalawang tren na may reserved seat hangga't maaari.\n\n⚠️ Ang Shinkansen ang transportasyon na pinakagusto nating i-secure nang maaga." }
     ],
     "money": "Tinatayang €40 (pagkain)"
   },
