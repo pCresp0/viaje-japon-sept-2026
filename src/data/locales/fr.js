@@ -53,16 +53,18 @@ export default {
     { name: "Petit-déjeuner japonais", where: "Hôtels, kissaten", desc: "Riz, soupe miso, poisson grillé, natto ou œuf, algues et tsukemono. Complet et salé.", tip: "Si l'hôtel le propose, essayez-le au moins une fois. Alternative pas chère : onigiri + café au konbini." }
   ],
   pendingItems: [
-    { title: "Réserver l'excursion au Mont Fuji (Ken Kaneshima)", detail: "Excursion d'une journée complète avec guide. Réserver 3-4 jours consécutifs et décider selon la météo. Confirmer la politique d'annulation.", deadline: "Des semaines à l'avance — en attente de réservation" },
-    { title: "Réserver le train panoramique Hida Express (Takayama → Nagoya)", detail: "Jour 8 (14 sept) : train panoramique de Takayama à Nagoya. Très populaire en septembre, les places réservées s'épuisent vite.", deadline: "Plusieurs semaines à l'avance" },
-    { title: "Réserver le train Thunderbird (Kyoto → Kanazawa)", detail: "Jour 6 (12 sept) : train Thunderbird de Kyoto à Kanazawa. Septembre est la haute saison à Kanazawa.", deadline: "Quelques semaines à l'avance" },
-    { title: "Réserver les sièges du Shinkansen", detail: "Deux trains à grande vitesse clés : Jour 1 (7 sept) Tokyo vers Kyoto et Jour 9 (15 sept) Nagoya vers Tokyo.", deadline: "Résoudre d'abord le JR Pass, puis réserver à l'avance" },
-    { title: "Vérifier les horaires du bus Magome → Nakatsugawa (Jour 9)", detail: "Le matin du jour 9 (15 sept), prendre un bus local de Magome à la gare de Nakatsugawa. Bus peu fréquents.", deadline: "Vérifier le soir du 14 sept" },
-    { title: "Organiser l'envoi de bagages Kyoto → Tokyo", detail: "Matin du jour 6, envoyer les grandes valises de l'hôtel de Kyoto directement à Tokyo (Takkyubin). Voyager léger dans les Alpes.", deadline: "Confirmer avec les deux hôtels avant le voyage" },
-    { title: "Réserver l'envoi de sacs à dos Magome ↔ Tsumago", detail: "Service de transport de bagages entre les deux extrémités de la route Nakasendo pour marcher léger.", deadline: "Confirmer les horaires avant le Jour 8" },
-    { title: "Confirmer le dîner à Magome Chaya", detail: "Le dîner fait maison au minshuku (Jour 8) est à 18h30 pile et aucun retard n'est permis. Ajuster la marche.", deadline: "Avant le voyage — contacter Magome Chaya" },
-    { title: "Décider d'acheter ou non le JR Pass", detail: "Comparer le coût des billets individuels avec le JR Pass. Refaire le calcul avec les trajets définitifs.", deadline: "Avant le voyage — le pass s'achète depuis le pays d'origine" },
-    { title: "Acheter les billets en ligne (TeamLab et musées)", detail: "TeamLab fonctionne avec des créneaux horaires et s'épuise vite. Vérifier aussi l'observatoire de Roppongi.", deadline: "Des semaines à l'avance, selon disponibilité" }
+    { title: "Réserver le train panoramique Hida Express (Takayama → Nagoya)", detail: "Jour 8 (14 sept) : train panoramique. Très populaire en septembre, les places réservées s'épuisent vite. Sans JR Pass, acheter les billets à l'avance.", deadline: "Des semaines à l'avance" },
+    { title: "Réserver le train Thunderbird (Kyoto → Kanazawa)", detail: "Jour 6 (12 sept) : train Thunderbird. Septembre est la haute saison à Kanazawa. Sans JR Pass, acheter les billets à l'avance.", deadline: "Des semaines à l'avance" },
+    { title: "Réserver les sièges Shinkansen", detail: "Deux trains à grande vitesse clés : Jour 1 Tokyo → Kyoto et Jour 9 Nagoya → Tokyo. Sans JR Pass, réserver en ligne (SmartEX ou Klook) avec bagages volumineux si besoin.", deadline: "Des semaines à l'avance" },
+    { title: "Réserver le Narita Express (N'EX)", detail: "Trains de l'aéroport au centre-ville (Jour 1) et retour (Jour 15). Sans JR Pass, il est conseillé de réserver en ligne ou à l'aéroport.", deadline: "Des semaines à l'avance ou à l'arrivée" },
+    { title: "Réserver le train JR Shinano", detail: "Jours 8 et 9 : JR Shinano Limited Express entre Nagoya et Nakatsugawa. Recommandé de réserver à l'avance sans JR Pass.", deadline: "Des semaines à l'avance" },
+    { title: "Vérifier les horaires de bus Magome → Nakatsugawa (Jour 9)", detail: "Le matin du jour 9 (15 sept), bus local très peu fréquent. Relie avec le JR Shinano.", deadline: "Vérifier le soir du 14 sept" },
+    { title: "Organiser l'envoi de bagages Kyoto → Tokyo", detail: "Matin du jour 6, envoyer les grosses valises de l'hôtel de Kyoto vers celui de Tokyo (Takkyubin). Voyagez léger dans les Alpes.", deadline: "Confirmer avec les hôtels avant" },
+    { title: "Réserver l'envoi de sacs à dos Magome ↔ Tsumago", detail: "Service de transport de bagages sur la route Nakasendo. Se réserve à l'office de tourisme le jour même.", deadline: "Confirmer les horaires avant" },
+    { title: "Confirmer le dîner au Magome Chaya", detail: "Répondre à l'e-mail de Jeng pour confirmer le dîner pour 5 à 18h00 et prévenir en cas d'allergies alimentaires.", deadline: "Avant le voyage" },
+    { title: "Acheter les billets en ligne (TeamLab & Shibuya Sky)", detail: "Acheter dès maintenant les billets en ligne pour le musée teamLab et Shibuya Sky (créneau du coucher du soleil) car ils partent vite.", deadline: "Dès que possible" },
+    { title: "Internet et transport local", detail: "Achetez les eSIMs (Airalo, Ubigi) et ajoutez la carte Suica numérique directement dans Apple Wallet pour la recharger.", deadline: "Avant de voyager" },
+    { title: "Petit-déjeuner route Nakasendo", detail: "Acheter un petit-déjeuner dans un konbini à Takayama ou Nakatsugawa le jour 14, car l'auberge rurale n'en sert pas.", deadline: "Jour 14 au Japon" }
   ],
   categoryLabels: {
     reserva: { label: "Réservations" },

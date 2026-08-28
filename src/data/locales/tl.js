@@ -53,16 +53,18 @@ export default {
     { name: "Japanese breakfast", where: "Mga hotel, kissaten", desc: "Kanin, miso, inihaw na isda, natto o itlog, seaweed, at tsukemono. Kumpleto at malinamnam.", tip: "Kung inaalok ito sa hotel, subukan kahit isang araw. Murang alternatibo: onigiri + kape sa konbini." }
   ],
   pendingItems: [
-    { title: "Mag-book ng Mount Fuji Tour (Ken Kaneshima)", detail: "Buong araw na tour kasama ang Spanish guide. Mag-book ng 3-4 na magkakasunod na araw at magpasya base sa panahon. Kumpirmahin ang cancellation policy.", deadline: "Ilang linggo bago ang biyahe — naghihintay ng booking" },
-    { title: "Mag-book ng Hida Express panoramic train (Takayama → Nagoya)", detail: "Araw 8 (Set 14): panoramic train mula Takayama hanggang Nagoya. Sikat sa Setyembre, mabilis maubos ang reserved seats.", deadline: "Ilang linggo bago ang biyahe" },
-    { title: "Mag-book ng Thunderbird train (Kyoto → Kanazawa)", detail: "Araw 6 (Set 12): Thunderbird train mula Kyoto papuntang Kanazawa. Peak season ang Setyembre sa Kanazawa.", deadline: "Ilang linggo bago ang biyahe" },
-    { title: "Mag-book ng mga upuan sa Shinkansen", detail: "Dalawang mahalagang bullet train: Araw 1 (Set 7) Tokyo hanggang Kyoto at Araw 9 (Set 15) Nagoya hanggang Tokyo.", deadline: "Ayusin muna ang JR Pass, tapos mag-book ng maaga" },
-    { title: "Suriin ang schedule ng bus Magome → Nakatsugawa (Araw 9)", detail: "Umaga ng araw 9 (Set 15), sumakay ng lokal na bus mula Magome papuntang Nakatsugawa station. Bihira ang mga bus.", deadline: "Suriin sa gabi ng Set 14" },
-    { title: "Ayusin ang pagpapadala ng bagahe Kyoto → Tokyo", detail: "Umaga ng araw 6, ipadala ang malalaking maleta mula sa hotel sa Kyoto direkta sa Tokyo (Takkyubin). Maglakbay nang magaan sa Alps.", deadline: "Kumpirmahin sa parehong hotel bago bumiyahe" },
-    { title: "Mag-book ng backpack forwarding Magome ↔ Tsumago", detail: "Serbisyo ng paglipat ng bagahe sa magkabilang dulo ng Nakasendo trail para magaan ang paglalakad.", deadline: "Kumpirmahin ang mga schedule bago ang Araw 8" },
-    { title: "Kumpirmahin ang hapunan sa Magome Chaya", detail: "Ang lutong-bahay na hapunan sa minshuku (Araw 8) ay eksaktong 18:30 at bawal ang late. Ayusin ang oras ng paglalakad.", deadline: "Bago bumiyahe — kontakin ang Magome Chaya" },
-    { title: "Magpasya kung bibili ng JR Pass", detail: "Paghambingin ang gastos sa indibidwal na tiket kumpara sa JR Pass. Kalkulahin ulit bago magdesisyon.", deadline: "Bago bumiyahe — binibili ang pass sa sariling bansa" },
-    { title: "Bumili ng online tickets (TeamLab at mga museo)", detail: "Ang TeamLab ay may time-slots at mabilis maubos. Suriin din ang Roppongi observation deck.", deadline: "Ilang linggo bago, depende sa availability" }
+    { title: "Mag-book ng Hida Express panoramic train (Takayama → Nagoya)", detail: "Araw 8 (Set 14): panoramic train mula Takayama papuntang Nagoya. Sikat sa Setyembre kaya nauubos agad ang upuan. Dahil walang JR Pass, bilhin ang tiket nang mas maaga.", deadline: "Ilang linggo bago" },
+    { title: "Mag-book ng Thunderbird train (Kyoto → Kanazawa)", detail: "Araw 6 (Set 12): Thunderbird train Kyoto hanggang Kanazawa. Peak season ang Setyembre. Dahil walang JR Pass, bilhin ang tiket nang mas maaga.", deadline: "Ilang linggo bago" },
+    { title: "Mag-book ng Shinkansen seats", detail: "Dalawang mahalagang bullet trains: Araw 1 Tokyo papuntang Kyoto at Araw 9 Nagoya papuntang Tokyo. Mag-book online at i-reserve ang upuan para sa malalaking bagahe.", deadline: "Ilang linggo bago" },
+    { title: "Mag-book ng Narita Express (N'EX)", detail: "Tren mula airport papuntang siyudad (Araw 1) at pabalik (Araw 15). Walang JR Pass, mas mabuting mag-book online o pagdating sa airport.", deadline: "Bago dumating o sa airport" },
+    { title: "Mag-book ng JR Shinano train", detail: "Araw 8 at 9: JR Shinano Limited Express sa pagitan ng Nagoya at Nakatsugawa. Inirerekomenda na i-book nang maaga dahil walang JR Pass.", deadline: "Ilang linggo bago" },
+    { title: "Tingnan ang oras ng bus Magome → Nakatsugawa (Araw 9)", detail: "Umaga ng araw 9 (Set 15), sumakay ng bus. Madalang ang bus kaya tingnan ang oras. Papunta sa JR Shinano.", deadline: "Tingnan sa gabi ng Set 14" },
+    { title: "I-ayos ang pagpapadala ng bagahe Kyoto → Tokyo", detail: "Umaga ng araw 6, ipadala ang malalaking maleta mula Kyoto hotel patungong Tokyo (Takkyubin).", deadline: "Kumpirmahin sa mga hotel" },
+    { title: "Mag-book ng backpack forwarding Magome ↔ Tsumago", detail: "Luggage transport service sa Nakasendo trail. Kadalasang na-book sa tourist office sa parehong araw.", deadline: "Kumpirmahin bago" },
+    { title: "Kumpirmahin ang hapunan sa Magome Chaya", detail: "Mag-reply sa email ni Jeng upang kumpirmahin ang hapunan para sa 5 sa 18:00 h at abisuhan kung may food allergies.", deadline: "Bago bumiyahe" },
+    { title: "Bumili ng tickets online (TeamLab at Shibuya Sky)", detail: "Bumili na ng online tickets para sa teamLab museum at Shibuya Sky (sunset slot) dahil mabilis itong maubos.", deadline: "Sa lalong madaling panahon" },
+    { title: "Internet at lokal na transportasyon", detail: "Bumili ng eSIMs (Airalo, Ubigi, atbp.) at idagdag ang digital Suica card nang direkta sa Apple Wallet para lagyan ng pondo.", deadline: "Bago bumiyahe" },
+    { title: "Almusal sa Nakasendo route", detail: "Bumili ng almusal sa isang konbini sa Takayama o Nakatsugawa sa araw 14, dahil walang pagkain sa umaga sa rural inn.", deadline: "Araw 14 sa Japan" }
   ],
   categoryLabels: {
     reserva: { label: "Mga Booking" },

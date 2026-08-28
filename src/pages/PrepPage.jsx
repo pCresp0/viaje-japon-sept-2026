@@ -95,7 +95,6 @@ export const sections = [
       { id: "cortaunas", text: "Cortauñas" },
       { id: "antifaz", text: "Antifaz" },
       { id: "tapones-oidos", text: "Tapones para los oídos" },
-      { id: "botiquin", text: "Mini botiquín" },
     ],
   },
   {
