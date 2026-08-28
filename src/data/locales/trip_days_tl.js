@@ -285,22 +285,43 @@ export const days = [
     "history": "Ang Shirakawa-go ay sikat sa mga gassho-zukuri na bahay, na may matarik na pawid na mga bubong upang makatiis sa niyebe. Ang Takayama ay umunlad bilang isang mayamang lungsod ng mangangalakal sa ilalim ng shogunate ng Tokugawa, salamat sa mga karpintero nito.",
     "schedule": [
       {
-        "text": "Paggising at mabilisang agahan."
+        "text": "🍙 Gumising + Mabilisang takeaway na almusal. Ang Hotel Resol Trinity Kanazawa ay HINDI kasama ang almusal sa booking. Kahit na may almusal ang hotel mula 07:00, para sa umagang ito mas praktikal na bumili sa konbini gabi pa lang: onigiri, sandwich, prutas, kape/inumin. Huwag umasa sa almusal ng hotel dahil sasakay tayo ng 08:40 na bus. Maghanda rin ng tubig na madadala."
       },
       {
-        "text": "Nohi Bus Kanazawa → Shirakawa-go (1h 15m). Booking 12GO31991741 — kumpirmado ang 5 upuan."
+        "text": "🚌 Nohi Bus Kanazawa → Shirakawa-go. Alis: 08:40. Reserbasyon: 12GO31991741. 5 upuang kumpirmado. Tagal: halos 1h25. Inaasahang pagdating: 10:05. Kailangan ang reserbasyon. Hindi ito JR. Hindi gumagamit ng Japan Rail Pass. Huwag gumamit ng IC card: dadalhin natin ang reserbasyon/tiket sa bus. 💡 Tip: Dumating sa sakayan nang maaga. Ihanda ang reserbasyon sa mobile o kopya nito."
       },
       {
-        "text": "Pagdating sa Shirakawa-go. Maglakad sa nayon ng mga bahay ng gassho-zukuri (matarik na pawid na bubong)."
+        "text": "Pagdating sa Shirakawa-go ng 10:05. Mula sa Shirakawa-go Bus Terminal, simulan ang paglalakad sa Ogimachi. Ang makasaysayang sentro ay ilang minuto lang mula sa terminal."
       },
       {
-        "text": "Nohi Bus Shirakawa-go → Takayama (50 mins). Booking 12GO31992254 — kumpirmado ang 5 upuan."
+        "text": "SHIRAKAWA-GO (10:05–11:45). Libutin ang Ogimachi: gassho-zukuri houses, tradisyonal na kalye, kanal, Shirakawa Hachiman Shrine, tanawin ng bundok. Unahing i-enjoy ang bayan kaysa pumasok sa maraming bahay. Inirerekomendang pasukin: Wada House (09:00–17:00, ¥400, 3-4 min mula sa terminal, hindi kailangan mag-reserve, cash payment). Opsiyonal: Open-Air Museum (08:40–17:00 tuwing Setyembre, ¥600, 12 min na lakad. Pumasok lang kung maaga pa)."
       },
       {
-        "text": "Pagdating sa Takayama. Lumang bayan ng mga kahoy na kalye (Sanmachi Suji)."
+        "text": "🍜 TANGHALIAN SA SHIRAKAWA-GO (11:45–12:30). Huwag masyadong patagalin ang pagkain dahil ang bus pa-Takayama ay aalis ng 13:15 at dapat nakabalik na tayo sa terminal bago rito. Mga pwedeng subukan: Hida beef, hoba miso, soba, udon, tofu ng Shirakawa-go, lokal na gulay. Opsyon: 1. YOUCYA UDON (mabilis); 2. Hiiragi (Hida beef A4/A5); 3. Magoemon (maliit na tradisyonal, isiping mag-reserve). Huwag mag-obligang mag-reserve. 💡 Tip: Maraming maliliit na restawran na pabagu-bago ang oras. Kapag nakakita ng bukas at kaunti ang pila, samantalahin na."
       },
       {
-        "text": "Hapunan kasama ng sikat na baka na Hida wagyu, kalaban ng baka ng Kobe."
+        "text": "HULING PAGLALAKAD + PABALIK SA TERMINAL (12:30–13:00). Maglaan ng halos 15–20 minutong palugit para makabalik sa Shirakawa-go Bus Terminal. Huwag nang lumayo sa gitna."
+      },
+      {
+        "text": "🚌 Nohi Bus Shirakawa-go → Takayama. Alis: 13:15. Reserbasyon: 12GO31992254. 5 kumpirmadong upuan. Tagal: halos 50 min. Inaasahang dating sa Takayama Bus Terminal: 14:05. Kailangan ng reserbasyon. Hindi JR. Hindi kailangan ng Japan Rail Pass. Huwag gumamit ng IC card: gamitin ang tiket sa bus."
+      },
+      {
+        "text": "Pagdating sa Takayama ng 14:05. Mula Takayama Bus Terminal hanggang Hotel Wood Takayama: halos 12 min na paglalakad. Ang hotel ay nasa tabi lang ng old town, kaya HINDI na kailangan ng taxi o urban transport. Ang official check-in ay 15:00. Pwedeng iwan ang bagahe sa reception kung hindi pa handa ang kwarto."
+      },
+      {
+        "text": "LUMANG BAYAN NG TAKAYAMA (14:20–17:30). Libutin ang: Sanmachi Suji, tradisyonal na kalye, maliliit na tindahan, sake breweries, makasaysayang gusali, Nakabashi at paligid. MAHALAGA: Maraming tindahan at atraksyon sa old town ay nagsasara bandang 17:00. Samantalahin ang oras na ito para sa pamimili at pagpasok sa loob. Pagkatapos ng 17:00: Manatili sa lugar, magpahinga sa hotel o maglakad-lakad sa mga kalye kung kailan mas kaunti ang tao. 🍡 OPSIYONAL NA MERYENDA: Subukan ang Hida street food (Hida beef sushi, croquette, mitarashi dango, pudding, lokal na sake). Huwag masyadong magpakabusog kung gustong mag-Hida beef dinner."
+      },
+      {
+        "text": "🥩 Espesyal na Hida beef hapunan ng 19:00. Para sa 5 tao at dahil Linggo ngayon, INIREREKOMENDA ANG RESERBASYON. Huwag ipaubaya ito sa kapalaran. Ano ang pwedeng kainin: Hida beef A4/A5, yakiniku, sukiyaki, hoba miso, Hida beef sushi. Badyet: kaswal ¥2,000–4,000/tao; kumpletong Hida beef dinner ¥4,000–8,000+; premium opsyon ay pwedeng lumagpas ng ¥10,000/tao. Kung gusto itong maging espesyal na pagkain, mag-reserve nang maaga."
+      },
+      {
+        "text": "🎫 MGA RESERBASYON: NAKAPAG-RESERVE NA: Kanazawa → Shirakawa-go (08:40, 5 upuan) at Shirakawa-go → Takayama (13:15, 5 upuan). HINDI natin kailangan ng Japan Rail Pass, tren, o IC card para rito. KUMPIRMAHIN / INIREREKOMENDA: mag-reserve ng Hida beef dinner para sa 5 tao ng 19:00."
+      },
+      {
+        "text": "🚍 BUOD NG TRANSPORTASYON: Kanazawa → Shirakawa-go: Nohi Bus booked, 08:40 → 10:05. Shirakawa-go: Lakad lang. Shirakawa-go → Takayama: Nohi Bus booked, 13:15 → 14:05. Takayama Bus Terminal → Hotel Wood: halos 12 min na lakad. Hotel → Sanmachi: katabi lang. Hindi natin kailangan ng Japan Rail Pass o tren ngayong araw."
+      },
+      {
+        "text": "🍽️ MGA FOOD TIP: ⚠️ Sa Shirakawa-go, huwag nang hintayin ang 13:00 para kumain. Maikli ang oras ng mga kainan at dapat makabalik na tayo sa terminal bago mag-13:15. ⚠️ Sa Takayama, maraming tindahan ang nagsasara bandang 17:00, pero mas huling nagbubukas ang mga restawran. Ang 19:00 na hapunan ay pasok. 🥩 Sa Takayama pinakamasarap subukan ang Hida beef. Tip ng manlalakbay: mag-reserve sa sikat na kainan o pumunta nang maaga bago mapuno."
       }
     ],
     "money": "Tinatayang €40 + premium na wagyu dinner"

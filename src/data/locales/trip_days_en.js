@@ -285,22 +285,43 @@ export const days = [
     "history": "Shirakawa-go is famous for its gassho-zukuri houses, with steep thatched roofs to withstand snow. Takayama prospered as a wealthy merchant city under the Tokugawa shogunate, thanks to its carpenters.",
     "schedule": [
       {
-        "text": "Wake up and quick breakfast."
+        "text": "🍙 Wake up + Quick takeaway breakfast. Hotel Resol Trinity Kanazawa DOES NOT include breakfast in our booking. Although the hotel offers breakfast from 07:00, for this morning it is more practical to buy the night before at a konbini: onigiri, sandwich, fruit, coffee/drink. Do not rely on the hotel breakfast because we have to catch the 08:40 bus. Also prepare water to go."
       },
       {
-        "text": "Nohi Bus Kanazawa → Shirakawa-go (1h 15m). Booking 12GO31991741 — 5 seats confirmed."
+        "text": "🚌 Nohi Bus Kanazawa → Shirakawa-go. Departure: 08:40. Reservation: 12GO31991741. 5 seats confirmed. Approximate duration: 1h25. Expected arrival: 10:05. Mandatory reservation for this service. It is not JR. Does not use Japan Rail Pass. Do not use IC card: we carry the bus reservation/ticket. 💡 Tip: Arrive at the stop with a margin. Have the reservation located on your mobile and/or an accessible copy."
       },
       {
-        "text": "Arrival in Shirakawa-go. Walk through the village of gassho-zukuri houses (steep thatched roofs)."
+        "text": "Arrival in Shirakawa-go at 10:05. From Shirakawa-go Bus Terminal begins the walking tour of Ogimachi. The historic center is a few minutes from the terminal."
       },
       {
-        "text": "Nohi Bus Shirakawa-go → Takayama (50 mins). Booking 12GO31992254 — 5 seats confirmed."
+        "text": "SHIRAKAWA-GO (10:05–11:45). Tour Ogimachi: gassho-zukuri houses, traditional streets, canals, Shirakawa Hachiman Shrine, mountain views. Prioritize enjoying the village rather than trying to enter many houses. Recommended interior visit: Wada House (09:00–17:00, ¥400, approx 3–4 mins from terminal, no reservation, cash payment). Optional: Open-Air Museum (08:40–17:00 in September, ¥600, 12 mins walk. Only enter if doing well on time)."
       },
       {
-        "text": "Arrival in Takayama. Old town of wooden streets (Sanmachi Suji)."
+        "text": "🍜 LUNCH IN SHIRAKAWA-GO (11:45–12:30). Do not delay lunch too much because the bus to Takayama leaves at 13:15 and we must be back at the terminal with a margin. What to try: Hida beef, hoba miso, soba, udon, Shirakawa-go tofu, local vegetables. Options: 1. YOUCYA UDON (quick option); 2. Hiiragi (Hida beef A4/A5); 3. Magoemon (small traditional option, consider reserving). Do not make a mandatory reservation. 💡 Tip: Many restaurants are small and with variable hours. If we find a suitable option open with little wait, take advantage of it."
       },
       {
-        "text": "Dinner with the famous Hida wagyu beef, rivaling Kobe beef."
+        "text": "LAST WALK + RETURN TO TERMINAL (12:30–13:00). Leave approximately 15–20 minutes margin to return to Shirakawa-go Bus Terminal. Do not wander far from the central area."
+      },
+      {
+        "text": "🚌 Nohi Bus Shirakawa-go → Takayama. Departure: 13:15. Reservation: 12GO31992254. 5 seats confirmed. Approximate duration: 50 min. Expected arrival at Takayama Bus Terminal: 14:05. Mandatory reservation. Not JR. Does not require Japan Rail Pass. Do not use IC card: use the bus reservation/ticket."
+      },
+      {
+        "text": "Arrival in Takayama at 14:05. From Takayama Bus Terminal to Hotel Wood Takayama: approximately 12 minutes walking. The hotel is practically next to the historic center, so we DO NOT need a taxi or urban transport. Official check-in is at 15:00. We can leave luggage at reception if the room is not yet available."
+      },
+      {
+        "text": "OLD TOWN OF TAKAYAMA (14:20–17:30). Tour: Sanmachi Suji, traditional streets, small shops, sake breweries, historic buildings, Nakabashi and surroundings. IMPORTANT: Many shops and attractions in the old town close around 17:00. Take advantage of this slot for shopping and interior visits. After 17:00: Stay in the area, rest at the hotel or take a quiet walk through the streets when there are fewer people. 🍡 OPTIONAL SNACK: Try some Hida street specialty (Hida beef sushi, croquette, mitarashi dango, pudding, local sake). Do not fill your stomach too much if we want a Hida beef dinner."
+      },
+      {
+        "text": "🥩 Special Hida beef dinner at 19:00. For 5 people and being Sunday, RESERVATION RECOMMENDED. Do not leave this dinner completely to improvisation. What to try: Hida beef A4/A5, yakiniku, sukiyaki, hoba miso, Hida beef sushi. Budget: casual meal ¥2,000–4,000/person; fuller Hida beef dinner ¥4,000–8,000+; premium option can exceed ¥10,000/person. If we want this to be one of the special meals, reserve in advance."
+      },
+      {
+        "text": "🎫 RESERVATIONS: ALREADY BOOKED: Kanazawa → Shirakawa-go (08:40, 5 seats) and Shirakawa-go → Takayama (13:15, 5 seats). We DO NOT need Japan Rail Pass, trains, or IC card for these buses. PENDING / RECOMMENDED: reserve Hida beef dinner for 5 people at 19:00."
+      },
+      {
+        "text": "🚍 TRANSPORT SUMMARY: Kanazawa → Shirakawa-go: Nohi Bus booked, 08:40 → 10:05. Shirakawa-go: All on foot. Shirakawa-go → Takayama: Nohi Bus booked, 13:15 → 14:05. Takayama Bus Terminal → Hotel Wood: approx. 12 min walk. Hotel → Sanmachi: right next to it. We do not need a Japan Rail Pass or trains today."
+      },
+      {
+        "text": "🍽️ FOOD TIPS: ⚠️ In Shirakawa-go do not wait until 13:00 to eat. Establishments with limited hours and we must be back at the terminal before 13:15. ⚠️ In Takayama many shops close around 17:00, but dinner restaurants open later. Dinner at 19:00 is viable. 🥩 Takayama is ideal for trying Hida beef. Travelers' tip: reserve popular restaurants or go early as they fill up."
       }
     ],
     "money": "Approx. €40 + premium wagyu dinner"
