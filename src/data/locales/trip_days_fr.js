@@ -291,10 +291,67 @@ export const days = [
     "money": "Env. 40 € (repas)"
   },
   {
+    "title": "Shibuya, Harajuku et Shinjuku",
+    "cities": "Shibuya, Harajuku, Shinjuku",
+    "summary": "Journée intense : carrefour de Shibuya et culture jeune d'Harajuku. Fin de journée sous les néons de Shinjuku et ses ruelles gourmandes. (Option flexible GetYourGuide GYGFWV2MNZV8).",
+    "history": "Ces quartiers se sont développés après le grand tremblement de terre de Kanto de 1923.",
+    "schedule": [
+      {
+        "text": "Carrefour de Shibuya et parc Miyashita. Arrêt au Pokémon Center Shibuya."
+      },
+      {
+        "text": "Promenade vers Harajuku par la rue Takeshita, sanctuaire Meiji dans le parc Yoyogi."
+      },
+      {
+        "text": "Soirée à Shinjuku : observatoire gratuit du gouvernement métropolitain, dîner à Omoide Yokocho, néons de Kabukicho."
+      }
+    ],
+    "money": "Env. 40 € (repas)"
+  },
+  {
+    "title": "Gastronomie, Luxe et Panoramas",
+    "cities": "Toyosu, Ginza, Roppongi",
+    "summary": "Matinée au marché de Toyosu pour le meilleur sushi frais, promenade à Ginza et architecture élégante. Coucher de soleil à la tour Mori (Roppongi). (Option flexible GetYourGuide GYGZGZVLFL75).",
+    "history": "Ginza signifie 'siège d'argent', site de l'hôtel des monnaies à l'époque d'Edo.",
+    "schedule": [
+      {
+        "text": "Petit-déjeuner de sushi au marché de gros de Toyosu."
+      },
+      {
+        "text": "Gare de Tokyo, esplanade du Palais Impérial et gratte-ciel de Shiodome."
+      },
+      {
+        "text": "Balade dans Ginza et boutiques emblématiques."
+      },
+      {
+        "text": "Coucher de soleil à l'observatoire Tokyo City View de la tour Mori (Roppongi)."
+      }
+    ],
+    "money": "Env. 50 € (repas et observatoire Mori)"
+  },
+  {
+    "title": "Route Nintendo et Shopping",
+    "cities": "Ikebukuro, Nakano",
+    "summary": "Journée rétrogaming et mangas : boutiques officielles Nintendo et Nakano Broadway. (Option flexible GetYourGuide GYGMX397LBNA).",
+    "history": "Nakano Broadway est la mecque du collectionnisme underground et des produits rétro.",
+    "schedule": [
+      {
+        "text": "Mega Pokémon Center Ikebukuro et Nintendo Store Tokyo."
+      },
+      {
+        "text": "Déjeuner dans le quartier d'Ikebukuro."
+      },
+      {
+        "text": "Après-midi de shopping de figurines et mangas rétro à Nakano Broadway."
+      }
+    ],
+    "money": "Env. 40 € (repas) + shopping"
+  },
+  {
     "title": "Excursion Exclusive au Mont Fuji",
     "cities": "Mishima, Pagode Chureito, Oshino Hakkai, Aokigahara, Shiraito, Lacs du Fuji",
     "summary": "Tour d'une journée complète (8 heures) en mini-van privée avec guide officiel hispanophone (Ken Kaneshima · Excursiones Fujiyama). Visite de la pagode Chureito, sanctuaire millénaire Kitaguchi Hongu, village traditionnel d'Oshino Hakkai, forêt d'Aokigahara, cascades de Shiraito et route des lacs. Repas typique avec dégustation de nouilles Houtou.",
-    "history": "Le mont Fuji (3 776 m) est le volcan sacré et le symbole incontesté du Japon. Objet de culte shintoïste depuis des siècles et inspiration d'artistes tels qu'Hokusai.",
+    "history": "Le mont Fuji (3 776 m) est le volcan sacré et le symbole incontesté du Japon.",
     "schedule": [
       {
         "text": "Vérifier les webcams en direct sur mtfujitoday.com et isfujivisible.com depuis l'hôtel à Tokyo (la règle d'or à 06h30)."
@@ -328,69 +385,12 @@ export const days = [
       },
       {
         "text": "Arrivée à la gare Shinkansen de Shin-Fuji vers 17h30 et retour en train à Tokyo (~60 min)."
-      }
-    ],
-    "money": "13 000 ¥ tour (entrées et minivan inc.) + Shinkansen + repas Houtou"
-  },
-  {
-    "title": "Shibuya, Harajuku et Shinjuku",
-    "cities": "Shibuya, Harajuku, Shinjuku",
-    "summary": "Journée intense : carrefour de Shibuya et culture jeune d'Harajuku. Fin de journée sous les néons de Shinjuku et ses ruelles gourmandes.",
-    "history": "Ces quartiers se sont développés après le grand tremblement de terre de Kanto de 1923, portés par l'expansion ferroviaire urbaine. Shinjuku accueille aujourd'hui la gare la plus fréquentée de la planète.",
-    "schedule": [
-      {
-        "text": "Carrefour de Shibuya et parc Miyashita. Arrêt au Pokémon Center Shibuya."
-      },
-      {
-        "text": "Promenade vers Harajuku par la rue Takeshita, sanctuaire Meiji dans le parc Yoyogi."
-      },
-      {
-        "text": "Soirée à Shinjuku : observatoire gratuit du gouvernement métropolitain, dîner à Omoide Yokocho, néons de Kabukicho."
-      }
-    ],
-    "money": "Env. 40 € (repas)"
-  },
-  {
-    "title": "Route Nintendo et Shopping",
-    "cities": "Ikebukuro, Nakano",
-    "summary": "Journée de collection et de jeux vidéo : magasins officiels Nintendo et Pokémon. L'après-midi, Nakano Broadway, le meilleur endroit pour les articles rétro et geek à un prix équitable.",
-    "history": "L'industrie japonaise des jeux vidéo, menée par Nintendo, a revitalisé l'économie culturelle du pays dans les années 80. Nakano Broadway est né dans les années 60 comme un complexe résidentiel de luxe, aujourd'hui une Mecque pour la collection underground.",
-    "schedule": [
-      {
-        "text": "Mega Pokémon Center Ikebukuro et Nintendo Store Tokyo."
-      },
-      {
-        "text": "Déjeuner dans le quartier d'Ikebukuro."
-      },
-      {
-        "text": "Après-midi de shopping de collection rétro, manga et figurines à Nakano Broadway."
-      }
-    ],
-    "money": "Env. 40 € (repas) + shopping"
-  },
-  {
-    "title": "Gastronomie, Luxe, Panoramas et Adieux",
-    "cities": "Toyosu, Ginza, Roppongi",
-    "summary": "Matinée au marché de Toyosu pour le meilleur sushi frais, promenade à Ginza et architecture élégante. Coucher de soleil à la tour Mori (Roppongi) avec vue sur la tour de Tokyo. Dîner d'adieu et préparation des bagages.",
-    "history": "Ginza signifie 'siège d'argent', site de l'hôtel des monnaies à l'époque d'Edo. Vitrine de la modernisation japonaise.",
-    "schedule": [
-      {
-        "text": "Petit-déjeuner de sushi au marché de gros de Toyosu."
-      },
-      {
-        "text": "Gare de Tokyo, esplanade du Palais Impérial et gratte-ciel de Shiodome."
-      },
-      {
-        "text": "Balade dans Ginza et boutiques emblématiques."
-      },
-      {
-        "text": "Coucher de soleil à l'observatoire Tokyo City View de la tour Mori (Roppongi)."
       },
       {
         "text": "Dîner d'adieu du groupe et valises à l'hôtel."
       }
     ],
-    "money": "Env. 50 € (repas et observatoire Mori)"
+    "money": "13 000 ¥ tour (entrées et minivan inc.) + Shinkansen + repas Houtou"
   },
   {
     "title": "Retour à la maison",

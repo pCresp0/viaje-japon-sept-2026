@@ -636,7 +636,7 @@ export const guides = {
       "Hay un dicho japonés: 'Es sabio subir el Fuji una vez, y necio subirlo dos'.",
       "El primer sueño del año con el Fuji se considera de muy buena suerte, especialmente combinado con un halcón y una berenjena.",
     ],
-    tip: "Tour confirmado el Jueves 17 de septiembre (Día 11) con Ken Kaneshima (Excursiones Fujiyama · +81 90-5863-1635 · excursionesfujiyama.com). Comprobar cámaras web a las 06:30 AM.",
+    tip: "Tour reservado el Domingo 20 de septiembre (Día 14) con Ken Kaneshima (Excursiones Fujiyama · +81 90-5863-1635 · excursionesfujiyama.com) + 4 reservas flexibles en GetYourGuide del 16 al 19 de septiembre. Comprobar cámaras web a las 06:30 AM.",
   },
 };
 
@@ -651,10 +651,10 @@ export const guidesByDay = {
   7: ["shirakawa-go", "takayama"],
   8: ["nakasendo"],
   9: ["akihabara"],
-  10: ["senso-ji"],
-  11: ["fuji"],
-  12: ["meiji-jingu", "shibuya"],
+  10: ["senso-ji", "teamlab"],
+  11: ["meiji-jingu", "shibuya"],
+  12: [],
   13: [],
-  14: ["teamlab"],
+  14: ["fuji"],
   15: [],
 };

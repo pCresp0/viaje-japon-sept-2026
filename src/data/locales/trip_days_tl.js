@@ -291,10 +291,67 @@ export const days = [
     "money": "Tinatayang €40 (pagkain)"
   },
   {
+    "title": "Shibuya, Harajuku at Shinjuku",
+    "cities": "Shibuya, Harajuku, Shinjuku",
+    "summary": "Matinding araw: Shibuya crossing at kultura ng kabataan sa Harajuku. (Opsyon sa GetYourGuide GYGFWV2MNZV8).",
+    "history": "Lumago ang mga distritong ito pagkatapos ng Great Kanto Earthquake noong 1923.",
+    "schedule": [
+      {
+        "text": "Shibuya Crossing at Miyashita Park. Huminto sa Pokémon Center Shibuya."
+      },
+      {
+        "text": "Maglakad papuntang Harajuku sa Takeshita Street, patungo sa Meiji Shrine sa Yoyogi Park."
+      },
+      {
+        "text": "Gabi sa Shinjuku: libreng Metropolitan Government observation deck, hapunan sa Omoide Yokocho, mga neon sa Kabukicho."
+      }
+    ],
+    "money": "Humigit-kumulang €40 (pagkain)"
+  },
+  {
+    "title": "Gastronomiya, Karangyaan at mga Tanawin",
+    "cities": "Toyosu, Ginza, Roppongi",
+    "summary": "Sariwang sushi sa Toyosu market, pamamasyal sa Ginza at magagandang gusali. Paglubog ng araw sa Mori Tower viewpoint (Roppongi). (Opsyon sa GetYourGuide GYGZGZVLFL75).",
+    "history": "Ang Ginza ay nangangahulugang 'upuan ng pilak'.",
+    "schedule": [
+      {
+        "text": "Masarap na almusal ng sushi sa Toyosu wholesale market."
+      },
+      {
+        "text": "Tokyo Station, Imperial Palace plaza, at Shiodome skyscrapers."
+      },
+      {
+        "text": "Pamamasyal sa Ginza at mga modernong tindahan."
+      },
+      {
+        "text": "Paglubog ng araw sa Tokyo City View deck sa Mori Tower (Roppongi)."
+      }
+    ],
+    "money": "Humigit-kumulang €50 (pagkain at Mori Tower)"
+  },
+  {
+    "title": "Ruta sa Nintendo at Pamimili",
+    "cities": "Ikebukuro, Nakano",
+    "summary": "Araw ng video games at retro shopping: Nintendo stores at Nakano Broadway. (Opsyon sa GetYourGuide GYGMX397LBNA).",
+    "history": "Ang Nakano Broadway ay sikat sa mga retro collectibles at anime.",
+    "schedule": [
+      {
+        "text": "Mega Pokémon Center Ikebukuro at Nintendo Store Tokyo."
+      },
+      {
+        "text": "Tanghalian sa Ikebukuro."
+      },
+      {
+        "text": "Pamimili sa Nakano Broadway ng mga retro collectibles at manga."
+      }
+    ],
+    "money": "Humigit-kumulang €40 (pagkain) + pamimili"
+  },
+  {
     "title": "Eksklusibong Pamamasyal sa Mount Fuji",
     "cities": "Mishima, Chureito Pagoda, Oshino Hakkai, Aokigahara, Shiraito, Mga Lawa ng Fuji",
     "summary": "Buong araw na tour (8 oras) sakay ng pribadong minivan kasama ang opisyal na Spanish-speaking guide (Ken Kaneshima · Excursiones Fujiyama). Pagbisita sa Chureito Pagoda, lumang dambana ng Kitaguchi Hongu, tradisyunal na nayon ng Oshino Hakkai, gubat ng Aokigahara, talon ng Shiraito at ruta ng mga lawa. Tikman ang Houtou noodles.",
-    "history": "Ang Mount Fuji (3,776 m) ang sagradong bulkan at tanyag na simbolo ng Japan. Sentro ng debosyon at inspirasyon sa sining sa loob ng daang taon.",
+    "history": "Ang Mount Fuji (3,776 m) ang sagradong bulkan at tanyag na simbolo ng Japan.",
     "schedule": [
       {
         "text": "Tingnan ang live webcams sa mtfujitoday.com at isfujivisible.com mula sa hotel sa Tokyo (patakaran sa 06:30 AM)."
@@ -328,69 +385,12 @@ export const days = [
       },
       {
         "text": "Pagdating sa Shin-Fuji Station (~17:30) at pagbalik sa Tokyo sakay ng bullet train (~60 min)."
-      }
-    ],
-    "money": "13,000 ¥ tour (kasama ang tiket at minivan) + Shinkansen + pagkain"
-  },
-  {
-    "title": "Shibuya, Harajuku at Shinjuku",
-    "cities": "Shibuya, Harajuku, Shinjuku",
-    "summary": "Matinding araw: Shibuya crossing at kultura ng kabataan sa Harajuku. Pagtatapos sa ilalim ng mga ilaw ng Shinjuku kasama ang mga eskinita ng pagkain.",
-    "history": "Lumago ang mga distritong ito pagkatapos ng Great Kanto Earthquake noong 1923. Ang Shinjuku ngayon ang may pinaka-abalang istasyon ng tren sa mundo.",
-    "schedule": [
-      {
-        "text": "Shibuya Crossing at Miyashita Park. Huminto sa Pokémon Center Shibuya."
-      },
-      {
-        "text": "Maglakad papuntang Harajuku sa Takeshita Street, patungo sa Meiji Shrine sa Yoyogi Park."
-      },
-      {
-        "text": "Gabi sa Shinjuku: libreng Metropolitan Government observation deck, hapunan sa Omoide Yokocho, mga neon sa Kabukicho."
-      }
-    ],
-    "money": "Humigit-kumulang €40 (pagkain)"
-  },
-  {
-    "title": "Nintendo Route at Shopping",
-    "cities": "Ikebukuro, Nakano",
-    "summary": "Araw ng koleksyon at video games: opisyal na Nintendo at Pokémon stores. Sa hapon, Nakano Broadway, ang pinakamagandang lugar para sa retro at geek na mga bagay sa patas na presyo.",
-    "history": "Ang industriya ng video game ng Japan, pinamunuan ng Nintendo, ay nagpasigla muli sa kultural na ekonomiya ng bansa noong 80s. Ang Nakano Broadway ay isinilang noong 60s bilang isang mamahaling residential complex, ngayon ay mecca ng koleksyong underground.",
-    "schedule": [
-      {
-        "text": "Mega Pokémon Center Ikebukuro at Nintendo Store Tokyo."
-      },
-      {
-        "text": "Tanghalian sa paligid ng lugar ng Ikebukuro."
-      },
-      {
-        "text": "Hapon ng retro na koleksyon, manga, at pamimili ng figure sa Nakano Broadway."
-      }
-    ],
-    "money": "Tinatayang €40 (pagkain) + pamimili"
-  },
-  {
-    "title": "Gastronomiya, Karangyaan, mga Tanawin at Pamamaalam",
-    "cities": "Toyosu, Ginza, Roppongi",
-    "summary": "Sariwang sushi sa Toyosu market, pamamasyal sa Ginza at magagandang gusali. Paglubog ng araw sa Mori Tower viewpoint (Roppongi) tanaw ang Tokyo Tower. Huling hapunan at pag-iimpake.",
-    "history": "Ang Ginza ay nangangahulugang 'upuan ng pilak'. Makasaysayang sentro ng modernisasyon ng Japan.",
-    "schedule": [
-      {
-        "text": "Masarap na almusal ng sushi sa Toyosu wholesale market."
-      },
-      {
-        "text": "Tokyo Station, Imperial Palace plaza, at Shiodome skyscrapers."
-      },
-      {
-        "text": "Pamamasyal sa Ginza at mga modernong tindahan."
-      },
-      {
-        "text": "Paglubog ng araw sa Tokyo City View deck sa Mori Tower (Roppongi)."
       },
       {
         "text": "Huling salo-salo at pag-impake sa hotel."
       }
     ],
-    "money": "Humigit-kumulang €50 (pagkain at Mori Tower)"
+    "money": "13,000 ¥ tour (kasama ang tiket at minivan) + Shinkansen + pagkain"
   },
   {
     "title": "Pag-uwi",

@@ -22,6 +22,7 @@ import PendingPage from "./pages/PendingPage";
 import HistoryPage from "./pages/HistoryPage";
 import AboutPage from "./pages/AboutPage";
 import FrikadasPage from "./pages/FrikadasPage";
+import FujiAlertBanner from "./components/FujiAlertBanner";
 import SearchResultHighlight from "./components/SearchResultHighlight";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { useHighlight } from "./context/HighlightContext";
@@ -101,6 +102,9 @@ export default function App() {
           flex: 1, display: "flex", flexDirection: "column",
           minWidth: 0, overflowY: "auto", height: "100%",
         }}>
+
+          {/* Banner global de aviso de visibilidad y cancelaciones del Monte Fuji */}
+          <FujiAlertBanner />
 
           <main style={{
             flex: 1,

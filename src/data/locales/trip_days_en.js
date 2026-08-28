@@ -291,6 +291,63 @@ export const days = [
     "money": "Approx. €40 (meals)"
   },
   {
+    "title": "Shibuya, Harajuku and Shinjuku",
+    "cities": "Shibuya, Harajuku, Shinjuku",
+    "summary": "Intense day: Shibuya crossing and youth culture of Harajuku. We end under the neon lights of Shinjuku with its gastronomic alleys. (Flexible GetYourGuide booking GYGFWV2MNZV8).",
+    "history": "These districts grew after the Great Kanto Earthquake of 1923, driven by urban train expansion. Shinjuku today hosts the busiest train station on the planet.",
+    "schedule": [
+      {
+        "text": "Shibuya Crossing and Miyashita Park. Stop at the Pokémon Center Shibuya."
+      },
+      {
+        "text": "Walk to Harajuku via Takeshita Street, ending at the Meiji Shrine in Yoyogi Park."
+      },
+      {
+        "text": "Night in Shinjuku: free Metropolitan Government observation deck, dinner in Omoide Yokocho, neons of Kabukicho."
+      }
+    ],
+    "money": "Approx. €40 (meals)"
+  },
+  {
+    "title": "Gastronomy, Luxury and Viewpoints",
+    "cities": "Toyosu, Ginza, Roppongi",
+    "summary": "Early morning for fresh sushi at Toyosu market, walk through Ginza and its elegant architecture. Sunset at Mori Tower observation deck (Roppongi) with views of Tokyo Tower and skyline. (Flexible GetYourGuide booking GYGZGZVLFL75).",
+    "history": "Ginza means 'silver seat', the original site of the government mint in the Edo period. Rebuilt with Western architecture, a showcase of Japan's modernization.",
+    "schedule": [
+      {
+        "text": "Premium sushi breakfast at Toyosu wholesale market."
+      },
+      {
+        "text": "Tokyo Station, Imperial Palace plaza, and Shiodome skyscrapers."
+      },
+      {
+        "text": "Stroll through the modern architecture of Ginza."
+      },
+      {
+        "text": "Sunset at Tokyo City View observation deck in Mori Tower (Roppongi)."
+      }
+    ],
+    "money": "Approx. €50 (meals & Mori Tower ticket)"
+  },
+  {
+    "title": "Nintendo Route and Shopping",
+    "cities": "Ikebukuro, Nakano",
+    "summary": "Day of collecting and video games: official Nintendo and Pokémon stores. In the afternoon, Nakano Broadway, the best place for retro and geek items at a fair price. (Flexible GetYourGuide booking GYGMX397LBNA).",
+    "history": "The Japanese video game industry, led by Nintendo, revitalized the country's cultural economy in the 80s. Nakano Broadway was born in the 60s as a luxury residential complex, today a mecca for underground collecting.",
+    "schedule": [
+      {
+        "text": "Mega Pokémon Center Ikebukuro and Nintendo Store Tokyo."
+      },
+      {
+        "text": "Lunch around the Ikebukuro area."
+      },
+      {
+        "text": "Afternoon of retro collecting, manga, and figure shopping in Nakano Broadway."
+      }
+    ],
+    "money": "Approx. €40 (meals) + shopping"
+  },
+  {
     "title": "Exclusive Mount Fuji Excursion",
     "cities": "Mishima, Chureito Pagoda, Oshino Hakkai, Aokigahara, Shiraito, Fuji Lakes",
     "summary": "Full-day tour (8 hours) in a private minivan with an official Spanish-speaking guide (Ken Kaneshima · Excursiones Fujiyama). Small group visiting Chureito Pagoda, ancient Kitaguchi Hongu shrine, traditional thatched-roof village of Oshino Hakkai, Aokigahara forest, Shiraito waterfalls and lake route. Tasting local star dish: Houtou noodles.",
@@ -328,69 +385,12 @@ export const days = [
       },
       {
         "text": "Arrival at Shin-Fuji Shinkansen Station (~17:30) and return bullet train to Tokyo (~60 min)."
+      },
+      {
+        "text": "Farewell dinner in Tokyo and packing at hotel."
       }
     ],
     "money": "13,000 ¥ tour (tickets & minivan inc.) + Shinkansen + Houtou lunch"
-  },
-  {
-    "title": "Shibuya, Harajuku and Shinjuku",
-    "cities": "Shibuya, Harajuku, Shinjuku",
-    "summary": "Intense day: Shibuya crossing and youth culture of Harajuku. We end under the neon lights of Shinjuku with its gastronomic alleys.",
-    "history": "These districts grew after the Great Kanto Earthquake of 1923, driven by urban train expansion. Shinjuku today hosts the busiest train station on the planet.",
-    "schedule": [
-      {
-        "text": "Shibuya Crossing and Miyashita Park. Stop at the Pokémon Center Shibuya."
-      },
-      {
-        "text": "Walk to Harajuku via Takeshita Street, ending at the Meiji Shrine in Yoyogi Park."
-      },
-      {
-        "text": "Night in Shinjuku: free Metropolitan Government observation deck, dinner in Omoide Yokocho, neons of Kabukicho."
-      }
-    ],
-    "money": "Approx. €40 (meals)"
-  },
-  {
-    "title": "Nintendo Route and Shopping",
-    "cities": "Ikebukuro, Nakano",
-    "summary": "Day of collecting and video games: official Nintendo and Pokémon stores. In the afternoon, Nakano Broadway, the best place for retro and geek items at a fair price.",
-    "history": "The Japanese video game industry, led by Nintendo, revitalized the country's cultural economy in the 80s. Nakano Broadway was born in the 60s as a luxury residential complex, today a mecca for underground collecting.",
-    "schedule": [
-      {
-        "text": "Mega Pokémon Center Ikebukuro and Nintendo Store Tokyo."
-      },
-      {
-        "text": "Lunch around the Ikebukuro area."
-      },
-      {
-        "text": "Afternoon of retro collecting, manga, and figure shopping in Nakano Broadway."
-      }
-    ],
-    "money": "Approx. €40 (meals) + shopping"
-  },
-  {
-    "title": "Gastronomy, Luxury, Viewpoints and Farewell",
-    "cities": "Toyosu, Ginza, Roppongi",
-    "summary": "Early morning for fresh sushi at Toyosu market, walk through Ginza and its elegant architecture. Sunset at Mori Tower observation deck (Roppongi) with views of Tokyo Tower and skyline. Farewell dinner and packing.",
-    "history": "Ginza means 'silver seat', the original site of the government mint in the Edo period. Rebuilt with Western architecture, a showcase of Japan's modernization.",
-    "schedule": [
-      {
-        "text": "Premium sushi breakfast at Toyosu wholesale market."
-      },
-      {
-        "text": "Tokyo Station, Imperial Palace plaza, and Shiodome skyscrapers."
-      },
-      {
-        "text": "Stroll through the modern architecture of Ginza."
-      },
-      {
-        "text": "Sunset at Tokyo City View observation deck in Mori Tower (Roppongi)."
-      },
-      {
-        "text": "Group farewell dinner and packing at hotel."
-      }
-    ],
-    "money": "Approx. €50 (meals & Mori Tower ticket)"
   },
   {
     "title": "Return Home",

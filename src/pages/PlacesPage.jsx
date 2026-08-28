@@ -90,7 +90,99 @@ export default function PlacesPage() {
         </p>
       </div>
 
-      {/* Excursión Monte Fuji — destacada */}
+      {/* 1. Estrategia de Reserva Múltiple GetYourGuide */}
+      <div className="rounded-2xl overflow-hidden border mb-6" style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
+        <div className="flex items-center gap-3 px-5 py-4" style={{ background: "linear-gradient(135deg, #0284c7 0%, #0369a1 100%)" }}>
+          <div style={{
+            width: 36, height: 36, borderRadius: 10,
+            background: "rgba(255,255,255,0.2)",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            flexShrink: 0,
+          }}>
+            <Mountain size={18} style={{ color: "white" }} />
+          </div>
+          <div className="flex-1">
+            <div className="flex items-center gap-2 flex-wrap">
+              <p style={{ fontSize: 15, fontWeight: 700, color: "white", margin: 0 }}>
+                Estrategia GetYourGuide · Monte Fuji, Lago Kawaguchi y Chureito
+              </p>
+              <span className="bg-amber-400 text-slate-950 text-[10px] font-extrabold px-2 py-0.5 rounded-full uppercase">
+                4 Días Reservados
+              </span>
+            </div>
+            <p style={{ fontSize: 11.5, color: "rgba(255,255,255,0.85)", margin: 0 }}>
+              Cancelación gratuita hasta 24h antes · Elegir el mejor día por visibilidad y cancelar el resto
+            </p>
+          </div>
+        </div>
+
+        <div className="px-5 py-4 space-y-4">
+          <p style={{ fontSize: 13.5, color: "var(--ink)", lineHeight: 1.6, margin: 0 }}>
+            Para asegurar ver el cono del Monte Fuji despejado, se han reservado <strong>4 fechas consecutivas</strong> en GetYourGuide (Japan Visionary Tour). Revisaremos las webcams 24h antes de cada día y mantendremos únicamente la jornada con mejor pronóstico, cancelando las demás con <strong>reembolso íntegro del 100%</strong>.
+          </p>
+
+          {/* 4 Reservas Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            {[
+              { day: "Miércoles 16 Sept (08:30)", code: "GYGX7M7NZBNL", pin: "3342WSa=", cancel: "Antes de 08:30 del 15 sept" },
+              { day: "Jueves 17 Sept (08:30)", code: "GYGFWV2MNZV8", pin: "rN#/Ec5r", cancel: "Antes de 08:30 del 16 sept" },
+              { day: "Viernes 18 Sept (08:30)", code: "GYGZGZVLFL75", pin: "ZPR=DM/Y", cancel: "Antes de 08:30 del 17 sept" },
+              { day: "Sábado 19 Sept (08:30)", code: "GYGMX397LBNA", pin: "qjQcmrJZ", cancel: "Antes de 08:30 del 18 sept" },
+            ].map((b, idx) => (
+              <div key={idx} className="p-3 rounded-xl border flex flex-col justify-between" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
+                <div>
+                  <p className="text-xs font-bold text-slate-900 dark:text-white">{b.day}</p>
+                  <p className="text-[11px] text-rose-600 dark:text-rose-400 font-semibold mt-0.5">Cancela: {b.cancel}</p>
+                </div>
+                <div className="flex items-center gap-2 mt-2 pt-2 border-t" style={{ borderColor: "var(--line)" }}>
+                  <span className="font-mono text-xs font-bold text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/60 px-2 py-0.5 rounded border border-sky-200 dark:border-sky-800">
+                    {b.code}
+                  </span>
+                  <span className="font-mono text-[11px] text-slate-500 bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded">
+                    PIN: {b.pin}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Logística y aviso de comida */}
+          <div className="p-3.5 rounded-xl border bg-amber-50/70 dark:bg-amber-950/30 border-amber-200 dark:border-amber-900/50 space-y-2">
+            <p className="text-xs font-bold text-amber-900 dark:text-amber-300">
+              ⚠️ Información Clave de la Excursión (GetYourGuide):
+            </p>
+            <ul className="text-xs text-amber-950 dark:text-amber-200/90 space-y-1 pl-4 list-disc">
+              <li><strong>Punto de encuentro:</strong> Tokyo Mode Gakuen (1-7-3 Nishishinjuku, Shinjuku). Llegar antes de las <strong>08:25 AM</strong> (salida a las 08:30 AM).</li>
+              <li><strong>🍱 Comida NO incluida:</strong> La actividad no incluye comida. No está permitido comer dentro del autobús. Conviene comprar snacks/desayuno antes de subir y llevar <strong>efectivo ¥</strong> para comprar en los puestos locales de Oshino Hakkai y Saiko.</li>
+              <li><strong>👟 400 escalones:</strong> Llevar calzado cómodo para subir al mirador de la Pagoda Chureito en el Parque Arakurayama Sengen.</li>
+              <li><strong>Paradas incluidas:</strong> Lago Kawaguchiko y Parque Oishi, Aldea Saiko Iyashi-no-Sato Nemba (entrada incluida), Manantiales Oshino Hakkai y Pagoda Chureito.</li>
+            </ul>
+          </div>
+
+          <div className="flex flex-wrap gap-2 pt-1">
+            <a
+              href="https://www.getyourguide.com/es-es/tokio-l193/tokio-monte-fuji-pagoda-chureito-lago-kawaguchi-y-oshino-hakkai-t792363/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-xs font-semibold px-3 py-1.5 rounded-lg border flex items-center gap-1.5"
+              style={{ background: "white", borderColor: "var(--line)", color: "var(--indigo)", textDecoration: "none" }}
+            >
+              🎟️ Ver Reserva en GetYourGuide ↗
+            </a>
+            <a
+              href="https://www.google.com/maps/place/35.6916642,139.6969475/@35.6916642,139.6969475,16z"
+              target="_blank"
+              rel="noreferrer"
+              className="text-xs font-semibold px-3 py-1.5 rounded-lg border flex items-center gap-1.5"
+              style={{ background: "white", borderColor: "var(--line)", color: "var(--forest)", textDecoration: "none" }}
+            >
+              📍 Punto de Encuentro en Maps (Tokyo Mode Gakuen) ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* 2. Tour Privado con Ken Kaneshima */}
       <div className="rounded-2xl overflow-hidden border mb-6" style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
         <div className="flex items-center gap-3 px-5 py-4" style={{ background: "#1d3557" }}>
           <div style={{
@@ -103,13 +195,13 @@ export default function PlacesPage() {
           </div>
           <div className="flex-1">
             <p style={{ fontSize: 15, fontWeight: 700, color: "white", margin: 0 }}>
-              Excursión Exclusiva al Monte Fuji{" "}
+              Tour Exclusivo al Monte Fuji con Ken Kaneshima{" "}
               <span style={{ fontWeight: 500, opacity: 0.85 }}>
-                ({dayLabel(11)})
+                ({dayLabel(14)})
               </span>
             </p>
             <p style={{ fontSize: 11.5, color: "rgba(255,255,255,0.7)", margin: 0 }}>
-              Jueves 17 de septiembre · Tour de 8 horas en mini-van privada
+              Domingo 20 de septiembre · Tour de 8 horas en mini-van privada con guía en español
             </p>
           </div>
         </div>
@@ -145,12 +237,12 @@ export default function PlacesPage() {
 
           {/* Lugares a visitar */}
           <div className="p-3.5 rounded-xl border" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
-            <p style={{ fontSize: 12, fontWeight: 700, color: "var(--ink)", marginBottom: 6 }}>🗺️ Itinerario del Tour (6 Paradas Principales):</p>
+            <p style={{ fontSize: 12, fontWeight: 700, color: "var(--ink)", marginBottom: 6 }}>🗺️ Itinerario del Tour con Ken (6 Paradas Principales):</p>
             <ol style={{ fontSize: 12, color: "var(--ink)", paddingLeft: 18, lineHeight: 1.6, margin: 0 }} className="space-y-1">
               <li><strong>Pagoda Chureito:</strong> La postal icónica de 5 pisos con el Monte Fuji de fondo.</li>
               <li><strong>Santuario Kitaguchi Hongu:</strong> Inicio histórico de peregrinos entre cedros gigantes milenarios.</li>
               <li><strong>Aldea Oshino Hakkai:</strong> Estanques cristalinos de agua de deshielo y casas de tejado de paja.</li>
-              <li><strong>Comida típica (Houtou):</strong> Parada para probar los famosos fideos anchos en sopa caliente de miso.</li>
+              <li><strong>Comida típica (Houtou):</strong> Parada técnica en restaurante tradicional para probar fideos anchos en sopa caliente de miso.</li>
               <li><strong>Bosque de Aokigahara:</strong> El 'Mar de Árboles' sobre suelo de lava volcánica y raíces retorcidas.</li>
               <li><strong>Cataratas Shiraito & Lagos:</strong> Cascadas en hilos de seda blanca y ruta panorámica de lagos (Yamanakako, Saiko, Motosuko).</li>
             </ol>

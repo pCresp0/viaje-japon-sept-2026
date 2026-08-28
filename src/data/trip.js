@@ -440,6 +440,61 @@ export const days = [
     date: "2026-09-17",
     weekday: "Jueves",
     block: "tokio",
+    title: "Shibuya, Harajuku y Shinjuku",
+    cities: "Shibuya, Harajuku, Shinjuku",
+    summary:
+      "Día intenso: cruce de Shibuya y cultura juvenil de Harajuku. Terminamos bajo los neones de Shinjuku con sus callejones gastronómicos. (Fecha con reserva flexible de GetYourGuide GYGFWV2MNZV8).",
+    history:
+      "Estos distritos crecieron tras el Gran Terremoto de Kanto de 1923, impulsados por la expansión del tren urbano. Shinjuku alberga hoy la estación más transitada del planeta.",
+    schedule: [
+      { time: "09:30", text: "Cruce de Shibuya y Miyashita Park. Parada en el Pokémon Center Shibuya." },
+      { time: "13:00", text: "Paseo hacia Harajuku por la calle Takeshita, terminando en el santuario Meiji en el parque Yoyogi." },
+      { time: "17:00", text: "Noche en Shinjuku: mirador gratuito del Gobierno Metropolitano, cena en Omoide Yokocho, neones de Kabukicho." },
+    ],
+    money: "Aprox. 40€ (comidas)",
+  },
+  {
+    num: 12,
+    date: "2026-09-18",
+    weekday: "Viernes",
+    block: "tokio",
+    title: "Gastronomía, Lujo y Miradores",
+    cities: "Toyosu, Ginza, Roppongi",
+    summary:
+      "Madrugón para el mejor sushi fresco del mundo en Toyosu, paseo por Ginza y su arquitectura elegante. La tarde culmina en Roppongi, subiendo al mirador de la torre Mori para ver atardecer sobre Tokio y la Torre iluminada. (Fecha con reserva flexible de GetYourGuide GYGZGZVLFL75).",
+    history:
+      "Ginza significa 'asiento de plata', sitio original de la ceca gubernamental en el periodo Edo. Tras un incendio a finales del XIX se reconstruyó con arquitectura occidental, escaparate de la modernización de Japón.",
+    schedule: [
+      { time: "08:30", text: "Desayuno premium de sushi en el mercado mayorista de Toyosu (sucesor de Tsukiji)." },
+      { time: "11:30", text: "Estación de Tokio, explanada del Palacio Imperial y rascacielos de Shiodome." },
+      { time: "14:00", text: "Paseo por la arquitectura moderna y tiendas emblemáticas de Ginza." },
+      { time: "17:30", text: "Atardecer en el mirador Tokyo City View de la torre Mori (Roppongi), vistas panorámicas y Torre de Tokio." },
+    ],
+    money: "Aprox. 50€ (comidas y mirador Mori)",
+  },
+  {
+    num: 13,
+    date: "2026-09-19",
+    weekday: "Sábado",
+    block: "tokio",
+    title: "Ruta Nintendo y Compras",
+    cities: "Ikebukuro, Nakano",
+    summary:
+      "Día de coleccionismo y videojuegos: tiendas oficiales de Nintendo y Pokémon. Por la tarde, Nakano Broadway, el mejor lugar para artículos retro y frikis a precio justo. (Fecha con reserva flexible de GetYourGuide GYGMX397LBNA).",
+    history:
+      "La industria del videojuego japonesa, liderada por Nintendo, revitalizó la economía cultural del país en los 80. Nakano Broadway nació en los 60 como complejo residencial de lujo, hoy meca del coleccionismo underground.",
+    schedule: [
+      { time: "10:00", text: "Mega Pokémon Center Ikebukuro y Nintendo Store Tokyo." },
+      { time: "13:30", text: "Comida por la zona de Ikebukuro." },
+      { time: "16:00", text: "Tarde de compras de coleccionismo retro, manga y figuras en Nakano Broadway." },
+    ],
+    money: "Aprox. 40€ (comidas) + compras",
+  },
+  {
+    num: 14,
+    date: "2026-09-20",
+    weekday: "Domingo",
+    block: "tokio",
     title: "Excursión Exclusiva al Monte Fuji",
     cities: "Mishima, Pagoda Chureito, Oshino Hakkai, Aokigahara, Shiraito, Lagos del Fuji",
     summary:
@@ -458,64 +513,9 @@ export const days = [
       { time: "15:45", text: "Cataratas Shiraito: espectacular salto de agua filtrada por roca volcánica que cae simulando hilos de seda blanca." },
       { time: "16:30", text: "Ruta panorámica de los Lagos del Fuji (Yamanakako, Saiko y Motosuko) con vistas desde distintos ángulos." },
       { time: "17:30", text: "Llegada a la Estación de tren bala Shin-Fuji y regreso en Shinkansen a Tokio (~60 min)." },
+      { time: "20:30", text: "Cena de despedida del grupo en Tokio y empaquetar maletas en el hotel." },
     ],
     money: "13.000 ¥ tour (entradas y mini-van inc.) + Shinkansen + comida Houtou",
-  },
-  {
-    num: 12,
-    date: "2026-09-18",
-    weekday: "Viernes",
-    block: "tokio",
-    title: "Shibuya, Harajuku y Shinjuku",
-    cities: "Shibuya, Harajuku, Shinjuku",
-    summary:
-      "Día intenso: cruce de Shibuya y cultura juvenil de Harajuku. Terminamos bajo los neones de Shinjuku con sus callejones gastronómicos.",
-    history:
-      "Estos distritos crecieron tras el Gran Terremoto de Kanto de 1923, impulsados por la expansión del tren urbano. Shinjuku alberga hoy la estación más transitada del planeta.",
-    schedule: [
-      { time: "09:30", text: "Cruce de Shibuya y Miyashita Park. Parada en el Pokémon Center Shibuya." },
-      { time: "13:00", text: "Paseo hacia Harajuku por la calle Takeshita, terminando en el santuario Meiji en el parque Yoyogi." },
-      { time: "17:00", text: "Noche en Shinjuku: mirador gratuito del Gobierno Metropolitano, cena en Omoide Yokocho, neones de Kabukicho." },
-    ],
-    money: "Aprox. 40€ (comidas)",
-  },
-  {
-    num: 13,
-    date: "2026-09-19",
-    weekday: "Sábado",
-    block: "tokio",
-    title: "Ruta Nintendo y Compras",
-    cities: "Ikebukuro, Nakano",
-    summary:
-      "Día de coleccionismo y videojuegos: tiendas oficiales de Nintendo y Pokémon. Por la tarde, Nakano Broadway, el mejor lugar para artículos retro y frikis a precio justo.",
-    history:
-      "La industria del videojuego japonesa, liderada por Nintendo, revitalizó la economía cultural del país en los 80. Nakano Broadway nació en los 60 como complejo residencial de lujo, hoy meca del coleccionismo underground.",
-    schedule: [
-      { time: "10:00", text: "Mega Pokémon Center Ikebukuro y Nintendo Store Tokyo." },
-      { time: "13:30", text: "Comida por la zona de Ikebukuro." },
-      { time: "16:00", text: "Tarde de compras de coleccionismo retro, manga y figuras en Nakano Broadway." },
-    ],
-    money: "Aprox. 40€ (comidas) + compras",
-  },
-  {
-    num: 14,
-    date: "2026-09-20",
-    weekday: "Domingo",
-    block: "tokio",
-    title: "Gastronomía, Lujo, Miradores y Despedida",
-    cities: "Toyosu, Ginza, Roppongi",
-    summary:
-      "Madrugón para el mejor sushi fresco del mundo en Toyosu, paseo por Ginza y su arquitectura elegante. La tarde culmina en Roppongi, subiendo al mirador de la torre Mori para ver atardecer sobre Tokio y la Torre iluminada. Últimas compras antes del regreso.",
-    history:
-      "Ginza significa 'asiento de plata', sitio original de la ceca gubernamental en el periodo Edo. Tras un incendio a finales del XIX se reconstruyó con arquitectura occidental, escaparate de la modernización de Japón.",
-    schedule: [
-      { time: "08:30", text: "Desayuno premium de sushi en el mercado mayorista de Toyosu (sucesor de Tsukiji)." },
-      { time: "11:30", text: "Estación de Tokio, explanada del Palacio Imperial y rascacielos de Shiodome." },
-      { time: "14:00", text: "Paseo por la arquitectura moderna y tiendas emblemáticas de Ginza." },
-      { time: "17:30", text: "Atardecer en el mirador Tokyo City View de la torre Mori (Roppongi), vistas panorámicas y Torre de Tokio." },
-      { time: "20:00", text: "Cena de despedida del grupo y empaquetar maletas en el hotel." },
-    ],
-    money: "Aprox. 50€ (comidas y mirador Mori)",
   },
   {
     num: 15,
