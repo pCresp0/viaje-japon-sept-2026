@@ -15,13 +15,13 @@ export default function AboutPage() {
         <div className="px-5 py-4 space-y-4">
           <div className="space-y-4">
             {tripMeta.about.features && tripMeta.about.features.map((feature, idx) => (
-              <div key={idx} className="flex gap-3">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-lg shadow-sm">
+              <div key={idx} className="flex items-start gap-3">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-[16px] shadow-sm mt-0.5" style={{ background: "var(--paper)", border: "1px solid var(--line)" }}>
                   {feature.icon}
                 </div>
                 <div>
-                  <h4 className="text-[14.5px] font-bold text-slate-900 dark:text-white mb-0.5">{feature.title}</h4>
-                  <p className="text-[14px] text-slate-600 dark:text-slate-300 leading-relaxed m-0" dangerouslySetInnerHTML={{ __html: feature.text }} />
+                  <h4 style={{ fontSize: 14.5, fontWeight: 700, color: "var(--ink)", marginBottom: 4, marginTop: 0 }}>{feature.title}</h4>
+                  <p style={{ fontSize: 14, color: "var(--ink)", opacity: 0.85, lineHeight: 1.6, margin: 0 }} dangerouslySetInnerHTML={{ __html: feature.text }} />
                 </div>
               </div>
             ))}
