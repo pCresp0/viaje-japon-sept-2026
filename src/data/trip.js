@@ -610,7 +610,7 @@ export const transports = [
   { day: 4, date: "2026-09-10", name: "Tranvía Randen", from: "Ninna-ji", to: "Arashiyama", type: "Operador Privado", real: 1.5, jrPass: 1.5 },
   { day: 4, date: "2026-09-10", name: "Tren JR Línea San-In", from: "Arashiyama", to: "Kioto", type: "Línea JR Local", real: 1.5, jrPass: 0 },
   { day: 5, date: "2026-09-11", name: "Tren rápido JR (ida y vuelta)", from: "Kioto", to: "Osaka", type: "Línea JR Local", real: 7, jrPass: 0 },
-  { day: 6, date: "2026-09-12", name: "Tren Thunderbird", from: "Kioto", to: "Kanazawa", type: "Línea JR Exprés", real: 43.5, jrPass: 0 },
+  { day: 6, date: "2026-09-12", name: "Thunderbird + Hokuriku Shinkansen", from: "Kioto", to: "Kanazawa", type: "Línea JR Exprés", real: 43.5, jrPass: 0 },
   { day: 7, date: "2026-09-13", name: "Nohi Bus Kanazawa → Shirakawa-go", from: "Kanazawa Sta.", to: "Shirakawa-go Bus Terminal", type: "Operador Privado (Bus)", real: 19.12, jrPass: 19.12, note: "✓ Reservado · Booking 12GO31991741 · Salida 08:40 · 5 asientos confirmados" },
   { day: 7, date: "2026-09-13", name: "Nohi Bus Shirakawa-go → Takayama", from: "Shirakawa-go Bus Terminal", to: "Takayama Nohi Bus Center", type: "Operador Privado (Bus)", real: 20.03, jrPass: 20.03, note: "✓ Reservado · Booking 12GO31992254 · Salida 13:15 · 5 asientos confirmados" },
   { day: 8, date: "2026-09-14", name: "Nohi Bus directo Takayama → Magome", from: "Takayama Nohi Bus Center", to: "Magome", type: "Operador Privado (Bus)", real: 25, jrPass: 25, note: "Reservar 5 plazas · 08:00–10:45 · ¥5.000/persona" },
@@ -619,10 +619,11 @@ export const transports = [
   { day: 9, date: "2026-09-15", name: "Shinkansen Nozomi", from: "Nagoya", to: "Tokio", type: "Línea JR (Tren Bala)", real: 50, jrPass: 0, note: "~11:15–11:30 → ~13:00 · Reservar por adelantado para 5 · Smart EX" },
   { day: 10, date: "2026-09-16", name: "Tren elevado Yurikamome", from: "Tokio", to: "Isla de Odaiba", type: "Operador Privado", real: 2, jrPass: 2 },
   { day: "10-14", date: "16-20 sept", name: "Metro y trenes locales (5 días)", from: "Tokio", to: "Tokio (varios)", type: "Operador Privado / Local", real: 25, jrPass: 25 },
+  { day: 14, date: "2026-09-20", name: "Shinkansen ida y vuelta (Excursión Fuji)", from: "Tokio", to: "Mishima / Shin-Fuji", type: "Línea JR (Tren Bala)", real: 62, jrPass: 0, note: "Tokio→Mishima (Kodama 805) y regreso Shin-Fuji→Tokio" },
   { day: 15, date: "2026-09-21", name: "Narita Express (N'EX)", from: "Estación de Tokio", to: "Aeropuerto de Narita", type: "Línea JR (fuera de plazo JR Pass)", real: 19, jrPass: 19 },
 ];
 
-export const transportTotals = { real: 373.35, jrPass: 100.65 };
+export const transportTotals = { real: 419.35, jrPass: 121.65 };
 
 // Presupuesto estimado para 5 personas
 export const budget = {
@@ -654,10 +655,10 @@ export const budget = {
     },
     {
       title: "Transporte nacional",
-      perPerson: "~373€",
-      total: "~1.867€",
+      perPerson: "~419€",
+      total: "~2.097€",
       details: [
-        "Trenes sueltos sin JR Pass (NEX, Shinkansen, ruta Alpes, Tokio): ~293€/persona.",
+        "Trenes sueltos (NEX, Shinkansens, ruta Alpes, Fuji, Tokio): ~340€/persona.",
         "Nohi Bus Kanazawa–Shirakawa-go–Takayama (reservado): 39,15€/persona.",
         "Transporte local (tarjeta Suica): ~80€/persona.",
       ],
@@ -677,6 +678,6 @@ export const budget = {
       details: ["Templos, museos, mirador de Roppongi, TeamLab, envío de maletas Takkyubin de Kioto a Tokio."],
     },
   ],
-  totalPerPerson: "~2.560€ – 2.660€ (vuelos incluidos)",
+  totalPerPerson: "~2.605€ – 2.705€ (vuelos incluidos)",
   totalGroup: "~12.800€ – 13.300€ (5 personas)",
 };

@@ -168,7 +168,7 @@ export const budget = {
     {
       title: "Domestic Transportation",
       details: [
-        "Individual trains without JR Pass (NEX, Shinkansen, Alps route, Tokyo): ~293€/person.",
+        "Individual trains (NEX, Shinkansens, Alps route, Fuji, Tokyo): ~340€/person.",
         "Nohi Bus Kanazawa–Shirakawa-go–Takayama (booked): 39.15€/person.",
         "Local transport (Suica card): ~80€/person.",
       ],

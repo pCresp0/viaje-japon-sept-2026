@@ -168,7 +168,7 @@ export const budget = {
     {
       title: "Domestic Transport",
       details: [
-        "Indibidwal na tren na walang JR Pass (NEX, Shinkansen, Alps route, Tokyo): ~293€/tao.",
+        "Indibidwal na tren (NEX, Shinkansens, Alps route, Fuji, Tokyo): ~340€/tao.",
         "Nohi Bus Kanazawa–Shirakawa-go–Takayama (na-book): 39.15€/tao.",
         "Lokal na transportasyon (Suica card): ~80€/tao.",
       ],
