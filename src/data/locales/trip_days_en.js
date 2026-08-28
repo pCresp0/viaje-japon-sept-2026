@@ -90,25 +90,52 @@ export const days = [
     "history": "Kinkakuji (Golden Pavilion) was the sumptuous retirement villa of the shogun Ashikaga Yoshimitsu in the late 14th century. Arashiyama has been a vacation destination for the imperial nobility since the Heian period.",
     "schedule": [
       {
-        "text": "Wake up."
+        "text": "Wake up and breakfast."
       },
       {
-        "text": "Kinkakuji: green subway line (Karasuma Line) to Kitaoji Station and then bus 205."
+        "text": "Leave hotel."
       },
       {
-        "text": "Kinukake no Michi trail: Kinkakuji, Ryoan-ji, and Ninna-ji temples, in that order."
+        "text": "🚇 Transport to Kinkaku-ji: Karasuma Line from Kyoto Station to Kitaoji Station and then bus 204/205 to Kinkakuji-michi. Avoid the direct 205 bus from Kyoto Station as it is often congested."
       },
       {
-        "text": "From Ninna-ji, Randen tram to Arashiyama (20 mins). Quick lunch."
+        "text": "🏯 Kinkaku-ji (Golden Pavilion). Arrive at opening time to avoid major crowds. The visit is relatively short; allocate about 60 minutes. 💡 Tip: go early. It is a one-way path and the pavilion is viewed from the outside; entering the building is not allowed."
       },
       {
-        "text": "Walk up to the Saga-Toriimoto historic district and Otagi temple (closes at 4 PM, go up first)."
+        "text": "🚶 Kinkaku-ji → Ryoan-ji via Kinukake-no-Michi (~18 min)."
       },
       {
-        "text": "Descend through the bamboo grove towards the center of the neighborhood."
+        "text": "🪨 Ryoan-ji. Visit the famous karesansui rock garden and grounds."
       },
       {
-        "text": "Return to Kyoto on JR train, San-In Line (€2, 15 mins direct)."
+        "text": "🚶 Ryoan-ji → Ninna-ji via Kinukake-no-Michi (~11 min)."
+      },
+      {
+        "text": "🏯 Ninna-ji. Visit the main complex. In September it opens at 09:00."
+      },
+      {
+        "text": "🚋 Randen tram from Omuro-Ninnaji to Arashiyama. Approx. 20–30 min depending on connections. No reservation required; use IC card when possible. 🍜 Quick lunch upon arriving in Arashiyama."
+      },
+      {
+        "text": "🚕/🚌 Head up to Saga-Toriimoto. If tired, use a taxi to save time and avoid the uphill walk."
+      },
+      {
+        "text": "🏯 Adashino Nenbutsu-ji and Saga-Toriimoto historic district. The temple is famous for its numerous stone statues and is on the way to the Otagi area. Visit this before continuing down to the bamboo grove."
+      },
+      {
+        "text": "🚶 Walk down through Saga-Toriimoto → bamboo grove → center of Arashiyama. Prioritize walking the traditional streets of Saga-Toriimoto and then the Bamboo Grove. 💡 The bamboo grove will be quite busy even in the afternoon. Do not spend too much time there: the main attraction is walking through it and continuing to central Arashiyama."
+      },
+      {
+        "text": "If there is enough time: Tenryu-ji or walk to the Togetsukyo bridge."
+      },
+      {
+        "text": "🚆 Return to Kyoto on JR from Saga-Arashiyama, San-In Line (Sagano Line), direct. Approx. 15–20 min trip. No reservation required."
+      },
+      {
+        "text": "🎫 RESERVATIONS: No advance reservations are needed for transport or main visits today. Tickets for Kinkaku-ji, Ryoan-ji, Ninna-ji, and Adashino Nenbutsu-ji are purchased on site. Randen and JR trains are regional services with no seat reservations."
+      },
+      {
+        "text": "⚠️ IMPORTANT: Otagi Nenbutsu-ji is excluded today because it is closed on Wednesdays (September 9). To visit it during the trip, we must move it to a day other than Wednesday or Saturday."
       }
     ],
     "money": "Approx. €40 (meals)"
