@@ -246,19 +246,34 @@ export const days = [
     "history": "Ang Kanazawa ang nasasakupan ng makapangyarihang angkan ng Maeda sa panahon ng Edo, na karibal ng Kyoto sa kayamanan at kultura. Matapos makatakas sa mga makabagong pambobomba, pinananatili nito ang pagkakalatag ng feudal na lungsod.",
     "schedule": [
       {
-        "text": "Paggising at ipasa ang bagahe sa reception."
+        "text": "🧳 Gumising at ipadala ang bagahe. Ang Hotel Keihan Kyoto Hachijoguchi ay may baggage forwarding service. Ipadala ang malaking maleta direkta sa hotel sa Tokyo at maglakbay bitbit ang backpack/maliit na bagahe. ⚠️ Kumpirmahin sa reception sa araw na ipapadala ang inaasahang petsa kung kailan darating sa Tokyo hotel. Huwag isipin na dadating agad kinabukasan. Ihanda sa backpack ang lahat ng kailangan para sa mga susunod na araw hanggang sa makuha ulit ang maleta. 🍳 Almusal: Mag-almusal sa Hotel Keihan Kyoto Hachijoguchi kung kasama, o bumili ng simpleng pagkain sa gabi kung kailangang umalis nang mabilis. (Paalala: Ang Hotel Resol Trinity Kanazawa ay nag-aalok ng buffet breakfast mula 07:00–10:00, pero dahil ngayon pa lang tayo dadating sa Kanazawa, hindi ito available sa atin ngayong umaga)."
       },
       {
-        "text": "Direktang Thunderbird na tren mula Kyoto papuntang Kanazawa (2h)."
+        "text": "🚆 KYOTO → TSURUGA → KANAZAWA. Hotel Keihan Kyoto Hachijoguchi → Kyoto Station: halos 5 minuto na lakad papuntang Hachijo East Exit. Umalis nang maaga para makarating sa platform nang mga 10–15 minuto bago ang tren. 1. Limited Express THUNDERBIRD: Kyoto Station → Tsuruga Station. Halos 50–55 min. Kailangang may reserved seat. Walang unreserved seat cars. 2. Sa Tsuruga: Lumipat sa Hokuriku Shinkansen. Sundan ang Thunderbird → Shinkansen connection signs. Huwag nang lumabas sa istasyon. Ang transfer na ito ay sadyang ginawa para ikonekta ang Thunderbird sa Hokuriku Shinkansen. 3. Hokuriku Shinkansen Tsurugi: Tsuruga → Kanazawa. Halos 40 min. Kabuuang oras: halos 1h40–2h."
       },
       {
-        "text": "Kenroku-en Garden at distrito ng samurai ng Nagamachi."
+        "text": "🌳 KENROKU-EN GARDEN. Bukas araw-araw. Oras sa Setyembre: 07:00–18:00. Halaga ng entrance: ¥320. Hindi kailangan mag-reserve. Mga hahanapin: Kasumigaike Pond, Kotoji-toro, Karasaki Pine, Uchihashi-tei, mga tanawin sa hardin at mga antas nito. 💡 Tip: Malaki ang Kenroku-en; huwag subukang tignan lahat. Gumawa ng pabilog na ruta sa mga pangunahing punto."
       },
       {
-        "text": "Tanghalian sa Omicho market (ang pinakamagandang seafood sa Japan)."
+        "text": "🏯 NAGAMACHI SAMURAI DISTRICT. Paglalakad sa: mga kalsada na may earthen walls; mga kanal; mga lumang tahanan ng samurai. Residential ang lugar at libre itong ikutin nang naglalakad. Kung gustong pumasok sa isang tahanan, unahin ang Nomura-ke: Bukas 08:30–17:30 sa Setyembre. Entrance ¥550. Walang reserbasyon na kailangan. Maganda ang panloob na hardin."
       },
       {
-        "text": "Mamasyal sa distrito ng mga geisha ng Higashi Chaya."
+        "text": "🍣 TANGHALIAN SA OMICHO MARKET. Isa sa malalaking food market ng Kanazawa, sikat sa sariwang isda at seafood mula sa Sea of Japan. Unahin ang: kaisendon; sushi; amaebi (sweet shrimp); nodoguro; lokal na isda; sariwang produkto mula Ishikawa. Ang Setyembre ay hindi pa pangunahing season para sa crab at buri/yellowtail; ito ay mas sikat bandang Nobyembre. Huwag gawing crab ang pinaka-target ng pagkain dito. 💡 Tip: Maraming restawran o stall ang nag-uumpisang magsara pagdating ng hapon. Huwag patagalin ang oras ng kain. Sa mga forum ngayon, inirerekomenda din ang pag-ikot sa Omicho Ichibakan at sa ikalawang palapag nito, kung saan may mga lokal na kainan. Badyet: simpleng pagkain: ¥1,000–2,000; kaisendon/sushi na mas kumpleto: ¥2,000–4,000+. Walang kailangang reserbasyon para rito."
+      },
+      {
+        "text": "🏮 HIGASHI CHAYA DISTRICT. Maglakad sa makasaysayang kalye at mga teahouses. Opsiyonal: SHIMA — lumang teahouse, bukas 09:30–17:30 sa Setyembre. Entrance: ¥500 + opsiyonal na bayad para sa tsaa/matamis. Kung papasok sa SHIMA, gawin bago mag-17:15. Pwedeng subukan: matcha + wagashi; matcha ice cream; gold leaf ice cream."
+      },
+      {
+        "text": "🍜 HAPUNAN SA KANAZAWA. Mas inirerekomenda na manatili sa sentro ng Kanazawa, mas mabuti kung malapit sa: Korinbo; Katamachi; Musashigatsuji/Omicho; Kanazawa Station. Ano ang pwedeng subukan: Kanazawa oden; sushi; isda sa Sea of Japan; nodoguro; Kaga cuisine; wagyu/Noto beef kung gustong gumastos pa. Badyet: kaswal: ¥1,000–2,500; katamtamang lokal na restawran: ¥2,500–5,000; special na hapunan: ¥8,000+. Para sa espesyal o sikat na kainan, magpa-reserve. Para sa izakaya/kaswal na restawran, hindi na kailangan."
+      },
+      {
+        "text": "🚌 TRANSPORTASYON: Paano umikot sa Kanazawa: Ang mga pangunahing tourist spots ay magkakalapit lang, pero ang Loop Bus ay napaka-praktikal. Kanazawa Loop Bus: ¥220 kada sakay. Tumatanggap ng IC cards at contactless payment. Mayroon ding ONE DAY PASS sa halagang ¥800. Sulit lang ang ONE DAY PASS kung 4 na beses o higit pa sasakay ng bus. Importante: Ang ONE DAY PASS ay hindi mabibili sa loob ng bus. Mabibili ito sa Tourist Information Center sa istasyon, Hokutetsu centers, sa ilang hotel, o digitally."
+      },
+      {
+        "text": "🎫 MGA RESERBASYON: ⚠️ ANG TREN NA ITO AY KAILANGANG I-BOOK NANG MAAGA. I-reserve ang buong biyaheng Kyoto → Kanazawa (Thunderbird + Hokuriku Shinkansen). I-reserve ang ordinary seat. Hindi natin kailangan ng Japan Rail Pass. Huwag gumamit ng IC card pambayad dito. Presyo: halos ¥7,720 bawat tao, ordinary reserved seat. I-reserve sa JR-WEST ONLINE TRAIN RESERVATION simula isang buwan bago ang araw ng biyahe. Dahil tayong 5, sabay-sabay i-book ang lahat ng upuan kung maaari."
+      },
+      {
+        "text": "💡 MGA TIP: Kanazawa Tips: Mas madaling ikutin ang Kanazawa kaysa Kyoto; pwedeng lakarin lang. Magdala ng cash kahit maraming tumatanggap ng card/IC. Sa Omicho, tingin muna bago bumili; huwag basta bilhin ang unang magustuhan. Para sa seafood bowls, ikumpara ang laki at presyo bago umupo. Sa Higashi Chaya, karaniwang mas maagang nagsasara ang mga tradisyonal na tindahan kaysa sa mga restawran. Ang Nagamachi ay residential na lugar kaya igalang ang mga bahay at iwasan ang ingay. Kung umulan, okay pa rin umikot dahil maraming commercial areas ang may bubong, pero magdala pa rin ng payong."
       }
     ],
     "money": "Tinatayang €40 (pagkain) + €15 luggage forwarding"

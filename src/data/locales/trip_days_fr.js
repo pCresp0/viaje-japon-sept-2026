@@ -246,19 +246,34 @@ export const days = [
     "history": "Kanazawa était le domaine du puissant clan Maeda à l'époque d'Edo, rivalisant avec Kyoto en richesse et culture. Ayant échappé aux bombardements modernes, elle conserve son tracé urbain féodal.",
     "schedule": [
       {
-        "text": "Réveil et envoi des bagages à la réception."
+        "text": "🧳 Réveil et expédition des bagages. L'hôtel Keihan Kyoto Hachijoguchi dispose d'un service d'expédition de bagages. Envoyez la grande valise directement à l'hôtel de Tokyo et voyagez avec un sac à dos/petit bagage. ⚠️ Confirmez à la réception le jour de l'envoi la date prévue de livraison à l'hôtel de Tokyo. Ne supposez pas qu'elle arrivera le lendemain. Préparez dans le sac à dos tout le nécessaire pour les jours intermédiaires jusqu'à ce que la valise soit récupérée. 🍳 Petit-déjeuner : Prenez le petit-déjeuner à l'hôtel Keihan Kyoto Hachijoguchi s'il est inclus, ou achetez quelque chose de simple la veille si nous devons partir très vite. (Remarque : L'hôtel Resol Trinity Kanazawa propose un petit-déjeuner buffet 07:00–10:00, mais comme nous arrivons à Kanazawa le jour même, cela ne s'applique pas à ce matin)."
       },
       {
-        "text": "Train direct Thunderbird de Kyoto à Kanazawa (2h)."
+        "text": "🚆 KYOTO → TSURUGA → KANAZAWA. Hôtel Keihan Kyoto Hachijoguchi → Kyoto Station : environ 5 minutes à pied jusqu'à Hachijo East Exit. Partez avec suffisamment de marge pour être sur le quai environ 10–15 minutes avant. 1. Limited Express THUNDERBIRD : Kyoto Station → Tsuruga Station. Environ 50–55 min. Siège réservé obligatoire. Il n'y a pas de wagons avec sièges non réservés. 2. À Tsuruga : Transfert vers le Hokuriku Shinkansen. Suivez les panneaux de correspondance Thunderbird → Shinkansen. Ne sortez pas inutilement de la gare. Le transfert est spécifiquement conçu pour relier Thunderbird et Hokuriku Shinkansen. 3. Hokuriku Shinkansen Tsurugi : Tsuruga → Kanazawa. Environ 40 min. Durée totale approximative : 1h40–2h."
       },
       {
-        "text": "Jardin Kenroku-en et quartier des samouraïs de Nagamachi."
+        "text": "🌳 JARDIN KENROKU-EN. Ouvert tous les jours. Horaires en septembre : 07:00–18:00. Entrée approximative : 320 ¥. Aucune réservation requise. À chercher : Étang Kasumigaike, Kotoji-toro, Pin Karasaki, Uchihashi-tei, vues sur le jardin et ses différents niveaux. 💡 Conseil : Kenroku-en est grand ; n'essayez pas de tout voir absolument. Faites un itinéraire circulaire par les points principaux."
       },
       {
-        "text": "Déjeuner au marché Omicho (les meilleurs fruits de mer du Japon)."
+        "text": "🏯 QUARTIER DES SAMOURAÏS DE NAGAMACHI. Promenade par : rues aux murs de terre ; canaux ; anciennes résidences de samouraïs. Le quartier est résidentiel et se parcourt gratuitement à pied. Si nous voulons entrer dans une résidence, privilégiez Nomura-ke : Ouvert 08:30–17:30 en septembre. Entrée 550 ¥. Aucune réservation requise. Jardin intérieur particulièrement intéressant."
       },
       {
-        "text": "Promenade dans le quartier des geishas de Higashi Chaya."
+        "text": "🍣 DÉJEUNER AU MARCHÉ D'OMICHO. L'un des grands marchés gastronomiques de Kanazawa, célèbre pour ses fruits de mer et poissons frais de la mer du Japon. Privilégiez : kaisendon ; sushi ; amaebi (crevette douce) ; nodoguro ; poisson local ; produits frais d'Ishikawa. Septembre n'est pas la saison principale du crabe et du buri/sériole ; le marché met particulièrement en avant ces produits vers novembre. Ne faites pas du crabe l'objectif principal de ce repas. 💡 Conseil : Beaucoup de restaurants/stands commencent à fermer l'après-midi. Ne retardez pas trop le repas. Sur des forums récents, des voyageurs recommandent également d'explorer Omicho Ichibakan et son deuxième étage, où se trouvent de petits restaurants locaux. Budget indicatif : repas simple : 1 000–2 000 ¥ ; kaisendon/sushi plus complet : 2 000–4 000+ ¥. Ne faites pas de réservation obligatoire pour le repas."
+      },
+      {
+        "text": "🏮 QUARTIER HIGASHI CHAYA. Promenez-vous dans les rues historiques et les maisons de thé. Option : SHIMA — ancienne maison de thé, ouverte 09:30–17:30 en septembre. Entrée : 500 ¥ + supplément optionnel pour thé/gâteau. Si vous voulez entrer à SHIMA, faites-le avant 17:15 pour avoir de la marge. Option gastronomique : matcha + wagashi ; glace au matcha ; glace à la feuille d'or."
+      },
+      {
+        "text": "🍜 DÎNER À KANAZAWA. Recommandé de rester dans le centre de Kanazawa, de préférence près de : Korinbo ; Katamachi ; Musashigatsuji/Omicho ; Kanazawa Station. Que goûter : oden de Kanazawa ; sushi ; poisson de la mer du Japon ; nodoguro ; cuisine de Kaga ; bœuf wagyu/Noto si vous souhaitez dépenser plus. Budget : décontracté : 1 000–2 500 ¥ ; restaurant local moyen : 2 500–5 000 ¥ ; dîner spécial : 8 000+ ¥. Pour un dîner spécial ou un très petit restaurant populaire, réservez. Pour un izakaya/restaurant décontracté, restez flexible."
+      },
+      {
+        "text": "🚌 TRANSPORT : Se déplacer dans Kanazawa : Les principaux points touristiques sont très proches les uns des autres, mais le Loop Bus est très pratique. Kanazawa Loop Bus : 220 ¥ par trajet. Accepte les cartes IC nationales et le paiement sans contact. Il existe également un ONE DAY PASS à 800 ¥. Le ONE DAY PASS ne vaut vraiment la peine que si nous prenons le bus 4 fois ou plus. Important : Le ONE DAY PASS ne s'achète pas à bord du bus. Il peut être acheté au Centre d'information touristique de la gare, aux centres Hokutetsu, dans certains hôtels ou numériquement."
+      },
+      {
+        "text": "🎫 RÉSERVATIONS DU JOUR : ⚠️ CE TRAIN DOIT ÊTRE RÉSERVÉ À L'AVANCE. Réservez tout le trajet Kyoto → Kanazawa (Thunderbird + Hokuriku Shinkansen). Réservez un siège ordinaire. Nous n'avons pas besoin de Japan Rail Pass. N'utilisez pas de carte IC pour payer ce trajet. Prix indicatif : 7 720 ¥ par personne, siège ordinaire réservé. Réservez sur JR-WEST ONLINE TRAIN RESERVATION à partir d'un mois avant la date du voyage. Comme nous sommes 5 personnes, réservez tous les sièges ensemble si le système le permet."
+      },
+      {
+        "text": "💡 CONSEILS : Conseils pour Kanazawa : Kanazawa est beaucoup plus compacte que Kyoto ; marcher entre plusieurs zones est parfaitement viable. Apportez de l'argent liquide même si de nombreux endroits acceptent la carte/IC. À Omicho, regardez d'abord et décidez ensuite ; n'achetez pas la première chose qui semble attirante. Pour les bols de fruits de mer, comparez les tailles/prix avant de vous asseoir. À Higashi Chaya, la plupart des boutiques traditionnelles ferment avant les restaurants. Le quartier de Nagamachi est résidentiel : gardez un profil bas et respectez les maisons. S'il pleut, Kanazawa reste assez gérable car de nombreuses zones commerçantes sont couvertes, mais apportez un parapluie."
       }
     ],
     "money": "Env. 40 € (repas) + 15 € transfert de bagages"

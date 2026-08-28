@@ -246,19 +246,34 @@ export const days = [
     "history": "Kanazawa was the domain of the powerful Maeda clan during the Edo period, rivaling Kyoto in wealth and culture. Having escaped modern bombings, it preserves its feudal urban layout.",
     "schedule": [
       {
-        "text": "Wake up and forward luggage at reception."
+        "text": "🧳 Wake up and send luggage. Hotel Keihan Kyoto Hachijoguchi has a luggage forwarding service. Send the large suitcase directly to the Tokyo hotel and travel with a backpack/small luggage. ⚠️ Confirm at reception on the day of sending the expected delivery date at the Tokyo hotel. Do not assume it will arrive the next day. Pack everything necessary for the intermediate days in the backpack until the suitcase is recovered. 🍳 Breakfast: Breakfast at Hotel Keihan Kyoto Hachijoguchi if included, or buy something simple the night before if we need to leave as quickly as possible. (Note: Hotel Resol Trinity Kanazawa offers buffet breakfast 07:00–10:00, but since we arrive in Kanazawa that same day, it does not apply for this morning)."
       },
       {
-        "text": "Direct Thunderbird train from Kyoto to Kanazawa (2h)."
+        "text": "🚆 KYOTO → TSURUGA → KANAZAWA. Hotel Keihan Kyoto Hachijoguchi → Kyoto Station: approximately 5 minutes walking to Hachijo East Exit. Leave with enough margin to be on the platform about 10–15 minutes before. 1. Limited Express THUNDERBIRD: Kyoto Station → Tsuruga Station. Approximately 50–55 min. Reserved seat required. There are no unreserved seat cars. 2. At Tsuruga: Transfer to the Hokuriku Shinkansen. Follow the Thunderbird → Shinkansen connection signs. Do not leave the station unnecessarily. The transfer is designed specifically to connect Thunderbird with the Hokuriku Shinkansen. 3. Hokuriku Shinkansen Tsurugi: Tsuruga → Kanazawa. Approximately 40 min. Total approximate duration: 1h40–2h."
       },
       {
-        "text": "Kenroku-en Garden and Nagamachi samurai district."
+        "text": "🌳 KENROKU-EN GARDEN. Open every day. Hours in September: 07:00–18:00. Approximate admission: ¥320. No reservation required. What to look for: Kasumigaike Pond, Kotoji-toro, Karasaki Pine, Uchihashi-tei, views of the garden and its different levels. 💡 Tip: Kenroku-en is large; do not try to see absolutely everything. Do a circular route through the main points."
       },
       {
-        "text": "Lunch at Omicho market (the best seafood in Japan)."
+        "text": "🏯 NAGAMACHI SAMURAI DISTRICT. Walk through: streets with earthen walls; canals; former samurai residences. The neighborhood is residential and can be explored on foot for free. If we want to enter a residence, prioritize Nomura-ke: Open 08:30–17:30 in September. Admission ¥550. No reservation required. Interior garden is particularly interesting."
       },
       {
-        "text": "Stroll through the Higashi Chaya geisha district."
+        "text": "🍣 LUNCH AT OMICHO MARKET. One of Kanazawa's great food markets, famous for fresh seafood from the Sea of Japan. Prioritize: kaisendon; sushi; amaebi (sweet shrimp); nodoguro; local fish; fresh Ishikawa produce. September is not the main season for crab and buri/yellowtail; the market particularly highlights these products around November. Do not make crab the main goal of this meal. 💡 Tip: Many restaurants/stalls start to close in the afternoon. Do not delay lunch too much. In recent forums, travelers recommend also exploring Omicho Ichibakan and its second floor, where there are small local restaurants. Guideline budget: simple meal: ¥1,000–2,000; fuller kaisendon/sushi: ¥2,000–4,000+. Do not make a mandatory reservation for lunch."
+      },
+      {
+        "text": "🏮 HIGASHI CHAYA DISTRICT. Walk through the historic streets and teahouses. Optional: SHIMA — former teahouse, open 09:30–17:30 in September. Admission: ¥500 + optional supplement for tea/sweet. If you want to enter SHIMA, do so before 17:15 to have a margin. Gastronomic option: matcha + wagashi; matcha ice cream; gold leaf ice cream."
+      },
+      {
+        "text": "🍜 DINNER IN KANAZAWA. Recommended to stay in central Kanazawa, preferably near: Korinbo; Katamachi; Musashigatsuji/Omicho; Kanazawa Station. What to try: Kanazawa oden; sushi; Sea of Japan fish; nodoguro; Kaga cuisine; wagyu/Noto beef if willing to spend more. Budget: casual: ¥1,000–2,500; average local restaurant: ¥2,500–5,000; special dinner: ¥8,000+. For a special dinner or very popular small restaurant, reserve. For casual izakaya/restaurant, keep flexibility."
+      },
+      {
+        "text": "🚌 TRANSPORT: Getting around Kanazawa: The main tourist spots are very close to each other, but the Loop Bus is very practical. Kanazawa Loop Bus: ¥220 per ride. Accepts national IC cards and contactless payment. There is also a ONE DAY PASS for ¥800. ONE DAY PASS is only especially worthwhile if we use the bus 4 times or more. Important: The ONE DAY PASS cannot be bought on board the bus. It can be purchased at the Tourist Information Center at the station, Hokutetsu centers, some hotels, or digitally."
+      },
+      {
+        "text": "🎫 DAY'S RESERVATIONS: ⚠️ THIS TRAIN MUST BE BOOKED IN ADVANCE. Reserve full Kyoto → Kanazawa route (Thunderbird + Hokuriku Shinkansen). Reserve ordinary seat. We do not need a Japan Rail Pass. Do not use an IC card to pay for this journey. Guideline price: ¥7,720 per person, ordinary reserved seat. Reserve on JR-WEST ONLINE TRAIN RESERVATION from one month before the travel date. Since we are 5 people, book all seats together if the system allows it."
+      },
+      {
+        "text": "💡 TIPS: Kanazawa Tips: Kanazawa is much more compact than Kyoto; walking between several areas is perfectly viable. Bring cash even though many places accept card/IC. In Omicho, look first and decide later; do not buy the first thing that looks appealing. For seafood bowls, compare sizes/prices before sitting down. In Higashi Chaya, most traditional shops close earlier than restaurants. The Nagamachi neighborhood is residential: keep a low profile and respect homes. If it rains, Kanazawa remains quite manageable because many shopping areas are covered, but bring an umbrella."
       }
     ],
     "money": "Approx. €40 (meals) + €15 luggage forwarding"
