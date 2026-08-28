@@ -42,7 +42,7 @@ export const days = [
         "text": "The Nozomi arrives at JR Kyoto Station. Get off the Shinkansen and follow the signs to Hachijo East Exit (八条東口). Leave the station through that exit and in about a 5-minute walk you will reach the hotel (Hotel Keihan Kyoto Hachijoguchi). Check-in and dinner."
       },
       {
-        "text": "Easy dinner at Kyoto Station. After the trip, don't overcomplicate things with a long dinner. Kyoto Station is the best area for dinner this first night. Options: ramen; udon/soba; Japanese curry; donburi; ekiben/bento if tired. Specific option: Kyoto Ramen Koji, on the 10th floor of Kyoto Station, is an easy option to try ramen without going far from the hotel. Approx. hours 11:00–22:00. Quick alternative: buy a bento/ekiben inside Kyoto Station."
+        "text": "🍣 19:00–20:30 — DINNER: KAITEN-SUSHI UOGASHI. Recommended restaurant at AEON MALL KYOTO — Sakura Building, 4F. About 5 min walk from Kyoto Station Hachijo Exit (very convenient after arriving by Shinkansen). Kaiten-zushi (conveyor belt sushi). Guideline price: ¥2,000–3,000/person. Hours: 11:00–22:00 (last order approx 21:30). No reservation needed. What to try: assorted sushi; fresh fish pieces; nigiri; daily specials; a hot side dish. 💡 Tip: It's a good first dinner in Japan because you can order bit by bit and control how much you eat and spend. AEON MALL has other options on the same floor if it's full."
       },
       {
         "text": "⚠️ Buy breakfast for Day 2 tonight at a konbini because the departure is too early to have a relaxed breakfast at the hotel. Recommendation: 1–2 onigiri per person; egg sandwich; banana/fruit; coffee or drink; optional yogurt."

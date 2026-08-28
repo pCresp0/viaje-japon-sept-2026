@@ -42,7 +42,7 @@ export const days = [
         "text": "Ang Nozomi ay darating sa JR Kyoto Station. Bumaba sa Shinkansen at sundan ang mga palatandaan sa Hachijo East Exit (八条東口). Umalis sa istasyon sa pamamagitan ng exit na iyon at sa halos 5 minutong paglalakad ay makakarating ka sa hotel (Hotel Keihan Kyoto Hachijoguchi). Check-in at hapunan."
       },
       {
-        "text": "Mabilisang hapunan sa Kyoto Station. Pagkatapos ng byahe, huwag nang pahirapan ang sarili sa mahabang hapunan. Ang Kyoto Station ang pinakamagandang lugar para maghapunan sa unang gabi. Mga opsyon: ramen; udon/soba; Japanese curry; donburi; ekiben/bento kung pagod na. Tiyak na opsyon: Kyoto Ramen Koji, sa 10th floor ng Kyoto Station, mabilis na opsyon para makatikim ng ramen nang hindi lumalayo sa hotel. Oras: halos 11:00–22:00. Mabilis na alternatibo: bumili ng bento/ekiben sa loob ng Kyoto Station."
+        "text": "🍣 19:00–20:30 — HAPUNAN: KAITEN-SUSHI UOGASHI. Inirerekomendang restawran sa AEON MALL KYOTO — Sakura Building, 4F. Halos 5 min na lakad mula Kyoto Station Hachijo Exit (napaka-komportable pagdating mula Shinkansen). Kaiten-zushi (conveyor belt sushi). Badyet: ¥2,000–3,000/tao. Oras: 11:00–22:00 (last order halos 21:30). Hindi kailangan mag-reserve. Subukan: iba't ibang sushi; sariwang isda; nigiri; daily specials; mainit na side dish. 💡 Tip: Magandang unang hapunan ito sa Japan dahil pwedeng umorder nang paunti-unti para kontrolado ang gastos. May iba pang opsyon sa AEON MALL kung puno ito."
       },
       {
         "text": "⚠️ Bumili na ngayong gabi ng almusal para sa Day 2 sa konbini dahil masyadong maaga ang alis para mag-almusal sa hotel. Inirerekomenda: 1–2 onigiri kada tao; egg sandwich; saging/prutas; kape o inumin; yogurt."
