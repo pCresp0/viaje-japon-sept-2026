@@ -33,14 +33,13 @@ export default function FujiAlertBanner() {
             {/* Left: Icon & Core Alert Message */}
             <div className="flex items-start gap-3 flex-1 min-w-0 pr-8 lg:pr-0">
               <div
-                className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 shadow-md mt-0.5"
-                style={{ background: "linear-gradient(135deg, #f59e0b 0%, #ea580c 100%)" }}
+                className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 shadow-md mt-0.5 bg-white/20"
               >
                 <Mountain size={20} className="text-white" />
               </div>
               <div className="min-w-0">
                 <div className="flex items-center gap-2 flex-wrap">
-                  <span className="bg-amber-500/25 text-amber-300 border border-amber-500/40 text-[10.5px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">
+                  <span className="bg-white/20 text-white border border-white/30 text-[10.5px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">
                     Estrategia Fuji 🗻
                   </span>
                   <span className="text-xs text-slate-300 font-medium hidden sm:inline">
@@ -83,7 +82,7 @@ export default function FujiAlertBanner() {
               <button
                 type="button"
                 onClick={() => setShowModal(true)}
-                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 shadow-md transition-all active:scale-95"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold bg-white hover:bg-slate-100 text-slate-900 shadow-md transition-all active:scale-95"
               >
                 <Info size={14} />
                 Ver 4 Reservas & Códigos
@@ -116,7 +115,7 @@ export default function FujiAlertBanner() {
             {/* Modal Header */}
             <div className="sticky top-0 z-10 px-6 py-4 bg-gradient-to-r from-indigo-900 via-slate-900 to-indigo-950 text-white flex items-center justify-between border-b border-white/10">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-amber-500 flex items-center justify-center text-slate-950">
+                <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center text-white">
                   <Mountain size={22} />
                 </div>
                 <div>
@@ -136,14 +135,14 @@ export default function FujiAlertBanner() {
             <div className="p-6 space-y-6 text-sm">
               
               {/* Cómo funciona la estrategia */}
-              <div className="bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 rounded-xl p-4">
+              <div className="bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-800/60 rounded-xl p-4">
                 <div className="flex items-start gap-2.5">
-                  <AlertTriangle className="text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" size={18} />
+                  <AlertTriangle className="text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5" size={18} />
                   <div>
-                    <h4 className="font-bold text-amber-900 dark:text-amber-200 text-sm">
+                    <h4 className="font-bold text-indigo-900 dark:text-indigo-200 text-sm">
                       ¿Cómo funciona la cancelación gratuita?
                     </h4>
-                    <p className="text-xs text-amber-800 dark:text-amber-300/90 mt-1 leading-relaxed">
+                    <p className="text-xs text-indigo-800 dark:text-indigo-300/90 mt-1 leading-relaxed">
                       Se han reservado 4 días en GetYourGuide con antelación para asegurar plaza. Cada reserva permite <strong>reembolso íntegro cancelando con al menos 24 horas de antelación</strong> a través de la app/web de GetYourGuide. Revisad los enlaces de visibilidad y cancelad las fechas nubladas antes del límite indicado en cada bono.
                     </p>
                   </div>

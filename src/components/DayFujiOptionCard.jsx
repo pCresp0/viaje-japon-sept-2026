@@ -30,7 +30,7 @@ export default function DayFujiOptionCard({ dayNum }) {
           </div>
           <div className="min-w-0">
             <div className="flex items-center gap-1.5 flex-wrap">
-              <span className="text-[10px] bg-amber-400 text-slate-950 font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">
+              <span className="text-[10px] bg-white text-sky-900 font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">
                 Opción Monte Fuji GYG
               </span>
               <span className="text-xs text-sky-100 font-semibold hidden sm:inline">
@@ -107,12 +107,12 @@ export default function DayFujiOptionCard({ dayNum }) {
           </div>
 
           {/* Aviso importante de comidas y dinero */}
-          <div className="p-3 rounded-xl border bg-amber-50/80 dark:bg-amber-950/30 border-amber-200 dark:border-amber-900/50 space-y-1">
-            <p className="font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5" style={{ margin: 0 }}>
-              <AlertTriangle size={14} className="text-amber-600" />
+          <div className="p-3 rounded-xl border space-y-1.5" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
+            <p className="font-bold flex items-center gap-1.5" style={{ margin: 0, color: "var(--shu)" }}>
+              <AlertTriangle size={14} />
               ⚠️ Comida y Normas de la Actividad:
             </p>
-            <ul className="pl-4 space-y-1 list-disc text-amber-950 dark:text-amber-200/90" style={{ margin: 0 }}>
+            <ul className="pl-4 space-y-1 list-disc" style={{ margin: 0, color: "var(--ink)" }}>
               <li><strong>Comida NO incluida:</strong> Desayunar fuerte antes de salir y llevar snacks/agua.</li>
               <li><strong>Prohibido comer en el autobús:</strong> Solo se puede comer en los descansos y paradas de las atracciones.</li>
               <li><strong>Llevar efectivo en yenes (¥):</strong> La mayoría de puestos locales de comida de Oshino Hakkai y Saiko no aceptan tarjeta.</li>

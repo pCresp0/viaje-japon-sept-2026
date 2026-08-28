@@ -73,7 +73,7 @@ export default function VisitJapanQRCard() {
           </div>
           <div className="min-w-0">
             <div className="flex items-center gap-1.5 flex-wrap">
-              <span className="text-[10px] bg-amber-400 text-slate-950 font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">
+              <span className="text-[10px] bg-white text-blue-900 font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">
                 Visit Japan Web
               </span>
               <span className="text-xs text-blue-100 font-semibold">
@@ -100,7 +100,7 @@ export default function VisitJapanQRCard() {
             <button
               type="button"
               onClick={startUnlockFlow}
-              className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-amber-400 text-slate-950 hover:bg-amber-300 shadow-sm active:scale-95 transition-all w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-white text-blue-900 shadow-sm active:scale-95 transition-all w-full sm:w-auto"
             >
               <Lock size={14} />
               Ver QR
@@ -145,7 +145,7 @@ export default function VisitJapanQRCard() {
                   Mostrar QR en Pantalla Completa 📱
                 </button>
               ) : (
-                <span className="text-xs text-amber-700 bg-amber-100 dark:bg-amber-950 px-3 py-1.5 rounded-xl border border-amber-300">
+                <span className="text-xs text-slate-700 bg-slate-100 dark:bg-slate-900 px-3 py-1.5 rounded-xl border border-slate-300 flex items-center">
                   QR de este viajero no cargado aún
                 </span>
               )}
