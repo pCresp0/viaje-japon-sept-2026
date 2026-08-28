@@ -102,8 +102,8 @@ export const stays = [
     nights: "From Sep 14 to 15 (1 night)",
     options: [
       {
-        rooms: "Minshuku · with dinner and breakfast",
-        note: "Home-cooked dinner at a fixed time (~18:30). Confirm before the trip.",
+        rooms: "Minshuku · with dinner (no breakfast)",
+        note: "Home-cooked dinner at a fixed time (~18:00). Confirm before the trip.",
       },
     ],
   },
@@ -161,7 +161,7 @@ export const budget = {
         "Hotel Keihan Kyoto Hachijoguchi (Sep 7–12, 5 nights): 678.68€ group · 135.74€/person.",
         "Hotel Resol Trinity Kanazawa (Sep 12–13, 1 night): 164€ group · 32.80€/person.",
         "Hotel Wood Takayama (Sep 13–14, 1 night): 279€ group · 55.80€/person.",
-        "Magome Chaya (Sep 14–15, 1 night, with dinner and breakfast): 178.98€ group · 35.80€/person.",
+        "Magome Chaya (Sep 14–15, 1 night, with dinner, no breakfast): 178.98€ group · 35.80€/person.",
         "KOKO HOTEL Residence Asakusa Kappabashi (Sep 15–21, 6 nights): 1,952.50€ group · 390.50€/person.",
       ],
     },

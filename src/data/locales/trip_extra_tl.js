@@ -102,8 +102,8 @@ export const stays = [
     nights: "Mula Set 14 hanggang 15 (1 gabi)",
     options: [
       {
-        rooms: "Minshuku · may kasamang hapunan at almusal",
-        note: "Lutong bahay na hapunan sa itinakdang oras (~18:30). Kumpirmahin bago ang biyahe.",
+        rooms: "Minshuku · may kasamang hapunan (walang almusal)",
+        note: "Lutong bahay na hapunan sa itinakdang oras (~18:00). Kumpirmahin bago ang biyahe.",
       },
     ],
   },
@@ -161,7 +161,7 @@ export const budget = {
         "Hotel Keihan Kyoto Hachijoguchi (Set 7–12, 5 gabi): 678.68€ grupo · 135.74€/tao.",
         "Hotel Resol Trinity Kanazawa (Set 12–13, 1 gabi): 164€ grupo · 32.80€/tao.",
         "Hotel Wood Takayama (Set 13–14, 1 gabi): 279€ grupo · 55.80€/tao.",
-        "Magome Chaya (Set 14–15, 1 gabi, kasama hapunan at almusal): 178.98€ grupo · 35.80€/tao.",
+        "Magome Chaya (Set 14–15, 1 gabi, kasama hapunan, walang almusal): 178.98€ grupo · 35.80€/tao.",
         "KOKO HOTEL Residence Asakusa Kappabashi (Set 15–21, 6 gabi): 1,952.50€ grupo · 390.50€/tao.",
       ],
     },

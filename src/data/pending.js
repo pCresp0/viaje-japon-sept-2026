@@ -56,7 +56,7 @@ export const pendingItems = [
     category: "reserva",
     urgency: "media",
     title: "🟠 Reservar JR Shinano (Nakatsugawa → Nagoya)",
-    detail: "📅 15/09/2026\n👥 5 personas\n🚆 JR Shinano Limited Express\n⏰ Salida objetivo: ~09:30\n📍 Nakatsugawa → Nagoya\n💳 Comprar: JR Central (SmartEX/JR-West online)\n⚠️ Tren popular para volver de los Alpes. Reservar juntos.",
+    detail: "📅 15/09/2026\n👥 5 personas\n🚆 JR Shinano Limited Express 4\n⏰ Salida objetivo: ~09:57\n📍 Nakatsugawa → Nagoya\n💳 Comprar: JR Central (SmartEX/JR-West online)\n⚠️ Tren popular para volver de los Alpes. Reservar juntos.",
     deadline: "1 mes antes",
   },
   {

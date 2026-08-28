@@ -106,7 +106,7 @@ export default {
       category: "reserva",
       urgency: "media",
       title: "🟠 Book JR Shinano (Nakatsugawa → Nagoya)",
-      detail: "📅 15/09/2026\n👥 5 people\n🚆 JR Shinano Limited Express\n⏰ Target departure: ~09:30\n📍 Nakatsugawa → Nagoya\n💳 Buy: JR Central (SmartEX/JR-West online)\n⚠️ Popular train to return from the Alps. Book together.",
+      detail: "📅 15/09/2026\n👥 5 people\n🚆 JR Shinano Limited Express 4\n⏰ Target departure: ~09:57\n📍 Nakatsugawa → Nagoya\n💳 Buy: JR Central (SmartEX/JR-West online)\n⚠️ Popular train to return from the Alps. Book together.",
       deadline: "1 month before",
     },
     {

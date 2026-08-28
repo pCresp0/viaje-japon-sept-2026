@@ -106,7 +106,7 @@ export default {
       category: "reserva",
       urgency: "media",
       title: "🟠 Réserver JR Shinano (Nakatsugawa → Nagoya)",
-      detail: "📅 15/09/2026\n👥 5 personnes\n🚆 JR Shinano Limited Express\n⏰ Départ ciblé: ~09:30\n📍 Nakatsugawa → Nagoya\n💳 Acheter : JR Central (SmartEX/JR-West online)\n⚠️ Train populaire pour revenir des Alpes. Réservez ensemble.",
+      detail: "📅 15/09/2026\n👥 5 personnes\n🚆 JR Shinano Limited Express 4\n⏰ Départ ciblé: ~09:57\n📍 Nakatsugawa → Nagoya\n💳 Acheter : JR Central (SmartEX/JR-West online)\n⚠️ Train populaire pour revenir des Alpes. Réservez ensemble.",
       deadline: "1 mois avant",
     },
     {
