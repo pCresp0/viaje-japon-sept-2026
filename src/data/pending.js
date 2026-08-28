@@ -4,6 +4,33 @@
 
 export const pendingItems = [
   {
+    id: "shinkansen-nozomi-dia1",
+    category: "reserva",
+    urgency: "alta",
+    title: "Reservar Shinkansen Nozomi Día 1 (Shinagawa → Kioto)",
+    detail:
+      "Día 1 (7 sept): Cómpralo con antelación desde España semanas antes en la app o web oficial SmartEX (https://smart-ex.jp/reservation/reserve_smart/sp/) de Shinagawa a Kioto (~90€). Al viajar 5 con maletas grandes, es OBLIGATORIO marcar 'Seat with an oversized baggage area' (última fila con espacio reservado detrás) y seleccionar los asientos E (ventanilla derecha) para ver el Monte Fuji ~40 min tras salir.",
+    deadline: "Semanas antes del viaje",
+  },
+  {
+    id: "nex-dia1",
+    category: "logistica",
+    urgency: "alta",
+    title: "Comprar Narita Express - N'EX (Aeropuerto Narita → Shinagawa)",
+    detail:
+      "Día 1 (7 sept): NO se compra por adelantado. Al depender de la puntualidad del vuelo (aterriza 12:55) y colas de aduana/inmigración, se compra directamente al aterrizar en la planta B1 de Narita en las taquillas/máquinas rojas de JR para el siguiente tren disponible a Shinagawa (~19€, salen cada 30 min, 1h 10m sin transbordos).",
+    deadline: "Al aterrizar en Narita (Planta B1)",
+  },
+  {
+    id: "shinkansen-nozomi-dia9",
+    category: "reserva",
+    urgency: "alta",
+    title: "Reservar Shinkansen Nozomi Día 9 (Nagoya → Tokio)",
+    detail:
+      "Día 9 (15 sept): tren bala Nozomi de Nagoya a Tokio (~50€, 1h 40m). Comprar con antelación en SmartEX reservando asientos con Oversized Baggage para las maletas grandes.",
+    deadline: "Semanas antes del viaje",
+  },
+  {
     id: "hida-express-reserva",
     category: "reserva",
     urgency: "alta",
@@ -20,24 +47,6 @@ export const pendingItems = [
     detail:
       "Día 6 (12 sept): tren Thunderbird de Kioto a Kanazawa (2h, ~43,50€). Septiembre es temporada alta en Kanazawa. Al no tener JR Pass, comprar billete en JR West online o taquilla con antelación.",
     deadline: "Semanas antes",
-  },
-  {
-    id: "shinkansen-asientos",
-    category: "reserva",
-    urgency: "alta",
-    title: "Reservar asientos en los Shinkansen",
-    detail:
-      "Dos trenes bala clave: Día 1 Shinkansen Nozomi (Shinagawa → Kioto, ~90€) y Día 9 Shinkansen Nozomi (Nagoya → Tokio, ~50€). Al no llevar JR Pass, comprar online (app SmartEX) semanas antes marcando obligatoriamente Oversized Baggage para las maletas y asiento E en ventanilla derecha para ver el Monte Fuji.",
-    deadline: "Semanas antes",
-  },
-  {
-    id: "nex-reserva",
-    category: "reserva",
-    urgency: "alta",
-    title: "Reservar Narita Express (N'EX)",
-    detail:
-      "Trenes del aeropuerto al centro (Día 1) y viceversa (Día 15). Unos 19€ por trayecto sin JR Pass. Conviene sacarlos con tiempo online o al llegar al aeropuerto.",
-    deadline: "Semanas antes o al aterrizar",
   },
   {
     id: "shinano-reserva",

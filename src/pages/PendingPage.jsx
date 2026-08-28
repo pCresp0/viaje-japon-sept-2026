@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useContent, useT } from "../i18n/LanguageContext";
 import { Check } from "lucide-react";
 import { Highlightable } from "../context/HighlightContext";
+import PlaceText from "../components/PlaceText";
 import { slug } from "../utils/slug";
 
 const STORAGE_KEY = "trip-pending-v1";
@@ -143,9 +144,12 @@ export default function PendingPage() {
                         )}
                       </div>
 
-                      <p style={{ fontSize: 13, color: "var(--ink-soft)", lineHeight: 1.6 }}>
-                        {item.detail}
-                      </p>
+                      <PlaceText
+                        as="p"
+                        text={item.detail}
+                        className="text-[13px] leading-relaxed block"
+                        style={{ color: "var(--ink-soft)" }}
+                      />
 
                       {/* Options to choose between */}
                       {item.options && (
