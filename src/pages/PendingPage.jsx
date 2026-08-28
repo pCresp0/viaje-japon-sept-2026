@@ -34,11 +34,34 @@ export default function PendingPage() {
   const remaining = total - completed;
   const pct = Math.round((completed / total) * 100);
 
-  // Group by category, keeping original order
-  const grouped = Object.keys(categoryLabels).map((cat) => ({
-    cat,
-    items: pendingItems.filter((i) => i.category === cat),
-  }));
+  const urgencyWeight = { alta: 1, media: 2, baja: 3 };
+  const idOrder = [
+    "esim-suica",
+    "nozomi-ida",
+    "kyoto-kanazawa",
+    "cena-takayama",
+    "bus-magome",
+    "cena-magome",
+    "mochilas-magome",
+    "desayunos",
+    "nozomi-vuelta",
+    "shinano",
+    "entradas-tokio",
+    "tour-fuji",
+    "equipaje"
+  ];
+
+  // Group by category, and sort inside each group
+  const grouped = Object.keys(categoryLabels).map((cat) => {
+    let items = pendingItems.filter((i) => i.category === cat);
+    items.sort((a, b) => {
+      if (urgencyWeight[a.urgency] !== urgencyWeight[b.urgency]) {
+        return urgencyWeight[a.urgency] - urgencyWeight[b.urgency];
+      }
+      return idOrder.indexOf(a.id) - idOrder.indexOf(b.id);
+    });
+    return { cat, items };
+  });
 
   return (
     <div className="px-4 pt-3 pb-12">
