@@ -156,6 +156,22 @@ export default {
       title: "🟢 Convenience Breakfasts",
       detail: "📅 Sept 7 (for Fushimi Inari) and Sept 14 (in Magome for the train)\n📍 Local konbini\n⚠️ Magome accommodation does not provide breakfast and the departure to Fushimi Inari on Day 2 is too early. Buy at konbinis the night before.",
       deadline: "Same day",
+    },
+    {
+      id: "shinkansen-fuji",
+      category: "reserva",
+      urgency: "alta",
+      title: "🔴 Book Shinkansen Kodama (Fuji Tour)",
+      detail: "📅 20/09/2026\n👥 5 people\n🚆 Tokaido-Sanyo Shinkansen KODAMA 805\n⏰ Target departure: 07:27\n📍 Tokyo → Mishima\n💳 Buy: SmartEX App/Web\n⚠️ MANDATORY: Take this specific train to arrive on time for the meeting with guide Ken (08:25). Book seats together.",
+      deadline: "1 month before"
+    },
+    {
+      id: "narita-express",
+      category: "reserva",
+      urgency: "media",
+      title: "🟠 Book Narita Express (N'EX)",
+      detail: "📅 07/09/2026 (Arrival) and 21/09/2026 (Departure)\n👥 5 people\n🚆 JR Narita Express\n📍 Narita ↔ Tokyo/Shinagawa\n💳 Buy: JR East Web or at the airport\n⚠️ N'EX requires a reserved seat. You can buy it upon arrival, but for 5 people it's better to book it online to sit together.",
+      deadline: "Before traveling"
     }
   ],
   categoryLabels: {

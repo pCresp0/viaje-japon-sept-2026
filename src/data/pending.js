@@ -106,7 +106,23 @@ export const pendingItems = [
     title: "🟢 Desayunos de Convivencia",
     detail: "📅 7 Sept (para Fushimi Inari) y 14 Sept (en Magome para el tren)\n📍 Konbini local\n⚠️ El alojamiento de Magome no da desayuno y la salida a Fushimi Inari del día 2 es demasiado temprana. Comprar en konbinis la noche antes.",
     deadline: "Mismo día",
-  }
+  },
+  {
+    id: "shinkansen-fuji",
+    category: "reserva",
+    urgency: "alta",
+    title: "🔴 Reservar Shinkansen Kodama (Excursión Fuji)",
+    detail: "📅 20/09/2026\n👥 5 personas\n🚆 Tokaido-Sanyo Shinkansen KODAMA 805\n⏰ Salida objetivo: 07:27\n📍 Tokio → Mishima\n💳 Comprar: SmartEX App/Web\n⚠️ OBLIGATORIO: Tomar este tren específico para llegar a la hora de encuentro con el guía Ken (08:25). Reservar asientos juntos.",
+    deadline: "1 mes antes",
+  },
+  {
+    id: "narita-express",
+    category: "reserva",
+    urgency: "media",
+    title: "🟠 Reservar Narita Express (N'EX)",
+    detail: "📅 07/09/2026 (Ida) y 21/09/2026 (Vuelta)\n👥 5 personas\n🚆 JR Narita Express\n📍 Narita ↔ Tokio/Shinagawa\n💳 Comprar: JR East Web o en el aeropuerto\n⚠️ El N'EX requiere asiento reservado. Se puede comprar al llegar, pero para 5 personas es mejor llevarlo reservado online si queréis ir juntos.",
+    deadline: "Antes de viajar",
+  },
 ];
 
 export const categoryLabels = {
