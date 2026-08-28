@@ -120,7 +120,7 @@ export const stays = [
         rooms: "2 habitaciones · Triple Moderate + Doble Estándar (2 camas)",
         guests: "5 adultos",
         cancel: "Cancelación gratis hasta 1 día antes",
-        note: "Tasa turística por persona/noche se paga en el hotel. No incluye comidas.",
+        note: "A partir de marzo de 2026, Kioto aplica una nueva tasa turística. Para alojamientos de menos de ¥6.000 por persona/noche, el impuesto está EXENTO. Si supera los ¥6.000, será de ¥400 por persona/noche. A pagar en el hotel. No incluye comidas.",
       },
     ],
   },

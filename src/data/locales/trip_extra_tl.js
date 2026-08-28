@@ -69,7 +69,7 @@ export const stays = [
         rooms: "2 kwarto · Triple Moderate + Standard Double (2 kama)",
         guests: "5 matatanda",
         cancel: "Libreng cancellation hanggang 1 araw bago ang check-in",
-        note: "Babayaran sa hotel ang tourist tax bawat tao/gabi. Hindi kasama ang mga pagkain.",
+        note: "Simula Marso 2026, nagpapatupad ang Kyoto ng bagong tourist tax. Para sa mga accommodation na mas mababa sa ¥6,000 bawat tao/gabi, EXEMPTED ang tax. Kung lalampas sa ¥6,000, ito ay ¥400 bawat tao/gabi. Babayaran sa hotel. Hindi kasama ang mga pagkain.",
       },
     ],
   },
