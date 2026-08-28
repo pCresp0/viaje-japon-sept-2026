@@ -328,6 +328,12 @@ export const days = [
       },
       {
         "text": "Enregistrement au Minshuku et dîner maison local à 18h30 (heure fixe)."
+      },
+      {
+        "text": "⚠️ IMPORTANT — MAGOME L'APRÈS-MIDI. La plupart des boutiques et restaurants de Magome ferment après 17:00. Il y a très peu d'options de dîner en ville et leurs horaires varient. Nous NE DEVONS DONC PAS compter sur la possibilité de trouver un restaurant alternatif spontanément. Confirmez le dîner avec l'hébergement et gardez la confirmation. DÉJEUNER À MAGOME : Comme les magasins peuvent fermer tôt, ne retardez pas trop le repas. Si nous trouvons un restaurant ouvert pendant la visite, profitez-en."
+      },
+      {
+        "text": "🍙 PETIT-DÉJEUNER DU LENDEMAIN. L'hébergement N'INCLUT PAS le petit-déjeuner. Achetez le petit-déjeuner la veille à Takayama ou dans une supérette avant d'arriver à Magome. NE SUPPOSEZ PAS qu'il y aura un konbini ouvert à Magome le matin. Achetez avant d'arriver : onigiri ; sandwichs ; pain ; fruits ; boissons ; café. Gardez le petit-déjeuner dans le sac à dos pour le lendemain matin."
       }
     ],
     "money": "Env. 40 € (repas)"

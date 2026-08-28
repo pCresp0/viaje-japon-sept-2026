@@ -328,6 +328,12 @@ export const days = [
       },
       {
         "text": "Check-in at the Minshuku and local homemade dinner at 6:30 PM (fixed time)."
+      },
+      {
+        "text": "⚠️ IMPORTANT — MAGOME IN THE AFTERNOON. Most shops and restaurants in Magome close after 17:00. There are very few dinner options in town and their hours vary. Therefore, we SHOULD NOT rely on finding an alternative restaurant spontaneously. Confirm dinner with the accommodation and keep the confirmation. LUNCH IN MAGOME: As shops can close early, do not delay lunch too much. If we find an open restaurant during the visit, take the opportunity."
+      },
+      {
+        "text": "🍙 NEXT DAY'S BREAKFAST. The accommodation DOES NOT include breakfast. Buy breakfast the day before in Takayama or at a convenience store before arriving in Magome. DO NOT assume there will be an open konbini in Magome in the morning. Buy before arriving: onigiri; sandwiches; bread; fruit; drinks; coffee. Keep breakfast in your backpack for the next morning."
       }
     ],
     "money": "Approx. €40 (meals)"

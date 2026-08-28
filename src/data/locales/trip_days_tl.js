@@ -328,6 +328,12 @@ export const days = [
       },
       {
         "text": "Check-in sa Minshuku at lokal na lutong bahay na hapunan ng 6:30 PM (fixed time)."
+      },
+      {
+        "text": "⚠️ MAHALAGA — MAGOME SA HAPON. Karamihan sa mga tindahan at restawran sa Magome ay nagsasara pagkalipas ng 17:00. Napakakaunti ng mga opsyon sa hapunan sa bayan at paiba-iba ang oras nila. Kaya HINDI tayo dapat umasa na makakahanap ng alternatibong restawran on the spot. Kumpirmahin ang hapunan sa tinutuluyan at itago ang kumpirmasyon. TANGHALIAN SA MAGOME: Dahil maagang nagsasara ang mga tindahan, huwag patagalin ang tanghalian. Kung makahanap ng bukas na restawran habang bumibisita, samantalahin na."
+      },
+      {
+        "text": "🍙 ALMUSAL BUKAS. HINDI kasama ang almusal sa accommodation. Bumili ng almusal sa nakaraang araw sa Takayama o sa isang convenience store bago dumating sa Magome. HUWAG isipin na may bukas na konbini sa Magome sa umaga. Bumili bago dumating: onigiri; sandwich; tinapay; prutas; inumin; kape. Itago ang almusal sa backpack para kinabukasan."
       }
     ],
     "money": "Tinatayang €40 (pagkain)"
