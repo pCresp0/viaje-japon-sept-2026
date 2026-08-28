@@ -489,13 +489,16 @@ export const days = [
     "history": "Mount Fuji (3,776m) is Japan's sacred volcano and undisputed symbol. For centuries it has been a place of Shinto pilgrimage and inspiration for artists like Hokusai.",
     "schedule": [
       {
-        "text": "Check live webcams on mtfujitoday.com and isfujivisible.com from Tokyo hotel (the golden morning rule at 06:30 AM)."
+        "text": "Check live webcams on mtfujitoday.com and isfujivisible.com from Tokyo hotel (the golden morning rule at 06:15 AM)."
       },
       {
-        "text": "Shinkansen bullet train from Tokyo Station to Mishima Station (~50 min)."
+        "text": "🚇 Hotel → Ueno → Tokyo Station. (e.g., Keihin-Tohoku Line from Ueno at 07:08, arrive 07:15). Walk 5 min to Shinkansen platforms."
       },
       {
-        "text": "Meet guide Ken Kaneshima at Mishima Station South Exit (08:20 AM) and start private minivan tour."
+        "text": "🚅 Tokaido-Sanyo Shinkansen KODAMA 805. Depart Tokyo at 07:27, arrive at Mishima at 08:20. IMPORTANT: It must be the Kodama to stop at Mishima."
+      },
+      {
+        "text": "Meet guide Ken Kaneshima at Mishima Station South Exit (08:25 AM) and start private minivan tour."
       },
       {
         "text": "Chureito Pagoda (Arakurayama Sengen): iconic 5-story pagoda with Mount Fuji in the background."

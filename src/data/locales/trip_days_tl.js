@@ -489,13 +489,16 @@ export const days = [
     "history": "Ang Mount Fuji (3,776 m) ang sagradong bulkan at tanyag na simbolo ng Japan.",
     "schedule": [
       {
-        "text": "Tingnan ang live webcams sa mtfujitoday.com at isfujivisible.com mula sa hotel sa Tokyo (patakaran sa 06:30 AM)."
+        "text": "Tingnan ang live webcams sa mtfujitoday.com at isfujivisible.com mula sa hotel sa Tokyo (patakaran sa 06:15 AM)."
       },
       {
-        "text": "Shinkansen bullet train mula Tokyo Station papuntang Mishima Station (~50 min)."
+        "text": "🚇 Hotel → Ueno → Tokyo Station. (hal., Keihin-Tohoku Line mula Ueno ng 07:08, dating 07:15). Maglakad ng 5 min papunta sa mga Shinkansen platform."
       },
       {
-        "text": "Magkita sa Mishima Station South Exit (08:20 AM) kasama si Ken Kaneshima."
+        "text": "🚅 Tokaido-Sanyo Shinkansen KODAMA 805. Alis ng Tokyo ng 07:27, dating sa Mishima ng 08:20. MAHALAGA: Dapat itong Kodama upang huminto sa Mishima."
+      },
+      {
+        "text": "Magkita sa Mishima Station South Exit (08:25 AM) kasama si Ken Kaneshima."
       },
       {
         "text": "Chureito Pagoda (Arakurayama Sengen): iconic 5-story pagoda kasama ang Mt. Fuji."

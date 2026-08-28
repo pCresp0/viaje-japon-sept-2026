@@ -561,9 +561,10 @@ export const days = [
     history:
       "El Monte Fuji (3.776 m) es el volcán sagrado y símbolo indiscutible de Japón. Durante siglos ha sido lugar de peregrinación sintoísta (Sengen Jinja) e inspiración de artistas como Hokusai. Su cono casi perfectamente simétrico atrae a viajeros de todo el mundo.",
     schedule: [
-      { time: "06:30", text: "Comprobar cámaras web en directo en mtfujitoday.com e isfujivisible.com desde el hotel en Tokio (la regla de oro matutina)." },
-      { time: "07:15", text: "Tren bala Shinkansen desde Estación de Tokio hacia la Estación de Mishima (~50 min de trayecto)." },
-      { time: "08:20", text: "Encuentro en la Salida Sur de la Estación de Mishima con el guía Ken Kaneshima e inicio de la ruta en mini-van privada." },
+      { time: "06:15", text: "Comprobar cámaras web en directo en mtfujitoday.com e isfujivisible.com desde el hotel en Tokio (la regla de oro matutina)." },
+      { time: "07:08", text: "🚇 Hotel → Ueno → Estación de Tokio. (Ej: Línea Keihin-Tohoku desde Ueno a las 07:08, llegada 07:15). Caminar 5 min al andén del Shinkansen." },
+      { time: "07:27", text: "🚅 Tokaido-Sanyo Shinkansen KODAMA 805. Salida de Tokio a las 07:27, llegada a Mishima a las 08:20. IMPORTANTE: Debe ser el Kodama para que pare en Mishima." },
+      { time: "08:25", text: "Encuentro en la Salida Sur de la Estación de Mishima con el guía Ken Kaneshima e inicio de la ruta en mini-van privada." },
       { time: "09:30", text: "Pagoda Chureito (Arakurayama Sengen): la imagen postal más icónica de Japón con la pagoda de 5 pisos y el Monte Fuji de fondo." },
       { time: "11:00", text: "Santuario Kitaguchi Hongu Fuji Sengen Jinja: punto de partida histórico de los peregrinos, con cedros gigantes milenarios y faroles de piedra." },
       { time: "12:15", text: "Aldea Oshino Hakkai: pintoresco pueblo con estanques cristalinos alimentados por el deshielo del Fuji y casas tradicionales de paja." },

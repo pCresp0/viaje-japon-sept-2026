@@ -489,13 +489,16 @@ export const days = [
     "history": "Le mont Fuji (3 776 m) est le volcan sacré et le symbole incontesté du Japon.",
     "schedule": [
       {
-        "text": "Vérifier les webcams en direct sur mtfujitoday.com et isfujivisible.com depuis l'hôtel à Tokyo (la règle d'or à 06h30)."
+        "text": "Vérifier les webcams en direct sur mtfujitoday.com et isfujivisible.com depuis l'hôtel à Tokyo (la règle d'or à 06h15)."
       },
       {
-        "text": "Train à grande vitesse Shinkansen de la gare de Tokyo à la gare de Mishima (~50 min)."
+        "text": "🚇 Hôtel → Ueno → Gare de Tokyo. (ex: Ligne Keihin-Tohoku depuis Ueno à 07:08, arrivée 07:15). Marcher 5 min jusqu'aux quais Shinkansen."
       },
       {
-        "text": "Rendez-vous à la sortie Sud de la gare de Mishima avec Ken Kaneshima à 08h20 et début du tour en minivan."
+        "text": "🚅 Tokaido-Sanyo Shinkansen KODAMA 805. Départ de Tokyo à 07:27, arrivée à Mishima à 08:20. IMPORTANT: Prendre le Kodama pour qu'il s'arrête à Mishima."
+      },
+      {
+        "text": "Rendez-vous à la sortie Sud de la gare de Mishima avec Ken Kaneshima à 08h25 et début du tour en minivan."
       },
       {
         "text": "Pagode Chureito : carte postale iconique avec la pagode à 5 étages et le mont Fuji en arrière-plan."
