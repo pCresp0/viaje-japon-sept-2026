@@ -162,7 +162,7 @@ export default function VisitJapanQRCard() {
           </div>
         ) : (
           <div
-            className="p-3.5 rounded-xl border flex flex-col sm:flex-row sm:items-center justify-between gap-2.5"
+            className="px-3.5 py-2 rounded-xl border flex flex-col sm:flex-row sm:items-center justify-between gap-2.5"
             style={{ background: "var(--paper)", borderColor: "var(--line)" }}
           >
             <div className="flex items-center gap-2">
@@ -185,7 +185,7 @@ export default function VisitJapanQRCard() {
 
         {/* Web Oficial Visit Japan Web */}
         <div
-          className="p-3 rounded-xl border flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-xs"
+          className="px-3 py-2 rounded-xl border flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-xs"
           style={{ background: "rgba(30, 58, 138, 0.04)", borderColor: "rgba(30, 58, 138, 0.15)" }}
         >
           <div className="flex items-center gap-2">
