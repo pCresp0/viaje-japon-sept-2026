@@ -51,19 +51,34 @@ export const days = [
         "text": "Réveil."
       },
       {
-        "text": "Sanctuaire Fushimi Inari. Ligne D de JR Nara de la gare de Kyoto à la gare d'Inari (env. 1 €, 5 min)."
+        "text": "🚆 Ligne JR Nara : Kyoto Station → Inari Station (env. 5 min). Aucune réservation requise ; utilisez une carte IC ou un billet simple."
       },
       {
-        "text": "D'Inari, continuez sur la ligne JR directement vers Nara (45 min)."
+        "text": "Sanctuaire Fushimi Inari. Il n'est pas nécessaire de monter jusqu'au sommet du mont Inari ; gardez le parcours flexible selon votre énergie et votre temps."
       },
       {
-        "text": "Visite du Grand Bouddha (Todai-ji) et du parc aux cerfs. Déjeuner à Nara."
+        "text": "🚆 Ligne JR Nara : Inari → Nara. Train LOCAL direct, sans correspondance, environ 50–55 min. Aucune réservation requise. Important : tous les trains de la ligne ne s'arrêtent pas à Inari ; utilisez un service Local."
       },
       {
-        "text": "Train de retour à Kyoto."
+        "text": "🏯 Todai-ji et Grand Bouddha."
       },
       {
-        "text": "Promenade au coucher du soleil à travers Pontocho et le quartier des geishas de Miyagawacho."
+        "text": "🦌 Parc de Nara et cerfs."
+      },
+      {
+        "text": "🍜 Déjeuner à Nara."
+      },
+      {
+        "text": "Promenade tranquille dans Nara. Nigatsu-do en option si on a le temps."
+      },
+      {
+        "text": "🚆 JR Nara → Kyoto. Prenez le prochain service qui vous convient ; il n'est pas nécessaire de réserver."
+      },
+      {
+        "text": "🌇 Promenade dans Pontocho, Kamogawa, Miyagawacho et Gion. Le coucher du soleil sera vers 18h15, ce qui permet de profiter de l'heure bleue. Yasaka Jinja peut être visité en option si on a le temps."
+      },
+      {
+        "text": "🎫 Réservations : il n'est pas nécessaire de réserver à l'avance aucun des trains de cette journée. Kyoto → Inari, Inari → Nara et Nara → Kyoto sont des trajets régionaux JR. Utilisez une carte IC ou achetez un billet à la gare."
       }
     ],
     "money": "Env. 40 € (repas)"

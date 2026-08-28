@@ -51,19 +51,34 @@ export const days = [
         "text": "Wake up."
       },
       {
-        "text": "Fushimi Inari Shrine. JR Nara Line D from Kyoto Station to Inari Station (approx. €1, 5 mins)."
+        "text": "🚆 JR Nara Line: Kyoto Station → Inari Station (approx. 5 min). No reservation required; use IC card or single ticket."
       },
       {
-        "text": "From Inari, continue on the JR line directly to Nara (45 mins)."
+        "text": "Fushimi Inari Shrine. It is not necessary to hike to the top of Mount Inari; keep it a flexible walk depending on energy and time."
       },
       {
-        "text": "Visit the Great Buddha (Todai-ji) and deer park. Lunch in Nara."
+        "text": "🚆 JR Nara Line: Inari → Nara. Direct LOCAL train, no transfers, approx. 50–55 min. No reservation required. Important: not all trains on this line stop at Inari; make sure to use a Local service."
       },
       {
-        "text": "Train back to Kyoto."
+        "text": "🏯 Todai-ji and Great Buddha."
       },
       {
-        "text": "Sunset stroll through Pontocho and the Miyagawacho geisha district."
+        "text": "🦌 Nara Park and deer."
+      },
+      {
+        "text": "🍜 Lunch in Nara."
+      },
+      {
+        "text": "Peaceful stroll through Nara. Nigatsu-do optional if there's enough time."
+      },
+      {
+        "text": "🚆 JR Nara → Kyoto. Catch the next convenient service; no reservation needed."
+      },
+      {
+        "text": "🌇 Walk through Pontocho, Kamogawa, Miyagawacho, and Gion. Sunset will be around 18:15, allowing you to enjoy the blue hour. Yasaka Jinja can optionally be visited if time permits."
+      },
+      {
+        "text": "🎫 Reservations: no advance reservations are needed for any trains today. Kyoto → Inari, Inari → Nara, and Nara → Kyoto are regional JR routes. Use an IC card or buy tickets at the station."
       }
     ],
     "money": "Approx. €40 (meals)"
