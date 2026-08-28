@@ -1,66 +1,97 @@
 import { useState } from "react";
-import { QrCode, Lock, Unlock, Eye, X, CheckCircle2, ShieldCheck, Download } from "lucide-react";
+import { QrCode, Lock, Unlock, Eye, X, CheckCircle2, ShieldCheck, Download, UserCheck, ChevronRight } from "lucide-react";
+
+export const groupMembers = [
+  { id: "pablo", name: "Pablo Crespo Bellido", hasQR: true, qrPath: "/images/visit-japan-qr.png", role: "Titular", pass: "cresp0" },
+  { id: "sergio", name: "Sergio Crespo Bellido", hasQR: false, role: "Viajero", pass: "cresp0" },
+  { id: "juancarlos", name: "Juan Carlos Rodríguez", hasQR: false, role: "Viajero", pass: "cresp0" },
+  { id: "gerundio", name: "Gerundio Guial", hasQR: false, role: "Viajero", pass: "cresp0" },
+  { id: "viajero5", name: "5º Viajero del Grupo", hasQR: false, role: "Viajero", pass: "cresp0" },
+];
 
 export default function VisitJapanQRCard() {
-  const [unlocked, setUnlocked] = useState(false);
-  const [showPasswordModal, setShowPasswordModal] = useState(false);
+  const [selectedMember, setSelectedMember] = useState(null);
+  const [step, setStep] = useState("idle"); // 'idle' | 'select_member' | 'enter_password' | 'unlocked'
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [showFullQR, setShowFullQR] = useState(false);
 
-  function handleUnlock(e) {
+  function startUnlockFlow() {
+    setStep("select_member");
+    setError(false);
+    setPassword("");
+  }
+
+  function handleSelectMember(member) {
+    setSelectedMember(member);
+    setStep("enter_password");
+    setError(false);
+    setPassword("");
+  }
+
+  function handlePasswordSubmit(e) {
     e?.preventDefault();
-    if (password.trim().toLowerCase() === "cresp0") {
-      setUnlocked(true);
-      setShowPasswordModal(false);
-      setPassword("");
+    const correctPass = selectedMember?.pass || "cresp0";
+    if (password.trim().toLowerCase() === correctPass.toLowerCase()) {
+      setStep("unlocked");
       setError(false);
-      setShowFullQR(true);
+      setPassword("");
+      if (selectedMember?.hasQR) {
+        setShowFullQR(true);
+      }
     } else {
       setError(true);
     }
   }
 
+  function handleLock() {
+    setStep("idle");
+    setSelectedMember(null);
+    setShowFullQR(false);
+    setPassword("");
+    setError(false);
+  }
+
   return (
     <div
-      className="rounded-2xl border overflow-hidden transition-all shadow-sm mb-4"
+      className="rounded-2xl border overflow-hidden shadow-sm mb-4"
       style={{
         background: "var(--paper-raised)",
-        borderColor: "rgba(27, 67, 50, 0.3)",
+        borderColor: "var(--line)",
       }}
     >
       {/* Header Bar */}
       <div
-        className="px-4 py-3.5 flex items-center justify-between gap-3 text-white"
+        className="px-4 py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-white"
         style={{
           background: "linear-gradient(135deg, #1e3a8a 0%, #1e40af 60%, #1d4ed8 100%)",
         }}
       >
-        <div className="flex items-center gap-2.5 min-w-0">
-          <div className="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center shrink-0">
-            <QrCode size={18} className="text-white" />
+        <div className="flex items-start sm:items-center gap-3 min-w-0">
+          <div className="w-9 h-9 rounded-xl bg-white/20 flex items-center justify-center shrink-0 shadow-sm mt-0.5 sm:mt-0">
+            <QrCode size={19} className="text-white" />
           </div>
           <div className="min-w-0">
             <div className="flex items-center gap-1.5 flex-wrap">
               <span className="text-[10px] bg-amber-400 text-slate-950 font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">
                 Visit Japan Web
               </span>
-              <span className="text-xs text-blue-100 font-semibold hidden sm:inline">
-                CRESPO PABLO
+              <span className="text-xs text-blue-100 font-semibold">
+                Inmigración y Aduanas (5 Viajeros)
               </span>
             </div>
-            <p className="text-xs sm:text-sm font-bold text-white leading-tight mt-0.5">
-              QR Oficial de Inmigración y Declaración de Aduana
-            </p>
+            <h3 className="text-sm sm:text-base font-bold text-white leading-tight mt-0.5" style={{ margin: 0 }}>
+              Código QR de Llegada a Narita
+            </h3>
           </div>
         </div>
 
-        <div className="shrink-0">
-          {unlocked ? (
+        <div className="shrink-0 flex items-center gap-2">
+          {step === "unlocked" ? (
             <button
               type="button"
               onClick={() => setShowFullQR(true)}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-white text-blue-900 shadow-sm active:scale-95 transition-all"
+              className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-white text-blue-900 shadow-sm active:scale-95 transition-all w-full sm:w-auto"
             >
               <Eye size={14} />
               Ver QR
@@ -68,66 +99,185 @@ export default function VisitJapanQRCard() {
           ) : (
             <button
               type="button"
-              onClick={() => setShowPasswordModal(true)}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-amber-400 text-slate-950 hover:bg-amber-300 shadow-sm active:scale-95 transition-all"
+              onClick={startUnlockFlow}
+              className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-amber-400 text-slate-950 hover:bg-amber-300 shadow-sm active:scale-95 transition-all w-full sm:w-auto"
             >
               <Lock size={14} />
-              Desbloquear QR
+              Ver QR
             </button>
           )}
         </div>
       </div>
 
       {/* Card Body */}
-      <div className="p-4 space-y-2.5 text-xs" style={{ color: "var(--ink)" }}>
-        <p style={{ color: "var(--ink)", lineHeight: 1.5, margin: 0 }}>
-          Código QR generado en la web oficial de <strong>Visit Japan Web</strong> para agilizar los controles de inmigración y aduanas en el Aeropuerto de Narita. Protegido con contraseña.
+      <div className="p-4 sm:p-5 space-y-3">
+        <p style={{ fontSize: 13, color: "var(--ink)", lineHeight: 1.5, margin: 0 }}>
+          Código QR generado en la web oficial de <strong>Visit Japan Web</strong> para agilizar los controles de inmigración y aduanas en el Aeropuerto de Narita. Selecciona quién eres y desbloquéalo con tu contraseña.
         </p>
 
-        {unlocked ? (
-          <div className="p-3.5 rounded-xl border flex flex-col sm:flex-row items-center justify-between gap-3 bg-emerald-50/60 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800">
-            <div className="flex items-center gap-2 text-emerald-800 dark:text-emerald-300 font-semibold">
-              <CheckCircle2 size={16} className="text-emerald-600" />
-              <span>QR Desbloqueado para CRESPO PABLO</span>
+        {step === "unlocked" && selectedMember ? (
+          <div
+            className="p-4 rounded-xl border flex flex-col gap-3"
+            style={{ background: "rgba(45, 106, 79, 0.06)", borderColor: "rgba(45, 106, 79, 0.3)" }}
+          >
+            <div className="flex items-center gap-2">
+              <CheckCircle2 size={18} style={{ color: "var(--forest)" }} />
+              <div>
+                <p style={{ fontSize: 13, fontWeight: 700, color: "var(--forest)", margin: 0 }}>
+                  Acceso desbloqueado: {selectedMember.name}
+                </p>
+                <p style={{ fontSize: 11, color: "var(--ink-soft)", margin: 0 }}>
+                  {selectedMember.hasQR
+                    ? "QR oficial cargado y listo para escanear en los tornos."
+                    : "Código QR individual pendiente de asociar."}
+                </p>
+              </div>
             </div>
-            <div className="flex gap-2">
+
+            <div className="flex flex-wrap gap-2 pt-1">
+              {selectedMember.hasQR ? (
+                <button
+                  type="button"
+                  onClick={() => setShowFullQR(true)}
+                  className="px-3.5 py-2 rounded-xl text-xs font-bold text-white shadow-sm transition-all"
+                  style={{ background: "var(--forest)" }}
+                >
+                  Mostrar QR en Pantalla Completa 📱
+                </button>
+              ) : (
+                <span className="text-xs text-amber-700 bg-amber-100 dark:bg-amber-950 px-3 py-1.5 rounded-xl border border-amber-300">
+                  QR de este viajero no cargado aún
+                </span>
+              )}
+
               <button
                 type="button"
-                onClick={() => setShowFullQR(true)}
-                className="px-3 py-1.5 rounded-lg text-xs font-bold bg-emerald-700 text-white"
+                onClick={handleLock}
+                className="px-3 py-2 rounded-xl text-xs font-bold border transition-all"
+                style={{ background: "var(--paper)", borderColor: "var(--line)", color: "var(--ink)" }}
               >
-                Mostrar en Pantalla Completa
-              </button>
-              <button
-                type="button"
-                onClick={() => setUnlocked(false)}
-                className="px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-600 dark:text-slate-300 border border-slate-300 dark:border-slate-700"
-              >
-                Bloquear
+                Cambiar de persona / Bloquear 🔒
               </button>
             </div>
           </div>
         ) : (
-          <div className="flex items-center justify-between pt-1">
-            <span style={{ color: "var(--ink-soft)" }}>
-              🔒 Requiere contraseña para visualizar
-            </span>
+          <div
+            className="p-3.5 rounded-xl border flex flex-col sm:flex-row sm:items-center justify-between gap-2.5"
+            style={{ background: "var(--paper)", borderColor: "var(--line)" }}
+          >
+            <div className="flex items-center gap-2">
+              <Lock size={15} style={{ color: "var(--indigo)" }} />
+              <span style={{ fontSize: 12, color: "var(--ink-soft)", fontWeight: 500 }}>
+                Protegido por contraseña para cada miembro del grupo
+              </span>
+            </div>
+
             <button
               type="button"
-              onClick={() => setShowPasswordModal(true)}
-              className="font-bold underline text-xs text-blue-700 dark:text-blue-400 hover:opacity-80"
+              onClick={startUnlockFlow}
+              className="text-xs font-bold px-3 py-1.5 rounded-lg text-white shadow-sm w-fit"
+              style={{ background: "var(--indigo)" }}
             >
-              Introducir clave
+              Seleccionar viajero y ver QR ↗
             </button>
           </div>
         )}
       </div>
 
-      {/* Password Modal */}
-      {showPasswordModal && (
+      {/* Modal Paso 1: Elegir quién eres de los 5 */}
+      {step === "select_member" && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fadeIn"
-          onClick={() => setShowPasswordModal(false)}
+          onClick={() => setStep("idle")}
+        >
+          <div
+            className="rounded-2xl max-w-md w-full p-6 shadow-2xl border"
+            style={{ background: "var(--paper-raised)", borderColor: "var(--line)", color: "var(--ink)" }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-2.5">
+                <div
+                  className="w-9 h-9 rounded-xl flex items-center justify-center text-white"
+                  style={{ background: "var(--indigo)" }}
+                >
+                  <UserCheck size={18} />
+                </div>
+                <div>
+                  <h3 className="font-bold text-base" style={{ color: "var(--ink)", margin: 0 }}>
+                    ¿Quién eres?
+                  </h3>
+                  <p style={{ fontSize: 11, color: "var(--ink-soft)", margin: 0 }}>
+                    Selecciona tu nombre para abrir tu QR de Visit Japan
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setStep("idle")}
+                className="p-1.5 rounded-lg hover:bg-black/5"
+                style={{ color: "var(--ink-soft)" }}
+              >
+                <X size={18} />
+              </button>
+            </div>
+
+            <div className="space-y-2 my-4">
+              {groupMembers.map((m) => (
+                <button
+                  key={m.id}
+                  type="button"
+                  onClick={() => handleSelectMember(m)}
+                  className="w-full p-3 rounded-xl border flex items-center justify-between text-left transition-all hover:scale-[1.01]"
+                  style={{
+                    background: "var(--paper)",
+                    borderColor: "var(--line)",
+                  }}
+                >
+                  <div className="flex items-center gap-2.5">
+                    <div
+                      className="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold"
+                      style={{
+                        background: m.hasQR ? "rgba(45, 106, 79, 0.15)" : "rgba(0,0,0,0.06)",
+                        color: m.hasQR ? "var(--forest)" : "var(--ink-soft)",
+                      }}
+                    >
+                      {m.name.charAt(0)}
+                    </div>
+                    <div>
+                      <p style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)", margin: 0 }}>
+                        {m.name}
+                      </p>
+                      <p style={{ fontSize: 11, color: "var(--ink-soft)", margin: 0 }}>
+                        {m.hasQR ? "🟢 QR oficial disponible" : "⚪ Pendiente de asociar QR"}
+                      </p>
+                    </div>
+                  </div>
+
+                  <ChevronRight size={16} style={{ color: "var(--ink-soft)" }} />
+                </button>
+              ))}
+            </div>
+
+            <div className="flex justify-end pt-2">
+              <button
+                type="button"
+                onClick={() => setStep("idle")}
+                className="px-4 py-2 rounded-xl text-xs font-semibold border"
+                style={{ borderColor: "var(--line)", color: "var(--ink)" }}
+              >
+                Cancelar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Modal Paso 2: Introducir Contraseña */}
+      {step === "enter_password" && selectedMember && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fadeIn"
+          onClick={() => setStep("idle")}
         >
           <div
             className="rounded-2xl max-w-sm w-full p-6 shadow-2xl border"
@@ -136,16 +286,24 @@ export default function VisitJapanQRCard() {
           >
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white">
+                <div
+                  className="w-8 h-8 rounded-lg flex items-center justify-center text-white"
+                  style={{ background: "var(--indigo)" }}
+                >
                   <Lock size={16} />
                 </div>
-                <h3 className="font-bold text-sm" style={{ color: "var(--ink)", margin: 0 }}>
-                  Acceso a Visit Japan QR
-                </h3>
+                <div>
+                  <h3 className="font-bold text-sm" style={{ color: "var(--ink)", margin: 0 }}>
+                    Clave de Acceso
+                  </h3>
+                  <p style={{ fontSize: 11, color: "var(--ink-soft)", margin: 0 }}>
+                    {selectedMember.name}
+                  </p>
+                </div>
               </div>
               <button
                 type="button"
-                onClick={() => setShowPasswordModal(false)}
+                onClick={() => setStep("idle")}
                 className="p-1 rounded-lg hover:bg-black/5"
                 style={{ color: "var(--ink-soft)" }}
               >
@@ -153,10 +311,10 @@ export default function VisitJapanQRCard() {
               </button>
             </div>
 
-            <form onSubmit={handleUnlock} className="space-y-4">
+            <form onSubmit={handlePasswordSubmit} className="space-y-4">
               <div>
                 <label style={{ fontSize: 12, fontWeight: 600, color: "var(--ink)", display: "block", marginBottom: 6 }}>
-                  Introduce la contraseña:
+                  Introduce la contraseña para desbloquear:
                 </label>
                 <input
                   type="password"
@@ -167,7 +325,7 @@ export default function VisitJapanQRCard() {
                     setError(false);
                   }}
                   placeholder="Contraseña"
-                  className="w-full px-3 py-2 rounded-xl border text-sm font-semibold outline-none transition-all"
+                  className="w-full px-3.5 py-2.5 rounded-xl border text-sm font-semibold outline-none transition-all"
                   style={{
                     background: "var(--paper)",
                     borderColor: error ? "var(--shu)" : "var(--line)",
@@ -181,30 +339,33 @@ export default function VisitJapanQRCard() {
                 )}
               </div>
 
-              <div className="flex justify-end gap-2 pt-1">
+              <div className="flex justify-between items-center pt-2">
                 <button
                   type="button"
-                  onClick={() => setShowPasswordModal(false)}
-                  className="px-4 py-2 rounded-xl text-xs font-semibold border"
-                  style={{ borderColor: "var(--line)", color: "var(--ink)" }}
+                  onClick={() => setStep("select_member")}
+                  className="text-xs font-semibold underline"
+                  style={{ color: "var(--ink-soft)" }}
                 >
-                  Cancelar
+                  ← Cambiar persona
                 </button>
-                <button
-                  type="submit"
-                  className="px-4 py-2 rounded-xl text-xs font-bold text-white shadow-sm"
-                  style={{ background: "var(--indigo)" }}
-                >
-                  Desbloquear
-                </button>
+
+                <div className="flex gap-2">
+                  <button
+                    type="submit"
+                    className="px-4 py-2 rounded-xl text-xs font-bold text-white shadow-sm"
+                    style={{ background: "var(--indigo)" }}
+                  >
+                    Desbloquear
+                  </button>
+                </div>
               </div>
             </form>
           </div>
         </div>
       )}
 
-      {/* Fullscreen / High Contrast QR Viewer Modal */}
-      {showFullQR && (
+      {/* Modal Pantalla Completa QR */}
+      {showFullQR && selectedMember && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fadeIn"
           onClick={() => setShowFullQR(false)}
@@ -229,17 +390,17 @@ export default function VisitJapanQRCard() {
               QR Code for Immigration & Customs
             </p>
 
-            {/* QR Image with high contrast white background */}
+            {/* QR Image con fondo blanco puro y alto contraste para escáneres */}
             <div className="p-3 bg-white border-2 border-slate-900 rounded-2xl shadow-inner mb-4">
               <img
-                src="/images/visit-japan-qr.png"
-                alt="QR Code Visit Japan Web - CRESPO PABLO"
+                src={selectedMember.qrPath || "/images/visit-japan-qr.png"}
+                alt={`QR Code Visit Japan Web - ${selectedMember.name}`}
                 className="w-64 h-64 object-contain"
               />
             </div>
 
             <p className="font-mono text-base font-extrabold text-slate-950 tracking-wider">
-              CRESPO PABLO
+              {selectedMember.name.toUpperCase()}
             </p>
             <p className="text-[11px] text-slate-500 mt-1">
               Muestra este código directamente en los lectores de inmigración y aduanas de Narita.
@@ -247,8 +408,8 @@ export default function VisitJapanQRCard() {
 
             <div className="w-full flex gap-2 mt-5">
               <a
-                href="/images/visit-japan-qr.png"
-                download="Visit_Japan_QR_Crespo_Pablo.png"
+                href={selectedMember.qrPath || "/images/visit-japan-qr.png"}
+                download={`Visit_Japan_QR_${selectedMember.name.replace(/\s+/g, "_")}.png`}
                 className="flex-1 py-2.5 px-3 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-900 flex items-center justify-center gap-1.5"
               >
                 <Download size={14} />
