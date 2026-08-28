@@ -51,19 +51,22 @@ export const days = [
         "text": "Gumising."
       },
       {
-        "text": "🚆 JR Nara Line: Kyoto Station → Inari Station (tinatayang 5 min). Walang kailangang reserbasyon; gumamit ng IC card o single ticket."
+        "text": "🚆 JR Nara Line: Kyoto Station → Inari Station (~5 min). Walang reserbasyon. Gumamit ng IC card o bumili ng single ticket sa istasyon. Ang Inari Station ay nasa tabi mismo ng Fushimi Inari."
       },
       {
-        "text": "Fushimi Inari Shrine. Hindi kailangang umakyat hanggang sa tuktok ng Mount Inari; gawin itong flexible na paglalakad depende sa enerhiya at oras."
+        "text": "Fushimi Inari Shrine. 💡 Tip: ang pagdating ng maaga ay lubos na inirerekomenda upang maiwasan ang maraming tao. Hindi kailangang umakyat hanggang sa tuktok ng Mount Inari; kung kapos sa oras o pagod, umakyat lang nang bahagya at bumalik."
       },
       {
-        "text": "🚆 JR Nara Line: Inari → Nara. Direktang LOCAL train, walang transfer, tinatayang 50–55 min. Walang kailangang reserbasyon. Mahalaga: hindi lahat ng tren sa linya na ito ay humihinto sa Inari; gumamit ng Local service."
+        "text": "🚆 JR Nara Line: Inari → Nara. Direktang tren pa-Nara, walang transfer, tinatayang 50–55 min. Walang kailangang reserbasyon. Sa Inari, siguraduhin na ang napiling tren ay humihinto sa Inari at didiretso sa Nara."
       },
       {
-        "text": "🏯 Todai-ji at Great Buddha."
+        "text": "🚌 Mula JR Nara Station → Tōdai-ji: Local Nara Kotsu bus papuntang Tōdai-ji Daibutsuden/Kasuga Taisha-mae area, tapos ilang minutong lakad. Alternatibo: taxi mula JR Nara Station kung kapos sa oras. Pwede ring lakarin, pero mas matagal. Huwag mag-book ng maaga."
       },
       {
-        "text": "🦌 Nara Park at mga usa."
+        "text": "🏯 Bisitahin ang Daibutsuden at ang Great Buddha. Ang pagbisita sa loob ng Great Buddha ang pangunahing bahagi; pagkatapos ay pwede tayong umikot sandali sa paligid. Huwag mag-book ng tiket nang maaga."
+      },
+      {
+        "text": "🦌 Nara Park at mga usa. 🦌 Kung bibili tayo ng shika senbei para sa mga usa, ibigay ang mga biskwit at ipakita ang mga walang laman na kamay kapag ubos na: ang ilang mga usa ay maaaring maging mapilit kung akala nila ay mayroon pa tayong pagkain."
       },
       {
         "text": "🍜 Tanghalian sa Nara."
@@ -72,13 +75,13 @@ export const days = [
         "text": "Payapang paglalakad sa Nara. Opsiyonal ang Nigatsu-do kung may sapat na oras."
       },
       {
-        "text": "🚆 JR Nara → Kyoto. Sakyan ang susunod na maginhawang byahe; walang kailangang reserbasyon."
+        "text": "🚆 JR Nara → Kyoto. Sakyan ang susunod na maginhawang byahe papuntang Kyoto. Walang kailangang reserbasyon. Gumamit ng IC card o bumili ng single ticket. Kung mayroong maginhawang Miyakoji Rapid, pwede itong sakyan upang mapabilis ang byahe."
       },
       {
-        "text": "🌇 Paglalakad sa Pontocho, Kamogawa, Miyagawacho, at Gion. Ang paglubog ng araw ay bandang 18:15, kaya mae-enjoy mo rin ang blue hour. Opsiyonal ang Yasaka Jinja kung may sapat na oras."
+        "text": "🌇 Paglalakad sa Pontocho, Kamogawa, Miyagawacho, at Gion. Ang paglubog ng araw ay bandang 18:15, kaya mae-enjoy mo rin ang blue hour. Opsiyonal ang Yasaka Jinja kung may sapat na oras. 🚶 Pagdating sa Gion/Pontocho area, dapat gawin ang paglilibot sa pamamagitan ng paglalakad."
       },
       {
-        "text": "🎫 Mga Reserbasyon: hindi na kailangan ng maagang reserbasyon para sa anumang tren ngayong araw. Ang Kyoto → Inari, Inari → Nara, at Nara → Kyoto ay mga regional JR routes. Gumamit ng IC card o bumili ng tiket sa istasyon."
+        "text": "🎫 MGA RESERBASYON: hindi kailangan ng maagang reserbasyon para sa alinmang tren ngayong araw. Ang lahat ng byahe sa tren ngayong araw ay mga regional/local na serbisyo. Pwedeng magbayad gamit ang IC card o single ticket na binili sa mga makina sa istasyon. Wala tayong Japan Rail Pass at hindi ito kailangan para sa araw na ito."
       }
     ],
     "money": "Tinatayang €40 (pagkain)"

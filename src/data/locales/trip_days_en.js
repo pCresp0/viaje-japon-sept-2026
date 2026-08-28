@@ -51,19 +51,22 @@ export const days = [
         "text": "Wake up."
       },
       {
-        "text": "🚆 JR Nara Line: Kyoto Station → Inari Station (approx. 5 min). No reservation required; use IC card or single ticket."
+        "text": "🚆 JR Nara Line: Kyoto Station → Inari Station (~5 min). No reservation. Use IC card or buy a single ticket at the station. Inari Station is right next to Fushimi Inari."
       },
       {
-        "text": "Fushimi Inari Shrine. It is not necessary to hike to the top of Mount Inari; keep it a flexible walk depending on energy and time."
+        "text": "Fushimi Inari Shrine. 💡 Tip: arriving early is highly recommended to avoid major crowds. It is not necessary to climb to the top of Mount Inari; if pressed for time or tired, do a partial climb and return."
       },
       {
-        "text": "🚆 JR Nara Line: Inari → Nara. Direct LOCAL train, no transfers, approx. 50–55 min. No reservation required. Important: not all trains on this line stop at Inari; make sure to use a Local service."
+        "text": "🚆 JR Nara Line: Inari → Nara. Direct train to Nara, no transfers, approx. 50–55 min. No reservation required. In Inari, verify that the chosen service stops at Inari and continues to Nara."
       },
       {
-        "text": "🏯 Todai-ji and Great Buddha."
+        "text": "🚌 From JR Nara Station → Tōdai-ji: Local Nara Kotsu bus to the Tōdai-ji Daibutsuden/Kasuga Taisha-mae area, then a few minutes walk. Alternative: taxi from JR Nara Station if tight on time. Walking is also possible but takes longer. Do not book in advance."
       },
       {
-        "text": "🦌 Nara Park and deer."
+        "text": "🏯 Visit the Daibutsuden and the Great Buddha. The visit inside the Great Buddha is the main part; afterwards we can briefly tour the grounds. Do not book tickets in advance."
+      },
+      {
+        "text": "🦌 Nara Park and deer. 🦌 If we buy shika senbei for the deer, give them the crackers and show empty hands when finished: some deer can get quite insistent if they think we still have food."
       },
       {
         "text": "🍜 Lunch in Nara."
@@ -72,13 +75,13 @@ export const days = [
         "text": "Peaceful stroll through Nara. Nigatsu-do optional if there's enough time."
       },
       {
-        "text": "🚆 JR Nara → Kyoto. Catch the next convenient service; no reservation needed."
+        "text": "🚆 JR Nara → Kyoto. Catch the next convenient service to Kyoto. No reservation required. Use an IC card or buy a single ticket. If there is a convenient Miyakoji Rapid, it can be used to reduce travel time."
       },
       {
-        "text": "🌇 Walk through Pontocho, Kamogawa, Miyagawacho, and Gion. Sunset will be around 18:15, allowing you to enjoy the blue hour. Yasaka Jinja can optionally be visited if time permits."
+        "text": "🌇 Walk through Pontocho, Kamogawa, Miyagawacho, and Gion. Sunset will be around 18:15, allowing you to enjoy the blue hour. Yasaka Jinja can optionally be visited if time permits. 🚶 Once in the Gion/Pontocho area, the tour should be done mainly on foot."
       },
       {
-        "text": "🎫 Reservations: no advance reservations are needed for any trains today. Kyoto → Inari, Inari → Nara, and Nara → Kyoto are regional JR routes. Use an IC card or buy tickets at the station."
+        "text": "🎫 RESERVATIONS: no advance reservations are needed for any trains today. All rail journeys today are regional/local services. They can be paid on the go with an IC card or a single ticket bought at the station machines. We do not have a Japan Rail Pass and it is not needed for this day."
       }
     ],
     "money": "Approx. €40 (meals)"

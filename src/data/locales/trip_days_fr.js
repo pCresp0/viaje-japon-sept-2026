@@ -51,19 +51,22 @@ export const days = [
         "text": "Réveil."
       },
       {
-        "text": "🚆 Ligne JR Nara : Kyoto Station → Inari Station (env. 5 min). Aucune réservation requise ; utilisez une carte IC ou un billet simple."
+        "text": "🚆 Ligne JR Nara : Kyoto Station → Inari Station (~5 min). Aucune réservation. Utilisez une carte IC ou achetez un billet simple à la gare. Inari Station est juste à côté de Fushimi Inari."
       },
       {
-        "text": "Sanctuaire Fushimi Inari. Il n'est pas nécessaire de monter jusqu'au sommet du mont Inari ; gardez le parcours flexible selon votre énergie et votre temps."
+        "text": "Sanctuaire Fushimi Inari. 💡 Conseil : arriver tôt est vivement recommandé pour éviter les foules. Il n'est pas nécessaire de monter jusqu'au sommet du mont Inari ; si vous manquez de temps ou êtes fatigués, faites une montée partielle et revenez."
       },
       {
-        "text": "🚆 Ligne JR Nara : Inari → Nara. Train LOCAL direct, sans correspondance, environ 50–55 min. Aucune réservation requise. Important : tous les trains de la ligne ne s'arrêtent pas à Inari ; utilisez un service Local."
+        "text": "🚆 Ligne JR Nara : Inari → Nara. Train direct vers Nara, sans correspondance, environ 50–55 min. Aucune réservation requise. À Inari, vérifiez que le service choisi s'arrête bien à Inari et continue vers Nara."
       },
       {
-        "text": "🏯 Todai-ji et Grand Bouddha."
+        "text": "🚌 De JR Nara Station → Tōdai-ji : Bus local Nara Kotsu jusqu'au quartier de Tōdai-ji Daibutsuden/Kasuga Taisha-mae, puis quelques minutes de marche. Alternative : taxi depuis JR Nara Station si on manque de temps. Il est aussi possible d'y aller à pied, mais cela prend plus de temps. Ne réservez pas à l'avance."
       },
       {
-        "text": "🦌 Parc de Nara et cerfs."
+        "text": "🏯 Visite du Daibutsuden et du Grand Bouddha. La visite de l'intérieur du Grand Bouddha est la partie principale ; ensuite nous pourrons faire un petit tour du domaine. Ne réservez pas les billets à l'avance."
+      },
+      {
+        "text": "🦌 Parc de Nara et cerfs. 🦌 Si nous achetons des shika senbei pour les cerfs, donnez-leur les biscuits et montrez vos mains vides quand c'est fini : certains cerfs peuvent devenir assez insistants s'ils croient que nous avons encore de la nourriture."
       },
       {
         "text": "🍜 Déjeuner à Nara."
@@ -72,13 +75,13 @@ export const days = [
         "text": "Promenade tranquille dans Nara. Nigatsu-do en option si on a le temps."
       },
       {
-        "text": "🚆 JR Nara → Kyoto. Prenez le prochain service qui vous convient ; il n'est pas nécessaire de réserver."
+        "text": "🚆 JR Nara → Kyoto. Prenez le prochain service pratique vers Kyoto. Aucune réservation requise. Utilisez une carte IC ou achetez un billet simple. S'il y a un service Miyakoji Rapid pratique, vous pouvez l'emprunter pour réduire le temps de trajet."
       },
       {
-        "text": "🌇 Promenade dans Pontocho, Kamogawa, Miyagawacho et Gion. Le coucher du soleil sera vers 18h15, ce qui permet de profiter de l'heure bleue. Yasaka Jinja peut être visité en option si on a le temps."
+        "text": "🌇 Promenade dans Pontocho, Kamogawa, Miyagawacho et Gion. Le coucher du soleil sera vers 18h15, ce qui permet de profiter de l'heure bleue. Yasaka Jinja peut être visité en option si on a le temps. 🚶 Une fois dans le quartier de Gion/Pontocho, faites le parcours principalement à pied."
       },
       {
-        "text": "🎫 Réservations : il n'est pas nécessaire de réserver à l'avance aucun des trains de cette journée. Kyoto → Inari, Inari → Nara et Nara → Kyoto sont des trajets régionaux JR. Utilisez une carte IC ou achetez un billet à la gare."
+        "text": "🎫 RÉSERVATIONS : il n'est pas nécessaire de réserver à l'avance aucun des trains de cette journée. Tous les trajets ferroviaires du jour sont des services régionaux/locaux. Ils peuvent être payés sur place avec une carte IC ou un billet simple acheté aux distributeurs de la gare. Nous n'avons pas de Japan Rail Pass et ce n'est pas nécessaire pour aujourd'hui."
       }
     ],
     "money": "Env. 40 € (repas)"
