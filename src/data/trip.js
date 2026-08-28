@@ -238,9 +238,9 @@ export const days = [
       "Kioto fue la capital imperial de Japón durante más de mil años, desde 794 hasta 1868. Es el corazón cultural y espiritual del país. Al haber sobrevivido casi intacta a los bombardeos de la Segunda Guerra Mundial, conserva gran parte de su milenaria arquitectura tradicional de madera.",
     schedule: [
       { time: "12:55", text: "Aterrizaje en Narita y trámites de aduana e inmigración (aprox. 1h 30m). Recuerda tener preparado el código QR de Visit Japan Web para agilizar el paso por los tornos." },
-      { time: "14:45", text: "Salida desde la planta B1 del aeropuerto (lado ROJO de Japan Railways) en el tren Narita Express (N'EX 30). Sacaremos el billete en la taquilla para el siguiente tren disponible. El trayecto dura 1 hora y 10 minutos sin transbordos hasta la Estación de Shinagawa (~19€). Nos bajamos estratégicamente aquí para evitar caminar 20 minutos por los laberintos subterráneos de la estación central de Tokio arrastrando las maletas." },
-      { time: "16:54", text: "En la misma Estación de Shinagawa, hacemos un transbordo rápido y accesible (aprox. 3 min) a las vías del tren bala. Cogeremos el Shinkansen Nozomi 51 con destino Kioto (aprox. 90€, 2h). Nota crítica de reserva: Comprar estos billetes semanas antes en la app SmartEX. Marcar 'Oversized Baggage' solo si la suma de las 3 dimensiones de la maleta es mayor a 160cm." },
-      { time: "19:00", text: "El Nozomi llega a JR Kyoto Station. Bajas del Shinkansen y sigues las indicaciones hacia Hachijo East Exit (八条東口). Sales de la estación por esa salida y en unos 5 minutos andando llegas al hotel (Hotel Keihan Kyoto Hachijoguchi). Check-in y cena." }
+      { time: "14:45", text: "Salida desde la planta B1 del aeropuerto en el tren Narita Express (N'EX 30) directo hasta Shinagawa. El trayecto dura algo más de una hora. (Ojo: los horarios exactos de tren pueden variar para septiembre de 2026, esto es orientativo)" },
+      { time: "16:54", text: "Transbordo en Shinagawa a las vías del tren bala. Subiremos al Shinkansen Nozomi 51 con destino Kioto. (La reserva se debe haber hecho semanas antes por SmartEX con 'Oversized Baggage' si alguna maleta mide más de 160cm en total)." },
+      { time: "~19:00", text: "Llegada a la estación de Kioto (JR Kyoto Station). Salimos por la salida Hachijo East Exit (八条東口). Desde ahí son solo unos 5 minutos andando hasta nuestro hotel (Hotel Keihan Kyoto Hachijoguchi)." }
     ],
     money: "Aprox. 40€ (comidas) + transportes",
   },
