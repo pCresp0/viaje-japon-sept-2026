@@ -171,31 +171,55 @@ export const days = [
     "history": "Ang Kiyomizu-dera ay itinatag noong 778; ang terrace nito ay itinayo nang hindi gumagamit ng isang pako. Ang Osaka Castle ay ang sentro ng militar ni Toyotomi Hideyoshi, isang pangunahing tauhan sa pag-iisa ng Japan noong ika-16 na siglo.",
     "schedule": [
       {
-        "text": "Paggising."
+        "text": "Gumising."
       },
       {
-        "text": "Kiyomizu-dera Temple (JR train o direktang bus, tinatayang 40 mins door to door)."
+        "text": "🚍 HOTEL → KIYOMIZU-DERA. Maglakad mula Hotel Keihan Kyoto Hachijoguchi papuntang Kyoto Station. Pangunahing opsyon: Kyoto City Bus 100 o 206 mula Kyoto Station. Bumaba sa Gojozaka. Maglakad ng halos 10 min papuntang Kiyomizu-dera. Alternatibo: Gamitin ang bagong Okoshi Bus Kiyomizu-dera Line, available tuwing weekdays mula Hulyo 2026, kung angkop sa iskedyul. Walang reserbasyon. Magbayad gamit ang IC card o ticket. Madalas ma-traffic ang mga bus sa Higashiyama. Umalis nang may sapat na oras."
       },
       {
-        "text": "Pagbaba sa pamamagitan ng mga dalisdis ng Higashiyama hanggang Yasaka Jinja, pagtawid sa Maruyama Park hanggang Chion-in Temple."
+        "text": "🏯 KIYOMIZU-DERA. Nagbubukas ng 06:00 at sa Setyembre 11 ay magsasara ng 18:00. Bisitahin: Main Hall / entablado ng Kiyomizu, Otowa-no-taki, Pagoda at paligid, mga kalsada ng Kiyomizu-zaka paglabas. Walang kailangang reserbasyon. 💡 Tip: Magandang unahin ang Kiyomizu-dera sa umaga upang maiwasan ang maraming tao."
       },
       {
-        "text": "Paglalakad papunta sa Okazaki Canal at Heian Jingu Temple."
+        "text": "🚶 HIGASHIYAMA → YASAKA → MARUYAMA → CHION-IN. Gawing puro paglalakad ang buong ruta: Kiyomizu-dera → Ninenzaka/Sannenzaka → Yasaka Jinja → Maruyama Park → Chion-in. 💡 Tip: Mas mae-enjoy ang lugar na ito kung lalakarin, at huwag sundan ang isang masyadong striktong ruta sa maliliit na eskinita. Huwag madaliin ang Higashiyama: ang kagandahan ay nasa mga kalye at maliliit na tindahan sa pagitan ng mga templo."
       },
       {
-        "text": "Tanghalian sa Kyoto."
+        "text": "⛩️ CHION-IN. Bisitahin ang grounds at ang Sanmon. Nagbubukas ang grounds ng 06:00; ang mga pagbisita/reception sa panloob na bahagi ay nagsisimula ng 09:00. Kung nais bisitahin ang mga panloob na hardin, suriin ang pagbubukas at bumili ng tiket doon. Walang reserbasyon."
       },
       {
-        "text": "Mabilis na tren papuntang Osaka (JR Line, 30 mins)."
+        "text": "🚶 CHION-IN → HEIAN JINGU. Ipagpatuloy ang paglalakad papuntang Heian Jingu."
       },
       {
-        "text": "Osaka Castle at mga hardin sa sikat ng araw."
+        "text": "⛩️ HEIAN JINGU. Bisitahin ang shrine at ang malaking torii. Nagbubukas ang grounds mula 06:00. Kung nais bisitahin ang hardin (Shin-en), ang oras nito sa Setyembre 11 ay halos 08:30–18:00, huling pasok ay 17:30. Walang kailangang reserbasyon."
       },
       {
-        "text": "Mga neon at street food sa paligid ng Dotonbori at Shinsekai."
+        "text": "🍜 TANGHALIAN SA KYOTO. MAHALAGA: Subukang matapos bandang 14:15 para may oras pa sa pag-tren papuntang Osaka."
       },
       {
-        "text": "Mabilis na tren pabalik para matulog sa Kyoto."
+        "text": "🚶 Paglipat sa Kyoto Station."
+      },
+      {
+        "text": "🚆 KYOTO → OSAKA. Sakyan ang JR Kyoto Line mula Kyoto Station patungong Osaka Station. Mas maigi ang Special Rapid (新快速) kung mayroon. Ang byahe ay halos 30 min. Walang reserbasyon. Hindi kailangan ng JR Pass. Magbayad gamit ang IC card o single ticket."
+      },
+      {
+        "text": "🚆 OSAKA STATION → MORINOMIYA. Mula Osaka Station, sakyan ang JR Osaka Loop Line patungong Morinomiya. Walang reserbasyon. Magbayad gamit ang IC card."
+      },
+      {
+        "text": "🚶 MORINOMIYA → OSAKA CASTLE. Maglakad sa Osaka Castle Park patungong kastilyo. Maglaan ng halos 15–20 min."
+      },
+      {
+        "text": "🏯 OSAKA CASTLE. MAHALAGA: Ang Osaka Castle Museum ay bukas mula 09:00–18:00, huling pasok ay 17:30. PAGPASOK SA LOOB NG KASTILYO: Gawing pangunahing bisita ang museo sa tore at ang observation deck. Pagpasok: ¥1,200 matanda. Hindi na kailangang magpareserba nang maaga. Bumili ng tiket sa mismong kastilyo. Pwedeng magbayad ng cash, card, at IC card. 💡 Tip: Sa Osaka Castle, maglaan ng halos 1.5–2 oras para sa museo + observation deck + labas."
+      },
+      {
+        "text": "🚇 OSAKA CASTLE → DOTONBORI. Mula Morinomiya gamitin ang Osaka Metro papuntang Namba/Dotonbori area. Walang reserbasyon. Gumamit ng IC card."
+      },
+      {
+        "text": "🌃 DOTONBORI + SHINSEKAI. Panggabing paglalakad at street food. Unahin: Dotonbori, Glico, Ebisu Bridge, Hozenji Yokocho. Kung may oras at lakas pa, tumuloy sa Shinsekai. 💡 Tips: Sa Dotonbori, hindi na kailangan mag-reserve para tumikim ng street food; pumili ng tindahan habang naglilibot. Ang Dotonbori ay mas maganda lalo na kapag gabi na, kaya magandang panatilihin ang pagdating bandang 18:30."
+      },
+      {
+        "text": "🚆 OSAKA → KYOTO. Bumalik sa Kyoto sakay ng JR. Walang reserbasyon. Gumamit ng IC card o single ticket."
+      },
+      {
+        "text": "🎫 MGA RESERBASYON PARA SA ARAW NA ITO: HUWAG mag-book ng anumang transportasyon. HUWAG gumamit ng SmartEX. HUWAG gumamit ng JR-WEST Online. Hindi natin kailangan ng Japan Rail Pass. Lahat ng byahe ay pwedeng bayaran nang isa-isa gamit ang IC card. BUOD NG TRANSPORTASYON: Hotel → Kiyomizu: Bus 100/206 o Kiyomizu-dera Line → IC card/ticket. Kiyomizu → Yasaka → Maruyama → Chion-in → Heian: Paglalakad. Heian → Kyoto Station: Paglalakad + urban transit kung kailangan. Kyoto → Osaka: JR Kyoto Line Special Rapid → IC card/ticket. Osaka → Morinomiya: JR Osaka Loop Line → IC card/ticket. Morinomiya → Osaka Castle: Paglalakad. Osaka Castle → Dotonbori: Osaka Metro → IC card. Dotonbori → Kyoto: JR/metro depende sa lokasyon → IC card/ticket."
       }
     ],
     "money": "Tinatayang €40 (pagkain)"

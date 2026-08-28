@@ -174,28 +174,52 @@ export const days = [
         "text": "Réveil."
       },
       {
-        "text": "Temple Kiyomizu-dera (train JR ou bus direct, env. 40 min de porte à porte)."
+        "text": "🚍 HÔTEL → KIYOMIZU-DERA. Marchez depuis l'Hôtel Keihan Kyoto Hachijoguchi jusqu'à Kyoto Station. Option principale : Kyoto City Bus 100 ou 206 depuis Kyoto Station. Descendez à Gojozaka. Marchez environ 10 min jusqu'à Kiyomizu-dera. Alternative : Utilisez la nouvelle ligne Kiyomizu-dera de Okoshi Bus, disponible en semaine depuis juillet 2026, si l'horaire convient. Aucune réservation. Payez avec une carte IC ou le billet correspondant. Les bus d'Higashiyama peuvent être encombrés. Prévoyez de la marge."
       },
       {
-        "text": "Descente par les pentes d'Higashiyama jusqu'à Yasaka Jinja, traversée du parc Maruyama jusqu'au temple Chion-in."
+        "text": "🏯 KIYOMIZU-DERA. Ouvre à 06:00 et le 11 septembre ferme à 18:00. Visite : Bâtiment principal / scène de Kiyomizu, Otowa-no-taki, Pagode et environs, rues de Kiyomizu-zaka à la sortie. Aucune réservation requise. 💡 Conseil : Kiyomizu-dera à la première heure est un bon choix pour éviter la foule."
       },
       {
-        "text": "Marche vers le canal Okazaki et le temple Heian Jingu."
+        "text": "🚶 HIGASHIYAMA → YASAKA → MARUYAMA → CHION-IN. Faites tout le trajet à pied : Kiyomizu-dera → Ninenzaka/Sannenzaka → Yasaka Jinja → Parc Maruyama → Chion-in. 💡 Conseil : Cette zone s'apprécie mieux à pied et il ne faut pas essayer de suivre un itinéraire trop rigide dans les ruelles. N'essayez pas de tout faire à Higashiyama rapidement : l'attrait réside précisément dans les rues et petites boutiques entre les temples."
       },
       {
-        "text": "Déjeuner à Kyoto."
+        "text": "⛩️ CHION-IN. Visitez l'enceinte et la Sanmon. Le domaine ouvre à 06:00 ; les visites/réceptions des zones intérieures commencent à 09:00. Si vous souhaitez visiter les jardins intérieurs, vérifiez l'ouverture et achetez l'entrée sur place. Aucune réservation."
       },
       {
-        "text": "Train rapide vers Osaka (Ligne JR, 30 min)."
+        "text": "🚶 CHION-IN → HEIAN JINGU. Continuez à pied vers Heian Jingu."
       },
       {
-        "text": "Château d'Osaka et jardins à la lumière du jour."
+        "text": "⛩️ HEIAN JINGU. Visitez le sanctuaire et son grand torii. Le domaine ouvre à 06:00. Si vous souhaitez visiter le jardin (Shin-en), ses horaires le 11 septembre sont environ 08:30–18:00, dernière entrée à 17:30. Aucune réservation requise."
       },
       {
-        "text": "Néons et cuisine de rue autour de Dotonbori et Shinsekai."
+        "text": "🍜 DÉJEUNER À KYOTO. IMPORTANT : Essayez de terminer vers 14:15 pour garder une marge pour le train vers Osaka."
       },
       {
-        "text": "Train rapide pour retourner dormir à Kyoto."
+        "text": "🚶 Transfert vers Kyoto Station."
+      },
+      {
+        "text": "🚆 KYOTO → OSAKA. Prenez la JR Kyoto Line depuis Kyoto Station jusqu'à Osaka Station. Privilégiez un Special Rapid (新快速) s'il y en a un pratique. Trajet d'environ 30 min. Aucune réservation. Pas besoin de JR Pass. Payez avec carte IC ou billet simple."
+      },
+      {
+        "text": "🚆 OSAKA STATION → MORINOMIYA. Depuis Osaka Station, prenez la JR Osaka Loop Line vers Morinomiya. Aucune réservation. Payez avec carte IC."
+      },
+      {
+        "text": "🚶 MORINOMIYA → OSAKA CASTLE. Marchez à travers l'Osaka Castle Park jusqu'au château. Comptez environ 15–20 min."
+      },
+      {
+        "text": "🏯 OSAKA CASTLE. IMPORTANT : Le musée du château d'Osaka ouvre 09:00–18:00, dernière entrée 17:30. ENTRER À L'INTÉRIEUR DU CHÂTEAU : Gardez comme visite principale le musée de la tour et l'observatoire. Entrée : 1 200 ¥ adulte. Il n'est pas nécessaire de réserver à l'avance pour ce jour. Achetez le billet directement au château. Vous pouvez payer en espèces, par carte ou carte IC. 💡 Conseil : À Osaka Castle, prévoyez environ 1,5–2 h pour le musée + observatoire + extérieurs."
+      },
+      {
+        "text": "🚇 OSAKA CASTLE → DOTONBORI. Depuis Morinomiya, utilisez l'Osaka Metro vers la zone de Namba/Dotonbori. Aucune réservation. Utilisez la carte IC."
+      },
+      {
+        "text": "🌃 DOTONBORI + SHINSEKAI. Promenade nocturne et nourriture de rue. Priorité : Dotonbori, Glico, Pont d'Ebisu, Hozenji Yokocho. S'il reste du temps et de l'énergie, continuez vers Shinsekai. 💡 Conseils : À Dotonbori, nul besoin de réserver pour la cuisine de rue ; choisissez les stands/restaurants sur place. Dotonbori est particulièrement intéressant après la tombée de la nuit, il est donc conseillé de maintenir l'arrivée vers 18:30."
+      },
+      {
+        "text": "🚆 OSAKA → KYOTO. Retour à Kyoto par JR. Aucune réservation. Utilisez la carte IC ou un billet simple."
+      },
+      {
+        "text": "🎫 RÉSERVATIONS DU JOUR : NE RÉSERVEZ AUCUN transport. N'UTILISEZ PAS SmartEX. N'UTILISEZ PAS JR-WEST Online. Nous n'avons pas besoin du Japan Rail Pass. Tous les trajets peuvent être payés individuellement avec une carte IC. RÉSUMÉ DES TRANSPORTS : Hôtel → Kiyomizu : Bus 100/206 ou Ligne Kiyomizu-dera → Carte IC/billet. Kiyomizu → Yasaka → Maruyama → Chion-in → Heian : À pied. Heian → Kyoto Station : À pied + transport urbain si besoin. Kyoto → Osaka : JR Kyoto Line Special Rapid → Carte IC/billet. Osaka → Morinomiya : JR Osaka Loop Line → Carte IC/billet. Morinomiya → Osaka Castle : À pied. Osaka Castle → Dotonbori : Osaka Metro → Carte IC. Dotonbori → Kyoto : JR/métro selon emplacement → Carte IC/billet."
       }
     ],
     "money": "Env. 40 € (repas)"
