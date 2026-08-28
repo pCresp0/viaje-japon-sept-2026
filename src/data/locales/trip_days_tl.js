@@ -27,16 +27,16 @@ export const days = [
     "history": "Ang Kyoto ang naging kabisera ng imperyo ng Japan sa loob ng mahigit isang libong taon, mula 794 hanggang 1868. Ito ang kultural at espirituwal na puso ng bansa. Matapos makaligtas nang buo sa mga pambobomba noong Ikalawang Digmaang Pandaigdig, napanatili nito ang halos lahat ng kanyang sinaunang tradisyunal na arkitektura ng kahoy.",
     "schedule": [
       {
-        "text": "Paglapag sa Narita at mga proseso sa customs (humigit-kumulang 1h 30m). Ihanda ang iyong Visit Japan Web QR code upang mapabilis ang pagdaan sa border control."
+        "text": "Paglapag sa Narita at mga pamamaraan sa customs (tinatayang 1h 30m). Tandaan na ihanda ang iyong Visit Japan Web QR code upang mapabilis ang border control."
       },
       {
-        "text": "Pag-alis mula sa airport level B1 (PULANG bahagi ng Japan Railways) sa tren na Narita Express (N'EX). Kukunin natin ang tiket sa counter para sa susunod na available na tren. Ang biyahe ay 1 oras at 10 minuto nang walang lipat hanggang sa Shinagawa Station (~€19). Dito tayo estratehikong bababa upang maiwasan ang 20 minutong paglalakad sa ilalim ng lupa ng Tokyo Station habang hila ang mga maleta."
+        "text": "Pag-alis mula sa airport level B1 (PULANG bahagi ng Japan Railways) sa Narita Express (N'EX 30) na tren. Kukuha kami ng mga tiket sa counter para sa susunod na available na tren. Ang direktang biyahe ay tumatagal ng 1 oras at 10 minuto na walang paglipat sa Shinagawa Station (~€19). Madiskarteng bumababa kami rito upang maiwasan ang paglalakad ng 20 minuto sa mga underground corridor ng Tokyo Station na hinihila ang mga maleta."
       },
       {
-        "text": "Sa parehong Shinagawa Station, mabilis at madaling paglipat (humigit-kumulang 3 min) papunta sa mga riles ng bullet train. Sasakay tayo sa Shinkansen Nozomi patungong Kyoto (humigit-kumulang €90, 2h 11m). Mahalagang paalala sa pag-book: Bilhin ang mga tiket na ito ilang linggo bago sa SmartEX app na may piniling Oversized Baggage (upang masiguro ang espasyo ng maleta) at piliin ang mga upuang E (kanang bintana) para makita ang Mount Fuji sa daan."
+        "text": "Sa Shinagawa Station, mabilis at madaling paglipat (tinatayang 3 min) sa mga track ng bullet train. Sasakay kami sa Shinkansen Nozomi 51 patungong Kyoto (tinatayang €90, 2h). Kritikal na paalala sa pag-book: Bilhin ang mga tiket na ito nang ilang linggo nang maaga sa pamamagitan ng SmartEX app. Suriin ang 'Oversized Baggage' lamang kung ang kabuuan ng 3 sukat ng maleta ay higit sa 160cm."
       },
       {
-        "text": "Pagdating sa Kyoto, hotel check-in, at hapunan."
+        "text": "Ang Nozomi ay darating sa JR Kyoto Station. Bumaba sa Shinkansen at sundan ang mga palatandaan sa Hachijo East Exit (八条東口). Umalis sa istasyon sa pamamagitan ng exit na iyon at sa halos 5 minutong paglalakad ay makakarating ka sa hotel (Hotel Keihan Kyoto Hachijoguchi). Check-in at hapunan."
       }
     ],
     "money": "Tinatayang €40 (pagkain) + transportasyon"

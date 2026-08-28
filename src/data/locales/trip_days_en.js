@@ -30,13 +30,13 @@ export const days = [
         "text": "Landing at Narita and customs procedures (approx. 1h 30m). Remember to have your Visit Japan Web QR code ready to speed through border control."
       },
       {
-        "text": "Departure from airport level B1 (RED side of Japan Railways) on the Narita Express (N'EX) train. We'll get tickets at the counter for the next available train. The direct ride takes 1 hour and 10 minutes without transfers to Shinagawa Station (~€19). We strategically get off here to avoid walking 20 minutes through Tokyo Station underground corridors dragging suitcases."
+        "text": "Departure from airport level B1 (RED side of Japan Railways) on the Narita Express (N'EX 30) train. We'll get tickets at the counter for the next available train. The direct ride takes 1 hour and 10 minutes without transfers to Shinagawa Station (~€19). We strategically get off here to avoid walking 20 minutes through Tokyo Station underground corridors dragging suitcases."
       },
       {
-        "text": "At Shinagawa Station, quick and step-free transfer (approx. 3 min) to the bullet train tracks. We will board the Shinkansen Nozomi bound for Kyoto (approx. €90, 2h 11m). Critical booking note: Buy these tickets weeks in advance via the SmartEX app selecting Oversized Baggage (to secure luggage storage space) and E seats (right window) to see Mount Fuji along the way."
+        "text": "At Shinagawa Station, quick and step-free transfer (approx. 3 min) to the bullet train tracks. We will board the Shinkansen Nozomi 51 bound for Kyoto (approx. €90, 2h). Critical booking note: Buy these tickets weeks in advance via the SmartEX app. Check 'Oversized Baggage' only if the sum of the 3 dimensions of the suitcase is greater than 160cm."
       },
       {
-        "text": "Arrival in Kyoto, hotel check-in, and dinner."
+        "text": "The Nozomi arrives at JR Kyoto Station. Get off the Shinkansen and follow the signs to Hachijo East Exit (八条東口). Leave the station through that exit and in about a 5-minute walk you will reach the hotel (Hotel Keihan Kyoto Hachijoguchi). Check-in and dinner."
       }
     ],
     "money": "Approx. €40 (meals) + transport"

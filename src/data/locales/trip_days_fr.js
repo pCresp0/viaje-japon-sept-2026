@@ -27,16 +27,16 @@ export const days = [
     "history": "Kyoto a été la capitale impériale du Japon pendant plus de mille ans, de 794 à 1868. C'est le cœur culturel et spirituel du pays. Ayant survécu presque intacte aux bombardements de la Seconde Guerre mondiale, elle conserve une grande partie de son architecture traditionnelle millénaire en bois.",
     "schedule": [
       {
-        "text": "Atterrissage à Narita et formalités douanières (env. 1h 30m). N'oubliez pas d'avoir votre QR code Visit Japan Web prêt pour passer rapidement les contrôles."
+        "text": "Atterrissage à Narita et formalités douanières (env. 1h 30m). N'oubliez pas d'avoir votre code QR Visit Japan Web prêt pour accélérer le contrôle aux frontières."
       },
       {
-        "text": "Départ du niveau B1 de l'aéroport (côté ROUGE de Japan Railways) par le train Narita Express (N'EX). Nous prendrons le billet au guichet pour le prochain train disponible. Le trajet direct dure 1h10 sans correspondance jusqu'à la gare de Shinagawa (~19 €). Nous descendons stratégiquement ici pour éviter de marcher 20 minutes dans les couloirs souterrains de la gare de Tokyo avec les valises."
+        "text": "Départ du niveau B1 de l'aéroport (côté ROUGE de Japan Railways) par le train Narita Express (N'EX 30). Nous achèterons les billets au guichet pour le prochain train disponible. Le trajet direct dure 1 heure et 10 minutes sans correspondance jusqu'à la gare de Shinagawa (~19€). Nous descendons stratégiquement ici pour éviter de marcher 20 minutes dans les couloirs souterrains de la gare de Tokyo en traînant les valises."
       },
       {
-        "text": "À la gare de Shinagawa, correspondance rapide et accessible (env. 3 min) vers les voies du train à grande vitesse. Nous prendrons le Shinkansen Nozomi à destination de Kyoto (env. 90 €, 2h 11m). Note critique de réservation : Acheter ces billets des semaines à l'avance sur l'application SmartEX en cochant obligatoirement Oversized Baggage (pour garantir l'espace bagages) et en choisissant les sièges E (fenêtre droite) pour apercevoir le mont Fuji en route."
+        "text": "À la gare de Shinagawa, correspondance rapide et accessible (env. 3 min) vers les voies du train à grande vitesse. Nous monterons à bord du Shinkansen Nozomi 51 à destination de Kyoto (env. 90€, 2h). Note critique de réservation: Achetez ces billets des semaines à l'avance via l'application SmartEX. Cochez 'Oversized Baggage' uniquement si la somme des 3 dimensions de la valise est supérieure à 160cm."
       },
       {
-        "text": "Arrivée à Kyoto, enregistrement à l'hôtel et dîner."
+        "text": "Le Nozomi arrive à la gare JR de Kyoto. Descendez du Shinkansen et suivez les panneaux vers Hachijo East Exit (八条東口). Sortez de la gare par cette sortie et à environ 5 minutes de marche, vous atteindrez l'hôtel (Hotel Keihan Kyoto Hachijoguchi). Check-in et dîner."
       }
     ],
     "money": "Env. 40 € (repas) + transport"
