@@ -6,13 +6,13 @@ export const days = [
     "history": "Ang Qatar Airways ay ang pambansang eroplano ng Qatar at isa sa mga may pinakamataas na rating sa mundo. Ang Doha ay ang sentrong hub ng kumpanya sa Gitnang Silangan, isang koneksyon sa pagitan ng Europa at Asya.",
     "schedule": [
       {
-        "text": "Pag-alis mula sa Adolfo Suárez Madrid-Barajas Airport sa flight QR148 (Qatar Airways)."
+        "text": "Pag-alis mula sa Adolfo Suárez Madrid-Barajas Airport sa flight QR148 (Qatar Airways). Live flight tracking: https://es.flightaware.com/live/flight/QTR148"
       },
       {
         "text": "Pagdating sa Doha (Hamad International Airport, HIA). Teknikal na paghinto, paglipat ng eroplano. Oras ng layover: humigit-kumulang 2 oras."
       },
       {
-        "text": "Pag-alis mula sa Doha papuntang Narita (NRT) sa flight QR808 (Qatar Airways)."
+        "text": "Pag-alis mula sa Doha papuntang Narita (NRT) sa flight QR808 (Qatar Airways). Live flight tracking: https://es.flightaware.com/live/flight/QTR808"
       },
       {
         "text": "Pagdating sa Narita (Lunes, Set 7). Customs at pagkuha ng bagahe. Pagkatapos: paglipat via Narita Express + Shinkansen papuntang Kyoto."
@@ -23,11 +23,11 @@ export const days = [
   {
     "title": "Pagdating sa Japan",
     "cities": "Narita, Tokyo, Kyoto",
-    "summary": "Paglapag sa airport ng Narita, mga proseso sa customs, at pagkuha ng bagahe. Direktang paglipat gamit ang tren papuntang Kyoto para sa hotel check-in. Tatapusin natin ang araw sa ating unang karanasan sa lungsod, sa pamamagitan ng mabilis na hapunan sa paligid ng istasyon.",
+    "summary": "Paglapag sa airport ng Narita, mga proseso sa customs gamit ang Visit Japan Web QR code, at pagkuha ng bagahe. Direktang paglipat gamit ang tren papuntang Kyoto para sa hotel check-in. Tatapusin natin ang araw sa ating unang karanasan sa lungsod, sa pamamagitan ng mabilis na hapunan sa paligid ng istasyon.",
     "history": "Ang Kyoto ang naging kabisera ng imperyo ng Japan sa loob ng mahigit isang libong taon, mula 794 hanggang 1868. Ito ang kultural at espirituwal na puso ng bansa. Matapos makaligtas nang buo sa mga pambobomba noong Ikalawang Digmaang Pandaigdig, napanatili nito ang halos lahat ng kanyang sinaunang tradisyunal na arkitektura ng kahoy.",
     "schedule": [
       {
-        "text": "Paglapag sa Narita at mga proseso sa customs (humigit-kumulang 1h 30m)."
+        "text": "Paglapag sa Narita at mga proseso sa customs (humigit-kumulang 1h 30m). Ihanda ang iyong Visit Japan Web QR code upang mapabilis ang pagdaan sa border control."
       },
       {
         "text": "Pag-alis mula sa airport gamit ang Narita Express (N'EX), nasa €19, eksaktong 1h papuntang Tokyo Station."

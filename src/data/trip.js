@@ -27,8 +27,8 @@ export const flights = {
     date: "2026-09-06",
     text: "Salida Dom 6 sept desde Madrid (T4S) a las 09:05 (Qatar Airways QR148). Escala en Doha (aeropuerto de terminal única). Llegada a Narita (NRT), Terminal 2, el Lun 7 sept a las 12:55.",
     flightNumber: "QR148 + QR808",
-    leg1: { number: "QR148", operator: "Qatar Airways", duration: "7h", route: "Madrid → Doha" },
-    leg2: { number: "QR808", operator: "Qatar Airways", duration: "8h 50m", route: "Doha → Narita" },
+    leg1: { number: "QR148", operator: "Qatar Airways", duration: "7h", route: "Madrid → Doha", trackUrl: "https://es.flightaware.com/live/flight/QTR148" },
+    leg2: { number: "QR808", operator: "Qatar Airways", duration: "8h 50m", route: "Doha → Narita", trackUrl: "https://es.flightaware.com/live/flight/QTR808" },
     trackUrl: "https://es.flightaware.com/live/flight/QTR148",
     depart: { city: "Madrid", time: "2026-09-06T09:05", terminal: "T4S (Satélite)" },
     arrive: { city: "Narita (NRT)", time: "2026-09-07T12:55", terminal: "T2" },
@@ -46,8 +46,8 @@ export const flights = {
     date: "2026-09-21",
     text: "Salida Lun 21 sept desde Narita (Terminal 2) a las 17:25 (Qatar Airways QR809). Escala en Doha. Llegada a Madrid (T4S) el Mar 22 sept a las 08:15.",
     flightNumber: "QR809 + QR6952",
-    leg1: { number: "QR809", operator: "Qatar Airways", duration: "8h", route: "Narita → Doha" },
-    leg2: { number: "QR6952", operator: "Qatar Airways / Iberia", duration: "7h 50m", route: "Doha → Madrid" },
+    leg1: { number: "QR809", operator: "Qatar Airways", duration: "8h", route: "Narita → Doha", trackUrl: "https://es.flightaware.com/live/flight/QTR809" },
+    leg2: { number: "QR6952", operator: "Qatar Airways / Iberia", duration: "7h 50m", route: "Doha → Madrid", trackUrl: "https://es.flightaware.com/live/flight/IBE6952" },
     trackUrl: "https://es.flightaware.com/live/flight/QTR809",
     depart: { city: "Narita (NRT)", time: "2026-09-21T17:25", terminal: "T2" },
     arrive: { city: "Madrid", time: "2026-09-22T08:15", terminal: "T4S (Satélite)" },
@@ -218,9 +218,9 @@ export const days = [
     history:
       "Qatar Airways es la aerolínea nacional de Catar y una de las más valoradas del mundo. Doha es el hub central de la compañía en Oriente Medio, punto de conexión entre Europa y Asia.",
     schedule: [
-      { time: "09:05", text: "Salida desde el Aeropuerto Adolfo Suárez Madrid-Barajas en vuelo QR148 (Qatar Airways)." },
+      { time: "09:05", text: "Salida desde el Aeropuerto Adolfo Suárez Madrid-Barajas en vuelo QR148 (Qatar Airways). Seguimiento en vivo: https://es.flightaware.com/live/flight/QTR148" },
       { time: "13:35+", text: "Llegada a Doha (Aeropuerto Internacional de Hamad, HIA). Escala técnica, cambio de avión. Tiempo en escala: aprox. 2 horas." },
-      { time: "15:35+", text: "Salida desde Doha hacia Narita (NRT) en el vuelo QR808 (Qatar Airways)." },
+      { time: "15:35+", text: "Salida desde Doha hacia Narita (NRT) en el vuelo QR808 (Qatar Airways). Seguimiento en vivo: https://es.flightaware.com/live/flight/QTR808" },
       { time: "12:55 (+1 día)", text: "Llegada a Narita (lunes 7 sept). Aduanas y recogida de equipajes. Luego: traslado en Narita Express + Shinkansen a Kioto." },
     ],
     money: "Vuelo incluido en el presupuesto de grupo",
@@ -233,11 +233,11 @@ export const days = [
     title: "Llegada a Japón",
     cities: "Narita, Tokio, Kioto",
     summary:
-      "Aterrizaje en el aeropuerto de Narita, trámites de aduana y recogida de equipajes. Traslado directo en tren hasta Kioto para hacer el check-in en el hotel. Terminaremos la jornada con una primera toma de contacto con la ciudad, cenando algo rápido por los alrededores de la estación.",
+      "Aterrizaje en el aeropuerto de Narita, trámites de aduana con el código QR de Visit Japan Web y recogida de equipajes. Traslado directo en tren hasta Kioto para hacer el check-in en el hotel. Terminaremos la jornada con una primera toma de contacto con la ciudad, cenando algo rápido por los alrededores de la estación.",
     history:
       "Kioto fue la capital imperial de Japón durante más de mil años, desde 794 hasta 1868. Es el corazón cultural y espiritual del país. Al haber sobrevivido casi intacta a los bombardeos de la Segunda Guerra Mundial, conserva gran parte de su milenaria arquitectura tradicional de madera.",
     schedule: [
-      { time: "12:55", text: "Aterrizaje en Narita y trámites de aduana (aprox. 1h 30m)." },
+      { time: "12:55", text: "Aterrizaje en Narita y trámites de aduana e inmigración (aprox. 1h 30m). Recuerda tener preparado el código QR de Visit Japan Web para agilizar el paso por los tornos." },
       { time: "15:00", text: "Salida del aeropuerto en el Narita Express (N'EX), unos 19€, 1h exacta hasta la Estación de Tokio." },
       { time: "16:30", text: "En la Estación de Tokio, transbordo al Shinkansen Hikari (tren bala) hasta Kioto (aprox. 90€, 2h 30m). Sentaos en el lado derecho para ver el Monte Fuji si está despejado." },
       { time: "19:00", text: "Llegada a Kioto, check-in en el hotel y cena." },

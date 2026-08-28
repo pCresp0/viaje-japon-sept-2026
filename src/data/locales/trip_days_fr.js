@@ -6,13 +6,13 @@ export const days = [
     "history": "Qatar Airways est la compagnie aérienne nationale du Qatar et l'une des mieux notées au monde. Doha est le hub central de la compagnie au Moyen-Orient, un point de connexion entre l'Europe et l'Asie.",
     "schedule": [
       {
-        "text": "Départ de l'aéroport Adolfo Suárez Madrid-Barajas sur le vol QR148 (Qatar Airways)."
+        "text": "Départ de l'aéroport Adolfo Suárez Madrid-Barajas sur le vol QR148 (Qatar Airways). Suivi de vol en direct : https://es.flightaware.com/live/flight/QTR148"
       },
       {
         "text": "Arrivée à Doha (Aéroport international Hamad, HIA). Arrêt technique, changement d'avion. Temps d'escale : env. 2 heures."
       },
       {
-        "text": "Départ de Doha vers Narita (NRT) sur le vol QR808 (Qatar Airways)."
+        "text": "Départ de Doha vers Narita (NRT) sur le vol QR808 (Qatar Airways). Suivi de vol en direct : https://es.flightaware.com/live/flight/QTR808"
       },
       {
         "text": "Arrivée à Narita (lundi 7 sept). Douanes et récupération des bagages. Ensuite : transfert via Narita Express + Shinkansen vers Kyoto."
@@ -23,11 +23,11 @@ export const days = [
   {
     "title": "Arrivée au Japon",
     "cities": "Narita, Tokyo, Kyoto",
-    "summary": "Atterrissage à l'aéroport de Narita, formalités douanières et récupération des bagages. Transfert direct en train vers Kyoto pour l'enregistrement à l'hôtel. Nous terminerons la journée par un premier contact avec la ville, en prenant un dîner rapide autour de la gare.",
+    "summary": "Atterrissage à l'aéroport de Narita, formalités douanières avec le code QR Visit Japan Web et récupération des bagages. Transfert direct en train vers Kyoto pour l'enregistrement à l'hôtel. Nous terminerons la journée par un premier contact avec la ville, en prenant un dîner rapide autour de la gare.",
     "history": "Kyoto a été la capitale impériale du Japon pendant plus de mille ans, de 794 à 1868. C'est le cœur culturel et spirituel du pays. Ayant survécu presque intacte aux bombardements de la Seconde Guerre mondiale, elle conserve une grande partie de son architecture traditionnelle millénaire en bois.",
     "schedule": [
       {
-        "text": "Atterrissage à Narita et formalités douanières (env. 1h 30m)."
+        "text": "Atterrissage à Narita et formalités douanières (env. 1h 30m). N'oubliez pas d'avoir votre QR code Visit Japan Web prêt pour passer rapidement les contrôles."
       },
       {
         "text": "Départ de l'aéroport par le Narita Express (N'EX), environ 19 €, exactement 1h jusqu'à la gare de Tokyo."

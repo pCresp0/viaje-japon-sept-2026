@@ -6,13 +6,13 @@ export const days = [
     "history": "Qatar Airways is the national airline of Qatar and one of the most highly rated in the world. Doha is the company's central hub in the Middle East, a connecting point between Europe and Asia.",
     "schedule": [
       {
-        "text": "Departure from Adolfo Suárez Madrid-Barajas Airport on flight QR148 (Qatar Airways)."
+        "text": "Departure from Adolfo Suárez Madrid-Barajas Airport on flight QR148 (Qatar Airways). Live flight tracking: https://es.flightaware.com/live/flight/QTR148"
       },
       {
         "text": "Arrival in Doha (Hamad International Airport, HIA). Technical stop, change of plane. Layover time: approx. 2 hours."
       },
       {
-        "text": "Departure from Doha to Narita (NRT) on flight QR808 (Qatar Airways)."
+        "text": "Departure from Doha to Narita (NRT) on flight QR808 (Qatar Airways). Live flight tracking: https://es.flightaware.com/live/flight/QTR808"
       },
       {
         "text": "Arrival in Narita (Monday, Sept 7). Customs and baggage claim. Then: transfer via Narita Express + Shinkansen to Kyoto."
@@ -23,11 +23,11 @@ export const days = [
   {
     "title": "Arrival in Japan",
     "cities": "Narita, Tokyo, Kyoto",
-    "summary": "Landing at Narita airport, customs procedures, and baggage claim. Direct train transfer to Kyoto for hotel check-in. We'll end the day with our first contact with the city, grabbing a quick dinner around the station.",
+    "summary": "Landing at Narita airport, customs procedures with Visit Japan Web QR code, and baggage claim. Direct train transfer to Kyoto for hotel check-in. We'll end the day with our first contact with the city, grabbing a quick dinner around the station.",
     "history": "Kyoto was the imperial capital of Japan for over a thousand years, from 794 to 1868. It is the cultural and spiritual heart of the country. Having survived the bombings of World War II almost intact, it preserves much of its ancient traditional wooden architecture.",
     "schedule": [
       {
-        "text": "Landing at Narita and customs procedures (approx. 1h 30m)."
+        "text": "Landing at Narita and customs procedures (approx. 1h 30m). Remember to have your Visit Japan Web QR code ready to speed through border control."
       },
       {
         "text": "Departure from the airport on the Narita Express (N'EX), about €19, exactly 1h to Tokyo Station."
