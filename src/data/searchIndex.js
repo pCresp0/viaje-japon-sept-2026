@@ -429,6 +429,19 @@ function buildSearchIndex(lang) {
     }));
   }
   items.push(entry({
+    id: "emergency-insurance",
+    title: "Seguro de viaje · Heymondo (Póliza 2368219)",
+    subtitle: "IMA Ibérica Asistencia · +34 91 353 63 23",
+    category: "Emergencias",
+    tab: "emergencias",
+    targetId: "emergency-insurance",
+    terms: [
+      "seguro", "seguro de viaje", "heymondo", "mondo", "póliza", "poliza", "2368219",
+      "asistencia medica", "asistencia médica", "ima iberica", "ima ibérica", "airhelp",
+      "913536323", "913536324", "gastos medicos", "repatriacion", "equipaje", "cobertura",
+    ],
+  }));
+  items.push(entry({
     id: "emergency-embassy",
     title: embassy.name,
     subtitle: embassy.emergencyPhone,
