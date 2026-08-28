@@ -1,6 +1,7 @@
 import { useContent, useT } from "../i18n/LanguageContext";
 import { fmtDate } from "../utils/date";
 import { PlaneTakeoff, PlaneLanding } from "lucide-react";
+import VisitJapanQRCard from "../components/VisitJapanQRCard";
 
 export default function InfoPage() {
   const { flights } = useContent();
@@ -19,6 +20,9 @@ export default function InfoPage() {
           Ida y vuelta confirmadas · Qatar Airways vía Doha
         </p>
       </div>
+
+      {/* QR Visit Japan Web para entrada a Japón */}
+      <VisitJapanQRCard />
 
       <div style={{
         display: "grid",

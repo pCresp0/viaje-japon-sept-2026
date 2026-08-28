@@ -3,6 +3,7 @@ import { ScrollText, ChevronDown, ChevronUp, Map } from "lucide-react";
 import { useContent } from "../i18n/LanguageContext";
 import { guidesByDay } from "../data/guides";
 import DayFujiOptionCard from "./DayFujiOptionCard";
+import VisitJapanQRCard from "./VisitJapanQRCard";
 import GuideCard from "./GuideCard";
 import StayOption from "./StayOption";
 import PlaceText from "./PlaceText";
@@ -81,6 +82,9 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
       </header>
 
       <div className="p-5 space-y-4">
+        {/* QR de Visit Japan Web en el día de llegada (Día 1 / 7 de sept) */}
+        {(day.num === 1 || day.num === 0) && <VisitJapanQRCard />}
+
         {/* Opción de Excursión Monte Fuji con GetYourGuide (Días 10 al 13) */}
         <DayFujiOptionCard dayNum={day.num} />
 
