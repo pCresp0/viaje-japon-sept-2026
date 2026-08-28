@@ -98,7 +98,7 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
 
         <div>
           <ol className="relative border-l-2 pl-4 space-y-4" style={{ borderColor: "var(--line)" }}>
-            {day.schedule.map((s, i) => {
+            {day.schedule.filter(s => s.time && /\d/.test(s.time)).map((s, i) => {
               const emoji = getScheduleEmoji(s.text);
               return (
                 <li key={i} className="relative">
@@ -120,6 +120,29 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
               );
             })}
           </ol>
+
+          {day.schedule.filter(s => !s.time || !/\d/.test(s.time)).length > 0 && (
+            <div className="mt-6 space-y-3">
+              {day.schedule.filter(s => !s.time || !/\d/.test(s.time)).map((s, i) => {
+                return (
+                  <div key={i} className="rounded-xl p-4 border" style={{ background: "rgba(0,0,0,0.015)", borderColor: "var(--line)" }}>
+                    {s.time && (
+                      <p className="font-display text-sm font-bold flex items-center gap-1 mb-1.5" style={{ color: block.color }}>
+                        {s.time}
+                      </p>
+                    )}
+                    <PlaceText
+                      as="p"
+                      text={s.text}
+                      className="text-[14px] leading-snug"
+                      style={{ color: "var(--ink)" }}
+                      linkStyle={{ color: "var(--shu)" }}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          )}
         </div>
 
         {dayGuides.length > 0 && (
