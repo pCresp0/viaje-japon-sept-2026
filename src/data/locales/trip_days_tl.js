@@ -93,25 +93,46 @@ export const days = [
     "history": "Ang Kinkakuji (Golden Pavilion) ay ang marangyang rest house ng shogun Ashikaga Yoshimitsu noong huling bahagi ng ika-14 na siglo. Ang Arashiyama ay naging destinasyon para magbakasyon ng imperyal na maharlika simula noong panahon ng Heian.",
     "schedule": [
       {
-        "text": "Paggising."
+        "text": "Gumising."
       },
       {
-        "text": "Kinkakuji: luntiang subway line (Karasuma Line) papuntang Kitaoji Station at pagkatapos ay bus 205."
+        "text": "🚇 Hotel → Kinkaku-ji. Maglakad mula sa hotel hanggang Kyoto Station. Sakyan ang Kyoto Subway Karasuma Line: Kyoto → Kitaoji. Sa Kitaoji: sundan ang mga sign papuntang Kitaoji Bus Terminal; gamitin ang asul na zone; sakyan ang bus No. 204 o 205 papuntang Kinkaku-ji; bumaba sa Kinkakuji-michi. Mula Kinkakuji-michi: halos 5 min na lakad papunta sa pasukan. Ang kombinasyon na ito ay mas mabuti kaysa sa direktang 205 bus mula Kyoto Station dahil iniiwasan nito ang ilang trapik at karamihan. Walang reserbasyon. Gumamit ng IC card."
       },
       {
-        "text": "Kinukake no Michi trail: Kinkakuji, Ryoan-ji, at Ninna-ji temples, sa ganyang pagkakasunud-sunod."
+        "text": "🏯 Kinkaku-ji (Golden Pavilion). MAHALAGA: Ang nakaraang nakasulat na 08:30 ay mali. Nagbubukas ang Kinkaku-ji ng 09:00. Bayad sa pagpasok: halos ¥500. Walang kailangang reserbasyon. Tip: Subukang dumating eksakto sa pagbukas para ma-enjoy ang lugar nang mas kaunti ang tao."
       },
       {
-        "text": "Mula Ninna-ji, Randen tram papuntang Arashiyama (20 min). Mabilis na tanghalian."
+        "text": "🚶 Kinukake no Michi path. Maglakad sa ganitong ayos: 1. Kinkaku-ji 2. Ryoan-ji 3. Ninna-ji"
       },
       {
-        "text": "Maglakad pataas patungo sa makasaysayang distrito ng Saga-Toriimoto at templo ng Otagi (nagsasara nang 4 PM, umakyat muna)."
+        "text": "🏯 Ryoan-ji. Mula Kinkaku-ji, maglakad gamit ang Kinukake no Michi. Layo: halos 1.5 km / 20 min. Oras sa Ryoan-ji sa Setyembre: 08:00–17:00. Bayad sa pagpasok: halos ¥600. Walang kailangang reserbasyon. Dapat makita: rock garden; Hojo; hardin."
       },
       {
-        "text": "Bumaba sa kakahuyan ng kawayan patungo sa sentro ng kapitbahayan."
+        "text": "🏯 Ninna-ji. Ipagpatuloy ang paglalakad mula Ryoan-ji papuntang Ninna-ji. Layo: halos 10–15 min. Oras sa Ninna-ji sa Setyembre: 09:00–17:00. Maaaring may dagdag na bayad ang pagpasok sa mga special areas. Walang kailangang reserbasyon."
       },
       {
-        "text": "Bumalik sa Kyoto sakay ng tren ng JR, San-In Line (€2, 15 min na direkta)."
+        "text": "🚋 Ninna-ji → Arashiyama. Maglakad hanggang Omuro-Ninnaji Station. Sakyan ang Randen Kitano Line hanggang Katabiranotsuji. Sa Katabiranotsuji lumipat sa Randen Arashiyama Line patungong Arashiyama. Bumaba sa Arashiyama Station. Kabuuang oras: 20–25 min. MAHALAGA: Ang Randen ay HINDI JR train. Hindi mo kailangan ng Japan Rail Pass. Kasalukuyang pamasahe sa Randen: ¥250 bawat matanda. Maaaring magbayad gamit ang IC card. Sa pag-akyat, HUWAG i-tap ang IC card. Magbayad pagbaba / sa istasyon. Walang reserbasyon."
+      },
+      {
+        "text": "🍜 Mabilisang tanghalian sa Arashiyama. Panatilihing mabilis ang pagkain upang hindi maapektuhan ang pagbisita sa Otagi."
+      },
+      {
+        "text": "🚌 Arashiyama → Otagi Nenbutsu-ji. MAHALAGA: HUWAG maglakad pataas nang buong daan mula sa Arashiyama. Inirerekomenda ng mismong website ng Otagi na dumating sakay ng taxi o bus tapos ay maglakad pababa. Inirerekomendang opsyon: Kyoto Bus No. 94 patungong Kiyotaki. Sumakay sa bus stop sa Arashiyama at bumaba sa Otagidera-mae. Halos 20–25 min. Alternatibo: Taxi mula sa Arashiyama. Mas mahal ang taxi pero nakakatipid ng oras kung nagmamadali. Huwag mag-book sa bus."
+      },
+      {
+        "text": "🏯 Otagi Nenbutsu-ji. MAHALAGA: Bisitahin ito ngayon sa Huwebes, Setyembre 10. Oras: 09:00–16:00. Sarado ito tuwing Miyerkules at Sabado, kaya ang pagbabago ng araw ay nagsosolve sa problema. Pagpasok: ¥1,000. Walang kailangang reserbasyon. Siguraduhing makita ang humigit-kumulang 1,200 rakan statues."
+      },
+      {
+        "text": "🚶 Saga-Toriimoto. Mula sa Otagi, simulan ang paglalakad pababa. Maglakad sa makasaysayang Saga-Toriimoto area. MAHALAGA: Ang direksyon na ito ay sinadya: Otagi → Saga-Toriimoto → bamboo grove → sentro ng Arashiyama. Ito ang rutang inirerekomenda ng mismong templo."
+      },
+      {
+        "text": "🎋 Arashiyama Bamboo Grove. Maglakad pababa sa sentro sa pamamagitan ng bamboo grove. Tip: Huwag asahang makita ang grove na ganap na walang tao. Isa itong napaka-busy na lugar. Ang daan mula Saga-Toriimoto patungong grove ay nagbibigay daan para sa maayos na paglipat mula sa rural/makasaysayang lugar papunta sa mas sikat na Arashiyama."
+      },
+      {
+        "text": "🚆 Pabalik sa Kyoto. Maglakad papuntang JR Saga-Arashiyama Station. Sakyan ang JR Sagano/San-in Line: Saga-Arashiyama → Kyoto. Direktang byahe, halos 15–20 min. Walang reserbasyon. Gumamit ng IC card o single ticket. MAHALAGA: Ang tren na ito ay JR, pero HINDI kailangan ng Japan Rail Pass. Maaari kang magbayad nang normal gamit ang IC card."
+      },
+      {
+        "text": "🎫 MGA RESERBASYON: HUWAG mag-book ng anumang transportasyon ngayong araw. Huwag mag-book: Subway, Bus 204/205, Randen, Kyoto Bus No. 94, JR Saga-Arashiyama → Kyoto. Hindi mo rin kailangang i-book ang: Kinkaku-ji, Ryoan-ji, Ninna-ji, Otagi Nenbutsu-ji. Bumili ng tiket nang direkta sa bawat site. JAPAN RAIL PASS: Wala tayong Japan Rail Pass. HUWAG baguhin ang itinerary dahil dito. Ang mga transportasyon ngayon ay maaaring magamit at bayaran nang isa-isa. IC card: Kyoto Subway, Kyoto City Bus, Randen, Kyoto Bus, local JR."
       }
     ],
     "money": "Tinatayang €40 (pagkain)"

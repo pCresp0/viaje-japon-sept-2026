@@ -96,22 +96,43 @@ export const days = [
         "text": "Réveil."
       },
       {
-        "text": "Kinkakuji : ligne verte de métro (Karasuma Line) jusqu'à la gare de Kitaoji puis bus 205."
+        "text": "🚇 Hôtel → Kinkaku-ji. Depuis l'hôtel, marchez jusqu'à Kyoto Station. Prenez la Kyoto Subway Karasuma Line : Kyoto → Kitaoji. À Kitaoji : suivez les panneaux vers Kitaoji Bus Terminal ; utilisez la zone bleue ; prenez le bus n° 204 ou 205 vers Kinkaku-ji ; descendez à Kinkakuji-michi. Depuis Kinkakuji-michi : environ 5 min à pied jusqu'à l'entrée. Cette combinaison est préférable au bus direct 205 de Kyoto Station car elle évite une partie du trafic et de la foule. Aucune réservation. Utilisez la carte IC."
       },
       {
-        "text": "Sentier Kinukake no Michi : temples Kinkakuji, Ryoan-ji et Ninna-ji, dans cet ordre."
+        "text": "🏯 Kinkaku-ji (Pavillon d'Or). IMPORTANT : L'heure précédente de 08:30 était incorrecte. Kinkaku-ji ouvre à 09:00. Entrée : environ 500 ¥. Aucune réservation requise. Conseil : Essayez d'arriver juste à l'ouverture pour profiter du site avec moins de monde."
       },
       {
-        "text": "Depuis Ninna-ji, tramway Randen vers Arashiyama (20 min). Déjeuner rapide."
+        "text": "🚶 Chemin Kinukake no Michi. Parcourez dans cet ordre : 1. Kinkaku-ji 2. Ryoan-ji 3. Ninna-ji"
       },
       {
-        "text": "Montée vers le quartier historique de Saga-Toriimoto et le temple Otagi (ferme à 16h, montez d'abord)."
+        "text": "🏯 Ryoan-ji. De Kinkaku-ji, marchez par Kinukake no Michi. Distance : environ 1,5 km / 20 min. Ryoan-ji ouvre en septembre de 08:00 à 17:00. Entrée : environ 600 ¥. Aucune réservation requise. À voir absolument : jardin de pierres ; Hojo ; jardin."
       },
       {
-        "text": "Descente à travers la bambouseraie vers le centre du quartier."
+        "text": "🏯 Ninna-ji. Continuez à pied de Ryoan-ji vers Ninna-ji. Distance : environ 10–15 min. Ninna-ji ouvre en septembre de 09:00 à 17:00. L'entrée aux zones spéciales peut avoir un coût supplémentaire. Aucune réservation requise."
       },
       {
-        "text": "Retour à Kyoto en train JR, Ligne San-In (2 €, 15 min direct)."
+        "text": "🚋 Ninna-ji → Arashiyama. Marchez jusqu'à Omuro-Ninnaji Station. Prenez la Randen Kitano Line vers Katabiranotsuji. À Katabiranotsuji, transférez sur la Randen Arashiyama Line vers Arashiyama. Descendez à Arashiyama Station. Durée totale environ 20–25 min. IMPORTANT : Le Randen N'EST PAS un train JR. Il ne nécessite pas de Japan Rail Pass. Tarif actuel du Randen : 250 ¥ par adulte et par trajet. Peut être payé avec une carte IC. En montant, NE BIPEZ PAS la carte IC. Vous payez en descendant / à la gare selon le cas. Aucune réservation."
+      },
+      {
+        "text": "🍜 Déjeuner rapide à Arashiyama. Gardez un repas rapide pour ne pas compromettre la partie Otagi."
+      },
+      {
+        "text": "🚌 Arashiyama → Otagi Nenbutsu-ji. IMPORTANT : Ne montez PAS à pied depuis Arashiyama. Le site web d'Otagi recommande d'arriver en taxi ou en bus puis de faire le parcours en descente. Option recommandée : Kyoto Bus n° 94 vers Kiyotaki. Montez à un arrêt dans la zone d'Arashiyama et descendez à Otagidera-mae. Environ 20–25 min. Alternative : Taxi depuis la zone d'Arashiyama. Le taxi est plus cher mais peut faire gagner du temps si vous êtes pressés. Ne réservez pas le bus."
+      },
+      {
+        "text": "🏯 Otagi Nenbutsu-ji. IMPORTANT : Ce lieu se visite désormais le jeudi 10 septembre. Horaires : 09:00–16:00. Il est fermé les mercredis et samedis, donc le changement de jour résout le problème. Entrée : 1 000 ¥. Aucune réservation requise. Visitez particulièrement les quelque 1 200 statues de rakan."
+      },
+      {
+        "text": "🚶 Saga-Toriimoto. Depuis Otagi, commencez la descente à pied. Traversez le quartier historique de Saga-Toriimoto. IMPORTANT : Ce sens de parcours est délibéré : Otagi → Saga-Toriimoto → bambouseraie → centre d'Arashiyama. C'est le sens recommandé par le temple lui-même."
+      },
+      {
+        "text": "🎋 Bambouseraie d'Arashiyama. Descendez à pied vers le centre à travers la bambouseraie. Conseil : Ne vous attendez pas à trouver la forêt complètement vide. C'est une zone très fréquentée. Le tronçon de Saga-Toriimoto à la forêt permet de profiter d'une transition progressive entre la zone rurale/historique et l'Arashiyama plus touristique."
+      },
+      {
+        "text": "🚆 Retour à Kyoto. Marchez jusqu'à JR Saga-Arashiyama Station. Prenez la ligne JR Sagano/San-in : Saga-Arashiyama → Kyoto. Trajet direct, environ 15–20 min. Aucune réservation. Utilisez la carte IC ou un billet simple. IMPORTANT : Ce train EST un JR, mais AUCUN Japan Rail Pass n'est requis. Vous pouvez payer normalement avec une carte IC."
+      },
+      {
+        "text": "🎫 RÉSERVATIONS : NE RÉSERVEZ AUCUN transport aujourd'hui. Ne réservez pas : Métro, Bus 204/205, Randen, Kyoto Bus n° 94, JR Saga-Arashiyama → Kyoto. Vous n'avez pas non plus besoin de réserver : Kinkaku-ji, Ryoan-ji, Ninna-ji, Otagi Nenbutsu-ji. Achetez les billets directement sur chaque site. JAPAN RAIL PASS : Nous n'avons pas de Japan Rail Pass. NE MODIFIEZ PAS l'itinéraire pour cette raison. Les transports d'aujourd'hui peuvent être utilisés et payés individuellement. Carte IC : Kyoto Subway, Kyoto City Bus, Randen, Kyoto Bus, JR local."
       }
     ],
     "money": "Env. 40 € (repas)"
