@@ -228,7 +228,7 @@ export const days = [
         "text": "🚆 OSAKA → KYOTO. Return to Kyoto via JR. No reservation. Use IC card or single ticket."
       },
       {
-        "text": "🎫 DAY's RESERVATIONS: DO NOT book any transport. DO NOT use SmartEX. DO NOT use JR-WEST Online. We do not need a Japan Rail Pass. All journeys can be paid individually with an IC card. TRANSPORT SUMMARY: Hotel → Kiyomizu: Bus 100/206 or Kiyomizu-dera Line → IC card/ticket. Kiyomizu → Yasaka → Maruyama → Chion-in → Heian: On foot. Heian → Kyoto Station: On foot + urban transit if needed. Kyoto → Osaka: JR Kyoto Line Special Rapid → IC card/ticket. Osaka → Morinomiya: JR Osaka Loop Line → IC card/ticket. Morinomiya → Osaka Castle: On foot. Osaka Castle → Dotonbori: Osaka Metro → IC card. Dotonbori → Kyoto: JR/metro depending on location → IC card/ticket."
+        "text": "🎫 DAY's RESERVATIONS: DO NOT book any transport.\nDO NOT use SmartEX.\nDO NOT use JR-WEST Online.\nWe do not need a Japan Rail Pass.\nAll journeys can be paid individually with an IC card.\nTRANSPORT SUMMARY: Hotel → Kiyomizu: Bus 100/206 or Kiyomizu-dera Line → IC card/ticket.\nKiyomizu → Yasaka → Maruyama → Chion-in → Heian: On foot.\nHeian → Kyoto Station: On foot + urban transit if needed.\nKyoto → Osaka: JR Kyoto Line Special Rapid → IC card/ticket.\nOsaka → Morinomiya: JR Osaka Loop Line → IC card/ticket.\nMorinomiya → Osaka Castle: On foot.\nOsaka Castle → Dotonbori: Osaka Metro → IC card.\nDotonbori → Kyoto: JR/metro depending on location → IC card/ticket."
       },
       {
         "text": "Before a day with a very early departure, buy the night before: 1–2 onigiri; egg sandwich; fruit/banana; drink; coffee if wanted. Japanese konbinis are a completely normal solution for breakfasts and quick meals."
@@ -318,7 +318,7 @@ export const days = [
         "text": "🎫 RESERVATIONS: ALREADY BOOKED: Kanazawa → Shirakawa-go (08:40, 5 seats) and Shirakawa-go → Takayama (13:15, 5 seats). We DO NOT need Japan Rail Pass, trains, or IC card for these buses. PENDING / RECOMMENDED: reserve Hida beef dinner for 5 people at 19:00."
       },
       {
-        "text": "🚍 TRANSPORT SUMMARY: Kanazawa → Shirakawa-go: Nohi Bus booked, 08:40 → 10:05. Shirakawa-go: All on foot. Shirakawa-go → Takayama: Nohi Bus booked, 13:15 → 14:05. Takayama Bus Terminal → Hotel Wood: approx. 12 min walk. Hotel → Sanmachi: right next to it. We do not need a Japan Rail Pass or trains today."
+        "text": "🚍 TRANSPORT SUMMARY: Kanazawa → Shirakawa-go: Nohi Bus booked, 08:40 → 10:05.\nShirakawa-go: All on foot.\nShirakawa-go → Takayama: Nohi Bus booked, 13:15 → 14:05.\nTakayama Bus Terminal → Hotel Wood: approx. 12 min walk.\nHotel → Sanmachi: right next to it.\nWe do not need a Japan Rail Pass or trains today."
       },
       {
         "text": "🍽️ FOOD TIPS: ⚠️ In Shirakawa-go do not wait until 13:00 to eat. Establishments with limited hours and we must be back at the terminal before 13:15. ⚠️ In Takayama many shops close around 17:00, but dinner restaurants open later. Dinner at 19:00 is viable. 🥩 Takayama is ideal for trying Hida beef. Travelers' tip: reserve popular restaurants or go early as they fill up."
@@ -372,7 +372,7 @@ export const days = [
         "text": "🎫 REQUIRED RESERVATIONS: ALREADY BOOKED: Hotel Wood Takayama, Magome Chaya. TO BOOK: 🚌 Nohi Bus Takayama → Magome (09/14/2026, 08:00, 5 pax). DO NOT BOOK: 🚍 Tsumago → Magome (local bus 14:22). LUGGAGE: 🧳 Magome → Tsumago (drop 08:30-11:30, pick up after 13:00, ¥500/piece)."
       },
       {
-        "text": "🚍 TRANSPORT SUMMARY: 🏨 Hotel Wood Takayama ↓ 10–15 min walk ↓ 🚌 Takayama Nohi Bus Center ↓ 08:00–10:45 🚌 Direct Nohi Bus ↓ 📍 Magome ↓ drop luggage ↓ 🥾 8 km / ~3 h ↓ 📍 Tsumago ↓ pick up luggage ↓ 🚌 14:22–14:50 ↓ 📍 Magome ↓ 🏨 Magome Chaya ↓ 🍱 Dinner 18:00."
+        "text": "🚍 TRANSPORT SUMMARY: 🏨 Hotel Wood Takayama\n↓ 10–15 min walk\n↓ 🚌 Takayama Nohi Bus Center\n↓ 08:00–10:45 🚌 Direct Nohi Bus\n↓ 📍 Magome\n↓ drop luggage\n↓ 🥾 8 km / ~3 h\n↓ 📍 Tsumago\n↓ pick up luggage\n↓ 🚌 14:22–14:50\n↓ 📍 Magome\n↓ 🏨 Magome Chaya\n↓ 🍱 Dinner 18:00."
       },
       {
         "text": "💡 NAKASENDO TIPS: 🥤 Bring enough water and light food before starting. 🍵 Teahouses exist but with variable hours. 🌙 Magome closes early, dinner at 18:00 is the safe bet. 🥾 Comfortable shoes with good soles. 🌧️ Watch for mud if it rains. 🐻 Use bear bells. 🎒 Hike only with a small backpack using the luggage service. 📸 Don't rush, enjoy the trail."

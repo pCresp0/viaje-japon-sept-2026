@@ -228,7 +228,7 @@ export const days = [
         "text": "🚆 OSAKA → KYOTO. Bumalik sa Kyoto sakay ng JR. Walang reserbasyon. Gumamit ng IC card o single ticket."
       },
       {
-        "text": "🎫 MGA RESERBASYON PARA SA ARAW NA ITO: HUWAG mag-book ng anumang transportasyon. HUWAG gumamit ng SmartEX. HUWAG gumamit ng JR-WEST Online. Hindi natin kailangan ng Japan Rail Pass. Lahat ng byahe ay pwedeng bayaran nang isa-isa gamit ang IC card. BUOD NG TRANSPORTASYON: Hotel → Kiyomizu: Bus 100/206 o Kiyomizu-dera Line → IC card/ticket. Kiyomizu → Yasaka → Maruyama → Chion-in → Heian: Paglalakad. Heian → Kyoto Station: Paglalakad + urban transit kung kailangan. Kyoto → Osaka: JR Kyoto Line Special Rapid → IC card/ticket. Osaka → Morinomiya: JR Osaka Loop Line → IC card/ticket. Morinomiya → Osaka Castle: Paglalakad. Osaka Castle → Dotonbori: Osaka Metro → IC card. Dotonbori → Kyoto: JR/metro depende sa lokasyon → IC card/ticket."
+        "text": "🎫 MGA RESERBASYON PARA SA ARAW NA ITO: HUWAG mag-book ng anumang transportasyon.\nHUWAG gumamit ng SmartEX.\nHUWAG gumamit ng JR-WEST Online.\nHindi natin kailangan ng Japan Rail Pass.\nLahat ng byahe ay pwedeng bayaran nang isa-isa gamit ang IC card.\nBUOD NG TRANSPORTASYON: Hotel → Kiyomizu: Bus 100/206 o Kiyomizu-dera Line → IC card/ticket.\nKiyomizu → Yasaka → Maruyama → Chion-in → Heian: Paglalakad.\nHeian → Kyoto Station: Paglalakad + urban transit kung kailangan.\nKyoto → Osaka: JR Kyoto Line Special Rapid → IC card/ticket.\nOsaka → Morinomiya: JR Osaka Loop Line → IC card/ticket.\nMorinomiya → Osaka Castle: Paglalakad.\nOsaka Castle → Dotonbori: Osaka Metro → IC card.\nDotonbori → Kyoto: JR/metro depende sa lokasyon → IC card/ticket."
       },
       {
         "text": "Bago ang isang araw na may maagang byahe, bumili sa gabi ng: 1–2 onigiri; egg sandwich; prutas/saging; inumin; kape kung gusto. Ang mga konbini sa Japan ay perpekto para sa almusal at mabilisang pagkain."
@@ -318,7 +318,7 @@ export const days = [
         "text": "🎫 MGA RESERBASYON: NAKAPAG-RESERVE NA: Kanazawa → Shirakawa-go (08:40, 5 upuan) at Shirakawa-go → Takayama (13:15, 5 upuan). HINDI natin kailangan ng Japan Rail Pass, tren, o IC card para rito. KUMPIRMAHIN / INIREREKOMENDA: mag-reserve ng Hida beef dinner para sa 5 tao ng 19:00."
       },
       {
-        "text": "🚍 BUOD NG TRANSPORTASYON: Kanazawa → Shirakawa-go: Nohi Bus booked, 08:40 → 10:05. Shirakawa-go: Lakad lang. Shirakawa-go → Takayama: Nohi Bus booked, 13:15 → 14:05. Takayama Bus Terminal → Hotel Wood: halos 12 min na lakad. Hotel → Sanmachi: katabi lang. Hindi natin kailangan ng Japan Rail Pass o tren ngayong araw."
+        "text": "🚍 BUOD NG TRANSPORTASYON: Kanazawa → Shirakawa-go: Nohi Bus booked, 08:40 → 10:05.\nShirakawa-go: Lakad lang.\nShirakawa-go → Takayama: Nohi Bus booked, 13:15 → 14:05.\nTakayama Bus Terminal → Hotel Wood: halos 12 min na lakad.\nHotel → Sanmachi: katabi lang.\nHindi natin kailangan ng Japan Rail Pass o tren ngayong araw."
       },
       {
         "text": "🍽️ MGA FOOD TIP: ⚠️ Sa Shirakawa-go, huwag nang hintayin ang 13:00 para kumain. Maikli ang oras ng mga kainan at dapat makabalik na tayo sa terminal bago mag-13:15. ⚠️ Sa Takayama, maraming tindahan ang nagsasara bandang 17:00, pero mas huling nagbubukas ang mga restawran. Ang 19:00 na hapunan ay pasok. 🥩 Sa Takayama pinakamasarap subukan ang Hida beef. Tip ng manlalakbay: mag-reserve sa sikat na kainan o pumunta nang maaga bago mapuno."
@@ -372,7 +372,7 @@ export const days = [
         "text": "🎫 MGA KAILANGANG RESERBASYON: NAKAPAG-RESERVE NA: Hotel Wood Takayama, Magome Chaya. I-RESERVE: 🚌 Nohi Bus Takayama → Magome (09/14/2026, 08:00, 5 tao). HUWAG I-RESERVE: 🚍 Tsumago → Magome (lokal na bus 14:22). BAGAHE: 🧳 Magome → Tsumago (iwan 08:30-11:30, kunin paglampas 13:00, ¥500/piraso)."
       },
       {
-        "text": "🚍 BUOD NG TRANSPORTASYON: 🏨 Hotel Wood Takayama ↓ 10–15 min na lakad ↓ 🚌 Takayama Nohi Bus Center ↓ 08:00–10:45 🚌 Direktang Nohi Bus ↓ 📍 Magome ↓ iwan ang bagahe ↓ 🥾 8 km / ~3 h ↓ 📍 Tsumago ↓ kunin ang bagahe ↓ 🚌 14:22–14:50 ↓ 📍 Magome ↓ 🏨 Magome Chaya ↓ 🍱 Hapunan 18:00."
+        "text": "🚍 BUOD NG TRANSPORTASYON: 🏨 Hotel Wood Takayama\n↓ 10–15 min na lakad\n↓ 🚌 Takayama Nohi Bus Center\n↓ 08:00–10:45 🚌 Direktang Nohi Bus\n↓ 📍 Magome\n↓ iwan ang bagahe\n↓ 🥾 8 km / ~3 h\n↓ 📍 Tsumago\n↓ kunin ang bagahe\n↓ 🚌 14:22–14:50\n↓ 📍 Magome\n↓ 🏨 Magome Chaya\n↓ 🍱 Hapunan 18:00."
       },
       {
         "text": "💡 NAKASENDO TIPS: 🥤 Magdala ng sapat na tubig at magaan na pagkain bago magsimula. 🍵 May mga teahouse pero paiba-iba ang oras. 🌙 Maagang nagsasara ang Magome, ang hapunan ng 18:00 ay pinakasigurado. 🥾 Kumportableng sapatos na may magandang swelas. 🌧️ Mag-ingat sa putik kung umulan. 🐻 Gamitin ang bear bells. 🎒 Maglakad lang nang may maliit na backpack gamit ang luggage service. 📸 Huwag magmadali, i-enjoy ang trail."

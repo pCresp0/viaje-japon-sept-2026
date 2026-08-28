@@ -112,7 +112,7 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
                   <PlaceText
                     as="p"
                     text={s.text}
-                    className="text-[14px] leading-snug mt-0.5"
+                    className="text-[14px] leading-snug mt-0.5 whitespace-pre-wrap"
                     style={{ color: "var(--ink)" }}
                     linkStyle={{ color: "var(--shu)" }}
                   />
@@ -134,7 +134,7 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
                     <PlaceText
                       as="p"
                       text={s.text}
-                      className="text-[14px] leading-snug"
+                      className="text-[14px] leading-snug whitespace-pre-wrap"
                       style={{ color: "var(--ink)" }}
                       linkStyle={{ color: "var(--shu)" }}
                     />

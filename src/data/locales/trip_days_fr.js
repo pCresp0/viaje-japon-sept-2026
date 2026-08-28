@@ -228,7 +228,7 @@ export const days = [
         "text": "🚆 OSAKA → KYOTO. Retour à Kyoto par JR. Aucune réservation. Utilisez la carte IC ou un billet simple."
       },
       {
-        "text": "🎫 RÉSERVATIONS DU JOUR : NE RÉSERVEZ AUCUN transport. N'UTILISEZ PAS SmartEX. N'UTILISEZ PAS JR-WEST Online. Nous n'avons pas besoin du Japan Rail Pass. Tous les trajets peuvent être payés individuellement avec une carte IC. RÉSUMÉ DES TRANSPORTS : Hôtel → Kiyomizu : Bus 100/206 ou Ligne Kiyomizu-dera → Carte IC/billet. Kiyomizu → Yasaka → Maruyama → Chion-in → Heian : À pied. Heian → Kyoto Station : À pied + transport urbain si besoin. Kyoto → Osaka : JR Kyoto Line Special Rapid → Carte IC/billet. Osaka → Morinomiya : JR Osaka Loop Line → Carte IC/billet. Morinomiya → Osaka Castle : À pied. Osaka Castle → Dotonbori : Osaka Metro → Carte IC. Dotonbori → Kyoto : JR/métro selon emplacement → Carte IC/billet."
+        "text": "🎫 RÉSERVATIONS DU JOUR : NE RÉSERVEZ AUCUN transport.\nN'UTILISEZ PAS SmartEX.\nN'UTILISEZ PAS JR-WEST Online.\nNous n'avons pas besoin du Japan Rail Pass.\nTous les trajets peuvent être payés individuellement avec une carte IC.\nRÉSUMÉ DES TRANSPORTS : Hôtel → Kiyomizu : Bus 100/206 ou Ligne Kiyomizu-dera → Carte IC/billet.\nKiyomizu → Yasaka → Maruyama → Chion-in → Heian : À pied.\nHeian → Kyoto Station : À pied + transport urbain si besoin.\nKyoto → Osaka : JR Kyoto Line Special Rapid → Carte IC/billet.\nOsaka → Morinomiya : JR Osaka Loop Line → Carte IC/billet.\nMorinomiya → Osaka Castle : À pied.\nOsaka Castle → Dotonbori : Osaka Metro → Carte IC.\nDotonbori → Kyoto : JR/métro selon emplacement → Carte IC/billet."
       },
       {
         "text": "Avant une journée avec un départ très matinal, achetez la veille : 1–2 onigiri ; sandwich aux œufs ; fruit/banane ; boisson ; café si vous voulez. Les konbini japonais sont une solution tout à fait normale pour les petits-déjeuners et repas rapides."
@@ -318,7 +318,7 @@ export const days = [
         "text": "🎫 RÉSERVATIONS : DÉJÀ RÉSERVÉ : Kanazawa → Shirakawa-go (08:40, 5 places) et Shirakawa-go → Takayama (13:15, 5 places). Nous n'avons PAS besoin de Japan Rail Pass, de trains ou de carte IC pour ces bus. EN ATTENTE / RECOMMANDÉ : réservez un dîner de bœuf de Hida pour 5 personnes à 19:00."
       },
       {
-        "text": "🚍 RÉSUMÉ DES TRANSPORTS : Kanazawa → Shirakawa-go : Nohi Bus réservé, 08:40 → 10:05. Shirakawa-go : Tout à pied. Shirakawa-go → Takayama : Nohi Bus réservé, 13:15 → 14:05. Terminal de bus de Takayama → Hotel Wood : env. 12 min à pied. Hôtel → Sanmachi : juste à côté. Nous n'avons pas besoin de Japan Rail Pass ni de trains aujourd'hui."
+        "text": "🚍 RÉSUMÉ DES TRANSPORTS : Kanazawa → Shirakawa-go : Nohi Bus réservé, 08:40 → 10:05.\nShirakawa-go : Tout à pied.\nShirakawa-go → Takayama : Nohi Bus réservé, 13:15 → 14:05.\nTerminal de bus de Takayama → Hotel Wood : env. 12 min à pied.\nHôtel → Sanmachi : juste à côté.\nNous n'avons pas besoin de Japan Rail Pass ni de trains aujourd'hui."
       },
       {
         "text": "🍽️ CONSEILS DE REPAS : ⚠️ À Shirakawa-go, n'attendez pas 13:00 pour manger. Établissements aux horaires limités et nous devons être de retour au terminal avant 13:15. ⚠️ À Takayama, de nombreuses boutiques ferment vers 17:00, mais les restaurants pour le dîner ouvrent plus tard. Un dîner à 19:00 est viable. 🥩 Takayama est idéal pour goûter au bœuf de Hida. Conseil de voyageurs : réservez les restaurants populaires ou allez-y tôt car ils se remplissent."
@@ -372,7 +372,7 @@ export const days = [
         "text": "🎫 RÉSERVATIONS REQUISES : DÉJÀ RÉSERVÉ : Hotel Wood Takayama, Magome Chaya. À RÉSERVER : 🚌 Nohi Bus Takayama → Magome (14/09/2026, 08:00, 5 pers). NE PAS RÉSERVER : 🚍 Tsumago → Magome (bus local 14:22). BAGAGES : 🧳 Magome → Tsumago (dépôt 08:30-11:30, retrait après 13:00, 500 ¥/pièce)."
       },
       {
-        "text": "🚍 RÉSUMÉ DES TRANSPORTS : 🏨 Hotel Wood Takayama ↓ 10–15 min à pied ↓ 🚌 Takayama Nohi Bus Center ↓ 08:00–10:45 🚌 Bus direct Nohi Bus ↓ 📍 Magome ↓ dépôt bagages ↓ 🥾 8 km / ~3 h ↓ 📍 Tsumago ↓ retrait bagages ↓ 🚌 14:22–14:50 ↓ 📍 Magome ↓ 🏨 Magome Chaya ↓ 🍱 Dîner 18:00."
+        "text": "🚍 RÉSUMÉ DES TRANSPORTS : 🏨 Hotel Wood Takayama\n↓ 10–15 min à pied\n↓ 🚌 Takayama Nohi Bus Center\n↓ 08:00–10:45 🚌 Bus direct Nohi Bus\n↓ 📍 Magome\n↓ dépôt bagages\n↓ 🥾 8 km / ~3 h\n↓ 📍 Tsumago\n↓ retrait bagages\n↓ 🚌 14:22–14:50\n↓ 📍 Magome\n↓ 🏨 Magome Chaya\n↓ 🍱 Dîner 18:00."
       },
       {
         "text": "💡 CONSEILS NAKASENDO : 🥤 Emportez de l'eau et de la nourriture légère avant de partir. 🍵 Des maisons de thé existent mais horaires variables. 🌙 Magome ferme tôt, le dîner à 18:00 est l'option sûre. 🥾 Chaussures confortables avec bonne semelle. 🌧️ Attention à la boue s'il pleut. 🐻 Utilisez les cloches à ours. 🎒 Marchez avec un petit sac à dos grâce au service de bagages. 📸 Ne courez pas, profitez de la randonnée."
