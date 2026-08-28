@@ -6,7 +6,6 @@ import {
   Building2,
   ShieldCheck,
   Download,
-  ExternalLink,
   FileText,
   Users,
   Plane,
@@ -55,13 +54,13 @@ export default function EmergencyPage() {
       <Highlightable id="emergency-insurance">
         <div
           className="rounded-2xl overflow-hidden border mb-8 shadow-sm"
-          style={{ borderColor: "rgba(5, 150, 105, 0.3)", background: "var(--paper-raised)" }}
+          style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}
         >
           {/* Cabecera Heymondo */}
           <div
             className="p-5 sm:p-6 text-white"
             style={{
-              background: "linear-gradient(135deg, #059669 0%, #047857 50%, #064e3b 100%)",
+              background: "linear-gradient(135deg, #1b4332 0%, #2d6a4f 60%, #40916c 100%)",
             }}
           >
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -74,17 +73,17 @@ export default function EmergencyPage() {
                 </div>
                 <div>
                   <div className="flex items-center gap-2 flex-wrap">
-                    <span className="bg-white/20 text-white text-[11px] font-extrabold px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                    <span className="bg-emerald-300 text-emerald-950 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full uppercase tracking-wider">
                       ¡Ya estás asegurad@!
                     </span>
                     <span className="text-xs text-emerald-100 font-medium">
                       Heymondo · Viaje Tranquilidad
                     </span>
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold mt-1 tracking-tight">
+                  <h3 className="text-xl sm:text-2xl font-bold mt-1 tracking-tight text-white font-display">
                     Póliza Nº {heymondoInsurance.policyNumber}
                   </h3>
-                  <p className="text-xs text-emerald-100/90 mt-0.5">
+                  <p className="text-xs text-emerald-100 mt-0.5">
                     Aseguradora: IMA Ibérica Asistencia · 06/09/2026 – 22/09/2026 (Japón)
                   </p>
                 </div>
@@ -94,10 +93,10 @@ export default function EmergencyPage() {
               <div className="shrink-0 flex flex-col sm:flex-row gap-2">
                 <a
                   href={`tel:${heymondoInsurance.assistancePhone.replace(/\s+/g, "")}`}
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-bold text-sm bg-white text-emerald-900 shadow-md hover:bg-emerald-50 active:scale-95 transition-all"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-bold text-sm bg-white text-emerald-950 shadow-md hover:bg-emerald-50 active:scale-95 transition-all"
                   style={{ textDecoration: "none" }}
                 >
-                  <Phone size={16} className="text-emerald-700" />
+                  <Phone size={16} className="text-emerald-800" />
                   Asistencia 24h: {heymondoInsurance.assistancePhone}
                 </a>
               </div>
@@ -109,28 +108,37 @@ export default function EmergencyPage() {
             {/* 4 Viajeros Asegurados */}
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <Users size={16} className="text-emerald-600 dark:text-emerald-400" />
+                <Users size={16} style={{ color: "var(--forest)" }} />
                 <p className="eyebrow" style={{ margin: 0, color: "var(--ink-soft)" }}>
                   Viajeros Asegurados (4 Personas)
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                 {heymondoInsurance.travelers.map((t, i) => (
                   <div
                     key={i}
-                    className="p-3 rounded-xl border flex flex-col justify-between"
+                    className="p-3.5 rounded-xl border flex flex-col justify-between"
                     style={{ background: "var(--paper)", borderColor: "var(--line)" }}
                   >
                     <div>
-                      <p className="text-[11px] font-semibold text-slate-400 uppercase">Asegurado {i + 1}</p>
-                      <p className="text-sm font-bold text-slate-900 dark:text-white mt-0.5">
+                      <p style={{ fontSize: 10, fontWeight: 700, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", margin: 0 }}>
+                        Asegurado {i + 1}
+                      </p>
+                      <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", marginTop: 4, marginBottom: 0 }}>
                         {t.name} {t.surnames}
                       </p>
                     </div>
-                    <div className="mt-2 pt-2 border-t flex items-center justify-between" style={{ borderColor: "var(--line)" }}>
-                      <span className="text-[11px] text-slate-400">DNI:</span>
-                      <span className="font-mono text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 px-2 py-0.5 rounded border border-emerald-200 dark:border-emerald-800">
+                    <div className="mt-3 pt-2.5 border-t flex items-center justify-between" style={{ borderColor: "var(--line)" }}>
+                      <span style={{ fontSize: 11, color: "var(--ink-soft)", fontWeight: 600 }}>DNI:</span>
+                      <span
+                        className="font-mono text-xs font-bold px-2 py-0.5 rounded border"
+                        style={{
+                          background: "rgba(45, 106, 79, 0.08)",
+                          borderColor: "rgba(45, 106, 79, 0.25)",
+                          color: "var(--forest)",
+                        }}
+                      >
                         {t.dni}
                       </span>
                     </div>
@@ -143,7 +151,7 @@ export default function EmergencyPage() {
             <div>
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2">
-                  <HeartHandshake size={16} className="text-emerald-600 dark:text-emerald-400" />
+                  <HeartHandshake size={16} style={{ color: "var(--forest)" }} />
                   <p className="eyebrow" style={{ margin: 0, color: "var(--ink-soft)" }}>
                     Coberturas de la Póliza
                   </p>
@@ -151,7 +159,8 @@ export default function EmergencyPage() {
                 <button
                   type="button"
                   onClick={() => setShowAllCoverages(!showAllCoverages)}
-                  className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 flex items-center gap-1 hover:underline"
+                  className="text-xs font-bold flex items-center gap-1 hover:underline"
+                  style={{ color: "var(--forest)" }}
                 >
                   {showAllCoverages ? "Ver menos" : "Ver todas las coberturas"}
                   {showAllCoverages ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
@@ -165,12 +174,25 @@ export default function EmergencyPage() {
                 ).map((cov, idx) => (
                   <div
                     key={idx}
-                    className={`p-3 rounded-xl border flex flex-col justify-between ${
-                      cov.highlight ? "bg-emerald-50/50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800/60" : "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800"
-                    }`}
+                    className="p-3.5 rounded-xl border flex flex-col justify-between"
+                    style={{
+                      background: cov.highlight ? "rgba(45, 106, 79, 0.05)" : "var(--paper)",
+                      borderColor: cov.highlight ? "rgba(45, 106, 79, 0.25)" : "var(--line)",
+                    }}
                   >
-                    <p className="text-xs text-slate-600 dark:text-slate-300 leading-snug">{cov.label}</p>
-                    <p className="text-sm font-bold text-emerald-700 dark:text-emerald-400 mt-1.5 font-mono">
+                    <p style={{ fontSize: 12.5, color: "var(--ink)", fontWeight: 500, lineHeight: 1.4, margin: 0 }}>
+                      {cov.label}
+                    </p>
+                    <p
+                      className="font-display"
+                      style={{
+                        fontSize: 14,
+                        fontWeight: 700,
+                        color: cov.highlight ? "var(--forest)" : "var(--indigo)",
+                        marginTop: 6,
+                        marginBottom: 0,
+                      }}
+                    >
                       {cov.amount}
                     </p>
                   </div>
@@ -179,19 +201,30 @@ export default function EmergencyPage() {
             </div>
 
             {/* AirHelp Plus Incluido */}
-            <div className="p-4 rounded-xl border bg-sky-50/60 dark:bg-sky-950/30 border-sky-200 dark:border-sky-800/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div
+              className="p-4 rounded-xl border flex flex-col sm:flex-row sm:items-center justify-between gap-3.5"
+              style={{ background: "rgba(29, 53, 87, 0.05)", borderColor: "rgba(29, 53, 87, 0.2)" }}
+            >
               <div className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-xl bg-sky-500 flex items-center justify-center text-white shrink-0 shadow-sm">
+                <div
+                  className="w-10 h-10 rounded-xl flex items-center justify-center text-white shrink-0 shadow-sm"
+                  style={{ background: "var(--indigo)" }}
+                >
                   <Plane size={20} />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-sky-950 dark:text-sky-200 flex items-center gap-2">
-                    Servicio AirHelp Plus Incluido
-                    <span className="text-[10px] bg-sky-200 dark:bg-sky-900 text-sky-800 dark:text-sky-300 font-bold px-2 py-0.5 rounded-full">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <h4 style={{ fontSize: 13.5, fontWeight: 700, color: "var(--indigo)", margin: 0 }}>
+                      Servicio AirHelp Plus Incluido
+                    </h4>
+                    <span
+                      className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+                      style={{ background: "rgba(29, 53, 87, 0.12)", color: "var(--indigo)" }}
+                    >
                       Hasta 600 € / pasajero
                     </span>
-                  </h4>
-                  <p className="text-xs text-sky-900/80 dark:text-sky-300/80 mt-0.5 leading-relaxed">
+                  </div>
+                  <p style={{ fontSize: 12, color: "var(--ink-soft)", marginTop: 2, marginBottom: 0, lineHeight: 1.5 }}>
                     Reclamación de vuelos ante demoras &gt;3h, cancelaciones o pérdidas de conexión en colaboración con Heymondo.
                   </p>
                 </div>
@@ -201,8 +234,8 @@ export default function EmergencyPage() {
                 href={heymondoInsurance.airHelpUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold bg-sky-600 hover:bg-sky-500 text-white shrink-0 shadow-sm"
-                style={{ textDecoration: "none" }}
+                className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-white shrink-0 shadow-sm"
+                style={{ background: "var(--indigo)", textDecoration: "none" }}
               >
                 Reclamar Vuelo AirHelp ↗
               </a>
@@ -210,12 +243,15 @@ export default function EmergencyPage() {
 
             {/* App Heymondo & Canales de Contacto */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
-              <div className="p-4 rounded-xl border bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 space-y-2">
-                <h5 className="font-bold text-xs uppercase tracking-wider text-slate-800 dark:text-slate-200 flex items-center gap-1.5">
-                  <Smartphone size={15} className="text-emerald-600" />
+              <div
+                className="p-4 rounded-xl border space-y-2"
+                style={{ background: "var(--paper)", borderColor: "var(--line)" }}
+              >
+                <h5 style={{ fontSize: 12, fontWeight: 700, color: "var(--ink)", textTransform: "uppercase", letterSpacing: "0.05em", margin: 0 }} className="flex items-center gap-1.5">
+                  <Smartphone size={15} style={{ color: "var(--forest)" }} />
                   App Heymondo (Asistencia 24h)
                 </h5>
-                <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                <p style={{ fontSize: 12, color: "var(--ink-soft)", margin: 0, lineHeight: 1.5 }}>
                   Chat médico y videoconsulta 24h, llamada de asistencia gratuita por internet sin coste de roaming y gestión de incidencias.
                 </p>
                 <div className="flex gap-2 pt-1">
@@ -223,8 +259,8 @@ export default function EmergencyPage() {
                     href={heymondoInsurance.appStoreUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-xs font-semibold px-3 py-1.5 rounded-lg border bg-white dark:bg-slate-900 border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white flex items-center gap-1"
-                    style={{ textDecoration: "none" }}
+                    className="text-xs font-bold px-3 py-1.5 rounded-lg border flex items-center gap-1"
+                    style={{ background: "var(--paper-raised)", borderColor: "var(--line)", color: "var(--ink)", textDecoration: "none" }}
                   >
                     🍏 App Store ↗
                   </a>
@@ -232,42 +268,46 @@ export default function EmergencyPage() {
                     href={heymondoInsurance.playStoreUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-xs font-semibold px-3 py-1.5 rounded-lg border bg-white dark:bg-slate-900 border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white flex items-center gap-1"
-                    style={{ textDecoration: "none" }}
+                    className="text-xs font-bold px-3 py-1.5 rounded-lg border flex items-center gap-1"
+                    style={{ background: "var(--paper-raised)", borderColor: "var(--line)", color: "var(--ink)", textDecoration: "none" }}
                   >
                     🤖 Google Play ↗
                   </a>
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl border bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 space-y-2">
-                <h5 className="font-bold text-xs uppercase tracking-wider text-slate-800 dark:text-slate-200 flex items-center gap-1.5">
-                  <FileText size={15} className="text-emerald-600" />
+              <div
+                className="p-4 rounded-xl border space-y-2"
+                style={{ background: "var(--paper)", borderColor: "var(--line)" }}
+              >
+                <h5 style={{ fontSize: 12, fontWeight: 700, color: "var(--ink)", textTransform: "uppercase", letterSpacing: "0.05em", margin: 0 }} className="flex items-center gap-1.5">
+                  <FileText size={15} style={{ color: "var(--forest)" }} />
                   Gestión de Reembolsos
                 </h5>
-                <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Portal online para solicitar reembolsos de gastos médicos o incidencias autorizadas previamente. Teléfono: <strong>+34 91 353 63 24</strong>.
+                <p style={{ fontSize: 12, color: "var(--ink-soft)", margin: 0, lineHeight: 1.5 }}>
+                  Portal online para solicitar reembolsos de gastos médicos o incidencias autorizadas previamente. Teléfono: <strong style={{ color: "var(--ink)" }}>+34 91 353 63 24</strong>.
                 </p>
                 <div className="pt-1">
                   <a
                     href={heymondoInsurance.portalUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-xs font-semibold px-3 py-1.5 rounded-lg border bg-white dark:bg-slate-900 border-slate-300 dark:border-slate-700 text-emerald-600 dark:text-emerald-400 flex items-center gap-1 w-fit"
-                    style={{ textDecoration: "none" }}
+                    className="text-xs font-bold px-3 py-1.5 rounded-lg border flex items-center gap-1 w-fit"
+                    style={{ background: "var(--paper-raised)", borderColor: "var(--line)", color: "var(--forest)", textDecoration: "none" }}
                   >
-                    🌐 Portal Siniestros (siniestros.imaiberica.es) ↗
+                    🌐 siniestros.imaiberica.es ↗
                   </a>
                 </div>
               </div>
             </div>
 
             {/* Botones de Descarga y Visualización de Condiciones */}
-            <div className="pt-2 border-t flex flex-wrap gap-2.5" style={{ borderColor: "var(--line)" }}>
+            <div className="pt-3 border-t flex flex-wrap gap-2.5" style={{ borderColor: "var(--line)" }}>
               <button
                 type="button"
                 onClick={() => downloadInsuranceConditions("particular")}
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white shadow-sm transition-all"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-white shadow-sm transition-all"
+                style={{ background: "var(--forest)" }}
               >
                 <Download size={14} />
                 Descargar Condiciones Particulares (.txt)
@@ -276,7 +316,8 @@ export default function EmergencyPage() {
               <button
                 type="button"
                 onClick={() => downloadInsuranceConditions("general")}
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-800 dark:bg-slate-700 hover:bg-slate-700 dark:hover:bg-slate-600 text-white shadow-sm transition-all"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-white shadow-sm transition-all"
+                style={{ background: "var(--indigo)" }}
               >
                 <Download size={14} />
                 Descargar Condiciones Generales (.txt)
@@ -285,7 +326,8 @@ export default function EmergencyPage() {
               <button
                 type="button"
                 onClick={() => setModalContent("particular")}
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 transition-all"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold border transition-all"
+                style={{ background: "var(--paper)", borderColor: "var(--line)", color: "var(--ink)" }}
               >
                 <FileText size={14} />
                 Ver Condiciones Particulares
@@ -294,7 +336,8 @@ export default function EmergencyPage() {
               <button
                 type="button"
                 onClick={() => setModalContent("general")}
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 transition-all"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold border transition-all"
+                style={{ background: "var(--paper)", borderColor: "var(--line)", color: "var(--ink)" }}
               >
                 <FileText size={14} />
                 Ver Condiciones Generales
@@ -382,13 +425,17 @@ export default function EmergencyPage() {
           onClick={() => setModalContent(null)}
         >
           <div
-            className="bg-white dark:bg-slate-900 rounded-2xl max-w-3xl w-full max-h-[90vh] flex flex-col shadow-2xl border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white"
+            className="rounded-2xl max-w-3xl w-full max-h-[90vh] flex flex-col shadow-2xl border"
+            style={{ background: "var(--paper-raised)", borderColor: "var(--line)", color: "var(--ink)" }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="px-6 py-4 bg-emerald-800 text-white flex items-center justify-between rounded-t-2xl">
+            <div
+              className="px-6 py-4 text-white flex items-center justify-between rounded-t-2xl"
+              style={{ background: "var(--forest)" }}
+            >
               <div className="flex items-center gap-2">
                 <FileText size={20} />
-                <h3 className="font-bold text-base">
+                <h3 className="font-bold text-base text-white">
                   {modalContent === "particular"
                     ? `Condiciones Particulares · Póliza ${heymondoInsurance.policyNumber}`
                     : `Condiciones Generales · Seguro TRANQUILIDAD`}
@@ -397,23 +444,30 @@ export default function EmergencyPage() {
               <button
                 type="button"
                 onClick={() => setModalContent(null)}
-                className="p-1 rounded-lg text-slate-200 hover:text-white hover:bg-white/10"
+                className="p-1.5 rounded-lg text-white/80 hover:text-white hover:bg-white/10"
               >
                 <X size={20} />
               </button>
             </div>
 
-            <div className="p-6 overflow-y-auto font-mono text-xs whitespace-pre-wrap leading-relaxed flex-1 bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200">
+            <div
+              className="p-6 overflow-y-auto font-mono text-xs whitespace-pre-wrap leading-relaxed flex-1"
+              style={{ background: "var(--paper)", color: "var(--ink)" }}
+            >
               {modalContent === "particular"
                 ? heymondoInsurance.fullParticularConditions
                 : heymondoInsurance.fullGeneralConditions}
             </div>
 
-            <div className="px-6 py-4 bg-slate-100 dark:bg-slate-800/80 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <div
+              className="px-6 py-4 border-t flex items-center justify-between"
+              style={{ background: "var(--paper-raised)", borderColor: "var(--line)" }}
+            >
               <button
                 type="button"
                 onClick={() => downloadInsuranceConditions(modalContent)}
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white shadow-sm transition-all"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-white shadow-sm transition-all"
+                style={{ background: "var(--forest)" }}
               >
                 <Download size={14} />
                 Descargar como archivo .txt
@@ -422,7 +476,8 @@ export default function EmergencyPage() {
               <button
                 type="button"
                 onClick={() => setModalContent(null)}
-                className="px-5 py-2 rounded-xl text-xs font-bold bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:opacity-90 transition-opacity"
+                className="px-5 py-2 rounded-xl text-xs font-bold text-white"
+                style={{ background: "var(--indigo)" }}
               >
                 Cerrar
               </button>
