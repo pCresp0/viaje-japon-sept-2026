@@ -48,22 +48,37 @@ export const days = [
     "history": "Ang Fushimi Inari ay nakatuon kay Inari, ang diyos ng Shinto ng bigas, isang pangunahing elemento para sa sinaunang ekonomiya ng Hapon. Ang Nara ay ang unang permanenteng kabisera ng Japan noong ika-8 siglo at siya ring pinagmulan ng Budismo sa bansa.",
     "schedule": [
       {
-        "text": "Paggising."
+        "text": "Gumising."
       },
       {
-        "text": "Fushimi Inari Shrine. JR Nara Line D mula Kyoto Station papuntang Inari Station (tinatayang €1, 5 min)."
+        "text": "🚆 JR Nara Line: Kyoto Station → Inari Station (tinatayang 5 min). Walang kailangang reserbasyon; gumamit ng IC card o single ticket."
       },
       {
-        "text": "Mula sa Inari, magpatuloy sa JR line nang direkta papuntang Nara (45 min)."
+        "text": "Fushimi Inari Shrine. Hindi kailangang umakyat hanggang sa tuktok ng Mount Inari; gawin itong flexible na paglalakad depende sa enerhiya at oras."
       },
       {
-        "text": "Pagbisita sa Great Buddha (Todai-ji) at deer park. Tanghalian sa Nara."
+        "text": "🚆 JR Nara Line: Inari → Nara. Direktang LOCAL train, walang transfer, tinatayang 50–55 min. Walang kailangang reserbasyon. Mahalaga: hindi lahat ng tren sa linya na ito ay humihinto sa Inari; gumamit ng Local service."
       },
       {
-        "text": "Tren pabalik ng Kyoto."
+        "text": "🏯 Todai-ji at Great Buddha."
       },
       {
-        "text": "Paglalakad sa paglubog ng araw sa pamamagitan ng Pontocho at distrito ng mga geisha ng Miyagawacho."
+        "text": "🦌 Nara Park at mga usa."
+      },
+      {
+        "text": "🍜 Tanghalian sa Nara."
+      },
+      {
+        "text": "Payapang paglalakad sa Nara. Opsiyonal ang Nigatsu-do kung may sapat na oras."
+      },
+      {
+        "text": "🚆 JR Nara → Kyoto. Sakyan ang susunod na maginhawang byahe; walang kailangang reserbasyon."
+      },
+      {
+        "text": "🌇 Paglalakad sa Pontocho, Kamogawa, Miyagawacho, at Gion. Ang paglubog ng araw ay bandang 18:15, kaya mae-enjoy mo rin ang blue hour. Opsiyonal ang Yasaka Jinja kung may sapat na oras."
+      },
+      {
+        "text": "🎫 Mga Reserbasyon: hindi na kailangan ng maagang reserbasyon para sa anumang tren ngayong araw. Ang Kyoto → Inari, Inari → Nara, at Nara → Kyoto ay mga regional JR routes. Gumamit ng IC card o bumili ng tiket sa istasyon."
       }
     ],
     "money": "Tinatayang €40 (pagkain)"
