@@ -27,7 +27,7 @@ export const pendingItems = [
     urgency: "alta",
     title: "Reservar asientos en los Shinkansen",
     detail:
-      "Dos trenes bala clave: Día 1 Shinkansen Hikari (Tokio → Kioto, ~85€) y Día 9 Shinkansen Nozomi (Nagoya → Tokio, ~50€). Al no llevar JR Pass, se deben comprar online (app SmartEX o Klook) y reservar asientos con equipaje grande si lleváis maletas XXL.",
+      "Dos trenes bala clave: Día 1 Shinkansen Nozomi (Shinagawa → Kioto, ~90€) y Día 9 Shinkansen Nozomi (Nagoya → Tokio, ~50€). Al no llevar JR Pass, comprar online (app SmartEX) semanas antes marcando obligatoriamente Oversized Baggage para las maletas y asiento E en ventanilla derecha para ver el Monte Fuji.",
     deadline: "Semanas antes",
   },
   {

@@ -23,17 +23,17 @@ export const days = [
   {
     "title": "Pagdating sa Japan",
     "cities": "Narita, Tokyo, Kyoto",
-    "summary": "Paglapag sa airport ng Narita, mga proseso sa customs gamit ang Visit Japan Web QR code, at pagkuha ng bagahe. Direktang paglipat gamit ang tren papuntang Kyoto para sa hotel check-in. Tatapusin natin ang araw sa ating unang karanasan sa lungsod, sa pamamagitan ng mabilis na hapunan sa paligid ng istasyon.",
+    "summary": "Paglapag sa airport ng Narita, mga proseso sa customs gamit ang Visit Japan Web QR code, at pagkuha ng bagahe. Paglipat gamit ang Narita Express papuntang Shinagawa at direktang koneksyon ng bullet train sa Shinkansen Nozomi papuntang Kyoto para sa hotel check-in. Tatapusin natin ang araw sa ating unang karanasan sa lungsod, sa pamamagitan ng mabilis na hapunan sa paligid ng istasyon.",
     "history": "Ang Kyoto ang naging kabisera ng imperyo ng Japan sa loob ng mahigit isang libong taon, mula 794 hanggang 1868. Ito ang kultural at espirituwal na puso ng bansa. Matapos makaligtas nang buo sa mga pambobomba noong Ikalawang Digmaang Pandaigdig, napanatili nito ang halos lahat ng kanyang sinaunang tradisyunal na arkitektura ng kahoy.",
     "schedule": [
       {
         "text": "Paglapag sa Narita at mga proseso sa customs (humigit-kumulang 1h 30m). Ihanda ang iyong Visit Japan Web QR code upang mapabilis ang pagdaan sa border control."
       },
       {
-        "text": "Pag-alis mula sa airport gamit ang Narita Express (N'EX), nasa €19, eksaktong 1h papuntang Tokyo Station."
+        "text": "Pag-alis mula sa airport level B1 (PULANG bahagi ng Japan Railways) sa tren na Narita Express (N'EX). Kukunin natin ang tiket sa counter para sa susunod na available na tren. Ang biyahe ay 1 oras at 10 minuto nang walang lipat hanggang sa Shinagawa Station (~€19). Dito tayo estratehikong bababa upang maiwasan ang 20 minutong paglalakad sa ilalim ng lupa ng Tokyo Station habang hila ang mga maleta."
       },
       {
-        "text": "Sa Tokyo Station, paglipat sa Shinkansen Hikari (bullet train) papuntang Kyoto (humigit-kumulang €90, 2h 30m). Umupo sa kanang bahagi para makita ang Mount Fuji kung maaliwalas ang kalangitan."
+        "text": "Sa parehong Shinagawa Station, mabilis at madaling paglipat (humigit-kumulang 3 min) papunta sa mga riles ng bullet train. Sasakay tayo sa Shinkansen Nozomi patungong Kyoto (humigit-kumulang €90, 2h 11m). Mahalagang paalala sa pag-book: Bilhin ang mga tiket na ito ilang linggo bago sa SmartEX app na may piniling Oversized Baggage (upang masiguro ang espasyo ng maleta) at piliin ang mga upuang E (kanang bintana) para makita ang Mount Fuji sa daan."
       },
       {
         "text": "Pagdating sa Kyoto, hotel check-in, at hapunan."

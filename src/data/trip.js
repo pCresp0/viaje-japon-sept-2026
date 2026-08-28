@@ -233,13 +233,13 @@ export const days = [
     title: "Llegada a Japón",
     cities: "Narita, Tokio, Kioto",
     summary:
-      "Aterrizaje en el aeropuerto de Narita, trámites de aduana con el código QR de Visit Japan Web y recogida de equipajes. Traslado directo en tren hasta Kioto para hacer el check-in en el hotel. Terminaremos la jornada con una primera toma de contacto con la ciudad, cenando algo rápido por los alrededores de la estación.",
+      "Aterrizaje en el aeropuerto de Narita, trámites de aduana con el código QR de Visit Japan Web y recogida de equipajes. Traslado en tren Narita Express hasta Shinagawa y conexión en tren bala Shinkansen Nozomi directo hasta Kioto para hacer el check-in en el hotel. Terminaremos la jornada con una primera toma de contacto con la ciudad, cenando algo rápido por los alrededores de la estación.",
     history:
       "Kioto fue la capital imperial de Japón durante más de mil años, desde 794 hasta 1868. Es el corazón cultural y espiritual del país. Al haber sobrevivido casi intacta a los bombardeos de la Segunda Guerra Mundial, conserva gran parte de su milenaria arquitectura tradicional de madera.",
     schedule: [
       { time: "12:55", text: "Aterrizaje en Narita y trámites de aduana e inmigración (aprox. 1h 30m). Recuerda tener preparado el código QR de Visit Japan Web para agilizar el paso por los tornos." },
-      { time: "15:00", text: "Salida del aeropuerto en el Narita Express (N'EX), unos 19€, 1h exacta hasta la Estación de Tokio." },
-      { time: "16:30", text: "En la Estación de Tokio, transbordo al Shinkansen Hikari (tren bala) hasta Kioto (aprox. 90€, 2h 30m). Sentaos en el lado derecho para ver el Monte Fuji si está despejado." },
+      { time: "15:00 (Aprox)", text: "Salida desde la planta B1 del aeropuerto (lado ROJO de Japan Railways) en el tren Narita Express (N'EX). Sacaremos el billete en la taquilla para el siguiente tren disponible. El trayecto dura 1 hora y 10 minutos sin transbordos hasta la Estación de Shinagawa (~19€). Nos bajamos estratégicamente aquí para evitar caminar 20 minutos por los laberintos subterráneos de la estación central de Tokio arrastrando las maletas." },
+      { time: "16:30 (Aprox)", text: "En la misma Estación de Shinagawa, hacemos un transbordo rápido y accesible (aprox. 3 min) a las vías del tren bala. Cogeremos el Shinkansen Nozomi con destino Kioto (aprox. 90€, 2h 11m). Nota crítica de reserva: Comprar estos billetes semanas antes en la app SmartEX marcando obligatoriamente Oversized Baggage (para asegurar el hueco de las maletas) y seleccionando los asientos E (ventanilla derecha) para ver el Monte Fuji de camino." },
       { time: "19:00", text: "Llegada a Kioto, check-in en el hotel y cena." },
     ],
     money: "Aprox. 40€ (comidas) + transportes",
@@ -540,8 +540,8 @@ export const days = [
 
 // Transportes con coste real vs coste ya cubierto por JR Pass (hoja "Transportes")
 export const transports = [
-  { day: 1, date: "2026-09-07", name: "Narita Express (N'EX)", from: "Aeropuerto de Narita", to: "Estación de Tokio", type: "Línea JR", real: 19, jrPass: 0 },
-  { day: 1, date: "2026-09-07", name: "Shinkansen Hikari", from: "Estación de Tokio", to: "Kioto", type: "Línea JR (Tren Bala)", real: 85, jrPass: 0 },
+  { day: 1, date: "2026-09-07", name: "Narita Express (N'EX)", from: "Aeropuerto de Narita", to: "Estación de Shinagawa", type: "Línea JR", real: 19, jrPass: 0 },
+  { day: 1, date: "2026-09-07", name: "Shinkansen Nozomi", from: "Estación de Shinagawa", to: "Kioto", type: "Línea JR (Tren Bala)", real: 90, jrPass: 0 },
   { day: 2, date: "2026-09-08", name: "Tren Línea JR Nara", from: "Kioto", to: "Inari Station", type: "Línea JR Local", real: 1, jrPass: 0 },
   { day: 2, date: "2026-09-08", name: "Tren Línea JR Nara", from: "Inari Station", to: "Nara", type: "Línea JR Local", real: 4.2, jrPass: 0 },
   { day: 2, date: "2026-09-08", name: "Tren Línea JR Nara", from: "Nara", to: "Kioto", type: "Línea JR Local", real: 4.5, jrPass: 0 },

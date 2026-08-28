@@ -23,17 +23,17 @@ export const days = [
   {
     "title": "Arrival in Japan",
     "cities": "Narita, Tokyo, Kyoto",
-    "summary": "Landing at Narita airport, customs procedures with Visit Japan Web QR code, and baggage claim. Direct train transfer to Kyoto for hotel check-in. We'll end the day with our first contact with the city, grabbing a quick dinner around the station.",
+    "summary": "Landing at Narita airport, customs procedures with Visit Japan Web QR code, and baggage claim. Transfer via Narita Express to Shinagawa and direct bullet train connection on the Shinkansen Nozomi to Kyoto for hotel check-in. We'll end the day with our first contact with the city, grabbing a quick dinner around the station.",
     "history": "Kyoto was the imperial capital of Japan for over a thousand years, from 794 to 1868. It is the cultural and spiritual heart of the country. Having survived the bombings of World War II almost intact, it preserves much of its ancient traditional wooden architecture.",
     "schedule": [
       {
         "text": "Landing at Narita and customs procedures (approx. 1h 30m). Remember to have your Visit Japan Web QR code ready to speed through border control."
       },
       {
-        "text": "Departure from the airport on the Narita Express (N'EX), about €19, exactly 1h to Tokyo Station."
+        "text": "Departure from airport level B1 (RED side of Japan Railways) on the Narita Express (N'EX) train. We'll get tickets at the counter for the next available train. The direct ride takes 1 hour and 10 minutes without transfers to Shinagawa Station (~€19). We strategically get off here to avoid walking 20 minutes through Tokyo Station underground corridors dragging suitcases."
       },
       {
-        "text": "At Tokyo Station, transfer to the Shinkansen Hikari (bullet train) to Kyoto (approx. €90, 2h 30m). Sit on the right side to see Mount Fuji if the sky is clear."
+        "text": "At Shinagawa Station, quick and step-free transfer (approx. 3 min) to the bullet train tracks. We will board the Shinkansen Nozomi bound for Kyoto (approx. €90, 2h 11m). Critical booking note: Buy these tickets weeks in advance via the SmartEX app selecting Oversized Baggage (to secure luggage storage space) and E seats (right window) to see Mount Fuji along the way."
       },
       {
         "text": "Arrival in Kyoto, hotel check-in, and dinner."
