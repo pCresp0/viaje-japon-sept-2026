@@ -13,7 +13,23 @@ export const tripMeta = {
   ],
   about: {
     title: "Sobre la web",
-    description: "Esta aplicación web ha sido diseñada con un propósito claro: <strong>no depender de internet durante el viaje</strong>. Cuando estás en Japón, la conexión puede fallar en trenes bala, zonas rurales o si hay problemas con la eSIM. Por eso, en lugar de usar una base de datos tradicional en la nube que requiera estar conectado constantemente, se ha optado por una arquitectura de <strong>Single Source of Truth (SSOT)</strong> en el lado del cliente.\n\nTodo el itinerario, vuelos, alojamientos y traducciones viven en la propia app (<code>trip.js</code>), que está empaquetada como una <strong>PWA (Progressive Web App)</strong> mediante Vite. Esto permite que el navegador descargue todo el contenido en caché a través de Service Workers en la primera visita. Gracias a este diseño, navegar entre los días del viaje o cambiar de idioma es instantáneo y tiene latencia cero, funcionando 100% offline.\n\nAdemás, el ecosistema de React nos permite separar la interfaz en componentes modulares, facilitando un diseño estricto Mobile-First estilizado con TailwindCSS y animaciones fluidas con Framer Motion, garantizando una experiencia de usuario nativa. Todo el código fuente es público y se puede consultar en nuestro repositorio.",
+    features: [
+      {
+        icon: "📡",
+        title: "100% Offline by Design",
+        text: "Esta aplicación web ha sido diseñada con un propósito claro: <strong>no depender de internet durante el viaje</strong>. Cuando estás en Japón, la conexión puede fallar en trenes bala, zonas rurales o si hay problemas con la eSIM. Por eso, se ha optado por una arquitectura de <strong>Single Source of Truth (SSOT)</strong> en el lado del cliente, en lugar de usar una base de datos en la nube."
+      },
+      {
+        icon: "⚡",
+        title: "Arquitectura PWA y Rendimiento",
+        text: "Todo el itinerario, vuelos, alojamientos y traducciones viven en la propia app (<code>trip.js</code>), empaquetada como una <strong>PWA (Progressive Web App)</strong> con Vite. El navegador descarga todo en caché mediante Service Workers en la primera visita, asegurando latencia cero al navegar o cambiar de idioma."
+      },
+      {
+        icon: "🎨",
+        title: "React, Tailwind & Framer Motion",
+        text: "El ecosistema de React nos permite usar componentes modulares, facilitando un diseño estricto Mobile-First estilizado con TailwindCSS y animaciones fluidas con Framer Motion, garantizando una experiencia nativa."
+      }
+    ],
     github: "Ver código fuente en GitHub"
   }
 };

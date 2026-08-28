@@ -9,7 +9,23 @@ export const tripMeta = {
   ],
   about: {
     title: "About the web",
-    description: "This web application was designed with a clear purpose: <strong>not to rely on internet access during the trip</strong>. When you are in Japan, the connection can fail on bullet trains, in rural areas, or if there are eSIM issues. That is why, instead of using a traditional cloud database that requires constant connectivity, we opted for a client-side <strong>Single Source of Truth (SSOT)</strong> architecture.\n\nThe entire itinerary, flights, accommodations, and translations live within the app itself (<code>trip.js</code>), which is bundled as a <strong>PWA (Progressive Web App)</strong> using Vite. This allows the browser to cache all content via Service Workers on the first visit. Thanks to this design, navigating between days or switching languages is instantaneous with zero latency, working 100% offline.\n\nFurthermore, the React ecosystem allows us to separate the interface into modular components, facilitating a strict Mobile-First design styled with TailwindCSS and fluid animations with Framer Motion, ensuring a native-like user experience. All source code is public and can be consulted in our repository.",
+    features: [
+      {
+        icon: "📡",
+        title: "100% Offline by Design",
+        text: "This web application was designed with a clear purpose: <strong>not to rely on internet access during the trip</strong>. When you are in Japan, connections can fail on bullet trains, in rural areas, or if there are eSIM issues. That is why we opted for a client-side <strong>Single Source of Truth (SSOT)</strong> architecture, instead of a traditional cloud database."
+      },
+      {
+        icon: "⚡",
+        title: "PWA Architecture & Performance",
+        text: "The entire itinerary, flights, accommodations, and translations live within the app itself (<code>trip.js</code>), bundled as a <strong>PWA (Progressive Web App)</strong> using Vite. The browser caches everything via Service Workers on the first visit, ensuring zero latency when navigating or switching languages."
+      },
+      {
+        icon: "🎨",
+        title: "React, Tailwind & Framer Motion",
+        text: "The React ecosystem allows us to use modular components, facilitating a strict Mobile-First design styled with TailwindCSS and fluid animations with Framer Motion, ensuring a native-like experience."
+      }
+    ],
     github: "View source code on GitHub"
   }
 };

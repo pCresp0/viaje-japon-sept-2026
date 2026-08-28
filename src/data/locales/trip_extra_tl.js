@@ -9,7 +9,23 @@ export const tripMeta = {
   ],
   about: {
     title: "Tungkol sa web",
-    description: "Ang web application na ito ay idinisenyo nang may malinaw na layunin: <strong>na huwag umasa sa internet habang naglalakbay</strong>. Kapag nasa Japan ka, maaaring mawalan ng koneksyon sa mga bullet train, mga rural na lugar, o kung may mga isyu sa eSIM. Kaya naman, sa halip na gumamit ng traditional na cloud database na nangangailangan ng palaging koneksyon, pinili namin ang client-side na <strong>Single Source of Truth (SSOT)</strong> architecture.\n\nAng buong itinerary, mga flight, mga tirahan, at mga pagsasalin ay nasa loob mismo ng app (<code>trip.js</code>), na naka-bundle bilang isang <strong>PWA (Progressive Web App)</strong> gamit ang Vite. Binibigyang-daan nito ang browser na i-cache ang lahat ng content sa pamamagitan ng Service Workers sa unang pag-bisita. Dahil sa disenyong ito, ang pag-navigate sa pagitan ng mga araw o pagpapalit ng mga wika ay instant na may zero latency, at gumagana ng 100% offline.\n\nBukod pa rito, pinapayagan kami ng React ecosystem na paghiwalayin ang interface sa mga modular na bahagi, na nagpapadali sa isang mahigpit na Mobile-First na disenyo na may estilo gamit ang TailwindCSS at tuluy-tuloy na mga animation sa Framer Motion, na tinitiyak ang parang native na user experience. Ang lahat ng source code ay pampubliko at maaaring konsultahin sa aming repository.",
+    features: [
+      {
+        icon: "📡",
+        title: "100% Offline by Design",
+        text: "Ang web app na ito ay idinisenyo nang may malinaw na layunin: <strong>na huwag umasa sa internet habang naglalakbay</strong>. Kapag nasa Japan ka, maaaring mawalan ng koneksyon sa mga bullet train o rural na lugar. Kaya naman pinili namin ang client-side na <strong>Single Source of Truth (SSOT)</strong> architecture sa halip na cloud database."
+      },
+      {
+        icon: "⚡",
+        title: "PWA Architecture & Performance",
+        text: "Ang buong itinerary, mga flight, mga tirahan, at mga pagsasalin ay nasa app mismo (<code>trip.js</code>), na naka-bundle bilang isang <strong>PWA (Progressive Web App)</strong> gamit ang Vite. I-cache ng browser ang lahat sa pamamagitan ng Service Workers, na tinitiyak ang zero latency sa pag-navigate."
+      },
+      {
+        icon: "🎨",
+        title: "React, Tailwind & Framer Motion",
+        text: "Pinapayagan kami ng React ecosystem na gumamit ng mga modular na component, na nagpapadali sa isang Mobile-First na disenyo gamit ang TailwindCSS at tuluy-tuloy na mga animation sa Framer Motion, na nagbibigay ng native-like na karanasan."
+      }
+    ],
     github: "Tingnan ang source code sa GitHub"
   }
 };

@@ -9,7 +9,23 @@ export const tripMeta = {
   ],
   about: {
     title: "À propos du site",
-    description: "Cette application web a été conçue dans un but précis : <strong>ne pas dépendre d'Internet pendant le voyage</strong>. Au Japon, la connexion peut échouer dans les trains à grande vitesse, les zones rurales, ou en cas de problèmes avec l'eSIM. C'est pourquoi, au lieu d'utiliser une base de données cloud traditionnelle nécessitant une connectivité constante, nous avons opté pour une architecture <strong>Single Source of Truth (SSOT)</strong> côté client.\n\nL'ensemble de l'itinéraire, des vols, des hébergements et des traductions se trouve dans l'application elle-même (<code>trip.js</code>), qui est empaquetée en tant que <strong>PWA (Progressive Web App)</strong> à l'aide de Vite. Cela permet au navigateur de mettre en cache tout le contenu via des Service Workers dès la première visite. Grâce à cette conception, la navigation entre les jours ou le changement de langue est instantané, avec une latence nulle, et fonctionne 100 % hors ligne.\n\nDe plus, l'écosystème React nous permet de séparer l'interface en composants modulaires, facilitant un design strict Mobile-First stylisé avec TailwindCSS et des animations fluides avec Framer Motion, garantissant une expérience utilisateur de type native. Tout le code source est public et peut être consulté dans notre dépôt.",
+    features: [
+      {
+        icon: "📡",
+        title: "100% Hors ligne par conception",
+        text: "Cette application web a été conçue dans un but précis : <strong>ne pas dépendre d'Internet pendant le voyage</strong>. Au Japon, la connexion peut échouer dans les trains à grande vitesse, les zones rurales ou avec une eSIM. C'est pourquoi nous avons opté pour une architecture <strong>Single Source of Truth (SSOT)</strong> côté client, plutôt qu'une base de données cloud."
+      },
+      {
+        icon: "⚡",
+        title: "Architecture PWA et Performances",
+        text: "Tout l'itinéraire, les vols, les hébergements et les traductions se trouvent dans l'application elle-même (<code>trip.js</code>), empaquetée comme une <strong>PWA (Progressive Web App)</strong> avec Vite. Le navigateur met tout en cache via des Service Workers à la première visite, assurant une latence nulle."
+      },
+      {
+        icon: "🎨",
+        title: "React, Tailwind & Framer Motion",
+        text: "L'écosystème React nous permet d'utiliser des composants modulaires, facilitant un design Mobile-First strict stylisé avec TailwindCSS et des animations fluides avec Framer Motion, garantissant une expérience native."
+      }
+    ],
     github: "Voir le code source sur GitHub"
   }
 };
