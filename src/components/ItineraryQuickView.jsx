@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { formatDateShort } from "../utils/date";
+import PlaceText from "./PlaceText";
 
 // Entradas informativas sin hora — se filtran del resumen rápido
 const SKIP_PREFIXES = [
@@ -62,6 +63,11 @@ function formatQuickTime(timeStr = "") {
     .replace(/aprox\.?/gi, "~")
     .replace(/^~/, "~")
     .trim();
+}
+
+function extractMapUrl(text = "") {
+  const match = text.match(/https?:\/\/(?:maps\.app\.goo\.gl|www\.google\.com\/maps)[^\s)]+/i);
+  return match ? match[0] : null;
 }
 
 function shortText(text = "") {
@@ -136,6 +142,7 @@ function QuickDayCard({ day, blockColor }) {
                     (entry.time ?? "") + (entry.text ?? "")
                   );
                 const displayTime = hasRealTime(entry) ? formatQuickTime(entry.time) : "";
+                const mapUrl = extractMapUrl(entry.text);
 
                 return (
                   <div key={i} className="flex items-start gap-2.5 sm:gap-3 relative">
@@ -159,15 +166,18 @@ function QuickDayCard({ day, blockColor }) {
                     </div>
 
                     {/* Texto limpio sin emoji redundante */}
-                    <p
+                    <div
                       className="flex-1 text-xs sm:text-[13px] leading-snug pt-0.5 pb-0.5"
                       style={{
                         color: isHotelReturn ? "var(--forest)" : "var(--ink)",
                         fontWeight: isHotelReturn ? 600 : 400,
                       }}
                     >
-                      {shortText(entry.text)}
-                    </p>
+                      <span>{shortText(entry.text)}</span>
+                      {mapUrl && (
+                        <PlaceText text={mapUrl} />
+                      )}
+                    </div>
                   </div>
                 );
               })}

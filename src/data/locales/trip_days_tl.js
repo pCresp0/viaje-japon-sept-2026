@@ -42,7 +42,7 @@ export const days = [
         "text": "Ang Nozomi ay darating sa JR Kyoto Station. Bumaba sa Shinkansen at sundan ang mga palatandaan sa Hachijo East Exit (八条東口). Umalis sa istasyon sa pamamagitan ng exit na iyon at sa halos 5 minutong paglalakad ay makakarating ka sa hotel (Hotel Keihan Kyoto Hachijoguchi). Check-in at hapunan."
       },
       {
-        "text": "🍣 19:00–20:30 — HAPUNAN: KAITEN-SUSHI UOGASHI. Inirerekomendang restawran sa AEON MALL KYOTO — Sakura Building, 4F (📍 Maps: https://maps.app.goo.gl/ByDBQB6zaVZ3dj2E6). Halos 5 min na lakad mula Kyoto Station Hachijo Exit (napaka-komportable pagdating mula Shinkansen). Kaiten-zushi (conveyor belt sushi). Badyet: ¥2,000–3,000/tao (~12–19€). Oras: 11:00–22:00 (last order halos 21:30). Hindi kailangan mag-reserve. Subukan: iba't ibang sushi; sariwang isda; nigiri; daily specials; mainit na side dish. 💡 Tip: Magandang unang hapunan ito sa Japan dahil pwedeng umorder nang paunti-unti para kontrolado ang gastos. May iba pang opsyon sa AEON MALL kung puno ito."
+        "text": "🍣 19:00–20:30 — HAPUNAN: KAITEN-SUSHI UOGASHI. Inirerekomendang restawran sa AEON MALL KYOTO — Sakura Building, 4F (https://maps.app.goo.gl/ByDBQB6zaVZ3dj2E6). Halos 5 min na lakad mula Kyoto Station Hachijo Exit (napaka-komportable pagdating mula Shinkansen). Kaiten-zushi (conveyor belt sushi). Badyet: ¥2,000–3,000/tao (~12–19€). Oras: 11:00–22:00 (last order halos 21:30). Hindi kailangan mag-reserve. Subukan: iba't ibang sushi; sariwang isda; nigiri; daily specials; mainit na side dish. 💡 Tip: Magandang unang hapunan ito sa Japan dahil pwedeng umorder nang paunti-unti para kontrolado ang gastos. May iba pang opsyon sa AEON MALL kung puno ito."
       },
       {
         "text": "⚠️ Bumili na ngayong gabi ng almusal para sa Day 2 sa konbini dahil masyadong maaga ang alis para mag-almusal sa hotel. Inirerekomenda: 1–2 onigiri kada tao; egg sandwich; saging/prutas; kape o inumin; yogurt."
@@ -291,7 +291,7 @@ export const days = [
         "text": "🚌 Nohi Bus Kanazawa → Shirakawa-go. Alis: 08:40. Reserbasyon: 12GO31991741. 5 upuang kumpirmado. Tagal: halos 1h25. Inaasahang pagdating: 10:05. Kailangan ang reserbasyon. Hindi ito JR. Hindi gumagamit ng Japan Rail Pass. Huwag gumamit ng IC card: dadalhin natin ang reserbasyon/tiket sa bus. 💡 Tip: Dumating sa sakayan nang maaga. Ihanda ang reserbasyon sa mobile o kopya nito."
       },
       {
-        "text": "Pagdating sa Shirakawa-go ng 10:05. Mula sa Shirakawa-go Bus Terminal, simulan ang paglalakad sa Ogimachi. Ang makasaysayang sentro ay ilang minuto lang mula sa terminal."
+        "text": "Pagdating sa Shirakawa-go ng 10:05. Mayroon tayong halos 3 h 10 min sa Shirakawa-go (mula sa pagdating ng 10:05 hanggang sa pag-alis ng bus papuntang Takayama ng 13:15). Mula sa Shirakawa-go Bus Terminal, simulan ang paglalakad sa Ogimachi. Ang makasaysayang sentro ay ilang minuto lang mula sa terminal."
       },
       {
         "text": "SHIRAKAWA-GO (10:05–11:45). Libutin ang Ogimachi: gassho-zukuri houses, tradisyonal na kalye, kanal, Shirakawa Hachiman Shrine, tanawin ng bundok. Unahing i-enjoy ang bayan kaysa pumasok sa maraming bahay. Inirerekomendang pasukin: Wada House (09:00–17:00, ¥400, 3-4 min mula sa terminal, hindi kailangan mag-reserve, cash payment). Opsiyonal: Open-Air Museum (08:40–17:00 tuwing Setyembre, ¥600, 12 min na lakad. Pumasok lang kung maaga pa)."
@@ -492,7 +492,7 @@ export const days = [
         "text": "Tingnan ang live webcams sa mtfujitoday.com at isfujivisible.com mula sa hotel sa Tokyo (patakaran sa 06:15 AM)."
       },
       {
-        "text": "🚇 Hotel → Ueno → Tokyo Station. (hal., Keihin-Tohoku Line mula Ueno ng 07:08, dating 07:15). Maglakad ng 5 min papunta sa mga Shinkansen platform."
+        "text": "🚶 INIREREKOMENDANG ORAS NG PAG-ALIS SA HOTEL (~06:30 · KOKO HOTEL Residence Asakusa Kappabashi → Tokyo Station).\nInirerekomendang pag-alis sa hotel na may sapat na palugit (~06:30; para sa 5 tao):\n1. Maglakad ng ~10 min papuntang Tawaramachi Station (Tokyo Metro).\n2. Sumakay sa Ginza Line papuntang Ueno Station.\n3. Mula Ueno, lumipat papuntang Tokyo Station (JR Yamanote / Keihin-Tohoku Line) at maglakad papunta sa Tokaido Shinkansen platforms.\n⚠️ Kritikal na koneksyon: Tinitiyak ng palugit na ito na makarating nang maaga bago ang 07:27 Kodama 805 para makipagkita kay guide Ken Kaneshima sa Mishima ng 08:25."
       },
       {
         "text": "🚅 Tokaido-Sanyo Shinkansen KODAMA 805. Alis ng Tokyo ng 07:27, dating sa Mishima ng 08:20. MAHALAGA: Dapat itong Kodama upang huminto sa Mishima."

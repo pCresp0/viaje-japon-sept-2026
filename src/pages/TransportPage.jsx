@@ -85,8 +85,8 @@ export default function TransportPage({ onNavigate }) {
               <li>• <strong>Kioto → Kanazawa</strong> (12 sep · JR-West Online)</li>
               <li>• <strong>Takayama → Magome</strong> (14 sep · ¥5.000/pax Nohi Bus)</li>
               <li>• <strong>Shinano 4</strong> Nakatsugawa → Nagoya (15 sep · Canal JR)</li>
-              <li>• <strong>Nozomi</strong> Nagoya → Tokio (15 sep, ~11:20–11:30 · Smart EX)</li>
-              <li>• <strong>Shinkansen Fuji</strong> (20 sep · Smart EX, tras confirmar tour)</li>
+              <li>• <strong>Nozomi</strong> Nagoya → Tokio (15 sep, ~11:20–11:30 · 1h17 margen previo en Nakatsugawa)</li>
+              <li>• <strong>Shinkansen Fuji</strong> (20 sep, 07:27 · Smart EX · salida hotel recomendada ~06:30)</li>
             </ul>
           </div>
 
@@ -95,7 +95,7 @@ export default function TransportPage({ onNavigate }) {
               <Clock size={14} /> 🟠 RESERVAR MÁS ADELANTE
             </p>
             <ul className="text-xs text-amber-900 space-y-1.5">
-              <li>• <strong>Narita Express (N'EX) Vuelta</strong> Tokio → Narita (21 sep)</li>
+              <li>• <strong>Keisei Skyliner / N'EX Vuelta</strong> Tokio → Narita (21 sep · Valorar Skyliner desde Keisei-Ueno vs N'EX)</li>
             </ul>
           </div>
 

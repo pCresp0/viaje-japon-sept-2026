@@ -42,7 +42,7 @@ export const days = [
         "text": "Le Nozomi arrive à la gare JR de Kyoto. Descendez du Shinkansen et suivez les panneaux vers Hachijo East Exit (八条東口). Sortez de la gare par cette sortie et à environ 5 minutes de marche, vous atteindrez l'hôtel (Hotel Keihan Kyoto Hachijoguchi). Check-in et dîner."
       },
       {
-        "text": "🍣 19:00–20:30 — DÎNER : KAITEN-SUSHI UOGASHI. Restaurant recommandé à l'AEON MALL KYOTO — Sakura Building, 4F (📍 Maps: https://maps.app.goo.gl/ByDBQB6zaVZ3dj2E6). À environ 5 min à pied de Kyoto Station Hachijo Exit (très pratique après le Shinkansen). Kaiten-zushi (sushi sur tapis roulant). Prix indicatif : 2 000–3 000 ¥/personne (~12–19€). Horaires : 11:00–22:00 (dernière commande vers 21:30). Aucune réservation nécessaire. À goûter : sushis variés ; morceaux de poisson frais ; nigiri ; plats du jour ; un accompagnement chaud. 💡 Conseil : C'est un bon premier dîner au Japon car on peut commander petit à petit et contrôler ce qu'on mange et dépense. L'AEON MALL a d'autres options au même étage si c'est plein."
+        "text": "🍣 19:00–20:30 — DÎNER : KAITEN-SUSHI UOGASHI. Restaurant recommandé à l'AEON MALL KYOTO — Sakura Building, 4F (https://maps.app.goo.gl/ByDBQB6zaVZ3dj2E6). À environ 5 min à pied de Kyoto Station Hachijo Exit (très pratique après le Shinkansen). Kaiten-zushi (sushi sur tapis roulant). Prix indicatif : 2 000–3 000 ¥/personne (~12–19€). Horaires : 11:00–22:00 (dernière commande vers 21:30). Aucune réservation nécessaire. À goûter : sushis variés ; morceaux de poisson frais ; nigiri ; plats du jour ; un accompagnement chaud. 💡 Conseil : C'est un bon premier dîner au Japon car on peut commander petit à petit et contrôler ce qu'on mange et dépense. L'AEON MALL a d'autres options au même étage si c'est plein."
       },
       {
         "text": "⚠️ Achetez ce soir le petit-déjeuner du Jour 2 dans un konbini car le départ est trop matinal pour prendre un petit-déjeuner tranquille à l'hôtel. Recommandation : 1–2 onigiri par personne ; sandwich aux œufs ; banane/fruit ; café ou boisson ; yaourt facultatif."
@@ -291,7 +291,7 @@ export const days = [
         "text": "🚌 Nohi Bus Kanazawa → Shirakawa-go. Départ : 08:40. Réservation : 12GO31991741. 5 sièges confirmés. Durée approximative : 1h25. Arrivée prévue : 10:05. Réservation obligatoire pour ce service. Ce n'est pas JR. N'utilise pas le Japan Rail Pass. N'utilisez pas de carte IC : nous avons la réservation/le billet de bus. 💡 Conseil : Arrivez à l'arrêt avec de la marge. Ayez la réservation sur votre mobile et/ou une copie accessible."
       },
       {
-        "text": "Arrivée à Shirakawa-go à 10:05. Depuis le terminal de bus de Shirakawa-go commence la visite à pied d'Ogimachi. Le centre historique est à quelques minutes du terminal."
+        "text": "Arrivée à Shirakawa-go à 10:05. Nous disposons d'environ 3 h 10 min à Shirakawa-go (de l'arrivée à 10:05 jusqu'au départ du bus pour Takayama à 13:15). Depuis le terminal de bus de Shirakawa-go commence la visite à pied d'Ogimachi. Le centre historique est à quelques minutes du terminal."
       },
       {
         "text": "SHIRAKAWA-GO (10:05–11:45). Visite d'Ogimachi : maisons gassho-zukuri, rues traditionnelles, canaux, sanctuaire Shirakawa Hachiman, vues sur la montagne. Privilégiez profiter du village plutôt que d'essayer d'entrer dans de nombreuses maisons. Visite intérieure recommandée : Wada House (09:00–17:00, 400 ¥, à env. 3–4 min du terminal, sans réservation, paiement en espèces). Facultatif : Musée en plein air (08:40–17:00 en septembre, 600 ¥, à 12 min à pied. N'y entrez que si nous avons le temps)."
@@ -492,7 +492,7 @@ export const days = [
         "text": "Vérifier les webcams en direct sur mtfujitoday.com et isfujivisible.com depuis l'hôtel à Tokyo (la règle d'or à 06h15)."
       },
       {
-        "text": "🚇 Hôtel → Ueno → Gare de Tokyo. (ex: Ligne Keihin-Tohoku depuis Ueno à 07:08, arrivée 07:15). Marcher 5 min jusqu'aux quais Shinkansen."
+        "text": "🚶 DÉPART RECOMMANDÉ DE L'HÔTEL (~06:30 · KOKO HOTEL Residence Asakusa Kappabashi → Gare de Tokyo).\nRecommandation de départ avec une marge suffisante (~06:30 ; recommandation préventive pour 5 personnes) :\n1. Marcher ~10 min jusqu'à la gare de Tawaramachi (Tokyo Metro).\n2. Prendre la Ginza Line jusqu'à Ueno Station.\n3. Depuis Ueno, connecter vers Tokyo Station (JR Yamanote / Keihin-Tohoku Line) et marcher calmement jusqu'aux quais Shinkansen.\n⚠️ Connexion critique : Cette marge délibérée garantit d'arriver calmement avant le départ du Kodama 805 à 07:27 pour retrouver le guide Ken Kaneshima à Mishima à 08:25."
       },
       {
         "text": "🚅 Tokaido-Sanyo Shinkansen KODAMA 805. Départ de Tokyo à 07:27, arrivée à Mishima à 08:20. IMPORTANT: Prendre le Kodama pour qu'il s'arrête à Mishima."

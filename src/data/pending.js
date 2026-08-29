@@ -59,7 +59,7 @@ export const pendingItems = [
     category: "reserva",
     urgency: "alta",
     title: "🔴 Reservar Shinkansen Excursión Fuji (Ida/Vuelta)",
-    detail: "📅 20/09/2026\n👥 5 personas\n🚆 Tokaido-Sanyo Shinkansen KODAMA 805 (Ida 07:27) y regreso Shin-Fuji→Tokio\n📍 Tokio ↔ Mishima / Shin-Fuji\n💳 Comprar: Smart EX App/Web\n⚠️ Excursión con el guía Ken ya confirmada para el 20/09. Comprar billetes de Shinkansen en Smart EX (1 mes antes / 20 de agosto a las 10:00 JST).",
+    detail: "📅 20/09/2026\n👥 5 personas\n🚆 Tokaido-Sanyo Shinkansen KODAMA 805 (Ida 07:27) y regreso Shin-Fuji→Tokio\n📍 Tokio ↔ Mishima / Shin-Fuji\n💳 Comprar: Smart EX App/Web\n⚠️ Excursión con el guía Ken ya confirmada para el 20/09. Comprar billetes de Shinkansen en Smart EX (1 mes antes / 20 de agosto a las 10:00 JST). Recordar salir del hotel ~06:30 para caminar a Tawaramachi, tomar Ginza Line a Ueno y conectar a Tokyo Station con margen.",
     deadline: "1 mes antes (20/08/2026)",
   },
   {
@@ -71,12 +71,12 @@ export const pendingItems = [
     deadline: "Antes de viajar",
   },
   {
-    id: "narita-express-vuelta",
+    id: "narita-transporte-vuelta",
     category: "reserva",
     urgency: "media",
-    title: "🟠 Reservar Narita Express (N'EX) Vuelta",
-    detail: "📅 21/09/2026\n👥 5 personas\n🚆 JR Narita Express\n📍 Estación de Tokio → Aeropuerto de Narita\n💳 Comprar: JR East Web o taquillas en Japón\n⚠️ Asiento reservado obligatorio. Se puede reservar más adelante o valorar el N'EX Tokyo Round Trip Ticket si aplica.",
-    deadline: "🟠 RESERVAR MÁS ADELANTE",
+    title: "🟠 Decidir / Reservar Transporte a Narita (Skyliner o N'EX)",
+    detail: "📅 21/09/2026\n👥 5 personas\n🚆 Keisei Skyliner (Recomendado desde Keisei-Ueno) o JR N'EX (desde Tokyo Station)\n📍 KOKO HOTEL Asakusa → Aeropuerto de Narita\n💡 Recomendación: Por ubicación del hotel en Asakusa/Kappabashi, es más cómodo tomar taxi con maletas hasta Keisei-Ueno y allí el Keisei Skyliner directo a Narita. El N'EX sigue siendo alternativa válida.\n⚠️ Comprobar horarios definitivos de septiembre 2026 y reservar con antelación o al llegar a Japón para el vuelo de las 17:25.",
+    deadline: "🟠 DECIDIR / RESERVAR",
   },
   {
     id: "esim-suica",
@@ -91,7 +91,7 @@ export const pendingItems = [
     category: "logistica",
     urgency: "baja",
     title: "🟡 Gestionar Envío de Equipaje (Takkyubin)",
-    detail: "📅 12/09/2026 (Mañana)\n👥 5 maletas grandes\n📦 Servicio de paquetería (Yamato/Sagawa)\n📍 Hotel Kioto → Koko Hotel Tokio\n⚠️ Enviar maletas grandes desde Kioto a Tokio para viajar por los Alpes (Kanazawa, Takayama, Magome) ligeros solo con mochila.",
+    detail: "📅 12/09/2026 (Mañana del check-out)\n👥 5 maletas grandes\n📦 Servicio de paquetería (Yamato/Sagawa)\n📍 Hotel Keihan Kioto → KOKO HOTEL Residence Asakusa Kappabashi (Tokio)\n⚠️ Enviar maletas grandes desde Kioto a Tokio para viajar por los Alpes (Kanazawa, Shirakawa-go, Takayama, Magome, Tsumago) ligeros solo con mochila. Estaremos sin maleta grande durante los días 12, 13, 14 y parte del 15. El 12/09 confirmar en recepción de Kioto el envío, verificar que el hotel de Tokio acepta recepción y guardar resguardos/tracking.",
     deadline: "12 Sept (mañana del check-out)",
   },
   {
