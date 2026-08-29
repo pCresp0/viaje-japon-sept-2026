@@ -66,10 +66,21 @@ export default function ShinkansenTicketCard() {
 
       {/* Body */}
       {isExpanded && (
-        <div className="p-4 sm:p-5 space-y-3 animate-in slide-in-from-top-2 fade-in duration-200">
+        <div className="p-4 sm:p-5 space-y-3.5 animate-in slide-in-from-top-2 fade-in duration-200">
+          <div className="flex flex-wrap items-center gap-2 text-xs">
+            <span className="px-2.5 py-1 rounded-full font-bold bg-green-100 text-green-800 border border-green-200">
+              ✅ Billetes Comprados (Smart EX)
+            </span>
+            <span className="px-2.5 py-1 rounded-full font-semibold bg-gray-100 text-gray-700">
+              Coche 13 · Ordinary
+            </span>
+            <span className="px-2.5 py-1 rounded-full font-semibold bg-gray-100 text-gray-700">
+              Total: ¥68.850 (¥13.770/pax · ~86€)
+            </span>
+          </div>
+
           <p style={{ fontSize: 13, color: "var(--ink)", lineHeight: 1.5, margin: 0 }}>
-            Billetes de tren bala (Shinkansen Nozomi 53) confirmados y comprados a través de Smart EX. <strong>Coche 13 (Ordinary)</strong>.
-            Selecciona tu nombre para abrir tu billete QR individual. Según las condiciones de Smart EX, cada viajero puede escanear su código QR directamente en los tornos del Shinkansen para acceder al andén.
+            Billetes confirmados para los 5 viajeros. Selecciona tu nombre para abrir tu <strong>código QR individual</strong> de acceso a los tornos del Shinkansen.
           </p>
 
         {/* Members List */}
