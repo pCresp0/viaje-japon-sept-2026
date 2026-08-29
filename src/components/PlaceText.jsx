@@ -10,14 +10,43 @@ export default function PlaceText({ text, linkStyle, className, style, as: Tag =
           const href = p.value.startsWith("http://") || p.value.startsWith("https://")
             ? p.value
             : `https://${p.value}`;
-          return (
+
+          const isMaps = /maps\.app\.goo\.gl|google\.com\/maps/i.test(href);
+
+          return isMaps ? (
             <a
               key={i}
               href={href}
               target="_blank"
               rel="noreferrer"
               onClick={(e) => e.stopPropagation()}
-              className="inline-flex items-center gap-0.5 font-semibold text-indigo-700 dark:text-indigo-400 hover:underline"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 4,
+                fontSize: "0.72em",
+                fontWeight: 600,
+                padding: "2px 8px",
+                borderRadius: 999,
+                background: "rgba(29,53,87,0.09)",
+                color: "var(--indigo)",
+                textDecoration: "none",
+                whiteSpace: "nowrap",
+                verticalAlign: "middle",
+                marginLeft: 4,
+                border: "1px solid rgba(29,53,87,0.18)",
+              }}
+            >
+              📍 Maps ↗
+            </a>
+          ) : (
+            <a
+              key={i}
+              href={href}
+              target="_blank"
+              rel="noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="inline-flex items-center gap-0.5 font-semibold hover:underline"
               style={{
                 color: "var(--indigo)",
                 textDecoration: "underline",
@@ -30,6 +59,7 @@ export default function PlaceText({ text, linkStyle, className, style, as: Tag =
             </a>
           );
         }
+
 
         if (p.type === "place") {
           return (
