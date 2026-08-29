@@ -1,7 +1,8 @@
 import { useContent, useT } from "../i18n/LanguageContext";
-import { Train, Bus, Zap } from "lucide-react";
+import { Train, Bus, Zap, FileDown, CheckCircle2, Clock } from "lucide-react";
 import { Highlightable } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
+import { exportTransportExcel } from "../utils/exportCsv";
 
 // Determina el icono del trayecto.
 // Se prioriza el campo estable `kind` del dato; el análisis del texto es
@@ -51,17 +52,21 @@ export default function TransportPage() {
     return { badge: "~", title: t("transport.tokioDays"), sub: "Tokio" };
   }
 
-  // (Antes había aquí un cálculo de "ahorro" real-jrPass sin usar en
-  // ningún sitio. Se ha quitado: habría repetido el mismo error que se
-  // corrigió en Presupuesto — transportTotals.jrPass son sólo los tramos
-  // que el JR Pass no cubre, no el coste total con el pase, así que
-  // restarlo del total sin pase no da un "ahorro" real.)
-
   return (
     <div className="px-4 pt-3 pb-12">
-      <div className="mb-6">
-        <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{t("transport.eyebrow")}</p>
-        <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>{t("transport.title")}</h2>
+      <div className="mb-6 flex items-start justify-between gap-3">
+        <div>
+          <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{t("transport.eyebrow")}</p>
+          <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>{t("transport.title")}</h2>
+        </div>
+        <button
+          onClick={() => exportTransportExcel(transports)}
+          className="shrink-0 flex items-center gap-1.5 rounded-full px-3.5 py-2 text-xs font-semibold shadow-sm"
+          style={{ background: "var(--indigo)", color: "white", border: "none" }}
+        >
+          <FileDown size={14} />
+          Descargar Excel
+        </button>
       </div>
 
       {/* Suica card */}
@@ -134,7 +139,7 @@ export default function TransportPage() {
                 return (
                   <Highlightable key={ti} id={slug("transport", tItem.day, tItem.name)}>
                     <div
-                      className="px-5 py-3 flex gap-3 items-center"
+                      className="px-5 py-3 flex gap-3 items-center relative"
                       style={{ borderTop: ti > 0 ? "1px solid var(--line)" : "none" }}
                     >
                     <div style={{
@@ -151,9 +156,19 @@ export default function TransportPage() {
                     </div>
 
                     <div className="flex-1 min-w-0">
-                      <p style={{ fontSize: 13, fontWeight: 600, color: "var(--ink)", marginBottom: 1 }}>
-                        {tItem.name}
-                      </p>
+                      <div className="flex items-center gap-2 flex-wrap mb-1">
+                        <p style={{ fontSize: 13, fontWeight: 600, color: "var(--ink)" }}>
+                          {tItem.name}
+                        </p>
+                        {tItem.purchased !== undefined && (
+                          <span className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold ${
+                            tItem.purchased ? "bg-green-100 text-green-700" : "bg-slate-100 text-slate-500"
+                          }`}>
+                            {tItem.purchased ? <CheckCircle2 size={10} /> : <Clock size={10} />}
+                            {tItem.purchased ? "COMPRADO" : "PENDIENTE"}
+                          </span>
+                        )}
+                      </div>
                       <p style={{ fontSize: 11.5, color: "var(--ink-soft)" }}>
                         {tItem.from} → {tItem.to}
                       </p>
