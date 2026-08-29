@@ -11,7 +11,7 @@
 //  · Imposible que las traducciones se desincronicen de los datos duros.
 //  · Si falta una traducción, cae automáticamente al español sin romperse.
 
-import { tripMeta, flights, blocks, stays, days, transports, transportTotals, budget } from "./trip";
+import { tripMeta, flights, blocks, stays, days, transports, budget } from "./trip";
 import { guides, guidesByDay } from "./guides";
 import { historyPeriods, furtherReading } from "./history";
 import { foods, foodCategories } from "./foods";
@@ -29,7 +29,7 @@ const overlays = { en, fr, tl };
 
 // Conjunto base en español.
 const base = {
-  tripMeta, flights, blocks, stays, days, transports, transportTotals, budget,
+  tripMeta, flights, blocks, stays, days, transports, budget,
   guides, guidesByDay,
   historyPeriods, furtherReading,
   foods, foodCategories,

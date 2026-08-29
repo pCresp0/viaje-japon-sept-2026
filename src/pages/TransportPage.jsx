@@ -18,12 +18,9 @@ function iconKind(transport) {
   return "train";
 }
 
-// jrPass === 0  → JR Pass covers the full cost
-// 0 < jrPass < real → partially covered (mixed JR + private leg)
-// jrPass >= real  → not covered by JR Pass (private operator)
+// jrCoverage determines if a transport is covered by JR Pass
 function jrCoverage(t) {
-  if (t.jrPass === 0) return "covered";
-  if (t.jrPass < t.real) return "partial";
+  if (t.coverage === "jr") return "covered";
   return "none";
 }
 
@@ -152,16 +149,12 @@ export default function TransportPage({ onNavigate }) {
                       style={{ borderTop: ti > 0 ? "1px solid var(--line)" : "none" }}
                     >
                     <div style={{
-                      width: 32, height: 32, borderRadius: 8, flexShrink: 0,
+                      width: 28, height: 28, borderRadius: 8,
+                      background: "rgba(0,0,0,0.04)",
                       display: "flex", alignItems: "center", justifyContent: "center",
-                      background:
-                        kind === "bus" ? "rgba(46,125,91,0.1)"
-                        : kind === "shinkansen" ? "rgba(188,71,73,0.1)"
-                        : "rgba(29,53,87,0.1)",
+                      color: "var(--ink)", flexShrink: 0,
                     }}>
-                      {kind === "train" && <Train size={16} style={{ color: "#1d3557" }} />}
-                      {kind === "bus" && <Bus size={16} style={{ color: "#2e7d5b" }} />}
-                      {kind === "shinkansen" && <Zap size={16} style={{ color: "#bc4749" }} />}
+                      {kind === "shinkansen" ? <Zap size={14} /> : kind === "bus" ? <Bus size={14} /> : <Train size={14} />}
                     </div>
 
                     <div className="flex-1 min-w-0">
@@ -190,13 +183,10 @@ export default function TransportPage({ onNavigate }) {
 
                     <div style={{ textAlign: "right", whiteSpace: "nowrap", flexShrink: 0 }}>
                       <p style={{ fontSize: 12.5, fontWeight: 700, color: "var(--shu)" }}>
-                        {tItem.real}€
+                        {tItem.jpy ? `¥${tItem.jpy.toLocaleString("es-ES")}` : `${tItem.real}€`}
                       </p>
                       {jr === "covered" && (
                         <p style={{ fontSize: 10, color: "#2e7d5b", fontWeight: 600 }}>{t("transport.jrPassCovered")}</p>
-                      )}
-                      {jr === "partial" && (
-                        <p style={{ fontSize: 10, color: "#c9a227", fontWeight: 600 }}>{t("transport.jrPassPartial")}</p>
                       )}
                       {jr === "none" && (
                         <p style={{ fontSize: 10, color: "var(--ink-soft)" }}>{t("transport.jrPassNone")}</p>
@@ -222,36 +212,119 @@ export default function TransportPage({ onNavigate }) {
 
         <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl mb-4" style={{ background: "rgba(188,71,73,0.1)", border: "1px solid rgba(188,71,73,0.2)" }}>
           <span style={{ fontSize: 16 }}>❌</span>
-          <p className="text-xs font-bold" style={{ color: "var(--shu)", margin: 0 }}>
-            VERDICTO ACTUAL: NO MERECE LA PENA (Ahorramos ~48 € / 7.500 ¥ por persona)
+          <p className="text-sm font-bold" style={{ color: "var(--shu)", margin: 0 }}>
+            VERDICTO: NO COMPENSA COMPRAR EL JAPAN RAIL PASS NACIONAL.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
-          <div className="p-4 rounded-xl border" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
-            <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Opción A: Billetes Sueltos (Recomendado)</p>
-            <p className="text-2xl font-bold font-display" style={{ color: "var(--forest)", margin: 0 }}>
-              ~293 € <span className="text-xs font-normal opacity-75">(~47.000 ¥)</span>
-            </p>
-            <p className="text-xs text-gray-600 mt-2 leading-relaxed">
-              Pagando solo los trayectos reales (N'EX, Shinkansen Hikari/Nozomi, Thunderbird, Hida Express). Permite usar los Shinkansen <strong>Nozomi</strong> (los más rápidos y frecuentes).
-            </p>
+        <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="p-4 rounded-xl border bg-white/50" style={{ borderColor: "var(--line)" }}>
+            <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">✅ El JR Pass SÍ cubre:</p>
+            <ul className="text-xs text-gray-700 space-y-1 pl-4 list-disc marker:text-green-600">
+              <li>Trenes JR incluidos en la red nacional.</li>
+              <li>Shinkansen Hikari, Kodama, Sakura, Tsubame.</li>
+              <li>Limited Express JR.</li>
+              <li>Trenes locales JR.</li>
+            </ul>
           </div>
-
-          <div className="p-4 rounded-xl border" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
-            <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Opción B: JR Pass Nacional (7 días)</p>
-            <p className="text-2xl font-bold font-display" style={{ color: "var(--shu)", margin: 0 }}>
-              ~341 € <span className="text-xs font-normal opacity-75">(50.000 ¥)</span>
-            </p>
-            <p className="text-xs text-gray-600 mt-2 leading-relaxed">
-              Tras la subida de precios (+65%), el pass de 7 días cuesta 50.000 ¥ (~341 €). En nuestro itinerario <strong>perderíamos ~48 € por persona</strong> (~240 € en total para el grupo).
-            </p>
+          <div className="p-4 rounded-xl border bg-white/50" style={{ borderColor: "var(--line)" }}>
+            <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">❌ El JR Pass NO cubre:</p>
+            <ul className="text-xs text-gray-700 space-y-1 pl-4 list-disc marker:text-red-600">
+              <li>Nohi Bus.</li>
+              <li>Metro de Kioto y Autobuses urbanos.</li>
+              <li>Randen y Yurikamome.</li>
+              <li>Metro de Tokio y otros operadores privados.</li>
+            </ul>
           </div>
         </div>
 
-        <div className="text-xs text-gray-600 space-y-1.5 pl-2 border-l-2" style={{ borderColor: "var(--shu)" }}>
-          <p>• <strong>Buses no cubiertos:</strong> Los autobuses Nohi Bus (Kanazawa → Shirakawa-go → Takayama) no están incluidos en el JR Pass (~39 € extra).</p>
-          <p>• <strong>Transporte local:</strong> El metro de Tokio y el tranvía de Kioto tampoco entran en el JR Pass; se pagan con la tarjeta Suica (¥).</p>
+        <div className="p-3.5 rounded-xl border mb-6" style={{ background: "#FFF5F5", borderColor: "#FCA5A5" }}>
+          <p className="text-sm font-bold text-red-800 mb-1 flex items-center gap-1.5">
+            <span className="text-base">⚠️</span> IMPORTANTE SOBRE NOZOMI
+          </p>
+          <p className="text-xs text-red-700 leading-relaxed">
+            El tren bala más rápido (Nozomi) <strong>NO está incluido</strong> normalmente en el JR Pass. Para usarlo con el JR Pass hay que pagar un "Ticket Especial" adicional cada vez. Comprando billetes individuales SÍ podemos subir al Nozomi sin problema.
+          </p>
+        </div>
+
+        <p className="text-sm font-bold mb-3" style={{ color: "var(--indigo)" }}>Comparativa de Precios (Billetes JR vs JR Pass)</p>
+        
+        <div className="overflow-x-auto mb-6">
+          <table className="w-full text-left text-sm border-collapse">
+            <thead>
+              <tr className="border-b" style={{ borderColor: "var(--line)" }}>
+                <th className="py-2 px-3 font-semibold text-gray-600">Opción</th>
+                <th className="py-2 px-3 font-semibold text-gray-600">Precio/Persona</th>
+                <th className="py-2 px-3 font-semibold text-gray-600">Precio 5 Personas</th>
+                <th className="py-2 px-3 font-semibold text-gray-600">Resultado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b" style={{ borderColor: "var(--line)" }}>
+                <td className="py-2 px-3 font-medium">Billetes individuales JR</td>
+                <td className="py-2 px-3 text-green-700 font-bold">~¥54.920</td>
+                <td className="py-2 px-3 text-green-700 font-bold">~¥274.600</td>
+                <td className="py-2 px-3 font-medium text-green-700">✅ Recomendado</td>
+              </tr>
+              <tr className="border-b bg-gray-50/50" style={{ borderColor: "var(--line)" }}>
+                <td className="py-2 px-3">JR Pass 7 días</td>
+                <td className="py-2 px-3 text-red-600">¥50.000</td>
+                <td className="py-2 px-3 text-red-600">¥250.000</td>
+                <td className="py-2 px-3 text-red-600">❌ No compensa *</td>
+              </tr>
+              <tr className="border-b bg-gray-50/50" style={{ borderColor: "var(--line)" }}>
+                <td className="py-2 px-3">JR Pass 14 días</td>
+                <td className="py-2 px-3 text-red-600">¥80.000</td>
+                <td className="py-2 px-3 text-red-600">¥400.000</td>
+                <td className="py-2 px-3 text-red-600">❌ No compensa</td>
+              </tr>
+              <tr className="bg-gray-50/50">
+                <td className="py-2 px-3">JR Pass 21 días</td>
+                <td className="py-2 px-3 text-red-600">¥100.000</td>
+                <td className="py-2 px-3 text-red-600">¥500.000</td>
+                <td className="py-2 px-3 text-red-600">❌ No compensa</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div className="text-xs text-gray-700 space-y-3 mb-6 leading-relaxed">
+          <p>
+            * <strong>¿Por qué ni siquiera el de 7 días compensa?</strong> He comparado las opciones con nuestros trayectos reales. La ventana de 7 días más favorable para nosotros sería del 9 al 15 de septiembre. Esta ventana concentra los trayectos <em>Kioto→Kanazawa (¥7.720)</em>, <em>Kioto→Osaka (¥1.160)</em>, otros JR locales (¥240), <em>Nakatsugawa→Nagoya (¥3.070)</em> y <em>Nagoya→Tokio (¥11.300)</em>.
+          </p>
+          <p>
+            Incluso agrupando estos desplazamientos en la ventana de 7 días más favorable, el coste de los billetes JR individuales queda en <strong>~¥23.490</strong>, muy por debajo de los <strong>¥50.000</strong> por persona del pase. Por tanto, el JR Pass no se amortiza en absoluto.
+          </p>
+          <p>
+            Además, una parte importante de nuestro itinerario utiliza operadores que no están incluidos en el JR Pass, especialmente Nohi Bus, metro de Kioto, Randen, Yurikamome y metro de Tokio. Estos habría que pagarlos aparte de todos modos. Comprar billetes individuales también nos permite utilizar Nozomi sin pagar el suplemento especial.
+          </p>
+          <p className="italic text-gray-500 pt-1 border-t" style={{ borderColor: "var(--line)" }}>
+            Nota: Si durante el viaje gastamos "X" en transporte total, eso NO significa que el JR Pass se compare directamente con ese total, porque una parte importante del transporte no está cubierta por el Pass. Los cálculos en euros son aproximados y dependen del tipo de cambio. El hecho de ser 5 personas NO hace que el JR Pass sea más rentable (el precio se multiplica por 5 igual).
+          </p>
+        </div>
+
+        <div className="p-4 rounded-xl border bg-indigo-50/30 mb-6" style={{ borderColor: "var(--indigo)" }}>
+          <p className="text-sm font-bold mb-2 flex items-center gap-1.5" style={{ color: "var(--indigo)" }}>
+            <span className="text-base">✅</span> RECOMENDACIÓN FINAL
+          </p>
+          <ul className="text-xs text-gray-800 space-y-2 pl-2">
+            <li>• <strong>No comprar Japan Rail Pass.</strong></li>
+            <li>• Comprar billetes individuales para los trayectos largos y utilizar Suica/PASMO para el transporte urbano.</li>
+            <li>• Reservar por adelantado únicamente los trenes en los que realmente queramos asiento asegurado.</li>
+            <li>• Somos 5 adultos. Para nosotros es especialmente recomendable reservar juntos los trenes de larga distancia por adelantado para intentar conseguir asientos próximos.</li>
+            <li>• Los transportes privados/locales se compran según corresponda: Nohi Bus online, Randen/metro/buses locales en Japón con Suica.</li>
+          </ul>
+        </div>
+
+        <div>
+          <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Fuentes Oficiales</p>
+          <div className="flex flex-col gap-1 text-[11px]">
+            <a href="https://japanrailpass.net/" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">Japan Rail Pass Oficial</a>
+            <a href="https://japanrailpass.net/purchase/price/" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">Precios Oficiales JR Pass</a>
+            <a href="https://japanrailpass.net/en/about_jrp/route/" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">Cobertura Oficial JR Pass</a>
+            <a href="https://global.jr-central.co.jp/en/onlinebooking/contents/jrp_nozomi/index.html" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">Información Nozomi + JR Pass</a>
+            <a href="https://smart-ex.jp/en/" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">Smart EX (Reservas Shinkansen)</a>
+          </div>
         </div>
       </div>
     </div>

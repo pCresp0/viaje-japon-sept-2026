@@ -5,9 +5,11 @@ import { Highlightable } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 
 export default function BudgetPage() {
-  const { budget, transports, transportTotals } = useContent();
+  const { budget, transports } = useContent();
   const t = useT();
   const [showTransports, setShowTransports] = useState(false);
+
+  const transportTotal = transports.reduce((sum, t) => sum + (t.real || 0), 0);
 
   return (
     <div className="px-4 pt-3 pb-8">
@@ -44,8 +46,9 @@ export default function BudgetPage() {
             {c.details.length > 0 && (
               <ul className="mt-2 space-y-1">
                 {c.details.map((d, i) => (
-                  <li key={i} className="text-xs leading-snug" style={{ color: "var(--ink-soft)" }}>
-                    · {d}
+                  <li key={i} className="text-[11.5px] flex items-start gap-1.5" style={{ color: "var(--ink-soft)" }}>
+                    <span style={{ color: "var(--shu)" }}>•</span>
+                    <span dangerouslySetInnerHTML={{ __html: d }} />
                   </li>
                 ))}
               </ul>
@@ -77,22 +80,15 @@ export default function BudgetPage() {
                 </div>
                 <div className="text-right shrink-0">
                   <p style={{ color: "var(--ink)" }}>{t.real.toFixed(2)}€</p>
-                  <p style={{ color: "var(--forest)" }}>{t.jrPass.toFixed(2)}€ sin cubrir</p>
                 </div>
               </div>
             ))}
             <div className="flex items-center justify-between text-sm font-medium pt-1">
               <span style={{ color: "var(--ink)" }}>{t("budget.perPerson")}</span>
               <span style={{ color: "var(--ink)" }}>
-                {transportTotals.real}€
+                {transportTotal.toFixed(2)}€
               </span>
             </div>
-            <p style={{ fontSize: 10.5, color: "var(--ink-soft)", lineHeight: 1.5, marginTop: 4 }}>
-              Con JR Pass todavía quedarían {transportTotals.jrPass}€/persona en trayectos que el
-              pase no cubre — sin contar el precio del propio pase (~270-505€ según los días,
-              siempre por encima de lo que cuesta pagar suelto en este itinerario). Ver "Decidir si
-              comprar JR Pass" en Cosas pendientes.
-            </p>
           </div>
         )}
       </div>
