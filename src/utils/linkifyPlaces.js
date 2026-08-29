@@ -194,35 +194,11 @@ export function tokenizePlaces(text) {
     chunks.push({ type: "raw", value: textStr.slice(lastIndex) });
   }
 
-  // 2. En los bloques de texto no-URL, aplicamos la detección de lugares
-  const withPlaces = [];
+  // 2. Extraer formato en negrita (**texto**) de los fragmentos de texto puro
+  const withBold = [];
   for (const chunk of chunks) {
-    if (chunk.type === "url") {
-      withPlaces.push(chunk);
-      continue;
-    }
-
-    let rawLast = 0;
-    let placeMatch;
-    const placeRe = new RegExp(placePattern.source, "gi");
-
-    while ((placeMatch = placeRe.exec(chunk.value)) !== null) {
-      if (placeMatch.index > rawLast) {
-        withPlaces.push({ type: "text", value: chunk.value.slice(rawLast, placeMatch.index) });
-      }
-      withPlaces.push({ type: "place", value: placeMatch[0] });
-      rawLast = placeMatch.index + placeMatch[0].length;
-    }
-    if (rawLast < chunk.value.length) {
-      withPlaces.push({ type: "text", value: chunk.value.slice(rawLast) });
-    }
-  }
-
-  // 3. Extraer formato en negrita (**texto**) de los fragmentos de texto puro
-  const finalParts = [];
-  for (const part of withPlaces) {
-    if (part.type !== "text") {
-      finalParts.push(part);
+    if (chunk.type !== "raw") {
+      withBold.push(chunk);
       continue;
     }
     
@@ -230,15 +206,39 @@ export function tokenizePlaces(text) {
     let boldMatch;
     const boldRe = /\*\*(.*?)\*\*/g;
     
-    while ((boldMatch = boldRe.exec(part.value)) !== null) {
+    while ((boldMatch = boldRe.exec(chunk.value)) !== null) {
       if (boldMatch.index > last) {
-        finalParts.push({ type: "text", value: part.value.slice(last, boldMatch.index) });
+        withBold.push({ type: "raw", value: chunk.value.slice(last, boldMatch.index) });
       }
-      finalParts.push({ type: "bold", value: boldMatch[1] });
+      withBold.push({ type: "bold", value: boldMatch[1] });
       last = boldMatch.index + boldMatch[0].length;
     }
-    if (last < part.value.length) {
-      finalParts.push({ type: "text", value: part.value.slice(last) });
+    if (last < chunk.value.length) {
+      withBold.push({ type: "raw", value: chunk.value.slice(last) });
+    }
+  }
+
+  // 3. En los bloques de texto puro (raw), aplicamos la detección de lugares
+  const finalParts = [];
+  for (const part of withBold) {
+    if (part.type !== "raw") {
+      finalParts.push(part);
+      continue;
+    }
+
+    let rawLast = 0;
+    let placeMatch;
+    const placeRe = new RegExp(placePattern.source, "gi");
+
+    while ((placeMatch = placeRe.exec(part.value)) !== null) {
+      if (placeMatch.index > rawLast) {
+        finalParts.push({ type: "text", value: part.value.slice(rawLast, placeMatch.index) });
+      }
+      finalParts.push({ type: "place", value: placeMatch[0] });
+      rawLast = placeMatch.index + placeMatch[0].length;
+    }
+    if (rawLast < part.value.length) {
+      finalParts.push({ type: "text", value: part.value.slice(rawLast) });
     }
   }
 
