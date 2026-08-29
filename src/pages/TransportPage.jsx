@@ -197,12 +197,13 @@ export default function TransportPage({ onNavigate }) {
                       <p style={{ fontSize: 12.5, fontWeight: 700, color: "var(--shu)" }}>
                         {tItem.jpy ? `¥${tItem.jpy.toLocaleString("es-ES")} (~${tItem.real}€)` : `${tItem.real}€`}
                       </p>
-                      {jr === "covered" && (
-                        <p style={{ fontSize: 10, color: "#2e7d5b", fontWeight: 600 }}>{t("transport.jrPassCovered")}</p>
-                      )}
-                      {jr === "none" && (
-                        <p style={{ fontSize: 10, color: "var(--ink-soft)" }}>{t("transport.jrPassNone")}</p>
-                      )}
+                      <p style={{ fontSize: 10.5, fontWeight: 600, marginTop: 2 }}>
+                        {tItem.suica ? (
+                          <span style={{ color: "#2e7d5b" }}>Suica: ✅ SÍ</span>
+                        ) : (
+                          <span style={{ color: "#bc4749" }}>Suica: ❌ NO</span>
+                        )}
+                      </p>
                     </div>
                   </div>
                   </Highlightable>
