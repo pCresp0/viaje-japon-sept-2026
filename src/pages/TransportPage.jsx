@@ -1,34 +1,22 @@
 import { useContent, useT } from "../i18n/LanguageContext";
-import { Train, Bus, Zap, FileDown, CheckCircle2, Clock } from "lucide-react";
+import { Train, Bus, Zap, FileDown, CheckCircle2, Clock, AlertCircle, Smartphone, CreditCard } from "lucide-react";
 import { Highlightable } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 import { exportTransportExcel } from "../utils/exportCsv";
 import ShinkansenTicketCard from "../components/ShinkansenTicketCard";
 
-// Determina el icono del trayecto.
-// Se prioriza el campo estable `kind` del dato; el análisis del texto es
-// sólo un respaldo para entradas antiguas que aún no lo tengan. Sin esto,
-// al traducir la app los iconos serían incorrectos, porque la detección
-// dependía de palabras en español ("Bala", "Operador Privado").
 function iconKind(transport) {
   if (transport?.kind) return transport.kind;
-
   const type = transport?.type || "";
   if (type === "Operador Privado (Bus)") return "bus";
   if (type.includes("Bala")) return "shinkansen";
   return "train";
 }
 
-// jrCoverage determines if a transport is covered by JR Pass
-function jrCoverage(t) {
-  if (t.coverage === "jr") return "covered";
-  return "none";
-}
-
 export default function TransportPage({ onNavigate }) {
   const { transports, days } = useContent();
   const t = useT();
-  // Group transports by day key, preserving insertion order
+
   const seenKeys = [];
   const groups = {};
   for (const item of transports) {
@@ -46,7 +34,6 @@ export default function TransportPage({ onNavigate }) {
         return { badge: String(n), title: `${d.weekday} ${calDay} sept`, sub: d.cities };
       }
     }
-    // "10-14" range entry
     return { badge: "~", title: t("transport.tokioDays"), sub: "Tokio" };
   }
 
@@ -65,7 +52,7 @@ export default function TransportPage({ onNavigate }) {
         </div>
         <button
           onClick={() => exportTransportExcel(transports)}
-          className="shrink-0 flex items-center gap-1.5 rounded-full px-3.5 py-2 text-xs font-semibold shadow-sm"
+          className="shrink-0 flex items-center gap-1.5 rounded-full px-3.5 py-2 text-xs font-semibold shadow-sm cursor-pointer hover:opacity-90 transition-opacity"
           style={{ background: "var(--indigo)", color: "white", border: "none" }}
         >
           <FileDown size={14} />
@@ -73,32 +60,122 @@ export default function TransportPage({ onNavigate }) {
         </button>
       </div>
 
-      {/* Suica card */}
-      <div className="rounded-2xl p-5 mb-8" style={{ background: "linear-gradient(135deg, #1d3557 0%, #0f1f35 100%)", color: "white" }}>
-        <p style={{ fontSize: 15, fontWeight: 700, marginBottom: 8 }}>Tarjeta Suica / Pasmo</p>
-        <p style={{ fontSize: 13, color: "rgba(255,255,255,0.8)", lineHeight: 1.6, marginBottom: 12 }}>
-          Tarjeta recargable para trenes, metro y autobuses en Japón. Se puede comprar en estaciones principales o añadir eSuica al iPhone desde España.
+      {/* 1. RESUMEN VISUAL DE ESTADO DE TRANSPORTES */}
+      <div className="rounded-2xl p-5 mb-8 border" style={{ background: "var(--paper-raised)", borderColor: "var(--line)" }}>
+        <p className="font-display text-base font-bold flex items-center gap-2 mb-3" style={{ color: "var(--indigo)" }}>
+          <span>🚆</span> TRANSPORTES — ESTADO GENERAL (5 ADULTOS)
         </p>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-          <div>
-            <p style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 4 }}>Dónde comprar</p>
-            <p style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 4 }}>{t("transport.icCardInfo")}</p>
-            <p style={{ fontSize: 12, fontWeight: 600 }}>{t("transport.icCardInfo")}</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          <div className="p-3.5 rounded-xl border bg-green-50/50 border-green-200">
+            <p className="text-xs font-bold text-green-800 flex items-center gap-1 mb-2">
+              <CheckCircle2 size={14} /> ✅ COMPRADOS
+            </p>
+            <ul className="text-xs text-green-900 space-y-1.5">
+              <li>• <strong>Nozomi 53</strong> Shinagawa → Kioto (7 sep, 17:19 · Coche 13)</li>
+              <li>• <strong>Nohi Bus</strong> Kanazawa → Shirakawa-go (13 sep, 08:40)</li>
+              <li>• <strong>Nohi Bus</strong> Shirakawa-go → Takayama (13 sep, 13:15)</li>
+            </ul>
           </div>
-          <div>
-            <p style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 4 }}>{t("transport.icCardCostLabel")}</p>
-            <p style={{ fontSize: 12, fontWeight: 600 }}>{t("transport.icCardCostValue")}</p>
+
+          <div className="p-3.5 rounded-xl border bg-red-50/50 border-red-200">
+            <p className="text-xs font-bold text-red-800 flex items-center gap-1 mb-2">
+              <AlertCircle size={14} /> 🔴 RESERVAR AHORA
+            </p>
+            <ul className="text-xs text-red-900 space-y-1.5">
+              <li>• <strong>Kioto → Kanazawa</strong> (12 sep · JR-West Online)</li>
+              <li>• <strong>Takayama → Magome</strong> (14 sep · ¥5.000/pax Nohi Bus)</li>
+              <li>• <strong>Shinano 4</strong> Nakatsugawa → Nagoya (15 sep · Canal JR)</li>
+              <li>• <strong>Nozomi</strong> Nagoya → Tokio (15 sep, ~11:20–11:30 · Smart EX)</li>
+              <li>• <strong>Shinkansen Fuji</strong> (20 sep · Smart EX, tras confirmar tour)</li>
+            </ul>
           </div>
-        </div>
-        <div style={{ marginTop: 12, paddingTop: 12, borderTop: "1px solid rgba(255,255,255,0.2)" }}>
-          <p style={{ fontSize: 12, color: "rgba(255,255,255,0.7)" }} dangerouslySetInnerHTML={{ __html: t("transport.icCardWarning") }} />
+
+          <div className="p-3.5 rounded-xl border bg-amber-50/50 border-amber-200">
+            <p className="text-xs font-bold text-amber-800 flex items-center gap-1 mb-2">
+              <Clock size={14} /> 🟠 RESERVAR MÁS ADELANTE
+            </p>
+            <ul className="text-xs text-amber-900 space-y-1.5">
+              <li>• <strong>Narita Express (N'EX) Vuelta</strong> Tokio → Narita (21 sep)</li>
+            </ul>
+          </div>
+
+          <div className="p-3.5 rounded-xl border bg-slate-50/80 border-slate-200">
+            <p className="text-xs font-bold text-slate-700 flex items-center gap-1 mb-2">
+              <CreditCard size={14} /> 🟢 COMPRAR EN JAPÓN
+            </p>
+            <ul className="text-xs text-slate-800 space-y-1.5">
+              <li>• <strong>N'EX Ida</strong> Narita → Shinagawa (comprar al aterrizar)</li>
+              <li>• <strong>Transportes locales</strong> con Suica / Efectivo según operador</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      {/* Billetes Shinkansen */}
-      <ShinkansenTicketCard />
+      {/* 2. BLOQUE OFICIAL WELCOME SUICA / TARJETAS IC */}
+      <div className="rounded-2xl p-5 mb-8" style={{ background: "linear-gradient(135deg, #1d3557 0%, #0f1f35 100%)", color: "white" }}>
+        <div className="flex items-center gap-2 mb-2">
+          <CreditCard size={18} className="text-emerald-400" />
+          <p style={{ fontSize: 16, fontWeight: 700, margin: 0 }}>Tarjeta Welcome Suica / Tarjetas IC</p>
+        </div>
+        <p style={{ fontSize: 13, color: "rgba(255,255,255,0.85)", lineHeight: 1.6, marginBottom: 12 }}>
+          Tarjeta de transporte y monedero electrónico para trenes locales, metro, autobuses urbanos y compras compatibles en todo Japón.
+        </p>
 
-      {/* Trayectos por día */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <div className="p-3.5 rounded-xl bg-white/10 border border-white/10">
+            <p className="text-xs font-bold text-emerald-300 flex items-center gap-1 mb-1.5">
+              <Smartphone size={14} /> 📱 iPhone (Welcome Suica Mobile)
+            </p>
+            <p className="text-xs text-white/80 leading-relaxed">
+              Descargar la app oficial <strong>Welcome Suica Mobile</strong> e integrarla en Apple Wallet con tarjeta en Apple Pay. Requiere activar localización. <em>Nota: Si existen restricciones de emisión/recarga desde España por la ubicación, se puede crear y recargar directamente al aterrizar en Japón.</em>
+            </p>
+          </div>
+
+          <div className="p-3.5 rounded-xl bg-white/10 border border-white/10">
+            <p className="text-xs font-bold text-amber-300 flex items-center gap-1 mb-1.5">
+              <CreditCard size={14} /> 🤖 Android extranjero (Welcome Suica Física)
+            </p>
+            <p className="text-xs text-white/80 leading-relaxed">
+              La app Welcome Suica Mobile no está disponible para Android extranjero. El hermano con Android puede comprar la <strong>Welcome Suica física</strong> al llegar a los puntos autorizados de JR East en Narita (T1 o T2/3).
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-white/80 pt-3 border-t border-white/15">
+          <div>
+            <p className="font-semibold text-white mb-0.5">💰 Sin depósito</p>
+            <p className="text-white/70">No requiere los ¥500 de fianza de la tarjeta clásica.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-white mb-0.5">⚠️ No reembolsable</p>
+            <p className="text-white/70">El saldo restante no se devuelve. No cargar importes excesivos.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-white mb-0.5">💳 Recarga recomendada</p>
+            <p className="text-white/70">Iniciar con ¥3.000–¥5.000/persona y recargar según necesidad.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* 3. POLÍTICA DE CAMBIOS SHINKANSEN SMART EX */}
+      <div className="rounded-2xl p-4 mb-8 border" style={{ background: "rgba(29, 53, 87, 0.03)", borderColor: "var(--line)" }}>
+        <p className="text-sm font-bold flex items-center gap-1.5 mb-2" style={{ color: "var(--indigo)" }}>
+          <Zap size={16} /> Política de Cambios en Shinkansen (Smart EX)
+        </p>
+        <p className="text-xs text-gray-700 leading-relaxed mb-2">
+          Las reservas de Shinkansen realizadas por <strong>Smart EX</strong> permiten modificaciones online sin coste antes de la salida (hasta 4 minutos antes de la salida programada, siempre que no se haya accedido al torno con QR ni impreso el billete físico, y sujeto a plazas disponibles).
+        </p>
+        <p className="text-xs text-gray-600 leading-relaxed">
+          💡 <strong>Plan de conexión Día 1 (Nozomi 53):</strong> Si el vuelo o el N'EX sufren un retraso severo y peligra la llegada a Shinagawa antes de las 17:19, se debe acceder a Smart EX (App / Web) <em>antes</em> de la salida del tren para cambiar los billetes al siguiente Nozomi disponible.
+        </p>
+      </div>
+
+      {/* 4. BILLETE SHINKANSEN (Colapsable) */}
+      <div className="mb-8">
+        <ShinkansenTicketCard />
+      </div>
+
+      {/* 5. TRAYECTOS POR DÍA */}
       <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>{t("transport.tripsByDay")}</p>
       <div
         className="mb-8"
@@ -142,8 +219,8 @@ export default function TransportPage({ onNavigate }) {
               {/* Transport rows */}
               {items.map((tItem, ti) => {
                 const kind = iconKind(tItem);
-                const jr = jrCoverage(tItem);
                 const isClickable = onNavigate && !isNaN(parseInt(tItem.day));
+                const suicaCat = tItem.suicaCategory || (tItem.suica ? "yes" : "no");
                 
                 return (
                   <Highlightable key={ti} id={slug("transport", tItem.day, tItem.name)}>
@@ -197,13 +274,23 @@ export default function TransportPage({ onNavigate }) {
                       <p style={{ fontSize: 12.5, fontWeight: 700, color: "var(--shu)" }}>
                         {tItem.jpy ? `¥${tItem.jpy.toLocaleString("es-ES")} (~${tItem.real}€)` : `${tItem.real}€`}
                       </p>
-                      <p style={{ fontSize: 10.5, fontWeight: 600, marginTop: 2 }}>
-                        {tItem.suica ? (
-                          <span style={{ color: "#2e7d5b" }}>Suica: ✅ SÍ</span>
-                        ) : (
-                          <span style={{ color: "#bc4749" }}>Suica: ❌ NO</span>
+                      <div className="mt-1">
+                        {suicaCat === "yes" && (
+                          <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                            🟢 Suica: SÍ
+                          </span>
                         )}
-                      </p>
+                        {suicaCat === "partial" && (
+                          <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-200">
+                            🟡 Suica: PARCIAL
+                          </span>
+                        )}
+                        {suicaCat === "no" && (
+                          <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-rose-50 text-rose-700 border border-rose-200">
+                            🔴 Suica: NO
+                          </span>
+                        )}
+                      </div>
                     </div>
                   </div>
                   </Highlightable>
@@ -214,7 +301,7 @@ export default function TransportPage({ onNavigate }) {
         })}
       </div>
 
-      {/* Cost summary & JR Pass evaluation */}
+      {/* 6. ANÁLISIS DE COSTE & JAPAN RAIL PASS */}
       <div className="rounded-2xl p-6 border mb-6" style={{ background: "var(--paper-raised)", borderColor: "var(--line)" }}>
         <div className="flex items-center gap-2 mb-3">
           <span className="text-xl">📊</span>
@@ -226,7 +313,7 @@ export default function TransportPage({ onNavigate }) {
         <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl mb-4" style={{ background: "rgba(188,71,73,0.1)", border: "1px solid rgba(188,71,73,0.2)" }}>
           <span style={{ fontSize: 16 }}>❌</span>
           <p className="text-sm font-bold" style={{ color: "var(--shu)", margin: 0 }}>
-            VERDICTO: NO COMPENSA COMPRAR EL JAPAN RAIL PASS NACIONAL.
+            VEREDICTO: NO COMPENSA COMPRAR EL JAPAN RAIL PASS NACIONAL.
           </p>
         </div>
 
@@ -236,17 +323,17 @@ export default function TransportPage({ onNavigate }) {
             <ul className="text-xs text-gray-700 space-y-1 pl-4 list-disc marker:text-green-600">
               <li>Trenes JR incluidos en la red nacional.</li>
               <li>Shinkansen Hikari, Kodama, Sakura, Tsubame.</li>
-              <li>Limited Express JR.</li>
-              <li>Trenes locales JR.</li>
+              <li>Limited Express JR (ej. Shinano, Thunderbird).</li>
+              <li>Trenes locales JR (ej. Línea Nara, Línea San-In).</li>
             </ul>
           </div>
           <div className="p-4 rounded-xl border bg-white/50" style={{ borderColor: "var(--line)" }}>
             <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">❌ El JR Pass NO cubre:</p>
             <ul className="text-xs text-gray-700 space-y-1 pl-4 list-disc marker:text-red-600">
-              <li>Nohi Bus.</li>
+              <li>Nohi Bus (Kanazawa → Shirakawa-go → Takayama → Magome).</li>
               <li>Metro de Kioto y Autobuses urbanos.</li>
-              <li>Randen y Yurikamome.</li>
-              <li>Metro de Tokio y otros operadores privados.</li>
+              <li>Tranvía Randen y tren elevado Yurikamome.</li>
+              <li>Metro de Tokio (Tokyo Metro y Toei Subway).</li>
             </ul>
           </div>
         </div>
@@ -256,7 +343,7 @@ export default function TransportPage({ onNavigate }) {
             <span className="text-base">⚠️</span> IMPORTANTE SOBRE NOZOMI
           </p>
           <p className="text-xs text-red-700 leading-relaxed">
-            El tren bala más rápido (Nozomi) <strong>NO está incluido</strong> normalmente en el JR Pass. Para usarlo con el JR Pass hay que pagar un "Ticket Especial" adicional cada vez. Comprando billetes individuales SÍ podemos subir al Nozomi sin problema.
+            El tren bala más rápido (Nozomi) <strong>NO está incluido</strong> directamente en el JR Pass y exige pagar un billete complementario costoso. Comprando billetes individuales SÍ podemos subir al Nozomi directamente reservando por Smart EX.
           </p>
         </div>
 
@@ -283,7 +370,7 @@ export default function TransportPage({ onNavigate }) {
                 <td className="py-2 px-3">JR Pass 7 días</td>
                 <td className="py-2 px-3 text-red-600">¥50.000</td>
                 <td className="py-2 px-3 text-red-600">¥250.000</td>
-                <td className="py-2 px-3 text-red-600">❌ No compensa *</td>
+                <td className="py-2 px-3 text-red-600">❌ No compensa</td>
               </tr>
               <tr className="border-b bg-gray-50/50" style={{ borderColor: "var(--line)" }}>
                 <td className="py-2 px-3">JR Pass 14 días</td>
@@ -303,16 +390,13 @@ export default function TransportPage({ onNavigate }) {
 
         <div className="text-xs text-gray-700 space-y-3 mb-6 leading-relaxed">
           <p>
-            * <strong>¿Por qué ni siquiera el de 7 días compensa?</strong> He comparado las opciones con nuestros trayectos reales. La ventana de 7 días más favorable para nosotros sería del 9 al 15 de septiembre. Esta ventana concentra los trayectos <em>Kioto→Kanazawa (¥7.720)</em>, <em>Kioto→Osaka (¥1.160)</em>, otros JR locales (¥240), <em>Nakatsugawa→Nagoya (¥3.070)</em> y <em>Nagoya→Tokio (¥11.300)</em>.
+            * <strong>¿Por qué no compensa?</strong> Agrupando todos los trayectos JR de la semana más densa (Kioto → Kanazawa, Kioto → Osaka, Nakatsugawa → Nagoya y Nagoya → Tokio), el coste individual suma aproximadamente <strong>~¥23.490</strong> por persona, muy por debajo de los <strong>¥50.000</strong> que cuesta el pase de 7 días.
           </p>
           <p>
-            Incluso agrupando estos desplazamientos en la ventana de 7 días más favorable, el coste de los billetes JR individuales queda en <strong>~¥23.490</strong>, muy por debajo de los <strong>¥50.000</strong> por persona del pase. Por tanto, el JR Pass no se amortiza en absoluto.
-          </p>
-          <p>
-            Además, una parte importante de nuestro itinerario utiliza operadores que no están incluidos en el JR Pass, especialmente Nohi Bus, metro de Kioto, Randen, Yurikamome y metro de Tokio. Estos habría que pagarlos aparte de todos modos. Comprar billetes individuales también nos permite utilizar Nozomi sin pagar el suplemento especial.
+            Además, una parte importante de nuestro itinerario utiliza operadores privados no incluidos (Nohi Bus, metro de Kioto, Randen, Yurikamome y metro de Tokio), los cuales habría que pagar aparte de todos modos.
           </p>
           <p className="italic text-gray-500 pt-1 border-t" style={{ borderColor: "var(--line)" }}>
-            Nota: Si durante el viaje gastamos "X" en transporte total, eso NO significa que el JR Pass se compare directamente con ese total, porque una parte importante del transporte no está cubierta por el Pass. Los cálculos en euros son aproximados y dependen del tipo de cambio. El hecho de ser 5 personas NO hace que el JR Pass sea más rentable (el precio se multiplica por 5 igual).
+            Nota: El precio del pase nacional se multiplica por viajero exactamente igual que los billetes individuales, por lo que viajar en grupo de 5 personas no cambia la ecuación de ahorro.
           </p>
         </div>
 
@@ -322,10 +406,9 @@ export default function TransportPage({ onNavigate }) {
           </p>
           <ul className="text-xs text-gray-800 space-y-2 pl-2">
             <li>• <strong>No comprar Japan Rail Pass.</strong></li>
-            <li>• Comprar billetes individuales para los trayectos largos y utilizar Suica/PASMO para el transporte urbano.</li>
-            <li>• Reservar por adelantado únicamente los trenes en los que realmente queramos asiento asegurado.</li>
-            <li>• Somos 5 adultos. Para nosotros es especialmente recomendable reservar juntos los trenes de larga distancia por adelantado para intentar conseguir asientos próximos.</li>
-            <li>• Los transportes privados/locales se compran según corresponda: Nohi Bus online, Randen/metro/buses locales en Japón con Suica.</li>
+            <li>• Comprar billetes individuales para los trayectos de larga distancia (Smart EX para Shinkansen y JR-West Online para Kioto–Kanazawa).</li>
+            <li>• Utilizar Suica / Welcome Suica para todo el transporte urbano de Kioto, Osaka y Tokio.</li>
+            <li>• Reservar por adelantado únicamente los trenes/buses que requieran asiento garantizado para los 5 viajeros.</li>
           </ul>
         </div>
 
@@ -333,13 +416,14 @@ export default function TransportPage({ onNavigate }) {
           <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Fuentes Oficiales</p>
           <div className="flex flex-col gap-1 text-[11px]">
             <a href="https://japanrailpass.net/" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">Japan Rail Pass Oficial</a>
-            <a href="https://japanrailpass.net/purchase/price/" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">Precios Oficiales JR Pass</a>
-            <a href="https://japanrailpass.net/en/about_jrp/route/" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">Cobertura Oficial JR Pass</a>
-            <a href="https://global.jr-central.co.jp/en/onlinebooking/contents/jrp_nozomi/index.html" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">Información Nozomi + JR Pass</a>
-            <a href="https://smart-ex.jp/en/" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">Smart EX (Reservas Shinkansen)</a>
+            <a href="https://smart-ex.jp/en/" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">Smart EX (Tokaido / Sanyo / Kyushu Shinkansen)</a>
+            <a href="https://www.westjr.co.jp/global/en/ticket/overview/" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">JR-West Online Train Reservation (Thunderbird + Hokuriku Shinkansen)</a>
+            <a href="https://www.jreast.co.jp/multi/en/welcomesuica/welcomesuica.html" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">JR East Welcome Suica Oficial</a>
+            <a href="https://www.nouhibus.co.jp/highwaybus/highwaybus_route/" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">Nohi Bus Oficial</a>
           </div>
         </div>
       </div>
     </div>
   );
 }
+

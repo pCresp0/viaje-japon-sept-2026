@@ -68,9 +68,9 @@ export default function ShinkansenTicketCard() {
       {isExpanded && (
         <div className="p-4 sm:p-5 space-y-3 animate-in slide-in-from-top-2 fade-in duration-200">
           <p style={{ fontSize: 13, color: "var(--ink)", lineHeight: 1.5, margin: 0 }}>
-          Billetes de tren bala (Shinkansen Nozomi) confirmados y comprados a través de Smart EX. <strong>Coche 13 (Ordinary)</strong>.
-          Selecciona tu nombre para ver el billete QR que deberás escanear en los tornos de la estación.
-        </p>
+            Billetes de tren bala (Shinkansen Nozomi 53) confirmados y comprados a través de Smart EX. <strong>Coche 13 (Ordinary)</strong>.
+            Selecciona tu nombre para abrir tu billete QR individual. Según las condiciones de Smart EX, cada viajero puede escanear su código QR directamente en los tornos del Shinkansen para acceder al andén.
+          </p>
 
         {/* Members List */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-3">

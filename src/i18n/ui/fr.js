@@ -275,7 +275,7 @@ export default {
 
   "transport.icCardInfo": "Gares principales, distributeurs automatiques",
   "transport.icCardCostLabel": "Coût initial",
-  "transport.icCardCostValue": "2.000 ¥ · (1.500 utilisables + 500 consigne)",
+  "transport.icCardCostValue": "Sans consigne · Recharge conseillée: ¥3.000–¥5.000",
   "transport.icCardWarning": "Les opérateurs privés (métro local, tramway Randen, Yurikamome, Nohi Bus) ne sont <strong>pas</strong> couverts par le JR Pass.",
   "transport.tripsByDay": "Trajets par jour",
   "transport.withJrPass": "avec JR Pass",
