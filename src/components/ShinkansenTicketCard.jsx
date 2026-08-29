@@ -6,10 +6,10 @@ export default function ShinkansenTicketCard() {
   const [selectedMember, setSelectedMember] = useState(null);
   const [showFullQR, setShowFullQR] = useState(false);
 
-  // Asignación de asientos y QRs (E = Ventana con vistas al Fuji para Pablo y Sergio)
+  // Configuración de los 5 asientos para la reserva Smart EX 2000
   const memberSeats = {
-    "pablo": { seat: "13-E", type: "Ventana (Fuji 🗻)", qr: "/images/tickets/nozomi-day1/seat-13e.png" },
-    "sergio": { seat: "14-E", type: "Ventana (Fuji 🗻)", qr: "/images/tickets/nozomi-day1/seat-14e.png" },
+    "pablo": { seat: "13-E", type: "Ventana", qr: "/images/tickets/nozomi-day1/seat-13e.png" },
+    "sergio": { seat: "14-E", type: "Ventana", qr: "/images/tickets/nozomi-day1/seat-14e.png" },
     "juancarlos": { seat: "13-C", type: "Pasillo", qr: "/images/tickets/nozomi-day1/seat-13c.png" },
     "gerundio": { seat: "13-D", type: "Centro", qr: "/images/tickets/nozomi-day1/seat-13d.png" },
     "viajero5": { seat: "14-D", type: "Centro", qr: "/images/tickets/nozomi-day1/seat-14d.png" },
