@@ -166,12 +166,20 @@ export default function TransportPage({ onNavigate }) {
                         <p style={{ fontSize: 13, fontWeight: 600, color: "var(--ink)" }}>
                           {tItem.name}
                         </p>
-                        {tItem.purchased !== undefined && (
-                          <span className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold ${
-                            tItem.purchased ? "bg-green-100 text-green-700" : "bg-slate-100 text-slate-500"
-                          }`}>
-                            {tItem.purchased ? <CheckCircle2 size={10} /> : <Clock size={10} />}
-                            {tItem.purchased ? "COMPRADO" : "PENDIENTE"}
+                        {tItem.purchased ? (
+                          <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-green-100 text-green-700 border border-green-200">
+                            <CheckCircle2 size={10} />
+                            COMPRADO
+                          </span>
+                        ) : tItem.advance ? (
+                          <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-orange-100 text-orange-700 border border-orange-200">
+                            <Clock size={10} />
+                            COMPRAR ADELANTADO
+                          </span>
+                        ) : (
+                          <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-500 border border-slate-200">
+                            <Clock size={10} />
+                            COMPRAR ALLÍ
                           </span>
                         )}
                       </div>
@@ -187,7 +195,7 @@ export default function TransportPage({ onNavigate }) {
 
                     <div style={{ textAlign: "right", whiteSpace: "nowrap", flexShrink: 0 }}>
                       <p style={{ fontSize: 12.5, fontWeight: 700, color: "var(--shu)" }}>
-                        {tItem.jpy ? `¥${tItem.jpy.toLocaleString("es-ES")}` : `${tItem.real}€`}
+                        {tItem.jpy ? `¥${tItem.jpy.toLocaleString("es-ES")} (~${tItem.real}€)` : `${tItem.real}€`}
                       </p>
                       {jr === "covered" && (
                         <p style={{ fontSize: 10, color: "#2e7d5b", fontWeight: 600 }}>{t("transport.jrPassCovered")}</p>
