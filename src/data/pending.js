@@ -82,7 +82,7 @@ export const pendingItems = [
     id: "esim-suica",
     category: "logistica",
     urgency: "media",
-    title: "🟠 Logística Digital: eSIM, Suica y Visit Japan Web",
+    title: "🟠 Logística Digital: Suica y Visit Japan Web",
     detail: "📱 iPhone: App oficial 'Welcome Suica Mobile' en Apple Wallet (requiere localización activa; si la emisión/recarga falla desde España por restricciones de país, crearla al aterrizar en Japón).\n🤖 Android extranjero: No dispone de Welcome Suica Mobile. El hermano con Android debe adquirir una tarjeta física Welcome Suica en Narita.\n💳 Tarjeta Welcome Suica: Sin depósito de 500¥; saldo no reembolsable. Recarga inicial recomendada: ¥3.000–¥5.000 por persona.\n🌐 Visit Japan Web: Códigos QR de inmigración y aduanas generados para los 5 viajeros.",
     deadline: "Días antes de volar",
   },

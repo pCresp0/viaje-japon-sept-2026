@@ -623,6 +623,7 @@ function fuzzyMatches(query, title) {
 // Lista de sugerencias rápidas para mostrar en el panel vacío
 export const QUICK_SUGGESTIONS = [
   { label: "Fushimi Inari", query: "fushimi" },
+  { label: "eSIM / Holafly", query: "holafly" },
   { label: "Nozomi 53", query: "nozomi" },
   { label: "Hotel Kioto", query: "keihan" },
   { label: "Monte Fuji", query: "fuji" },
