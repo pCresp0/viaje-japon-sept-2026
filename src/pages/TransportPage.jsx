@@ -3,6 +3,7 @@ import { Train, Bus, Zap, FileDown, CheckCircle2, Clock } from "lucide-react";
 import { Highlightable } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 import { exportTransportExcel } from "../utils/exportCsv";
+import ShinkansenTicketCard from "../components/ShinkansenTicketCard";
 
 // Determina el icono del trayecto.
 // Se prioriza el campo estable `kind` del dato; el análisis del texto es
@@ -71,6 +72,9 @@ export default function TransportPage({ onNavigate }) {
           Descargar Excel
         </button>
       </div>
+
+      {/* Billetes Shinkansen */}
+      <ShinkansenTicketCard />
 
       {/* Suica card */}
       <div className="rounded-2xl p-5 mb-8" style={{ background: "linear-gradient(135deg, #1d3557 0%, #0f1f35 100%)", color: "white" }}>
