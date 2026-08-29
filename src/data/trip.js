@@ -620,7 +620,7 @@ export const days = [
 
 // Transportes con coste real vs coste ya cubierto por JR Pass (hoja "Transportes")
 export const transports = [
-  { day: 1, date: "2026-09-07", name: "Narita Express (N'EX)", from: "Aeropuerto de Narita", to: "Estación de Shinagawa", type: "Línea JR", real: 19, jpy: 3330, coverage: "jr", purchased: false, advance: true },
+  { day: 1, date: "2026-09-07", name: "Narita Express (N'EX)", from: "Aeropuerto de Narita", to: "Estación de Shinagawa", type: "Línea JR", real: 19, jpy: 3330, coverage: "jr", purchased: false, advance: false },
   { day: 1, date: "2026-09-07", name: "Shinkansen Nozomi 53", from: "Estación de Shinagawa", to: "Kioto", type: "Línea JR (Tren Bala)", real: 90, jpy: 14170, coverage: "jr", note: "✓ Reservado (Ref: 2000) · Salida 17:19 → Llegada 19:23 · Coche 13 · Asientos: 13-C, 13-D, 13-E, 14-D, 14-E", purchased: true, advance: true },
   { day: 2, date: "2026-09-08", name: "Tren Línea JR Nara", from: "Kioto", to: "Inari Station", type: "Línea JR Local", real: 1, jpy: 200, coverage: "jr", purchased: false, advance: false },
   { day: 2, date: "2026-09-08", name: "Tren Línea JR Nara", from: "Inari Station", to: "Nara", type: "Línea JR Local", real: 4.2, jpy: 680, coverage: "jr", purchased: false, advance: false },
