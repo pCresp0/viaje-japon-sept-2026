@@ -125,7 +125,7 @@ export default function App() {
                 {tab === "itinerario"   && <Itinerary openDay={openDay} setOpenDay={setOpenDay} onGoToMapDay={goToMapDay} />}
                 {tab === "vuelos"       && <InfoPage />}
                 {tab === "hoteles"      && <HotelsPage />}
-                {tab === "transportes"  && <TransportPage />}
+                {tab === "transportes"  && <TransportPage onNavigate={handleSearchNavigate} />}
                 {tab === "presupuesto"  && <BudgetPage />}
                 {tab === "lugares"      && <PlacesPage />}
                 {tab === "comidas"      && <FoodsPage />}

@@ -27,7 +27,7 @@ function jrCoverage(t) {
   return "none";
 }
 
-export default function TransportPage() {
+export default function TransportPage({ onNavigate }) {
   const { transports, days } = useContent();
   const t = useT();
   // Group transports by day key, preserving insertion order
@@ -50,6 +50,12 @@ export default function TransportPage() {
     }
     // "10-14" range entry
     return { badge: "~", title: t("transport.tokioDays"), sub: "Tokio" };
+  }
+
+  function handleTransportClick(tItem) {
+    if (!onNavigate || isNaN(parseInt(tItem.day))) return;
+    const dayNum = parseInt(tItem.day);
+    onNavigate({ tab: "itinerario", day: dayNum, targetId: slug("itinerary-day", dayNum) });
   }
 
   return (
@@ -136,10 +142,13 @@ export default function TransportPage() {
               {items.map((tItem, ti) => {
                 const kind = iconKind(tItem);
                 const jr = jrCoverage(tItem);
+                const isClickable = onNavigate && !isNaN(parseInt(tItem.day));
+                
                 return (
                   <Highlightable key={ti} id={slug("transport", tItem.day, tItem.name)}>
                     <div
-                      className="px-5 py-3 flex gap-3 items-center relative"
+                      onClick={() => handleTransportClick(tItem)}
+                      className={`px-5 py-3 flex gap-3 items-center relative ${isClickable ? "cursor-pointer hover:bg-black/5 active:bg-black/10 transition-colors" : ""}`}
                       style={{ borderTop: ti > 0 ? "1px solid var(--line)" : "none" }}
                     >
                     <div style={{
