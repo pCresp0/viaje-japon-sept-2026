@@ -52,6 +52,10 @@ export default function PlaceText({ text, linkStyle, className, style, as: Tag =
             </a>
           );
         }
+        
+        if (p.type === "bold") {
+          return <strong key={i} style={{ fontWeight: 700, color: "var(--ink-bold)" }}>{p.value}</strong>;
+        }
 
         return <span key={i}>{p.value}</span>;
       })}
