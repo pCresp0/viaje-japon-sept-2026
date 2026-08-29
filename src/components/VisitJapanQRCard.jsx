@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { QrCode, Lock, Unlock, Eye, X, CheckCircle2, ShieldCheck, Download, UserCheck, ChevronRight } from "lucide-react";
+import { QrCode, Lock, Unlock, Eye, EyeOff, X, CheckCircle2, ShieldCheck, Download, UserCheck, ChevronRight } from "lucide-react";
 
 export const groupMembers = [
   { id: "pablo", name: "Pablo Crespo Bellido", hasQR: true, qrPath: "/images/visit-japan-qr.png", role: "Titular", pass: "cresp0" },
@@ -14,6 +14,7 @@ export default function VisitJapanQRCard() {
   const [step, setStep] = useState("idle"); // 'idle' | 'select_member' | 'enter_password' | 'unlocked'
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   const [showFullQR, setShowFullQR] = useState(false);
 
   function startUnlockFlow() {
@@ -343,22 +344,32 @@ export default function VisitJapanQRCard() {
                 <label style={{ fontSize: 12, fontWeight: 600, color: "var(--ink)", display: "block", marginBottom: 6 }}>
                   Introduce la contraseña para desbloquear:
                 </label>
-                <input
-                  type="password"
-                  autoFocus
-                  value={password}
-                  onChange={(e) => {
-                    setPassword(e.target.value);
-                    setError(false);
-                  }}
-                  placeholder="Contraseña"
-                  className="w-full px-3.5 py-2.5 rounded-xl border text-sm font-semibold outline-none transition-all"
-                  style={{
-                    background: "var(--paper)",
-                    borderColor: error ? "var(--shu)" : "var(--line)",
-                    color: "var(--ink)",
-                  }}
-                />
+                <div className="relative">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    autoFocus
+                    value={password}
+                    onChange={(e) => {
+                      setPassword(e.target.value);
+                      setError(false);
+                    }}
+                    placeholder="Contraseña"
+                    className="w-full px-3.5 py-2.5 pr-10 rounded-xl border text-sm font-semibold outline-none transition-all"
+                    style={{
+                      background: "var(--paper)",
+                      borderColor: error ? "var(--shu)" : "var(--line)",
+                      color: "var(--ink)",
+                    }}
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 focus:outline-none"
+                    style={{ padding: 4 }}
+                  >
+                    {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
+                  </button>
+                </div>
                 {error && (
                   <p className="text-xs text-rose-600 font-semibold mt-1.5">
                     Contraseña incorrecta. Inténtalo de nuevo.

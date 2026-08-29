@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Lock } from "lucide-react";
+import { Lock, Eye, EyeOff } from "lucide-react";
 
 const STORAGE_KEY = "viaje-japon-auth-v1";
 const PASSWORD = "pokem0n";
@@ -21,6 +21,7 @@ function unlock() {
 export default function AccessGate({ onUnlock }) {
   const [value, setValue] = useState("");
   const [error, setError] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   function submit(e) {
     e.preventDefault();
@@ -167,27 +168,37 @@ export default function AccessGate({ onUnlock }) {
             </div>
           </div>
 
-          <input
-            id="trip-pass"
-            type="password"
-            autoFocus
-            autoComplete="current-password"
-            value={value}
-            onChange={(e) => {
-              setValue(e.target.value);
-              if (error) setError(false);
-            }}
-            placeholder="************"
-            aria-label="Clave"
-            className="w-full rounded-xl px-3.5 py-3.5 text-sm outline-none access-pass-input"
-            style={{
-              background: "var(--paper)",
-              border: `1.5px solid ${error ? "var(--shu)" : "var(--line)"}`,
-              color: "var(--ink)",
-              letterSpacing: "0.18em",
-              transition: "border-color 0.15s",
-            }}
-          />
+          <div className="relative">
+            <input
+              id="trip-pass"
+              type={showPassword ? "text" : "password"}
+              autoFocus
+              autoComplete="current-password"
+              value={value}
+              onChange={(e) => {
+                setValue(e.target.value);
+                if (error) setError(false);
+              }}
+              placeholder="************"
+              aria-label="Clave"
+              className="w-full rounded-xl px-3.5 py-3.5 pr-10 text-sm outline-none access-pass-input"
+              style={{
+                background: "var(--paper)",
+                border: `1.5px solid ${error ? "var(--shu)" : "var(--line)"}`,
+                color: "var(--ink)",
+                letterSpacing: showPassword ? "0.05em" : "0.18em",
+                transition: "border-color 0.15s",
+              }}
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 focus:outline-none"
+              style={{ padding: 4 }}
+            >
+              {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+            </button>
+          </div>
           {error && (
             <p style={{ fontSize: 12.5, color: "var(--shu)", marginTop: 8, marginBottom: 0 }}>
               Clave incorrecta
