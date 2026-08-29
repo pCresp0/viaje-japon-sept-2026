@@ -111,8 +111,8 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
                     className="absolute -left-[21px] top-1 w-2.5 h-2.5 rounded-full"
                     style={{ background: block.color }}
                   />
-                  <p className="font-display text-sm font-bold flex items-center gap-1" style={{ color: block.color }}>
-                    {emoji && <span>{emoji}</span>}{s.time}
+                  <p className="font-display text-[16px] sm:text-[17px] font-extrabold flex items-center gap-1.5 mb-1 tracking-tight" style={{ color: block.color }}>
+                    {emoji && <span className="text-[17px]">{emoji}</span>}{s.time}
                   </p>
                   <PlaceText
                     as="p"
@@ -137,7 +137,7 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
                 return (
                   <div key={i} className="rounded-xl p-4 border" style={{ background: "rgba(0,0,0,0.015)", borderColor: "var(--line)" }}>
                     {s.time && (
-                      <p className="font-display text-sm font-bold flex items-center gap-1 mb-1.5" style={{ color: block.color }}>
+                      <p className="font-display text-[15px] sm:text-[16px] font-extrabold flex items-center gap-1.5 mb-2 tracking-tight" style={{ color: block.color }}>
                         {s.time}
                       </p>
                     )}
