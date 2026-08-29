@@ -204,7 +204,7 @@ export function tokenizePlaces(text) {
     
     let last = 0;
     let boldMatch;
-    const boldRe = /\*\*(.*?)\*\*/g;
+    const boldRe = /\*\*(.*?)\*\*/gs;
     
     while ((boldMatch = boldRe.exec(chunk.value)) !== null) {
       if (boldMatch.index > last) {
