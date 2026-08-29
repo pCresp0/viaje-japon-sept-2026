@@ -117,8 +117,19 @@ function buildSearchIndex(lang) {
     }
   }
 
-  // ── Días del itinerario (ciudades / títulos) ───────────────────────
+  // ── Días del itinerario (ciudades / títulos + schedule) ─────────────
   for (const d of days) {
+    // Extraemos todo el texto de las entradas del schedule para indexar
+    // horarios, transportes, restaurantes, visitas, hoteles, etc.
+    const scheduleTerms = (d.schedule || []).flatMap((s) => [
+      s.time,
+      // Limpiar markdown y URLs del texto
+      (s.text || "")
+        .replace(/\*\*(.*?)\*\*/g, "$1")
+        .replace(/https?:\/\/[^\s)]+/g, "")
+        .replace(/\n/g, " "),
+    ]).filter(Boolean);
+
     items.push(entry({
       id: `day-${d.num}`,
       title: `Día ${d.num} · ${d.title}`,
@@ -129,7 +140,8 @@ function buildSearchIndex(lang) {
       targetId: slug("itinerary-day", d.num),
       terms: [
         d.title, d.cities, d.summary, `dia ${d.num}`, `día ${d.num}`,
-        d.weekday, d.date,
+        d.weekday, d.date, d.history,
+        ...scheduleTerms,
       ],
     }));
   }
@@ -144,21 +156,30 @@ function buildSearchIndex(lang) {
   }
   // Aliases extra ciudad → día (primera noche / visita)
   const cityDayHints = [
-    { terms: ["kioto", "kyoto"], day: 1, title: "Kioto", subtitle: "Base días 1–5" },
-    { terms: ["tokio", "tokyo"], day: 9, title: "Tokio", subtitle: "Base días 9–15" },
-    { terms: ["nara", "todai", "ciervos"], day: 2, title: "Nara", subtitle: "Día 2 · Todai-ji y ciervos" },
-    { terms: ["arashiyama", "bambu", "bambú"], day: 3, title: "Arashiyama", subtitle: "Día 3 · bosque de bambú" },
-    { terms: ["osaka", "dotonbori", "shinsekai"], day: 5, title: "Osaka", subtitle: "Día 5" },
-    { terms: ["kanazawa"], day: 6, title: "Kanazawa", subtitle: "Día 6" },
-    { terms: ["shirakawa", "shirakawa-go", "gassho"], day: 7, title: "Shirakawa-go", subtitle: "Día 7" },
-    { terms: ["takayama", "hida"], day: 7, title: "Takayama", subtitle: "Días 7–8" },
-    { terms: ["magome", "tsumago", "nakasendo"], day: 8, title: "Magome / Tsumago", subtitle: "Día 8 · Nakasendo" },
-    { terms: ["asakusa", "senso"], day: 10, title: "Asakusa", subtitle: "Días 9–15 · hotel en Asakusa" },
-    { terms: ["odaiba", "gundam", "teamlab"], day: 10, title: "Odaiba / teamLab", subtitle: "Día 10" },
-    { terms: ["shibuya", "harajuku", "shinjuku", "meiji", "takeshita", "omoide"], day: 11, title: "Shibuya / Harajuku / Shinjuku", subtitle: "Día 11" },
-    { terms: ["toyosu", "ginza", "roppongi", "mori tower", "sushi"], day: 12, title: "Toyosu / Ginza / Roppongi", subtitle: "Día 12" },
-    { terms: ["ikebukuro", "nakano", "nintendo", "pokemon"], day: 13, title: "Ikebukuro / Nakano", subtitle: "Día 13" },
-    { terms: ["fuji", "monte fuji", "kaneshima", "fujiyama", "chureito", "aokigahara", "shiraito", "oshino", "houtou", "mishima", "shin-fuji", "getyourguide", "gyg", "gygx7m7nzbnl", "gygfwv2mnzv8", "gygzgvzvlfl75", "gygmx397lbna", "visionary", "saiko", "oishi", "mode gakuen", "isfujivisible", "mtfujitoday"], day: 14, title: "Monte Fuji", subtitle: "Día 14 · excursión exclusiva Ken + reservas GYG" },
+    { terms: ["kioto", "kyoto", "keihan", "hachijoguchi", "uogashi", "kaiten sushi", "pontocho", "gion", "inari"], day: 1, title: "Kioto", subtitle: "Base días 1–5" },
+    { terms: ["tokio", "tokyo", "koko hotel", "asakusa"], day: 9, title: "Tokio", subtitle: "Base días 9–15" },
+    { terms: ["nara", "todai", "todaiji", "ciervos", "daibutsuden", "gran buda", "gran buddha", "shika senbei"], day: 2, title: "Nara", subtitle: "Día 2 · Todai-ji y ciervos" },
+    { terms: ["arashiyama", "bambu", "bambú", "tenryu-ji", "kinkaku", "kinkakuji", "ginkaku", "ginkakuji", "nishiki", "mercado nishiki", "filo de la filosofia", "heian"], day: 3, title: "Arashiyama", subtitle: "Día 3 · bosque de bambú" },
+    { terms: ["osaka", "dotonbori", "shinsekai", "kuromon", "namba", "takoyaki"], day: 5, title: "Osaka", subtitle: "Día 5" },
+    { terms: ["kanazawa", "kenroku-en", "kenrokuен", "higashichaya"], day: 6, title: "Kanazawa", subtitle: "Día 6" },
+    { terms: ["shirakawa", "shirakawa-go", "gassho", "minka"], day: 7, title: "Shirakawa-go", subtitle: "Día 7" },
+    { terms: ["takayama", "hida", "hida beef", "wagyu", "sake", "sake brewery", "jinya", "sanmachi"], day: 7, title: "Takayama", subtitle: "Días 7–8" },
+    { terms: ["magome", "tsumago", "nakasendo", "magome chaya", "cena minshuku", "jeng", "juan carlos"], day: 8, title: "Magome / Tsumago", subtitle: "Día 8 · Nakasendo" },
+    { terms: ["asakusa", "senso", "senso-ji", "narita airport", "narita", "n'ex", "nex", "narita express"], day: 1, title: "Llegada · Narita", subtitle: "Día 1 · Aterrizaje y traslado a Kioto" },
+    { terms: ["odaiba", "gundam", "teamlab", "teamlab planets", "yurikamome"], day: 10, title: "Odaiba / teamLab", subtitle: "Día 10" },
+    { terms: ["shibuya", "harajuku", "shinjuku", "meiji", "takeshita", "omoide", "shibuya sky", "shibuya crossing", "cat street"], day: 11, title: "Shibuya / Harajuku / Shinjuku", subtitle: "Día 11" },
+    { terms: ["toyosu", "ginza", "roppongi", "mori tower", "sushi", "sashimi", "tsukiji", "teamlab borderless"], day: 12, title: "Toyosu / Ginza / Roppongi", subtitle: "Día 12" },
+    { terms: ["ikebukuro", "nakano", "nintendo", "pokemon", "sunshine", "animate", "mandarake", "broadway"], day: 13, title: "Ikebukuro / Nakano", subtitle: "Día 13" },
+    { terms: ["fuji", "monte fuji", "ken kaneshima", "kaneshima", "fujiyama", "chureito", "aokigahara", "shiraito", "oshino", "houtou", "mishima", "shin-fuji", "getyourguide", "gyg", "gygx7m7nzbnl", "gygfwv2mnzv8", "gygzgvzvlfl75", "gygmx397lbna", "visionary", "saiko", "oishi", "mode gakuen", "isfujivisible", "mtfujitoday"], day: 14, title: "Monte Fuji", subtitle: "Día 14 · excursión exclusiva Ken + reservas GYG" },
+    // Transportes clave buscables por nombre
+    { terms: ["nozomi", "nozomi 53", "shinkansen", "shinagawa", "17:19", "smart ex", "coche 13", "13c", "13d", "13e", "14d", "14e"], day: 1, title: "Shinkansen Nozomi 53", subtitle: "Día 1 · Shinagawa → Kyoto 17:19" },
+    { terms: ["check-in", "check in", "keihan", "hotel keihan"], day: 1, title: "Check-in Hotel Keihan Kyoto Hachijoguchi", subtitle: "Día 1 · 19:30" },
+    { terms: ["cena", "kaiten", "uogashi", "sushi giratorio", "aeon mall", "aeon"], day: 1, title: "Cena Kaiten-Sushi Uogashi", subtitle: "Día 1 · AEON Mall Kyoto" },
+    { terms: ["thunderbird", "hokuriku", "tsuruga", "kyoto kanazawa"], day: 6, title: "Thunderbird → Hokuriku Shinkansen", subtitle: "Día 6 · Kioto → Kanazawa" },
+    { terms: ["hida express", "hida", "gifu", "takayama kanazawa"], day: 7, title: "JR Hida Express", subtitle: "Día 7 · Kanazawa → Takayama" },
+    { terms: ["nohi bus", "nohi", "bus magome", "takayama magome", "08:00"], day: 8, title: "Nohi Bus Takayama → Magome", subtitle: "Día 8 · 08:00" },
+    { terms: ["shinano", "express shinano", "nakatsugawa", "nagoya", "09:57"], day: 9, title: "JR Shinano → Nagoya", subtitle: "Día 9 · Nakatsugawa → Nagoya" },
+    { terms: ["kodama", "kodama 805", "shin-fuji", "fuji shinkansen", "07:27"], day: 14, title: "Shinkansen Kodama 805", subtitle: "Día 14 · Tokio → Mishima/Shin-Fuji" },
   ];
   for (const c of cityDayHints) {
     items.push(entry({
@@ -599,7 +620,23 @@ function fuzzyMatches(query, title) {
   return words.some((w) => w.length >= 3 && levenshtein(query, w) <= maxDist);
 }
 
-export function searchGlobal(query, { limit = 12, minChars = 3, lang = "es" } = {}) {
+// Lista de sugerencias rápidas para mostrar en el panel vacío
+export const QUICK_SUGGESTIONS = [
+  { label: "Fushimi Inari", query: "fushimi" },
+  { label: "Nozomi 53", query: "nozomi" },
+  { label: "Hotel Kioto", query: "keihan" },
+  { label: "Monte Fuji", query: "fuji" },
+  { label: "Shinkansen", query: "shinkansen" },
+  { label: "Narita Express", query: "narita express" },
+  { label: "Magome", query: "magome" },
+  { label: "Check-in", query: "check-in" },
+  { label: "Suica", query: "suica" },
+  { label: "Seguro", query: "heymondo" },
+  { label: "Pokémon", query: "pokemon" },
+  { label: "Ken Kaneshima", query: "ken kaneshima" },
+];
+
+export function searchGlobal(query, { limit = 15, minChars = 3, lang = "es" } = {}) {
   const q = normalize(query);
   if (q.length < minChars) return [];
 

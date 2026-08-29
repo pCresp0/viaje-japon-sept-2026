@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { formatDateShort } from "../utils/date";
 
-// Entradas informativas sin hora — se filtran del resumen
+// Entradas informativas sin hora — se filtran del resumen rápido
 const SKIP_PREFIXES = [
   "🎫 RESERVAS",
   "🎫 BILLETES",
@@ -12,29 +12,68 @@ const SKIP_PREFIXES = [
 ];
 
 function detectEmoji(time = "", text = "") {
-  const src = time + " " + text;
-  if (/shinkansen|nozomi|hikari/i.test(src)) return "🚄";
-  if (/vuelo|aterriza|despega|avión|airport/i.test(src)) return "✈️";
-  if (/\bbus\b|autobús|nohi/i.test(src)) return "🚌";
-  if (/tranvía|randen/i.test(src)) return "🚋";
-  if (/\bmetro\b/i.test(src)) return "🚇";
-  if (/\btren\b|\bJR\b|narita express|n'ex|hida express|thunderbird|shinano|yurikamome/i.test(src)) return "🚂";
+  const src = (time + " " + text).toLowerCase();
+
+  // Hotel check-in & regreso
+  if (/regreso al hotel|vuelta al hotel|descanso en hotel|dormir en|dormimos en/i.test(src)) return "🏠";
+  if (/check.?in|alojamiento|minshuku|ryokan/i.test(src)) return "🏨";
+
+  // Trenes de alta velocidad / Shinkansen
+  if (/shinkansen|nozomi|hikari|kodama|hayabusa|tsurugi|kagayaki/i.test(src)) return "🚄";
+
+  // Trenes expreso y JR
+  if (/narita express|n'ex|thunderbird|shinano|hida express|limited express|haruka/i.test(src)) return "🚆";
+  if (/\bline\b|línea|linea|yurikamome|\bjr\b|cercanías|cercanias|tren\b/i.test(src)) return "🚃";
+
+  // Metro / Tranvía
+  if (/metro|subway/i.test(src)) return "🚇";
+  if (/tranvía|tranvia|randen/i.test(src)) return "🚋";
+
+  // Autobús
+  if (/\bbus\b|autobús|autobus|nohi|shuttle/i.test(src)) return "🚌";
+
+  // Vuelo / Aterrizaje
+  if (/vuelo|aterrizaje|aterriza|despegue|despega|boarding|embarque|aeropuerto|airport/i.test(src)) return "✈️";
+
+  // Barco / Ferry
+  if (/ferry|barco|crucero/i.test(src)) return "⛴️";
   if (/taxi/i.test(src)) return "🚕";
-  if (/ferry|barco/i.test(src)) return "⛴️";
-  if (/check.?in|🏨/i.test(src)) return "🏨";
-  if (/regreso al hotel|vuelta al hotel|descanso en hotel/i.test(src)) return "🏠";
-  if (/cenar|cena|comida|🍣|🍜|🍙|restaurante/i.test(src)) return "🍽️";
-  if (/visita|santuario|templo|castillo|jardín|jardines|museo|parque|🏯/i.test(src)) return "📍";
+
+  // Comidas / Gastronomía
+  if (/desayuno/i.test(src)) return "🥐";
+  if (/cenar|cena\b|dîner|dinner|cenamos/i.test(src)) return "🍽️";
+  if (/comer|comida|almuerzo|lunch|sushi|ramen|wagyu|hida beef|izakaya|kaiten/i.test(src)) return "🍜";
+
+  // Visitas / Templos / Turismo
+  if (/santuario|templo|shrine|jinja|tera|ji\b/i.test(src)) return "⛩️";
+  if (/castillo|castle/i.test(src)) return "🏯";
+  if (/parque|jardín|jardin|bambú|bambu|bosque|fuji/i.test(src)) return "🌲";
+  if (/museo|museum|teamlab|sky|tower|mirador/i.test(src)) return "🗼";
+  if (/compras|tiendas|shopping|pokemon center|nintendo/i.test(src)) return "🛍️";
+  if (/visita|paseo|recorrido/i.test(src)) return "📍";
+
   return "•";
 }
 
+function formatQuickTime(timeStr = "") {
+  if (!timeStr) return "";
+  return timeStr
+    .replace(/\(\+1\s*d[ií]a\)/gi, "(+1d)")
+    .replace(/aprox\.?/gi, "~")
+    .replace(/^~/, "~")
+    .trim();
+}
+
 function shortText(text = "") {
-  const clean = text
+  if (!text) return "";
+  let clean = text
     .replace(/\*\*(.*?)\*\*/g, "$1")
     .replace(/https?:\/\/[^\s)]+/g, "")
     .split("\n")[0]
     .trim();
-  return clean.length > 90 ? clean.slice(0, 87) + "…" : clean;
+  // Quitar emojis iniciales duplicados (ej: 🛬, 🚄, 🏨, 🥩, •, -, etc.)
+  clean = clean.replace(/^[\p{Extended_Pictographic}\uFE0F\u200D\s•\-—:→]+/u, "").trim();
+  return clean.length > 95 ? clean.slice(0, 92) + "…" : clean;
 }
 
 function isSkip(entry) {
@@ -79,42 +118,62 @@ function QuickDayCard({ day, blockColor }) {
         </div>
       </div>
 
-      <div className="px-4 py-3">
+      <div className="px-3 sm:px-4 py-3">
         {keyEntries.length === 0 ? (
           <p className="text-xs" style={{ color: "var(--ink-soft)" }}>Día de traslado · ver detalle</p>
         ) : (
           <div className="relative">
+            {/* Línea conectora vertical centrada con los iconos */}
             <div
-              className="absolute top-0 bottom-0"
-              style={{ left: 69, width: 1, background: "var(--line)" }}
+              className="absolute top-2 bottom-3 left-[94px] sm:left-[108px] -translate-x-1/2"
+              style={{ width: 1.5, background: "var(--line)" }}
             />
-            <div className="space-y-1.5">
+            <div className="space-y-2">
               {displayed.map((entry, i) => {
                 const emoji = detectEmoji(entry.time, entry.text);
                 const isHotelReturn =
                   /regreso al hotel|vuelta al hotel|descanso en hotel/i.test(
                     (entry.time ?? "") + (entry.text ?? "")
                   );
+                const displayTime = hasRealTime(entry) ? formatQuickTime(entry.time) : "";
+
                 return (
-                  <div key={i} className="flex items-start gap-2 relative">
+                  <div key={i} className="flex items-start gap-2 sm:gap-2.5 relative">
+                    {/* Columna de hora: ancho suficiente y sin saltos de línea */}
                     <div
-                      className="shrink-0 text-right text-xs font-mono tabular-nums pt-0.5"
-                      style={{ color: "var(--shu)", width: 60, minWidth: 60 }}
-                    >
-                      {hasRealTime(entry) ? entry.time.replace(/^~/, "~") : ""}
-                    </div>
-                    <div
-                      className="shrink-0 w-[18px] h-[18px] rounded-full flex items-center justify-center text-[10px] z-10 mt-0.5"
+                      className="shrink-0 text-right text-[11px] sm:text-xs font-mono font-bold tabular-nums whitespace-nowrap pt-0.5"
                       style={{
-                        background: isHotelReturn ? "var(--forest)" : "var(--paper)",
-                        border: `1.5px solid ${isHotelReturn ? "var(--forest)" : "var(--line)"}`,
+                        color: "var(--shu)",
+                        width: 76,
+                        minWidth: 76,
+                      }}
+                    >
+                      <span className="hidden sm:inline-block sm:w-[90px] text-right">
+                        {displayTime}
+                      </span>
+                      <span className="inline-block sm:hidden text-right">
+                        {displayTime}
+                      </span>
+                    </div>
+
+                    {/* Nodo con icono temático */}
+                    <div
+                      className="shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-[10.5px] z-10 mt-0.5 shadow-xs"
+                      style={{
+                        background: isHotelReturn ? "#e8f5e9" : "var(--paper)",
+                        border: `1.5px solid ${isHotelReturn ? "#2e7d5b" : "var(--line)"}`,
                       }}
                     >
                       {emoji}
                     </div>
+
+                    {/* Texto limpio sin emoji redundante */}
                     <p
-                      className="flex-1 text-xs leading-snug pt-0.5 pb-1"
-                      style={{ color: isHotelReturn ? "var(--forest)" : "var(--ink)" }}
+                      className="flex-1 text-xs sm:text-[13px] leading-snug pt-0.5 pb-0.5"
+                      style={{
+                        color: isHotelReturn ? "var(--forest)" : "var(--ink)",
+                        fontWeight: isHotelReturn ? 600 : 400,
+                      }}
                     >
                       {shortText(entry.text)}
                     </p>
@@ -126,9 +185,9 @@ function QuickDayCard({ day, blockColor }) {
             {hasMore && (
               <button
                 onClick={() => setExpanded((v) => !v)}
-                className="mt-2 flex items-center gap-1 text-xs font-medium"
+                className="mt-2.5 flex items-center gap-1 text-xs font-semibold"
                 style={{
-                  marginLeft: 82,
+                  marginLeft: 98,
                   color: "var(--shu)",
                   background: "none",
                   border: "none",
@@ -164,3 +223,4 @@ export default function ItineraryQuickView({ days, blocks }) {
     </div>
   );
 }
+
