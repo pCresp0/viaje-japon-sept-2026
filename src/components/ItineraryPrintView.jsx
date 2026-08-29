@@ -6,6 +6,50 @@ import { popCulture } from "../data/popCulture";
 
 const franchiseLabel = { pokemon: "Pokémon", digimon: "Digimon", pelicula: "Película" };
 
+/** Renderiza un bloque de texto con soporte de \n, **bold** y URLs clicables */
+function RichText({ text, style = {} }) {
+  if (!text) return null;
+
+  const paragraphs = text.split("\n");
+
+  return (
+    <span style={style}>
+      {paragraphs.map((para, pi) => {
+        if (!para.trim()) return pi === 0 ? null : <br key={pi} />;
+
+        // Parse **bold** and URLs
+        const parts = [];
+        const pattern = /(\*\*(.+?)\*\*|(https?:\/\/[^\s)]+))/g;
+        let last = 0;
+        let match;
+
+        while ((match = pattern.exec(para)) !== null) {
+          if (match.index > last) {
+            parts.push(para.slice(last, match.index));
+          }
+          if (match[2]) {
+            parts.push(<strong key={match.index}>{match[2]}</strong>);
+          } else if (match[3]) {
+            parts.push(
+              <a key={match.index} href={match[3]} style={{ color: "#7a2c2e", wordBreak: "break-all" }}>
+                {match[3]} ↗
+              </a>
+            );
+          }
+          last = match.index + match[0].length;
+        }
+        if (last < para.length) parts.push(para.slice(last));
+
+        return (
+          <span key={pi} style={{ display: "block", marginBottom: pi < paragraphs.length - 1 ? 3 : 0 }}>
+            {parts}
+          </span>
+        );
+      })}
+    </span>
+  );
+}
+
 function FlightBlock({ flight }) {
   return (
     <div style={{ marginBottom: 10, fontSize: 10.5, lineHeight: 1.5 }}>
@@ -26,14 +70,16 @@ function StayBlock({ day }) {
   const opt = stay.options[0];
   return (
     <div style={{
-      marginTop: 10, padding: "8px 10px", background: "#f7f0e3",
-      border: "1px solid #e6dcc4", borderRadius: 6, fontSize: 10,
+      marginTop: 10, padding: "8px 10px", background: "#f0f8ee",
+      border: "1px solid #b8ddb0", borderRadius: 6, fontSize: 10,
     }}>
       <strong>🏨 {opt.name}</strong> — {stay.city} · {stay.nights}
       <br />
       {opt.address} {opt.phone && `· ${opt.phone}`}
       {opt.confirmation && <> · Confirmación: {opt.confirmation}</>}
       {opt.pin && <> · PIN: {opt.pin}</>}
+      {opt.checkIn && <> · ✅ Check-in: {opt.checkIn}</>}
+      {opt.checkOut && <> · Check-out: {opt.checkOut}</>}
       {opt.url && (
         <>
           {" · "}
@@ -62,7 +108,7 @@ function GuideBlock({ id, accentColor }) {
           alt={g.name}
           style={{
             display: "block", margin: "0 auto",
-            maxWidth: "100%", maxHeight: "65mm", // ~1/4 de una hoja A4
+            maxWidth: "100%", maxHeight: "65mm",
             width: "auto", height: "auto",
           }}
         />
@@ -110,6 +156,64 @@ function GuideBlock({ id, accentColor }) {
   );
 }
 
+/** Decide si una entrada del schedule es "especial" (sin hora real, solo etiqueta) */
+function isSpecialEntry(time) {
+  const special = ["🎫", "🧳", "📊", "💡", "🍙", "🍜", "🍵", "🚌", "🚍", "🏯", "📖"];
+  return special.some((e) => time?.startsWith(e));
+}
+
+function ScheduleRow({ entry }) {
+  const special = isSpecialEntry(entry.time);
+  const isHotel = entry.text?.includes("REGRESO AL HOTEL") || entry.text?.includes("DESCANSO EN") || entry.time?.includes("🏨");
+
+  if (special) {
+    return (
+      <tr>
+        <td colSpan={2} style={{
+          padding: "6px 8px",
+          background: "#f7f0e3",
+          borderBottom: "1px solid #e6dcc4",
+          fontSize: 9.5,
+        }}>
+          <strong style={{ color: "#7a2c2e" }}>{entry.time}</strong>{" "}
+          <RichText text={entry.text} />
+        </td>
+      </tr>
+    );
+  }
+
+  if (isHotel) {
+    return (
+      <tr style={{ background: "#f0f8ee" }}>
+        <td style={{
+          padding: "6px 8px 6px 0", fontWeight: 700, color: "#2e7d5b",
+          whiteSpace: "nowrap", verticalAlign: "top", width: 60,
+          borderBottom: "1px solid #b8ddb0",
+        }}>
+          {entry.time}
+        </td>
+        <td style={{ padding: "6px 0", verticalAlign: "top", borderBottom: "1px solid #b8ddb0", fontSize: 10 }}>
+          <RichText text={entry.text} />
+        </td>
+      </tr>
+    );
+  }
+
+  return (
+    <tr style={{ borderBottom: "1px solid #e6dcc4" }}>
+      <td style={{
+        padding: "4px 8px 4px 0", fontWeight: 700, color: "#7a2c2e",
+        whiteSpace: "nowrap", verticalAlign: "top", width: 60,
+      }}>
+        {entry.time}
+      </td>
+      <td style={{ padding: "4px 0", verticalAlign: "top", fontSize: 10, lineHeight: 1.55 }}>
+        <RichText text={entry.text} />
+      </td>
+    </tr>
+  );
+}
+
 function DaySection({ day }) {
   const placeIds = guidesByDay[day.num] || [];
   return (
@@ -127,14 +231,7 @@ function DaySection({ day }) {
       {day.schedule?.length > 0 && (
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 10, marginBottom: 8 }}>
           <tbody>
-            {day.schedule.map((s, i) => (
-              <tr key={i} style={{ borderBottom: "1px solid #e6dcc4" }}>
-                <td style={{ padding: "4px 8px 4px 0", fontWeight: 700, color: "#7a2c2e", whiteSpace: "nowrap", verticalAlign: "top", width: 60 }}>
-                  {s.time}
-                </td>
-                <td style={{ padding: "4px 0", verticalAlign: "top" }}>{s.text}</td>
-              </tr>
-            ))}
+            {day.schedule.map((s, i) => <ScheduleRow key={i} entry={s} />)}
           </tbody>
         </table>
       )}
@@ -165,9 +262,8 @@ function DaySection({ day }) {
  * pantalla — sólo se hace visible dentro de @media print (ver
  * index.css), momento en el que el resto de la app se oculta.
  *
- * Deliberadamente NO usa acordeones ni nada plegado: todo el contenido
- * (incluidas las guías "Saber más", normalmente colapsadas en la app)
- * sale desplegado de antemano, porque en un PDF no se puede pulsar nada.
+ * Renderiza markdown básico (**bold**), saltos de línea (\n) y URLs clicables.
+ * Todo el contenido sale desplegado porque en un PDF no se puede pulsar nada.
  */
 export default function ItineraryPrintView({ days }) {
   return createPortal(
@@ -193,3 +289,4 @@ export default function ItineraryPrintView({ days }) {
     document.body
   );
 }
+
