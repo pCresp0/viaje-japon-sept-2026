@@ -6,7 +6,7 @@ export const groupMembers = [
   { id: "sergio", name: "Sergio Crespo Bellido", hasQR: true, qrPath: "/images/visit-japan-qr-sergio.png", role: "Titular", pass: "kr43xpo" },
   { id: "juancarlos", name: "Juan Carlos Rodríguez", hasQR: false, role: "Viajero", pass: "cresp0" },
   { id: "gerundio", name: "Gerundio Guial", hasQR: false, role: "Viajero", pass: "cresp0" },
-  { id: "viajero5", name: "5º Viajero del Grupo", hasQR: false, role: "Viajero", pass: "cresp0" },
+  { id: "thibaut", name: "Thibaut", hasQR: false, role: "Viajero", pass: "cresp0" },
 ];
 
 export default function VisitJapanQRCard() {

@@ -12,7 +12,7 @@ export default function ShinkansenTicketCard() {
     "sergio": { seat: "14-E", type: "Ventana", qr: "/images/tickets/nozomi-day1/seat-14e.png" },
     "juancarlos": { seat: "13-C", type: "Pasillo", qr: "/images/tickets/nozomi-day1/seat-13c.png" },
     "gerundio": { seat: "13-D", type: "Centro", qr: "/images/tickets/nozomi-day1/seat-13d.png" },
-    "viajero5": { seat: "14-D", type: "Centro", qr: "/images/tickets/nozomi-day1/seat-14d.png" },
+    "thibaut": { seat: "14-D", type: "Centro", qr: "/images/tickets/nozomi-day1/seat-14d.png" },
   };
 
   return (
