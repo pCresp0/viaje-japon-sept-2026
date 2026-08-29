@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Zap, Ticket, X, MapPin } from "lucide-react";
+import { Zap, Ticket, X, MapPin, ChevronDown } from "lucide-react";
 import { groupMembers } from "./VisitJapanQRCard";
 
 export default function ShinkansenTicketCard() {
   const [selectedMember, setSelectedMember] = useState(null);
   const [showFullQR, setShowFullQR] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   // Configuración de los 5 asientos para la reserva Smart EX 2000
   const memberSeats = {
@@ -23,38 +24,50 @@ export default function ShinkansenTicketCard() {
         borderColor: "var(--line)",
       }}
     >
-      {/* Header */}
-      <div className="p-4 sm:p-5 text-white relative overflow-hidden" style={{ background: "linear-gradient(135deg, #1d3557 0%, #2a5286 100%)" }}>
-        <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-          <div>
-            <div className="flex items-center gap-2 mb-1.5 opacity-90">
-              <Zap size={14} className="text-yellow-400" />
-              <p className="text-xs font-bold tracking-widest uppercase m-0">Shinkansen Ticket</p>
+      {/* Header (Toggle) */}
+      <button 
+        onClick={() => setIsExpanded(!isExpanded)}
+        className="w-full text-left p-4 sm:p-5 text-white relative overflow-hidden transition-all hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset" 
+        style={{ background: "linear-gradient(135deg, #1d3557 0%, #2a5286 100%)" }}
+      >
+        <div className="relative z-10 flex items-center justify-between gap-3">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 flex-1">
+            <div>
+              <div className="flex items-center gap-2 mb-1.5 opacity-90">
+                <Zap size={14} className="text-yellow-400" />
+                <p className="text-xs font-bold tracking-widest uppercase m-0">Shinkansen Ticket</p>
+              </div>
+              <h3 className="text-lg font-display font-bold m-0 leading-tight">
+                NOZOMI 53
+              </h3>
+              <p className="text-sm opacity-90 mt-1 flex items-center gap-1.5 m-0">
+                <MapPin size={12} />
+                Shinagawa (17:19) → Kioto (19:23)
+              </p>
             </div>
-            <h3 className="text-lg font-display font-bold m-0 leading-tight">
-              NOZOMI 53
-            </h3>
-            <p className="text-sm opacity-90 mt-1 flex items-center gap-1.5 m-0">
-              <MapPin size={12} />
-              Shinagawa (17:19) → Kioto (19:23)
-            </p>
+            <div className="text-left sm:text-right flex-shrink-0">
+              <p className="text-xs opacity-75 uppercase tracking-wider mb-0.5 mt-0">Localizador</p>
+              <p className="text-base font-bold font-mono tracking-widest m-0">2000</p>
+              <p className="text-xs opacity-90 mt-0.5 m-0">7 Septiembre 2026</p>
+            </div>
           </div>
-          <div className="text-left sm:text-right">
-            <p className="text-xs opacity-75 uppercase tracking-wider mb-0.5 mt-0">Localizador</p>
-            <p className="text-base font-bold font-mono tracking-widest m-0">2000</p>
-            <p className="text-xs opacity-90 mt-0.5 m-0">7 Septiembre 2026</p>
-          </div>
+          <ChevronDown 
+            size={24} 
+            className={`flex-shrink-0 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+            style={{ opacity: 0.8 }}
+          />
         </div>
         
         {/* Decoración gráfica */}
         <div className="absolute -bottom-8 -right-8 opacity-10 rotate-12 pointer-events-none">
           <Ticket size={120} />
         </div>
-      </div>
+      </button>
 
       {/* Body */}
-      <div className="p-4 sm:p-5 space-y-3">
-        <p style={{ fontSize: 13, color: "var(--ink)", lineHeight: 1.5, margin: 0 }}>
+      {isExpanded && (
+        <div className="p-4 sm:p-5 space-y-3 animate-in slide-in-from-top-2 fade-in duration-200">
+          <p style={{ fontSize: 13, color: "var(--ink)", lineHeight: 1.5, margin: 0 }}>
           Billetes de tren bala (Shinkansen Nozomi) confirmados y comprados a través de Smart EX. <strong>Coche 13 (Ordinary)</strong>.
           Selecciona tu nombre para ver el billete QR que deberás escanear en los tornos de la estación.
         </p>
@@ -94,6 +107,7 @@ export default function ShinkansenTicketCard() {
           })}
         </div>
       </div>
+      )}
 
       {/* Modal QR Completo */}
       {showFullQR && selectedMember && (

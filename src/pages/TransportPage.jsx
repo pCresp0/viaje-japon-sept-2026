@@ -73,9 +73,6 @@ export default function TransportPage({ onNavigate }) {
         </button>
       </div>
 
-      {/* Billetes Shinkansen */}
-      <ShinkansenTicketCard />
-
       {/* Suica card */}
       <div className="rounded-2xl p-5 mb-8" style={{ background: "linear-gradient(135deg, #1d3557 0%, #0f1f35 100%)", color: "white" }}>
         <p style={{ fontSize: 15, fontWeight: 700, marginBottom: 8 }}>Tarjeta Suica / Pasmo</p>
@@ -97,6 +94,9 @@ export default function TransportPage({ onNavigate }) {
           <p style={{ fontSize: 12, color: "rgba(255,255,255,0.7)" }} dangerouslySetInnerHTML={{ __html: t("transport.icCardWarning") }} />
         </div>
       </div>
+
+      {/* Billetes Shinkansen */}
+      <ShinkansenTicketCard />
 
       {/* Trayectos por día */}
       <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>{t("transport.tripsByDay")}</p>

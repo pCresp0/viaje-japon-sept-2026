@@ -87,7 +87,6 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
         {day.num === 1 && (
           <div className="space-y-4">
             <VisitJapanQRCard />
-            <ShinkansenTicketCard />
           </div>
         )}
 
@@ -122,6 +121,11 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
                     style={{ color: "var(--ink)" }}
                     linkStyle={{ color: "var(--shu)" }}
                   />
+                  {day.num === 1 && s.time === "17:19" && (
+                    <div className="mt-3 relative z-10">
+                      <ShinkansenTicketCard />
+                    </div>
+                  )}
                 </li>
               );
             })}
