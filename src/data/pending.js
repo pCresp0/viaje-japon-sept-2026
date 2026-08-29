@@ -15,14 +15,6 @@ export const pendingItems = [
     deadline: "Hacer ya",
   },
   {
-    id: "tour-fuji",
-    category: "reserva",
-    urgency: "alta",
-    title: "🔴 Confirmar Excursión Privada Fuji",
-    detail: "📅 20/09/2026 (o fecha definitiva según clima)\n👥 5 personas\n🚐 Mini-van privada con Ken Kaneshima\n⏰ Día completo\n📍 Tokio ↔ Lagos del Fuji\n⚠️ Confirmar primero disponibilidad y bloquear el día con el guía Ken antes de comprar los billetes de Shinkansen.",
-    deadline: "Hacer cuanto antes",
-  },
-  {
     id: "kyoto-kanazawa",
     category: "reserva",
     urgency: "alta",
@@ -67,8 +59,8 @@ export const pendingItems = [
     category: "reserva",
     urgency: "alta",
     title: "🔴 Reservar Shinkansen Excursión Fuji (Ida/Vuelta)",
-    detail: "📅 20/09/2026 (o fecha definitiva de excursión)\n👥 5 personas\n🚆 Tokaido-Sanyo Shinkansen KODAMA 805 (Ida 07:27) y regreso Shin-Fuji→Tokio\n📍 Tokio ↔ Mishima / Shin-Fuji\n💳 Comprar: Smart EX App/Web\n⚠️ Comprar después de confirmar la fecha definitiva con el guía Ken.",
-    deadline: "Tras confirmar excursión Fuji",
+    detail: "📅 20/09/2026\n👥 5 personas\n🚆 Tokaido-Sanyo Shinkansen KODAMA 805 (Ida 07:27) y regreso Shin-Fuji→Tokio\n📍 Tokio ↔ Mishima / Shin-Fuji\n💳 Comprar: Smart EX App/Web\n⚠️ Excursión con el guía Ken ya confirmada para el 20/09. Comprar billetes de Shinkansen en Smart EX (1 mes antes / 20 de agosto a las 10:00 JST).",
+    deadline: "1 mes antes (20/08/2026)",
   },
   {
     id: "cena-takayama",
