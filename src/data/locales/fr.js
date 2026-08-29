@@ -81,9 +81,9 @@ export default {
       id: "cena-magome",
       category: "logistica",
       urgency: "alta",
-      title: "🔴 Confirmer Dîner Magome Chaya",
-      detail: "📅 14/09/2026\n👥 5 personnes\n🍱 Dîner Minshuku\n⏰ Heure: exactement 18:00\n📍 Magome Chaya\n⚠️ L'hébergement exige une confirmation pour servir le dîner. Envoyez un e-mail à Jeng en indiquant: 5 personnes, arrivée le 14/09, heure 18:00. Sans confirmation, il n'y a pas de dîner (¥3,630/personne).",
-      deadline: "Fais-le maintenant",
+      title: "🔴 Confirmer Dîner Magome Chaya (Juan Carlos)",
+      detail: "👤 Responsable: Juan Carlos\n📅 14/09/2026\n👥 5 personnes\n🍱 Dîner Minshuku\n⏰ Heure: exactement 18:00\n📍 Magome Chaya\n⚠️ L'hébergement exige une confirmation pour servir le dîner. Juan Carlos doit envoyer un e-mail à Jeng en indiquant: 5 personnes, arrivée le 14/09, heure 18:00. Sans confirmation, il n'y a pas de dîner (¥3,630/personne).",
+      deadline: "Fais-le maintenant (Juan Carlos)",
     },
     {
       id: "tour-fuji",

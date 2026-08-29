@@ -10,9 +10,9 @@ export const pendingItems = [
     id: "cena-magome",
     category: "logistica",
     urgency: "alta",
-    title: "🔴 Confirmar Cena Magome Chaya",
-    detail: "📅 14/09/2026\n👥 5 personas\n🍱 Cena de Minshuku\n⏰ Hora: 18:00 exactas\n📍 Magome Chaya\n⚠️ El alojamiento exige confirmación para servir la cena. Enviar email a Jeng indicando: 5 comensales, llegada 14/09, hora 18:00. Sin confirmación no hay cena (¥3.630/persona).",
-    deadline: "Hacer ya",
+    title: "🔴 Confirmar Cena Magome Chaya (Juan Carlos)",
+    detail: "👤 Responsable: Juan Carlos\n📅 14/09/2026\n👥 5 personas\n🍱 Cena de Minshuku\n⏰ Hora: 18:00 exactas\n📍 Magome Chaya\n⚠️ El alojamiento exige confirmación para servir la cena. Juan Carlos debe enviar email a Jeng indicando: 5 comensales, llegada 14/09, hora 18:00. Sin confirmación no hay cena (¥3.630/persona).",
+    deadline: "Hacer ya (Juan Carlos)",
   },
   {
     id: "kyoto-kanazawa",
@@ -85,14 +85,6 @@ export const pendingItems = [
     title: "🟠 Logística Digital: eSIM, Suica y Visit Japan Web",
     detail: "📱 iPhone: App oficial 'Welcome Suica Mobile' en Apple Wallet (requiere localización activa; si la emisión/recarga falla desde España por restricciones de país, crearla al aterrizar en Japón).\n🤖 Android extranjero: No dispone de Welcome Suica Mobile. El hermano con Android debe adquirir una tarjeta física Welcome Suica en Narita.\n💳 Tarjeta Welcome Suica: Sin depósito de 500¥; saldo no reembolsable. Recarga inicial recomendada: ¥3.000–¥5.000 por persona.\n🌐 Visit Japan Web: Códigos QR de inmigración y aduanas generados para los 5 viajeros.",
     deadline: "Días antes de volar",
-  },
-  {
-    id: "narita-express-ida",
-    category: "logistica",
-    urgency: "media",
-    title: "🟢 Comprar Narita Express (N'EX) Ida al aterrizar",
-    detail: "📅 07/09/2026\n👥 5 personas\n🚆 JR Narita Express (Narita → Shinagawa)\n📍 Aeropuerto de Narita\n⚠️ NO comprar con antelación fija porque el vuelo internacional puede retrasarse. Comprar/reservar los 5 billetes juntos en las máquinas o taquillas JR de Narita tras pasar aduanas.",
-    deadline: "🟢 COMPRAR AL LLEGAR A NARITA",
   },
   {
     id: "equipaje",

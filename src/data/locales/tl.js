@@ -81,9 +81,9 @@ export default {
       id: "cena-magome",
       category: "logistica",
       urgency: "alta",
-      title: "🔴 Kumpirmahin ang Hapunan sa Magome Chaya",
-      detail: "📅 14/09/2026\n👥 5 mga tao\n🍱 Minshuku Dinner\n⏰ Oras: saktong 18:00\n📍 Magome Chaya\n⚠️ Kailangan ng kumpirmasyon ng accommodation para maghain ng hapunan. Mag-email kay Jeng at sabihin: 5 bisita, dating 14/09, oras 18:00. Walang hapunan kung walang kumpirmasyon (¥3,630/tao).",
-      deadline: "Gawin mo na ngayon",
+      title: "🔴 Kumpirmahin ang Hapunan sa Magome Chaya (Juan Carlos)",
+      detail: "👤 Responsable: Juan Carlos\n📅 14/09/2026\n👥 5 mga tao\n🍱 Minshuku Dinner\n⏰ Oras: saktong 18:00\n📍 Magome Chaya\n⚠️ Kailangan ng kumpirmasyon ng accommodation para maghain ng hapunan. Dapat mag-email si Juan Carlos kay Jeng at sabihin: 5 bisita, dating 14/09, oras 18:00. Walang hapunan kung walang kumpirmasyon (¥3,630/tao).",
+      deadline: "Gawin mo na ngayon (Juan Carlos)",
     },
     {
       id: "tour-fuji",

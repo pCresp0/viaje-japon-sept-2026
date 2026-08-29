@@ -81,9 +81,9 @@ export default {
       id: "cena-magome",
       category: "logistica",
       urgency: "alta",
-      title: "🔴 Confirm Dinner Magome Chaya",
-      detail: "📅 14/09/2026\n👥 5 people\n🍱 Minshuku Dinner\n⏰ Time: exactly 18:00\n📍 Magome Chaya\n⚠️ Accommodation requires confirmation to serve dinner. Send email to Jeng indicating: 5 guests, arrival 14/09, time 18:00. Without confirmation there is no dinner (¥3,630/person).",
-      deadline: "Do it now",
+      title: "🔴 Confirm Dinner Magome Chaya (Juan Carlos)",
+      detail: "👤 Responsible: Juan Carlos\n📅 14/09/2026\n👥 5 people\n🍱 Minshuku Dinner\n⏰ Time: exactly 18:00\n📍 Magome Chaya\n⚠️ Accommodation requires confirmation to serve dinner. Juan Carlos must send an email to Jeng indicating: 5 guests, arrival 14/09, time 18:00. Without confirmation there is no dinner (¥3,630/person).",
+      deadline: "Do it now (Juan Carlos)",
     },
     {
       id: "tour-fuji",
