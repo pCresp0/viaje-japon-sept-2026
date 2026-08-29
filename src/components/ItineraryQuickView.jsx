@@ -123,9 +123,9 @@ function QuickDayCard({ day, blockColor }) {
           <p className="text-xs" style={{ color: "var(--ink-soft)" }}>Día de traslado · ver detalle</p>
         ) : (
           <div className="relative">
-            {/* Línea conectora vertical centrada con los iconos */}
+            {/* Línea conectora vertical centrada exactamente con los nodos */}
             <div
-              className="absolute top-2 bottom-3 left-[94px] sm:left-[108px] -translate-x-1/2"
+              className="absolute top-2 bottom-3 left-[98px] sm:left-[126px] -translate-x-1/2"
               style={{ width: 1.5, background: "var(--line)" }}
             />
             <div className="space-y-2">
@@ -138,22 +138,13 @@ function QuickDayCard({ day, blockColor }) {
                 const displayTime = hasRealTime(entry) ? formatQuickTime(entry.time) : "";
 
                 return (
-                  <div key={i} className="flex items-start gap-2 sm:gap-2.5 relative">
-                    {/* Columna de hora: ancho suficiente y sin saltos de línea */}
+                  <div key={i} className="flex items-start gap-2.5 sm:gap-3 relative">
+                    {/* Columna de hora con ancho amplio y limpio tanto en móvil como en PC */}
                     <div
-                      className="shrink-0 text-right text-[11px] sm:text-xs font-mono font-bold tabular-nums whitespace-nowrap pt-0.5"
-                      style={{
-                        color: "var(--shu)",
-                        width: 76,
-                        minWidth: 76,
-                      }}
+                      className="w-[78px] sm:w-[104px] shrink-0 text-right text-[11px] sm:text-xs font-mono font-bold tabular-nums whitespace-nowrap pt-0.5"
+                      style={{ color: "var(--shu)" }}
                     >
-                      <span className="hidden sm:inline-block sm:w-[90px] text-right">
-                        {displayTime}
-                      </span>
-                      <span className="inline-block sm:hidden text-right">
-                        {displayTime}
-                      </span>
+                      {displayTime}
                     </div>
 
                     {/* Nodo con icono temático */}
@@ -187,7 +178,7 @@ function QuickDayCard({ day, blockColor }) {
                 onClick={() => setExpanded((v) => !v)}
                 className="mt-2.5 flex items-center gap-1 text-xs font-semibold"
                 style={{
-                  marginLeft: 98,
+                  marginLeft: "clamp(112px, 12vw, 140px)",
                   color: "var(--shu)",
                   background: "none",
                   border: "none",
