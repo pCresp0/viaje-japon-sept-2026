@@ -4,6 +4,7 @@ import { useContent } from "../i18n/LanguageContext";
 import { guidesByDay } from "../data/guides";
 import DayFujiOptionCard from "./DayFujiOptionCard";
 import VisitJapanQRCard from "./VisitJapanQRCard";
+import ShinkansenTicketCard from "./ShinkansenTicketCard";
 import GuideCard from "./GuideCard";
 import StayOption from "./StayOption";
 import PlaceText from "./PlaceText";
@@ -83,7 +84,12 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
 
       <div className="p-5 space-y-4">
         {/* QR de Visit Japan Web en el día de llegada (Día 1 / 7 de sept) */}
-        {day.num === 1 && <VisitJapanQRCard />}
+        {day.num === 1 && (
+          <div className="space-y-4">
+            <VisitJapanQRCard />
+            <ShinkansenTicketCard />
+          </div>
+        )}
 
         {/* Opción de Excursión Monte Fuji con GetYourGuide (Días 10 al 13) */}
         <DayFujiOptionCard dayNum={day.num} />
