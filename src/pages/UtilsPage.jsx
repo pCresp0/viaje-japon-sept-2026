@@ -121,6 +121,18 @@ export default function UtilsPage() {
     setEurText(formatEs(nextEur, { maxDecimals: 2 }));
   };
 
+  const getHourDiff = () => {
+    try {
+      const now = new Date();
+      const madridDate = new Date(now.toLocaleString("en-US", { timeZone: "Europe/Madrid" }));
+      const tokyoDate = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Tokyo" }));
+      return Math.round((tokyoDate.getTime() - madridDate.getTime()) / (1000 * 60 * 60));
+    } catch {
+      return 7;
+    }
+  };
+  const diffHours = getHourDiff();
+
   return (
     <div className="px-4 pt-3 pb-12">
       <div className="mb-6">
@@ -160,9 +172,13 @@ export default function UtilsPage() {
           </div>
         </div>
 
-        <div className="rounded-xl p-4 mt-3" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
-          <p style={{ fontSize: 12, color: "var(--ink-soft)", margin: 0 }}>
-            <strong>Diferencia:</strong> Japón está 8 horas adelantado respecto a España.
+        <div className="rounded-xl p-4 mt-3 space-y-1.5" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
+          <p style={{ fontSize: 13, color: "var(--ink)", margin: 0, fontWeight: 700 }}>
+            ⏰ <strong>Diferencia horaria:</strong> Japón está actualmente <strong>{diffHours} horas adelantado</strong> (+{diffHours} h).
+          </p>
+          <p style={{ fontSize: 12, color: "var(--ink-soft)", margin: 0, lineHeight: 1.5 }}>
+            • <strong>Horario de verano (nuestro viaje en septiembre):</strong> <strong>+7 horas</strong> respecto a España peninsular (cuando en España son las 10:00, en Japón son las 17:00).<br />
+            • <strong>Horario de invierno (noviembre a marzo):</strong> <strong>+8 horas</strong> respecto a España peninsular.
           </p>
         </div>
       </div>
