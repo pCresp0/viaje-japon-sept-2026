@@ -171,15 +171,17 @@ function buildSearchIndex(lang) {
     { terms: ["toyosu", "ginza", "roppongi", "mori tower", "sushi", "sashimi", "tsukiji", "teamlab borderless"], day: 12, title: "Toyosu / Ginza / Roppongi", subtitle: "Día 12" },
     { terms: ["ikebukuro", "nakano", "nintendo", "pokemon", "sunshine", "animate", "mandarake", "broadway"], day: 13, title: "Ikebukuro / Nakano", subtitle: "Día 13" },
     { terms: ["fuji", "monte fuji", "ken kaneshima", "kaneshima", "fujiyama", "chureito", "aokigahara", "shiraito", "oshino", "houtou", "mishima", "shin-fuji", "getyourguide", "gyg", "gygx7m7nzbnl", "gygfwv2mnzv8", "gygzgvzvlfl75", "gygmx397lbna", "visionary", "saiko", "oishi", "mode gakuen", "isfujivisible", "mtfujitoday"], day: 14, title: "Monte Fuji", subtitle: "Día 14 · excursión exclusiva Ken + reservas GYG" },
-    // Transportes clave buscables por nombre
-    { terms: ["nozomi", "nozomi 53", "shinkansen", "shinagawa", "17:19", "smart ex", "coche 13", "13c", "13d", "13e", "14d", "14e"], day: 1, title: "Shinkansen Nozomi 53", subtitle: "Día 1 · Shinagawa → Kyoto 17:19" },
+    // Transportes clave buscables por nombre y números de reserva/asiento
+    { terms: ["nozomi", "nozomi 53", "shinkansen", "shinagawa", "17:19", "smart ex", "smart ex 2000", "2000", "coche 13", "13c", "13d", "13e", "14d", "14e"], day: 1, title: "Shinkansen Nozomi 53", subtitle: "Día 1 · Shinagawa → Kyoto 17:19" },
     { terms: ["check-in", "check in", "keihan", "hotel keihan"], day: 1, title: "Check-in Hotel Keihan Kyoto Hachijoguchi", subtitle: "Día 1 · 19:30" },
     { terms: ["cena", "kaiten", "uogashi", "sushi giratorio", "aeon mall", "aeon"], day: 1, title: "Cena Kaiten-Sushi Uogashi", subtitle: "Día 1 · AEON Mall Kyoto" },
-    { terms: ["thunderbird", "hokuriku", "tsuruga", "kyoto kanazawa"], day: 6, title: "Thunderbird → Hokuriku Shinkansen", subtitle: "Día 6 · Kioto → Kanazawa" },
+    { terms: ["thunderbird", "hokuriku", "tsuruga", "kyoto kanazawa", "47932", "reserva 47932"], day: 6, title: "Thunderbird → Hokuriku Shinkansen", subtitle: "Día 6 · Kioto → Kanazawa" },
+    { terms: ["nohi bus", "kanazawa shirakawa", "12GO31991741", "12go", "08:40"], day: 7, title: "Nohi Bus Kanazawa → Shirakawa-go", subtitle: "Día 7 · 08:40" },
+    { terms: ["nohi bus", "shirakawa takayama", "12GO31992254", "12go", "13:15"], day: 7, title: "Nohi Bus Shirakawa-go → Takayama", subtitle: "Día 7 · 13:15" },
     { terms: ["hida express", "hida", "gifu", "takayama kanazawa"], day: 7, title: "JR Hida Express", subtitle: "Día 7 · Kanazawa → Takayama" },
-    { terms: ["nohi bus", "nohi", "bus magome", "takayama magome", "08:00"], day: 8, title: "Nohi Bus Takayama → Magome", subtitle: "Día 8 · 08:00" },
-    { terms: ["shinano", "express shinano", "nakatsugawa", "nagoya", "09:57", "42093", "aee6606m"], day: 9, title: "JR Shinano 4 → Nagoya", subtitle: "Día 9 · ✅ Reservado 42093 · 🎫 Recoger billetes" },
-    { terms: ["nozomi 358", "nozomi", "shinkansen nagoya", "smart ex 2002", "2002", "11:29", "13:06", "coche 12", "11-d", "11-e", "12-c", "12-d", "12-e"], day: 9, title: "Shinkansen Nozomi 358", subtitle: "Día 9 · ✅ Smart EX 2002 · Nagoya 11:29 → Tokyo 13:06" },
+    { terms: ["nohi bus", "nohi", "bus magome", "takayama magome", "08:00", "08302008262", "reserva 08302008262", "coche 1", "car 01", "2c", "2d", "3b", "3c", "3d"], day: 8, title: "Nohi Bus Takayama → Magome", subtitle: "Día 8 · 08:00" },
+    { terms: ["shinano", "express shinano", "nakatsugawa", "nagoya", "09:57", "42093", "reserva 42093", "aee6606m", "car 4", "coche 4"], day: 9, title: "JR Shinano 4 → Nagoya", subtitle: "Día 9 · ✅ Reservado 42093 · 🎫 Recoger billetes" },
+    { terms: ["nozomi 358", "nozomi", "shinkansen nagoya", "smart ex 2002", "2002", "11:29", "13:06", "coche 12", "car 12", "11-d", "11-e", "12-c", "12-d", "12-e"], day: 9, title: "Shinkansen Nozomi 358", subtitle: "Día 9 · ✅ Smart EX 2002 · Nagoya 11:29 → Tokyo 13:06" },
     { terms: ["kodama", "kodama 805", "shin-fuji", "fuji shinkansen", "07:27"], day: 14, title: "Shinkansen Kodama 805", subtitle: "Día 14 · Tokio → Mishima/Shin-Fuji" },
   ];
   for (const c of cityDayHints) {
