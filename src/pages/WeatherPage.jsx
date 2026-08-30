@@ -1,17 +1,121 @@
-import { Cloud, CloudRain, Sun, CloudSun, MapPin, Droplets } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Cloud, CloudRain, Sun, CloudSun, MapPin, Droplets, Loader2, Info } from "lucide-react";
 
 import { useContent } from "../i18n/LanguageContext";
 import { Highlightable } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 
+const cityCoords = {
+  "Kioto": { lat: 35.0116, lon: 135.7681 },
+  "Kanazawa": { lat: 36.5613, lon: 136.6562 },
+  "Takayama": { lat: 36.1461, lon: 137.2522 },
+  "Tsumago": { lat: 35.5768, lon: 137.5954 },
+  "Tokio": { lat: 35.6895, lon: 139.6917 }
+};
+
+function getSkyFromWMO(code) {
+  if (code === 0) return "sun";
+  if (code === 1 || code === 2) return "partly";
+  if (code === 3 || code === 45 || code === 48) return "cloud";
+  return "rain";
+}
+
+function getConditionFromWMO(code) {
+  if (code === 0) return "Soleado";
+  if (code === 1 || code === 2) return "Parcialmente nublado";
+  if (code === 3 || code === 45 || code === 48) return "Nublado";
+  if (code >= 51 && code <= 67) return "Lluvia";
+  if (code >= 71 && code <= 86) return "Nieve/Lluvia";
+  if (code >= 95) return "Tormenta";
+  return "Variable";
+}
+
 export default function WeatherPage() {
   const { weatherData, dailyWeather, weatherLabels } = useContent();
+  const [liveWeather, setLiveWeather] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchWeather() {
+      try {
+        const cities = Object.keys(cityCoords);
+        const lats = cities.map(c => cityCoords[c].lat).join(",");
+        const lons = cities.map(c => cityCoords[c].lon).join(",");
+        
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lats}&longitude=${lons}&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FTokyo&forecast_days=16`;
+        
+        const res = await fetch(url);
+        const data = await res.json();
+        
+        // When passing multiple coords, Open-Meteo returns an array
+        const resultsArray = Array.isArray(data) ? data : [data];
+        
+        const weatherMap = {};
+        cities.forEach((city, index) => {
+          weatherMap[city] = resultsArray[index].daily;
+        });
+
+        const tripStartDate = new Date("2026-09-07T00:00:00+09:00");
+        
+        const updatedDaily = dailyWeather.map(d => {
+          const targetDate = new Date(tripStartDate);
+          targetDate.setDate(tripStartDate.getDate() + (d.day - 1));
+          const dateStr = targetDate.toISOString().split("T")[0];
+          
+          const cityData = weatherMap[d.city];
+          if (!cityData) return d;
+          
+          const dateIndex = cityData.time.indexOf(dateStr);
+          let high, low, rain, sky, condition, isFallback = false;
+
+          if (dateIndex !== -1) {
+            high = Math.round(cityData.temperature_2m_max[dateIndex]);
+            low = Math.round(cityData.temperature_2m_min[dateIndex]);
+            rain = cityData.precipitation_probability_max[dateIndex] || 0;
+            const wmo = cityData.weathercode[dateIndex];
+            sky = getSkyFromWMO(wmo);
+            condition = getConditionFromWMO(wmo);
+          } else {
+            // Fallback to today
+            high = Math.round(cityData.temperature_2m_max[0]);
+            low = Math.round(cityData.temperature_2m_min[0]);
+            rain = cityData.precipitation_probability_max[0] || 0;
+            const wmo = cityData.weathercode[0];
+            sky = getSkyFromWMO(wmo);
+            condition = getConditionFromWMO(wmo);
+            isFallback = true;
+          }
+          
+          return { ...d, high, low, rain, sky, condition, isFallback };
+        });
+        
+        setLiveWeather(updatedDaily);
+      } catch (err) {
+        console.error("Error fetching weather:", err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchWeather();
+  }, [dailyWeather]);
+
+  const displayWeather = liveWeather || dailyWeather;
 
   return (
     <div className="px-4 pt-3 pb-12">
-      <div className="mb-6">
-        <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{weatherLabels.previsiones}</p>
-        <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>{weatherLabels.climaCiudad}</h2>
+      <div className="mb-6 flex justify-between items-start gap-4">
+        <div>
+          <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{weatherLabels.previsiones}</p>
+          <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>{weatherLabels.climaCiudad}</h2>
+        </div>
+        <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border bg-green-50/50 border-green-200 text-green-700 mt-1 shadow-sm">
+          {loading ? (
+            <Loader2 size={12} className="animate-spin" />
+          ) : (
+            <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+          )}
+          <span className="text-[10px] font-bold tracking-widest uppercase">{loading ? 'Cargando' : 'En vivo'}</span>
+        </div>
       </div>
 
       {/* City weather overview */}
@@ -42,9 +146,12 @@ export default function WeatherPage() {
       </div>
 
       {/* Day-by-day forecast */}
-      <p className="eyebrow mb-3 mt-6" style={{ color: "var(--ink-soft)" }}>{weatherLabels.previsionDiaDia}</p>
+      <p className="eyebrow mb-3 mt-6 flex items-center justify-between" style={{ color: "var(--ink-soft)" }}>
+        <span>{weatherLabels.previsionDiaDia}</span>
+        {!loading && <span className="text-[10px] font-medium bg-slate-100 px-2 py-0.5 rounded-md text-slate-500">API: Open-Meteo</span>}
+      </p>
       <div className="space-y-3">
-        {dailyWeather.map((d, idx) => {
+        {displayWeather.map((d, idx) => {
           // El icono se elige por la clave estable `sky`, no analizando el
           // texto: al traducir la app, buscar "Soleado" o "Lluvia" fallaría
           // y todos los días saldrían con el icono genérico de nube.
@@ -80,11 +187,19 @@ export default function WeatherPage() {
               }} />
 
               <div className="relative z-10 flex justify-between items-center mb-1">
-                <div className="flex items-center gap-1.5">
-                  <Icon size={14} strokeWidth={2.5} />
-                  <span className="font-semibold" style={{ fontSize: 12, letterSpacing: "0.02em", textShadow: "0 1px 2px rgba(0,0,0,0.1)" }}>
-                    {d.condition}
-                  </span>
+                <div className="flex flex-col">
+                  <div className="flex items-center gap-1.5">
+                    <Icon size={14} strokeWidth={2.5} />
+                    <span className="font-semibold" style={{ fontSize: 12, letterSpacing: "0.02em", textShadow: "0 1px 2px rgba(0,0,0,0.1)" }}>
+                      {d.condition}
+                    </span>
+                  </div>
+                  {d.isFallback && (
+                    <div className="flex items-center gap-1 mt-1 text-white/90" style={{ fontSize: 9 }}>
+                      <Info size={9} />
+                      Faltan +16 días. Mostrando tiempo de hoy.
+                    </div>
+                  )}
                 </div>
                 <div className="font-semibold opacity-95" style={{ fontSize: 11, textShadow: "0 1px 2px rgba(0,0,0,0.1)" }}>
                   {weatherLabels.dia} {d.day}
