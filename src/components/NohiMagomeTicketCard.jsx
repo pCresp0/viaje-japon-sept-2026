@@ -130,26 +130,33 @@ export default function NohiMagomeTicketCard() {
 
           {/* Comprobante E-Ticket */}
           <div className="rounded-xl border p-4" style={{ borderColor: "var(--line)", background: "rgba(0,0,0,0.015)" }}>
-            <div className="flex items-center justify-between gap-2 mb-3">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-3">
               <div className="flex items-center gap-2">
                 <Ticket size={16} className="text-amber-700" />
-                <span className="text-xs font-bold uppercase tracking-wider text-gray-700">Comprobante de Reserva Oficial</span>
+                <span className="text-xs font-bold uppercase tracking-wider text-gray-700">E-Ticket & Documentación Oficial</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 flex-wrap">
+                <a
+                  href="/images/tickets/nohi_bus_takayama_magome_eticket.pdf"
+                  download="E-Ticket_NohiBus_Takayama_Magome_08302008262.pdf"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border border-amber-600 bg-amber-600 text-white hover:bg-amber-700 shadow-xs cursor-pointer transition-colors no-underline"
+                >
+                  <FileDown size={14} /> Descargar PDF
+                </a>
                 <a
                   href="/images/tickets/nohi_bus_takayama_magome_eticket.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 cursor-pointer transition-colors no-underline"
+                  className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1.5 rounded-full border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 cursor-pointer transition-colors no-underline"
                 >
-                  📄 Abrir PDF
+                  Abrir PDF
                 </a>
                 <button
                   type="button"
                   onClick={() => setShowImageModal(true)}
-                  className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full border border-amber-300 bg-amber-50 text-amber-900 hover:bg-amber-100 cursor-pointer transition-colors"
+                  className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1.5 rounded-full border border-amber-300 bg-amber-50 text-amber-900 hover:bg-amber-100 cursor-pointer transition-colors"
                 >
-                  <Eye size={13} /> Ver E-ticket
+                  <Eye size={13} /> Ver captura
                 </button>
               </div>
             </div>
