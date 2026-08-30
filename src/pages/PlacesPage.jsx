@@ -106,11 +106,11 @@ export default function PlacesPage() {
               <p style={{ fontSize: 15, fontWeight: 700, color: "white", margin: 0 }}>
                 Estrategia GetYourGuide · Monte Fuji, Lago Kawaguchi y Chureito
               </p>
-              <span className="bg-blue-200 dark:bg-blue-900 text-blue-950 dark:text-blue-100 text-[10px] font-extrabold px-2 py-0.5 rounded-full uppercase">
+              <span style={{ background: "rgba(255,255,255,0.25)", color: "white", fontSize: 10, fontWeight: 800, padding: "2px 8px", borderRadius: 9999, textTransform: "uppercase", letterSpacing: "0.03em" }}>
                 4 Días Reservados
               </span>
             </div>
-            <p style={{ fontSize: 11.5, color: "rgba(255,255,255,0.85)", margin: 0 }}>
+            <p style={{ fontSize: 11.5, color: "rgba(255,255,255,0.9)", margin: 0 }}>
               Cancelación gratuita hasta 24h antes · Elegir el mejor día por visibilidad y cancelar el resto
             </p>
           </div>
@@ -118,7 +118,7 @@ export default function PlacesPage() {
 
         <div className="px-5 py-4 space-y-4">
           <p style={{ fontSize: 13.5, color: "var(--ink)", lineHeight: 1.6, margin: 0 }}>
-            Para asegurar ver el cono del Monte Fuji despejado, se han reservado <strong>4 fechas consecutivas</strong> en GetYourGuide (Japan Visionary Tour). Revisaremos las webcams 24h antes de cada día y mantendremos únicamente la jornada con mejor pronóstico, cancelando las demás con <strong>reembolso íntegro del 100%</strong>.
+            Para asegurar ver el cono del Monte Fuji despejado, se han reservado <strong>4 fechas consecutivas</strong> en GetYourGuide (Japan Visionary Tour). Revisaremos las webcams 24h antes de cada día y mantendremos únicamente la jornada con mejor pronóstico, cancelando las demás con <strong style={{ color: "var(--forest)" }}>reembolso íntegro del 100%</strong>.
           </p>
 
           {/* 4 Reservas Grid */}
@@ -129,16 +129,18 @@ export default function PlacesPage() {
               { day: "Viernes 18 Sept (08:30)", code: "GYGZGZVLFL75", pin: "ZPR=DM/Y", cancel: "Antes de 08:30 del 17 sept" },
               { day: "Sábado 19 Sept (08:30)", code: "GYGMX397LBNA", pin: "qjQcmrJZ", cancel: "Antes de 08:30 del 18 sept" },
             ].map((b, idx) => (
-              <div key={idx} className="p-3 rounded-xl border flex flex-col justify-between" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
+              <div key={idx} className="p-3.5 rounded-xl border flex flex-col justify-between" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
                 <div>
-                  <p className="text-xs font-bold text-slate-900 dark:text-white">{b.day}</p>
-                  <p className="text-[11px] text-rose-600 dark:text-rose-400 font-semibold mt-0.5">Cancela: {b.cancel}</p>
+                  <p style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)", margin: 0 }}>{b.day}</p>
+                  <p style={{ fontSize: 11.5, fontWeight: 600, color: "var(--shu)", marginTop: 3, marginBottom: 0 }}>
+                    Cancela: {b.cancel}
+                  </p>
                 </div>
-                <div className="flex items-center gap-2 mt-2 pt-2 border-t" style={{ borderColor: "var(--line)" }}>
-                  <span className="font-mono text-xs font-bold text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/60 px-2 py-0.5 rounded border border-sky-200 dark:border-sky-800">
+                <div className="flex items-center gap-2 mt-2.5 pt-2.5 border-t" style={{ borderColor: "var(--line)" }}>
+                  <span className="font-mono text-xs font-bold px-2 py-0.5 rounded border" style={{ background: "rgba(2, 132, 199, 0.08)", borderColor: "rgba(2, 132, 199, 0.3)", color: "#0284c7" }}>
                     {b.code}
                   </span>
-                  <span className="font-mono text-[11px] text-slate-500 bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded">
+                  <span className="font-mono text-[11px] px-2 py-0.5 rounded border" style={{ background: "var(--paper-raised)", borderColor: "var(--line)", color: "var(--ink-soft)" }}>
                     PIN: {b.pin}
                   </span>
                 </div>
@@ -147,11 +149,11 @@ export default function PlacesPage() {
           </div>
 
           {/* Logística y aviso de comida */}
-          <div className="p-3.5 rounded-xl border bg-blue-50/70 dark:bg-blue-950/30 border-blue-200 dark:border-blue-900/50 space-y-2">
-            <p className="text-xs font-bold text-blue-900 dark:text-blue-300">
-              ℹ️ Información Clave de la Excursión (GetYourGuide):
+          <div className="p-4 rounded-xl border space-y-2.5" style={{ background: "var(--paper)", borderColor: "rgba(2, 132, 199, 0.25)" }}>
+            <p className="flex items-center gap-1.5" style={{ fontSize: 13, fontWeight: 700, color: "var(--indigo)", margin: 0 }}>
+              <span>ℹ️</span> Información Clave de la Excursión (GetYourGuide):
             </p>
-            <ul className="text-xs text-blue-950 dark:text-blue-200/90 space-y-1 pl-4 list-disc">
+            <ul className="space-y-1.5 pl-4 list-disc" style={{ fontSize: 12.5, color: "var(--ink)", lineHeight: 1.5, margin: 0 }}>
               <li><strong>Punto de encuentro:</strong> Tokyo Mode Gakuen (1-7-3 Nishishinjuku, Shinjuku). Llegar antes de las <strong>08:25 AM</strong> (salida a las 08:30 AM).</li>
               <li><strong>🍱 Comida NO incluida:</strong> La actividad no incluye comida. No está permitido comer dentro del autobús. Conviene comprar snacks/desayuno antes de subir y llevar <strong>efectivo ¥</strong> para comprar en los puestos locales de Oshino Hakkai y Saiko.</li>
               <li><strong>👟 400 escalones:</strong> Llevar calzado cómodo para subir al mirador de la Pagoda Chureito en el Parque Arakurayama Sengen.</li>
@@ -164,8 +166,8 @@ export default function PlacesPage() {
               href="https://www.getyourguide.com/es-es/tokio-l193/tokio-monte-fuji-pagoda-chureito-lago-kawaguchi-y-oshino-hakkai-t792363/"
               target="_blank"
               rel="noreferrer"
-              className="text-xs font-semibold px-3 py-1.5 rounded-lg border flex items-center gap-1.5"
-              style={{ background: "white", borderColor: "var(--line)", color: "var(--indigo)", textDecoration: "none" }}
+              className="text-xs font-semibold px-3.5 py-2 rounded-xl border flex items-center gap-1.5 transition-opacity hover:opacity-85"
+              style={{ background: "var(--paper)", borderColor: "var(--line)", color: "var(--indigo)", textDecoration: "none" }}
             >
               🎟️ Ver Reserva en GetYourGuide ↗
             </a>
@@ -173,8 +175,8 @@ export default function PlacesPage() {
               href="https://www.google.com/maps/place/35.6916642,139.6969475/@35.6916642,139.6969475,16z"
               target="_blank"
               rel="noreferrer"
-              className="text-xs font-semibold px-3 py-1.5 rounded-lg border flex items-center gap-1.5"
-              style={{ background: "white", borderColor: "var(--line)", color: "var(--forest)", textDecoration: "none" }}
+              className="text-xs font-semibold px-3.5 py-2 rounded-xl border flex items-center gap-1.5 transition-opacity hover:opacity-85"
+              style={{ background: "var(--paper)", borderColor: "var(--line)", color: "var(--forest)", textDecoration: "none" }}
             >
               📍 Punto de Encuentro en Maps (Tokyo Mode Gakuen) ↗
             </a>

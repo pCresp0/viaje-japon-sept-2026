@@ -109,24 +109,25 @@ export default function FujiAlertBanner() {
           onClick={() => setShowModal(false)}
         >
           <div
-            className="bg-white dark:bg-slate-900 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white"
+            className="rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border"
+            style={{ background: "var(--paper-raised)", borderColor: "var(--line)", color: "var(--ink)" }}
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
-            <div className="sticky top-0 z-10 px-6 py-4 bg-gradient-to-r from-indigo-900 via-slate-900 to-indigo-950 text-white flex items-center justify-between border-b border-white/10">
+            <div className="sticky top-0 z-10 px-6 py-4 flex items-center justify-between border-b" style={{ background: "linear-gradient(135deg, #1d3557 0%, #0369a1 100%)", borderColor: "rgba(255,255,255,0.15)", color: "white" }}>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center text-white">
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center text-white" style={{ background: "rgba(255,255,255,0.2)" }}>
                   <Mountain size={22} />
                 </div>
                 <div>
-                  <h3 className="text-base font-bold">Estrategia de Excursión al Monte Fuji</h3>
-                  <p className="text-xs text-slate-300">4 Reservas en GetYourGuide + Tour Privado con Ken</p>
+                  <h3 className="text-base font-bold text-white m-0">Estrategia de Excursión al Monte Fuji</h3>
+                  <p className="text-xs text-white/80 m-0">4 Reservas en GetYourGuide + Tour Privado con Ken</p>
                 </div>
               </div>
               <button
                 type="button"
                 onClick={() => setShowModal(false)}
-                className="p-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-white/10"
+                className="p-1.5 rounded-lg text-white/80 hover:text-white hover:bg-white/10"
               >
                 <X size={20} />
               </button>
@@ -135,14 +136,14 @@ export default function FujiAlertBanner() {
             <div className="p-6 space-y-6 text-sm">
               
               {/* Cómo funciona la estrategia */}
-              <div className="bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-800/60 rounded-xl p-4">
+              <div className="rounded-xl p-4 border" style={{ background: "var(--paper)", borderColor: "rgba(2, 132, 199, 0.25)" }}>
                 <div className="flex items-start gap-2.5">
-                  <AlertTriangle className="text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5" size={18} />
+                  <AlertTriangle className="text-sky-600 shrink-0 mt-0.5" size={18} />
                   <div>
-                    <h4 className="font-bold text-indigo-900 dark:text-indigo-200 text-sm">
+                    <h4 className="font-bold text-sm m-0" style={{ color: "var(--indigo)" }}>
                       ¿Cómo funciona la cancelación gratuita?
                     </h4>
-                    <p className="text-xs text-indigo-800 dark:text-indigo-300/90 mt-1 leading-relaxed">
+                    <p className="text-xs mt-1 leading-relaxed m-0" style={{ color: "var(--ink)" }}>
                       Se han reservado 4 días en GetYourGuide con antelación para asegurar plaza. Cada reserva permite <strong>reembolso íntegro cancelando con al menos 24 horas de antelación</strong> a través de la app/web de GetYourGuide. Revisad los enlaces de visibilidad y cancelad las fechas nubladas antes del límite indicado en cada bono.
                     </p>
                   </div>
@@ -152,45 +153,47 @@ export default function FujiAlertBanner() {
               {/* Las 4 Reservas de GetYourGuide */}
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <h4 className="font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                    <Calendar size={16} className="text-indigo-600 dark:text-indigo-400" />
+                  <h4 className="font-bold flex items-center gap-2 m-0" style={{ color: "var(--ink)" }}>
+                    <Calendar size={16} style={{ color: "var(--indigo)" }} />
                     Tus 4 Códigos de Reserva en GetYourGuide
                   </h4>
                   <a
                     href={gygFujiActivity.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-xs text-indigo-600 dark:text-indigo-400 font-semibold hover:underline flex items-center gap-1"
+                    className="text-xs font-semibold hover:underline flex items-center gap-1"
+                    style={{ color: "var(--indigo)" }}
                   >
                     Ver actividad en GYG ↗
                   </a>
                 </div>
 
-                <div className="space-y-3">
+                <div className="space-y-2.5">
                   {gygFujiActivity.bookings.map((b) => (
                     <div
                       key={b.code}
-                      className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3"
+                      className="p-3.5 rounded-xl border flex flex-col sm:flex-row sm:items-center justify-between gap-3"
+                      style={{ background: "var(--paper)", borderColor: "var(--line)" }}
                     >
                       <div>
                         <div className="flex items-center gap-2">
-                          <span className="font-bold text-sm text-slate-900 dark:text-white">
+                          <span className="font-bold text-sm" style={{ color: "var(--ink)" }}>
                             {b.dateFormatted} (08:30 AM)
                           </span>
                         </div>
-                        <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-                          Límite cancelación: <strong className="text-rose-600 dark:text-rose-400">{b.cancelDeadline}</strong>
+                        <p className="text-xs mt-0.5 m-0" style={{ color: "var(--ink-soft)" }}>
+                          Límite cancelación: <strong style={{ color: "var(--shu)" }}>{b.cancelDeadline}</strong>
                         </p>
                       </div>
 
                       <div className="flex items-center gap-2 shrink-0">
-                        <div className="bg-white dark:bg-slate-900 px-2.5 py-1 rounded-lg border border-slate-300 dark:border-slate-700">
-                          <p className="text-[10px] text-slate-400 uppercase font-semibold">Reserva</p>
-                          <p className="font-mono text-xs font-bold text-indigo-600 dark:text-indigo-400">{b.code}</p>
+                        <div className="px-2.5 py-1 rounded-lg border" style={{ background: "var(--paper-raised)", borderColor: "rgba(2, 132, 199, 0.3)" }}>
+                          <p className="text-[10px] uppercase font-semibold m-0" style={{ color: "var(--ink-soft)" }}>Reserva</p>
+                          <p className="font-mono text-xs font-bold m-0" style={{ color: "#0284c7" }}>{b.code}</p>
                         </div>
-                        <div className="bg-white dark:bg-slate-900 px-2.5 py-1 rounded-lg border border-slate-300 dark:border-slate-700">
-                          <p className="text-[10px] text-slate-400 uppercase font-semibold">PIN</p>
-                          <p className="font-mono text-xs font-bold text-slate-700 dark:text-slate-300">{b.pin}</p>
+                        <div className="px-2.5 py-1 rounded-lg border" style={{ background: "var(--paper-raised)", borderColor: "var(--line)" }}>
+                          <p className="text-[10px] uppercase font-semibold m-0" style={{ color: "var(--ink-soft)" }}>PIN</p>
+                          <p className="font-mono text-xs font-bold m-0" style={{ color: "var(--ink)" }}>{b.pin}</p>
                         </div>
                       </div>
                     </div>
@@ -199,49 +202,50 @@ export default function FujiAlertBanner() {
               </div>
 
               {/* Logística y aviso de comida de GetYourGuide */}
-              <div className="p-4 rounded-xl bg-indigo-50/50 dark:bg-indigo-950/30 border border-indigo-100 dark:border-indigo-900/50 space-y-2.5">
-                <h5 className="font-bold text-xs uppercase tracking-wider text-indigo-900 dark:text-indigo-300">
+              <div className="p-4 rounded-xl border space-y-2.5" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
+                <h5 className="font-bold text-xs uppercase tracking-wider m-0" style={{ color: "var(--indigo)" }}>
                   📍 Punto de Encuentro y Detalles GYG
                 </h5>
-                <p className="text-xs text-slate-600 dark:text-slate-300 flex items-start gap-1.5">
-                  <MapPin size={15} className="text-indigo-600 shrink-0 mt-0.5" />
+                <p className="text-xs flex items-start gap-1.5 m-0" style={{ color: "var(--ink)" }}>
+                  <MapPin size={15} className="text-sky-600 shrink-0 mt-0.5" />
                   <span>
                     <strong>Punto de encuentro:</strong> Tokyo Mode Gakuen (1-7-3 Nishishinjuku, Shinjuku, enfrente de la estación). Llegar antes de las <strong>08:25 AM</strong> (salida 08:30).
                   </span>
                 </p>
-                <p className="text-xs text-amber-700 dark:text-amber-400 bg-amber-100/50 dark:bg-amber-900/30 p-2.5 rounded-lg leading-relaxed">
-                  🍱 <strong>Comida NO incluida:</strong> La actividad no incluye almuerzo. No está permitido comer en el autobús, por lo que conviene desayunar bien, llevar agua y comprar comida/snacks en las paradas (llevad yenes en efectivo ¥ para las tiendas tradicionales).
+                <p className="text-xs p-2.5 rounded-lg leading-relaxed m-0" style={{ background: "rgba(230, 57, 70, 0.08)", border: "1px solid rgba(230, 57, 70, 0.25)", color: "var(--ink)" }}>
+                  🍱 <strong style={{ color: "var(--shu)" }}>Comida NO incluida:</strong> La actividad no incluye almuerzo. No está permitido comer en el autobús, por lo que conviene desayunar bien, llevar agua y comprar comida/snacks en las paradas (llevad yenes en efectivo ¥ para las tiendas tradicionales).
                 </p>
-                <p className="text-xs text-slate-500 dark:text-slate-400">
+                <p className="text-xs m-0" style={{ color: "var(--ink-soft)" }}>
                   👟 <strong>Recomendación:</strong> Calzado cómodo para subir los 400 escalones del Parque Arakurayama Sengen hasta la Pagoda Chureito.
                 </p>
               </div>
 
               {/* Tour Privado con Ken Kaneshima (20 Sept) */}
-              <div className="p-4 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-2">
+              <div className="p-4 rounded-xl border space-y-2" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
                 <div className="flex items-center justify-between">
-                  <h4 className="font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2">
+                  <h4 className="font-bold text-sm flex items-center gap-2 m-0" style={{ color: "var(--ink)" }}>
                     <span>🚐</span> Tour Exclusivo con Ken Kaneshima
                   </h4>
-                  <span className="text-xs font-bold text-forest bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 px-2 py-0.5 rounded-full">
+                  <span className="text-xs font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(46, 125, 91, 0.15)", color: "var(--forest)" }}>
                     Domingo 20 Sept
                   </span>
                 </div>
-                <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                <p className="text-xs leading-relaxed m-0" style={{ color: "var(--ink)" }}>
                   <strong>Precio:</strong> 13.000 ¥/persona (entradas y mini-van privada 8h con guía oficial en español). Inicio en Estación de Mishima (08:20 AM) y fin en Estación Shin-Fuji (17:30). Incluye parada gastronómica tradicional para degustar fideos <strong>Houtou</strong>.
                 </p>
-                <p className="text-xs text-slate-500 dark:text-slate-400">
-                  📞 Contacto Ken: <a href="tel:+819058631635" className="font-semibold underline">+81 90-5863-1635</a> · <a href="https://excursionesfujiyama.com" target="_blank" rel="noreferrer" className="font-semibold underline">excursionesfujiyama.com ↗</a>
+                <p className="text-xs m-0" style={{ color: "var(--ink-soft)" }}>
+                  📞 Contacto Ken: <a href="tel:+819058631635" className="font-semibold underline" style={{ color: "var(--indigo)" }}>+81 90-5863-1635</a> · <a href="https://excursionesfujiyama.com" target="_blank" rel="noreferrer" className="font-semibold underline" style={{ color: "var(--indigo)" }}>excursionesfujiyama.com ↗</a>
                 </p>
               </div>
 
             </div>
 
-            <div className="px-6 py-4 bg-slate-50 dark:bg-slate-800/80 border-t border-slate-200 dark:border-slate-700 flex justify-end">
+            <div className="px-6 py-4 border-t flex justify-end" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
               <button
                 type="button"
                 onClick={() => setShowModal(false)}
-                className="px-5 py-2 rounded-xl text-xs font-bold bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:opacity-90 transition-opacity"
+                className="px-5 py-2 rounded-xl text-xs font-bold text-white transition-opacity hover:opacity-90"
+                style={{ background: "var(--indigo)", border: "none" }}
               >
                 Cerrar
               </button>
