@@ -89,19 +89,15 @@ function formatQuickText(text = "") {
   if (!clean) return "";
 
   let parts = clean.split(/\.\s+/);
-  let title = "";
+  let title = parts[0];
   let detail = "";
 
   if (parts.length > 1) {
-    if (parts[0].length < 15) {
-      title = parts[0] + ". " + parts[1];
-      detail = parts.slice(2).join(". ");
-    } else {
-      title = parts[0];
-      detail = parts.slice(1).join(". ");
+    // Si el título es muy corto, mostramos 1 frase más de detalle (max 2 frases)
+    // Si el título ya es largo, nos quedamos solo con 1 frase ("mejor 1 frase que 2")
+    if (title.length < 35) {
+      detail = parts[1];
     }
-  } else {
-    title = parts[0];
   }
 
   // Quitar puntos finales sueltos
