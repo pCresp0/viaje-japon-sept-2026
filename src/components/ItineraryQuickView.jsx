@@ -79,7 +79,19 @@ function shortText(text = "") {
   } catch {
     clean = clean.replace(/^[^\w\s•\-—:→]+/, "").trim();
   }
-  return clean.length > 95 ? clean.slice(0, 92) + "…" : clean;
+  let parts = clean.split(/\.\s+/);
+  if (parts.length > 1) {
+    if (parts[0].length < 15) {
+      // Si la primera frase es muy corta (ej: "Despertar."), cogemos también la segunda
+      clean = parts[0] + ". " + parts[1];
+    } else {
+      clean = parts[0];
+    }
+    // Removemos puntos finales si quedaron
+    clean = clean.replace(/\.$/, "");
+  }
+
+  return clean;
 }
 
 function hasRealTime(entry) {
