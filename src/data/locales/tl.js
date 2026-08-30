@@ -67,14 +67,7 @@ export default {
       detail: "📅 11/09/2026 (Inirerekomenda sa gabi)\n📍 Kyoto Station (Green machines 5489)\n🎟️ Kunin nang personal ang JR-West reservation #47932.\n⚠️ KAILANGAN:\n- Pisikal na Mastercard (**8625) na ginamit pambayad.\n- Reservation number (47932).\n- 4-digit Identification Number (PIN).",
       deadline: "11/09/2026",
     },
-    {
-      id: "bus-magome",
-      category: "reserva",
-      urgency: "alta",
-      title: "🔴 Mag-book ng Nohi Bus Takayama → Magome",
-      detail: "📅 14/09/2026\n👥 5 mga tao\n🚌 Direct Nohi Bus\n⏰ Target na pag-alis: 08:00\n📍 Takayama Nohi Bus Center → Magome\n💳 Bumili: Japan Bus Online / Nohi Bus Web\n⚠️ Ito ang direct bus. Mabilis mapuno tuwing high season.",
-      deadline: "1 buwan bago",
-    },
+
     {
       id: "cena-magome",
       category: "logistica",

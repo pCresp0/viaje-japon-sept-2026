@@ -5,6 +5,7 @@ import { slug } from "../utils/slug";
 import { exportTransportExcel } from "../utils/exportCsv";
 import ShinkansenTicketCard from "../components/ShinkansenTicketCard";
 import ThunderbirdTicketCard from "../components/ThunderbirdTicketCard";
+import NohiMagomeTicketCard from "../components/NohiMagomeTicketCard";
 
 function iconKind(transport) {
   if (transport?.kind) return transport.kind;
@@ -76,6 +77,7 @@ export default function TransportPage({ onNavigate }) {
               <li>• <strong>Thunderbird + Kagayaki</strong> Kioto → Kanazawa (12 sep, 08:10)</li>
               <li>• <strong>Nohi Bus</strong> Kanazawa → Shirakawa-go (13 sep, 08:40)</li>
               <li>• <strong>Nohi Bus</strong> Shirakawa-go → Takayama (13 sep, 13:15)</li>
+              <li>• <strong>Nohi Bus</strong> Takayama → Magome (14 sep, 08:00 · Car 01 · Asientos: 2C, 2D, 3B, 3C, 3D)</li>
             </ul>
           </div>
 
@@ -84,7 +86,6 @@ export default function TransportPage({ onNavigate }) {
               <AlertCircle size={14} /> 🔴 RESERVAR AHORA
             </p>
             <ul className="text-xs text-red-900 space-y-1.5">
-              <li>• <strong>Takayama → Magome</strong> (14 sep · ¥5.000/pax Nohi Bus)</li>
               <li>• <strong>Shinano 4</strong> Nakatsugawa → Nagoya (15 sep · Canal JR)</li>
               <li>• <strong>Nozomi</strong> Nagoya → Tokio (15 sep, ~11:20–11:30 · 1h17 margen previo en Nakatsugawa)</li>
               <li>• <strong>Shinkansen Fuji</strong> (20 sep, 07:27 · Smart EX · salida hotel recomendada ~06:30)</li>
@@ -171,10 +172,11 @@ export default function TransportPage({ onNavigate }) {
         </p>
       </div>
 
-      {/* 4. BILLETE SHINKANSEN Y THUNDERBIRD (Colapsable) */}
+      {/* 4. BILLETES CONFIRMADOS Y DOCUMENTACIÓN (Colapsable) */}
       <div className="mb-8">
         <ShinkansenTicketCard />
         <ThunderbirdTicketCard />
+        <NohiMagomeTicketCard />
       </div>
 
       {/* 5. TRAYECTOS POR DÍA */}

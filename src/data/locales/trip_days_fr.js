@@ -337,13 +337,16 @@ export const days = [
         "text": "🍙 Réveil et petit-déjeuner rapide. L'hôtel Wood Takayama ne doit pas être notre source de petit-déjeuner ce matin s'il n'est pas inclus. Achetez-le la veille : onigiri, sandwich, pain, fruit, café/boisson. Mangez avant de partir ou emportez-le. 💡 Conseil : Partez prêts car nous avons un bus réservé à 08:00."
       },
       {
-        "text": "🚶 Quittez l'hôtel Wood Takayama pour le Takayama Nohi Bus Center. Environ 10–15 min de marche. Arrivez bien avant 08:00."
+        "text": "🚶 Quittez l'hôtel Wood Takayama pour le Takayama Nohi Bus Center (env. 10–15 min à pied). Objectif : arriver entre 07:30 et 07:35 pour échanger les billets physiques sereinement."
       },
       {
-        "text": "🚌 Bus direct Nohi Bus Takayama → Magome. Départ : Takayama Nohi Bus Center (08:00). Arrivée : Magome (10:45). Durée : env. 2h45. Prix indicatif : 5 000 ¥/pers. IMPORTANT : Réservation préalable requise. N'utilise pas le Japan Rail Pass. Ce n'est pas un train. Pas besoin de carte IC. Réservez en ligne via Japan Bus Online / Nohi Bus. Réservez pour 5.\n⚠️ RÉSERVEZ À L'AVANCE : Ce bus évite Takayama → Nagoya → Nakatsugawa → Magome. Bien plus simple et laisse la matinée parfaite pour la randonnée Nakasendo. Confirmez pour le 14/09/2026."
+        "text": "⚠️ **ÉCHANGE OBLIGATOIRE DU BILLET ÉLECTRONIQUE :**\nAu Takayama Nohi Bus Center, présentez l'E-ticket de Japan Bus Online (sur mobile ou imprimé) au guichet pour **l'échanger contre les billets physiques**.\n\n⚠️ **IMPORTANT :** L'opérateur exige d'effectuer l'échange au moins 15 minutes avant le départ de 08:00 (arriver au plus tard à 07:45). Conservez les billets physiques pour monter à bord."
       },
       {
-        "text": "📍 Arrivée à Magome à 10:45. Début du sentier Nakasendo ici. Avant la randonnée, laissez les gros bagages au service de transfert."
+        "text": "🚌 Bus direct Nohi Bus : Takayama → Magome.\n\n🎫 **SUICA:** ❌ NON\n📅 **RÉSERVATION:** ✅ ACHETÉE ET CONFIRMÉE\n📄 **E-TICKET :** Réservation 08302008262 · Titulaire : Pablo Crespo Bellido\n\nDépart : Takayama Nohi Bus Center (08:00) → Arrivée : Magome (10:45).\nCar No. 01 · 5 Sièges : 2C, 2D, 3B, 3C, 3D.\nTotal : 25 000 ¥ (5 adultes · 5 000 ¥/pers).\n\n⚠️ **IMPORTANT :**\nNotre réservation se termine à **MAGOME à 10:45**. Même si le bus continue vers Tsumago (11:10), nous descendons à Magome pour commencer la randonnée du sentier historique de Nakasendo."
+      },
+      {
+        "text": "📍 Arrivée à Magome à 10:45. Fin du trajet en bus. Début du sentier Nakasendo à pied vers Tsumago (8 km). Avant la randonnée, laissez les bagages au service de transfert."
       },
       {
         "text": "🧳 ENVOYER LES BAGAGES À TSUMAGO (10:45–11:15). Dépôt à l'office du tourisme de Magome entre 08:30 et 11:30 (500 ¥/pièce). Récupération à Tsumago après 13:00. IMPORTANT : Arrivés à 10:45, nous avons le temps de les déposer avant 11:30. Ne portez qu'un petit sac à dos pour la randonnée avec eau, papiers, téléphone, batterie, argent. NE PAS emporter de valises sur le sentier (pierres et dénivelé)."
@@ -370,10 +373,7 @@ export const days = [
         "text": "🍱 DÎNER À MAGOME CHAYA (18:00). Le dîner est servi EXACTEMENT à 18:00 et finit vers 19:00. Prix : 3 630 ¥/pers (18 150 ¥ pour 5). Doit être confirmé à l'avance. IMPORTANT : Ne soyez pas en retard. Le restaurant est juste en face du logement.\n⚠️ PAS DE PETIT-DÉJEUNER le lendemain : Magome Chaya ne l'offre plus. Achetez-le à l'avance, le village n'a pas de commerces ouverts tôt."
       },
       {
-        "text": "🎫 RÉSERVATIONS REQUISES :\nDÉJÀ RÉSERVÉ : Hotel Wood Takayama, Magome Chaya. À\nRÉSERVER : 🚌 Nohi Bus Takayama → Magome (14/09/2026, 08:00, 5 pers). NE PAS\nRÉSERVER : 🚍 Tsumago → Magome (bus local 14:22).\nBAGAGES : 🧳 Magome → Tsumago (dépôt 08:30-11:30, retrait après 13:00, 500 ¥/pièce)."
-      },
-      {
-        "text": "🚍 RÉSUMÉ DES TRANSPORTS : 🏨 Hotel Wood Takayama\n↓ 10–15 min à pied\n↓ 🚌 Takayama Nohi Bus Center\n↓ 08:00–10:45 🚌 Bus direct Nohi Bus\n↓ 📍 Magome\n↓ dépôt bagages\n↓ 🥾 8 km / ~3 h\n↓ 📍 Tsumago\n↓ retrait bagages\n↓ 🚌 14:22–14:50\n↓ 📍 Magome\n↓ 🏨 Magome Chaya\n↓ 🍱 Dîner 18:00."
+        "text": "🚍 RÉSUMÉ DES TRANSPORTS : 🏨 Hotel Wood Takayama\n↓ 10–15 min à pied (07:20)\n↓ 🚌 Takayama Nohi Bus Center (07:35 échange billets)\n↓ 08:00–10:45 🚌 Bus direct Nohi Bus (✅ Réservé)\n↓ 📍 Magome (descente 10:45)\n↓ dépôt bagages\n↓ 🥾 8 km / ~3 h Sentier Nakasendo\n↓ 📍 Tsumago\n↓ retrait bagages\n↓ 🚌 14:22–14:50 Bus local\n↓ 📍 Magome\n↓ 🏨 Magome Chaya\n↓ 🍱 Dîner 18:00."
       },
       {
         "text": "💡 CONSEILS NAKASENDO : 🥤 Emportez de l'eau et de la nourriture légère avant de partir. 🍵 Des maisons de thé existent mais horaires variables. 🌙 Magome ferme tôt, le dîner à 18:00 est l'option sûre. 🥾 Chaussures confortables avec bonne semelle. 🌧️ Attention à la boue s'il pleut. 🐻 Utilisez les cloches à ours. 🎒 Marchez avec un petit sac à dos grâce au service de bagages. 📸 Ne courez pas, profitez de la randonnée."
