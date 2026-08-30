@@ -324,12 +324,12 @@ export default function MapPage({ onGoToDay, initialDay }) {
             >
               <div className="flex items-center gap-3 mb-2.5">
                 <div style={{
-                  width: 24, height: 24, borderRadius: "50%",
+                  height: 24, padding: "0 8px", borderRadius: 12,
                   background: stop.color, color: "white",
-                  display: "flex", alignItems: "center", justifyContent: "center",
+                  display: "flex", alignItems: "center", justifyContent: "center", gap: 4,
                   fontSize: 11, fontWeight: 700, flexShrink: 0,
                 }}>
-                  <span className="mr-1">{badge}</span>
+                  <span>{badge}</span>
                   <span style={{ fontSize: 12 }}>{stop.emoji}</span>
                 </div>
                 <div style={{ flex: 1, minWidth: 0 }}>
