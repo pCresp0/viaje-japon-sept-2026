@@ -228,6 +228,9 @@ export const days = [
         "text": "🚆 OSAKA → KYOTO. Return to Kyoto via JR. No reservation. Use IC card or single ticket."
       },
       {
+        "text": "🎟️ LOGISTICS: ⚠️ **JR-WEST TICKET PICKUP:**\nWhen returning to Kyoto Station (or anytime during the day), go to the green ticket machines (with the 5489 logo) to **print the physical tickets** for tomorrow's train to Kanazawa. REQUIRED to bring:\n- The **physical** credit card (Mastercard **8625).\n- The reservation number (47932).\n- The 4-digit Identification Number (PIN)."
+      },
+      {
         "text": "🎫 DAY's RESERVATIONS: DO NOT book any transport.\nDO NOT use SmartEX.\nDO NOT use JR-WEST Online.\nWe do not need a Japan Rail Pass.\nAll journeys can be paid individually with an IC card.\nTRANSPORT SUMMARY: Hotel → Kiyomizu: Bus 100/206 or Kiyomizu-dera Line → IC card/ticket.\nKiyomizu → Yasaka → Maruyama → Chion-in → Heian: On foot.\nHeian → Kyoto Station: On foot + urban transit if needed.\nKyoto → Osaka: JR Kyoto Line Special Rapid → IC card/ticket.\nOsaka → Morinomiya: JR Osaka Loop Line → IC card/ticket.\nMorinomiya → Osaka Castle: On foot.\nOsaka Castle → Dotonbori: Osaka Metro → IC card.\nDotonbori → Kyoto: JR/metro depending on location → IC card/ticket."
       },
       {
@@ -249,7 +252,7 @@ export const days = [
         "text": "🧳 Wake up and luggage forwarding management (Takkyubin).\n\nHotel Keihan Kyoto Hachijoguchi has a luggage forwarding service (Yamato/Sagawa). We will forward the 5 large suitcases directly from Kyoto to KOKO HOTEL Residence Asakusa Kappabashi in Tokyo.\n\n📦 Logistics strategy:\n- Travel through the Alps (Kanazawa, Shirakawa-go, Takayama, Magome and Tsumago walking trail) with backpacks only.\n- 4 days without big suitcases (Sept 12, 13, 14, and most of 15th until arriving in Tokyo in the afternoon).\n- On the morning of Sept 12: Confirm shipment at Kyoto hotel reception and ensure KOKO HOTEL in Tokyo accepts reception. Request delivery on or before Sept 15.\n- Keep receipts and tracking numbers safely.\n- 🍳 Breakfast at hotel or konbini."
       },
       {
-        "text": "🚆 KYOTO → TSURUGA → KANAZAWA. Hotel Keihan Kyoto Hachijoguchi → Kyoto Station: approximately 5 minutes walking to Hachijo East Exit. Leave with enough margin to be on the platform about 10–15 minutes before. 1. Limited Express THUNDERBIRD: Kyoto Station → Tsuruga Station. Approximately 50–55 min. Reserved seat required. There are no unreserved seat cars. 2. At Tsuruga: Transfer to the Hokuriku Shinkansen. Follow the Thunderbird → Shinkansen connection signs. Do not leave the station unnecessarily. The transfer is designed specifically to connect Thunderbird with the Hokuriku Shinkansen. 3. Hokuriku Shinkansen Tsurugi: Tsuruga → Kanazawa. Approximately 40 min. Total approximate duration: 1h40–2h."
+        "text": "🚆 KYOTO → TSURUGA → KANAZAWA. Hotel Keihan Kyoto Hachijoguchi → Kyoto Station: approximately 5 minutes walking to Hachijo East Exit. Leave with enough margin to be on the platform about 10–15 minutes before. 1. Limited Express THUNDERBIRD 5: Kyoto Station (08:10) → Tsuruga Station (09:03).\n\n🎫 **SUICA:** ❌ NO\n📅 **RESERVATION:** ✅ ALREADY BOUGHT and tickets collected the day before.\n\nConfirmed seats: Car 5 (11-D, 12-C, 12-D, 13-C, 13-D).\n\n2. At Tsuruga (09:03 - 09:21): Transfer (18 min) to the Hokuriku Shinkansen. Follow the Thunderbird → Shinkansen connection signs. Do not leave the station unnecessarily.\n\n3. Hokuriku Shinkansen KAGAYAKI 508: Tsuruga (09:21) → Kanazawa (10:03).\n\n🎫 **SUICA:** ❌ NO\n📅 **RESERVATION:** ✅ ALREADY BOUGHT\n\nConfirmed seats: Car 5 (11-E, 12-D, 12-E, 13-D, 13-E).\n\nArrival in Kanazawa at 10:03."
       },
       {
         "text": "🌳 KENROKU-EN GARDEN. Open every day. Hours in September: 07:00–18:00. Approximate admission: ¥320. No reservation required. What to look for: Kasumigaike Pond, Kotoji-toro, Karasaki Pine, Uchihashi-tei, views of the garden and its different levels. 💡 Tip: Kenroku-en is large; do not try to see absolutely everything. Do a circular route through the main points."
@@ -269,9 +272,7 @@ export const days = [
       {
         "text": "🚌 TRANSPORT: Getting around Kanazawa: The main tourist spots are very close to each other, but the Loop Bus is very practical. Kanazawa Loop Bus: ¥220 per ride. Accepts national IC cards and contactless payment. There is also a ONE DAY PASS for ¥800. ONE DAY PASS is only especially worthwhile if we use the bus 4 times or more. Important: The ONE DAY PASS cannot be bought on board the bus. It can be purchased at the Tourist Information Center at the station, Hokutetsu centers, some hotels, or digitally."
       },
-      {
-        "text": "🎫 DAY'S RESERVATIONS:\n⚠️ THIS TRAIN MUST BE BOOKED IN ADVANCE. Reserve full Kyoto → Kanazawa route (Thunderbird + Hokuriku Shinkansen). Reserve ordinary seat. We do not need a Japan Rail Pass. Do not use an IC card to pay for this journey. Guideline price: ¥7,720 per person, ordinary reserved seat. Reserve on JR-WEST ONLINE TRAIN RESERVATION from one month before the travel date. Since we are 5 people, book all seats together if the system allows it."
-      },
+
       {
         "text": "💡 TIPS: Kanazawa Tips: Kanazawa is much more compact than Kyoto; walking between several areas is perfectly viable. Bring cash even though many places accept card/IC. In Omicho, look first and decide later; do not buy the first thing that looks appealing. For seafood bowls, compare sizes/prices before sitting down. In Higashi Chaya, most traditional shops close earlier than restaurants. The Nagamachi neighborhood is residential: keep a low profile and respect homes. If it rains, Kanazawa remains quite manageable because many shopping areas are covered, but bring an umbrella."
       }

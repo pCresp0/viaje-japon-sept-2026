@@ -4,6 +4,7 @@ import { Highlightable } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 import { exportTransportExcel } from "../utils/exportCsv";
 import ShinkansenTicketCard from "../components/ShinkansenTicketCard";
+import ThunderbirdTicketCard from "../components/ThunderbirdTicketCard";
 
 function iconKind(transport) {
   if (transport?.kind) return transport.kind;
@@ -74,6 +75,7 @@ export default function TransportPage({ onNavigate }) {
               <li>• <strong>Nozomi 53</strong> Shinagawa → Kioto (7 sep, 17:19 · Coche 13)</li>
               <li>• <strong>Nohi Bus</strong> Kanazawa → Shirakawa-go (13 sep, 08:40)</li>
               <li>• <strong>Nohi Bus</strong> Shirakawa-go → Takayama (13 sep, 13:15)</li>
+              <li>• <strong>Thunderbird + Kagayaki</strong> Kioto → Kanazawa (12 sep, 08:10)</li>
             </ul>
           </div>
 
@@ -82,7 +84,6 @@ export default function TransportPage({ onNavigate }) {
               <AlertCircle size={14} /> 🔴 RESERVAR AHORA
             </p>
             <ul className="text-xs text-red-900 space-y-1.5">
-              <li>• <strong>Kioto → Kanazawa</strong> (12 sep · JR-West Online)</li>
               <li>• <strong>Takayama → Magome</strong> (14 sep · ¥5.000/pax Nohi Bus)</li>
               <li>• <strong>Shinano 4</strong> Nakatsugawa → Nagoya (15 sep · Canal JR)</li>
               <li>• <strong>Nozomi</strong> Nagoya → Tokio (15 sep, ~11:20–11:30 · 1h17 margen previo en Nakatsugawa)</li>
@@ -170,9 +171,10 @@ export default function TransportPage({ onNavigate }) {
         </p>
       </div>
 
-      {/* 4. BILLETE SHINKANSEN (Colapsable) */}
+      {/* 4. BILLETE SHINKANSEN Y THUNDERBIRD (Colapsable) */}
       <div className="mb-8">
         <ShinkansenTicketCard />
+        <ThunderbirdTicketCard />
       </div>
 
       {/* 5. TRAYECTOS POR DÍA */}

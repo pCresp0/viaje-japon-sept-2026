@@ -15,12 +15,12 @@ export const pendingItems = [
     deadline: "Hacer ya (Juan Carlos)",
   },
   {
-    id: "kyoto-kanazawa",
-    category: "reserva",
+    id: "recogida-billetes-jrwest",
+    category: "logistica",
     urgency: "alta",
-    title: "🔴 Reservar Kioto → Kanazawa",
-    detail: "📅 12/09/2026\n👥 5 personas\n🚆 Thunderbird + Hokuriku Shinkansen (transbordo en Tsuruga)\n⏰ Salida objetivo: ~08:10 desde Kioto\n📍 Kyoto → Tsuruga → Kanazawa\n💳 Comprar: JR-WEST ONLINE TRAIN RESERVATION (¡Ya disponible a 1 mes de la salida!)\n⚠️ Reservar 5 asientos juntos ordinarios. Es un billete combinado (NO Smart EX).",
-    deadline: "🔴 RESERVAR AHORA",
+    title: "🎟️ RECOGER BILLETES JR-WEST — KYOTO → KANAZAWA",
+    detail: "📅 11/09/2026 (Recomendado tarde/noche)\n📍 Kyoto Station (Máquinas verdes 5489)\n🎟️ Recoger físicamente la reserva JR-West nº 47932.\n⚠️ OBLIGATORIO LLEVAR:\n- La tarjeta física Mastercard (**8625) utilizada para el pago.\n- El número de reserva (47932).\n- Recordar el Identification Number (PIN) de 4 dígitos.",
+    deadline: "11/09/2026",
   },
   {
     id: "bus-magome",

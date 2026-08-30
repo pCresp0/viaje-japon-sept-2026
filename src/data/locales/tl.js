@@ -62,12 +62,10 @@ export default {
       deadline: "1 buwan bago (07/08/2026 10:00 JST)",
     },
     {
-      id: "kyoto-kanazawa",
-      category: "reserva",
-      urgency: "alta",
-      title: "🔴 Mag-book ng Kyoto → Kanazawa",
-      detail: "📅 12/09/2026\n👥 5 mga tao\n🚆 Thunderbird + Hokuriku Shinkansen\n⏰ Target na pag-alis: ~08:10\n📍 Kyoto → Tsuruga → Kanazawa\n💳 Bumili: JR-WEST ONLINE TRAIN RESERVATION\n⚠️ Mag-book ng standard seats nang magkakasama. Ito ay combined ticket.",
-      deadline: "1 buwan bago (12/08/2026 10:00 JST)",
+      id: "recogida-billetes-jrwest",
+      title: "🎟️ KUNIN ANG JR-WEST TICKETS — KYOTO → KANAZAWA",
+      detail: "📅 11/09/2026 (Inirerekomenda sa gabi)\n📍 Kyoto Station (Green machines 5489)\n🎟️ Kunin nang personal ang JR-West reservation #47932.\n⚠️ KAILANGAN:\n- Pisikal na Mastercard (**8625) na ginamit pambayad.\n- Reservation number (47932).\n- 4-digit Identification Number (PIN).",
+      deadline: "11/09/2026",
     },
     {
       id: "bus-magome",

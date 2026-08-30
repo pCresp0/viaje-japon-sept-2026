@@ -228,6 +228,9 @@ export const days = [
         "text": "🚆 OSAKA → KYOTO. Bumalik sa Kyoto sakay ng JR. Walang reserbasyon. Gumamit ng IC card o single ticket."
       },
       {
+        "text": "🎟️ LOGISTIKA: ⚠️ **PAGKUHA NG JR-WEST TICKETS:**\nPagbalik sa Kyoto Station (o kahit anong libreng oras sa araw na ito), pumunta sa mga berdeng ticket machines (na may 5489 logo) para **i-print ang pisikal na tiket** para sa tren bukas papuntang Kanazawa. KAILANGANG dalhin:\n- Ang **pisikal** na credit card (Mastercard **8625).\n- Ang reservation number (47932).\n- Ang 4-digit Identification Number (PIN)."
+      },
+      {
         "text": "🎫 MGA RESERBASYON PARA SA ARAW NA ITO: HUWAG mag-book ng anumang transportasyon.\nHUWAG gumamit ng SmartEX.\nHUWAG gumamit ng JR-WEST Online.\nHindi natin kailangan ng Japan Rail Pass.\nLahat ng byahe ay pwedeng bayaran nang isa-isa gamit ang IC card.\nBUOD NG TRANSPORTASYON: Hotel → Kiyomizu: Bus 100/206 o Kiyomizu-dera Line → IC card/ticket.\nKiyomizu → Yasaka → Maruyama → Chion-in → Heian: Paglalakad.\nHeian → Kyoto Station: Paglalakad + urban transit kung kailangan.\nKyoto → Osaka: JR Kyoto Line Special Rapid → IC card/ticket.\nOsaka → Morinomiya: JR Osaka Loop Line → IC card/ticket.\nMorinomiya → Osaka Castle: Paglalakad.\nOsaka Castle → Dotonbori: Osaka Metro → IC card.\nDotonbori → Kyoto: JR/metro depende sa lokasyon → IC card/ticket."
       },
       {
@@ -249,7 +252,7 @@ export const days = [
         "text": "🧳 Gumising at ipadala ang bagahe. Ang Hotel Keihan Kyoto Hachijoguchi ay may baggage forwarding service. Ipadala ang malaking maleta direkta sa hotel sa Tokyo at maglakbay bitbit ang backpack/maliit na bagahe.\n⚠️ Kumpirmahin sa reception sa araw na ipapadala ang inaasahang petsa kung kailan darating sa Tokyo hotel. Huwag isipin na dadating agad kinabukasan. Ihanda sa backpack ang lahat ng kailangan para sa mga susunod na araw hanggang sa makuha ulit ang maleta. 🍳 Almusal: Mag-almusal sa Hotel Keihan Kyoto Hachijoguchi kung kasama, o bumili ng simpleng pagkain sa gabi kung kailangang umalis nang mabilis. (Paalala: Ang Hotel Resol Trinity Kanazawa ay nag-aalok ng buffet breakfast mula 07:00–10:00, pero dahil ngayon pa lang tayo dadating sa Kanazawa, hindi ito available sa atin ngayong umaga)."
       },
       {
-        "text": "🚆 KYOTO → TSURUGA → KANAZAWA. Hotel Keihan Kyoto Hachijoguchi → Kyoto Station: halos 5 minuto na lakad papuntang Hachijo East Exit. Umalis nang maaga para makarating sa platform nang mga 10–15 minuto bago ang tren. 1. Limited Express THUNDERBIRD: Kyoto Station → Tsuruga Station. Halos 50–55 min. Kailangang may reserved seat. Walang unreserved seat cars. 2. Sa Tsuruga: Lumipat sa Hokuriku Shinkansen. Sundan ang Thunderbird → Shinkansen connection signs. Huwag nang lumabas sa istasyon. Ang transfer na ito ay sadyang ginawa para ikonekta ang Thunderbird sa Hokuriku Shinkansen. 3. Hokuriku Shinkansen Tsurugi: Tsuruga → Kanazawa. Halos 40 min. Kabuuang oras: halos 1h40–2h."
+        "text": "🚆 KYOTO → TSURUGA → KANAZAWA. Hotel Keihan Kyoto Hachijoguchi → Kyoto Station: halos 5 minuto na lakad papuntang Hachijo East Exit. Umalis nang maaga para makarating sa platform nang mga 10–15 minuto bago ang tren. 1. Limited Express THUNDERBIRD 5: Kyoto Station (08:10) → Tsuruga Station (09:03).\n\n🎫 **SUICA:** ❌ HINDI\n📅 **RESERBASYON:** ✅ NABILI NA at nakuha na ang tiket kahapon.\n\nMga upuan: Car 5 (11-D, 12-C, 12-D, 13-C, 13-D).\n\n2. Sa Tsuruga (09:03 - 09:21): Lumipat (18 min) sa Hokuriku Shinkansen. Sundan ang Thunderbird → Shinkansen connection signs. Huwag nang lumabas sa istasyon.\n\n3. Hokuriku Shinkansen KAGAYAKI 508: Tsuruga (09:21) → Kanazawa (10:03).\n\n🎫 **SUICA:** ❌ HINDI\n📅 **RESERBASYON:** ✅ NABILI NA\n\nMga upuan: Car 5 (11-E, 12-D, 12-E, 13-D, 13-E).\n\nPagdating sa Kanazawa nang 10:03."
       },
       {
         "text": "🌳 KENROKU-EN GARDEN. Bukas araw-araw. Oras sa Setyembre: 07:00–18:00. Halaga ng entrance: ¥320. Hindi kailangan mag-reserve. Mga hahanapin: Kasumigaike Pond, Kotoji-toro, Karasaki Pine, Uchihashi-tei, mga tanawin sa hardin at mga antas nito. 💡 Tip: Malaki ang Kenroku-en; huwag subukang tignan lahat. Gumawa ng pabilog na ruta sa mga pangunahing punto."
@@ -269,9 +272,7 @@ export const days = [
       {
         "text": "🚌 TRANSPORTASYON: Paano umikot sa Kanazawa: Ang mga pangunahing tourist spots ay magkakalapit lang, pero ang Loop Bus ay napaka-praktikal. Kanazawa Loop Bus: ¥220 kada sakay. Tumatanggap ng IC cards at contactless payment. Mayroon ding ONE DAY PASS sa halagang ¥800. Sulit lang ang ONE DAY PASS kung 4 na beses o higit pa sasakay ng bus. Importante: Ang ONE DAY PASS ay hindi mabibili sa loob ng bus. Mabibili ito sa Tourist Information Center sa istasyon, Hokutetsu centers, sa ilang hotel, o digitally."
       },
-      {
-        "text": "🎫 MGA RESERBASYON:\n⚠️ ANG TREN NA ITO AY KAILANGANG I-BOOK NANG MAAGA. I-reserve ang buong biyaheng Kyoto → Kanazawa (Thunderbird + Hokuriku Shinkansen). I-reserve ang ordinary seat. Hindi natin kailangan ng Japan Rail Pass. Huwag gumamit ng IC card pambayad dito. Presyo: halos ¥7,720 bawat tao, ordinary reserved seat. I-reserve sa JR-WEST ONLINE TRAIN RESERVATION simula isang buwan bago ang araw ng biyahe. Dahil tayong 5, sabay-sabay i-book ang lahat ng upuan kung maaari."
-      },
+
       {
         "text": "💡 MGA TIP: Kanazawa Tips: Mas madaling ikutin ang Kanazawa kaysa Kyoto; pwedeng lakarin lang. Magdala ng cash kahit maraming tumatanggap ng card/IC. Sa Omicho, tingin muna bago bumili; huwag basta bilhin ang unang magustuhan. Para sa seafood bowls, ikumpara ang laki at presyo bago umupo. Sa Higashi Chaya, karaniwang mas maagang nagsasara ang mga tradisyonal na tindahan kaysa sa mga restawran. Ang Nagamachi ay residential na lugar kaya igalang ang mga bahay at iwasan ang ingay. Kung umulan, okay pa rin umikot dahil maraming commercial areas ang may bubong, pero magdala pa rin ng payong."
       }

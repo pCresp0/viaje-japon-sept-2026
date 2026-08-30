@@ -62,12 +62,10 @@ export default {
       deadline: "1 mois avant (07/08/2026 10:00 JST)",
     },
     {
-      id: "kyoto-kanazawa",
-      category: "reserva",
-      urgency: "alta",
-      title: "🔴 Réserver Kyoto → Kanazawa",
-      detail: "📅 12/09/2026\n👥 5 personnes\n🚆 Thunderbird + Hokuriku Shinkansen\n⏰ Départ ciblé: ~08:10\n📍 Kyoto → Tsuruga → Kanazawa\n💳 Acheter : JR-WEST ONLINE TRAIN RESERVATION\n⚠️ Réservez des sièges standard ensemble. C'est un billet combiné.",
-      deadline: "1 mois avant (12/08/2026 10:00 JST)",
+      id: "recogida-billetes-jrwest",
+      title: "🎟️ RETIRER BILLETS JR-WEST — KYOTO → KANAZAWA",
+      detail: "📅 11/09/2026 (Recommandé le soir)\n📍 Kyoto Station (Machines vertes 5489)\n🎟️ Retirer physiquement la réservation JR-West nº 47932.\n⚠️ REQUIS :\n- Carte physique Mastercard (**8625) utilisée pour le paiement.\n- Numéro de réservation (47932).\n- Identification Number (PIN) à 4 chiffres.",
+      deadline: "11/09/2026",
     },
     {
       id: "bus-magome",
