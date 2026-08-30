@@ -1,4 +1,5 @@
-import { MapPin, Utensils, Coffee, Mountain } from "lucide-react";
+import { useState } from "react";
+import { MapPin, Utensils, Coffee, Mountain, ChevronDown } from "lucide-react";
 import GuideCard from "../components/GuideCard";
 import { days } from "../data/trip";
 import { formatDateShort } from "../utils/date";
@@ -80,6 +81,9 @@ function sortByTripDay(items) {
 
 export default function PlacesPage() {
   const t = useT();
+  const [gygOpen, setGygOpen] = useState(false);
+  const [kenOpen, setKenOpen] = useState(false);
+
   return (
     <div className="px-4 pt-3 pb-12">
       <div className="mb-6">
@@ -92,7 +96,12 @@ export default function PlacesPage() {
 
       {/* 1. Estrategia de Reserva Múltiple GetYourGuide */}
       <div className="rounded-2xl overflow-hidden border mb-6" style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
-        <div className="flex items-center gap-3 px-5 py-4" style={{ background: "linear-gradient(135deg, #0284c7 0%, #0369a1 100%)" }}>
+        <button
+          type="button"
+          onClick={() => setGygOpen((v) => !v)}
+          className="w-full text-left flex items-center gap-3 px-5 py-4 border-none cursor-pointer"
+          style={{ background: "linear-gradient(135deg, #0284c7 0%, #0369a1 100%)" }}
+        >
           <div style={{
             width: 36, height: 36, borderRadius: 10,
             background: "rgba(255,255,255,0.2)",
@@ -101,7 +110,7 @@ export default function PlacesPage() {
           }}>
             <Mountain size={18} style={{ color: "white" }} />
           </div>
-          <div className="flex-1">
+          <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 flex-wrap">
               <p style={{ fontSize: 15, fontWeight: 700, color: "white", margin: 0 }}>
                 Estrategia GetYourGuide · Monte Fuji, Lago Kawaguchi y Chureito
@@ -114,8 +123,14 @@ export default function PlacesPage() {
               Cancelación gratuita hasta 24h antes · Elegir el mejor día por visibilidad y cancelar el resto
             </p>
           </div>
-        </div>
+          <ChevronDown
+            size={20}
+            className={`shrink-0 transition-transform ${gygOpen ? "rotate-180" : ""}`}
+            style={{ color: "rgba(255,255,255,0.9)" }}
+          />
+        </button>
 
+        {gygOpen && (
         <div className="px-5 py-4 space-y-4">
           <p style={{ fontSize: 13.5, color: "var(--ink)", lineHeight: 1.6, margin: 0 }}>
             Para asegurar ver el cono del Monte Fuji despejado, se han reservado <strong>4 fechas consecutivas</strong> en GetYourGuide (Japan Visionary Tour). Revisaremos las webcams 24h antes de cada día y mantendremos únicamente la jornada con mejor pronóstico, cancelando las demás con <strong style={{ color: "var(--forest)" }}>reembolso íntegro del 100%</strong>.
@@ -182,11 +197,17 @@ export default function PlacesPage() {
             </a>
           </div>
         </div>
+        )}
       </div>
 
       {/* 2. Tour Privado con Ken Kaneshima */}
       <div className="rounded-2xl overflow-hidden border mb-6" style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
-        <div className="flex items-center gap-3 px-5 py-4" style={{ background: "#1d3557" }}>
+        <button
+          type="button"
+          onClick={() => setKenOpen((v) => !v)}
+          className="w-full text-left flex items-center gap-3 px-5 py-4 border-none cursor-pointer"
+          style={{ background: "#1d3557" }}
+        >
           <div style={{
             width: 36, height: 36, borderRadius: 10,
             background: "rgba(255,255,255,0.18)",
@@ -195,7 +216,7 @@ export default function PlacesPage() {
           }}>
             <Mountain size={18} style={{ color: "white" }} />
           </div>
-          <div className="flex-1">
+          <div className="flex-1 min-w-0">
             <p style={{ fontSize: 15, fontWeight: 700, color: "white", margin: 0 }}>
               Tour Exclusivo al Monte Fuji con Ken Kaneshima{" "}
               <span style={{ fontWeight: 500, opacity: 0.85 }}>
@@ -206,8 +227,14 @@ export default function PlacesPage() {
               Domingo 20 de septiembre · Tour de 8 horas en mini-van privada con guía en español
             </p>
           </div>
-        </div>
+          <ChevronDown
+            size={20}
+            className={`shrink-0 transition-transform ${kenOpen ? "rotate-180" : ""}`}
+            style={{ color: "rgba(255,255,255,0.9)" }}
+          />
+        </button>
 
+        {kenOpen && (
         <div className="px-5 py-4 space-y-4">
           <p style={{ fontSize: 13.5, color: "var(--ink)", lineHeight: 1.6, margin: 0 }}>
             Descubrid la esencia del Japón rural con este tour de día completo para grupos reducidos con <strong>guía oficial en español</strong> (Ken Kaneshima). Recorreremos la Pagoda Chureito, santuarios milenarios, aldeas tradicionales de paja, el místico bosque de lava y las cataratas de la falda del volcán.
@@ -293,6 +320,7 @@ export default function PlacesPage() {
             <GuideCard id="fuji" accent="#1d3557" />
           </div>
         </div>
+        )}
       </div>
 
       <div style={{
