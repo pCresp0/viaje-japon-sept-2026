@@ -135,13 +135,23 @@ export default function NohiMagomeTicketCard() {
                 <Ticket size={16} className="text-amber-700" />
                 <span className="text-xs font-bold uppercase tracking-wider text-gray-700">Comprobante de Reserva Oficial</span>
               </div>
-              <button
-                type="button"
-                onClick={() => setShowImageModal(true)}
-                className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full border border-amber-300 bg-amber-50 text-amber-900 hover:bg-amber-100 cursor-pointer transition-colors"
-              >
-                <Eye size={13} /> Ver comprobante completo
-              </button>
+              <div className="flex items-center gap-2">
+                <a
+                  href="/images/tickets/nohi_bus_takayama_magome_eticket.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 cursor-pointer transition-colors no-underline"
+                >
+                  📄 Abrir PDF
+                </a>
+                <button
+                  type="button"
+                  onClick={() => setShowImageModal(true)}
+                  className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full border border-amber-300 bg-amber-50 text-amber-900 hover:bg-amber-100 cursor-pointer transition-colors"
+                >
+                  <Eye size={13} /> Ver E-ticket
+                </button>
+              </div>
             </div>
 
             <div 
