@@ -100,8 +100,8 @@ export function QuickDayCard({ day, blockColor, onShowFullDay, onClose, standalo
     return /shinkansen|nozomi|vuelo|aterriza|tren|metro|bus|check.?in|regreso al hotel|visita|santuario|templo|castillo|museo|cena|comida|restaurante/i.test(src);
   });
 
-  const displayed = expanded ? keyEntries : keyEntries.slice(0, 5);
-  const hasMore = keyEntries.length > 5;
+  const displayed = (standalone || expanded) ? keyEntries : keyEntries.slice(0, 5);
+  const hasMore = !standalone && keyEntries.length > 5;
 
   return (
     <div

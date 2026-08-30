@@ -266,7 +266,7 @@ export default function CalendarPage() {
       {/* Mobile modal overlay for day detail */}
       {selectedDay && createPortal(
         <div data-mobile-modal className="modal-overlay" onClick={() => setSelectedDayNum(null)}>
-          <div className="modal-sheet" onClick={(e) => e.stopPropagation()} style={{ position: "relative", overflow: "hidden", display: "flex", flexDirection: "column", height: "85vh", maxHeight: 800 }}>
+          <div className="modal-sheet" onClick={(e) => e.stopPropagation()} style={{ position: "relative", overflow: "hidden", display: "flex", flexDirection: "column", maxHeight: "85vh" }}>
             {!detailMode ? (
               <div style={{ flex: 1, overflowY: "auto" }}>
                 <QuickDayCard 
