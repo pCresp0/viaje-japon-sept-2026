@@ -26,14 +26,14 @@ export default function Itinerary({ openDay, setOpenDay, onGoToMapDay }) {
   }
 
   useEffect(() => {
-    if (openDay == null) return;
+    if (openDay == null || quickView) return;
     const el = refs.current[openDay];
     if (!el) return;
     const t = window.setTimeout(() => {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 50);
     return () => window.clearTimeout(t);
-  }, [openDay]);
+  }, [openDay, quickView]);
 
   function handleShowQuickDay(dayNum) {
     setQuickView(true);
