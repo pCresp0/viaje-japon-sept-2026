@@ -9,6 +9,7 @@ export default function BudgetPage() {
   const { budget, transports } = useContent();
   const t = useT();
   const [showTransports, setShowTransports] = useState(false);
+  const [openCategory, setOpenCategory] = useState(null);
 
   const transportTotal = transports.reduce((sum, item) => sum + (item.real || 0), 0);
   const transportTotalJpy = transports.reduce((sum, item) => sum + (item.jpy || 0), 0);
@@ -40,27 +41,50 @@ export default function BudgetPage() {
         gap: 10,
         marginBottom: 20,
       }}>
-        {budget.categories.map((c, index) => (
-          <Highlightable key={c.title} id={slug("budget", index)}>
-          <div className="rounded-2xl p-4" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
-            <div className="flex items-baseline justify-between">
-              <p className="font-medium text-sm" style={{ color: "var(--ink)" }}>{c.title}</p>
-              <p className="font-display text-sm" style={{ color: "var(--gold)" }}>{c.perPerson} /pax</p>
-            </div>
-            <p className="text-xs mt-0.5" style={{ color: "var(--ink-soft)" }}>Total grupo: {c.total}</p>
-            {c.details.length > 0 && (
-              <ul className="mt-2 space-y-1">
-                {c.details.map((d, i) => (
-                  <li key={i} className="text-[11.5px] flex items-start gap-1.5" style={{ color: "var(--ink-soft)" }}>
-                    <span style={{ color: "var(--shu)" }}>•</span>
-                    <span dangerouslySetInnerHTML={{ __html: d }} />
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-          </Highlightable>
-        ))}
+        {budget.categories.map((c, index) => {
+          const isOpen = openCategory === index;
+          return (
+            <Highlightable key={c.title} id={slug("budget", index)}>
+              <div
+                className="rounded-2xl overflow-hidden"
+                style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}
+              >
+                <button
+                  type="button"
+                  onClick={() => setOpenCategory(isOpen ? null : index)}
+                  className="w-full text-left px-4 py-3.5 border-none cursor-pointer bg-transparent"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="min-w-0 flex-1">
+                      <p className="font-medium text-sm m-0" style={{ color: "var(--ink)" }}>{c.title}</p>
+                      <p className="text-xs mt-1 m-0" style={{ color: "var(--ink-soft)" }}>
+                        Total grupo: {c.total}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2 shrink-0">
+                      <p className="font-display text-sm m-0" style={{ color: "var(--gold)" }}>{c.perPerson}/pax</p>
+                      <ChevronDown
+                        size={16}
+                        className={`transition-transform ${isOpen ? "rotate-180" : ""}`}
+                        style={{ color: "var(--ink-soft)" }}
+                      />
+                    </div>
+                  </div>
+                </button>
+                {isOpen && c.details.length > 0 && (
+                  <ul className="px-4 pb-4 space-y-1.5" style={{ borderTop: "1px solid var(--line)", paddingTop: 12 }}>
+                    {c.details.map((d, i) => (
+                      <li key={i} className="text-[11.5px] flex items-start gap-1.5" style={{ color: "var(--ink-soft)" }}>
+                        <span style={{ color: "var(--shu)" }}>•</span>
+                        <span dangerouslySetInnerHTML={{ __html: d }} />
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </Highlightable>
+          );
+        })}
       </div>
 
       <div className="rounded-2xl p-4" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
@@ -68,10 +92,15 @@ export default function BudgetPage() {
           onClick={() => setShowTransports((v) => !v)}
           className="w-full flex items-center justify-between"
         >
-          <span className="font-medium text-sm" style={{ color: "var(--indigo)" }}>
-            🚄 Detalle de transportes día a día
-          </span>
-          <ChevronDown size={18} className={`transition-transform ${showTransports ? "rotate-180" : ""}`} style={{ color: "var(--ink-soft)" }} />
+          <div className="text-left min-w-0">
+            <span className="font-medium text-sm block" style={{ color: "var(--indigo)" }}>
+              🚄 Detalle de transportes día a día
+            </span>
+            <span className="text-xs block mt-0.5" style={{ color: "var(--ink-soft)" }}>
+              Estimado {formatJpyEur(transportTotalJpy, transportTotal)}/pax · ya comprado ≈ {formatEur(purchasedTotal)}/pax
+            </span>
+          </div>
+          <ChevronDown size={18} className={`transition-transform shrink-0 ${showTransports ? "rotate-180" : ""}`} style={{ color: "var(--ink-soft)" }} />
         </button>
         {showTransports && (
           <div className="mt-3 space-y-2">

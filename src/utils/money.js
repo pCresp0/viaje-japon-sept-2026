@@ -1,5 +1,13 @@
 /** Formato de importes ¥ / € para la web del viaje. */
 
+/** Tipo de cambio aprox. Revolut (ago 2026) usado en comparativas. */
+export const YEN_PER_EUR = 184.4;
+
+export function jpyToEur(jpy, rate = YEN_PER_EUR) {
+  if (jpy == null || Number.isNaN(Number(jpy))) return null;
+  return Number(jpy) / rate;
+}
+
 export function formatJpy(jpy) {
   if (jpy == null || Number.isNaN(Number(jpy))) return null;
   return `¥${Number(jpy).toLocaleString("es-ES")}`;

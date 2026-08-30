@@ -37,6 +37,11 @@ export const embassy = {
 export default function EmergencyPage() {
   const [showAllCoverages, setShowAllCoverages] = useState(false);
   const [modalContent, setModalContent] = useState(null); // 'particular' | 'general' | null
+  const [openSection, setOpenSection] = useState(null); // 'insurance' | 'numbers' | 'embassy'
+
+  function toggleSection(id) {
+    setOpenSection((prev) => (prev === id ? null : id));
+  }
 
   return (
     <div className="px-4 pt-3 pb-12">
@@ -53,25 +58,26 @@ export default function EmergencyPage() {
       {/* 1. SEGURO DE VIAJE HEYMONDO (DESTACADO PRINCIPAL) */}
       <Highlightable id="emergency-insurance">
         <div
-          className="rounded-2xl overflow-hidden border mb-8 shadow-sm"
+          className="rounded-2xl overflow-hidden border mb-5 shadow-sm"
           style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}
         >
-          {/* Cabecera Heymondo */}
-          <div
-            className="p-5 sm:p-6 text-white"
+          <button
+            type="button"
+            onClick={() => toggleSection("insurance")}
+            className="w-full text-left p-5 sm:p-6 text-white border-none cursor-pointer"
             style={{
               background: "linear-gradient(135deg, #1b4332 0%, #2d6a4f 60%, #40916c 100%)",
             }}
           >
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div className="flex items-start gap-3.5">
+              <div className="flex items-start gap-3.5 min-w-0">
                 <div
                   className="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 shadow-md"
                   style={{ background: "rgba(255, 255, 255, 0.2)" }}
                 >
                   <ShieldCheck size={26} className="text-white" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <div className="flex items-center gap-2 flex-wrap">
                     <span className="bg-emerald-300 text-emerald-950 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full uppercase tracking-wider">
                       ¡Ya estás asegurad@!
@@ -80,30 +86,34 @@ export default function EmergencyPage() {
                       Heymondo · Viaje Tranquilidad
                     </span>
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold mt-1 tracking-tight text-white font-display">
+                  <h3 className="text-xl sm:text-2xl font-bold mt-1 tracking-tight text-white font-display m-0">
                     Póliza Nº {heymondoInsurance.policyNumber}
                   </h3>
-                  <p className="text-xs text-emerald-100 mt-0.5">
+                  <p className="text-xs text-emerald-100 mt-0.5 mb-0">
                     Aseguradora: IMA Ibérica Asistencia · 06/09/2026 – 22/09/2026 (Japón)
                   </p>
                 </div>
               </div>
-
-              {/* Botón Llamar 24h directo */}
-              <div className="shrink-0 flex flex-col sm:flex-row gap-2">
-                <a
-                  href={`tel:${heymondoInsurance.assistancePhone.replace(/\s+/g, "")}`}
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-bold text-sm bg-white text-emerald-950 shadow-md hover:bg-emerald-50 active:scale-95 transition-all"
-                  style={{ textDecoration: "none" }}
-                >
-                  <Phone size={16} className="text-emerald-800" />
-                  Asistencia 24h: {heymondoInsurance.assistancePhone}
-                </a>
-              </div>
+              <ChevronDown
+                size={22}
+                className={`shrink-0 self-center transition-transform ${openSection === "insurance" ? "rotate-180" : ""}`}
+                style={{ color: "rgba(255,255,255,0.85)" }}
+              />
             </div>
-          </div>
+          </button>
 
+          {openSection === "insurance" && (
           <div className="p-5 sm:p-6 space-y-6">
+            <div className="flex flex-col sm:flex-row gap-2">
+              <a
+                href={`tel:${heymondoInsurance.assistancePhone.replace(/\s+/g, "")}`}
+                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-bold text-sm shadow-md hover:opacity-90 active:scale-95 transition-all"
+                style={{ textDecoration: "none", background: "var(--forest)", color: "white" }}
+              >
+                <Phone size={16} />
+                Asistencia 24h: {heymondoInsurance.assistancePhone}
+              </a>
+            </div>
             
             {/* 4 Viajeros Asegurados */}
             <div>
@@ -345,22 +355,34 @@ export default function EmergencyPage() {
             </div>
 
           </div>
+          )}
         </div>
       </Highlightable>
 
       {/* 2. Números de emergencia en Japón */}
-      <div className="mb-8">
-        <div className="flex items-center gap-2 mb-3">
+      <div className="mb-5 rounded-2xl border overflow-hidden" style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
+        <button
+          type="button"
+          onClick={() => toggleSection("numbers")}
+          className="w-full flex items-center gap-2 px-4 py-3.5 border-none cursor-pointer bg-transparent text-left"
+        >
           <ShieldAlert size={16} style={{ color: "var(--shu)" }} />
-          <p className="eyebrow" style={{ margin: 0, color: "var(--ink-soft)" }}>Números de emergencia en Japón</p>
-        </div>
-        <div className="grid gap-3" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }}>
+          <p className="eyebrow flex-1 m-0" style={{ color: "var(--ink-soft)" }}>Números de emergencia en Japón</p>
+          <span className="text-xs font-bold mr-1" style={{ color: "var(--shu)" }}>110 · 119 · JNTO</span>
+          <ChevronDown
+            size={18}
+            className={`transition-transform ${openSection === "numbers" ? "rotate-180" : ""}`}
+            style={{ color: "var(--ink-soft)" }}
+          />
+        </button>
+        {openSection === "numbers" && (
+        <div className="grid gap-3 px-4 pb-4" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }}>
           {emergencyNumbers.map((e, idx) => (
             <Highlightable key={idx} id={slug("emergency", e.number)}>
               <a
                 href={`tel:${e.number}`}
                 className="rounded-xl p-4 flex items-center gap-3 transition-all"
-                style={{ background: "var(--paper-raised)", border: "1px solid var(--line)", textDecoration: "none" }}
+                style={{ background: "var(--paper)", border: "1px solid var(--line)", textDecoration: "none" }}
                 onMouseEnter={ev => { ev.currentTarget.style.borderColor = "var(--shu)"; }}
                 onMouseLeave={ev => { ev.currentTarget.style.borderColor = "var(--line)"; }}
               >
@@ -381,14 +403,27 @@ export default function EmergencyPage() {
             </Highlightable>
           ))}
         </div>
+        )}
       </div>
 
       {/* 3. Embajada de España */}
-      <div className="mb-8">
-        <div className="flex items-center gap-2 mb-3">
+      <div className="mb-8 rounded-2xl border overflow-hidden" style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
+        <button
+          type="button"
+          onClick={() => toggleSection("embassy")}
+          className="w-full flex items-center gap-2 px-4 py-3.5 border-none cursor-pointer bg-transparent text-left"
+        >
           <Building2 size={16} style={{ color: "var(--indigo)" }} />
-          <p className="eyebrow" style={{ margin: 0, color: "var(--ink-soft)" }}>Embajada de España en Tokio</p>
-        </div>
+          <p className="eyebrow flex-1 m-0" style={{ color: "var(--ink-soft)" }}>Embajada de España en Tokio</p>
+          <span className="text-xs font-bold mr-1 truncate" style={{ color: "var(--indigo)" }}>{embassy.emergencyPhone}</span>
+          <ChevronDown
+            size={18}
+            className={`transition-transform ${openSection === "embassy" ? "rotate-180" : ""}`}
+            style={{ color: "var(--ink-soft)" }}
+          />
+        </button>
+        {openSection === "embassy" && (
+        <div className="px-4 pb-4">
         <Highlightable id="emergency-embassy">
           <div className="rounded-2xl p-5" style={{ background: "var(--indigo)", color: "white" }}>
             <p style={{ fontSize: 16, fontWeight: 700, marginBottom: 12, fontFamily: "var(--font-display)" }}>{embassy.name}</p>
@@ -416,6 +451,8 @@ export default function EmergencyPage() {
             </p>
           </div>
         </Highlightable>
+        </div>
+        )}
       </div>
 
       {/* Modal de visualización de Condiciones */}

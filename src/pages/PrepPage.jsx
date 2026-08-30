@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CheckCircle2, Circle, FileText, Plug, Umbrella, Backpack, Droplets } from "lucide-react";
+import { CheckCircle2, Circle, FileText, Plug, Umbrella, Backpack, Droplets, ChevronDown } from "lucide-react";
 import { Highlightable } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 
@@ -118,6 +118,7 @@ export const sections = [
 
 export default function PrepPage() {
   const [checked, setChecked] = useState(loadChecked);
+  const [openId, setOpenId] = useState(null);
 
   function toggle(id) {
     const next = { ...checked, [id]: !checked[id] };
@@ -160,15 +161,19 @@ export default function PrepPage() {
         {sections.map((section) => {
           const Icon = section.icon;
           const sectionChecked = section.items.filter(i => checked[i.id]).length;
+          const isOpen = openId === section.id;
           // Header background uses a slightly darker shade for colors that
           // don't have enough contrast with white text (e.g. gold/mustard).
           const headerBg = section.color === "#c9a227" ? "#8a6d1a" : section.color;
           return (
             <div key={section.id} className="rounded-2xl border overflow-hidden"
               style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
-              {/* header */}
-              <div className="flex items-center gap-3 px-5 py-4"
-                style={{ background: headerBg }}>
+              <button
+                type="button"
+                onClick={() => setOpenId(isOpen ? null : section.id)}
+                className="flex items-center gap-3 px-5 py-4 w-full text-left border-none cursor-pointer"
+                style={{ background: headerBg }}
+              >
                 <div style={{
                   width: 36, height: 36, borderRadius: 10,
                   background: "rgba(255,255,255,0.18)",
@@ -177,8 +182,8 @@ export default function PrepPage() {
                 }}>
                   <Icon size={18} style={{ color: "white" }} />
                 </div>
-                <div className="flex-1">
-                  <p style={{ fontSize: 15, fontWeight: 700, color: "white" }}>{section.title}</p>
+                <div className="flex-1 min-w-0">
+                  <p style={{ fontSize: 15, fontWeight: 700, color: "white", margin: 0 }}>{section.title}</p>
                 </div>
                 <span style={{
                   fontSize: 11.5, color: "white", fontWeight: 700,
@@ -187,37 +192,48 @@ export default function PrepPage() {
                 }}>
                   {sectionChecked}/{section.items.length}
                 </span>
-              </div>
+                <ChevronDown
+                  size={18}
+                  style={{
+                    color: "white",
+                    flexShrink: 0,
+                    opacity: 0.9,
+                    transform: isOpen ? "rotate(180deg)" : "none",
+                    transition: "transform 0.2s",
+                  }}
+                />
+              </button>
 
-              {/* items */}
-              <div>
-                {section.items.map((item, idx) => (
-                  <Highlightable key={item.id} id={slug("prep", item.id)}>
-                  <button
-                    onClick={() => toggle(item.id)}
-                    className="flex items-start gap-3 w-full text-left px-5 py-3 transition-colors"
-                    style={{
-                      borderBottom: idx < section.items.length - 1 ? "1px solid var(--line)" : "none",
-                      background: "transparent",
-                    }}
-                    onMouseEnter={e => e.currentTarget.style.background = "rgba(0,0,0,0.015)"}
-                    onMouseLeave={e => e.currentTarget.style.background = "transparent"}
-                  >
-                    {checked[item.id]
-                      ? <CheckCircle2 size={18} style={{ color: section.color, flexShrink: 0, marginTop: 1 }} />
-                      : <Circle size={18} style={{ color: "var(--line)", flexShrink: 0, marginTop: 1 }} />
-                    }
-                    <span style={{
-                      fontSize: 13.5, lineHeight: 1.5,
-                      color: checked[item.id] ? "var(--ink-soft)" : "var(--ink)",
-                      textDecoration: checked[item.id] ? "line-through" : "none",
-                    }}>
-                      {item.text}
-                    </span>
-                  </button>
-                  </Highlightable>
-                ))}
-              </div>
+              {isOpen && (
+                <div>
+                  {section.items.map((item, idx) => (
+                    <Highlightable key={item.id} id={slug("prep", item.id)}>
+                    <button
+                      onClick={() => toggle(item.id)}
+                      className="flex items-start gap-3 w-full text-left px-5 py-3 transition-colors"
+                      style={{
+                        borderBottom: idx < section.items.length - 1 ? "1px solid var(--line)" : "none",
+                        background: "transparent",
+                      }}
+                      onMouseEnter={e => e.currentTarget.style.background = "rgba(0,0,0,0.015)"}
+                      onMouseLeave={e => e.currentTarget.style.background = "transparent"}
+                    >
+                      {checked[item.id]
+                        ? <CheckCircle2 size={18} style={{ color: section.color, flexShrink: 0, marginTop: 1 }} />
+                        : <Circle size={18} style={{ color: "var(--line)", flexShrink: 0, marginTop: 1 }} />
+                      }
+                      <span style={{
+                        fontSize: 13.5, lineHeight: 1.5,
+                        color: checked[item.id] ? "var(--ink-soft)" : "var(--ink)",
+                        textDecoration: checked[item.id] ? "line-through" : "none",
+                      }}>
+                        {item.text}
+                      </span>
+                    </button>
+                    </Highlightable>
+                  ))}
+                </div>
+              )}
             </div>
           );
         })}
