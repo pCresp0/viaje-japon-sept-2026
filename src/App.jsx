@@ -79,6 +79,25 @@ export default function App() {
     }
   }, [tab]);
 
+  // Prevenir que el botón "atrás" en móviles salga de la app accidentalmente
+  useEffect(() => {
+    window.history.pushState({ preventBack: true }, "");
+
+    const handlePopState = (e) => {
+      if (!e.state || !e.state.preventBack) {
+        const confirmExit = window.confirm("¿Seguro que quieres salir de la aplicación?");
+        if (confirmExit) {
+          window.history.back();
+        } else {
+          window.history.pushState({ preventBack: true }, "");
+        }
+      }
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
+
   if (!unlocked) {
     return <AccessGate onUnlock={() => setUnlocked(true)} />;
   }
