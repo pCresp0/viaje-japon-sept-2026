@@ -31,7 +31,7 @@ export const stops = [
     detail: "Todai-ji, Gran Buda de bronce y parque de los ciervos",
   },
   {
-    id: "pontocho", name: "Pontocho y Miyagawacho", city: "Kioto",
+    id: "pontocho-day2", name: "Pontocho y Miyagawacho", city: "Kioto",
     lat: 35.009, lng: 135.77,
     emoji: "🏮", color: "#bc4749",
     day: "Día 2",
@@ -66,6 +66,13 @@ export const stops = [
     emoji: "🍢", color: "#bc4749",
     day: "Día 3",
     detail: "La despensa de Kioto y degustación gastronómica",
+  },
+  {
+    id: "pontocho-day3", name: "Pontocho y Miyagawacho", city: "Kioto",
+    lat: 35.009, lng: 135.77,
+    emoji: "🏮", color: "#bc4749",
+    day: "Día 3",
+    detail: "Paseo al atardecer por los callejones tradicionales junto al río Kamo",
   },
   {
     id: "gion", name: "Barrio de Gion", city: "Kioto",
@@ -105,6 +112,13 @@ export const stops = [
     detail: "1.200 estatuas de rakan con caras únicas, en Saga-Toriimoto",
   },
   {
+    id: "saga-toriimoto", name: "Saga-Toriimoto", city: "Kioto",
+    lat: 35.0195, lng: 135.6663,
+    emoji: "🏘️", color: "#bc4749",
+    day: "Día 4",
+    detail: "Calle histórica preservada con casas de techo de paja",
+  },
+  {
     id: "arashiyama", name: "Arashiyama y Bosque de Bambú", city: "Kioto",
     lat: 35.0173, lng: 135.6721,
     emoji: "🎋", color: "#bc4749",
@@ -128,6 +142,13 @@ export const stops = [
     detail: "Cuestas de Ninenzaka/Sannenzaka, Maruyama Park y Chion-in",
   },
   {
+    id: "heian-jingu", name: "Heian Jingu", city: "Kioto",
+    lat: 35.0159, lng: 135.7825,
+    emoji: "⛩️", color: "#bc4749",
+    day: "Día 5",
+    detail: "Santuario con gran torii rojo y hermosos jardines",
+  },
+  {
     id: "osaka-castle", name: "Castillo de Osaka", city: "Osaka",
     lat: 34.6873, lng: 135.5262,
     emoji: "🏯", color: "#bc4749",
@@ -140,6 +161,13 @@ export const stops = [
     emoji: "🐙", color: "#bc4749",
     day: "Día 5",
     detail: "Neones, cartel de Glico, takoyaki y comida callejera",
+  },
+  {
+    id: "shinsekai", name: "Shinsekai", city: "Osaka",
+    lat: 34.6525, lng: 135.5063,
+    emoji: "🍢", color: "#bc4749",
+    day: "Día 5",
+    detail: "Barrio retro con la torre Tsutenkaku y puestos de kushikatsu",
   },
 
   // ── DÍA 6: Kanazawa ──────────────────────────────────────────────
@@ -328,6 +356,13 @@ export const stops = [
     detail: "La vista postal más icónica de Japón con la pagoda y el Fuji",
   },
   {
+    id: "sengen-jinja", name: "Santuario Kitaguchi Hongu Fuji Sengen", city: "Yamanashi",
+    lat: 35.4748, lng: 138.7944,
+    emoji: "⛩️", color: "#1d3557",
+    day: "Día 14",
+    detail: "Punto de partida histórico de los peregrinos con cedros milenarios",
+  },
+  {
     id: "oshino-hakkai", name: "Aldea Oshino Hakkai", city: "Yamanashi",
     lat: 35.4594, lng: 138.8329,
     emoji: "🏡", color: "#1d3557",
@@ -356,56 +391,6 @@ export const stops = [
     detail: "Vistas panorámicas del monte Fuji desde los lagos Kawaguchiko y Saiko",
   },
 
-  // ── PUNTOS EXTRA AÑADIDOS ────────────────────────────────────────
-  {
-    id: "kasuga-taisha", name: "Kasuga Taisha", city: "Nara",
-    lat: 34.6814, lng: 135.8484,
-    emoji: "🏮", color: "#bc4749",
-    day: "Día 2",
-    detail: "Santuario de los mil faroles de bronce y piedra en el bosque",
-  },
-  {
-    id: "kofukuji", name: "Kofuku-ji", city: "Nara",
-    lat: 34.6827, lng: 135.8306,
-    emoji: "🏯", color: "#bc4749",
-    day: "Día 2",
-    detail: "Pagoda de cinco pisos y tesoro nacional",
-  },
-  {
-    id: "tenryuji", name: "Templo Tenryu-ji", city: "Kioto",
-    lat: 35.0157, lng: 135.6737,
-    emoji: "🌸", color: "#bc4749",
-    day: "Día 4",
-    detail: "Importante templo zen con un espectacular jardín paisajístico",
-  },
-  {
-    id: "shinsekai", name: "Shinsekai", city: "Osaka",
-    lat: 34.6525, lng: 135.5063,
-    emoji: "🍢", color: "#bc4749",
-    day: "Día 5",
-    detail: "Barrio retro con la torre Tsutenkaku y puestos de kushikatsu",
-  },
-  {
-    id: "takeshita", name: "Takeshita Street", city: "Tokio",
-    lat: 35.6715, lng: 139.7031,
-    emoji: "🛍️", color: "#1d3557",
-    day: "Día 11",
-    detail: "Centro de la moda juvenil, tiendas coloridas y crepes en Harajuku",
-  },
-  {
-    id: "kappabashi", name: "Kappabashi (Kitchen Town)", city: "Tokio",
-    lat: 35.7145, lng: 139.7891,
-    emoji: "🔪", color: "#1d3557",
-    day: "Día 10",
-    detail: "Calle del menaje de cocina y réplicas de comida de plástico",
-  },
-  {
-    id: "teamlab", name: "TeamLab Planets", city: "Tokio",
-    lat: 35.6499, lng: 139.7893,
-    emoji: "🌌", color: "#1d3557",
-    day: "Día 10",
-    detail: "Museo inmersivo de arte digital donde entras descalzo",
-  },
 ];
 
 export const filterData = {
