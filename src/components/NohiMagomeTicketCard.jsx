@@ -164,6 +164,7 @@ export default function NohiMagomeTicketCard({ defaultExpanded = false, onGoToDa
               <img
                 src="/images/tickets/nohi_bus_takayama_magome.png"
                 alt="Comprobante Nohi Bus Takayama Magome"
+                onError={(e) => { e.currentTarget.style.display = 'none'; }}
                 className="w-full object-cover object-top h-48 transition-transform group-hover:scale-[1.02]"
               />
               <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold gap-1.5">
@@ -213,8 +214,9 @@ export default function NohiMagomeTicketCard({ defaultExpanded = false, onGoToDa
             <div className="overflow-auto p-2 bg-gray-100 flex items-center justify-center">
               <img
                 src="/images/tickets/nohi_bus_takayama_magome.png"
-                alt="Comprobante Nohi Bus Takayama Magome Grande"
-                className="max-w-full h-auto rounded shadow-xs"
+                alt="Comprobante Nohi Bus Takayama Magome Ampliado"
+                onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                className="w-full h-auto object-contain bg-white shadow-sm"
               />
             </div>
           </div>

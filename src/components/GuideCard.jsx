@@ -21,6 +21,7 @@ function GuideBody({ guide, refs, localImage, accent }) {
             src={localImage}
             alt={guide.name}
             loading="lazy"
+            onError={(e) => { e.currentTarget.style.display = 'none'; }}
             style={{
               width: "100%", aspectRatio: "16 / 10", objectFit: "cover",
               borderRadius: 10, display: "block",
