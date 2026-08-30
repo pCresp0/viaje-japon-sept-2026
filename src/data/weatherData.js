@@ -32,5 +32,13 @@ export const weatherLabels = {
   previsionDiaDia: "Previsión día a día",
   dia: "Día",
   probLluvia: "% lluvia",
-  tipTexto: "💧 Septiembre es temporada de lluvias en Japón — llevar paraguas o chubasquero. Las temperaturas bajan en las montañas (Alpes y Nakasendo), así que ropa por capas es esencial."
+  tipTexto: "💧 Septiembre es temporada de lluvias en Japón — llevar paraguas o chubasquero. Las temperaturas bajan en las montañas (Alpes y Nakasendo), así que ropa por capas es esencial.",
+  compMuchHotter: "Mucho más calor",
+  compHotter: "Más calor",
+  compExpected: "Lo esperado",
+  compCooler: "Más fresco",
+  compMuchCooler: "Mucho más frío",
+  compRainy: "Peor (más lluvia)",
+  compSunny: "Mejor (soleado)"
+
 };

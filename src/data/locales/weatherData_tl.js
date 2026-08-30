@@ -32,5 +32,13 @@ export const weatherLabels = {
   previsionDiaDia: "Pang-araw-araw na Pagtataya",
   dia: "Araw",
   probLluvia: "% ulan",
-  tipTexto: "💧 Setyembre ay panahon ng ulan sa Japan — magdala ng payong o kapote. Bumababa ang temperatura sa mga bundok (Alps at Nakasendo), kaya mahalaga ang pagsusuot ng patong-patong na damit."
+  tipTexto: "💧 Setyembre ay panahon ng ulan sa Japan — magdala ng payong o kapote. Bumababa ang temperatura sa mga bundok (Alps at Nakasendo), kaya mahalaga ang pagsusuot ng patong-patong na damit.",
+  compMuchHotter: "Mas mainit",
+  compHotter: "Medyo mainit",
+  compExpected: "Gaya ng inaasahan",
+  compCooler: "Medyo malamig",
+  compMuchCooler: "Mas malamig",
+  compRainy: "Mas malala (maulan)",
+  compSunny: "Mas maganda (maaraw)"
+
 };

@@ -32,5 +32,13 @@ export const weatherLabels = {
   previsionDiaDia: "Day-by-day Forecast",
   dia: "Day",
   probLluvia: "% rain",
-  tipTexto: "💧 September is typhoon season in Japan — bring an umbrella or raincoat. Temperatures drop in the mountains (Alps and Nakasendo), so layering is essential."
+  tipTexto: "💧 September is typhoon season in Japan — bring an umbrella or raincoat. Temperatures drop in the mountains (Alps and Nakasendo), so layering is essential.",
+  compMuchHotter: "Much hotter",
+  compHotter: "Hotter",
+  compExpected: "As expected",
+  compCooler: "Cooler",
+  compMuchCooler: "Much cooler",
+  compRainy: "Worse (rainier)",
+  compSunny: "Better (sunnier)"
+
 };

@@ -32,5 +32,13 @@ export const weatherLabels = {
   previsionDiaDia: "Prévisions au jour le jour",
   dia: "Jour",
   probLluvia: "% pluie",
-  tipTexto: "💧 Septembre est la saison des pluies au Japon — apportez un parapluie ou un imperméable. Les températures baissent en montagne (Alpes et Nakasendo), il est donc essentiel de s'habiller avec plusieurs couches."
+  tipTexto: "💧 Septembre est la saison des pluies au Japon — apportez un parapluie ou un imperméable. Les températures baissent en montagne (Alpes et Nakasendo), il est donc essentiel de s'habiller avec plusieurs couches.",
+  compMuchHotter: "Beaucoup plus chaud",
+  compHotter: "Plus chaud",
+  compExpected: "Comme prévu",
+  compCooler: "Plus frais",
+  compMuchCooler: "Beaucoup plus frais",
+  compRainy: "Pire (plus de pluie)",
+  compSunny: "Mieux (ensoleillé)"
+
 };

@@ -131,33 +131,6 @@ export default function WeatherPage() {
         </div>
       </div>
 
-      {/* City weather overview */}
-      <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>{weatherLabels.condicionesGrales}</p>
-      <div className="grid gap-3 mb-8" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))" }}>
-        {weatherData.map((w, idx) => (
-          <Highlightable key={idx} id={slug("weather", w.city)}>
-          <div className="rounded-xl p-4 border"
-            style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
-            <div className="flex items-center justify-between mb-2">
-              <span style={{ fontSize: 20 }}>{w.emoji}</span>
-            </div>
-            <p style={{ fontSize: 13.5, fontWeight: 700, color: "var(--ink)", marginBottom: 1 }}>
-              {w.city}
-            </p>
-            <p style={{ fontSize: 12, color: "var(--shu)", fontWeight: 600, marginBottom: 4 }}>
-              {w.avg}°C
-            </p>
-            <p style={{ fontSize: 11, color: "var(--ink-soft)", lineHeight: 1.4 }}>
-              {w.condition}
-            </p>
-            <p style={{ fontSize: 10, color: "var(--ink-soft)", marginTop: 3, opacity: 0.7 }}>
-              {weatherLabels.lluvia} {w.precip}
-            </p>
-          </div>
-          </Highlightable>
-        ))}
-      </div>
-
       {/* Day-by-day forecast */}
       <p className="eyebrow mb-3 mt-6 flex items-center justify-between" style={{ color: "var(--ink-soft)" }}>
         <span>{weatherLabels.previsionDiaDia}</span>
@@ -235,6 +208,81 @@ export default function WeatherPage() {
                   </div>
                 </div>
               </div>
+            </div>
+            </Highlightable>
+          );
+        })}
+      </div>
+
+      {/* City weather overview */}
+      <p className="eyebrow mb-3 mt-8 flex items-center justify-between" style={{ color: "var(--ink-soft)" }}>
+        <span>{weatherLabels.condicionesGrales}</span>
+      </p>
+      <div className="grid gap-3 mb-4" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))" }}>
+        {weatherData.map((w, idx) => {
+          let compLabel = null;
+          let compColor = "var(--ink-soft)";
+          
+          if (liveWeather) {
+             const cityDays = liveWeather.filter(d => d.city === w.city);
+             if (cityDays.length > 0) {
+                const avgHigh = cityDays.reduce((acc, d) => acc + d.high, 0) / cityDays.length;
+                const diff = avgHigh - w.avg;
+                
+                if (diff >= 3) {
+                   compLabel = weatherLabels.compMuchHotter || "Mucho más calor";
+                   compColor = "#ef4444";
+                } else if (diff >= 1.5) {
+                   compLabel = weatherLabels.compHotter || "Más calor";
+                   compColor = "#f97316";
+                } else if (diff <= -3) {
+                   compLabel = weatherLabels.compMuchCooler || "Mucho más frío";
+                   compColor = "#3b82f6";
+                } else if (diff <= -1.5) {
+                   compLabel = weatherLabels.compCooler || "Más fresco";
+                   compColor = "#0ea5e9";
+                } else {
+                   const avgRain = cityDays.reduce((acc, d) => acc + d.rain, 0) / cityDays.length;
+                   if (avgRain >= 50) {
+                      compLabel = weatherLabels.compRainy || "Peor (más lluvia)";
+                      compColor = "#6366f1";
+                   } else if (avgRain <= 20) {
+                      compLabel = weatherLabels.compSunny || "Mejor (soleado)";
+                      compColor = "#22c55e";
+                   } else {
+                      compLabel = weatherLabels.compExpected || "Lo esperado";
+                      compColor = "#10b981";
+                   }
+                }
+             }
+          }
+
+          return (
+            <Highlightable key={idx} id={slug("weather", w.city)}>
+            <div className="rounded-xl p-4 border"
+              style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
+              <div className="flex items-center justify-between mb-2">
+                <span style={{ fontSize: 20 }}>{w.emoji}</span>
+              </div>
+              <p style={{ fontSize: 13.5, fontWeight: 700, color: "var(--ink)", marginBottom: 1 }}>
+                {w.city}
+              </p>
+              <p style={{ fontSize: 12, color: "var(--shu)", fontWeight: 600, marginBottom: 4 }}>
+                {w.avg}°C
+              </p>
+              <p style={{ fontSize: 11, color: "var(--ink-soft)", lineHeight: 1.4 }}>
+                {w.condition}
+              </p>
+              <p style={{ fontSize: 10, color: "var(--ink-soft)", marginTop: 3, opacity: 0.7 }}>
+                {weatherLabels.lluvia} {w.precip}
+              </p>
+              {compLabel && (
+                <div style={{ marginTop: '8px', paddingTop: '8px', borderTop: '1px solid var(--line)' }}>
+                  <span style={{ fontSize: 10, fontWeight: 700, color: compColor, backgroundColor: compColor + '1A', padding: '3px 6px', borderRadius: '4px' }}>
+                    {compLabel}
+                  </span>
+                </div>
+              )}
             </div>
             </Highlightable>
           );
