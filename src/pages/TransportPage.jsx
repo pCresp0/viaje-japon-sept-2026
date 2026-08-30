@@ -73,9 +73,9 @@ export default function TransportPage({ onNavigate }) {
             </p>
             <ul className="text-xs text-green-900 space-y-1.5">
               <li>• <strong>Nozomi 53</strong> Shinagawa → Kioto (7 sep, 17:19 · Coche 13)</li>
+              <li>• <strong>Thunderbird + Kagayaki</strong> Kioto → Kanazawa (12 sep, 08:10)</li>
               <li>• <strong>Nohi Bus</strong> Kanazawa → Shirakawa-go (13 sep, 08:40)</li>
               <li>• <strong>Nohi Bus</strong> Shirakawa-go → Takayama (13 sep, 13:15)</li>
-              <li>• <strong>Thunderbird + Kagayaki</strong> Kioto → Kanazawa (12 sep, 08:10)</li>
             </ul>
           </div>
 
