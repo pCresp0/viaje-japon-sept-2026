@@ -1,7 +1,12 @@
 import { useState } from "react";
 import { Train, Ticket, CheckCircle2, ChevronDown, Clock, CreditCard, Lock, AlertTriangle, Eye, X, CalendarDays, MapPin } from "lucide-react";
+import { ticketAccentColor, ticketHeaderBackground, ticketSoftBackground } from "../utils/blockTheme";
 
 const CONFIRMATION_IMG = "/images/tickets/jr-west-shinano-4-nakatsugawa-nagoya-2026-09-15.png";
+
+// Cruce Alpes → Tokio (salida Magome / llegada hacia Tokio)
+const FROM_BLOCK = "alpes";
+const TO_BLOCK = "tokio";
 
 export default function ShinanoTicketCard({ onGoToDay } = {}) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -15,6 +20,9 @@ export default function ShinanoTicketCard({ onGoToDay } = {}) {
     collected: false,
     boarded: false,
   });
+  const headerBg = ticketHeaderBackground(FROM_BLOCK, TO_BLOCK);
+  const accent = ticketAccentColor(FROM_BLOCK, TO_BLOCK);
+  const softBg = ticketSoftBackground(FROM_BLOCK, TO_BLOCK);
 
   const toggleCheck = (id) => {
     if (["booked", "paid", "seats"].includes(id)) return;
@@ -33,13 +41,13 @@ export default function ShinanoTicketCard({ onGoToDay } = {}) {
         type="button"
         onClick={() => setIsExpanded(!isExpanded)}
         className="w-full text-left p-4 sm:p-5 text-white relative overflow-hidden transition-all hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-inset cursor-pointer"
-        style={{ background: "linear-gradient(135deg, #1d3557 0%, #0f2744 100%)" }}
+        style={{ background: headerBg }}
       >
         <div className="relative z-10 flex items-center justify-between gap-3">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 flex-1">
             <div>
               <div className="flex items-center gap-2 mb-1.5 opacity-90">
-                <Train size={14} className="text-sky-300" />
+                <Train size={14} className="text-sky-200" />
                 <p className="text-xs font-bold tracking-widest uppercase m-0">Nakatsugawa → Nagoya</p>
               </div>
               <h3 className="text-lg font-display font-bold m-0 leading-tight">
@@ -69,12 +77,12 @@ export default function ShinanoTicketCard({ onGoToDay } = {}) {
       </button>
 
       {onGoToDay && (
-        <div className="px-4 py-2.5 border-b flex items-center justify-between gap-2" style={{ borderColor: "var(--line)", background: "rgba(29,53,87,0.04)" }}>
+        <div className="px-4 py-2.5 border-b flex items-center justify-between gap-2" style={{ borderColor: "var(--line)", background: softBg }}>
           <button
             type="button"
             onClick={onGoToDay}
             className="inline-flex items-center gap-1.5 text-xs font-semibold rounded-full px-3 py-1.5 cursor-pointer border-none transition-opacity hover:opacity-80"
-            style={{ background: "#1d3557", color: "white" }}
+            style={{ background: accent, color: "white" }}
           >
             <CalendarDays size={13} />
             Ver día 9 en itinerario

@@ -1,5 +1,10 @@
 import { useState } from "react";
 import { Train, Ticket, CheckCircle2, ChevronDown, Clock, CreditCard, Lock, Info, MapPin, CalendarDays } from "lucide-react";
+import { ticketAccentColor, ticketHeaderBackground, ticketSoftBackground } from "../utils/blockTheme";
+
+// Cruce Kioto → Alpes
+const FROM_BLOCK = "kioto";
+const TO_BLOCK = "alpes";
 
 export default function ThunderbirdTicketCard({ onGoToDay } = {}) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -12,6 +17,9 @@ export default function ThunderbirdTicketCard({ onGoToDay } = {}) {
     pin: false,
     kept: false,
   });
+  const headerBg = ticketHeaderBackground(FROM_BLOCK, TO_BLOCK);
+  const accent = ticketAccentColor(FROM_BLOCK, TO_BLOCK);
+  const softBg = ticketSoftBackground(FROM_BLOCK, TO_BLOCK);
 
   const toggleCheck = (id) => {
     // Solo permitir interactuar con los que no vienen pre-marcados del código
@@ -30,14 +38,14 @@ export default function ThunderbirdTicketCard({ onGoToDay } = {}) {
       {/* Header (Toggle) */}
       <button 
         onClick={() => setIsExpanded(!isExpanded)}
-        className="w-full text-left p-4 sm:p-5 text-white relative overflow-hidden transition-all hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset cursor-pointer" 
-        style={{ background: "linear-gradient(135deg, #2e7d5b 0%, #1a4a35 100%)" }}
+        className="w-full text-left p-4 sm:p-5 text-white relative overflow-hidden transition-all hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-inset cursor-pointer" 
+        style={{ background: headerBg }}
       >
         <div className="relative z-10 flex items-center justify-between gap-3">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 flex-1">
             <div>
               <div className="flex items-center gap-2 mb-1.5 opacity-90">
-                <Train size={14} className="text-green-300" />
+                <Train size={14} className="text-green-200" />
                 <p className="text-xs font-bold tracking-widest uppercase m-0">Kioto → Kanazawa</p>
               </div>
               <h3 className="text-lg font-display font-bold m-0 leading-tight">
@@ -67,12 +75,12 @@ export default function ThunderbirdTicketCard({ onGoToDay } = {}) {
       </button>
 
       {onGoToDay && (
-        <div className="px-4 py-2.5 border-b flex items-center justify-between gap-2" style={{ borderColor: "var(--line)", background: "rgba(46,125,91,0.06)" }}>
+        <div className="px-4 py-2.5 border-b flex items-center justify-between gap-2" style={{ borderColor: "var(--line)", background: softBg }}>
           <button
             type="button"
             onClick={onGoToDay}
             className="inline-flex items-center gap-1.5 text-xs font-semibold rounded-full px-3 py-1.5 cursor-pointer border-none transition-opacity hover:opacity-80"
-            style={{ background: "#2e7d5b", color: "white" }}
+            style={{ background: accent, color: "white" }}
           >
             <CalendarDays size={13} />
             Ver día 6 en itinerario

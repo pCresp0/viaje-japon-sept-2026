@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { Zap, Ticket, CheckCircle2, ChevronDown, Clock, Smartphone, CreditCard, Eye, X, CalendarDays, MapPin, Luggage } from "lucide-react";
 import { groupMembers } from "./VisitJapanQRCard";
+import { ticketAccentColor, ticketHeaderBackground, ticketSoftBackground } from "../utils/blockTheme";
 
 const CONFIRMATION_IMG = "/images/tickets/smart-ex_nagoya-tokyo_nozomi358_2026-09-15.png";
+
+const FROM_BLOCK = "tokio";
+const TO_BLOCK = "tokio";
 
 // Asientos Car 12 · Smart EX reserva 2002 (misma lógica de asignación que Nozomi 53 día 1)
 const memberSeats = {
@@ -26,6 +30,9 @@ export default function NozomiNagoyaTicketCard({ onGoToDay } = {}) {
     luggage: false,
     email: false,
   });
+  const headerBg = ticketHeaderBackground(FROM_BLOCK, TO_BLOCK);
+  const accent = ticketAccentColor(FROM_BLOCK, TO_BLOCK);
+  const softBg = ticketSoftBackground(FROM_BLOCK, TO_BLOCK);
 
   const toggleCheck = (id) => {
     if (["booked", "paid", "seats"].includes(id)) return;
@@ -44,7 +51,7 @@ export default function NozomiNagoyaTicketCard({ onGoToDay } = {}) {
         type="button"
         onClick={() => setIsExpanded(!isExpanded)}
         className="w-full text-left p-4 sm:p-5 text-white relative overflow-hidden transition-all hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset cursor-pointer"
-        style={{ background: "linear-gradient(135deg, #1d3557 0%, #2a5286 100%)" }}
+        style={{ background: headerBg }}
       >
         <div className="relative z-10 flex items-center justify-between gap-3">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 flex-1">
@@ -80,12 +87,12 @@ export default function NozomiNagoyaTicketCard({ onGoToDay } = {}) {
       </button>
 
       {onGoToDay && (
-        <div className="px-4 py-2.5 border-b flex items-center justify-between gap-2" style={{ borderColor: "var(--line)", background: "rgba(29,53,87,0.04)" }}>
+        <div className="px-4 py-2.5 border-b flex items-center justify-between gap-2" style={{ borderColor: "var(--line)", background: softBg }}>
           <button
             type="button"
             onClick={onGoToDay}
             className="inline-flex items-center gap-1.5 text-xs font-semibold rounded-full px-3 py-1.5 cursor-pointer border-none transition-opacity hover:opacity-80"
-            style={{ background: "#1d3557", color: "white" }}
+            style={{ background: accent, color: "white" }}
           >
             <CalendarDays size={13} />
             Ver día 9 en itinerario

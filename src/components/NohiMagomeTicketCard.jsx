@@ -1,5 +1,9 @@
 import { useState } from "react";
 import { Bus, Ticket, CheckCircle2, ChevronDown, Clock, AlertTriangle, Info, MapPin, Eye, X, FileDown, CalendarDays } from "lucide-react";
+import { ticketAccentColor, ticketHeaderBackground, ticketSoftBackground } from "../utils/blockTheme";
+
+const FROM_BLOCK = "alpes";
+const TO_BLOCK = "alpes";
 
 export default function NohiMagomeTicketCard({ defaultExpanded = false, onGoToDay } = {}) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
@@ -13,6 +17,9 @@ export default function NohiMagomeTicketCard({ defaultExpanded = false, onGoToDa
     exchanged: false,
     boarded: false,
   });
+  const headerBg = ticketHeaderBackground(FROM_BLOCK, TO_BLOCK);
+  const accent = ticketAccentColor(FROM_BLOCK, TO_BLOCK);
+  const softBg = ticketSoftBackground(FROM_BLOCK, TO_BLOCK);
 
   const toggleCheck = (id) => {
     if (['booked', 'paid', 'seats'].includes(id)) return;
@@ -30,14 +37,14 @@ export default function NohiMagomeTicketCard({ defaultExpanded = false, onGoToDa
       {/* Header (Toggle) */}
       <button 
         onClick={() => setIsExpanded(!isExpanded)}
-        className="w-full text-left p-4 sm:p-5 text-white relative overflow-hidden transition-all hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-inset cursor-pointer" 
-        style={{ background: "linear-gradient(135deg, #b45309 0%, #78350f 100%)" }}
+        className="w-full text-left p-4 sm:p-5 text-white relative overflow-hidden transition-all hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-inset cursor-pointer" 
+        style={{ background: headerBg }}
       >
         <div className="relative z-10 flex items-center justify-between gap-3">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 flex-1">
             <div>
               <div className="flex items-center gap-2 mb-1.5 opacity-90">
-                <Bus size={14} className="text-amber-200" />
+                <Bus size={14} className="text-green-200" />
                 <p className="text-xs font-bold tracking-widest uppercase m-0">Takayama → Magome</p>
               </div>
               <h3 className="text-lg font-display font-bold m-0 leading-tight">
@@ -67,12 +74,12 @@ export default function NohiMagomeTicketCard({ defaultExpanded = false, onGoToDa
       </button>
 
       {onGoToDay && (
-        <div className="px-4 py-2.5 border-b flex items-center justify-between gap-2" style={{ borderColor: "var(--line)", background: "rgba(180,83,9,0.06)" }}>
+        <div className="px-4 py-2.5 border-b flex items-center justify-between gap-2" style={{ borderColor: "var(--line)", background: softBg }}>
           <button
             type="button"
             onClick={onGoToDay}
             className="inline-flex items-center gap-1.5 text-xs font-semibold rounded-full px-3 py-1.5 cursor-pointer border-none transition-opacity hover:opacity-80"
-            style={{ background: "#b45309", color: "white" }}
+            style={{ background: accent, color: "white" }}
           >
             <CalendarDays size={13} />
             Ver día 8 en itinerario
