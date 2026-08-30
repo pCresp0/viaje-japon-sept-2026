@@ -23,6 +23,33 @@ function getScheduleEmoji(text) {
   return null;
 }
 
+function formatSectionTitle(title) {
+  if (!title) return title;
+  
+  let emoji = "";
+  let text = title.trim();
+
+  const chars = Array.from(text);
+  const firstChar = chars[0];
+  
+  if (firstChar && !/[a-zA-Z0-9¿¡"'\(\)\[\]\{\}]/.test(firstChar)) {
+    emoji = firstChar;
+    text = chars.slice(1).join("").trim();
+  }
+
+  if (!emoji) {
+    if (/reserva/i.test(text)) emoji = "🎫";
+    else if (/transporte/i.test(text)) emoji = "🚍";
+    else if (/equipaje/i.test(text)) emoji = "🧳";
+    else emoji = "📌";
+  }
+
+  text = text.toLowerCase();
+  text = text.charAt(0).toUpperCase() + text.slice(1);
+
+  return `${emoji} ${text}`;
+}
+
 function CollapsibleScheduleItem({ s, color }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -36,7 +63,7 @@ function CollapsibleScheduleItem({ s, color }) {
         <div className="flex-1">
           {s.time && (
             <p className="font-display text-[15px] sm:text-[16px] font-extrabold flex items-center gap-1.5 tracking-tight m-0" style={{ color: color }}>
-              {s.time}
+              {formatSectionTitle(s.time)}
             </p>
           )}
         </div>
