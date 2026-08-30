@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { ScrollText, ChevronDown, ChevronUp, Map, BookOpen, List, X } from "lucide-react";
 import { useContent } from "../i18n/LanguageContext";
@@ -133,6 +133,15 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
   // Días de puro traslado (vuelo de ida/vuelta) no tienen ninguna parada
   // propia en el mapa — en esos casos no tiene sentido ofrecer "Ver mapa".
   const hasMapStops = mapStops.some((s) => parseDayNumbers(s.day).includes(day.num));
+
+  useEffect(() => {
+    if (!selectedGuide) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [selectedGuide]);
 
   return (
     <article
@@ -382,38 +391,60 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
         )}
       </div>
 
-      {/* Guide Info Modal */}
+      {/* Guide Info Modal — ficha limpia, no otra tarjeta acordeón encima */}
       {selectedGuide && createPortal(
-        <div className="modal-overlay" onClick={() => setSelectedGuide(null)}>
-          <div 
-            className="modal-sheet" 
-            onClick={(e) => e.stopPropagation()} 
-            style={{ position: "relative", padding: "32px 16px 20px 16px" }}
+        <div
+          className="modal-overlay"
+          style={{ zIndex: 120 }}
+          onClick={() => setSelectedGuide(null)}
+          role="presentation"
+        >
+          <div
+            className="modal-sheet"
+            role="dialog"
+            aria-modal="true"
+            aria-label={guides[selectedGuide]?.name || "Info del lugar"}
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              maxHeight: "min(88vh, 100%)",
+              overflow: "hidden",
+              padding: 0,
+              width: "100%",
+              maxWidth: 560,
+            }}
           >
-            <button
-              onClick={() => setSelectedGuide(null)}
-              aria-label="Cerrar info"
+            <div
+              className="modal-sheet-header"
               style={{
-                position: "absolute",
-                top: 14,
-                right: 14,
-                zIndex: 30,
-                width: 32,
-                height: 32,
-                borderRadius: "50%",
-                background: "rgba(0, 0, 0, 0.4)",
-                color: "#ffffff",
-                border: "1px solid rgba(255, 255, 255, 0.3)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                cursor: "pointer",
-                boxShadow: "0 2px 8px rgba(0,0,0,0.2)"
+                justifyContent: "flex-end",
+                padding: "12px 12px 8px",
+                borderBottom: "1px solid var(--line)",
+                flexShrink: 0,
               }}
             >
-              <X size={18} />
-            </button>
-            <GuideCard id={selectedGuide} accent={block.color} defaultOpen />
+              <button
+                type="button"
+                className="modal-close-btn"
+                onClick={() => setSelectedGuide(null)}
+                aria-label="Cerrar info"
+              >
+                <X size={16} />
+              </button>
+            </div>
+            <div
+              className="modal-sheet-body"
+              style={{
+                overflowY: "auto",
+                WebkitOverflowScrolling: "touch",
+                flex: 1,
+                minHeight: 0,
+                padding: "8px 20px calc(24px + env(safe-area-inset-bottom, 0px))",
+              }}
+            >
+              <GuideCard id={selectedGuide} accent={block.color} variant="modal" />
+            </div>
           </div>
         </div>,
         document.body

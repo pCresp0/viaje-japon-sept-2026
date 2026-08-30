@@ -12,15 +12,126 @@ const franchiseStyle = {
   pelicula: { label: "Película", emoji: "🎬", color: "#6b3fa0" },
 };
 
+function GuideBody({ guide, refs, localImage, accent }) {
+  return (
+    <>
+      {localImage && (
+        <figure style={{ margin: "0 0 14px" }}>
+          <img
+            src={localImage}
+            alt={guide.name}
+            loading="lazy"
+            style={{
+              width: "100%", aspectRatio: "16 / 10", objectFit: "cover",
+              borderRadius: 10, display: "block",
+              background: "var(--paper)",
+            }}
+          />
+          <figcaption style={{
+            fontSize: 10.5, color: "var(--ink-soft)", marginTop: 5,
+            display: "flex", justifyContent: "flex-end",
+          }}>
+            Foto: Wikimedia Commons
+          </figcaption>
+        </figure>
+      )}
+
+      {guide.sections.map((s, i) => (
+        <div key={i} style={{ marginBottom: 14 }}>
+          <p style={{
+            fontSize: 12, fontWeight: 700, color: accent,
+            letterSpacing: "0.02em", marginBottom: 4,
+          }}>
+            {s.title}
+          </p>
+          <p style={{ fontSize: 13.5, color: "var(--ink)", lineHeight: 1.65 }}>
+            {s.body}
+          </p>
+        </div>
+      ))}
+
+      {refs?.length > 0 && (
+        <div style={{ marginTop: 4, marginBottom: 14, display: "flex", flexDirection: "column", gap: 8 }}>
+          {refs.map((ref, i) => {
+            const fs = franchiseStyle[ref.franchise];
+            return (
+              <div key={i} style={{
+                border: `1px solid ${fs.color}33`,
+                background: `${fs.color}0d`,
+                borderRadius: 10, padding: "10px 12px",
+              }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 5 }}>
+                  <span style={{
+                    fontSize: 10, fontWeight: 700, color: "#fff",
+                    background: fs.color, padding: "2px 8px", borderRadius: 20,
+                    letterSpacing: "0.02em", display: "inline-flex", alignItems: "center", gap: 4,
+                  }}>
+                    {fs.emoji} {fs.label}
+                  </span>
+                  <span style={{ fontSize: 12, fontWeight: 700, color: "var(--ink)" }}>
+                    {ref.title}
+                  </span>
+                </div>
+                <p style={{ fontSize: 12.5, color: "var(--ink)", lineHeight: 1.6, margin: 0, whiteSpace: "pre-line" }}>
+                  {ref.detail}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      {guide.curiosities?.length > 0 && (
+        <div style={{
+          background: "var(--paper)", borderRadius: 10,
+          padding: "12px 14px", marginTop: 4, marginBottom: 12,
+        }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 8 }}>
+            <Sparkles size={13} style={{ color: "var(--gold)" }} />
+            <span style={{
+              fontSize: 11, fontWeight: 700, color: "var(--ink-soft)",
+              letterSpacing: "0.06em", textTransform: "uppercase",
+            }}>
+              Curiosidades
+            </span>
+          </div>
+          <ul style={{ margin: 0, paddingLeft: 16, display: "flex", flexDirection: "column", gap: 6 }}>
+            {guide.curiosities.map((c, i) => (
+              <li key={i} style={{ fontSize: 12.5, color: "var(--ink)", lineHeight: 1.6 }}>
+                {c}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {guide.tip && (
+        <div style={{
+          display: "flex", gap: 8, alignItems: "flex-start",
+          background: accent + "0f", borderRadius: 10, padding: "10px 12px",
+        }}>
+          <Lightbulb size={14} style={{ color: accent, flexShrink: 0, marginTop: 1 }} />
+          <p style={{ fontSize: 12.5, color: "var(--ink)", lineHeight: 1.6, margin: 0 }}>
+            {guide.tip}
+          </p>
+        </div>
+      )}
+    </>
+  );
+}
+
 /**
  * Tarjeta plegable con la guía detallada de un lugar.
- * Por defecto está cerrada: sólo muestra el nombre y una línea de resumen,
- * para no convertir cada día en un muro de texto.
- * Con defaultOpen={true} (p. ej. desde el botón Info del itinerario) se abre
- * ya desplegada para ahorrar un clic.
+ * - variant="accordion" (default): plegable en el listado del día.
+ * - variant="modal": ficha completa sin acordeón, para el modal de Info.
  */
-export default function GuideCard({ id, accent = "#1d3557", defaultOpen = false }) {
-  const [open, setOpen] = useState(defaultOpen);
+export default function GuideCard({
+  id,
+  accent = "#1d3557",
+  defaultOpen = false,
+  variant = "accordion",
+}) {
+  const [open, setOpen] = useState(defaultOpen || variant === "modal");
   const guide = guides[id];
   const refs = popCulture[id];
   const localImage = guideImages[id] ?? null;
@@ -28,9 +139,8 @@ export default function GuideCard({ id, accent = "#1d3557", defaultOpen = false 
   const anchorId = slug("guide", id);
   const isHighlighted = highlightId === anchorId;
   const cardRef = useRef(null);
+  const isModal = variant === "modal";
 
-  // Si llegamos desde el buscador o desde el itinerario, se abre solo
-  // (aunque estuviera cerrado) y se hace scroll hasta el inicio de la tarjeta.
   useEffect(() => {
     if (isHighlighted) {
       setOpen(true);
@@ -42,6 +152,45 @@ export default function GuideCard({ id, accent = "#1d3557", defaultOpen = false 
   }, [isHighlighted]);
 
   if (!guide) return null;
+
+  if (isModal) {
+    return (
+      <div ref={cardRef}>
+        <div className="flex items-start gap-3 mb-4">
+          <div
+            style={{
+              width: 36, height: 36, borderRadius: 10, flexShrink: 0,
+              background: accent + "18",
+              display: "flex", alignItems: "center", justifyContent: "center",
+            }}
+          >
+            <BookOpen size={17} style={{ color: accent }} />
+          </div>
+          <div className="flex-1 min-w-0 pr-8">
+            <div style={{ display: "flex", alignItems: "baseline", gap: 7, flexWrap: "wrap" }}>
+              <h3 style={{ fontSize: 18, fontWeight: 800, color: "var(--ink)", margin: 0, fontFamily: "var(--font-display, inherit)" }}>
+                {guide.name}
+              </h3>
+              <span style={{ fontSize: 13, color: "var(--ink-soft)" }}>
+                {guide.jp}
+              </span>
+              {refs?.length > 0 && (
+                <span title="Tiene referencias de Pokémon/Digimon/cine" style={{ fontSize: 13 }}>
+                  {refs.some(r => r.franchise === "pokemon") && "⚡"}
+                  {refs.some(r => r.franchise === "digimon") && "🔷"}
+                  {refs.some(r => r.franchise === "pelicula") && "🎬"}
+                </span>
+              )}
+            </div>
+            <p style={{ fontSize: 13, color: "var(--ink-soft)", lineHeight: 1.45, margin: "4px 0 0" }}>
+              {guide.founded || guide.tagline}
+            </p>
+          </div>
+        </div>
+        <GuideBody guide={guide} refs={refs} localImage={localImage} accent={accent} />
+      </div>
+    );
+  }
 
   return (
     <div
@@ -55,11 +204,11 @@ export default function GuideCard({ id, accent = "#1d3557", defaultOpen = false 
         transition: "border-color 0.2s",
       }}
     >
-      {/* Cabecera pulsable */}
       <button
+        type="button"
         onClick={() => setOpen((o) => !o)}
-        className="w-full text-left flex items-start gap-3 px-4 py-3"
-        style={{ background: open ? accent + "0a" : "transparent", transition: "background 0.2s" }}
+        className="w-full text-left flex items-start gap-3 px-4 py-3 cursor-pointer"
+        style={{ background: open ? accent + "0a" : "transparent", transition: "background 0.2s", border: "none" }}
       >
         <div
           style={{
@@ -113,111 +262,9 @@ export default function GuideCard({ id, accent = "#1d3557", defaultOpen = false 
         </div>
       </button>
 
-      {/* Contenido desplegado */}
       {open && (
         <div className="px-4 pb-4" style={{ borderTop: "1px solid var(--line)", paddingTop: 14 }}>
-          {/* Foto del lugar (Wikimedia Commons, licencia libre, imagen local) */}
-          {localImage && (
-            <figure style={{ margin: "0 0 14px" }}>
-              <img
-                src={localImage}
-                alt={guide.name}
-                loading="lazy"
-                style={{
-                  width: "100%", aspectRatio: "16 / 10", objectFit: "cover",
-                  borderRadius: 10, display: "block",
-                  background: "var(--paper)",
-                }}
-              />
-              <figcaption style={{
-                fontSize: 10.5, color: "var(--ink-soft)", marginTop: 5,
-                display: "flex", justifyContent: "flex-end",
-              }}>
-                Foto: Wikimedia Commons
-              </figcaption>
-            </figure>
-          )}
-
-          {guide.sections.map((s, i) => (
-            <div key={i} style={{ marginBottom: 14 }}>
-              <p style={{
-                fontSize: 12, fontWeight: 700, color: accent,
-                letterSpacing: "0.02em", marginBottom: 4,
-              }}>
-                {s.title}
-              </p>
-              <p style={{ fontSize: 13.5, color: "var(--ink)", lineHeight: 1.65 }}>
-                {s.body}
-              </p>
-            </div>
-          ))}
-
-          {refs?.length > 0 && (
-            <div style={{ marginTop: 4, marginBottom: 14, display: "flex", flexDirection: "column", gap: 8 }}>
-              {refs.map((ref, i) => {
-                const fs = franchiseStyle[ref.franchise];
-                return (
-                  <div key={i} style={{
-                    border: `1px solid ${fs.color}33`,
-                    background: `${fs.color}0d`,
-                    borderRadius: 10, padding: "10px 12px",
-                  }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 5 }}>
-                      <span style={{
-                        fontSize: 10, fontWeight: 700, color: "#fff",
-                        background: fs.color, padding: "2px 8px", borderRadius: 20,
-                        letterSpacing: "0.02em", display: "inline-flex", alignItems: "center", gap: 4,
-                      }}>
-                        {fs.emoji} {fs.label}
-                      </span>
-                      <span style={{ fontSize: 12, fontWeight: 700, color: "var(--ink)" }}>
-                        {ref.title}
-                      </span>
-                    </div>
-                    <p style={{ fontSize: 12.5, color: "var(--ink)", lineHeight: 1.6, margin: 0, whiteSpace: "pre-line" }}>
-                      {ref.detail}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-          )}
-
-          {guide.curiosities?.length > 0 && (
-            <div style={{
-              background: "var(--paper)", borderRadius: 10,
-              padding: "12px 14px", marginTop: 4, marginBottom: 12,
-            }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 8 }}>
-                <Sparkles size={13} style={{ color: "var(--gold)" }} />
-                <span style={{
-                  fontSize: 11, fontWeight: 700, color: "var(--ink-soft)",
-                  letterSpacing: "0.06em", textTransform: "uppercase",
-                }}>
-                  Curiosidades
-                </span>
-              </div>
-              <ul style={{ margin: 0, paddingLeft: 16, display: "flex", flexDirection: "column", gap: 6 }}>
-                {guide.curiosities.map((c, i) => (
-                  <li key={i} style={{ fontSize: 12.5, color: "var(--ink)", lineHeight: 1.6 }}>
-                    {c}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {guide.tip && (
-            <div style={{
-              display: "flex", gap: 8, alignItems: "flex-start",
-              background: accent + "0f", borderRadius: 10, padding: "10px 12px",
-            }}>
-              <Lightbulb size={14} style={{ color: accent, flexShrink: 0, marginTop: 1 }} />
-              <p style={{ fontSize: 12.5, color: "var(--ink)", lineHeight: 1.6 }}>
-                {guide.tip}
-              </p>
-            </div>
-          )}
+          <GuideBody guide={guide} refs={refs} localImage={localImage} accent={accent} />
         </div>
       )}
     </div>
