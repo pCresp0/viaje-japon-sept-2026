@@ -53,7 +53,7 @@ function FitBounds({ markers }) {
   useEffect(() => {
     if (!markers || markers.length === 0) return;
     const bounds = L.latLngBounds(markers.map((s) => [s.lat, s.lng]));
-    map.fitBounds(bounds, { padding: [36, 36], maxZoom: 10 });
+    map.fitBounds(bounds, { padding: [50, 50], maxZoom: 15 });
   }, [map, markers]);
   return null;
 }
