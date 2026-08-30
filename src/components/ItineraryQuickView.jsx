@@ -90,7 +90,7 @@ function hasRealTime(entry) {
   return /^~?\d{1,2}[:h]\d{0,2}/.test(entry.time ?? "");
 }
 
-function QuickDayCard({ day, blockColor, onShowFullDay }) {
+export function QuickDayCard({ day, blockColor, onShowFullDay }) {
   const [expanded, setExpanded] = useState(false);
 
   const keyEntries = (day.schedule ?? []).filter((e) => {

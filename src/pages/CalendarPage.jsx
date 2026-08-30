@@ -5,6 +5,7 @@ import DayCard from "../components/DayCard";
 import { X, CalendarPlus, Download, ExternalLink } from "lucide-react";
 import { days } from "../data/trip";
 import { downloadIcsCalendar } from "../utils/exportCalendar";
+import { QuickDayCard } from "../components/ItineraryQuickView";
 
 // blockColors removed, we use blocks from context now
 const blockEmoji = { kioto: "⛩️", alpes: "🏔️", tokio: "🗼" };
@@ -52,10 +53,12 @@ for (let wi = 0; wi < grid.length / 7; wi++) {
   if (week.some((d) => d && dayByDate[d])) weeks.push(week);
 }
 
-export default function CalendarPage({ onGoToDayQuickView }) {
+export default function CalendarPage() {
   const { days, blocks } = useContent();
   const t = useT();
-    const [showExportModal, setShowExportModal] = useState(false);
+  const [showExportModal, setShowExportModal] = useState(false);
+  const [selectedDayNum, setSelectedDayNum] = useState(null);
+  const [detailMode, setDetailMode] = useState(false);
   const selectedDay = selectedDayNum !== null ? days.find(d => d.num === selectedDayNum) : null;
   
   // blocks is an array, build a dictionary by id
@@ -145,13 +148,13 @@ export default function CalendarPage({ onGoToDayQuickView }) {
                 const blockData = tripDay ? blockMap[tripDay.block] : null;
                 const color = blockData ? blockData.color : "#bc4749";
                 const isWeekend = di >= 5;
-                const isSelected = false;
+                const isSelected = tripDay && tripDay.num === selectedDayNum;
                 const meta = tripDay ? dayHighlights[tripDay.num] : null;
                 
                 return (
                   <button
                     key={di}
-                    onClick={() => tripDay && onGoToDayQuickView(tripDay.num)}
+                    onClick={() => { if (tripDay) { setSelectedDayNum(tripDay.num); setDetailMode(false); } }}
                     style={{
                       borderRight: di < 6 ? "1px solid var(--line)" : "none",
                       borderTop: tripDay ? `3px solid ${color}` : "none",
@@ -225,6 +228,111 @@ export default function CalendarPage({ onGoToDayQuickView }) {
       </div>
 
       
+
+      {/* Day detail panel — right side (desktop only, fixed width) */}
+      {selectedDay && (
+        <div data-detail-panel style={{
+          display: "flex",
+          width: 380,
+          flexDirection: "column",
+          borderLeft: "1px solid var(--line)",
+          background: "var(--paper-raised)",
+          padding: 20,
+          overflowY: "auto",
+          height: "100%",
+          flexShrink: 0,
+          position: "relative",
+        }}>
+          <button
+            onClick={() => setSelectedDayNum(null)}
+            aria-label="Cerrar"
+            style={{
+              position: "absolute",
+              top: 28,
+              right: 28,
+              zIndex: 30,
+              background: "rgba(0, 0, 0, 0.4)",
+              color: "#ffffff",
+              border: "1px solid rgba(255, 255, 255, 0.3)",
+              borderRadius: "50%",
+              width: 32,
+              height: 32,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              cursor: "pointer",
+              boxShadow: "0 2px 8px rgba(0,0,0,0.2)"
+            }}
+          >
+            <X size={18} />
+          </button>
+          
+          {!detailMode ? (
+            <QuickDayCard 
+              day={selectedDay} 
+              blockColor={blockMap[selectedDay.block]?.color || "#1d3557"} 
+              onShowFullDay={() => setDetailMode(true)} 
+            />
+          ) : (
+            <DayCard 
+              day={selectedDay} 
+              defaultOpenHistory={true} 
+              onClose={() => setSelectedDayNum(null)} 
+              onShowQuickView={() => setDetailMode(false)} 
+            />
+          )}
+        </div>
+      )}
+
+      {/* Mobile modal overlay for day detail */}
+      {selectedDay && createPortal(
+        <div data-mobile-modal className="modal-overlay" onClick={() => setSelectedDayNum(null)}>
+          <div className="modal-sheet" onClick={(e) => e.stopPropagation()} style={{ position: "relative" }}>
+            <button
+              onClick={() => setSelectedDayNum(null)}
+              aria-label="Cerrar"
+              style={{
+                position: "absolute",
+                top: 14,
+                right: 14,
+                zIndex: 30,
+                width: 32,
+                height: 32,
+                borderRadius: "50%",
+                background: "rgba(0, 0, 0, 0.4)",
+                color: "#ffffff",
+                border: "1px solid rgba(255, 255, 255, 0.3)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.2)"
+              }}
+            >
+              <X size={18} />
+            </button>
+            <div style={{ padding: 0 }}>
+              {!detailMode ? (
+                <div className="p-4 pt-12">
+                  <QuickDayCard 
+                    day={selectedDay} 
+                    blockColor={blockMap[selectedDay.block]?.color || "#1d3557"} 
+                    onShowFullDay={() => setDetailMode(true)} 
+                  />
+                </div>
+              ) : (
+                <DayCard 
+                  day={selectedDay} 
+                  defaultOpenHistory={true} 
+                  onClose={() => setSelectedDayNum(null)} 
+                  onShowQuickView={() => setDetailMode(false)} 
+                />
+              )}
+            </div>
+          </div>
+        </div>,
+        document.body
+      )}
 
       {/* Export Calendar Modal */}
       {showExportModal && createPortal(

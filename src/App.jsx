@@ -148,7 +148,7 @@ export default function App() {
                 {tab === "historia"     && <HistoryPage />}
                 {tab === "inicio"       && <InicioPage onNavigate={setTab} />}
                 {tab === "hoy"          && <Home onGoToDay={goToDay} />}
-                {tab === "calendario"   && <CalendarPage onGoToDayQuickView={goToDayQuickView} />}
+                {tab === "calendario"   && <CalendarPage  />}
                 {tab === "itinerario"   && <Itinerary openDay={openDay} setOpenDay={setOpenDay} quickView={quickView} setQuickView={setQuickView} onGoToMapDay={goToMapDay} />}
                 {tab === "vuelos"       && <InfoPage />}
                 {tab === "hoteles"      && <HotelsPage />}
