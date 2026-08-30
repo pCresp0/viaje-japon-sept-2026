@@ -201,7 +201,9 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
 
         <div>
           <ol className="relative border-l-2 pl-4 space-y-4" style={{ borderColor: "var(--line)" }}>
-            {day.schedule.filter(s => s.time && /\d/.test(s.time)).map((s, i) => {
+            {(() => {
+              const renderedGuides = new Set();
+              return day.schedule.filter(s => s.time && /\d/.test(s.time)).map((s, i) => {
               const emoji = getScheduleEmoji(s.text);
               return (
                 <li key={i} className="relative">
@@ -221,8 +223,9 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
                   />
                   
                   {(() => {
-                    const matchedGuides = findMatchedGuideIds(s.text, dayGuides);
+                    const matchedGuides = findMatchedGuideIds(s.text, dayGuides).filter(gid => !renderedGuides.has(gid));
                     if (matchedGuides.length === 0) return null;
+                    matchedGuides.forEach(gid => renderedGuides.add(gid));
                     return (
                       <div className="flex flex-wrap gap-2 mt-2.5 mb-1 relative z-10">
                         {matchedGuides.map((gid) => {
@@ -258,7 +261,8 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
                   )}
                 </li>
               );
-            })}
+            });
+            })()}
           </ol>
 
           {day.schedule.filter(s => !s.time || !/\d/.test(s.time)).length > 0 && (
