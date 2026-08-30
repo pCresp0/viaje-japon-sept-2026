@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { MapPin, Utensils, Coffee, Mountain, ChevronDown } from "lucide-react";
 import GuideCard from "../components/GuideCard";
-import { days } from "../data/trip";
 import { formatDateShort } from "../utils/date";
-import { useT } from "../i18n/LanguageContext";
+import { useT, useContent } from "../i18n/LanguageContext";
 
 // Lugares que tienen guía detallada disponible (id del lugar → id de la guía)
 const guideFor = {
@@ -16,15 +15,6 @@ const guideFor = {
   meiji: "meiji-jingu",
   fuji: "fuji",
 };
-
-const dayByNum = Object.fromEntries(days.map((d) => [d.num, d]));
-
-function dayLabel(dayNum) {
-  if (dayNum == null) return null;
-  const d = dayByNum[dayNum];
-  if (!d) return `Día ${dayNum}`;
-  return `Día ${dayNum} · ${formatDateShort(d.date)}`;
-}
 
 /** Orden cronológico del viaje. `day` = nº de día del itinerario (null = flexible / opcional). */
 const places = [
@@ -81,8 +71,18 @@ function sortByTripDay(items) {
 
 export default function PlacesPage() {
   const t = useT();
+  const { days } = useContent();
   const [gygOpen, setGygOpen] = useState(false);
   const [kenOpen, setKenOpen] = useState(false);
+
+  const dayByNum = Object.fromEntries(days.map((d) => [d.num, d]));
+
+  function dayLabel(dayNum) {
+    if (dayNum == null) return null;
+    const d = dayByNum[dayNum];
+    if (!d) return `Día ${dayNum}`;
+    return `Día ${dayNum} · ${formatDateShort(d.date)}`;
+  }
 
   return (
     <div className="px-4 pt-3 pb-12">

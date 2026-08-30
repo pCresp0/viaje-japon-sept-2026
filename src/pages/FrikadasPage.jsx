@@ -1,19 +1,16 @@
 import { useState, useEffect, useRef } from "react";
 import { AlertTriangle, CalendarDays, ChevronDown, ExternalLink, MapPin, Sparkles, Ticket } from "lucide-react";
-import { useT } from "../i18n/LanguageContext";
+import { useT, useContent } from "../i18n/LanguageContext";
 import { frikSections } from "../data/frikadas";
 import { geekStops } from "../data/popCulture";
-import { days } from "../data/trip";
 import { stopStyle, stopsBySection, standaloneStops } from "../data/geekRouteMap";
 import { useHighlight } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 
-const dayInfo = Object.fromEntries(days.map((day) => [day.num, day]));
 const stopById = Object.fromEntries(geekStops.map((stop) => [stop.id, stop]));
 
-function RouteStop({ stop }) {
+function RouteStop({ stop, day }) {
   const state = stopStyle[stop.status];
-  const day = dayInfo[stop.day];
   return (
     <article className="rounded-xl overflow-hidden border mt-4" style={{ borderColor: state.color + "55", background: "var(--paper)" }}>
       <div className="px-3 py-2 flex items-center gap-2" style={{ background: state.color + "12", borderBottom: `1px solid ${state.color}30` }}>
@@ -107,7 +104,7 @@ function SectionCard({ section, stops = [], isOpen, onToggle }) {
               </p>
             </div>
           ))}
-          {stops.map((stop) => <RouteStop key={stop.id} stop={stop} />)}
+          {stops.map((stop) => <RouteStop key={stop.id} stop={stop} day={dayInfo[stop.day]} />)}
         </div>
       )}
     </div>
@@ -116,6 +113,8 @@ function SectionCard({ section, stops = [], isOpen, onToggle }) {
 
 export default function FrikadasPage() {
   const t = useT();
+  const { days } = useContent();
+  const dayInfo = Object.fromEntries(days.map((day) => [day.num, day]));
   const [openId, setOpenId] = useState(null);
   const { highlightId } = useHighlight();
 

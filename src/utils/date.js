@@ -1,4 +1,4 @@
-import { days, tripMeta } from "../data/trip";
+import { days as baseDays, tripMeta } from "../data/trip";
 
 // Returns today's local date as YYYY-MM-DD
 export function todayISO() {
@@ -17,10 +17,10 @@ export function getTripStatus() {
   if (today > tripMeta.end) {
     return { phase: "after" };
   }
-  const day = days.find((d) => d.date === today);
-  if (day) return { phase: "during", day };
+  const day = baseDays.find((d) => d.date === today);
+  if (day) return { phase: "during", dayNum: day.num };
   // fecha entre inicio y fin de viaje pero sin día definido (p.ej. 6 sept, día de vuelo de ida)
-  return { phase: "during", day: null };
+  return { phase: "during", dayNum: null };
 }
 
 export function diffDays(fromISO, toISO) {

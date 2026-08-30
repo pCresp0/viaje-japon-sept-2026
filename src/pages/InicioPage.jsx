@@ -1,13 +1,10 @@
 import { useState, useEffect } from "react";
 import { useContent, useT } from "../i18n/LanguageContext";
 import { PlaneTakeoff } from "lucide-react";
-import { flights } from "../data/trip";
 
-const DEPARTURE_ISO = `${flights.out.date}T09:05:00`;
-
-function getCountdown() {
+function getCountdown(departureIso) {
   const now = new Date();
-  const target = new Date(DEPARTURE_ISO);
+  const target = new Date(departureIso);
   const diff = target - now;
   if (diff <= 0) return null;
 
@@ -23,12 +20,13 @@ import { tabs as navTabs } from "../components/Nav";
 export default function InicioPage({ onNavigate }) {
   const { tripMeta, flights } = useContent();
   const t = useT();
-  const [countdown, setCountdown] = useState(getCountdown);
+  const DEPARTURE_ISO = `${flights.out.date}T09:05:00`;
+  const [countdown, setCountdown] = useState(() => getCountdown(DEPARTURE_ISO));
 
   useEffect(() => {
-    const timer = setInterval(() => setCountdown(getCountdown()), 1000);
+    const timer = setInterval(() => setCountdown(getCountdown(DEPARTURE_ISO)), 1000);
     return () => clearInterval(timer);
-  }, []);
+  }, [DEPARTURE_ISO]);
 
   const units = countdown
     ? [

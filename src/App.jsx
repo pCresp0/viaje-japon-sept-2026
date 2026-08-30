@@ -38,7 +38,7 @@ function defaultTab() {
 export default function App() {
   const [unlocked, setUnlocked] = useState(() => isUnlocked());
   const [tab, setTab] = useState(defaultTab);
-  const [openDay, setOpenDay] = useState(getTripStatus().day?.num ?? null);
+  const [openDay, setOpenDay] = useState(getTripStatus().dayNum ?? null);
   const [quickView, setQuickView] = useState(false);
   const [searchResult, setSearchResult] = useState(null);
   const [mapInitialDay, setMapInitialDay] = useState(null);

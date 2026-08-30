@@ -3,7 +3,6 @@ import { createPortal } from "react-dom";
 import { useContent, useT } from "../i18n/LanguageContext";
 import DayCard from "../components/DayCard";
 import { X, CalendarPlus, Download, ExternalLink } from "lucide-react";
-import { days } from "../data/trip";
 import { downloadIcsCalendar } from "../utils/exportCalendar";
 import { QuickDayCard } from "../components/ItineraryQuickView";
 
@@ -40,25 +39,25 @@ function buildGrid() {
 
 const grid = buildGrid();
 
-const dayByDate = {};
-days.forEach((d) => {
-  const dateNum = parseInt(d.date.split("-")[2]);
-  dayByDate[dateNum] = d;
-});
-
-// Solo semanas con algún día del viaje (quita la fila del 28–30, vacía)
-const weeks = [];
-for (let wi = 0; wi < grid.length / 7; wi++) {
-  const week = grid.slice(wi * 7, wi * 7 + 7);
-  if (week.some((d) => d && dayByDate[d])) weeks.push(week);
-}
-
 export default function CalendarPage() {
   const { days, blocks } = useContent();
   const t = useT();
   const [showExportModal, setShowExportModal] = useState(false);
   const [selectedDayNum, setSelectedDayNum] = useState(null);
   const [detailMode, setDetailMode] = useState(false);
+  
+  const dayByDate = {};
+  days.forEach((d) => {
+    const dateNum = parseInt(d.date.split("-")[2]);
+    dayByDate[dateNum] = d;
+  });
+
+  const weeks = [];
+  for (let wi = 0; wi < grid.length / 7; wi++) {
+    const week = grid.slice(wi * 7, wi * 7 + 7);
+    if (week.some((d) => d && dayByDate[d])) weeks.push(week);
+  }
+
   const selectedDay = selectedDayNum !== null ? days.find(d => d.num === selectedDayNum) : null;
   
   // blocks is an array, build a dictionary by id

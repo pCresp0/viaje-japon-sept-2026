@@ -44,16 +44,16 @@ export default function Home({ onGoToDay }) {
         </>
       )}
 
-      {status.phase === "during" && status.day && (
+      {status.phase === "during" && status.dayNum && (
         <div>
           <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>
-            {t("today.todayDay")} {status.day.num}
+            {t("today.todayDay")} {status.dayNum}
           </p>
-          <DayCard day={status.day} defaultOpenHistory={false} />
+          <DayCard day={days.find(d => d.num === status.dayNum)} defaultOpenHistory={false} />
         </div>
       )}
 
-      {status.phase === "during" && !status.day && (
+      {status.phase === "during" && !status.dayNum && (
         <div className="rounded-2xl p-5" style={{ background: "var(--paper-raised)", border: "1px solid var(--shu)" }}>
           <p className="eyebrow mb-2" style={{ color: "var(--shu)" }}>{t("today.travelDay")}</p>
           <p style={{ fontSize: 16, fontWeight: 600, color: "var(--ink)", marginBottom: 8 }}>

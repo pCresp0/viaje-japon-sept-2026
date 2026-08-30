@@ -1,7 +1,7 @@
+import React from "react";
 import { createPortal } from "react-dom";
-import { tripMeta, flights, stays, blocks, transports, budget } from "../data/trip";
+import { useContent, useT } from "../i18n/LanguageContext";
 import { guidesByDay } from "../data/guides";
-import { useContent } from "../i18n/LanguageContext";
 import { guideImages } from "../data/guideImages";
 import { popCulture } from "../data/popCulture";
 import { pendingItems } from "../data/pending";
@@ -11,11 +11,29 @@ import { foods } from "../data/foods";
 import { sections as prepSections } from "../pages/PrepPage";
 import { categories as phraseCategories, etiquette } from "../pages/PhrasesPage";
 import { emergencyNumbers, embassy } from "../pages/EmergencyPage";
+import { Plane, Train, Hotel, Euro, AlertCircle, Sparkles, CheckSquare, Clock } from "lucide-react";
+import { diffDays, formatDateLong, formatDayOfWeek, todayISO } from "../utils/date";
+import { formatTime } from "../utils/time";
 import { formatEur, formatJpyEur, YEN_PER_EUR } from "../utils/money";
 import { PASS_7_JPY, PASS_14_JPY, PASS_7_EUR, PASS_14_EUR } from "../data/jrPass";
 
+const iconMap = {
+  plane: Plane,
+  train: Train,
+  hotel: Hotel,
+  euro: Euro,
+  alert: AlertCircle,
+  sparkles: Sparkles,
+  check: CheckSquare,
+  clock: Clock
+};
+
 const franchiseLabel = { pokemon: "Pokémon", digimon: "Digimon", pelicula: "Película" };
 const PEOPLE = 5;
+
+export default function ItineraryPrintView({ days }) {
+  const { tripMeta, flights, stays, blocks, transports, budget } = useContent();
+  const t = useT();
 
 const CONFIRMED_TICKETS = [
   {
