@@ -9,6 +9,38 @@
 
 export const historyPeriods = [
   {
+    id: "religion",
+    era: "Desde los orígenes hasta hoy",
+    title: "Creencias: Sintoísmo y Budismo",
+    summary: "El alma de Japón: la convivencia pacífica y el sincretismo entre los kami autóctonos y el budismo continental.",
+    content: [
+      {
+        heading: "Sintoísmo (Shintō)",
+        text: "El Sintoísmo ('El camino de los dioses') es la religión autóctona de Japón. No tiene fundador, ni textos sagrados absolutos, ni dogmas estrictos. Se basa en la veneración de los 'kami', espíritus o deidades que habitan en la naturaleza (montañas, árboles milenarios, cascadas) y en conceptos abstractos o antepasados célebres. Se centra en la pureza ritual y la celebración de la vida. Los santuarios sintoístas se reconocen por sus puertas 'torii' (frecuentemente rojas), que marcan el paso de lo profano a lo sagrado. Durante el viaje, veréis este misticismo natural en lugares como el santuario Fushimi Inari o en los gigantescos árboles de los Alpes Japoneses.",
+      },
+      {
+        heading: "Budismo (Bukkyō)",
+        text: "El Budismo llegó a Japón en el siglo VI d.C. desde Corea y China. A diferencia del sintoísmo, trajo consigo una compleja doctrina filosófica sobre el sufrimiento, la reencarnación y la salvación, así como un arte y una arquitectura monumentales. Se instaló fuertemente en las clases gobernantes y transformó la cultura del país. Sus lugares de culto son los templos (tera / ji), que suelen tener pagodas, estatuas de Buda y enormes campanas. El Tōdai-ji en Nara y el Sanjūsangen-dō en Kioto son ejemplos impresionantes de su poderío.",
+      },
+      {
+        heading: "Sincretismo: 'Nacer sintoísta, morir budista'",
+        text: "En lugar de enfrentarse, ambas religiones se fusionaron (Shinbutsu-shūgō). Los kami pasaron a considerarse manifestaciones locales de los budas. Hoy en día, la mayoría de los japoneses practican ambas religiones según la ocasión: las celebraciones de la vida (nacimientos, bodas, festivales locales o Matsuri) se hacen por el rito sintoísta, mientras que los funerales y el culto a los antepasados se rigen por el rito budista. Esta coexistencia pacífica y pragmática es fundamental para entender la mentalidad japonesa moderna.",
+      },
+    ],
+    seeOnTrip: [
+      {
+        place: "Fushimi Inari-taisha",
+        desc: "El santuario sintoísta más importante dedicado a Inari (kami del arroz y los negocios), famoso por sus miles de toriis rojos.",
+        day: 1,
+      },
+      {
+        place: "Tōdai-ji",
+        desc: "El centro del budismo en el Japón antiguo, con la estatua de Buda de bronce más grande del mundo bajo el techo de madera más grande del mundo.",
+        day: 2,
+      },
+    ],
+  },
+  {
     id: "origenes",
     era: "14.000 a.C. – 300 d.C.",
     title: "Los orígenes: Jōmon y Yayoi",

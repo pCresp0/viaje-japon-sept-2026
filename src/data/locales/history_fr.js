@@ -1,5 +1,31 @@
 export const historyPeriods = [
   {
+    title: "Croyances : Shintoïsme et Bouddhisme",
+    summary: "L'âme du Japon : la coexistence pacifique et le syncrétisme entre les kami indigènes et le bouddhisme continental.",
+    content: [
+      {
+        heading: "Shintoïsme (Shintō)",
+        text: "Le shintoïsme ('La voie des dieux') est la religion autochtone du Japon. Il n'a pas de fondateur, de textes sacrés absolus ou de dogmes stricts. Il est basé sur la vénération des 'kami', des esprits ou divinités qui habitent la nature (montagnes, arbres centenaires, cascades) et des concepts abstraits ou des ancêtres célèbres. Il se concentre sur la pureté rituelle et la célébration de la vie. Les sanctuaires shintoïstes se reconnaissent à leurs portes 'torii' (souvent rouges), qui marquent le passage du profane au sacré. Pendant le voyage, vous verrez ce mysticisme naturel dans des endroits comme le sanctuaire Fushimi Inari ou les arbres gigantesques des Alpes japonaises.",
+      },
+      {
+        heading: "Bouddhisme (Bukkyō)",
+        text: "Le bouddhisme est arrivé au Japon au 6ème siècle après JC de Corée et de Chine. Contrairement au shintoïsme, il a apporté une doctrine philosophique complexe sur la souffrance, la réincarnation et le salut, ainsi qu'un art et une architecture monumentaux. Il s'est fortement implanté dans les classes dirigeantes et a transformé la culture du pays. Ses lieux de culte sont les temples (tera / ji), qui ont généralement des pagodes, des statues de Bouddha et d'énormes cloches. Tōdai-ji à Nara et Sanjūsangen-dō à Kyoto sont des exemples impressionnants de sa puissance.",
+      },
+      {
+        heading: "Syncrétisme : 'Naître shintoïste, mourir bouddhiste'",
+        text: "Au lieu de s'affronter, les deux religions ont fusionné (Shinbutsu-shūgō). Les kami en sont venus à être considérés comme des manifestations locales des bouddhas. Aujourd'hui, la plupart des Japonais pratiquent les deux religions selon l'occasion : les célébrations de la vie (naissances, mariages, fêtes locales ou Matsuri) se déroulent selon des rites shintoïstes, tandis que les funérailles et le culte des ancêtres sont régis par des rites bouddhistes. Cette coexistence pacifique et pragmatique est fondamentale pour comprendre la mentalité japonaise moderne.",
+      },
+    ],
+    seeOnTrip: [
+      {
+        desc: "Le sanctuaire shintoïste le plus important dédié à Inari (kami du riz et des affaires), célèbre pour ses milliers de portes torii rouges.",
+      },
+      {
+        desc: "Le centre du bouddhisme dans le Japon ancien, avec la plus grande statue de Bouddha en bronze au monde sous le plus grand toit en bois du monde.",
+      },
+    ],
+  },
+  {
     title: "Les Origines : Jōmon et Yayoi",
     summary: "Des chasseurs-cueilleurs avec la plus ancienne poterie du monde, et l'arrivée du riz qui a tout changé.",
     content: [

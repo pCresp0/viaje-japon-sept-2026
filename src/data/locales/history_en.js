@@ -1,5 +1,31 @@
 export const historyPeriods = [
   {
+    title: "Beliefs: Shintoism and Buddhism",
+    summary: "The soul of Japan: the peaceful coexistence and syncretism between native kami and continental Buddhism.",
+    content: [
+      {
+        heading: "Shintoism (Shintō)",
+        text: "Shintoism ('The way of the gods') is the native religion of Japan. It has no founder, no absolute sacred texts, and no strict dogmas. It is based on the veneration of 'kami', spirits or deities that inhabit nature (mountains, ancient trees, waterfalls) and abstract concepts or famous ancestors. It focuses on ritual purity and the celebration of life. Shinto shrines are recognized by their 'torii' gates (often red), which mark the passage from the profane to the sacred. During the trip, you will see this natural mysticism in places like the Fushimi Inari shrine or the gigantic trees of the Japanese Alps.",
+      },
+      {
+        heading: "Buddhism (Bukkyō)",
+        text: "Buddhism arrived in Japan in the 6th century AD from Korea and China. Unlike Shintoism, it brought a complex philosophical doctrine about suffering, reincarnation, and salvation, as well as monumental art and architecture. It strongly took hold in the ruling classes and transformed the country's culture. Its places of worship are temples (tera / ji), which usually have pagodas, Buddha statues, and huge bells. Tōdai-ji in Nara and Sanjūsangen-dō in Kyoto are impressive examples of its power.",
+      },
+      {
+        heading: "Syncretism: 'Born Shinto, die Buddhist'",
+        text: "Instead of clashing, both religions merged (Shinbutsu-shūgō). Kami came to be considered local manifestations of Buddhas. Today, most Japanese practice both religions depending on the occasion: life celebrations (births, weddings, local festivals or Matsuri) are held according to Shinto rites, while funerals and ancestor worship are governed by Buddhist rites. This peaceful and pragmatic coexistence is fundamental to understanding the modern Japanese mindset.",
+      },
+    ],
+    seeOnTrip: [
+      {
+        desc: "The most important Shinto shrine dedicated to Inari (kami of rice and business), famous for its thousands of red torii gates.",
+      },
+      {
+        desc: "The center of Buddhism in ancient Japan, with the world's largest bronze Buddha statue under the world's largest wooden roof.",
+      },
+    ],
+  },
+  {
     title: "The Origins: Jōmon and Yayoi",
     summary: "Hunter-gatherers with the oldest pottery in the world, and the arrival of rice that changed everything.",
     content: [

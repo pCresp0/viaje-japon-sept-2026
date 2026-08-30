@@ -1,5 +1,31 @@
 export const historyPeriods = [
   {
+    title: "Paniniwala: Shintoism at Buddhism",
+    summary: "Ang kaluluwa ng Hapon: ang mapayapang magkakasama at syncretism sa pagitan ng mga katutubong kami at ng Buddhism mula sa kontinente.",
+    content: [
+      {
+        heading: "Shintoism (Shintō)",
+        text: "Ang Shintoism ('Ang paraan ng mga diyos') ay ang katutubong relihiyon ng Japan. Wala itong tagapagtatag, walang tiyak na mga banal na teksto, at walang mahigpit na dogma. Nakabatay ito sa pagsamba sa mga 'kami', mga espiritu o diyos na naninirahan sa kalikasan (mga bundok, sinaunang puno, talon) at mga abstract na konsepto o kilalang ninuno. Nakatuon ito sa ritwal na kadalisayan at pagdiriwang ng buhay. Ang mga Shinto shrine ay nakikilala sa pamamagitan ng kanilang mga 'torii' gate (kadalasan ay pula), na nagmamarka ng paglipat mula sa ordinaryo patungo sa sagrado. Sa paglalakbay, makikita mo ang likas na mistisismo na ito sa mga lugar tulad ng Fushimi Inari shrine o ang malalaking puno ng Japanese Alps.",
+      },
+      {
+        heading: "Buddhism (Bukkyō)",
+        text: "Dumating ang Buddhism sa Japan noong ika-6 na siglo AD mula sa Korea at China. Hindi tulad ng Shintoism, nagdala ito ng isang kumplikadong pilosopikal na doktrina tungkol sa pagdurusa, reinkarnasyon, at kaligtasan, pati na rin ang monumental na sining at arkitektura. Matatag itong naitatag sa mga naghaharing uri at binago ang kultura ng bansa. Ang mga lugar ng pagsamba nito ay mga templo (tera / ji), na karaniwang may mga pagoda, mga rebulto ni Buddha, at malalaking kampana. Ang Tōdai-ji sa Nara at Sanjūsangen-dō sa Kyoto ay mga kahanga-hangang halimbawa ng kapangyarihan nito.",
+      },
+      {
+        heading: "Syncretism: 'Ipinanganak na Shinto, namatay na Buddhist'",
+        text: "Sa halip na mag-away, nagsanib ang dalawang relihiyon (Shinbutsu-shūgō). Ang mga kami ay naging mga lokal na pagpapakita ng mga Buddha. Ngayon, karamihan sa mga Hapones ay nagsasagawa ng parehong relihiyon depende sa okasyon: ang mga pagdiriwang ng buhay (mga kapanganakan, kasalan, lokal na pagdiriwang o Matsuri) ay ginaganap ayon sa mga ritwal ng Shinto, habang ang mga libing at pagsamba sa mga ninuno ay pinamamahalaan ng mga ritwal ng Buddhist. Ang mapayapa at pragmatikong pakikipamuhay na ito ay mahalaga sa pag-unawa sa modernong pag-iisip ng mga Hapones.",
+      },
+    ],
+    seeOnTrip: [
+      {
+        desc: "Ang pinakamahalagang Shinto shrine na nakatuon kay Inari (kami ng bigas at negosyo), sikat sa libu-libong pulang torii gate nito.",
+      },
+      {
+        desc: "Ang sentro ng Buddhism sa sinaunang Japan, kasama ang pinakamalaking bronze Buddha statue sa mundo sa ilalim ng pinakamalaking kahoy na bubong sa mundo.",
+      },
+    ],
+  },
+  {
     title: "Ang mga Pinagmulan: Jōmon at Yayoi",
     summary: "Mga mangangaso na may pinakalumang palayok sa mundo, at ang pagdating ng bigas na nagpabago sa lahat.",
     content: [
