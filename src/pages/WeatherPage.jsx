@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Cloud, CloudRain, Sun, CloudSun, MapPin, Droplets, Loader2, Info } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
+import { Cloud, CloudRain, Sun, CloudSun, MapPin, Droplets, Loader2, Info, RefreshCw } from "lucide-react";
 
 import { useContent } from "../i18n/LanguageContext";
 import { Highlightable } from "../context/HighlightContext";
@@ -34,70 +34,72 @@ export default function WeatherPage() {
   const { weatherData, dailyWeather, weatherLabels } = useContent();
   const [liveWeather, setLiveWeather] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [lastFetched, setLastFetched] = useState(null);
+
+  const fetchWeather = useCallback(async () => {
+    setLoading(true);
+    try {
+      const cities = Object.keys(cityCoords);
+      const lats = cities.map(c => cityCoords[c].lat).join(",");
+      const lons = cities.map(c => cityCoords[c].lon).join(",");
+      
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${lats}&longitude=${lons}&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FTokyo&forecast_days=16`;
+      
+      const res = await fetch(url);
+      const data = await res.json();
+      
+      const resultsArray = Array.isArray(data) ? data : [data];
+      
+      const weatherMap = {};
+      cities.forEach((city, index) => {
+        weatherMap[city] = resultsArray[index].daily;
+      });
+
+      const tripStartDate = new Date("2026-09-07T00:00:00+09:00");
+      
+      const updatedDaily = dailyWeather.map(d => {
+        const targetDate = new Date(tripStartDate);
+        targetDate.setDate(tripStartDate.getDate() + (d.day - 1));
+        const dateStr = targetDate.toISOString().split("T")[0];
+        
+        const cityData = weatherMap[d.city];
+        if (!cityData) return d;
+        
+        const dateIndex = cityData.time.indexOf(dateStr);
+        let high, low, rain, sky, condition, isFallback = false;
+
+        if (dateIndex !== -1) {
+          high = Math.round(cityData.temperature_2m_max[dateIndex]);
+          low = Math.round(cityData.temperature_2m_min[dateIndex]);
+          rain = cityData.precipitation_probability_max[dateIndex] || 0;
+          const wmo = cityData.weathercode[dateIndex];
+          sky = getSkyFromWMO(wmo);
+          condition = getConditionFromWMO(wmo);
+        } else {
+          high = Math.round(cityData.temperature_2m_max[0]);
+          low = Math.round(cityData.temperature_2m_min[0]);
+          rain = cityData.precipitation_probability_max[0] || 0;
+          const wmo = cityData.weathercode[0];
+          sky = getSkyFromWMO(wmo);
+          condition = getConditionFromWMO(wmo);
+          isFallback = true;
+        }
+        
+        return { ...d, high, low, rain, sky, condition, isFallback };
+      });
+      
+      setLiveWeather(updatedDaily);
+      setLastFetched(new Date());
+    } catch (err) {
+      console.error("Error fetching weather:", err);
+    } finally {
+      setLoading(false);
+    }
+  }, [dailyWeather]);
 
   useEffect(() => {
-    async function fetchWeather() {
-      try {
-        const cities = Object.keys(cityCoords);
-        const lats = cities.map(c => cityCoords[c].lat).join(",");
-        const lons = cities.map(c => cityCoords[c].lon).join(",");
-        
-        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lats}&longitude=${lons}&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FTokyo&forecast_days=16`;
-        
-        const res = await fetch(url);
-        const data = await res.json();
-        
-        // When passing multiple coords, Open-Meteo returns an array
-        const resultsArray = Array.isArray(data) ? data : [data];
-        
-        const weatherMap = {};
-        cities.forEach((city, index) => {
-          weatherMap[city] = resultsArray[index].daily;
-        });
-
-        const tripStartDate = new Date("2026-09-07T00:00:00+09:00");
-        
-        const updatedDaily = dailyWeather.map(d => {
-          const targetDate = new Date(tripStartDate);
-          targetDate.setDate(tripStartDate.getDate() + (d.day - 1));
-          const dateStr = targetDate.toISOString().split("T")[0];
-          
-          const cityData = weatherMap[d.city];
-          if (!cityData) return d;
-          
-          const dateIndex = cityData.time.indexOf(dateStr);
-          let high, low, rain, sky, condition, isFallback = false;
-
-          if (dateIndex !== -1) {
-            high = Math.round(cityData.temperature_2m_max[dateIndex]);
-            low = Math.round(cityData.temperature_2m_min[dateIndex]);
-            rain = cityData.precipitation_probability_max[dateIndex] || 0;
-            const wmo = cityData.weathercode[dateIndex];
-            sky = getSkyFromWMO(wmo);
-            condition = getConditionFromWMO(wmo);
-          } else {
-            // Fallback to today
-            high = Math.round(cityData.temperature_2m_max[0]);
-            low = Math.round(cityData.temperature_2m_min[0]);
-            rain = cityData.precipitation_probability_max[0] || 0;
-            const wmo = cityData.weathercode[0];
-            sky = getSkyFromWMO(wmo);
-            condition = getConditionFromWMO(wmo);
-            isFallback = true;
-          }
-          
-          return { ...d, high, low, rain, sky, condition, isFallback };
-        });
-        
-        setLiveWeather(updatedDaily);
-      } catch (err) {
-        console.error("Error fetching weather:", err);
-      } finally {
-        setLoading(false);
-      }
-    }
     fetchWeather();
-  }, [dailyWeather]);
+  }, [fetchWeather]);
 
   const displayWeather = liveWeather || dailyWeather;
 
@@ -108,13 +110,24 @@ export default function WeatherPage() {
           <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{weatherLabels.previsiones}</p>
           <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>{weatherLabels.climaCiudad}</h2>
         </div>
-        <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border bg-green-50/50 border-green-200 text-green-700 mt-1 shadow-sm">
-          {loading ? (
-            <Loader2 size={12} className="animate-spin" />
-          ) : (
-            <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+        <div className="flex flex-col items-end gap-1 mt-1">
+          <button 
+            onClick={() => !loading && fetchWeather()}
+            disabled={loading}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border bg-green-50 border-green-200 text-green-700 shadow-sm transition-colors hover:bg-green-100 disabled:opacity-70"
+          >
+            {loading ? (
+              <Loader2 size={12} className="animate-spin" />
+            ) : (
+              <RefreshCw size={12} />
+            )}
+            <span className="text-[10px] font-bold tracking-widest uppercase">{loading ? 'Cargando' : 'Actualizar'}</span>
+          </button>
+          {lastFetched && (
+            <span className="text-[9px] text-slate-400 font-medium mr-1">
+              {lastFetched.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+            </span>
           )}
-          <span className="text-[10px] font-bold tracking-widest uppercase">{loading ? 'Cargando' : 'En vivo'}</span>
         </div>
       </div>
 
