@@ -46,12 +46,27 @@ function getScheduleEmoji(text) {
 function formatSectionTitle(title) {
   if (!title) return title;
   
-  let text = title.trim();
-  const emojiMatch = text.match(/^([\p{Extended_Pictographic}\uFE0F\u200D\s]+)/u);
+  let text = String(title).trim();
   let emoji = "";
-  if (emojiMatch) {
-    emoji = emojiMatch[1].trim();
-    text = text.slice(emojiMatch[0].length).trim();
+
+  try {
+    const codePoints = Array.from(text);
+    let splitIdx = 0;
+    while (splitIdx < codePoints.length && /[^\p{L}\p{N}]/u.test(codePoints[splitIdx])) {
+      splitIdx++;
+    }
+    if (splitIdx > 0 && splitIdx < codePoints.length) {
+      emoji = codePoints.slice(0, splitIdx).join("").trim();
+      text = codePoints.slice(splitIdx).join("").trim();
+    } else if (splitIdx === codePoints.length) {
+      return title;
+    }
+  } catch {
+    const match = text.match(/^([^\w\s]+)/);
+    if (match) {
+      emoji = match[1].trim();
+      text = text.slice(match[0].length).trim();
+    }
   }
 
   if (!emoji) {
@@ -61,8 +76,10 @@ function formatSectionTitle(title) {
     else emoji = "📌";
   }
 
-  text = text.toLowerCase();
-  text = text.charAt(0).toUpperCase() + text.slice(1);
+  if (text.length > 0) {
+    text = text.toLowerCase();
+    text = text.charAt(0).toUpperCase() + text.slice(1);
+  }
 
   return emoji ? `${emoji} ${text}` : text;
 }

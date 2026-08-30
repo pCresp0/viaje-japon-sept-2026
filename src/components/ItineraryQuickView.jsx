@@ -77,8 +77,11 @@ function shortText(text = "") {
     .replace(/https?:\/\/[^\s)]+/g, "")
     .split("\n")[0]
     .trim();
-  // Quitar emojis iniciales duplicados (ej: 🛬, 🚄, 🏨, 🥩, •, -, etc.)
-  clean = clean.replace(/^[\p{Extended_Pictographic}\uFE0F\u200D\s•\-—:→]+/u, "").trim();
+  try {
+    clean = clean.replace(/^[\p{Extended_Pictographic}\uFE0F\u200D\s•\-—:→]+/u, "").trim();
+  } catch {
+    clean = clean.replace(/^[^\w\s•\-—:→]+/, "").trim();
+  }
   return clean.length > 95 ? clean.slice(0, 92) + "…" : clean;
 }
 
