@@ -9,13 +9,12 @@ import { ChevronRight, FileDown, Loader2, List, LayoutList } from "lucide-react"
 import { useHighlight } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 
-export default function Itinerary({ openDay, setOpenDay, onGoToMapDay }) {
+export default function Itinerary({ openDay, setOpenDay, quickView, setQuickView, onGoToMapDay }) {
   const { days, blocks } = useContent();
   const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
   const refs = useRef({});
   const { highlightId } = useHighlight();
   const [exporting, setExporting] = useState(false);
-  const [quickView, setQuickView] = useState(false);
 
   function handleExportPdf() {
     setExporting(true);
@@ -26,11 +25,15 @@ export default function Itinerary({ openDay, setOpenDay, onGoToMapDay }) {
   }
 
   useEffect(() => {
-    if (openDay == null || quickView) return;
-    const el = refs.current[openDay];
-    if (!el) return;
+    if (openDay == null) return;
     const t = window.setTimeout(() => {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (quickView) {
+        const el = document.getElementById(`quick-day-${openDay}`);
+        el?.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        const el = refs.current[openDay];
+        el?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     }, 50);
     return () => window.clearTimeout(t);
   }, [openDay, quickView]);

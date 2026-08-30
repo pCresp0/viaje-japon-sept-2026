@@ -38,6 +38,7 @@ export default function App() {
   const [unlocked, setUnlocked] = useState(() => isUnlocked());
   const [tab, setTab] = useState(defaultTab);
   const [openDay, setOpenDay] = useState(getTripStatus().day?.num ?? null);
+  const [quickView, setQuickView] = useState(false);
   const [searchResult, setSearchResult] = useState(null);
   const [mapInitialDay, setMapInitialDay] = useState(null);
   const scrollContainerRef = useRef(null);
@@ -45,10 +46,17 @@ export default function App() {
 
   function goToDay(num) {
     setOpenDay(num);
+    setQuickView(false); // Default to full view when searching/home
     setTab("itinerario");
     // Mismo pulso dorado que usa el buscador: confirma visualmente a qué
     // día concreto se ha saltado, venga la navegación de "Hoy" o del mapa.
     window.setTimeout(() => triggerHighlight(slug("itinerary-day", num)), 120);
+  }
+
+  function goToDayQuickView(num) {
+    setOpenDay(num);
+    setQuickView(true);
+    setTab("itinerario");
   }
 
   function goToMapDay(num) {
@@ -140,8 +148,8 @@ export default function App() {
                 {tab === "historia"     && <HistoryPage />}
                 {tab === "inicio"       && <InicioPage onNavigate={setTab} />}
                 {tab === "hoy"          && <Home onGoToDay={goToDay} />}
-                {tab === "calendario"   && <CalendarPage />}
-                {tab === "itinerario"   && <Itinerary openDay={openDay} setOpenDay={setOpenDay} onGoToMapDay={goToMapDay} />}
+                {tab === "calendario"   && <CalendarPage onGoToDayQuickView={goToDayQuickView} />}
+                {tab === "itinerario"   && <Itinerary openDay={openDay} setOpenDay={setOpenDay} quickView={quickView} setQuickView={setQuickView} onGoToMapDay={goToMapDay} />}
                 {tab === "vuelos"       && <InfoPage />}
                 {tab === "hoteles"      && <HotelsPage />}
                 {tab === "transportes"  && <TransportPage onNavigate={handleSearchNavigate} />}
