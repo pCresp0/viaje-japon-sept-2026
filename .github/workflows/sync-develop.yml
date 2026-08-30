@@ -1,0 +1,38 @@
+name: Sync main to develop
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: {}
+
+jobs:
+  sync-branches:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout develop branch
+        uses: actions/checkout@v4
+        with:
+          ref: develop
+          fetch-depth: 0
+
+      - name: Merge main into develop
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+          
+          # Fetch the latest main
+          git fetch origin main
+          
+          # Merge main into develop
+          # We use --no-edit to accept the default merge message
+          # and || exit 1 to fail the job if there are conflicts
+          git merge origin/main --no-edit || {
+            echo "Merge conflict detected! Please resolve manually."
+            exit 1
+          }
+          
+          # Push the updated develop branch
+          git push origin develop
