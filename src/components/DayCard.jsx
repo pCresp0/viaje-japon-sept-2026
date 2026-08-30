@@ -202,8 +202,32 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
         <div>
           <ol className="relative border-l-2 pl-4 space-y-4" style={{ borderColor: "var(--line)" }}>
             {(() => {
-              const renderedGuides = new Set();
-              return day.schedule.filter(s => s.time && /\d/.test(s.time)).map((s, i) => {
+              const filteredSchedule = day.schedule.filter(s => s.time && /\d/.test(s.time));
+              const bestMatchForGuide = {};
+              if (dayGuides && dayGuides.length > 0) {
+                dayGuides.forEach(gid => {
+                  const meta = guideMeta[gid];
+                  if (!meta) return;
+                  let bestIndex = -1;
+                  let bestScore = -1000;
+                  filteredSchedule.forEach((s, i) => {
+                    if (!s.text) return;
+                    const normText = normalize(s.text);
+                    if (meta.keywords.some(kw => normText.includes(normalize(kw)))) {
+                      let score = 0;
+                      if (/\b(santuario|shrine|sanctuaire|templo|temple|castillo|castle|château|parque|park|parc|mercado|market|marché|aldea|village|jardín|garden|jardin)\b/i.test(s.text)) score += 10;
+                      if (/\b(despertar|wake|réveil|desayuno|breakfast|petit.?déjeuner|almusal|bus|tren|train|jr|station|estación|estacion|gare|istasyon|llegada|arrival|takeaway)\b/i.test(s.text)) score -= 10;
+                      if (score > bestScore) {
+                        bestScore = score;
+                        bestIndex = i;
+                      }
+                    }
+                  });
+                  if (bestIndex !== -1) bestMatchForGuide[gid] = bestIndex;
+                });
+              }
+
+              return filteredSchedule.map((s, i) => {
               const emoji = getScheduleEmoji(s.text);
               return (
                 <li key={i} className="relative">
@@ -223,9 +247,8 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
                   />
                   
                   {(() => {
-                    const matchedGuides = findMatchedGuideIds(s.text, dayGuides).filter(gid => !renderedGuides.has(gid));
+                    const matchedGuides = dayGuides.filter(gid => bestMatchForGuide[gid] === i);
                     if (matchedGuides.length === 0) return null;
-                    matchedGuides.forEach(gid => renderedGuides.add(gid));
                     return (
                       <div className="flex flex-wrap gap-2 mt-2.5 mb-1 relative z-10">
                         {matchedGuides.map((gid) => {

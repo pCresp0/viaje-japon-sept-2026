@@ -57,10 +57,10 @@ export const days = [
     "history": "Fushimi Inari is dedicated to Inari, the Shinto deity of rice, a fundamental element for the ancient Japanese economy. Nara was Japan's first permanent capital in the 8th century and is the cradle of Buddhism in the country.",
     "schedule": [
       {
-        "text": "Wake up. 🍙 Takeaway breakfast bought the night before. Eat before arriving at Fushimi Inari or during the journey."
+        "text": "Wake up. 🍙 Takeaway breakfast bought the night before. Eat before arriving at the shrine or during the journey."
       },
       {
-        "text": "🚆 JR Nara Line: Kyoto Station → Inari Station (~5 min). No reservation. Use IC card or buy a single ticket at the station. Inari Station is right next to Fushimi Inari."
+        "text": "🚆 JR Nara Line: Kyoto Station → Inari Station (~5 min). No reservation. Use IC card or buy a single ticket at the station. Inari Station is right next to the shrine."
       },
       {
         "text": "Fushimi Inari Shrine. 💡 Tip: arriving early is highly recommended to avoid major crowds. It is not necessary to climb to the top of Mount Inari; if pressed for time or tired, do a partial climb and return. Pablo won't have any trouble climbing, he goes to the gym to get strong for a reason."

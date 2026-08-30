@@ -57,10 +57,10 @@ export const days = [
     "history": "Ang Fushimi Inari ay nakatuon kay Inari, ang diyos ng Shinto ng bigas, isang pangunahing elemento para sa sinaunang ekonomiya ng Hapon. Ang Nara ay ang unang permanenteng kabisera ng Japan noong ika-8 siglo at siya ring pinagmulan ng Budismo sa bansa.",
     "schedule": [
       {
-        "text": "Gumising. 🍙 Takeaway almusal na binili kagabi. Kainin bago dumating sa Fushimi Inari o habang nagbibyahe."
+        "text": "Gumising. 🍙 Takeaway almusal na binili kagabi. Kainin bago dumating sa shrine o habang nagbibyahe."
       },
       {
-        "text": "🚆 JR Nara Line: Kyoto Station → Inari Station (~5 min). Walang reserbasyon. Gumamit ng IC card o bumili ng single ticket sa istasyon. Ang Inari Station ay nasa tabi mismo ng Fushimi Inari."
+        "text": "🚆 JR Nara Line: Kyoto Station → Inari Station (~5 min). Walang reserbasyon. Gumamit ng IC card o bumili ng single ticket sa istasyon. Ang Inari Station ay nasa tabi mismo ng shrine."
       },
       {
         "text": "Fushimi Inari Shrine. 💡 Tip: ang pagdating ng maaga ay lubos na inirerekomenda upang maiwasan ang maraming tao. Hindi kailangang umakyat hanggang sa tuktok ng Mount Inari; kung kapos sa oras o pagod, umakyat lang nang bahagya at bumalik. Walang kahirap-hirap itong akyatin para kay Pablo, pumupunta siya sa gym para lumakas."

@@ -57,10 +57,10 @@ export const days = [
     "history": "Fushimi Inari est dédié à Inari, la divinité shinto de riz, un élément fondamental pour l'ancienne économie japonaise. Nara a été la première capitale permanente du Japon au VIIIe siècle et est le berceau du bouddhisme dans le pays.",
     "schedule": [
       {
-        "text": "Réveil. 🍙 Petit-déjeuner à emporter acheté la veille. À manger avant d'arriver à Fushimi Inari ou pendant le trajet."
+        "text": "Réveil. 🍙 Petit-déjeuner à emporter acheté la veille. À manger avant d'arriver au sanctuaire ou pendant le trajet."
       },
       {
-        "text": "🚆 Ligne JR Nara : Kyoto Station → Inari Station (~5 min). Aucune réservation. Utilisez une carte IC ou achetez un billet simple à la gare. Inari Station est juste à côté de Fushimi Inari."
+        "text": "🚆 Ligne JR Nara : Kyoto Station → Inari Station (~5 min). Aucune réservation. Utilisez une carte IC ou achetez un billet simple à la gare. Inari Station est juste à côté du sanctuaire."
       },
       {
         "text": "Sanctuaire Fushimi Inari. 💡 Conseil : arriver tôt est vivement recommandé pour éviter les foules. Il n'est pas nécessaire de monter jusqu'au sommet du mont Inari ; si vous manquez de temps ou êtes fatigués, faites une montée partielle et revenez. Pablo n'aura aucun mal à monter, il va à la salle de sport pour devenir fort pour une raison."
