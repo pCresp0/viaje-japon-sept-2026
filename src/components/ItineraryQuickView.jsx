@@ -94,17 +94,12 @@ function hasRealTime(entry) {
 }
 
 export function QuickDayCard({ day, blockColor, onShowFullDay, onClose, standalone = false }) {
-  const [expanded, setExpanded] = useState(false);
-
   const keyEntries = (day.schedule ?? []).filter((e) => {
     if (isSkip(e)) return false;
     if (hasRealTime(e)) return true;
     const src = (e.time ?? "") + " " + (e.text ?? "");
     return /shinkansen|nozomi|vuelo|aterriza|tren|metro|bus|check.?in|regreso al hotel|visita|santuario|templo|castillo|museo|cena|comida|restaurante/i.test(src);
   });
-
-  const displayed = (standalone || expanded) ? keyEntries : keyEntries.slice(0, 5);
-  const hasMore = !standalone && keyEntries.length > 5;
 
   return (
     <div
@@ -162,7 +157,7 @@ export function QuickDayCard({ day, blockColor, onShowFullDay, onClose, standalo
               style={{ width: 1.5, background: "var(--line)" }}
             />
             <div className="space-y-2">
-              {displayed.map((entry, i) => {
+              {keyEntries.map((entry, i) => {
                 const emoji = detectEmoji(entry.time, entry.text);
                 const isHotelReturn =
                   /regreso al hotel|vuelta al hotel|descanso en hotel/i.test(
@@ -209,27 +204,6 @@ export function QuickDayCard({ day, blockColor, onShowFullDay, onClose, standalo
                 );
               })}
             </div>
-
-            {hasMore && (
-              <button
-                onClick={() => setExpanded((v) => !v)}
-                className="mt-2.5 flex items-center gap-1 text-xs font-semibold"
-                style={{
-                  marginLeft: "clamp(112px, 12vw, 140px)",
-                  color: "var(--shu)",
-                  background: "none",
-                  border: "none",
-                  padding: 0,
-                  cursor: "pointer",
-                }}
-              >
-                {expanded ? (
-                  <><ChevronUp size={13} /> Ver menos</>
-                ) : (
-                  <><ChevronDown size={13} /> +{keyEntries.length - 5} más</>
-                )}
-              </button>
-            )}
           </div>
         )}
       </div>
