@@ -229,6 +229,12 @@ export const furtherReading = {
   ],
   podcasts: [
     {
+      title: "Japón a fondo",
+      show: "Japonismo",
+      url: "https://podcasts.apple.com/es/podcast/jap%C3%B3n-a-fondo/id1545542012",
+      note: "El podcast en español por excelencia sobre Japón. Creado por los autores de Japonismo, cubre en detalle muchísimos destinos turísticos, historia, cultura y actualidad. Imprescindible.",
+    },
+    {
       title: "\"213. Japón, de los orígenes al imperialismo\"",
       show: "No es el fin del mundo",
       note: "Episodio de dos horas que recorre toda la historia japonesa, de los orígenes míticos a la Restauración Meiji. Buen punto de partida de conjunto antes del viaje.",

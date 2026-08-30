@@ -249,7 +249,15 @@ export default function HistoryPage() {
             <Highlightable key={i} id={slug("history", "podcasts", p.title)}>
               <div className="px-5 py-4"
                 style={{ borderBottom: i < furtherReading.podcasts.length - 1 ? "1px solid var(--line)" : "none" }}>
-                <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)" }}>{p.title}</p>
+                <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)" }}>
+                  {p.url ? (
+                    <a href={p.url} target="_blank" rel="noreferrer" style={{ textDecoration: "underline" }}>
+                      {p.title}
+                    </a>
+                  ) : (
+                    p.title
+                  )}
+                </p>
                 <p style={{ fontSize: 12, color: "var(--forest)", fontWeight: 600, marginTop: 1, marginBottom: 5 }}>{p.show}</p>
                 <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.6 }}>{p.note}</p>
               </div>
