@@ -110,13 +110,24 @@ function CollapsibleScheduleItem({ s, color }) {
 
       {isExpanded && (
         <div className="px-4 pb-4 pt-1">
-          <PlaceText
-            as="p"
-            text={s.text}
-            className="text-[14px] leading-snug whitespace-pre-wrap m-0"
-            style={{ color: "var(--ink)" }}
-            linkStyle={{ color: "var(--shu)" }}
-          />
+          {(() => {
+            let formattedText = s.text.replace(/\n{2,}/g, '\n');
+            if (!formattedText.trim().startsWith('**')) {
+              const match = formattedText.match(/^([^\.]{5,100}?)\.\s+/);
+              if (match) {
+                formattedText = `**${match[1]}.** ` + formattedText.slice(match[0].length);
+              }
+            }
+            return (
+              <PlaceText
+                as="p"
+                text={formattedText}
+                className="text-[14px] leading-snug whitespace-pre-wrap m-0"
+                style={{ color: "var(--ink)" }}
+                linkStyle={{ color: "var(--shu)" }}
+              />
+            );
+          })()}
         </div>
       )}
     </div>
@@ -258,6 +269,18 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
 
               return filteredSchedule.map((s, i) => {
               const emoji = getScheduleEmoji(s.text);
+              
+              // 1. Quitar los múltiples saltos de línea y dejarlos en uno solo
+              let formattedText = s.text.replace(/\n{2,}/g, '\n');
+              
+              // 2. Autoponer en negrita la primera frase si actúa como título
+              if (!formattedText.trim().startsWith('**')) {
+                const match = formattedText.match(/^([^\.]{5,100}?)\.\s+/);
+                if (match) {
+                  formattedText = `**${match[1]}.** ` + formattedText.slice(match[0].length);
+                }
+              }
+
               return (
                 <li key={i} className="relative">
                   <span
@@ -269,7 +292,7 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
                   </p>
                   <PlaceText
                     as="p"
-                    text={s.text}
+                    text={formattedText}
                     className="text-[14px] leading-snug mt-0.5 whitespace-pre-wrap"
                     style={{ color: "var(--ink)" }}
                     linkStyle={{ color: "var(--shu)" }}
