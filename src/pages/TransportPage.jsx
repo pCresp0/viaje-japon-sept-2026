@@ -86,11 +86,8 @@ export default function TransportPage({ onNavigate }) {
         </button>
       </div>
 
-      {/* Pill tabs — sticky */}
-      <div
-        className="sticky top-0 z-20 px-4 pb-3 pt-1"
-        style={{ background: "var(--paper)", borderBottom: "1px solid var(--line)" }}
-      >
+      {/* Segmented Control */}
+      <div className="px-4 mb-4">
         <div 
           className="flex p-1 rounded-xl relative z-0" 
           style={{ background: "rgba(29, 53, 87, 0.06)", border: "1px solid rgba(29, 53, 87, 0.08)" }}
