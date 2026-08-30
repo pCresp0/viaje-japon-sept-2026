@@ -23,7 +23,7 @@ export const days = [
   {
     "title": "Arrival in Japan",
     "cities": "Narita, Tokyo, Kyoto",
-    "summary": "Landing at Narita airport, customs procedures with Visit Japan Web QR code, and baggage claim. Transfer via Narita Express to Shinagawa and direct bullet train connection on the Shinkansen Nozomi to Kyoto for hotel check-in. We'll end the day with our first contact with the city, grabbing a quick dinner around the station.",
+    "summary": "Landing at Narita airport, customs procedures with Visit Japan Web QR code, and baggage claim. Transfer via Narita Express to Shinagawa and direct bullet train connection on the Shinkansen Nozomi to Kyoto for hotel check-in. We'll end the day with our first contact with the city, grabbing a quick dinner around the station. Randy is probably already comparing the reception to his hotel in Sol.",
     "history": "Kyoto was the imperial capital of Japan for over a thousand years, from 794 to 1868. It is the cultural and spiritual heart of the country. Having survived the bombings of World War II almost intact, it preserves much of its ancient traditional wooden architecture.",
     "schedule": [
       {
@@ -42,7 +42,7 @@ export const days = [
         "text": "The Nozomi arrives at JR Kyoto Station. Get off the Shinkansen and follow the signs to Hachijo East Exit (八条東口). Leave the station through that exit and in about a 5-minute walk you will reach the hotel (Hotel Keihan Kyoto Hachijoguchi). Check-in and dinner."
       },
       {
-        "text": "🍣 19:00–20:30 — DINNER: KAITEN-SUSHI UOGASHI. Recommended restaurant at AEON MALL KYOTO — Sakura Building, 4F (https://maps.app.goo.gl/ByDBQB6zaVZ3dj2E6). About 5 min walk from Kyoto Station Hachijo Exit (very convenient after arriving by Shinkansen). Kaiten-zushi (conveyor belt sushi). Guideline price: ¥2,000–3,000/person (~12–19€). Hours: 11:00–22:00 (last order approx 21:30). No reservation needed. What to try: assorted sushi; fresh fish pieces; nigiri; daily specials; a hot side dish. 💡 Tip: It's a good first dinner in Japan because you can order bit by bit and control how much you eat and spend. AEON MALL has other options on the same floor if it's full."
+        "text": "🍣 19:00–20:30 — DINNER: KAITEN-SUSHI UOGASHI. Recommended restaurant at AEON MALL KYOTO — Sakura Building, 4F (https://maps.app.goo.gl/ByDBQB6zaVZ3dj2E6). About 5 min walk from Kyoto Station Hachijo Exit (very convenient after arriving by Shinkansen). Kaiten-zushi (conveyor belt sushi). Guideline price: ¥2,000–3,000/person (~12–19€). Hours: 11:00–22:00 (last order approx 21:30). No reservation needed. What to try: assorted sushi; fresh fish pieces; nigiri; daily specials; a hot side dish. 💡 Tip: It's a good first dinner in Japan because you can order bit by bit and control how much you eat and spend. AEON MALL has other options on the same floor if it's full. I wish Randy would make us his famous spectacular lasagna today."
       },
       {
         "text": "⚠️ Buy breakfast for Day 2 tonight at a konbini because the departure is too early to have a relaxed breakfast at the hotel. Recommendation: 1–2 onigiri per person; egg sandwich; banana/fruit; coffee or drink; optional yogurt."
@@ -63,13 +63,13 @@ export const days = [
         "text": "🚆 JR Nara Line: Kyoto Station → Inari Station (~5 min). No reservation. Use IC card or buy a single ticket at the station. Inari Station is right next to Fushimi Inari."
       },
       {
-        "text": "Fushimi Inari Shrine. 💡 Tip: arriving early is highly recommended to avoid major crowds. It is not necessary to climb to the top of Mount Inari; if pressed for time or tired, do a partial climb and return."
+        "text": "Fushimi Inari Shrine. 💡 Tip: arriving early is highly recommended to avoid major crowds. It is not necessary to climb to the top of Mount Inari; if pressed for time or tired, do a partial climb and return. Pablo won't have any trouble climbing, he goes to the gym to get strong for a reason."
       },
       {
         "text": "🚆 JR Nara Line: Inari → Nara. Direct train to Nara, no transfers, approx. 50–55 min. No reservation required. In Inari, verify that the chosen service stops at Inari and continues to Nara."
       },
       {
-        "text": "🚌 From JR Nara Station → Tōdai-ji: Local Nara Kotsu bus to the Tōdai-ji Daibutsuden/Kasuga Taisha-mae area, then a few minutes walk. Alternative: taxi from JR Nara Station if tight on time. Walking is also possible but takes longer. Do not book in advance."
+        "text": "🚌 From JR Nara Station → Tōdai-ji: Local Nara Kotsu bus to the Tōdai-ji Daibutsuden/Kasuga Taisha-mae area, then a few minutes walk. Alternative: taxi from JR Nara Station if tight on time. Walking is also possible but takes longer. Do not book in advance. Let's see what Juancar tells us as a good historian with a PhD, he's surely read a book about this."
       },
       {
         "text": "🏯 Visit the Daibutsuden and the Great Buddha. The visit inside the Great Buddha is the main part; afterwards we can briefly tour the grounds. Do not book tickets in advance."
@@ -98,7 +98,7 @@ export const days = [
   {
     "title": "Northwest Kyoto and Bamboo",
     "cities": "Kyoto (Arashiyama)",
-    "summary": "We'll explore the northwest starting with the brilliant Golden Pavilion and the Kinukake no Michi trail. At noon, a tram takes us to Arashiyama, prioritizing the upper historic area before descending through the famous bamboo grove.",
+    "summary": "We'll explore the northwest starting with the brilliant Golden Pavilion and the Kinukake no Michi trail. At noon, a tram takes us to Arashiyama, prioritizing the upper historic area before descending through the famous bamboo grove. Sergio, don't take any bamboo for your plants in Aluche. Juancar is probably already looking for historical errors in the brochure.",
     "history": "Kinkakuji (Golden Pavilion) was the sumptuous retirement villa of the shogun Ashikaga Yoshimitsu in the late 14th century. Arashiyama has been a vacation destination for the imperial nobility since the Heian period.",
     "schedule": [
       {
@@ -168,15 +168,15 @@ export const days = [
         "text": "Geisha districts: Pontocho, crossing the Kamogawa river to Miyagawacho."
       },
       {
-        "text": "Stroll through Gion: Hanamikoji street to the Ichiriki teahouse, Shirakawa stream, and Tatsumi shrine. If you want to dine in Gion/Pontocho, it is usually better to start between 18:00 and 19:00. For kaiseki or very popular restaurants, book in advance; for casual options, stay flexible."
+        "text": "Stroll through Gion: Hanamikoji street to the Ichiriki teahouse, Shirakawa stream, and Tatsumi shrine. If you want to dine in Gion/Pontocho, it is usually better to start between 18:00 and 19:00. For kaiseki or very popular restaurants, book in advance; for casual options, stay flexible. Randy will be delighted with how quiet and peaceful they are here."
       }
     ],
     "money": "Approx. €40 (meals)"
   },
   {
-    "title": "Traditional Kyoto and Osaka Castle",
+    "title": "Traditional Kyoto and Osaka Castle Juancar, this castle has more history than you and Randy in Rome!",
     "cities": "Kyoto, Osaka",
-    "summary": "Last morning in Kyoto visiting the monumental Kiyomizu-dera and descending through the slopes of Higashiyama. At noon, a fast train to Osaka for its historic castle and the gastronomic madness of Dotonbori.",
+    "summary": "Last morning in Kyoto visiting the monumental Kiyomizu-dera and descending through the slopes of Higashiyama. At noon, a fast train to Osaka for its historic castle and the gastronomic madness of Dotonbori. Juancar and Randy will probably get nostalgic and prefer eating pasta in Rome where they met. Careful, Pablo might go into high school teacher mode and bore us to death.",
     "history": "Kiyomizu-dera was founded in 778; its terrace was built without using a single nail. Osaka Castle was the military epicenter of Toyotomi Hideyoshi, a key figure in the unification of Japan in the 16th century.",
     "schedule": [
       {
@@ -242,7 +242,7 @@ export const days = [
   {
     "title": "Kanazawa",
     "cities": "Kanazawa",
-    "summary": "We'll forward the large luggage to Tokyo and travel light towards the Sea of Japan coast. Day in Kanazawa: Kenroku-en (one of the country's best gardens), seafood, and ancient samurai districts.",
+    "summary": "We'll forward the large luggage to Tokyo and travel light towards the Sea of Japan coast. Day in Kanazawa: Kenroku-en (one of the country's best gardens), seafood, and ancient samurai districts. Surely the ice cream here isn't as good as the homemade fruit ones Sergio makes.",
     "history": "Kanazawa was the domain of the powerful Maeda clan during the Edo period, rivaling Kyoto in wealth and culture. Having escaped modern bombings, it preserves its feudal urban layout.",
     "schedule": [
       {
@@ -285,7 +285,7 @@ export const days = [
     "history": "Shirakawa-go is famous for its gassho-zukuri houses, with steep thatched roofs to withstand snow. Takayama prospered as a wealthy merchant city under the Tokugawa shogunate, thanks to its carpenters.",
     "schedule": [
       {
-        "text": "🍙 Wake up + Quick takeaway breakfast. Hotel Resol Trinity Kanazawa DOES NOT include breakfast in our booking. Although the hotel offers breakfast from 07:00, for this morning it is more practical to buy the night before at a konbini: onigiri, sandwich, fruit, coffee/drink. Do not rely on the hotel breakfast because we have to catch the 08:40 bus. Also prepare water to go."
+        "text": "🍙 Wake up + Quick takeaway breakfast. Hotel Resol Trinity Kanazawa DOES NOT include breakfast in our booking. Although the hotel offers breakfast from 07:00, for this morning it is more practical to buy the night before at a konbini: onigiri, sandwich, fruit, coffee/drink. Do not rely on the hotel breakfast because we have to catch the 08:40 bus. Also prepare water to go. Randy has probably already bought water for everyone because he's always so attentive."
       },
       {
         "text": "🚌 Nohi Bus Kanazawa → Shirakawa-go. Departure: 08:40. Reservation: 12GO31991741. 5 seats confirmed. Approximate duration: 1h25. Expected arrival: 10:05. Mandatory reservation for this service. It is not JR. Does not use Japan Rail Pass. Do not use IC card: we carry the bus reservation/ticket. 💡 Tip: Arrive at the stop with a margin. Have the reservation located on your mobile and/or an accessible copy."
@@ -348,7 +348,7 @@ export const days = [
         "text": "🧳 SEND LUGGAGE TO TSUMAGO (10:45–11:15). The service allows dropping bags at Magome tourist office between 08:30 and 11:30 (¥500/piece). We will pick them up in Tsumago after 13:00. IMPORTANT: We arrive at 10:45, plenty of time to drop off before 11:30. Carry only a small backpack during the hike with water, ID, mobile, power bank, and money. DO NOT carry large bags on the trail (it has rocks and elevation)."
       },
       {
-        "text": "🥾 Nakasendo Trail: Magome → Tsumago. Approx 8 km and 3 hours at a leisurely pace. The Magome → Tsumago direction has less uphill. Practical info: easy–moderate difficulty; well-marked trail; forest and asphalt sections; bring water. There are bear bells along the way, ring them as you pass."
+        "text": "🥾 Nakasendo Trail: Magome → Tsumago. Approx 8 km and 3 hours at a leisurely pace. The Magome → Tsumago direction has less uphill. Practical info: easy–moderate difficulty; well-marked trail; forest and asphalt sections; bring water. There are bear bells along the way, ring them as you pass. Juancar, we know that as a civil servant at the Reina Sofía you don't move much, but today we walk!"
       },
       {
         "text": "🍙 LUNCH / SNACK ON THE TRAIL (12:30–13:00). Bring food from Takayama/Magome. Do not rely on finding a restaurant during the hike. Buy: onigiri, sandwich, fruit, drink. Priority is not prolonging the hike as we must pick up luggage and catch the bus back to Magome. If an open teahouse is found, we can stop, but do not count on it."
@@ -396,7 +396,7 @@ export const days = [
       { "text": "~13:00 — Arrival at Tokyo Station. From Tokyo Station continue on public transport to KOKO HOTEL Residence Asakusa Kappabashi." },
       { "text": "🚇 TOKYO STATION → KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI\nThe hotel is at: 3-24-2 Nishi-Asakusa, Taito-ku.\nOptions:\nSimple option: JR from Tokyo → Ueno + Tokyo Metro Ginza Line Ueno → Tawaramachi + 10 min walk to the hotel.\nAlternatively: Tokyo → Ueno and then taxi if we carry a lot of luggage.\nThe hotel is approximately:\n- 4 min walk from Tsukuba Express Asakusa Station B\n- 10 min from Tawaramachi Station\n- 10 min from Iriya Station.\n\nDo not reserve this transport.\nIt is paid there using an IC card/ticket.\nWith 5 people and suitcases, if we are tired, consider a taxi from Tokyo Station directly to the hotel. It is not mandatory to reserve it." },
       { "text": "HOTEL\nArrival at KOKO HOTEL Residence Asakusa Kappabashi.\nOfficial check-in from 15:00.\nIf we arrive earlier, leave the suitcases at reception if the hotel allows it and head to Akihabara.\nThe hotel is very well located to continue to Akihabara by public transport." },
-      { "text": "Afternoon in Akihabara.\nVisit: Akihabara Electric Town, Radio Kaikan, Mandarake, electronics stores, anime/manga, figures, arcades, second-hand shops.\n\nMandarake Complex: 12:00–20:00. Open every day. Therefore, the 15:00 visit fits perfectly." },
+      { "text": "Afternoon in Akihabara.\nVisit: Akihabara Electric Town, Radio Kaikan, Mandarake, electronics stores, anime/manga, figures, arcades, second-hand shops.\n\nMandarake Complex: 12:00–20:00. Open every day. Therefore, the 15:00 visit fits perfectly. Sergio, you can't take anything from the dumpsters no matter what a 'bargain' it is, and you can't fit any more board games in your suitcase, you already have over 130! This is where Pablo will go crazy buying gadgets the AI tells him to." },
       { "text": "LUNCH\nSince breakfast will be early and the main meal will be on the Shinkansen, it is not necessary to reserve a meal in Akihabara.\nIf we are hungry upon arrival, eat something quick in Akihabara. Typical options: ramen, curry, gyudon, kaiten sushi, tonkatsu, Japanese fast food.\n\nDINNER\nLeave dinner for Akihabara or Asakusa.\nDo not assume all restaurants stay open very late.\nFor a specific restaurant and being 5 people, reserve if a popular one is decided on." },
       { "text": "1. 🚌 Magome → Nakatsugawa: 08:15 → 08:40. No reservation. ¥800 approx. Local payment.\n2. 🚆 Nakatsugawa → Nagoya: Limited Express Shinano 4. 09:57 → 10:53.\n\nRESERVATION RECOMMENDED for 5.\n3. 🚅 Nagoya → Tokyo: Nozomi. ~11:15–11:30 → ~13:00.\n\nRESERVE IN ADVANCE for 5.\n4. 🚇 Tokyo → Asakusa/Kappabashi: Metro/JR. No reservation. IC card.\n5. 🚇 Asakusa → Akihabara: Urban transport. No reservation. IC card." },
       { "text": "🔴 HIGH PRIORITY\n\nRESERVE Shinkansen Nozomi Nagoya → Tokyo for 5 people.\n\n🟠 MEDIUM PRIORITY\n\nRESERVE Limited Express Shinano 4 Nakatsugawa → Nagoya for 5 people.\n\n🟢 DO NOT RESERVE\nLocal bus Magome → Nakatsugawa.\n\n🟢 DO NOT RESERVE\nTokyo → hotel.\n\n🟢 DO NOT RESERVE\nUrban transport in Tokyo." },
@@ -426,13 +426,13 @@ export const days = [
     "money": "Approx. €40 (meals)"
   },
   {
-    "title": "Shibuya, Harajuku and Shinjuku",
+    "title": "Shibuya, Harajuku and Shinjuku Thibaut, take the chance to get a haircut, even if it's not as cheap as in Spain, it's still better than in France.",
     "cities": "Shibuya, Harajuku, Shinjuku",
     "summary": "Intense day: Shibuya crossing and youth culture of Harajuku. We end under the neon lights of Shinjuku with its gastronomic alleys. (Flexible GetYourGuide booking GYGFWV2MNZV8).",
     "history": "These districts grew after the Great Kanto Earthquake of 1923, driven by urban train expansion. Shinjuku today hosts the busiest train station on the planet.",
     "schedule": [
       {
-        "text": "Shibuya Crossing and Miyashita Park. Stop at the Pokémon Center Shibuya."
+        "text": "Shibuya Crossing and Miyashita Park. Stop at the Pokémon Center Shibuya. Watch out, Sergio will probably think about setting up an urban garden here for his plants in Aluche."
       },
       {
         "text": "Walk to Harajuku via Takeshita Street, ending at the Meiji Shrine in Yoyogi Park."
@@ -485,7 +485,7 @@ export const days = [
   {
     "title": "Exclusive Mount Fuji Excursion",
     "cities": "Mishima, Chureito Pagoda, Oshino Hakkai, Aokigahara, Shiraito, Fuji Lakes",
-    "summary": "Full-day tour (8 hours) in a private minivan with an official Spanish-speaking guide (Ken Kaneshima · Excursiones Fujiyama). Small group visiting Chureito Pagoda, ancient Kitaguchi Hongu shrine, traditional thatched-roof village of Oshino Hakkai, Aokigahara forest, Shiraito waterfalls and lake route. Tasting local star dish: Houtou noodles.",
+    "summary": "Full-day tour (8 hours) in a private minivan with an official Spanish-speaking guide (Ken Kaneshima · Excursiones Fujiyama). Small group visiting Chureito Pagoda, ancient Kitaguchi Hongu shrine, traditional thatched-roof village of Oshino Hakkai, Aokigahara forest, Shiraito waterfalls and lake route. Tasting local star dish: Houtou noodles. Thibaut, let's see if you can prove that CrossFit is good for something.",
     "history": "Mount Fuji (3,776m) is Japan's sacred volcano and undisputed symbol. For centuries it has been a place of Shinto pilgrimage and inspiration for artists like Hokusai.",
     "schedule": [
       {

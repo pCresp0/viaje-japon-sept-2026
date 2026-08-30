@@ -23,7 +23,7 @@ export const days = [
   {
     "title": "Pagdating sa Japan",
     "cities": "Narita, Tokyo, Kyoto",
-    "summary": "Paglapag sa airport ng Narita, mga proseso sa customs gamit ang Visit Japan Web QR code, at pagkuha ng bagahe. Paglipat gamit ang Narita Express papuntang Shinagawa at direktang koneksyon ng bullet train sa Shinkansen Nozomi papuntang Kyoto para sa hotel check-in. Tatapusin natin ang araw sa ating unang karanasan sa lungsod, sa pamamagitan ng mabilis na hapunan sa paligid ng istasyon.",
+    "summary": "Paglapag sa airport ng Narita, mga proseso sa customs gamit ang Visit Japan Web QR code, at pagkuha ng bagahe. Paglipat gamit ang Narita Express papuntang Shinagawa at direktang koneksyon ng bullet train sa Shinkansen Nozomi papuntang Kyoto para sa hotel check-in. Tatapusin natin ang araw sa ating unang karanasan sa lungsod, sa pamamagitan ng mabilis na hapunan sa paligid ng istasyon. Siguradong kinukumpara na ni Randy ang reception sa kanyang hotel sa Sol.",
     "history": "Ang Kyoto ang naging kabisera ng imperyo ng Japan sa loob ng mahigit isang libong taon, mula 794 hanggang 1868. Ito ang kultural at espirituwal na puso ng bansa. Matapos makaligtas nang buo sa mga pambobomba noong Ikalawang Digmaang Pandaigdig, napanatili nito ang halos lahat ng kanyang sinaunang tradisyunal na arkitektura ng kahoy.",
     "schedule": [
       {
@@ -42,7 +42,7 @@ export const days = [
         "text": "Ang Nozomi ay darating sa JR Kyoto Station. Bumaba sa Shinkansen at sundan ang mga palatandaan sa Hachijo East Exit (八条東口). Umalis sa istasyon sa pamamagitan ng exit na iyon at sa halos 5 minutong paglalakad ay makakarating ka sa hotel (Hotel Keihan Kyoto Hachijoguchi). Check-in at hapunan."
       },
       {
-        "text": "🍣 19:00–20:30 — HAPUNAN: KAITEN-SUSHI UOGASHI. Inirerekomendang restawran sa AEON MALL KYOTO — Sakura Building, 4F (https://maps.app.goo.gl/ByDBQB6zaVZ3dj2E6). Halos 5 min na lakad mula Kyoto Station Hachijo Exit (napaka-komportable pagdating mula Shinkansen). Kaiten-zushi (conveyor belt sushi). Badyet: ¥2,000–3,000/tao (~12–19€). Oras: 11:00–22:00 (last order halos 21:30). Hindi kailangan mag-reserve. Subukan: iba't ibang sushi; sariwang isda; nigiri; daily specials; mainit na side dish. 💡 Tip: Magandang unang hapunan ito sa Japan dahil pwedeng umorder nang paunti-unti para kontrolado ang gastos. May iba pang opsyon sa AEON MALL kung puno ito."
+        "text": "🍣 19:00–20:30 — HAPUNAN: KAITEN-SUSHI UOGASHI. Inirerekomendang restawran sa AEON MALL KYOTO — Sakura Building, 4F (https://maps.app.goo.gl/ByDBQB6zaVZ3dj2E6). Halos 5 min na lakad mula Kyoto Station Hachijo Exit (napaka-komportable pagdating mula Shinkansen). Kaiten-zushi (conveyor belt sushi). Badyet: ¥2,000–3,000/tao (~12–19€). Oras: 11:00–22:00 (last order halos 21:30). Hindi kailangan mag-reserve. Subukan: iba't ibang sushi; sariwang isda; nigiri; daily specials; mainit na side dish. 💡 Tip: Magandang unang hapunan ito sa Japan dahil pwedeng umorder nang paunti-unti para kontrolado ang gastos. May iba pang opsyon sa AEON MALL kung puno ito. Sana ipagluto tayo ni Randy ng kanyang sikat at masarap na lasagna ngayon."
       },
       {
         "text": "⚠️ Bumili na ngayong gabi ng almusal para sa Day 2 sa konbini dahil masyadong maaga ang alis para mag-almusal sa hotel. Inirerekomenda: 1–2 onigiri kada tao; egg sandwich; saging/prutas; kape o inumin; yogurt."
@@ -63,13 +63,13 @@ export const days = [
         "text": "🚆 JR Nara Line: Kyoto Station → Inari Station (~5 min). Walang reserbasyon. Gumamit ng IC card o bumili ng single ticket sa istasyon. Ang Inari Station ay nasa tabi mismo ng Fushimi Inari."
       },
       {
-        "text": "Fushimi Inari Shrine. 💡 Tip: ang pagdating ng maaga ay lubos na inirerekomenda upang maiwasan ang maraming tao. Hindi kailangang umakyat hanggang sa tuktok ng Mount Inari; kung kapos sa oras o pagod, umakyat lang nang bahagya at bumalik."
+        "text": "Fushimi Inari Shrine. 💡 Tip: ang pagdating ng maaga ay lubos na inirerekomenda upang maiwasan ang maraming tao. Hindi kailangang umakyat hanggang sa tuktok ng Mount Inari; kung kapos sa oras o pagod, umakyat lang nang bahagya at bumalik. Walang kahirap-hirap itong akyatin para kay Pablo, pumupunta siya sa gym para lumakas."
       },
       {
         "text": "🚆 JR Nara Line: Inari → Nara. Direktang tren pa-Nara, walang transfer, tinatayang 50–55 min. Walang kailangang reserbasyon. Sa Inari, siguraduhin na ang napiling tren ay humihinto sa Inari at didiretso sa Nara."
       },
       {
-        "text": "🚌 Mula JR Nara Station → Tōdai-ji: Local Nara Kotsu bus papuntang Tōdai-ji Daibutsuden/Kasuga Taisha-mae area, tapos ilang minutong lakad. Alternatibo: taxi mula JR Nara Station kung kapos sa oras. Pwede ring lakarin, pero mas matagal. Huwag mag-book ng maaga."
+        "text": "🚌 Mula JR Nara Station → Tōdai-ji: Local Nara Kotsu bus papuntang Tōdai-ji Daibutsuden/Kasuga Taisha-mae area, tapos ilang minutong lakad. Alternatibo: taxi mula JR Nara Station kung kapos sa oras. Pwede ring lakarin, pero mas matagal. Huwag mag-book ng maaga. Tingnan natin kung anong sasabihin ni Juancar bilang isang magaling na historian na may PhD, siguradong may nabasa na siyang libro tungkol dito."
       },
       {
         "text": "🏯 Bisitahin ang Daibutsuden at ang Great Buddha. Ang pagbisita sa loob ng Great Buddha ang pangunahing bahagi; pagkatapos ay pwede tayong umikot sandali sa paligid. Huwag mag-book ng tiket nang maaga."
@@ -98,7 +98,7 @@ export const days = [
   {
     "title": "Hilagang-kanlurang Kyoto at Bamboo",
     "cities": "Kyoto (Arashiyama)",
-    "summary": "I-e-explore natin ang hilagang-kanluran simula sa maningning na Golden Pavilion at sa daan ng Kinukake no Michi. Sa tanghali, dadalhin tayo ng tram sa Arashiyama, uunahin ang nasa itaas na makasaysayang lugar bago bumaba sa tanyag na kakahuyan ng kawayan.",
+    "summary": "I-e-explore natin ang hilagang-kanluran simula sa maningning na Golden Pavilion at sa daan ng Kinukake no Michi. Sa tanghali, dadalhin tayo ng tram sa Arashiyama, uunahin ang nasa itaas na makasaysayang lugar bago bumaba sa tanyag na kakahuyan ng kawayan. Siguradong naghahanap na si Juancar ng mga pagkakamali sa kasaysayan sa brochure.",
     "history": "Ang Kinkakuji (Golden Pavilion) ay ang marangyang rest house ng shogun Ashikaga Yoshimitsu noong huling bahagi ng ika-14 na siglo. Ang Arashiyama ay naging destinasyon para magbakasyon ng imperyal na maharlika simula noong panahon ng Heian.",
     "schedule": [
       {
@@ -168,15 +168,15 @@ export const days = [
         "text": "Distrito ng geisha: Pontocho, pagtawid sa ilog Kamogawa hanggang Miyagawacho."
       },
       {
-        "text": "Mamasyal sa Gion: Hanamikoji street hanggang Ichiriki teahouse, batis ng Shirakawa, at Tatsumi shrine. Kung gusto niyong maghapunan sa Gion/Pontocho, mas mainam magsimula ng 18:00 hanggang 19:00. Para sa mga kaiseki o sikat na restawran, magpareserba; para sa kaswal, panatilihing magaan ang plano."
+        "text": "Mamasyal sa Gion: Hanamikoji street hanggang Ichiriki teahouse, batis ng Shirakawa, at Tatsumi shrine. Kung gusto niyong maghapunan sa Gion/Pontocho, mas mainam magsimula ng 18:00 hanggang 19:00. Para sa mga kaiseki o sikat na restawran, magpareserba; para sa kaswal, panatilihing magaan ang plano. Siguradong matutuwa si Randy kung gaano katahimik at kapayapa dito."
       }
     ],
     "money": "Tinatayang €40 (pagkain)"
   },
   {
-    "title": "Tradisyonal na Kyoto at Osaka Castle",
+    "title": "Tradisyonal na Kyoto at Osaka Castle Juancar, ang kastilyong ito ay may mas maraming kasaysayan kaysa sa inyo ni Randy sa Rome!",
     "cities": "Kyoto, Osaka",
-    "summary": "Huling umaga sa Kyoto pagbisita sa napakalaking Kiyomizu-dera at pababa sa pamamagitan ng mga dalisdis ng Higashiyama. Sa tanghali, mabilis na tren patungo sa Osaka para sa makasaysayang kastilyo at ang kabaliwan sa gastronomic ng Dotonbori.",
+    "summary": "Huling umaga sa Kyoto pagbisita sa napakalaking Kiyomizu-dera at pababa sa pamamagitan ng mga dalisdis ng Higashiyama. Sa tanghali, mabilis na tren patungo sa Osaka para sa makasaysayang kastilyo at ang kabaliwan sa gastronomic ng Dotonbori. Siguradong makakaramdam ng nostalgia sina Juancar at Randy at mas gugustuhing kumain ng pasta sa Rome kung saan sila nagkakilala. Mag-ingat baka mag-high school teacher mode si Pablo at ma-bored tayo.",
     "history": "Ang Kiyomizu-dera ay itinatag noong 778; ang terrace nito ay itinayo nang hindi gumagamit ng isang pako. Ang Osaka Castle ay ang sentro ng militar ni Toyotomi Hideyoshi, isang pangunahing tauhan sa pag-iisa ng Japan noong ika-16 na siglo.",
     "schedule": [
       {
@@ -242,7 +242,7 @@ export const days = [
   {
     "title": "Kanazawa",
     "cities": "Kanazawa",
-    "summary": "Ipadadala natin ang malalaking bagahe sa Tokyo at maglalakbay nang magaan patungo sa baybayin ng Sea of Japan. Araw sa Kanazawa: Kenroku-en (isa sa mga pinakamahusay na hardin sa bansa), seafood, at mga sinaunang distrito ng samurai.",
+    "summary": "Ipadadala natin ang malalaking bagahe sa Tokyo at maglalakbay nang magaan patungo sa baybayin ng Sea of Japan. Araw sa Kanazawa: Kenroku-en (isa sa mga pinakamahusay na hardin sa bansa), seafood, at mga sinaunang distrito ng samurai. Siguradong hindi kasing sarap ng lutong-bahay na prutas na ice cream ni Sergio ang mga ice cream dito.",
     "history": "Ang Kanazawa ang nasasakupan ng makapangyarihang angkan ng Maeda sa panahon ng Edo, na karibal ng Kyoto sa kayamanan at kultura. Matapos makatakas sa mga makabagong pambobomba, pinananatili nito ang pagkakalatag ng feudal na lungsod.",
     "schedule": [
       {
@@ -285,7 +285,7 @@ export const days = [
     "history": "Ang Shirakawa-go ay sikat sa mga gassho-zukuri na bahay, na may matarik na pawid na mga bubong upang makatiis sa niyebe. Ang Takayama ay umunlad bilang isang mayamang lungsod ng mangangalakal sa ilalim ng shogunate ng Tokugawa, salamat sa mga karpintero nito.",
     "schedule": [
       {
-        "text": "🍙 Gumising + Mabilisang takeaway na almusal. Ang Hotel Resol Trinity Kanazawa ay HINDI kasama ang almusal sa booking. Kahit na may almusal ang hotel mula 07:00, para sa umagang ito mas praktikal na bumili sa konbini gabi pa lang: onigiri, sandwich, prutas, kape/inumin. Huwag umasa sa almusal ng hotel dahil sasakay tayo ng 08:40 na bus. Maghanda rin ng tubig na madadala."
+        "text": "🍙 Gumising + Mabilisang takeaway na almusal. Ang Hotel Resol Trinity Kanazawa ay HINDI kasama ang almusal sa booking. Kahit na may almusal ang hotel mula 07:00, para sa umagang ito mas praktikal na bumili sa konbini gabi pa lang: onigiri, sandwich, prutas, kape/inumin. Huwag umasa sa almusal ng hotel dahil sasakay tayo ng 08:40 na bus. Maghanda rin ng tubig na madadala. Siguradong nakabili na si Randy ng tubig para sa lahat dahil lagi siyang sobrang asikaso."
       },
       {
         "text": "🚌 Nohi Bus Kanazawa → Shirakawa-go. Alis: 08:40. Reserbasyon: 12GO31991741. 5 upuang kumpirmado. Tagal: halos 1h25. Inaasahang pagdating: 10:05. Kailangan ang reserbasyon. Hindi ito JR. Hindi gumagamit ng Japan Rail Pass. Huwag gumamit ng IC card: dadalhin natin ang reserbasyon/tiket sa bus. 💡 Tip: Dumating sa sakayan nang maaga. Ihanda ang reserbasyon sa mobile o kopya nito."
@@ -348,7 +348,7 @@ export const days = [
         "text": "🧳 IPADALA ANG BAGAHE SA TSUMAGO (10:45–11:15). Pwedeng iwan ang bagahe sa Magome tourist office mula 08:30 hanggang 11:30 (¥500/piraso). Kukunin natin ito sa Tsumago pagkalipas ng 13:00. MAHALAGA: Dating natin ng 10:45, kaya may oras pa para iwan bago mag 11:30. Magdala lang ng maliit na backpack para sa lakad na may tubig, ID, mobile, power bank, at pera. HUWAG magdala ng malaking maleta sa trail (mabato at paakyat)."
       },
       {
-        "text": "🥾 Nakasendo Trail: Magome → Tsumago. Halos 8 km at 3 oras sa banayad na bilis. Ang direksyong Magome → Tsumago ay mas kaunti ang paakyat. Praktikal na info: madali–katamtaman ang hirap; malinaw ang daan; may gubat at aspalto; magdala ng tubig. May mga bear bells sa daan, patunugin ito pagdaan."
+        "text": "🥾 Nakasendo Trail: Magome → Tsumago. Halos 8 km at 3 oras sa banayad na bilis. Ang direksyong Magome → Tsumago ay mas kaunti ang paakyat. Praktikal na info: madali–katamtaman ang hirap; malinaw ang daan; may gubat at aspalto; magdala ng tubig. May mga bear bells sa daan, patunugin ito pagdaan. Juancar, alam namin na bilang isang civil servant sa Reina Sofía ay hindi ka gaanong gumagalaw, pero ngayon maglalakad tayo!"
       },
       {
         "text": "🍙 TANGHALIAN / SNACK SA TRAIL (12:30–13:00). Magdala ng pagkain mula sa Takayama/Magome. Huwag umasang may bukas na kainan sa trail. Bumili ng: onigiri, sandwich, prutas, inumin. Ang prayoridad ay huwag patagalin ang lakad dahil kukuha pa ng bagahe at sasakay ng bus pabalik sa Magome. Kung may bukas na teahouse, pwede huminto, pero huwag asahan."
@@ -396,7 +396,7 @@ export const days = [
       { "text": "~13:00 — Dating sa Tokyo Station. Mula Tokyo Station magpatuloy sa pampublikong transportasyon papuntang KOKO HOTEL Residence Asakusa Kappabashi." },
       { "text": "🚇 TOKYO STATION → KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI\nAng hotel ay nasa: 3-24-2 Nishi-Asakusa, Taito-ku.\nMga Opsyon:\nSimpleng opsyon: JR mula Tokyo → Ueno + Tokyo Metro Ginza Line Ueno → Tawaramachi + 10 min lakad pa-hotel.\nAlternatibo: Tokyo → Ueno at mag-taxi kung marami tayong bagahe.\nAng hotel ay halos:\n- 4 min lakad mula sa Tsukuba Express Asakusa Station B\n- 10 min mula sa Tawaramachi Station\n- 10 min mula sa Iriya Station.\n\nHuwag i-reserve ang transportasyong ito.\nIbabayad doon gamit ang IC card/tiket.\nDahil 5 tao at may maleta, kung pagod, i-konsidera ang taxi mula Tokyo Station direkta sa hotel. Hindi obligadong i-reserve." },
       { "text": "HOTEL\nDating sa KOKO HOTEL Residence Asakusa Kappabashi.\nOpisyal na check-in mula 15:00.\nKung dumating ng maaga, iwanan ang maleta sa reception kung pwede at dumiretso sa Akihabara.\nNapakaganda ng lokasyon ng hotel para pumunta ng Akihabara gamit ang pampublikong transportasyon." },
-      { "text": "Hapon sa Akihabara.\nBisitahin: Akihabara Electric Town, Radio Kaikan, Mandarake, mga tindahan ng electronics, anime/manga, figures, arcades, second-hand shops.\n\nMandarake Complex: 12:00–20:00. Bukas araw-araw. Kaya't ang pagbisita ng 15:00 ay saktong-sakto." },
+      { "text": "Hapon sa Akihabara.\nBisitahin: Akihabara Electric Town, Radio Kaikan, Mandarake, mga tindahan ng electronics, anime/manga, figures, arcades, second-hand shops.\n\nMandarake Complex: 12:00–20:00. Bukas araw-araw. Kaya't ang pagbisita ng 15:00 ay saktong-sakto. Sergio, hindi ka pwedeng kumuha ng kahit ano sa mga basurahan kahit gaano pa ka 'bargain', at hindi mo na mapagkakasya ang higit pang board games sa maleta mo, may higit 130 ka na! Dito siguradong masisiraan ng bait si Pablo sa pagbili ng mga gadget na sinasabi ng AI sa kanya." },
       { "text": "TANGHALIAN/HAPUNAN\nTANGHALIAN\nDahil maaga ang almusal at sa Shinkansen ang pangunahing tanghalian, hindi na kailangang mag-reserve ng tanghalian sa Akihabara.\nKung nagugutom pagdating, kumain ng mabilis sa Akihabara. Mga karaniwang opsyon: ramen, curry, gyudon, kaiten sushi, tonkatsu, Japanese fast food.\n\nHAPUNAN\nIwan ang hapunan para sa Akihabara o Asakusa.\nHuwag ipagpalagay na lahat ng restaurant ay bukas hanggang gabi.\nPara sa isang partikular na restaurant at dahil 5 tao, mag-reserve kung sikat ang napili." },
       { "text": "1. 🚌 Magome → Nakatsugawa: 08:15 → 08:40. Walang reserbasyon. ¥800 approx. Bayad lokal.\n2. 🚆 Nakatsugawa → Nagoya: Limited Express Shinano 4. 09:57 → 10:53.\n\nINIREREKOMENDA ANG RESERBASYON para sa 5.\n3. 🚅 Nagoya → Tokyo: Nozomi. ~11:15–11:30 → ~13:00.\n\nMAG-RESERVE NANG MAAGA para sa 5.\n4. 🚇 Tokyo → Asakusa/Kappabashi: Metro/JR. Walang reserbasyon. IC card.\n5. 🚇 Asakusa → Akihabara: Urban transport. Walang reserbasyon. IC card." },
       { "text": "🔴 MATAAS NA PRAYORIDAD\n\nMAG-BOOK ng Shinkansen Nozomi Nagoya → Tokyo para sa 5 tao.\n\n🟠 KATAMTAMANG PRAYORIDAD\n\nMAG-BOOK ng Limited Express Shinano 4 Nakatsugawa → Nagoya para sa 5 tao.\n\n🟢 HUWAG MAG-BOOK\nLokal na bus Magome → Nakatsugawa.\n\n🟢 HUWAG MAG-BOOK\nTokyo → hotel.\n\n🟢 HUWAG MAG-BOOK\nUrban transport sa Tokyo." },
@@ -426,13 +426,13 @@ export const days = [
     "money": "Tinatayang €40 (pagkain)"
   },
   {
-    "title": "Shibuya, Harajuku at Shinjuku",
+    "title": "Shibuya, Harajuku at Shinjuku Thibaut, samantalahin mo na magpagupit, kahit hindi kasing mura sa Spain, mas maganda pa rin kaysa sa France.",
     "cities": "Shibuya, Harajuku, Shinjuku",
     "summary": "Matinding araw: Shibuya crossing at kultura ng kabataan sa Harajuku. (Opsyon sa GetYourGuide GYGFWV2MNZV8).",
     "history": "Lumago ang mga distritong ito pagkatapos ng Great Kanto Earthquake noong 1923.",
     "schedule": [
       {
-        "text": "Shibuya Crossing at Miyashita Park. Huminto sa Pokémon Center Shibuya."
+        "text": "Shibuya Crossing at Miyashita Park. Huminto sa Pokémon Center Shibuya. Mag-ingat, siguradong maiisipan ni Sergio na magtayo ng urban garden dito para sa kanyang mga halaman sa Aluche."
       },
       {
         "text": "Maglakad papuntang Harajuku sa Takeshita Street, patungo sa Meiji Shrine sa Yoyogi Park."
@@ -485,7 +485,7 @@ export const days = [
   {
     "title": "Eksklusibong Pamamasyal sa Mount Fuji",
     "cities": "Mishima, Chureito Pagoda, Oshino Hakkai, Aokigahara, Shiraito, Mga Lawa ng Fuji",
-    "summary": "Buong araw na tour (8 oras) sakay ng pribadong minivan kasama ang opisyal na Spanish-speaking guide (Ken Kaneshima · Excursiones Fujiyama). Pagbisita sa Chureito Pagoda, lumang dambana ng Kitaguchi Hongu, tradisyunal na nayon ng Oshino Hakkai, gubat ng Aokigahara, talon ng Shiraito at ruta ng mga lawa. Tikman ang Houtou noodles.",
+    "summary": "Buong araw na tour (8 oras) sakay ng pribadong minivan kasama ang opisyal na Spanish-speaking guide (Ken Kaneshima · Excursiones Fujiyama). Pagbisita sa Chureito Pagoda, lumang dambana ng Kitaguchi Hongu, tradisyunal na nayon ng Oshino Hakkai, gubat ng Aokigahara, talon ng Shiraito at ruta ng mga lawa. Tikman ang Houtou noodles. Thibaut, tingnan natin kung mapapatunayan mong may silbi ang CrossFit na yan.",
     "history": "Ang Mount Fuji (3,776 m) ang sagradong bulkan at tanyag na simbolo ng Japan.",
     "schedule": [
       {
