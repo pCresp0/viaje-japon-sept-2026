@@ -27,14 +27,14 @@ export default function GuideCard({ id, accent = "#1d3557" }) {
   const isHighlighted = highlightId === anchorId;
   const cardRef = useRef(null);
 
-  // Si llegamos desde el buscador apuntando a este lugar, se abre solo
-  // (aunque estuviera cerrado) y se hace scroll hasta él.
+  // Si llegamos desde el buscador o desde el itinerario, se abre solo
+  // (aunque estuviera cerrado) y se hace scroll hasta el inicio de la tarjeta.
   useEffect(() => {
     if (isHighlighted) {
       setOpen(true);
       const t = window.setTimeout(() => {
-        cardRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
-      }, 80);
+        cardRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 100);
       return () => window.clearTimeout(t);
     }
   }, [isHighlighted]);
@@ -47,6 +47,7 @@ export default function GuideCard({ id, accent = "#1d3557" }) {
       ref={cardRef}
       className={"rounded-xl border overflow-hidden" + (isHighlighted ? " search-highlight-pulse" : "")}
       style={{
+        scrollMarginTop: "75px",
         borderColor: open ? accent + "44" : "var(--line)",
         background: "var(--paper-raised)",
         transition: "border-color 0.2s",
