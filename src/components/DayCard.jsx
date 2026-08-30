@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ScrollText, ChevronDown, ChevronUp, Map, BookOpen } from "lucide-react";
+import { ScrollText, ChevronDown, ChevronUp, Map, BookOpen, List } from "lucide-react";
 import { useContent } from "../i18n/LanguageContext";
 import { useHighlight } from "../context/HighlightContext";
 import { guides, guidesByDay, guideMeta } from "../data/guides";
@@ -104,7 +104,7 @@ function CollapsibleScheduleItem({ s, color }) {
   );
 }
 
-export default function DayCard({ day, defaultOpenHistory = false, onClose, onViewMap }) {
+export default function DayCard({ day, defaultOpenHistory = false, onClose, onViewMap, onShowQuickView }) {
   const [showHistory, setShowHistory] = useState(defaultOpenHistory);
   const { blocks, stays, days, mapStops } = useContent();
   const { triggerHighlight } = useHighlight();
@@ -139,24 +139,39 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
             linkStyle={{ color: "white", textDecorationColor: "rgba(255,255,255,0.7)" }}
           />
         </div>
-        {((onViewMap && hasMapStops) || onClose) && (
-          <div className="shrink-0 mt-0.5 flex items-center gap-2">
+        {((onViewMap && hasMapStops) || onClose || onShowQuickView) && (
+          <div className="shrink-0 mt-0.5 flex items-center gap-1.5 sm:gap-2">
+            {onShowQuickView && (
+              <button
+                type="button"
+                onClick={onShowQuickView}
+                title="Ver en vista rápida"
+                aria-label="Ver en vista rápida"
+                className="flex items-center gap-1.5 rounded-full px-2.5 sm:px-3 py-1.5 text-xs font-semibold transition-all hover:bg-white/25 active:scale-95 shrink-0"
+                style={{ background: "rgba(255,255,255,0.18)", color: "white", border: "none", cursor: "pointer" }}
+              >
+                <List size={14} />
+                <span className="hidden sm:inline">Vista rápida</span>
+              </button>
+            )}
             {onViewMap && hasMapStops && (
               <button
+                type="button"
                 onClick={onViewMap}
-                className="flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium"
-                style={{ background: "rgba(255,255,255,0.18)", color: "white" }}
+                className="flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition-all hover:bg-white/25"
+                style={{ background: "rgba(255,255,255,0.18)", color: "white", border: "none", cursor: "pointer" }}
               >
                 <Map size={14} />
-                Ver mapa
+                <span className="hidden sm:inline">Ver mapa</span>
               </button>
             )}
             {onClose && (
               <button
+                type="button"
                 onClick={onClose}
                 aria-label="Cerrar"
-                className="rounded-full p-1"
-                style={{ background: "rgba(255,255,255,0.18)", color: "white" }}
+                className="rounded-full p-1.5 flex items-center justify-center transition-all hover:bg-white/25"
+                style={{ background: "rgba(255,255,255,0.18)", color: "white", border: "none", cursor: "pointer" }}
               >
                 <ChevronUp size={18} />
               </button>

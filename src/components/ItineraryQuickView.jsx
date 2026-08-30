@@ -105,8 +105,9 @@ function QuickDayCard({ day, blockColor, onShowFullDay }) {
 
   return (
     <div
+      id={`quick-day-${day.num}`}
       className="rounded-2xl overflow-hidden"
-      style={{ border: "1px solid var(--line)", background: "var(--paper-raised)" }}
+      style={{ scrollMarginTop: "80px", border: "1px solid var(--line)", background: "var(--paper-raised)" }}
     >
       <div
         className="px-4 py-3 flex items-center gap-3 relative"

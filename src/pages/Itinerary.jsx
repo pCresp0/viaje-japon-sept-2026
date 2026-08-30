@@ -35,6 +35,14 @@ export default function Itinerary({ openDay, setOpenDay, onGoToMapDay }) {
     return () => window.clearTimeout(t);
   }, [openDay]);
 
+  function handleShowQuickDay(dayNum) {
+    setQuickView(true);
+    window.setTimeout(() => {
+      const el = document.getElementById(`quick-day-${dayNum}`);
+      el?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 60);
+  }
+
   return (
     <div className="pt-3 pb-8 px-4">
       {/* ── Cabecera ──────────────────────────────────────────── */}
@@ -123,7 +131,12 @@ export default function Itinerary({ openDay, setOpenDay, onGoToMapDay }) {
                 className={"itinerary-day-anchor" + (isHighlighted ? " search-highlight-pulse" : "")}
               >
                 {isOpen ? (
-                  <DayCard day={d} onClose={() => setOpenDay(null)} onViewMap={() => onGoToMapDay?.(d.num)} />
+                  <DayCard 
+                    day={d} 
+                    onClose={() => setOpenDay(null)} 
+                    onViewMap={() => onGoToMapDay?.(d.num)} 
+                    onShowQuickView={() => handleShowQuickDay(d.num)}
+                  />
                 ) : (
                   <button
                     onClick={() => setOpenDay(d.num)}
