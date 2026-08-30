@@ -368,6 +368,9 @@ main > div > * {
     display: block !important;
   }
   @page {
-    margin: 14mm 12mm;
+    margin: 12mm 10mm;
+  }
+  a {
+    text-decoration: none;
   }
 }

@@ -65,9 +65,13 @@ export default function Itinerary({ openDay, setOpenDay, quickView, setQuickView
           style={{ background: "var(--indigo)", color: "white", border: "none" }}
         >
           {exporting ? <Loader2 size={14} className="animate-spin" /> : <FileDown size={14} />}
-          Exportar a PDF
+          Exportar guía PDF
         </button>
       </div>
+
+      <p className="text-xs mb-4" style={{ color: "var(--ink-soft)" }}>
+        El PDF incluye el itinerario completo (días 0–15) y anexos: vuelos, hoteles, billetes, Fuji, transporte, presupuesto, emergencias, pendientes, preparativos, comidas y frases.
+      </p>
 
       {/* ── Toggle vista rápida / completa ────────────────────── */}
       <div
