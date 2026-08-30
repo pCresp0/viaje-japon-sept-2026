@@ -1,6 +1,7 @@
 import { createPortal } from "react-dom";
 import { tripMeta, flights, stays, blocks, transports, budget } from "../data/trip";
-import { guides, guidesByDay } from "../data/guides";
+import { guidesByDay } from "../data/guides";
+import { useContent } from "../i18n/LanguageContext";
 import { guideImages } from "../data/guideImages";
 import { popCulture } from "../data/popCulture";
 import { pendingItems } from "../data/pending";
@@ -208,7 +209,7 @@ function HotelCard({ stay, compact = false }) {
   );
 }
 
-function GuideBlock({ id, accentColor }) {
+function GuideBlock({ id, accentColor, guides }) {
   const g = guides[id];
   if (!g) return null;
   const img = guideImages[id];
@@ -380,7 +381,7 @@ function DayFujiNote({ dayNum }) {
   );
 }
 
-function DaySection({ day }) {
+function DaySection({ day, guides }) {
   const placeIds = guidesByDay[day.num] || [];
   return (
     <section style={{ marginBottom: 22, pageBreakBefore: "always", breakBefore: "page" }}>
@@ -430,7 +431,7 @@ function DaySection({ day }) {
           <p style={{ fontSize: 11, fontWeight: 700, color: "#1d3557", marginTop: 14, marginBottom: 2 }}>
             📖 Qué vamos a ver
           </p>
-          {placeIds.map((id) => <GuideBlock key={id} id={id} accentColor="#1d3557" />)}
+          {placeIds.map((id) => <GuideBlock key={id} id={id} accentColor="#1d3557" guides={guides} />)}
         </>
       )}
     </section>
@@ -452,6 +453,7 @@ function Appendix({ title, children }) {
  * transporte, presupuesto, emergencias, pendientes, preparativos, comidas, frases).
  */
 export default function ItineraryPrintView({ days }) {
+  const { guides } = useContent();
   const purchased = transports.filter((x) => x.purchased);
   const pending = transports.filter((x) => !x.purchased);
   const jrCovered = transports.filter((x) => x.jrPassCovered);
@@ -514,7 +516,7 @@ export default function ItineraryPrintView({ days }) {
       </section>
 
       {/* ── Días ────────────────────────────────────────────────── */}
-      {days.map((day) => <DaySection key={day.num} day={day} />)}
+      {days.map((day) => <DaySection key={day.num} day={day} guides={guides} />)}
 
       {/* ── Anexo: Hoteles ──────────────────────────────────────── */}
       <Appendix title="Anexo · Alojamientos (detalle completo)">

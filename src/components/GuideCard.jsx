@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { BookOpen, ChevronDown, Lightbulb, Sparkles } from "lucide-react";
-import { guides } from "../data/guides";
 import { popCulture } from "../data/popCulture";
 import { guideImages } from "../data/guideImages";
+import { useContent } from "../i18n/LanguageContext";
 import { useHighlight } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 
@@ -132,6 +132,7 @@ export default function GuideCard({
   variant = "accordion",
 }) {
   const [open, setOpen] = useState(defaultOpen || variant === "modal");
+  const { guides } = useContent();
   const guide = guides[id];
   const refs = popCulture[id];
   const localImage = guideImages[id] ?? null;

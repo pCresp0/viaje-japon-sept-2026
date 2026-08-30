@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 import { ScrollText, ChevronDown, ChevronUp, Map, BookOpen, List, X } from "lucide-react";
 import { useContent } from "../i18n/LanguageContext";
 import { useHighlight } from "../context/HighlightContext";
-import { guides, guidesByDay, guideMeta } from "../data/guides";
+import { guidesByDay, guideMeta } from "../data/guides";
 import DayFujiOptionCard from "./DayFujiOptionCard";
 import VisitJapanQRCard from "./VisitJapanQRCard";
 import ShinkansenTicketCard from "./ShinkansenTicketCard";
@@ -126,7 +126,7 @@ function CollapsibleScheduleItem({ s, color }) {
 export default function DayCard({ day, defaultOpenHistory = false, onClose, onViewMap, onShowQuickView }) {
   const [showHistory, setShowHistory] = useState(defaultOpenHistory);
   const [selectedGuide, setSelectedGuide] = useState(null);
-  const { blocks, stays, days, mapStops } = useContent();
+  const { blocks, stays, days, mapStops, guides } = useContent();
   const { triggerHighlight } = useHighlight();
   const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
   const block = blockById[day.block];
