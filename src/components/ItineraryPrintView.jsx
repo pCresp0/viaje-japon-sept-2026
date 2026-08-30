@@ -12,8 +12,7 @@ import { sections as prepSections } from "../pages/PrepPage";
 import { categories as phraseCategories, etiquette } from "../pages/PhrasesPage";
 import { emergencyNumbers, embassy } from "../pages/EmergencyPage";
 import { Plane, Train, Hotel, Euro, AlertCircle, Sparkles, CheckSquare, Clock } from "lucide-react";
-import { diffDays, formatDateLong, formatDayOfWeek, todayISO } from "../utils/date";
-import { formatTime } from "../utils/time";
+import { diffDays, formatDateLong, todayISO } from "../utils/date";
 import { formatEur, formatJpyEur, YEN_PER_EUR } from "../utils/money";
 import { PASS_7_JPY, PASS_14_JPY, PASS_7_EUR, PASS_14_EUR } from "../data/jrPass";
 
@@ -31,9 +30,6 @@ const iconMap = {
 const franchiseLabel = { pokemon: "Pokémon", digimon: "Digimon", pelicula: "Película" };
 const PEOPLE = 5;
 
-export default function ItineraryPrintView({ days }) {
-  const { tripMeta, flights, stays, blocks, transports, budget } = useContent();
-  const t = useT();
 
 const CONFIRMED_TICKETS = [
   {
