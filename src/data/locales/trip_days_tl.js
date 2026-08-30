@@ -408,16 +408,16 @@ export const days = [
         "text": "🚆 **SHINANO 4 — NAKATSUGAWA → NAGOYA**\n\n🟢 **NAKA-RESERVE AT CONFIRMED** (JR-WEST)\n\nAlis **09:57** → Dating **10:53** (56 min).\nCar **4** · Seats **11-D · 12-C · 12-D · 13-C · 13-D**.\n5 adults · **¥14,350** · #**42093** · Receipt **AEE6606M**.\n\n🎫 Pisikal na ticket: kailangan pang kunin (tingnan ang 08:40)."
       },
       {
-        "text": "10:53 — Dating sa Nagoya. Lipat sa Tokaido Shinkansen. May halos 20–30 minuto depende sa napiling Shinkansen.\nBumili ng EKIBEN dito kung hindi pa tayo nakakain.\nHuwag umupo at kumain sa istasyon: bumili ng takeout at kainin sa Shinkansen.\nRekomendasyon: ekiben, sandwich, sushi/bento, inumin."
+        "text": "10:53 — Dating sa Nagoya Station.\n\n⏱️ **Transfer sa Tokaido Shinkansen:** aalis ang Nozomi 358 nang **11:29** → **36 minuto** na buffer (makatwiran; hindi sobrang malaki).\n\n⚠️ **IMPORTANTE:** Sundin ang mga palatandaan papunta sa mga platform ng Tokaido Shinkansen. Huwag maghanap ng ibang tren o baguhin ang reserbasyon maliban kung may tunay na incident.\n\n🍱 Sa window na ito (halos 10:53–11:20) bumili ng ekiben/bento, sandwich, sushi o inumin para kainin sa Shinkansen. Huwag mag-reserve ng restaurant."
       },
       {
-        "text": "🍱 TANGHALIAN\nBumili ng ekiben sa Nagoya Station at kainin habang nasa Shinkansen.\nIto ang isa sa mga pinakapraktikal na paraan para sulitin ang byahe.\nHuwag mag-reserve ng restaurant para sa pagkain na ito."
+        "text": "🍱 **BUMILI NG PAGKAIN SA NAGOYA**\n\nBumili ng ekiben/bento, sandwich, sushi, inumin, atbp., para kainin habang nasa Nozomi 358.\nIto ang pinakapraktikal na paraan para sulitin ang byahe.\nHuwag mag-reserve ng restaurant para sa pagkain na ito."
       },
       {
-        "text": "🚅 ~11:15–11:30 — Tokaido Shinkansen NOZOMI\nNagoya → Tokyo\nTagal: halos 1h40.\nTinantiyang dating: ~13:00.\n\nIMPORTANTE:\nMAG-RESERVE NANG MAAGA para sa 5 tao.\nPreferensya: magkakatabing upuan.\nHindi natin kailangan ng Japan Rail Pass.\nMag-reserve via Smart EX / Tokaido Sanyo Kyushu Shinkansen Online Reservation.\nDahil 5 tayo, i-reserve nang magkakatabi ang lima hangga't maaari.\n\n🧳 Kung may malaking maleta:\nSuriin ang sukat bago mag-book.\nKung ang maleta ay may kabuuang sukat na higit 160 cm, mag-reserve ng upuan na may oversized baggage space.\nHuwag ipagpalagay na pwedeng ilagay ang malaking maleta kahit saan natin gusto."
+        "text": "🚄 **TOKAIDO SHINKANSEN NOZOMI 358 — NAGOYA → TOKYO**\n\n🟢 **NABILI AT CONFIRMED** (Smart EX)\n\nAlis: Nagoya **11:29** → Dating: Tokyo **13:06** (1 h 37 min).\nOrdinary Car · Series N700 · Car **12**.\nSeats: **11-D · 11-E · 12-C · 12-D · 12-E** (nakatalaga na).\n5 adults · Total **¥54,500** (¥10,900/pax).\nSmart EX reservation **#2002**.\n\n📱 **Access:** QR-Ticket (recommended) · pwede ring mag-designate ng IC card · optional ang physical pickup (HINDI mandatory).\n\n🧳 Ordinary Car naka-book na: suriin ang sukat ng maleta (≤160 cm OK; >160 cm hanggang 250 cm ay mangangailangan ng oversized space — huwag baguhin ang reserbasyon nang hindi muna sinusukat).\n\nI-expand ang card sa ibaba para sa Smart EX confirmation, seats at checklist."
       },
       {
-        "text": "~13:00 — Dating sa Tokyo Station. Mula Tokyo Station magpatuloy sa pampublikong transportasyon papuntang KOKO HOTEL Residence Asakusa Kappabashi."
+        "text": "13:06 — Dating sa Tokyo Station. Mula Tokyo Station magpatuloy sa pampublikong transportasyon papuntang KOKO HOTEL Residence Asakusa Kappabashi."
       },
       {
         "text": "🚇 TOKYO STATION → KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI\nAng hotel ay nasa: 3-24-2 Nishi-Asakusa, Taito-ku.\nMga Opsyon:\nSimpleng opsyon: JR mula Tokyo → Ueno + Tokyo Metro Ginza Line Ueno → Tawaramachi + 10 min lakad pa-hotel.\nAlternatibo: Tokyo → Ueno at mag-taxi kung marami tayong bagahe.\nAng hotel ay halos:\n- 4 min lakad mula sa Tsukuba Express Asakusa Station B\n- 10 min mula sa Tawaramachi Station\n- 10 min mula sa Iriya Station.\n\nHuwag i-reserve ang transportasyong ito.\nIbabayad doon gamit ang IC card/tiket.\nDahil 5 tao at may maleta, kung pagod, i-konsidera ang taxi mula Tokyo Station direkta sa hotel. Hindi obligadong i-reserve."
@@ -435,19 +435,19 @@ export const days = [
         "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nBumalik sa residence sa Tokyo para magpahinga at makasama ulit ang malalaking maleta mula Kyoto (unang gabi sa Tokyo)."
       },
       {
-        "text": "🔴 MATAAS NA PRAYORIDAD\n\nMAG-BOOK ng Shinkansen Nozomi Nagoya → Tokyo para sa 5 tao.\n\n🟠 KATAMTAMANG PRAYORIDAD\n\nMAG-BOOK ng Limited Express Shinano 4 Nakatsugawa → Nagoya para sa 5 tao.\n\n🟢 HUWAG MAG-BOOK\nLokal na bus Magome → Nakatsugawa.\n\n🟢 HUWAG MAG-BOOK\nTokyo → hotel.\n\n🟢 HUWAG MAG-BOOK\nUrban transport sa Tokyo."
+        "text": "TANGHALIAN\nDahil maaga ang almusal at sa Shinkansen ang pangunahing tanghalian, hindi na kailangang mag-reserve ng tanghalian sa Akihabara.\nKung nagugutom pagdating, kumain ng mabilis sa Akihabara. Mga karaniwang opsyon: ramen, curry, gyudon, kaiten sushi, tonkatsu, Japanese fast food.\n\nHAPUNAN\nIwan ang hapunan para sa Akihabara o Asakusa.\nHuwag ipagpalagay na lahat ng restaurant ay bukas hanggang gabi.\nPara sa isang partikular na restaurant at dahil 5 tao, mag-reserve kung sikat ang napili."
       },
       {
-        "text": "1. Bus Magome → Nakatsugawa.\n2. Shinano 4 · 🟢 **NAKA-BOOK NA** (42093).\n3. Nozomi Nagoya → Tokyo · 🟠 **PENDING PA** (Smart EX)."
+        "text": "1. 🚌 Magome → Nakatsugawa: 08:15 → 08:40. Walang reserbasyon. ~¥800 (~€5). Bayad on the spot.\n2. 🚆 Nakatsugawa → Nagoya: Limited Express **Shinano 4**. 09:57 → 10:53.\n\n🟢 **NAKA-BOOK NA** (JR-WEST No. 42093 · ¥14,350 · Car 4). 🎫 Kunin ang pisikal na tickets bago sumakay.\n3. 🚅 Nagoya → Tokyo: **Nozomi 358**. 11:29 → 13:06.\n\n🟢 **NABILI NA** (Smart EX No. 2002 · ¥54,500 · Car 12 · QR-Ticket).\n4. 🚇 Tokyo → Asakusa/Kappabashi: Metro/JR. Walang reserbasyon. Suica.\n5. 🚇 Asakusa → Akihabara: Urban transit. Walang reserbasyon. Suica."
       },
       {
-        "text": "🟢 TAPOS: Shinano 4 (42093).\n🎫 KUNIN: pisikal na tickets.\n🔴 PRIORITY: i-book ang Nozomi Nagoya → Tokyo."
+        "text": "🟢 **TAPOS**\n• Shinano 4 Nakatsugawa → Nagoya (09:57 → 10:53) · Reservation 42093 · Receipt AEE6606M · ¥14,350.\n• Nozomi 358 Nagoya → Tokyo (11:29 → 13:06) · Smart EX **2002** · ¥54,500 · Car 12 · seats 11-D/11-E/12-C/12-D/12-E.\n\n🎫 **KUNIN PA (Shinano, hindi pagbili):** pisikal na JR-WEST tickets bago sumakay (Mastercard **8625 + PIN kaarawan ni Pablo).\n\n📱 **PREP ng Nozomi:** i-save ang QR-Ticket / kumpirmahin ang access; suriin ang sukat ng maleta.\n\n🟢 HUWAG MAG-BOOK Magome bus / hotel transfer Tokyo / urban transit."
       },
       {
-        "text": "⚠️ Shinano 4 09:57 naka-reserve na. Pending pa ang Shinkansen Nagoya → Tokyo."
+        "text": "⚠️ Ang Shinano 4 (09:57) at Nozomi 358 (11:29) ay **NABILI NA**. Huwag baguhin ang oras maliban kung may tahasang request o incident.\n\n⚠️ Transfer sa Nagoya: 10:53 → 11:29 (**36 min**). Sundin papunta sa Tokaido Shinkansen platforms.\n\n⚠️ Shinano: ang booking HINDI kapalit ng physical JR-WEST ticket pickup.\n\n⚠️ Nozomi: access gamit ang **QR-Ticket** (recommended) o designated IC — hindi mandatory JR-WEST-style pickup.\n\n⚠️ Bumili ng almusal isang araw bago (walang breakfast ang Magome Chaya)."
       },
       {
-        "text": "☑️ Bus Magome → Nakatsugawa\n☑️ Shinano 4 reservation (42093)\n☐ Kunin ang pisikal na JR-WEST tickets\n☐ Physical Mastercard **8625\n☐ No. 42093 + PIN (kaarawan ni Pablo)\n☐ I-book ang Shinkansen Nagoya → Tokyo"
+        "text": "☑️ Bus Magome → Nakatsugawa\n☑️ Shinano 4 reservation (No. 42093 · TAPOS)\n☑️ Nozomi 358 Smart EX reservation (No. 2002 · NABILI)\n☐ Kunin ang pisikal na JR-WEST tickets ng Shinano (labas ng gates)\n☐ Physical Mastercard ending 8625 + PIN (kaarawan ni Pablo) + No. 42093\n☐ I-save ang QR-Ticket / kumpirmahin ang Smart EX access para sa Nozomi 358\n☐ Suriin ang sukat ng maleta\n☐ Panatilihing accessible ang Smart EX confirmation sa phone"
       }
     ],
     "money": "Tinatayang €40 (pagkain)"

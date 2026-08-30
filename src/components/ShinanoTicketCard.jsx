@@ -158,7 +158,7 @@ export default function ShinanoTicketCard({ onGoToDay } = {}) {
             <MapPin size={18} className="text-blue-700 shrink-0 mt-0.5" />
             <div className="text-xs text-blue-900 leading-relaxed">
               <strong>Contexto del día:</strong> Magome → bus a Nakatsugawa (08:15–08:40) → <strong>Shinano 4</strong> → Nagoya (10:53) →
-              Tokaido Shinkansen a Tokio (<strong>aún pendiente de reservar</strong>) → KOKO Hotel / Akihabara.
+              <strong> Nozomi 358</strong> (11:29 → 13:06, Smart EX 2002 · ya comprado) → KOKO Hotel / Akihabara.
             </div>
           </div>
 

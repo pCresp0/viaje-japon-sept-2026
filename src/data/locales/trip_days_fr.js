@@ -408,16 +408,16 @@ export const days = [
         "text": "🚆 **SHINANO 4 — NAKATSUGAWA → NAGOYA**\n\n🟢 **RÉSERVÉ ET CONFIRMÉ** (JR-WEST)\n\nDépart **09:57** → Arrivée **10:53** (56 min).\nVoiture **4** · Places **11-D · 12-C · 12-D · 13-C · 13-D**.\n5 adultes · **¥14.350** · Réservation **#42093** · Receipt **AEE6606M**.\n\n🎫 Billets physiques encore à récupérer (voir 08:40)."
       },
       {
-        "text": "10:53 — Arrivée à Nagoya. Correspondance pour le Tokaido Shinkansen. Nous avons environ 20–30 minutes selon le Shinkansen choisi.\nAchetez un EKIBEN ici si nous n'avons pas encore mangé.\nNe vous asseyez pas pour manger dans la gare : achetez à emporter et mangez dans le Shinkansen.\nRecommandation : ekiben, sandwich, sushi/bento, boisson."
+        "text": "10:53 — Arrivée à Nagoya Station.\n\n⏱️ **Correspondance vers le Tokaido Shinkansen :** le Nozomi 358 part à **11:29** → **36 minutes** de marge (raisonnable ; ce n'est pas une marge énorme).\n\n⚠️ **IMPORTANT :** Suivre les indications vers les quais du Tokaido Shinkansen. Ne pas chercher un autre train ni modifier cette réservation sauf incident réel.\n\n🍱 Dans cette plage (env. 10:53–11:20) acheter ekiben/bento, sandwich, sushi ou boisson pour manger dans le Shinkansen. Ne pas réserver de restaurant."
       },
       {
-        "text": "🍱 DÉJEUNER\nAchetez un ekiben à Nagoya Station et mangez pendant le Shinkansen.\nC'est l'un des moyens les plus pratiques de rentabiliser le trajet.\nNe réservez pas de restaurant pour ce repas."
+        "text": "🍱 **ACHETER À MANGER À NAGOYA**\n\nAcheter un ekiben/bento, sandwich, sushi, boisson, etc., pour manger pendant le Nozomi 358.\nC'est la façon la plus pratique de profiter du trajet.\nNe pas réserver de restaurant pour ce repas."
       },
       {
-        "text": "🚅 ~11:15–11:30 — Tokaido Shinkansen NOZOMI\nNagoya → Tokyo\nDurée : env. 1h40.\nArrivée approximative : ~13:00.\n\nIMPORTANT :\nRÉSERVER À L'AVANCE pour 5 personnes.\nPréférence : sièges ensemble.\nNous n'avons pas besoin de Japan Rail Pass.\nRéservez via Smart EX / Tokaido Sanyo Kyushu Shinkansen Online Reservation.\nPuisque nous sommes 5, réservez les cinq sièges ensemble si possible.\n\n🧳 Si nous voyageons avec de grandes valises :\nVérifiez les dimensions avant de réserver.\nSi une valise a des dimensions totales supérieures à 160 cm, réservez un siège avec espace bagage hors format.\nNe présumez pas que nous pouvons placer une grande valise où nous voulons."
+        "text": "🚄 **TOKAIDO SHINKANSEN NOZOMI 358 — NAGOYA → TOKYO**\n\n🟢 **ACHETÉ ET CONFIRMÉ** (Smart EX)\n\nDépart : Nagoya **11:29** → Arrivée : Tokyo **13:06** (1 h 37 min).\nOrdinary Car · Series N700 · Voiture **12**.\nSièges : **11-D · 11-E · 12-C · 12-D · 12-E** (déjà attribués).\n5 adultes · Total **¥54.500** (¥10.900/pers.).\nRéservation Smart EX **#2002**.\n\n📱 **Accès :** QR-Ticket (recommandé) · une IC card peut aussi être désignée · retrait physique optionnel (PAS obligatoire).\n\n🧳 Ordinary Car déjà réservée : vérifier les dimensions des valises (≤160 cm OK ; >160 cm jusqu'à 250 cm nécessiterait l'espace oversized — ne pas modifier la réservation sans mesurer).\n\nDéplier la carte ci-dessous pour la confirmation Smart EX, les sièges et la checklist."
       },
       {
-        "text": "~13:00 — Arrivée à Tokyo Station. De Tokyo Station, continuez en transports en commun jusqu'au KOKO HOTEL Residence Asakusa Kappabashi."
+        "text": "13:06 — Arrivée à Tokyo Station. De Tokyo Station, continuez en transports en commun jusqu'au KOKO HOTEL Residence Asakusa Kappabashi."
       },
       {
         "text": "🚇 TOKYO STATION → KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI\nL'hôtel est au : 3-24-2 Nishi-Asakusa, Taito-ku.\nOptions :\nOption simple : JR de Tokyo → Ueno + Tokyo Metro Ginza Line Ueno → Tawaramachi + 10 min à pied de l'hôtel.\nAlternativement : Tokyo → Ueno puis taxi si nous avons beaucoup de bagages.\nL'hôtel est à environ :\n- 4 min à pied de Tsukuba Express Asakusa Station B\n- 10 min de Tawaramachi Station\n- 10 min d'Iriya Station.\n\nNe réservez pas ce transport.\nPayez sur place par carte IC/billet.\nÀ 5 personnes avec valises, si fatigués, envisagez un taxi de Tokyo Station directement à l'hôtel. Il n'est pas obligatoire de le réserver."
@@ -435,19 +435,19 @@ export const days = [
         "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nRetour à notre résidence à Tokyo pour se reposer et retrouver les grandes valises envoyées depuis Kyoto (1re nuit à Tokyo)."
       },
       {
-        "text": "🔴 HAUTE PRIORITÉ\n\nRÉSERVER Shinkansen Nozomi Nagoya → Tokyo pour 5 personnes.\n\n🟠 PRIORITÉ MOYENNE\n\nRÉSERVER Limited Express Shinano 4 Nakatsugawa → Nagoya pour 5 personnes.\n\n🟢 NE PAS RÉSERVER\nBus local Magome → Nakatsugawa.\n\n🟢 NE PAS RÉSERVER\nTokyo → hôtel.\n\n🟢 NE PAS RÉSERVER\nTransports urbains à Tokyo."
+        "text": "DÉJEUNER\nComme le petit-déjeuner sera tôt et le repas principal dans le Shinkansen, il n'est pas nécessaire de réserver un repas à Akihabara.\nSi nous avons faim à l'arrivée, manger quelque chose de rapide à Akihabara. Options typiques : ramen, curry, gyudon, kaiten sushi, tonkatsu, fast-food japonais.\n\nDÎNER\nLaisser le dîner pour Akihabara ou Asakusa.\nNe pas supposer que tous les restaurants restent ouverts très tard.\nPour un restaurant précis et à 5 personnes, réserver si l'on choisit un lieu populaire."
       },
       {
-        "text": "1. Bus Magome → Nakatsugawa 08:15→08:40.\n2. Shinano 4 09:57→10:53 · 🟢 **DÉJÀ RÉSERVÉ** (42093).\n3. Nozomi Nagoya → Tokyo ~11:20 · 🟠 **ENCORE À RÉSERVER** (Smart EX)."
+        "text": "1. 🚌 Magome → Nakatsugawa : 08:15 → 08:40. Sans réservation. ¥800 env. (~5€). Paiement sur place.\n2. 🚆 Nakatsugawa → Nagoya : Limited Express **Shinano 4**. 09:57 → 10:53.\n\n🟢 **DÉJÀ RÉSERVÉ** (JR-WEST n° 42093 · ¥14.350 · Voiture 4). 🎫 Récupérer les billets physiques avant de monter.\n3. 🚅 Nagoya → Tokyo : **Nozomi 358**. 11:29 → 13:06.\n\n🟢 **DÉJÀ ACHETÉ** (Smart EX n° 2002 · ¥54.500 · Voiture 12 · QR-Ticket).\n4. 🚇 Tokyo → Asakusa/Kappabashi : Métro/JR. Sans réservation. Suica.\n5. 🚇 Asakusa → Akihabara : Transports urbains. Sans réservation. Suica."
       },
       {
-        "text": "🟢 FAIT : Shinano 4 (42093 / AEE6606M).\n🎫 À RÉCUPÉRER : billets physiques.\n🔴 PRIORITÉ : réserver Nozomi Nagoya → Tokyo."
+        "text": "🟢 **FAIT**\n• Shinano 4 Nakatsugawa → Nagoya (09:57 → 10:53) · Réservation 42093 · Receipt AEE6606M · ¥14.350.\n• Nozomi 358 Nagoya → Tokyo (11:29 → 13:06) · Smart EX **2002** · ¥54.500 · Voiture 12 · sièges 11-D/11-E/12-C/12-D/12-E.\n\n🎫 **À RÉCUPÉRER (Shinano, ce n'est pas acheter) :** billets physiques JR-WEST avant de monter (Mastercard **8625 + PIN anniversaire de Pablo).\n\n📱 **PRÉPARATION Nozomi :** sauvegarder le QR-Ticket / confirmer l'accès ; vérifier les dimensions des valises.\n\n🟢 NE PAS RÉSERVER bus Magome / transfert hôtel Tokyo / transports urbains."
       },
       {
-        "text": "⚠️ Shinano 4 09:57 déjà réservé. Le Shinkansen Nagoya → Tokyo reste à réserver."
+        "text": "⚠️ Le Shinano 4 (09:57) et le Nozomi 358 (11:29) sont **DÉJÀ ACHETÉS**. Ne pas changer les horaires sauf demande explicite ou incident.\n\n⚠️ Correspondance Nagoya : 10:53 → 11:29 (**36 min**). Suivre vers les quais du Tokaido Shinkansen.\n\n⚠️ Shinano : la réservation NE remplace PAS le retrait physique des billets JR-WEST.\n\n⚠️ Nozomi : accès avec **QR-Ticket** (recommandé) ou IC désignée — pas un retrait obligatoire type JR-WEST.\n\n⚠️ Acheter le petit-déjeuner la veille (Magome Chaya ne propose pas de petit-déjeuner)."
       },
       {
-        "text": "☑️ Bus Magome → Nakatsugawa\n☑️ Réservation Shinano 4 (42093)\n☐ Récupérer billets physiques JR-WEST\n☐ Carte Mastercard physique **8625\n☐ N° 42093 + PIN (anniversaire de Pablo)\n☐ Réserver Shinkansen Nagoya → Tokyo"
+        "text": "☑️ Bus Magome → Nakatsugawa\n☑️ Réservation Shinano 4 (n° 42093 · FAIT)\n☑️ Réservation Nozomi 358 Smart EX (n° 2002 · ACHETÉE)\n☐ Récupérer les billets physiques JR-WEST du Shinano (hors portiques)\n☐ Mastercard physique se terminant par 8625 + PIN (anniversaire de Pablo) + n° 42093\n☐ Sauvegarder le QR-Ticket / confirmer l'accès Smart EX du Nozomi 358\n☐ Vérifier les dimensions des valises\n☐ Garder la confirmation Smart EX accessible sur le téléphone"
       }
     ],
     "money": "Env. 40 € (repas)"

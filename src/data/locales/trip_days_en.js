@@ -408,16 +408,16 @@ export const days = [
         "text": "🚆 **SHINANO 4 — NAKATSUGAWA → NAGOYA**\n\n🟢 **BOOKED & CONFIRMED** (JR-WEST Online Train Reservation)\n\nDep: Nakatsugawa **09:57** → Arr: Nagoya **10:53** (56 min).\nCar **4** · Ordinary / Reserved / Non-Smoking.\nSeats: **11-D · 12-C · 12-D · 13-C · 13-D**.\n5 adults · Total **¥14,350** (¥2,870/pax).\nReservation **#42093** · Receipt **AEE6606M**.\n\n🎫 **PHYSICAL TICKETS:** still to collect (see 08:40). Board only with tickets in hand."
       },
       {
-        "text": "10:53 — Arrival in Nagoya. Transfer to the Tokaido Shinkansen. We have approximately 20–30 minutes depending on the chosen Shinkansen.\nBuy an EKIBEN here if we haven't eaten before.\nDo not sit and eat in the station: buy food to go and eat it on the Shinkansen.\nRecommendation: ekiben, sandwich, sushi/bento, drink."
+        "text": "10:53 — Arrival at Nagoya Station.\n\n⏱️ **Transfer to the Tokaido Shinkansen:** Nozomi 358 departs at **11:29** → **36 minutes** buffer (reasonable; not a huge margin).\n\n⚠️ **IMPORTANT:** Follow signs to the Tokaido Shinkansen platforms. Do not look for an alternative train or change this reservation unless there is a real disruption.\n\n🍱 In this window (approx. 10:53–11:20) buy ekiben/bento, sandwich, sushi or a drink to eat on the Shinkansen. Do not reserve a restaurant."
       },
       {
-        "text": "🍱 LUNCH\nBuy an ekiben at Nagoya Station and eat during the Shinkansen.\nIt is one of the most practical ways to take advantage of the journey.\nDo not reserve a restaurant for this meal."
+        "text": "🍱 **BUY FOOD IN NAGOYA**\n\nBuy an ekiben/bento, sandwich, sushi, drink, etc., to eat during Nozomi 358.\nIt is the most practical way to use the journey.\nDo not reserve a restaurant for this meal."
       },
       {
-        "text": "🚅 ~11:15–11:30 — Tokaido Shinkansen NOZOMI\nNagoya → Tokyo\nDuration: approx. 1h40.\nApproximate arrival: ~13:00.\n\nIMPORTANT:\nRESERVE IN ADVANCE for 5 people.\nPreference: seats together.\nWe do not need a Japan Rail Pass.\nReserve via Smart EX / Tokaido Sanyo Kyushu Shinkansen Online Reservation.\nSince we are 5, reserve the five seats together if possible.\n\n🧳 If we travel with large suitcases:\nCheck dimensions before booking.\nIf any suitcase has total dimensions greater than 160 cm, reserve a seat with oversized baggage space.\nDo not assume we can place a large suitcase wherever we want."
+        "text": "🚄 **TOKAIDO SHINKANSEN NOZOMI 358 — NAGOYA → TOKYO**\n\n🟢 **PURCHASED AND CONFIRMED** (Smart EX)\n\nDep: Nagoya **11:29** → Arr: Tokyo **13:06** (1 h 37 min).\nOrdinary Car · Series N700 · Car **12**.\nSeats: **11-D · 11-E · 12-C · 12-D · 12-E** (already assigned).\n5 adults · Total **¥54,500** (¥10,900/pax).\nSmart EX reservation **#2002**.\n\n📱 **Access:** QR-Ticket (recommended) · IC card can also be designated · physical pickup optional (NOT mandatory).\n\n🧳 Ordinary Car already booked: check suitcase dimensions (≤160 cm OK; >160 cm up to 250 cm would need oversized space — do not change the reservation without measuring).\n\nExpand the card below for the Smart EX confirmation, seats and checklist."
       },
       {
-        "text": "~13:00 — Arrival at Tokyo Station. From Tokyo Station continue on public transport to KOKO HOTEL Residence Asakusa Kappabashi."
+        "text": "13:06 — Arrival at Tokyo Station. From Tokyo Station continue on public transport to KOKO HOTEL Residence Asakusa Kappabashi."
       },
       {
         "text": "🚇 TOKYO STATION → KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI\nThe hotel is at: 3-24-2 Nishi-Asakusa, Taito-ku.\nOptions:\nSimple option: JR from Tokyo → Ueno + Tokyo Metro Ginza Line Ueno → Tawaramachi + 10 min walk to the hotel.\nAlternatively: Tokyo → Ueno and then taxi if we carry a lot of luggage.\nThe hotel is approximately:\n- 4 min walk from Tsukuba Express Asakusa Station B\n- 10 min from Tawaramachi Station\n- 10 min from Iriya Station.\n\nDo not reserve this transport.\nIt is paid there using an IC card/ticket.\nWith 5 people and suitcases, if we are tired, consider a taxi from Tokyo Station directly to the hotel. It is not mandatory to reserve it."
@@ -435,19 +435,19 @@ export const days = [
         "text": "🏨 **RETURN TO HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nReturn to our Tokyo residence to rest and reunite with the large luggage forwarded from Kyoto (1st night in Tokyo)."
       },
       {
-        "text": "🔴 HIGH PRIORITY\n\nRESERVE Shinkansen Nozomi Nagoya → Tokyo for 5 people.\n\n🟠 MEDIUM PRIORITY\n\nRESERVE Limited Express Shinano 4 Nakatsugawa → Nagoya for 5 people.\n\n🟢 DO NOT RESERVE\nLocal bus Magome → Nakatsugawa.\n\n🟢 DO NOT RESERVE\nTokyo → hotel.\n\n🟢 DO NOT RESERVE\nUrban transport in Tokyo."
+        "text": "LUNCH\nSince breakfast will be early and the main meal will be on the Shinkansen, it is not necessary to reserve a meal in Akihabara.\nIf we are hungry upon arrival, eat something quick in Akihabara. Typical options: ramen, curry, gyudon, kaiten sushi, tonkatsu, Japanese fast food.\n\nDINNER\nLeave dinner for Akihabara or Asakusa.\nDo not assume all restaurants stay open very late.\nFor a specific restaurant and being 5 people, reserve if a popular one is decided on."
       },
       {
-        "text": "1. 🚌 Magome → Nakatsugawa: 08:15 → 08:40. No reservation.\n2. 🚆 Nakatsugawa → Nagoya: **Shinano 4** 09:57 → 10:53.\n\n🟢 **ALREADY BOOKED** (JR-WEST 42093 · ¥14,350 · Car 4). 🎫 Collect physical tickets before boarding.\n3. 🚅 Nagoya → Tokyo: Nozomi ~11:20–11:30.\n\n🟠 **STILL PENDING** — book in advance for 5 (Smart EX).\n4–5. Tokyo urban transit: Suica, no reservation."
+        "text": "1. 🚌 Magome → Nakatsugawa: 08:15 → 08:40. No reservation. ¥800 approx. (~€5). Pay locally.\n2. 🚆 Nakatsugawa → Nagoya: Limited Express **Shinano 4**. 09:57 → 10:53.\n\n🟢 **ALREADY BOOKED** (JR-WEST No. 42093 · ¥14,350 · Car 4). 🎫 Collect physical tickets before boarding.\n3. 🚅 Nagoya → Tokyo: **Nozomi 358**. 11:29 → 13:06.\n\n🟢 **ALREADY PURCHASED** (Smart EX No. 2002 · ¥54,500 · Car 12 · QR-Ticket).\n4. 🚇 Tokyo → Asakusa/Kappabashi: Metro/JR. No reservation. Suica.\n5. 🚇 Asakusa → Akihabara: Urban transit. No reservation. Suica."
       },
       {
-        "text": "🟢 **DONE**\nShinano 4 Nakatsugawa → Nagoya · Reservation 42093 · Receipt AEE6606M · ¥14,350.\n\n🎫 **STILL TO COLLECT (not buy):** physical JR-WEST tickets before boarding (Mastercard **8625 + Pablo's birthday PIN).\n\n🔴 **HIGH PRIORITY — STILL PENDING**\nBook Shinkansen Nozomi Nagoya → Tokyo for 5 (~11:20–11:30).\n\n🟢 DO NOT BOOK Magome bus / Tokyo hotel transfer / urban transit."
+        "text": "🟢 **DONE**\n• Shinano 4 Nakatsugawa → Nagoya (09:57 → 10:53) · Reservation 42093 · Receipt AEE6606M · ¥14,350.\n• Nozomi 358 Nagoya → Tokyo (11:29 → 13:06) · Smart EX **2002** · ¥54,500 · Car 12 · seats 11-D/11-E/12-C/12-D/12-E.\n\n🎫 **STILL TO COLLECT (Shinano, not buy):** physical JR-WEST tickets before boarding (Mastercard **8625 + Pablo's birthday PIN).\n\n📱 **Nozomi PREP:** save QR-Ticket / confirm access; check suitcase dimensions.\n\n🟢 DO NOT BOOK Magome bus / Tokyo hotel transfer / urban transit."
       },
       {
-        "text": "⚠️ Shinano 4 at 09:57 is **ALREADY BOOKED**. Do not change this time unless explicitly requested.\n\n⚠️ Booking does not replace physical ticket pickup.\n\n⚠️ Nagoya → Tokyo Shinkansen is **still pending** (Smart EX).\n\n⚠️ Buy breakfast the day before (Magome Chaya has no breakfast)."
+        "text": "⚠️ Shinano 4 (09:57) and Nozomi 358 (11:29) are **ALREADY PURCHASED**. Do not change times unless explicitly requested or there is a disruption.\n\n⚠️ Nagoya transfer: 10:53 → 11:29 (**36 min**). Follow signs to Tokaido Shinkansen platforms.\n\n⚠️ Shinano: booking does NOT replace physical JR-WEST ticket pickup.\n\n⚠️ Nozomi: access with **QR-Ticket** (recommended) or designated IC — not a mandatory JR-WEST-style pickup.\n\n⚠️ Buy breakfast the day before (Magome Chaya has no breakfast)."
       },
       {
-        "text": "☑️ Magome → Nakatsugawa bus\n☑️ Shinano 4 reservation (No. 42093 · DONE)\n☐ Collect physical JR-WEST tickets (outside gates)\n☐ Bring physical Mastercard ending in 8625\n☐ Have Reservation No. 42093 ready\n☐ Have 4-digit PIN ready (Pablo's birthday)\n☐ Book Tokaido Shinkansen Nagoya → Tokyo (still pending)"
+        "text": "☑️ Magome → Nakatsugawa bus\n☑️ Shinano 4 reservation (No. 42093 · DONE)\n☑️ Nozomi 358 Smart EX reservation (No. 2002 · PURCHASED)\n☐ Collect physical JR-WEST Shinano tickets (outside gates)\n☐ Physical Mastercard ending 8625 + PIN (Pablo's birthday) + No. 42093\n☐ Save QR-Ticket / confirm Smart EX access for Nozomi 358\n☐ Check suitcase dimensions\n☐ Keep Smart EX confirmation accessible on the phone"
       }
     ],
     "money": "Approx. €40 (meals)"
