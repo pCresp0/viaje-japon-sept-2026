@@ -69,9 +69,11 @@ function shortText(text = "") {
   if (!text) return "";
   let clean = text
     .replace(/\*\*(.*?)\*\*/g, "$1")
+    .replace(/\(\s*https?:\/\/[^\s)]+\s*\)/g, "")
     .replace(/https?:\/\/[^\s)]+/g, "")
     .split("\n")[0]
     .trim();
+  clean = clean.replace(/\(\s*\)/g, "").trim();
   try {
     clean = clean.replace(/^[\p{Extended_Pictographic}\uFE0F\u200D\s•\-—:→]+/u, "").trim();
   } catch {
