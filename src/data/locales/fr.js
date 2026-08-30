@@ -72,7 +72,7 @@ export default {
       category: "logistica",
       urgency: "alta",
       title: "🎫 RÉCUPÉRER BILLETS PHYSIQUES — Shinano 4 (DÉJÀ PAYÉ)",
-      detail: "📅 15/09/2026 (ou plus tôt en gare JR-WEST si possible)\n🚆 Shinano 4 · Nakatsugawa 09:57 → Nagoya 10:53\n🟢 Réservation FAITE : nº 42093 · Receipt AEE6606M · ¥14.350 (~77,84€)\n📍 Récupérer HORS des portiques\n⚠️ APPORTER : Mastercard physique **8625 · PIN = anniversaire de Pablo · Réservation 42093\nPLAN B : à Nakatsugawa ~08:40 (77 min avant le départ).",
+      detail: "📅 15/09/2026 (ou plus tôt en gare JR-WEST si possible)\n🚆 Shinano 4 · Nakatsugawa 09:57 → Nagoya 10:53\n🟢 Réservation FAITE : nº 42093 · Receipt AEE6606M · ¥14.350 (~77,84€)\n📍 Récupérer HORS des portiques\n⚠️ APPORTER : Mastercard physique **8625 · PIN = PIN de la réservation · Réservation 42093\nPLAN B : à Nakatsugawa ~08:40 (77 min avant le départ).",
       deadline: "Avant de monter dans le Shinano 4 (15/09 09:57)",
     },
     {

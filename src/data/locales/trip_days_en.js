@@ -441,13 +441,13 @@ export const days = [
         "text": "1. 🚌 Magome → Nakatsugawa: 08:15 → 08:40. No reservation. ¥800 approx. (~€5). Pay locally.\n2. 🚆 Nakatsugawa → Nagoya: Limited Express **Shinano 4**. 09:57 → 10:53.\n\n🟢 **ALREADY BOOKED** (JR-WEST No. 42093 · ¥14,350 · Car 4). 🎫 Collect physical tickets before boarding.\n3. 🚅 Nagoya → Tokyo: **Nozomi 358**. 11:29 → 13:06.\n\n🟢 **ALREADY PURCHASED** (Smart EX No. 2002 · ¥54,500 · Car 12 · QR-Ticket).\n4. 🚇 Tokyo → Asakusa/Kappabashi: Metro/JR. No reservation. Suica.\n5. 🚇 Asakusa → Akihabara: Urban transit. No reservation. Suica."
       },
       {
-        "text": "🟢 **DONE**\n• Shinano 4 Nakatsugawa → Nagoya (09:57 → 10:53) · Reservation 42093 · Receipt AEE6606M · ¥14,350.\n• Nozomi 358 Nagoya → Tokyo (11:29 → 13:06) · Smart EX **2002** · ¥54,500 · Car 12 · seats 11-D/11-E/12-C/12-D/12-E.\n\n🎫 **STILL TO COLLECT (Shinano, not buy):** physical JR-WEST tickets before boarding (Mastercard **8625 + Pablo's birthday PIN).\n\n📱 **Nozomi PREP:** save QR-Ticket / confirm access; check suitcase dimensions.\n\n🟢 DO NOT BOOK Magome bus / Tokyo hotel transfer / urban transit."
+        "text": "🟢 **DONE**\n• Shinano 4 Nakatsugawa → Nagoya (09:57 → 10:53) · Reservation 42093 · Receipt AEE6606M · ¥14,350.\n• Nozomi 358 Nagoya → Tokyo (11:29 → 13:06) · Smart EX **2002** · ¥54,500 · Car 12 · seats 11-D/11-E/12-C/12-D/12-E.\n\n🎫 **STILL TO COLLECT (Shinano, not buy):** physical JR-WEST tickets before boarding (Mastercard **8625 + reservation PIN).\n\n📱 **Nozomi PREP:** save QR-Ticket / confirm access; check suitcase dimensions.\n\n🟢 DO NOT BOOK Magome bus / Tokyo hotel transfer / urban transit."
       },
       {
         "text": "⚠️ Shinano 4 (09:57) and Nozomi 358 (11:29) are **ALREADY PURCHASED**. Do not change times unless explicitly requested or there is a disruption.\n\n⚠️ Nagoya transfer: 10:53 → 11:29 (**36 min**). Follow signs to Tokaido Shinkansen platforms.\n\n⚠️ Shinano: booking does NOT replace physical JR-WEST ticket pickup.\n\n⚠️ Nozomi: access with **QR-Ticket** (recommended) or designated IC — not a mandatory JR-WEST-style pickup.\n\n⚠️ Buy breakfast the day before (Magome Chaya has no breakfast)."
       },
       {
-        "text": "☑️ Magome → Nakatsugawa bus\n☑️ Shinano 4 reservation (No. 42093 · DONE)\n☑️ Nozomi 358 Smart EX reservation (No. 2002 · PURCHASED)\n☐ Collect physical JR-WEST Shinano tickets (outside gates)\n☐ Physical Mastercard ending 8625 + PIN (Pablo's birthday) + No. 42093\n☐ Save QR-Ticket / confirm Smart EX access for Nozomi 358\n☐ Check suitcase dimensions\n☐ Keep Smart EX confirmation accessible on the phone"
+        "text": "☑️ Magome → Nakatsugawa bus\n☑️ Shinano 4 reservation (No. 42093 · DONE)\n☑️ Nozomi 358 Smart EX reservation (No. 2002 · PURCHASED)\n☐ Collect physical JR-WEST Shinano tickets (outside gates)\n☐ Physical Mastercard ending 8625 + PIN  + No. 42093\n☐ Save QR-Ticket / confirm Smart EX access for Nozomi 358\n☐ Check suitcase dimensions\n☐ Keep Smart EX confirmation accessible on the phone"
       }
     ],
     "money": "Approx. €40 (meals)"

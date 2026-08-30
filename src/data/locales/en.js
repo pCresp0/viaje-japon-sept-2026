@@ -72,7 +72,7 @@ export default {
       category: "logistica",
       urgency: "alta",
       title: "🎫 COLLECT PHYSICAL TICKETS — Shinano 4 (ALREADY PAID)",
-      detail: "📅 15/09/2026 (or earlier at a JR-WEST station if possible)\n🚆 Shinano 4 · Nakatsugawa 09:57 → Nagoya 10:53\n🟢 Reservation DONE: No. 42093 · Receipt AEE6606M · ¥14,350\n📍 Collect OUTSIDE ticket gates\n⚠️ BRING: physical Mastercard ending 8625 · PIN = Pablo's birthday · Reservation 42093\nPLAN B: at Nakatsugawa ~08:40 (77 min before departure).",
+      detail: "📅 15/09/2026 (or earlier at a JR-WEST station if possible)\n🚆 Shinano 4 · Nakatsugawa 09:57 → Nagoya 10:53\n🟢 Reservation DONE: No. 42093 · Receipt AEE6606M · ¥14,350\n📍 Collect OUTSIDE ticket gates\n⚠️ BRING: physical Mastercard ending 8625 · PIN = reservation PIN · Reservation 42093\nPLAN B: at Nakatsugawa ~08:40 (77 min before departure).",
       deadline: "Before boarding Shinano 4 (15/09 09:57)",
     },
     {

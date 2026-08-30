@@ -106,7 +106,7 @@ export default function ShinanoTicketCard({ onGoToDay } = {}) {
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-800">
                 <Lock size={14} className="text-gray-400 shrink-0" />
-                <span><strong>PIN de recogida:</strong> cumpleaños de Pablo (4 dígitos de la reserva).</span>
+                <span><strong>PIN de recogida:</strong> PIN de 4 dígitos de la reserva.</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-800">
                 <Ticket size={14} className="text-gray-400 shrink-0" />
@@ -193,7 +193,7 @@ export default function ShinanoTicketCard({ onGoToDay } = {}) {
               <div className="my-2 border-t border-dashed" style={{ borderColor: "var(--line)" }} />
 
               <ChecklistItem id="card" checked={checkedItems.card} onClick={() => toggleCheck("card")} text="Llevamos la tarjeta física Mastercard terminada en 8625" />
-              <ChecklistItem id="pin" checked={checkedItems.pin} onClick={() => toggleCheck("pin")} text="Tenemos a mano el PIN de 4 dígitos (cumpleaños de Pablo)" />
+              <ChecklistItem id="pin" checked={checkedItems.pin} onClick={() => toggleCheck("pin")} text="Tenemos a mano el PIN de la reserva (4 dígitos)" />
               <ChecklistItem id="collected" checked={checkedItems.collected} onClick={() => toggleCheck("collected")} text="Billetes físicos recogidos (fuera de los tornos) antes de subir" />
               <ChecklistItem id="boarded" checked={checkedItems.boarded} onClick={() => toggleCheck("boarded")} text="Subidos al Shinano 4 a las 09:57 con billetes en mano" />
             </div>

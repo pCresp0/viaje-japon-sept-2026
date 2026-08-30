@@ -28,7 +28,7 @@ export const pendingItems = [
     category: "logistica",
     urgency: "alta",
     title: "🎫 RECOGER BILLETES FÍSICOS — Shinano 4 (YA PAGADO)",
-    detail: "📅 15/09/2026 (o antes si se puede en estación JR-WEST)\n🚆 Shinano 4 · Nakatsugawa 09:57 → Nagoya 10:53\n🟢 Reserva YA HECHA: nº 42093 · Receipt AEE6606M · ¥14.350 (~77,84€)\n📍 Recoger FUERA de los tornos (máquina/taquilla habilitada)\n⚠️ OBLIGATORIO LLEVAR:\n- Tarjeta física Mastercard terminada en 8625 (no virtual)\n- PIN de 4 dígitos: cumpleaños de Pablo\n- Reservation No. 42093\nPLAN B: al llegar a Nakatsugawa ~08:40 (77 min hasta el tren).",
+    detail: "📅 15/09/2026 (o antes si se puede en estación JR-WEST)\n🚆 Shinano 4 · Nakatsugawa 09:57 → Nagoya 10:53\n🟢 Reserva YA HECHA: nº 42093 · Receipt AEE6606M · ¥14.350 (~77,84€)\n📍 Recoger FUERA de los tornos (máquina/taquilla habilitada)\n⚠️ OBLIGATORIO LLEVAR:\n- Tarjeta física Mastercard terminada en 8625 (no virtual)\n- PIN de 4 dígitos de la reserva\n- Reservation No. 42093\nPLAN B: al llegar a Nakatsugawa ~08:40 (77 min hasta el tren).",
     deadline: "Antes de subir al Shinano 4 (15/09 09:57)",
   },
   {
