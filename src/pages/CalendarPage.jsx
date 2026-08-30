@@ -237,49 +237,28 @@ export default function CalendarPage() {
           flexDirection: "column",
           borderLeft: "1px solid var(--line)",
           background: "var(--paper-raised)",
-          padding: 20,
           overflowY: "auto",
           height: "100%",
           flexShrink: 0,
           position: "relative",
         }}>
-          <button
-            onClick={() => setSelectedDayNum(null)}
-            aria-label="Cerrar"
-            style={{
-              position: "absolute",
-              top: 28,
-              right: 28,
-              zIndex: 30,
-              background: "rgba(0, 0, 0, 0.4)",
-              color: "#ffffff",
-              border: "1px solid rgba(255, 255, 255, 0.3)",
-              borderRadius: "50%",
-              width: 32,
-              height: 32,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              cursor: "pointer",
-              boxShadow: "0 2px 8px rgba(0,0,0,0.2)"
-            }}
-          >
-            <X size={18} />
-          </button>
-          
           {!detailMode ? (
             <QuickDayCard 
               day={selectedDay} 
               blockColor={blockMap[selectedDay.block]?.color || "#1d3557"} 
               onShowFullDay={() => setDetailMode(true)} 
+              onClose={() => setSelectedDayNum(null)}
+              standalone={true}
             />
           ) : (
-            <DayCard 
-              day={selectedDay} 
-              defaultOpenHistory={true} 
-              onClose={() => setSelectedDayNum(null)} 
-              onShowQuickView={() => setDetailMode(false)} 
-            />
+            <div style={{ padding: 20 }}>
+              <DayCard 
+                day={selectedDay} 
+                defaultOpenHistory={true} 
+                onClose={() => setSelectedDayNum(null)} 
+                onShowQuickView={() => setDetailMode(false)} 
+              />
+            </div>
           )}
         </div>
       )}
@@ -287,48 +266,27 @@ export default function CalendarPage() {
       {/* Mobile modal overlay for day detail */}
       {selectedDay && createPortal(
         <div data-mobile-modal className="modal-overlay" onClick={() => setSelectedDayNum(null)}>
-          <div className="modal-sheet" onClick={(e) => e.stopPropagation()} style={{ position: "relative" }}>
-            <button
-              onClick={() => setSelectedDayNum(null)}
-              aria-label="Cerrar"
-              style={{
-                position: "absolute",
-                top: 14,
-                right: 14,
-                zIndex: 30,
-                width: 32,
-                height: 32,
-                borderRadius: "50%",
-                background: "rgba(0, 0, 0, 0.4)",
-                color: "#ffffff",
-                border: "1px solid rgba(255, 255, 255, 0.3)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                cursor: "pointer",
-                boxShadow: "0 2px 8px rgba(0,0,0,0.2)"
-              }}
-            >
-              <X size={18} />
-            </button>
-            <div style={{ padding: 0 }}>
-              {!detailMode ? (
-                <div className="p-4 pt-12">
-                  <QuickDayCard 
-                    day={selectedDay} 
-                    blockColor={blockMap[selectedDay.block]?.color || "#1d3557"} 
-                    onShowFullDay={() => setDetailMode(true)} 
-                  />
-                </div>
-              ) : (
+          <div className="modal-sheet" onClick={(e) => e.stopPropagation()} style={{ position: "relative", overflow: "hidden", display: "flex", flexDirection: "column", height: "85vh", maxHeight: 800 }}>
+            {!detailMode ? (
+              <div style={{ flex: 1, overflowY: "auto" }}>
+                <QuickDayCard 
+                  day={selectedDay} 
+                  blockColor={blockMap[selectedDay.block]?.color || "#1d3557"} 
+                  onShowFullDay={() => setDetailMode(true)} 
+                  onClose={() => setSelectedDayNum(null)}
+                  standalone={true}
+                />
+              </div>
+            ) : (
+              <div style={{ padding: "16px 16px 24px", overflowY: "auto", flex: 1 }}>
                 <DayCard 
                   day={selectedDay} 
                   defaultOpenHistory={true} 
                   onClose={() => setSelectedDayNum(null)} 
                   onShowQuickView={() => setDetailMode(false)} 
                 />
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </div>,
         document.body

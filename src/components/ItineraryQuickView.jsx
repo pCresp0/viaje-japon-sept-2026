@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, ChevronUp, LayoutList } from "lucide-react";
+import { ChevronDown, ChevronUp, LayoutList, X } from "lucide-react";
 import { formatDateShort } from "../utils/date";
 import PlaceText from "./PlaceText";
 
@@ -90,7 +90,7 @@ function hasRealTime(entry) {
   return /^~?\d{1,2}[:h]\d{0,2}/.test(entry.time ?? "");
 }
 
-export function QuickDayCard({ day, blockColor, onShowFullDay }) {
+export function QuickDayCard({ day, blockColor, onShowFullDay, onClose, standalone = false }) {
   const [expanded, setExpanded] = useState(false);
 
   const keyEntries = (day.schedule ?? []).filter((e) => {
@@ -106,8 +106,8 @@ export function QuickDayCard({ day, blockColor, onShowFullDay }) {
   return (
     <div
       id={`quick-day-${day.num}`}
-      className="rounded-2xl overflow-hidden"
-      style={{ scrollMarginTop: "80px", border: "1px solid var(--line)", background: "var(--paper-raised)" }}
+      className={standalone ? "flex flex-col h-full bg-paper" : "rounded-2xl overflow-hidden"}
+      style={{ scrollMarginTop: "80px", border: standalone ? "none" : "1px solid var(--line)", background: standalone ? "var(--paper-raised)" : "var(--paper-raised)", ...(standalone ? { height: "100%", borderRadius: 0 } : {}) }}
     >
       <div
         className="px-4 py-3 flex items-center gap-3 relative"
@@ -124,16 +124,28 @@ export function QuickDayCard({ day, blockColor, onShowFullDay }) {
           <p className="text-white/80 text-xs mt-0.5">{formatDateShort(day.date)} · {day.cities}</p>
         </div>
         
-        {onShowFullDay && (
-          <button
-            onClick={() => onShowFullDay(day.num)}
-            className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center justify-center rounded-full p-2 transition-colors hover:bg-white/20"
-            style={{ background: "rgba(255,255,255,0.15)", border: "none", cursor: "pointer", color: "white" }}
-            title="Ver detalle completo"
-          >
-            <LayoutList size={16} />
-          </button>
-        )}
+        <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1.5">
+          {onShowFullDay && (
+            <button
+              onClick={() => onShowFullDay(day.num)}
+              className="flex items-center justify-center rounded-full p-2 transition-colors hover:bg-white/20 active:scale-95"
+              style={{ background: "rgba(255,255,255,0.15)", border: "none", cursor: "pointer", color: "white" }}
+              title="Ver detalle completo"
+            >
+              <LayoutList size={16} />
+            </button>
+          )}
+          {onClose && (
+            <button
+              onClick={onClose}
+              className="flex items-center justify-center rounded-full p-2 transition-colors hover:bg-white/20 active:scale-95"
+              style={{ background: "rgba(255,255,255,0.15)", border: "none", cursor: "pointer", color: "white" }}
+              title="Cerrar"
+            >
+              <X size={16} />
+            </button>
+          )}
+        </div>
       </div>
 
       <div className="px-3 sm:px-4 py-3">
