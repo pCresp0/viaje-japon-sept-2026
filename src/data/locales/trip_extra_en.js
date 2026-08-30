@@ -160,7 +160,7 @@ export const transports = [
 ];
 
 export const budget = {
-  note: "Calculated with realistic prices and the current ¥, very cheap for Europe.",
+  note: "Flights, hotels and long-distance tickets confirmed (Revolut). Fuji tours + urban estimates still pending. JR Pass not worth it (see analysis below).",
   categories: [
     {
       title: "International Flights",
@@ -184,10 +184,18 @@ export const budget = {
     {
       title: "Domestic Transportation",
       details: [
-        "<strong>Already purchased (Revolut, 5 pax):</strong> Nozomi 53 373.27€ · Thunderbird/Kagayaki 209.38€ · Nohi Magome 135.61€ · Shinano 4 77.84€ · Nozomi 358 295.62€ (+ Day 7 Nohi buses already booked).",
-        "Subtotal long-distance tickets purchased ≈ 1,287€ group (~257€/person) + Day 7 Alps buses.",
-        "Still estimated: N'EX, local JR, Tokyo metro, Fuji Kodama, return Skyliner/N'EX (~155€/person).",
-        "Approx. Revolut rate Aug 2026: ~184 ¥/€.",
+        "<strong>Already purchased ≈ 1,287€ group (~257€/person)</strong> — Nozomi 53 373.27€ · Thunderbird/Kagayaki 209.38€ · Nohi Magome 135.61€ · Shinano 4 77.84€ · Nozomi 358 295.62€ · Day 7 Nohi (Kanazawa↔Shirakawa↔Takayama) ≈ 196€.",
+        "Still estimated ≈ 156€/person: arrival N'EX, local JR, Tokyo metro, Fuji Shinkansen (Kodama), return Skyliner/N'EX.",
+        "Total transport est. ≈ 414€/person · ~2,068€ group. Revolut rate ~184 ¥/€.",
+        "Japan Rail Pass Ordinary (jrpass.com): 284€ / 455€ / 568€ (7/14/21 days) — <strong>not worth it</strong> (analysis below).",
+      ],
+    },
+    {
+      title: "Mount Fuji Excursions",
+      details: [
+        "<strong>Ken Kaneshima tour (day 14, confirmed):</strong> ¥13,000 (~70€)/person · ~350€ group (mini-van + admissions).",
+        "<strong>GetYourGuide (days 10–13, 4 dates reserved):</strong> 210€ group / 42€/person for the day used. Free cancellation 24h before for the rest (100% refund). Charge scheduled ~Sep 13.",
+        "If the sky is clear on a day 10–13 you can do GYG and cancel the rest; Ken on day 14 is independent. Fuji Shinkansen is under Transport.",
       ],
     },
     {
@@ -205,6 +213,6 @@ export const budget = {
       ],
     },
   ],
-  totalPerPerson: "~2,650€ – 2,750€ (flights included)",
-  totalGroup: "~13,000€ – 13,500€ (5 people)",
+  totalPerPerson: "~2,750€ – 2,900€ (flights included)",
+  totalGroup: "~13,750€ – 14,500€ (5 people)",
 };

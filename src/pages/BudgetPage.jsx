@@ -4,6 +4,7 @@ import { ChevronDown } from "lucide-react";
 import { Highlightable } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 import { formatEur, formatJpyEur } from "../utils/money";
+import JrPassAnalysis from "../components/JrPassAnalysis";
 
 export default function BudgetPage() {
   const { budget, transports, flights } = useContent();
@@ -113,6 +114,8 @@ export default function BudgetPage() {
         })}
       </div>
 
+      <JrPassAnalysis />
+
       <div className="rounded-2xl p-4" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
         <button
           onClick={() => setShowTransports((v) => !v)}
@@ -154,7 +157,7 @@ export default function BudgetPage() {
               </span>
             </div>
             <p className="text-[11px] m-0" style={{ color: "var(--ink-soft)" }}>
-              Ya comprado ≈ {formatEur(purchasedTotal)}/persona · {formatEur(purchasedTotal * 5)} el grupo (Revolut en billetes largos).
+              Ya comprado ≈ {formatEur(purchasedTotal)}/persona · {formatEur(purchasedTotal * 5)} el grupo (Revolut en billetes largos + Nohi).
             </p>
           </div>
         )}

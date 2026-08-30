@@ -668,7 +668,7 @@ export const transports = [
 // Presupuesto estimado para 5 personas
 export const budget = {
   people: 5,
-  note: "Vuelos y alojamiento confirmados. Transportes largos: costes reales Revolut (ago 2026) + estimados del resto.",
+  note: "Vuelos, hoteles y billetes largos confirmados (Revolut). Excursiones Fuji + estimados urbanos pendientes. JR Pass no compensa (ver análisis abajo).",
   categories: [
     {
       title: "Vuelos internacionales",
@@ -695,13 +695,23 @@ export const budget = {
     },
     {
       title: "Transporte nacional",
-      perPerson: "~412€",
-      total: "~2.061€",
+      perPerson: "~414€",
+      total: "~2.068€",
       details: [
-        "<strong>Ya comprado (Revolut, 5 pax):</strong> Nozomi 53 373,27€ · Thunderbird/Kagayaki 209,38€ · Nohi Magome 135,61€ · Shinano 4 77,84€ · Nozomi 358 295,62€ (+ Nohi día 7 ya reservados).",
-        "Subtotal billetes largos comprados ≈ 1.287€ grupo (~257€/persona) + buses Alpes día 7.",
-        "Pendiente estimado: N'EX, locales JR, metro Tokio, Fuji Kodama, Skyliner/N'EX vuelta (~155€/persona).",
-        "Conversión aprox. Revolut ago 2026: ~184 ¥/€.",
+        "<strong>Ya comprado ≈ 1.287€ grupo (~257€/persona)</strong> — Nozomi 53 373,27€ · Thunderbird/Kagayaki 209,38€ · Nohi Magome 135,61€ · Shinano 4 77,84€ · Nozomi 358 295,62€ · Nohi día 7 (Kanazawa↔Shirakawa↔Takayama) ≈ 196€.",
+        "Pendiente estimado ≈ 156€/persona: N'EX llegada, locales JR, metro Tokio, Shinkansen Fuji (Kodama), Skyliner/N'EX vuelta.",
+        "Total transporte est. ≈ 414€/persona · ~2.068€ grupo. Conversión Revolut ~184 ¥/€.",
+        "Japan Rail Pass Ordinary (jrpass.com): 284€ / 455€ / 568€ (7/14/21 días) — <strong>no compensa</strong> (análisis abajo).",
+      ],
+    },
+    {
+      title: "Excursiones Monte Fuji",
+      perPerson: "~70€ – 112€",
+      total: "~350€ – 560€",
+      details: [
+        "<strong>Tour Ken Kaneshima (día 14, confirmado):</strong> 13.000 ¥ (~70€)/persona · ~350€ grupo (mini-van + entradas).",
+        "<strong>GetYourGuide (días 10–13, 4 fechas reservadas):</strong> 210€ grupo / 42€/persona por el día que se use. Cancelación gratuita 24h antes del resto (reembolso 100%). Cobro programado ~13 sept.",
+        "Si el cielo está bien un día 10–13 se puede hacer GYG y cancelar el resto; el tour con Ken del día 14 es independiente. Shinkansen Fuji va en Transporte.",
       ],
     },
     {
@@ -723,6 +733,6 @@ export const budget = {
       ],
     },
   ],
-  totalPerPerson: "~2.650€ – 2.750€ (vuelos incluidos)",
-  totalGroup: "~13.000€ – 13.500€ (5 personas)",
+  totalPerPerson: "~2.750€ – 2.900€ (vuelos incluidos)",
+  totalGroup: "~13.750€ – 14.500€ (5 personas)",
 };

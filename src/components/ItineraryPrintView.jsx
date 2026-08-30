@@ -10,12 +10,11 @@ import { foods } from "../data/foods";
 import { sections as prepSections } from "../pages/PrepPage";
 import { categories as phraseCategories, etiquette } from "../pages/PhrasesPage";
 import { emergencyNumbers, embassy } from "../pages/EmergencyPage";
-import { formatEur, formatJpy, formatJpyEur, jpyToEur, YEN_PER_EUR } from "../utils/money";
+import { formatEur, formatJpyEur, YEN_PER_EUR } from "../utils/money";
+import { PASS_7_JPY, PASS_14_JPY, PASS_7_EUR, PASS_14_EUR } from "../data/jrPass";
 
 const franchiseLabel = { pokemon: "Pokémon", digimon: "Digimon", pelicula: "Película" };
 const PEOPLE = 5;
-const PASS_7 = 50000;
-const PASS_14 = 80000;
 
 const CONFIRMED_TICKETS = [
   {
@@ -662,9 +661,9 @@ export default function ItineraryPrintView({ days }) {
           <strong>JR Pass — NO COMPENSA</strong>
           <br />
           Trayectos cubiertos por el Pass: ~{formatJpyEur(coveredJpy, coveredEur)}/persona
-          {" vs "}Pass 7d {formatJpyEur(PASS_7)}
-          {" / "}Pass 14d {formatJpyEur(PASS_14)}.
-          Tipo cambio ~{YEN_PER_EUR} ¥/€. Nozomi no incluido. Un Pass de 7 días no cubre a la vez N'EX (día 1), Alpes y Fuji (día 14).
+          {" vs "}Pass 7d {formatJpyEur(PASS_7_JPY, PASS_7_EUR)}
+          {" / "}Pass 14d {formatJpyEur(PASS_14_JPY, PASS_14_EUR)}.
+          Agencia jrpass.com: 284€ / 455€ / 568€. Tipo cambio ~{YEN_PER_EUR} ¥/€. Nozomi no incluido. Un Pass de 7 días no cubre a la vez N'EX (día 1), Alpes y Fuji (día 14).
         </div>
       </Appendix>
 

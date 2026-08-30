@@ -238,10 +238,11 @@ function buildSearchIndex(lang) {
   items.push(entry({
     id: "jr-pass",
     title: "JR Pass",
-    subtitle: "Evaluación de si conviene o no",
-    category: "Transportes",
-    tab: "transportes",
-    terms: ["jr pass", "japan rail pass", "pase jr"],
+    subtitle: "¿Merece la pena? · análisis en Presupuesto",
+    category: "Presupuesto",
+    tab: "presupuesto",
+    targetId: "jr-pass-analysis",
+    terms: ["jr pass", "japan rail pass", "pase jr", "merece", "compensa"],
   }));
   items.push(entry({
     id: "nohi-bookings",

@@ -160,7 +160,7 @@ export const transports = [
 ];
 
 export const budget = {
-  note: "Kinakalkula gamit ang mga makatotohanang presyo at ang kasalukuyang ¥, napakamura para sa Europe.",
+  note: "Flights, hotels at long-distance tickets confirmed (Revolut). Fuji tours + urban estimates pending. JR Pass hindi sulit (see analysis below).",
   categories: [
     {
       title: "Mga International Flight",
@@ -184,10 +184,18 @@ export const budget = {
     {
       title: "Domestic Transport",
       details: [
-        "<strong>Nabili na (Revolut, 5 pax):</strong> Nozomi 53 373.27€ · Thunderbird/Kagayaki 209.38€ · Nohi Magome 135.61€ · Shinano 4 77.84€ · Nozomi 358 295.62€ (+ Nohi araw 7 naka-book na).",
-        "Subtotal ng long-distance tickets ≈ 1,287€ grupo (~257€/tao) + Alps buses araw 7.",
-        "Tinataya pa: N'EX, local JR, Tokyo metro, Fuji Kodama, Skyliner/N'EX pauwi (~155€/tao).",
-        "Approx. Revolut rate Ago 2026: ~184 ¥/€.",
+        "<strong>Nabili na ≈ 1,287€ grupo (~257€/tao)</strong> — Nozomi 53 373.27€ · Thunderbird/Kagayaki 209.38€ · Nohi Magome 135.61€ · Shinano 4 77.84€ · Nozomi 358 295.62€ · Nohi araw 7 (Kanazawa↔Shirakawa↔Takayama) ≈ 196€.",
+        "Tinataya pa ≈ 156€/tao: N'EX dating, local JR, Tokyo metro, Fuji Shinkansen (Kodama), Skyliner/N'EX pauwi.",
+        "Total transport est. ≈ 414€/tao · ~2,068€ grupo. Revolut rate ~184 ¥/€.",
+        "Japan Rail Pass Ordinary (jrpass.com): 284€ / 455€ / 568€ (7/14/21 araw) — <strong>hindi sulit</strong> (analysis below).",
+      ],
+    },
+    {
+      title: "Mga Excursion sa Bundok Fuji",
+      details: [
+        "<strong>Tour Ken Kaneshima (araw 14, confirmed):</strong> ¥13,000 (~70€)/tao · ~350€ grupo (mini-van + entrances).",
+        "<strong>GetYourGuide (araw 10–13, 4 petsa reserved):</strong> 210€ grupo / 42€/tao para sa araw na gagamitin. Free cancellation 24h before para sa iba (100% refund). Charge ~Set 13.",
+        "Kung malinaw ang langit sa araw 10–13, puwedeng GYG at i-cancel ang iba; si Ken sa araw 14 ay independent. Fuji Shinkansen nasa Transport.",
       ],
     },
     {
@@ -205,6 +213,6 @@ export const budget = {
       ],
     },
   ],
-  totalPerPerson: "~2,650€ – 2,750€ (kasama flights)",
-  totalGroup: "~13,000€ – 13,500€ (5 tao)",
+  totalPerPerson: "~2,750€ – 2,900€ (kasama flights)",
+  totalGroup: "~13,750€ – 14,500€ (5 tao)",
 };

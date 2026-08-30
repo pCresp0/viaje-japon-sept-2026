@@ -4,17 +4,13 @@ import { Train, Bus, Zap, FileDown, CheckCircle2, Clock, AlertCircle, Smartphone
 import { Highlightable } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 import { exportTransportExcel } from "../utils/exportCsv";
-import { formatEur, formatJpy, formatJpyEur, formatGroupJpyEur, jpyToEur, YEN_PER_EUR } from "../utils/money";
+import { formatEur, formatJpyEur } from "../utils/money";
+import { PASS_7_JPY, PASS_7_EUR } from "../data/jrPass";
 import ShinkansenTicketCard from "../components/ShinkansenTicketCard";
 import ThunderbirdTicketCard from "../components/ThunderbirdTicketCard";
 import NohiMagomeTicketCard from "../components/NohiMagomeTicketCard";
 import ShinanoTicketCard from "../components/ShinanoTicketCard";
 import NozomiNagoyaTicketCard from "../components/NozomiNagoyaTicketCard";
-
-const PEOPLE = 5;
-const PASS_7 = 50000;
-const PASS_14 = 80000;
-const PASS_21 = 100000;
 
 function iconKind(transport) {
   if (transport?.kind) return transport.kind;
@@ -24,70 +20,12 @@ function iconKind(transport) {
   return "train";
 }
 
-function isJrPassCovered(t) {
-  if (typeof t.jrPassCovered === "boolean") return t.jrPassCovered;
-  return t.coverage === "jr" && !/nozomi/i.test(t.name || "");
-}
-
-function isNozomi(t) {
-  return /nozomi/i.test(t.name || "");
-}
-
 export default function TransportPage({ onNavigate }) {
   const { transports, days, blocks } = useContent();
   const t = useT();
   const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
-  const [jrPassOpen, setJrPassOpen] = useState(false);
   const [suicaOpen, setSuicaOpen] = useState(false);
   const [smartExOpen, setSmartExOpen] = useState(false);
-
-  const sumJpy = (arr) => arr.reduce((s, x) => s + (x.jpy || 0), 0);
-  const sumEur = (arr) => arr.reduce((s, x) => s + (x.real || 0), 0);
-
-  const purchased = transports.filter((x) => x.purchased);
-  const pending = transports.filter((x) => !x.purchased);
-  const jrCoveredPurchased = purchased.filter(isJrPassCovered);
-  const jrCoveredEstimated = pending.filter(isJrPassCovered);
-  const nozomiPurchased = purchased.filter(isNozomi);
-  const nonJrAll = transports.filter((x) => !isJrPassCovered(x) && !isNozomi(x));
-  const nonJrPurchased = nonJrAll.filter((x) => x.purchased);
-  const nonJrPending = nonJrAll.filter((x) => !x.purchased);
-
-  const coveredBoughtJpy = sumJpy(jrCoveredPurchased);
-  const coveredBoughtEur = sumEur(jrCoveredPurchased);
-  const coveredEstJpy = sumJpy(jrCoveredEstimated);
-  const coveredEstEur = sumEur(jrCoveredEstimated);
-  const coveredTotalJpy = coveredBoughtJpy + coveredEstJpy;
-  const coveredTotalEur = coveredBoughtEur + coveredEstEur;
-  const nozomiJpy = sumJpy(nozomiPurchased);
-  const nozomiEur = sumEur(nozomiPurchased);
-  const nonJrJpy = sumJpy(nonJrAll);
-  const nonJrEur = sumEur(nonJrAll);
-  const nonJrBoughtJpy = sumJpy(nonJrPurchased);
-  const nonJrBoughtEur = sumEur(nonJrPurchased);
-  const nonJrPendJpy = sumJpy(nonJrPending);
-  const nonJrPendEur = sumEur(nonJrPending);
-
-  const paidJpy = sumJpy(purchased);
-  const paidEur = sumEur(purchased);
-  const pendingJpy = sumJpy(pending);
-  const pendingEur = sumEur(pending);
-  const allJpy = paidJpy + pendingJpy;
-  const allEur = paidEur + pendingEur;
-
-  // Escenarios totales /pax (transporte completo del viaje)
-  const individualTotalJpy = allJpy;
-  const individualTotalEur = allEur;
-  const withPass7Jpy = PASS_7 + nozomiJpy + nonJrJpy;
-  const withPass7Eur = jpyToEur(PASS_7) + nozomiEur + nonJrEur;
-  const withPass14Jpy = PASS_14 + nozomiJpy + nonJrJpy;
-  const withPass14Eur = jpyToEur(PASS_14) + nozomiEur + nonJrEur;
-  const saveVs7Jpy = withPass7Jpy - individualTotalJpy;
-  const saveVs7Eur = withPass7Eur - individualTotalEur;
-  const saveVs14Jpy = withPass14Jpy - individualTotalJpy;
-  const saveVs14Eur = withPass14Eur - individualTotalEur;
-  const saveCoveredOnlyJpy = PASS_7 - coveredTotalJpy;
-  const saveCoveredOnlyEur = jpyToEur(PASS_7) - coveredTotalEur;
 
   const seenKeys = [];
   const groups = {};
@@ -435,284 +373,33 @@ export default function TransportPage({ onNavigate }) {
         })}
       </div>
 
-      {/* 6. ANÁLISIS DE COSTE & JAPAN RAIL PASS */}
-      <div className="rounded-2xl border mb-6 overflow-hidden" style={{ background: "var(--paper-raised)", borderColor: "var(--line)" }}>
-        <button
-          type="button"
-          onClick={() => setJrPassOpen(!jrPassOpen)}
-          className="w-full text-left p-5 sm:p-6 cursor-pointer border-none bg-transparent transition-colors hover:bg-black/[0.02]"
-        >
-          <div className="flex items-start justify-between gap-3">
-            <div className="min-w-0">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-xl">📊</span>
-                <h3 className="font-bold text-lg m-0" style={{ color: "var(--ink)" }}>
-                  ¿Merece la pena el Japan Rail Pass (JR Pass)?
-                </h3>
-              </div>
-              <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl" style={{ background: "rgba(188,71,73,0.1)", border: "1px solid rgba(188,71,73,0.2)" }}>
-                <span style={{ fontSize: 16 }}>❌</span>
-                <p className="text-sm font-bold m-0" style={{ color: "var(--shu)" }}>
-                  NO COMPENSA — billetes JR ~{formatJpyEur(coveredTotalJpy, coveredTotalEur)}/pax vs Pass 7d {formatJpyEur(PASS_7)} (+{formatJpyEur(saveCoveredOnlyJpy)} más caro).
-                </p>
-              </div>
+      {/* 6. Enlace al análisis JR Pass (vive en Presupuesto) */}
+      <button
+        type="button"
+        onClick={() => onNavigate?.({ tab: "presupuesto", targetId: "jr-pass-analysis" })}
+        className="w-full text-left rounded-2xl border mb-6 p-5 cursor-pointer transition-colors hover:bg-black/[0.02]"
+        style={{ background: "var(--paper-raised)", borderColor: "var(--line)" }}
+      >
+        <div className="flex items-start justify-between gap-3">
+          <div className="min-w-0">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="text-xl">📊</span>
+              <h3 className="font-bold text-lg m-0" style={{ color: "var(--ink)" }}>
+                ¿Merece la pena el Japan Rail Pass?
+              </h3>
             </div>
-            <ChevronDown
-              size={22}
-              className={`shrink-0 transition-transform ${jrPassOpen ? "rotate-180" : ""}`}
-              style={{ color: "var(--ink-soft)", marginTop: 4 }}
-            />
-          </div>
-        </button>
-
-        {jrPassOpen && (
-        <div className="px-5 sm:px-6 pb-6 space-y-6">
-          <p className="text-xs leading-relaxed m-0" style={{ color: "var(--ink-soft)" }}>
-            Cálculo con <strong>precios reales Revolut</strong> de billetes ya comprados + estimaciones del resto.
-            Tipo de cambio aprox. {YEN_PER_EUR} ¥/€. Precios oficiales JR Pass (ordinario adulto, vigentes hasta sept 2026):
-            {" "}7 días {formatJpyEur(PASS_7)} · 14 días {formatJpyEur(PASS_14)} · 21 días {formatJpyEur(PASS_21)}.
-            El Pass <strong>no incluye Nozomi</strong>.
-          </p>
-
-          {/* 1. Estado de pagos del transporte */}
-          <div>
-            <p className="text-xs font-bold uppercase tracking-wider mb-3 m-0" style={{ color: "var(--ink-soft)" }}>
-              1. Estado de pagos — transporte nacional
+            <p className="text-sm m-0 mb-2" style={{ color: "var(--ink-soft)" }}>
+              El análisis completo (pagado vs pendiente, escenarios y precios) está en Presupuesto.
+              Pass 7d Ordinary: {formatJpyEur(PASS_7_JPY, PASS_7_EUR)}/persona · {formatEur(PASS_7_EUR * 5)} el grupo (jrpass.com).
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              <div className="p-4 rounded-xl border" style={{ background: "rgba(46,125,91,0.06)", borderColor: "rgba(46,125,91,0.25)" }}>
-                <p className="text-[11px] font-bold uppercase tracking-wider m-0" style={{ color: "var(--forest)" }}>Ya pagado</p>
-                <p className="font-display text-lg font-bold m-0 mt-1" style={{ color: "var(--ink)" }}>{formatJpyEur(paidJpy, paidEur)}</p>
-                <p className="text-xs m-0 mt-1" style={{ color: "var(--ink-soft)" }}>/persona · grupo {formatGroupJpyEur(paidJpy, paidEur, PEOPLE)}</p>
-                <p className="text-[11px] m-0 mt-2" style={{ color: "var(--ink-soft)" }}>{purchased.length} trayectos confirmados</p>
-              </div>
-              <div className="p-4 rounded-xl border" style={{ background: "rgba(201,162,39,0.08)", borderColor: "rgba(201,162,39,0.3)" }}>
-                <p className="text-[11px] font-bold uppercase tracking-wider m-0" style={{ color: "#8a6d1a" }}>Queda por pagar (est.)</p>
-                <p className="font-display text-lg font-bold m-0 mt-1" style={{ color: "var(--ink)" }}>{formatJpyEur(pendingJpy, pendingEur)}</p>
-                <p className="text-xs m-0 mt-1" style={{ color: "var(--ink-soft)" }}>/persona · grupo {formatGroupJpyEur(pendingJpy, pendingEur, PEOPLE)}</p>
-                <p className="text-[11px] m-0 mt-2" style={{ color: "var(--ink-soft)" }}>{pending.length} trayectos pendientes</p>
-              </div>
-              <div className="p-4 rounded-xl border" style={{ background: "rgba(29,53,87,0.06)", borderColor: "rgba(29,53,87,0.2)" }}>
-                <p className="text-[11px] font-bold uppercase tracking-wider m-0" style={{ color: "var(--indigo)" }}>Total transporte est.</p>
-                <p className="font-display text-lg font-bold m-0 mt-1" style={{ color: "var(--ink)" }}>{formatJpyEur(allJpy, allEur)}</p>
-                <p className="text-xs m-0 mt-1" style={{ color: "var(--ink-soft)" }}>/persona · grupo {formatGroupJpyEur(allJpy, allEur, PEOPLE)}</p>
-                <p className="text-[11px] m-0 mt-2" style={{ color: "var(--ink-soft)" }}>Sin vuelos internacionales</p>
-              </div>
-            </div>
-          </div>
-
-          {/* 2. Desglose por categoría */}
-          <div>
-            <p className="text-xs font-bold uppercase tracking-wider mb-3 m-0" style={{ color: "var(--ink-soft)" }}>
-              2. Desglose por categoría (/persona)
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-              <div className="p-4 rounded-xl border bg-white/50" style={{ borderColor: "var(--line)" }}>
-                <p className="text-xs font-bold m-0 mb-2" style={{ color: "var(--forest)" }}>✅ Cubierto por JR Pass</p>
-                <ul className="text-xs space-y-1 m-0 p-0 list-none" style={{ color: "var(--ink)" }}>
-                  {jrCoveredPurchased.map((x) => (
-                    <li key={`p-${x.name}`}>• {x.name}: <strong>{formatJpyEur(x.jpy, x.real)}</strong> ✓</li>
-                  ))}
-                  {jrCoveredEstimated.map((x) => (
-                    <li key={`e-${x.name}`}>• {x.name}: <strong>{formatJpyEur(x.jpy, x.real)}</strong> <span style={{ color: "var(--ink-soft)" }}>(est.)</span></li>
-                  ))}
-                </ul>
-                <p className="text-xs font-bold m-0 mt-3 pt-2 border-t" style={{ borderColor: "var(--line)", color: "var(--ink)" }}>
-                  Subtotal: {formatJpyEur(coveredTotalJpy, coveredTotalEur)}
-                </p>
-                <p className="text-[10px] m-0 mt-1" style={{ color: "var(--ink-soft)" }}>
-                  Comprado {formatJpyEur(coveredBoughtJpy, coveredBoughtEur)} · pendiente {formatJpyEur(coveredEstJpy, coveredEstEur)}
-                </p>
-              </div>
-
-              <div className="p-4 rounded-xl border" style={{ background: "#FFF5F5", borderColor: "#FCA5A5" }}>
-                <p className="text-xs font-bold text-red-800 m-0 mb-2">⚠️ Nozomi (NO entra en el Pass)</p>
-                <ul className="text-xs text-red-800 space-y-1 m-0 p-0 list-none">
-                  {nozomiPurchased.map((x) => (
-                    <li key={x.name}>• {x.name}: <strong>{formatJpyEur(x.jpy, x.real)}</strong></li>
-                  ))}
-                </ul>
-                <p className="text-xs font-bold text-red-900 m-0 mt-3 pt-2 border-t border-red-200">
-                  Subtotal: {formatJpyEur(nozomiJpy, nozomiEur)}
-                </p>
-                <p className="text-[10px] text-red-700 m-0 mt-1">
-                  Con Pass habría que pagar suplemento Nozomi o usar Hikari/Kodama (más lento). Ya comprados.
-                </p>
-              </div>
-
-              <div className="p-4 rounded-xl border bg-white/50" style={{ borderColor: "var(--line)" }}>
-                <p className="text-xs font-bold m-0 mb-2" style={{ color: "var(--ink)" }}>🚌 Privados / no JR</p>
-                <ul className="text-xs space-y-1 m-0 p-0 list-none" style={{ color: "var(--ink)" }}>
-                  {nonJrPurchased.map((x) => (
-                    <li key={`np-${x.name}`}>• {x.name}: <strong>{formatJpyEur(x.jpy, x.real)}</strong> ✓</li>
-                  ))}
-                  {nonJrPending.map((x) => (
-                    <li key={`ne-${x.name}`}>• {x.name}: <strong>{formatJpyEur(x.jpy, x.real)}</strong> <span style={{ color: "var(--ink-soft)" }}>(est.)</span></li>
-                  ))}
-                </ul>
-                <p className="text-xs font-bold m-0 mt-3 pt-2 border-t" style={{ borderColor: "var(--line)", color: "var(--ink)" }}>
-                  Subtotal: {formatJpyEur(nonJrJpy, nonJrEur)}
-                </p>
-                <p className="text-[10px] m-0 mt-1" style={{ color: "var(--ink-soft)" }}>
-                  Se paga igual con o sin Pass · comprado {formatJpyEur(nonJrBoughtJpy, nonJrBoughtEur)} · pendiente {formatJpyEur(nonJrPendJpy, nonJrPendEur)}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* 3. Precios oficiales del Pass */}
-          <div>
-            <p className="text-xs font-bold uppercase tracking-wider mb-3 m-0" style={{ color: "var(--ink-soft)" }}>
-              3. Precio oficial Japan Rail Pass (ordinario adulto)
-            </p>
-            <div className="overflow-x-auto rounded-xl border" style={{ borderColor: "var(--line)" }}>
-              <table className="w-full text-left text-sm border-collapse">
-                <thead>
-                  <tr style={{ background: "rgba(29,53,87,0.04)" }}>
-                    <th className="py-2.5 px-3 font-semibold text-xs" style={{ color: "var(--ink-soft)" }}>Duración</th>
-                    <th className="py-2.5 px-3 font-semibold text-xs" style={{ color: "var(--ink-soft)" }}>¥ / persona</th>
-                    <th className="py-2.5 px-3 font-semibold text-xs" style={{ color: "var(--ink-soft)" }}>≈ € / persona</th>
-                    <th className="py-2.5 px-3 font-semibold text-xs" style={{ color: "var(--ink-soft)" }}>Grupo ×5</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-t" style={{ borderColor: "var(--line)" }}>
-                    <td className="py-2.5 px-3 font-medium">7 días consecutivos</td>
-                    <td className="py-2.5 px-3 font-bold">{formatJpy(PASS_7)}</td>
-                    <td className="py-2.5 px-3">~{formatEur(jpyToEur(PASS_7))}</td>
-                    <td className="py-2.5 px-3 text-xs" style={{ color: "var(--ink-soft)" }}>{formatGroupJpyEur(PASS_7, jpyToEur(PASS_7), PEOPLE)}</td>
-                  </tr>
-                  <tr className="border-t" style={{ borderColor: "var(--line)" }}>
-                    <td className="py-2.5 px-3 font-medium">14 días consecutivos</td>
-                    <td className="py-2.5 px-3 font-bold">{formatJpy(PASS_14)}</td>
-                    <td className="py-2.5 px-3">~{formatEur(jpyToEur(PASS_14))}</td>
-                    <td className="py-2.5 px-3 text-xs" style={{ color: "var(--ink-soft)" }}>{formatGroupJpyEur(PASS_14, jpyToEur(PASS_14), PEOPLE)}</td>
-                  </tr>
-                  <tr className="border-t" style={{ borderColor: "var(--line)" }}>
-                    <td className="py-2.5 px-3 font-medium">21 días consecutivos</td>
-                    <td className="py-2.5 px-3 font-bold">{formatJpy(PASS_21)}</td>
-                    <td className="py-2.5 px-3">~{formatEur(jpyToEur(PASS_21))}</td>
-                    <td className="py-2.5 px-3 text-xs" style={{ color: "var(--ink-soft)" }}>{formatGroupJpyEur(PASS_21, jpyToEur(PASS_21), PEOPLE)}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p className="text-[11px] m-0 mt-2 leading-relaxed" style={{ color: "var(--ink-soft)" }}>
-              Fuente: <a href="https://japanrailpass.net/en/purchase/price/" target="_blank" rel="noreferrer" className="underline">japanrailpass.net</a>.
-              Desde octubre 2026 las agencias en el extranjero suben a ¥53.000 (~287€) / ¥84.000 (~455€) / ¥105.000 (~569€); la web oficial mantiene los precios actuales por ahora.
-              Nuestro viaje es 7–21 sept (~15 días): un Pass de 7 días <strong>no puede cubrir</strong> a la vez N'EX (día 1), Alpes (día 6–9) y Fuji (día 14).
+            <p className="text-sm font-bold m-0" style={{ color: "var(--shu)" }}>
+              ❌ NO COMPENSA — ver detalle en Presupuesto →
             </p>
           </div>
-
-          {/* 4. Comparativa de escenarios */}
-          <div>
-            <p className="text-xs font-bold uppercase tracking-wider mb-3 m-0" style={{ color: "var(--ink-soft)" }}>
-              4. Comparativa de escenarios — coste total transporte /persona
-            </p>
-            <div className="overflow-x-auto rounded-xl border" style={{ borderColor: "var(--line)" }}>
-              <table className="w-full text-left text-sm border-collapse">
-                <thead>
-                  <tr style={{ background: "rgba(29,53,87,0.04)" }}>
-                    <th className="py-2.5 px-3 font-semibold text-xs" style={{ color: "var(--ink-soft)" }}>Escenario</th>
-                    <th className="py-2.5 px-3 font-semibold text-xs" style={{ color: "var(--ink-soft)" }}>Cómo se compone</th>
-                    <th className="py-2.5 px-3 font-semibold text-xs" style={{ color: "var(--ink-soft)" }}>Total /pax</th>
-                    <th className="py-2.5 px-3 font-semibold text-xs" style={{ color: "var(--ink-soft)" }}>vs individuales</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-t" style={{ borderColor: "var(--line)", background: "rgba(46,125,91,0.06)" }}>
-                    <td className="py-3 px-3 font-bold" style={{ color: "var(--forest)" }}>A · Billetes individuales</td>
-                    <td className="py-3 px-3 text-xs" style={{ color: "var(--ink-soft)" }}>
-                      JR {formatJpyEur(coveredTotalJpy, coveredTotalEur)} + Nozomi {formatJpyEur(nozomiJpy, nozomiEur)} + privados {formatJpyEur(nonJrJpy, nonJrEur)}
-                    </td>
-                    <td className="py-3 px-3 font-bold" style={{ color: "var(--forest)" }}>{formatJpyEur(individualTotalJpy, individualTotalEur)}</td>
-                    <td className="py-3 px-3 font-medium" style={{ color: "var(--forest)" }}>✅ Más barato</td>
-                  </tr>
-                  <tr className="border-t" style={{ borderColor: "var(--line)" }}>
-                    <td className="py-3 px-3 font-medium">B · JR Pass 7 días</td>
-                    <td className="py-3 px-3 text-xs" style={{ color: "var(--ink-soft)" }}>
-                      Pass {formatJpyEur(PASS_7)} + Nozomi {formatJpyEur(nozomiJpy, nozomiEur)} + privados {formatJpyEur(nonJrJpy, nonJrEur)}
-                    </td>
-                    <td className="py-3 px-3 font-bold">{formatJpyEur(withPass7Jpy, withPass7Eur)}</td>
-                    <td className="py-3 px-3" style={{ color: "var(--shu)" }}>❌ +{formatJpyEur(saveVs7Jpy, saveVs7Eur)}</td>
-                  </tr>
-                  <tr className="border-t" style={{ borderColor: "var(--line)" }}>
-                    <td className="py-3 px-3 font-medium">C · JR Pass 14 días</td>
-                    <td className="py-3 px-3 text-xs" style={{ color: "var(--ink-soft)" }}>
-                      Pass {formatJpyEur(PASS_14)} + Nozomi {formatJpyEur(nozomiJpy, nozomiEur)} + privados {formatJpyEur(nonJrJpy, nonJrEur)}
-                    </td>
-                    <td className="py-3 px-3 font-bold">{formatJpyEur(withPass14Jpy, withPass14Eur)}</td>
-                    <td className="py-3 px-3" style={{ color: "var(--shu)" }}>❌ +{formatJpyEur(saveVs14Jpy, saveVs14Eur)}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div className="mt-3 p-3.5 rounded-xl border" style={{ background: "rgba(46,125,91,0.06)", borderColor: "rgba(46,125,91,0.25)" }}>
-              <p className="text-sm font-bold m-0 mb-1" style={{ color: "var(--forest)" }}>
-                Ahorro al NO comprar el Pass
-              </p>
-              <p className="text-xs m-0 leading-relaxed" style={{ color: "var(--ink)" }}>
-                Solo mirando trayectos que el Pass cubriría: {formatJpyEur(coveredTotalJpy, coveredTotalEur)} vs Pass 7d {formatJpyEur(PASS_7, jpyToEur(PASS_7))}
-                → ahorramos <strong>{formatJpyEur(saveCoveredOnlyJpy, saveCoveredOnlyEur)}</strong>/persona
-                (≈ {formatGroupJpyEur(saveCoveredOnlyJpy, saveCoveredOnlyEur, PEOPLE)} el grupo).
-              </p>
-              <p className="text-xs m-0 mt-2 leading-relaxed" style={{ color: "var(--ink)" }}>
-                En el coste total del transporte del viaje: con Pass 7d pagaríamos <strong>{formatJpyEur(saveVs7Jpy, saveVs7Eur)}</strong> más por persona
-                (≈ {formatGroupJpyEur(saveVs7Jpy, saveVs7Eur, PEOPLE)} el grupo); con Pass 14d,
-                {" "}<strong>{formatJpyEur(saveVs14Jpy, saveVs14Eur)}</strong> más/persona.
-              </p>
-            </div>
-          </div>
-
-          {/* 5. Qué cubre / no */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="p-4 rounded-xl border bg-white/50" style={{ borderColor: "var(--line)" }}>
-              <p className="text-xs font-bold uppercase tracking-wider mb-2 m-0" style={{ color: "var(--ink-soft)" }}>✅ El JR Pass SÍ cubre</p>
-              <ul className="text-xs space-y-1 pl-4 list-disc m-0" style={{ color: "var(--ink)" }}>
-                <li>Shinkansen Hikari, Kodama, Sakura, Tsubame</li>
-                <li>Limited Express JR (Thunderbird, Shinano, Kagayaki…)</li>
-                <li>Trenes locales JR (Nara, San-In, Osaka…)</li>
-                <li>Narita Express (N'EX)</li>
-              </ul>
-            </div>
-            <div className="p-4 rounded-xl border bg-white/50" style={{ borderColor: "var(--line)" }}>
-              <p className="text-xs font-bold uppercase tracking-wider mb-2 m-0" style={{ color: "var(--ink-soft)" }}>❌ El JR Pass NO cubre</p>
-              <ul className="text-xs space-y-1 pl-4 list-disc m-0" style={{ color: "var(--ink)" }}>
-                <li>Nozomi / Mizuho (salvo suplemento caro)</li>
-                <li>Nohi Bus (Alpes: Shirakawa-go, Takayama, Magome)</li>
-                <li>Metro Kioto/Tokio, Randen, Yurikamome</li>
-                <li>Keisei Skyliner (vuelta a Narita)</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="p-4 rounded-xl border" style={{ background: "rgba(29,53,87,0.05)", borderColor: "var(--indigo)" }}>
-            <p className="text-sm font-bold mb-2 flex items-center gap-1.5 m-0" style={{ color: "var(--indigo)" }}>
-              <span>✅</span> Recomendación final
-            </p>
-            <ul className="text-xs space-y-2 pl-2 m-0" style={{ color: "var(--ink)" }}>
-              <li>• <strong>No comprar Japan Rail Pass.</strong> Los trayectos JR de este viaje suman ~{formatJpyEur(coveredTotalJpy, coveredTotalEur)}/pax frente a {formatJpyEur(PASS_7)} (7d) o {formatJpyEur(PASS_14)} (14d).</li>
-              <li>• Ya llevamos comprados Nozomi + Thunderbird + Shinano + Nohi: el Pass no los “recupera”.</li>
-              <li>• Seguir con billetes individuales + Suica/Welcome Suica para urbano.</li>
-              <li>• Pendiente de pagar estimado: {formatJpyEur(pendingJpy, pendingEur)}/persona (N'EX, locales, Fuji, Skyliner, metro…).</li>
-            </ul>
-          </div>
-
-          <div>
-            <p className="text-xs font-bold uppercase tracking-wider mb-2 m-0" style={{ color: "var(--ink-soft)" }}>Fuentes oficiales</p>
-            <div className="flex flex-col gap-1 text-[11px]">
-              <a href="https://japanrailpass.net/en/purchase/price/" target="_blank" rel="noreferrer" className="hover:underline" style={{ color: "var(--indigo)" }}>Japan Rail Pass — precios oficiales</a>
-              <a href="https://japanrailpass.net/" target="_blank" rel="noreferrer" className="hover:underline" style={{ color: "var(--indigo)" }}>Japan Rail Pass — info general</a>
-              <a href="https://smart-ex.jp/en/" target="_blank" rel="noreferrer" className="hover:underline" style={{ color: "var(--indigo)" }}>Smart EX (Tokaido / Sanyo / Kyushu Shinkansen)</a>
-              <a href="https://www.westjr.co.jp/global/en/ticket/overview/" target="_blank" rel="noreferrer" className="hover:underline" style={{ color: "var(--indigo)" }}>JR-West Online Train Reservation</a>
-              <a href="https://www.jreast.co.jp/multi/en/welcomesuica/welcomesuica.html" target="_blank" rel="noreferrer" className="hover:underline" style={{ color: "var(--indigo)" }}>JR East Welcome Suica</a>
-              <a href="https://www.nouhibus.co.jp/highwaybus/highwaybus_route/" target="_blank" rel="noreferrer" className="hover:underline" style={{ color: "var(--indigo)" }}>Nohi Bus Oficial</a>
-            </div>
-          </div>
+          <span className="shrink-0 text-sm font-semibold" style={{ color: "var(--indigo)", marginTop: 4 }}>Ver →</span>
         </div>
-        )}
-      </div>
+      </button>
+
     </div>
   );
 }
-

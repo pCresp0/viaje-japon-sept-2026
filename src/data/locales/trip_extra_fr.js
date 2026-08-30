@@ -160,7 +160,7 @@ export const transports = [
 ];
 
 export const budget = {
-  note: "Calculé avec des prix réalistes et le ¥ actuel, très bon marché pour l'Europe.",
+  note: "Vols, hôtels et billets longue distance confirmés (Revolut). Excursions Fuji + estimations urbaines en attente. Le JR Pass ne vaut pas le coup (voir analyse ci-dessous).",
   categories: [
     {
       title: "Vols Internationaux",
@@ -184,10 +184,18 @@ export const budget = {
     {
       title: "Transports Intérieurs",
       details: [
-        "<strong>Déjà acheté (Revolut, 5 pers.) :</strong> Nozomi 53 373,27€ · Thunderbird/Kagayaki 209,38€ · Nohi Magome 135,61€ · Shinano 4 77,84€ · Nozomi 358 295,62€ (+ bus Nohi jour 7 déjà réservés).",
-        "Sous-total billets longue distance achetés ≈ 1 287€ groupe (~257€/personne) + bus Alpes jour 7.",
-        "Encore estimé : N'EX, JR locaux, métro Tokyo, Fuji Kodama, Skyliner/N'EX retour (~155€/personne).",
-        "Taux Revolut approx. août 2026 : ~184 ¥/€.",
+        "<strong>Déjà acheté ≈ 1 287€ groupe (~257€/personne)</strong> — Nozomi 53 373,27€ · Thunderbird/Kagayaki 209,38€ · Nohi Magome 135,61€ · Shinano 4 77,84€ · Nozomi 358 295,62€ · Nohi jour 7 (Kanazawa↔Shirakawa↔Takayama) ≈ 196€.",
+        "Encore estimé ≈ 156€/personne : N'EX arrivée, JR locaux, métro Tokyo, Shinkansen Fuji (Kodama), Skyliner/N'EX retour.",
+        "Total transport est. ≈ 414€/personne · ~2 068€ groupe. Taux Revolut ~184 ¥/€.",
+        "Japan Rail Pass Ordinary (jrpass.com) : 284€ / 455€ / 568€ (7/14/21 jours) — <strong>ne vaut pas le coup</strong> (analyse ci-dessous).",
+      ],
+    },
+    {
+      title: "Excursions Mont Fuji",
+      details: [
+        "<strong>Tour Ken Kaneshima (jour 14, confirmé) :</strong> 13 000 ¥ (~70€)/personne · ~350€ groupe (mini-van + entrées).",
+        "<strong>GetYourGuide (jours 10–13, 4 dates réservées) :</strong> 210€ groupe / 42€/personne pour le jour utilisé. Annulation gratuite 24h avant pour le reste (remboursement 100 %). Paiement prévu ~13 sept.",
+        "Si le ciel est dégagé un jour 10–13 on peut faire GYG et annuler le reste ; Ken le jour 14 est indépendant. Le Shinkansen Fuji est dans Transports.",
       ],
     },
     {
@@ -205,6 +213,6 @@ export const budget = {
       ],
     },
   ],
-  totalPerPerson: "~2 650€ – 2 750€ (vols inclus)",
-  totalGroup: "~13 000€ – 13 500€ (5 personnes)",
+  totalPerPerson: "~2 750€ – 2 900€ (vols inclus)",
+  totalGroup: "~13 750€ – 14 500€ (5 personnes)",
 };
