@@ -65,33 +65,53 @@ function extractMapUrl(text = "") {
   return match ? match[0] : null;
 }
 
-function shortText(text = "") {
+function formatQuickText(text = "") {
   if (!text) return "";
+  
   let clean = text
-    .replace(/\*\*(.*?)\*\*/g, "$1")
     .replace(/\(\s*https?:\/\/[^\s)]+\s*\)/g, "")
     .replace(/https?:\/\/[^\s)]+/g, "")
     .split("\n")[0]
     .trim();
   clean = clean.replace(/\(\s*\)/g, "").trim();
+
+  // Quitamos asteriscos originales para rehacer el bold en el título
+  clean = clean.replace(/\*\*(.*?)\*\*/g, "$1");
+
   try {
     clean = clean.replace(/^[\p{Extended_Pictographic}\uFE0F\u200D\s•\-—:→]+/u, "").trim();
   } catch {
     clean = clean.replace(/^[^\w\s•\-—:→]+/, "").trim();
   }
+
+  if (!clean) return "";
+
   let parts = clean.split(/\.\s+/);
+  let title = "";
+  let detail = "";
+
   if (parts.length > 1) {
     if (parts[0].length < 15) {
-      // Si la primera frase es muy corta (ej: "Despertar."), cogemos también la segunda
-      clean = parts[0] + ". " + parts[1];
+      title = parts[0] + ". " + parts[1];
+      detail = parts.slice(2).join(". ");
     } else {
-      clean = parts[0];
+      title = parts[0];
+      detail = parts.slice(1).join(". ");
     }
-    // Removemos puntos finales si quedaron
-    clean = clean.replace(/\.$/, "");
+  } else {
+    title = parts[0];
   }
 
-  return clean;
+  // Quitar puntos finales sueltos
+  title = title.replace(/\.$/, "");
+  detail = detail.replace(/\.$/, "");
+
+  let finalStr = `**${title}.**`;
+  if (detail) {
+    finalStr += ` ${detail}.`;
+  }
+
+  return finalStr;
 }
 
 function hasRealTime(entry) {
@@ -195,7 +215,7 @@ export function QuickDayCard({ day, blockColor, onShowFullDay, onClose, standalo
                         fontWeight: isHotelReturn ? 600 : 400,
                       }}
                     >
-                      <span>{shortText(entry.text)}</span>
+                      <PlaceText text={formatQuickText(entry.text)} />
                       {mapUrl && (
                         <PlaceText text={mapUrl} />
                       )}
