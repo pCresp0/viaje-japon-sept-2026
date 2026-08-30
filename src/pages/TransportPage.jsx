@@ -323,7 +323,7 @@ export default function TransportPage({ onNavigate }) {
               </div>
               {!suicaOpen && (
                 <p style={{ fontSize: 11.5, color: "rgba(255,255,255,0.65)", margin: "6px 0 0", lineHeight: 1.4 }}>
-                  iPhone: Welcome Suica Mobile · Android: física en Narita · recarga ¥3.000–¥5.000 (~16–27€)
+                  iPhone (Pablo, Juan Carlos y Randy): Welcome Suica Mobile · Android (Sergio y Thibaut): física en Narita · recarga ¥3.000–¥5.000 (~16–27€)
                 </p>
               )}
             </button>
@@ -335,18 +335,18 @@ export default function TransportPage({ onNavigate }) {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
                   <div className="p-3.5 rounded-xl bg-white/10 border border-white/10">
                     <p className="text-xs font-bold text-emerald-300 flex items-center gap-1 mb-1.5">
-                      <Smartphone size={13} /> 📱 iPhone (Welcome Suica Mobile)
+                      <Smartphone size={13} /> 📱 iPhone — Pablo, Juan Carlos y Randy (Welcome Suica Mobile)
                     </p>
                     <p className="text-xs text-white/80 leading-relaxed">
-                      Descargar la app oficial <strong>Welcome Suica Mobile</strong> e integrarla en Apple Wallet con tarjeta en Apple Pay. Requiere activar localización.
+                      Descargar la app oficial <strong>Welcome Suica Mobile</strong> e integrarla en Apple Wallet con tarjeta en Apple Pay. Requiere activar localización. <em>Nota: Si la emisión/recarga da error desde España por restricciones de ubicación, se puede crear y recargar al instante al aterrizar en Japón.</em>
                     </p>
                   </div>
                   <div className="p-3.5 rounded-xl bg-white/10 border border-white/10">
                     <p className="text-xs font-bold text-amber-300 flex items-center gap-1 mb-1.5">
-                      <CreditCard size={13} /> 🤖 Android extranjero (Welcome Suica Física)
+                      <CreditCard size={13} /> 🤖 Android — Sergio y Thibaut (Welcome Suica Física)
                     </p>
                     <p className="text-xs text-white/80 leading-relaxed">
-                      Comprar la <strong>Welcome Suica física</strong> al llegar a los puntos autorizados de JR East en Narita (T1 o T2/3).
+                      La app Welcome Suica Mobile no está disponible para terminales Android comprados fuera de Japón (requieren chip FeliCa japonés). <strong>Sergio y Thibaut</strong> comprarán la <strong>Welcome Suica física</strong> al llegar a los puntos autorizados de JR East en Narita (T1 o T2/3).
                     </p>
                   </div>
                 </div>

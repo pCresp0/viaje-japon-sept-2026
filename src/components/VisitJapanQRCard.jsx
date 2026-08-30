@@ -5,7 +5,7 @@ export const groupMembers = [
   { id: "pablo", name: "Pablo Crespo Bellido", hasQR: true, qrPath: "/images/visit-japan-qr.png", role: "Titular", pass: "cresp0" },
   { id: "sergio", name: "Sergio Crespo Bellido", hasQR: true, qrPath: "/images/visit-japan-qr-sergio.png", role: "Titular", pass: "kr43xpo" },
   { id: "juancarlos", name: "Juan Carlos Rodríguez", hasQR: false, role: "Viajero", pass: "cresp0" },
-  { id: "gerundio", name: "Gerundio Guial", hasQR: false, role: "Viajero", pass: "cresp0" },
+  { id: "gerundio", name: "Randy (Gerundio)", hasQR: false, role: "Viajero", pass: "cresp0" },
   { id: "thibaut", name: "Thibaut", hasQR: false, role: "Viajero", pass: "cresp0" },
 ];
 

@@ -128,7 +128,7 @@ export default {
       category: "logistica",
       urgency: "media",
       title: "🟠 Digital Logistics: Suica at Visit Japan Web",
-      detail: "📱 iPhone: official 'Welcome Suica Mobile' sa Apple Wallet.\n🤖 Foreign Android: walang Welcome Suica Mobile — bumili ng physical Welcome Suica sa Narita.\n💳 Welcome Suica: walang ¥500 (~3€) deposit; hindi refundable ang balance. Recommended top-up: ¥3,000–¥5,000 (~16–27€)/tao.\n🌐 Visit Japan Web: immigration/customs QR para sa lima.",
+      detail: "📱 iPhone (Pablo, Juan Carlos, Randy): official 'Welcome Suica Mobile' sa Apple Wallet.\n🤖 Android (Sergio, Thibaut): walang Welcome Suica Mobile sa foreign Android — bibili sina Sergio at Thibaut ng physical Welcome Suica sa Narita.\n💳 Welcome Suica: walang ¥500 (~3€) deposit; hindi refundable ang balance. Recommended top-up: ¥3,000–¥5,000 (~16–27€)/tao.\n🌐 Visit Japan Web: immigration/customs QR para sa lima.",
       deadline: "Ilang araw bago lumipad",
     },
     {

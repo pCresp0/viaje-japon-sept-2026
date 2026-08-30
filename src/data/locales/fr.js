@@ -128,7 +128,7 @@ export default {
       category: "logistica",
       urgency: "media",
       title: "🟠 Logistique numérique : Suica et Visit Japan Web",
-      detail: "📱 iPhone : app officielle 'Welcome Suica Mobile' dans Apple Wallet.\n🤖 Android étranger : pas de Welcome Suica Mobile — acheter une carte physique à Narita.\n💳 Welcome Suica : pas de dépôt ¥500 (~3€) ; solde non remboursable. Recharge initiale recommandée ¥3.000–¥5.000 (~16–27€)/pers.\n🌐 Visit Japan Web : QR immigration/douanes pour les 5.",
+      detail: "📱 iPhone (Pablo, Juan Carlos, Randy) : app officielle 'Welcome Suica Mobile' dans Apple Wallet.\n🤖 Android (Sergio, Thibaut) : pas de Welcome Suica Mobile sur Android étranger — Sergio et Thibaut doivent acheter une carte physique à Narita.\n💳 Welcome Suica : pas de dépôt ¥500 (~3€) ; solde non remboursable. Recharge initiale recommandée ¥3.000–¥5.000 (~16–27€)/pers.\n🌐 Visit Japan Web : QR immigration/douanes pour les 5.",
       deadline: "Jours avant de voler",
     },
     {

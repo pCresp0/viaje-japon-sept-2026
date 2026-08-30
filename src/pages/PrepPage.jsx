@@ -111,7 +111,7 @@ export const sections = [
       { id: "repelente-mosquitos", text: "Repelente de mosquitos" },
       { id: "aparato-mosquitos", text: "Aparato de los mosquitos" },
       { id: "dinero", text: "Dinero en efectivo (¥)" },
-      { id: "suica", text: "Tarjeta Suica/Pasmo o eSIM Suica en el iPhone" },
+      { id: "suica", text: "Tarjeta Suica/Pasmo (física en Narita para Sergio y Thibaut; digital en Apple Wallet para Pablo, Juan Carlos y Randy)" },
     ],
   },
 ];

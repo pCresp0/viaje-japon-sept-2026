@@ -128,7 +128,7 @@ export default {
       category: "logistica",
       urgency: "media",
       title: "🟠 Digital Logistics: Suica and Visit Japan Web",
-      detail: "📱 iPhone: official 'Welcome Suica Mobile' in Apple Wallet (needs location on; if issue/recharge fails from Spain due to country restrictions, create it on landing in Japan).\n🤖 Foreign Android: no Welcome Suica Mobile. Android user must buy a physical Welcome Suica at Narita.\n💳 Welcome Suica card: no ¥500 (~3€) deposit; balance non-refundable. Recommended initial top-up: ¥3,000–¥5,000 (~16–27€) per person.\n🌐 Visit Japan Web: immigration/customs QR codes generated for all 5 travelers.",
+      detail: "📱 iPhone (Pablo, Juan Carlos, Randy): official 'Welcome Suica Mobile' in Apple Wallet (needs location on; if issue/recharge fails from Spain due to country restrictions, create it on landing in Japan).\n🤖 Android (Sergio, Thibaut): no Welcome Suica Mobile for foreign Androids. Sergio and Thibaut must buy a physical Welcome Suica at Narita.\n💳 Welcome Suica card: no ¥500 (~3€) deposit; balance non-refundable. Recommended initial top-up: ¥3,000–¥5,000 (~16–27€) per person.\n🌐 Visit Japan Web: immigration/customs QR codes generated for all 5 travelers.",
       deadline: "Days before flying",
     },
     {

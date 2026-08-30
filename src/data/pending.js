@@ -84,7 +84,7 @@ export const pendingItems = [
     category: "logistica",
     urgency: "media",
     title: "🟠 Logística Digital: Suica y Visit Japan Web",
-    detail: "📱 iPhone: App oficial 'Welcome Suica Mobile' en Apple Wallet (requiere localización activa; si la emisión/recarga falla desde España por restricciones de país, crearla al aterrizar en Japón).\n🤖 Android extranjero: No dispone de Welcome Suica Mobile. El hermano con Android debe adquirir una tarjeta física Welcome Suica en Narita.\n💳 Tarjeta Welcome Suica: Sin depósito de 500¥ (~3€); saldo no reembolsable. Recarga inicial recomendada: ¥3.000–¥5.000 (~16–27€) por persona.\n🌐 Visit Japan Web: Códigos QR de inmigración y aduanas generados para los 5 viajeros.",
+    detail: "📱 iPhone (Pablo, Juan Carlos y Randy): App oficial 'Welcome Suica Mobile' en Apple Wallet (requiere localización activa; si la emisión/recarga falla desde España por restricciones de país, crearla al aterrizar en Japón).\n🤖 Android (Sergio y Thibaut): No disponen de Welcome Suica Mobile por incompatibilidad con teléfonos Android no japoneses (falta de chip FeliCa). Sergio y Thibaut deben adquirir la tarjeta física Welcome Suica en las taquillas/máquinas de JR East en Narita.\n💳 Tarjeta Welcome Suica: Sin depósito de 500¥ (~3€); saldo no reembolsable. Recarga inicial recomendada: ¥3.000–¥5.000 (~16–27€) por persona.\n🌐 Visit Japan Web: Códigos QR de inmigración y aduanas generados para los 5 viajeros.",
     deadline: "Días antes de volar",
   },
   {

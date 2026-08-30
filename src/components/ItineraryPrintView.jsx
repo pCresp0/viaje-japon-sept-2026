@@ -23,7 +23,7 @@ const CONFIRMED_TICKETS = [
     when: "7 sept · 17:19 → 19:23",
     ref: "Smart EX 2000",
     car: "Coche 13",
-    seats: "Pablo 13-E · Sergio 14-E · Juan Carlos 13-C · Gerundio 13-D · Thibaut 14-D",
+    seats: "Pablo 13-E · Sergio 14-E · Juan Carlos 13-C · Randy 13-D · Thibaut 14-D",
     price: "¥68.850 · 373,27€ (grupo)",
     note: "QR-Ticket en la app / web. Nozomi no incluido en JR Pass.",
   },
@@ -83,7 +83,7 @@ const CONFIRMED_TICKETS = [
     when: "15 sept · 11:29 → 13:06",
     ref: "Smart EX 2002",
     car: "Coche 12",
-    seats: "Pablo 11-E · Sergio 12-E · Juan Carlos 12-C · Gerundio 11-D · Thibaut 12-D",
+    seats: "Pablo 11-E · Sergio 12-E · Juan Carlos 12-C · Randy 11-D · Thibaut 12-D",
     price: "¥54.500 · 295,62€ (grupo)",
     note: "QR-Ticket. Nozomi no incluido en JR Pass.",
   },
@@ -646,7 +646,7 @@ export default function ItineraryPrintView({ days }) {
         <div style={{ padding: "8px 10px", background: "#f7f0e3", borderRadius: 6, fontSize: 10, lineHeight: 1.55, marginBottom: 10 }}>
           <strong>Welcome Suica / IC</strong>
           <br />
-          iPhone: app Welcome Suica Mobile → Apple Wallet. Android extranjero: tarjeta física en Narita (JR East).
+          iPhone (Pablo, Juan Carlos, Randy): app Welcome Suica Mobile → Apple Wallet. Android (Sergio, Thibaut): tarjeta física en Narita (JR East).
           Sin depósito ¥500 (~3€); saldo no reembolsable. Recarga inicial recomendada ¥3.000–¥5.000 (~16–27€)/persona.
         </div>
 
