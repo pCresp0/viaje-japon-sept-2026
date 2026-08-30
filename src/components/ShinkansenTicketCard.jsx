@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Zap, Ticket, X, Clock, ChevronDown } from "lucide-react";
+import { Zap, Ticket, X, Clock, ChevronDown, CalendarDays } from "lucide-react";
 import { groupMembers } from "./VisitJapanQRCard";
 
-export default function ShinkansenTicketCard() {
+export default function ShinkansenTicketCard({ onGoToDay } = {}) {
   const [selectedMember, setSelectedMember] = useState(null);
   const [showFullQR, setShowFullQR] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -63,6 +63,20 @@ export default function ShinkansenTicketCard() {
           <Ticket size={120} />
         </div>
       </button>
+
+      {onGoToDay && (
+        <div className="px-4 py-2.5 border-b flex items-center justify-between gap-2" style={{ borderColor: "var(--line)", background: "rgba(29,53,87,0.04)" }}>
+          <button
+            type="button"
+            onClick={onGoToDay}
+            className="inline-flex items-center gap-1.5 text-xs font-semibold rounded-full px-3 py-1.5 cursor-pointer border-none transition-opacity hover:opacity-80"
+            style={{ background: "#1d3557", color: "white" }}
+          >
+            <CalendarDays size={13} />
+            Ver día 1 en itinerario
+          </button>
+        </div>
+      )}
 
       {/* Body */}
       {isExpanded && (

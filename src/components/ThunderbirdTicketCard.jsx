@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Train, Ticket, CheckCircle2, ChevronDown, Clock, CreditCard, Lock, Info, MapPin } from "lucide-react";
+import { Train, Ticket, CheckCircle2, ChevronDown, Clock, CreditCard, Lock, Info, MapPin, CalendarDays } from "lucide-react";
 
-export default function ThunderbirdTicketCard() {
+export default function ThunderbirdTicketCard({ onGoToDay } = {}) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [checkedItems, setCheckedItems] = useState({
     booked: true,
@@ -65,6 +65,20 @@ export default function ThunderbirdTicketCard() {
           <Ticket size={120} />
         </div>
       </button>
+
+      {onGoToDay && (
+        <div className="px-4 py-2.5 border-b flex items-center justify-between gap-2" style={{ borderColor: "var(--line)", background: "rgba(46,125,91,0.06)" }}>
+          <button
+            type="button"
+            onClick={onGoToDay}
+            className="inline-flex items-center gap-1.5 text-xs font-semibold rounded-full px-3 py-1.5 cursor-pointer border-none transition-opacity hover:opacity-80"
+            style={{ background: "#2e7d5b", color: "white" }}
+          >
+            <CalendarDays size={13} />
+            Ver día 6 en itinerario
+          </button>
+        </div>
+      )}
 
       {/* Body */}
       {isExpanded && (

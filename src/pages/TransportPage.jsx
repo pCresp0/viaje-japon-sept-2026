@@ -62,7 +62,21 @@ export default function TransportPage({ onNavigate }) {
         </button>
       </div>
 
-      {/* 1. RESUMEN VISUAL DE ESTADO DE TRANSPORTES */}
+      {/* 1. BILLETES CONFIRMADOS — lo más importante, arriba del todo */}
+      <div className="mb-8">
+        <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>Billetes confirmados</p>
+        <ShinkansenTicketCard
+          onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 1, targetId: slug("itinerary-day", 1) }) : undefined}
+        />
+        <ThunderbirdTicketCard
+          onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 6, targetId: slug("itinerary-day", 6) }) : undefined}
+        />
+        <NohiMagomeTicketCard
+          onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 8, targetId: slug("itinerary-day", 8) }) : undefined}
+        />
+      </div>
+
+      {/* 2. RESUMEN VISUAL DE ESTADO DE TRANSPORTES */}
       <div className="rounded-2xl p-5 mb-8 border" style={{ background: "var(--paper-raised)", borderColor: "var(--line)" }}>
         <p className="font-display text-base font-bold flex items-center gap-2 mb-3" style={{ color: "var(--indigo)" }}>
           <span>🚆</span> TRANSPORTES — ESTADO GENERAL (5 ADULTOS)
@@ -113,7 +127,7 @@ export default function TransportPage({ onNavigate }) {
         </div>
       </div>
 
-      {/* 2. BLOQUE OFICIAL WELCOME SUICA / TARJETAS IC */}
+      {/* 3. BLOQUE OFICIAL WELCOME SUICA / TARJETAS IC */}
       <div className="rounded-2xl p-5 mb-8" style={{ background: "linear-gradient(135deg, #1d3557 0%, #0f1f35 100%)", color: "white" }}>
         <div className="flex items-center gap-2 mb-2">
           <CreditCard size={18} className="text-emerald-400" />
@@ -159,7 +173,7 @@ export default function TransportPage({ onNavigate }) {
         </div>
       </div>
 
-      {/* 3. POLÍTICA DE CAMBIOS SHINKANSEN SMART EX */}
+      {/* 4. POLÍTICA DE CAMBIOS SHINKANSEN SMART EX */}
       <div className="rounded-2xl p-4 mb-8 border" style={{ background: "rgba(29, 53, 87, 0.03)", borderColor: "var(--line)" }}>
         <p className="text-sm font-bold flex items-center gap-1.5 mb-2" style={{ color: "var(--indigo)" }}>
           <Zap size={16} /> Política de Cambios en Shinkansen (Smart EX)
@@ -170,13 +184,6 @@ export default function TransportPage({ onNavigate }) {
         <p className="text-xs text-gray-600 leading-relaxed">
           💡 <strong>Plan de conexión Día 1 (Nozomi 53):</strong> Si el vuelo o el N'EX sufren un retraso severo y peligra la llegada a Shinagawa antes de las 17:19, se debe acceder a Smart EX (App / Web) <em>antes</em> de la salida del tren para cambiar los billetes al siguiente Nozomi disponible.
         </p>
-      </div>
-
-      {/* 4. BILLETES CONFIRMADOS Y DOCUMENTACIÓN (Colapsable) */}
-      <div className="mb-8">
-        <ShinkansenTicketCard />
-        <ThunderbirdTicketCard />
-        <NohiMagomeTicketCard />
       </div>
 
       {/* 5. TRAYECTOS POR DÍA */}

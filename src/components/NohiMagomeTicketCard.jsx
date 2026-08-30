@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Bus, Ticket, CheckCircle2, ChevronDown, Clock, AlertTriangle, Info, MapPin, Eye, X, FileDown } from "lucide-react";
+import { Bus, Ticket, CheckCircle2, ChevronDown, Clock, AlertTriangle, Info, MapPin, Eye, X, FileDown, CalendarDays } from "lucide-react";
 
-export default function NohiMagomeTicketCard({ defaultExpanded = false }) {
+export default function NohiMagomeTicketCard({ defaultExpanded = false, onGoToDay } = {}) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
   const [showImageModal, setShowImageModal] = useState(false);
   const [checkedItems, setCheckedItems] = useState({
@@ -65,6 +65,20 @@ export default function NohiMagomeTicketCard({ defaultExpanded = false }) {
           <Ticket size={120} />
         </div>
       </button>
+
+      {onGoToDay && (
+        <div className="px-4 py-2.5 border-b flex items-center justify-between gap-2" style={{ borderColor: "var(--line)", background: "rgba(180,83,9,0.06)" }}>
+          <button
+            type="button"
+            onClick={onGoToDay}
+            className="inline-flex items-center gap-1.5 text-xs font-semibold rounded-full px-3 py-1.5 cursor-pointer border-none transition-opacity hover:opacity-80"
+            style={{ background: "#b45309", color: "white" }}
+          >
+            <CalendarDays size={13} />
+            Ver día 8 en itinerario
+          </button>
+        </div>
+      )}
 
       {/* Body */}
       {isExpanded && (
