@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { ScrollText, ChevronDown, ChevronUp, Map, BookOpen, List } from "lucide-react";
+import { createPortal } from "react-dom";
+import { ScrollText, ChevronDown, ChevronUp, Map, BookOpen, List, X } from "lucide-react";
 import { useContent } from "../i18n/LanguageContext";
 import { useHighlight } from "../context/HighlightContext";
 import { guides, guidesByDay, guideMeta } from "../data/guides";
@@ -106,6 +107,7 @@ function CollapsibleScheduleItem({ s, color }) {
 
 export default function DayCard({ day, defaultOpenHistory = false, onClose, onViewMap, onShowQuickView }) {
   const [showHistory, setShowHistory] = useState(defaultOpenHistory);
+  const [selectedGuide, setSelectedGuide] = useState(null);
   const { blocks, stays, days, mapStops } = useContent();
   const { triggerHighlight } = useHighlight();
   const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
@@ -258,7 +260,7 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
                             <button
                               key={gid}
                               type="button"
-                              onClick={() => triggerHighlight(slug("guide", gid))}
+                              onClick={() => setSelectedGuide(gid)}
                               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-semibold transition-all shadow-sm active:scale-95 hover:opacity-90"
                               style={{
                                 background: "var(--paper-raised)",
@@ -351,6 +353,43 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
           />
         )}
       </div>
+
+      {/* Guide Info Modal */}
+      {selectedGuide && createPortal(
+        <div className="modal-overlay" onClick={() => setSelectedGuide(null)}>
+          <div 
+            className="modal-sheet" 
+            onClick={(e) => e.stopPropagation()} 
+            style={{ position: "relative", padding: "32px 16px 20px 16px" }}
+          >
+            <button
+              onClick={() => setSelectedGuide(null)}
+              aria-label="Cerrar info"
+              style={{
+                position: "absolute",
+                top: 14,
+                right: 14,
+                zIndex: 30,
+                width: 32,
+                height: 32,
+                borderRadius: "50%",
+                background: "rgba(0, 0, 0, 0.4)",
+                color: "#ffffff",
+                border: "1px solid rgba(255, 255, 255, 0.3)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.2)"
+              }}
+            >
+              <X size={18} />
+            </button>
+            <GuideCard id={selectedGuide} accent={block.color} />
+          </div>
+        </div>,
+        document.body
+      )}
     </article>
   );
 }
