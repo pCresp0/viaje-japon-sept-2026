@@ -249,17 +249,25 @@ export default function HistoryPage() {
             <Highlightable key={i} id={slug("history", "podcasts", p.title)}>
               <div className="px-5 py-4"
                 style={{ borderBottom: i < furtherReading.podcasts.length - 1 ? "1px solid var(--line)" : "none" }}>
-                <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)" }}>
-                  {p.url ? (
-                    <a href={p.url} target="_blank" rel="noreferrer" style={{ textDecoration: "underline" }}>
-                      {p.title}
+                <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
+                  <div>
+                    <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)" }}>{p.title}</p>
+                    <p style={{ fontSize: 12, color: "var(--forest)", fontWeight: 600, marginTop: 1, marginBottom: 5 }}>{p.show}</p>
+                    <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.6 }}>{p.note}</p>
+                  </div>
+                  {p.url && (
+                    <a 
+                      href={p.url} 
+                      target="_blank" 
+                      rel="noreferrer" 
+                      className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold text-white transition-all hover:opacity-90 active:scale-95 sm:mt-0 mt-1 self-start"
+                      style={{ background: "#872ec4", textDecoration: "none" }}
+                    >
+                      <Headphones size={13} />
+                      Apple Podcasts
                     </a>
-                  ) : (
-                    p.title
                   )}
-                </p>
-                <p style={{ fontSize: 12, color: "var(--forest)", fontWeight: 600, marginTop: 1, marginBottom: 5 }}>{p.show}</p>
-                <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.6 }}>{p.note}</p>
+                </div>
               </div>
             </Highlightable>
           ))}

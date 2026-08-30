@@ -237,21 +237,25 @@ export const furtherReading = {
     {
       title: "\"213. Japón, de los orígenes al imperialismo\"",
       show: "No es el fin del mundo",
+      url: "https://podcasts.apple.com/es/podcast/213-jap%C3%B3n-de-los-or%C3%ADgenes-al-imperialismo/id1687260829?i=1000721920418",
       note: "Episodio de dos horas que recorre toda la historia japonesa, de los orígenes míticos a la Restauración Meiji. Buen punto de partida de conjunto antes del viaje.",
     },
     {
       title: "\"Episodio 74: Shogunato Tokugawa, el reinado de los samurái\"",
       show: "Cum Lingus Communicamus",
+      url: "https://podcasts.apple.com/es/podcast/episodio-74-shogunato-tokugawa-el-reinado-de-los-samur%C3%A1i/id1872183992?i=1000746759090",
       note: "Centrado justo en el periodo Edo, con bibliografía citada al final del episodio (incluye a Mikiso Hane y Jonathan López-Vera).",
     },
     {
       title: "Nippon.com en español",
       show: "Nippon.com",
+      url: "https://podcasts.apple.com/es/podcast/nippon-com-en-espa%C3%B1ol/id1761501245",
       note: "Podcast semanal en español con actualidad, historia y cultura japonesa contadas por especialistas — bueno para escuchar episodios sueltos según el tema que más os llame.",
     },
     {
       title: "\"Samurais\"",
       show: "Pasajes de la Historia",
+      url: "https://podcasts.apple.com/es/podcast/samur%C3%A1is/id1740368587?i=1000660283378",
       note: "Un repaso clásico de radio a la clase samurái, desde el periodo Sengoku hasta su desaparición en la Restauración Meiji.",
     },
   ],
