@@ -24,6 +24,7 @@ function periodSpeechText(period) {
 const SHU = "#bc4749";
 
 function PeriodCard({ period, isOpen, onToggle, speak, stop, speakingId, supported }) {
+  const t = useT();
   const { guides } = useContent();
   const { highlightId } = useHighlight();
   const isSpeaking = speakingId === period.id;
