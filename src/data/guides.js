@@ -638,6 +638,54 @@ export const guides = {
     ],
     tip: "Tour reservado el Domingo 20 de septiembre (Día 14) con Ken Kaneshima (Excursiones Fujiyama · +81 90-5863-1635 · excursionesfujiyama.com) + 4 reservas flexibles en GetYourGuide del 16 al 19 de septiembre. Comprobar cámaras web a las 06:30 AM.",
   },
+  "tokyo-tower": {
+    name: "Roppongi Hills y la Torre de Tokio",
+    jp: "東京タワー",
+    founded: "1958 (Torre) / 2003 (Roppongi Hills)",
+    wiki: "Torre de Tokio",
+    tagline: "El símbolo del renacimiento de posguerra visto desde el mejor mirador panorámico de la ciudad.",
+    sections: [
+      {
+        title: "El mirador Tokyo City View",
+        body: "Situado en la planta 52 de la Torre Mori (250 metros de altura), este mirador interior acristalado de 360 grados tiene una ventaja fundamental sobre el Tokyo Skytree o Shibuya Sky: su ubicación. Al estar en Roppongi, sitúa a la icónica Torre de Tokio justo en el primer plano del horizonte, permitiendo ver cómo se ilumina con la inmensidad de la bahía y Odaiba de fondo.",
+      },
+      {
+        title: "La Torre de Tokio",
+        body: "Construida en 1958, mide 333 metros (13 metros más que la Torre Eiffel, en la que se inspira claramente). Fue el símbolo del renacimiento económico de Japón tras la devastación de la Segunda Guerra Mundial. Un tercio del acero utilizado en su construcción se recicló de tanques estadounidenses dañados durante la Guerra de Corea. Está pintada de blanco y naranja internacional para cumplir con las normativas de seguridad aérea.",
+      },
+    ],
+    curiosities: [
+      "El atardecer es el momento más codiciado en el Tokyo City View; es imprescindible llegar unos 45 minutos antes de la puesta de sol para coger sitio junto a los cristales.",
+      "La Torre de Tokio tiene dos patrones de iluminación: el \"Landmark Light\" (el clásico naranja cálido) y el \"Infinity Diamond Veil\" (luces LED de colores que cambian según el mes o eventos especiales).",
+      "Roppongi Hills fue uno de los primeros \"megacomplejos\" urbanos de Tokio, integrando oficinas, viviendas, museo (Mori Art Museum) y mirador en una sola estructura vertical.",
+    ],
+  },
+  "nakano-broadway": {
+    name: "Nakano Broadway",
+    jp: "中野ブロードウェイ",
+    founded: "1966",
+    wiki: "Nakano Broadway",
+    tagline: "De complejo residencial de lujo a la meca subterránea del coleccionismo retro y la cultura otaku.",
+    sections: [
+      {
+        title: "Qué es",
+        body: "Si Akihabara es el escaparate brillante y *mainstream* de la electrónica y el anime actual, Nakano Broadway es su reverso oscuro y profundo. Es un centro comercial de pasillos estrechos y sin ventanas dedicado obsesivamente al coleccionismo retro, descatalogado y de nicho. Es el lugar donde los coleccionistas serios buscan artículos que ya no se fabrican.",
+      },
+      {
+        title: "El imperio Mandarake",
+        body: "El edificio se inauguró en 1966 como un complejo residencial de lujo (el primer ministro de Japón llegó a vivir en los apartamentos superiores). Sin embargo, en 1980, una pequeña tienda de manga de segunda mano de apenas 7 metros cuadrados abrió en la segunda planta. Se llamaba Mandarake. Con el tiempo, fue comprando los locales vacíos del edificio. Hoy, Mandarake opera unas 30 tiendas distintas dentro de Nakano Broadway, cada una especializada en una obsesión diferente.",
+      },
+      {
+        title: "El laberinto del coleccionismo",
+        body: "Al perderse por la segunda y tercera planta, se pueden encontrar tiendas dedicadas exclusivamente a celuloides de animación originales (cels) de los años 80 y 90, juguetes de hojalata de la posguerra, robots *mecha* antiguos, relojes vintage, trenes a escala, tarjetas de béisbol y figuras de Godzilla de edición limitada.",
+      },
+    ],
+    curiosities: [
+      "Horario otaku: Las tiendas de Nakano Broadway no están hechas para madrugadores. La mayoría rara vez abre antes de las 12:00, siendo las 14:00 la hora en la que el centro comercial está funcionando a pleno rendimiento.",
+      "En el sótano se encuentra un mercado de comida y ropa que conserva el ambiente del Tokio de la era Showa, contrastando radicalmente con la cultura friki de los pisos superiores.",
+      "La icónica tienda de relojes JackRoad, situada en la tercera planta, es mundialmente conocida entre los coleccionistas de Rolex y Omega vintage.",
+    ],
+  },
 };
 
 // Mapa de qué guías corresponden a cada día del itinerario
@@ -653,8 +701,8 @@ export const guidesByDay = {
   9: ["akihabara"],
   10: ["senso-ji", "teamlab"],
   11: ["meiji-jingu", "shibuya"],
-  12: [],
-  13: [],
+  12: ["tokyo-tower"],
+  13: ["nakano-broadway"],
   14: ["fuji"],
   15: [],
 };
@@ -736,5 +784,13 @@ export const guideMeta = {
   "fuji": {
     shortName: "Monte Fuji",
     keywords: ["chureito", "oshino hakkai", "aokigahara", "shiraito", "pagoda chureito", "kitaguchi hongu", "lagos del fuji"],
+  },
+  "tokyo-tower": {
+    shortName: "Torre de Tokio",
+    keywords: ["tokyo tower", "roppongi", "tokyo city view", "roppongi hills"],
+  },
+  "nakano-broadway": {
+    shortName: "Nakano Broadway",
+    keywords: ["nakano", "nakano broadway", "mandarake", "coleccionismo", "retro"],
   },
 };

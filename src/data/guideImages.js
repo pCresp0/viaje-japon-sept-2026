@@ -23,4 +23,6 @@ export const guideImages = {
   "akihabara":     "/img/places/akihabara.jpg",
   "teamlab":       "/img/places/teamlab.jpg",
   "fuji":          "/img/places/fuji.jpg",
+  "tokyo-tower":   "/img/places/tokyo-tower.jpg",
+  "nakano-broadway": "/img/places/nakano-broadway.jpg",
 };
