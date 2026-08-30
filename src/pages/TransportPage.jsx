@@ -16,8 +16,9 @@ function iconKind(transport) {
 }
 
 export default function TransportPage({ onNavigate }) {
-  const { transports, days } = useContent();
+  const { transports, days, blocks } = useContent();
   const t = useT();
+  const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
 
   const seenKeys = [];
   const groups = {};
@@ -33,10 +34,16 @@ export default function TransportPage({ onNavigate }) {
       const d = days.find(day => day.num === n);
       if (d) {
         const calDay = parseInt(d.date.slice(8));
-        return { badge: String(n), title: `${d.weekday} ${calDay} sept`, sub: d.cities };
+        const block = blockById[d.block];
+        return {
+          badge: String(n),
+          title: `${d.weekday} ${calDay} sept`,
+          sub: d.cities,
+          color: block?.color || "var(--indigo)",
+        };
       }
     }
-    return { badge: "~", title: t("transport.tokioDays"), sub: "Tokio" };
+    return { badge: "~", title: t("transport.tokioDays"), sub: "Tokio", color: blockById.tokio?.color || "var(--indigo)" };
   }
 
   function handleTransportClick(tItem) {
@@ -198,7 +205,7 @@ export default function TransportPage({ onNavigate }) {
         }}
       >
         {seenKeys.map(key => {
-          const { badge, title, sub } = headerFor(key);
+          const { badge, title, sub, color } = headerFor(key);
           const items = groups[key];
 
           return (
@@ -207,8 +214,8 @@ export default function TransportPage({ onNavigate }) {
               className="rounded-2xl border overflow-hidden"
               style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}
             >
-              {/* Day header */}
-              <div className="px-5 py-3.5 flex items-center gap-3" style={{ background: "var(--indigo)" }}>
+              {/* Day header — color del bloque (Kioto / Alpes / Tokio) */}
+              <div className="px-5 py-3.5 flex items-center gap-3" style={{ background: color }}>
                 <div style={{
                   width: 30, height: 30, borderRadius: 8, flexShrink: 0,
                   background: "rgba(255,255,255,0.15)",
