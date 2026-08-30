@@ -30,13 +30,13 @@ export default function PendingPage() {
     });
   }
 
-  const total = pendingItems.length;
-  const completed = pendingItems.filter((i) => done[i.id]).length;
-  const remaining = total - completed;
-  const pct = Math.round((completed / total) * 100);
-
   // Filter by active tab (phase)
   const tabItems = pendingItems.filter((i) => i.phase === activeTab);
+
+  const total = tabItems.length;
+  const completed = tabItems.filter((i) => done[i.id]).length;
+  const remaining = total - completed;
+  const pct = total === 0 ? 0 : Math.round((completed / total) * 100);
 
   // Group by category, preserving chronological proximity order
   const grouped = Object.keys(categoryLabels).map((cat) => {
@@ -55,24 +55,24 @@ export default function PendingPage() {
       </div>
 
       {/* Progress */}
-      <div className="rounded-2xl p-5 mb-8" style={{
+      <div className="rounded-2xl p-4 mb-6" style={{
         background: remaining === 0
           ? "linear-gradient(135deg, #2e7d5b 0%, #1f5a41 100%)"
           : "linear-gradient(160deg, var(--shu-darker) 0%, var(--shu-deep) 100%)",
         color: "white",
       }}>
-        <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", marginBottom: 12 }}>
-          <div>
-            <p style={{ fontFamily: "var(--font-display)", fontSize: 34, lineHeight: 1 }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 10 }}>
+          <div className="flex items-baseline gap-2">
+            <p style={{ fontFamily: "var(--font-display)", fontSize: 28, lineHeight: 1 }}>
               {remaining}
             </p>
-            <p style={{ fontSize: 12, color: "rgba(255,255,255,0.7)", marginTop: 4 }}>
+            <p style={{ fontSize: 12, color: "rgba(255,255,255,0.8)" }}>
               {remaining === 0
                 ? t("pending.allDone")
                 : remaining === 1 ? t("pending.remainingOne") : t("pending.remaining")}
             </p>
           </div>
-          <p style={{ fontSize: 13, color: "rgba(255,255,255,0.7)" }}>
+          <p style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", fontWeight: 600 }}>
             {completed} / {total}
           </p>
         </div>
