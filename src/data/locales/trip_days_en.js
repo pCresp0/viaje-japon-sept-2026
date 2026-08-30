@@ -75,7 +75,7 @@ export const days = [
         "text": "🏯 Visit the Daibutsuden and the Great Buddha. The visit inside the Great Buddha is the main part; afterwards we can briefly tour the grounds. Do not book tickets in advance."
       },
       {
-        "text": "🦌 Nara Park and deer. 🦌 If we buy shika senbei for the deer, give them the crackers and show empty hands when finished: some deer can get quite insistent if they think we still have food."
+        "text": "🦌 Nara Park and deer. 🦌 If we buy shika senbei for the deer, give them the crackers and show empty hands when finished: some deer can get quite insistent if they think we still have food (they are almost as hungry and intense as Randy when he sees a Chickenjoy from Jollibee!)."
       },
       {
         "text": "🍜 Lunch in Nara."

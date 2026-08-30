@@ -75,7 +75,7 @@ export const days = [
         "text": "🏯 Bisitahin ang Daibutsuden at ang Great Buddha. Ang pagbisita sa loob ng Great Buddha ang pangunahing bahagi; pagkatapos ay pwede tayong umikot sandali sa paligid. Huwag mag-book ng tiket nang maaga."
       },
       {
-        "text": "🦌 Nara Park at mga usa. 🦌 Kung bibili tayo ng shika senbei para sa mga usa, ibigay ang mga biskwit at ipakita ang mga walang laman na kamay kapag ubos na: ang ilang mga usa ay maaaring maging mapilit kung akala nila ay mayroon pa tayong pagkain."
+        "text": "🦌 Nara Park at mga usa. 🦌 Kung bibili tayo ng shika senbei para sa mga usa, ibigay ang mga biskwit at ipakita ang mga walang laman na kamay kapag ubos na: ang ilang mga usa ay maaaring maging mapilit kung akala nila ay mayroon pa tayong pagkain (halos kasing gutom at tindi sila ni Randy kapag nakakita ng Chickenjoy mula sa Jollibee o Adobo!)."
       },
       {
         "text": "🍜 Tanghalian sa Nara."

@@ -45,7 +45,7 @@ export const days = [
         "text": "🍣 19:00–20:30 — DÎNER : KAITEN-SUSHI UOGASHI. Restaurant recommandé à l'AEON MALL KYOTO — Sakura Building, 4F (https://maps.app.goo.gl/ByDBQB6zaVZ3dj2E6). À environ 5 min à pied de Kyoto Station Hachijo Exit (très pratique après le Shinkansen). Kaiten-zushi (sushi sur tapis roulant). Prix indicatif : 2 000–3 000 ¥/personne (~12–19€). Horaires : 11:00–22:00 (dernière commande vers 21:30). Aucune réservation nécessaire. À goûter : sushis variés ; morceaux de poisson frais ; nigiri ; plats du jour ; un accompagnement chaud. 💡 Conseil : C'est un bon premier dîner au Japon car on peut commander petit à petit et contrôler ce qu'on mange et dépense. L'AEON MALL a d'autres options au même étage si c'est plein."
       },
       {
-        "text": "⚠️ Achetez ce soir le petit-déjeuner du Jour 2 dans un konbini car le départ est trop matinal pour prendre un petit-déjeuner tranquille à l'hôtel. Recommandation : 1–2 onigiri par personne ; sandwich aux œufs ; banane/fruit ; café ou boisson ; yaourt facultatif."
+        "text": "⚠️ Achetez ce soir le petit-déjeuner du Jour 2 dans un konbini car le départ est trop matinal pour prendre un petit-déjeuner tranquille à l'hôtel. Recommandation : 1–2 onigiri par personne ; sandwich aux œufs ; banane/fruit ; café ou boisson ; yaourt facultatif (et oui Thibaut, désolé mais il n'y a pas de vraies baguettes ou de croissants au beurre ici, il va falloir t'y faire !)."
       }
     ],
     "money": "Env. 40 € (repas) + transport"
@@ -168,7 +168,7 @@ export const days = [
         "text": "Quartiers des geishas : Pontocho, traversée de la rivière Kamogawa jusqu'à Miyagawacho."
       },
       {
-        "text": "Promenade dans Gion : rue Hanamikoji jusqu'à la maison de thé Ichiriki, ruisseau Shirakawa et sanctuaire Tatsumi. Si vous voulez dîner à Gion/Pontocho, il vaut mieux commencer entre 18:00 et 19:00. Pour les restaurants kaiseki ou très populaires, réservez à l'avance ; pour les options décontractées, restez flexibles."
+        "text": "Promenade dans Gion : rue Hanamikoji jusqu'à la maison de thé Ichiriki, ruisseau Shirakawa et sanctuaire Tatsumi (Thibaut, retiens-toi de draguer toutes les geishas en leur proposant un massage de kiné, elles n'ont pas le temps pour les tactiques de Toulouse). Si vous voulez dîner à Gion/Pontocho, il vaut mieux commencer entre 18:00 et 19:00 (l'occasion parfaite pour rappeler que l'Espagne a encore gagné le dernier Mondial). Pour les restaurants kaiseki ou très populaires, réservez à l'avance ; pour les options décontractées, restez flexibles."
       }
     ],
     "money": "Env. 40 € (repas)"
