@@ -55,6 +55,7 @@ function formatQuickTime(timeStr = "") {
   if (!timeStr) return "";
   return timeStr
     .replace(/\(\+1\s*d[ií]a\)/gi, "(+1d)")
+    .replace(/(\d{2}:\d{2})\+/g, "$1") // Remove trailing + (e.g. 13:35+ -> 13:35)
     .replace(/aprox\.?/gi, "~")
     .replace(/^~/, "~")
     .replace(/(\d{2}:\d{2})\s*\/\s*\d{2}:\d{2}/g, "$1") // "13:30/14:00" -> "13:30"
@@ -86,6 +87,10 @@ function formatQuickText(text = "") {
     clean = clean.replace(/^[^\w\s•\-—:→]+/, "").trim();
   }
 
+  // Inteligencia semántica: Cortar en seco si empiezan consejos o avisos
+  clean = clean.split(/[💡⚠️🎫🛒📅]/)[0].trim();
+  clean = clean.split(/(?:Tip|Consejo|Alternativa|Nota|Opcional|Importante):/i)[0].trim();
+
   if (!clean) return "";
 
   let parts = clean.split(/\.\s+/);
@@ -93,10 +98,16 @@ function formatQuickText(text = "") {
   let detail = "";
 
   if (parts.length > 1) {
-    // Si el título es muy corto, mostramos 1 frase más de detalle (max 2 frases)
-    // Si el título ya es largo, nos quedamos solo con 1 frase ("mejor 1 frase que 2")
-    if (title.length < 35) {
-      detail = parts[1];
+    // Filtramos frases puramente logísticas para quedarnos con el detalle real
+    let filteredParts = parts.filter((part, index) => {
+      if (index === 0) return true; // El título siempre se queda
+      const p = part.toLowerCase();
+      if (/abierto todos|horario|entrada aprox|no requiere|precio orientat|¥|último pedido/.test(p)) return false;
+      return true;
+    });
+
+    if (filteredParts.length > 1) {
+      detail = filteredParts[1]; // Nos quedamos con 1 frase de "lore" puro
     }
   }
 
