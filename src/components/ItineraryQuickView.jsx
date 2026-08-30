@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { ChevronDown, ChevronUp, LayoutList, X } from "lucide-react";
+import { ChevronDown, ChevronUp, LayoutList, X, Map } from "lucide-react";
 import { formatDateShort } from "../utils/date";
 import PlaceText from "./PlaceText";
+import { useContent } from "../i18n/LanguageContext";
+import { parseDayNumbers } from "../utils/mapDay";
 
 // La vista rápida filtra automáticamente para dejar solo las paradas cronológicas (horas con dígitos)
 
@@ -118,8 +120,10 @@ function hasRealTime(entry) {
   return /^~?\d{1,2}[:h]\d{0,2}/.test(entry.time ?? "");
 }
 
-export function QuickDayCard({ day, blockColor, onShowFullDay, onClose, standalone = false }) {
+export function QuickDayCard({ day, blockColor, onShowFullDay, onClose, onViewMap, standalone = false }) {
   const keyEntries = (day.schedule ?? []).filter(hasRealTime);
+  const { mapStops } = useContent();
+  const hasMapStops = mapStops.some((s) => parseDayNumbers(s.day).includes(day.num));
 
   return (
     <div
@@ -143,6 +147,16 @@ export function QuickDayCard({ day, blockColor, onShowFullDay, onClose, standalo
         </div>
         
         <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1.5">
+          {onViewMap && hasMapStops && (
+            <button
+              onClick={() => onViewMap(day.num)}
+              className="flex items-center justify-center rounded-full p-2 transition-colors hover:bg-white/20 active:scale-95"
+              style={{ background: "rgba(255,255,255,0.15)", border: "none", cursor: "pointer", color: "white" }}
+              title="Ver mapa"
+            >
+              <Map size={16} />
+            </button>
+          )}
           {onShowFullDay && (
             <button
               onClick={() => onShowFullDay(day.num)}
@@ -231,7 +245,7 @@ export function QuickDayCard({ day, blockColor, onShowFullDay, onClose, standalo
   );
 }
 
-export default function ItineraryQuickView({ days, blocks, onShowFullDay }) {
+export default function ItineraryQuickView({ days, blocks, onShowFullDay, onViewMap }) {
   const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
 
   return (
@@ -244,6 +258,7 @@ export default function ItineraryQuickView({ days, blocks, onShowFullDay }) {
             day={day} 
             blockColor={block.color} 
             onShowFullDay={onShowFullDay}
+            onViewMap={onViewMap}
           />
         );
       })}
