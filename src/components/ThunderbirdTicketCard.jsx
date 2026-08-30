@@ -1,10 +1,14 @@
 import { useState } from "react";
-import { Train, Ticket, CheckCircle2, ChevronDown, Clock, CreditCard, Lock, Info, MapPin, CalendarDays } from "lucide-react";
+import { Train, Ticket, CheckCircle2, CreditCard, Lock, Info, MapPin, CalendarDays } from "lucide-react";
 import { ticketAccentColor, ticketHeaderBackground, ticketSoftBackground } from "../utils/blockTheme";
+import TicketCardHeader from "./TicketCardHeader";
 
 // Cruce Kioto → Alpes
 const FROM_BLOCK = "kioto";
 const TO_BLOCK = "alpes";
+
+/** Precios reales Revolut (grupo): ¥38.600 · 209,38€ */
+const PRICE_LINE = "5 · ¥38.600 (~209,38€)";
 
 export default function ThunderbirdTicketCard({ onGoToDay } = {}) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -29,53 +33,28 @@ export default function ThunderbirdTicketCard({ onGoToDay } = {}) {
 
   return (
     <div
-      className="rounded-2xl border overflow-hidden shadow-sm mb-6"
+      className="rounded-2xl border overflow-hidden shadow-sm mb-3"
       style={{
         background: "var(--paper-raised)",
         borderColor: "var(--line)",
       }}
     >
-      {/* Header (Toggle) */}
-      <button 
-        onClick={() => setIsExpanded(!isExpanded)}
-        className="w-full text-left p-4 sm:p-5 text-white relative overflow-hidden transition-all hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-inset cursor-pointer" 
-        style={{ background: headerBg }}
-      >
-        <div className="relative z-10 flex items-center justify-between gap-3">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 flex-1">
-            <div>
-              <div className="flex items-center gap-2 mb-1.5 opacity-90">
-                <Train size={14} className="text-green-200" />
-                <p className="text-xs font-bold tracking-widest uppercase m-0">Kioto → Kanazawa</p>
-              </div>
-              <h3 className="text-lg font-display font-bold m-0 leading-tight">
-                Thunderbird 5 + Kagayaki 508
-              </h3>
-              <p className="text-sm opacity-90 mt-1 flex items-center gap-1.5 m-0">
-                <Clock size={12} />
-                12 Septiembre 2026 · 08:10 → 10:03
-              </p>
-            </div>
-            <div className="text-left sm:text-right flex-shrink-0">
-              <p className="text-xs opacity-75 uppercase tracking-wider mb-0.5 mt-0">Reserva</p>
-              <p className="text-base font-bold font-mono tracking-widest m-0">47932</p>
-              <p className="text-xs opacity-90 mt-0.5 m-0">5 Adultos · ¥38.600 (~209,38€)</p>
-            </div>
-          </div>
-          <ChevronDown 
-            size={24} 
-            className={`flex-shrink-0 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
-            style={{ opacity: 0.8 }}
-          />
-        </div>
-        
-        <div className="absolute -bottom-8 -right-8 opacity-10 rotate-12 pointer-events-none">
-          <Ticket size={120} />
-        </div>
-      </button>
+      <TicketCardHeader
+        icon={Train}
+        iconClassName="text-green-200"
+        route="Kioto → Kanazawa"
+        title="Thunderbird 5 + Kagayaki 508"
+        when="12 Sept 2026 · 08:10 → 10:03"
+        reservationCode="47932"
+        priceLine={PRICE_LINE}
+        isExpanded={isExpanded}
+        onToggle={() => setIsExpanded(!isExpanded)}
+        focusRingClass="focus:ring-green-600"
+        headerBg={headerBg}
+      />
 
       {onGoToDay && (
-        <div className="px-4 py-2.5 border-b flex items-center justify-between gap-2" style={{ borderColor: "var(--line)", background: softBg }}>
+        <div className="px-3.5 py-2 border-b flex items-center justify-between gap-2" style={{ borderColor: "var(--line)", background: softBg }}>
           <button
             type="button"
             onClick={onGoToDay}

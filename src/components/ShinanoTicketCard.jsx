@@ -1,12 +1,16 @@
 import { useState } from "react";
-import { Train, Ticket, CheckCircle2, ChevronDown, Clock, CreditCard, Lock, AlertTriangle, Eye, X, CalendarDays, MapPin } from "lucide-react";
+import { Train, Ticket, CheckCircle2, CreditCard, Lock, AlertTriangle, Eye, X, CalendarDays, MapPin } from "lucide-react";
 import { ticketAccentColor, ticketHeaderBackground, ticketSoftBackground } from "../utils/blockTheme";
+import TicketCardHeader from "./TicketCardHeader";
 
 const CONFIRMATION_IMG = "/images/tickets/jr-west-shinano-4-nakatsugawa-nagoya-2026-09-15.png";
 
 // Cruce Alpes → Tokio (salida Magome / llegada hacia Tokio)
 const FROM_BLOCK = "alpes";
 const TO_BLOCK = "tokio";
+
+/** Precios reales Revolut (grupo): ¥14.350 · 77,84€ */
+const PRICE_LINE = "5 · ¥14.350 (~77,84€)";
 
 export default function ShinanoTicketCard({ onGoToDay } = {}) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -31,53 +35,28 @@ export default function ShinanoTicketCard({ onGoToDay } = {}) {
 
   return (
     <div
-      className="rounded-2xl border overflow-hidden shadow-sm mb-6"
+      className="rounded-2xl border overflow-hidden shadow-sm mb-3"
       style={{
         background: "var(--paper-raised)",
         borderColor: "var(--line)",
       }}
     >
-      <button
-        type="button"
-        onClick={() => setIsExpanded(!isExpanded)}
-        className="w-full text-left p-4 sm:p-5 text-white relative overflow-hidden transition-all hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-inset cursor-pointer"
-        style={{ background: headerBg }}
-      >
-        <div className="relative z-10 flex items-center justify-between gap-3">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 flex-1">
-            <div>
-              <div className="flex items-center gap-2 mb-1.5 opacity-90">
-                <Train size={14} className="text-sky-200" />
-                <p className="text-xs font-bold tracking-widest uppercase m-0">Nakatsugawa → Nagoya</p>
-              </div>
-              <h3 className="text-lg font-display font-bold m-0 leading-tight">
-                Shinano 4 (JR-WEST)
-              </h3>
-              <p className="text-sm opacity-90 mt-1 flex items-center gap-1.5 m-0">
-                <Clock size={12} />
-                15 Septiembre 2026 · 09:57 → 10:53
-              </p>
-            </div>
-            <div className="text-left sm:text-right flex-shrink-0">
-              <p className="text-xs opacity-75 uppercase tracking-wider mb-0.5 mt-0">Reserva</p>
-              <p className="text-base font-bold font-mono tracking-widest m-0">42093</p>
-              <p className="text-xs opacity-90 mt-0.5 m-0">5 Adultos · ¥14.350 (~77,84€)</p>
-            </div>
-          </div>
-          <ChevronDown
-            size={24}
-            className={`flex-shrink-0 transition-transform duration-300 ${isExpanded ? "rotate-180" : ""}`}
-            style={{ opacity: 0.8 }}
-          />
-        </div>
-
-        <div className="absolute -bottom-8 -right-8 opacity-10 rotate-12 pointer-events-none">
-          <Ticket size={120} />
-        </div>
-      </button>
+      <TicketCardHeader
+        icon={Train}
+        iconClassName="text-sky-200"
+        route="Nakatsugawa → Nagoya"
+        title="Shinano 4 (JR-WEST)"
+        when="15 Sept 2026 · 09:57 → 10:53"
+        reservationCode="42093"
+        priceLine={PRICE_LINE}
+        isExpanded={isExpanded}
+        onToggle={() => setIsExpanded(!isExpanded)}
+        focusRingClass="focus:ring-indigo-500"
+        headerBg={headerBg}
+      />
 
       {onGoToDay && (
-        <div className="px-4 py-2.5 border-b flex items-center justify-between gap-2" style={{ borderColor: "var(--line)", background: softBg }}>
+        <div className="px-3.5 py-2 border-b flex items-center justify-between gap-2" style={{ borderColor: "var(--line)", background: softBg }}>
           <button
             type="button"
             onClick={onGoToDay}
@@ -154,7 +133,7 @@ export default function ShinanoTicketCard({ onGoToDay } = {}) {
 
             <div className="mt-3 pt-3 border-t text-xs text-gray-600 flex flex-wrap items-center justify-between gap-2" style={{ borderColor: "var(--line)" }}>
               <span>👤 Titular: <strong>Pablo Crespo</strong></span>
-              <span>💰 Total: <strong>¥14.350 (~77,84€) · ¥2.870/pax (~15,57€)</strong></span>
+              <span>💰 Revolut: <strong>¥14.350 (~77,84€) · ¥2.870/pax (~15,57€)</strong></span>
               <span>🧾 Receipt: <strong>AEE6606M</strong></span>
             </div>
             <p className="text-xs text-gray-500 m-0 mt-2">
@@ -208,7 +187,7 @@ export default function ShinanoTicketCard({ onGoToDay } = {}) {
             <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-3 mt-2 border-b pb-2">Checklist operativo</p>
             <div className="space-y-2">
               <ChecklistItem id="booked" checked={checkedItems.booked} locked text="Reserva JR-WEST aceptada (nº 42093 · Receipt AEE6606M)" />
-              <ChecklistItem id="paid" checked={checkedItems.paid} locked text="Pago registrado · ¥14.350 (~77,84€) · 5 adultos" />
+              <ChecklistItem id="paid" checked={checkedItems.paid} locked text="Pago Revolut · ¥14.350 (~77,84€) · 5 adultos" />
               <ChecklistItem id="seats" checked={checkedItems.seats} locked text="Asientos Car 4: 11-D, 12-C, 12-D, 13-C, 13-D" />
 
               <div className="my-2 border-t border-dashed" style={{ borderColor: "var(--line)" }} />

@@ -1,10 +1,14 @@
 import { useState } from "react";
-import { Zap, Ticket, X, Clock, ChevronDown, CalendarDays } from "lucide-react";
+import { Zap, Ticket, X, CalendarDays } from "lucide-react";
 import { groupMembers } from "./VisitJapanQRCard";
 import { ticketAccentColor, ticketHeaderBackground, ticketSoftBackground } from "../utils/blockTheme";
+import TicketCardHeader from "./TicketCardHeader";
 
 const FROM_BLOCK = "kioto";
 const TO_BLOCK = "kioto";
+
+/** Precios reales Revolut (grupo): ¥68.850 · 373,27€ */
+const PRICE_LINE = "5 · ¥68.850 (~373,27€)";
 
 export default function ShinkansenTicketCard({ onGoToDay } = {}) {
   const [selectedMember, setSelectedMember] = useState(null);
@@ -25,54 +29,28 @@ export default function ShinkansenTicketCard({ onGoToDay } = {}) {
 
   return (
     <div
-      className="rounded-2xl border overflow-hidden shadow-sm mb-6"
+      className="rounded-2xl border overflow-hidden shadow-sm mb-3"
       style={{
         background: "var(--paper-raised)",
         borderColor: "var(--line)",
       }}
     >
-      {/* Header (Toggle) */}
-      <button 
-        onClick={() => setIsExpanded(!isExpanded)}
-        className="w-full text-left p-4 sm:p-5 text-white relative overflow-hidden transition-all hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset cursor-pointer" 
-        style={{ background: headerBg }}
-      >
-        <div className="relative z-10 flex items-center justify-between gap-3">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 flex-1">
-            <div>
-              <div className="flex items-center gap-2 mb-1.5 opacity-90">
-                <Zap size={14} className="text-yellow-400" />
-                <p className="text-xs font-bold tracking-widest uppercase m-0">Shinagawa → Kioto</p>
-              </div>
-              <h3 className="text-lg font-display font-bold m-0 leading-tight">
-                NOZOMI 53
-              </h3>
-              <p className="text-sm opacity-90 mt-1 flex items-center gap-1.5 m-0">
-                <Clock size={12} />
-                7 Septiembre 2026 · 17:19 → 19:23
-              </p>
-            </div>
-            <div className="text-left sm:text-right flex-shrink-0">
-              <p className="text-xs opacity-75 uppercase tracking-wider mb-0.5 mt-0">Reserva</p>
-              <p className="text-base font-bold font-mono tracking-widest m-0">2000</p>
-              <p className="text-xs opacity-90 mt-0.5 m-0">5 Adultos · ¥68.850 (~373,27€)</p>
-            </div>
-          </div>
-          <ChevronDown 
-            size={24} 
-            className={`flex-shrink-0 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
-            style={{ opacity: 0.8 }}
-          />
-        </div>
-        
-        {/* Decoración gráfica */}
-        <div className="absolute -bottom-8 -right-8 opacity-10 rotate-12 pointer-events-none">
-          <Ticket size={120} />
-        </div>
-      </button>
+      <TicketCardHeader
+        icon={Zap}
+        iconClassName="text-yellow-400"
+        route="Shinagawa → Kioto"
+        title="NOZOMI 53"
+        when="7 Sept 2026 · 17:19 → 19:23"
+        reservationCode="2000"
+        priceLine={PRICE_LINE}
+        isExpanded={isExpanded}
+        onToggle={() => setIsExpanded(!isExpanded)}
+        focusRingClass="focus:ring-blue-500"
+        headerBg={headerBg}
+      />
 
       {onGoToDay && (
-        <div className="px-4 py-2.5 border-b flex items-center justify-between gap-2" style={{ borderColor: "var(--line)", background: softBg }}>
+        <div className="px-3.5 py-2 border-b flex items-center justify-between gap-2" style={{ borderColor: "var(--line)", background: softBg }}>
           <button
             type="button"
             onClick={onGoToDay}
@@ -96,7 +74,7 @@ export default function ShinkansenTicketCard({ onGoToDay } = {}) {
               Coche 13 · Ordinary
             </span>
             <span className="px-2.5 py-1 rounded-full font-semibold bg-gray-100 text-gray-700">
-              Total: ¥68.850 (~373,27€) · ¥13.770/pax (~74,65€)
+              Revolut: ¥68.850 (~373,27€) · ¥13.770/pax (~74,65€)
             </span>
           </div>
 
