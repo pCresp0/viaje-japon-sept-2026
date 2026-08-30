@@ -125,8 +125,25 @@ export default function TransportPage({ onNavigate }) {
       {/* ── TAB: BILLETES ──────────────────────────────────────── */}
       {activeTab === "billetes" && (
         <div className="px-4 pt-5">
-          {/* Estado general */}
-          <div className="rounded-2xl p-4 mb-5 border" style={{ background: "var(--paper-raised)", borderColor: "var(--line)" }}>
+          {/* Tarjetas de billetes */}
+          <ShinkansenTicketCard
+            onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 1, targetId: slug("itinerary-day", 1) }) : undefined}
+          />
+          <ThunderbirdTicketCard
+            onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 6, targetId: slug("itinerary-day", 6) }) : undefined}
+          />
+          <NohiMagomeTicketCard
+            onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 8, targetId: slug("itinerary-day", 8) }) : undefined}
+          />
+          <ShinanoTicketCard
+            onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 9, targetId: slug("itinerary-day", 9) }) : undefined}
+          />
+          <NozomiNagoyaTicketCard
+            onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 9, targetId: slug("itinerary-day", 9) }) : undefined}
+          />
+
+          {/* Estado general — al final */}
+          <div className="rounded-2xl p-4 mt-2 mb-4 border" style={{ background: "var(--paper-raised)", borderColor: "var(--line)" }}>
             <p className="font-display text-sm font-bold flex items-center gap-2 mb-3" style={{ color: "var(--indigo)" }}>
               <span>🚆</span> Estado general — 5 adultos
             </p>
@@ -173,23 +190,6 @@ export default function TransportPage({ onNavigate }) {
               </div>
             </div>
           </div>
-
-          {/* Tarjetas de billetes */}
-          <ShinkansenTicketCard
-            onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 1, targetId: slug("itinerary-day", 1) }) : undefined}
-          />
-          <ThunderbirdTicketCard
-            onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 6, targetId: slug("itinerary-day", 6) }) : undefined}
-          />
-          <NohiMagomeTicketCard
-            onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 8, targetId: slug("itinerary-day", 8) }) : undefined}
-          />
-          <ShinanoTicketCard
-            onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 9, targetId: slug("itinerary-day", 9) }) : undefined}
-          />
-          <NozomiNagoyaTicketCard
-            onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 9, targetId: slug("itinerary-day", 9) }) : undefined}
-          />
         </div>
       )}
 
@@ -197,99 +197,7 @@ export default function TransportPage({ onNavigate }) {
       {activeTab === "trayectos" && (
         <div className="px-4 pt-5">
 
-          {/* Suica */}
-          <div className="rounded-2xl mb-4 overflow-hidden" style={{ background: "linear-gradient(135deg, #1d3557 0%, #0f1f35 100%)", color: "white" }}>
-            <button
-              type="button"
-              onClick={() => setSuicaOpen(!suicaOpen)}
-              className="w-full text-left p-4 border-none cursor-pointer bg-transparent text-white"
-            >
-              <div className="flex items-center gap-2">
-                <CreditCard size={17} className="text-emerald-400 shrink-0" />
-                <p style={{ fontSize: 15, fontWeight: 700, margin: 0 }} className="flex-1">Tarjeta Welcome Suica / IC</p>
-                <ChevronDown
-                  size={18}
-                  className={`shrink-0 transition-transform ${suicaOpen ? "rotate-180" : ""}`}
-                  style={{ color: "rgba(255,255,255,0.8)" }}
-                />
-              </div>
-              {!suicaOpen && (
-                <p style={{ fontSize: 11.5, color: "rgba(255,255,255,0.65)", margin: "6px 0 0", lineHeight: 1.4 }}>
-                  iPhone: Welcome Suica Mobile · Android: física en Narita · recarga ¥3.000–¥5.000 (~16–27€)
-                </p>
-              )}
-            </button>
-            {suicaOpen && (
-              <div className="px-4 pb-4">
-                <p style={{ fontSize: 13, color: "rgba(255,255,255,0.85)", lineHeight: 1.6, marginBottom: 12 }}>
-                  Tarjeta de transporte y monedero electrónico para trenes locales, metro, autobuses urbanos y compras compatibles en todo Japón.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
-                  <div className="p-3.5 rounded-xl bg-white/10 border border-white/10">
-                    <p className="text-xs font-bold text-emerald-300 flex items-center gap-1 mb-1.5">
-                      <Smartphone size={13} /> 📱 iPhone (Welcome Suica Mobile)
-                    </p>
-                    <p className="text-xs text-white/80 leading-relaxed">
-                      Descargar la app oficial <strong>Welcome Suica Mobile</strong> e integrarla en Apple Wallet con tarjeta en Apple Pay. Requiere activar localización.
-                    </p>
-                  </div>
-                  <div className="p-3.5 rounded-xl bg-white/10 border border-white/10">
-                    <p className="text-xs font-bold text-amber-300 flex items-center gap-1 mb-1.5">
-                      <CreditCard size={13} /> 🤖 Android extranjero (Welcome Suica Física)
-                    </p>
-                    <p className="text-xs text-white/80 leading-relaxed">
-                      Comprar la <strong>Welcome Suica física</strong> al llegar a los puntos autorizados de JR East en Narita (T1 o T2/3).
-                    </p>
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-white/80 pt-3 border-t border-white/15">
-                  <div>
-                    <p className="font-semibold text-white mb-0.5">💰 Sin depósito</p>
-                    <p className="text-white/70">No requiere los ¥500 (~3€) de fianza.</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white mb-0.5">⚠️ No reembolsable</p>
-                    <p className="text-white/70">El saldo restante no se devuelve.</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white mb-0.5">💳 Recarga recomendada</p>
-                    <p className="text-white/70">¥3.000–¥5.000 (~16–27€)/persona.</p>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* Smart EX */}
-          <div className="rounded-2xl mb-5 border overflow-hidden" style={{ background: "rgba(29, 53, 87, 0.03)", borderColor: "var(--line)" }}>
-            <button
-              type="button"
-              onClick={() => setSmartExOpen(!smartExOpen)}
-              className="w-full text-left px-4 py-3.5 border-none cursor-pointer bg-transparent flex items-center gap-2"
-            >
-              <Zap size={16} style={{ color: "var(--indigo)" }} />
-              <p className="text-sm font-bold flex-1 m-0" style={{ color: "var(--indigo)" }}>
-                Política de Cambios — Smart EX
-              </p>
-              <ChevronDown
-                size={17}
-                className={`shrink-0 transition-transform ${smartExOpen ? "rotate-180" : ""}`}
-                style={{ color: "var(--ink-soft)" }}
-              />
-            </button>
-            {smartExOpen && (
-              <div className="px-4 pb-4">
-                <p className="text-xs text-gray-700 leading-relaxed mb-2">
-                  Las reservas de Shinkansen realizadas por <strong>Smart EX</strong> permiten modificaciones online sin coste antes de la salida (hasta 4 minutos antes de la salida programada, siempre que no se haya accedido al torno con QR ni impreso el billete físico).
-                </p>
-                <p className="text-xs text-gray-600 leading-relaxed m-0">
-                  💡 <strong>Plan de conexión Día 1 (Nozomi 53):</strong> Si el vuelo o el N'EX sufren un retraso severo y peligra la llegada a Shinagawa antes de las 17:19, acceder a Smart EX (App / Web) <em>antes</em> de la salida para cambiar al siguiente Nozomi disponible.
-                </p>
-              </div>
-            )}
-          </div>
-
-          {/* Trayectos por día */}
+          {/* Trayectos por día — primero */}
           <p className="eyebrow mb-3" style={{ color: "var(--ink-soft)" }}>{t("transport.tripsByDay")}</p>
           <div
             className="mb-6"
@@ -395,6 +303,98 @@ export default function TransportPage({ onNavigate }) {
                 </div>
               );
             })}
+          </div>
+
+          {/* Suica */}
+          <div className="rounded-2xl mb-4 overflow-hidden" style={{ background: "linear-gradient(135deg, #1d3557 0%, #0f1f35 100%)", color: "white" }}>
+            <button
+              type="button"
+              onClick={() => setSuicaOpen(!suicaOpen)}
+              className="w-full text-left p-4 border-none cursor-pointer bg-transparent text-white"
+            >
+              <div className="flex items-center gap-2">
+                <CreditCard size={17} className="text-emerald-400 shrink-0" />
+                <p style={{ fontSize: 15, fontWeight: 700, margin: 0 }} className="flex-1">Tarjeta Welcome Suica / IC</p>
+                <ChevronDown
+                  size={18}
+                  className={`shrink-0 transition-transform ${suicaOpen ? "rotate-180" : ""}`}
+                  style={{ color: "rgba(255,255,255,0.8)" }}
+                />
+              </div>
+              {!suicaOpen && (
+                <p style={{ fontSize: 11.5, color: "rgba(255,255,255,0.65)", margin: "6px 0 0", lineHeight: 1.4 }}>
+                  iPhone: Welcome Suica Mobile · Android: física en Narita · recarga ¥3.000–¥5.000 (~16–27€)
+                </p>
+              )}
+            </button>
+            {suicaOpen && (
+              <div className="px-4 pb-4">
+                <p style={{ fontSize: 13, color: "rgba(255,255,255,0.85)", lineHeight: 1.6, marginBottom: 12 }}>
+                  Tarjeta de transporte y monedero electrónico para trenes locales, metro, autobuses urbanos y compras compatibles en todo Japón.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+                  <div className="p-3.5 rounded-xl bg-white/10 border border-white/10">
+                    <p className="text-xs font-bold text-emerald-300 flex items-center gap-1 mb-1.5">
+                      <Smartphone size={13} /> 📱 iPhone (Welcome Suica Mobile)
+                    </p>
+                    <p className="text-xs text-white/80 leading-relaxed">
+                      Descargar la app oficial <strong>Welcome Suica Mobile</strong> e integrarla en Apple Wallet con tarjeta en Apple Pay. Requiere activar localización.
+                    </p>
+                  </div>
+                  <div className="p-3.5 rounded-xl bg-white/10 border border-white/10">
+                    <p className="text-xs font-bold text-amber-300 flex items-center gap-1 mb-1.5">
+                      <CreditCard size={13} /> 🤖 Android extranjero (Welcome Suica Física)
+                    </p>
+                    <p className="text-xs text-white/80 leading-relaxed">
+                      Comprar la <strong>Welcome Suica física</strong> al llegar a los puntos autorizados de JR East en Narita (T1 o T2/3).
+                    </p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-white/80 pt-3 border-t border-white/15">
+                  <div>
+                    <p className="font-semibold text-white mb-0.5">💰 Sin depósito</p>
+                    <p className="text-white/70">No requiere los ¥500 (~3€) de fianza.</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-white mb-0.5">⚠️ No reembolsable</p>
+                    <p className="text-white/70">El saldo restante no se devuelve.</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-white mb-0.5">💳 Recarga recomendada</p>
+                    <p className="text-white/70">¥3.000–¥5.000 (~16–27€)/persona.</p>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Smart EX */}
+          <div className="rounded-2xl mb-5 border overflow-hidden" style={{ background: "rgba(29, 53, 87, 0.03)", borderColor: "var(--line)" }}>
+            <button
+              type="button"
+              onClick={() => setSmartExOpen(!smartExOpen)}
+              className="w-full text-left px-4 py-3.5 border-none cursor-pointer bg-transparent flex items-center gap-2"
+            >
+              <Zap size={16} style={{ color: "var(--indigo)" }} />
+              <p className="text-sm font-bold flex-1 m-0" style={{ color: "var(--indigo)" }}>
+                Política de Cambios — Smart EX
+              </p>
+              <ChevronDown
+                size={17}
+                className={`shrink-0 transition-transform ${smartExOpen ? "rotate-180" : ""}`}
+                style={{ color: "var(--ink-soft)" }}
+              />
+            </button>
+            {smartExOpen && (
+              <div className="px-4 pb-4">
+                <p className="text-xs text-gray-700 leading-relaxed mb-2">
+                  Las reservas de Shinkansen realizadas por <strong>Smart EX</strong> permiten modificaciones online sin coste antes de la salida (hasta 4 minutos antes de la salida programada, siempre que no se haya accedido al torno con QR ni impreso el billete físico).
+                </p>
+                <p className="text-xs text-gray-600 leading-relaxed m-0">
+                  💡 <strong>Plan de conexión Día 1 (Nozomi 53):</strong> Si el vuelo o el N'EX sufren un retraso severo y peligra la llegada a Shinagawa antes de las 17:19, acceder a Smart EX (App / Web) <em>antes</em> de la salida para cambiar al siguiente Nozomi disponible.
+                </p>
+              </div>
+            )}
           </div>
 
           {/* JR Pass link */}
