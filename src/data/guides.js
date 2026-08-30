@@ -643,9 +643,9 @@ export const guides = {
 // Mapa de qué guías corresponden a cada día del itinerario
 export const guidesByDay = {
   1: [],
-  2: ["fushimi-inari", "todai-ji", "gion"],
-  3: ["kinkaku-ji", "arashiyama"],
-  4: ["ginkaku-ji", "gion", "nishiki"],
+  2: ["fushimi-inari", "todai-ji"],
+  3: ["ginkaku-ji", "nishiki", "gion"],
+  4: ["kinkaku-ji", "arashiyama"],
   5: ["kiyomizu-dera", "osaka"],
   6: ["kenroku-en"],
   7: ["shirakawa-go", "takayama"],
@@ -657,4 +657,84 @@ export const guidesByDay = {
   13: [],
   14: ["fuji"],
   15: [],
+};
+
+// Metadatos y palabras clave para vincular cada guía con los eventos del itinerario
+export const guideMeta = {
+  "fushimi-inari": {
+    shortName: "Fushimi Inari",
+    keywords: ["fushimi inari", "santuario fushimi"],
+  },
+  "todai-ji": {
+    shortName: "Todai-ji y Gran Buda",
+    keywords: ["todai-ji", "gran buda", "daibutsuden", "tōdai-ji"],
+  },
+  "kinkaku-ji": {
+    shortName: "Kinkaku-ji (Pab. Dorado)",
+    keywords: ["kinkaku-ji", "pabellon dorado", "kinkakuji"],
+  },
+  "ginkaku-ji": {
+    shortName: "Ginkaku-ji (Pab. de Plata)",
+    keywords: ["ginkaku-ji", "pabellon de plata", "ginkakuji"],
+  },
+  "kiyomizu-dera": {
+    shortName: "Kiyomizu-dera",
+    keywords: ["kiyomizu-dera", "kiyomizudera", "escenario de kiyomizu"],
+  },
+  "arashiyama": {
+    shortName: "Arashiyama y Bambú",
+    keywords: ["arashiyama", "bosque de bambu", "otagi nenbutsu", "saga-toriimoto"],
+  },
+  "gion": {
+    shortName: "Gion y Geishas",
+    keywords: ["gion", "hanamikoji", "pontocho", "miyagawacho"],
+  },
+  "nishiki": {
+    shortName: "Mercado Nishiki",
+    keywords: ["mercado de nishiki", "nishiki market", "mercado nishiki"],
+  },
+  "osaka": {
+    shortName: "Castillo de Osaka y Dotonbori",
+    keywords: ["castillo de osaka", "dotonbori", "shinsekai", "morinomiya"],
+  },
+  "kenroku-en": {
+    shortName: "Jardín Kenroku-en",
+    keywords: ["kenroku-en", "kenrokuen", "jardin kenroku"],
+  },
+  "shirakawa-go": {
+    shortName: "Shirakawa-go",
+    keywords: ["shirakawa-go", "shirakawago", "ogimachi"],
+  },
+  "takayama": {
+    shortName: "Takayama (Sanmachi)",
+    keywords: ["sanmachi", "casco historico de takayama", "villa de takayama", "calles tradicionales de sanmachi"],
+  },
+  "nakasendo": {
+    shortName: "Ruta Nakasendo",
+    keywords: ["ruta nakasendo", "caminata nakasendo", "sendero nakasendo", "nakasendo"],
+  },
+  "senso-ji": {
+    shortName: "Senso-ji y Asakusa",
+    keywords: ["senso-ji", "sensoji", "kaminarimon", "templo senso"],
+  },
+  "meiji-jingu": {
+    shortName: "Santuario Meiji",
+    keywords: ["meiji", "meiji jingu", "santuario meiji"],
+  },
+  "shibuya": {
+    shortName: "Shibuya",
+    keywords: ["cruce de shibuya", "shibuya crossing", "miyashita park"],
+  },
+  "akihabara": {
+    shortName: "Akihabara",
+    keywords: ["electric town", "radio kaikan", "mandarake", "tarde en akihabara"],
+  },
+  "teamlab": {
+    shortName: "Odaiba y teamLab",
+    keywords: ["odaiba", "gundam", "rainbow bridge", "yurikamome"],
+  },
+  "fuji": {
+    shortName: "Monte Fuji",
+    keywords: ["chureito", "oshino hakkai", "aokigahara", "shiraito", "pagoda chureito", "kitaguchi hongu", "lagos del fuji"],
+  },
 };

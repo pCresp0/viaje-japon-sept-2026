@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ScrollText, ChevronDown, ChevronUp, Map, BookOpen } from "lucide-react";
 import { useContent } from "../i18n/LanguageContext";
 import { useHighlight } from "../context/HighlightContext";
-import { guides, guidesByDay } from "../data/guides";
+import { guides, guidesByDay, guideMeta } from "../data/guides";
 import DayFujiOptionCard from "./DayFujiOptionCard";
 import VisitJapanQRCard from "./VisitJapanQRCard";
 import ShinkansenTicketCard from "./ShinkansenTicketCard";
@@ -17,21 +17,16 @@ function normalize(str) {
   return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
-function findMatchedGuideIds(text, dayGuides, allGuides) {
+function findMatchedGuideIds(text, dayGuides) {
   if (!dayGuides || dayGuides.length === 0) return [];
-  const normText = normalize(text);
-  return dayGuides.filter(gid => {
-    const g = allGuides[gid];
-    if (!g) return false;
-    
-    const normName = normalize(g.name);
-    if (normText.includes(normName)) return true;
-    
-    const idParts = gid.split("-");
-    const matchesAll = idParts.every(k => normText.includes(k));
-    if (matchesAll) return true;
+  // Evitar vincular en logística de regreso al hotel o check-in
+  if (/regreso al hotel|check-in/i.test(text)) return [];
 
-    return false;
+  const normText = normalize(text);
+  return dayGuides.filter((gid) => {
+    const meta = guideMeta[gid];
+    if (!meta) return false;
+    return meta.keywords.some((kw) => normText.includes(normalize(kw)));
   });
 }
 
@@ -211,27 +206,32 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
                   />
                   
                   {(() => {
-                    const matchedGuides = findMatchedGuideIds(s.text, dayGuides, guides);
+                    const matchedGuides = findMatchedGuideIds(s.text, dayGuides);
                     if (matchedGuides.length === 0) return null;
                     return (
                       <div className="flex flex-wrap gap-2 mt-2.5 mb-1 relative z-10">
-                        {matchedGuides.map(gid => (
-                          <button
-                            key={gid}
-                            onClick={() => triggerHighlight(slug("guide", gid))}
-                            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-semibold transition-all shadow-sm active:scale-95"
-                            style={{ 
-                              background: "var(--paper-raised)", 
-                              border: `1px solid ${block.color}40`, 
-                              color: block.color, 
-                              fontSize: "12px",
-                              cursor: "pointer" 
-                            }}
-                          >
-                            <BookOpen size={14} />
-                            Info de {guides[gid].name.split(" ")[0]}
-                          </button>
-                        ))}
+                        {matchedGuides.map((gid) => {
+                          const meta = guideMeta[gid];
+                          const label = meta ? meta.shortName : guides[gid]?.name?.split(" ")[0];
+                          return (
+                            <button
+                              key={gid}
+                              type="button"
+                              onClick={() => triggerHighlight(slug("guide", gid))}
+                              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-semibold transition-all shadow-sm active:scale-95 hover:opacity-90"
+                              style={{
+                                background: "var(--paper-raised)",
+                                border: `1px solid ${block.color}40`,
+                                color: block.color,
+                                fontSize: "12px",
+                                cursor: "pointer",
+                              }}
+                            >
+                              <BookOpen size={13} />
+                              Info: {label}
+                            </button>
+                          );
+                        })}
                       </div>
                     );
                   })()}
