@@ -48,7 +48,7 @@ export default function ShinkansenTicketCard({ onGoToDay } = {}) {
             <div className="text-left sm:text-right flex-shrink-0">
               <p className="text-xs opacity-75 uppercase tracking-wider mb-0.5 mt-0">Reserva</p>
               <p className="text-base font-bold font-mono tracking-widest m-0">2000</p>
-              <p className="text-xs opacity-90 mt-0.5 m-0">5 Adultos · ¥68.850</p>
+              <p className="text-xs opacity-90 mt-0.5 m-0">5 Adultos · ¥68.850 · 373,27€</p>
             </div>
           </div>
           <ChevronDown 
@@ -89,7 +89,7 @@ export default function ShinkansenTicketCard({ onGoToDay } = {}) {
               Coche 13 · Ordinary
             </span>
             <span className="px-2.5 py-1 rounded-full font-semibold bg-gray-100 text-gray-700">
-              Total: ¥68.850 (¥13.770/pax · ~86€)
+              Total: ¥68.850 (¥13.770/pax · 373,27€ grupo · ~74,65€/pax)
             </span>
           </div>
 

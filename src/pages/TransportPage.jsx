@@ -4,6 +4,7 @@ import { Train, Bus, Zap, FileDown, CheckCircle2, Clock, AlertCircle, Smartphone
 import { Highlightable } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 import { exportTransportExcel } from "../utils/exportCsv";
+import { formatEur, formatJpy, formatJpyEur } from "../utils/money";
 import ShinkansenTicketCard from "../components/ShinkansenTicketCard";
 import ThunderbirdTicketCard from "../components/ThunderbirdTicketCard";
 import NohiMagomeTicketCard from "../components/NohiMagomeTicketCard";
@@ -18,11 +19,33 @@ function iconKind(transport) {
   return "train";
 }
 
+function isJrPassCovered(t) {
+  if (typeof t.jrPassCovered === "boolean") return t.jrPassCovered;
+  return t.coverage === "jr" && !/nozomi/i.test(t.name || "");
+}
+
 export default function TransportPage({ onNavigate }) {
   const { transports, days, blocks } = useContent();
   const t = useT();
   const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
   const [jrPassOpen, setJrPassOpen] = useState(false);
+
+  const jrCoveredPurchased = transports.filter((x) => x.purchased && isJrPassCovered(x));
+  const jrCoveredEstimated = transports.filter((x) => !x.purchased && isJrPassCovered(x));
+  const nozomiPurchased = transports.filter((x) => x.purchased && /nozomi/i.test(x.name || ""));
+  const sumJpy = (arr) => arr.reduce((s, x) => s + (x.jpy || 0), 0);
+  const sumEur = (arr) => arr.reduce((s, x) => s + (x.real || 0), 0);
+  const coveredBoughtJpy = sumJpy(jrCoveredPurchased);
+  const coveredBoughtEur = sumEur(jrCoveredPurchased);
+  const coveredEstJpy = sumJpy(jrCoveredEstimated);
+  const coveredEstEur = sumEur(jrCoveredEstimated);
+  const coveredTotalJpy = coveredBoughtJpy + coveredEstJpy;
+  const coveredTotalEur = coveredBoughtEur + coveredEstEur;
+  const nozomiJpy = sumJpy(nozomiPurchased);
+  const nozomiEur = sumEur(nozomiPurchased);
+  const pass7 = 50000;
+  const pass14 = 80000;
+  const savingsVs7 = pass7 - coveredTotalJpy;
 
   const seenKeys = [];
   const groups = {};
@@ -300,7 +323,12 @@ export default function TransportPage({ onNavigate }) {
 
                     <div style={{ textAlign: "right", whiteSpace: "nowrap", flexShrink: 0 }}>
                       <p style={{ fontSize: 12.5, fontWeight: 700, color: "var(--shu)" }}>
-                        {tItem.jpy ? `¥${tItem.jpy.toLocaleString("es-ES")} (~${tItem.real}€)` : `${tItem.real}€`}
+                        {tItem.jpy != null
+                          ? formatJpyEur(tItem.jpy, tItem.real)
+                          : formatEur(tItem.real)}
+                      </p>
+                      <p style={{ fontSize: 10, color: "var(--ink-soft)", marginTop: 2 }}>
+                        /persona
                       </p>
                       <div className="mt-1">
                         {suicaCat === "yes" && (
@@ -347,7 +375,7 @@ export default function TransportPage({ onNavigate }) {
               <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl" style={{ background: "rgba(188,71,73,0.1)", border: "1px solid rgba(188,71,73,0.2)" }}>
                 <span style={{ fontSize: 16 }}>❌</span>
                 <p className="text-sm font-bold m-0" style={{ color: "var(--shu)" }}>
-                  VEREDICTO: NO COMPENSA COMPRAR EL JAPAN RAIL PASS NACIONAL.
+                  VEREDICTO: NO COMPENSA — billetes cubiertos ~¥{coveredTotalJpy.toLocaleString("es-ES")} vs Pass 7d ¥50.000/pax.
                 </p>
               </div>
             </div>
@@ -361,6 +389,91 @@ export default function TransportPage({ onNavigate }) {
 
         {jrPassOpen && (
         <div className="px-5 sm:px-6 pb-6">
+        <p className="text-xs text-gray-600 mb-4 leading-relaxed">
+          Cálculo actualizado con <strong>precios reales Revolut</strong> de los billetes ya comprados y estimaciones del resto.
+          El JR Pass <strong>no incluye Nozomi</strong> (habría que pagar suplemento o cambiar a Hikari/Kodama).
+        </p>
+
+        <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="p-4 rounded-xl border bg-white/50" style={{ borderColor: "var(--line)" }}>
+            <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">✅ Cubierto por JR Pass (comprado)</p>
+            <ul className="text-xs text-gray-700 space-y-1.5">
+              {jrCoveredPurchased.map((x) => (
+                <li key={x.name}>• {x.name}: <strong>{formatJpyEur(x.jpy, x.real)}</strong>/pax</li>
+              ))}
+              <li className="pt-1 border-t" style={{ borderColor: "var(--line)" }}>
+                Subtotal: <strong>{formatJpyEur(coveredBoughtJpy, coveredBoughtEur)}</strong>/pax
+              </li>
+            </ul>
+          </div>
+          <div className="p-4 rounded-xl border bg-white/50" style={{ borderColor: "var(--line)" }}>
+            <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">🟠 Cubierto por JR Pass (estimado pendiente)</p>
+            <ul className="text-xs text-gray-700 space-y-1.5">
+              {jrCoveredEstimated.map((x) => (
+                <li key={x.name}>• {x.name}: <strong>{formatJpyEur(x.jpy, x.real)}</strong>/pax</li>
+              ))}
+              <li className="pt-1 border-t" style={{ borderColor: "var(--line)" }}>
+                Subtotal estimado: <strong>{formatJpyEur(coveredEstJpy, coveredEstEur)}</strong>/pax
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="p-3.5 rounded-xl border mb-4" style={{ background: "#FFF5F5", borderColor: "#FCA5A5" }}>
+          <p className="text-sm font-bold text-red-800 mb-1 flex items-center gap-1.5">
+            <span className="text-base">⚠️</span> NOZOMI YA COMPRADOS (no entran en el JR Pass)
+          </p>
+          <ul className="text-xs text-red-700 space-y-1 mb-2">
+            {nozomiPurchased.map((x) => (
+              <li key={x.name}>• {x.name}: <strong>{formatJpyEur(x.jpy, x.real)}</strong>/pax · total grupo {formatJpyEur((x.jpy || 0) * 5, (x.real || 0) * 5)}</li>
+            ))}
+          </ul>
+          <p className="text-xs text-red-700 leading-relaxed m-0">
+            Con JR Pass seguiríamos pagando suplemento Nozomi o tendríamos que usar Hikari/Kodama (más lento). Total Nozomi ya pagado: <strong>{formatJpyEur(nozomiJpy, nozomiEur)}</strong>/pax.
+          </p>
+        </div>
+
+        <div className="p-4 rounded-xl border mb-6 bg-emerald-50/50" style={{ borderColor: "#86efac" }}>
+          <p className="text-sm font-bold text-emerald-900 mb-2">Comparativa por persona</p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-sm border-collapse">
+              <thead>
+                <tr className="border-b" style={{ borderColor: "var(--line)" }}>
+                  <th className="py-2 px-2 font-semibold text-gray-600">Opción</th>
+                  <th className="py-2 px-2 font-semibold text-gray-600">¥ / persona</th>
+                  <th className="py-2 px-2 font-semibold text-gray-600">≈ €</th>
+                  <th className="py-2 px-2 font-semibold text-gray-600">Resultado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b" style={{ borderColor: "var(--line)" }}>
+                  <td className="py-2 px-2 font-medium">Billetes individuales (solo trayectos cubiertos por el Pass)</td>
+                  <td className="py-2 px-2 text-green-700 font-bold">{formatJpy(coveredTotalJpy)}</td>
+                  <td className="py-2 px-2 text-green-700 font-bold">~{formatEur(coveredTotalEur)}</td>
+                  <td className="py-2 px-2 font-medium text-green-700">✅ Más barato</td>
+                </tr>
+                <tr className="border-b bg-gray-50/50" style={{ borderColor: "var(--line)" }}>
+                  <td className="py-2 px-2">JR Pass 7 días</td>
+                  <td className="py-2 px-2 text-red-600">{formatJpy(pass7)}</td>
+                  <td className="py-2 px-2 text-red-600">~{formatEur(pass7 / 184.4)}</td>
+                  <td className="py-2 px-2 text-red-600">❌ +{formatJpy(savingsVs7)} más caro</td>
+                </tr>
+                <tr className="bg-gray-50/50">
+                  <td className="py-2 px-2">JR Pass 14 días</td>
+                  <td className="py-2 px-2 text-red-600">{formatJpy(pass14)}</td>
+                  <td className="py-2 px-2 text-red-600">~{formatEur(pass14 / 184.4)}</td>
+                  <td className="py-2 px-2 text-red-600">❌ No compensa</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-emerald-900 mt-3 mb-0 leading-relaxed">
+            Ahorro estimado al <strong>no</strong> comprar el Pass de 7 días: <strong>{formatJpyEur(savingsVs7, savingsVs7 / 184.4)}</strong> por persona
+            (≈ {formatEur(savingsVs7 / 184.4 * 5)} el grupo), solo contando trayectos que el Pass cubriría.
+            Los Nozomi ({formatJpy(nozomiJpy)}/pax) se pagan igual sin Pass.
+          </p>
+        </div>
+
         <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="p-4 rounded-xl border bg-white/50" style={{ borderColor: "var(--line)" }}>
             <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">✅ El JR Pass SÍ cubre:</p>
@@ -374,85 +487,21 @@ export default function TransportPage({ onNavigate }) {
           <div className="p-4 rounded-xl border bg-white/50" style={{ borderColor: "var(--line)" }}>
             <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">❌ El JR Pass NO cubre:</p>
             <ul className="text-xs text-gray-700 space-y-1 pl-4 list-disc marker:text-red-600">
+              <li>Nozomi (salvo suplemento caro).</li>
               <li>Nohi Bus (Kanazawa → Shirakawa-go → Takayama → Magome).</li>
-              <li>Metro de Kioto y Autobuses urbanos.</li>
-              <li>Tranvía Randen y tren elevado Yurikamome.</li>
-              <li>Metro de Tokio (Tokyo Metro y Toei Subway).</li>
+              <li>Metro de Kioto / Tokio, Randen, Yurikamome.</li>
             </ul>
           </div>
         </div>
 
-        <div className="p-3.5 rounded-xl border mb-6" style={{ background: "#FFF5F5", borderColor: "#FCA5A5" }}>
-          <p className="text-sm font-bold text-red-800 mb-1 flex items-center gap-1.5">
-            <span className="text-base">⚠️</span> IMPORTANTE SOBRE NOZOMI
-          </p>
-          <p className="text-xs text-red-700 leading-relaxed">
-            El tren bala más rápido (Nozomi) <strong>NO está incluido</strong> directamente en el JR Pass y exige pagar un billete complementario costoso. Comprando billetes individuales SÍ podemos subir al Nozomi directamente reservando por Smart EX.
-          </p>
-        </div>
-
-        <p className="text-sm font-bold mb-3" style={{ color: "var(--indigo)" }}>Comparativa de Precios (Billetes JR vs JR Pass)</p>
-        
-        <div className="overflow-x-auto mb-6">
-          <table className="w-full text-left text-sm border-collapse">
-            <thead>
-              <tr className="border-b" style={{ borderColor: "var(--line)" }}>
-                <th className="py-2 px-3 font-semibold text-gray-600">Opción</th>
-                <th className="py-2 px-3 font-semibold text-gray-600">Precio/Persona</th>
-                <th className="py-2 px-3 font-semibold text-gray-600">Precio 5 Personas</th>
-                <th className="py-2 px-3 font-semibold text-gray-600">Resultado</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="border-b" style={{ borderColor: "var(--line)" }}>
-                <td className="py-2 px-3 font-medium">Billetes individuales JR</td>
-                <td className="py-2 px-3 text-green-700 font-bold">~¥54.920</td>
-                <td className="py-2 px-3 text-green-700 font-bold">~¥274.600</td>
-                <td className="py-2 px-3 font-medium text-green-700">✅ Recomendado</td>
-              </tr>
-              <tr className="border-b bg-gray-50/50" style={{ borderColor: "var(--line)" }}>
-                <td className="py-2 px-3">JR Pass 7 días</td>
-                <td className="py-2 px-3 text-red-600">¥50.000</td>
-                <td className="py-2 px-3 text-red-600">¥250.000</td>
-                <td className="py-2 px-3 text-red-600">❌ No compensa</td>
-              </tr>
-              <tr className="border-b bg-gray-50/50" style={{ borderColor: "var(--line)" }}>
-                <td className="py-2 px-3">JR Pass 14 días</td>
-                <td className="py-2 px-3 text-red-600">¥80.000</td>
-                <td className="py-2 px-3 text-red-600">¥400.000</td>
-                <td className="py-2 px-3 text-red-600">❌ No compensa</td>
-              </tr>
-              <tr className="bg-gray-50/50">
-                <td className="py-2 px-3">JR Pass 21 días</td>
-                <td className="py-2 px-3 text-red-600">¥100.000</td>
-                <td className="py-2 px-3 text-red-600">¥500.000</td>
-                <td className="py-2 px-3 text-red-600">❌ No compensa</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div className="text-xs text-gray-700 space-y-3 mb-6 leading-relaxed">
-          <p>
-            * <strong>¿Por qué no compensa?</strong> Agrupando todos los trayectos JR de la semana más densa (Kioto → Kanazawa, Kioto → Osaka, Nakatsugawa → Nagoya y Nagoya → Tokio), el coste individual suma aproximadamente <strong>~¥23.490</strong> por persona, muy por debajo de los <strong>¥50.000</strong> que cuesta el pase de 7 días.
-          </p>
-          <p>
-            Además, una parte importante de nuestro itinerario utiliza operadores privados no incluidos (Nohi Bus, metro de Kioto, Randen, Yurikamome y metro de Tokio), los cuales habría que pagar aparte de todos modos.
-          </p>
-          <p className="italic text-gray-500 pt-1 border-t" style={{ borderColor: "var(--line)" }}>
-            Nota: El precio del pase nacional se multiplica por viajero exactamente igual que los billetes individuales, por lo que viajar en grupo de 5 personas no cambia la ecuación de ahorro.
-          </p>
-        </div>
-
         <div className="p-4 rounded-xl border bg-indigo-50/30 mb-6" style={{ borderColor: "var(--indigo)" }}>
           <p className="text-sm font-bold mb-2 flex items-center gap-1.5" style={{ color: "var(--indigo)" }}>
-            <span className="text-base">✅</span> RECOMENDACIÓN FINAL
+            <span className="text-base">✅</span> RECOMENDACIÓN FINAL (confirmada con billetes reales)
           </p>
           <ul className="text-xs text-gray-800 space-y-2 pl-2">
-            <li>• <strong>No comprar Japan Rail Pass.</strong></li>
-            <li>• Comprar billetes individuales para los trayectos de larga distancia (Smart EX para Shinkansen y JR-West Online para Kioto–Kanazawa).</li>
-            <li>• Utilizar Suica / Welcome Suica para todo el transporte urbano de Kioto, Osaka y Tokio.</li>
-            <li>• Reservar por adelantado únicamente los trenes/buses que requieran asiento garantizado para los 5 viajeros.</li>
+            <li>• <strong>No comprar Japan Rail Pass.</strong> Los trayectos que cubriría suman ~{formatJpy(coveredTotalJpy)}/pax frente a ¥50.000 del pase de 7 días.</li>
+            <li>• Seguir con billetes individuales (Smart EX / JR-West / Nohi) como ya hemos hecho.</li>
+            <li>• Suica / Welcome Suica para transporte urbano.</li>
           </ul>
         </div>
 

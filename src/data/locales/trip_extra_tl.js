@@ -184,9 +184,10 @@ export const budget = {
     {
       title: "Domestic Transport",
       details: [
-        "Indibidwal na tren (NEX, Shinkansens, Alps route, Fuji, Tokyo): ~340€/tao.",
-        "Nohi Bus Kanazawa–Shirakawa-go–Takayama (na-book): 39.15€/tao.",
-        "Lokal na transportasyon (Suica card): ~80€/tao.",
+        "<strong>Nabili na (Revolut, 5 pax):</strong> Nozomi 53 373.27€ · Thunderbird/Kagayaki 209.38€ · Nohi Magome 135.61€ · Shinano 4 77.84€ · Nozomi 358 295.62€ (+ Nohi araw 7 naka-book na).",
+        "Subtotal ng long-distance tickets ≈ 1,287€ grupo (~257€/tao) + Alps buses araw 7.",
+        "Tinataya pa: N'EX, local JR, Tokyo metro, Fuji Kodama, Skyliner/N'EX pauwi (~155€/tao).",
+        "Approx. Revolut rate Ago 2026: ~184 ¥/€.",
       ],
     },
     {
@@ -196,10 +197,14 @@ export const budget = {
       ],
     },
     {
-      title: "Mga Ticket at Extra",
-      details: ["Mga templo, museo, Roppongi observation deck, TeamLab, Takkyubin luggage forwarding mula Kyoto papuntang Tokyo."],
+      title: "Insurance, eSIM at extras",
+      details: [
+        "Heymondo Japan insurance: 273.60€ (4 tao · Revolut).",
+        "Holafly eSIM: 164.88€ (4 tao · Revolut).",
+        "Tickets (templo, TeamLab, viewpoints), Takkyubin Kyoto→Tokyo at iba pa ~150€/tao orientative.",
+      ],
     },
   ],
-  totalPerPerson: "~2,560€ – 2,660€ (kasama flights)",
-  totalGroup: "~12,800€ – 13,300€ (5 tao)",
+  totalPerPerson: "~2,650€ – 2,750€ (kasama flights)",
+  totalGroup: "~13,000€ – 13,500€ (5 tao)",
 };

@@ -639,35 +639,36 @@ export const days = [
   },
 ];
 
-// Transportes con coste real vs coste ya cubierto por JR Pass (hoja "Transportes")
+// Transportes: `real` = €/persona · `jpy` = ¥/persona.
+// Los billetes ya comprados usan conversión real Revolut (ago 2026).
 export const transports = [
-  { day: 1, date: "2026-09-07", name: "Narita Express (N'EX)", from: "Aeropuerto de Narita", to: "Estación de Shinagawa", type: "Línea JR", real: 19, jpy: 3330, coverage: "jr", suicaCategory: "partial", note: "Comprar al llegar a Narita en taquillas/máquinas JR. Billete reservado N'EX.", purchased: false, advance: false },
-  { day: 1, date: "2026-09-07", name: "Shinkansen Nozomi 53", from: "Estación de Shinagawa", to: "Kioto", type: "Línea JR (Tren Bala)", real: 90, jpy: 14170, coverage: "jr", suicaCategory: "no", note: "✓ Reservado (Ref: 2000) · Salida 17:19 → Llegada 19:23 · Coche 13 · Asientos: 13-C, 13-D, 13-E, 14-D, 14-E", purchased: true, advance: true },
-  { day: 2, date: "2026-09-08", name: "Tren Línea JR Nara", from: "Kioto", to: "Inari Station", type: "Línea JR Local", real: 1, jpy: 200, coverage: "jr", suicaCategory: "yes", purchased: false, advance: false },
-  { day: 2, date: "2026-09-08", name: "Tren Línea JR Nara", from: "Inari Station", to: "Nara", type: "Línea JR Local", real: 4.2, jpy: 680, coverage: "jr", suicaCategory: "yes", purchased: false, advance: false },
-  { day: 2, date: "2026-09-08", name: "Tren Línea JR Nara", from: "Nara", to: "Kioto", type: "Línea JR Local", real: 4.5, jpy: 720, coverage: "jr", suicaCategory: "yes", purchased: false, advance: false },
-  { day: 3, date: "2026-09-09", name: "Bus y Metro", from: "Kioto", to: "Mercado Nishiki / Gion", type: "Operador Privado / Local", real: 4, jpy: 600, coverage: "no-jr", suicaCategory: "yes", purchased: false, advance: false },
-  { day: 4, date: "2026-09-10", name: "Metro y Bus 205", from: "Kioto", to: "Kinkakuji", type: "Operador Privado / Local", real: 3, jpy: 500, coverage: "no-jr", suicaCategory: "yes", purchased: false, advance: false },
-  { day: 4, date: "2026-09-10", name: "Tranvía Randen", from: "Ninna-ji", to: "Arashiyama", type: "Operador Privado", real: 1.5, jpy: 250, coverage: "no-jr", suicaCategory: "yes", purchased: false, advance: false },
-  { day: 4, date: "2026-09-10", name: "Tren JR Línea San-In", from: "Arashiyama", to: "Kioto", type: "Línea JR Local", real: 1.5, jpy: 240, coverage: "jr", suicaCategory: "yes", purchased: false, advance: false },
-  { day: 5, date: "2026-09-11", name: "Tren rápido JR (ida y vuelta)", from: "Kioto", to: "Osaka", type: "Línea JR Local", real: 7, jpy: 1160, coverage: "jr", suicaCategory: "yes", purchased: false, advance: false },
-      { day: 6, date: "2026-09-12", name: "Thunderbird + Hokuriku Shinkansen", from: "Kioto", to: "Kanazawa", type: "Línea JR Exprés", real: 43.5, jpy: 7720, coverage: "jr", suicaCategory: "no", note: "✓ Comprado · Reserva 47932 · OBLIGATORIO retirar billetes físicos en Kyoto Station (día 11)", purchased: true, advance: true },
-  { day: 7, date: "2026-09-13", name: "Nohi Bus Kanazawa → Shirakawa-go", from: "Kanazawa Sta.", to: "Shirakawa-go Bus Terminal", type: "Operador Privado (Bus)", real: 19.12, jpy: 3100, coverage: "no-jr", suicaCategory: "no", note: "✓ Reservado · Booking 12GO31991741 · Salida 08:40 · 5 asientos confirmados", purchased: true, advance: true },
-  { day: 7, date: "2026-09-13", name: "Nohi Bus Shirakawa-go → Takayama", from: "Shirakawa-go Bus Terminal", to: "Takayama Nohi Bus Center", type: "Operador Privado (Bus)", real: 20.03, jpy: 3250, coverage: "no-jr", suicaCategory: "no", note: "✓ Reservado · Booking 12GO31992254 · Salida 13:15 · 5 asientos confirmados", purchased: true, advance: true },
-  { day: 8, date: "2026-09-14", name: "Nohi Bus directo Takayama → Magome", from: "Takayama Nohi Bus Center", to: "Magome", type: "Operador Privado (Bus)", real: 31, jpy: 5000, coverage: "no-jr", suicaCategory: "no", note: "✓ Reservado · Booking 08302008262 · Salida 08:00 → Llegada 10:45 · Car 01 · Asientos: 2C, 2D, 3B, 3C, 3D · Canje E-ticket en taquilla", purchased: true, advance: true },
-  { day: 9, date: "2026-09-15", name: "Bus local Magome → Nakatsugawa", from: "Magome", to: "Nakatsugawa", type: "Operador Privado (Bus)", real: 3, jpy: 500, coverage: "no-jr", suicaCategory: "no", note: "Salida 08:15 → Llegada 08:40 · ¥800/persona · Sin reserva (pago en efectivo al bajar)", purchased: false, advance: false },
-  { day: 9, date: "2026-09-15", name: "JR Limited Express Shinano 4", from: "Nakatsugawa", to: "Nagoya", type: "Línea JR Exprés", real: 18, jpy: 2870, coverage: "jr", suicaCategory: "partial", note: "09:57 → 10:53 · ✅ Reservado JR-WEST nº 42093 · Car 4 · Asientos 11-D/12-C/12-D/13-C/13-D · ¥14.350 total · 🎫 Recoger billetes físicos antes de subir", purchased: true, advance: false },
-  { day: 9, date: "2026-09-15", name: "Shinkansen Nozomi 358", from: "Nagoya", to: "Tokio", type: "Línea JR (Tren Bala)", real: 68, jpy: 10900, coverage: "jr", suicaCategory: "no", note: "11:29 → 13:06 · ✅ Smart EX nº 2002 · Car 12 · Asientos 11-D/11-E/12-C/12-D/12-E · ¥54.500 total · QR-Ticket", purchased: true, advance: false },
-  { day: 10, date: "2026-09-16", name: "Tren elevado Yurikamome", from: "Tokio", to: "Isla de Odaiba", type: "Operador Privado", real: 2, jpy: 330, coverage: "no-jr", suicaCategory: "yes", purchased: false, advance: false },
-  { day: "10-14", date: "16-20 sept", name: "Metro y trenes locales (5 días)", from: "Tokio", to: "Tokio (varios)", type: "Operador Privado / Local", real: 25, jpy: 4000, coverage: "no-jr", suicaCategory: "yes", purchased: false, advance: false },
-  { day: 14, date: "2026-09-20", name: "Shinkansen ida y vuelta (Excursión Fuji)", from: "Tokio", to: "Mishima / Shin-Fuji", type: "Línea JR (Tren Bala)", real: 62, jpy: 9000, coverage: "jr", suicaCategory: "no", note: "Kodama 805 ida 07:27 (salida hotel recomendada ~06:30) y regreso Shin-Fuji", purchased: false, advance: true },
-  { day: 15, date: "2026-09-21", name: "Keisei Skyliner (o N'EX)", from: "Keisei-Ueno (o Tokio)", to: "Aeropuerto de Narita", type: "Línea Keisei / JR", real: 17, jpy: 2570, coverage: "no-jr", suicaCategory: "partial", note: "Recomendado: Skyliner desde Keisei-Ueno (con taxi hotel→Ueno para 5). Alternativa: N'EX desde Tokyo Station.", purchased: false, advance: true },
+  { day: 1, date: "2026-09-07", name: "Narita Express (N'EX)", from: "Aeropuerto de Narita", to: "Estación de Shinagawa", type: "Línea JR", real: 19, jpy: 3330, coverage: "jr", jrPassCovered: true, suicaCategory: "partial", note: "Comprar al llegar a Narita en taquillas/máquinas JR. Billete reservado N'EX.", purchased: false, advance: false },
+  { day: 1, date: "2026-09-07", name: "Shinkansen Nozomi 53", from: "Estación de Shinagawa", to: "Kioto", type: "Línea JR (Tren Bala)", real: 74.65, jpy: 13770, coverage: "jr", jrPassCovered: false, suicaCategory: "no", note: "✓ Comprado Smart EX (Ref: 2000) · ¥68.850 total · 373,27€ Revolut · 17:19→19:23 · Coche 13 · ⚠️ Nozomi NO incluido en JR Pass", purchased: true, advance: true },
+  { day: 2, date: "2026-09-08", name: "Tren Línea JR Nara", from: "Kioto", to: "Inari Station", type: "Línea JR Local", real: 1, jpy: 200, coverage: "jr", jrPassCovered: true, suicaCategory: "yes", purchased: false, advance: false },
+  { day: 2, date: "2026-09-08", name: "Tren Línea JR Nara", from: "Inari Station", to: "Nara", type: "Línea JR Local", real: 4.2, jpy: 680, coverage: "jr", jrPassCovered: true, suicaCategory: "yes", purchased: false, advance: false },
+  { day: 2, date: "2026-09-08", name: "Tren Línea JR Nara", from: "Nara", to: "Kioto", type: "Línea JR Local", real: 4.5, jpy: 720, coverage: "jr", jrPassCovered: true, suicaCategory: "yes", purchased: false, advance: false },
+  { day: 3, date: "2026-09-09", name: "Bus y Metro", from: "Kioto", to: "Mercado Nishiki / Gion", type: "Operador Privado / Local", real: 4, jpy: 600, coverage: "no-jr", jrPassCovered: false, suicaCategory: "yes", purchased: false, advance: false },
+  { day: 4, date: "2026-09-10", name: "Metro y Bus 205", from: "Kioto", to: "Kinkakuji", type: "Operador Privado / Local", real: 3, jpy: 500, coverage: "no-jr", jrPassCovered: false, suicaCategory: "yes", purchased: false, advance: false },
+  { day: 4, date: "2026-09-10", name: "Tranvía Randen", from: "Ninna-ji", to: "Arashiyama", type: "Operador Privado", real: 1.5, jpy: 250, coverage: "no-jr", jrPassCovered: false, suicaCategory: "yes", purchased: false, advance: false },
+  { day: 4, date: "2026-09-10", name: "Tren JR Línea San-In", from: "Arashiyama", to: "Kioto", type: "Línea JR Local", real: 1.5, jpy: 240, coverage: "jr", jrPassCovered: true, suicaCategory: "yes", purchased: false, advance: false },
+  { day: 5, date: "2026-09-11", name: "Tren rápido JR (ida y vuelta)", from: "Kioto", to: "Osaka", type: "Línea JR Local", real: 7, jpy: 1160, coverage: "jr", jrPassCovered: true, suicaCategory: "yes", purchased: false, advance: false },
+  { day: 6, date: "2026-09-12", name: "Thunderbird + Hokuriku Shinkansen", from: "Kioto", to: "Kanazawa", type: "Línea JR Exprés", real: 41.88, jpy: 7720, coverage: "jr", jrPassCovered: true, suicaCategory: "no", note: "✓ Comprado · Reserva 47932 · ¥38.600 total · 209,38€ Revolut · Retirar billetes físicos en Kyoto Station (día 11)", purchased: true, advance: true },
+  { day: 7, date: "2026-09-13", name: "Nohi Bus Kanazawa → Shirakawa-go", from: "Kanazawa Sta.", to: "Shirakawa-go Bus Terminal", type: "Operador Privado (Bus)", real: 19.12, jpy: 3100, coverage: "no-jr", jrPassCovered: false, suicaCategory: "no", note: "✓ Reservado · Booking 12GO31991741 · Salida 08:40 · 5 asientos confirmados", purchased: true, advance: true },
+  { day: 7, date: "2026-09-13", name: "Nohi Bus Shirakawa-go → Takayama", from: "Shirakawa-go Bus Terminal", to: "Takayama Nohi Bus Center", type: "Operador Privado (Bus)", real: 20.03, jpy: 3250, coverage: "no-jr", jrPassCovered: false, suicaCategory: "no", note: "✓ Reservado · Booking 12GO31992254 · Salida 13:15 · 5 asientos confirmados", purchased: true, advance: true },
+  { day: 8, date: "2026-09-14", name: "Nohi Bus directo Takayama → Magome", from: "Takayama Nohi Bus Center", to: "Magome", type: "Operador Privado (Bus)", real: 27.12, jpy: 5000, coverage: "no-jr", jrPassCovered: false, suicaCategory: "no", note: "✓ Comprado · Booking 08302008262 · ¥25.000 total · 135,61€ Revolut · 08:00→10:45 · Car 01 · Canje E-ticket en taquilla", purchased: true, advance: true },
+  { day: 9, date: "2026-09-15", name: "Bus local Magome → Nakatsugawa", from: "Magome", to: "Nakatsugawa", type: "Operador Privado (Bus)", real: 4.34, jpy: 800, coverage: "no-jr", jrPassCovered: false, suicaCategory: "no", note: "Salida 08:15 → Llegada 08:40 · ¥800/persona · Sin reserva (pago en efectivo al bajar)", purchased: false, advance: false },
+  { day: 9, date: "2026-09-15", name: "JR Limited Express Shinano 4", from: "Nakatsugawa", to: "Nagoya", type: "Línea JR Exprés", real: 15.57, jpy: 2870, coverage: "jr", jrPassCovered: true, suicaCategory: "partial", note: "09:57 → 10:53 · ✅ JR-WEST nº 42093 · ¥14.350 total · 77,84€ Revolut · Car 4 · 🎫 Recoger billetes físicos antes de subir", purchased: true, advance: false },
+  { day: 9, date: "2026-09-15", name: "Shinkansen Nozomi 358", from: "Nagoya", to: "Tokio", type: "Línea JR (Tren Bala)", real: 59.12, jpy: 10900, coverage: "jr", jrPassCovered: false, suicaCategory: "no", note: "11:29 → 13:06 · ✅ Smart EX nº 2002 · ¥54.500 total · 295,62€ Revolut · Car 12 · QR-Ticket · ⚠️ Nozomi NO incluido en JR Pass", purchased: true, advance: false },
+  { day: 10, date: "2026-09-16", name: "Tren elevado Yurikamome", from: "Tokio", to: "Isla de Odaiba", type: "Operador Privado", real: 2, jpy: 330, coverage: "no-jr", jrPassCovered: false, suicaCategory: "yes", purchased: false, advance: false },
+  { day: "10-14", date: "16-20 sept", name: "Metro y trenes locales (5 días)", from: "Tokio", to: "Tokio (varios)", type: "Operador Privado / Local", real: 25, jpy: 4000, coverage: "no-jr", jrPassCovered: false, suicaCategory: "yes", purchased: false, advance: false },
+  { day: 14, date: "2026-09-20", name: "Shinkansen ida y vuelta (Excursión Fuji)", from: "Tokio", to: "Mishima / Shin-Fuji", type: "Línea JR (Tren Bala)", real: 62, jpy: 9000, coverage: "jr", jrPassCovered: true, suicaCategory: "no", note: "Estimado · Kodama 805 ida 07:27 (salida hotel ~06:30) y regreso Shin-Fuji · pendiente de comprar", purchased: false, advance: true },
+  { day: 15, date: "2026-09-21", name: "Keisei Skyliner (o N'EX)", from: "Keisei-Ueno (o Tokio)", to: "Aeropuerto de Narita", type: "Línea Keisei / JR", real: 17, jpy: 2570, coverage: "no-jr", jrPassCovered: false, suicaCategory: "partial", note: "Recomendado: Skyliner desde Keisei-Ueno (con taxi hotel→Ueno para 5). Alternativa: N'EX desde Tokyo Station.", purchased: false, advance: true },
 ];
 
 // Presupuesto estimado para 5 personas
 export const budget = {
   people: 5,
-  note: "Calculado con precios realistas y el ¥ actual, muy barato para Europa.",
+  note: "Vuelos y alojamiento confirmados. Transportes largos: costes reales Revolut (ago 2026) + estimados del resto.",
   categories: [
     {
       title: "Vuelos internacionales",
@@ -694,12 +695,13 @@ export const budget = {
     },
     {
       title: "Transporte nacional",
-      perPerson: "~419€",
-      total: "~2.097€",
+      perPerson: "~412€",
+      total: "~2.061€",
       details: [
-        "Trenes sueltos (NEX, Shinkansens, ruta Alpes, Fuji, Tokio): ~340€/persona.",
-        "Nohi Bus Kanazawa–Shirakawa-go–Takayama (reservado): 39,15€/persona.",
-        "Transporte local (tarjeta Suica): ~80€/persona.",
+        "<strong>Ya comprado (Revolut, 5 pax):</strong> Nozomi 53 373,27€ · Thunderbird/Kagayaki 209,38€ · Nohi Magome 135,61€ · Shinano 4 77,84€ · Nozomi 358 295,62€ (+ Nohi día 7 ya reservados).",
+        "Subtotal billetes largos comprados ≈ 1.287€ grupo (~257€/persona) + buses Alpes día 7.",
+        "Pendiente estimado: N'EX, locales JR, metro Tokio, Fuji Kodama, Skyliner/N'EX vuelta (~155€/persona).",
+        "Conversión aprox. Revolut ago 2026: ~184 ¥/€.",
       ],
     },
     {
@@ -711,12 +713,16 @@ export const budget = {
       ],
     },
     {
-      title: "Entradas y extras",
-      perPerson: "~150€",
-      total: "~750€",
-      details: ["Templos, museos, mirador de Roppongi, TeamLab, envío de maletas Takkyubin de Kioto a Tokio."],
+      title: "Seguro, eSIM y extras",
+      perPerson: "~200€",
+      total: "~1.000€",
+      details: [
+        "Seguro Heymondo Japón: 273,60€ (4 personas · Revolut).",
+        "E-SIM Holafly: 164,88€ (4 personas · Revolut).",
+        "Entradas (templos, TeamLab, miradores), Takkyubin Kioto→Tokio y extras varios ~150€/persona orientativo.",
+      ],
     },
   ],
-  totalPerPerson: "~2.605€ – 2.705€ (vuelos incluidos)",
-  totalGroup: "~12.800€ – 13.300€ (5 personas)",
+  totalPerPerson: "~2.650€ – 2.750€ (vuelos incluidos)",
+  totalGroup: "~13.000€ – 13.500€ (5 personas)",
 };

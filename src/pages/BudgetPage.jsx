@@ -3,13 +3,18 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { Highlightable } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
+import { formatEur, formatJpyEur } from "../utils/money";
 
 export default function BudgetPage() {
   const { budget, transports } = useContent();
   const t = useT();
   const [showTransports, setShowTransports] = useState(false);
 
-  const transportTotal = transports.reduce((sum, t) => sum + (t.real || 0), 0);
+  const transportTotal = transports.reduce((sum, item) => sum + (item.real || 0), 0);
+  const transportTotalJpy = transports.reduce((sum, item) => sum + (item.jpy || 0), 0);
+  const purchasedTotal = transports
+    .filter((item) => item.purchased)
+    .reduce((sum, item) => sum + (item.real || 0), 0);
 
   return (
     <div className="px-4 pt-3 pb-8">
@@ -70,25 +75,32 @@ export default function BudgetPage() {
         </button>
         {showTransports && (
           <div className="mt-3 space-y-2">
-            {transports.map((t, i) => (
+            {transports.map((item, i) => (
               <div key={i} className="flex items-center justify-between text-xs border-b pb-2" style={{ borderColor: "var(--line)" }}>
                 <div className="min-w-0 pr-2">
                   <p className="font-medium truncate" style={{ color: "var(--ink)" }}>
-                    Día {t.day} · {t.name}
+                    Día {item.day} · {item.name}
+                    {item.purchased ? " ✓" : ""}
                   </p>
-                  <p style={{ color: "var(--ink-soft)" }}>{t.from} → {t.to}</p>
+                  <p style={{ color: "var(--ink-soft)" }}>{item.from} → {item.to}</p>
                 </div>
                 <div className="text-right shrink-0">
-                  <p style={{ color: "var(--ink)" }}>{t.real.toFixed(2)}€</p>
+                  <p style={{ color: "var(--ink)" }}>
+                    {item.jpy != null ? formatJpyEur(item.jpy, item.real) : formatEur(item.real)}
+                  </p>
+                  <p style={{ color: "var(--ink-soft)", fontSize: 10 }}>/persona</p>
                 </div>
               </div>
             ))}
             <div className="flex items-center justify-between text-sm font-medium pt-1">
-              <span style={{ color: "var(--ink)" }}>{t("budget.perPerson")}</span>
+              <span style={{ color: "var(--ink)" }}>Total estimado / persona</span>
               <span style={{ color: "var(--ink)" }}>
-                {transportTotal.toFixed(2)}€
+                {formatJpyEur(transportTotalJpy, transportTotal)}
               </span>
             </div>
+            <p className="text-[11px] m-0" style={{ color: "var(--ink-soft)" }}>
+              Ya comprado ≈ {formatEur(purchasedTotal)}/persona · {formatEur(purchasedTotal * 5)} el grupo (Revolut en billetes largos).
+            </p>
           </div>
         )}
       </div>

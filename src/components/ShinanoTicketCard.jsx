@@ -53,7 +53,7 @@ export default function ShinanoTicketCard({ onGoToDay } = {}) {
             <div className="text-left sm:text-right flex-shrink-0">
               <p className="text-xs opacity-75 uppercase tracking-wider mb-0.5 mt-0">Reserva</p>
               <p className="text-base font-bold font-mono tracking-widest m-0">42093</p>
-              <p className="text-xs opacity-90 mt-0.5 m-0">5 Adultos · ¥14.350</p>
+              <p className="text-xs opacity-90 mt-0.5 m-0">5 Adultos · ¥14.350 · 77,84€</p>
             </div>
           </div>
           <ChevronDown
@@ -146,7 +146,7 @@ export default function ShinanoTicketCard({ onGoToDay } = {}) {
 
             <div className="mt-3 pt-3 border-t text-xs text-gray-600 flex flex-wrap items-center justify-between gap-2" style={{ borderColor: "var(--line)" }}>
               <span>👤 Titular: <strong>Pablo Crespo</strong></span>
-              <span>💰 Total: <strong>¥14.350 (¥2.870/pax)</strong></span>
+              <span>💰 Total: <strong>¥14.350 (¥2.870/pax · 77,84€ Revolut)</strong></span>
               <span>🧾 Receipt: <strong>AEE6606M</strong></span>
             </div>
             <p className="text-xs text-gray-500 m-0 mt-2">
@@ -200,7 +200,7 @@ export default function ShinanoTicketCard({ onGoToDay } = {}) {
             <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-3 mt-2 border-b pb-2">Checklist operativo</p>
             <div className="space-y-2">
               <ChecklistItem id="booked" checked={checkedItems.booked} locked text="Reserva JR-WEST aceptada (nº 42093 · Receipt AEE6606M)" />
-              <ChecklistItem id="paid" checked={checkedItems.paid} locked text="Pago registrado · ¥14.350 (5 adultos)" />
+              <ChecklistItem id="paid" checked={checkedItems.paid} locked text="Pago registrado · ¥14.350 · 77,84€ (5 adultos)" />
               <ChecklistItem id="seats" checked={checkedItems.seats} locked text="Asientos Car 4: 11-D, 12-C, 12-D, 13-C, 13-D" />
 
               <div className="my-2 border-t border-dashed" style={{ borderColor: "var(--line)" }} />

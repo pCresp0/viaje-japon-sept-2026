@@ -184,9 +184,10 @@ export const budget = {
     {
       title: "Transports Intérieurs",
       details: [
-        "Trains individuels (NEX, Shinkansens, route des Alpes, Fuji, Tokyo) : ~340€/personne.",
-        "Bus Nohi Kanazawa–Shirakawa-go–Takayama (réservé) : 39,15€/personne.",
-        "Transports locaux (carte Suica) : ~80€/personne.",
+        "<strong>Déjà acheté (Revolut, 5 pers.) :</strong> Nozomi 53 373,27€ · Thunderbird/Kagayaki 209,38€ · Nohi Magome 135,61€ · Shinano 4 77,84€ · Nozomi 358 295,62€ (+ bus Nohi jour 7 déjà réservés).",
+        "Sous-total billets longue distance achetés ≈ 1 287€ groupe (~257€/personne) + bus Alpes jour 7.",
+        "Encore estimé : N'EX, JR locaux, métro Tokyo, Fuji Kodama, Skyliner/N'EX retour (~155€/personne).",
+        "Taux Revolut approx. août 2026 : ~184 ¥/€.",
       ],
     },
     {
@@ -196,10 +197,14 @@ export const budget = {
       ],
     },
     {
-      title: "Billets et Extras",
-      details: ["Temples, musées, observatoire de Roppongi, TeamLab, transfert de bagages Takkyubin de Kyoto à Tokyo."],
+      title: "Assurance, eSIM et extras",
+      details: [
+        "Assurance Heymondo Japon : 273,60€ (4 personnes · Revolut).",
+        "eSIM Holafly : 164,88€ (4 personnes · Revolut).",
+        "Entrées (temples, TeamLab, belvédères), Takkyubin Kyoto→Tokyo et divers ~150€/personne à titre indicatif.",
+      ],
     },
   ],
-  totalPerPerson: "~2 560€ – 2 660€ (vols inclus)",
-  totalGroup: "~12 800€ – 13 300€ (5 personnes)",
+  totalPerPerson: "~2 650€ – 2 750€ (vols inclus)",
+  totalGroup: "~13 000€ – 13 500€ (5 personnes)",
 };

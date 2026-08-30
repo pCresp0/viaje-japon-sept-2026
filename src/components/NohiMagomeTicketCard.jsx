@@ -51,7 +51,7 @@ export default function NohiMagomeTicketCard({ defaultExpanded = false, onGoToDa
             <div className="text-left sm:text-right flex-shrink-0">
               <p className="text-xs opacity-75 uppercase tracking-wider mb-0.5 mt-0">Reserva</p>
               <p className="text-base font-bold font-mono tracking-widest m-0">08302008262</p>
-              <p className="text-xs opacity-90 mt-0.5 m-0">5 Adultos · ¥25.000</p>
+              <p className="text-xs opacity-90 mt-0.5 m-0">5 Adultos · ¥25.000 · 135,61€</p>
             </div>
           </div>
           <ChevronDown 
@@ -129,7 +129,7 @@ export default function NohiMagomeTicketCard({ defaultExpanded = false, onGoToDa
 
             <div className="mt-3 pt-3 border-t text-xs text-gray-600 flex flex-wrap items-center justify-between gap-2" style={{ borderColor: "var(--line)" }}>
               <span>👤 Titular: <strong>Pablo Crespo Bellido</strong></span>
-              <span>💰 Total: <strong>¥25.000 (¥5.000/pax)</strong></span>
+              <span>💰 Total: <strong>¥25.000 (¥5.000/pax · 135,61€ Revolut)</strong></span>
               <span>⏳ Cancelación: <strong>Hasta 14/09 07:50 JST</strong></span>
             </div>
           </div>
@@ -195,7 +195,7 @@ export default function NohiMagomeTicketCard({ defaultExpanded = false, onGoToDa
             <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-3 mt-2 border-b pb-2">Checklist Operativo del Día</p>
             <div className="space-y-2">
               <ChecklistItem id="booked" checked={checkedItems.booked} locked text="Reserva completada en Japan Bus Online (08302008262)" />
-              <ChecklistItem id="paid" checked={checkedItems.paid} locked text="Pago confirmado: ¥25.000 (5 adultos)" />
+              <ChecklistItem id="paid" checked={checkedItems.paid} locked text="Pago confirmado: ¥25.000 · 135,61€ (5 adultos)" />
               <ChecklistItem id="seats" checked={checkedItems.seats} locked text="Asientos asignados en Car 01: 2C, 2D, 3B, 3C, 3D" />
               
               <div className="my-2 border-t border-dashed" style={{ borderColor: "var(--line)" }}></div>
