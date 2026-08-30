@@ -46,15 +46,12 @@ function getScheduleEmoji(text) {
 function formatSectionTitle(title) {
   if (!title) return title;
   
-  let emoji = "";
   let text = title.trim();
-
-  const chars = Array.from(text);
-  const firstChar = chars[0];
-  
-  if (firstChar && !/[a-zA-Z0-9¿¡"'\(\)\[\]\{\}]/.test(firstChar)) {
-    emoji = firstChar;
-    text = chars.slice(1).join("").trim();
+  const emojiMatch = text.match(/^([\p{Extended_Pictographic}\uFE0F\u200D\s]+)/u);
+  let emoji = "";
+  if (emojiMatch) {
+    emoji = emojiMatch[1].trim();
+    text = text.slice(emojiMatch[0].length).trim();
   }
 
   if (!emoji) {
@@ -67,7 +64,7 @@ function formatSectionTitle(title) {
   text = text.toLowerCase();
   text = text.charAt(0).toUpperCase() + text.slice(1);
 
-  return `${emoji} ${text}`;
+  return emoji ? `${emoji} ${text}` : text;
 }
 
 function CollapsibleScheduleItem({ s, color }) {

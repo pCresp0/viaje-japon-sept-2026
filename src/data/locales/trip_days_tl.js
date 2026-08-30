@@ -180,7 +180,7 @@ export const days = [
     "history": "Ang Kiyomizu-dera ay itinatag noong 778; ang terrace nito ay itinayo nang hindi gumagamit ng isang pako. Ang Osaka Castle ay ang sentro ng militar ni Toyotomi Hideyoshi, isang pangunahing tauhan sa pag-iisa ng Japan noong ika-16 na siglo.",
     "schedule": [
       {
-        "text": "Gumising. 🍳 Almusal sa hotel ng 07:00. Masyadong maagang nagbubukas ang Kiyomizu-dera kaya hindi dapat ma-late ang pag-alis."
+        "text": "Gumising. 🍳 Almusal sa hotel ng 07:00. Masyadong maagang nagbubukas ang Kiyomizu-dera kaya hindi dapat ma-late ang pag-alis.\n\n⚠️ **MAHALAGANG PAALALA NGAYONG ARAW:** Sa araw na ito (pagdaan sa Kyoto Station sa tanghali o pagbalik mula Osaka), kailangan nating **kunin ang mga pisikal na tiket** para sa Thunderbird train bukas papuntang Kanazawa sa berdeng 5489 ticket machines gamit ang pisikal na Mastercard (**8625)."
       },
       {
         "text": "🚍 HOTEL → KIYOMIZU-DERA. Maglakad mula Hotel Keihan Kyoto Hachijoguchi papuntang Kyoto Station. Pangunahing opsyon: Kyoto City Bus 100 o 206 mula Kyoto Station. Bumaba sa Gojozaka. Maglakad ng halos 10 min papuntang Kiyomizu-dera. Alternatibo: Gamitin ang bagong Okoshi Bus Kiyomizu-dera Line, available tuwing weekdays mula Hulyo 2026, kung angkop sa iskedyul. Walang reserbasyon. Magbayad gamit ang IC card o ticket. Madalas ma-traffic ang mga bus sa Higashiyama. Umalis nang may sapat na oras."

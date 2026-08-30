@@ -180,7 +180,7 @@ export const days = [
     "history": "Le Kiyomizu-dera a été fondé en 778 ; sa terrasse a été construite sans utiliser un seul clou. Le château d'Osaka était l'épicentre militaire de Toyotomi Hideyoshi, figure clé de l'unification du Japon au XVIe siècle.",
     "schedule": [
       {
-        "text": "Réveil. 🍳 Petit-déjeuner à l'hôtel à 07:00. Kiyomizu-dera ouvre très tôt, il ne faut donc pas retarder le départ."
+        "text": "Réveil. 🍳 Petit-déjeuner à l'hôtel à 07:00. Kiyomizu-dera ouvre très tôt, il ne faut donc pas retarder le départ.\n\n⚠️ **RAPPEL IMPORTANT DU JOUR :** Dans la journée (en passant par Kyoto Station à midi ou en revenant d'Osaka), nous devons **récupérer les billets physiques** du train Thunderbird pour Kanazawa du lendemain aux distributeurs verts 5489 avec la carte Mastercard physique (**8625)."
       },
       {
         "text": "🚍 HÔTEL → KIYOMIZU-DERA. Marchez depuis l'Hôtel Keihan Kyoto Hachijoguchi jusqu'à Kyoto Station. Option principale : Kyoto City Bus 100 ou 206 depuis Kyoto Station. Descendez à Gojozaka. Marchez environ 10 min jusqu'à Kiyomizu-dera. Alternative : Utilisez la nouvelle ligne Kiyomizu-dera de Okoshi Bus, disponible en semaine depuis juillet 2026, si l'horaire convient. Aucune réservation. Payez avec une carte IC ou le billet correspondant. Les bus d'Higashiyama peuvent être encombrés. Prévoyez de la marge."
