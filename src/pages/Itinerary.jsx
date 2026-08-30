@@ -124,6 +124,8 @@ export default function Itinerary({ openDay, setOpenDay, quickView, setQuickView
             setOpenDay(dayNum);
           }}
           onViewMap={onGoToMapDay}
+          openDay={openDay}
+          setOpenDay={setOpenDay}
         />
       ) : (
         /* ── Vista completa (comportamiento original) ─────────── */
