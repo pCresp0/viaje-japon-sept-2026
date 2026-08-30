@@ -25,6 +25,7 @@ import FrikadasPage from "./pages/FrikadasPage";
 import FujiAlertBanner from "./components/FujiAlertBanner";
 import SearchResultHighlight from "./components/SearchResultHighlight";
 import ErrorBoundary from "./components/ErrorBoundary";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 import { useHighlight } from "./context/HighlightContext";
 import { slug } from "./utils/slug";
 import { getTripStatus } from "./utils/date";
@@ -171,6 +172,8 @@ export default function App() {
           <Footer />
         </div>
       </div>
+
+      <ScrollToTopButton containerRef={scrollContainerRef} resetKey={tab} />
     </div>
   );
 }
