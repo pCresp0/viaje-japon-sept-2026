@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { QrCode, Lock, Unlock, Eye, EyeOff, X, CheckCircle2, ShieldCheck, Download, UserCheck, ChevronRight } from "lucide-react";
+import { QrCode, Lock, Unlock, Eye, EyeOff, X, CheckCircle2, ShieldCheck, Download, UserCheck, ChevronRight, ChevronDown } from "lucide-react";
 
 export const groupMembers = [
   { id: "pablo", name: "Pablo Crespo Bellido", hasQR: true, qrPath: "/images/visit-japan-qr.png", role: "Titular", pass: "cresp0" },
@@ -16,6 +16,7 @@ export default function VisitJapanQRCard() {
   const [error, setError] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showFullQR, setShowFullQR] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   function startUnlockFlow() {
     setStep("select_member");
@@ -61,11 +62,13 @@ export default function VisitJapanQRCard() {
         borderColor: "var(--line)",
       }}
     >
-      {/* Header Bar */}
-      <div
-        className="px-4 py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-white"
+      {/* Header (Toggle) */}
+      <button
+        onClick={() => setIsExpanded(!isExpanded)}
+        className="w-full text-left px-4 py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-white transition-all hover:brightness-110 focus:outline-none"
         style={{
           background: "linear-gradient(135deg, #1e3a8a 0%, #1e40af 60%, #1d4ed8 100%)",
+          cursor: "pointer", border: "none"
         }}
       >
         <div className="flex items-start sm:items-center gap-3 min-w-0">
@@ -78,7 +81,7 @@ export default function VisitJapanQRCard() {
                 Visit Japan Web
               </span>
               <span className="text-xs text-blue-100 font-semibold">
-                Inmigración y Aduanas (5 Viajeros)
+                Inmigración y Aduanas
               </span>
             </div>
             <h3 className="text-sm sm:text-base font-bold text-white leading-tight mt-0.5" style={{ margin: 0 }}>
@@ -87,31 +90,14 @@ export default function VisitJapanQRCard() {
           </div>
         </div>
 
-        <div className="shrink-0 flex items-center gap-2">
-          {step === "unlocked" ? (
-            <button
-              type="button"
-              onClick={() => setShowFullQR(true)}
-              className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-white text-blue-900 shadow-sm active:scale-95 transition-all w-full sm:w-auto"
-            >
-              <Eye size={14} />
-              Ver QR
-            </button>
-          ) : (
-            <button
-              type="button"
-              onClick={startUnlockFlow}
-              className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-white text-blue-900 shadow-sm active:scale-95 transition-all w-full sm:w-auto"
-            >
-              <Lock size={14} />
-              Ver QR
-            </button>
-          )}
+        <div className="shrink-0 flex items-center justify-end">
+          <ChevronDown size={20} className={`transition-transform ${isExpanded ? "rotate-180" : ""}`} style={{ opacity: 0.8 }} />
         </div>
-      </div>
+      </button>
 
       {/* Card Body */}
-      <div className="p-4 sm:p-5 space-y-3">
+      {isExpanded && (
+        <div className="p-4 sm:p-5 space-y-3">
         <p style={{ fontSize: 13, color: "var(--ink)", lineHeight: 1.5, margin: 0 }}>
           Código QR generado en la web oficial de <strong>Visit Japan Web</strong> para agilizar los controles de inmigración y aduanas en el Aeropuerto de Narita. Selecciona quién eres y desbloquéalo con tu contraseña.
         </p>
@@ -211,6 +197,7 @@ export default function VisitJapanQRCard() {
           </a>
         </div>
       </div>
+      )}
 
       {/* Modal Paso 1: Elegir quién eres de los 5 */}
       {step === "select_member" && (

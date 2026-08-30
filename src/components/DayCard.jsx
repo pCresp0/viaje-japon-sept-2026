@@ -19,7 +19,43 @@ function getScheduleEmoji(text) {
   if (/tranvía|randen/i.test(text)) return "🚋";
   if (/\bmetro\b/i.test(text)) return "🚇";
   if (/\btren\b|\bJR\b|narita express|hida express|thunderbird|shinano|yurikamome/i.test(text)) return "🚂";
+  if (/caminar|andando|a pie/i.test(text)) return "🚶";
   return null;
+}
+
+function CollapsibleScheduleItem({ s, color }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  return (
+    <div className="rounded-xl border overflow-hidden" style={{ background: "rgba(0,0,0,0.015)", borderColor: "var(--line)" }}>
+      <button
+        onClick={() => setIsExpanded(!isExpanded)}
+        className="w-full text-left px-4 py-3.5 flex items-center justify-between gap-3 transition-colors hover:bg-black/5 focus:outline-none"
+        style={{ cursor: "pointer", border: "none", background: "transparent" }}
+      >
+        <div className="flex-1">
+          {s.time && (
+            <p className="font-display text-[15px] sm:text-[16px] font-extrabold flex items-center gap-1.5 tracking-tight m-0" style={{ color: color }}>
+              {s.time}
+            </p>
+          )}
+        </div>
+        <ChevronDown size={20} className={`shrink-0 transition-transform ${isExpanded ? "rotate-180" : ""}`} style={{ color: "var(--ink-soft)" }} />
+      </button>
+
+      {isExpanded && (
+        <div className="px-4 pb-4 pt-1">
+          <PlaceText
+            as="p"
+            text={s.text}
+            className="text-[14px] leading-snug whitespace-pre-wrap m-0"
+            style={{ color: "var(--ink)" }}
+            linkStyle={{ color: "var(--shu)" }}
+          />
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default function DayCard({ day, defaultOpenHistory = false, onClose, onViewMap }) {
@@ -133,24 +169,9 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
 
           {day.schedule.filter(s => !s.time || !/\d/.test(s.time)).length > 0 && (
             <div className="mt-6 space-y-3">
-              {day.schedule.filter(s => !s.time || !/\d/.test(s.time)).map((s, i) => {
-                return (
-                  <div key={i} className="rounded-xl p-4 border" style={{ background: "rgba(0,0,0,0.015)", borderColor: "var(--line)" }}>
-                    {s.time && (
-                      <p className="font-display text-[15px] sm:text-[16px] font-extrabold flex items-center gap-1.5 mb-2 tracking-tight" style={{ color: block.color }}>
-                        {s.time}
-                      </p>
-                    )}
-                    <PlaceText
-                      as="p"
-                      text={s.text}
-                      className="text-[14px] leading-snug whitespace-pre-wrap"
-                      style={{ color: "var(--ink)" }}
-                      linkStyle={{ color: "var(--shu)" }}
-                    />
-                  </div>
-                );
-              })}
+              {day.schedule.filter(s => !s.time || !/\d/.test(s.time)).map((s, i) => (
+                <CollapsibleScheduleItem key={i} s={s} color={block.color} />
+              ))}
             </div>
           )}
         </div>
