@@ -1,11 +1,23 @@
 import { useState } from "react";
 import { Zap, Ticket, CheckCircle2, ChevronDown, Clock, Smartphone, CreditCard, Eye, X, CalendarDays, MapPin, Luggage } from "lucide-react";
+import { groupMembers } from "./VisitJapanQRCard";
 
 const CONFIRMATION_IMG = "/images/tickets/smart-ex_nagoya-tokyo_nozomi358_2026-09-15.png";
+
+// Asientos Car 12 · Smart EX reserva 2002 (misma lógica de asignación que Nozomi 53 día 1)
+const memberSeats = {
+  pablo: { seat: "11-E", type: "Ventana", qr: "/images/tickets/nozomi-day9/seat-11e.png" },
+  sergio: { seat: "12-E", type: "Ventana", qr: "/images/tickets/nozomi-day9/seat-12e.png" },
+  juancarlos: { seat: "12-C", type: "Pasillo", qr: "/images/tickets/nozomi-day9/seat-12c.png" },
+  gerundio: { seat: "11-D", type: "Centro", qr: "/images/tickets/nozomi-day9/seat-11d.png" },
+  thibaut: { seat: "12-D", type: "Centro", qr: "/images/tickets/nozomi-day9/seat-12d.png" },
+};
 
 export default function NozomiNagoyaTicketCard({ onGoToDay } = {}) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [showImageModal, setShowImageModal] = useState(false);
+  const [selectedMember, setSelectedMember] = useState(null);
+  const [showFullQR, setShowFullQR] = useState(false);
   const [checkedItems, setCheckedItems] = useState({
     booked: true,
     paid: true,
@@ -88,11 +100,49 @@ export default function NozomiNagoyaTicketCard({ onGoToDay } = {}) {
               <CheckCircle2 size={14} /> COMPRADO Y CONFIRMADO
             </span>
             <span className="px-2.5 py-1 rounded-full font-semibold bg-gray-100 text-gray-700">
-              Smart EX · Ordinary · N700
+              Coche 12 · Ordinary · N700
             </span>
             <span className="px-2.5 py-1 rounded-full font-semibold bg-sky-100 text-sky-800 border border-sky-200">
               QR-Ticket disponible
             </span>
+          </div>
+
+          <p style={{ fontSize: 13, color: "var(--ink)", lineHeight: 1.5, margin: 0 }}>
+            Billetes confirmados para los 5 viajeros. Selecciona tu nombre para abrir tu <strong>código QR individual</strong> de acceso a los tornos del Shinkansen.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+            {groupMembers.map((m) => {
+              const seatInfo = memberSeats[m.id];
+              const isSelected = selectedMember?.id === m.id;
+              return (
+                <button
+                  key={m.id}
+                  type="button"
+                  onClick={() => {
+                    setSelectedMember(m);
+                    setShowFullQR(true);
+                  }}
+                  className={`text-left p-3 rounded-xl border transition-all flex items-center justify-between ${
+                    isSelected
+                      ? "border-blue-500 bg-blue-50 ring-1 ring-blue-500"
+                      : "border-gray-200 hover:border-gray-300 hover:bg-gray-50"
+                  }`}
+                  style={{
+                    borderColor: isSelected ? "var(--indigo)" : "var(--line)",
+                    background: isSelected ? "rgba(29, 53, 87, 0.04)" : "var(--paper)",
+                  }}
+                >
+                  <div>
+                    <p className="text-sm font-bold m-0" style={{ color: "var(--ink)" }}>{m.name}</p>
+                    <p className="text-xs font-medium mt-0.5 m-0" style={{ color: "var(--indigo)" }}>
+                      Asiento {seatInfo?.seat} · {seatInfo?.type}
+                    </p>
+                  </div>
+                  <Ticket size={18} style={{ color: isSelected ? "var(--indigo)" : "var(--ink-soft)" }} />
+                </button>
+              );
+            })}
           </div>
 
           <div className="rounded-xl p-4 bg-sky-50 border border-sky-200">
@@ -100,7 +150,7 @@ export default function NozomiNagoyaTicketCard({ onGoToDay } = {}) {
               <Smartphone size={16} /> ACCESO AL SHINKANSEN (Smart EX)
             </h4>
             <p className="text-sm text-sky-900 m-0 leading-relaxed">
-              Opción principal recomendada: <strong>QR-Ticket</strong> en el móvil (imprimir o mostrar en pantalla antes de subir).
+              Opción principal recomendada: <strong>QR-Ticket</strong> en el móvil (mostrar en pantalla antes de subir).
               <br /><br />
               También se puede <strong>designar una IC card</strong> a los asientos para pasar el torno tocando la tarjeta.
               Opcionalmente se pueden recoger billetes físicos, pero <strong>NO es obligatorio</strong> como en JR-WEST.
@@ -188,6 +238,63 @@ export default function NozomiNagoyaTicketCard({ onGoToDay } = {}) {
               <ChecklistItem checked={checkedItems.qr} onClick={() => toggleCheck("qr")} text="QR-Ticket guardado / método de acceso confirmado" />
               <ChecklistItem checked={checkedItems.luggage} onClick={() => toggleCheck("luggage")} text="Comprobadas dimensiones de las maletas" />
               <ChecklistItem checked={checkedItems.email} onClick={() => toggleCheck("email")} text="Email/confirmación Smart EX accesible en el móvil" />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showFullQR && selectedMember && (
+        <div className="fixed inset-0 z-[999] flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
+          <div className="bg-white rounded-3xl overflow-hidden w-full max-w-sm shadow-2xl relative flex flex-col max-h-[90vh]">
+            <div className="p-4 sm:p-5 flex items-center justify-between border-b border-gray-100 bg-gray-50">
+              <div>
+                <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-0.5 mt-0">
+                  Billete QR Shinkansen
+                </p>
+                <p className="text-base font-bold text-gray-900 leading-tight m-0">
+                  {selectedMember.name}
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowFullQR(false)}
+                className="w-10 h-10 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-gray-700 transition-colors border-none cursor-pointer"
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            <div className="p-6 sm:p-8 flex-1 overflow-y-auto flex flex-col items-center">
+              <div className="w-full bg-blue-50 text-blue-900 rounded-xl p-3 mb-6 text-center border border-blue-100">
+                <p className="text-lg font-black tracking-widest font-mono m-0">
+                  {memberSeats[selectedMember.id]?.seat}
+                </p>
+                <p className="text-xs font-medium opacity-80 mt-1 uppercase tracking-wider m-0">
+                  Coche 12 • {memberSeats[selectedMember.id]?.type}
+                </p>
+              </div>
+
+              <div className="bg-white p-4 rounded-xl border-2 border-dashed border-gray-200 mb-6 w-full max-w-[280px] aspect-square flex items-center justify-center relative shadow-sm">
+                <img
+                  src={memberSeats[selectedMember.id]?.qr}
+                  alt={`QR Shinkansen ${selectedMember.name}`}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+
+              <div className="w-full text-center space-y-1">
+                <p className="text-[11px] text-gray-500 font-bold uppercase tracking-wider m-0">Tren</p>
+                <p className="text-sm font-bold text-gray-900 m-0">NOZOMI 358</p>
+                <p className="text-xs text-gray-600 mt-2 m-0">
+                  Nagoya (11:29) → Tokio (13:06)
+                </p>
+              </div>
+            </div>
+
+            <div className="p-4 bg-gray-50 border-t border-gray-100 text-center">
+              <p className="text-[10px] text-gray-500 m-0">
+                Aumenta el brillo de tu pantalla y escanea este código en los tornos Shinkansen de la estación.
+              </p>
             </div>
           </div>
         </div>
