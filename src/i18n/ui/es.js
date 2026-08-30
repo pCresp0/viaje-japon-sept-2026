@@ -308,6 +308,8 @@ export default {
   "about.pwaDesc": "Cacheo de recursos usando Workbox para que funcione sin conexión en Japón.",
   "about.tailwindDesc": "Diseño escalable, utilidades atómicas y estricto enfoque Mobile-First.",
   "about.i18nDesc": "Arquitectura propia sin dependencias pesadas, fusionando un dataset base estructurado con diccionarios de idiomas.",
+  "about.searchDesc": "Motor de búsqueda inteligente que resalta visualmente los resultados en toda la app.",
+  "about.weatherDesc": "Integración con Open-Meteo para predicciones en vivo, con caché local de 12 horas para ahorrar batería.",
   "about.mapDesc": "Alternativa ligera sin coste a Google Maps API.",
   "geek.eyebrow": "Anime, juegos y cine",
   "geek.title": "Frikadas en la ruta"

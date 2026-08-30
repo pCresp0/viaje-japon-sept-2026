@@ -35,6 +35,10 @@ export default function AboutPage() {
               <li><strong>Tailwind CSS v4:</strong> {t("about.tailwindDesc")}</li>
               <li><strong>Multi-idioma (i18n):</strong> {t("about.i18nDesc")}</li>
               <li><strong>Mapas (Leaflet):</strong> {t("about.mapDesc")}</li>
+
+              <li><strong>Buscador Global:</strong> {t("about.searchDesc")}</li>
+              <li><strong>API del Clima:</strong> {t("about.weatherDesc")}</li>
+
             </ul>
           </div>
           

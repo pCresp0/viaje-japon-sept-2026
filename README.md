@@ -48,6 +48,10 @@ He seleccionado meticulosamente el stack tecnológico priorizando el rendimiento
 - 🚇 **Navegación tipo Metro:** El itinerario (`RouteLine`) usa un diseño de navegación vertical inspirado en los esquemas de trenes nipones.
 - 📋 **Preparativos Persistentes:** Una lista de equipaje cuyas casillas rellenadas se guardan en el móvil.
 - 💰 **Calculadora de Presupuestos:** Desgloses automáticos por persona de costes de vuelos y reservas en función del número de integrantes del grupo (5).
+- 🔍 **Buscador Global Inteligente:** Un motor de búsqueda integrado que permite encontrar al instante cualquier lugar, hotel, restaurante o tren a lo largo del viaje, saltando directamente al día y pestaña correspondiente con el resultado resaltado visualmente.
+- 🌦️ **Meteorología en Tiempo Real (Offline-friendly):** Integración con la API de Open-Meteo para mostrar el tiempo en las distintas ciudades de la ruta. Las previsiones se guardan en el caché local del móvil durante 12 horas, garantizando que puedas consultar el clima del día incluso si te quedas sin conexión en la calle.
+- 🗺️ **Mapa Interactivo Sincronizado:** Gracias a Leaflet, la app cuenta con un mapa vectorial interactivo que permite filtrar marcadores por categoría (Excursiones, Hoteles, Transportes) o por día específico, haciendo zoom dinámico automáticamente para una navegación perfecta por el terreno.
+- 📅 **Calendario Integrado con "Vista Rápida":** Un calendario visual que no solo da una idea clara de la estructura del viaje y los bloques geográficos, sino que actúa como atajo directo a una "Vista Rápida" simplificada en el itinerario de cada día.
 
 ---
 
