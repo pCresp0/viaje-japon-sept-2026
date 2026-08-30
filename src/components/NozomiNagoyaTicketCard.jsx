@@ -10,11 +10,11 @@ const TO_BLOCK = "tokio";
 
 // Asientos Car 12 · Smart EX reserva 2002 (misma lógica de asignación que Nozomi 53 día 1)
 const memberSeats = {
-  pablo: { seat: "11-E", type: "Ventana", qr: "/images/tickets/nozomi-day9/seat-11e.png" },
-  sergio: { seat: "12-E", type: "Ventana", qr: "/images/tickets/nozomi-day9/seat-12e.png" },
-  juancarlos: { seat: "12-C", type: "Pasillo", qr: "/images/tickets/nozomi-day9/seat-12c.png" },
-  gerundio: { seat: "11-D", type: "Centro", qr: "/images/tickets/nozomi-day9/seat-11d.png" },
-  thibaut: { seat: "12-D", type: "Centro", qr: "/images/tickets/nozomi-day9/seat-12d.png" },
+  pablo: { seat: "11-E", qr: "/images/tickets/nozomi-day9/seat-11e.png" },
+  sergio: { seat: "12-E", qr: "/images/tickets/nozomi-day9/seat-12e.png" },
+  juancarlos: { seat: "12-C", qr: "/images/tickets/nozomi-day9/seat-12c.png" },
+  gerundio: { seat: "11-D", qr: "/images/tickets/nozomi-day9/seat-11d.png" },
+  thibaut: { seat: "12-D", qr: "/images/tickets/nozomi-day9/seat-12d.png" },
 };
 
 export default function NozomiNagoyaTicketCard({ onGoToDay } = {}) {
@@ -143,7 +143,7 @@ export default function NozomiNagoyaTicketCard({ onGoToDay } = {}) {
                   <div>
                     <p className="text-sm font-bold m-0" style={{ color: "var(--ink)" }}>{m.name}</p>
                     <p className="text-xs font-medium mt-0.5 m-0" style={{ color: "var(--indigo)" }}>
-                      Asiento {seatInfo?.seat} · {seatInfo?.type}
+                      Asiento {seatInfo?.seat}
                     </p>
                   </div>
                   <Ticket size={18} style={{ color: isSelected ? "var(--indigo)" : "var(--ink-soft)" }} />
@@ -277,7 +277,7 @@ export default function NozomiNagoyaTicketCard({ onGoToDay } = {}) {
                   {memberSeats[selectedMember.id]?.seat}
                 </p>
                 <p className="text-xs font-medium opacity-80 mt-1 uppercase tracking-wider m-0">
-                  Coche 12 • {memberSeats[selectedMember.id]?.type}
+                  Coche 12
                 </p>
               </div>
 

@@ -16,11 +16,11 @@ export default function ShinkansenTicketCard({ onGoToDay } = {}) {
 
   // Configuración de los 5 asientos para la reserva Smart EX 2000
   const memberSeats = {
-    "pablo": { seat: "13-E", type: "Ventana", qr: "/images/tickets/nozomi-day1/seat-13e.png" },
-    "sergio": { seat: "14-E", type: "Ventana", qr: "/images/tickets/nozomi-day1/seat-14e.png" },
-    "juancarlos": { seat: "13-C", type: "Pasillo", qr: "/images/tickets/nozomi-day1/seat-13c.png" },
-    "gerundio": { seat: "13-D", type: "Centro", qr: "/images/tickets/nozomi-day1/seat-13d.png" },
-    "thibaut": { seat: "14-D", type: "Centro", qr: "/images/tickets/nozomi-day1/seat-14d.png" },
+    "pablo": { seat: "13-E", qr: "/images/tickets/nozomi-day1/seat-13e.png" },
+    "sergio": { seat: "14-E", qr: "/images/tickets/nozomi-day1/seat-14e.png" },
+    "juancarlos": { seat: "13-C", qr: "/images/tickets/nozomi-day1/seat-13c.png" },
+    "gerundio": { seat: "13-D", qr: "/images/tickets/nozomi-day1/seat-13d.png" },
+    "thibaut": { seat: "14-D", qr: "/images/tickets/nozomi-day1/seat-14d.png" },
   };
 
   return (
@@ -168,7 +168,7 @@ export default function ShinkansenTicketCard({ onGoToDay } = {}) {
                   {memberSeats[selectedMember.id]?.seat}
                 </p>
                 <p className="text-xs font-medium opacity-80 mt-1 uppercase tracking-wider m-0">
-                  Coche 13 • {memberSeats[selectedMember.id]?.type}
+                  Coche 13
                 </p>
               </div>
               
