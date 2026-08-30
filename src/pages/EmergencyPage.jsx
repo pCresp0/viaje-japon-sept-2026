@@ -5,7 +5,6 @@ import {
   ShieldAlert,
   Building2,
   ShieldCheck,
-  Download,
   FileText,
   Users,
   Plane,
@@ -14,11 +13,11 @@ import {
   ChevronUp,
   X,
   HeartHandshake,
+  ExternalLink,
 } from "lucide-react";
 import { Highlightable } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 import { heymondoInsurance } from "../data/insurance";
-import { downloadInsuranceConditions } from "../utils/exportInsurance";
 
 export const emergencyNumbers = [
   { label: "Policía", number: "110", note: "Emergencias con la policía japonesa" },
@@ -104,7 +103,7 @@ export default function EmergencyPage() {
 
           {openSection === "insurance" && (
           <div className="p-5 sm:p-6 space-y-6">
-            <div className="flex flex-col sm:flex-row gap-2">
+            <div className="flex flex-col sm:flex-row gap-2 flex-wrap">
               <a
                 href={`tel:${heymondoInsurance.assistancePhone.replace(/\s+/g, "")}`}
                 className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-bold text-sm shadow-md hover:opacity-90 active:scale-95 transition-all"
@@ -113,45 +112,61 @@ export default function EmergencyPage() {
                 <Phone size={16} />
                 Asistencia 24h: {heymondoInsurance.assistancePhone}
               </a>
+              <a
+                href={heymondoInsurance.documentsDriveUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-bold text-sm shadow-md hover:opacity-90 active:scale-95 transition-all"
+                style={{ textDecoration: "none", background: "var(--indigo)", color: "white" }}
+              >
+                <ExternalLink size={16} />
+                Documentación completa (Drive)
+              </a>
+            </div>
+
+            <div
+              className="p-4 rounded-xl border"
+              style={{ background: "rgba(29, 53, 87, 0.05)", borderColor: "rgba(29, 53, 87, 0.2)" }}
+            >
+              <p style={{ fontSize: 13, fontWeight: 700, color: "var(--indigo)", margin: "0 0 6px" }}>
+                Datos sensibles fuera de la web
+              </p>
+              <p style={{ fontSize: 12.5, color: "var(--ink-soft)", margin: 0, lineHeight: 1.55 }}>
+                DNI, certificados, condiciones particulares y PDFs de la póliza están en la{" "}
+                <a
+                  href={heymondoInsurance.documentsDriveUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ color: "var(--indigo)", fontWeight: 700 }}
+                >
+                  carpeta de Google Drive del grupo
+                </a>
+                . Aquí solo dejamos lo útil en viaje: teléfono 24h, coberturas y quién está asegurado.
+              </p>
             </div>
             
-            {/* 4 Viajeros Asegurados */}
+            {/* Viajeros asegurados (sin DNI) */}
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <Users size={16} style={{ color: "var(--forest)" }} />
                 <p className="eyebrow" style={{ margin: 0, color: "var(--ink-soft)" }}>
-                  Viajeros Asegurados (4 Personas)
+                  Viajeros asegurados ({heymondoInsurance.travelers.length} personas)
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 {heymondoInsurance.travelers.map((t, i) => (
                   <div
                     key={i}
-                    className="p-3.5 rounded-xl border flex flex-col justify-between"
+                    className="p-3.5 rounded-xl border"
                     style={{ background: "var(--paper)", borderColor: "var(--line)" }}
                   >
-                    <div>
-                      <p style={{ fontSize: 10, fontWeight: 700, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", margin: 0 }}>
-                        Asegurado {i + 1}
-                      </p>
-                      <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", marginTop: 4, marginBottom: 0 }}>
-                        {t.name} {t.surnames}
-                      </p>
-                    </div>
-                    <div className="mt-3 pt-2.5 border-t flex items-center justify-between" style={{ borderColor: "var(--line)" }}>
-                      <span style={{ fontSize: 11, color: "var(--ink-soft)", fontWeight: 600 }}>DNI:</span>
-                      <span
-                        className="font-mono text-xs font-bold px-2 py-0.5 rounded border"
-                        style={{
-                          background: "rgba(45, 106, 79, 0.08)",
-                          borderColor: "rgba(45, 106, 79, 0.25)",
-                          color: "var(--forest)",
-                        }}
-                      >
-                        {t.dni}
-                      </span>
-                    </div>
+                    <p style={{ fontSize: 10, fontWeight: 700, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", margin: 0 }}>
+                      Asegurado {i + 1}
+                    </p>
+                    <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", marginTop: 4, marginBottom: 0 }}>
+                      {t.name}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -311,37 +326,18 @@ export default function EmergencyPage() {
               </div>
             </div>
 
-            {/* Botones de Descarga y Visualización de Condiciones */}
+            {/* Documentación oficial → Drive (sin datos sensibles en la web) */}
             <div className="pt-3 border-t flex flex-wrap gap-2.5" style={{ borderColor: "var(--line)" }}>
-              <button
-                type="button"
-                onClick={() => downloadInsuranceConditions("particular")}
+              <a
+                href={heymondoInsurance.documentsDriveUrl}
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-white shadow-sm transition-all"
-                style={{ background: "var(--forest)" }}
+                style={{ background: "var(--forest)", textDecoration: "none" }}
               >
-                <Download size={14} />
-                Descargar Condiciones Particulares (.txt)
-              </button>
-
-              <button
-                type="button"
-                onClick={() => downloadInsuranceConditions("general")}
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-white shadow-sm transition-all"
-                style={{ background: "var(--indigo)" }}
-              >
-                <Download size={14} />
-                Descargar Condiciones Generales (.txt)
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setModalContent("particular")}
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold border transition-all"
-                style={{ background: "var(--paper)", borderColor: "var(--line)", color: "var(--ink)" }}
-              >
-                <FileText size={14} />
-                Ver Condiciones Particulares
-              </button>
+                <ExternalLink size={14} />
+                Abrir carpeta Drive (póliza, DNI, PDFs)
+              </a>
 
               <button
                 type="button"
@@ -350,7 +346,7 @@ export default function EmergencyPage() {
                 style={{ background: "var(--paper)", borderColor: "var(--line)", color: "var(--ink)" }}
               >
                 <FileText size={14} />
-                Ver Condiciones Generales
+                Ver resumen de condiciones generales
               </button>
             </div>
 
@@ -497,18 +493,19 @@ export default function EmergencyPage() {
             </div>
 
             <div
-              className="px-6 py-4 border-t flex items-center justify-between"
+              className="px-6 py-4 border-t flex items-center justify-between gap-3 flex-wrap"
               style={{ background: "var(--paper-raised)", borderColor: "var(--line)" }}
             >
-              <button
-                type="button"
-                onClick={() => downloadInsuranceConditions(modalContent)}
+              <a
+                href={heymondoInsurance.documentsDriveUrl}
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-white shadow-sm transition-all"
-                style={{ background: "var(--forest)" }}
+                style={{ background: "var(--forest)", textDecoration: "none" }}
               >
-                <Download size={14} />
-                Descargar como archivo .txt
-              </button>
+                <ExternalLink size={14} />
+                Documentación oficial en Drive
+              </a>
 
               <button
                 type="button"

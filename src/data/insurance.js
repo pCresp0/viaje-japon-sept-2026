@@ -1,5 +1,6 @@
 /**
- * Datos oficiales de la póliza de seguro de viaje contratada con Heymondo
+ * Datos públicos del seguro Heymondo (sin DNI ni datos personales sensibles).
+ * Documentación completa (póliza, DNI, certificados): carpeta Drive del grupo.
  */
 
 export const heymondoInsurance = {
@@ -13,6 +14,8 @@ export const heymondoInsurance = {
   airHelpUrl: "https://funnel.airhelp.com/claims/new/trip-details?lang=es&partner=heymondo",
   appStoreUrl: "https://apps.apple.com/es/app/heymondo-asistencia-en-viaje/id1450096956",
   playStoreUrl: "https://play.google.com/store/apps/details?id=com.heymondo.app",
+  /** Carpeta Drive con póliza, DNI y documentación sensible (acceso solo del grupo). */
+  documentsDriveUrl: "https://drive.google.com/drive/folders/1BFL40EA0_6E7GzIB5O8dPAwOXRZTxweh",
 
   dates: {
     start: "06/09/2026",
@@ -21,19 +24,12 @@ export const heymondoInsurance = {
     destination: "Japón",
   },
 
-  holder: {
-    name: "Pablo",
-    surnames: "Crespo Bellido",
-    dni: "50620910A",
-    phone: "+34 616 597 026",
-    email: "pcbcrespo@gmail.com",
-  },
-
+  /** Solo nombres de pila — sin DNI ni apellidos en la web. */
   travelers: [
-    { name: "PABLO", surnames: "CRESPO BELLIDO", dni: "50620910A" },
-    { name: "SERGIO", surnames: "CRESPO BELLIDO", dni: "50621353D" },
-    { name: "JUAN CARLOS", surnames: "RODRÍGUEZ PÉREZ", dni: "70902540A" },
-    { name: "GERUNDIO", surnames: "GUIAL", dni: "Y9699185F" },
+    { name: "Pablo" },
+    { name: "Sergio" },
+    { name: "Juan Carlos" },
+    { name: "Gerundio" },
   ],
 
   pricing: {
@@ -65,69 +61,25 @@ export const heymondoInsurance = {
     { label: "Deportes de aventura", amount: "Básico (Trekking <3.000m)", highlight: false },
   ],
 
-  fullParticularConditions: `CERTIFICADO DE PÓLIZA DE SEGURO DE ASISTENCIA EN VIAJE
+  /** Resumen sin datos personales — la póliza completa está en Drive. */
+  fullParticularConditions: `RESUMEN PÚBLICO — SEGURO HEYMONDO TRANQUILIDAD
 Nº DE PÓLIZA: 2368219
-PRODUCTO: Viaje Tranquilidad - Heymondo
-COMPAÑÍA ASEGURADORA: IMA IBÉRICA ASISTENCIA (COD DGSFP: E0258)
-MEDIADOR: SMART INSURANCE CORREDURÍA DE SEGUROS S.L. (J3422 - CIF B-66843798)
+COMPAÑÍA: IMA IBÉRICA ASISTENCIA (COD DGSFP: E0258)
+MEDIADOR: SMART INSURANCE CORREDURÍA DE SEGUROS S.L. (J3422)
 
 DATOS DEL VIAJE:
 • Destino: Japón
 • Fecha inicio: 06/09/2026
 • Fecha fin: 22/09/2026
-• Fecha de contratación: 28/08/2026
 • Nº de asegurados: 4
 
-TOMADOR Y TITULAR:
-• Pablo Crespo Bellido (DNI: 50620910A · Tel: +34 616 597 026 · Email: pcbcrespo@gmail.com)
+PRECIO TOTAL: 273,60 € (incluye AirHelp Plus)
 
-VIAJEROS ASEGURADOS:
-1. PABLO CRESPO BELLIDO (DNI: 50620910A)
-2. SERGIO CRESPO BELLIDO (DNI: 50621353D)
-3. JUAN CARLOS RODRÍGUEZ PÉREZ (DNI: 70902540A)
-4. GERUNDIO GUIAL (DNI: Y9699185F)
+ASISTENCIA 24H: +34 91 353 63 23
+Portal siniestros: https://siniestros.imaiberica.es
 
-PRECIO Y PAGO:
-• Prima seguro: 266,00 € (280,00 € con 14,00 € dto.)
-• Servicio AirHelp Plus: 7,60 € (8,00 € con 0,40 € dto.)
-• PRECIO TOTAL: 273,60 €
-
-ASISTENCIA MÉDICA Y EMERGENCIAS 24H:
-• Teléfono 24h: +34 91 353 63 23
-• Portal de siniestros y reembolsos: https://siniestros.imaiberica.es
-• Reclamación de vuelos AirHelp: https://funnel.airhelp.com/claims/new/trip-details?lang=es&partner=heymondo
-
-TABLA DE COBERTURAS:
-1. Gastos médicos por enfermedad o accidente: 1.500.000 €
-2. Gastos odontológicos de urgencia: 150 €
-3. Repatriación o traslado de heridos o enfermos: INCLUIDO (ILIMITADO)
-4. Repatriación o traslado del asegurado fallecido: INCLUIDO
-5. Repatriación o traslado de los demás asegurados: INCLUIDO
-6. Regreso anticipado por fallecimiento de un familiar: INCLUIDO
-7. Regreso anticipado por hospitalización de un familiar: INCLUIDO
-8. Regreso anticipado por graves perjuicios en domicilio o local profesional: INCLUIDO
-9. Regreso anticipado por atentado o catástrofe (<100 km): 500 €
-10. Gastos de desplazamiento de un familiar: INCLUIDO (Billete I/V)
-11. Gastos de estancia del familiar desplazado: 1.200 € (80 €/día hasta 15 días)
-12. Convalecencia en hotel por enfermedad o cuarentena médica: 1.200 € (80 €/día)
-13. Servicio de intérprete en el extranjero: INCLUIDO
-14. Servicio de información: INCLUIDO
-15. Transmisión de mensajes urgentes: INCLUIDO
-16. Vehículo de sustitución por inmovilización: 400 € (40 €/día)
-17. Robo y daños materiales al equipaje: 2.000 €
-18. Demora en la entrega de equipajes: 200 € (a partir de 10 horas)
-19. Búsqueda, localización y envío de equipajes extraviados: INCLUIDO
-20. Interrupción de viaje ya iniciado: 1.500 €
-21. Demora en la salida del medio de transporte: 200 € (50 € cada 6 horas)
-22. Gastos por pérdida de enlaces del medio de transporte: 150 €
-23. Defensa de la responsabilidad penal en el extranjero: 3.000 €
-24. Defensa jurídica para la recuperación de vivienda ocupada: 3.000 €
-25. Defensa jurídica cuestiones administrativas (excluida vía contenciosa): 3.000 €
-26. Responsabilidad civil privada: 60.000 €
-27. Indemnización adicional por fallecimiento o invalidez por accidente: 6.000 €
-28. Indemnización por accidente en transporte público: 12.000 €
-29. Deportes de aventura: Básico (senderismo <3.000 m, paseos en bici, etc.)
-30. Equipamiento electrónico: 1.000 €`,
+⚠️ Documentación completa (condiciones particulares con datos personales, DNI, certificados PDF):
+carpeta Drive del grupo — no se publica en esta web.`,
 
   fullGeneralConditions: `CONDICIONES GENERALES - SEGURO DE VIAJE TRANQUILIDAD
 COMPAÑÍA: IMA IBÉRICA ASISTENCIA, SUCURSAL DE IMA ASSURANCES ESPAÑA
@@ -153,5 +105,7 @@ Para reembolsos de gastos autorizados: gestionar a través de https://siniestros
 Hasta 60.000 € para indemnizaciones derivadas de daños corporales o materiales causados involuntariamente a terceros en sus personas o cosas durante el viaje.
 
 6. SERVICIO AIRHELP PLUS:
-Reclamación y gestión legal integral frente a aerolíneas por retrasos superiores a 3 horas, cancelaciones con menos de 14 días o pérdidas de conexión en vuelos cubiertos por normativa UE (Reglamento CE 261/2004) con indemnizaciones de hasta 600 € por pasajero.`,
+Reclamación y gestión legal integral frente a aerolíneas por retrasos superiores a 3 horas, cancelaciones con menos de 14 días o pérdidas de conexión en vuelos cubiertos por normativa UE (Reglamento CE 261/2004) con indemnizaciones de hasta 600 € por pasajero.
+
+⚠️ El PDF oficial de condiciones generales y particulares está en la carpeta Drive del grupo.`,
 };

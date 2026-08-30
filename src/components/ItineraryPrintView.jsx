@@ -706,9 +706,11 @@ export default function ItineraryPrintView({ days }) {
           <br />
           Portal: {heymondoInsurance.portalUrl}
           <br />
-          Asegurados: {heymondoInsurance.travelers.map((t) => `${t.name} ${t.surnames} (${t.dni})`).join(" · ")}
+          Asegurados: {heymondoInsurance.travelers.map((t) => t.name).join(" · ")}
           <br />
           Precio: {heymondoInsurance.pricing.totalPrice}
+          <br />
+          📁 Documentación completa (DNI, PDFs): {heymondoInsurance.documentsDriveUrl}
         </div>
         <p style={{ fontSize: 11, fontWeight: 700, margin: "0 0 6px", color: "#1d3557" }}>Coberturas principales</p>
         <ul style={{ fontSize: 10, lineHeight: 1.5, margin: "0 0 12px", paddingLeft: 16 }}>
