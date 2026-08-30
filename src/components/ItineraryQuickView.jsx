@@ -62,6 +62,8 @@ function formatQuickTime(timeStr = "") {
     .replace(/\(\+1\s*d[ií]a\)/gi, "(+1d)")
     .replace(/aprox\.?/gi, "~")
     .replace(/^~/, "~")
+    .replace(/(\d{2}:\d{2})\s*\/\s*\d{2}:\d{2}/g, "$1") // "13:30/14:00" -> "13:30"
+    .replace(/\s*([–-])\s*/g, "$1") // "11:00 - 12:15" -> "11:00-12:15"
     .trim();
 }
 
