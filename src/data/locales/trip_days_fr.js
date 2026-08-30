@@ -402,10 +402,10 @@ export const days = [
         "text": "🚌 08:15 — BUS LOCAL MAGOME → NAKATSUGAWA\nDépart : Magome — 08:15\nArrivée : Nakatsugawa Station — 08:40\nDurée : env. 25 min.\nType : bus local.\nRéservation : NE PEUT PAS être réservé.\nJapan Rail Pass : NON inclus.\nPaiement : acheter/payer localement selon les instructions de l'opérateur.\nPrix estimé : ¥800/personne.\nIMPORTANT : Le 15 septembre 2026 est un mardi, les horaires de semaine s'appliquent.\nArrivez à l'arrêt quelques minutes en avance.\nCe bus est nécessaire pour relier Magome au réseau ferroviaire JR."
       },
       {
-        "text": "08:40 — Arrivée à Nakatsugawa Station. Nous avons une marge suffisante pour trouver le quai du Limited Express Shinano."
+        "text": "🎫 **08:40 — RÉCUPÉRER LES BILLETS PHYSIQUES JR-WEST (CRITIQUE)**\n\nArrivée à Nakatsugawa (~08:40). Le Shinano 4 part à **09:57** → ~**77 min** de marge.\n\n🟢 Réservation **DÉJÀ PAYÉE** (nº **42093**). Ce n'est PAS un achat : c'est la **récupération des billets physiques**.\n\n⚠️ **OBLIGATOIRE avant de monter :** machine/guichet **HORS des portiques**, carte Mastercard physique **8625**, réservation **42093**, PIN = **anniversaire de Pablo**.\n\n💡 Si possible, récupérer plus tôt ; sinon **obligatoire à Nakatsugawa**."
       },
       {
-        "text": "🚆 09:57 — JR Limited Express SHINANO 4\nNakatsugawa → Nagoya\nDépart : 09:57\nArrivée : 10:53\nDurée : env. 56 min.\nRecommandation : SIÈGE RÉSERVÉ pour les 5 voyageurs.\nNous n'avons pas besoin de Japan Rail Pass.\nLe Limited Express nécessite un billet + supplément Limited Express.\n\n⚠️ RÉSERVATION RECOMMANDÉE\nBien que ce ne soit pas un train aussi critique que le Shinkansen, pour 5 personnes je réserverais les 5 sièges ensemble pour éviter d'être séparés.\nLes sièges réservés peuvent être achetés/réservés à l'avance via les canaux officiels de JR Central ou dans une gare JR.\nN'utilisez PAS de carte IC comme substitut au billet complet du Limited Express."
+        "text": "🚆 **SHINANO 4 — NAKATSUGAWA → NAGOYA**\n\n🟢 **RÉSERVÉ ET CONFIRMÉ** (JR-WEST)\n\nDépart **09:57** → Arrivée **10:53** (56 min).\nVoiture **4** · Places **11-D · 12-C · 12-D · 13-C · 13-D**.\n5 adultes · **¥14.350** · Réservation **#42093** · Receipt **AEE6606M**.\n\n🎫 Billets physiques encore à récupérer (voir 08:40)."
       },
       {
         "text": "10:53 — Arrivée à Nagoya. Correspondance pour le Tokaido Shinkansen. Nous avons environ 20–30 minutes selon le Shinkansen choisi.\nAchetez un EKIBEN ici si nous n'avons pas encore mangé.\nNe vous asseyez pas pour manger dans la gare : achetez à emporter et mangez dans le Shinkansen.\nRecommandation : ekiben, sandwich, sushi/bento, boisson."
@@ -438,7 +438,16 @@ export const days = [
         "text": "🔴 HAUTE PRIORITÉ\n\nRÉSERVER Shinkansen Nozomi Nagoya → Tokyo pour 5 personnes.\n\n🟠 PRIORITÉ MOYENNE\n\nRÉSERVER Limited Express Shinano 4 Nakatsugawa → Nagoya pour 5 personnes.\n\n🟢 NE PAS RÉSERVER\nBus local Magome → Nakatsugawa.\n\n🟢 NE PAS RÉSERVER\nTokyo → hôtel.\n\n🟢 NE PAS RÉSERVER\nTransports urbains à Tokyo."
       },
       {
-        "text": "\n⚠️ Ne vous fiez pas aux anciens horaires de 08:50 et 09:30 qui figuraient auparavant : ils ne correspondent pas aux services que nous devons utiliser le 15/09/2026.\n\n⚠️ Achetez le petit-déjeuner la veille car Magome Chaya n'en propose pas.\n\n⚠️ Puisque nous sommes 5, réservez les deux trains avec places assises ensemble dans la mesure du possible.\n\n⚠️ Le Shinkansen est le moyen de transport que nous avons le plus intérêt à sécuriser à l'avance."
+        "text": "1. Bus Magome → Nakatsugawa 08:15→08:40.\n2. Shinano 4 09:57→10:53 · 🟢 **DÉJÀ RÉSERVÉ** (42093).\n3. Nozomi Nagoya → Tokyo ~11:20 · 🟠 **ENCORE À RÉSERVER** (Smart EX)."
+      },
+      {
+        "text": "🟢 FAIT : Shinano 4 (42093 / AEE6606M).\n🎫 À RÉCUPÉRER : billets physiques.\n🔴 PRIORITÉ : réserver Nozomi Nagoya → Tokyo."
+      },
+      {
+        "text": "⚠️ Shinano 4 09:57 déjà réservé. Le Shinkansen Nagoya → Tokyo reste à réserver."
+      },
+      {
+        "text": "☑️ Bus Magome → Nakatsugawa\n☑️ Réservation Shinano 4 (42093)\n☐ Récupérer billets physiques JR-WEST\n☐ Carte Mastercard physique **8625\n☐ N° 42093 + PIN (anniversaire de Pablo)\n☐ Réserver Shinkansen Nagoya → Tokyo"
       }
     ],
     "money": "Env. 40 € (repas)"

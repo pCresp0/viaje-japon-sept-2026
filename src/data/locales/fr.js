@@ -93,12 +93,12 @@ export default {
       deadline: "1 mois avant (15/08/2026 10:00 JST)",
     },
     {
-      id: "shinano",
-      category: "reserva",
-      urgency: "media",
-      title: "🟠 Réserver JR Shinano (Nakatsugawa → Nagoya)",
-      detail: "📅 15/09/2026\n👥 5 personnes\n🚆 JR Shinano Limited Express 4\n⏰ Départ ciblé: ~09:57\n📍 Nakatsugawa → Nagoya\n💳 Acheter : JR Central (SmartEX/JR-West online)\n⚠️ Train populaire pour revenir des Alpes. Réservez ensemble.",
-      deadline: "1 mois avant",
+      id: "shinano-recogida",
+      category: "logistica",
+      urgency: "alta",
+      title: "🎫 RÉCUPÉRER BILLETS PHYSIQUES — Shinano 4 (DÉJÀ PAYÉ)",
+      detail: "📅 15/09/2026 (ou plus tôt en gare JR-WEST si possible)\n🚆 Shinano 4 · Nakatsugawa 09:57 → Nagoya 10:53\n🟢 Réservation FAITE : nº 42093 · Receipt AEE6606M · ¥14.350\n📍 Récupérer HORS des portiques\n⚠️ APPORTER : Mastercard physique **8625 · PIN = anniversaire de Pablo · Réservation 42093\nPLAN B : à Nakatsugawa ~08:40 (77 min avant le départ).",
+      deadline: "Avant de monter dans le Shinano 4 (15/09 09:57)",
     },
     {
       id: "entradas-tokio",

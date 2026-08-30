@@ -178,7 +178,7 @@ function buildSearchIndex(lang) {
     { terms: ["thunderbird", "hokuriku", "tsuruga", "kyoto kanazawa"], day: 6, title: "Thunderbird → Hokuriku Shinkansen", subtitle: "Día 6 · Kioto → Kanazawa" },
     { terms: ["hida express", "hida", "gifu", "takayama kanazawa"], day: 7, title: "JR Hida Express", subtitle: "Día 7 · Kanazawa → Takayama" },
     { terms: ["nohi bus", "nohi", "bus magome", "takayama magome", "08:00"], day: 8, title: "Nohi Bus Takayama → Magome", subtitle: "Día 8 · 08:00" },
-    { terms: ["shinano", "express shinano", "nakatsugawa", "nagoya", "09:57"], day: 9, title: "JR Shinano → Nagoya", subtitle: "Día 9 · Nakatsugawa → Nagoya" },
+    { terms: ["shinano", "express shinano", "nakatsugawa", "nagoya", "09:57", "42093", "aee6606m"], day: 9, title: "JR Shinano 4 → Nagoya", subtitle: "Día 9 · ✅ Reservado 42093 · 🎫 Recoger billetes" },
     { terms: ["kodama", "kodama 805", "shin-fuji", "fuji shinkansen", "07:27"], day: 14, title: "Shinkansen Kodama 805", subtitle: "Día 14 · Tokio → Mishima/Shin-Fuji" },
   ];
   for (const c of cityDayHints) {

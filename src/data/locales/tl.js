@@ -93,12 +93,12 @@ export default {
       deadline: "1 buwan bago (15/08/2026 10:00 JST)",
     },
     {
-      id: "shinano",
-      category: "reserva",
-      urgency: "media",
-      title: "🟠 Mag-book ng JR Shinano (Nakatsugawa → Nagoya)",
-      detail: "📅 15/09/2026\n👥 5 mga tao\n🚆 JR Shinano Limited Express 4\n⏰ Target na pag-alis: ~09:57\n📍 Nakatsugawa → Nagoya\n💳 Bumili: JR Central (SmartEX/JR-West online)\n⚠️ Sikat na tren pabalik mula sa Alps. Mag-book nang magkakasama.",
-      deadline: "1 buwan bago",
+      id: "shinano-recogida",
+      category: "logistica",
+      urgency: "alta",
+      title: "🎫 KUNIN ANG PISIKAL NA TICKETS — Shinano 4 (BAYAD NA)",
+      detail: "📅 15/09/2026 (o mas maaga sa JR-WEST station kung pwede)\n🚆 Shinano 4 · Nakatsugawa 09:57 → Nagoya 10:53\n🟢 Reserbasyon TAPOS: No. 42093 · Receipt AEE6606M · ¥14,350\n📍 Kunin SA LABAS ng gates\n⚠️ DALHIN: physical Mastercard **8625 · PIN = kaarawan ni Pablo · Reservation 42093\nPLAN B: sa Nakatsugawa ~08:40 (77 min bago umalis).",
+      deadline: "Bago sumakay sa Shinano 4 (15/09 09:57)",
     },
     {
       id: "entradas-tokio",

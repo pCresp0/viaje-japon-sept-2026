@@ -9,6 +9,7 @@ import VisitJapanQRCard from "./VisitJapanQRCard";
 import ShinkansenTicketCard from "./ShinkansenTicketCard";
 import ThunderbirdTicketCard from "./ThunderbirdTicketCard";
 import NohiMagomeTicketCard from "./NohiMagomeTicketCard";
+import ShinanoTicketCard from "./ShinanoTicketCard";
 import GuideCard from "./GuideCard";
 import StayOption from "./StayOption";
 import PlaceText from "./PlaceText";
@@ -319,6 +320,12 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
                   {day.num === 8 && s.time === "07:35" && (
                     <div className="mt-3 relative z-10">
                       <NohiMagomeTicketCard />
+                    </div>
+                  )}
+
+                  {day.num === 9 && s.time === "09:57" && (
+                    <div className="mt-3 relative z-10">
+                      <ShinanoTicketCard />
                     </div>
                   )}
                 </li>

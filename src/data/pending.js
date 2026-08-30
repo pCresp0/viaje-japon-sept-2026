@@ -24,12 +24,12 @@ export const pendingItems = [
   },
 
   {
-    id: "shinano",
-    category: "reserva",
+    id: "shinano-recogida",
+    category: "logistica",
     urgency: "alta",
-    title: "🔴 Reservar JR Limited Express Shinano 4",
-    detail: "📅 15/09/2026\n👥 5 personas\n🚆 JR Shinano Limited Express 4\n⏰ Horario: 09:57 → 10:53\n📍 Nakatsugawa → Nagoya\n💳 Comprar: Canales oficiales de JR / taquilla en estación\n⚠️ NO se reserva por Smart EX (es un tren convencional Limited Express). Recomendar comprar el billete completo con asiento reservado.",
-    deadline: "🔴 RESERVAR / COMPRAR",
+    title: "🎫 RECOGER BILLETES FÍSICOS — Shinano 4 (YA PAGADO)",
+    detail: "📅 15/09/2026 (o antes si se puede en estación JR-WEST)\n🚆 Shinano 4 · Nakatsugawa 09:57 → Nagoya 10:53\n🟢 Reserva YA HECHA: nº 42093 · Receipt AEE6606M · ¥14.350\n📍 Recoger FUERA de los tornos (máquina/taquilla habilitada)\n⚠️ OBLIGATORIO LLEVAR:\n- Tarjeta física Mastercard terminada en 8625 (no virtual)\n- PIN de 4 dígitos: cumpleaños de Pablo\n- Reservation No. 42093\nPLAN B: al llegar a Nakatsugawa ~08:40 (77 min hasta el tren).",
+    deadline: "Antes de subir al Shinano 4 (15/09 09:57)",
   },
   {
     id: "nozomi-vuelta",

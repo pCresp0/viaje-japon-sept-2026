@@ -402,10 +402,10 @@ export const days = [
         "text": "🚌 08:15 — LOKAL NA BUS MAGOME → NAKATSUGAWA\nAlis: Magome — 08:15\nDating: Nakatsugawa Station — 08:40\nTagal: halos 25 min.\nUri: lokal na bus.\nReserbasyon: HINDI pwedeng i-reserve.\nJapan Rail Pass: HINDI kasama.\nBayad: bumili/magbayad on the spot sundin ang instructions ng operator.\nEstimated presyo: ¥800/tao.\nIMPORTANTE: Setyembre 15, 2026 ay Martes, kaya't weekday schedule ang susundin.\nDumating sa bus stop nang maaga ng ilang minuto.\nKailangan ang bus na ito para makakonekta ang Magome sa JR rail network."
       },
       {
-        "text": "08:40 — Dating sa Nakatsugawa Station. May sapat na oras para hanapin ang platform ng Limited Express Shinano."
+        "text": "🎫 **08:40 — KUNIN ANG PISIKAL NA JR-WEST TICKETS (CRITICAL)**\n\nDating sa Nakatsugawa (~08:40). Aalis ang Shinano 4 nang **09:57** → ~**77 min**.\n\n🟢 Bayad na ang reserbasyon (**42093**). Hindi ito pagbili — **pagkuha ng pisikal na ticket**.\n\n⚠️ Kailangan: machine/ticket office **LABAS ng gates**, physical Mastercard **8625**, Reservation **42093**, PIN = **kaarawan ni Pablo**.\n\n💡 Kung pwede, kunin nang mas maaga; kung hindi, **sa Nakatsugawa**."
       },
       {
-        "text": "🚆 09:57 — JR Limited Express SHINANO 4\nNakatsugawa → Nagoya\nAlis: 09:57\nDating: 10:53\nTagal: halos 56 min.\nRekomendasyon: NAKA-RESERBANG UPUAN para sa 5 byahero.\nHindi natin kailangan ng Japan Rail Pass.\nKailangan ng tiket + Limited Express supplement ang Limited Express.\n\n⚠️ INIREREKOMENDA ANG RESERBASYON\nKahit hindi kasing-kritikal ng Shinkansen, dahil 5 tayo mas mainam na i-reserve nang magkakatabi ang 5 upuan para iwas-hiwalay.\nPwedeng bilhin/i-reserve nang maaga ang mga reserved seats sa mga official channel ng JR Central o sa JR station.\nHUWAG gumamit ng IC card pamalit sa buong Limited Express ticket."
+        "text": "🚆 **SHINANO 4 — NAKATSUGAWA → NAGOYA**\n\n🟢 **NAKA-RESERVE AT CONFIRMED** (JR-WEST)\n\nAlis **09:57** → Dating **10:53** (56 min).\nCar **4** · Seats **11-D · 12-C · 12-D · 13-C · 13-D**.\n5 adults · **¥14,350** · #**42093** · Receipt **AEE6606M**.\n\n🎫 Pisikal na ticket: kailangan pang kunin (tingnan ang 08:40)."
       },
       {
         "text": "10:53 — Dating sa Nagoya. Lipat sa Tokaido Shinkansen. May halos 20–30 minuto depende sa napiling Shinkansen.\nBumili ng EKIBEN dito kung hindi pa tayo nakakain.\nHuwag umupo at kumain sa istasyon: bumili ng takeout at kainin sa Shinkansen.\nRekomendasyon: ekiben, sandwich, sushi/bento, inumin."
@@ -438,7 +438,16 @@ export const days = [
         "text": "🔴 MATAAS NA PRAYORIDAD\n\nMAG-BOOK ng Shinkansen Nozomi Nagoya → Tokyo para sa 5 tao.\n\n🟠 KATAMTAMANG PRAYORIDAD\n\nMAG-BOOK ng Limited Express Shinano 4 Nakatsugawa → Nagoya para sa 5 tao.\n\n🟢 HUWAG MAG-BOOK\nLokal na bus Magome → Nakatsugawa.\n\n🟢 HUWAG MAG-BOOK\nTokyo → hotel.\n\n🟢 HUWAG MAG-BOOK\nUrban transport sa Tokyo."
       },
       {
-        "text": "\n⚠️ Huwag magtiwala sa mga lumang oras na 08:50 at 09:30 na nakita dati: hindi ito tumutugma sa mga serbisyong kailangan nating sakyan sa 15/09/2026.\n\n⚠️ Bumili ng almusal bago ang araw ng byahe dahil walang almusal sa Magome Chaya.\n\n⚠️ Dahil tayo ay 5, i-reserve nang sabay ang dalawang tren na may reserved seat hangga't maaari.\n\n⚠️ Ang Shinkansen ang transportasyon na pinakagusto nating i-secure nang maaga."
+        "text": "1. Bus Magome → Nakatsugawa.\n2. Shinano 4 · 🟢 **NAKA-BOOK NA** (42093).\n3. Nozomi Nagoya → Tokyo · 🟠 **PENDING PA** (Smart EX)."
+      },
+      {
+        "text": "🟢 TAPOS: Shinano 4 (42093).\n🎫 KUNIN: pisikal na tickets.\n🔴 PRIORITY: i-book ang Nozomi Nagoya → Tokyo."
+      },
+      {
+        "text": "⚠️ Shinano 4 09:57 naka-reserve na. Pending pa ang Shinkansen Nagoya → Tokyo."
+      },
+      {
+        "text": "☑️ Bus Magome → Nakatsugawa\n☑️ Shinano 4 reservation (42093)\n☐ Kunin ang pisikal na JR-WEST tickets\n☐ Physical Mastercard **8625\n☐ No. 42093 + PIN (kaarawan ni Pablo)\n☐ I-book ang Shinkansen Nagoya → Tokyo"
       }
     ],
     "money": "Tinatayang €40 (pagkain)"
