@@ -34,24 +34,6 @@ export default function InfoPage() {
         <FlightRow flight={flights.out} icon={PlaneTakeoff} />
         <FlightRow flight={flights.back} icon={PlaneLanding} />
       </div>
-
-      <div className="rounded-xl p-4 mt-4" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))", gap: 14 }}>
-          <div>
-            <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 3 }}>{t("flights.reference")}</p>
-            <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", fontFamily: "monospace", margin: 0 }}>{flights.booking.ref}</p>
-          </div>
-          <div>
-            <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 3 }}>PIN</p>
-            <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", fontFamily: "monospace", margin: 0 }}>{flights.booking.pin}</p>
-          </div>
-          <div>
-            <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 3 }}>{flights.price.people} personas</p>
-            <p style={{ fontSize: 16, fontWeight: 700, color: "var(--shu)", margin: 0 }}>{flights.price.total}</p>
-            <p style={{ fontSize: 11, color: "var(--ink-soft)", margin: 0 }}>{flights.price.perPerson}/persona</p>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

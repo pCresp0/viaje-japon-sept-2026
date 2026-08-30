@@ -84,13 +84,13 @@ function buildSearchIndex(lang) {
   items.push(entry({
     id: "flight-booking",
     title: `Reserva vuelo · ${flights.booking.ref}`,
-    subtitle: `PIN ${flights.booking.pin} · ${flights.price.perPerson}/persona`,
-    category: "Vuelos",
-    tab: "vuelos",
-    targetId: "flight-out",
+    subtitle: `PIN ${flights.booking.pin} · ${flights.price.perPerson}/persona · ${flights.price.total}`,
+    category: "Presupuesto",
+    tab: "presupuesto",
+    targetId: "budget-flights-booking",
     terms: [
       "reserva", "booking", "referencia", "pin", flights.booking.ref,
-      flights.booking.pin, "40-892227078", "2534",
+      flights.booking.pin, "40-892227078", "2534", "vuelos", "qatar", "precio vuelo",
     ],
   }));
 
