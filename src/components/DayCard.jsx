@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { ScrollText, ChevronDown, ChevronUp, Map } from "lucide-react";
+import { ScrollText, ChevronDown, ChevronUp, Map, BookOpen } from "lucide-react";
 import { useContent } from "../i18n/LanguageContext";
-import { guidesByDay } from "../data/guides";
+import { useHighlight } from "../context/HighlightContext";
+import { guides, guidesByDay } from "../data/guides";
 import DayFujiOptionCard from "./DayFujiOptionCard";
 import VisitJapanQRCard from "./VisitJapanQRCard";
 import ShinkansenTicketCard from "./ShinkansenTicketCard";
@@ -10,6 +11,29 @@ import StayOption from "./StayOption";
 import PlaceText from "./PlaceText";
 import { formatDateLong } from "../utils/date";
 import { parseDayNumbers } from "../utils/mapDay";
+import { slug } from "../utils/slug";
+
+function normalize(str) {
+  return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function findMatchedGuideIds(text, dayGuides, allGuides) {
+  if (!dayGuides || dayGuides.length === 0) return [];
+  const normText = normalize(text);
+  return dayGuides.filter(gid => {
+    const g = allGuides[gid];
+    if (!g) return false;
+    
+    const normName = normalize(g.name);
+    if (normText.includes(normName)) return true;
+    
+    const idParts = gid.split("-");
+    const matchesAll = idParts.every(k => normText.includes(k));
+    if (matchesAll) return true;
+
+    return false;
+  });
+}
 
 // Auto-detect transport type from schedule text and return matching emoji
 function getScheduleEmoji(text) {
@@ -87,7 +111,8 @@ function CollapsibleScheduleItem({ s, color }) {
 
 export default function DayCard({ day, defaultOpenHistory = false, onClose, onViewMap }) {
   const [showHistory, setShowHistory] = useState(defaultOpenHistory);
-  const { blocks, stays, mapStops } = useContent();
+  const { blocks, stays, days, mapStops } = useContent();
+  const { triggerHighlight } = useHighlight();
   const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
   const block = blockById[day.block];
   const stay = stays.find((s) => s.afterDay === day.num);
@@ -184,6 +209,33 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
                     style={{ color: "var(--ink)" }}
                     linkStyle={{ color: "var(--shu)" }}
                   />
+                  
+                  {(() => {
+                    const matchedGuides = findMatchedGuideIds(s.text, dayGuides, guides);
+                    if (matchedGuides.length === 0) return null;
+                    return (
+                      <div className="flex flex-wrap gap-2 mt-2.5 mb-1 relative z-10">
+                        {matchedGuides.map(gid => (
+                          <button
+                            key={gid}
+                            onClick={() => triggerHighlight(slug("guide", gid))}
+                            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-semibold transition-all shadow-sm active:scale-95"
+                            style={{ 
+                              background: "var(--paper-raised)", 
+                              border: `1px solid ${block.color}40`, 
+                              color: block.color, 
+                              fontSize: "12px",
+                              cursor: "pointer" 
+                            }}
+                          >
+                            <BookOpen size={14} />
+                            Info de {guides[gid].name.split(" ")[0]}
+                          </button>
+                        ))}
+                      </div>
+                    );
+                  })()}
+
                   {day.num === 1 && s.time === "17:19" && (
                     <div className="mt-3 relative z-10">
                       <ShinkansenTicketCard />
