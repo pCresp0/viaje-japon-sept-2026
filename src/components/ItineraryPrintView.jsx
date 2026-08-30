@@ -195,6 +195,7 @@ function FlightBlock({ flight }) {
 }
 
 function StayBlock({ day }) {
+  const { stays } = useContent();
   const stay = stays.find((s) => s.afterDay === day.num);
   if (!stay) return null;
   return <HotelCard stay={stay} compact />;
@@ -467,7 +468,7 @@ function Appendix({ title, children }) {
  * transporte, presupuesto, emergencias, pendientes, preparativos, comidas, frases).
  */
 export default function ItineraryPrintView({ days }) {
-  const { guides } = useContent();
+  const { tripMeta, flights, stays, blocks, transports, budget, guides } = useContent();
   const purchased = transports.filter((x) => x.purchased);
   const pending = transports.filter((x) => !x.purchased);
   const jrCovered = transports.filter((x) => x.jrPassCovered);
