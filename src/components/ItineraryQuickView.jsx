@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, LayoutList } from "lucide-react";
 import { formatDateShort } from "../utils/date";
 import PlaceText from "./PlaceText";
 
@@ -90,7 +90,7 @@ function hasRealTime(entry) {
   return /^~?\d{1,2}[:h]\d{0,2}/.test(entry.time ?? "");
 }
 
-function QuickDayCard({ day, blockColor }) {
+function QuickDayCard({ day, blockColor, onShowFullDay }) {
   const [expanded, setExpanded] = useState(false);
 
   const keyEntries = (day.schedule ?? []).filter((e) => {
@@ -109,7 +109,7 @@ function QuickDayCard({ day, blockColor }) {
       style={{ border: "1px solid var(--line)", background: "var(--paper-raised)" }}
     >
       <div
-        className="px-4 py-3 flex items-center gap-3"
+        className="px-4 py-3 flex items-center gap-3 relative"
         style={{ background: blockColor }}
       >
         <span
@@ -118,10 +118,21 @@ function QuickDayCard({ day, blockColor }) {
         >
           {day.num}
         </span>
-        <div className="flex-1 min-w-0">
+        <div className="flex-1 min-w-0 pr-10">
           <p className="text-white font-semibold text-sm leading-snug truncate">{day.title}</p>
           <p className="text-white/80 text-xs mt-0.5">{formatDateShort(day.date)} · {day.cities}</p>
         </div>
+        
+        {onShowFullDay && (
+          <button
+            onClick={() => onShowFullDay(day.num)}
+            className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center justify-center rounded-full p-2 transition-colors hover:bg-white/20"
+            style={{ background: "rgba(255,255,255,0.15)", border: "none", cursor: "pointer", color: "white" }}
+            title="Ver detalle completo"
+          >
+            <LayoutList size={16} />
+          </button>
+        )}
       </div>
 
       <div className="px-3 sm:px-4 py-3">
@@ -210,7 +221,7 @@ function QuickDayCard({ day, blockColor }) {
   );
 }
 
-export default function ItineraryQuickView({ days, blocks }) {
+export default function ItineraryQuickView({ days, blocks, onShowFullDay }) {
   const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
 
   return (
@@ -218,7 +229,12 @@ export default function ItineraryQuickView({ days, blocks }) {
       {days.map((day) => {
         const block = blockById[day.block] ?? { color: "#1d3557" };
         return (
-          <QuickDayCard key={day.num} day={day} blockColor={block.color} />
+          <QuickDayCard 
+            key={day.num} 
+            day={day} 
+            blockColor={block.color} 
+            onShowFullDay={onShowFullDay}
+          />
         );
       })}
     </div>

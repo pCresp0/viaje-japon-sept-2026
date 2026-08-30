@@ -101,7 +101,14 @@ export default function Itinerary({ openDay, setOpenDay, onGoToMapDay }) {
 
       {/* ── Vista rápida ──────────────────────────────────────── */}
       {quickView ? (
-        <ItineraryQuickView days={days} blocks={blocks} />
+        <ItineraryQuickView 
+          days={days} 
+          blocks={blocks} 
+          onShowFullDay={(dayNum) => {
+            setQuickView(false);
+            setOpenDay(dayNum);
+          }}
+        />
       ) : (
         /* ── Vista completa (comportamiento original) ─────────── */
         <div className="space-y-2.5">
