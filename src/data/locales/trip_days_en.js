@@ -174,9 +174,9 @@ export const days = [
     "money": "Approx. €40 (meals)"
   },
   {
-    "title": "Traditional Kyoto and Osaka Castle Juancar, this castle has more history than you and Randy in Rome!",
+    "title": "Traditional Kyoto and Osaka Castle",
     "cities": "Kyoto, Osaka",
-    "summary": "Last morning in Kyoto visiting the monumental Kiyomizu-dera and descending through the slopes of Higashiyama. At noon, a fast train to Osaka for its historic castle and the gastronomic madness of Dotonbori. Juancar and Randy will probably get nostalgic and prefer eating pasta in Rome where they met. Careful, Pablo might go into high school teacher mode and bore us to death.",
+    "summary": "Last morning in Kyoto visiting the monumental Kiyomizu-dera and descending through the slopes of Higashiyama. At noon, a fast train to Osaka for its historic castle and the gastronomic madness of Dotonbori. Juancar and Randy will probably get nostalgic and prefer eating pasta in Rome where they met. Careful, Pablo might go into high school teacher mode and bore us to death. Juancar, this castle has more history than you and Randy in Rome!",
     "history": "Kiyomizu-dera was founded in 778; its terrace was built without using a single nail. Osaka Castle was the military epicenter of Toyotomi Hideyoshi, a key figure in the unification of Japan in the 16th century.",
     "schedule": [
       {
@@ -426,9 +426,9 @@ export const days = [
     "money": "Approx. €40 (meals)"
   },
   {
-    "title": "Shibuya, Harajuku and Shinjuku Thibaut, take the chance to get a haircut, even if it's not as cheap as in Spain, it's still better than in France.",
+    "title": "Shibuya, Harajuku and Shinjuku",
     "cities": "Shibuya, Harajuku, Shinjuku",
-    "summary": "Intense day: Shibuya crossing and youth culture of Harajuku. We end under the neon lights of Shinjuku with its gastronomic alleys. (Flexible GetYourGuide booking GYGFWV2MNZV8).",
+    "summary": "Intense day: Shibuya crossing and youth culture of Harajuku. We end under the neon lights of Shinjuku with its gastronomic alleys. (Flexible GetYourGuide booking GYGFWV2MNZV8). Thibaut, take the chance to get a haircut, even if it's not as cheap as in Spain, it's still better than in France.",
     "history": "These districts grew after the Great Kanto Earthquake of 1923, driven by urban train expansion. Shinjuku today hosts the busiest train station on the planet.",
     "schedule": [
       {

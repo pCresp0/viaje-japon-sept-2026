@@ -356,10 +356,10 @@ export const days = [
     date: "2026-09-11",
     weekday: "Viernes",
     block: "kioto",
-    title: "Kioto Tradicional y Castillo de Osaka Juancar, ¡este castillo tiene más historia que tú y Randy en Roma!",
+    title: "Kioto Tradicional y Castillo de Osaka",
     cities: "Kioto, Osaka",
     summary:
-      "Última mañana en Kioto visitando el monumental Kiyomizu-dera y bajando por las cuestas de Higashiyama. Al mediodía, tren rápido a Osaka para su castillo histórico y la locura gastronómica de Dotonbori. Seguro que a Juancar y Randy les entra la nostalgia y prefieren estar cenando pasta en Roma donde se conocieron. Cuidado que Pablo se pone en modo profesor de secundaria a darnos la chapa.",
+      "Última mañana en Kioto visitando el monumental Kiyomizu-dera y bajando por las cuestas de Higashiyama. Al mediodía, tren rápido a Osaka para su castillo histórico y la locura gastronómica de Dotonbori. Seguro que a Juancar y Randy les entra la nostalgia y prefieren estar cenando pasta en Roma donde se conocieron. Cuidado que Pablo se pone en modo profesor de secundaria a darnos la chapa. Juancar, ¡este castillo tiene más historia que tú y Randy en Roma!",
     history:
       "Kiyomizu-dera se fundó en el año 778; su terraza se construyó sin usar un solo clavo. El Castillo de Osaka fue el epicentro militar de Toyotomi Hideyoshi, figura clave en la unificación de Japón en el siglo XVI.",
     schedule: [
@@ -529,10 +529,10 @@ export const days = [
     date: "2026-09-17",
     weekday: "Jueves",
     block: "tokio",
-    title: "Shibuya, Harajuku y Shinjuku Thibaut, aprovecha para cortarte el pelo, que aunque no sea tan barato como en España, igual es mejor que en Francia.",
+    title: "Shibuya, Harajuku y Shinjuku",
     cities: "Shibuya, Harajuku, Shinjuku",
     summary:
-      "Día intenso: cruce de Shibuya y cultura juvenil de Harajuku. Terminamos bajo los neones de Shinjuku con sus callejones gastronómicos. (Fecha con reserva flexible de GetYourGuide GYGFWV2MNZV8).",
+      "Día intenso: cruce de Shibuya y cultura juvenil de Harajuku. Terminamos bajo los neones de Shinjuku con sus callejones gastronómicos. (Fecha con reserva flexible de GetYourGuide GYGFWV2MNZV8). Thibaut, aprovecha para cortarte el pelo, que aunque no sea tan barato como en España, igual es mejor que en Francia.",
     history:
       "Estos distritos crecieron tras el Gran Terremoto de Kanto de 1923, impulsados por la expansión del tren urbano. Shinjuku alberga hoy la estación más transitada del planeta.",
     schedule: [

@@ -174,9 +174,9 @@ export const days = [
     "money": "Env. 40 € (repas)"
   },
   {
-    "title": "Kyoto Traditionnel et Château d'Osaka Juancar, ce château a plus d'histoire que toi et Randy à Rome !",
+    "title": "Kyoto Traditionnel et Château d'Osaka",
     "cities": "Kyoto, Osaka",
-    "summary": "Dernière matinée à Kyoto en visitant le monumental Kiyomizu-dera et en descendant les pentes d'Higashiyama. À midi, train rapide vers Osaka pour son château historique et la folie gastronomique de Dotonbori. Juancar et Randy seront sûrement nostalgiques et préféreront manger des pâtes à Rome où ils se sont rencontrés. Attention, Pablo pourrait se mettre en mode prof de lycée et nous saouler.",
+    "summary": "Dernière matinée à Kyoto en visitant le monumental Kiyomizu-dera et en descendant les pentes d'Higashiyama. À midi, train rapide vers Osaka pour son château historique et la folie gastronomique de Dotonbori. Juancar et Randy seront sûrement nostalgiques et préféreront manger des pâtes à Rome où ils se sont rencontrés. Attention, Pablo pourrait se mettre en mode prof de lycée et nous saouler. Juancar, ce château a plus d'histoire que toi et Randy à Rome !",
     "history": "Le Kiyomizu-dera a été fondé en 778 ; sa terrasse a été construite sans utiliser un seul clou. Le château d'Osaka était l'épicentre militaire de Toyotomi Hideyoshi, figure clé de l'unification du Japon au XVIe siècle.",
     "schedule": [
       {
@@ -426,9 +426,9 @@ export const days = [
     "money": "Env. 40 € (repas)"
   },
   {
-    "title": "Shibuya, Harajuku et Shinjuku Thibaut, profite-en pour te faire couper les cheveux, même si ce n'est pas aussi bon marché qu'en Espagne, c'est toujours mieux qu'en France.",
+    "title": "Shibuya, Harajuku et Shinjuku",
     "cities": "Shibuya, Harajuku, Shinjuku",
-    "summary": "Journée intense : carrefour de Shibuya et culture jeune d'Harajuku. Fin de journée sous les néons de Shinjuku et ses ruelles gourmandes. (Option flexible GetYourGuide GYGFWV2MNZV8).",
+    "summary": "Journée intense : carrefour de Shibuya et culture jeune d'Harajuku. Fin de journée sous les néons de Shinjuku et ses ruelles gourmandes. (Option flexible GetYourGuide GYGFWV2MNZV8). Thibaut, profite-en pour te faire couper les cheveux, même si ce n'est pas aussi bon marché qu'en Espagne, c'est toujours mieux qu'en France.",
     "history": "Ces quartiers se sont développés après le grand tremblement de terre de Kanto de 1923.",
     "schedule": [
       {

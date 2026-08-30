@@ -174,9 +174,9 @@ export const days = [
     "money": "Tinatayang €40 (pagkain)"
   },
   {
-    "title": "Tradisyonal na Kyoto at Osaka Castle Juancar, ang kastilyong ito ay may mas maraming kasaysayan kaysa sa inyo ni Randy sa Rome!",
+    "title": "Tradisyonal na Kyoto at Osaka Castle",
     "cities": "Kyoto, Osaka",
-    "summary": "Huling umaga sa Kyoto pagbisita sa napakalaking Kiyomizu-dera at pababa sa pamamagitan ng mga dalisdis ng Higashiyama. Sa tanghali, mabilis na tren patungo sa Osaka para sa makasaysayang kastilyo at ang kabaliwan sa gastronomic ng Dotonbori. Siguradong makakaramdam ng nostalgia sina Juancar at Randy at mas gugustuhing kumain ng pasta sa Rome kung saan sila nagkakilala. Mag-ingat baka mag-high school teacher mode si Pablo at ma-bored tayo.",
+    "summary": "Huling umaga sa Kyoto pagbisita sa napakalaking Kiyomizu-dera at pababa sa pamamagitan ng mga dalisdis ng Higashiyama. Sa tanghali, mabilis na tren patungo sa Osaka para sa makasaysayang kastilyo at ang kabaliwan sa gastronomic ng Dotonbori. Siguradong makakaramdam ng nostalgia sina Juancar at Randy at mas gugustuhing kumain ng pasta sa Rome kung saan sila nagkakilala. Mag-ingat baka mag-high school teacher mode si Pablo at ma-bored tayo. Juancar, ang kastilyong ito ay may mas maraming kasaysayan kaysa sa inyo ni Randy sa Rome!",
     "history": "Ang Kiyomizu-dera ay itinatag noong 778; ang terrace nito ay itinayo nang hindi gumagamit ng isang pako. Ang Osaka Castle ay ang sentro ng militar ni Toyotomi Hideyoshi, isang pangunahing tauhan sa pag-iisa ng Japan noong ika-16 na siglo.",
     "schedule": [
       {
@@ -426,9 +426,9 @@ export const days = [
     "money": "Tinatayang €40 (pagkain)"
   },
   {
-    "title": "Shibuya, Harajuku at Shinjuku Thibaut, samantalahin mo na magpagupit, kahit hindi kasing mura sa Spain, mas maganda pa rin kaysa sa France.",
+    "title": "Shibuya, Harajuku at Shinjuku",
     "cities": "Shibuya, Harajuku, Shinjuku",
-    "summary": "Matinding araw: Shibuya crossing at kultura ng kabataan sa Harajuku. (Opsyon sa GetYourGuide GYGFWV2MNZV8).",
+    "summary": "Matinding araw: Shibuya crossing at kultura ng kabataan sa Harajuku. (Opsyon sa GetYourGuide GYGFWV2MNZV8). Thibaut, samantalahin mo na magpagupit, kahit hindi kasing mura sa Spain, mas maganda pa rin kaysa sa France.",
     "history": "Lumago ang mga distritong ito pagkatapos ng Great Kanto Earthquake noong 1923.",
     "schedule": [
       {
