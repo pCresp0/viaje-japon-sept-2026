@@ -456,5 +456,176 @@ export const guides = {
       "Fuji TV's headquarters is located here, featuring a massive metallic sphere suspended in the building's grid structure, which serves as an observation deck.",
     ],
     tip: "Odaiba is one of the best places in Tokyo for sunset, watching the sun go down behind the Rainbow Bridge and the city skyline.",
-  }
+  },
+
+  "osaka": {
+    name: "Osaka: Castle and Dotonbori",
+    tagline: "Japan's kitchen and the merchants' city, with a castle that is a pure symbol.",
+    sections: [
+      {
+        title: "The Castle",
+        body: "Toyotomi Hideyoshi built it in 1583 as the largest castle in Japan, a symbol of the unification of the country he had completed. It was destroyed in 1615 by Tokugawa Ieyasu during the Siege of Osaka, which ended the Toyotomi clan. It was rebuilt, and the tower burned again from a lightning strike in 1665.",
+      },
+      {
+        title: "What You Will Actually See",
+        body: "Worth knowing: the current tower is from 1931, made of reinforced concrete, and inside it is a modern museum with an elevator. It is not an archaeological reconstruction but a free recreation, funded by public donations. What is authentic and spectacular are the stone walls and moats, from the 17th century: some individual rocks weigh more than 100 tons and were transported by sea from quarries hundreds of kilometers away.",
+      },
+      {
+        title: "Dotonbori",
+        body: "The canal was dug in 1615 and the area became Osaka's theater district (kabuki and bunraku). Today it is the zone of neon signs, restaurants, and giant billboards. The Glico running man sign has been there since 1935 and is on its sixth version; the mechanical crab of the Kani Doraku restaurant, since 1960.",
+      },
+      {
+        title: "Kuidaore",
+        body: "Osaka has its own word: kuidaore, 'to ruin oneself eating'. For centuries the city was Japan's center for rice trading and developed a popular, unpretentious gastronomic culture. From here come takoyaki (octopus balls), okonomiyaki (cabbage omelette on the griddle) and kushikatsu (breaded skewers).",
+      },
+    ],
+    curiosities: [
+      "Strict rule of kushikatsu: you cannot dip the skewer twice into the communal sauce. It is written in every establishment.",
+      "In Osaka people stand on the right of escalators; in Tokyo, on the left. No one knows exactly why.",
+      "Shinsekai ('new world') was built in 1912 inspired by Paris to the north and Coney Island to the south; its Tsūtenkaku tower imitated the Eiffel Tower.",
+    ],
+    tip: "The castle interior can be skipped without regret if you are short on time. The park and the walls are what is worth it.",
+  },
+
+  "meiji-jingu": {
+    name: "Meiji Jingū",
+    tagline: "A forest of 100,000 hand-planted trees in the heart of Tokyo, dedicated to the emperor of modernization.",
+    sections: [
+      {
+        title: "To Whom It Is Dedicated",
+        body: "To Emperor Meiji (1852-1912) and Empress Shōken. Under his reign Japan went from being a closed feudal country to an industrial power in just 45 years: the samurai were abolished, a modern army was created, a constitution was established and a war was won against Russia. Upon his death, a popular petition demanded a shrine in his memory.",
+      },
+      {
+        title: "The Forest Is Artificial",
+        body: "This is the most surprising thing about the place. The 70 hectares of forest surrounding the shrine are not a preserved ancient forest: they were planted from scratch between 1915 and 1920. Citizens from all over Japan donated about 100,000 trees of 365 species, and some 110,000 volunteers planted them by hand. Botanists designed the planting so that it would evolve on its own into a self-sufficient forest in about 150 years, without maintenance. The plan is working: today it is a stable ecosystem with species that arrived on their own.",
+      },
+      {
+        title: "Rebuilt After the War",
+        body: "The original 1920 shrine was destroyed in the 1945 bombings. The current building was completed in 1958, again with public donation funds.",
+      },
+      {
+        title: "The Sake Barrels",
+        body: "The wall of decorated barrels at the entrance are offerings from distilleries throughout Japan. They are empty: they are ceremonial barrels. Opposite is a parallel wall of Burgundy wine barrels, donated by French wineries, in memory of Emperor Meiji being a great advocate of adopting Western customs, including wine.",
+      },
+    ],
+    curiosities: [
+      "It is the shrine that receives the most New Year visits in all of Japan: more than three million people in the first three days of January.",
+      "It is common to see traditional Shinto weddings crossing the courtyard, with the bride in white and the shiromuku hat.",
+      "Next to it is Harajuku and Takeshita Street, the epicenter of youth fashion: the contrast between the two within 200 meters is dramatic.",
+    ],
+    tip: "The walk from the entrance torii to the shrine is about 10-15 minutes through the trees. It is part of the experience, not a formality.",
+  },
+
+  "teamlab": {
+    name: "teamLab",
+    tagline: "Immersive digital art where the works react to your presence and never repeat.",
+    sections: [
+      {
+        title: "What It Is",
+        body: "teamLab is a Japanese interdisciplinary collective founded in 2001 by Toshiyuki Inoko, bringing together artists, programmers, engineers, animators, mathematicians and architects. Their installations are not recorded video projections: they are programs that render in real time and change according to the presence and movement of visitors. No image is ever repeated — what you see, nobody else will see the same way.",
+      },
+      {
+        title: "The Concept",
+        body: "The central idea is to dissolve the boundary between the viewer and the work, and between the works themselves: the butterflies in one room can fly to another and die if you touch them; flowers are born, bloom and wither according to the real cycle of the year. They draw inspiration from traditional Japanese painting, which does not use a single perspective and allows the viewer to move through pictorial space.",
+      },
+      {
+        title: "The Spaces in Tokyo",
+        body: "teamLab Planets, in Toyosu, is the one that combines water: it is visited barefoot and there are rooms where you walk with water up to your knees, with projected koi fish that turn into flowers when they touch you. teamLab Borderless, reopened at Azabudai Hills in 2024, is the mapless labyrinth where works migrate between rooms.",
+      },
+    ],
+    curiosities: [
+      "At Planets you need to wear clothing that can be rolled up above the knee; they lend shorts if needed.",
+      "Mirror floors make skirts a bad idea; they offer leggings at the entrance.",
+      "Tickets are timed and sell out weeks in advance, especially on weekends.",
+    ],
+    tip: "Booking online in advance is practically mandatory. Going in the last hours of the day tends to be less crowded.",
+  },
+
+  "fuji": {
+    name: "Mount Fuji",
+    tagline: "Active volcano, sacred mountain and Japan's most recognizable symbol — when it lets itself be seen.",
+    sections: [
+      {
+        title: "The Mountain",
+        body: "At 3,776 meters it is the highest peak in Japan. It is an active stratovolcano, not extinct: its last eruption was the Hōei eruption in December 1707, which lasted 16 days and covered Edo (100 km away) with several centimeters of ash. It was formed by the superposition of three volcanoes, and the current and almost perfectly symmetrical cone is about 10,000 years old.",
+      },
+      {
+        title: "Sacred Mountain",
+        body: "It has been an object of worship since at least the 7th century. Shinto associates it with the goddess Konohanasakuya-hime, whose main shrine (Fujisan Hongū Sengen Taisha) legally owns the land above 3,360 meters. Until 1868 women were prohibited from climbing it. It was declared a UNESCO World Heritage Site in 2013, not for its natural value but cultural: for its influence on art and pilgrimage.",
+      },
+      {
+        title: "Why It Is So Hard to See",
+        body: "This is key for planning: Fuji is clear far less than people expect. In summer, clear visibility lasts only a few days a month due to the humidity and clouds the mountain itself generates. The best months are November to February. In September the odds are intermediate, and almost always better in the early morning, before the heat forms clouds. Hence why the strategy of booking several days and executing on the one that dawns clear makes complete sense.",
+      },
+      {
+        title: "Exclusive Tour: Places to Visit",
+        body: "The 8h mini-van tour with Ken Kaneshima includes the most spectacular enclaves in the region:\n1. Chureito Pagoda (Arakurayama Sengen): the classic postcard of 5 stories with Fuji in the background.\n2. Kitaguchi Hongu Fuji Sengen Jinja Shrine: historic starting point for pilgrims among giant cedars.\n3. Oshino Hakkai Village: 8 crystal-clear pools of volcanic snowmelt and thatched-roof farmhouses.\n4. Aokigahara Forest: the 'Sea of Trees' on hardened lava rock.\n5. Shiraito Falls: a natural waterfall that springs from the rock like threads of white silk.\n6. Lakes Route: panoramic views from the shores of Yamanakako, Saiko and Motosuko.",
+      },
+      {
+        title: "Local Gastronomy: Houtou Noodles",
+        body: "At midday, a stop at a traditional restaurant to taste Houtou (flat, wide noodles slow-cooked in warm miso broth with pumpkin and seasonal mountain vegetables), the signature dish of Yamanashi Prefecture.",
+      },
+      {
+        title: "Logistics and Prices",
+        body: "• Price: ¥13,000 / person (~€70) (includes private mini-van and all venue entry fees). Meals and drinks not included.\n• Starting point: Mishima Station (South Exit) at 08:20 AM (~50 min from Tokyo by Shinkansen).\n• End point: Shin-Fuji bullet train station at around 17:30 (~60 min to Tokyo by Shinkansen).\n• Language: Official guide in Spanish (Ken Kaneshima · excursionesfujiyama.com · +81 90-5863-1635).",
+      },
+      {
+        title: "Visibility Forecast and Webcams",
+        body: "• isfujivisible.com: Technical algorithm with a score from 1 to 10 and hourly forecasts.\n• mtfujitoday.com: 7-day forecast and direct access to live webcams of the area.\n• The Golden Rule: Open the webcams at 06:30 AM from the hotel in Tokyo. If it can't be seen by 07:00 AM, it is highly unlikely to appear later (from 09:00 AM the heat evaporates moisture and creates clouds over the cone).",
+      },
+    ],
+    curiosities: [
+      "The official climbing season on foot is from July to early September; outside those dates the stations close and climbing is dangerous.",
+      "There is a Japanese saying: 'It is wise to climb Fuji once, and foolish to climb it twice'.",
+      "The first dream of the year featuring Fuji is considered very lucky, especially combined with a hawk and an eggplant.",
+    ],
+    tip: "Tour booked for Sunday, September 20 (Day 14) with Ken Kaneshima (Excursiones Fujiyama · +81 90-5863-1635 · excursionesfujiyama.com) + 4 flexible bookings on GetYourGuide from September 16–19. Check webcams at 06:30 AM.",
+  },
+
+  "tokyo-tower": {
+    name: "Roppongi Hills and Tokyo Tower",
+    tagline: "The symbol of post-war renaissance seen from the city's best panoramic viewpoint.",
+    sections: [
+      {
+        title: "The Tokyo City View Observation Deck",
+        body: "Located on the 52nd floor of the Mori Tower (250 meters high), this 360-degree interior glass observation deck has a fundamental advantage over Tokyo Skytree or Shibuya Sky: its location. Being in Roppongi, it places the iconic Tokyo Tower right in the foreground of the horizon, allowing you to watch it light up with the immensity of the bay and Odaiba in the background.",
+      },
+      {
+        title: "Tokyo Tower",
+        body: "Built in 1958, it stands 333 meters tall (13 meters taller than the Eiffel Tower, which it clearly draws inspiration from). It was the symbol of Japan's economic revival after the devastation of World War II. One third of the steel used in its construction was recycled from damaged American tanks during the Korean War. It is painted in white and international orange to comply with aviation safety regulations.",
+      },
+    ],
+    curiosities: [
+      "Sunset is the most coveted moment at Tokyo City View; it is essential to arrive about 45 minutes before sunset to get a spot by the windows.",
+      "Tokyo Tower has two lighting patterns: the 'Landmark Light' (the classic warm orange) and the 'Infinity Diamond Veil' (color LED lights that change according to the month or special events).",
+      "Roppongi Hills was one of the first 'mega-complexes' in Tokyo, integrating offices, residences, a museum (Mori Art Museum) and an observation deck in a single vertical structure.",
+    ],
+    tip: "The Mori Art Museum at the top of the Mori Tower is included in the combined ticket; it often features world-class contemporary exhibitions. If you only go for the view, go on clear days and arrive for sunset.",
+  },
+
+  "nakano-broadway": {
+    name: "Nakano Broadway",
+    tagline: "From luxury residential complex to the underground mecca of retro collecting and otaku culture.",
+    sections: [
+      {
+        title: "What It Is",
+        body: "If Akihabara is the bright, mainstream showcase of electronics and current anime, Nakano Broadway is its dark, deep reverse. It is a shopping center of narrow, windowless corridors obsessively dedicated to retro, out-of-print and niche collecting. It is the place where serious collectors look for items that are no longer manufactured.",
+      },
+      {
+        title: "The Mandarake Empire",
+        body: "The building opened in 1966 as a luxury residential complex (Japan's prime minister even lived in the upper apartments). However, in 1980, a tiny 7-square-meter second-hand manga store opened on the second floor. It was called Mandarake. Over time, it bought up the empty premises in the building. Today, Mandarake operates about 30 different stores within Nakano Broadway, each specializing in a different obsession.",
+      },
+      {
+        title: "The Collector's Labyrinth",
+        body: "Getting lost on the second and third floors, you can find stores dedicated exclusively to original animation cels from the 80s and 90s, postwar tin toys, vintage mecha robots, antique watches, model trains, baseball cards and limited-edition Godzilla figures.",
+      },
+    ],
+    curiosities: [
+      "Otaku hours: The stores at Nakano Broadway are not made for early risers. Most rarely open before noon, with 2:00 PM being when the shopping center is running at full capacity.",
+      "In the basement there is a food and clothing market that preserves the atmosphere of Showa-era Tokyo, contrasting sharply with the geek culture of the upper floors.",
+      "The iconic JackRoad watch store, located on the third floor, is world-famous among vintage Rolex and Omega collectors.",
+    ],
+    tip: "Get off at Nakano Station on the JR Chuo Line. The Broadway entrance is at the end of the Sun Mall covered shopping street, a 5-minute walk from the station. Perfect to combine with Akihabara for a full day of otaku culture.",
+  },
 };
+

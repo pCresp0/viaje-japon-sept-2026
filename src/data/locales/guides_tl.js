@@ -465,5 +465,176 @@ export const guides = {
       "Natatanging (na buong) the buong The na (the The the the buong buong buong) of (the The) buong na buong (the) na buong The of na buong (the The).",
     ],
     tip: "The of buong na (the The the The) buong of buong na buong The na of (the buong The the) buong of buong buong The na of buong (buong).",
-  }
+  },
+
+  "osaka": {
+    name: "Osaka: Kastilyo at Dotonbori",
+    tagline: "Ang kusina ng Japan at lungsod ng mga mangangalakal, na may kastilyo na puro simbolo.",
+    sections: [
+      {
+        title: "Ang Kastilyo",
+        body: "Itinayo ito ni Toyotomi Hideyoshi noong 1583 bilang pinakamalaking kastilyo sa Japan, simbolo ng pagsasama-sama ng bansa na natapos na niya. Winasak ito noong 1615 ni Tokugawa Ieyasu sa Siege of Osaka, na nagwakas sa Toyotomi clan. Itinayo itong muli, at ang tore ay nasunog muli dahil sa kidlat noong 1665.",
+      },
+      {
+        title: "Ang Tunay na Makikita Mo",
+        body: "Dapat malaman: ang kasalukuyang tore ay mula 1931, gawa sa reinforced concrete, at sa loob ay isang modernong museo na may elevator. Hindi ito isang arkeolohikal na rekonstruksyon kundi isang malayang replika, na pinondohan ng mga donasyon ng publiko. Ang tunay at kamangha-mangha ay ang mga pader ng bato at mga moat, mula ika-17 siglo: ang ilang indibidwal na bato ay tumitimbang ng higit sa 100 tonelada at dinala sa dagat mula sa mga quarry na daan-daang kilometro ang layo.",
+      },
+      {
+        title: "Dotonbori",
+        body: "Ang kanal ay hinukay noong 1615 at ang lugar ay naging teatro district ng Osaka (kabuki at bunraku). Ngayon ay ito ang zone ng mga neon light, restaurant, at malalaking billboard. Ang Glico running man sign ay nandoon na mula 1935 at nasa ikaanim na bersyon na; ang mechanical crab ng restaurant na Kani Dōraku, mula 1960.",
+      },
+      {
+        title: "Kuidaore",
+        body: "May sariling salita ang Osaka: kuidaore, 'maging wasak sa pagkain'. Sa loob ng maraming siglo ang lungsod ay sentro ng kalakalan ng bigas sa Japan at nagkaroon ng popular at walang pagmamalabis na kultura sa pagkain. Mula dito nagmula ang takoyaki (ball ng octopus), okonomiyaki (tortilla ng repolyo sa grill) at kushikatsu (breaded na skewer).",
+      },
+    ],
+    curiosities: [
+      "Mahigpit na patakaran ng kushikatsu: hindi maaaring isawsaw ang skewer nang dalawang beses sa komunal na sarsa. Nakasulat ito sa bawat establisyimento.",
+      "Sa Osaka ang mga tao ay nakatayo sa kanan ng mga escalator; sa Tokyo, sa kaliwa. Walang nakakaalam kung bakit.",
+      "Ang Shinsekai ('bagong mundo') ay itinayo noong 1912 na inspirado ng Paris sa hilaga at Coney Island sa timog; ang tore nitong Tsūtenkaku ay ginaya ang Eiffel Tower.",
+    ],
+    tip: "Ang loob ng kastilyo ay maaaring laktawan nang walang pagsisisi kung limitado ang oras. Ang parke at ang mga pader ang tunay na sulit.",
+  },
+
+  "meiji-jingu": {
+    name: "Meiji Jingū",
+    tagline: "Isang kagubatan ng 100,000 puno na itanim ng kamay sa puso ng Tokyo, inialay sa emperor ng modernisasyon.",
+    sections: [
+      {
+        title: "Kanino Ito Inialay",
+        body: "Sa Emperor Meiji (1852-1912) at sa Empress Shōken. Sa ilalim ng kanyang paghahari ang Japan ay lumipat mula sa isang saradong pyudal na bansa patungo sa isang industriyal na kapangyarihan sa loob lamang ng 45 taon: inalis ang mga samurai, nilikha ang modernong hukbo, naitatag ang konstitusyon at nanalo sa digmaan laban sa Russia. Nang mamatay siya, isang popular na petisyon ang humingi ng isang dambana sa kanyang alaala.",
+      },
+      {
+        title: "Ang Kagubatan ay Artipisyal",
+        body: "Ito ang pinaka-nakakagulat na bagay tungkol sa lugar. Ang 70 ektarya ng kagubatan na nakapaligid sa dambana ay hindi isang sinaunang kagubatan na iningatan: itinatanim ito mula sa simula sa pagitan ng 1915 at 1920. Mga mamamayan mula sa buong Japan ay nagbigay ng halos 100,000 puno ng 365 espesye, at mga 110,000 boluntaryo ang nagatanim ng mga ito sa pamamagitan ng kamay. Ang mga botanist ay nagdisenyo ng pagtatanim upang ito ay mag-evolve sa sarili nito patungo sa isang sarili-sustentadong kagubatan sa loob ng halos 150 taon, nang walang maintenance. Gumagana ang plano: ngayon ito ay isang matatag na ecosystem na may mga espesyeng dumating nang mag-isa.",
+      },
+      {
+        title: "Itinayong Muli Pagkatapos ng Digmaan",
+        body: "Ang orihinal na dambana ng 1920 ay nawasak sa mga bombardment ng 1945. Ang kasalukuyang gusali ay natapos noong 1958, muli sa pamamagitan ng mga pondo mula sa donasyon ng publiko.",
+      },
+      {
+        title: "Ang mga Bariles ng Sake",
+        body: "Ang pader ng mga dekoradong bariles sa pasukan ay mga handog mula sa mga destilerya sa buong Japan. Blangko ang mga ito: mga seremonyal na bariles. Sa harap ay isang parallel na pader ng mga bariles ng alak ng Burgundy, na inihandog ng mga French na winery, bilang alaala na si Emperor Meiji ay isang malaking tagasuporta ng pagpapalit ng mga kaugaliang Kanluranin, kabilang ang alak.",
+      },
+    ],
+    curiosities: [
+      "Ito ang dambana na tumatanggap ng pinakamaraming pagbisita sa Bagong Taon sa buong Japan: higit sa tatlong milyong tao sa unang tatlong araw ng Enero.",
+      "Karaniwan na makakita ng mga tradisyonal na Shinto na kasal na tumatawid sa patio, kasama ang nobya na nakasuot ng puti at shiromuku na sombrero.",
+      "Sa tabi nito ay ang Harajuku at Takeshita Street, ang sentro ng fashion ng kabataan: ang pagkakaiba ng dalawa sa loob ng 200 metro ay dramatiko.",
+    ],
+    tip: "Ang lakad mula sa entrance torii hanggang sa dambana ay mga 10-15 minuto sa pagitan ng mga puno. Ito ay bahagi ng karanasan, hindi isang pormalidad.",
+  },
+
+  "teamlab": {
+    name: "teamLab",
+    tagline: "Immersive na digital na sining kung saan ang mga gawa ay tumutugon sa iyong presensya at hindi kailanman inuulit.",
+    sections: [
+      {
+        title: "Ano Ito",
+        body: "Ang teamLab ay isang Japanese interdisciplinary collective na itinatag noong 2001 ni Toshiyuki Inoko, na nagtitipon ng mga artista, programmer, inhinyero, animator, matematisyano at arkitekto. Ang kanilang mga instalasyon ay hindi mga naka-record na video projection: sila ay mga programa na nagre-render sa real time at nagbabago ayon sa presensya at kilusan ng mga bisita. Walang imahe ang inuulit - ang nakikita mo, walang ibang makakakita ng ganoon.",
+      },
+      {
+        title: "Ang Konsepto",
+        body: "Ang sentral na ideya ay ang matunaw ang hangganan sa pagitan ng manonood at ng gawa, at sa pagitan ng mga gawa mismo: ang mga mariposa sa isang silid ay maaaring lumipad sa isa pa at mamatay kung hahawakan mo sila; ang mga bulaklak ay ipinanganak, namumukadkad at nalalanta ayon sa tunay na ikot ng taon. Sila ay kumukuha ng inspirasyon mula sa tradisyonal na Japanese painting, na hindi gumagamit ng isang perspektibo at nagpapahintulot sa manonood na gumalaw sa espasyo ng larawan.",
+      },
+      {
+        title: "Ang mga Espasyo sa Tokyo",
+        body: "Ang teamLab Planets, sa Toyosu, ay ang nagkukombina ng tubig: binibisita ito nang nakapaa at may mga silid kung saan lumalakad ka nang may tubig hanggang sa iyong tuhod, na may mga projected koi fish na nagiging bulaklak kapag hinawakan ka. Ang teamLab Borderless, muling binuksan sa Azabudai Hills noong 2024, ay ang labyrintho na walang mapa kung saan ang mga gawa ay lumilipat sa pagitan ng mga silid.",
+      },
+    ],
+    curiosities: [
+      "Sa Planets kailangan mong magsuot ng damit na maaaring i-roll up nang higit sa tuhod; nagpapahiram ng shorts kung kinakailangan.",
+      "Ang mga mirror floor ay nagpapahiwatig na ang mga palda ay hindi magandang ideya; nag-aalok ng leggings sa pasukan.",
+      "Ang mga tiket ay may tiyak na oras at ibinebenta nang maaga nang ilang linggo, lalo na sa mga weekend.",
+    ],
+    tip: "Ang pagre-reserve online nang maaga ay halos obligado. Ang pagpunta sa mga huling oras ng araw ay karaniwang mas hindi masikip.",
+  },
+
+  "fuji": {
+    name: "Bundok Fuji",
+    tagline: "Aktibong bulkan, banal na bundok at pinaka-kilalang simbolo ng Japan — kapag nagpapakita ito.",
+    sections: [
+      {
+        title: "Ang Bundok",
+        body: "Sa 3,776 metro ito ang pinakamataas na tuktok sa Japan. Ito ay isang aktibong stratovolcano, hindi patay: ang huling pagsabog nito ay ang pagsabog ng Hōei, noong Disyembre 1707, na tumagal ng 16 na araw at sinaklawan ang Edo (100 km ang layo) ng ilang sentimetro ng abo. Nabuo ito sa pamamagitan ng superposisyon ng tatlong bulkan, at ang kasalukuyang at halos perpektong simetriko na kono ay mga 10,000 taon na.",
+      },
+      {
+        title: "Banal na Bundok",
+        body: "Ito ay isang bagay ng pagsamba mula pa noong hindi bababa sa ika-7 siglo. Iniuugnay ng Shinto ito sa diyosang Konohanasakuya-hime, na ang pangunahing dambana (Fujisan Hongū Sengen Taisha) ay legal na nagmamay-ari ng lupa sa itaas ng 3,360 metro. Hanggang 1868 ipinagbawal ang mga babae na umakyat dito. Ito ay idineklara bilang UNESCO World Heritage Site noong 2013, hindi dahil sa natural na halaga nito kundi kultural: dahil sa impluwensya nito sa sining at pilgrimage.",
+      },
+      {
+        title: "Bakit Napakahirap Makita Ito",
+        body: "Ito ang susi sa pagpaplano: ang Fuji ay malinaw nang mas madalas kaysa sa inaasahan ng mga tao. Sa tag-araw, ang malinaw na visibility ay tumatagal lamang ng ilang araw sa isang buwan dahil sa kahalumigmigan at mga ulap na nalilikha ng bundok mismo. Ang pinakamainam na mga buwan ay Nobyembre hanggang Pebrero. Sa Setyembre ang mga posibilidad ay intermediate, at halos palagi ay mas maganda sa umaga, bago lumikha ng mga ulap ang init. Kaya naman ang estratehiya ng pag-book ng ilang araw at pagpasok sa araw na maliwanag ang bukang-liwayway ay may kumpletong katuturan.",
+      },
+      {
+        title: "Eksklusibong Tour: Mga Lugar na Bibisitahin",
+        body: "Ang 8h na mini-van tour kasama si Ken Kaneshima ay kinabibilangan ng pinakamagandang lugar sa rehiyon:\n1. Chureito Pagoda (Arakurayama Sengen): ang klasikong postal na may 5 palapag na may Fuji sa background.\n2. Kitaguchi Hongu Fuji Sengen Jinja Shrine: makasaysayang panimulang punto para sa mga peregrino sa gitna ng malalaking cedar.\n3. Oshino Hakkai Village: 8 malinaw na pool ng volcanic snowmelt at mga bahay na may straw na bubong.\n4. Aokigahara Forest: ang 'Sea of Trees' sa hardened lava rock.\n5. Shiraito Falls: natural na talon na bumubukal mula sa bato tulad ng mga thread ng puting sutla.\n6. Lakes Route: panoramic views mula sa mga pampang ng Yamanakako, Saiko at Motosuko.",
+      },
+      {
+        title: "Lokal na Pagkain: Houtou Noodles",
+        body: "Sa tanghali, paghinto sa tradisyonal na restaurant para tikman ang Houtou (flat, malawak na noodle na dahan-dahang niluto sa mainit na miso broth na may kalabasa at mga panapanahong gulay ng bundok), ang pangunahing pagkain ng Yamanashi Prefecture.",
+      },
+      {
+        title: "Logistika at Presyo",
+        body: "• Presyo: ¥13,000 / tao (~€70) (kasama ang pribadong mini-van at lahat ng entry fee sa venue). Ang pagkain at inumin ay hindi kasama.\n• Simula: Mishima Station (South Exit) sa 08:20 AM (~50 min mula Tokyo sa Shinkansen).\n• Katapusan: Shin-Fuji bullet train station mga 17:30 (~60 min sa Tokyo sa Shinkansen).\n• Wika: Opisyal na gabay sa Espanyol (Ken Kaneshima · excursionesfujiyama.com · +81 90-5863-1635).",
+      },
+      {
+        title: "Forecast ng Visibility at Webcam",
+        body: "• isfujivisible.com: Technical na algorithm na may score mula 1 hanggang 10 at hourly forecast.\n• mtfujitoday.com: 7-araw na forecast at direktang access sa live webcam ng lugar.\n• Ang Golden Rule: Buksan ang mga webcam sa 06:30 AM mula sa hotel sa Tokyo. Kung hindi makita sa 07:00 AM, napakaliit ng posibilidad na lumabas ito mamaya (mula 09:00 AM ang init ay nagpapasingaw ng kahalumigmigan at lumilikha ng mga ulap sa itaas ng kono).",
+      },
+    ],
+    curiosities: [
+      "Ang opisyal na climbing season sa paa ay mula Hulyo hanggang maagang Setyembre; sa labas ng mga petsa na iyon, ang mga istasyon ay nagsasara at ang pag-akyat ay mapanganib.",
+      "May Japanese na kasabihan: 'Karunungan ang umakyat sa Fuji nang isang beses, at kamangmangan ang umakyat nang dalawang beses'.",
+      "Ang unang panaginip ng taon na nagtatampok ng Fuji ay itinuturing na napakasuwerte, lalo na kapag pinagsama sa isang agila at isang talong.",
+    ],
+    tip: "Tour na naka-book para Linggo, Setyembre 20 (Araw 14) kasama si Ken Kaneshima (Excursiones Fujiyama · +81 90-5863-1635 · excursionesfujiyama.com) + 4 flexible na booking sa GetYourGuide mula Setyembre 16–19. Suriin ang mga webcam sa 06:30 AM.",
+  },
+
+  "tokyo-tower": {
+    name: "Roppongi Hills at Tokyo Tower",
+    tagline: "Ang simbolo ng pagbabago pagkatapos ng digmaan na nakikita mula sa pinakamahusay na panoramic viewpoint ng lungsod.",
+    sections: [
+      {
+        title: "Ang Tokyo City View Observation Deck",
+        body: "Matatagpuan sa ika-52 palapag ng Mori Tower (250 metro ang taas), ang 360-degree na interior glass observation deck na ito ay may pangunahing kalamangan kaysa sa Tokyo Skytree o Shibuya Sky: ang lokasyon nito. Dahil nasa Roppongi, inilalagay nito ang iconic na Tokyo Tower nang tuwid sa foreground ng abot-tanaw, na nagpapahintulot sa iyo na panoorin itong mag-ilaw kasama ang kalawakan ng bay at Odaiba sa background.",
+      },
+      {
+        title: "Tokyo Tower",
+        body: "Itinayo noong 1958, ito ay 333 metro ang taas (13 metro na mas matangkad kaysa sa Eiffel Tower, na malinaw na kinuha ang inspirasyon nito). Ito ang simbolo ng ekonomikong pagbabago ng Japan pagkatapos ng pinsala ng Ikalawang Digmaang Pandaigdig. Isang ikatlong bahagi ng asero na ginamit sa konstruksyon nito ay na-recycle mula sa mga nasira na American tank sa panahon ng Korean War. Ito ay pinalaman ng puti at international orange upang sumunod sa mga regulasyon sa kaligtasan ng aviation.",
+      },
+    ],
+    curiosities: [
+      "Ang pagsalog ng araw ay ang pinaka-hinahangad na sandali sa Tokyo City View; mahalaga na dumating nang mga 45 minuto bago lumubog ang araw upang makapag-angkop ng lugar sa tabi ng mga bintana.",
+      "Ang Tokyo Tower ay may dalawang lighting pattern: ang 'Landmark Light' (ang klasikong mainit na orange) at ang 'Infinity Diamond Veil' (mga kulay LED light na nagbabago ayon sa buwan o espesyal na okasyon).",
+      "Ang Roppongi Hills ay isa sa mga unang 'mega-complex' sa Tokyo, na pinagsama ang mga opisina, tirahan, museo (Mori Art Museum) at observation deck sa isang vertical na istruktura.",
+    ],
+    tip: "Ang Mori Art Museum sa tuktok ng Mori Tower ay kasama sa pinagsamang tiket; madalas itong nagtatampok ng world-class na contemporary art exhibition. Kung para sa view lamang ang pagpunta, pumunta sa maliwanag na araw at dumating para sa pagsalog ng araw.",
+  },
+
+  "nakano-broadway": {
+    name: "Nakano Broadway",
+    tagline: "Mula sa luxury residential complex hanggang sa underground mecca ng retro collecting at otaku culture.",
+    sections: [
+      {
+        title: "Ano Ito",
+        body: "Kung ang Akihabara ay ang maliwanag, mainstream na showcase ng electronics at kasalukuyang anime, ang Nakano Broadway ay ang madilim, malalim na kabaligtaran nito. Ito ay isang shopping center ng makitid, walang-bintana na koridor na obsesibong nakatuon sa retro, out-of-print at niche na koleksyon. Ito ang lugar kung saan naghahanap ang mga seryosong koleksyonista ng mga item na hindi na ginagawa.",
+      },
+      {
+        title: "Ang Imperyong Mandarake",
+        body: "Ang gusali ay binuksan noong 1966 bilang isang luxury residential complex (ang prime minister ng Japan ay nanirahan pa sa mga itaas na apartment). Gayunpaman, noong 1980, isang maliit na 7-square-meter na second-hand manga store ay nagbukas sa ikalawang palapag. Tinawag itong Mandarake. Sa paglipas ng panahon, binili nito ang mga bakanteng lugar sa gusali. Ngayon, ang Mandarake ay nagpapatakbo ng halos 30 iba't ibang tindahan sa loob ng Nakano Broadway, bawat isa ay espesyalista sa ibang obsesyon.",
+      },
+      {
+        title: "Ang Labyrintho ng Koleksyon",
+        body: "Sa pagligaw sa ikalawa at ikatlong palapag, maaari kang makahanap ng mga tindahan na eksklusibong nakatuon sa orihinal na animation cel mula sa 80s at 90s, postwar na tin toy, vintage mecha robot, antique na relo, model train, baseball card at limitadong edisyon ng Godzilla figure.",
+      },
+    ],
+    curiosities: [
+      "Oras ng otaku: Ang mga tindahan sa Nakano Broadway ay hindi para sa mga maagang bumabangon. Karamihan ay bihirang magbukas bago mag-tanghali, na ang 2:00 PM ang oras na buong lakas na tumatakbo ang shopping center.",
+      "Sa basement ay may market ng pagkain at damit na nagpapanatili ng kapaligiran ng Showa-era Tokyo, na nagbibigay ng matinding kaibahan sa geek culture ng mga itaas na palapag.",
+      "Ang iconic na JackRoad watch store, na matatagpuan sa ikatlong palapag, ay world-famous sa mga koleksyonista ng vintage Rolex at Omega.",
+    ],
+    tip: "Bumaba sa Nakano Station sa JR Chuo Line. Ang pasukan ng Broadway ay nasa dulo ng Sun Mall covered shopping street, 5-minutong lakad mula sa istasyon. Perpekto para pagsamahin sa Akihabara para sa isang buong araw ng otaku culture.",
+  },
 };
+

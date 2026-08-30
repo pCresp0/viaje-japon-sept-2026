@@ -456,5 +456,176 @@ export const guides = {
       "Le siège de Fuji TV est situé ici, avec une immense sphère métallique suspendue dans la structure en treillis du bâtiment, qui sert de plate-forme d'observation.",
     ],
     tip: "Odaiba est l'un des meilleurs endroits de Tokyo pour le coucher du soleil, en regardant le soleil se coucher derrière le Rainbow Bridge et la ligne d'horizon de la ville.",
-  }
+  },
+
+  "osaka": {
+    name: "Osaka : Château et Dotonbori",
+    tagline: "La cuisine du Japon et la ville des marchands, avec un château qui est un pur symbole.",
+    sections: [
+      {
+        title: "Le Château",
+        body: "Toyotomi Hideyoshi l'a construit en 1583 comme le plus grand château du Japon, symbole de l'unification du pays qu'il venait d'achever. Il fut détruit en 1615 par Tokugawa Ieyasu lors du Siège d'Osaka, qui mit fin au clan Toyotomi. Il fut reconstruit, et la tour brûla à nouveau lors d'un coup de foudre en 1665.",
+      },
+      {
+        title: "Ce que vous verrez réellement",
+        body: "Il vaut mieux le savoir : la tour actuelle date de 1931, en béton armé, et l'intérieur est un musée moderne avec ascenseur. Ce n'est pas une reconstruction archéologique mais une recréation libre, financée par des dons publics. Ce qui est authentique et spectaculaire, ce sont les murailles en pierre et les douves, du XVIIe siècle : certaines pierres individuelles pèsent plus de 100 tonnes et furent transportées par mer depuis des carrières situées à des centaines de kilomètres.",
+      },
+      {
+        title: "Dotonbori",
+        body: "Le canal fut creusé en 1615 et le quartier est devenu le district théâtral d'Osaka (kabuki et bunraku). Aujourd'hui, c'est la zone des néons, des restaurants et des panneaux géants. Le panneau du coureur Glico est là depuis 1935 et en est à sa sixième version ; le crabe mécanique du restaurant Kani Dōraku, depuis 1960.",
+      },
+      {
+        title: "Kuidaore",
+        body: "Osaka a son propre mot : kuidaore, 'se ruiner en mangeant'. Pendant des siècles, la ville a été le centre du commerce du riz au Japon et a développé une culture gastronomique populaire et sans prétention. C'est de là que viennent le takoyaki (boulettes de pieuvre), l'okonomiyaki (omelette au chou sur plaque chauffante) et le kushikatsu (brochettes panées).",
+      },
+    ],
+    curiosities: [
+      "Règle stricte du kushikatsu : on ne peut pas tremper la brochette deux fois dans la sauce commune. C'est écrit dans chaque établissement.",
+      "À Osaka, les gens se placent à droite des escalators ; à Tokyo, à gauche. Personne ne sait exactement pourquoi.",
+      "Shinsekai ('nouveau monde') a été construit en 1912 en s'inspirant de Paris au nord et de Coney Island au sud ; sa tour Tsūtenkaku imitait la Tour Eiffel.",
+    ],
+    tip: "L'intérieur du château peut être ignoré sans regret si vous êtes pressé. Le parc et les murailles valent vraiment le coup.",
+  },
+
+  "meiji-jingu": {
+    name: "Meiji Jingū",
+    tagline: "Une forêt de 100 000 arbres plantés à la main au cœur de Tokyo, dédiée à l'empereur de la modernisation.",
+    sections: [
+      {
+        title: "À qui il est dédié",
+        body: "À l'empereur Meiji (1852-1912) et à l'impératrice Shōken. Sous son règne, le Japon est passé d'un pays féodal fermé à une puissance industrielle en seulement 45 ans : les samouraïs furent abolis, une armée moderne fut créée, une constitution fut établie et une guerre fut gagnée contre la Russie. À sa mort, une pétition populaire réclama un sanctuaire en sa mémoire.",
+      },
+      {
+        title: "La forêt est artificielle",
+        body: "C'est ce qu'il y a de plus surprenant dans cet endroit. Les 70 hectares de forêt qui entourent le sanctuaire ne sont pas une forêt ancienne préservée : ils ont été plantés de zéro entre 1915 et 1920. Des citoyens de tout le Japon ont fait don d'environ 100 000 arbres de 365 espèces, et quelque 110 000 bénévoles les ont plantés à la main. Des botanistes ont conçu la plantation pour qu'elle évolue d'elle-même vers une forêt autosuffisante en environ 150 ans, sans entretien. Le plan fonctionne : aujourd'hui c'est un écosystème stable avec des espèces arrivées seules.",
+      },
+      {
+        title: "Reconstruit après la guerre",
+        body: "Le sanctuaire original de 1920 fut détruit lors des bombardements de 1945. Le bâtiment actuel fut achevé en 1958, à nouveau avec des fonds issus de dons publics.",
+      },
+      {
+        title: "Les tonneaux de sake",
+        body: "Le mur de tonneaux décorés à l'entrée sont des offrandes de distilleries de tout le Japon. Ils sont vides : ce sont des tonneaux cérémonials. En face se trouve un mur parallèle de barriques de vin de Bourgogne, offertes par des vignobles français, en souvenir du fait que l'empereur Meiji était un grand défenseur de l'adoption des coutumes occidentales, y compris le vin.",
+      },
+    ],
+    curiosities: [
+      "C'est le sanctuaire qui reçoit le plus de visites du Nouvel An dans tout le Japon : plus de trois millions de personnes dans les trois premiers jours de janvier.",
+      "Il est courant de voir des mariages shinto traditionnels traverser la cour, avec la mariée en blanc et le chapeau shiromuku.",
+      "À côté se trouve Harajuku et la rue Takeshita, l'épicentre de la mode jeune : le contraste entre les deux en 200 mètres est saisissant.",
+    ],
+    tip: "La marche depuis le torii d'entrée jusqu'au sanctuaire dure environ 10 à 15 minutes à travers les arbres. C'est une partie de l'expérience, pas une formalité.",
+  },
+
+  "teamlab": {
+    name: "teamLab",
+    tagline: "Art numérique immersif où les œuvres réagissent à votre présence et ne se répètent jamais.",
+    sections: [
+      {
+        title: "Ce que c'est",
+        body: "teamLab est un collectif interdisciplinaire japonais fondé en 2001 par Toshiyuki Inoko, réunissant artistes, programmeurs, ingénieurs, animateurs, mathématiciens et architectes. Leurs installations ne sont pas des projections vidéo enregistrées : ce sont des programmes qui se génèrent en temps réel et changent selon la présence et le mouvement des visiteurs. Aucune image ne se répète jamais — ce que vous voyez, personne d'autre ne le verra de la même façon.",
+      },
+      {
+        title: "Le concept",
+        body: "L'idée centrale est de dissoudre la frontière entre le spectateur et l'œuvre, et entre les œuvres elles-mêmes : les papillons d'une salle peuvent voler dans une autre et mourir si on les touche ; les fleurs naissent, s'épanouissent et se fanent selon le cycle réel de l'année. Ils s'inspirent de la peinture traditionnelle japonaise, qui n'utilise pas une perspective unique et permet au spectateur de se déplacer dans l'espace pictural.",
+      },
+      {
+        title: "Les espaces à Tokyo",
+        body: "teamLab Planets, à Toyosu, est celui qui combine l'eau : on le visite pieds nus et il y a des salles où l'on marche avec de l'eau jusqu'aux genoux, avec des carpes koï projetées qui se transforment en fleurs lorsqu'elles vous touchent. teamLab Borderless, rouvert à Azabudai Hills en 2024, est le labyrinthe sans carte où les œuvres migrent entre les salles.",
+      },
+    ],
+    curiosities: [
+      "À Planets, il faut porter des vêtements pouvant être retroussés au-dessus du genou ; des shorts sont prêtés si nécessaire.",
+      "Les sols en miroir rendent les jupes déconseillées ; des leggings sont proposés à l'entrée.",
+      "Les billets sont horodatés et se vendent plusieurs semaines à l'avance, surtout le week-end.",
+    ],
+    tip: "Réserver en ligne à l'avance est pratiquement obligatoire. Aller en fin de journée tend à être moins fréquenté.",
+  },
+
+  "fuji": {
+    name: "Mont Fuji",
+    tagline: "Volcan actif, montagne sacrée et symbole le plus reconnaissable du Japon — quand il se laisse voir.",
+    sections: [
+      {
+        title: "La montagne",
+        body: "Avec ses 3 776 mètres, c'est le point culminant du Japon. C'est un stratovolcan actif, non éteint : sa dernière éruption fut celle de Hōei, en décembre 1707, qui dura 16 jours et couvrit Edo (à 100 km) de plusieurs centimètres de cendres. Il fut formé par la superposition de trois volcans, et le cône actuel, presque parfaitement symétrique, a environ 10 000 ans.",
+      },
+      {
+        title: "Montagne sacrée",
+        body: "Elle fait l'objet d'un culte depuis au moins le VIIe siècle. Le shinto l'associe à la déesse Konohanasakuya-hime, dont le sanctuaire principal (Fujisan Hongū Sengen Taisha) possède légalement le terrain au-dessus de 3 360 mètres. Jusqu'en 1868, les femmes avaient interdiction d'y monter. Elle a été déclarée Patrimoine Mondial de l'UNESCO en 2013, non pour sa valeur naturelle mais culturelle : pour son influence sur l'art et le pèlerinage.",
+      },
+      {
+        title: "Pourquoi c'est si difficile de la voir",
+        body: "C'est essentiel pour la planification : le Fuji est dégagé bien moins souvent que les gens ne l'imaginent. En été, la visibilité claire ne dure que quelques jours par mois en raison de l'humidité et des nuages que la montagne génère elle-même. Les meilleurs mois sont de novembre à février. En septembre les probabilités sont intermédiaires, et presque toujours meilleures tôt le matin, avant que la chaleur ne forme des nuages. D'où l'intérêt de réserver plusieurs jours et d'exécuter le plan le jour où l'aube est dégagée.",
+      },
+      {
+        title: "Tour exclusif : lieux à visiter",
+        body: "Le circuit de 8h en mini-van avec Ken Kaneshima inclut les sites les plus spectaculaires de la région :\n1. Pagode Chureito (Arakurayama Sengen) : la carte postale classique à 5 étages avec le Fuji en arrière-plan.\n2. Sanctuaire Kitaguchi Hongu Fuji Sengen Jinja : point de départ historique des pèlerins parmi de gigantesques cèdres.\n3. Village Oshino Hakkai : 8 bassins cristallins d'eau de fonte volcanique et maisons au toit de chaume.\n4. Forêt d'Aokigahara : la 'Mer des Arbres' sur de la roche de lave durcie.\n5. Chutes Shiraito : cascade naturelle qui jaillit de la roche comme des fils de soie blanche.\n6. Route des Lacs : vues panoramiques depuis les rives de Yamanakako, Saiko et Motosuko.",
+      },
+      {
+        title: "Gastronomie locale : Nouilles Houtou",
+        body: "À midi, arrêt dans un restaurant traditionnel pour déguster les Houtou (nouilles plates et larges cuites lentement dans un bouillon de miso chaud avec de la citrouille et des légumes de montagne de saison), le plat emblématique de la préfecture de Yamanashi.",
+      },
+      {
+        title: "Logistique et tarifs",
+        body: "• Prix : 13 000 ¥ / personne (~70€) (inclut le mini-van privé et toutes les entrées aux sites). Repas et boissons non inclus.\n• Point de départ : Gare de Mishima (Sortie Sud) à 08h20 (~50 min de Tokyo en Shinkansen).\n• Point d'arrivée : Gare du Shinkansen Shin-Fuji vers 17h30 (~60 min de Tokyo en Shinkansen).\n• Langue : Guide officiel en espagnol (Ken Kaneshima · excursionesfujiyama.com · +81 90-5863-1635).",
+      },
+      {
+        title: "Prévisions de visibilité et webcams",
+        body: "• isfujivisible.com : Algorithme technique avec un score de 1 à 10 et prévisions par tranches horaires.\n• mtfujitoday.com : Prévisions à 7 jours et accès direct aux webcams en direct de la zone.\n• La règle d'or : Ouvrir les webcams à 06h30 depuis l'hôtel à Tokyo. Si le Fuji n'est pas visible à 07h00, il est très peu probable qu'il apparaisse plus tard (à partir de 09h00, la chaleur évapore l'humidité et crée des nuages sur le cône).",
+      },
+    ],
+    curiosities: [
+      "La saison officielle d'ascension à pied va de juillet à début septembre ; en dehors de ces dates, les stations ferment et la montée est dangereuse.",
+      "Il y a un proverbe japonais : 'Il est sage de gravir le Fuji une fois, et stupide de le gravir deux fois'.",
+      "Le premier rêve de l'année avec le Fuji est considéré de très bon augure, surtout combiné avec un faucon et une aubergine.",
+    ],
+    tip: "Tour réservé le dimanche 20 septembre (Jour 14) avec Ken Kaneshima (Excursiones Fujiyama · +81 90-5863-1635 · excursionesfujiyama.com) + 4 réservations flexibles sur GetYourGuide du 16 au 19 septembre. Vérifier les webcams à 06h30.",
+  },
+
+  "tokyo-tower": {
+    name: "Roppongi Hills et la Tour de Tokyo",
+    tagline: "Le symbole de la renaissance d'après-guerre vu depuis le meilleur belvédère panoramique de la ville.",
+    sections: [
+      {
+        title: "Le belvédère Tokyo City View",
+        body: "Situé au 52e étage de la Tour Mori (250 mètres de hauteur), ce belvédère intérieur vitré à 360 degrés possède un avantage fondamental sur le Tokyo Skytree ou Shibuya Sky : son emplacement. Étant à Roppongi, il place l'emblématique Tour de Tokyo juste au premier plan de l'horizon, permettant de la voir s'illuminer avec l'immensité de la baie et d'Odaiba en arrière-plan.",
+      },
+      {
+        title: "La Tour de Tokyo",
+        body: "Construite en 1958, elle mesure 333 mètres (13 mètres de plus que la Tour Eiffel, dont elle s'inspire clairement). Elle fut le symbole du renouveau économique du Japon après la dévastation de la Seconde Guerre mondiale. Un tiers de l'acier utilisé dans sa construction a été recyclé à partir de chars américains endommagés pendant la guerre de Corée. Elle est peinte en blanc et en orange international pour respecter les réglementations de sécurité aérienne.",
+      },
+    ],
+    curiosities: [
+      "Le coucher du soleil est le moment le plus convoité au Tokyo City View ; il est indispensable d'arriver environ 45 minutes avant le coucher du soleil pour trouver une place près des fenêtres.",
+      "La Tour de Tokyo a deux modes d'éclairage : le 'Landmark Light' (le classique orange chaud) et le 'Infinity Diamond Veil' (lumières LED de couleurs qui changent selon le mois ou les événements spéciaux).",
+      "Roppongi Hills était l'un des premiers 'méga-complexes' à Tokyo, intégrant bureaux, résidences, musée (Mori Art Museum) et belvédère dans une seule structure verticale.",
+    ],
+    tip: "Le Mori Art Museum au sommet de la Tour Mori est inclus dans le billet combiné ; il accueille souvent des expositions d'art contemporain de renommée mondiale. Si vous venez uniquement pour la vue, allez par temps clair et arrivez pour le coucher du soleil.",
+  },
+
+  "nakano-broadway": {
+    name: "Nakano Broadway",
+    tagline: "De complexe résidentiel de luxe à la mecque souterraine du collectionnisme rétro et de la culture otaku.",
+    sections: [
+      {
+        title: "Ce que c'est",
+        body: "Si Akihabara est la vitrine brillante et grand public de l'électronique et de l'anime actuel, Nakano Broadway en est le revers sombre et profond. C'est un centre commercial aux couloirs étroits et sans fenêtres, obsessionnellement dédié au collectionnisme rétro, aux articles introuvables et de niche. C'est l'endroit où les collectionneurs sérieux cherchent des articles qui ne sont plus fabriqués.",
+      },
+      {
+        title: "L'empire Mandarake",
+        body: "Le bâtiment a été inauguré en 1966 comme un complexe résidentiel de luxe (le Premier ministre du Japon y a même vécu dans les appartements supérieurs). Cependant, en 1980, une minuscule boutique de manga d'occasion de 7 mètres carrés à peine a ouvert au deuxième étage. Elle s'appelait Mandarake. Au fil du temps, elle a racheté les locaux vides du bâtiment. Aujourd'hui, Mandarake exploite environ 30 boutiques différentes au sein de Nakano Broadway, chacune spécialisée dans une obsession différente.",
+      },
+      {
+        title: "Le labyrinthe du collectionnisme",
+        body: "En se perdant dans les deuxième et troisième étages, on peut trouver des boutiques entièrement dédiées aux cels d'animation originaux des années 80 et 90, aux jouets en fer-blanc d'après-guerre, aux robots mecha vintage, aux montres d'époque, aux trains à l'échelle, aux cartes de baseball et aux figurines Godzilla en édition limitée.",
+      },
+    ],
+    curiosities: [
+      "Horaires otaku : Les boutiques de Nakano Broadway ne sont pas faites pour les lève-tôt. La plupart n'ouvrent rarement avant midi, 14h00 étant l'heure où le centre commercial tourne à plein régime.",
+      "Au sous-sol se trouve un marché alimentaire et vestimentaire qui conserve l'ambiance du Tokyo de l'ère Showa, contrastant radicalement avec la culture geek des étages supérieurs.",
+      "L'emblématique boutique de montres JackRoad, située au troisième étage, est mondialement connue parmi les collectionneurs de Rolex et Omega vintage.",
+    ],
+    tip: "Descendez à la gare de Nakano sur la ligne JR Chuo. L'entrée du Broadway se trouve au bout de la galerie marchande couverte Sun Mall, à 5 minutes à pied de la gare. Parfait à combiner avec Akihabara pour une journée complète de culture otaku.",
+  },
 };
+
