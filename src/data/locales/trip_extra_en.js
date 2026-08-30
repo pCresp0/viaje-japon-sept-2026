@@ -85,7 +85,7 @@ export const stays = [
         rooms: "2 rooms · Triple Moderate + Standard Double (2 beds)",
         guests: "5 adults",
         cancel: "Free cancellation up to 1 day before",
-        note: "Starting March 2026, Kyoto applies a new tourist tax. For accommodations under ¥6,000 per person/night, the tax is EXEMPT. If it exceeds ¥6,000, it is ¥400 per person/night. To be paid at the hotel. Meals not included.",
+        note: "Starting March 2026, Kyoto applies a new tourist tax. For accommodations under ¥6,000 (~33€) per person/night, the tax is EXEMPT. If it exceeds ¥6,000 (~33€), it is ¥400 (~2€) per person/night. To be paid at the hotel. Meals not included.",
       },
     ],
   },

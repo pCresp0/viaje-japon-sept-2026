@@ -128,7 +128,7 @@ export default {
       category: "logistica",
       urgency: "media",
       title: "🟠 Digital Logistics: Suica and Visit Japan Web",
-      detail: "📱 iPhone: official 'Welcome Suica Mobile' in Apple Wallet (needs location on; if issue/recharge fails from Spain due to country restrictions, create it on landing in Japan).\n🤖 Foreign Android: no Welcome Suica Mobile. Android user must buy a physical Welcome Suica at Narita.\n💳 Welcome Suica card: no ¥500 deposit; balance non-refundable. Recommended initial top-up: ¥3,000–¥5,000 per person.\n🌐 Visit Japan Web: immigration/customs QR codes generated for all 5 travelers.",
+      detail: "📱 iPhone: official 'Welcome Suica Mobile' in Apple Wallet (needs location on; if issue/recharge fails from Spain due to country restrictions, create it on landing in Japan).\n🤖 Foreign Android: no Welcome Suica Mobile. Android user must buy a physical Welcome Suica at Narita.\n💳 Welcome Suica card: no ¥500 (~3€) deposit; balance non-refundable. Recommended initial top-up: ¥3,000–¥5,000 (~16–27€) per person.\n🌐 Visit Japan Web: immigration/customs QR codes generated for all 5 travelers.",
       deadline: "Days before flying",
     },
     {
@@ -144,7 +144,7 @@ export default {
       category: "logistica",
       urgency: "baja",
       title: "🟢 Backpack Forwarding Nakasendo (Magome ↔ Tsumago)",
-      detail: "📅 14/09/2026\n📍 Magome Tourist Office (08:30–11:30)\n⚠️ Drop bags in Magome (¥500/piece) for the 8 km hike; collect in Tsumago after 13:00.",
+      detail: "📅 14/09/2026\n📍 Magome Tourist Office (08:30–11:30)\n⚠️ Drop bags in Magome (¥500/piece (~3€)) for the 8 km hike; collect in Tsumago after 13:00.",
       deadline: "14 Sept (same day)",
     },
     {

@@ -59,7 +59,7 @@ export default function ThunderbirdTicketCard({ onGoToDay } = {}) {
             <div className="text-left sm:text-right flex-shrink-0">
               <p className="text-xs opacity-75 uppercase tracking-wider mb-0.5 mt-0">Reserva</p>
               <p className="text-base font-bold font-mono tracking-widest m-0">47932</p>
-              <p className="text-xs opacity-90 mt-0.5 m-0">5 Adultos · ¥38.600 · 209,38€</p>
+              <p className="text-xs opacity-90 mt-0.5 m-0">5 Adultos · ¥38.600 (~209,38€)</p>
             </div>
           </div>
           <ChevronDown 
@@ -177,7 +177,7 @@ export default function ThunderbirdTicketCard({ onGoToDay } = {}) {
             <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-3 mt-2 border-b pb-2">Checklist Operativo</p>
             <div className="space-y-2">
               <ChecklistItem id="booked" checked={checkedItems.booked} locked text="Reserva realizada (Receipt: AEE6444M)" />
-              <ChecklistItem id="paid" checked={checkedItems.paid} locked text="Pago confirmado (¥38.600 · 209,38€ Revolut)" />
+              <ChecklistItem id="paid" checked={checkedItems.paid} locked text="Pago confirmado (¥38.600 · ~209,38€ Revolut)" />
               <ChecklistItem id="seats" checked={checkedItems.seats} locked text="5 asientos confirmados en coche 5" />
               
               <div className="my-2 border-t border-dashed" style={{ borderColor: "var(--line)" }}></div>

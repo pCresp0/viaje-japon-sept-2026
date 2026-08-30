@@ -11,7 +11,7 @@ export const pendingItems = [
     category: "logistica",
     urgency: "alta",
     title: "🔴 Confirmar Cena Magome Chaya (Juan Carlos)",
-    detail: "👤 Responsable: Juan Carlos\n📅 14/09/2026\n👥 5 personas\n🍱 Cena de Minshuku\n⏰ Hora: 18:00 exactas\n📍 Magome Chaya\n⚠️ El alojamiento exige confirmación para servir la cena. Juan Carlos debe enviar email a Jeng indicando: 5 comensales, llegada 14/09, hora 18:00. Sin confirmación no hay cena (¥3.630/persona).",
+    detail: "👤 Responsable: Juan Carlos\n📅 14/09/2026\n👥 5 personas\n🍱 Cena de Minshuku\n⏰ Hora: 18:00 exactas\n📍 Magome Chaya\n⚠️ El alojamiento exige confirmación para servir la cena. Juan Carlos debe enviar email a Jeng indicando: 5 comensales, llegada 14/09, hora 18:00. Sin confirmación no hay cena (¥3.630/persona · ~20€).",
     deadline: "Hacer ya (Juan Carlos)",
   },
   {
@@ -28,7 +28,7 @@ export const pendingItems = [
     category: "logistica",
     urgency: "alta",
     title: "🎫 RECOGER BILLETES FÍSICOS — Shinano 4 (YA PAGADO)",
-    detail: "📅 15/09/2026 (o antes si se puede en estación JR-WEST)\n🚆 Shinano 4 · Nakatsugawa 09:57 → Nagoya 10:53\n🟢 Reserva YA HECHA: nº 42093 · Receipt AEE6606M · ¥14.350\n📍 Recoger FUERA de los tornos (máquina/taquilla habilitada)\n⚠️ OBLIGATORIO LLEVAR:\n- Tarjeta física Mastercard terminada en 8625 (no virtual)\n- PIN de 4 dígitos: cumpleaños de Pablo\n- Reservation No. 42093\nPLAN B: al llegar a Nakatsugawa ~08:40 (77 min hasta el tren).",
+    detail: "📅 15/09/2026 (o antes si se puede en estación JR-WEST)\n🚆 Shinano 4 · Nakatsugawa 09:57 → Nagoya 10:53\n🟢 Reserva YA HECHA: nº 42093 · Receipt AEE6606M · ¥14.350 (~77,84€)\n📍 Recoger FUERA de los tornos (máquina/taquilla habilitada)\n⚠️ OBLIGATORIO LLEVAR:\n- Tarjeta física Mastercard terminada en 8625 (no virtual)\n- PIN de 4 dígitos: cumpleaños de Pablo\n- Reservation No. 42093\nPLAN B: al llegar a Nakatsugawa ~08:40 (77 min hasta el tren).",
     deadline: "Antes de subir al Shinano 4 (15/09 09:57)",
   },
   {
@@ -44,7 +44,7 @@ export const pendingItems = [
     category: "logistica",
     urgency: "media",
     title: "📱 Preparar acceso Smart EX — Nozomi 358 (YA COMPRADO)",
-    detail: "📅 15/09/2026\n🚄 Nozomi 358 · Nagoya 11:29 → Tokyo 13:06\n🟢 Reserva YA HECHA: Smart EX nº 2002 · ¥54.500 · Car 12\n📱 Guardar QR-Ticket (opción principal) o designar IC card\n📧 Mantener email/confirmación Smart EX en el móvil\n⚠️ NO es recogida obligatoria tipo JR-WEST.",
+    detail: "📅 15/09/2026\n🚄 Nozomi 358 · Nagoya 11:29 → Tokyo 13:06\n🟢 Reserva YA HECHA: Smart EX nº 2002 · ¥54.500 (~295,62€) · Car 12\n📱 Guardar QR-Ticket (opción principal) o designar IC card\n📧 Mantener email/confirmación Smart EX en el móvil\n⚠️ NO es recogida obligatoria tipo JR-WEST.",
     deadline: "Antes del 15/09",
   },
   {
@@ -84,7 +84,7 @@ export const pendingItems = [
     category: "logistica",
     urgency: "media",
     title: "🟠 Logística Digital: Suica y Visit Japan Web",
-    detail: "📱 iPhone: App oficial 'Welcome Suica Mobile' en Apple Wallet (requiere localización activa; si la emisión/recarga falla desde España por restricciones de país, crearla al aterrizar en Japón).\n🤖 Android extranjero: No dispone de Welcome Suica Mobile. El hermano con Android debe adquirir una tarjeta física Welcome Suica en Narita.\n💳 Tarjeta Welcome Suica: Sin depósito de 500¥; saldo no reembolsable. Recarga inicial recomendada: ¥3.000–¥5.000 por persona.\n🌐 Visit Japan Web: Códigos QR de inmigración y aduanas generados para los 5 viajeros.",
+    detail: "📱 iPhone: App oficial 'Welcome Suica Mobile' en Apple Wallet (requiere localización activa; si la emisión/recarga falla desde España por restricciones de país, crearla al aterrizar en Japón).\n🤖 Android extranjero: No dispone de Welcome Suica Mobile. El hermano con Android debe adquirir una tarjeta física Welcome Suica en Narita.\n💳 Tarjeta Welcome Suica: Sin depósito de 500¥ (~3€); saldo no reembolsable. Recarga inicial recomendada: ¥3.000–¥5.000 (~16–27€) por persona.\n🌐 Visit Japan Web: Códigos QR de inmigración y aduanas generados para los 5 viajeros.",
     deadline: "Días antes de volar",
   },
   {
@@ -100,7 +100,7 @@ export const pendingItems = [
     category: "logistica",
     urgency: "baja",
     title: "🟢 Envío Mochilas Nakasendo (Magome ↔ Tsumago)",
-    detail: "📅 14/09/2026\n📍 Oficina de Turismo Magome (08:30–11:30)\n⚠️ Dejar mochilas/bultos en Magome (¥500/pieza) para hacer la caminata de 8 km y recogerlos en Tsumago tras las 13:00.",
+    detail: "📅 14/09/2026\n📍 Oficina de Turismo Magome (08:30–11:30)\n⚠️ Dejar mochilas/bultos en Magome (¥500/pieza · ~3€) para hacer la caminata de 8 km y recogerlos en Tsumago tras las 13:00.",
     deadline: "14 Sept (mismo día)",
   },
   {

@@ -227,7 +227,7 @@ export default function TransportPage({ onNavigate }) {
           </div>
           {!suicaOpen && (
             <p style={{ fontSize: 12, color: "rgba(255,255,255,0.7)", margin: "8px 0 0", lineHeight: 1.45 }}>
-              iPhone: Welcome Suica Mobile · Android: física en Narita · recarga ¥3.000–¥5.000
+              iPhone: Welcome Suica Mobile · Android: física en Narita · recarga ¥3.000–¥5.000 (~16–27€)
             </p>
           )}
         </button>
@@ -260,7 +260,7 @@ export default function TransportPage({ onNavigate }) {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-white/80 pt-3 border-t border-white/15">
           <div>
             <p className="font-semibold text-white mb-0.5">💰 Sin depósito</p>
-            <p className="text-white/70">No requiere los ¥500 de fianza de la tarjeta clásica.</p>
+            <p className="text-white/70">No requiere los ¥500 (~3€) de fianza de la tarjeta clásica.</p>
           </div>
           <div>
             <p className="font-semibold text-white mb-0.5">⚠️ No reembolsable</p>
@@ -268,7 +268,7 @@ export default function TransportPage({ onNavigate }) {
           </div>
           <div>
             <p className="font-semibold text-white mb-0.5">💳 Recarga recomendada</p>
-            <p className="text-white/70">Iniciar con ¥3.000–¥5.000/persona y recargar según necesidad.</p>
+            <p className="text-white/70">Iniciar con ¥3.000–¥5.000 (~16–27€)/persona y recargar según necesidad.</p>
           </div>
         </div>
         </div>
@@ -453,7 +453,7 @@ export default function TransportPage({ onNavigate }) {
               <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl" style={{ background: "rgba(188,71,73,0.1)", border: "1px solid rgba(188,71,73,0.2)" }}>
                 <span style={{ fontSize: 16 }}>❌</span>
                 <p className="text-sm font-bold m-0" style={{ color: "var(--shu)" }}>
-                  NO COMPENSA — billetes JR ~{formatJpy(coveredTotalJpy)}/pax vs Pass 7d {formatJpy(PASS_7)} (+{formatJpy(saveCoveredOnlyJpy)} más caro).
+                  NO COMPENSA — billetes JR ~{formatJpyEur(coveredTotalJpy, coveredTotalEur)}/pax vs Pass 7d {formatJpyEur(PASS_7)} (+{formatJpyEur(saveCoveredOnlyJpy)} más caro).
                 </p>
               </div>
             </div>
@@ -470,7 +470,7 @@ export default function TransportPage({ onNavigate }) {
           <p className="text-xs leading-relaxed m-0" style={{ color: "var(--ink-soft)" }}>
             Cálculo con <strong>precios reales Revolut</strong> de billetes ya comprados + estimaciones del resto.
             Tipo de cambio aprox. {YEN_PER_EUR} ¥/€. Precios oficiales JR Pass (ordinario adulto, vigentes hasta sept 2026):
-            {" "}7 días {formatJpy(PASS_7)} · 14 días {formatJpy(PASS_14)} · 21 días {formatJpy(PASS_21)}.
+            {" "}7 días {formatJpyEur(PASS_7)} · 14 días {formatJpyEur(PASS_14)} · 21 días {formatJpyEur(PASS_21)}.
             El Pass <strong>no incluye Nozomi</strong>.
           </p>
 
@@ -599,7 +599,7 @@ export default function TransportPage({ onNavigate }) {
             </div>
             <p className="text-[11px] m-0 mt-2 leading-relaxed" style={{ color: "var(--ink-soft)" }}>
               Fuente: <a href="https://japanrailpass.net/en/purchase/price/" target="_blank" rel="noreferrer" className="underline">japanrailpass.net</a>.
-              Desde octubre 2026 las agencias en el extranjero suben a ¥53.000 / ¥84.000 / ¥105.000; la web oficial mantiene los precios actuales por ahora.
+              Desde octubre 2026 las agencias en el extranjero suben a ¥53.000 (~287€) / ¥84.000 (~455€) / ¥105.000 (~569€); la web oficial mantiene los precios actuales por ahora.
               Nuestro viaje es 7–21 sept (~15 días): un Pass de 7 días <strong>no puede cubrir</strong> a la vez N'EX (día 1), Alpes (día 6–9) y Fuji (día 14).
             </p>
           </div>
@@ -623,7 +623,7 @@ export default function TransportPage({ onNavigate }) {
                   <tr className="border-t" style={{ borderColor: "var(--line)", background: "rgba(46,125,91,0.06)" }}>
                     <td className="py-3 px-3 font-bold" style={{ color: "var(--forest)" }}>A · Billetes individuales</td>
                     <td className="py-3 px-3 text-xs" style={{ color: "var(--ink-soft)" }}>
-                      JR {formatJpy(coveredTotalJpy)} + Nozomi {formatJpy(nozomiJpy)} + privados {formatJpy(nonJrJpy)}
+                      JR {formatJpyEur(coveredTotalJpy, coveredTotalEur)} + Nozomi {formatJpyEur(nozomiJpy, nozomiEur)} + privados {formatJpyEur(nonJrJpy, nonJrEur)}
                     </td>
                     <td className="py-3 px-3 font-bold" style={{ color: "var(--forest)" }}>{formatJpyEur(individualTotalJpy, individualTotalEur)}</td>
                     <td className="py-3 px-3 font-medium" style={{ color: "var(--forest)" }}>✅ Más barato</td>
@@ -631,7 +631,7 @@ export default function TransportPage({ onNavigate }) {
                   <tr className="border-t" style={{ borderColor: "var(--line)" }}>
                     <td className="py-3 px-3 font-medium">B · JR Pass 7 días</td>
                     <td className="py-3 px-3 text-xs" style={{ color: "var(--ink-soft)" }}>
-                      Pass {formatJpy(PASS_7)} + Nozomi {formatJpy(nozomiJpy)} + privados {formatJpy(nonJrJpy)}
+                      Pass {formatJpyEur(PASS_7)} + Nozomi {formatJpyEur(nozomiJpy, nozomiEur)} + privados {formatJpyEur(nonJrJpy, nonJrEur)}
                     </td>
                     <td className="py-3 px-3 font-bold">{formatJpyEur(withPass7Jpy, withPass7Eur)}</td>
                     <td className="py-3 px-3" style={{ color: "var(--shu)" }}>❌ +{formatJpyEur(saveVs7Jpy, saveVs7Eur)}</td>
@@ -639,7 +639,7 @@ export default function TransportPage({ onNavigate }) {
                   <tr className="border-t" style={{ borderColor: "var(--line)" }}>
                     <td className="py-3 px-3 font-medium">C · JR Pass 14 días</td>
                     <td className="py-3 px-3 text-xs" style={{ color: "var(--ink-soft)" }}>
-                      Pass {formatJpy(PASS_14)} + Nozomi {formatJpy(nozomiJpy)} + privados {formatJpy(nonJrJpy)}
+                      Pass {formatJpyEur(PASS_14)} + Nozomi {formatJpyEur(nozomiJpy, nozomiEur)} + privados {formatJpyEur(nonJrJpy, nonJrEur)}
                     </td>
                     <td className="py-3 px-3 font-bold">{formatJpyEur(withPass14Jpy, withPass14Eur)}</td>
                     <td className="py-3 px-3" style={{ color: "var(--shu)" }}>❌ +{formatJpyEur(saveVs14Jpy, saveVs14Eur)}</td>
@@ -691,7 +691,7 @@ export default function TransportPage({ onNavigate }) {
               <span>✅</span> Recomendación final
             </p>
             <ul className="text-xs space-y-2 pl-2 m-0" style={{ color: "var(--ink)" }}>
-              <li>• <strong>No comprar Japan Rail Pass.</strong> Los trayectos JR de este viaje suman ~{formatJpy(coveredTotalJpy)}/pax frente a {formatJpy(PASS_7)} (7d) o {formatJpy(PASS_14)} (14d).</li>
+              <li>• <strong>No comprar Japan Rail Pass.</strong> Los trayectos JR de este viaje suman ~{formatJpyEur(coveredTotalJpy, coveredTotalEur)}/pax frente a {formatJpyEur(PASS_7)} (7d) o {formatJpyEur(PASS_14)} (14d).</li>
               <li>• Ya llevamos comprados Nozomi + Thunderbird + Shinano + Nohi: el Pass no los “recupera”.</li>
               <li>• Seguir con billetes individuales + Suica/Welcome Suica para urbano.</li>
               <li>• Pendiente de pagar estimado: {formatJpyEur(pendingJpy, pendingEur)}/persona (N'EX, locales, Fuji, Skyliner, metro…).</li>

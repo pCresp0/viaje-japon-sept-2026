@@ -648,7 +648,7 @@ export default function ItineraryPrintView({ days }) {
           <strong>Welcome Suica / IC</strong>
           <br />
           iPhone: app Welcome Suica Mobile → Apple Wallet. Android extranjero: tarjeta física en Narita (JR East).
-          Sin depósito ¥500; saldo no reembolsable. Recarga inicial recomendada ¥3.000–¥5.000/persona.
+          Sin depósito ¥500 (~3€); saldo no reembolsable. Recarga inicial recomendada ¥3.000–¥5.000 (~16–27€)/persona.
         </div>
 
         <div style={{ padding: "8px 10px", background: "#eef4fb", borderRadius: 6, fontSize: 10, lineHeight: 1.55, marginBottom: 10 }}>
@@ -662,8 +662,8 @@ export default function ItineraryPrintView({ days }) {
           <strong>JR Pass — NO COMPENSA</strong>
           <br />
           Trayectos cubiertos por el Pass: ~{formatJpyEur(coveredJpy, coveredEur)}/persona
-          {" vs "}Pass 7d {formatJpy(PASS_7)} (~{formatEur(jpyToEur(PASS_7))})
-          {" / "}Pass 14d {formatJpy(PASS_14)} (~{formatEur(jpyToEur(PASS_14))}).
+          {" vs "}Pass 7d {formatJpyEur(PASS_7)}
+          {" / "}Pass 14d {formatJpyEur(PASS_14)}.
           Tipo cambio ~{YEN_PER_EUR} ¥/€. Nozomi no incluido. Un Pass de 7 días no cubre a la vez N'EX (día 1), Alpes y Fuji (día 14).
         </div>
       </Appendix>

@@ -278,7 +278,7 @@ export default {
 
   "transport.icCardInfo": "Estaciones principales, máquinas expendedoras",
   "transport.icCardCostLabel": "Coste inicial",
-  "transport.icCardCostValue": "Sin depósito · Recarga sugerida: ¥3.000–¥5.000",
+  "transport.icCardCostValue": "Sin depósito · Recarga sugerida: ¥3.000–¥5.000 (~16–27€)",
   "transport.icCardWarning": "Operadores privados (metro local, tranvía Randen, Yurikamome, Nohi Bus) <strong>no</strong> están cubiertos por el JR Pass.",
   "transport.tripsByDay": "Trayectos por día",
   "transport.withJrPass": "con JR Pass",

@@ -58,7 +58,7 @@ export default {
       category: "logistica",
       urgency: "alta",
       title: "🔴 Confirmer Dîner Magome Chaya (Juan Carlos)",
-      detail: "👤 Responsable: Juan Carlos\n📅 14/09/2026\n👥 5 personnes\n🍱 Dîner Minshuku\n⏰ Heure: exactement 18:00\n📍 Magome Chaya\n⚠️ L'hébergement exige une confirmation pour servir le dîner. Juan Carlos doit envoyer un e-mail à Jeng : 5 personnes, arrivée 14/09, heure 18:00. Sans confirmation, pas de dîner (¥3.630/personne).",
+      detail: "👤 Responsable: Juan Carlos\n📅 14/09/2026\n👥 5 personnes\n🍱 Dîner Minshuku\n⏰ Heure: exactement 18:00\n📍 Magome Chaya\n⚠️ L'hébergement exige une confirmation pour servir le dîner. Juan Carlos doit envoyer un e-mail à Jeng : 5 personnes, arrivée 14/09, heure 18:00. Sans confirmation, pas de dîner (¥3.630/personne (~20€)).",
       deadline: "Fais-le maintenant (Juan Carlos)",
     },
     {
@@ -72,7 +72,7 @@ export default {
       category: "logistica",
       urgency: "alta",
       title: "🎫 RÉCUPÉRER BILLETS PHYSIQUES — Shinano 4 (DÉJÀ PAYÉ)",
-      detail: "📅 15/09/2026 (ou plus tôt en gare JR-WEST si possible)\n🚆 Shinano 4 · Nakatsugawa 09:57 → Nagoya 10:53\n🟢 Réservation FAITE : nº 42093 · Receipt AEE6606M · ¥14.350\n📍 Récupérer HORS des portiques\n⚠️ APPORTER : Mastercard physique **8625 · PIN = anniversaire de Pablo · Réservation 42093\nPLAN B : à Nakatsugawa ~08:40 (77 min avant le départ).",
+      detail: "📅 15/09/2026 (ou plus tôt en gare JR-WEST si possible)\n🚆 Shinano 4 · Nakatsugawa 09:57 → Nagoya 10:53\n🟢 Réservation FAITE : nº 42093 · Receipt AEE6606M · ¥14.350 (~77,84€)\n📍 Récupérer HORS des portiques\n⚠️ APPORTER : Mastercard physique **8625 · PIN = anniversaire de Pablo · Réservation 42093\nPLAN B : à Nakatsugawa ~08:40 (77 min avant le départ).",
       deadline: "Avant de monter dans le Shinano 4 (15/09 09:57)",
     },
     {
@@ -88,7 +88,7 @@ export default {
       category: "logistica",
       urgency: "media",
       title: "📱 Préparer l'accès Smart EX — Nozomi 358 (DÉJÀ ACHETÉ)",
-      detail: "📅 15/09/2026\n🚄 Nozomi 358 · Nagoya 11:29 → Tokyo 13:06\n🟢 Réservation FAITE : Smart EX nº 2002 · ¥54.500 · Voiture 12\n📱 Sauvegarder le QR-Ticket (option principale) ou désigner une IC card\n📧 Garder l'e-mail/confirmation Smart EX sur le téléphone\n⚠️ PAS un retrait physique obligatoire type JR-WEST.",
+      detail: "📅 15/09/2026\n🚄 Nozomi 358 · Nagoya 11:29 → Tokyo 13:06\n🟢 Réservation FAITE : Smart EX nº 2002 · ¥54.500 (~295,62€) · Voiture 12\n📱 Sauvegarder le QR-Ticket (option principale) ou désigner une IC card\n📧 Garder l'e-mail/confirmation Smart EX sur le téléphone\n⚠️ PAS un retrait physique obligatoire type JR-WEST.",
       deadline: "Avant le 15/09",
     },
     {
@@ -128,7 +128,7 @@ export default {
       category: "logistica",
       urgency: "media",
       title: "🟠 Logistique numérique : Suica et Visit Japan Web",
-      detail: "📱 iPhone : app officielle 'Welcome Suica Mobile' dans Apple Wallet.\n🤖 Android étranger : pas de Welcome Suica Mobile — acheter une carte physique à Narita.\n💳 Welcome Suica : pas de dépôt ¥500 ; solde non remboursable. Recharge initiale recommandée ¥3.000–¥5.000/pers.\n🌐 Visit Japan Web : QR immigration/douanes pour les 5.",
+      detail: "📱 iPhone : app officielle 'Welcome Suica Mobile' dans Apple Wallet.\n🤖 Android étranger : pas de Welcome Suica Mobile — acheter une carte physique à Narita.\n💳 Welcome Suica : pas de dépôt ¥500 (~3€) ; solde non remboursable. Recharge initiale recommandée ¥3.000–¥5.000 (~16–27€)/pers.\n🌐 Visit Japan Web : QR immigration/douanes pour les 5.",
       deadline: "Jours avant de voler",
     },
     {
@@ -144,7 +144,7 @@ export default {
       category: "logistica",
       urgency: "baja",
       title: "🟢 Expédition de sacs à dos Nakasendo (Magome ↔ Tsumago)",
-      detail: "📅 14/09/2026\n📍 Office de tourisme Magome (08:30–11:30)\n⚠️ Déposer les sacs à Magome (¥500/pièce) pour la marche de 8 km ; récupérer à Tsumago après 13:00.",
+      detail: "📅 14/09/2026\n📍 Office de tourisme Magome (08:30–11:30)\n⚠️ Déposer les sacs à Magome (¥500/pièce (~3€)) pour la marche de 8 km ; récupérer à Tsumago après 13:00.",
       deadline: "14 sept (même jour)",
     },
     {

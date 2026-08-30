@@ -17,7 +17,7 @@ export const guides = {
       },
       {
         title: "Les torii et pourquoi ils sont si nombreux",
-        body: "Le chemin de torii (senbon torii, 'mille torii', bien qu'en réalité il y en ait plus de 10 000) a commencé à se former à l'époque d'Edo. Chaque torii est un don d'une personne ou d'une entreprise qui demande ou remercie pour la prospérité. Au dos de chacun, le nom du donateur et la date sont gravés. Les prix vont d'environ 400 000 ¥ pour un petit à plus d'un million pour les grands. Quand l'un d'eux pourrit, il est retiré et l'espace est revendu, le tunnel est donc en constant renouvellement.",
+        body: "Le chemin de torii (senbon torii, 'mille torii', bien qu'en réalité il y en ait plus de 10 000) a commencé à se former à l'époque d'Edo. Chaque torii est un don d'une personne ou d'une entreprise qui demande ou remercie pour la prospérité. Au dos de chacun, le nom du donateur et la date sont gravés. Les prix vont d'environ 400 000 ¥ (~2.170€) pour un petit à plus d'un million pour les grands. Quand l'un d'eux pourrit, il est retiré et l'espace est revendu, le tunnel est donc en constant renouvellement.",
       },
       {
         title: "Les renards",
@@ -207,7 +207,7 @@ export const guides = {
       },
     ],
     curiosities: [
-      "Depuis 2019, il est interdit de prendre des photos dans les rues privées de Gion, sous peine d'une amende de 10 000 ¥. En 2024, plusieurs ruelles ont été fermées au tourisme en raison du harcèlement des maiko.",
+      "Depuis 2019, il est interdit de prendre des photos dans les rues privées de Gion, sous peine d'une amende de 10 000 ¥ (~54€). En 2024, plusieurs ruelles ont été fermées au tourisme en raison du harcèlement des maiko.",
       "Le nombre de geiko et maiko est passé de quelque 80 000 dans les années 20 à environ 1 000 dans tout le Japon, dont environ 200 à Kyoto.",
       "Le ruisseau Shirakawa, avec ses saules et ses maisons en bois, est probablement le coin le plus photographié de Kyoto au crépuscule.",
     ],
@@ -331,7 +331,7 @@ export const guides = {
       "Le long du sentier, vous verrez des 'cloches à ours' (kuma-yoke no kane) que les randonneurs sont encouragés à faire sonner pour effrayer les ours noirs d'Asie.",
       "Tsumago a été la pionnière du mouvement de préservation architecturale au Japon. En 1968, les habitants se sont mis d'accord sur une charte : ne pas vendre, ne pas louer et ne pas détruire leurs maisons historiques.",
     ],
-    tip: "Utilisez le service d'expédition de bagages (environ 1000 ¥ par sac) disponible entre les centres d'information touristique de Magome et Tsumago pour randonner les mains libres.",
+    tip: "Utilisez le service d'expédition de bagages (environ 1000 ¥ (~5€) par sac) disponible entre les centres d'information touristique de Magome et Tsumago pour randonner les mains libres.",
   },
 
   // ══════════════════════════════════════════════════════════════════

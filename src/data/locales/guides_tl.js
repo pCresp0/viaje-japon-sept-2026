@@ -17,7 +17,7 @@ export const guides = {
       },
       {
         title: "Ang mga torii gate at bakit napakarami nito",
-        body: "Nagsimulang mabuo ang daanan ng torii (senbon torii, 'libong torii', bagaman sa katotohanan ay mayroong higit sa 10,000) sa panahon ng Edo. Ang bawat torii ay donasyon mula sa isang tao o kumpanya na humihingi o nagpapasalamat sa kasaganaan. Sa likod ng bawat isa, ang pangalan ng nag-donate at ang petsa ay inukit. Mula humigit-kumulang 400,000 ¥ ang presyo para sa maliit hanggang mahigit isang milyon para sa malalaki. Kapag nabulok ang isa, inaalis ito at ibinebentang muli ang espasyo, kaya't ang tunnel ay palaging nababago.",
+        body: "Nagsimulang mabuo ang daanan ng torii (senbon torii, 'libong torii', bagaman sa katotohanan ay mayroong higit sa 10,000) sa panahon ng Edo. Ang bawat torii ay donasyon mula sa isang tao o kumpanya na humihingi o nagpapasalamat sa kasaganaan. Sa likod ng bawat isa, ang pangalan ng nag-donate at ang petsa ay inukit. Mula humigit-kumulang 400,000 ¥ (~2.170€) ang presyo para sa maliit hanggang mahigit isang milyon para sa malalaki. Kapag nabulok ang isa, inaalis ito at ibinebentang muli ang espasyo, kaya't ang tunnel ay palaging nababago.",
       },
       {
         title: "Ang mga fox",
@@ -207,7 +207,7 @@ export const guides = {
       },
     ],
     curiosities: [
-      "Ipinagbabawal mula pa noong 2019 ang kumuha ng litrato sa mga pribadong kalsada ng Gion, na may multa na halagang 10,000 ¥. Maraming eskinita ang isinara noong 2024 para sa turismo dahilan ng panggugulo sa maiko.",
+      "Ipinagbabawal mula pa noong 2019 ang kumuha ng litrato sa mga pribadong kalsada ng Gion, na may multa na halagang 10,000 ¥ (~54€). Maraming eskinita ang isinara noong 2024 para sa turismo dahilan ng panggugulo sa maiko.",
       "Bumaba ang bilang ng geiko at maiko mula sa ilang 80,000 mula nang mangyari noong mga 1920s patungong humigit-kumulang 1,000 sa buong bansa ng Japan, at 200 mula sa mga ito ay nananatili sa lungsod ng Kyoto.",
       "Malamang na ang batis sa Shirakawa, pinaliligiran ng mga willow at maliliit na kahoy na bahay ang pinakamaraming kinukunan ng litrato na sulok sa bayan ng Kyoto sa madaling-araw.",
     ],

@@ -231,7 +231,7 @@ export default function FujiAlertBanner() {
                   </span>
                 </div>
                 <p className="text-xs leading-relaxed m-0" style={{ color: "var(--ink)" }}>
-                  <strong>Precio:</strong> 13.000 ¥/persona (entradas y mini-van privada 8h con guía oficial en español). Inicio en Estación de Mishima (08:20 AM) y fin en Estación Shin-Fuji (17:30). Incluye parada gastronómica tradicional para degustar fideos <strong>Houtou</strong>.
+                  <strong>Precio:</strong> 13.000 ¥/persona (~70€) (entradas y mini-van privada 8h con guía oficial en español). Inicio en Estación de Mishima (08:20 AM) y fin en Estación Shin-Fuji (17:30). Incluye parada gastronómica tradicional para degustar fideos <strong>Houtou</strong>.
                 </p>
                 <p className="text-xs m-0" style={{ color: "var(--ink-soft)" }}>
                   📞 Contacto Ken: <a href="tel:+819058631635" className="font-semibold underline" style={{ color: "var(--indigo)" }}>+81 90-5863-1635</a> · <a href="https://excursionesfujiyama.com" target="_blank" rel="noreferrer" className="font-semibold underline" style={{ color: "var(--indigo)" }}>excursionesfujiyama.com ↗</a>

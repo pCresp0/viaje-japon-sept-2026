@@ -217,7 +217,7 @@ export default function PlacesPage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 150px), 1fr))", gap: 10 }}>
             <div className="p-2.5 rounded-xl border" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
               <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 2, fontWeight: 600 }}>Precio</p>
-              <p style={{ fontSize: 13, fontWeight: 700, color: "var(--shu)", margin: 0 }}>13.000 ¥ / pers.</p>
+              <p style={{ fontSize: 13, fontWeight: 700, color: "var(--shu)", margin: 0 }}>13.000 ¥ (~70€) / pers.</p>
               <p style={{ fontSize: 9.5, color: "var(--ink-soft)", margin: 0 }}>Entradas + mini-van inc.</p>
             </div>
             <div className="p-2.5 rounded-xl border" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>

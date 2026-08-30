@@ -58,7 +58,7 @@ export default {
       category: "logistica",
       urgency: "alta",
       title: "🔴 Kumpirmahin ang Hapunan sa Magome Chaya (Juan Carlos)",
-      detail: "👤 Responsable: Juan Carlos\n📅 14/09/2026\n👥 5 mga tao\n🍱 Minshuku Dinner\n⏰ Oras: saktong 18:00\n📍 Magome Chaya\n⚠️ Kailangan ng kumpirmasyon. Dapat mag-email si Juan Carlos kay Jeng: 5 bisita, dating 14/09, oras 18:00. Walang hapunan kung walang kumpirmasyon (¥3,630/tao).",
+      detail: "👤 Responsable: Juan Carlos\n📅 14/09/2026\n👥 5 mga tao\n🍱 Minshuku Dinner\n⏰ Oras: saktong 18:00\n📍 Magome Chaya\n⚠️ Kailangan ng kumpirmasyon. Dapat mag-email si Juan Carlos kay Jeng: 5 bisita, dating 14/09, oras 18:00. Walang hapunan kung walang kumpirmasyon (¥3,630/tao (~20€)).",
       deadline: "Gawin mo na ngayon (Juan Carlos)",
     },
     {
@@ -128,7 +128,7 @@ export default {
       category: "logistica",
       urgency: "media",
       title: "🟠 Digital Logistics: Suica at Visit Japan Web",
-      detail: "📱 iPhone: official 'Welcome Suica Mobile' sa Apple Wallet.\n🤖 Foreign Android: walang Welcome Suica Mobile — bumili ng physical Welcome Suica sa Narita.\n💳 Welcome Suica: walang ¥500 deposit; hindi refundable ang balance. Recommended top-up: ¥3,000–¥5,000/tao.\n🌐 Visit Japan Web: immigration/customs QR para sa lima.",
+      detail: "📱 iPhone: official 'Welcome Suica Mobile' sa Apple Wallet.\n🤖 Foreign Android: walang Welcome Suica Mobile — bumili ng physical Welcome Suica sa Narita.\n💳 Welcome Suica: walang ¥500 (~3€) deposit; hindi refundable ang balance. Recommended top-up: ¥3,000–¥5,000 (~16–27€)/tao.\n🌐 Visit Japan Web: immigration/customs QR para sa lima.",
       deadline: "Ilang araw bago lumipad",
     },
     {
@@ -144,7 +144,7 @@ export default {
       category: "logistica",
       urgency: "baja",
       title: "🟢 Pagpapadala ng backpack Nakasendo (Magome ↔ Tsumago)",
-      detail: "📅 14/09/2026\n📍 Magome Tourist Office (08:30–11:30)\n⚠️ Iwan ang bags sa Magome (¥500/piraso) para sa 8 km hike; kunin sa Tsumago pagkatapos ng 13:00.",
+      detail: "📅 14/09/2026\n📍 Magome Tourist Office (08:30–11:30)\n⚠️ Iwan ang bags sa Magome (¥500/piraso (~3€)) para sa 8 km hike; kunin sa Tsumago pagkatapos ng 13:00.",
       deadline: "14 Sept (parehong araw)",
     },
     {

@@ -71,7 +71,7 @@ export default function NozomiNagoyaTicketCard({ onGoToDay } = {}) {
             <div className="text-left sm:text-right flex-shrink-0">
               <p className="text-xs opacity-75 uppercase tracking-wider mb-0.5 mt-0">Reserva</p>
               <p className="text-base font-bold font-mono tracking-widest m-0">2002</p>
-              <p className="text-xs opacity-90 mt-0.5 m-0">5 Adultos · ¥54.500 · 295,62€</p>
+              <p className="text-xs opacity-90 mt-0.5 m-0">5 Adultos · ¥54.500 (~295,62€)</p>
             </div>
           </div>
           <ChevronDown
@@ -182,7 +182,7 @@ export default function NozomiNagoyaTicketCard({ onGoToDay } = {}) {
 
             <div className="mt-3 pt-3 border-t text-xs text-gray-600 flex flex-wrap items-center justify-between gap-2" style={{ borderColor: "var(--line)" }}>
               <span>👤 Titular: <strong>Pablo Crespo Bellido</strong></span>
-              <span>💰 Total: <strong>¥54.500 (¥10.900/pax · 295,62€ Revolut)</strong></span>
+              <span>💰 Total: <strong>¥54.500 (~295,62€) · ¥10.900/pax (~59,12€)</strong></span>
               <span className="inline-flex items-center gap-1">
                 <CreditCard size={12} /> Mastercard ···· <strong>5230</strong>
               </span>
@@ -239,7 +239,7 @@ export default function NozomiNagoyaTicketCard({ onGoToDay } = {}) {
             <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-3 mt-2 border-b pb-2">Checklist de preparación</p>
             <div className="space-y-2">
               <ChecklistItem checked={checkedItems.booked} locked text="Reserva Smart EX completada (nº 2002)" />
-              <ChecklistItem checked={checkedItems.paid} locked text="Pago confirmado · ¥54.500 · 295,62€" />
+              <ChecklistItem checked={checkedItems.paid} locked text="Pago confirmado · ¥54.500 (~295,62€)" />
               <ChecklistItem checked={checkedItems.seats} locked text="Asientos Car 12: 11-D, 11-E, 12-C, 12-D, 12-E" />
               <div className="my-2 border-t border-dashed" style={{ borderColor: "var(--line)" }} />
               <ChecklistItem checked={checkedItems.qr} onClick={() => toggleCheck("qr")} text="QR-Ticket guardado / método de acceso confirmado" />
