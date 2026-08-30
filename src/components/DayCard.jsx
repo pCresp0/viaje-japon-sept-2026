@@ -7,6 +7,8 @@ import { guides, guidesByDay, guideMeta } from "../data/guides";
 import DayFujiOptionCard from "./DayFujiOptionCard";
 import VisitJapanQRCard from "./VisitJapanQRCard";
 import ShinkansenTicketCard from "./ShinkansenTicketCard";
+import ThunderbirdTicketCard from "./ThunderbirdTicketCard";
+import NohiMagomeTicketCard from "./NohiMagomeTicketCard";
 import GuideCard from "./GuideCard";
 import StayOption from "./StayOption";
 import PlaceText from "./PlaceText";
@@ -296,6 +298,18 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
                   {day.num === 1 && s.time === "17:19" && (
                     <div className="mt-3 relative z-10">
                       <ShinkansenTicketCard />
+                    </div>
+                  )}
+
+                  {day.num === 6 && s.time === "08:10" && (
+                    <div className="mt-3 relative z-10">
+                      <ThunderbirdTicketCard />
+                    </div>
+                  )}
+
+                  {day.num === 8 && s.time === "07:35" && (
+                    <div className="mt-3 relative z-10">
+                      <NohiMagomeTicketCard defaultExpanded={true} />
                     </div>
                   )}
                 </li>

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Bus, Ticket, CheckCircle2, ChevronDown, Clock, AlertTriangle, Info, MapPin, Eye, X } from "lucide-react";
 
-export default function NohiMagomeTicketCard() {
-  const [isExpanded, setIsExpanded] = useState(false);
+export default function NohiMagomeTicketCard({ defaultExpanded = false }) {
+  const [isExpanded, setIsExpanded] = useState(defaultExpanded);
   const [showImageModal, setShowImageModal] = useState(false);
   const [checkedItems, setCheckedItems] = useState({
     booked: true,
