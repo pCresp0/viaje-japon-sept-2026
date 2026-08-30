@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Bus, Ticket, CheckCircle2, ChevronDown, Clock, AlertTriangle, Info, MapPin, Eye, X } from "lucide-react";
+import { Bus, Ticket, CheckCircle2, ChevronDown, Clock, AlertTriangle, Info, MapPin, Eye, X, FileDown } from "lucide-react";
 
 export default function NohiMagomeTicketCard({ defaultExpanded = false }) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
