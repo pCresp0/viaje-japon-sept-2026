@@ -21,7 +21,7 @@ export default function ThunderbirdTicketCard() {
 
   return (
     <div
-      className="rounded-2xl border overflow-hidden shadow-sm mb-6 mt-4"
+      className="rounded-2xl border overflow-hidden shadow-sm mb-6"
       style={{
         background: "var(--paper-raised)",
         borderColor: "var(--line)",
@@ -30,7 +30,7 @@ export default function ThunderbirdTicketCard() {
       {/* Header (Toggle) */}
       <button 
         onClick={() => setIsExpanded(!isExpanded)}
-        className="w-full text-left p-4 sm:p-5 text-white relative overflow-hidden transition-all hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset" 
+        className="w-full text-left p-4 sm:p-5 text-white relative overflow-hidden transition-all hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset cursor-pointer" 
         style={{ background: "linear-gradient(135deg, #2e7d5b 0%, #1a4a35 100%)" }}
       >
         <div className="relative z-10 flex items-center justify-between gap-3">
@@ -38,14 +38,14 @@ export default function ThunderbirdTicketCard() {
             <div>
               <div className="flex items-center gap-2 mb-1.5 opacity-90">
                 <Train size={14} className="text-green-300" />
-                <p className="text-xs font-bold tracking-widest uppercase m-0">Kyoto → Kanazawa</p>
+                <p className="text-xs font-bold tracking-widest uppercase m-0">Kioto → Kanazawa</p>
               </div>
               <h3 className="text-lg font-display font-bold m-0 leading-tight">
                 Thunderbird 5 + Kagayaki 508
               </h3>
               <p className="text-sm opacity-90 mt-1 flex items-center gap-1.5 m-0">
                 <Clock size={12} />
-                12 Septiembre 2026 · 08:10 – 10:03
+                12 Septiembre 2026 · 08:10 → 10:03
               </p>
             </div>
             <div className="text-left sm:text-right flex-shrink-0">

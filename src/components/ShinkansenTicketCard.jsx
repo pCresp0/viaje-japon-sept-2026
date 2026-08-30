@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Zap, Ticket, X, MapPin, ChevronDown } from "lucide-react";
+import { Zap, Ticket, X, Clock, ChevronDown } from "lucide-react";
 import { groupMembers } from "./VisitJapanQRCard";
 
 export default function ShinkansenTicketCard() {
@@ -27,7 +27,7 @@ export default function ShinkansenTicketCard() {
       {/* Header (Toggle) */}
       <button 
         onClick={() => setIsExpanded(!isExpanded)}
-        className="w-full text-left p-4 sm:p-5 text-white relative overflow-hidden transition-all hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset" 
+        className="w-full text-left p-4 sm:p-5 text-white relative overflow-hidden transition-all hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset cursor-pointer" 
         style={{ background: "linear-gradient(135deg, #1d3557 0%, #2a5286 100%)" }}
       >
         <div className="relative z-10 flex items-center justify-between gap-3">
@@ -35,20 +35,20 @@ export default function ShinkansenTicketCard() {
             <div>
               <div className="flex items-center gap-2 mb-1.5 opacity-90">
                 <Zap size={14} className="text-yellow-400" />
-                <p className="text-xs font-bold tracking-widest uppercase m-0">Shinkansen Ticket</p>
+                <p className="text-xs font-bold tracking-widest uppercase m-0">Shinagawa → Kioto</p>
               </div>
               <h3 className="text-lg font-display font-bold m-0 leading-tight">
                 NOZOMI 53
               </h3>
               <p className="text-sm opacity-90 mt-1 flex items-center gap-1.5 m-0">
-                <MapPin size={12} />
-                Shinagawa (17:19) → Kioto (19:23)
+                <Clock size={12} />
+                7 Septiembre 2026 · 17:19 → 19:23
               </p>
             </div>
             <div className="text-left sm:text-right flex-shrink-0">
-              <p className="text-xs opacity-75 uppercase tracking-wider mb-0.5 mt-0">Localizador</p>
+              <p className="text-xs opacity-75 uppercase tracking-wider mb-0.5 mt-0">Reserva</p>
               <p className="text-base font-bold font-mono tracking-widest m-0">2000</p>
-              <p className="text-xs opacity-90 mt-0.5 m-0">7 Septiembre 2026</p>
+              <p className="text-xs opacity-90 mt-0.5 m-0">5 Adultos · ¥68.850</p>
             </div>
           </div>
           <ChevronDown 

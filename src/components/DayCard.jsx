@@ -309,7 +309,7 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
 
                   {day.num === 8 && s.time === "07:35" && (
                     <div className="mt-3 relative z-10">
-                      <NohiMagomeTicketCard defaultExpanded={true} />
+                      <NohiMagomeTicketCard />
                     </div>
                   )}
                 </li>
@@ -413,7 +413,7 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
             >
               <X size={18} />
             </button>
-            <GuideCard id={selectedGuide} accent={block.color} />
+            <GuideCard id={selectedGuide} accent={block.color} defaultOpen />
           </div>
         </div>,
         document.body

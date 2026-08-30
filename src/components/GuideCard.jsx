@@ -16,9 +16,11 @@ const franchiseStyle = {
  * Tarjeta plegable con la guía detallada de un lugar.
  * Por defecto está cerrada: sólo muestra el nombre y una línea de resumen,
  * para no convertir cada día en un muro de texto.
+ * Con defaultOpen={true} (p. ej. desde el botón Info del itinerario) se abre
+ * ya desplegada para ahorrar un clic.
  */
-export default function GuideCard({ id, accent = "#1d3557" }) {
-  const [open, setOpen] = useState(false);
+export default function GuideCard({ id, accent = "#1d3557", defaultOpen = false }) {
+  const [open, setOpen] = useState(defaultOpen);
   const guide = guides[id];
   const refs = popCulture[id];
   const localImage = guideImages[id] ?? null;

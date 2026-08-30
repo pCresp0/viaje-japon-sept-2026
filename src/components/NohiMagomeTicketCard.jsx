@@ -21,7 +21,7 @@ export default function NohiMagomeTicketCard({ defaultExpanded = false }) {
 
   return (
     <div
-      className="rounded-2xl border overflow-hidden shadow-sm mb-6 mt-4"
+      className="rounded-2xl border overflow-hidden shadow-sm mb-6"
       style={{
         background: "var(--paper-raised)",
         borderColor: "var(--line)",
@@ -38,7 +38,7 @@ export default function NohiMagomeTicketCard({ defaultExpanded = false }) {
             <div>
               <div className="flex items-center gap-2 mb-1.5 opacity-90">
                 <Bus size={14} className="text-amber-200" />
-                <p className="text-xs font-bold tracking-widest uppercase m-0">Takayama → Magome (Nakasendo)</p>
+                <p className="text-xs font-bold tracking-widest uppercase m-0">Takayama → Magome</p>
               </div>
               <h3 className="text-lg font-display font-bold m-0 leading-tight">
                 Nohi Bus (Japan Bus Online)
