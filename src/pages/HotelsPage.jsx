@@ -225,12 +225,6 @@ function HotelCard({ stay, index, anchorId }) {
 export default function HotelsPage() {
   const { stays } = useContent();
   const t = useT();
-  const totalGroup = stays.reduce((sum, s) => {
-    const raw = s.options[0]?.total;
-    if (!raw) return sum;
-    const n = parseFloat(raw.replace(/[€\s]/g, "").replace(/\./g, "").replace(",", "."));
-    return sum + (isNaN(n) ? 0 : n);
-  }, 0);
 
   return (
     <div className="px-4 pt-3 pb-12">
@@ -240,26 +234,6 @@ export default function HotelsPage() {
         <p style={{ fontSize: 13.5, color: "var(--ink-soft)", marginTop: 6, lineHeight: 1.5 }}>
           Todo lo necesario para el check-in: confirmación, PIN, horarios, dirección y enlace a la reserva.
         </p>
-      </div>
-
-      {/* Summary strip */}
-      <div className="rounded-2xl px-5 py-4 mb-6" style={{ background: "var(--indigo)", color: "white" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12 }}>
-          <div>
-            <p style={{ fontSize: 10, opacity: 0.6, textTransform: "uppercase", letterSpacing: "0.05em", margin: 0 }}>{t("hotels.stays")}</p>
-            <p className="font-display" style={{ fontSize: 22, fontWeight: 700, margin: "2px 0 0" }}>{stays.length}</p>
-          </div>
-          <div>
-            <p style={{ fontSize: 10, opacity: 0.6, textTransform: "uppercase", letterSpacing: "0.05em", margin: 0 }}>{t("hotels.nights")}</p>
-            <p className="font-display" style={{ fontSize: 22, fontWeight: 700, margin: "2px 0 0" }}>14</p>
-          </div>
-          <div>
-            <p style={{ fontSize: 10, opacity: 0.6, textTransform: "uppercase", letterSpacing: "0.05em", margin: 0 }}>{t("hotels.groupTotal")}</p>
-            <p className="font-display" style={{ fontSize: 22, fontWeight: 700, margin: "2px 0 0" }}>
-              {totalGroup.toLocaleString("es-ES", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}€
-            </p>
-          </div>
-        </div>
       </div>
 
       <div
