@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { useContent, useT } from "../i18n/LanguageContext";
 import { fmtDate } from "../utils/date";
-import { PlaneTakeoff, PlaneLanding } from "lucide-react";
+import { PlaneTakeoff, PlaneLanding, ChevronDown } from "lucide-react";
 import VisitJapanQRCard from "../components/VisitJapanQRCard";
 
 export default function InfoPage() {
@@ -59,6 +60,7 @@ function FlightRow({ flight, icon: Icon }) {
   // For round trip flights, we need to parse the journey
   // Ida: Madrid -> Doha -> Narita
   // Vuelta: Narita -> Doha -> Madrid
+  const [expanded, setExpanded] = useState(false);
   
   // Se compara contra un campo estable, nunca contra el texto visible:
   // el label se traduce y la comparación se rompería.
@@ -89,14 +91,37 @@ function FlightRow({ flight, icon: Icon }) {
   
   const leg1Duration = 7; // Madrid-Doha
   const leg2Duration = 8; // Doha-Narita or reverse
+  const routeSummary = isOutbound ? "Madrid → Doha → Narita" : "Narita → Doha → Madrid";
   
   return (
-    <div className="rounded-2xl p-4" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
-      <div className="flex items-center gap-2 mb-4" style={{ color: "var(--shu)" }}>
-        <Icon size={18} />
-        <p className="eyebrow font-semibold">{flight.label} · {flight.flightNumber}</p>
-      </div>
-      
+    <div className="rounded-2xl overflow-hidden" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
+      <button
+        type="button"
+        onClick={() => setExpanded(!expanded)}
+        className="w-full text-left p-4 cursor-pointer transition-colors hover:bg-black/[0.02] border-none bg-transparent"
+      >
+        <div className="flex items-start justify-between gap-3">
+          <div className="min-w-0">
+            <div className="flex items-center gap-2 mb-1.5" style={{ color: "var(--shu)" }}>
+              <Icon size={18} />
+              <p className="eyebrow font-semibold m-0">{flight.label} · {flight.flightNumber}</p>
+            </div>
+            <p className="text-sm font-bold m-0" style={{ color: "var(--ink)" }}>{routeSummary}</p>
+            <p className="text-xs mt-1 m-0" style={{ color: "var(--ink-soft)" }}>
+              {formatDate(depTime)} · {formatTime(depTime)} → {formatTime(arrTime)}
+              {arrTime.getDate() !== depTime.getDate() ? " (+1)" : ""} · {totalDuration}h {totalMins}m
+            </p>
+          </div>
+          <ChevronDown
+            size={20}
+            className={`shrink-0 transition-transform ${expanded ? "rotate-180" : ""}`}
+            style={{ color: "var(--ink-soft)", marginTop: 2 }}
+          />
+        </div>
+      </button>
+
+      {expanded && (
+      <div className="px-4 pb-4">
       {/* Route overview */}
       <div style={{
         background: "var(--paper)",
@@ -230,6 +255,8 @@ function FlightRow({ flight, icon: Icon }) {
           </a>
         )}
       </div>
+      </div>
+      )}
     </div>
   );
 }

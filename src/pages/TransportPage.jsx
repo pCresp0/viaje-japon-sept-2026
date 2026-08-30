@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { useContent, useT } from "../i18n/LanguageContext";
-import { Train, Bus, Zap, FileDown, CheckCircle2, Clock, AlertCircle, Smartphone, CreditCard } from "lucide-react";
+import { Train, Bus, Zap, FileDown, CheckCircle2, Clock, AlertCircle, Smartphone, CreditCard, ChevronDown } from "lucide-react";
 import { Highlightable } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 import { exportTransportExcel } from "../utils/exportCsv";
@@ -21,6 +22,7 @@ export default function TransportPage({ onNavigate }) {
   const { transports, days, blocks } = useContent();
   const t = useT();
   const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
+  const [jrPassOpen, setJrPassOpen] = useState(false);
 
   const seenKeys = [];
   const groups = {};
@@ -328,21 +330,37 @@ export default function TransportPage({ onNavigate }) {
       </div>
 
       {/* 6. ANÁLISIS DE COSTE & JAPAN RAIL PASS */}
-      <div className="rounded-2xl p-6 border mb-6" style={{ background: "var(--paper-raised)", borderColor: "var(--line)" }}>
-        <div className="flex items-center gap-2 mb-3">
-          <span className="text-xl">📊</span>
-          <h3 className="font-bold text-lg" style={{ color: "var(--ink)", margin: 0 }}>
-            ¿Merece la pena el Japan Rail Pass (JR Pass)?
-          </h3>
-        </div>
+      <div className="rounded-2xl border mb-6 overflow-hidden" style={{ background: "var(--paper-raised)", borderColor: "var(--line)" }}>
+        <button
+          type="button"
+          onClick={() => setJrPassOpen(!jrPassOpen)}
+          className="w-full text-left p-5 sm:p-6 cursor-pointer border-none bg-transparent transition-colors hover:bg-black/[0.02]"
+        >
+          <div className="flex items-start justify-between gap-3">
+            <div className="min-w-0">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xl">📊</span>
+                <h3 className="font-bold text-lg m-0" style={{ color: "var(--ink)" }}>
+                  ¿Merece la pena el Japan Rail Pass (JR Pass)?
+                </h3>
+              </div>
+              <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl" style={{ background: "rgba(188,71,73,0.1)", border: "1px solid rgba(188,71,73,0.2)" }}>
+                <span style={{ fontSize: 16 }}>❌</span>
+                <p className="text-sm font-bold m-0" style={{ color: "var(--shu)" }}>
+                  VEREDICTO: NO COMPENSA COMPRAR EL JAPAN RAIL PASS NACIONAL.
+                </p>
+              </div>
+            </div>
+            <ChevronDown
+              size={22}
+              className={`shrink-0 transition-transform ${jrPassOpen ? "rotate-180" : ""}`}
+              style={{ color: "var(--ink-soft)", marginTop: 4 }}
+            />
+          </div>
+        </button>
 
-        <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl mb-4" style={{ background: "rgba(188,71,73,0.1)", border: "1px solid rgba(188,71,73,0.2)" }}>
-          <span style={{ fontSize: 16 }}>❌</span>
-          <p className="text-sm font-bold" style={{ color: "var(--shu)", margin: 0 }}>
-            VEREDICTO: NO COMPENSA COMPRAR EL JAPAN RAIL PASS NACIONAL.
-          </p>
-        </div>
-
+        {jrPassOpen && (
+        <div className="px-5 sm:px-6 pb-6">
         <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="p-4 rounded-xl border bg-white/50" style={{ borderColor: "var(--line)" }}>
             <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">✅ El JR Pass SÍ cubre:</p>
@@ -448,6 +466,8 @@ export default function TransportPage({ onNavigate }) {
             <a href="https://www.nouhibus.co.jp/highwaybus/highwaybus_route/" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">Nohi Bus Oficial</a>
           </div>
         </div>
+        </div>
+        )}
       </div>
     </div>
   );
