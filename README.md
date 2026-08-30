@@ -25,7 +25,7 @@ He seleccionado meticulosamente el stack tecnológico priorizando el rendimiento
 * **Por qué:** Vite proporciona un entorno de desarrollo casi instantáneo gracias al Hot Module Replacement (HMR) y empaqueta el código para producción usando Rollup, generando *chunks* de JavaScript altamente optimizados. React nos permite organizar la UI en componentes reusables (como el `Nav` superior o las `Cards` de lugares).
 
 ### 2. Tailwind CSS v4
-* **Por qué:** Permite construir la interfaz de usuario directamente en el HTML usando clases utilitarias (`flex`, `rounded-2xl`, `bg-paper`), sin tener que mantener hojas de estilo CSS kilométricas. Además, Tailwind asegura un diseño **estrictamente responsive y *Mobile-First***, con soporte nativo para *Safe Area Insets* de iOS (para que la app no se superponga con el "notch" o la barra de inicio del iPhone).
+* **Por qué:** Permite construir la interfaz de usuario directamente en el HTML usando clases utilitarias (`flex`, `rounded-2xl`, `bg-paper`), sin tener que mantener hojas de estilo CSS kilométricas. Además, Tailwind asegura un diseño **estrictamente responsive y *Mobile-First***, con soporte nativo para *Safe Area Insets* de iOS (para que la app no se superponga con el "notch" o la barra de inicio del iPhone). Combinado con selectores nativos (*Segmented Controls*) de estilo iOS, el aspecto final es totalmente premium.
 
 ### 3. Sistema Multi-idioma Propio (i18n Context)
 * **Por qué:** En lugar de instalar dependencias pesadas como `react-i18next`, desarrollé una arquitectura de internacionalización a medida mediante *React Context*. El sistema fusiona un dataset base (los datos estructurales y numéricos del viaje en `trip.js`) con diccionarios puramente textuales para cada idioma (`es.js`, `en.js`, `fr.js`, `tl.js`).
@@ -44,11 +44,14 @@ He seleccionado meticulosamente el stack tecnológico priorizando el rendimiento
 
 ## ✨ Funcionalidades Destacadas
 
-- 🏠 **Estado Dinámico ("Hoy"):** La app sabe qué día es. El componente de inicio detecta automáticamente en qué fase temporal se encuentra el usuario (Antes del viaje, Durante, Después) y renderiza la pantalla de "Hoy" con el itinerario de la jornada en curso.
+- 🏠 **Estado Dinámico ("Hoy"):** La app sabe qué día es. El componente de inicio detecta automáticamente en qué fase temporal se encuentra el usuario (Antes del viaje, Durante, Después) y renderiza la pantalla de "Hoy" con el itinerario de la jornada en curso (por defecto, el día 0 de viaje).
 - 🚇 **Navegación tipo Metro:** El itinerario (`RouteLine`) usa un diseño de navegación vertical inspirado en los esquemas de trenes nipones.
-- 📋 **Preparativos Persistentes:** Una lista de equipaje cuyas casillas rellenadas se guardan en el móvil.
+- 👾 **Cultura Pop (Frikadas):** Un apartado dedicado a integrar localizaciones reales del viaje con franquicias como Pokémon, Studio Ghibli, Digimon y Nintendo.
+- 📋 **Preparativos Persistentes:** Una lista de equipaje y tareas dividida inteligentemente entre "Antes de viajar" y "Durante el viaje", guardando el progreso en el dispositivo de forma persistente.
 - 💰 **Calculadora de Presupuestos:** Desgloses automáticos por persona de costes de vuelos y reservas en función del número de integrantes del grupo (5).
-- 🔍 **Buscador Global Inteligente:** Un motor de búsqueda integrado que permite encontrar al instante cualquier lugar, hotel, restaurante o tren a lo largo del viaje, saltando directamente al día y pestaña correspondiente con el resultado resaltado visualmente.
+- 🖨️ **Modo Impresión:** Vistas optimizadas para generar el itinerario en PDF o en papel.
+- ⚡ **Lazy Loading:** División del código (*Code Splitting*) con React Suspense para asegurar tiempos de carga y un primer renderizado instantáneo.
+- 🔍 **Buscador Global Inteligente:** Un motor de búsqueda integrado que permite encontrar al instante cualquier lugar, hotel, restaurante, concepto histórico o frikada a lo largo del viaje, saltando directamente al día y pestaña correspondiente con el resultado resaltado visualmente (incluso abriendo los acordeones necesarios automáticamente).
 - 🌦️ **Meteorología en Tiempo Real (Offline-friendly):** Integración con la API de Open-Meteo para mostrar el tiempo en las distintas ciudades de la ruta. Las previsiones se guardan en el caché local del móvil durante 12 horas, garantizando que puedas consultar el clima del día incluso si te quedas sin conexión en la calle.
 - 🗺️ **Mapa Interactivo Sincronizado:** Gracias a Leaflet, la app cuenta con un mapa vectorial interactivo que permite filtrar marcadores por categoría (Excursiones, Hoteles, Transportes) o por día específico, haciendo zoom dinámico automáticamente para una navegación perfecta por el terreno.
 - 📅 **Calendario Integrado con "Vista Rápida":** Un calendario visual que no solo da una idea clara de la estructura del viaje y los bloques geográficos, sino que actúa como atajo directo a una "Vista Rápida" simplificada en el itinerario de cada día.

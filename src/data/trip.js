@@ -26,8 +26,23 @@ export const tripMeta = {
       },
       {
         icon: "🎨",
-        title: "React, Tailwind & Framer Motion",
-        text: "El ecosistema de React nos permite usar componentes modulares, facilitando un diseño estricto Mobile-First estilizado con TailwindCSS y animaciones fluidas con Framer Motion, garantizando una experiencia nativa."
+        title: "React, Tailwind & UI Moderna",
+        text: "El ecosistema de React nos permite usar componentes modulares, facilitando un diseño estricto Mobile-First estilizado con TailwindCSS v4. Además, con controles segmentados (estilo iOS) y micro-animaciones en los menús, garantizamos una experiencia totalmente premium y nativa."
+      },
+      {
+        icon: "⚡",
+        title: "Lazy Loading (Code Splitting)",
+        text: "Para mantener la velocidad de carga al máximo, hemos implementado React Suspense. Al abrir la app, solo descargas el código necesario para empezar (Lazy Loading); el resto de pantallas (Mapas, Frikadas, Historia) se cargan de forma asíncrona a medida que las visitas."
+      },
+      {
+        icon: "🔍",
+        title: "Buscador Global Inteligente",
+        text: "La aplicación incluye un motor de búsqueda que indexa instantáneamente todo el contenido (lugares, restaurantes, conceptos históricos, cultura pop, hoteles). Puedes saltar en un clic a cualquier parte del viaje, abriendo los paneles o menús necesarios automáticamente."
+      },
+      {
+        icon: "👾",
+        title: "Cultura Pop (Frikadas)",
+        text: "Hemos añadido una integración especial entre los puntos de la ruta y franquicias japonesas como Pokémon, Studio Ghibli, Nintendo o Digimon. La app no solo te cuenta las curiosidades, sino que cruza los datos con el mapa interactivo para avisarte si estás cerca de algún punto clave."
       }
     ],
     github: "Ver código fuente en GitHub"
