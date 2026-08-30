@@ -376,7 +376,13 @@ export default function TransportPage({ onNavigate }) {
       {/* 6. Enlace al análisis JR Pass (vive en Presupuesto) */}
       <button
         type="button"
-        onClick={() => onNavigate?.({ tab: "presupuesto", targetId: "jr-pass-analysis" })}
+        onClick={() => onNavigate?.({
+          tab: "presupuesto",
+          targetId: "jr-pass-analysis",
+          silent: true,
+          scrollBlock: "start",
+          highlightDelay: 250,
+        })}
         className="w-full text-left rounded-2xl border mb-6 p-5 cursor-pointer transition-colors hover:bg-black/[0.02]"
         style={{ background: "var(--paper-raised)", borderColor: "var(--line)" }}
       >

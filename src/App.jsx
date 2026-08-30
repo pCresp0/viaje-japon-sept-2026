@@ -69,15 +69,26 @@ export default function App() {
   }
 
   function handleSearchNavigate(result) {
-    const { tab: nextTab, day, targetId } = result;
-    setSearchResult(result);
+    const { tab: nextTab, day, targetId, silent, scrollBlock, highlightDelay } = result;
+    // Enlaces internos (p. ej. Transportes → JR Pass) no deben mostrar
+    // la franja "Resultado de búsqueda".
+    if (silent) setSearchResult(null);
+    else setSearchResult(result);
     if (day != null) setOpenDay(day);
     setTab(nextTab);
     // Se dispara con un pequeño margen para dar tiempo a que la nueva
     // página (y, si hace falta, el día/acordeón correspondiente) se
     // monten antes de intentar el scrollIntoView.
     if (targetId) {
-      window.setTimeout(() => triggerHighlight(targetId), 120);
+      const delay = highlightDelay ?? (silent ? 220 : 120);
+      window.setTimeout(
+        () => triggerHighlight(targetId, {
+          block: scrollBlock || "center",
+          // Tras abrir un acordeón, esperar un poco más para scroll al top.
+          delay: scrollBlock === "start" ? 80 : 60,
+        }),
+        delay,
+      );
     }
   }
 

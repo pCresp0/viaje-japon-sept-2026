@@ -19,19 +19,22 @@ const HIGHLIGHT_DURATION_MS = 2600;
 
 export function HighlightProvider({ children }) {
   const [highlightId, setHighlightId] = useState(null);
+  const [highlightOpts, setHighlightOpts] = useState({ block: "center" });
   const timerRef = useRef(null);
 
-  const triggerHighlight = useCallback((id) => {
+  const triggerHighlight = useCallback((id, opts = {}) => {
     window.clearTimeout(timerRef.current);
     if (!id) {
       setHighlightId(null);
       return;
     }
+    const nextOpts = { block: opts.block || "center", delay: opts.delay ?? 60 };
     // Forzar un "reset" antes de volver a activar el mismo id, para que
     // si se pulsa el mismo resultado dos veces seguidas el pulso se
     // vuelva a reproducir en vez de quedarse ya "consumido".
     setHighlightId(null);
     requestAnimationFrame(() => {
+      setHighlightOpts(nextOpts);
       setHighlightId(id);
       timerRef.current = window.setTimeout(() => setHighlightId(null), HIGHLIGHT_DURATION_MS);
     });
@@ -40,7 +43,7 @@ export function HighlightProvider({ children }) {
   useEffect(() => () => window.clearTimeout(timerRef.current), []);
 
   return (
-    <HighlightContext.Provider value={{ highlightId, triggerHighlight }}>
+    <HighlightContext.Provider value={{ highlightId, highlightOpts, triggerHighlight }}>
       {children}
     </HighlightContext.Provider>
   );
@@ -62,18 +65,20 @@ export function useHighlight() {
  * Uso: <Highlightable id={anchorId}><div className="...">...</div></Highlightable>
  */
 export function Highlightable({ id, children }) {
-  const { highlightId } = useHighlight();
+  const { highlightId, highlightOpts } = useHighlight();
   const ref = useRef(null);
   const active = highlightId === id;
+  const block = highlightOpts?.block || "center";
+  const delay = highlightOpts?.delay ?? 60;
 
   useEffect(() => {
     if (active && ref.current) {
       const t = window.setTimeout(() => {
-        ref.current?.scrollIntoView({ behavior: "smooth", block: "center" });
-      }, 60);
+        ref.current?.scrollIntoView({ behavior: "smooth", block });
+      }, delay);
       return () => window.clearTimeout(t);
     }
-  }, [active]);
+  }, [active, block, delay]);
 
   return cloneElement(children, {
     id,
@@ -81,5 +86,9 @@ export function Highlightable({ id, children }) {
     className: [children.props.className, active ? "search-highlight-pulse" : ""]
       .filter(Boolean)
       .join(" "),
+    style: {
+      ...children.props.style,
+      ...(block === "start" ? { scrollMarginTop: 12 } : null),
+    },
   });
 }
