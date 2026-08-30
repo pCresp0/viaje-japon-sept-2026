@@ -339,12 +339,13 @@ function buildSearchIndex(lang) {
       terms: [period.title, period.summary, ...(period.content || []).map((block) => block.text)],
     }));
   }
-  for (const kind of ["books", "podcasts"]) {
+  for (const kind of ["books", "podcasts", "documentaries"]) {
     for (const item of furtherReading[kind] || []) {
+      const sub = kind === "books" ? "Libro recomendado" : kind === "podcasts" ? "Podcast recomendado" : "Documental recomendado";
       items.push(entry({
         id: `history-${kind}-${item.title}`,
         title: item.title,
-        subtitle: kind === "books" ? "Libro recomendado · Historia" : "Podcast recomendado · Historia",
+        subtitle: `${sub} · Historia`,
         category: "Historia",
         tab: "historia",
         targetId: slug("history", kind, item.title),

@@ -259,4 +259,12 @@ export const furtherReading = {
       note: "Un repaso clásico de radio a la clase samurái, desde el periodo Sengoku hasta su desaparición en la Restauración Meiji.",
     },
   ],
+  documentaries: [
+    {
+      title: "El verdadero Japón que la mayoría nunca verá | Documental 4K",
+      channel: "YouTube",
+      url: "https://www.youtube.com/watch?v=b23vUM4MdFM",
+      note: "Un documental visualmente espectacular que explora tanto las grandes urbes como el Japón más rural y tradicional.",
+    },
+  ],
 };

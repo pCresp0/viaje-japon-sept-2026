@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { ChevronDown, BookOpen, Headphones, MapPinned, Scroll, Volume2 } from "lucide-react";
+import { ChevronDown, BookOpen, Headphones, MonitorPlay, MapPinned, Scroll, Volume2 } from "lucide-react";
 import { useContent, useT, useLang } from "../i18n/LanguageContext";
 import { useTextSpeech } from "../utils/useTextSpeech";
 import { useHighlight, Highlightable } from "../context/HighlightContext";
@@ -272,6 +272,43 @@ export default function HistoryPage() {
             </Highlightable>
           ))}
         </div>
+
+        {/* Documentaries */}
+        {furtherReading.documentaries && furtherReading.documentaries.length > 0 && (
+          <div className="rounded-2xl border overflow-hidden mt-4"
+            style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
+            <div className="flex items-center gap-2 px-5 py-3" style={{ background: "#c4302b" }}>
+              <MonitorPlay size={16} color="#fff" />
+              <span style={{ fontSize: 13, fontWeight: 700, color: "#fff" }}>{t("history.documentaries")}</span>
+            </div>
+            {furtherReading.documentaries.map((d, i) => (
+              <Highlightable key={i} id={slug("history", "documentaries", d.title)}>
+                <div className="px-5 py-4"
+                  style={{ borderBottom: i < furtherReading.documentaries.length - 1 ? "1px solid var(--line)" : "none" }}>
+                  <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
+                    <div>
+                      <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)" }}>{d.title}</p>
+                      <p style={{ fontSize: 12, color: "#c4302b", fontWeight: 600, marginTop: 1, marginBottom: 5 }}>{d.channel}</p>
+                      <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.6 }}>{d.note}</p>
+                    </div>
+                    {d.url && (
+                      <a 
+                        href={d.url} 
+                        target="_blank" 
+                        rel="noreferrer" 
+                        className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold text-white transition-all hover:opacity-90 active:scale-95 sm:mt-0 mt-1 self-start"
+                        style={{ background: "#c4302b", textDecoration: "none" }}
+                      >
+                        <MonitorPlay size={13} />
+                        YouTube
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </Highlightable>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
