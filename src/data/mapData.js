@@ -14,6 +14,13 @@ export const stops = [
     day: "Días 1–5",
     detail: "Llegada en Shinkansen Nozomi · Conexión base en Kioto",
   },
+  {
+    id: "hotel-keihan-kyoto", name: "Hotel Keihan Kyoto Hachijoguchi", city: "Kioto",
+    lat: 34.9811, lng: 135.7589,
+    emoji: "🏨", color: "#bc4749",
+    day: "Día 1",
+    detail: "Llegada, check-in y cena cercana en AEON MALL",
+  },
 
   // ── DÍA 2: Kioto Sur y Nara ──────────────────────────────────────
   {
@@ -29,6 +36,13 @@ export const stops = [
     emoji: "🦌", color: "#bc4749",
     day: "Día 2",
     detail: "Todai-ji, Gran Buda de bronce y parque de los ciervos",
+  },
+  {
+    id: "nigatsudo", name: "Nigatsu-do", city: "Nara",
+    lat: 34.6894, lng: 135.8450,
+    emoji: "🏮", color: "#bc4749",
+    day: "Día 2",
+    detail: "Subida opcional para vistas panorámicas tras el Todai-ji",
   },
   {
     id: "pontocho-day2", name: "Pontocho y Miyagawacho", city: "Kioto",
@@ -135,11 +149,18 @@ export const stops = [
     detail: "Gran terraza de madera sobre el valle y cascada Otowa",
   },
   {
-    id: "yasaka-chionin", name: "Higashiyama, Yasaka y Chion-in", city: "Kioto",
+    id: "ninenzaka", name: "Ninenzaka y Sannenzaka", city: "Kioto",
+    lat: 34.9976, lng: 135.7808,
+    emoji: "🏮", color: "#bc4749",
+    day: "Día 5",
+    detail: "Paseo por famosas cuestas empedradas con casas tradicionales",
+  },
+  {
+    id: "yasaka-chionin", name: "Yasaka, Maruyama y Chion-in", city: "Kioto",
     lat: 35.0032, lng: 135.7811,
     emoji: "⛩️", color: "#bc4749",
     day: "Día 5",
-    detail: "Cuestas de Ninenzaka/Sannenzaka, Maruyama Park y Chion-in",
+    detail: "Santuario Yasaka, parque Maruyama y gran puerta de Chion-in",
   },
   {
     id: "heian-jingu", name: "Heian Jingu", city: "Kioto",
@@ -234,6 +255,13 @@ export const stops = [
 
   // ── DÍA 9: Tránsito a Tokio y Akihabara ──────────────────────────
   {
+    id: "nakatsugawa", name: "Estación de Nakatsugawa", city: "Gifu",
+    lat: 35.5002, lng: 137.5029,
+    emoji: "🚆", color: "#2e7d5b",
+    day: "Día 9",
+    detail: "Canje crítico de billetes JR físicos antes de subir al Shinano 4",
+  },
+  {
     id: "nagoya", name: "Estación de Nagoya", city: "Aichi",
     lat: 35.1709, lng: 136.8815,
     emoji: "🚄", color: "#2e7d5b",
@@ -277,7 +305,7 @@ export const stops = [
     lat: 35.6595, lng: 139.7005,
     emoji: "🚦", color: "#1d3557",
     day: "Día 11",
-    detail: "El cruce peatonal más transitado del mundo y Pokémon Center",
+    detail: "El cruce peatonal más transitado, Miyashita Park y Pokémon Center",
   },
   {
     id: "harajuku", name: "Harajuku", city: "Tokio",
@@ -310,11 +338,11 @@ export const stops = [
     detail: "Sucesor de Tsukiji, lonja mayorista y desayuno de sushi fresco",
   },
   {
-    id: "tokyo-station", name: "Estación de Tokio y Palacio Imperial", city: "Tokio",
+    id: "tokyo-station", name: "Estación de Tokio y Shiodome", city: "Tokio",
     lat: 35.6852, lng: 139.7528,
     emoji: "🏛️", color: "#1d3557",
     day: "Día 12",
-    detail: "Fachada de ladrillo rojo de la estación y explanada del palacio",
+    detail: "Explanada del palacio imperial, fachada de ladrillo y rascacielos de Shiodome",
   },
   {
     id: "ginza", name: "Ginza", city: "Tokio",
@@ -348,6 +376,13 @@ export const stops = [
   },
 
   // ── DÍA 14: Excursión Exclusiva al Monte Fuji ────────────────────
+  {
+    id: "mishima-fuji", name: "Estación de Mishima", city: "Shizuoka",
+    lat: 35.1271, lng: 138.9106,
+    emoji: "🚐", color: "#1d3557",
+    day: "Día 14",
+    detail: "Llegada en Shinkansen Kodama y encuentro para iniciar ruta en mini-van",
+  },
   {
     id: "chureito", name: "Pagoda Chureito (Arakurayama Sengen)", city: "Yamanashi",
     lat: 35.5015, lng: 138.8016,
@@ -389,6 +424,22 @@ export const stops = [
     emoji: "🗻", color: "#1d3557",
     day: "Día 14",
     detail: "Vistas panorámicas del monte Fuji desde los lagos Kawaguchiko y Saiko",
+  },
+  {
+    id: "shinfuji", name: "Estación Shin-Fuji", city: "Shizuoka",
+    lat: 35.1422, lng: 138.6636,
+    emoji: "🚅", color: "#1d3557",
+    day: "Día 14",
+    detail: "Final del tour y regreso en Shinkansen a Tokio",
+  },
+  
+  // ── DÍA 15: Vuelta a casa ────────────────────────────────────────
+  {
+    id: "keisei-ueno", name: "Estación Keisei-Ueno", city: "Tokio",
+    lat: 35.7112, lng: 139.7735,
+    emoji: "🚆", color: "#1d3557",
+    day: "Día 15",
+    detail: "Salida del Keisei Skyliner directo hacia Narita (con maletas)",
   },
 
 ];
