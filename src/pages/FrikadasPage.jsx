@@ -15,7 +15,7 @@ function RouteStop({ stop, day }) {
     <article className="rounded-xl overflow-hidden border mt-4" style={{ borderColor: state.color + "55", background: "var(--paper)" }}>
       <div className="px-3 py-2 flex items-center gap-2" style={{ background: state.color + "12", borderBottom: `1px solid ${state.color}30` }}>
         <CalendarDays size={14} style={{ color: state.color }} />
-        <span style={{ fontSize: 12, fontWeight: 700, color: "var(--ink)" }}>Día {stop.day} · {day?.weekday} {day?.date.slice(8)} sept</span>
+        <span style={{ fontSize: 12, fontWeight: 700, color: "var(--ink)" }}>Día {stop.day}{day ? ` · ${day.weekday} ${day.date.slice(8)} sept` : ""}</span>
         <span style={{ marginLeft: "auto", fontSize: 10, fontWeight: 700, color: "white", background: state.color, padding: "3px 7px", borderRadius: 99 }}>{state.label}</span>
       </div>
       <div className="p-3.5">
@@ -34,7 +34,7 @@ function RouteStop({ stop, day }) {
   );
 }
 
-function SectionCard({ section, stops = [], isOpen, onToggle }) {
+function SectionCard({ section, stops = [], isOpen, onToggle, dayInfo }) {
   const { highlightId } = useHighlight();
   const anchorId = slug("frikadas", section.id);
   const ref = useRef(null);
@@ -157,6 +157,7 @@ export default function FrikadasPage() {
           stops={(stopsBySection[section.id] || []).map((id) => stopById[id])}
           isOpen={openId === section.id}
           onToggle={() => handleToggle(section.id)}
+          dayInfo={dayInfo}
         />
       ))}
 
@@ -165,6 +166,7 @@ export default function FrikadasPage() {
         stops={standaloneStops.map((id) => stopById[id])}
         isOpen={openId === "ruta-especial"}
         onToggle={() => handleToggle("ruta-especial")}
+        dayInfo={dayInfo}
       />
     </div>
   );

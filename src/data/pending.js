@@ -8,6 +8,7 @@
 export const pendingItems = [
   {
     id: "cena-magome",
+    phase: "durante",
     category: "logistica",
     urgency: "alta",
     title: "🔴 Confirmar Cena Magome Chaya (Juan Carlos)",
@@ -16,6 +17,7 @@ export const pendingItems = [
   },
   {
     id: "recogida-billetes-jrwest",
+    phase: "durante",
     category: "logistica",
     urgency: "alta",
     title: "🎟️ RECOGER BILLETES JR-WEST — KYOTO → KANAZAWA",
@@ -25,6 +27,7 @@ export const pendingItems = [
 
   {
     id: "shinano-recogida",
+    phase: "durante",
     category: "logistica",
     urgency: "alta",
     title: "🎫 RECOGER BILLETES FÍSICOS — Shinano 4 (YA PAGADO)",
@@ -33,6 +36,7 @@ export const pendingItems = [
   },
   {
     id: "maletas-dimensiones",
+    phase: "antes",
     category: "logistica",
     urgency: "media",
     title: "🧳 Comprobar dimensiones de las maletas",
@@ -41,6 +45,7 @@ export const pendingItems = [
   },
   {
     id: "nozomi-vuelta-prep",
+    phase: "antes",
     category: "logistica",
     urgency: "media",
     title: "📱 Preparar acceso Smart EX — Nozomi 358 (YA COMPRADO)",
@@ -49,6 +54,7 @@ export const pendingItems = [
   },
   {
     id: "entradas-tokio",
+    phase: "antes",
     category: "reserva",
     urgency: "media",
     title: "🟠 Comprar Entradas TeamLab / Shibuya Sky / Mori Tower",
@@ -57,6 +63,7 @@ export const pendingItems = [
   },
   {
     id: "shinkansen-fuji",
+    phase: "antes",
     category: "reserva",
     urgency: "alta",
     title: "🔴 Reservar Shinkansen Excursión Fuji (Ida/Vuelta)",
@@ -65,6 +72,7 @@ export const pendingItems = [
   },
   {
     id: "cena-takayama",
+    phase: "antes",
     category: "reserva",
     urgency: "media",
     title: "🟠 Reservar Cena de Hida Beef en Takayama",
@@ -73,6 +81,7 @@ export const pendingItems = [
   },
   {
     id: "narita-transporte-vuelta",
+    phase: "antes",
     category: "reserva",
     urgency: "media",
     title: "🟠 Decidir / Reservar Transporte a Narita (Skyliner o N'EX)",
@@ -81,6 +90,7 @@ export const pendingItems = [
   },
   {
     id: "esim-suica",
+    phase: "antes",
     category: "logistica",
     urgency: "media",
     title: "🟠 Logística Digital: Suica y Visit Japan Web",
@@ -89,6 +99,7 @@ export const pendingItems = [
   },
   {
     id: "equipaje",
+    phase: "durante",
     category: "logistica",
     urgency: "baja",
     title: "🟡 Gestionar Envío de Equipaje (Takkyubin)",
@@ -97,6 +108,7 @@ export const pendingItems = [
   },
   {
     id: "mochilas-magome",
+    phase: "durante",
     category: "logistica",
     urgency: "baja",
     title: "🟢 Envío Mochilas Nakasendo (Magome ↔ Tsumago)",
@@ -105,6 +117,7 @@ export const pendingItems = [
   },
   {
     id: "desayunos",
+    phase: "durante",
     category: "logistica",
     urgency: "baja",
     title: "🟢 Desayunos de Convivencia (Konbini)",

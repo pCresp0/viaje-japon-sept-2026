@@ -91,18 +91,19 @@ export default function TransportPage({ onNavigate }) {
         className="sticky top-0 z-20 px-4 pb-3 pt-1"
         style={{ background: "var(--paper)", borderBottom: "1px solid var(--line)" }}
       >
-        <div
-          className="flex items-center gap-1 p-1 rounded-xl"
-          style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}
+        <div 
+          className="flex p-1 rounded-xl relative z-0" 
+          style={{ background: "rgba(29, 53, 87, 0.06)", border: "1px solid rgba(29, 53, 87, 0.08)" }}
         >
+          <div
+            className="absolute top-1 bottom-1 left-1 w-[calc(50%-4px)] bg-white rounded-lg shadow-sm transition-transform duration-300 ease-out pointer-events-none"
+            style={{ transform: activeTab === "billetes" ? "translateX(0)" : "translateX(100%)" }}
+          />
           <button
             type="button"
             onClick={() => setActiveTab("billetes")}
-            className="flex-1 flex items-center justify-center gap-1.5 rounded-lg py-1.5 text-sm font-semibold transition-all cursor-pointer border-none"
-            style={{
-              background: activeTab === "billetes" ? "var(--indigo)" : "transparent",
-              color: activeTab === "billetes" ? "white" : "var(--ink-soft)",
-            }}
+            className="flex-1 relative z-10 flex items-center justify-center gap-2 py-2 text-xs font-bold uppercase tracking-widest transition-colors duration-300 cursor-pointer border-none bg-transparent m-0"
+            style={{ color: activeTab === "billetes" ? "var(--indigo)" : "var(--ink-soft)" }}
           >
             <Ticket size={14} />
             Billetes
@@ -110,11 +111,8 @@ export default function TransportPage({ onNavigate }) {
           <button
             type="button"
             onClick={() => setActiveTab("trayectos")}
-            className="flex-1 flex items-center justify-center gap-1.5 rounded-lg py-1.5 text-sm font-semibold transition-all cursor-pointer border-none"
-            style={{
-              background: activeTab === "trayectos" ? "var(--indigo)" : "transparent",
-              color: activeTab === "trayectos" ? "white" : "var(--ink-soft)",
-            }}
+            className="flex-1 relative z-10 flex items-center justify-center gap-2 py-2 text-xs font-bold uppercase tracking-widest transition-colors duration-300 cursor-pointer border-none bg-transparent m-0"
+            style={{ color: activeTab === "trayectos" ? "var(--indigo)" : "var(--ink-soft)" }}
           >
             <Train size={14} />
             Trayectos

@@ -11,6 +11,7 @@ export default function PendingPage() {
   const { pendingItems, categoryLabels, urgencyConfig } = useContent();
   const t = useT();
   const [done, setDone] = useState({});
+  const [activeTab, setActiveTab] = useState("antes");
 
   useEffect(() => {
     try {
@@ -34,11 +35,14 @@ export default function PendingPage() {
   const remaining = total - completed;
   const pct = Math.round((completed / total) * 100);
 
+  // Filter by active tab (phase)
+  const tabItems = pendingItems.filter((i) => i.phase === activeTab);
+
   // Group by category, preserving chronological proximity order
   const grouped = Object.keys(categoryLabels).map((cat) => {
-    const items = pendingItems.filter((i) => i.category === cat);
+    const items = tabItems.filter((i) => i.category === cat);
     return { cat, items };
-  });
+  }).filter((g) => g.items.length > 0);
 
   return (
     <div className="px-4 pt-3 pb-12">
@@ -79,6 +83,33 @@ export default function PendingPage() {
             transition: "width 0.3s",
           }} />
         </div>
+      </div>
+
+      {/* Segmented Control */}
+      <div 
+        className="flex p-1 rounded-xl mb-8 relative z-0" 
+        style={{ background: "rgba(29, 53, 87, 0.06)", border: "1px solid rgba(29, 53, 87, 0.08)" }}
+      >
+        <div
+          className="absolute top-1 bottom-1 left-1 w-[calc(50%-4px)] bg-white rounded-lg shadow-sm transition-transform duration-300 ease-out pointer-events-none"
+          style={{ transform: activeTab === "antes" ? "translateX(0)" : "translateX(100%)" }}
+        />
+        <button
+          type="button"
+          onClick={() => setActiveTab("antes")}
+          className="flex-1 relative z-10 flex items-center justify-center py-2 text-xs font-bold uppercase tracking-widest transition-colors duration-300 cursor-pointer border-none bg-transparent m-0"
+          style={{ color: activeTab === "antes" ? "var(--indigo)" : "var(--ink-soft)" }}
+        >
+          Antes de viajar
+        </button>
+        <button
+          type="button"
+          onClick={() => setActiveTab("durante")}
+          className="flex-1 relative z-10 flex items-center justify-center py-2 text-xs font-bold uppercase tracking-widest transition-colors duration-300 cursor-pointer border-none bg-transparent m-0"
+          style={{ color: activeTab === "durante" ? "var(--indigo)" : "var(--ink-soft)" }}
+        >
+          Durante el viaje
+        </button>
       </div>
 
       {/* Items grouped by category */}
