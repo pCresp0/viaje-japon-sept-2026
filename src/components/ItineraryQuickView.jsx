@@ -3,14 +3,7 @@ import { ChevronDown, ChevronUp, LayoutList, X } from "lucide-react";
 import { formatDateShort } from "../utils/date";
 import PlaceText from "./PlaceText";
 
-// Entradas informativas sin hora — se filtran del resumen rápido
-const SKIP_PREFIXES = [
-  "🎫 RESERVAS",
-  "🎫 BILLETES",
-  "📊 RESUMEN",
-  "🍜 COMER EN JAPÓN",
-  "🧳 EQUIPAJE",
-];
+// La vista rápida filtra automáticamente para dejar solo las paradas cronológicas (horas con dígitos)
 
 function detectEmoji(time = "", text = "") {
   const src = (time + " " + text).toLowerCase();
@@ -87,21 +80,12 @@ function shortText(text = "") {
   return clean.length > 95 ? clean.slice(0, 92) + "…" : clean;
 }
 
-function isSkip(entry) {
-  return SKIP_PREFIXES.some((p) => entry.time?.startsWith(p));
-}
-
 function hasRealTime(entry) {
   return /^~?\d{1,2}[:h]\d{0,2}/.test(entry.time ?? "");
 }
 
 export function QuickDayCard({ day, blockColor, onShowFullDay, onClose, standalone = false }) {
-  const keyEntries = (day.schedule ?? []).filter((e) => {
-    if (isSkip(e)) return false;
-    if (hasRealTime(e)) return true;
-    const src = (e.time ?? "") + " " + (e.text ?? "");
-    return /shinkansen|nozomi|vuelo|aterriza|tren|metro|bus|check.?in|regreso al hotel|visita|santuario|templo|castillo|museo|cena|comida|restaurante/i.test(src);
-  });
+  const keyEntries = (day.schedule ?? []).filter(hasRealTime);
 
   return (
     <div
