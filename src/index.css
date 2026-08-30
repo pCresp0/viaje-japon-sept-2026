@@ -21,6 +21,12 @@
   --mobile-topbar: calc(58px + env(safe-area-inset-top, 0px));
 }
 
+@media (min-width: 768px) {
+  :root {
+    --mobile-topbar: 0px;
+  }
+}
+
 * {
   -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
