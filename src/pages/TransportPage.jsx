@@ -25,6 +25,11 @@ export default function TransportPage({ onNavigate }) {
   const { highlightId } = useHighlight();
   const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
   const [activeTab, setActiveTab] = useState("billetes");
+
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+    document.getElementById("main-scroll-container")?.scrollTo({ top: 0, behavior: "smooth" });
+  };
   const [suicaOpen, setSuicaOpen] = useState(false);
   const [smartExOpen, setSmartExOpen] = useState(false);
 
@@ -93,7 +98,7 @@ export default function TransportPage({ onNavigate }) {
           />
           <button
             type="button"
-            onClick={() => setActiveTab("billetes")}
+            onClick={() => handleTabChange("billetes")}
             className="flex-1 relative z-10 flex items-center justify-center gap-2 py-2 text-xs font-bold uppercase tracking-widest transition-colors duration-300 cursor-pointer border-none bg-transparent m-0"
             style={{ color: activeTab === "billetes" ? "var(--indigo)" : "var(--ink-soft)" }}
           >
@@ -102,7 +107,7 @@ export default function TransportPage({ onNavigate }) {
           </button>
           <button
             type="button"
-            onClick={() => setActiveTab("trayectos")}
+            onClick={() => handleTabChange("trayectos")}
             className="flex-1 relative z-10 flex items-center justify-center gap-2 py-2 text-xs font-bold uppercase tracking-widest transition-colors duration-300 cursor-pointer border-none bg-transparent m-0"
             style={{ color: activeTab === "trayectos" ? "var(--indigo)" : "var(--ink-soft)" }}
           >

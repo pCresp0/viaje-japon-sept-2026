@@ -13,6 +13,11 @@ export default function PendingPage() {
   const [done, setDone] = useState({});
   const [activeTab, setActiveTab] = useState("antes");
 
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+    document.getElementById("main-scroll-container")?.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   useEffect(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
@@ -102,7 +107,7 @@ export default function PendingPage() {
         />
         <button
           type="button"
-          onClick={() => setActiveTab("antes")}
+          onClick={() => handleTabChange("antes")}
           className="flex-1 relative z-10 flex items-center justify-center py-2 text-xs font-bold uppercase tracking-widest transition-colors duration-300 cursor-pointer border-none bg-transparent m-0"
           style={{ color: activeTab === "antes" ? "var(--indigo)" : "var(--ink-soft)" }}
         >
@@ -110,7 +115,7 @@ export default function PendingPage() {
         </button>
         <button
           type="button"
-          onClick={() => setActiveTab("durante")}
+          onClick={() => handleTabChange("durante")}
           className="flex-1 relative z-10 flex items-center justify-center py-2 text-xs font-bold uppercase tracking-widest transition-colors duration-300 cursor-pointer border-none bg-transparent m-0"
           style={{ color: activeTab === "durante" ? "var(--indigo)" : "var(--ink-soft)" }}
         >

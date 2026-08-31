@@ -158,7 +158,7 @@ export default function App() {
         <Sidebar active={tab} onChange={setTab} />
 
         {/* Right column — scrollable */}
-        <div ref={scrollContainerRef} style={{
+        <div id="main-scroll-container" ref={scrollContainerRef} style={{
           flex: 1, display: "flex", flexDirection: "column",
           minWidth: 0, overflowY: "auto", height: "100%",
         }}>
