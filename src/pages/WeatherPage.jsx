@@ -45,45 +45,87 @@ function computeCityWeatherBadges(w, liveWeather, dailyWeather, weatherLabels) {
   const rainDaysLive = cityDays.filter(d => d.sky === "rain" || d.rain >= 50).length;
   const rainDaysBase = baseDays.filter(d => d.sky === "rain" || d.rain >= 50).length;
   const sunDaysLive = cityDays.filter(d => d.sky === "sun").length;
+  const cloudDaysLive = cityDays.filter(d => d.sky === "cloud" || d.sky === "partly").length;
 
   const badges = [];
 
-  // 1. Comparación de temperatura
-  if (diffTemp >= 3) {
-    badges.push({ text: weatherLabels.compMuchHotter || "Mucho más calor", color: "#ef4444", bg: "rgba(239, 68, 68, 0.12)" });
-  } else if (diffTemp >= 1.5) {
-    badges.push({ text: weatherLabels.compHotter || "Más calor", color: "#ea580c", bg: "rgba(234, 88, 12, 0.12)" });
-  } else if (diffTemp <= -3) {
-    badges.push({ text: weatherLabels.compMuchCooler || "Mucho más frío", color: "#2563eb", bg: "rgba(37, 99, 235, 0.12)" });
-  } else if (diffTemp <= -1.5) {
-    badges.push({ text: weatherLabels.compCooler || "Más fresco", color: "#0284c7", bg: "rgba(2, 132, 199, 0.12)" });
+  // 1. Comparación de temperatura en vivo vs histórica
+  const roundedDiff = Math.abs(Math.round(diffTemp * 10) / 10);
+  if (diffTemp >= 2.5) {
+    badges.push({ 
+      text: `🔥 +${roundedDiff}°C Mucho más calor`, 
+      color: "#ef4444", 
+      bg: "rgba(239, 68, 68, 0.12)" 
+    });
+  } else if (diffTemp >= 1.2) {
+    badges.push({ 
+      text: `🌡️ +${roundedDiff}°C Más calor`, 
+      color: "#ea580c", 
+      bg: "rgba(234, 88, 12, 0.12)" 
+    });
+  } else if (diffTemp <= -2.5) {
+    badges.push({ 
+      text: `❄️ -${roundedDiff}°C Mucho más frío`, 
+      color: "#2563eb", 
+      bg: "rgba(37, 99, 235, 0.12)" 
+    });
+  } else if (diffTemp <= -1.2) {
+    badges.push({ 
+      text: `🍃 -${roundedDiff}°C Más fresco`, 
+      color: "#0284c7", 
+      bg: "rgba(2, 132, 199, 0.12)" 
+    });
   }
 
-  // 2. Comparación de lluvia y sol
-  // Caso A: Lluvia imprevista (se esperaba seco pero la previsión marca lluvia o alta probabilidad)
+  // 2. Comparación de lluvia / sol / nubes en vivo vs esperada
+  // Caso A: Lluvia imprevista (se esperaba seco pero la API marca lluvia o alta prob.)
   if (baseRainAvg < 30 && rainDaysBase === 0 && (avgRainLive >= 40 || rainDaysLive >= 1)) {
-    badges.push({ text: "Lluvia no prevista", color: "#6366f1", bg: "rgba(99, 102, 241, 0.12)" });
+    badges.push({ 
+      text: `🌧️ Lluvia no prevista (${Math.round(avgRainLive)}%)`, 
+      color: "#6366f1", 
+      bg: "rgba(99, 102, 241, 0.12)" 
+    });
   } 
-  // Caso B: Más lluvia de la habitual/esperada
-  else if (avgRainLive - baseRainAvg >= 20 || (avgRainLive >= 55 && baseRainAvg < 50)) {
-    badges.push({ text: weatherLabels.compRainy || "Más lluvia de lo previsto", color: "#6366f1", bg: "rgba(99, 102, 241, 0.12)" });
+  // Caso B: Más lluvia de la esperada
+  else if (avgRainLive - baseRainAvg >= 15 || (avgRainLive >= 50 && baseRainAvg < 45)) {
+    badges.push({ 
+      text: `🌧️ Más lluvia de lo previsto (${Math.round(avgRainLive)}%)`, 
+      color: "#6366f1", 
+      bg: "rgba(99, 102, 241, 0.12)" 
+    });
   }
-  // Caso C: Más soleado cuando históricamente suele llover o se preveía inestable
-  else if ((baseRainAvg >= 40 || rainDaysBase > 0) && avgRainLive <= 20 && rainDaysLive === 0) {
-    badges.push({ text: "Más soleado de lo esperado", color: "#16a34a", bg: "rgba(22, 163, 74, 0.12)" });
+  // Caso C: Más soleado de lo esperado (en lugares donde suele llover en septiembre o se preveía lluvia)
+  else if ((baseRainAvg >= 35 || rainDaysBase > 0) && avgRainLive <= 25 && rainDaysLive === 0) {
+    badges.push({ 
+      text: `☀️ Más soleado de lo esperado`, 
+      color: "#16a34a", 
+      bg: "rgba(22, 163, 74, 0.12)" 
+    });
   }
-  // Caso D: Predominio de sol y buen tiempo
-  else if (sunDaysLive / cityDays.length >= 0.65 && avgRainLive <= 15) {
-    badges.push({ text: weatherLabels.compSunny || "Muy soleado", color: "#16a34a", bg: "rgba(22, 163, 74, 0.12)" });
+  // Caso D: Predominio claro de sol
+  else if (sunDaysLive / cityDays.length >= 0.6 && avgRainLive <= 20) {
+    badges.push({ 
+      text: `☀️ Muy soleado`, 
+      color: "#16a34a", 
+      bg: "rgba(22, 163, 74, 0.12)" 
+    });
   }
   // Caso E: Mayormente nublado
-  else if (cityDays.filter(d => d.sky === "cloud").length / cityDays.length >= 0.6 && avgRainLive < 40) {
-    badges.push({ text: "Más nublado", color: "#64748b", bg: "rgba(100, 116, 139, 0.12)" });
+  else if (cloudDaysLive / cityDays.length >= 0.65 && avgRainLive < 40) {
+    badges.push({ 
+      text: `☁️ Más nublado`, 
+      color: "#64748b", 
+      bg: "rgba(100, 116, 139, 0.12)" 
+    });
   }
 
-  // Si no hay variaciones significativas ni de temp ni de precipitaciones
+  // 3. Si no hay variaciones significativas ni de temp ni de precipitaciones
   if (badges.length === 0) {
-    badges.push({ text: weatherLabels.compExpected || "Lo esperado", color: "#10b981", bg: "rgba(16, 185, 129, 0.12)" });
+    badges.push({ 
+      text: `✨ ${weatherLabels.compExpected || "Lo esperado"}`, 
+      color: "#10b981", 
+      bg: "rgba(16, 185, 129, 0.12)" 
+    });
   }
 
   return badges;
@@ -282,6 +324,9 @@ export default function WeatherPage() {
       </p>
       <div className="grid gap-3 mb-4" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))" }}>
         {weatherData.map((w, idx) => {
+          const cityDays = liveWeather ? liveWeather.filter(d => d.city === w.city) : [];
+          const liveAvgHigh = cityDays.length > 0 ? Math.round(cityDays.reduce((acc, d) => acc + d.high, 0) / cityDays.length) : null;
+          const liveAvgRain = cityDays.length > 0 ? Math.round(cityDays.reduce((acc, d) => acc + d.rain, 0) / cityDays.length) : null;
           const badges = computeCityWeatherBadges(w, liveWeather, dailyWeather, weatherLabels);
 
           return (
@@ -291,18 +336,33 @@ export default function WeatherPage() {
               <div>
                 <div className="flex items-center justify-between mb-2">
                   <span style={{ fontSize: 20 }}>{w.emoji}</span>
+                  {liveAvgHigh != null && (
+                    <span className="text-[9.5px] font-bold px-2 py-0.5 rounded-full" 
+                      style={{ background: "rgba(29,53,87,0.08)", color: "var(--indigo)" }}>
+                      API en vivo
+                    </span>
+                  )}
                 </div>
-                <p style={{ fontSize: 13.5, fontWeight: 700, color: "var(--ink)", marginBottom: 1 }}>
+                <p style={{ fontSize: 13.5, fontWeight: 700, color: "var(--ink)", marginBottom: 2 }}>
                   {w.city}
                 </p>
-                <p style={{ fontSize: 12, color: "var(--shu)", fontWeight: 600, marginBottom: 4 }}>
-                  {w.avg}°C
-                </p>
+                <div className="flex items-baseline gap-1.5 mb-2">
+                  <span style={{ fontSize: 18, color: "var(--shu)", fontWeight: 700, lineHeight: 1 }}>
+                    {liveAvgHigh != null ? `${liveAvgHigh}°C` : `${w.avg}°C`}
+                  </span>
+                  {liveAvgHigh != null && liveAvgHigh !== w.avg && (
+                    <span style={{ fontSize: 11, color: "var(--ink-soft)", textDecoration: "line-through", opacity: 0.6 }}>
+                      {w.avg}°C
+                    </span>
+                  )}
+                  <span style={{ fontSize: 11, color: "var(--ink-soft)" }}>media</span>
+                </div>
                 <p style={{ fontSize: 11, color: "var(--ink-soft)", lineHeight: 1.4 }}>
                   {w.condition}
                 </p>
-                <p style={{ fontSize: 10, color: "var(--ink-soft)", marginTop: 3, opacity: 0.7 }}>
-                  {weatherLabels.lluvia} {w.precip}
+                <p style={{ fontSize: 10, color: "var(--ink-soft)", marginTop: 4, opacity: 0.8 }}>
+                  {weatherLabels.lluvia} {liveAvgRain != null ? `${liveAvgRain}% prev.` : w.precip} 
+                  {liveAvgRain != null && <span className="opacity-60"> (habitual: {w.precip})</span>}
                 </p>
               </div>
               {badges.length > 0 && (
