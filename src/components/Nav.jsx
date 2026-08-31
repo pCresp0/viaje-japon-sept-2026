@@ -358,8 +358,7 @@ export function Sidebar({ active, onChange }) {
 }
 
 /* ── Mobile export ───────────────────────────────────────────────── */
-export default function Nav({ active, onChange, onNavigate }) {
-  const [open, setOpen] = useState(false);
+export default function Nav({ active, onChange, onNavigate, open, setOpen }) {
   return (
     <div className="md:hidden">
       <TopBar active={active} onOpenDrawer={() => setOpen(true)} onNavigate={onNavigate} />

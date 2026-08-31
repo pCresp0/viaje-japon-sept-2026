@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, lazy, Suspense } from "react";
+import { useSwipeable } from "react-swipeable";
 import Nav, { Sidebar, DesktopTopBar } from "./components/Nav";
 import Footer from "./components/Footer";
 import AccessGate, { isUnlocked } from "./components/AccessGate";
@@ -39,6 +40,7 @@ function defaultTab() {
 export default function App() {
   const [unlocked, setUnlocked] = useState(() => isUnlocked());
   const [tab, setTab] = useState(defaultTab);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [openDay, setOpenDay] = useState(getTripStatus().dayNum ?? 0);
   const [quickView, setQuickView] = useState(false);
   const [searchResult, setSearchResult] = useState(null);
@@ -119,12 +121,30 @@ export default function App() {
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
+  // Configuración de gestos (swipe)
+  const swipeHandlers = useSwipeable({
+    onSwipedRight: (e) => {
+      // Ignoramos si el evento se originó muy al borde izquierdo (< 30px) 
+      // porque suele ser capturado por el "ir atrás" nativo de iOS.
+      // Así aseguramos que solo un gesto intencionado en la zona central lo abra.
+      if (e.initial[0] > 30) {
+        setMenuOpen(true);
+      }
+    },
+    onSwipedLeft: () => {
+      setMenuOpen(false);
+    },
+    delta: 40, // Distancia mínima de arrastre
+    preventScrollOnSwipe: false,
+    trackMouse: false,
+  });
+
   if (!unlocked) {
     return <AccessGate onUnlock={() => setUnlocked(true)} />;
   }
 
   return (
-    <div className="full-viewport-height app-shell" style={{ display: "flex", flexDirection: "column" }}>
+    <div {...swipeHandlers} className="full-viewport-height app-shell" style={{ display: "flex", flexDirection: "column", touchAction: "pan-y" }}>
 
       {/* Desktop: cabecera a todo el ancho (lupa + idioma a la derecha) */}
       <DesktopTopBar active={tab} onNavigate={handleSearchNavigate} />
@@ -132,7 +152,7 @@ export default function App() {
       <div style={{ display: "flex", flex: 1, minHeight: 0 }}>
 
         {/* Mobile top bar + drawer */}
-        <Nav active={tab} onChange={setTab} onNavigate={handleSearchNavigate} />
+        <Nav active={tab} onChange={setTab} onNavigate={handleSearchNavigate} open={menuOpen} setOpen={setMenuOpen} />
 
         {/* Desktop sidebar */}
         <Sidebar active={tab} onChange={setTab} />
