@@ -28,7 +28,7 @@ export default function TransportPage({ onNavigate }) {
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
-    document.getElementById("main-scroll-container")?.scrollTo({ top: 0, behavior: "smooth" });
+    document.getElementById("transport-tab-anchor")?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
   const [suicaOpen, setSuicaOpen] = useState(false);
   const [smartExOpen, setSmartExOpen] = useState(false);
@@ -81,6 +81,9 @@ export default function TransportPage({ onNavigate }) {
           <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>{t("transport.title")}</h2>
         </div>
       </div>
+
+      {/* Scroll Anchor */}
+      <div id="transport-tab-anchor" style={{ scrollMarginTop: "calc(var(--mobile-topbar) + 12px)" }} />
 
       {/* Segmented Control */}
       <div className="px-4 mb-4 sticky z-20" style={{ top: "calc(var(--mobile-topbar) + 12px)" }}>

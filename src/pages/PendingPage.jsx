@@ -15,7 +15,7 @@ export default function PendingPage() {
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
-    document.getElementById("main-scroll-container")?.scrollTo({ top: 0, behavior: "smooth" });
+    document.getElementById("pending-tab-anchor")?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   useEffect(() => {
@@ -89,6 +89,9 @@ export default function PendingPage() {
           }} />
         </div>
       </div>
+
+      {/* Scroll Anchor */}
+      <div id="pending-tab-anchor" style={{ scrollMarginTop: "calc(var(--mobile-topbar) + 12px)" }} />
 
       {/* Segmented Control */}
       <div 
