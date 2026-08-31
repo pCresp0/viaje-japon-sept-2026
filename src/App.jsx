@@ -4,7 +4,6 @@ import Nav, { Sidebar, DesktopTopBar } from "./components/Nav";
 import Footer from "./components/Footer";
 import AccessGate, { isUnlocked } from "./components/AccessGate";
 import FujiAlertBanner from "./components/FujiAlertBanner";
-import SearchResultHighlight from "./components/SearchResultHighlight";
 import ErrorBoundary from "./components/ErrorBoundary";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 
@@ -43,7 +42,6 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDay, setOpenDay] = useState(getTripStatus().dayNum ?? 0);
   const [quickView, setQuickView] = useState(false);
-  const [searchResult, setSearchResult] = useState(null);
   const [mapInitialDay, setMapInitialDay] = useState(null);
   const scrollContainerRef = useRef(null);
   const { triggerHighlight } = useHighlight();
@@ -73,10 +71,6 @@ export default function App() {
 
   function handleSearchNavigate(result) {
     const { tab: nextTab, day, targetId, silent, scrollBlock, highlightDelay } = result;
-    // Enlaces internos (p. ej. Transportes → JR Pass) no deben mostrar
-    // la franja "Resultado de búsqueda".
-    if (silent) setSearchResult(null);
-    else setSearchResult(result);
     if (day != null) setOpenDay(day);
     setTab(nextTab);
     // Se dispara con un pequeño margen para dar tiempo a que la nueva
@@ -174,7 +168,6 @@ export default function App() {
             {/* Banner global de aviso de visibilidad y cancelaciones del Monte Fuji (activo del 12 al 20 de sept) */}
             <FujiAlertBanner />
 
-            {searchResult?.tab === tab && <SearchResultHighlight result={searchResult} onClear={() => setSearchResult(null)} />}
             <ErrorBoundary resetKey={tab}>
               <div>
                 {tab === "pendientes"   && <PendingPage />}
