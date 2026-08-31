@@ -2,6 +2,12 @@
 
 export default {
   // ── Navigation ────────────────────────────────────────────────────
+  "nav.group.plan": "PLANIFICATION",
+  "nav.group.viaje": "VOYAGE",
+  "nav.group.guia": "GUIDE",
+  "nav.group.prep": "PRÉPARATION",
+  "nav.group.util": "UTILITAIRES",
+
   "nav.pendientes": "À faire",
   "nav.inicio": "Accueil",
   "nav.calendario": "Calendrier",

@@ -7,6 +7,12 @@
 
 export default {
   // ── Nabigasyon ────────────────────────────────────────────────────
+  "nav.group.plan": "PAGPAPLANO",
+  "nav.group.viaje": "PAGLALAKBAY",
+  "nav.group.guia": "GABAY",
+  "nav.group.prep": "PAGHAHANDA",
+  "nav.group.util": "MGA KAGAMITAN",
+
   "nav.pendientes": "Mga dapat gawin",
   "nav.inicio": "Simula",
   "nav.calendario": "Kalendaryo",
