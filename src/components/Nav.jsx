@@ -232,9 +232,40 @@ function Drawer({ active, onChange, open, onClose }) {
 
           {/* nav — scrollable si hay más items de los que caben */}
           <nav className="flex flex-col gap-0.5 p-3"
-            style={{ flex: 1, overflowY: "auto", overflowX: "hidden" }}>
+            style={{ flex: 1, overflowY: "auto", overflowX: "hidden", paddingBottom: 80 }}>
             <NavItems active={active} onChange={onChange} onClose={onClose} isMobile={true} />
           </nav>
+          
+          {/* Quick access bottom bar */}
+          <div className="absolute bottom-0 left-0 right-0 flex items-center justify-around px-2 py-4"
+               style={{ 
+                 background: "linear-gradient(to top, rgba(35,27,27,1) 30%, rgba(35,27,27,0.9) 70%, rgba(35,27,27,0))",
+                 borderTop: "1px solid rgba(255,255,255,0.05)" 
+               }}>
+            {[
+              { id: "hoy", icon: Compass },
+              { id: "calendario", icon: CalendarDays },
+              { id: "itinerario", icon: Route },
+              { id: "mapa", icon: Map },
+              { id: "transportes", icon: Train }
+            ].map(item => {
+              const isActive = active === item.id;
+              const Icon = item.icon;
+              return (
+                <button 
+                  key={item.id}
+                  onClick={() => { onChange(item.id); onClose(); }}
+                  className="flex flex-col items-center justify-center p-2 rounded-xl transition-all"
+                  style={{
+                    color: isActive ? "#e8b74a" : "rgba(255,255,255,0.5)",
+                    background: isActive ? "rgba(232, 183, 74, 0.15)" : "transparent",
+                  }}
+                >
+                  <Icon size={22} strokeWidth={isActive ? 2.5 : 2} />
+                </button>
+              )
+            })}
+          </div>
 
         </div>
       </aside>
