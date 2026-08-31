@@ -127,9 +127,32 @@ function RichText({ text, style = {} }) {
           if (match[2]) {
             parts.push(<strong key={match.index}>{match[2]}</strong>);
           } else if (match[3]) {
+            const href = match[3];
+            const isMaps = /maps\.app\.goo\.gl|google\.com\/maps/i.test(href);
+            const isFlight = /flightaware\.com/i.test(href);
+            const label = isMaps ? "📍 Maps ↗" : isFlight ? "✈️ Seguimiento vuelo ↗" : "🔗 Enlace ↗";
             parts.push(
-              <a key={match.index} href={match[3]} style={{ color: "#7a2c2e", wordBreak: "break-all" }}>
-                {match[3]} ↗
+              <a
+                key={match.index}
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 3,
+                  fontSize: "0.78em",
+                  fontWeight: 600,
+                  padding: "1px 7px",
+                  borderRadius: 999,
+                  background: isFlight ? "rgba(192, 57, 43, 0.09)" : "rgba(29, 53, 87, 0.09)",
+                  color: isFlight ? "var(--shu, #c0392b)" : "var(--indigo, #1d3557)",
+                  textDecoration: "none",
+                  marginLeft: 4,
+                  border: isFlight ? "1px solid rgba(192, 57, 43, 0.22)" : "1px solid rgba(29, 53, 87, 0.18)",
+                }}
+              >
+                {label}
               </a>
             );
           }
@@ -429,7 +452,7 @@ function DaySection({ day, guides }) {
           <br />
           Salida: {kenFujiActivity.startPoint} · Fin: {kenFujiActivity.endPoint}
           <br />
-          Tel: {kenFujiActivity.phone} · <a href={kenFujiActivity.url} style={{ color: "#7a2c2e" }}>{kenFujiActivity.url}</a>
+          Tel: {kenFujiActivity.phone} · <a href={kenFujiActivity.url} style={{ color: "#7a2c2e", fontWeight: 600 }}>Web excursión ↗</a>
         </div>
       )}
 
@@ -580,7 +603,7 @@ export default function ItineraryPrintView({ days }) {
           <br />
           Paradas: {kenFujiActivity.stops?.join(" · ")}
           <br />
-          <a href={kenFujiActivity.url} style={{ color: "#7a2c2e" }}>{kenFujiActivity.url}</a>
+          <a href={kenFujiActivity.url} style={{ color: "#7a2c2e", fontWeight: 600 }}>Web excursión ↗</a>
         </div>
 
         <div style={{ fontSize: 10.5, lineHeight: 1.55, marginBottom: 10 }}>

@@ -63,9 +63,9 @@ function formatQuickTime(timeStr = "") {
     .trim();
 }
 
-function extractMapUrl(text = "") {
-  const match = text.match(/https?:\/\/(?:maps\.app\.goo\.gl|www\.google\.com\/maps)[^\s)]+/i);
-  return match ? match[0] : null;
+function extractUrls(text = "") {
+  const matches = text.match(/https?:\/\/[^\s)]+/gi);
+  return matches ? Array.from(new Set(matches)) : [];
 }
 
 function formatQuickText(text = "") {
@@ -74,9 +74,10 @@ function formatQuickText(text = "") {
   let clean = text
     .replace(/\(\s*https?:\/\/[^\s)]+\s*\)/g, "")
     .replace(/https?:\/\/[^\s)]+/g, "")
+    .replace(/(?:Seguimiento en vivo|Live flight tracking|Suivi de vol en direct|Live tracking):?/gi, "")
     .split("\n")[0]
     .trim();
-  clean = clean.replace(/\(\s*\)/g, "").trim();
+  clean = clean.replace(/\(\s*\)/g, "").replace(/:\s*$/, "").trim();
 
   // Quitamos asteriscos originales para rehacer el bold en el título
   clean = clean.replace(/\*\*(.*?)\*\*/g, "$1");
@@ -215,7 +216,7 @@ export function QuickDayCard({ day, blockColor, onShowFullDay, onClose, onViewMa
                       (entry.time ?? "") + (entry.text ?? "")
                     );
                   const displayTime = hasRealTime(entry) ? formatQuickTime(entry.time) : "";
-                  const mapUrl = extractMapUrl(entry.text);
+                  const urls = extractUrls(entry.text);
 
                   return (
                     <div key={i} className="flex items-start gap-2.5 sm:gap-3 relative">
@@ -247,9 +248,9 @@ export function QuickDayCard({ day, blockColor, onShowFullDay, onClose, onViewMa
                         }}
                       >
                         <PlaceText text={formatQuickText(entry.text)} />
-                        {mapUrl && (
-                          <PlaceText text={mapUrl} />
-                        )}
+                        {urls.map((u, ui) => (
+                          <PlaceText key={ui} text={u} />
+                        ))}
                       </div>
                     </div>
                   );

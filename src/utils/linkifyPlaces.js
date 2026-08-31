@@ -177,8 +177,8 @@ export function tokenizePlaces(text) {
   if (!text) return [];
   let textStr = String(text);
   
-  // Eliminar paréntesis que rodeen directamente a enlaces de Maps para que el botón se renderice limpio
-  textStr = textStr.replace(/\(\s*(https?:\/\/(?:maps\.app\.goo\.gl|www\.google\.com\/maps)[^\s)]+)\s*\)/gi, ' $1 ');
+  // Eliminar paréntesis que rodeen directamente a cualquier URL para que el botón se renderice limpio
+  textStr = textStr.replace(/\(\s*(https?:\/\/[^\s)]+)\s*\)/gi, ' $1 ');
 
   // 1. Primero extraemos las URLs completas para que no sean divididas por nombres de lugares
   const chunks = [];
