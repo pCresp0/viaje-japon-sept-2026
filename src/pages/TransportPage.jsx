@@ -29,25 +29,15 @@ export default function TransportPage({ onNavigate }) {
   const handleTabChange = (tab) => {
     setActiveTab(tab);
     
-    const scrollToAnchor = () => {
+    const scrollToTop = () => {
       const scrollContainer = document.getElementById("main-scroll-container");
-      const anchor = document.getElementById("transport-tab-anchor");
-      if (!scrollContainer || !anchor) return;
-      
-      const topbar = document.querySelector("header");
-      const topbarHeight = topbar ? topbar.offsetHeight : 58;
-      const desiredOffset = topbarHeight + 12;
-      const containerRect = scrollContainer.getBoundingClientRect();
-      const anchorRect = anchor.getBoundingClientRect();
-      
-      const targetScroll = Math.max(0, scrollContainer.scrollTop + (anchorRect.top - containerRect.top) - desiredOffset);
-      scrollContainer.scrollTo({ top: targetScroll, behavior: "smooth" });
+      if (!scrollContainer) return;
+      scrollContainer.scrollTo({ top: 0, behavior: "smooth" });
     };
 
-    scrollToAnchor();
-    // Re-verify after React DOM commit in next frame
+    scrollToTop();
     requestAnimationFrame(() => {
-      scrollToAnchor();
+      scrollToTop();
     });
   };
   const [suicaOpen, setSuicaOpen] = useState(false);
