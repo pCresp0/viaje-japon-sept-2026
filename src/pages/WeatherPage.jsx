@@ -4,6 +4,7 @@ import { Cloud, CloudRain, Sun, CloudSun, MapPin, Droplets, Loader2, Info, Refre
 import { useContent } from "../i18n/LanguageContext";
 import { Highlightable } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
+import { diffDays, todayISO } from "../utils/date";
 
 const cityCoords = {
   "Kioto": { lat: 35.0116, lon: 135.7681 },
@@ -28,6 +29,64 @@ function getConditionFromWMO(code) {
   if (code >= 71 && code <= 86) return "Nieve/Lluvia";
   if (code >= 95) return "Tormenta";
   return "Variable";
+}
+
+function computeCityWeatherBadges(w, liveWeather, dailyWeather, weatherLabels) {
+  if (!liveWeather) return [];
+  const cityDays = liveWeather.filter(d => d.city === w.city);
+  const baseDays = dailyWeather.filter(d => d.city === w.city);
+  if (cityDays.length === 0) return [];
+
+  const avgHighLive = cityDays.reduce((acc, d) => acc + d.high, 0) / cityDays.length;
+  const diffTemp = avgHighLive - w.avg;
+
+  const avgRainLive = cityDays.reduce((acc, d) => acc + d.rain, 0) / cityDays.length;
+  const baseRainAvg = baseDays.length > 0 ? (baseDays.reduce((acc, d) => acc + d.rain, 0) / baseDays.length) : 25;
+  const rainDaysLive = cityDays.filter(d => d.sky === "rain" || d.rain >= 50).length;
+  const rainDaysBase = baseDays.filter(d => d.sky === "rain" || d.rain >= 50).length;
+  const sunDaysLive = cityDays.filter(d => d.sky === "sun").length;
+
+  const badges = [];
+
+  // 1. Comparación de temperatura
+  if (diffTemp >= 3) {
+    badges.push({ text: weatherLabels.compMuchHotter || "Mucho más calor", color: "#ef4444", bg: "rgba(239, 68, 68, 0.12)" });
+  } else if (diffTemp >= 1.5) {
+    badges.push({ text: weatherLabels.compHotter || "Más calor", color: "#ea580c", bg: "rgba(234, 88, 12, 0.12)" });
+  } else if (diffTemp <= -3) {
+    badges.push({ text: weatherLabels.compMuchCooler || "Mucho más frío", color: "#2563eb", bg: "rgba(37, 99, 235, 0.12)" });
+  } else if (diffTemp <= -1.5) {
+    badges.push({ text: weatherLabels.compCooler || "Más fresco", color: "#0284c7", bg: "rgba(2, 132, 199, 0.12)" });
+  }
+
+  // 2. Comparación de lluvia y sol
+  // Caso A: Lluvia imprevista (se esperaba seco pero la previsión marca lluvia o alta probabilidad)
+  if (baseRainAvg < 30 && rainDaysBase === 0 && (avgRainLive >= 40 || rainDaysLive >= 1)) {
+    badges.push({ text: "Lluvia no prevista", color: "#6366f1", bg: "rgba(99, 102, 241, 0.12)" });
+  } 
+  // Caso B: Más lluvia de la habitual/esperada
+  else if (avgRainLive - baseRainAvg >= 20 || (avgRainLive >= 55 && baseRainAvg < 50)) {
+    badges.push({ text: weatherLabels.compRainy || "Más lluvia de lo previsto", color: "#6366f1", bg: "rgba(99, 102, 241, 0.12)" });
+  }
+  // Caso C: Más soleado cuando históricamente suele llover o se preveía inestable
+  else if ((baseRainAvg >= 40 || rainDaysBase > 0) && avgRainLive <= 20 && rainDaysLive === 0) {
+    badges.push({ text: "Más soleado de lo esperado", color: "#16a34a", bg: "rgba(22, 163, 74, 0.12)" });
+  }
+  // Caso D: Predominio de sol y buen tiempo
+  else if (sunDaysLive / cityDays.length >= 0.65 && avgRainLive <= 15) {
+    badges.push({ text: weatherLabels.compSunny || "Muy soleado", color: "#16a34a", bg: "rgba(22, 163, 74, 0.12)" });
+  }
+  // Caso E: Mayormente nublado
+  else if (cityDays.filter(d => d.sky === "cloud").length / cityDays.length >= 0.6 && avgRainLive < 40) {
+    badges.push({ text: "Más nublado", color: "#64748b", bg: "rgba(100, 116, 139, 0.12)" });
+  }
+
+  // Si no hay variaciones significativas ni de temp ni de precipitaciones
+  if (badges.length === 0) {
+    badges.push({ text: weatherLabels.compExpected || "Lo esperado", color: "#10b981", bg: "rgba(16, 185, 129, 0.12)" });
+  }
+
+  return badges;
 }
 
 export default function WeatherPage() {
@@ -56,14 +115,16 @@ export default function WeatherPage() {
       });
 
       const tripStartDate = new Date("2026-09-07T00:00:00+09:00");
+      const today = todayISO();
       
       const updatedDaily = dailyWeather.map(d => {
         const targetDate = new Date(tripStartDate);
         targetDate.setDate(tripStartDate.getDate() + (d.day - 1));
         const dateStr = targetDate.toISOString().split("T")[0];
+        const daysLeft = diffDays(today, dateStr);
         
         const cityData = weatherMap[d.city];
-        if (!cityData) return d;
+        if (!cityData) return { ...d, daysLeft, dateStr };
         
         const dateIndex = cityData.time.indexOf(dateStr);
         let high, low, rain, sky, condition, isFallback = false;
@@ -85,7 +146,7 @@ export default function WeatherPage() {
           isFallback = true;
         }
         
-        return { ...d, high, low, rain, sky, condition, isFallback };
+        return { ...d, high, low, rain, sky, condition, isFallback, daysLeft, dateStr };
       });
       
       setLiveWeather(updatedDaily);
@@ -138,9 +199,6 @@ export default function WeatherPage() {
       </p>
       <div className="space-y-3">
         {displayWeather.map((d, idx) => {
-          // El icono se elige por la clave estable `sky`, no analizando el
-          // texto: al traducir la app, buscar "Soleado" o "Lluvia" fallaría
-          // y todos los días saldrían con el icono genérico de nube.
           let bg = "linear-gradient(135deg, #606C88 0%, #3F4C6B 100%)";
           let Icon = Cloud;
           if (d.sky === "sun") {
@@ -181,9 +239,13 @@ export default function WeatherPage() {
                     </span>
                   </div>
                   {d.isFallback && (
-                    <div className="flex items-center gap-1 mt-1 text-white/90" style={{ fontSize: 9 }}>
-                      <Info size={9} />
-                      Faltan +16 días. Mostrando tiempo de hoy.
+                    <div className="flex items-center gap-1 mt-1 text-white/90" style={{ fontSize: 9.5 }}>
+                      <Info size={10} />
+                      {d.daysLeft != null
+                        ? (d.daysLeft === 1
+                            ? "Falta 1 día. Mostrando tiempo de hoy."
+                            : `Faltan ${d.daysLeft} días. Mostrando tiempo de hoy.`)
+                        : "Mostrando tiempo de hoy."}
                     </div>
                   )}
                 </div>
@@ -220,67 +282,49 @@ export default function WeatherPage() {
       </p>
       <div className="grid gap-3 mb-4" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))" }}>
         {weatherData.map((w, idx) => {
-          let compLabel = null;
-          let compColor = "var(--ink-soft)";
-          
-          if (liveWeather) {
-             const cityDays = liveWeather.filter(d => d.city === w.city);
-             if (cityDays.length > 0) {
-                const avgHigh = cityDays.reduce((acc, d) => acc + d.high, 0) / cityDays.length;
-                const diff = avgHigh - w.avg;
-                
-                if (diff >= 3) {
-                   compLabel = weatherLabels.compMuchHotter || "Mucho más calor";
-                   compColor = "#ef4444";
-                } else if (diff >= 1.5) {
-                   compLabel = weatherLabels.compHotter || "Más calor";
-                   compColor = "#f97316";
-                } else if (diff <= -3) {
-                   compLabel = weatherLabels.compMuchCooler || "Mucho más frío";
-                   compColor = "#3b82f6";
-                } else if (diff <= -1.5) {
-                   compLabel = weatherLabels.compCooler || "Más fresco";
-                   compColor = "#0ea5e9";
-                } else {
-                   const avgRain = cityDays.reduce((acc, d) => acc + d.rain, 0) / cityDays.length;
-                   if (avgRain >= 50) {
-                      compLabel = weatherLabels.compRainy || "Peor (más lluvia)";
-                      compColor = "#6366f1";
-                   } else if (avgRain <= 20) {
-                      compLabel = weatherLabels.compSunny || "Mejor (soleado)";
-                      compColor = "#22c55e";
-                   } else {
-                      compLabel = weatherLabels.compExpected || "Lo esperado";
-                      compColor = "#10b981";
-                   }
-                }
-             }
-          }
+          const badges = computeCityWeatherBadges(w, liveWeather, dailyWeather, weatherLabels);
 
           return (
             <Highlightable key={idx} id={slug("weather", w.city)}>
-            <div className="rounded-xl p-4 border"
+            <div className="rounded-xl p-4 border flex flex-col justify-between"
               style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
-              <div className="flex items-center justify-between mb-2">
-                <span style={{ fontSize: 20 }}>{w.emoji}</span>
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <span style={{ fontSize: 20 }}>{w.emoji}</span>
+                </div>
+                <p style={{ fontSize: 13.5, fontWeight: 700, color: "var(--ink)", marginBottom: 1 }}>
+                  {w.city}
+                </p>
+                <p style={{ fontSize: 12, color: "var(--shu)", fontWeight: 600, marginBottom: 4 }}>
+                  {w.avg}°C
+                </p>
+                <p style={{ fontSize: 11, color: "var(--ink-soft)", lineHeight: 1.4 }}>
+                  {w.condition}
+                </p>
+                <p style={{ fontSize: 10, color: "var(--ink-soft)", marginTop: 3, opacity: 0.7 }}>
+                  {weatherLabels.lluvia} {w.precip}
+                </p>
               </div>
-              <p style={{ fontSize: 13.5, fontWeight: 700, color: "var(--ink)", marginBottom: 1 }}>
-                {w.city}
-              </p>
-              <p style={{ fontSize: 12, color: "var(--shu)", fontWeight: 600, marginBottom: 4 }}>
-                {w.avg}°C
-              </p>
-              <p style={{ fontSize: 11, color: "var(--ink-soft)", lineHeight: 1.4 }}>
-                {w.condition}
-              </p>
-              <p style={{ fontSize: 10, color: "var(--ink-soft)", marginTop: 3, opacity: 0.7 }}>
-                {weatherLabels.lluvia} {w.precip}
-              </p>
-              {compLabel && (
-                <div style={{ marginTop: '8px', paddingTop: '8px', borderTop: '1px solid var(--line)' }}>
-                  <span style={{ fontSize: 10, fontWeight: 700, color: compColor, backgroundColor: compColor + '1A', padding: '3px 6px', borderRadius: '4px' }}>
-                    {compLabel}
-                  </span>
+              {badges.length > 0 && (
+                <div className="flex flex-wrap gap-1.5 mt-3 pt-2.5" style={{ borderTop: '1px solid var(--line)' }}>
+                  {badges.map((b, bIdx) => (
+                    <span 
+                      key={bIdx} 
+                      style={{ 
+                        fontSize: 9.5, 
+                        fontWeight: 700, 
+                        color: b.color, 
+                        backgroundColor: b.bg, 
+                        padding: '2.5px 6px', 
+                        borderRadius: '4px',
+                        letterSpacing: '0.01em',
+                        display: 'inline-flex',
+                        alignItems: 'center'
+                      }}
+                    >
+                      {b.text}
+                    </span>
+                  ))}
                 </div>
               )}
             </div>
