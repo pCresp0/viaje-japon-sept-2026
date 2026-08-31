@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useId } from "react";
 import { createPortal } from "react-dom";
-import { Search, X, Calendar, Hotel, Train, Utensils, MapPin, Plane, AlertCircle, Clock, Star } from "lucide-react";
+import { Search, X, Calendar, Hotel, Train, Utensils, MapPin, Plane, AlertCircle, Clock, Star, LayoutGrid } from "lucide-react";
 import { searchGlobal, QUICK_SUGGESTIONS } from "../data/searchIndex";
 import { useLang } from "../i18n/LanguageContext";
 
@@ -15,6 +15,7 @@ import { useLang } from "../i18n/LanguageContext";
 
 // Color e icono por categoría de resultado
 const CATEGORY_META = {
+  "Apartados":    { color: "#1d3557", bg: "rgba(29,53,87,0.12)",   icon: LayoutGrid },
   "Itinerario":   { color: "#1d3557", bg: "rgba(29,53,87,0.1)",   icon: Calendar },
   "Hoteles":      { color: "#2e7d5b", bg: "rgba(46,125,91,0.1)",  icon: Hotel },
   "Transportes":  { color: "#bc4749", bg: "rgba(188,71,73,0.1)",  icon: Train },
