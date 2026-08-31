@@ -298,5 +298,11 @@ export const furtherReading = {
       url: "https://www.youtube.com/watch?v=b23vUM4MdFM",
       note: "Un documental visualmente espectacular que explora tanto las grandes urbes como el Japón más rural y tradicional.",
     },
+    {
+      title: "La HISTORIA COMPLETA de Japón en 30 Minutos",
+      channel: "YouTube",
+      url: "https://www.youtube.com/watch?v=L_WGl2dE3NA",
+      note: "Un resumen excelente y dinámico para entender las distintas eras y el desarrollo histórico y social del país de forma rápida.",
+    },
   ],
 };
