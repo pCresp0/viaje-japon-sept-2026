@@ -3,7 +3,6 @@ import { useContent, useT } from "../i18n/LanguageContext";
 import { Train, Bus, Zap, FileDown, CheckCircle2, Clock, AlertCircle, Smartphone, CreditCard, ChevronDown, Ticket } from "lucide-react";
 import { Highlightable, useHighlight } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
-import { exportTransportExcel } from "../utils/exportCsv";
 import { formatEur, formatJpyEur } from "../utils/money";
 import { PASS_7_JPY, PASS_7_EUR } from "../data/jrPass";
 import ShinkansenTicketCard from "../components/ShinkansenTicketCard";
@@ -76,21 +75,17 @@ export default function TransportPage({ onNavigate }) {
           <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{t("transport.eyebrow")}</p>
           <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>{t("transport.title")}</h2>
         </div>
-        <button
-          onClick={() => exportTransportExcel(transports)}
-          className="shrink-0 flex items-center gap-1.5 rounded-full px-3.5 py-2 text-xs font-semibold shadow-sm cursor-pointer hover:opacity-90 transition-opacity"
-          style={{ background: "var(--indigo)", color: "white", border: "none" }}
-        >
-          <FileDown size={14} />
-          Excel
-        </button>
       </div>
 
       {/* Segmented Control */}
-      <div className="px-4 mb-4">
+      <div className="px-4 mb-4 sticky z-20" style={{ top: "calc(var(--mobile-topbar) + 12px)" }}>
         <div 
-          className="flex p-1 rounded-xl relative z-0" 
-          style={{ background: "rgba(29, 53, 87, 0.06)", border: "1px solid rgba(29, 53, 87, 0.08)" }}
+          className="flex p-1 rounded-xl relative shadow-sm" 
+          style={{ 
+            background: "rgba(255, 255, 255, 0.85)", 
+            border: "1px solid rgba(29, 53, 87, 0.08)",
+            backdropFilter: "blur(12px)"
+          }}
         >
           <div
             className="absolute top-1 bottom-1 left-1 w-[calc(50%-4px)] bg-white rounded-lg shadow-sm transition-transform duration-300 ease-out pointer-events-none"

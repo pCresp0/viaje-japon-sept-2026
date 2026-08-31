@@ -87,8 +87,14 @@ export default function PendingPage() {
 
       {/* Segmented Control */}
       <div 
-        className="flex p-1 rounded-xl mb-8 relative z-0" 
-        style={{ background: "rgba(29, 53, 87, 0.06)", border: "1px solid rgba(29, 53, 87, 0.08)" }}
+        className="flex p-1 rounded-xl mb-8 relative z-20 shadow-sm" 
+        style={{ 
+          background: "rgba(255, 255, 255, 0.85)", 
+          border: "1px solid rgba(29, 53, 87, 0.08)",
+          position: "sticky",
+          top: "calc(var(--mobile-topbar) + 12px)",
+          backdropFilter: "blur(12px)"
+        }}
       >
         <div
           className="absolute top-1 bottom-1 left-1 w-[calc(50%-4px)] bg-white rounded-lg shadow-sm transition-transform duration-300 ease-out pointer-events-none"
