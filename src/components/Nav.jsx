@@ -237,10 +237,10 @@ function Drawer({ active, onChange, open, onClose }) {
           </nav>
           
           {/* Quick access bottom bar */}
-          <div className="absolute bottom-0 left-0 right-0 flex items-center justify-around px-2 py-4"
+          <div className="absolute bottom-0 left-0 right-0 flex items-center justify-around px-2 pb-5 pt-8"
                style={{ 
-                 background: "linear-gradient(to top, rgba(35,27,27,1) 30%, rgba(35,27,27,0.9) 70%, rgba(35,27,27,0))",
-                 borderTop: "1px solid rgba(255,255,255,0.05)" 
+                 background: "linear-gradient(to top, rgba(35,27,27,1) 40%, rgba(35,27,27,0.95) 60%, rgba(35,27,27,0.7) 80%, rgba(35,27,27,0))",
+                 borderTop: "none"
                }}>
             {[
               { id: "hoy", icon: Compass },
