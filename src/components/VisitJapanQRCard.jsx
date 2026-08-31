@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { QrCode, Lock, Unlock, Eye, EyeOff, X, CheckCircle2, ShieldCheck, Download, UserCheck, ChevronRight, ChevronDown } from "lucide-react";
+import { sha256Hex } from "../utils/hash";
 
+// passHash = sha256(contraseña en minúsculas) — valores en claro en /memories/repo/secrets.md (fuera del repo).
 export const groupMembers = [
-  { id: "pablo", name: "Pablo Crespo Bellido", hasQR: true, qrPath: "/images/visit-japan-qr.png", role: "Titular", pass: "cresp0" },
-  { id: "sergio", name: "Sergio Crespo Bellido", hasQR: true, qrPath: "/images/visit-japan-qr-sergio.png", role: "Titular", pass: "kr43xpo" },
-  { id: "juancarlos", name: "Juan Carlos Rodríguez", hasQR: false, role: "Viajero", pass: "cresp0" },
-  { id: "gerundio", name: "Randy (Gerundio)", hasQR: false, role: "Viajero", pass: "cresp0" },
-  { id: "thibaut", name: "Thibaut", hasQR: false, role: "Viajero", pass: "cresp0" },
+  { id: "pablo", name: "Pablo Crespo Bellido", hasQR: true, qrPath: "/images/visit-japan-qr.png", role: "Titular", passHash: "1d8b070e797a48a1b935e9622415c50a4914a19bbcc7a3bffa909fe65c1d07b7" },
+  { id: "sergio", name: "Sergio Crespo Bellido", hasQR: true, qrPath: "/images/visit-japan-qr-sergio.png", role: "Titular", passHash: "296fb098929ae462b109e0df2726da063f371ad993a0ebe6dadf18a36fa1583c" },
+  { id: "juancarlos", name: "Juan Carlos Rodríguez", hasQR: false, role: "Viajero", passHash: "1d8b070e797a48a1b935e9622415c50a4914a19bbcc7a3bffa909fe65c1d07b7" },
+  { id: "gerundio", name: "Randy (Gerundio)", hasQR: false, role: "Viajero", passHash: "1d8b070e797a48a1b935e9622415c50a4914a19bbcc7a3bffa909fe65c1d07b7" },
+  { id: "thibaut", name: "Thibaut", hasQR: false, role: "Viajero", passHash: "1d8b070e797a48a1b935e9622415c50a4914a19bbcc7a3bffa909fe65c1d07b7" },
 ];
 
 export default function VisitJapanQRCard() {
@@ -31,10 +33,10 @@ export default function VisitJapanQRCard() {
     setPassword("");
   }
 
-  function handlePasswordSubmit(e) {
+  async function handlePasswordSubmit(e) {
     e?.preventDefault();
-    const correctPass = selectedMember?.pass || "cresp0";
-    if (password.trim().toLowerCase() === correctPass.toLowerCase()) {
+    const inputHash = await sha256Hex(password.trim().toLowerCase());
+    if (inputHash === selectedMember?.passHash) {
       setStep("unlocked");
       setError(false);
       setPassword("");

@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Lock, Eye, EyeOff } from "lucide-react";
+import { sha256Hex } from "../utils/hash";
 
 const STORAGE_KEY = "viaje-japon-auth-v1";
-const PASSWORD = "pokem0n";
+// sha256 de la clave real — ver /memories/repo/secrets.md (fuera del repo) para el valor en claro.
+const PASSWORD_HASH = "44d0c8f97f4032bc81ebea9eee77f16363e61800ff1f04c6d71fe77e6b3d8871";
 
 export function isUnlocked() {
   try {
@@ -23,9 +25,9 @@ export default function AccessGate({ onUnlock }) {
   const [error, setError] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
-  function submit(e) {
+  async function submit(e) {
     e.preventDefault();
-    if (value === PASSWORD) {
+    if ((await sha256Hex(value)) === PASSWORD_HASH) {
       unlock();
       onUnlock();
       return;
