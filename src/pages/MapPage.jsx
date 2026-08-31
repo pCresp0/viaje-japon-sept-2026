@@ -60,7 +60,7 @@ function FitBounds({ markers }) {
 }
 
 export default function MapPage({ onGoToDay, initialDay }) {
-  const defaultDay = initialDay ?? (getTripStatus().dayNum ?? 0);
+  const defaultDay = initialDay ?? (getTripStatus().dayNum || 1);
   const [selected, setSelected] = useState(null);
   const [filter, setFilter] = useState("dias");
   const [subDay, setSubDay] = useState(defaultDay); // día concreto dentro del filtro "dias", null = todos
