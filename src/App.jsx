@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, lazy, Suspense } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useSwipeable } from "react-swipeable";
 import Nav, { Sidebar, DesktopTopBar } from "./components/Nav";
 import Footer from "./components/Footer";
@@ -8,26 +8,26 @@ import SearchResultHighlight from "./components/SearchResultHighlight";
 import ErrorBoundary from "./components/ErrorBoundary";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 
-const InicioPage = lazy(() => import("./pages/InicioPage"));
-const Home = lazy(() => import("./pages/Home"));
-const CalendarPage = lazy(() => import("./pages/CalendarPage"));
-const Itinerary = lazy(() => import("./pages/Itinerary"));
-const InfoPage = lazy(() => import("./pages/InfoPage"));
-const BudgetPage = lazy(() => import("./pages/BudgetPage"));
-const TransportPage = lazy(() => import("./pages/TransportPage"));
-const HotelsPage = lazy(() => import("./pages/HotelsPage"));
-const PlacesPage = lazy(() => import("./pages/PlacesPage"));
-const FoodsPage = lazy(() => import("./pages/FoodsPage"));
-const MapPage = lazy(() => import("./pages/MapPage"));
-const WeatherPage = lazy(() => import("./pages/WeatherPage"));
-const PhrasesPage = lazy(() => import("./pages/PhrasesPage"));
-const PrepPage = lazy(() => import("./pages/PrepPage"));
-const UtilsPage = lazy(() => import("./pages/UtilsPage"));
-const EmergencyPage = lazy(() => import("./pages/EmergencyPage"));
-const PendingPage = lazy(() => import("./pages/PendingPage"));
-const HistoryPage = lazy(() => import("./pages/HistoryPage"));
-const AboutPage = lazy(() => import("./pages/AboutPage"));
-const FrikadasPage = lazy(() => import("./pages/FrikadasPage"));
+import InicioPage from "./pages/InicioPage";
+import Home from "./pages/Home";
+import CalendarPage from "./pages/CalendarPage";
+import Itinerary from "./pages/Itinerary";
+import InfoPage from "./pages/InfoPage";
+import BudgetPage from "./pages/BudgetPage";
+import TransportPage from "./pages/TransportPage";
+import HotelsPage from "./pages/HotelsPage";
+import PlacesPage from "./pages/PlacesPage";
+import FoodsPage from "./pages/FoodsPage";
+import MapPage from "./pages/MapPage";
+import WeatherPage from "./pages/WeatherPage";
+import PhrasesPage from "./pages/PhrasesPage";
+import PrepPage from "./pages/PrepPage";
+import UtilsPage from "./pages/UtilsPage";
+import EmergencyPage from "./pages/EmergencyPage";
+import PendingPage from "./pages/PendingPage";
+import HistoryPage from "./pages/HistoryPage";
+import AboutPage from "./pages/AboutPage";
+import FrikadasPage from "./pages/FrikadasPage";
 import { useHighlight } from "./context/HighlightContext";
 import { slug } from "./utils/slug";
 import { getTripStatus } from "./utils/date";
@@ -176,30 +176,28 @@ export default function App() {
 
             {searchResult?.tab === tab && <SearchResultHighlight result={searchResult} onClear={() => setSearchResult(null)} />}
             <ErrorBoundary resetKey={tab}>
-              <Suspense fallback={<div style={{ padding: "40px 20px", textAlign: "center", color: "var(--ink-soft)" }}>Cargando...</div>}>
-                <div>
-                  {tab === "pendientes"   && <PendingPage />}
-                  {tab === "historia"     && <HistoryPage />}
-                  {tab === "inicio"       && <InicioPage onNavigate={setTab} />}
-                  {tab === "hoy"          && <Home onGoToDay={goToDay} />}
-                  {tab === "calendario"   && <CalendarPage  />}
-                  {tab === "itinerario"   && <Itinerary openDay={openDay} setOpenDay={setOpenDay} quickView={quickView} setQuickView={setQuickView} onGoToMapDay={goToMapDay} />}
-                  {tab === "vuelos"       && <InfoPage />}
-                  {tab === "hoteles"      && <HotelsPage />}
-                  {tab === "transportes"  && <TransportPage onNavigate={handleSearchNavigate} />}
-                  {tab === "presupuesto"  && <BudgetPage />}
-                  {tab === "lugares"      && <PlacesPage />}
-                  {tab === "comidas"      && <FoodsPage />}
-                  {tab === "mapa"         && <MapPage onGoToDay={goToDay} initialDay={mapInitialDay} />}
-                  {tab === "clima"        && <WeatherPage />}
-                  {tab === "frases"       && <PhrasesPage />}
-                  {tab === "preparativos" && <PrepPage />}
-                  {tab === "herramientas" && <UtilsPage />}
-                  {tab === "emergencias"  && <EmergencyPage />}
-                  {tab === "frikadas"     && <FrikadasPage />}
-                  {tab === "about"        && <AboutPage />}
-                </div>
-              </Suspense>
+              <div>
+                {tab === "pendientes"   && <PendingPage />}
+                {tab === "historia"     && <HistoryPage />}
+                {tab === "inicio"       && <InicioPage onNavigate={setTab} />}
+                {tab === "hoy"          && <Home onGoToDay={goToDay} />}
+                {tab === "calendario"   && <CalendarPage  />}
+                {tab === "itinerario"   && <Itinerary openDay={openDay} setOpenDay={setOpenDay} quickView={quickView} setQuickView={setQuickView} onGoToMapDay={goToMapDay} />}
+                {tab === "vuelos"       && <InfoPage />}
+                {tab === "hoteles"      && <HotelsPage />}
+                {tab === "transportes"  && <TransportPage onNavigate={handleSearchNavigate} />}
+                {tab === "presupuesto"  && <BudgetPage />}
+                {tab === "lugares"      && <PlacesPage />}
+                {tab === "comidas"      && <FoodsPage />}
+                {tab === "mapa"         && <MapPage onGoToDay={goToDay} initialDay={mapInitialDay} />}
+                {tab === "clima"        && <WeatherPage />}
+                {tab === "frases"       && <PhrasesPage />}
+                {tab === "preparativos" && <PrepPage />}
+                {tab === "herramientas" && <UtilsPage />}
+                {tab === "emergencias"  && <EmergencyPage />}
+                {tab === "frikadas"     && <FrikadasPage />}
+                {tab === "about"        && <AboutPage />}
+              </div>
             </ErrorBoundary>
           </main>
 
