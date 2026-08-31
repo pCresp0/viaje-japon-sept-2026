@@ -8,6 +8,7 @@ import { useContent } from "../i18n/LanguageContext";
 import { Highlightable } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 import { parseDayNumbers } from "../utils/mapDay";
+import { getTripStatus } from "../utils/date";
 import PlaceText from "../components/PlaceText";
 
 function createIcon(emoji, color, order) {
@@ -59,9 +60,10 @@ function FitBounds({ markers }) {
 }
 
 export default function MapPage({ onGoToDay, initialDay }) {
+  const defaultDay = initialDay ?? (getTripStatus().dayNum ?? 0);
   const [selected, setSelected] = useState(null);
-  const [filter, setFilter] = useState(initialDay != null ? "dias" : "ruta");
-  const [subDay, setSubDay] = useState(initialDay ?? null); // día concreto dentro del filtro "dias", null = todos
+  const [filter, setFilter] = useState("dias");
+  const [subDay, setSubDay] = useState(defaultDay); // día concreto dentro del filtro "dias", null = todos
 
   const { mapStops, mapFilterData, mapLabels, days } = useContent();
   const dayInfo = Object.fromEntries(days.map((d) => [d.num, d]));
