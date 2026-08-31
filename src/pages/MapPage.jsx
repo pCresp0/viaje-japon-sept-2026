@@ -99,17 +99,70 @@ export default function MapPage({ onGoToDay, initialDay }) {
     };
   });
 
+  const DAY_START_HOTELS = {
+    1: { id: "hotel-d1", name: "Hotel Keihan Kyoto Hachijoguchi", city: "Kioto", lat: 34.9811, lng: 135.7589, emoji: "🏨", color: "#bc4749", day: "Día 1", detail: "Hotel base en Kioto · Llegada y check-in", isHotel: true },
+    2: { id: "hotel-d2", name: "Hotel Keihan Kyoto Hachijoguchi", city: "Kioto", lat: 34.9811, lng: 135.7589, emoji: "🏨", color: "#bc4749", day: "Día 2", detail: "Hotel base en Kioto · Punto de partida del día", isHotel: true },
+    3: { id: "hotel-d3", name: "Hotel Keihan Kyoto Hachijoguchi", city: "Kioto", lat: 34.9811, lng: 135.7589, emoji: "🏨", color: "#bc4749", day: "Día 3", detail: "Hotel base en Kioto · Punto de partida del día", isHotel: true },
+    4: { id: "hotel-d4", name: "Hotel Keihan Kyoto Hachijoguchi", city: "Kioto", lat: 34.9811, lng: 135.7589, emoji: "🏨", color: "#bc4749", day: "Día 4", detail: "Hotel base en Kioto · Punto de partida del día", isHotel: true },
+    5: { id: "hotel-d5", name: "Hotel Keihan Kyoto Hachijoguchi", city: "Kioto", lat: 34.9811, lng: 135.7589, emoji: "🏨", color: "#bc4749", day: "Día 5", detail: "Hotel base en Kioto · Salida hacia Osaka", isHotel: true },
+    6: { id: "hotel-d6-start", name: "Hotel Keihan Kyoto Hachijoguchi", city: "Kioto", lat: 34.9811, lng: 135.7589, emoji: "🏨", color: "#bc4749", day: "Día 6", detail: "Hotel de salida en Kioto · Gestión de maletas y salida a Kanazawa", isHotel: true },
+    7: { id: "hotel-d7-start", name: "Hotel Resol Trinity Kanazawa", city: "Kanazawa", lat: 36.5713, lng: 136.6542, emoji: "🏨", color: "#2e7d5b", day: "Día 7", detail: "Hotel de salida en Kanazawa · Salida a Shirakawa-go", isHotel: true },
+    8: { id: "hotel-d8-start", name: "Hotel Wood Takayama", city: "Takayama", lat: 36.1421, lng: 137.2582, emoji: "🏨", color: "#2e7d5b", day: "Día 8", detail: "Hotel de salida en Takayama · Salida a Magome", isHotel: true },
+    9: { id: "hotel-d9-start", name: "Magome Chaya", city: "Magome", lat: 35.5244, lng: 137.5647, emoji: "🏨", color: "#2e7d5b", day: "Día 9", detail: "Minshuku tradicional en Magome · Salida hacia Tokio", isHotel: true },
+    10: { id: "hotel-d10", name: "KOKO HOTEL Residence Asakusa Kappabashi", city: "Tokio", lat: 35.7178, lng: 139.7917, emoji: "🏨", color: "#1d3557", day: "Día 10", detail: "Hotel base en Tokio · Punto de partida del día", isHotel: true },
+    11: { id: "hotel-d11", name: "KOKO HOTEL Residence Asakusa Kappabashi", city: "Tokio", lat: 35.7178, lng: 139.7917, emoji: "🏨", color: "#1d3557", day: "Día 11", detail: "Hotel base en Tokio · Punto de partida del día", isHotel: true },
+    12: { id: "hotel-d12", name: "KOKO HOTEL Residence Asakusa Kappabashi", city: "Tokio", lat: 35.7178, lng: 139.7917, emoji: "🏨", color: "#1d3557", day: "Día 12", detail: "Hotel base en Tokio · Punto de partida del día", isHotel: true },
+    13: { id: "hotel-d13", name: "KOKO HOTEL Residence Asakusa Kappabashi", city: "Tokio", lat: 35.7178, lng: 139.7917, emoji: "🏨", color: "#1d3557", day: "Día 13", detail: "Hotel base en Tokio · Punto de partida del día", isHotel: true },
+    14: { id: "hotel-d14", name: "KOKO HOTEL Residence Asakusa Kappabashi", city: "Tokio", lat: 35.7178, lng: 139.7917, emoji: "🏨", color: "#1d3557", day: "Día 14", detail: "Hotel base en Tokio · Salida excursión Monte Fuji", isHotel: true },
+    15: { id: "hotel-d15", name: "KOKO HOTEL Residence Asakusa Kappabashi", city: "Tokio", lat: 35.7178, lng: 139.7917, emoji: "🏨", color: "#1d3557", day: "Día 15", detail: "Hotel base en Tokio · Check-out y salida al aeropuerto", isHotel: true },
+  };
+
+  const DAY_END_HOTELS = {
+    6: { id: "hotel-d6-end", name: "Hotel Resol Trinity Kanazawa", city: "Kanazawa", lat: 36.5713, lng: 136.6542, emoji: "🏨", color: "#2e7d5b", day: "Día 6", detail: "Hotel en Kanazawa · Llegada, check-in y descanso", isHotel: true },
+    7: { id: "hotel-d7-end", name: "Hotel Wood Takayama", city: "Takayama", lat: 36.1421, lng: 137.2582, emoji: "🏨", color: "#2e7d5b", day: "Día 7", detail: "Hotel en Takayama · Llegada, check-in y descanso", isHotel: true },
+    8: { id: "hotel-d8-end", name: "Magome Chaya", city: "Magome", lat: 35.5244, lng: 137.5647, emoji: "🏨", color: "#2e7d5b", day: "Día 8", detail: "Minshuku tradicional en Magome · Llegada, cena y descanso", isHotel: true },
+    9: { id: "hotel-d9-end", name: "KOKO HOTEL Residence Asakusa Kappabashi", city: "Tokio", lat: 35.7178, lng: 139.7917, emoji: "🏨", color: "#1d3557", day: "Día 9", detail: "Hotel base en Tokio · Llegada, check-in para 6 noches", isHotel: true },
+  };
+
+  const getSingleDayMarkers = (dayNum) => {
+    const rawStops = mapStops.filter((s) => parseDayNumbers(s.day).includes(dayNum));
+    
+    // Si es Día 1 (día de llegada), el hotel es la última parada (llegada y check-in)
+    if (dayNum === 1) {
+      return rawStops;
+    }
+    
+    const result = [];
+    const startHotel = DAY_START_HOTELS[dayNum];
+    if (startHotel) {
+      result.push(startHotel);
+    }
+    
+    for (const stop of rawStops) {
+      // Evitar duplicar si la parada ya es el hotel de salida
+      if (stop.id !== startHotel?.id && !stop.name.includes(startHotel?.name || "---")) {
+        result.push(stop);
+      }
+    }
+    
+    // Si es día de cambio de ciudad, añadir el hotel de llegada al final
+    const endHotel = DAY_END_HOTELS[dayNum];
+    if (endHotel && !result.some((s) => s.id === endHotel.id || s.name.includes(endHotel.name))) {
+      result.push(endHotel);
+    }
+    
+    return result;
+  };
+
   const isDaysFilter = filter === "dias";
   const isRutaFilter = filter === "ruta";
+  const isSingleDayDetail = isDaysFilter && subDay != null;
+
   const currentMarkers = isRutaFilter
     ? dayOverviewMarkers
     : isDaysFilter
-      ? (subDay == null ? mapStops : mapStops.filter((s) => parseDayNumbers(s.day).includes(subDay)))
+      ? (subDay == null ? mapStops : getSingleDayMarkers(subDay))
       : (mapFilterData[filter] || []);
-
-  // Cuando hay un día concreto elegido en "Días", los números pasan a ser
-  // el orden de visita dentro de ESE día (1, 2, 3...), no el número de día.
-  const isSingleDayDetail = isDaysFilter && subDay != null;
 
   // Ruta, hoteles, transportes y días: línea en orden cronológico del viaje
   const showChronoLine = filter === "ruta" || filter === "hoteles" || filter === "transportes" || isDaysFilter;
@@ -345,7 +398,7 @@ export default function MapPage({ onGoToDay, initialDay }) {
                     fontSize: 12, color: "var(--ink-soft)",
                     overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap",
                   }}>
-                    {isRutaFilter ? stop.detail : stop.day}
+                    {isRutaFilter || isSingleDayDetail ? stop.detail : stop.day}
                   </p>
                 </div>
               </div>
