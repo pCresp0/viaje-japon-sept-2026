@@ -100,20 +100,24 @@ export default function TransportPage({ onNavigate }) {
         <div 
           className="flex p-1 rounded-xl relative shadow-sm" 
           style={{ 
-            background: "rgba(255, 255, 255, 0.85)", 
-            border: "1px solid rgba(29, 53, 87, 0.08)",
+            background: "var(--paper-raised)", 
+            border: "1px solid var(--line)",
             backdropFilter: "blur(12px)"
           }}
         >
           <div
-            className="absolute top-1 bottom-1 left-1 w-[calc(50%-4px)] bg-white rounded-lg shadow-sm transition-transform duration-300 ease-out pointer-events-none"
-            style={{ transform: activeTab === "billetes" ? "translateX(0)" : "translateX(100%)" }}
+            className="absolute top-1 bottom-1 left-1 w-[calc(50%-4px)] rounded-lg transition-transform duration-300 ease-out pointer-events-none"
+            style={{ 
+              transform: activeTab === "billetes" ? "translateX(0)" : "translateX(100%)",
+              background: "var(--indigo)",
+              boxShadow: "0 2px 8px rgba(29, 53, 87, 0.28)",
+            }}
           />
           <button
             type="button"
             onClick={() => handleTabChange("billetes")}
-            className="flex-1 relative z-10 flex items-center justify-center gap-2 py-2 text-xs font-bold uppercase tracking-widest transition-colors duration-300 cursor-pointer border-none bg-transparent m-0"
-            style={{ color: activeTab === "billetes" ? "var(--indigo)" : "var(--ink-soft)" }}
+            className="flex-1 relative z-10 flex items-center justify-center gap-2 py-2 text-xs font-bold uppercase tracking-wider transition-colors duration-300 cursor-pointer border-none bg-transparent m-0"
+            style={{ color: activeTab === "billetes" ? "#ffffff" : "var(--ink-soft)" }}
           >
             <Ticket size={14} />
             Billetes
@@ -121,8 +125,8 @@ export default function TransportPage({ onNavigate }) {
           <button
             type="button"
             onClick={() => handleTabChange("trayectos")}
-            className="flex-1 relative z-10 flex items-center justify-center gap-2 py-2 text-xs font-bold uppercase tracking-widest transition-colors duration-300 cursor-pointer border-none bg-transparent m-0"
-            style={{ color: activeTab === "trayectos" ? "var(--indigo)" : "var(--ink-soft)" }}
+            className="flex-1 relative z-10 flex items-center justify-center gap-2 py-2 text-xs font-bold uppercase tracking-wider transition-colors duration-300 cursor-pointer border-none bg-transparent m-0"
+            style={{ color: activeTab === "trayectos" ? "#ffffff" : "var(--ink-soft)" }}
           >
             <Train size={14} />
             Trayectos
