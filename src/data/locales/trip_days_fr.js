@@ -375,7 +375,7 @@ export const days = [
         "text": "Promenade tranquille dans Magome-juku (15:00–17:30), ses maisons traditionnelles et rues historiques. Idéal pour : check-in, déposer les bagages, se reposer, se doucher, profiter du village. IMPORTANT : Beaucoup de boutiques et restaurants ferment tôt. Ne gardez pas les achats ou la nourriture pour la dernière minute."
       },
       {
-        "text": "🍱 DÎNER À MAGOME CHAYA (18:00). Le dîner est servi EXACTEMENT à 18:00 et finit vers 19:00. Prix : 3 630 ¥/pers (18 150 ¥ pour 5). Doit être confirmé à l'avance. IMPORTANT : Ne soyez pas en retard. Le restaurant est juste en face du logement.\n⚠️ PAS DE PETIT-DÉJEUNER le lendemain : Magome Chaya ne l'offre plus. Achetez-le à l'avance, le village n'a pas de commerces ouverts tôt."
+        "text": "🍱 **18:00 | DÎNER À MAGOME CHAYA**\n\nDîner traditionnel confirmé à l'auberge (servi ponctuellement à 18:00). Prix : 3 630 ¥/personne (~23€). Deux options de menu principal au choix :\n\n* **Menu A :** Poisson de rivière grillé au sel et marmite chaude (*nabemono*) de porc et champignons.\n* **Menu B :** *Tonkatsu* (escalope de porc panée et frite).\n*(Les deux menus incluent tempura de légumes, sashimi, riz, accompagnements et dessert).*"
       },
       {
         "text": "🏨 **HÉBERGEMENT : MAGOME CHAYA (MINSHUKU)** (https://www.google.com/maps/search/?api=1&query=Magome+Chaya+Gifu)\n\nRepos à l'auberge rurale après le dîner (1re et unique nuit à Magome Chaya)."

@@ -375,7 +375,7 @@ export const days = [
         "text": "Relax na paglalakad sa Magome-juku (15:00–17:30), mga tradisyonal nitong bahay at kalye. Oras ito para mag: check-in, iwan ang bagahe, magpahinga, maligo, at mag-enjoy sa nayon. MAHALAGA: Maraming tindahan at kainan ang maagang nagsasara. Huwag ipagpabukas ang pamimili o pagkain."
       },
       {
-        "text": "🍱 HAPUNAN SA MAGOME CHAYA (18:00). Ise-serve ang hapunan EKSAKTONG 18:00 at matatapos ng halos 19:00. Presyo: ¥3,630/tao (¥18,150 para sa 5). Dapat kumpirmado ang hapunan. MAHALAGA: Huwag ma-late. Nasa tapat lang ng accommodation ang restawran.\n⚠️ WALANG ALMUSAL kinabukasan: Wala nang almusal sa Magome Chaya. Bumili nang maaga, walang bukas na tindahan nang maaga sa bayan."
+        "text": "🍱 **18:00 | HAPUNAN SA MAGOME CHAYA**\n\nTradisyonal na hapunan na kumpirmado sa tuluyan (saktong ise-serve nang 18:00). Presyo: ¥3,630/tao (~23€). May dalawang pangunahing pagpipilian sa menu:\n\n* **Menu A:** Inihaw na isda sa asin at hot pot (*nabemono*) na baboy na may kabute.\n* **Menu B:** *Tonkatsu* (breaded at pritong baboy).\n*(Kasama sa parehong menu ang vegetable tempura, sashimi, kanin, side dishes, at dessert).*"
       },
       {
         "text": "🏨 **TULUYAN: MAGOME CHAYA (MINSHUKU)** (https://www.google.com/maps/search/?api=1&query=Magome+Chaya+Gifu)\n\nMagpahinga sa minshuku pagkatapos ng hapunan (una at tanging gabi sa Magome Chaya)."
