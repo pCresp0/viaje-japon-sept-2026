@@ -215,6 +215,6 @@ export const budget = {
       ],
     },
   ],
-  totalPerPerson: "~2 750€ – 2 900€ (vols inclus)",
-  totalGroup: "~13 750€ – 14 500€ (5 personnes)",
+  totalPerPerson: "~2 735€ – 2 880€ (tout inclus)",
+  totalGroup: "~13 680€ – 14 400€ (5 personnes)",
 };
