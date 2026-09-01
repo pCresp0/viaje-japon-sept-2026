@@ -247,6 +247,7 @@ export const furtherReading = {
     {
       title: "Historia de los samuráis",
       author: "Jonathan López-Vera",
+      url: "https://telegra.ph/Historia-de-los-samur%C3%A1is-09-01-28",
       note: "El especialista en español de referencia sobre el periodo Kamakura-Edo y la clase guerrera. Su blog, historiasamurai.com, es también una fuente fiable y amena para profundizar en cualquier anécdota samurái del viaje.",
     },
     {
