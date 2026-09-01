@@ -167,8 +167,19 @@ export default function HistoryPage() {
   const { lang } = useLang();
   const { supported, speakingId, speak, stop } = useTextSpeech(lang);
 
-  // Acordeón exclusivo: sólo un periodo abierto a la vez. Al abrir uno
-  // distinto se cierra automáticamente el que estuviera abierto.
+  // 4 Secciones principales colapsadas por defecto
+  const [openSections, setOpenSections] = useState({
+    historia: false,
+    podcasts: false,
+    documentaries: false,
+    books: false,
+  });
+
+  const toggleSection = (key) => {
+    setOpenSections((prev) => ({ ...prev, [key]: !prev[key] }));
+  };
+
+  // Acordeón exclusivo para periodos dentro de la sección de Historia
   const [openId, setOpenId] = useState(null);
   const { highlightId } = useHighlight();
 
@@ -176,16 +187,28 @@ export default function HistoryPage() {
     setOpenId((current) => (current === id ? null : id));
   }
 
-  // Si llegamos desde el buscador apuntando a un periodo concreto, se
-  // abre automáticamente antes de que PeriodCard intente hacer scroll.
+  // Si llegamos desde el buscador apuntando a un elemento concreto,
+  // se abre automáticamente la sección padre correspondiente.
   useEffect(() => {
     if (!highlightId) return;
-    const match = historyPeriods.find((p) => slug("history", p.id) === highlightId);
-    if (match) setOpenId(match.id);
+    if (highlightId.startsWith("history-podcasts")) {
+      setOpenSections((prev) => ({ ...prev, podcasts: true }));
+    } else if (highlightId.startsWith("history-documentaries")) {
+      setOpenSections((prev) => ({ ...prev, documentaries: true }));
+    } else if (highlightId.startsWith("history-books")) {
+      setOpenSections((prev) => ({ ...prev, books: true }));
+    } else {
+      const match = historyPeriods.find((p) => slug("history", p.id) === highlightId);
+      if (match) {
+        setOpenSections((prev) => ({ ...prev, historia: true }));
+        setOpenId(match.id);
+      }
+    }
   }, [highlightId, historyPeriods]);
 
   return (
     <div className="px-4 pt-3 pb-12">
+      {/* Header */}
       <div className="mb-6">
         <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{t("history.eyebrow")}</p>
         <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>
@@ -196,131 +219,242 @@ export default function HistoryPage() {
         </p>
       </div>
 
-      {historyPeriods.map((period) => (
-        <PeriodCard
-          key={period.id}
-          period={period}
-          isOpen={openId === period.id}
-          onToggle={() => handleToggle(period.id)}
-          speak={speak}
-          stop={stop}
-          speakingId={speakingId}
-          supported={supported}
-        />
-      ))}
-
-      {/* Further reading */}
-      <div style={{ marginTop: 32 }}>
-        <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{t("history.readingEyebrow")}</p>
-        <h3 className="font-display text-xl" style={{ color: "var(--indigo)", marginBottom: 4 }}>
-          {t("history.readingTitle")}
-        </h3>
-        <p style={{ fontSize: 12.5, color: "var(--ink-soft)", marginBottom: 16, lineHeight: 1.6 }}>
-          {t("history.readingIntro")}
-        </p>
-
-        {/* Books */}
-        <div className="rounded-2xl border overflow-hidden mb-4"
-          style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
-          <div className="flex items-center gap-2 px-5 py-3" style={{ background: "var(--indigo)" }}>
-            <BookOpen size={16} color="#fff" />
-            <span style={{ fontSize: 13, fontWeight: 700, color: "#fff" }}>{t("history.books")}</span>
+      {/* ── 1. SECCIÓN: HISTORIA DE JAPÓN ────────────────────────── */}
+      <div 
+        className="rounded-2xl border overflow-hidden mb-4 shadow-xs"
+        style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}
+      >
+        <button
+          type="button"
+          onClick={() => toggleSection("historia")}
+          className="w-full text-left flex items-center justify-between px-5 py-3.5 transition-colors cursor-pointer border-none m-0"
+          style={{ background: "var(--shu)" }}
+        >
+          <div className="flex items-center gap-2.5">
+            <Scroll size={18} color="#fff" />
+            <span style={{ fontSize: 14, fontWeight: 700, color: "#fff", letterSpacing: "0.02em" }}>
+              {t("history.title")}
+            </span>
+            <span 
+              className="text-[11px] font-semibold px-2 py-0.5 rounded-full text-white"
+              style={{ background: "rgba(255,255,255,0.22)" }}
+            >
+              {historyPeriods.length}
+            </span>
           </div>
-          {furtherReading.books.map((b, i) => (
-            <Highlightable key={i} id={slug("history", "books", b.title)}>
-              <div className="px-5 py-4"
-                style={{ borderBottom: i < furtherReading.books.length - 1 ? "1px solid var(--line)" : "none" }}>
-                <div className="flex items-start justify-between gap-3">
-                  <div className="min-w-0 flex-1">
-                    <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", margin: 0, lineHeight: 1.35 }}>{b.title}</p>
-                    <p style={{ fontSize: 12, color: "var(--shu)", fontWeight: 600, marginTop: 2, marginBottom: 0 }}>{b.author}</p>
-                  </div>
-                  {b.url && (
-                    <a 
-                      href={b.url} 
-                      target="_blank" 
-                      rel="noreferrer" 
-                      className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold text-white transition-all hover:opacity-90 active:scale-95 self-start"
-                      style={{ background: "var(--indigo)", textDecoration: "none" }}
-                    >
-                      <BookOpen size={13} />
-                      {t("history.readOnline") || "Leer online"}
-                      <ExternalLink size={11} />
-                    </a>
-                  )}
-                </div>
-                <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.6, margin: "6px 0 0" }}>{b.note}</p>
-              </div>
-            </Highlightable>
-          ))}
-        </div>
+          <ChevronDown
+            size={18}
+            color="#fff"
+            className={`transition-transform duration-200 ${openSections.historia ? "rotate-180" : ""}`}
+          />
+        </button>
 
-        {/* Podcasts */}
-        <div className="rounded-2xl border overflow-hidden"
-          style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
-          <div className="flex items-center gap-2 px-5 py-3" style={{ background: "var(--forest)" }}>
-            <Headphones size={16} color="#fff" />
-            <span style={{ fontSize: 13, fontWeight: 700, color: "#fff" }}>{t("history.podcasts")}</span>
+        {openSections.historia && (
+          <div className="p-4" style={{ background: "var(--paper)" }}>
+            {historyPeriods.map((period) => (
+              <PeriodCard
+                key={period.id}
+                period={period}
+                isOpen={openId === period.id}
+                onToggle={() => handleToggle(period.id)}
+                speak={speak}
+                stop={stop}
+                speakingId={speakingId}
+                supported={supported}
+              />
+            ))}
           </div>
-          {furtherReading.podcasts.map((p, i) => (
-            <Highlightable key={i} id={slug("history", "podcasts", p.title)}>
-              <div className="px-5 py-4"
-                style={{ borderBottom: i < furtherReading.podcasts.length - 1 ? "1px solid var(--line)" : "none" }}>
-                <div className="flex items-start justify-between gap-3">
-                  <div className="min-w-0 flex-1">
-                    <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", margin: 0, lineHeight: 1.35 }}>{p.title}</p>
-                    <p style={{ fontSize: 12, color: "var(--forest)", fontWeight: 600, marginTop: 2, marginBottom: 0 }}>{p.show}</p>
-                  </div>
-                  {p.url && (
-                    <a 
-                      href={p.url} 
-                      target="_blank" 
-                      rel="noreferrer" 
-                      className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold text-white transition-all hover:opacity-90 active:scale-95 self-start"
-                      style={{ background: "#872ec4", textDecoration: "none" }}
-                    >
-                      <Headphones size={13} />
-                      Apple Podcasts
-                    </a>
-                  )}
-                </div>
-                <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.6, margin: "6px 0 0" }}>{p.note}</p>
-              </div>
-            </Highlightable>
-          ))}
-        </div>
+        )}
+      </div>
 
-        {/* Documentaries */}
-        {furtherReading.documentaries && furtherReading.documentaries.length > 0 && (
-          <div className="rounded-2xl border overflow-hidden mt-4"
-            style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
-            <div className="flex items-center gap-2 px-5 py-3" style={{ background: "#c4302b" }}>
-              <MonitorPlay size={16} color="#fff" />
-              <span style={{ fontSize: 13, fontWeight: 700, color: "#fff" }}>{t("history.documentaries")}</span>
-            </div>
-            {furtherReading.documentaries.map((d, i) => (
-              <Highlightable key={i} id={slug("history", "documentaries", d.title)}>
-                <div className="px-5 py-4"
-                  style={{ borderBottom: i < furtherReading.documentaries.length - 1 ? "1px solid var(--line)" : "none" }}>
+      {/* ── 2. SECCIÓN: PODCASTS (MORADO) ────────────────────────── */}
+      <div 
+        className="rounded-2xl border overflow-hidden mb-4 shadow-xs"
+        style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}
+      >
+        <button
+          type="button"
+          onClick={() => toggleSection("podcasts")}
+          className="w-full text-left flex items-center justify-between px-5 py-3.5 transition-colors cursor-pointer border-none m-0"
+          style={{ background: "#872ec4" }}
+        >
+          <div className="flex items-center gap-2.5">
+            <Headphones size={18} color="#fff" />
+            <span style={{ fontSize: 14, fontWeight: 700, color: "#fff", letterSpacing: "0.02em" }}>
+              {t("history.podcasts")}
+            </span>
+            <span 
+              className="text-[11px] font-semibold px-2 py-0.5 rounded-full text-white"
+              style={{ background: "rgba(255,255,255,0.22)" }}
+            >
+              {furtherReading.podcasts.length}
+            </span>
+          </div>
+          <ChevronDown
+            size={18}
+            color="#fff"
+            className={`transition-transform duration-200 ${openSections.podcasts ? "rotate-180" : ""}`}
+          />
+        </button>
+
+        {openSections.podcasts && (
+          <div>
+            {furtherReading.podcasts.map((p, i) => (
+              <Highlightable key={i} id={slug("history", "podcasts", p.title)}>
+                <div 
+                  className="px-5 py-4"
+                  style={{ borderBottom: i < furtherReading.podcasts.length - 1 ? "1px solid var(--line)" : "none" }}
+                >
                   <div className="flex items-start justify-between gap-3">
                     <div className="min-w-0 flex-1">
-                      <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", margin: 0, lineHeight: 1.35 }}>{d.title}</p>
-                      <p style={{ fontSize: 12, color: "#c4302b", fontWeight: 600, marginTop: 2, marginBottom: 0 }}>{d.channel}</p>
+                      <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", margin: 0, lineHeight: 1.35 }}>{p.title}</p>
+                      <p style={{ fontSize: 12, color: "#872ec4", fontWeight: 600, marginTop: 2, marginBottom: 0 }}>{p.show}</p>
                     </div>
-                    {d.url && (
+                    {p.url && (
                       <a 
-                        href={d.url} 
+                        href={p.url} 
                         target="_blank" 
                         rel="noreferrer" 
                         className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold text-white transition-all hover:opacity-90 active:scale-95 self-start"
-                        style={{ background: "#c4302b", textDecoration: "none" }}
+                        style={{ background: "#872ec4", textDecoration: "none" }}
                       >
-                        <MonitorPlay size={13} />
-                        YouTube
+                        <Headphones size={13} />
+                        Apple Podcasts
                       </a>
                     )}
                   </div>
-                  <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.6, margin: "6px 0 0" }}>{d.note}</p>
+                  <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.6, margin: "6px 0 0" }}>{p.note}</p>
+                </div>
+              </Highlightable>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* ── 3. SECCIÓN: DOCUMENTALES (ROJO YOUTUBE) ────────────────── */}
+      {furtherReading.documentaries && furtherReading.documentaries.length > 0 && (
+        <div 
+          className="rounded-2xl border overflow-hidden mb-4 shadow-xs"
+          style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}
+        >
+          <button
+            type="button"
+            onClick={() => toggleSection("documentaries")}
+            className="w-full text-left flex items-center justify-between px-5 py-3.5 transition-colors cursor-pointer border-none m-0"
+            style={{ background: "#c4302b" }}
+          >
+            <div className="flex items-center gap-2.5">
+              <MonitorPlay size={18} color="#fff" />
+              <span style={{ fontSize: 14, fontWeight: 700, color: "#fff", letterSpacing: "0.02em" }}>
+                {t("history.documentaries")}
+              </span>
+              <span 
+                className="text-[11px] font-semibold px-2 py-0.5 rounded-full text-white"
+                style={{ background: "rgba(255,255,255,0.22)" }}
+              >
+                {furtherReading.documentaries.length}
+              </span>
+            </div>
+            <ChevronDown
+              size={18}
+              color="#fff"
+              className={`transition-transform duration-200 ${openSections.documentaries ? "rotate-180" : ""}`}
+            />
+          </button>
+
+          {openSections.documentaries && (
+            <div>
+              {furtherReading.documentaries.map((d, i) => (
+                <Highlightable key={i} id={slug("history", "documentaries", d.title)}>
+                  <div 
+                    className="px-5 py-4"
+                    style={{ borderBottom: i < furtherReading.documentaries.length - 1 ? "1px solid var(--line)" : "none" }}
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="min-w-0 flex-1">
+                        <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", margin: 0, lineHeight: 1.35 }}>{d.title}</p>
+                        <p style={{ fontSize: 12, color: "#c4302b", fontWeight: 600, marginTop: 2, marginBottom: 0 }}>{d.channel}</p>
+                      </div>
+                      {d.url && (
+                        <a 
+                          href={d.url} 
+                          target="_blank" 
+                          rel="noreferrer" 
+                          className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold text-white transition-all hover:opacity-90 active:scale-95 self-start"
+                          style={{ background: "#c4302b", textDecoration: "none" }}
+                        >
+                          <MonitorPlay size={13} />
+                          YouTube
+                        </a>
+                      )}
+                    </div>
+                    <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.6, margin: "6px 0 0" }}>{d.note}</p>
+                  </div>
+                </Highlightable>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* ── 4. SECCIÓN: LIBROS (AZUL / ÍNDIGO) ────────────────────── */}
+      <div 
+        className="rounded-2xl border overflow-hidden mb-4 shadow-xs"
+        style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}
+      >
+        <button
+          type="button"
+          onClick={() => toggleSection("books")}
+          className="w-full text-left flex items-center justify-between px-5 py-3.5 transition-colors cursor-pointer border-none m-0"
+          style={{ background: "var(--indigo)" }}
+        >
+          <div className="flex items-center gap-2.5">
+            <BookOpen size={18} color="#fff" />
+            <span style={{ fontSize: 14, fontWeight: 700, color: "#fff", letterSpacing: "0.02em" }}>
+              {t("history.books")}
+            </span>
+            <span 
+              className="text-[11px] font-semibold px-2 py-0.5 rounded-full text-white"
+              style={{ background: "rgba(255,255,255,0.22)" }}
+            >
+              {furtherReading.books.length}
+            </span>
+          </div>
+          <ChevronDown
+            size={18}
+            color="#fff"
+            className={`transition-transform duration-200 ${openSections.books ? "rotate-180" : ""}`}
+          />
+        </button>
+
+        {openSections.books && (
+          <div>
+            {furtherReading.books.map((b, i) => (
+              <Highlightable key={i} id={slug("history", "books", b.title)}>
+                <div 
+                  className="px-5 py-4"
+                  style={{ borderBottom: i < furtherReading.books.length - 1 ? "1px solid var(--line)" : "none" }}
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="min-w-0 flex-1">
+                      <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", margin: 0, lineHeight: 1.35 }}>{b.title}</p>
+                      <p style={{ fontSize: 12, color: "var(--shu)", fontWeight: 600, marginTop: 2, marginBottom: 0 }}>{b.author}</p>
+                    </div>
+                    {b.url && (
+                      <a 
+                        href={b.url} 
+                        target="_blank" 
+                        rel="noreferrer" 
+                        className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold text-white transition-all hover:opacity-90 active:scale-95 self-start"
+                        style={{ background: "var(--indigo)", textDecoration: "none" }}
+                      >
+                        <BookOpen size={13} />
+                        {t("history.readOnline") || "Leer online"}
+                        <ExternalLink size={11} />
+                      </a>
+                    )}
+                  </div>
+                  <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.6, margin: "6px 0 0" }}>{b.note}</p>
                 </div>
               </Highlightable>
             ))}
