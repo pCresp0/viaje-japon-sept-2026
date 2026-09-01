@@ -252,6 +252,7 @@ export const furtherReading = {
     {
       title: "El libro del té",
       author: "Okakura Kakuzō",
+      url: "https://telegra.ph/El-libro-del-t%C3%A9-08-29-11",
       note: "Un ensayo breve y clásico (1906) sobre la ceremonia del té, el budismo zen y la estética japonesa — perfecto para entender el trasfondo cultural del Ginkaku-ji y los jardines zen que vais a visitar.",
     },
     {
