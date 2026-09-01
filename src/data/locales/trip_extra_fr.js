@@ -13,17 +13,52 @@ export const tripMeta = {
       {
         icon: "📡",
         title: "100% Hors ligne par conception",
-        text: "Cette application web a été conçue dans un but précis : <strong>ne pas dépendre d'Internet pendant le voyage</strong>. Au Japon, la connexion peut échouer dans les trains à grande vitesse, les zones rurales ou avec une eSIM. C'est pourquoi nous avons opté pour une architecture <strong>Single Source of Truth (SSOT)</strong> côté client, plutôt qu'une base de données cloud."
+        text: "Cette application web a été conçue pour <strong>ne jamais dépendre d'Internet pendant le voyage</strong>. Dans les trains à grande vitesse, les zones rurales ou lors de pannes d'eSIM, l'application reste 100% opérationnelle grâce à son architecture <strong>Single Source of Truth (SSOT)</strong> côté client, packagée en PWA avec Service Worker."
       },
       {
-        icon: "⚡",
-        title: "Architecture PWA et Performances",
-        text: "Tout l'itinéraire, les vols, les hébergements et les traductions se trouvent dans l'application elle-même (<code>trip.js</code>), empaquetée comme une <strong>PWA (Progressive Web App)</strong> avec Vite. Le navigateur met tout en cache via des Service Workers à la première visite, assurant une latence nulle."
+        icon: "🗓️",
+        title: "Double Itinéraire (Détaillé & Vue Rapide)",
+        text: "Chacun des 15 jours de voyage dispose de deux modes : <strong>Détail complet</strong> (avec horaires, conseils, alertes et explications) et <strong>Vue rapide</strong> (une ligne de métro visuelle avec les horaires et arrêts clés), ainsi que l'accès direct à la carte de chaque journée."
       },
       {
-        icon: "🎨",
-        title: "React, Tailwind & Framer Motion",
-        text: "L'écosystème React nous permet d'utiliser des composants modulaires, facilitant un design Mobile-First strict stylisé avec TailwindCSS et des animations fluides avec Framer Motion, garantissant une expérience native."
+        icon: "🎫",
+        title: "Billets de Transport & QR Interactifs",
+        text: "Fiches numériques fidèles pour les trains et bus réservés (Shinkansen Hikari & Nozomi, Thunderbird, Shinano, Nohi Bus) avec voitures, sièges, codes QR officiels et le QR d'arrivée de Visit Japan Web intégré au Jour 1."
+      },
+      {
+        icon: "📜",
+        title: "Histoire du Japon, Podcasts, Documentaires & Livres",
+        text: "Section multimédia organisée en 4 blocs thématiques repliables : <strong>Histoire chronologique</strong> avec synthèse vocale Text-to-Speech et repères du voyage, <strong>Podcasts</strong> (Apple Podcasts), <strong>Documentaires</strong> (YouTube) et <strong>Livres recommandés</strong> avec lecture en ligne."
+      },
+      {
+        icon: "🔍",
+        title: "Recherche Globale Intelligente",
+        text: "Moteur de recherche réactif qui indexe instantanément tout le contenu (lieux, hôtels, billets, histoire, gastronomie, culture pop). En un clic, l'application vous amène au résultat exact en ouvrant les panneaux nécessaires."
+      },
+      {
+        icon: "🌦️",
+        title: "Météo en Temps Réel avec Cache",
+        text: "Intégration de l'API Open-Meteo pour les villes du parcours (Tokyo, Kyoto, Osaka, Kanazawa, Takayama, Magome), avec mise en cache locale de 12 heures pour consultation hors ligne."
+      },
+      {
+        icon: "🗺️",
+        title: "Cartes Vectorielles Légères (Leaflet)",
+        text: "Carte interactive adaptée au mode hors ligne basée sur OpenStreetMap et Leaflet, avec filtrage par catégorie et par jour de voyage, sans API payante ni scripts lourds."
+      },
+      {
+        icon: "👾",
+        title: "Culture Pop & Frikadas",
+        text: "Guide thématique reliant les étapes du voyage aux grands univers du jeu vidéo, des mangas et de l'animation (Pokémon, Studio Ghibli, Nintendo, Digimon, Persona, Tekken)."
+      },
+      {
+        icon: "💰",
+        title: "Budget Réel & Tâches Persistantes",
+        text: "Suivi rigoureux des dépenses estimées et déjà payées (hôtels Booking, hôtel Magome Chaya en espèces, assurances, eSIMs) et check-list de préparatifs sauvegardée dans le <code>localStorage</code>."
+      },
+      {
+        icon: "🌐",
+        title: "Multi-langue Natif (4 Langues)",
+        text: "Architecture i18n sur mesure en React Context prenant en charge <strong>l'Espagnol, l'Anglais, le Français et le Tagalog</strong>, fusionnant dynamiquement les textes traduits avec les données du voyage."
       }
     ],
     github: "Voir le code source sur GitHub"

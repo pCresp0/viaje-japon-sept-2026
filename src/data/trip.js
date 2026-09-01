@@ -17,32 +17,52 @@ export const tripMeta = {
       {
         icon: "📡",
         title: "100% Offline by Design",
-        text: "Esta aplicación web ha sido diseñada con un propósito claro: <strong>no depender de internet durante el viaje</strong>. Cuando estás en Japón, la conexión puede fallar en trenes bala, zonas rurales o si hay problemas con la eSIM. Por eso, se ha optado por una arquitectura de <strong>Single Source of Truth (SSOT)</strong> en el lado del cliente, en lugar de usar una base de datos en la nube. Esperemos que a Pablo no se le acaben los tokens de la IA con tanto vibe coding."
+        text: "Esta aplicación web ha sido diseñada para <strong>no depender de internet durante el viaje</strong>. En trenes bala, zonas rurales o ante fallos de eSIM, la app sigue funcionando al 100%. Sigue una arquitectura de <strong>Single Source of Truth (SSOT)</strong> en el cliente, empaquetada como PWA con Service Worker (Workbox)."
       },
       {
-        icon: "⚡",
-        title: "Arquitectura PWA y Rendimiento",
-        text: "Todo el itinerario, vuelos, alojamientos y traducciones viven en la propia app (<code>trip.js</code>), empaquetada como una <strong>PWA (Progressive Web App)</strong> con Vite. El navegador descarga todo en caché mediante Service Workers en la primera visita, asegurando latencia cero al navegar o cambiar de idioma."
+        icon: "🗓️",
+        title: "Itinerario Doble (Detallado & Vista Rápida)",
+        text: "Cada uno de los 15 días del viaje cuenta con dos modos: <strong>Detalle completo</strong> (con horarios, consejos, advertencias y lore) y <strong>Vista rápida</strong> (una línea de metro visual con las horas y paradas clave), además de acceso directo al mapa de cada jornada."
       },
       {
-        icon: "🎨",
-        title: "React, Tailwind & UI Moderna",
-        text: "El ecosistema de React nos permite usar componentes modulares, facilitando un diseño estricto Mobile-First estilizado con TailwindCSS v4. Además, con controles segmentados (estilo iOS) y micro-animaciones en los menús, garantizamos una experiencia totalmente premium y nativa."
+        icon: "🎫",
+        title: "Billetes de Transporte & QR Interactivos",
+        text: "Fichas digitales fieles de los billetes de tren y autobús reservados (Shinkansen Hikari y Nozomi, Thunderbird, Shinano, Nohi Bus) con coches, asientos, códigos QR oficiales y el QR de llegada de Visit Japan Web integrado en el Día 1."
       },
       {
-        icon: "⚡",
-        title: "Lazy Loading (Code Splitting)",
-        text: "Para mantener la velocidad de carga al máximo, hemos implementado React Suspense. Al abrir la app, solo descargas el código necesario para empezar (Lazy Loading); el resto de pantallas (Mapas, Frikadas, Historia) se cargan de forma asíncrona a medida que las visitas."
+        icon: "📜",
+        title: "Historia de Japón, Podcasts, Documentales y Libros",
+        text: "Sección multimedia organizada en 4 bloques temáticos colapsables: <strong>Historia cronológica</strong> con reproductor de voz Text-to-Speech nativo y referencias del viaje, <strong>Podcasts</strong> (Apple Podcasts), <strong>Documentales</strong> (YouTube) y <strong>Libros recomendados</strong> con enlaces directos para lectura online."
       },
       {
         icon: "🔍",
         title: "Buscador Global Inteligente",
-        text: "La aplicación incluye un motor de búsqueda que indexa instantáneamente todo el contenido (lugares, restaurantes, conceptos históricos, cultura pop, hoteles). Puedes saltar en un clic a cualquier parte del viaje, abriendo los paneles o menús necesarios automáticamente."
+        text: "Motor de búsqueda reactivo que indexa instantáneamente todo el contenido (lugares, hoteles, billetes, historia, gastronomía, frikadas). Al hacer clic en un resultado, la app salta directamente al lugar exacto, abriendo las secciones necesarias y resaltándolo visualmente."
+      },
+      {
+        icon: "🌦️",
+        title: "Meteorología en Tiempo Real con Caché",
+        text: "Integración con la API de Open-Meteo para las ciudades del itinerario (Tokio, Kioto, Osaka, Kanazawa, Takayama, Magome), con guardado en caché local de 12 horas para consultar el tiempo sin conexión."
+      },
+      {
+        icon: "🗺️",
+        title: "Mapas Vectoriales Ligeros (Leaflet)",
+        text: "Mapa interactivo offline-friendly basado en OpenStreetMap y Leaflet, con filtrado dinámico por categoría y por día de viaje, sin consumir APIs de pago ni recargar scripts externos pesados."
       },
       {
         icon: "👾",
-        title: "Cultura Pop (Frikadas)",
-        text: "Hemos añadido una integración especial entre los puntos de la ruta y franquicias japonesas como Pokémon, Studio Ghibli, Nintendo o Digimon. La app no solo te cuenta las curiosidades, sino que cruza los datos con el mapa interactivo para avisarte si estás cerca de algún punto clave."
+        title: "Cultura Pop & Frikadas",
+        text: "Guía temática que cruza localizaciones del viaje con universos de anime, videojuegos y cine (Pokémon, Studio Ghibli, Nintendo, Digimon, Persona, Tekken)."
+      },
+      {
+        icon: "💰",
+        title: "Presupuesto Real y Tareas Persistentes",
+        text: "Control de costes estimados y reales pagados (hoteles de Booking, hotel de Magome Chaya en efectivo, seguros, eSIMs) y lista de tareas 'Antes de viajar' y 'Durante el viaje' guardadas en <code>localStorage</code>."
+      },
+      {
+        icon: "🌐",
+        title: "Multi-idioma Nativo (4 idiomas)",
+        text: "Arquitectura i18n propia en React Context con soporte completo para <strong>Español, English, Français y Tagalog</strong>, fusionando dinámicamente las cadenas traducidas con los datos estructurales."
       }
     ],
     github: "Ver código fuente en GitHub"

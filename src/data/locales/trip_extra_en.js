@@ -13,17 +13,52 @@ export const tripMeta = {
       {
         icon: "📡",
         title: "100% Offline by Design",
-        text: "This web application was designed with a clear purpose: <strong>not to rely on internet access during the trip</strong>. When you are in Japan, connections can fail on bullet trains, in rural areas, or if there are eSIM issues. That is why we opted for a client-side <strong>Single Source of Truth (SSOT)</strong> architecture, instead of a traditional cloud database."
+        text: "This web application was designed to <strong>never rely on internet during the trip</strong>. On bullet trains, in rural areas, or during eSIM issues, the app keeps running 100%. It uses a client-side <strong>Single Source of Truth (SSOT)</strong> architecture, packaged as a PWA with Workbox Service Worker."
       },
       {
-        icon: "⚡",
-        title: "PWA Architecture & Performance",
-        text: "The entire itinerary, flights, accommodations, and translations live within the app itself (<code>trip.js</code>), bundled as a <strong>PWA (Progressive Web App)</strong> using Vite. The browser caches everything via Service Workers on the first visit, ensuring zero latency when navigating or switching languages."
+        icon: "🗓️",
+        title: "Dual Itinerary (Detailed & Quick View)",
+        text: "Each of the 15 trip days features two modes: <strong>Full Detail</strong> (with timetables, tips, alerts, and lore) and <strong>Quick View</strong> (a visual metro-style timeline with essential stops and times), plus direct map links for each day."
       },
       {
-        icon: "🎨",
-        title: "React, Tailwind & Framer Motion",
-        text: "The React ecosystem allows us to use modular components, facilitating a strict Mobile-First design styled with TailwindCSS and fluid animations with Framer Motion, ensuring a native-like experience."
+        icon: "🎫",
+        title: "Transit Tickets & Interactive QRs",
+        text: "Faithful digital passes for booked trains and buses (Shinkansen Hikari & Nozomi, Thunderbird, Shinano, Nohi Bus) with cars, reserved seats, official QR codes, and the Visit Japan Web QR integrated on Day 1."
+      },
+      {
+        icon: "📜",
+        title: "Japanese History, Podcasts, Documentaries & Books",
+        text: "Multimedia section organized into 4 collapsible thematic blocks: <strong>Chronological history</strong> with native Text-to-Speech audio and trip references, <strong>Podcasts</strong> (Apple Podcasts), <strong>Documentaries</strong> (YouTube), and <strong>Recommended books</strong> with direct online reading links."
+      },
+      {
+        icon: "🔍",
+        title: "Smart Global Search",
+        text: "Reactive search engine that instantly indexes all content (places, hotels, tickets, history, food, pop culture). Clicking a result jumps straight to the exact item, auto-opening panels and highlighting it."
+      },
+      {
+        icon: "🌦️",
+        title: "Real-Time Weather with Cache",
+        text: "Integration with the Open-Meteo API for all route cities (Tokyo, Kyoto, Osaka, Kanazawa, Takayama, Magome), with 12-hour local caching to check weather anytime offline."
+      },
+      {
+        icon: "🗺️",
+        title: "Lightweight Vector Maps (Leaflet)",
+        text: "Offline-friendly interactive map based on OpenStreetMap and Leaflet, with dynamic filtering by category and trip day, requiring no paid APIs or heavy external scripts."
+      },
+      {
+        icon: "👾",
+        title: "Pop Culture & Frikadas",
+        text: "Thematic guide linking route locations to iconic universes of anime, gaming, and cinema (Pokémon, Studio Ghibli, Nintendo, Digimon, Persona, Tekken)."
+      },
+      {
+        icon: "💰",
+        title: "Real Budget & Persistent Tasks",
+        text: "Accurate tracking of estimated and paid expenses (Booking hotels, Magome Chaya cash-only, insurance, eSIMs) and packing/prep checklists saved in <code>localStorage</code>."
+      },
+      {
+        icon: "🌐",
+        title: "Native Multi-Language (4 Languages)",
+        text: "Custom i18n architecture in React Context supporting <strong>Spanish, English, French, and Tagalog</strong>, dynamically merging localized strings with structural trip data."
       }
     ],
     github: "View source code on GitHub"

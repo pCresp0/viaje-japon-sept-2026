@@ -13,17 +13,52 @@ export const tripMeta = {
       {
         icon: "📡",
         title: "100% Offline by Design",
-        text: "Ang web app na ito ay idinisenyo nang may malinaw na layunin: <strong>na huwag umasa sa internet habang naglalakbay</strong>. Kapag nasa Japan ka, maaaring mawalan ng koneksyon sa mga bullet train o rural na lugar. Kaya naman pinili namin ang client-side na <strong>Single Source of Truth (SSOT)</strong> architecture sa halip na cloud database."
+        text: "Ang web app na ito ay idinisenyo upang <strong>hindi umasa sa internet habang nagbibiyahe</strong>. Sa mga shinkansen, sa mga rural na bayan, o kapag nagkaproblema ang eSIM, patuloy na gagana ang app nang 100% gamit ang <strong>Single Source of Truth (SSOT)</strong> sa client, na naka-package bilang PWA kasama ang Service Worker."
       },
       {
-        icon: "⚡",
-        title: "PWA Architecture & Performance",
-        text: "Ang buong itinerary, mga flight, mga tirahan, at mga pagsasalin ay nasa app mismo (<code>trip.js</code>), na naka-bundle bilang isang <strong>PWA (Progressive Web App)</strong> gamit ang Vite. I-cache ng browser ang lahat sa pamamagitan ng Service Workers, na tinitiyak ang zero latency sa pag-navigate."
+        icon: "🗓️",
+        title: "Dalawahang Itinerary (Detalyado at Mabilis na Tingin)",
+        text: "Bawat isa sa 15 araw ng biyahe ay may dalawang mode: <strong>Buong Detalye</strong> (may mga oras, payo, babala at kasaysayan) at <strong>Mabilis na Tingin</strong> (isang visual na linya ng tren na may mahahalagang oras at hinto), kasama ang direktang mapa para sa bawat araw."
       },
       {
-        icon: "🎨",
-        title: "React, Tailwind & Framer Motion",
-        text: "Pinapayagan kami ng React ecosystem na gumamit ng mga modular na component, na nagpapadali sa isang Mobile-First na disenyo gamit ang TailwindCSS at tuluy-tuloy na mga animation sa Framer Motion, na nagbibigay ng native-like na karanasan."
+        icon: "🎫",
+        title: "Mga Ticket sa Transportasyon at Interactive na QR",
+        text: "Tunay na digital pass para sa mga nakareserbang tren at bus (Shinkansen Hikari & Nozomi, Thunderbird, Shinano, Nohi Bus) na may mga bagon, upuan, opisyal na QR code, at ang pagdating na QR ng Visit Japan Web sa Araw 1."
+      },
+      {
+        icon: "📜",
+        title: "Kasaysayan ng Japan, Mga Podcast, Dokumentaryo at Libro",
+        text: "Seksyong multimedia na nakaayos sa 4 na collapsible na block: <strong>Kronolohikal na kasaysayan</strong> na may Text-to-Speech audio, <strong>Mga Podcast</strong> (Apple Podcasts), <strong>Mga Dokumentaryo</strong> (YouTube), at <strong>Mga Inirerekomendang Libro</strong> na may direktang online reading."
+      },
+      {
+        icon: "🔍",
+        title: "Matalinong Pandaigdigang Paghahanap",
+        text: "Search engine na agad na nag-iindex sa lahat ng nilalaman (mga lugar, hotel, ticket, kasaysayan, pagkain, pop culture). Sa isang pindot, dadalhin ka nito sa eksaktong lugar na may visual na highlight."
+      },
+      {
+        icon: "🌦️",
+        title: "Real-Time na Panahon na may Cache",
+        text: "Pagsasama sa Open-Meteo API para sa mga lungsod ng ruta (Tokyo, Kyoto, Osaka, Kanazawa, Takayama, Magome), na may 12-oras na lokal na cache para sa offline na pagsusuri."
+      },
+      {
+        icon: "🗺️",
+        title: "Magaang na Vector Map (Leaflet)",
+        text: "Interactive at offline-friendly na mapa batay sa OpenStreetMap at Leaflet, na may pag-filter ayon sa kategorya at araw ng biyahe, nang walang bayad na API."
+      },
+      {
+        icon: "👾",
+        title: "Kulturang Pop at Frikadas",
+        text: "Gabay na nag-uugnay sa mga lokasyon ng ruta sa mga sikat na anime, video game, at pelikula (Pokémon, Studio Ghibli, Nintendo, Digimon, Persona, Tekken)."
+      },
+      {
+        icon: "💰",
+        title: "Tunay na Badyet at Nakaimbak na Checklist",
+        text: "Tiyak na pagsubaybay sa mga bayad na gastusin (mga hotel sa Booking, Magome Chaya cash-only, insurance, eSIM) at checklist ng pag-iimpake na naka-save sa <code>localStorage</code>."
+      },
+      {
+        icon: "🌐",
+        title: "Katutubong Multi-Language (4 na Wika)",
+        text: "Sariling i18n architecture sa React Context na sumusuporta sa <strong>Espanyol, Ingles, Pranses, at Tagalog</strong>, na dynamic na pinagsasama ang mga isinalin na teksto sa data ng biyahe."
       }
     ],
     github: "Tingnan ang source code sa GitHub"
