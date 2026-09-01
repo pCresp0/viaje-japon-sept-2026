@@ -7,6 +7,15 @@
 
 export const pendingItems = [
   {
+    id: "pago-magome-efectivo",
+    phase: "durante",
+    category: "logistica",
+    urgency: "alta",
+    title: "💴 Sacar efectivo para pagar Magome Chaya (en el hotel)",
+    detail: "📅 14/09/2026\n📍 Magome Chaya (Minshuku)\n👥 5 personas\n⚠️ El alojamiento Magome Chaya NO está pagado de antemano. Se debe abonar EN EL PROPIO HOTEL EN EFECTIVO / METÁLICO (aprox. ¥32.000 / ~178,98€ grupo · ~35,80€/persona).\n💡 Sacar dinero en un cajero 7-Eleven / konbini antes de llegar a Magome (en Kioto, Kanazawa o Takayama).",
+    deadline: "Antes de llegar a Magome (14/09)",
+  },
+  {
     id: "cena-magome",
     phase: "durante",
     category: "logistica",

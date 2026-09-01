@@ -174,11 +174,13 @@ export const budget = {
     {
       title: "Hébergement (14 nuits)",
       details: [
-        "Hotel Keihan Kyoto Hachijoguchi (7–12 sept, 5 nuits) : 678,68€ groupe · 135,74€/personne.",
-        "Hotel Resol Trinity Kanazawa (12–13 sept, 1 nuit) : 164€ groupe · 32,80€/personne.",
-        "Hotel Wood Takayama (13–14 sept, 1 nuit) : 279€ groupe · 55,80€/personne.",
-        "Magome Chaya (14–15 sept, 1 nuit, avec dîner, sans petit-déjeuner) : 178,98€ groupe · 35,80€/personne.",
-        "KOKO HOTEL Residence Asakusa Kappabashi (15–21 sept, 6 nuits) : 1 952,50€ groupe · 390,50€/personne.",
+        "<strong>✅ 4 hôtels sur 5 déjà payés par Juancar sur Booking (3 033,86€ groupe · 606,77€/personne)</strong> :",
+        "• Hotel Keihan Kyoto Hachijoguchi (7–12 sept, 5 nuits) : 669,86€ groupe · 133,97€/personne ✓",
+        "• Hotel Resol Trinity Kanazawa (12–13 sept, 1 nuit) : 161,89€ groupe · 32,38€/personne ✓",
+        "• Hotel Wood Takayama (13–14 sept, 1 nuit) : 274,98€ groupe · 55,00€/personne ✓",
+        "• KOKO HOTEL Residence Asakusa Kappabashi (15–21 sept, 6 nuits) : 1 927,13€ groupe · 385,43€/personne ✓",
+        "<strong>⚠️ En attente de paiement sur place à l'hôtel en espèces</strong> :",
+        "• Magome Chaya (14–15 sept, 1 nuit, avec dîner) : ~178,98€ groupe (~32 000 ¥) · 35,80€/personne. À payer en liquide à l'auberge (retirer de l'argent avant).",
       ],
     },
     {

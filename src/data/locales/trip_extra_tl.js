@@ -174,11 +174,13 @@ export const budget = {
     {
       title: "Matutuluyan (14 gabi)",
       details: [
-        "Hotel Keihan Kyoto Hachijoguchi (Set 7–12, 5 gabi): 678.68€ grupo · 135.74€/tao.",
-        "Hotel Resol Trinity Kanazawa (Set 12–13, 1 gabi): 164€ grupo · 32.80€/tao.",
-        "Hotel Wood Takayama (Set 13–14, 1 gabi): 279€ grupo · 55.80€/tao.",
-        "Magome Chaya (Set 14–15, 1 gabi, kasama hapunan, walang almusal): 178.98€ grupo · 35.80€/tao.",
-        "KOKO HOTEL Residence Asakusa Kappabashi (Set 15–21, 6 gabi): 1,952.50€ grupo · 390.50€/tao.",
+        "<strong>✅ 4 sa 5 hotel bayad na ni Juancar sa Booking (3,033.86€ grupo · 606.77€/tao)</strong>:",
+        "• Hotel Keihan Kyoto Hachijoguchi (Set 7–12, 5 gabi): 669.86€ grupo · 133.97€/tao ✓",
+        "• Hotel Resol Trinity Kanazawa (Set 12–13, 1 gabi): 161.89€ grupo · 32.38€/tao ✓",
+        "• Hotel Wood Takayama (Set 13–14, 1 gabi): 274.98€ grupo · 55.00€/tao ✓",
+        "• KOKO HOTEL Residence Asakusa Kappabashi (Set 15–21, 6 gabi): 1,927.13€ grupo · 385.43€/tao ✓",
+        "<strong>⚠️ Babayaran pa sa hotel gamit ang cash</strong>:",
+        "• Magome Chaya (Set 14–15, 1 gabi, kasama hapunan): ~178.98€ grupo (~32,000 ¥) · 35.80€/tao. Babayaran nang cash doon mismo (mag-withdraw ng pera bago dumating).",
       ],
     },
     {
