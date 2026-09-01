@@ -186,6 +186,7 @@ export default {
   "history.books": "Books",
   "history.readOnline": "Read online",
   "history.podcasts": "Podcasts",
+  "history.documentaries": "Documentaries",
 
   // ── Phrases ───────────────────────────────────────────────────────
   "phrases.eyebrow": "Language and culture",

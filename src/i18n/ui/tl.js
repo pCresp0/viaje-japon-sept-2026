@@ -191,6 +191,7 @@ export default {
   "history.books": "Mga libro",
   "history.readOnline": "Basahin online",
   "history.podcasts": "Mga podcast",
+  "history.documentaries": "Mga Dokumentaryo",
 
   // ── Mga parirala ──────────────────────────────────────────────────
   "phrases.eyebrow": "Wika at kultura",
