@@ -230,18 +230,17 @@ export default function HistoryPage() {
             <Highlightable key={i} id={slug("history", "books", b.title)}>
               <div className="px-5 py-4"
                 style={{ borderBottom: i < furtherReading.books.length - 1 ? "1px solid var(--line)" : "none" }}>
-                <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
-                  <div>
-                    <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)" }}>{b.title}</p>
-                    <p style={{ fontSize: 12, color: "var(--shu)", fontWeight: 600, marginTop: 1, marginBottom: 5 }}>{b.author}</p>
-                    <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.6 }}>{b.note}</p>
+                <div className="flex items-start justify-between gap-3">
+                  <div className="min-w-0 flex-1">
+                    <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", margin: 0, lineHeight: 1.35 }}>{b.title}</p>
+                    <p style={{ fontSize: 12, color: "var(--shu)", fontWeight: 600, marginTop: 2, marginBottom: 0 }}>{b.author}</p>
                   </div>
                   {b.url && (
                     <a 
                       href={b.url} 
                       target="_blank" 
                       rel="noreferrer" 
-                      className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold text-white transition-all hover:opacity-90 active:scale-95 sm:mt-0 mt-1 self-start"
+                      className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold text-white transition-all hover:opacity-90 active:scale-95 self-start"
                       style={{ background: "var(--indigo)", textDecoration: "none" }}
                     >
                       <BookOpen size={13} />
@@ -250,6 +249,7 @@ export default function HistoryPage() {
                     </a>
                   )}
                 </div>
+                <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.6, margin: "6px 0 0" }}>{b.note}</p>
               </div>
             </Highlightable>
           ))}
@@ -266,18 +266,17 @@ export default function HistoryPage() {
             <Highlightable key={i} id={slug("history", "podcasts", p.title)}>
               <div className="px-5 py-4"
                 style={{ borderBottom: i < furtherReading.podcasts.length - 1 ? "1px solid var(--line)" : "none" }}>
-                <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
-                  <div>
-                    <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)" }}>{p.title}</p>
-                    <p style={{ fontSize: 12, color: "var(--forest)", fontWeight: 600, marginTop: 1, marginBottom: 5 }}>{p.show}</p>
-                    <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.6 }}>{p.note}</p>
+                <div className="flex items-start justify-between gap-3">
+                  <div className="min-w-0 flex-1">
+                    <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", margin: 0, lineHeight: 1.35 }}>{p.title}</p>
+                    <p style={{ fontSize: 12, color: "var(--forest)", fontWeight: 600, marginTop: 2, marginBottom: 0 }}>{p.show}</p>
                   </div>
                   {p.url && (
                     <a 
                       href={p.url} 
                       target="_blank" 
                       rel="noreferrer" 
-                      className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold text-white transition-all hover:opacity-90 active:scale-95 sm:mt-0 mt-1 self-start"
+                      className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold text-white transition-all hover:opacity-90 active:scale-95 self-start"
                       style={{ background: "#872ec4", textDecoration: "none" }}
                     >
                       <Headphones size={13} />
@@ -285,6 +284,7 @@ export default function HistoryPage() {
                     </a>
                   )}
                 </div>
+                <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.6, margin: "6px 0 0" }}>{p.note}</p>
               </div>
             </Highlightable>
           ))}
@@ -302,18 +302,17 @@ export default function HistoryPage() {
               <Highlightable key={i} id={slug("history", "documentaries", d.title)}>
                 <div className="px-5 py-4"
                   style={{ borderBottom: i < furtherReading.documentaries.length - 1 ? "1px solid var(--line)" : "none" }}>
-                  <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
-                    <div>
-                      <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)" }}>{d.title}</p>
-                      <p style={{ fontSize: 12, color: "#c4302b", fontWeight: 600, marginTop: 1, marginBottom: 5 }}>{d.channel}</p>
-                      <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.6 }}>{d.note}</p>
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="min-w-0 flex-1">
+                      <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", margin: 0, lineHeight: 1.35 }}>{d.title}</p>
+                      <p style={{ fontSize: 12, color: "#c4302b", fontWeight: 600, marginTop: 2, marginBottom: 0 }}>{d.channel}</p>
                     </div>
                     {d.url && (
                       <a 
                         href={d.url} 
                         target="_blank" 
                         rel="noreferrer" 
-                        className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold text-white transition-all hover:opacity-90 active:scale-95 sm:mt-0 mt-1 self-start"
+                        className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold text-white transition-all hover:opacity-90 active:scale-95 self-start"
                         style={{ background: "#c4302b", textDecoration: "none" }}
                       >
                         <MonitorPlay size={13} />
@@ -321,6 +320,7 @@ export default function HistoryPage() {
                       </a>
                     )}
                   </div>
+                  <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.6, margin: "6px 0 0" }}>{d.note}</p>
                 </div>
               </Highlightable>
             ))}
