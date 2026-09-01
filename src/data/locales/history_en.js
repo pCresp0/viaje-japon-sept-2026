@@ -17,12 +17,9 @@ export const historyPeriods = [
       },
     ],
     seeOnTrip: [
-      {
-        desc: "The most important Shinto shrine dedicated to Inari (kami of rice and business), famous for its thousands of red torii gates.",
-      },
-      {
-        desc: "The center of Buddhism in ancient Japan, with the world's largest bronze Buddha statue under the world's largest wooden roof.",
-      },
+      { note: "The most important Shinto shrine dedicated to Inari (kami of rice and business), famous for its thousands of red torii gates (Day 2)." },
+      { note: "The center of Buddhism in ancient Japan, with the world's largest bronze Buddha statue under the world's largest wooden roof (Day 2)." },
+      { note: "The oldest and most important Buddhist temple in Tokyo in Asakusa (Day 10)." },
     ],
   },
   {

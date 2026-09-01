@@ -144,14 +144,23 @@ function PeriodCard({ period, isOpen, onToggle, speak, stop, speakingId, support
                 </span>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                {period.seeOnTrip.map((ref, i) => (
-                  <div key={i} style={{ fontSize: 12.5, lineHeight: 1.55 }}>
-                    <span style={{ fontWeight: 700, color: "var(--forest)" }}>
-                      {guides[ref.id]?.name ?? ref.id}
-                    </span>
-                    <span style={{ color: "var(--ink)" }}> — {ref.note}</span>
-                  </div>
-                ))}
+                {period.seeOnTrip.map((ref, i) => {
+                  const placeName = guides[ref.id]?.name ?? ref.place ?? ref.name ?? ref.id;
+                  const placeNote = ref.note ?? ref.desc;
+                  if (!placeName && !placeNote) return null;
+                  return (
+                    <div key={i} style={{ fontSize: 12.5, lineHeight: 1.55 }}>
+                      {placeName && (
+                        <span style={{ fontWeight: 700, color: "var(--forest)" }}>
+                          {placeName}
+                        </span>
+                      )}
+                      {placeNote && (
+                        <span style={{ color: "var(--ink)" }}>{placeName ? " — " : ""}{placeNote}</span>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           )}

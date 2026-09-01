@@ -17,12 +17,9 @@ export const historyPeriods = [
       },
     ],
     seeOnTrip: [
-      {
-        desc: "Le sanctuaire shintoïste le plus important dédié à Inari (kami du riz et des affaires), célèbre pour ses milliers de portes torii rouges.",
-      },
-      {
-        desc: "Le centre du bouddhisme dans le Japon ancien, avec la plus grande statue de Bouddha en bronze au monde sous le plus grand toit en bois du monde.",
-      },
+      { note: "Le sanctuaire shintoïste le plus important dédié à Inari (kami du riz et des affaires), célèbre pour ses milliers de portes torii rouges (Jour 2)." },
+      { note: "Le centre du bouddhisme dans le Japon ancien, avec la plus grande statue de Bouddha en bronze au monde (Jour 2)." },
+      { note: "Le temple bouddhiste le plus ancien et important de Tokyo à Asakusa (Jour 10)." },
     ],
   },
   {

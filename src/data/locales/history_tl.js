@@ -17,12 +17,9 @@ export const historyPeriods = [
       },
     ],
     seeOnTrip: [
-      {
-        desc: "Ang pinakamahalagang Shinto shrine na nakatuon kay Inari (kami ng bigas at negosyo), sikat sa libu-libong pulang torii gate nito.",
-      },
-      {
-        desc: "Ang sentro ng Buddhism sa sinaunang Japan, kasama ang pinakamalaking bronze Buddha statue sa mundo sa ilalim ng pinakamalaking kahoy na bubong sa mundo.",
-      },
+      { note: "Ang pinakamahalagang Shinto shrine na nakatuon kay Inari (kami ng bigas at negosyo), sikat sa libu-libong pulang torii gate nito (Araw 2)." },
+      { note: "Ang sentro ng Buddhism sa sinaunang Japan, kasama ang pinakamalaking bronze Buddha statue sa mundo (Araw 2)." },
+      { note: "Ang pinakamatanda at pinakamahalagang Buddhist temple sa Tokyo sa Asakusa (Araw 10)." },
     ],
   },
   {

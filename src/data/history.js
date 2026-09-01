@@ -28,16 +28,9 @@ export const historyPeriods = [
       },
     ],
     seeOnTrip: [
-      {
-        place: "Fushimi Inari-taisha",
-        desc: "El santuario sintoísta más importante dedicado a Inari (kami del arroz y los negocios), famoso por sus miles de toriis rojos.",
-        day: 1,
-      },
-      {
-        place: "Tōdai-ji",
-        desc: "El centro del budismo en el Japón antiguo, con la estatua de Buda de bronce más grande del mundo bajo el techo de madera más grande del mundo.",
-        day: 2,
-      },
+      { id: "fushimi-inari", note: "El santuario sintoísta más importante dedicado a Inari (kami del arroz y los negocios), famoso por sus miles de toriis rojos (Día 2)." },
+      { id: "todai-ji", note: "El centro del budismo en el Japón antiguo, con la estatua de Buda de bronce más grande del mundo bajo el techo de madera más grande del mundo (Día 2)." },
+      { id: "senso-ji", note: "El templo budista más antiguo e importante de Tokio en Asakusa (Día 10)." },
     ],
   },
   {
