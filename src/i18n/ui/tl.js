@@ -189,6 +189,7 @@ export default {
   "history.readingIntro":
     "Kung may kuwento rito na nagpausisa sa inyo, narito kung saan pwedeng magpatuloy.",
   "history.books": "Mga libro",
+  "history.readOnline": "Basahin online",
   "history.podcasts": "Mga podcast",
 
   // ── Mga parirala ──────────────────────────────────────────────────

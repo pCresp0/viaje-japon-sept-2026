@@ -185,6 +185,7 @@ export default {
   "history.readingIntro":
     "Si alguna de estas historias os ha dejado con ganas de más, aquí tenéis por dónde seguir tirando del hilo.",
   "history.books": "Libros",
+  "history.readOnline": "Leer online",
   "history.podcasts": "Podcasts",
 
   // ── Frases ────────────────────────────────────────────────────────

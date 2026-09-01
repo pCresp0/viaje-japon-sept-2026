@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { ChevronDown, BookOpen, Headphones, MonitorPlay, MapPinned, Scroll, Volume2 } from "lucide-react";
+import { ChevronDown, BookOpen, Headphones, MonitorPlay, MapPinned, Scroll, Volume2, ExternalLink } from "lucide-react";
 import { useContent, useT, useLang } from "../i18n/LanguageContext";
 import { useTextSpeech } from "../utils/useTextSpeech";
 import { useHighlight, Highlightable } from "../context/HighlightContext";
@@ -230,9 +230,26 @@ export default function HistoryPage() {
             <Highlightable key={i} id={slug("history", "books", b.title)}>
               <div className="px-5 py-4"
                 style={{ borderBottom: i < furtherReading.books.length - 1 ? "1px solid var(--line)" : "none" }}>
-                <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)" }}>{b.title}</p>
-                <p style={{ fontSize: 12, color: "var(--shu)", fontWeight: 600, marginTop: 1, marginBottom: 5 }}>{b.author}</p>
-                <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.6 }}>{b.note}</p>
+                <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
+                  <div>
+                    <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)" }}>{b.title}</p>
+                    <p style={{ fontSize: 12, color: "var(--shu)", fontWeight: 600, marginTop: 1, marginBottom: 5 }}>{b.author}</p>
+                    <p style={{ fontSize: 12.5, color: "var(--ink-soft)", lineHeight: 1.6 }}>{b.note}</p>
+                  </div>
+                  {b.url && (
+                    <a 
+                      href={b.url} 
+                      target="_blank" 
+                      rel="noreferrer" 
+                      className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold text-white transition-all hover:opacity-90 active:scale-95 sm:mt-0 mt-1 self-start"
+                      style={{ background: "var(--indigo)", textDecoration: "none" }}
+                    >
+                      <BookOpen size={13} />
+                      {t("history.readOnline") || "Leer online"}
+                      <ExternalLink size={11} />
+                    </a>
+                  )}
+                </div>
               </div>
             </Highlightable>
           ))}

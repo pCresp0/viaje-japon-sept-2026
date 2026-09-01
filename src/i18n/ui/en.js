@@ -184,6 +184,7 @@ export default {
   "history.readingIntro":
     "If any of these stories left you wanting more, here's where to keep pulling the thread.",
   "history.books": "Books",
+  "history.readOnline": "Read online",
   "history.podcasts": "Podcasts",
 
   // ── Phrases ───────────────────────────────────────────────────────

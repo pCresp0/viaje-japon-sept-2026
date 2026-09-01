@@ -184,6 +184,7 @@ export default {
   "history.readingIntro":
     "Si l'une de ces histoires vous a donné envie d'en savoir plus, voici par où continuer.",
   "history.books": "Livres",
+  "history.readOnline": "Lire en ligne",
   "history.podcasts": "Podcasts",
 
   // ── Phrases ───────────────────────────────────────────────────────

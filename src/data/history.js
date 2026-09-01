@@ -236,6 +236,7 @@ export const furtherReading = {
     {
       title: "Breve historia de Japón",
       author: "Mikiso Hane",
+      url: "https://telegra.ph/Breve-historia-de-Jap%C3%B3n-08-31-52",
       note: "El clásico para empezar: 416 páginas que cubren desde la prehistoria hasta finales del siglo XX de forma amena y completa. Es la referencia que citan casi todos los podcasts de historia en español sobre Japón.",
     },
     {
