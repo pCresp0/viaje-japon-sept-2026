@@ -129,7 +129,7 @@ function RichText({ text, style = {} }) {
           } else if (match[3]) {
             const href = match[3];
             const isMaps = /maps\.app\.goo\.gl|google\.com\/maps/i.test(href);
-            const isFlight = /flightaware\.com/i.test(href);
+            const isFlight = /flightaware\.com|flightradar24\.com|google\..*[\?&]q=(vuelo|flight|vol|\+?qr\d|\+?ibe\d)/i.test(href);
             const label = isMaps ? "📍 Maps ↗" : isFlight ? "✈️ Seguimiento vuelo ↗" : "🔗 Enlace ↗";
             parts.push(
               <a

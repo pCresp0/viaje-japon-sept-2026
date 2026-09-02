@@ -6,13 +6,13 @@ export const days = [
     "history": "Ang Qatar Airways ay ang pambansang eroplano ng Qatar at isa sa mga may pinakamataas na rating sa mundo. Ang Doha ay ang sentrong hub ng kumpanya sa Gitnang Silangan, isang koneksyon sa pagitan ng Europa at Asya.",
     "schedule": [
       {
-        "text": "Pag-alis mula sa Adolfo Suárez Madrid-Barajas Airport sa flight QR148 (Qatar Airways). Live flight tracking: https://es.flightaware.com/live/flight/QTR148"
+        "text": "Pag-alis mula sa Adolfo Suárez Madrid-Barajas Airport sa flight QR148 (Qatar Airways). Live flight tracking: https://www.google.com/search?q=flight+QR148"
       },
       {
         "text": "Pagdating sa Doha (Hamad International Airport, HIA). Teknikal na paghinto, paglipat ng eroplano. Oras ng layover: humigit-kumulang 2 oras."
       },
       {
-        "text": "Pag-alis mula sa Doha papuntang Narita (NRT) sa flight QR808 (Qatar Airways). Live flight tracking: https://es.flightaware.com/live/flight/QTR808"
+        "text": "Pag-alis mula sa Doha papuntang Narita (NRT) sa flight QR808 (Qatar Airways). Live flight tracking: https://www.google.com/search?q=flight+QR808"
       },
       {
         "text": "Pagdating sa Narita (Lunes, Set 7). Customs at pagkuha ng bagahe. Pagkatapos: paglipat via Narita Express + Shinkansen papuntang Kyoto."

@@ -6,13 +6,13 @@ export const days = [
     "history": "Qatar Airways est la compagnie aérienne nationale du Qatar et l'une des mieux notées au monde. Doha est le hub central de la compagnie au Moyen-Orient, un point de connexion entre l'Europe et l'Asie.",
     "schedule": [
       {
-        "text": "Départ de l'aéroport Adolfo Suárez Madrid-Barajas sur le vol QR148 (Qatar Airways). Suivi de vol en direct : https://es.flightaware.com/live/flight/QTR148"
+        "text": "Départ de l'aéroport Adolfo Suárez Madrid-Barajas sur le vol QR148 (Qatar Airways). Suivi de vol en direct : https://www.google.com/search?q=vol+QR148"
       },
       {
         "text": "Arrivée à Doha (Aéroport international Hamad, HIA). Arrêt technique, changement d'avion. Temps d'escale : env. 2 heures."
       },
       {
-        "text": "Départ de Doha vers Narita (NRT) sur le vol QR808 (Qatar Airways). Suivi de vol en direct : https://es.flightaware.com/live/flight/QTR808"
+        "text": "Départ de Doha vers Narita (NRT) sur le vol QR808 (Qatar Airways). Suivi de vol en direct : https://www.google.com/search?q=vol+QR808"
       },
       {
         "text": "Arrivée à Narita (lundi 7 sept). Douanes et récupération des bagages. Ensuite : transfert via Narita Express + Shinkansen vers Kyoto."

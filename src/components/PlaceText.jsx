@@ -9,7 +9,7 @@ function getUrlButtonInfo(href) {
       border: "1px solid rgba(29, 53, 87, 0.18)",
     };
   }
-  if (/flightaware\.com/i.test(href)) {
+  if (/flightaware\.com|flightradar24\.com|google\..*[\?&]q=(vuelo|flight|vol|\+?qr\d|\+?ibe\d)/i.test(href)) {
     return {
       label: "✈️ Seguimiento de vuelo ↗",
       bg: "rgba(192, 57, 43, 0.09)",
