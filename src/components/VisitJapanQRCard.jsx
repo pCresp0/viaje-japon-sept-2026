@@ -67,34 +67,31 @@ export default function VisitJapanQRCard() {
       {/* Header (Toggle) */}
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="w-full text-left px-4 py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-white transition-all hover:brightness-110 focus:outline-none"
+        className="w-full text-left px-3.5 py-2.5 flex items-center justify-between gap-2.5 text-white transition-all hover:brightness-110 focus:outline-none cursor-pointer border-none"
         style={{
           background: "linear-gradient(135deg, #1e3a8a 0%, #1e40af 60%, #1d4ed8 100%)",
-          cursor: "pointer", border: "none"
         }}
       >
-        <div className="flex items-start sm:items-center gap-3 min-w-0">
-          <div className="w-9 h-9 rounded-xl bg-white/20 flex items-center justify-center shrink-0 shadow-sm mt-0.5 sm:mt-0">
-            <QrCode size={19} className="text-white" />
+        <div className="flex items-center gap-2.5 min-w-0 flex-1">
+          <div className="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center shrink-0 shadow-sm">
+            <QrCode size={17} className="text-white" />
           </div>
-          <div className="min-w-0">
+          <div className="min-w-0 flex-1">
             <div className="flex items-center gap-1.5 flex-wrap">
-              <span className="text-[10px] bg-white text-blue-900 font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">
+              <span className="text-[10px] bg-white text-blue-900 font-extrabold px-1.5 py-0.5 rounded uppercase tracking-wider leading-none">
                 Visit Japan Web
               </span>
-              <span className="text-xs text-blue-100 font-semibold">
+              <span className="text-xs text-blue-100 font-semibold truncate">
                 Inmigración y Aduanas
               </span>
             </div>
-            <h3 className="text-sm sm:text-base font-bold text-white leading-tight mt-0.5" style={{ margin: 0 }}>
+            <h3 className="text-[13.5px] sm:text-sm font-bold text-white leading-tight mt-0.5 truncate" style={{ margin: 0 }}>
               Código QR de Llegada a Narita
             </h3>
           </div>
         </div>
 
-        <div className="shrink-0 flex items-center justify-end">
-          <ChevronDown size={20} className={`transition-transform ${isExpanded ? "rotate-180" : ""}`} style={{ opacity: 0.8 }} />
-        </div>
+        <ChevronDown size={18} className={`shrink-0 transition-transform duration-300 ${isExpanded ? "rotate-180" : ""}`} style={{ opacity: 0.85 }} />
       </button>
 
       {/* Card Body */}
