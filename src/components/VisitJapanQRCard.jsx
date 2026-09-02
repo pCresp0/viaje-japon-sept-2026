@@ -8,7 +8,7 @@ export const groupMembers = [
   { id: "sergio", name: "Sergio Crespo Bellido", hasQR: true, qrPath: "/images/visit-japan-qr-sergio.png", role: "Titular", passHash: "296fb098929ae462b109e0df2726da063f371ad993a0ebe6dadf18a36fa1583c" },
   { id: "juancarlos", name: "Juan Carlos Rodríguez", hasQR: false, role: "Viajero", passHash: "1d8b070e797a48a1b935e9622415c50a4914a19bbcc7a3bffa909fe65c1d07b7" },
   { id: "gerundio", name: "Randy (Gerundio)", hasQR: false, role: "Viajero", passHash: "1d8b070e797a48a1b935e9622415c50a4914a19bbcc7a3bffa909fe65c1d07b7" },
-  { id: "thibaut", name: "Thibaut", hasQR: false, role: "Viajero", passHash: "1d8b070e797a48a1b935e9622415c50a4914a19bbcc7a3bffa909fe65c1d07b7" },
+  { id: "thibaut", name: "Thibaut Fossat", hasQR: true, qrPath: "/images/visit-japan-qr-thibaut.png", role: "Titular", passHash: "97cf94ea5536d9ce870ce055760f81c6b355df478d4566ae3140a4dc1cdec3d5" },
 ];
 
 export default function VisitJapanQRCard() {
