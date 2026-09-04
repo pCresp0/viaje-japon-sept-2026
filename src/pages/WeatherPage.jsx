@@ -1,10 +1,37 @@
 import { useState, useEffect, useCallback } from "react";
-import { Cloud, CloudRain, Sun, CloudSun, MapPin, Droplets, Loader2, Info, RefreshCw } from "lucide-react";
+import { Cloud, CloudRain, Sun, CloudSun, MapPin, Droplets, Loader2, Info, RefreshCw, ExternalLink } from "lucide-react";
 
 import { useContent } from "../i18n/LanguageContext";
 import { Highlightable } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 import { diffDays, todayISO } from "../utils/date";
+
+const dayDateMap = {
+  1: "7 Sept",
+  2: "8 Sept",
+  3: "9 Sept",
+  4: "10 Sept",
+  5: "11 Sept",
+  6: "12 Sept",
+  7: "13 Sept",
+  8: "14 Sept",
+  9: "15 Sept",
+  10: "16 Sept",
+  11: "17 Sept",
+  12: "18 Sept",
+  13: "19 Sept",
+  14: "20 Sept",
+  15: "21 Sept",
+};
+
+function getDayDateLabel(dayNum) {
+  return dayDateMap[dayNum] || `Día ${dayNum}`;
+}
+
+function getCityWeatherUrl(city) {
+  const queryCity = city === "Tsumago" ? "Nagiso Tsumago" : city === "Fuji" ? "Fujikawaguchiko" : city;
+  return `https://www.google.com/search?q=${encodeURIComponent(`tiempo en ${queryCity} Japon`)}`;
+}
 
 const cityCoords = {
   "Kioto": { lat: 35.0116, lon: 135.7681 },
@@ -256,8 +283,14 @@ export default function WeatherPage() {
 
           return (
             <Highlightable key={idx} id={slug("weather-day", d.day)}>
-            <div className="rounded-[10px] py-2 px-3 shadow-sm relative overflow-hidden" 
-              style={{ background: bg, color: "white" }}>
+            <a
+              href={getCityWeatherUrl(d.city)}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-[10px] py-2 px-3 shadow-sm relative overflow-hidden block transition-all duration-200 hover:opacity-95 hover:shadow-md active:scale-[0.99] group select-none no-underline text-white" 
+              style={{ background: bg, color: "white", textDecoration: "none", cursor: "pointer" }}
+              title={`Ver previsión detallada de ${d.city} en Google Weather ↗`}
+            >
               {/* Decorational circles for glassmorphism / modern feel */}
               <div style={{
                 position: "absolute", top: "-30%", right: "-5%",
@@ -291,8 +324,9 @@ export default function WeatherPage() {
                     </div>
                   )}
                 </div>
-                <div className="font-semibold opacity-95" style={{ fontSize: 11, textShadow: "0 1px 2px rgba(0,0,0,0.1)" }}>
-                  {weatherLabels.dia} {d.day}
+                <div className="flex items-center gap-1 font-semibold opacity-95 group-hover:opacity-100 transition-opacity" style={{ fontSize: 11.5, textShadow: "0 1px 2px rgba(0,0,0,0.1)" }}>
+                  <span>{getDayDateLabel(d.day)}</span>
+                  <ExternalLink size={10.5} className="opacity-70 group-hover:opacity-100 transition-opacity" />
                 </div>
               </div>
 
@@ -312,7 +346,7 @@ export default function WeatherPage() {
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
             </Highlightable>
           );
         })}
@@ -331,17 +365,26 @@ export default function WeatherPage() {
 
           return (
             <Highlightable key={idx} id={slug("weather", w.city)}>
-            <div className="rounded-xl p-4 border flex flex-col justify-between"
-              style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
+            <a
+              href={getCityWeatherUrl(w.city)}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-xl p-4 border flex flex-col justify-between transition-all duration-200 hover:border-slate-400 hover:shadow-md active:scale-[0.99] no-underline text-inherit block group cursor-pointer"
+              style={{ borderColor: "var(--line)", background: "var(--paper-raised)", textDecoration: "none" }}
+              title={`Ver previsión detallada de ${w.city} en Google Weather ↗`}
+            >
               <div>
                 <div className="flex items-center justify-between mb-2">
                   <span style={{ fontSize: 20 }}>{w.emoji}</span>
-                  {liveAvgHigh != null && (
-                    <span className="text-[9.5px] font-bold px-2 py-0.5 rounded-full" 
-                      style={{ background: "rgba(29,53,87,0.08)", color: "var(--indigo)" }}>
-                      API en vivo
-                    </span>
-                  )}
+                  <div className="flex items-center gap-1.5">
+                    {liveAvgHigh != null && (
+                      <span className="text-[9.5px] font-bold px-2 py-0.5 rounded-full" 
+                        style={{ background: "rgba(29,53,87,0.08)", color: "var(--indigo)" }}>
+                        API en vivo
+                      </span>
+                    )}
+                    <ExternalLink size={12} className="opacity-0 group-hover:opacity-60 transition-opacity text-slate-500" />
+                  </div>
                 </div>
                 <p style={{ fontSize: 13.5, fontWeight: 700, color: "var(--ink)", marginBottom: 2 }}>
                   {w.city}
@@ -387,7 +430,7 @@ export default function WeatherPage() {
                   ))}
                 </div>
               )}
-            </div>
+            </a>
             </Highlightable>
           );
         })}
