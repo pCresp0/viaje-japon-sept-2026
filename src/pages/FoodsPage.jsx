@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { UtensilsCrossed, Store, Sparkles, ChevronRight, Info, Flame, Coffee, Tag, ShoppingBag } from "lucide-react";
+import { UtensilsCrossed, Store, Sparkles, ChevronRight, Info, Flame, Coffee, Tag, ShoppingBag, MapPin, ExternalLink } from "lucide-react";
 import { useContent, useT } from "../i18n/LanguageContext";
 import { useHighlight } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
@@ -237,7 +237,7 @@ function KonbiniView() {
               {/* Header de la Cadena */}
               <div className="border-b pb-4 mb-5" style={{ borderColor: "var(--line)" }}>
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-1.5">
-                  <div className="flex items-center gap-2.5">
+                  <div className="flex flex-wrap items-center gap-2">
                     <span
                       className="px-2.5 py-1 rounded-lg text-xs font-black tracking-wider text-white uppercase shadow-sm"
                       style={{ backgroundColor: chain.themeColor }}
@@ -247,6 +247,26 @@ function KonbiniView() {
                     <span className="text-xs font-medium" style={{ color: "var(--ink-soft)" }}>
                       {chain.jp}
                     </span>
+
+                    {/* Botón Ver cercanos en Google Maps */}
+                    <a
+                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(chain.mapQuery || chain.name)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11.5px] font-semibold transition-transform active:scale-95"
+                      style={{
+                        backgroundColor: "rgba(255,255,255,0.9)",
+                        color: "var(--ink)",
+                        border: "1px solid var(--line)",
+                        boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
+                        textDecoration: "none",
+                      }}
+                      title={`Buscar ${chain.name} cercanos en Google Maps`}
+                    >
+                      <MapPin size={12} style={{ color: chain.themeColor }} />
+                      <span>Ver cercanos</span>
+                      <ExternalLink size={10} style={{ opacity: 0.55 }} />
+                    </a>
                   </div>
                   <span
                     className="text-[11px] font-bold px-2.5 py-0.5 rounded-full"

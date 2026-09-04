@@ -38,6 +38,7 @@ export const konbiniChains = [
     vibe: "La cadena con los estándares de comida fresca más altos de Japón. Su marca 'Seven Premium' compite de tú a tú con restaurantes.",
     specialty: "Sándwiches de huevo, bentos premium, café de máquina y ramen de estrella Michelin.",
     bestFor: "Desayunos rápidos, café recién molido matutino y cenas express de gran sabor.",
+    mapQuery: "7-Eleven",
     items: [
       {
         name: "Tamago Sando (Sándwich de ensalada de huevo)",
@@ -98,6 +99,7 @@ export const konbiniChains = [
     vibe: "Famoso por su música de entrada icónica («tirorirorí»), su comida caliente al mostrador y su línea de diseño 'Convenience Wear'.",
     specialty: "Famichiki, Frappés de sabores de máquina, Soufflé Pudding y calcetines retro.",
     bestFor: "Meriendas saladas calientes, postres golosos y antojos de pollo crujiente al volver al hotel.",
+    mapQuery: "FamilyMart",
     items: [
       {
         name: "Famichiki (Pollo frito deshuesado)",
@@ -158,6 +160,7 @@ export const konbiniChains = [
     vibe: "Su logotipo de botella de leche delata su origen lácteo. Es indiscutiblemente el konbini con la mejor nata, repostería dulce y bocaditos de pollo.",
     specialty: "Karaage-kun (cajitas de pollo), Premium Roll Cake y tartas de queso Uchi Café.",
     bestFor: "Darse un homenaje goloso de postre por la noche o picar bocaditos de pollo sobre la marcha.",
+    mapQuery: "Lawson",
     items: [
       {
         name: "Karaage-kun (Bocaditos de pollo frito en caja)",
@@ -218,6 +221,7 @@ export const konbiniChains = [
     vibe: "Menos ubicuo que los tres gigantes, pero venerado por los japoneses porque tiene cocina interior propia y una zona para sentarse a comer (eat-in).",
     specialty: "Soft Cream de leche de Hokkaido, patatas fritas X y postres Halohalo.",
     bestFor: "Merendar un helado artesanal insuperable o patatas fritas crujientes hechas al momento.",
+    mapQuery: "Ministop",
     items: [
       {
         name: "Hokkaido Vanilla Soft Cream",
@@ -260,6 +264,7 @@ export const konbiniChains = [
     vibe: "Donki es la megatienda caótica 24 horas para comprar dulces raros y cosmética libre de impuestos; los supermercados de barrio (Life, Seiyu, Aeon) son el secreto mejor guardado para cenar sushi de restaurante a mitad de precio.",
     specialty: "Kit Kats de sabores japoneses, dulces raros, cervezas artesanales y bandejas de sashimi con descuento a las 20:00.",
     bestFor: "Llenar la maleta de regalos comestibles y cenar como reyes en la habitación del hotel por menos de 5€.",
+    mapQuery: "Don Quijote",
     items: [
       {
         name: "Kit Kats de sabores raros en Don Quijote",
