@@ -45,8 +45,7 @@ export default function AboutPage() {
           <div style={{ marginTop: 24 }}>
             <a
               href="https://github.com/pCresp0/viaje-japon-sept-2026"
-              target="_blank"
-              rel="noreferrer"
+              target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center justify-center w-full gap-2 text-sm font-medium rounded-xl py-3"
               style={{ background: "var(--ink)", color: "var(--paper)", textDecoration: "none" }}
             >

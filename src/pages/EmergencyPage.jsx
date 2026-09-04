@@ -114,8 +114,7 @@ export default function EmergencyPage() {
               </a>
               <a
                 href={heymondoInsurance.documentsDriveUrl}
-                target="_blank"
-                rel="noreferrer"
+                target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-bold text-sm shadow-md hover:opacity-90 active:scale-95 transition-all"
                 style={{ textDecoration: "none", background: "var(--indigo)", color: "white" }}
               >
@@ -135,8 +134,7 @@ export default function EmergencyPage() {
                 DNI, certificados, condiciones particulares y PDFs de la póliza están en la{" "}
                 <a
                   href={heymondoInsurance.documentsDriveUrl}
-                  target="_blank"
-                  rel="noreferrer"
+                  target="_blank" rel="noopener noreferrer"
                   style={{ color: "var(--indigo)", fontWeight: 700 }}
                 >
                   carpeta de Google Drive del grupo
@@ -257,8 +255,7 @@ export default function EmergencyPage() {
 
               <a
                 href={heymondoInsurance.airHelpUrl}
-                target="_blank"
-                rel="noreferrer"
+                target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-white shrink-0 shadow-sm"
                 style={{ background: "var(--indigo)", textDecoration: "none" }}
               >
@@ -282,8 +279,7 @@ export default function EmergencyPage() {
                 <div className="flex gap-2 pt-1">
                   <a
                     href={heymondoInsurance.appStoreUrl}
-                    target="_blank"
-                    rel="noreferrer"
+                    target="_blank" rel="noopener noreferrer"
                     className="text-xs font-bold px-3 py-1.5 rounded-lg border flex items-center gap-1"
                     style={{ background: "var(--paper-raised)", borderColor: "var(--line)", color: "var(--ink)", textDecoration: "none" }}
                   >
@@ -291,8 +287,7 @@ export default function EmergencyPage() {
                   </a>
                   <a
                     href={heymondoInsurance.playStoreUrl}
-                    target="_blank"
-                    rel="noreferrer"
+                    target="_blank" rel="noopener noreferrer"
                     className="text-xs font-bold px-3 py-1.5 rounded-lg border flex items-center gap-1"
                     style={{ background: "var(--paper-raised)", borderColor: "var(--line)", color: "var(--ink)", textDecoration: "none" }}
                   >
@@ -315,8 +310,7 @@ export default function EmergencyPage() {
                 <div className="pt-1">
                   <a
                     href={heymondoInsurance.portalUrl}
-                    target="_blank"
-                    rel="noreferrer"
+                    target="_blank" rel="noopener noreferrer"
                     className="text-xs font-bold px-3 py-1.5 rounded-lg border flex items-center gap-1 w-fit"
                     style={{ background: "var(--paper-raised)", borderColor: "var(--line)", color: "var(--forest)", textDecoration: "none" }}
                   >
@@ -330,8 +324,7 @@ export default function EmergencyPage() {
             <div className="pt-3 border-t flex flex-wrap gap-2.5" style={{ borderColor: "var(--line)" }}>
               <a
                 href={heymondoInsurance.documentsDriveUrl}
-                target="_blank"
-                rel="noreferrer"
+                target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-white shadow-sm transition-all"
                 style={{ background: "var(--forest)", textDecoration: "none" }}
               >
@@ -498,8 +491,7 @@ export default function EmergencyPage() {
             >
               <a
                 href={heymondoInsurance.documentsDriveUrl}
-                target="_blank"
-                rel="noreferrer"
+                target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-white shadow-sm transition-all"
                 style={{ background: "var(--forest)", textDecoration: "none" }}
               >

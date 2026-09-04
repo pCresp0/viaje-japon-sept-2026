@@ -123,8 +123,7 @@ function HotelCard({ stay, index, anchorId, defaultExpanded = false, isTodayHote
           <div className="flex flex-col items-end gap-3 flex-shrink-0">
             <a
               href={mapsUrl(mapQuery)}
-              target="_blank"
-              rel="noreferrer"
+              target="_blank" rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
               className="inline-flex items-center justify-center gap-1.5 text-xs font-semibold rounded-full px-3 py-1.5 transition-colors"
               style={{ background: "rgba(255,255,255,0.2)", color: "white", textDecoration: "none" }}
@@ -227,8 +226,7 @@ function HotelCard({ stay, index, anchorId, defaultExpanded = false, isTodayHote
             {hotel.url && (
               <a
                 href={hotel.url}
-                target="_blank"
-                rel="noreferrer"
+                target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-sm font-medium rounded-lg px-3 py-2"
                 style={{ background: headerBg, color: "white", textDecoration: "none" }}
               >

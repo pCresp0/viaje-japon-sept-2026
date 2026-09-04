@@ -189,8 +189,7 @@ export default function VisitJapanQRCard({ defaultExpanded = false, isPriorityTo
           </div>
           <a
             href="https://www.vjw.digital.go.jp/"
-            target="_blank"
-            rel="noreferrer"
+            target="_blank" rel="noopener noreferrer"
             className="font-bold px-3 py-1.5 rounded-lg border flex items-center gap-1 shrink-0 w-fit"
             style={{
               background: "var(--paper-raised)",
@@ -427,7 +426,7 @@ export default function VisitJapanQRCard({ defaultExpanded = false, isPriorityTo
                 src={selectedMember.qrPath || "/images/visit-japan-qr.png"}
                 alt={`QR Code Visit Japan Web - ${selectedMember.name}`}
                 className="w-64 h-64 object-contain"
-              />
+               onError={(e) => { e.currentTarget.style.display = 'none'; }} />
             </div>
 
             <p className="font-mono text-base font-extrabold text-slate-950 tracking-wider">
@@ -458,8 +457,7 @@ export default function VisitJapanQRCard({ defaultExpanded = false, isPriorityTo
             <div className="mt-3 pt-2.5 border-t border-slate-100 w-full">
               <a
                 href="https://www.vjw.digital.go.jp/"
-                target="_blank"
-                rel="noreferrer"
+                target="_blank" rel="noopener noreferrer"
                 className="text-[11px] text-blue-600 font-semibold hover:underline flex items-center justify-center gap-1"
               >
                 🌐 Web oficial del Gobierno: vjw.digital.go.jp ↗

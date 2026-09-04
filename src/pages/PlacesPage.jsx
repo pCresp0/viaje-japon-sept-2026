@@ -179,8 +179,7 @@ export default function PlacesPage() {
           <div className="flex flex-wrap gap-2 pt-1">
             <a
               href="https://www.getyourguide.com/es-es/tokio-l193/tokio-monte-fuji-pagoda-chureito-lago-kawaguchi-y-oshino-hakkai-t792363/"
-              target="_blank"
-              rel="noreferrer"
+              target="_blank" rel="noopener noreferrer"
               className="text-xs font-semibold px-3.5 py-2 rounded-xl border flex items-center gap-1.5 transition-opacity hover:opacity-85"
               style={{ background: "var(--paper)", borderColor: "var(--line)", color: "var(--indigo)", textDecoration: "none" }}
             >
@@ -188,8 +187,7 @@ export default function PlacesPage() {
             </a>
             <a
               href="https://www.google.com/maps/place/35.6916642,139.6969475/@35.6916642,139.6969475,16z"
-              target="_blank"
-              rel="noreferrer"
+              target="_blank" rel="noopener noreferrer"
               className="text-xs font-semibold px-3.5 py-2 rounded-xl border flex items-center gap-1.5 transition-opacity hover:opacity-85"
               style={{ background: "var(--paper)", borderColor: "var(--line)", color: "var(--forest)", textDecoration: "none" }}
             >
@@ -288,8 +286,7 @@ export default function PlacesPage() {
             <div className="flex flex-wrap gap-2">
               <a
                 href="https://isfujivisible.com"
-                target="_blank"
-                rel="noreferrer"
+                target="_blank" rel="noopener noreferrer"
                 className="text-xs font-semibold px-2.5 py-1.5 rounded-lg border flex items-center gap-1"
                 style={{ background: "white", borderColor: "var(--line)", color: "var(--indigo)", textDecoration: "none" }}
               >
@@ -297,8 +294,7 @@ export default function PlacesPage() {
               </a>
               <a
                 href="https://mtfujitoday.com"
-                target="_blank"
-                rel="noreferrer"
+                target="_blank" rel="noopener noreferrer"
                 className="text-xs font-semibold px-2.5 py-1.5 rounded-lg border flex items-center gap-1"
                 style={{ background: "white", borderColor: "var(--line)", color: "var(--forest)", textDecoration: "none" }}
               >
@@ -306,8 +302,7 @@ export default function PlacesPage() {
               </a>
               <a
                 href="https://excursionesfujiyama.com/"
-                target="_blank"
-                rel="noreferrer"
+                target="_blank" rel="noopener noreferrer"
                 className="text-xs font-semibold px-2.5 py-1.5 rounded-lg border flex items-center gap-1"
                 style={{ background: "white", borderColor: "var(--line)", color: "var(--shu)", textDecoration: "none" }}
               >

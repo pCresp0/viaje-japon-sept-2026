@@ -207,7 +207,7 @@ export default function NozomiNagoyaTicketCard({ onGoToDay, defaultExpanded = fa
                 src={CONFIRMATION_IMG}
                 alt="Confirmación Smart EX Nozomi 358 Nagoya → Tokyo (reserva 2002)"
                 className="w-full object-contain object-top max-h-56 transition-transform group-hover:scale-[1.01]"
-              />
+               onError={(e) => { e.currentTarget.style.display = 'none'; }} />
               <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold gap-1.5">
                 <Eye size={16} /> Click para ampliar
               </div>
@@ -265,7 +265,7 @@ export default function NozomiNagoyaTicketCard({ onGoToDay, defaultExpanded = fa
                   src={memberSeats[selectedMember.id]?.qr}
                   alt={`QR Shinkansen ${selectedMember.name}`}
                   className="w-full h-full object-contain"
-                />
+                 onError={(e) => { e.currentTarget.style.display = 'none'; }} />
               </div>
 
               <div className="w-full text-center space-y-1">
@@ -312,7 +312,7 @@ export default function NozomiNagoyaTicketCard({ onGoToDay, defaultExpanded = fa
                 src={CONFIRMATION_IMG}
                 alt="Confirmación Smart EX Nozomi 358 ampliada"
                 className="max-w-full h-auto rounded shadow-xs"
-              />
+               onError={(e) => { e.currentTarget.style.display = 'none'; }} />
             </div>
           </div>
         </div>

@@ -135,8 +135,7 @@ function RichText({ text, style = {} }) {
               <a
                 key={match.index}
                 href={href}
-                target="_blank"
-                rel="noreferrer"
+                target="_blank" rel="noopener noreferrer"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
@@ -268,7 +267,7 @@ function GuideBlock({ id, accentColor, guides }) {
             maxWidth: "100%", maxHeight: "65mm",
             width: "auto", height: "auto",
           }}
-        />
+         onError={(e) => { e.currentTarget.style.display = 'none'; }} />
       )}
       <div style={{ padding: "10px 12px" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 2 }}>

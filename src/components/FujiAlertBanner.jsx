@@ -59,8 +59,7 @@ export default function FujiAlertBanner() {
             <div className="flex items-center gap-2 flex-wrap w-full lg:w-auto justify-start lg:justify-end shrink-0 pt-1 lg:pt-0">
               <a
                 href={visibilityTools.isFujiVisible.url}
-                target="_blank"
-                rel="noreferrer"
+                target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-white/10 hover:bg-white/20 text-slate-100 border border-white/15 transition-colors"
                 title="Puntuación de visibilidad de 1 a 10"
               >
@@ -70,8 +69,7 @@ export default function FujiAlertBanner() {
 
               <a
                 href={visibilityTools.mtFujiToday.url}
-                target="_blank"
-                rel="noreferrer"
+                target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-white/10 hover:bg-white/20 text-slate-100 border border-white/15 transition-colors"
                 title="Webcams en directo y previsión"
               >
@@ -159,8 +157,7 @@ export default function FujiAlertBanner() {
                   </h4>
                   <a
                     href={gygFujiActivity.url}
-                    target="_blank"
-                    rel="noreferrer"
+                    target="_blank" rel="noopener noreferrer"
                     className="text-xs font-semibold hover:underline flex items-center gap-1"
                     style={{ color: "var(--indigo)" }}
                   >
@@ -234,7 +231,7 @@ export default function FujiAlertBanner() {
                   <strong>Precio:</strong> 13.000 ¥/persona (~70€) (entradas y mini-van privada 8h con guía oficial en español). Inicio en Estación de Mishima (08:20 AM) y fin en Estación Shin-Fuji (17:30). Incluye parada gastronómica tradicional para degustar fideos <strong>Houtou</strong>.
                 </p>
                 <p className="text-xs m-0" style={{ color: "var(--ink-soft)" }}>
-                  📞 Contacto Ken: <a href="tel:+819058631635" className="font-semibold underline" style={{ color: "var(--indigo)" }}>+81 90-5863-1635</a> · <a href="https://excursionesfujiyama.com" target="_blank" rel="noreferrer" className="font-semibold underline" style={{ color: "var(--indigo)" }}>excursionesfujiyama.com ↗</a>
+                  📞 Contacto Ken: <a href="tel:+819058631635" className="font-semibold underline" style={{ color: "var(--indigo)" }}>+81 90-5863-1635</a> · <a href="https://excursionesfujiyama.com" target="_blank" rel="noopener noreferrer" className="font-semibold underline" style={{ color: "var(--indigo)" }}>excursionesfujiyama.com ↗</a>
                 </p>
               </div>
 

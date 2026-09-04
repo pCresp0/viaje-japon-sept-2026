@@ -287,8 +287,7 @@ export default function WeatherPage() {
             <Highlightable key={idx} id={slug("weather-day", d.day)}>
             <a
               href={getCityWeatherUrl(d.city)}
-              target="_blank"
-              rel="noreferrer"
+              target="_blank" rel="noopener noreferrer"
               className="rounded-[10px] py-2 px-3 shadow-sm relative overflow-hidden block transition-all duration-200 hover:opacity-95 hover:shadow-md active:scale-[0.99] group select-none no-underline text-white" 
               style={{ background: bg, color: "white", textDecoration: "none", cursor: "pointer" }}
               title={`Ver previsión detallada de ${d.city} en Google Weather ↗`}
@@ -369,8 +368,7 @@ export default function WeatherPage() {
             <Highlightable key={idx} id={slug("weather", w.city)}>
             <a
               href={getCityWeatherUrl(w.city)}
-              target="_blank"
-              rel="noreferrer"
+              target="_blank" rel="noopener noreferrer"
               className="rounded-xl p-4 border flex flex-col justify-between transition-all duration-200 hover:border-slate-400 hover:shadow-md active:scale-[0.99] no-underline text-inherit block group cursor-pointer"
               style={{ borderColor: "var(--line)", background: "var(--paper-raised)", textDecoration: "none" }}
               title={`Ver previsión detallada de ${w.city} en Google Weather ↗`}
@@ -459,8 +457,7 @@ export default function WeatherPage() {
         <div className="flex flex-wrap gap-2">
           <a
             href="https://isfujivisible.com"
-            target="_blank"
-            rel="noreferrer"
+            target="_blank" rel="noopener noreferrer"
             className="text-xs font-semibold px-3 py-2 rounded-xl border flex items-center gap-1.5"
             style={{ background: "var(--paper)", borderColor: "var(--line)", color: "var(--indigo)", textDecoration: "none" }}
           >
@@ -468,8 +465,7 @@ export default function WeatherPage() {
           </a>
           <a
             href="https://mtfujitoday.com"
-            target="_blank"
-            rel="noreferrer"
+            target="_blank" rel="noopener noreferrer"
             className="text-xs font-semibold px-3 py-2 rounded-xl border flex items-center gap-1.5"
             style={{ background: "var(--paper)", borderColor: "var(--line)", color: "var(--forest)", textDecoration: "none" }}
           >

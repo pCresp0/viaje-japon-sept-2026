@@ -95,8 +95,7 @@ export default function PlaceText({ text, linkStyle, className, style, as: Tag =
             <a
               key={i}
               href={href}
-              target="_blank"
-              rel="noreferrer"
+              target="_blank" rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
               className="inline-flex items-center gap-1 font-semibold transition-all hover:opacity-85 active:scale-95 shadow-2xs"
               style={{
@@ -129,8 +128,7 @@ export default function PlaceText({ text, linkStyle, className, style, as: Tag =
             <a
               key={i}
               href={placeMapsUrl(p.value)}
-              target="_blank"
-              rel="noreferrer"
+              target="_blank" rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
               style={{
                 color: "inherit",

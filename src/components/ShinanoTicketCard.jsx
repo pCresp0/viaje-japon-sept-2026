@@ -173,7 +173,7 @@ export default function ShinanoTicketCard({ onGoToDay, defaultExpanded = false }
                 src={CONFIRMATION_IMG}
                 alt="Confirmación JR-WEST Shinano 4 Nakatsugawa → Nagoya (reserva 42093)"
                 className="w-full object-contain object-top max-h-64 transition-transform group-hover:scale-[1.01]"
-              />
+               onError={(e) => { e.currentTarget.style.display = 'none'; }} />
               <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold gap-1.5">
                 <Eye size={16} /> Click para ampliar
               </div>
@@ -227,7 +227,7 @@ export default function ShinanoTicketCard({ onGoToDay, defaultExpanded = false }
                 src={CONFIRMATION_IMG}
                 alt="Confirmación JR-WEST Shinano 4 ampliada"
                 className="max-w-full h-auto rounded shadow-xs"
-              />
+               onError={(e) => { e.currentTarget.style.display = 'none'; }} />
             </div>
           </div>
         </div>

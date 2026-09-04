@@ -131,7 +131,7 @@ export default function JrPassAnalysis({ defaultOpen = false }) {
             <p className="text-xs leading-relaxed m-0" style={{ color: "var(--ink-soft)" }}>
               Cálculo con <strong>precios reales Revolut</strong> de billetes ya comprados + estimaciones del resto.
               Tipo de cambio aprox. {YEN_PER_EUR} ¥/€ para el resto del viaje. Precios JR Pass Ordinary adulto
-              (agencia <a href={JR_PASS_SOURCE_EUR} target="_blank" rel="noreferrer" className="underline">jrpass.com</a>, ago 2026):
+              (agencia <a href={JR_PASS_SOURCE_EUR} target="_blank" rel="noopener noreferrer" className="underline">jrpass.com</a>, ago 2026):
               {" "}7 días {formatEur(PASS_7_EUR)} · 14 días {formatEur(PASS_14_EUR)} · 21 días {formatEur(PASS_21_EUR)}
               {" "}(grupo ×5: {formatEur(PASS_7_EUR * PEOPLE)} / {formatEur(PASS_14_EUR * PEOPLE)} / {formatEur(PASS_21_EUR * PEOPLE)}).
               El Pass <strong>no incluye Nozomi</strong>.
@@ -259,9 +259,9 @@ export default function JrPassAnalysis({ defaultOpen = false }) {
               </div>
               <p className="text-[11px] m-0 mt-2 leading-relaxed" style={{ color: "var(--ink-soft)" }}>
                 Fuentes:{" "}
-                <a href={JR_PASS_SOURCE_EUR} target="_blank" rel="noreferrer" className="underline">jrpass.com</a>
+                <a href={JR_PASS_SOURCE_EUR} target="_blank" rel="noopener noreferrer" className="underline">jrpass.com</a>
                 {" "}(€ de compra) ·{" "}
-                <a href={JR_PASS_SOURCE_OFFICIAL} target="_blank" rel="noreferrer" className="underline">japanrailpass.net</a>
+                <a href={JR_PASS_SOURCE_OFFICIAL} target="_blank" rel="noopener noreferrer" className="underline">japanrailpass.net</a>
                 {" "}(¥ oficiales). Desde octubre 2026 las agencias en el extranjero suben a ¥53.000 / ¥84.000 / ¥105.000.
                 Nuestro viaje es 7–21 sept (~15 días): un Pass de 7 días <strong>no puede cubrir</strong> a la vez N'EX (día 1), Alpes (día 6–9) y Fuji (día 14).
               </p>
@@ -362,10 +362,10 @@ export default function JrPassAnalysis({ defaultOpen = false }) {
             <div>
               <p className="text-xs font-bold uppercase tracking-wider mb-2 m-0" style={{ color: "var(--ink-soft)" }}>Fuentes</p>
               <div className="flex flex-col gap-1 text-[11px]">
-                <a href={JR_PASS_SOURCE_EUR} target="_blank" rel="noreferrer" className="hover:underline" style={{ color: "var(--indigo)" }}>jrpass.com — precios en euros (agencia)</a>
-                <a href={JR_PASS_SOURCE_OFFICIAL} target="_blank" rel="noreferrer" className="hover:underline" style={{ color: "var(--indigo)" }}>Japan Rail Pass — precios oficiales (¥)</a>
-                <a href="https://smart-ex.jp/en/" target="_blank" rel="noreferrer" className="hover:underline" style={{ color: "var(--indigo)" }}>Smart EX (Tokaido / Sanyo / Kyushu Shinkansen)</a>
-                <a href="https://www.westjr.co.jp/global/en/ticket/overview/" target="_blank" rel="noreferrer" className="hover:underline" style={{ color: "var(--indigo)" }}>JR-West Online Train Reservation</a>
+                <a href={JR_PASS_SOURCE_EUR} target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: "var(--indigo)" }}>jrpass.com — precios en euros (agencia)</a>
+                <a href={JR_PASS_SOURCE_OFFICIAL} target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: "var(--indigo)" }}>Japan Rail Pass — precios oficiales (¥)</a>
+                <a href="https://smart-ex.jp/en/" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: "var(--indigo)" }}>Smart EX (Tokaido / Sanyo / Kyushu Shinkansen)</a>
+                <a href="https://www.westjr.co.jp/global/en/ticket/overview/" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: "var(--indigo)" }}>JR-West Online Train Reservation</a>
               </div>
             </div>
           </div>

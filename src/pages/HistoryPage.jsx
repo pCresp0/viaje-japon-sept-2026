@@ -322,8 +322,7 @@ export default function HistoryPage() {
                     {p.url && (
                       <a 
                         href={p.url} 
-                        target="_blank" 
-                        rel="noreferrer" 
+                        target="_blank" rel="noopener noreferrer" 
                         className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold text-white transition-all hover:opacity-90 active:scale-95 self-start"
                         style={{ background: "#872ec4", textDecoration: "none" }}
                       >
@@ -387,8 +386,7 @@ export default function HistoryPage() {
                       {d.url && (
                         <a 
                           href={d.url} 
-                          target="_blank" 
-                          rel="noreferrer" 
+                          target="_blank" rel="noopener noreferrer" 
                           className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold text-white transition-all hover:opacity-90 active:scale-95 self-start"
                           style={{ background: "#c4302b", textDecoration: "none" }}
                         >
@@ -452,8 +450,7 @@ export default function HistoryPage() {
                     {b.url && (
                       <a 
                         href={b.url} 
-                        target="_blank" 
-                        rel="noreferrer" 
+                        target="_blank" rel="noopener noreferrer" 
                         className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold text-white transition-all hover:opacity-90 active:scale-95 self-start"
                         style={{ background: "var(--indigo)", textDecoration: "none" }}
                       >

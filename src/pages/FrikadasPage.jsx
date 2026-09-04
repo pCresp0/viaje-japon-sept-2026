@@ -26,7 +26,7 @@ function RouteStop({ stop, day }) {
           <Ticket size={14} style={{ color: "var(--indigo)", flexShrink: 0, marginTop: 2 }} />
           <p style={{ fontSize: 12, color: "var(--ink-soft)", lineHeight: 1.45, margin: 0 }}>{stop.access}</p>
         </div>
-        <a href={stop.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 mt-2.5" style={{ color: "var(--shu)", fontSize: 12, fontWeight: 700, textDecoration: "none" }}>
+        <a href={stop.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 mt-2.5" style={{ color: "var(--shu)", fontSize: 12, fontWeight: 700, textDecoration: "none" }}>
           Fuente oficial <ExternalLink size={12} />
         </a>
       </div>

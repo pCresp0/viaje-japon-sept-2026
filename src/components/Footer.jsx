@@ -46,8 +46,7 @@ export default function Footer() {
           {/* LinkedIn */}
           <a
             href="https://www.linkedin.com/in/pablocrespobellido/"
-            target="_blank"
-            rel="noopener noreferrer"
+            target="_blank" rel="noopener noreferrer"
             aria-label="LinkedIn"
             style={{
               width: 36, height: 36,
@@ -80,8 +79,7 @@ export default function Footer() {
           {/* GitHub */}
           <a
             href="https://github.com/pCresp0/viaje-japon-sept-2026"
-            target="_blank"
-            rel="noopener noreferrer"
+            target="_blank" rel="noopener noreferrer"
             aria-label="GitHub"
             style={{
               width: 36, height: 36,

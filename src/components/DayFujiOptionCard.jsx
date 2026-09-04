@@ -124,8 +124,7 @@ export default function DayFujiOptionCard({ dayNum }) {
           <div className="flex flex-wrap gap-2 pt-1">
             <a
               href={gygFujiActivity.url}
-              target="_blank"
-              rel="noreferrer"
+              target="_blank" rel="noopener noreferrer"
               className="font-bold px-3 py-1.5 rounded-lg border flex items-center gap-1 text-[11.5px]"
               style={{ background: "var(--paper-raised)", borderColor: "var(--line)", color: "var(--indigo)", textDecoration: "none" }}
             >
@@ -133,8 +132,7 @@ export default function DayFujiOptionCard({ dayNum }) {
             </a>
             <a
               href={gygFujiActivity.meetingPointUrl}
-              target="_blank"
-              rel="noreferrer"
+              target="_blank" rel="noopener noreferrer"
               className="font-bold px-3 py-1.5 rounded-lg border flex items-center gap-1 text-[11.5px]"
               style={{ background: "var(--paper-raised)", borderColor: "var(--line)", color: "var(--forest)", textDecoration: "none" }}
             >
@@ -142,8 +140,7 @@ export default function DayFujiOptionCard({ dayNum }) {
             </a>
             <a
               href={visibilityTools.isFujiVisible.url}
-              target="_blank"
-              rel="noreferrer"
+              target="_blank" rel="noopener noreferrer"
               className="font-bold px-3 py-1.5 rounded-lg border flex items-center gap-1 text-[11.5px]"
               style={{ background: "var(--paper-raised)", borderColor: "var(--line)", color: "var(--shu)", textDecoration: "none" }}
             >

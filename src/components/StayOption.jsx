@@ -42,14 +42,13 @@ export default function StayOption({ option, city }) {
 
       <span className="flex items-center gap-3 mt-2">
         {option.url && (
-          <a href={option.url} target="_blank" rel="noreferrer" className="text-xs font-medium" style={{ color: "var(--indigo)" }}>
+          <a href={option.url} target="_blank" rel="noopener noreferrer" className="text-xs font-medium" style={{ color: "var(--indigo)" }}>
             Ver reserva ↗
           </a>
         )}
         <a
           href={mapsUrl(mapQuery)}
-          target="_blank"
-          rel="noreferrer"
+          target="_blank" rel="noopener noreferrer"
           className="flex items-center gap-1 text-xs font-medium"
           style={{ color: "var(--shu)" }}
         >

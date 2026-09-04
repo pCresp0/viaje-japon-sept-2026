@@ -326,8 +326,7 @@ export default function MapPage({ onGoToDay, initialDay }) {
                       <p style={{ fontSize: 12, color: "#5a6070", marginBottom: 6 }}>{stop.detail}</p>
                       <a
                         href={`https://www.google.com/maps/search/?api=1&query=${stop.lat},${stop.lng}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        target="_blank" rel="noopener noreferrer"
                         style={{ fontSize: 12, color: stop.color, fontWeight: 600, textDecoration: "none" }}
                       >
                         {mapLabels.abrirGoogleMaps}
@@ -427,8 +426,7 @@ export default function MapPage({ onGoToDay, initialDay }) {
                 )}
                 <a
                   href={mapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target="_blank" rel="noopener noreferrer"
                   onClick={() => setSelected(stop.id)}
                   className="flex-1 flex items-center justify-center gap-1.5 rounded-lg py-1.5 px-2 transition-colors"
                   style={{

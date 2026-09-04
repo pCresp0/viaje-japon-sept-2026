@@ -155,7 +155,7 @@ export default function ShinkansenTicketCard({ onGoToDay, defaultExpanded = fals
                   src={memberSeats[selectedMember.id]?.qr}
                   alt={`QR Shinkansen ${selectedMember.name}`}
                   className="w-full h-full object-contain"
-                />
+                 onError={(e) => { e.currentTarget.style.display = 'none'; }} />
               </div>
 
               <div className="w-full text-center space-y-1">

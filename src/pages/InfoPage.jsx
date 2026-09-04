@@ -263,8 +263,7 @@ function FlightRow({ flight, icon: Icon, defaultExpanded = false, isTodayFlight 
         {flight.leg1?.trackUrl ? (
           <a
             href={flight.leg1.trackUrl}
-            target="_blank"
-            rel="noreferrer"
+            target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1.5 rounded-lg border transition-all"
             style={{ color: "var(--indigo)", background: "var(--paper)", borderColor: "var(--line)" }}
           >
@@ -274,8 +273,7 @@ function FlightRow({ flight, icon: Icon, defaultExpanded = false, isTodayFlight 
         {flight.leg2?.trackUrl ? (
           <a
             href={flight.leg2.trackUrl}
-            target="_blank"
-            rel="noreferrer"
+            target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1.5 rounded-lg border transition-all"
             style={{ color: "var(--indigo)", background: "var(--paper)", borderColor: "var(--line)" }}
           >
@@ -283,7 +281,7 @@ function FlightRow({ flight, icon: Icon, defaultExpanded = false, isTodayFlight 
           </a>
         ) : null}
         {!flight.leg1?.trackUrl && !flight.leg2?.trackUrl && flight.trackUrl && (
-          <a href={flight.trackUrl} target="_blank" rel="noreferrer" className="inline-block text-xs font-medium" style={{ color: "var(--shu)" }}>
+          <a href={flight.trackUrl} target="_blank" rel="noopener noreferrer" className="inline-block text-xs font-medium" style={{ color: "var(--shu)" }}>
             Seguir vuelo en vivo ↗
           </a>
         )}

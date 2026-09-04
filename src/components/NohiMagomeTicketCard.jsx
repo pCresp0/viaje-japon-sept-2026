@@ -141,8 +141,7 @@ export default function NohiMagomeTicketCard({ defaultExpanded = false, onGoToDa
                 </a>
                 <a
                   href="/images/tickets/nohi_bus_takayama_magome_eticket.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1.5 rounded-full border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 cursor-pointer transition-colors no-underline"
                 >
                   Abrir PDF

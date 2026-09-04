@@ -219,6 +219,7 @@ function KonbiniView() {
                     src={c.logo}
                     alt={c.name}
                     className="w-full h-full object-contain"
+                    onError={(e) => { e.currentTarget.parentElement.style.display = 'none'; }}
                   />
                 </span>
               )}
@@ -256,6 +257,7 @@ function KonbiniView() {
                           src={chain.logo}
                           alt={chain.name}
                           className="h-5 w-auto max-w-[75px] object-contain"
+                          onError={(e) => { e.currentTarget.parentElement.style.display = 'none'; }}
                         />
                       </div>
                     )}
@@ -272,8 +274,7 @@ function KonbiniView() {
                     {/* Botón Ver cercanos en Google Maps */}
                     <a
                       href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(chain.mapQuery || chain.name)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      target="_blank" rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11.5px] font-semibold transition-transform active:scale-95"
                       style={{
                         backgroundColor: "rgba(255,255,255,0.9)",
