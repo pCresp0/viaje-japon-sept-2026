@@ -73,8 +73,27 @@ function getConditionFromWMO(code) {
   return "Variable";
 }
 
-const CACHE_KEY = "jp_weather_forecast_cache_v2";
+const CACHE_KEY = "jp_weather_forecast_cache_v3";
 const CACHE_TTL = 2 * 60 * 60 * 1000; // 2 hours
+
+export const DAY_DATE_MAP = {
+  0: { date: "2026-09-06", label: "6 Sept" },
+  1: { date: "2026-09-07", label: "7 Sept" },
+  2: { date: "2026-09-08", label: "8 Sept" },
+  3: { date: "2026-09-09", label: "9 Sept" },
+  4: { date: "2026-09-10", label: "10 Sept" },
+  5: { date: "2026-09-11", label: "11 Sept" },
+  6: { date: "2026-09-12", label: "12 Sept" },
+  7: { date: "2026-09-13", label: "13 Sept" },
+  8: { date: "2026-09-14", label: "14 Sept" },
+  9: { date: "2026-09-15", label: "15 Sept" },
+  10: { date: "2026-09-16", label: "16 Sept" },
+  11: { date: "2026-09-17", label: "17 Sept" },
+  12: { date: "2026-09-18", label: "18 Sept" },
+  13: { date: "2026-09-19", label: "19 Sept" },
+  14: { date: "2026-09-20", label: "20 Sept" },
+  15: { date: "2026-09-21", label: "21 Sept" },
+};
 
 export async function fetchLiveWeatherMap() {
   try {
@@ -166,10 +185,9 @@ export function useTodayWeatherForecast() {
   const cityKeys = DAY_CITIES[activeDayNum] || ["Tokio"];
   const isDisplacement = cityKeys.length > 1;
 
-  const tripStartDate = new Date("2026-09-07T00:00:00+09:00");
-  const targetDate = new Date(tripStartDate);
-  targetDate.setDate(tripStartDate.getDate() + (activeDayNum - 1));
-  const targetDateStr = targetDate.toISOString().split("T")[0];
+  const dayInfo = DAY_DATE_MAP[activeDayNum] || { date: "2026-09-07", label: "7 Sept" };
+  const targetDateStr = dayInfo.date;
+  const dateLabel = dayInfo.label;
 
   const citiesWeather = cityKeys.map(cityKey => {
     const fallback = STATIC_CITY_WEATHER[cityKey] || { high: 28, low: 20, rain: 20, sky: "partly", condition: "Parcialmente nublado" };
@@ -215,9 +233,10 @@ export function useTodayWeatherForecast() {
   return {
     loading,
     dayNum: activeDayNum,
+    dateLabel,
+    targetDateStr,
     isDisplacement,
     citiesWeather,
-    targetDateStr,
     phase: status.phase,
   };
 }

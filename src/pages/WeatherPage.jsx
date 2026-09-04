@@ -183,13 +183,10 @@ export default function WeatherPage() {
         weatherMap[city] = resultsArray[index].daily;
       });
 
-      const tripStartDate = new Date("2026-09-07T00:00:00+09:00");
       const today = todayISO();
       
       const updatedDaily = dailyWeather.map(d => {
-        const targetDate = new Date(tripStartDate);
-        targetDate.setDate(tripStartDate.getDate() + (d.day - 1));
-        const dateStr = targetDate.toISOString().split("T")[0];
+        const dateStr = `2026-09-${String(6 + d.day).padStart(2, "0")}`;
         const daysLeft = diffDays(today, dateStr);
         
         const cityData = weatherMap[d.city];

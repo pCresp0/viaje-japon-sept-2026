@@ -4,7 +4,7 @@ import { useT } from "../i18n";
 
 export default function DrawerWeatherWidget({ onNavigate, onClose }) {
   const t = useT();
-  const { loading, dayNum, isDisplacement, citiesWeather, phase } = useTodayWeatherForecast();
+  const { loading, dayNum, isDisplacement, citiesWeather, phase, dateLabel } = useTodayWeatherForecast();
 
   if (!citiesWeather || citiesWeather.length === 0) return null;
 
@@ -62,8 +62,8 @@ export default function DrawerWeatherWidget({ onNavigate, onClose }) {
             >
               {t("nav.rainToday") || "Lluvia hoy"}
             </span>
-            <span style={{ fontSize: 10.5, color: "rgba(255,255,255,0.45)", fontWeight: 500 }}>
-              {phase === "during" ? `· ${t("common.day") || "Día"} ${dayNum}` : `· ${t("common.day") || "Día"} 1`}
+            <span style={{ fontSize: 10.5, color: "rgba(255,255,255,0.6)", fontWeight: 500 }}>
+              {`· ${t("common.day") || "Día"} ${dayNum}${dateLabel ? ` (${dateLabel})` : ""}`}
             </span>
           </div>
 
