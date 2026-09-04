@@ -72,12 +72,20 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
     const r = btnRef.current.getBoundingClientRect();
     const isMobile = window.innerWidth < 768 || !isDesktop;
 
+    const btn = {
+      top: r.top,
+      left: r.left,
+      width: r.width,
+      height: r.height,
+    };
+
     if (isMobile) {
       return {
         top: r.bottom + 8,
         left: 12,
         right: 12,
         width: "auto",
+        btn,
       };
     }
 
@@ -92,6 +100,7 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
       left: "auto",
       right,
       width: panelW,
+      btn,
     };
   }
 
@@ -189,6 +198,7 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
           cursor: "pointer",
           flexShrink: 0,
           color: "#fff",
+          opacity: open ? 0 : 1,
         }}
       >
         <Search size={isDesktop ? 20 : 16} strokeWidth={2.5} />
@@ -211,6 +221,39 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
               animation: "fadeIn 0.15s ease-out",
             }}
           />
+
+          {/* Botón Buscar nítido por delante del desenfoque */}
+          {coords.btn && (
+            <button
+              type="button"
+              onClick={closePanel}
+              aria-label={t("search.ariaLabel")}
+              style={{
+                position: "fixed",
+                top: coords.btn.top,
+                left: coords.btn.left,
+                width: coords.btn.width,
+                height: coords.btn.height,
+                zIndex: 999,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: isDesktop ? 8 : 5,
+                borderRadius: 999,
+                background: "rgba(255,255,255,0.28)",
+                border: "1px solid rgba(255,255,255,0.45)",
+                boxShadow: "0 2px 10px rgba(0,0,0,0.2)",
+                cursor: "pointer",
+                color: "#fff",
+                animation: "fadeIn 0.15s ease-out",
+              }}
+            >
+              <Search size={isDesktop ? 20 : 16} strokeWidth={2.5} />
+              <span style={{ fontSize: isDesktop ? 15 : 12, fontWeight: 700, letterSpacing: "0.02em", lineHeight: 1 }}>
+                {t("search.button")}
+              </span>
+            </button>
+          )}
           <div
             id={listId}
             role="dialog"
