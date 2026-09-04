@@ -30,6 +30,7 @@ export const konbiniChains = [
     id: "seven-eleven",
     name: "7-Eleven",
     jp: "セブン-イレブン",
+    logo: "/images/markets/seven-eleven.png",
     badge: "El rey de la comida de calidad y marca propia",
     themeColor: "#008060", // Green
     accentColor: "#ee7100", // Orange
@@ -91,6 +92,7 @@ export const konbiniChains = [
     id: "familymart",
     name: "FamilyMart (Famima)",
     jp: "ファミリーマート",
+    logo: "/images/markets/familymart.png",
     badge: "El templo del pollo frito crujiente y los frappés",
     themeColor: "#009fe3", // Blue
     accentColor: "#58b843", // Green
@@ -152,6 +154,7 @@ export const konbiniChains = [
     id: "lawson",
     name: "Lawson",
     jp: "ローソン",
+    logo: "/images/markets/lawson.png",
     badge: "El paraíso de la repostería fina 'Uchi Café' y Karaage-kun",
     themeColor: "#0068b7", // Cobalt Blue
     accentColor: "#e60012", // Red
@@ -213,6 +216,7 @@ export const konbiniChains = [
     id: "ministop",
     name: "Ministop",
     jp: "ミニストップ",
+    logo: "/images/markets/ministop.png",
     badge: "Los reyes del helado 'Soft Cream' y cocina bajo pedido",
     themeColor: "#ffcc00", // Yellow
     accentColor: "#003399", // Blue
@@ -256,6 +260,7 @@ export const konbiniChains = [
     id: "donki-supers",
     name: "Don Quijote & Supermercados nocturnos",
     jp: "ドン・キホーテ / スーパーマーケット",
+    logo: "/images/markets/don-quijote.png",
     badge: "Souvenirs comestibles, KitKats raros y el festival de pegatinas de descuento",
     themeColor: "#1e293b",
     accentColor: "#eab308",

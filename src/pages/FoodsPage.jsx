@@ -213,7 +213,16 @@ function KonbiniView() {
                 cursor: "pointer",
               }}
             >
-              <span>{c.name.split(" ")[0]}</span>
+              {c.logo && (
+                <span className="w-4 h-4 rounded-sm bg-white p-0.5 flex items-center justify-center shrink-0">
+                  <img
+                    src={c.logo}
+                    alt={c.name}
+                    className="w-full h-full object-contain"
+                  />
+                </span>
+              )}
+              <span>{c.id === "donki-supers" ? "Donki" : c.name.split(" ")[0]}</span>
             </button>
           );
         })}
@@ -236,8 +245,20 @@ function KonbiniView() {
             >
               {/* Header de la Cadena */}
               <div className="border-b pb-4 mb-5" style={{ borderColor: "var(--line)" }}>
-                <div className="flex flex-wrap items-center justify-between gap-2 mb-1.5">
-                  <div className="flex flex-wrap items-center gap-2">
+                <div className="flex flex-wrap items-center justify-between gap-2.5 mb-2">
+                  <div className="flex flex-wrap items-center gap-2.5">
+                    {chain.logo && (
+                      <div
+                        className="h-8 px-2 py-1 rounded-xl bg-white border flex items-center justify-center shrink-0 shadow-xs"
+                        style={{ borderColor: "rgba(0,0,0,0.08)" }}
+                      >
+                        <img
+                          src={chain.logo}
+                          alt={chain.name}
+                          className="h-5 w-auto max-w-[75px] object-contain"
+                        />
+                      </div>
+                    )}
                     <span
                       className="px-2.5 py-1 rounded-lg text-xs font-black tracking-wider text-white uppercase shadow-sm"
                       style={{ backgroundColor: chain.themeColor }}
