@@ -346,7 +346,7 @@ export default function VisitJapanQRCard({ defaultExpanded = false, isPriorityTo
                       setError(false);
                     }}
                     placeholder={t("vjw.pinPlaceholder")}
-                    className="w-full px-3.5 py-2.5 pr-10 rounded-xl border text-sm font-semibold outline-none transition-all"
+                    className="w-full px-3.5 py-2.5 pr-10 rounded-xl border text-base font-semibold outline-none transition-all"
                     style={{
                       background: "var(--paper)",
                       borderColor: error ? "var(--shu)" : "var(--line)",

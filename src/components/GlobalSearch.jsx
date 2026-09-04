@@ -58,6 +58,7 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
   const [activeIndex, setActiveIndex] = useState(-1);
   const btnRef = useRef(null);
   const inputRef = useRef(null);
+  const hasFocusedRef = useRef(false);
   const listRef = useRef(null);
   const listId = useId();
   const isDesktop = variant === "desktop";
@@ -67,6 +68,7 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
   const results = searchGlobal(query, { minChars, lang });
 
   function openPanel() {
+    hasFocusedRef.current = false;
     if (btnRef.current) {
       const r = btnRef.current.getBoundingClientRect();
       const panelW = Math.min(380, window.innerWidth - 24);
@@ -80,6 +82,7 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
   }
 
   function closePanel() {
+    hasFocusedRef.current = false;
     setOpen(false);
     setQuery("");
     setActiveIndex(-1);
@@ -87,13 +90,17 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
 
   useEffect(() => {
     if (!open) return;
-    const frame = requestAnimationFrame(() => inputRef.current?.focus());
+    // Foco inmediato y de respaldo (para que en móviles y escritorio se coloque el cursor de inmediato)
+    inputRef.current?.focus({ preventScroll: true });
+    const timer = setTimeout(() => {
+      inputRef.current?.focus({ preventScroll: true });
+    }, 40);
     function onKey(e) {
       if (e.key === "Escape") closePanel();
     }
     window.addEventListener("keydown", onKey);
     return () => {
-      cancelAnimationFrame(frame);
+      clearTimeout(timer);
       window.removeEventListener("keydown", onKey);
     };
   }, [open]);
@@ -185,7 +192,18 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
             <div style={{ display: "flex", alignItems: "center", gap: 8, padding: "11px 13px", borderBottom: "1px solid var(--line)" }}>
               <Search size={17} style={{ color: "var(--shu)", flexShrink: 0 }} />
               <input
-                ref={inputRef}
+                ref={(node) => {
+                  inputRef.current = node;
+                  if (node && !hasFocusedRef.current) {
+                    hasFocusedRef.current = true;
+                    try {
+                      node.focus({ preventScroll: true });
+                    } catch {
+                      /* fallback handled by effect */
+                    }
+                  }
+                }}
+                autoFocus
                 type="search"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
@@ -198,12 +216,23 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
                 aria-expanded={results.length > 0}
                 aria-activedescendant={activeIndex >= 0 ? `${listId}-opt-${activeIndex}` : undefined}
                 aria-autocomplete="list"
-                style={{ flex: 1, border: "none", outline: "none", background: "transparent", fontSize: 15, color: "var(--ink)", minWidth: 0 }}
+                style={{
+                  flex: 1,
+                  border: "none",
+                  outline: "none",
+                  background: "transparent",
+                  fontSize: 16,
+                  color: "var(--ink)",
+                  minWidth: 0,
+                }}
               />
               {query && (
                 <button
                   type="button"
-                  onClick={() => setQuery("")}
+                  onClick={() => {
+                    setQuery("");
+                    inputRef.current?.focus({ preventScroll: true });
+                  }}
                   aria-label={t("search.clear")}
                   style={{ padding: 4, color: "var(--ink-soft)", display: "flex", background: "transparent", border: "none", cursor: "pointer", borderRadius: 6 }}
                 >
@@ -225,7 +254,10 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
                       <button
                         key={s.query}
                         type="button"
-                        onClick={() => setQuery(s.query)}
+                        onClick={() => {
+                          setQuery(s.query);
+                          inputRef.current?.focus({ preventScroll: true });
+                        }}
                         style={{
                           padding: "5px 11px",
                           borderRadius: 999,

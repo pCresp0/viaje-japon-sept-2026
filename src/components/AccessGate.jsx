@@ -183,7 +183,7 @@ export default function AccessGate({ onUnlock }) {
               }}
               placeholder="************"
               aria-label="Clave"
-              className="w-full rounded-xl px-3.5 py-3.5 pr-10 text-sm outline-none access-pass-input"
+              className="w-full rounded-xl px-3.5 py-3.5 pr-10 text-base outline-none access-pass-input"
               style={{
                 background: "var(--paper)",
                 border: `1.5px solid ${error ? "var(--shu)" : "var(--line)"}`,

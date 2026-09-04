@@ -32,6 +32,21 @@
   box-sizing: border-box;
 }
 
+/* Evitar zoom automático en iOS Safari al hacer foco en campos de texto (requiere font-size >= 16px) */
+@media screen and (max-width: 768px) {
+  input[type="text"],
+  input[type="search"],
+  input[type="password"],
+  input[type="number"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="url"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
 html, body, #root {
   height: 100%;
 }
