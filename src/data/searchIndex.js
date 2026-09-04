@@ -132,11 +132,11 @@ function buildSearchIndex(lang) {
     },
     {
       id: "nav-comidas",
-      title: "Comidas típicas",
-      subtitle: "Guía gastronómica, especialidades locales y restaurantes",
+      title: "Comidas y Konbinis",
+      subtitle: "Guía gastronómica, restaurantes y qué comprar en cada konbini/market",
       category: "Apartados",
       tab: "comidas",
-      terms: ["comidas", "comida", "gastronomia", "platos", "restaurantes", "que comer", "ramen", "sushi", "dulces", "guia"],
+      terms: ["comidas", "comida", "gastronomia", "platos", "restaurantes", "que comer", "ramen", "sushi", "dulces", "guia", "konbini", "konbinis", "supermercado", "supermercados", "market", "markets", "7-eleven", "familymart", "lawson", "ministop", "don quijote"],
     },
     {
       id: "nav-clima",
@@ -216,14 +216,27 @@ function buildSearchIndex(lang) {
     items.push(entry(n));
   }
 
-  // ── Vuelos ────────────────────────────────────────────────────────
+  // ── Vuelos y Visit Japan Web ──────────────────────────────────────
+  items.push(entry({
+    id: "visit-japan-web",
+    title: "Visit Japan Web · QR de Inmigración y Aduanas",
+    subtitle: "Códigos QR de entrada a Japón de los 5 viajeros",
+    category: "Vuelos",
+    tab: "vuelos",
+    targetId: "visit-japan-qr-card",
+    terms: [
+      "visit japan web", "visit japan", "qr", "qr aduana", "qr inmigracion",
+      "inmigracion", "aduanas", "pasaporte", "entrada japon", "desembarco",
+      "pablo", "sergio", "juan carlos", "randy", "thibaut",
+    ],
+  }));
   items.push(entry({
     id: "flight-out",
     title: `Vuelo ida · ${flights.out.flightNumber}`,
     subtitle: "Madrid → Doha → Narita · 6–7 sept",
     category: "Vuelos",
     tab: "vuelos",
-    targetId: "flight-out",
+    targetId: "flight-outbound-card",
     terms: [
       "vuelo", "ida", "qatar", "qr148", "qr808", "madrid", "barajas", "t4s",
       "doha", "doh", "hamad", "narita", "nrt", "t2", "escala",
@@ -236,7 +249,7 @@ function buildSearchIndex(lang) {
     subtitle: "Narita → Doha → Madrid · 21–22 sept",
     category: "Vuelos",
     tab: "vuelos",
-    targetId: "flight-back",
+    targetId: "flight-return-card",
     terms: [
       "vuelo", "vuelta", "qatar", "iberia", "qr809", "qr6952",
       "narita", "doha", "madrid", flights.booking.ref, flights.booking.pin,
@@ -832,6 +845,8 @@ function fuzzyMatches(query, title) {
 
 // Lista de sugerencias rápidas para mostrar en el panel vacío
 export const QUICK_SUGGESTIONS = [
+  { label: "Konbinis & Markets", query: "konbini" },
+  { label: "Famichiki / 7-Eleven", query: "famichiki" },
   { label: "Fushimi Inari", query: "fushimi" },
   { label: "eSIM / Holafly", query: "holafly" },
   { label: "Nozomi 53", query: "nozomi" },
@@ -843,6 +858,7 @@ export const QUICK_SUGGESTIONS = [
   { label: "Check-in", query: "check-in" },
   { label: "Suica", query: "suica" },
   { label: "Seguro", query: "heymondo" },
+  { label: "Visit Japan Web", query: "visit japan" },
   { label: "Pokémon", query: "pokemon" },
   { label: "Ken Kaneshima", query: "ken kaneshima" },
 ];

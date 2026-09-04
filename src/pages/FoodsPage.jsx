@@ -393,6 +393,17 @@ export default function FoodsPage() {
   const [mainTab, setMainTab] = useState("konbini"); // "tradicional" o "konbini"
   const [filter, setFilter] = useState("all");
   const t = useT();
+  const { highlightId } = useHighlight();
+
+  useEffect(() => {
+    if (highlightId) {
+      if (highlightId.startsWith("konbini-")) {
+        setMainTab("konbini");
+      } else if (highlightId.startsWith("food-")) {
+        setMainTab("tradicional");
+      }
+    }
+  }, [highlightId]);
 
   const filterButtons = [
     { id: "all", label: "Todos" },
