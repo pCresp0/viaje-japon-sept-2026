@@ -34,7 +34,7 @@ export default function DrawerWeatherWidget({ onNavigate, onClose }) {
   }
 
   return (
-    <div className="mt-4 px-1">
+    <div className="w-full">
       <button
         type="button"
         onClick={handleClick}

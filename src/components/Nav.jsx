@@ -230,20 +230,24 @@ function Drawer({ active, onChange, open, onClose }) {
             </button>
           </div>
 
-          {/* nav — scrollable con todos los apartados y el widget del tiempo */}
+          {/* nav — scrollable con los apartados (de arriba a abajo) */}
           <nav
             className="flex-1 flex flex-col gap-0.5 p-3 overflow-y-auto overflow-x-hidden"
             style={{
               minHeight: 0,
               WebkitOverflowScrolling: "touch",
-              paddingBottom: 20,
+              paddingBottom: 8,
             }}
           >
             <NavItems active={active} onChange={onChange} onClose={onClose} isMobile={true} />
-            <DrawerWeatherWidget onNavigate={onChange} onClose={onClose} />
           </nav>
+
+          {/* Widget del tiempo — siempre fijo justo encima de los accesos rápidos */}
+          <div className="shrink-0 px-3 pb-2 pt-1" style={{ zIndex: 5 }}>
+            <DrawerWeatherWidget onNavigate={onChange} onClose={onClose} />
+          </div>
           
-          {/* Quick access bottom bar — pie fijo siempre visible sin superponerse */}
+          {/* Quick access bottom bar — pie fijo siempre visible en la base */}
           <div className="shrink-0 flex items-center justify-around px-2 py-3"
                style={{ 
                  background: "rgba(35, 27, 27, 0.96)",
@@ -391,10 +395,12 @@ export function Sidebar({ active, onChange }) {
     >
       <div style={{ ...overlay, display: "flex", flexDirection: "column", height: "100%" }}>
         <nav className="flex-1 flex flex-col gap-0.5 p-3 overflow-y-auto overflow-x-hidden"
-          style={{ minHeight: 0, paddingTop: 14, paddingBottom: 20 }}>
+          style={{ minHeight: 0, paddingTop: 14, paddingBottom: 8 }}>
           <NavItems active={active} onChange={onChange} isMobile={false} />
-          <DrawerWeatherWidget onNavigate={onChange} />
         </nav>
+        <div className="shrink-0 px-3 pb-3 pt-1">
+          <DrawerWeatherWidget onNavigate={onChange} />
+        </div>
       </div>
     </aside>
   );
