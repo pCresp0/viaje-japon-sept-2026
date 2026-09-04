@@ -8,7 +8,6 @@ import DrawerWeatherWidget from "./DrawerWeatherWidget";
 // El campo `labelKey` se resuelve en tiempo de render con la función de
 // traducción, para que el menú cambie de idioma sin recargar la página.
 export const navStructure = [
-  { type: "item", id: "pendientes", labelKey: "nav.pendientes", descKey: "nav.desc.pendientes", icon: ListTodo, alert: true },
   { type: "item", id: "calendario", labelKey: "nav.calendario", descKey: "nav.desc.calendario", icon: CalendarDays },
   { type: "item", id: "itinerario", labelKey: "nav.itinerario", descKey: "nav.desc.itinerario", icon: Route },
   { type: "item", id: "mapa", labelKey: "nav.mapa", descKey: "nav.desc.mapa", icon: Map },
@@ -28,6 +27,7 @@ export const navStructure = [
     ]
   },
   { type: "group", id: "prep", labelKey: "nav.group.prep", items: [
+      { id: "pendientes", labelKey: "nav.pendientes", descKey: "nav.desc.pendientes", icon: ListTodo, alert: true },
       { id: "preparativos", labelKey: "nav.preparativos", descKey: "nav.desc.preparativos", icon: Backpack },
       { id: "presupuesto", labelKey: "nav.presupuesto", descKey: "nav.desc.presupuesto", icon: Wallet },
     ]
@@ -135,9 +135,14 @@ function NavItems({ active, onChange, onClose, isMobile }) {
                 }}
                 disabled={!isMobile}
               >
-                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.1em" }}>
-                  {t(node.labelKey)}
-                </span>
+                <div className="flex items-center gap-1.5">
+                  <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.1em" }}>
+                    {t(node.labelKey)}
+                  </span>
+                  {!isOpen && node.items.some(i => i.alert) && (
+                    <span className="alert-dot" aria-hidden="true" style={{ width: 6, height: 6 }} />
+                  )}
+                </div>
                 {isMobile && (
                   <span style={{ opacity: 0.5 }}>
                     {isOpen ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
@@ -171,6 +176,7 @@ function NavItems({ active, onChange, onClose, isMobile }) {
                     >
                       <Icon size={16} strokeWidth={isActive ? 2.4 : 2} />
                       <span style={{ fontSize: 13.5, letterSpacing: "0.01em" }}>{t(tab.labelKey)}</span>
+                      {tab.alert && <span className="alert-dot" aria-hidden="true" />}
                     </button>
                   );
                 })}
