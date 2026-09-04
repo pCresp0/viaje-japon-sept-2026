@@ -260,13 +260,33 @@ function KonbiniView() {
                   {chain.vibe}
                 </p>
 
-                <div className="mt-3 flex flex-wrap gap-2 text-[11.5px]">
-                  <span className="px-2 py-1 rounded-md bg-amber-500/10 text-amber-900 dark:text-amber-300 font-medium">
-                    🎯 <strong>Especialidad:</strong> {chain.specialty}
-                  </span>
-                  <span className="px-2 py-1 rounded-md bg-emerald-500/10 text-emerald-900 dark:text-emerald-300 font-medium">
-                    💡 <strong>Ideal para:</strong> {chain.bestFor}
-                  </span>
+                <div className="mt-3 flex flex-col sm:flex-row gap-2 text-[12px]">
+                  <div
+                    className="px-3 py-1.5 rounded-lg flex items-center gap-1.5 border"
+                    style={{
+                      backgroundColor: "rgba(180, 83, 9, 0.08)",
+                      borderColor: "rgba(180, 83, 9, 0.22)",
+                      color: "var(--ink)",
+                    }}
+                  >
+                    <span>🎯</span>
+                    <span>
+                      <strong style={{ color: "#b45309" }}>Especialidad:</strong> {chain.specialty}
+                    </span>
+                  </div>
+                  <div
+                    className="px-3 py-1.5 rounded-lg flex items-center gap-1.5 border"
+                    style={{
+                      backgroundColor: "rgba(15, 118, 110, 0.08)",
+                      borderColor: "rgba(15, 118, 110, 0.22)",
+                      color: "var(--ink)",
+                    }}
+                  >
+                    <span>💡</span>
+                    <span>
+                      <strong style={{ color: "#0f766e" }}>Ideal para:</strong> {chain.bestFor}
+                    </span>
+                  </div>
                 </div>
               </div>
 
@@ -311,10 +331,14 @@ function KonbiniView() {
 
                         {item.highlight && (
                           <div
-                            className="text-[11px] font-semibold px-2 py-1 rounded-md mb-2.5"
-                            style={{ background: "rgba(234, 179, 8, 0.12)", color: "#854d0e" }}
+                            className="text-[11.5px] font-medium px-2.5 py-1 rounded-md mb-2.5 border"
+                            style={{
+                              background: "rgba(217, 119, 6, 0.09)",
+                              borderColor: "rgba(217, 119, 6, 0.25)",
+                              color: "var(--ink)",
+                            }}
                           >
-                            {item.highlight}
+                            <span className="font-bold" style={{ color: "#b45309" }}>{item.highlight}</span>
                           </div>
                         )}
 
