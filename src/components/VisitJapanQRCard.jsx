@@ -11,14 +11,14 @@ export const groupMembers = [
   { id: "thibaut", name: "Thibaut Fossat", hasQR: true, qrPath: "/images/visit-japan-qr-thibaut.png", role: "Titular", passHash: "97cf94ea5536d9ce870ce055760f81c6b355df478d4566ae3140a4dc1cdec3d5" },
 ];
 
-export default function VisitJapanQRCard() {
+export default function VisitJapanQRCard({ defaultExpanded = false, isPriorityToday = false } = {}) {
   const [selectedMember, setSelectedMember] = useState(null);
   const [step, setStep] = useState("idle"); // 'idle' | 'select_member' | 'enter_password' | 'unlocked'
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showFullQR, setShowFullQR] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(defaultExpanded);
 
   function startUnlockFlow() {
     setStep("select_member");
@@ -84,6 +84,11 @@ export default function VisitJapanQRCard() {
               <span className="text-xs text-blue-100 font-semibold truncate">
                 Inmigración y Aduanas
               </span>
+              {isPriorityToday && (
+                <span className="text-[10px] bg-amber-400 text-amber-950 font-extrabold px-1.5 py-0.5 rounded uppercase tracking-wider leading-none shadow-sm">
+                  ⭐ Necesario hoy
+                </span>
+              )}
             </div>
             <h3 className="text-[13.5px] sm:text-sm font-bold text-white leading-tight mt-0.5 truncate" style={{ margin: 0 }}>
               Código QR de Llegada a Narita

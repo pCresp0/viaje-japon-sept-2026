@@ -1,12 +1,20 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useContent, useT } from "../i18n/LanguageContext";
-import { fmtDate } from "../utils/date";
+import { fmtDate, getDefaultTripDay } from "../utils/date";
 import { PlaneTakeoff, PlaneLanding, ChevronDown } from "lucide-react";
 import VisitJapanQRCard from "../components/VisitJapanQRCard";
 
 export default function InfoPage() {
   const { flights } = useContent();
   const t = useT();
+  const currentDay = getDefaultTripDay();
+
+  // Día 0 (salida Madrid 6 sept) o Día 1 (llegada 7 sept): ida activa
+  // Día 1 (llegada a Narita) o Día 0 (vuelo): Visit Japan Web activo
+  // Día 15 (21 sept) o posterior: vuelta activa
+  const isOutboundActive = currentDay <= 1;
+  const isVisitJapanActive = currentDay === 1 || currentDay === 0;
+  const isReturnActive = currentDay >= 15;
 
   return (
     <div className="px-4 pt-3 pb-8">
@@ -23,7 +31,12 @@ export default function InfoPage() {
       </div>
 
       {/* QR Visit Japan Web para entrada a Japón */}
-      <VisitJapanQRCard />
+      <div id="visit-japan-qr-card">
+        <VisitJapanQRCard 
+          defaultExpanded={isVisitJapanActive}
+          isPriorityToday={isVisitJapanActive}
+        />
+      </div>
 
       <div style={{
         display: "grid",
@@ -31,22 +44,46 @@ export default function InfoPage() {
         gap: 16,
         alignItems: "start",
       }}>
-        <FlightRow flight={flights.out} icon={PlaneTakeoff} />
-        <FlightRow flight={flights.back} icon={PlaneLanding} />
+        <div id="flight-outbound-card">
+          <FlightRow 
+            flight={flights.out} 
+            icon={PlaneTakeoff} 
+            defaultExpanded={isOutboundActive}
+            isTodayFlight={isOutboundActive}
+          />
+        </div>
+        <div id="flight-return-card">
+          <FlightRow 
+            flight={flights.back} 
+            icon={PlaneLanding} 
+            defaultExpanded={isReturnActive}
+            isTodayFlight={isReturnActive}
+          />
+        </div>
       </div>
     </div>
   );
 }
 
-function FlightRow({ flight, icon: Icon }) {
+function FlightRow({ flight, icon: Icon, defaultExpanded = false, isTodayFlight = false }) {
   // For round trip flights, we need to parse the journey
   // Ida: Madrid -> Doha -> Narita
   // Vuelta: Narita -> Doha -> Madrid
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(defaultExpanded);
+  const rowRef = useRef(null);
   
   // Se compara contra un campo estable, nunca contra el texto visible:
   // el label se traduce y la comparación se rompería.
   const isOutbound = flight.dir === "out";
+
+  useEffect(() => {
+    if (defaultExpanded && rowRef.current && !isOutbound) {
+      const t = window.setTimeout(() => {
+        rowRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 120);
+      return () => window.clearTimeout(t);
+    }
+  }, [defaultExpanded, isOutbound]);
   
   // Parse times
   const depTime = new Date(flight.depart.time);
@@ -76,17 +113,30 @@ function FlightRow({ flight, icon: Icon }) {
   const routeSummary = isOutbound ? "Madrid → Doha → Narita" : "Narita → Doha → Madrid";
   
   return (
-    <div className="rounded-2xl overflow-hidden" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
+    <div 
+      ref={rowRef}
+      className="rounded-2xl overflow-hidden transition-all" 
+      style={{ 
+        background: "var(--paper-raised)", 
+        border: isTodayFlight ? "1.5px solid var(--shu)" : "1px solid var(--line)",
+        boxShadow: isTodayFlight ? "0 0 0 2px rgba(188, 71, 73, 0.22)" : "none"
+      }}
+    >
       <button
         type="button"
         onClick={() => setExpanded(!expanded)}
         className="w-full text-left p-4 cursor-pointer transition-colors hover:bg-black/[0.02] border-none bg-transparent"
       >
         <div className="flex items-start justify-between gap-3">
-          <div className="min-w-0">
+          <div className="min-w-0 flex-1">
             <div className="flex items-center gap-2 mb-1.5" style={{ color: "var(--shu)" }}>
               <Icon size={18} />
               <p className="eyebrow font-semibold m-0">{flight.label} · {flight.flightNumber}</p>
+              {isTodayFlight && (
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-300 text-amber-950 shadow-sm ml-auto">
+                  ⭐ Vuelo de hoy
+                </span>
+              )}
             </div>
             <p className="text-sm font-bold m-0" style={{ color: "var(--ink)" }}>{routeSummary}</p>
             <p className="text-xs mt-1 m-0" style={{ color: "var(--ink-soft)" }}>
