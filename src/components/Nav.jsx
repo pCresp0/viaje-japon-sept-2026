@@ -205,9 +205,9 @@ function Drawer({ active, onChange, open, onClose }) {
           boxShadow: open ? "6px 0 32px rgba(0,0,0,0.4)" : "none",
         }}
       >
-        <div style={{ ...overlay, display: "flex", flexDirection: "column" }}>
+        <div style={{ ...overlay, display: "flex", flexDirection: "column", height: "100%" }}>
           {/* header */}
-          <div className="flex items-center justify-between px-5 pt-12 pb-5"
+          <div className="shrink-0 flex items-center justify-between px-5 pt-12 pb-5"
             style={{ borderBottom: "1px solid rgba(255,255,255,0.1)" }}>
             <div>
               <div className="flex items-center gap-2 mb-0.5">
@@ -224,18 +224,28 @@ function Drawer({ active, onChange, open, onClose }) {
             </button>
           </div>
 
-          {/* nav — scrollable si hay más items de los que caben */}
-          <nav className="flex flex-col gap-0.5 p-3"
-            style={{ flex: 1, overflowY: "auto", overflowX: "hidden", paddingBottom: 90 }}>
+          {/* nav — scrollable con todos los apartados y el widget del tiempo */}
+          <nav
+            className="flex-1 flex flex-col gap-0.5 p-3 overflow-y-auto overflow-x-hidden"
+            style={{
+              minHeight: 0,
+              WebkitOverflowScrolling: "touch",
+              paddingBottom: 20,
+            }}
+          >
             <NavItems active={active} onChange={onChange} onClose={onClose} isMobile={true} />
             <DrawerWeatherWidget onNavigate={onChange} onClose={onClose} />
           </nav>
           
-          {/* Quick access bottom bar */}
-          <div className="absolute bottom-0 left-0 right-0 flex items-center justify-around px-2 pb-5 pt-8"
+          {/* Quick access bottom bar — pie fijo siempre visible sin superponerse */}
+          <div className="shrink-0 flex items-center justify-around px-2 py-3"
                style={{ 
-                 background: "linear-gradient(to top, rgba(35,27,27,1) 40%, rgba(35,27,27,0.95) 60%, rgba(35,27,27,0.7) 80%, rgba(35,27,27,0))",
-                 borderTop: "none"
+                 background: "rgba(35, 27, 27, 0.96)",
+                 borderTop: "1px solid rgba(255, 255, 255, 0.1)",
+                 backdropFilter: "blur(12px)",
+                 boxShadow: "0 -4px 16px rgba(0,0,0,0.35)",
+                 zIndex: 10,
+                 paddingBottom: "calc(0.75rem + env(safe-area-inset-bottom, 0px))"
                }}>
             {[
               { id: "calendario", icon: CalendarDays },
@@ -373,10 +383,11 @@ export function Sidebar({ active, onChange }) {
       className="hidden md:flex flex-col h-full sticky top-0 shrink-0"
       style={{ width: 230, ...sidebarBg }}
     >
-      <div style={{ ...overlay, display: "flex", flexDirection: "column" }}>
-        <nav className="flex flex-col gap-0.5 p-3"
-          style={{ flex: 1, overflowY: "auto", overflowX: "hidden", paddingTop: 14 }}>
+      <div style={{ ...overlay, display: "flex", flexDirection: "column", height: "100%" }}>
+        <nav className="flex-1 flex flex-col gap-0.5 p-3 overflow-y-auto overflow-x-hidden"
+          style={{ minHeight: 0, paddingTop: 14, paddingBottom: 20 }}>
           <NavItems active={active} onChange={onChange} isMobile={false} />
+          <DrawerWeatherWidget onNavigate={onChange} />
         </nav>
       </div>
     </aside>
