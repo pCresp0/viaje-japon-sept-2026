@@ -6,6 +6,7 @@ import { categories as phraseCategories, etiquette } from "../pages/PhrasesPage"
 import { sections as prepSections } from "../pages/PrepPage";
 import { emergencyNumbers, embassy } from "../pages/EmergencyPage";
 import { slug } from "../utils/slug";
+import { konbiniChains } from "./konbiniGuide";
 
 function normalize(s) {
   return String(s || "")
@@ -427,6 +428,50 @@ function buildSearchIndex(lang) {
       targetId: slug("food", f.id),
       terms: [f.name, f.jp, f.desc, f.where, f.id],
     }));
+  }
+
+  // ── Konbinis & Markets ─────────────────────────────────────────────
+  for (const chain of konbiniChains) {
+    items.push(entry({
+      id: `konbini-${chain.id}`,
+      title: `${chain.name} · Guía de compra`,
+      subtitle: chain.badge,
+      category: "Comidas",
+      tab: "comidas",
+      targetId: `konbini-${chain.id}`,
+      terms: [
+        chain.name,
+        chain.jp,
+        "konbini",
+        "market",
+        "tienda",
+        "supermercado",
+        chain.specialty,
+        chain.bestFor,
+        chain.vibe,
+      ],
+    }));
+
+    chain.items.forEach((item, idx) => {
+      items.push(entry({
+        id: `konbini-item-${chain.id}-${idx}`,
+        title: `${item.name} (${chain.name})`,
+        subtitle: `${item.price} · ${item.tag}`,
+        category: "Comidas",
+        tab: "comidas",
+        targetId: slug("konbini", `${chain.id}-${idx}`),
+        terms: [
+          item.name,
+          item.jp,
+          item.desc,
+          item.tip,
+          item.highlight,
+          chain.name,
+          "konbini",
+          "market",
+        ],
+      }));
+    });
   }
 
   // ── Lugares (guías) ───────────────────────────────────────────────

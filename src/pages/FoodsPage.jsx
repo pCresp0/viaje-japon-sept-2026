@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from "react";
-import { UtensilsCrossed } from "lucide-react";
+import { UtensilsCrossed, Store, Sparkles, ChevronRight, Info, Flame, Coffee, Tag, ShoppingBag } from "lucide-react";
 import { useContent, useT } from "../i18n/LanguageContext";
 import { useHighlight } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
+import { konbiniChains, konbiniRules } from "../data/konbiniGuide";
 
 function FoodCard({ food, accent }) {
   const [imgOk, setImgOk] = useState(true);
@@ -130,8 +131,222 @@ function FoodCard({ food, accent }) {
   );
 }
 
+function KonbiniView() {
+  const [selectedChain, setSelectedChain] = useState("all");
+  const { highlightId } = useHighlight();
+
+  useEffect(() => {
+    if (highlightId && highlightId.startsWith("konbini-")) {
+      const el = document.getElementById(highlightId);
+      if (el) {
+        setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "center" }), 60);
+      }
+    }
+  }, [highlightId]);
+
+  return (
+    <div>
+      {/* Intro Konbinis */}
+      <div
+        className="rounded-2xl p-4 sm:p-5 mb-6 border"
+        style={{
+          background: "linear-gradient(135deg, rgba(29,53,87,0.05) 0%, rgba(188,71,73,0.04) 100%)",
+          borderColor: "rgba(29,53,87,0.15)",
+        }}
+      >
+        <div className="flex items-center gap-2 mb-2">
+          <Store size={20} style={{ color: "var(--shu)" }} />
+          <h3 className="font-bold text-base sm:text-lg" style={{ color: "var(--indigo)", margin: 0 }}>
+            Guía de Konbinis y Supermercados
+          </h3>
+        </div>
+        <p className="text-xs sm:text-sm leading-relaxed mb-4" style={{ color: "var(--ink-soft)" }}>
+          En Japón, las tiendas de conveniencia (<strong>konbini</strong>) son un arte culinario abierto las 24 horas.
+          Cada cadena tiene sus puntos fuertes indiscutibles: no compres lo mismo en todas. Aquí tienes el mapa de qué pillar en cada una.
+        </p>
+
+        {/* 4 Reglas de Oro */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+          {konbiniRules.map((rule, idx) => (
+            <div
+              key={idx}
+              className="p-2.5 rounded-xl border flex gap-2.5 items-start"
+              style={{ background: "var(--paper-raised)", borderColor: "rgba(0,0,0,0.06)" }}
+            >
+              <span className="text-lg leading-none mt-0.5">{rule.icon}</span>
+              <div>
+                <h4 className="text-xs font-bold mb-0.5" style={{ color: "var(--ink)" }}>{rule.title}</h4>
+                <p className="text-[11.5px] leading-relaxed" style={{ color: "var(--ink-soft)", margin: 0 }}>
+                  {rule.desc}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Selector de cadena rápida */}
+      <div className="flex gap-2 overflow-x-auto pb-3 mb-5" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+        <button
+          onClick={() => setSelectedChain("all")}
+          className="px-3 py-1.5 rounded-full shrink-0 text-xs font-semibold transition-colors"
+          style={{
+            backgroundColor: selectedChain === "all" ? "var(--indigo)" : "rgba(0,0,0,0.04)",
+            color: selectedChain === "all" ? "#fff" : "var(--ink)",
+            border: selectedChain === "all" ? "1px solid var(--indigo)" : "1px solid rgba(0,0,0,0.08)",
+            cursor: "pointer",
+          }}
+        >
+          🏪 Todas las cadenas
+        </button>
+        {konbiniChains.map((c) => {
+          const isAct = selectedChain === c.id;
+          return (
+            <button
+              key={c.id}
+              onClick={() => setSelectedChain(c.id)}
+              className="px-3 py-1.5 rounded-full shrink-0 text-xs font-semibold flex items-center gap-1.5 transition-colors"
+              style={{
+                backgroundColor: isAct ? c.themeColor : "rgba(0,0,0,0.04)",
+                color: isAct ? "#ffffff" : "var(--ink)",
+                border: `1px solid ${isAct ? c.themeColor : "rgba(0,0,0,0.08)"}`,
+                cursor: "pointer",
+              }}
+            >
+              <span>{c.name.split(" ")[0]}</span>
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Listado de Cadenas y Productos */}
+      <div className="space-y-8">
+        {konbiniChains
+          .filter((c) => selectedChain === "all" || selectedChain === c.id)
+          .map((chain) => (
+            <section
+              key={chain.id}
+              id={`konbini-${chain.id}`}
+              className="rounded-2xl border overflow-hidden p-4 sm:p-6"
+              style={{
+                background: "var(--paper-raised)",
+                borderColor: chain.borderColor,
+                boxShadow: "0 2px 8px rgba(0,0,0,0.02)",
+              }}
+            >
+              {/* Header de la Cadena */}
+              <div className="border-b pb-4 mb-5" style={{ borderColor: "var(--line)" }}>
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-1.5">
+                  <div className="flex items-center gap-2.5">
+                    <span
+                      className="px-2.5 py-1 rounded-lg text-xs font-black tracking-wider text-white uppercase shadow-sm"
+                      style={{ backgroundColor: chain.themeColor }}
+                    >
+                      {chain.name}
+                    </span>
+                    <span className="text-xs font-medium" style={{ color: "var(--ink-soft)" }}>
+                      {chain.jp}
+                    </span>
+                  </div>
+                  <span
+                    className="text-[11px] font-bold px-2.5 py-0.5 rounded-full"
+                    style={{ background: chain.bgLight, color: chain.themeColor, border: `1px solid ${chain.borderColor}` }}
+                  >
+                    {chain.badge}
+                  </span>
+                </div>
+
+                <p className="text-xs sm:text-sm mt-2 leading-relaxed" style={{ color: "var(--ink)" }}>
+                  {chain.vibe}
+                </p>
+
+                <div className="mt-3 flex flex-wrap gap-2 text-[11.5px]">
+                  <span className="px-2 py-1 rounded-md bg-amber-500/10 text-amber-900 dark:text-amber-300 font-medium">
+                    🎯 <strong>Especialidad:</strong> {chain.specialty}
+                  </span>
+                  <span className="px-2 py-1 rounded-md bg-emerald-500/10 text-emerald-900 dark:text-emerald-300 font-medium">
+                    💡 <strong>Ideal para:</strong> {chain.bestFor}
+                  </span>
+                </div>
+              </div>
+
+              {/* Items recomendados de la cadena */}
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 300px), 1fr))",
+                  gap: 14,
+                }}
+              >
+                {chain.items.map((item, idx) => {
+                  const itemId = slug("konbini", `${chain.id}-${idx}`);
+                  return (
+                    <div
+                      key={idx}
+                      id={itemId}
+                      className="rounded-xl border p-4 flex flex-col justify-between"
+                      style={{
+                        background: "var(--paper)",
+                        borderColor: "var(--line)",
+                      }}
+                    >
+                      <div>
+                        <div className="flex items-start justify-between gap-2 mb-1">
+                          <h4 className="font-bold text-sm sm:text-base leading-snug" style={{ color: "var(--ink)" }}>
+                            {item.name}
+                          </h4>
+                          <span className="text-xs font-bold px-2 py-0.5 rounded-full shrink-0 ml-1" style={{ background: "rgba(0,0,0,0.06)", color: "var(--ink)" }}>
+                            {item.price}
+                          </span>
+                        </div>
+
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className="text-[11.5px] font-medium" style={{ color: "var(--ink-soft)" }}>
+                            {item.jp}
+                          </span>
+                          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: `${chain.themeColor}15`, color: chain.themeColor }}>
+                            {item.tag}
+                          </span>
+                        </div>
+
+                        {item.highlight && (
+                          <div
+                            className="text-[11px] font-semibold px-2 py-1 rounded-md mb-2.5"
+                            style={{ background: "rgba(234, 179, 8, 0.12)", color: "#854d0e" }}
+                          >
+                            {item.highlight}
+                          </div>
+                        )}
+
+                        <p className="text-xs leading-relaxed mb-3" style={{ color: "var(--ink)" }}>
+                          {item.desc}
+                        </p>
+                      </div>
+
+                      {item.tip && (
+                        <div
+                          className="rounded-lg p-2.5 mt-2"
+                          style={{ background: "var(--paper-raised)", borderLeft: `3px solid ${chain.themeColor}` }}
+                        >
+                          <p className="text-[11.5px] leading-snug m-0" style={{ color: "var(--ink-soft)" }}>
+                            💡 <strong>Tip:</strong> {item.tip}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+          ))}
+      </div>
+    </div>
+  );
+}
+
 export default function FoodsPage() {
   const { foods, foodCategories } = useContent();
+  const [mainTab, setMainTab] = useState("konbini"); // "tradicional" o "konbini"
   const [filter, setFilter] = useState("all");
   const t = useT();
 
@@ -168,41 +383,99 @@ export default function FoodsPage() {
         </p>
       </div>
 
-      {/* Barra de Filtros */}
-      <div className="flex gap-2 overflow-x-auto pb-4 mb-4" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
-        {filterButtons.map((btn) => {
-          const isActive = filter === btn.id;
-          return (
-            <button
-              key={btn.id}
-              onClick={() => setFilter(btn.id)}
-              className="px-3.5 py-1.5 rounded-full shrink-0 transition-colors"
-              style={{
-                fontSize: 13,
-                fontWeight: 500,
-                backgroundColor: isActive ? "var(--shu)" : "rgba(0,0,0,0.04)",
-                color: isActive ? "#ffffff" : "var(--ink)",
-                border: isActive ? "1px solid var(--shu-deep)" : "1px solid rgba(0,0,0,0.08)",
-                cursor: "pointer",
-                WebkitTapHighlightColor: "transparent"
-              }}
-            >
-              {btn.label}
-            </button>
-          );
-        })}
+      {/* Selector de Pestaña Principal: Gastronomía Tradicional vs Konbinis & Markets */}
+      <div className="flex gap-2 p-1 rounded-xl mb-5 max-w-md" style={{ background: "rgba(0,0,0,0.05)" }}>
+        <button
+          onClick={() => setMainTab("konbini")}
+          className="flex-1 py-2 px-3 rounded-lg text-xs sm:text-sm font-bold flex items-center justify-center gap-1.5 transition-all"
+          style={{
+            backgroundColor: mainTab === "konbini" ? "var(--paper-raised)" : "transparent",
+            color: mainTab === "konbini" ? "var(--shu)" : "var(--ink-soft)",
+            boxShadow: mainTab === "konbini" ? "0 2px 6px rgba(0,0,0,0.08)" : "none",
+            border: "none",
+            cursor: "pointer",
+          }}
+        >
+          <Store size={15} />
+          <span>🏪 Konbinis & Markets</span>
+        </button>
+
+        <button
+          onClick={() => setMainTab("tradicional")}
+          className="flex-1 py-2 px-3 rounded-lg text-xs sm:text-sm font-bold flex items-center justify-center gap-1.5 transition-all"
+          style={{
+            backgroundColor: mainTab === "tradicional" ? "var(--paper-raised)" : "transparent",
+            color: mainTab === "tradicional" ? "var(--indigo)" : "var(--ink-soft)",
+            boxShadow: mainTab === "tradicional" ? "0 2px 6px rgba(0,0,0,0.08)" : "none",
+            border: "none",
+            cursor: "pointer",
+          }}
+        >
+          <UtensilsCrossed size={15} />
+          <span>🍱 Platos y Restaurantes</span>
+        </button>
       </div>
 
-      {filter === "all" ? (
-        foodCategories.map((cat) => {
-          const items = foods.filter((f) => f.category === cat.id);
-          if (!items.length) return null;
-          return (
-            <section key={cat.id} className="mb-8">
-              <div className="flex items-center gap-2 mb-3">
-                <UtensilsCrossed size={16} style={{ color: cat.color }} />
-                <h3 className="eyebrow" style={{ color: cat.color, margin: 0 }}>{cat.title}</h3>
-              </div>
+      {/* Vista de Konbini */}
+      {mainTab === "konbini" && <KonbiniView />}
+
+      {/* Vista Tradicional */}
+      {mainTab === "tradicional" && (
+        <>
+          {/* Barra de Filtros */}
+          <div className="flex gap-2 overflow-x-auto pb-4 mb-4" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+            {filterButtons.map((btn) => {
+              const isActive = filter === btn.id;
+              return (
+                <button
+                  key={btn.id}
+                  onClick={() => setFilter(btn.id)}
+                  className="px-3.5 py-1.5 rounded-full shrink-0 transition-colors"
+                  style={{
+                    fontSize: 13,
+                    fontWeight: 500,
+                    backgroundColor: isActive ? "var(--shu)" : "rgba(0,0,0,0.04)",
+                    color: isActive ? "#ffffff" : "var(--ink)",
+                    border: isActive ? "1px solid var(--shu-deep)" : "1px solid rgba(0,0,0,0.08)",
+                    cursor: "pointer",
+                    WebkitTapHighlightColor: "transparent"
+                  }}
+                >
+                  {btn.label}
+                </button>
+              );
+            })}
+          </div>
+
+          {filter === "all" ? (
+            foodCategories.map((cat) => {
+              const items = foods.filter((f) => f.category === cat.id);
+              if (!items.length) return null;
+              return (
+                <section key={cat.id} className="mb-8">
+                  <div className="flex items-center gap-2 mb-3">
+                    <UtensilsCrossed size={16} style={{ color: cat.color }} />
+                    <h3 className="eyebrow" style={{ color: cat.color, margin: 0 }}>{cat.title}</h3>
+                  </div>
+                  <div
+                    style={{
+                      display: "grid",
+                      gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 280px), 1fr))",
+                      gap: 14,
+                    }}
+                  >
+                    {items.map((food) => (
+                      <FoodCard key={food.id} food={food} accent={cat.color} />
+                    ))}
+                  </div>
+                </section>
+              );
+            })
+          ) : (
+            <section className="mb-8">
+              <p className="text-xs font-semibold mb-3" style={{ color: "var(--ink-soft)" }}>
+                Mostrando {filteredFoods.length} resultados
+              </p>
               <div
                 style={{
                   display: "grid",
@@ -210,32 +483,16 @@ export default function FoodsPage() {
                   gap: 14,
                 }}
               >
-                {items.map((food) => (
-                  <FoodCard key={food.id} food={food} accent={cat.color} />
-                ))}
+                {filteredFoods.map((food) => {
+                  const cat = foodCategories.find((c) => c.id === food.category);
+                  return <FoodCard key={food.id} food={food} accent={cat?.color || "var(--shu)"} />;
+                })}
               </div>
             </section>
-          );
-        })
-      ) : (
-        <section className="mb-8">
-          <p className="text-xs font-semibold mb-3" style={{ color: "var(--ink-soft)" }}>
-            Mostrando {filteredFoods.length} resultados
-          </p>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 280px), 1fr))",
-              gap: 14,
-            }}
-          >
-            {filteredFoods.map((food) => {
-              const cat = foodCategories.find((c) => c.id === food.category);
-              return <FoodCard key={food.id} food={food} accent={cat?.color || "var(--shu)"} />;
-            })}
-          </div>
-        </section>
+          )}
+        </>
       )}
     </div>
   );
 }
+
