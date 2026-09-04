@@ -269,7 +269,7 @@ function Drawer({ active, onChange, open, onClose }) {
               { id: "calendario", icon: CalendarDays },
               { id: "mapa", icon: Map },
               { id: "transportes", icon: Train },
-              { id: "clima", icon: Cloud }
+              { id: "comidas", icon: UtensilsCrossed }
             ].map(item => {
               const isActive = active === item.id;
               const Icon = item.icon;

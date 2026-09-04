@@ -1,4 +1,4 @@
-import { Cloud, CloudRain, Sun, CloudSun, Droplets, MapPin, ArrowRight, ArrowRightLeft } from "lucide-react";
+import { Cloud, CloudRain, Sun, CloudSun, Droplets, MapPin, ArrowRightLeft } from "lucide-react";
 import { useTodayWeatherForecast } from "../utils/weatherService";
 import { useT } from "../i18n";
 
@@ -49,29 +49,22 @@ export default function DrawerWeatherWidget({ onNavigate, onClose }) {
         }}
       >
         {/* Widget Header */}
-        <div className="flex items-center justify-between gap-1 mb-2">
-          <div className="flex items-center gap-1.5 min-w-0">
-            <Droplets size={13} className="text-sky-400 shrink-0" />
-            <span
-              style={{
-                fontSize: 11,
-                fontWeight: 700,
-                color: "#e8b74a",
-                letterSpacing: "0.04em",
-                textTransform: "uppercase",
-              }}
-            >
-              {t("nav.rainToday") || "Lluvia hoy"}
-            </span>
-            <span style={{ fontSize: 10.5, color: "rgba(255,255,255,0.6)", fontWeight: 500 }}>
-              {`· ${t("common.day") || "Día"} ${dayNum}${dateLabel ? ` (${dateLabel})` : ""}`}
-            </span>
-          </div>
-
-          <div className="flex items-center gap-0.5 text-white/50 group-hover:text-white transition-colors">
-            <span style={{ fontSize: 10, fontWeight: 600 }}>{t("nav.clima") || "Clima"}</span>
-            <ArrowRight size={11} />
-          </div>
+        <div className="flex items-center gap-1.5 mb-2">
+          <Droplets size={13} className="text-sky-400 shrink-0" />
+          <span
+            style={{
+              fontSize: 11,
+              fontWeight: 700,
+              color: "#e8b74a",
+              letterSpacing: "0.04em",
+              textTransform: "uppercase",
+            }}
+          >
+            {t("nav.rainToday") || "Lluvia hoy"}
+          </span>
+          <span style={{ fontSize: 10.5, color: "rgba(255,255,255,0.6)", fontWeight: 500 }}>
+            {`· ${t("common.day") || "Día"} ${dayNum}${dateLabel ? ` (${dateLabel})` : ""}`}
+          </span>
         </div>
 
         {/* Cities Forecast Cards */}
