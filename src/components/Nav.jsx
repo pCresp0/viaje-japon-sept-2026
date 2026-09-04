@@ -9,13 +9,10 @@ import DrawerWeatherWidget from "./DrawerWeatherWidget";
 // traducción, para que el menú cambie de idioma sin recargar la página.
 export const navStructure = [
   { type: "item", id: "pendientes", labelKey: "nav.pendientes", descKey: "nav.desc.pendientes", icon: ListTodo, alert: true },
+  { type: "item", id: "calendario", labelKey: "nav.calendario", descKey: "nav.desc.calendario", icon: CalendarDays },
+  { type: "item", id: "itinerario", labelKey: "nav.itinerario", descKey: "nav.desc.itinerario", icon: Route },
+  { type: "item", id: "mapa", labelKey: "nav.mapa", descKey: "nav.desc.mapa", icon: Map },
   
-  { type: "group", id: "plan", labelKey: "nav.group.plan", items: [
-      { id: "itinerario", labelKey: "nav.itinerario", descKey: "nav.desc.itinerario", icon: Route },
-      { id: "calendario", labelKey: "nav.calendario", descKey: "nav.desc.calendario", icon: CalendarDays },
-      { id: "mapa", labelKey: "nav.mapa", descKey: "nav.desc.mapa", icon: Map },
-    ]
-  },
   { type: "group", id: "viaje", labelKey: "nav.group.viaje", items: [
       { id: "vuelos", labelKey: "nav.vuelos", descKey: "nav.desc.vuelos", icon: Plane },
       { id: "hoteles", labelKey: "nav.hoteles", descKey: "nav.desc.hoteles", icon: Hotel },
@@ -38,11 +35,10 @@ export const navStructure = [
   { type: "group", id: "util", labelKey: "nav.group.util", items: [
       { id: "herramientas", labelKey: "nav.herramientas", descKey: "nav.desc.herramientas", icon: Clock },
       { id: "emergencias", labelKey: "nav.emergencias", descKey: "nav.desc.emergencias", icon: ShieldAlert },
+      { id: "frikadas", labelKey: "nav.frikadas", descKey: "nav.desc.frikadas", icon: Sparkles },
+      { id: "about", labelKey: "nav.about", descKey: "nav.desc.about", icon: Info },
     ]
   },
-  
-  { type: "item", id: "frikadas", labelKey: "nav.frikadas", descKey: "nav.desc.frikadas", icon: Sparkles },
-  { type: "item", id: "about", labelKey: "nav.about", descKey: "nav.desc.about", icon: Info },
 ];
 
 export const tabs = navStructure.reduce((acc, curr) => {
@@ -117,8 +113,7 @@ function NavItems({ active, onChange, onClose, isMobile }) {
                 color: isActive ? "#fff" : tab.alert ? "#fff" : "rgba(255,255,255,0.8)",
                 borderLeft: isActive ? "3px solid #e8b74a" : "3px solid transparent",
                 fontWeight: isActive || tab.alert ? 700 : 500,
-                marginBottom: tab.alert ? 12 : 4,
-                marginTop: tab.id === "frikadas" ? 12 : 0,
+                marginBottom: tab.alert ? 10 : tab.id === "mapa" ? 12 : 3,
               }}
             >
               <Icon size={17} strokeWidth={isActive || tab.alert ? 2.4 : 2} />
@@ -243,8 +238,8 @@ function Drawer({ active, onChange, open, onClose }) {
                  borderTop: "none"
                }}>
             {[
-              { id: "itinerario", icon: Route },
               { id: "calendario", icon: CalendarDays },
+              { id: "itinerario", icon: Route },
               { id: "mapa", icon: Map },
               { id: "transportes", icon: Train },
               { id: "clima", icon: Cloud }
