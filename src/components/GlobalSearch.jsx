@@ -67,17 +67,36 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
   const minChars = shortCode ? 2 : 3;
   const results = searchGlobal(query, { minChars, lang });
 
+  function calculateCoords() {
+    if (!btnRef.current) return null;
+    const r = btnRef.current.getBoundingClientRect();
+    const isMobile = window.innerWidth < 768 || !isDesktop;
+
+    if (isMobile) {
+      return {
+        top: r.bottom + 8,
+        left: 12,
+        right: 12,
+        width: "auto",
+      };
+    }
+
+    const panelW = 400;
+    let right = window.innerWidth - r.right;
+    if (window.innerWidth - right - panelW < 16) {
+      right = Math.max(16, window.innerWidth - panelW - 16);
+    }
+    return {
+      top: r.bottom + 8,
+      left: "auto",
+      right,
+      width: panelW,
+    };
+  }
+
   function openPanel() {
     hasFocusedRef.current = false;
-    if (btnRef.current) {
-      const r = btnRef.current.getBoundingClientRect();
-      const panelW = Math.min(380, window.innerWidth - 24);
-      let right = window.innerWidth - r.right;
-      if (window.innerWidth - right - panelW < 12) {
-        right = Math.max(12, window.innerWidth - panelW - 12);
-      }
-      setCoords({ top: r.bottom + 8, right, width: panelW });
-    }
+    setCoords(calculateCoords());
     setOpen(true);
   }
 
@@ -87,6 +106,15 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
     setQuery("");
     setActiveIndex(-1);
   }
+
+  useEffect(() => {
+    if (!open) return;
+    function onResize() {
+      setCoords(calculateCoords());
+    }
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, [open, isDesktop]);
 
   useEffect(() => {
     if (!open) return;
@@ -178,6 +206,7 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
             style={{
               position: "fixed",
               top: coords.top,
+              left: coords.left,
               right: coords.right,
               width: coords.width,
               zIndex: 999,
