@@ -81,10 +81,11 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
       };
     }
 
-    const panelW = 400;
+    // En PC / escritorio: ancho más generoso y cómodo (580px)
+    const panelW = Math.min(580, window.innerWidth - 32);
     let right = window.innerWidth - r.right;
-    if (window.innerWidth - right - panelW < 16) {
-      right = Math.max(16, window.innerWidth - panelW - 16);
+    if (window.innerWidth - right - panelW < 24) {
+      right = Math.max(24, window.innerWidth - panelW - 24);
     }
     return {
       top: r.bottom + 8,
@@ -230,8 +231,8 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
             }}
           >
             {/* Input */}
-            <div style={{ display: "flex", alignItems: "center", gap: 8, padding: "11px 13px", borderBottom: "1px solid var(--line)" }}>
-              <Search size={17} style={{ color: "var(--shu)", flexShrink: 0 }} />
+            <div style={{ display: "flex", alignItems: "center", gap: isDesktop ? 10 : 8, padding: isDesktop ? "13px 16px" : "11px 13px", borderBottom: "1px solid var(--line)" }}>
+              <Search size={isDesktop ? 19 : 17} style={{ color: "var(--shu)", flexShrink: 0 }} />
               <input
                 ref={(node) => {
                   inputRef.current = node;
@@ -282,15 +283,15 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
               )}
             </div>
 
-            <div ref={listRef} role="listbox" style={{ maxHeight: "min(62vh, 440px)", overflowY: "auto" }}>
+            <div ref={listRef} role="listbox" style={{ maxHeight: isDesktop ? "min(70vh, 520px)" : "min(62vh, 440px)", overflowY: "auto" }}>
 
               {/* Chips de sugerencias rápidas — sólo en panel vacío */}
               {showChips && (
-                <div style={{ padding: "12px 13px 10px" }}>
+                <div style={{ padding: isDesktop ? "14px 18px 12px" : "12px 13px 10px" }}>
                   <p style={{ margin: "0 0 8px", fontSize: 10.5, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--ink-soft)" }}>
                     Búsquedas frecuentes
                   </p>
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: 7 }}>
                     {QUICK_SUGGESTIONS.map((s) => (
                       <button
                         key={s.query}
@@ -300,15 +301,16 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
                           inputRef.current?.focus({ preventScroll: true });
                         }}
                         style={{
-                          padding: "5px 11px",
+                          padding: isDesktop ? "6px 13px" : "5px 11px",
                           borderRadius: 999,
                           border: "1px solid var(--line)",
                           background: "var(--paper)",
                           color: "var(--ink)",
-                          fontSize: 12.5,
+                          fontSize: isDesktop ? 13 : 12.5,
                           fontWeight: 600,
                           cursor: "pointer",
                           whiteSpace: "nowrap",
+                          transition: "all 0.12s ease",
                         }}
                         onMouseEnter={(e) => { e.currentTarget.style.background = "var(--line)"; }}
                         onMouseLeave={(e) => { e.currentTarget.style.background = "var(--paper)"; }}
