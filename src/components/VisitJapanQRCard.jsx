@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { QrCode, Lock, Unlock, Eye, EyeOff, X, CheckCircle2, ShieldCheck, Download, UserCheck, ChevronRight, ChevronDown } from "lucide-react";
 import { sha256Hex } from "../utils/hash";
+import { useT } from "../i18n/LanguageContext";
 
 // passHash = sha256(contraseña en minúsculas) — valores en claro en /memories/repo/secrets.md (fuera del repo).
 export const groupMembers = [
@@ -12,6 +13,7 @@ export const groupMembers = [
 ];
 
 export default function VisitJapanQRCard({ defaultExpanded = false, isPriorityToday = false } = {}) {
+  const t = useT();
   const [selectedMember, setSelectedMember] = useState(null);
   const [step, setStep] = useState("idle"); // 'idle' | 'select_member' | 'enter_password' | 'unlocked'
   const [password, setPassword] = useState("");
@@ -79,19 +81,19 @@ export default function VisitJapanQRCard({ defaultExpanded = false, isPriorityTo
           <div className="min-w-0 flex-1">
             <div className="flex items-center gap-1.5 flex-wrap">
               <span className="text-[10px] bg-white text-blue-900 font-extrabold px-1.5 py-0.5 rounded uppercase tracking-wider leading-none">
-                Visit Japan Web
+                {t("vjw.badge")}
               </span>
               <span className="text-xs text-blue-100 font-semibold truncate">
-                Inmigración y Aduanas
+                {t("vjw.subtitle")}
               </span>
               {isPriorityToday && (
                 <span className="text-[10px] bg-amber-400 text-amber-950 font-extrabold px-1.5 py-0.5 rounded uppercase tracking-wider leading-none shadow-sm">
-                  ⭐ Necesario hoy
+                  {t("vjw.neededToday")}
                 </span>
               )}
             </div>
             <h3 className="text-[13.5px] sm:text-sm font-bold text-white leading-tight mt-0.5 truncate" style={{ margin: 0 }}>
-              Código QR de Llegada a Narita
+              {t("vjw.title")}
             </h3>
           </div>
         </div>
@@ -103,7 +105,7 @@ export default function VisitJapanQRCard({ defaultExpanded = false, isPriorityTo
       {isExpanded && (
         <div className="p-4 sm:p-5 space-y-3">
         <p style={{ fontSize: 13, color: "var(--ink)", lineHeight: 1.5, margin: 0 }}>
-          Código QR generado en la web oficial de <strong>Visit Japan Web</strong> para agilizar los controles de inmigración y aduanas en el Aeropuerto de Narita. Selecciona quién eres y desbloquéalo con tu contraseña.
+          {t("vjw.intro")}
         </p>
 
         {step === "unlocked" && selectedMember ? (
@@ -115,12 +117,12 @@ export default function VisitJapanQRCard({ defaultExpanded = false, isPriorityTo
               <CheckCircle2 size={18} style={{ color: "var(--forest)" }} />
               <div>
                 <p style={{ fontSize: 13, fontWeight: 700, color: "var(--forest)", margin: 0 }}>
-                  Acceso desbloqueado: {selectedMember.name}
+                  {t("vjw.unlocked")} {selectedMember.name}
                 </p>
                 <p style={{ fontSize: 11, color: "var(--ink-soft)", margin: 0 }}>
                   {selectedMember.hasQR
-                    ? "QR oficial cargado y listo para escanear en los tornos."
-                    : "Código QR individual pendiente de asociar."}
+                    ? t("vjw.qrReady")
+                    : t("vjw.qrPending")}
                 </p>
               </div>
             </div>
@@ -133,11 +135,11 @@ export default function VisitJapanQRCard({ defaultExpanded = false, isPriorityTo
                   className="px-3.5 py-2 rounded-xl text-xs font-bold text-white shadow-sm transition-all"
                   style={{ background: "var(--forest)" }}
                 >
-                  Mostrar QR en Pantalla Completa 📱
+                  {t("vjw.showFull")}
                 </button>
               ) : (
                 <span className="text-xs text-slate-700 bg-slate-100 dark:bg-slate-900 px-3 py-1.5 rounded-xl border border-slate-300 flex items-center">
-                  QR de este viajero no cargado aún
+                  {t("vjw.notUploaded")}
                 </span>
               )}
 
@@ -147,7 +149,7 @@ export default function VisitJapanQRCard({ defaultExpanded = false, isPriorityTo
                 className="px-3 py-2 rounded-xl text-xs font-bold border transition-all"
                 style={{ background: "var(--paper)", borderColor: "var(--line)", color: "var(--ink)" }}
               >
-                Cambiar de persona / Bloquear 🔒
+                {t("vjw.lock")}
               </button>
             </div>
           </div>
@@ -159,7 +161,7 @@ export default function VisitJapanQRCard({ defaultExpanded = false, isPriorityTo
             <div className="flex items-center gap-2">
               <Lock size={15} style={{ color: "var(--indigo)" }} />
               <span style={{ fontSize: 12, color: "var(--ink-soft)", fontWeight: 500 }}>
-                Protegido por contraseña para cada miembro del grupo
+                {t("vjw.protected")}
               </span>
             </div>
 
@@ -169,7 +171,7 @@ export default function VisitJapanQRCard({ defaultExpanded = false, isPriorityTo
               className="text-xs font-bold px-3 py-1.5 rounded-lg text-white shadow-sm w-fit"
               style={{ background: "var(--indigo)" }}
             >
-              Seleccionar viajero y ver QR ↗
+              {t("vjw.selectBtn")}
             </button>
           </div>
         )}
@@ -182,7 +184,7 @@ export default function VisitJapanQRCard({ defaultExpanded = false, isPriorityTo
           <div className="flex items-center gap-2">
             <span className="text-base">🌐</span>
             <span style={{ color: "var(--ink-soft)" }}>
-              También puedes ver o generar tu QR directamente en la web oficial del Gobierno de Japón:
+              {t("vjw.officialWeb")}
             </span>
           </div>
           <a
@@ -224,10 +226,10 @@ export default function VisitJapanQRCard({ defaultExpanded = false, isPriorityTo
                 </div>
                 <div>
                   <h3 className="font-bold text-base" style={{ color: "var(--ink)", margin: 0 }}>
-                    ¿Quién eres?
+                    {t("vjw.selectTitle")}
                   </h3>
                   <p style={{ fontSize: 11, color: "var(--ink-soft)", margin: 0 }}>
-                    Selecciona tu nombre para abrir tu QR de Visit Japan
+                    {t("vjw.selectSubtitle")}
                   </p>
                 </div>
               </div>
@@ -285,7 +287,7 @@ export default function VisitJapanQRCard({ defaultExpanded = false, isPriorityTo
                 className="px-4 py-2 rounded-xl text-xs font-semibold border"
                 style={{ borderColor: "var(--line)", color: "var(--ink)" }}
               >
-                Cancelar
+                {t("vjw.cancel")}
               </button>
             </div>
           </div>
@@ -313,7 +315,7 @@ export default function VisitJapanQRCard({ defaultExpanded = false, isPriorityTo
                 </div>
                 <div>
                   <h3 className="font-bold text-sm" style={{ color: "var(--ink)", margin: 0 }}>
-                    Clave de Acceso
+                    {t("vjw.enterPin")}
                   </h3>
                   <p style={{ fontSize: 11, color: "var(--ink-soft)", margin: 0 }}>
                     {selectedMember.name}
@@ -333,7 +335,7 @@ export default function VisitJapanQRCard({ defaultExpanded = false, isPriorityTo
             <form onSubmit={handlePasswordSubmit} className="space-y-4">
               <div>
                 <label style={{ fontSize: 12, fontWeight: 600, color: "var(--ink)", display: "block", marginBottom: 6 }}>
-                  Introduce la contraseña para desbloquear:
+                  {t("vjw.pinSubtitle")}
                 </label>
                 <div className="relative">
                   <input
@@ -344,7 +346,7 @@ export default function VisitJapanQRCard({ defaultExpanded = false, isPriorityTo
                       setPassword(e.target.value);
                       setError(false);
                     }}
-                    placeholder="Contraseña"
+                    placeholder={t("vjw.pinPlaceholder")}
                     className="w-full px-3.5 py-2.5 pr-10 rounded-xl border text-sm font-semibold outline-none transition-all"
                     style={{
                       background: "var(--paper)",
@@ -363,7 +365,7 @@ export default function VisitJapanQRCard({ defaultExpanded = false, isPriorityTo
                 </div>
                 {error && (
                   <p className="text-xs text-rose-600 font-semibold mt-1.5">
-                    Contraseña incorrecta. Inténtalo de nuevo.
+                    {t("vjw.wrongPin")}
                   </p>
                 )}
               </div>
@@ -384,7 +386,7 @@ export default function VisitJapanQRCard({ defaultExpanded = false, isPriorityTo
                     className="px-4 py-2 rounded-xl text-xs font-bold text-white shadow-sm"
                     style={{ background: "var(--indigo)" }}
                   >
-                    Desbloquear
+                    {t("vjw.unlockBtn")}
                   </button>
                 </div>
               </div>
@@ -432,7 +434,7 @@ export default function VisitJapanQRCard({ defaultExpanded = false, isPriorityTo
               {selectedMember.name.toUpperCase()}
             </p>
             <p className="text-[11px] text-slate-500 mt-1">
-              Muestra este código directamente en los lectores de inmigración y aduanas de Narita.
+              {t("vjw.fullscreenSubtitle")}
             </p>
 
             <div className="w-full flex flex-col sm:flex-row gap-2 mt-4">

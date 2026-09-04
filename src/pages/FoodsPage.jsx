@@ -3,7 +3,6 @@ import { UtensilsCrossed, Store, Sparkles, ChevronRight, Info, Flame, Coffee, Ta
 import { useContent, useT } from "../i18n/LanguageContext";
 import { useHighlight } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
-import { konbiniChains, konbiniRules } from "../data/konbiniGuide";
 
 function FoodCard({ food, accent }) {
   const [imgOk, setImgOk] = useState(true);
@@ -132,6 +131,8 @@ function FoodCard({ food, accent }) {
 }
 
 function KonbiniView() {
+  const { konbiniChains, konbiniRules } = useContent();
+  const t = useT();
   const [selectedChain, setSelectedChain] = useState("all");
   const { highlightId } = useHighlight();
 
@@ -157,12 +158,11 @@ function KonbiniView() {
         <div className="flex items-center gap-2 mb-2">
           <Store size={20} style={{ color: "var(--shu)" }} />
           <h3 className="font-bold text-base sm:text-lg" style={{ color: "var(--indigo)", margin: 0 }}>
-            Guía de Konbinis y Supermercados
+            {t("foods.konbiniTitle")}
           </h3>
         </div>
         <p className="text-xs sm:text-sm leading-relaxed mb-4" style={{ color: "var(--ink-soft)" }}>
-          En Japón, las tiendas de conveniencia (<strong>konbini</strong>) son un arte culinario abierto las 24 horas.
-          Cada cadena tiene sus puntos fuertes indiscutibles: no compres lo mismo en todas. Aquí tienes el mapa de qué pillar en cada una.
+          {t("foods.konbiniIntro")}
         </p>
 
         {/* 4 Reglas de Oro */}
@@ -197,7 +197,7 @@ function KonbiniView() {
             cursor: "pointer",
           }}
         >
-          🏪 Todas las cadenas
+          {t("foods.allChains")}
         </button>
         {konbiniChains.map((c) => {
           const isAct = selectedChain === c.id;
@@ -261,10 +261,10 @@ function KonbiniView() {
                         boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
                         textDecoration: "none",
                       }}
-                      title={`Buscar ${chain.name} cercanos en Google Maps`}
+                      title={t("foods.searchNearby", { chain: chain.name })}
                     >
                       <MapPin size={12} style={{ color: chain.themeColor }} />
-                      <span>Ver cercanos</span>
+                      <span>{t("foods.seeNearby")}</span>
                       <ExternalLink size={10} style={{ opacity: 0.55 }} />
                     </a>
                   </div>
@@ -291,7 +291,7 @@ function KonbiniView() {
                   >
                     <span>🎯</span>
                     <span>
-                      <strong style={{ color: "#b45309" }}>Especialidad:</strong> {chain.specialty}
+                      <strong style={{ color: "#b45309" }}>{t("foods.specialty")}</strong> {chain.specialty}
                     </span>
                   </div>
                   <div
@@ -304,7 +304,7 @@ function KonbiniView() {
                   >
                     <span>💡</span>
                     <span>
-                      <strong style={{ color: "#0f766e" }}>Ideal para:</strong> {chain.bestFor}
+                      <strong style={{ color: "#0f766e" }}>{t("foods.bestFor")}</strong> {chain.bestFor}
                     </span>
                   </div>
                 </div>
@@ -373,7 +373,7 @@ function KonbiniView() {
                           style={{ background: "var(--paper-raised)", borderLeft: `3px solid ${chain.themeColor}` }}
                         >
                           <p className="text-[11.5px] leading-snug m-0" style={{ color: "var(--ink-soft)" }}>
-                            💡 <strong>Tip:</strong> {item.tip}
+                            💡 <strong>{t("foods.tip")}</strong> {item.tip}
                           </p>
                         </div>
                       )}
@@ -406,13 +406,13 @@ export default function FoodsPage() {
   }, [highlightId]);
 
   const filterButtons = [
-    { id: "all", label: "Todos" },
-    { id: "desayuno", label: "☕ Desayuno" },
-    { id: "comida", label: "🍱 Comida / Cena" },
-    { id: "salado", label: "🧂 Salado" },
-    { id: "dulce", label: "🍡 Dulce" },
-    { id: "bebida", label: "🍶 Bebida" },
-    { id: "street", label: "🍢 Callejero / Snack" },
+    { id: "all", label: t("foods.filterAll") },
+    { id: "desayuno", label: t("foods.filterBreakfast") },
+    { id: "comida", label: t("foods.filterMeal") },
+    { id: "salado", label: t("foods.filterSalty") },
+    { id: "dulce", label: t("foods.filterSweet") },
+    { id: "bebida", label: t("foods.filterDrink") },
+    { id: "street", label: t("foods.filterStreet") },
   ];
 
   const filteredFoods = foods.filter((f) => {
@@ -452,7 +452,7 @@ export default function FoodsPage() {
           }}
         >
           <Store size={15} />
-          <span>🏪 Konbinis & Markets</span>
+          <span>{t("foods.tabKonbini")}</span>
         </button>
 
         <button
@@ -467,7 +467,7 @@ export default function FoodsPage() {
           }}
         >
           <UtensilsCrossed size={15} />
-          <span>🍱 Platos y Restaurantes</span>
+          <span>{t("foods.tabTraditional")}</span>
         </button>
       </div>
 
@@ -529,7 +529,7 @@ export default function FoodsPage() {
           ) : (
             <section className="mb-8">
               <p className="text-xs font-semibold mb-3" style={{ color: "var(--ink-soft)" }}>
-                Mostrando {filteredFoods.length} resultados
+                {t("foods.showingResults", { count: filteredFoods.length })}
               </p>
               <div
                 style={{

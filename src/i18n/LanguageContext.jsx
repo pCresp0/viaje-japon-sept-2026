@@ -7,9 +7,9 @@ import { getContent } from "../data/content";
 // el español en su lugar, de modo que la app nunca muestra huecos.
 export const LANGUAGES = [
   { code: "es", label: "Español",  flag: "🇪🇸", short: "ES" },
-  { code: "en", label: "English",  flag: "🇬🇧", short: "EN" },
   { code: "fr", label: "Français", flag: "🇫🇷", short: "FR" },
   { code: "tl", label: "Tagalog",  flag: "🇵🇭", short: "TL" },
+  { code: "en", label: "English",  flag: "🇬🇧", short: "EN" },
 ];
 
 export const DEFAULT_LANG = "es";

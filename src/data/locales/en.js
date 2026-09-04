@@ -8,8 +8,11 @@ import { popCulture } from "./popCulture_en";
 import { tripMeta, flights, blocks, stays, transports, budget } from "./trip_extra_en";
 import { stops as mapStops, filterData as mapFilterData, mapLabels } from "./mapData_en";
 import { weatherData, dailyWeather, weatherLabels } from "./weatherData_en";
+import { konbiniRules, konbiniChains } from "./konbini_en";
 
 export default {
+  konbiniRules,
+  konbiniChains,
   weatherData, dailyWeather, weatherLabels,
   mapStops, mapFilterData, mapLabels,
   tripMeta,
@@ -53,6 +56,14 @@ export default {
     { name: "Japanese breakfast", where: "Hotels, kissaten", desc: "Rice, miso, grilled fish, natto or egg, seaweed, and tsukemono. Complete and savory.", tip: "If the hotel offers it, try it at least one day. Cheap alternative: onigiri + coffee at konbini." }
   ],
   pendingItems: [
+    {
+      id: "pago-magome-efectivo",
+      category: "logistica",
+      urgency: "alta",
+      title: "💴 Withdraw cash to pay Magome Chaya (at the hotel)",
+      detail: "📅 14/09/2026\n📍 Magome Chaya (Minshuku)\n👥 5 people\n⚠️ Magome Chaya is NOT prepaid. It must be paid AT THE HOTEL IN CASH (approx. ¥32,000 / ~€178.98 group · ~€35.80/person).\n💡 Withdraw cash at a 7-Eleven / konbini ATM before arriving in Magome (in Kyoto, Kanazawa, or Takayama).",
+      deadline: "Before arriving in Magome (14/09)",
+    },
     {
       id: "cena-magome",
       category: "logistica",

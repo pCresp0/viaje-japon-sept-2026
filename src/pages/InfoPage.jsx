@@ -26,7 +26,7 @@ export default function InfoPage() {
           {t("flights.title")}
         </h1>
         <p style={{ fontSize: 13.5, color: "var(--ink-soft)", marginTop: 6, lineHeight: 1.5 }}>
-          Ida y vuelta confirmadas · Qatar Airways vía Doha
+          {t("flights.confirmedSub")}
         </p>
       </div>
 
@@ -66,6 +66,7 @@ export default function InfoPage() {
 }
 
 function FlightRow({ flight, icon: Icon, defaultExpanded = false, isTodayFlight = false }) {
+  const t = useT();
   // For round trip flights, we need to parse the journey
   // Ida: Madrid -> Doha -> Narita
   // Vuelta: Narita -> Doha -> Madrid
@@ -134,7 +135,7 @@ function FlightRow({ flight, icon: Icon, defaultExpanded = false, isTodayFlight 
               <p className="eyebrow font-semibold m-0">{flight.label} · {flight.flightNumber}</p>
               {isTodayFlight && (
                 <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-300 text-amber-950 shadow-sm ml-auto">
-                  ⭐ Vuelo de hoy
+                  {t("flights.todayFlight")}
                 </span>
               )}
             </div>

@@ -20,6 +20,7 @@ import { popCulture } from "./popCulture";
 import { guideImages } from "./guideImages";
 import { stops as mapStops, filterData as mapFilterData, mapLabels } from "./mapData";
 import { weatherData, dailyWeather, weatherLabels } from "./weatherData";
+import { konbiniRules, konbiniChains } from "./konbiniGuide";
 
 import en from "./locales/en";
 import fr from "./locales/fr";
@@ -33,6 +34,7 @@ const base = {
   guides, guidesByDay,
   historyPeriods, furtherReading,
   foods, foodCategories,
+  konbiniRules, konbiniChains,
   pendingItems, categoryLabels, urgencyConfig,
   popCulture,
   guideImages,

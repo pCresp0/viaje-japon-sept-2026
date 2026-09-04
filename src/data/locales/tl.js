@@ -8,8 +8,11 @@ import { popCulture } from "./popCulture_tl";
 import { tripMeta, flights, blocks, stays, transports, budget } from "./trip_extra_tl";
 import { stops as mapStops, filterData as mapFilterData, mapLabels } from "./mapData_tl";
 import { weatherData, dailyWeather, weatherLabels } from "./weatherData_tl";
+import { konbiniRules, konbiniChains } from "./konbini_tl";
 
 export default {
+  konbiniRules,
+  konbiniChains,
   weatherData, dailyWeather, weatherLabels,
   mapStops, mapFilterData, mapLabels,
   tripMeta,
@@ -53,6 +56,14 @@ export default {
     { name: "Japanese breakfast", where: "Mga hotel, kissaten", desc: "Kanin, miso, inihaw na isda, natto o itlog, seaweed, at tsukemono. Kumpleto at malinamnam.", tip: "Kung inaalok ito sa hotel, subukan kahit isang araw. Murang alternatibo: onigiri + kape sa konbini." }
   ],
   pendingItems: [
+    {
+      id: "pago-magome-efectivo",
+      category: "logistica",
+      urgency: "alta",
+      title: "💴 Mag-withdraw ng cash pambayad sa Magome Chaya (sa hotel)",
+      detail: "📅 14/09/2026\n📍 Magome Chaya (Minshuku)\n👥 5 mga tao\n⚠️ HINDI pa bayad nang pauna ang Magome Chaya. Dapat itong bayaran NANG CASH SA HOTEL MISMO (tinatayang ¥32,000 / ~€178.98 grupo · ~€35.80/tao).\n💡 Mag-withdraw ng pera sa 7-Eleven / konbini ATM bago pumunta sa Magome (sa Kyoto, Kanazawa, o Takayama).",
+      deadline: "Bago dumating sa Magome (14/09)",
+    },
     {
       id: "cena-magome",
       category: "logistica",
