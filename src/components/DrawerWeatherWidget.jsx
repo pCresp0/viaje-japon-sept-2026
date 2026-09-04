@@ -40,11 +40,12 @@ export default function DrawerWeatherWidget({ onNavigate, onClose }) {
         onClick={handleClick}
         className="w-full text-left rounded-xl transition-all select-none group"
         style={{
-          background: "rgba(0, 0, 0, 0.28)",
-          border: "1px solid rgba(255, 255, 255, 0.12)",
+          background: "linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(15, 8, 8, 0.42) 100%)",
+          border: "1px solid rgba(255, 255, 255, 0.13)",
           padding: "10px 12px",
           cursor: "pointer",
-          backdropFilter: "blur(4px)",
+          backdropFilter: "blur(6px)",
+          boxShadow: "0 4px 14px rgba(0, 0, 0, 0.18)",
         }}
       >
         {/* Widget Header */}
@@ -83,8 +84,8 @@ export default function DrawerWeatherWidget({ onNavigate, onClose }) {
                   key={item.cityKey}
                   className="flex items-center justify-between px-2.5 py-1.5 rounded-lg"
                   style={{
-                    background: "rgba(255, 255, 255, 0.06)",
-                    border: "1px solid rgba(255, 255, 255, 0.07)",
+                    background: "linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%)",
+                    border: "1px solid rgba(255, 255, 255, 0.08)",
                   }}
                 >
                   <div className="flex items-center gap-1.5 min-w-0">
@@ -128,8 +129,8 @@ export default function DrawerWeatherWidget({ onNavigate, onClose }) {
                   key={item.cityKey}
                   className="flex items-center justify-between px-2.5 py-2 rounded-lg"
                   style={{
-                    background: "rgba(255, 255, 255, 0.06)",
-                    border: "1px solid rgba(255, 255, 255, 0.07)",
+                    background: "linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%)",
+                    border: "1px solid rgba(255, 255, 255, 0.08)",
                   }}
                 >
                   <div className="flex items-center gap-1.5 min-w-0">

@@ -27,7 +27,7 @@ export const navStructure = [
     ]
   },
   { type: "group", id: "prep", labelKey: "nav.group.prep", items: [
-      { id: "pendientes", labelKey: "nav.pendientes", descKey: "nav.desc.pendientes", icon: ListTodo, alert: true },
+      { id: "pendientes", labelKey: "nav.pendientes", descKey: "nav.desc.pendientes", icon: ListTodo },
       { id: "preparativos", labelKey: "nav.preparativos", descKey: "nav.desc.preparativos", icon: Backpack },
       { id: "presupuesto", labelKey: "nav.presupuesto", descKey: "nav.desc.presupuesto", icon: Wallet },
     ]
@@ -230,20 +230,27 @@ function Drawer({ active, onChange, open, onClose }) {
             </button>
           </div>
 
-          {/* nav — scrollable con los apartados (de arriba a abajo) */}
+          {/* nav — scrollable con los apartados (de arriba a abajo), con prioridad z-index */}
           <nav
-            className="flex-1 flex flex-col gap-0.5 p-3 overflow-y-auto overflow-x-hidden"
+            className="flex-1 flex flex-col gap-0.5 p-3 overflow-y-auto overflow-x-hidden relative"
             style={{
               minHeight: 0,
               WebkitOverflowScrolling: "touch",
-              paddingBottom: 8,
+              paddingBottom: 14,
+              zIndex: 10,
             }}
           >
             <NavItems active={active} onChange={onChange} onClose={onClose} isMobile={true} />
           </nav>
 
-          {/* Widget del tiempo — siempre fijo justo encima de los accesos rápidos */}
-          <div className="shrink-0 px-3 pb-2 pt-1" style={{ zIndex: 5 }}>
+          {/* Widget del tiempo — con degradado y por debajo de los apartados si coinciden */}
+          <div 
+            className="shrink-0 px-3 pb-2 pt-2 relative" 
+            style={{ 
+              zIndex: 1,
+              background: "linear-gradient(to bottom, rgba(77, 28, 30, 0) 0%, rgba(68, 25, 27, 0.72) 28%, rgba(45, 16, 18, 0.96) 100%)",
+            }}
+          >
             <DrawerWeatherWidget onNavigate={onChange} onClose={onClose} />
           </div>
           
@@ -394,11 +401,19 @@ export function Sidebar({ active, onChange }) {
       style={{ width: 230, ...sidebarBg }}
     >
       <div style={{ ...overlay, display: "flex", flexDirection: "column", height: "100%" }}>
-        <nav className="flex-1 flex flex-col gap-0.5 p-3 overflow-y-auto overflow-x-hidden"
-          style={{ minHeight: 0, paddingTop: 14, paddingBottom: 8 }}>
+        <nav 
+          className="flex-1 flex flex-col gap-0.5 p-3 overflow-y-auto overflow-x-hidden relative"
+          style={{ minHeight: 0, paddingTop: 14, paddingBottom: 14, zIndex: 10 }}
+        >
           <NavItems active={active} onChange={onChange} isMobile={false} />
         </nav>
-        <div className="shrink-0 px-3 pb-3 pt-1">
+        <div 
+          className="shrink-0 px-3 pb-3 pt-2 relative"
+          style={{
+            zIndex: 1,
+            background: "linear-gradient(to bottom, rgba(77, 28, 30, 0) 0%, rgba(68, 25, 27, 0.72) 28%, rgba(45, 16, 18, 0.96) 100%)",
+          }}
+        >
           <DrawerWeatherWidget onNavigate={onChange} />
         </div>
       </div>
