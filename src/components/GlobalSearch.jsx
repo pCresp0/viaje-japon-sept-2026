@@ -198,7 +198,18 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
 
       {open && coords && createPortal(
         <>
-          <div onClick={closePanel} style={{ position: "fixed", inset: 0, zIndex: 998 }} />
+          <div
+            onClick={closePanel}
+            style={{
+              position: "fixed",
+              inset: 0,
+              zIndex: 998,
+              backgroundColor: "rgba(20, 25, 35, 0.28)",
+              backdropFilter: "blur(4px)",
+              WebkitBackdropFilter: "blur(4px)",
+              animation: "fadeIn 0.15s ease-out",
+            }}
+          />
           <div
             id={listId}
             role="dialog"
@@ -213,8 +224,9 @@ export default function GlobalSearch({ onNavigate, variant = "bar" }) {
               background: "var(--paper-raised)",
               border: "1px solid var(--line)",
               borderRadius: 16,
-              boxShadow: "0 16px 48px rgba(0,0,0,0.22), 0 4px 16px rgba(0,0,0,0.12)",
+              boxShadow: "0 20px 50px rgba(0,0,0,0.28), 0 6px 20px rgba(0,0,0,0.12)",
               overflow: "hidden",
+              animation: "fadeIn 0.18s ease-out",
             }}
           >
             {/* Input */}
