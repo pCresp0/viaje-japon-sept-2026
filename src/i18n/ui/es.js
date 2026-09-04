@@ -28,6 +28,7 @@ export default {
   "nav.herramientas": "Herramientas",
   "nav.emergencias": "Emergencias",
   "nav.frikadas": "Frikadas",
+  "nav.rainToday": "Lluvia hoy",
 
   // ── Genéricos ─────────────────────────────────────────────────────
   "common.day": "Día",

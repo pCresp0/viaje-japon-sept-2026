@@ -27,6 +27,7 @@ export default {
   "nav.clima": "Panahon",
   "nav.historia": "Kasaysayan ng Japan",
   "nav.frikadas": "Geek na hinto",
+  "nav.rainToday": "Ulan ngayong araw",
   "nav.frases": "Mga parirala",
   "nav.preparativos": "Paghahanda",
   "nav.presupuesto": "Badyet",

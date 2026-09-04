@@ -3,6 +3,7 @@ import { Compass, Route, Plane, Wallet, X, Menu, CalendarDays, MessageCircle, Ba
 import { useT } from "../i18n";
 import LanguageSwitcher from "./LanguageSwitcher";
 import GlobalSearch from "./GlobalSearch";
+import DrawerWeatherWidget from "./DrawerWeatherWidget";
 
 // El campo `labelKey` se resuelve en tiempo de render con la función de
 // traducción, para que el menú cambie de idioma sin recargar la página.
@@ -232,8 +233,9 @@ function Drawer({ active, onChange, open, onClose }) {
 
           {/* nav — scrollable si hay más items de los que caben */}
           <nav className="flex flex-col gap-0.5 p-3"
-            style={{ flex: 1, overflowY: "auto", overflowX: "hidden", paddingBottom: 80 }}>
+            style={{ flex: 1, overflowY: "auto", overflowX: "hidden", paddingBottom: 90 }}>
             <NavItems active={active} onChange={onChange} onClose={onClose} isMobile={true} />
+            <DrawerWeatherWidget onNavigate={onChange} onClose={onClose} />
           </nav>
           
           {/* Quick access bottom bar */}
