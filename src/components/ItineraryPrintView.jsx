@@ -47,7 +47,7 @@ const CONFIRMED_TICKETS = [
     route: "Kioto → Kanazawa",
     when: "12 sept · 08:10 → 10:03",
     ref: "JR-WEST 47932",
-    car: "Recoger billetes físicos en Kyoto Station (máq. verdes)",
+    car: "Recoger billetes físicos en Kyoto Station (máq. verdes 5489)",
     seats: "5 adultos",
     price: "¥38.600 · 209,38€ (grupo)",
     note: "Llevar Mastercard física *8625 + PIN. Recoger preferiblemente el 11 sept.",
@@ -60,7 +60,7 @@ const CONFIRMED_TICKETS = [
     car: "—",
     seats: "5 asientos confirmados",
     price: "Incluido en buses Alpes",
-    note: "Operador privado · no JR Pass.",
+    note: "Operador privado · no JR Pass. Canjear e-ticket en taquilla si se requiere.",
   },
   {
     name: "Nohi Bus Shirakawa-go → Takayama",
@@ -70,7 +70,7 @@ const CONFIRMED_TICKETS = [
     car: "—",
     seats: "5 asientos confirmados",
     price: "Incluido en buses Alpes",
-    note: "Operador privado · no JR Pass.",
+    note: "Operador privado · no JR Pass. Canjear e-ticket en taquilla si se requiere.",
   },
   {
     name: "Nohi Bus Takayama → Magome",
@@ -80,7 +80,7 @@ const CONFIRMED_TICKETS = [
     car: "Car 01",
     seats: "2C, 2D, 3B, 3C, 3D",
     price: "¥25.000 · 135,61€ (grupo)",
-    note: "Canjear e-ticket en taquilla. PDF en la app.",
+    note: "Canjear e-ticket en taquilla de Takayama Nohi Bus Center antes de las 07:45.",
   },
   {
     name: "Shinano 4",
@@ -90,7 +90,7 @@ const CONFIRMED_TICKETS = [
     car: "Car 4",
     seats: "5 adultos",
     price: "¥14.350 · 77,84€ (grupo)",
-    note: "Recoger billetes físicos antes de subir (Mastercard *8625 + PIN).",
+    note: "Recoger billetes físicos en Nakatsugawa antes de subir (Mastercard *8625 + PIN).",
   },
   {
     name: "Nozomi 358",
@@ -100,11 +100,11 @@ const CONFIRMED_TICKETS = [
     car: "Coche 12",
     seats: "Pablo 11-E · Sergio 12-E · Juan Carlos 12-C · Randy 11-D · Thibaut 12-D",
     price: "¥54.500 · 295,62€ (grupo)",
-    note: "QR-Ticket. Nozomi no incluido en JR Pass.",
+    note: "QR-Ticket en la app / web. Nozomi no incluido en JR Pass.",
   },
 ];
 
-/** Renderiza un bloque de texto con soporte de \n, **bold** y URLs clicables */
+/** Renderiza un bloque de texto con soporte de \n, **bold**, viñetas y URLs clicables */
 function RichText({ text, style = {} }) {
   if (!text) return null;
 
@@ -115,14 +115,17 @@ function RichText({ text, style = {} }) {
       {paragraphs.map((para, pi) => {
         if (!para.trim()) return pi === 0 ? null : <br key={pi} />;
 
+        const isBullet = /^[-•]\s+/.test(para.trim());
+        const cleanedPara = isBullet ? para.trim().replace(/^[-•]\s+/, "") : para;
+
         const parts = [];
         const pattern = /(\*\*(.+?)\*\*|(https?:\/\/[^\s)]+))/g;
         let last = 0;
         let match;
 
-        while ((match = pattern.exec(para)) !== null) {
+        while ((match = pattern.exec(cleanedPara)) !== null) {
           if (match.index > last) {
-            parts.push(para.slice(last, match.index));
+            parts.push(cleanedPara.slice(last, match.index));
           }
           if (match[2]) {
             parts.push(<strong key={match.index}>{match[2]}</strong>);
@@ -157,10 +160,19 @@ function RichText({ text, style = {} }) {
           }
           last = match.index + match[0].length;
         }
-        if (last < para.length) parts.push(para.slice(last));
+        if (last < cleanedPara.length) parts.push(cleanedPara.slice(last));
 
         return (
-          <span key={pi} style={{ display: "block", marginBottom: pi < paragraphs.length - 1 ? 3 : 0 }}>
+          <span
+            key={pi}
+            style={{
+              display: "block",
+              marginBottom: pi < paragraphs.length - 1 ? 3 : 0,
+              paddingLeft: isBullet ? 14 : 0,
+              textIndent: isBullet ? -10 : 0,
+            }}
+          >
+            {isBullet && "• "}
             {parts}
           </span>
         );
@@ -242,6 +254,11 @@ function HotelCard({ stay, compact = false }) {
       {opt.total && <>Total: <strong>{opt.total}</strong>{opt.cancel ? ` · ${opt.cancel}` : ""}<br /></>}
       {opt.note && <><span style={{ color: "#5a6070" }}>{opt.note}</span><br /></>}
       {opt.url && <a href={opt.url} style={{ color: "#7a2c2e" }}>Ver reserva ↗</a>}
+      {stay.warning && (
+        <div style={{ marginTop: 4, padding: "4px 8px", background: "#fbeaea", color: "#bc4749", borderRadius: 4, fontSize: 9.5 }}>
+          ⚠️ {stay.warning}
+        </div>
+      )}
     </div>
   );
 }
@@ -312,9 +329,23 @@ function GuideBlock({ id, accentColor, guides }) {
   );
 }
 
+function getScheduleEmoji(text) {
+  if (!text) return null;
+  if (/\bvuelo\b|aterriza|\bavión\b/i.test(text)) return "✈️";
+  if (/shinkansen|nozomi|hikari/i.test(text)) return "🚄";
+  if (/\bbus\b|nohi|autobús/i.test(text)) return "🚌";
+  if (/tranvía|randen/i.test(text)) return "🚋";
+  if (/\bmetro\b/i.test(text)) return "🚇";
+  if (/\btren\b|\bJR\b|narita express|hida express|thunderbird|shinano|yurikamome/i.test(text)) return "🚂";
+  if (/caminar|andando|a pie/i.test(text)) return "🚶";
+  return null;
+}
+
 function isSpecialEntry(time) {
-  const special = ["🎫", "🧳", "📊", "💡", "🍙", "🍜", "🍵", "🚌", "🚍", "🏯", "📖", "📱"];
-  return special.some((e) => time?.startsWith(e));
+  if (!time) return true;
+  if (!/\d/.test(time)) return true;
+  const special = ["🎫", "🧳", "📊", "💡", "🍙", "🍜", "🍵", "🚌", "🚍", "🏯", "📖", "📱", "🎟️", "🍽️", "🚆", "✅", "⚠️", "📌", "ℹ️", "🍣"];
+  return special.some((e) => time.startsWith(e));
 }
 
 function ScheduleRow({ entry }) {
@@ -325,29 +356,35 @@ function ScheduleRow({ entry }) {
     return (
       <tr>
         <td colSpan={2} style={{
-          padding: "6px 8px",
+          padding: "7px 9px",
           background: "#f7f0e3",
           borderBottom: "1px solid #e6dcc4",
           fontSize: 9.5,
+          lineHeight: 1.5,
+          borderRadius: 4,
         }}>
-          <strong style={{ color: "#7a2c2e" }}>{entry.time}</strong>{" "}
+          <strong style={{ color: "#7a2c2e", display: "block", marginBottom: 3, fontSize: 10 }}>
+            {entry.time}
+          </strong>
           <RichText text={entry.text} />
         </td>
       </tr>
     );
   }
 
+  const emoji = getScheduleEmoji(entry.text);
+
   if (isHotel) {
     return (
       <tr style={{ background: "#f0f8ee" }}>
         <td style={{
           padding: "6px 8px 6px 0", fontWeight: 700, color: "#2e7d5b",
-          whiteSpace: "nowrap", verticalAlign: "top", width: 60,
+          whiteSpace: "nowrap", verticalAlign: "top", width: 68,
           borderBottom: "1px solid #b8ddb0",
         }}>
-          {entry.time}
+          {emoji ? `${emoji} ` : ""}{entry.time}
         </td>
-        <td style={{ padding: "6px 0", verticalAlign: "top", borderBottom: "1px solid #b8ddb0", fontSize: 10 }}>
+        <td style={{ padding: "6px 0", verticalAlign: "top", borderBottom: "1px solid #b8ddb0", fontSize: 10, lineHeight: 1.55 }}>
           <RichText text={entry.text} />
         </td>
       </tr>
@@ -357,12 +394,12 @@ function ScheduleRow({ entry }) {
   return (
     <tr style={{ borderBottom: "1px solid #e6dcc4" }}>
       <td style={{
-        padding: "4px 8px 4px 0", fontWeight: 700, color: "#7a2c2e",
-        whiteSpace: "nowrap", verticalAlign: "top", width: 60,
+        padding: "5px 8px 5px 0", fontWeight: 700, color: "#7a2c2e",
+        whiteSpace: "nowrap", verticalAlign: "top", width: 68,
       }}>
-        {entry.time}
+        {emoji ? `${emoji} ` : ""}{entry.time}
       </td>
-      <td style={{ padding: "4px 0", verticalAlign: "top", fontSize: 10, lineHeight: 1.55 }}>
+      <td style={{ padding: "5px 0", verticalAlign: "top", fontSize: 10, lineHeight: 1.55 }}>
         <RichText text={entry.text} />
       </td>
     </tr>
@@ -370,36 +407,81 @@ function ScheduleRow({ entry }) {
 }
 
 function DayTicketNote({ dayNum }) {
-  const tickets = {
-    1: CONFIRMED_TICKETS[0],
-    6: CONFIRMED_TICKETS[1],
-    8: CONFIRMED_TICKETS[4],
-    9: null,
-  };
-  if (dayNum === 9) {
+  if (dayNum === 1) {
+    const t = CONFIRMED_TICKETS[0];
     return (
       <div style={{ marginTop: 8, padding: "8px 10px", background: "#eef4fb", border: "1px solid #b8c9de", borderRadius: 6, fontSize: 9.5, lineHeight: 1.5 }}>
-        <strong>🎟️ Billetes del día</strong>
+        <strong>🎟️ Billete de tren confirmado</strong>: <strong>{t.name}</strong> ({t.route})
         <br />
-        <strong>{CONFIRMED_TICKETS[5].name}</strong> · {CONFIRMED_TICKETS[5].ref} · {CONFIRMED_TICKETS[5].car} · {CONFIRMED_TICKETS[5].price}
+        {t.when} · Ref. <strong>{t.ref}</strong> · {t.car} · {t.price}
         <br />
-        <strong>{CONFIRMED_TICKETS[6].name}</strong> · {CONFIRMED_TICKETS[6].ref} · {CONFIRMED_TICKETS[6].car}
+        Asientos: {t.seats}
         <br />
-        Asientos: {CONFIRMED_TICKETS[6].seats}
+        <span style={{ color: "#5a6070" }}>{t.note}</span>
       </div>
     );
   }
-  const t = tickets[dayNum];
-  if (!t) return null;
-  return (
-    <div style={{ marginTop: 8, padding: "8px 10px", background: "#eef4fb", border: "1px solid #b8c9de", borderRadius: 6, fontSize: 9.5, lineHeight: 1.5 }}>
-      <strong>🎟️ {t.name}</strong> · {t.ref} · {t.car}
-      <br />
-      {t.seats} · {t.price}
-      <br />
-      <span style={{ color: "#5a6070" }}>{t.note}</span>
-    </div>
-  );
+  if (dayNum === 6) {
+    const t = CONFIRMED_TICKETS[1];
+    return (
+      <div style={{ marginTop: 8, padding: "8px 10px", background: "#eef4fb", border: "1px solid #b8c9de", borderRadius: 6, fontSize: 9.5, lineHeight: 1.5 }}>
+        <strong>🎟️ Billete de tren confirmado</strong>: <strong>{t.name}</strong> ({t.route})
+        <br />
+        {t.when} · Ref. <strong>{t.ref}</strong> · {t.price}
+        <br />
+        {t.car}
+        <br />
+        <span style={{ color: "#7a2c2e", fontWeight: 600 }}>⚠️ {t.note}</span>
+      </div>
+    );
+  }
+  if (dayNum === 7) {
+    const b1 = CONFIRMED_TICKETS[2];
+    const b2 = CONFIRMED_TICKETS[3];
+    return (
+      <div style={{ marginTop: 8, padding: "8px 10px", background: "#eef4fb", border: "1px solid #b8c9de", borderRadius: 6, fontSize: 9.5, lineHeight: 1.5 }}>
+        <strong>🎟️ Billetes de autobús confirmados (Nohi Bus)</strong>
+        <br />
+        1. <strong>{b1.name}</strong> · {b1.when} · Ref. <strong>{b1.ref}</strong> ({b1.seats})
+        <br />
+        2. <strong>{b2.name}</strong> · {b2.when} · Ref. <strong>{b2.ref}</strong> ({b2.seats})
+        <br />
+        <span style={{ color: "#5a6070" }}>{b1.note}</span>
+      </div>
+    );
+  }
+  if (dayNum === 8) {
+    const t = CONFIRMED_TICKETS[4];
+    return (
+      <div style={{ marginTop: 8, padding: "8px 10px", background: "#eef4fb", border: "1px solid #b8c9de", borderRadius: 6, fontSize: 9.5, lineHeight: 1.5 }}>
+        <strong>🎟️ Billete de autobús confirmado</strong>: <strong>{t.name}</strong> ({t.route})
+        <br />
+        {t.when} · Ref. <strong>{t.ref}</strong> · {t.car} · {t.price}
+        <br />
+        Asientos: {t.seats}
+        <br />
+        <span style={{ color: "#7a2c2e", fontWeight: 600 }}>⚠️ {t.note}</span>
+      </div>
+    );
+  }
+  if (dayNum === 9) {
+    const t1 = CONFIRMED_TICKETS[5];
+    const t2 = CONFIRMED_TICKETS[6];
+    return (
+      <div style={{ marginTop: 8, padding: "8px 10px", background: "#eef4fb", border: "1px solid #b8c9de", borderRadius: 6, fontSize: 9.5, lineHeight: 1.5 }}>
+        <strong>🎟️ Billetes de tren confirmados del día</strong>
+        <br />
+        1. <strong>{t1.name}</strong> ({t1.route}) · {t1.when} · Ref. <strong>{t1.ref}</strong> · {t1.car} · {t1.price}
+        <br />
+        <span style={{ color: "#7a2c2e", fontWeight: 600 }}>⚠️ {t1.note}</span>
+        <br />
+        2. <strong>{t2.name}</strong> ({t2.route}) · {t2.when} · Ref. <strong>{t2.ref}</strong> · {t2.car} · {t2.price}
+        <br />
+        Asientos: {t2.seats} · <span style={{ color: "#5a6070" }}>{t2.note}</span>
+      </div>
+    );
+  }
+  return null;
 }
 
 function DayFujiNote({ dayNum }) {
@@ -414,6 +496,10 @@ function DayFujiNote({ dayNum }) {
       Cancelar antes de: {booking.cancelDeadline}
       <br />
       Punto de encuentro: {gygFujiActivity.meetingPoint} · {gygFujiActivity.meetingTime}
+      <br />
+      <span style={{ color: "#0369a1", fontStyle: "italic" }}>
+        Si 24h antes la previsión meteorológica de visibilidad es favorable, se realiza esta excursión en lugar del plan previsto de Tokio.
+      </span>
     </div>
   );
 }
@@ -424,13 +510,19 @@ function DaySection({ day, guides }) {
     <section style={{ marginBottom: 22, pageBreakBefore: "always", breakBefore: "page" }}>
       <div style={{ borderBottom: "3px solid #7a2c2e", paddingBottom: 6, marginBottom: 8 }}>
         <p style={{ fontSize: 10, fontWeight: 700, color: "#7a2c2e", letterSpacing: "0.05em", margin: 0 }}>
-          DÍA {day.num} · {day.weekday?.toUpperCase()} {day.date}
+          DÍA {day.num} · {formatDateLong(day.date).toUpperCase()}
         </p>
         <h2 style={{ fontSize: 18, margin: "2px 0 0", color: "#1d3557" }}>{day.title}</h2>
         <p style={{ fontSize: 11, color: "#5a6070", margin: "2px 0 0" }}>{day.cities}</p>
       </div>
 
-      <p style={{ fontSize: 11.5, lineHeight: 1.6, marginBottom: 8 }}>{day.summary}</p>
+      <RichText text={day.summary} style={{ display: "block", fontSize: 11.5, lineHeight: 1.6, marginBottom: 8 }} />
+
+      {day.money && (
+        <div style={{ marginBottom: 8, padding: "5px 9px", background: "#fdfbf7", border: "1px solid #e6dcc4", borderRadius: 6, fontSize: 9.5, color: "#5a6070" }}>
+          <strong>💶 Gasto estimado del día:</strong> {day.money}
+        </div>
+      )}
 
       {day.schedule?.length > 0 && (
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 10, marginBottom: 8 }}>
@@ -438,6 +530,18 @@ function DaySection({ day, guides }) {
             {day.schedule.map((s, i) => <ScheduleRow key={i} entry={s} />)}
           </tbody>
         </table>
+      )}
+
+      {day.num === 1 && (
+        <div style={{ marginTop: 8, padding: "8px 10px", background: "#f0fdf4", border: "1px solid #86efac", borderRadius: 6, fontSize: 9.5, lineHeight: 1.5 }}>
+          <strong>🇯🇵 Visit Japan Web (Control de Inmigración y Aduanas)</strong>
+          <br />
+          Web oficial: <strong>vjw.digital.go.jp</strong> · 5 viajeros registrados (Pablo, Sergio, Juan Carlos, Randy, Thibaut)
+          <br />
+          <span style={{ color: "#166534" }}>
+            Tener preparados en el móvil o impresos los códigos QR individuales generados antes de embarcar. Se escanean en los quioscos automáticos al llegar a Japón para agilizar el paso por aduanas y pasaportes sin rellenar papel físico.
+          </span>
+        </div>
       )}
 
       <DayTicketNote dayNum={day.num} />
