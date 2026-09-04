@@ -12,8 +12,8 @@ const TO_BLOCK = "tokio";
 /** Precios reales Revolut (grupo): ¥14.350 · 77,84€ */
 const PRICE_LINE = "5 · ¥14.350 (~77,84€)";
 
-export default function ShinanoTicketCard({ onGoToDay } = {}) {
-  const [isExpanded, setIsExpanded] = useState(false);
+export default function ShinanoTicketCard({ onGoToDay, defaultExpanded = false } = {}) {
+  const [isExpanded, setIsExpanded] = useState(defaultExpanded);
   const [showImageModal, setShowImageModal] = useState(false);
   const [checkedItems, setCheckedItems] = useState({
     booked: true,

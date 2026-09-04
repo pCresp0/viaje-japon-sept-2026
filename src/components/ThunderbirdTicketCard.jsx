@@ -10,8 +10,8 @@ const TO_BLOCK = "alpes";
 /** Precios reales Revolut (grupo): ¥38.600 · 209,38€ */
 const PRICE_LINE = "5 · ¥38.600 (~209,38€)";
 
-export default function ThunderbirdTicketCard({ onGoToDay } = {}) {
-  const [isExpanded, setIsExpanded] = useState(false);
+export default function ThunderbirdTicketCard({ onGoToDay, defaultExpanded = false } = {}) {
+  const [isExpanded, setIsExpanded] = useState(defaultExpanded);
   const [checkedItems, setCheckedItems] = useState({
     booked: true,
     paid: true,

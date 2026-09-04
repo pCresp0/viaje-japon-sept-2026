@@ -25,7 +25,7 @@ export default function Itinerary({ openDay, setOpenDay, quickView, setQuickView
   }
 
   useEffect(() => {
-    if (openDay == null) return;
+    if (openDay == null || openDay === 0) return;
     const t = window.setTimeout(() => {
       if (quickView) {
         const el = document.getElementById(`quick-day-${openDay}`);
@@ -34,7 +34,7 @@ export default function Itinerary({ openDay, setOpenDay, quickView, setQuickView
         const el = refs.current[openDay];
         el?.scrollIntoView({ behavior: "smooth", block: "start" });
       }
-    }, 50);
+    }, 120);
     return () => window.clearTimeout(t);
   }, [openDay, quickView]);
 

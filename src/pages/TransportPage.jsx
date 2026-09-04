@@ -5,6 +5,7 @@ import { Highlightable, useHighlight } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 import { formatEur, formatJpyEur } from "../utils/money";
 import { PASS_7_JPY, PASS_7_EUR } from "../data/jrPass";
+import { getDefaultTripDay } from "../utils/date";
 import ShinkansenTicketCard from "../components/ShinkansenTicketCard";
 import ThunderbirdTicketCard from "../components/ThunderbirdTicketCard";
 import NohiMagomeTicketCard from "../components/NohiMagomeTicketCard";
@@ -24,7 +25,9 @@ export default function TransportPage({ onNavigate }) {
   const t = useT();
   const { highlightId } = useHighlight();
   const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
-  const [activeTab, setActiveTab] = useState("billetes");
+  const currentDay = getDefaultTripDay();
+  const hasTicketTab = [0, 1, 6, 8, 9].includes(currentDay);
+  const [activeTab, setActiveTab] = useState(() => hasTicketTab ? "billetes" : "trayectos");
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
@@ -49,6 +52,27 @@ export default function TransportPage({ onNavigate }) {
       setActiveTab("trayectos");
     }
   }, [highlightId]);
+
+  // Auto-scroll al transporte del día actual al entrar
+  useEffect(() => {
+    if (highlightId) return; // si viene de búsqueda o highlight, no interferir
+    const t = window.setTimeout(() => {
+      if (activeTab === "billetes") {
+        const ticketDay = [0, 1].includes(currentDay) ? 1 : currentDay;
+        const el = document.getElementById(`ticket-day-${ticketDay}`);
+        if (el && ticketDay !== 1) {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      } else {
+        const dayKey = String(currentDay === 0 ? 1 : currentDay);
+        const el = document.getElementById(`transport-group-${dayKey}`);
+        if (el && dayKey !== "1") {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+    }, 140);
+    return () => window.clearTimeout(t);
+  }, [activeTab, currentDay, highlightId]);
 
   const seenKeys = [];
   const groups = {};
@@ -138,21 +162,36 @@ export default function TransportPage({ onNavigate }) {
       {activeTab === "billetes" && (
         <div className="px-4 pt-5">
           {/* Tarjetas de billetes */}
-          <ShinkansenTicketCard
-            onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 1, targetId: slug("itinerary-day", 1) }) : undefined}
-          />
-          <ThunderbirdTicketCard
-            onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 6, targetId: slug("itinerary-day", 6) }) : undefined}
-          />
-          <NohiMagomeTicketCard
-            onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 8, targetId: slug("itinerary-day", 8) }) : undefined}
-          />
-          <ShinanoTicketCard
-            onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 9, targetId: slug("itinerary-day", 9) }) : undefined}
-          />
-          <NozomiNagoyaTicketCard
-            onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 9, targetId: slug("itinerary-day", 9) }) : undefined}
-          />
+          <div id="ticket-day-1">
+            <ShinkansenTicketCard
+              defaultExpanded={currentDay === 1 || currentDay === 0}
+              onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 1, targetId: slug("itinerary-day", 1) }) : undefined}
+            />
+          </div>
+          <div id="ticket-day-6">
+            <ThunderbirdTicketCard
+              defaultExpanded={currentDay === 6}
+              onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 6, targetId: slug("itinerary-day", 6) }) : undefined}
+            />
+          </div>
+          <div id="ticket-day-8">
+            <NohiMagomeTicketCard
+              defaultExpanded={currentDay === 8}
+              onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 8, targetId: slug("itinerary-day", 8) }) : undefined}
+            />
+          </div>
+          <div id="ticket-day-9">
+            <ShinanoTicketCard
+              defaultExpanded={currentDay === 9}
+              onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 9, targetId: slug("itinerary-day", 9) }) : undefined}
+            />
+          </div>
+          <div id="ticket-day-9-nozomi">
+            <NozomiNagoyaTicketCard
+              defaultExpanded={currentDay === 9}
+              onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 9, targetId: slug("itinerary-day", 9) }) : undefined}
+            />
+          </div>
 
           {/* Estado general — al final */}
           <div className="rounded-2xl p-4 mt-2 mb-4 border" style={{ background: "var(--paper-raised)", borderColor: "var(--line)" }}>
@@ -223,26 +262,39 @@ export default function TransportPage({ onNavigate }) {
             {seenKeys.map(key => {
               const { badge, title, sub, color } = headerFor(key);
               const items = groups[key];
+              const isToday = String(currentDay === 0 ? 1 : currentDay) === key;
 
               return (
                 <div
                   key={key}
-                  className="rounded-2xl border overflow-hidden"
-                  style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}
+                  id={`transport-group-${key}`}
+                  className="rounded-2xl border overflow-hidden transition-all"
+                  style={{ 
+                    borderColor: isToday ? "var(--shu)" : "var(--line)", 
+                    background: "var(--paper-raised)",
+                    boxShadow: isToday ? "0 0 0 2px rgba(188, 71, 73, 0.25)" : "none"
+                  }}
                 >
-                  <div className="px-4 py-3 flex items-center gap-3" style={{ background: color }}>
-                    <div style={{
-                      width: 28, height: 28, borderRadius: 8, flexShrink: 0,
-                      background: "rgba(255,255,255,0.15)",
-                      display: "flex", alignItems: "center", justifyContent: "center",
-                      fontSize: 11, fontWeight: 700, color: "white",
-                    }}>
-                      {badge}
+                  <div className="px-4 py-3 flex items-center justify-between gap-3" style={{ background: color }}>
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div style={{
+                        width: 28, height: 28, borderRadius: 8, flexShrink: 0,
+                        background: "rgba(255,255,255,0.15)",
+                        display: "flex", alignItems: "center", justifyContent: "center",
+                        fontSize: 11, fontWeight: 700, color: "white",
+                      }}>
+                        {badge}
+                      </div>
+                      <div className="min-w-0">
+                        <p style={{ fontSize: 13.5, fontWeight: 700, color: "white", margin: 0, lineHeight: 1.3 }}>{title}</p>
+                        <p style={{ fontSize: 11, color: "rgba(255,255,255,0.6)", margin: 0 }}>{sub}</p>
+                      </div>
                     </div>
-                    <div>
-                      <p style={{ fontSize: 13.5, fontWeight: 700, color: "white", margin: 0, lineHeight: 1.3 }}>{title}</p>
-                      <p style={{ fontSize: 11, color: "rgba(255,255,255,0.6)", margin: 0 }}>{sub}</p>
-                    </div>
+                    {isToday && (
+                      <span className="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-300 text-amber-950 shadow-sm">
+                        ⭐ Hoy
+                      </span>
+                    )}
                   </div>
 
                   {items.map((tItem, ti) => {

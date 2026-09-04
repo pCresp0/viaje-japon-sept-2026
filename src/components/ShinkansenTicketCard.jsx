@@ -10,10 +10,10 @@ const TO_BLOCK = "kioto";
 /** Precios reales Revolut (grupo): ¥68.850 · 373,27€ */
 const PRICE_LINE = "5 · ¥68.850 (~373,27€)";
 
-export default function ShinkansenTicketCard({ onGoToDay } = {}) {
+export default function ShinkansenTicketCard({ onGoToDay, defaultExpanded = false } = {}) {
   const [selectedMember, setSelectedMember] = useState(null);
   const [showFullQR, setShowFullQR] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(defaultExpanded);
   const headerBg = ticketHeaderBackground(FROM_BLOCK, TO_BLOCK);
   const accent = ticketAccentColor(FROM_BLOCK, TO_BLOCK);
   const softBg = ticketSoftBackground(FROM_BLOCK, TO_BLOCK);

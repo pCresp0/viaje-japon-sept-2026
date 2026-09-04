@@ -4,6 +4,7 @@ import { mapsUrl } from "../utils/maps";
 import { MapPin, Phone, KeyRound, CalendarCheck, CalendarX, BedDouble, ExternalLink, ChevronDown, ChevronUp } from "lucide-react";
 import { useHighlight } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
+import { getDefaultTripDay, getHotelForDay } from "../utils/date";
 
 function Field({ label, children, mono = false }) {
   if (!children) return null;
@@ -38,13 +39,13 @@ const getHeaderColor = (city) => {
   return "var(--indigo)";
 };
 
-function HotelCard({ stay, index, anchorId }) {
+function HotelCard({ stay, index, anchorId, defaultExpanded = false, isTodayHotel = false }) {
   const hotel = stay.options[0];
   const t = useT();
   const { highlightId } = useHighlight();
   const isHighlighted = anchorId && highlightId === anchorId;
   const cardRef = useRef(null);
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(defaultExpanded);
 
   useEffect(() => {
     if (isHighlighted && cardRef.current) {
@@ -55,6 +56,15 @@ function HotelCard({ stay, index, anchorId }) {
       return () => window.clearTimeout(t);
     }
   }, [isHighlighted]);
+
+  useEffect(() => {
+    if (defaultExpanded && cardRef.current && !isHighlighted && index > 0) {
+      const t = window.setTimeout(() => {
+        cardRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 120);
+      return () => window.clearTimeout(t);
+    }
+  }, [defaultExpanded, isHighlighted, index]);
 
   if (!hotel) return null;
 
@@ -79,9 +89,19 @@ function HotelCard({ stay, index, anchorId }) {
       >
         <div className="flex items-start justify-between gap-3">
           <div>
-            <p style={{ fontSize: 11, opacity: 0.8, margin: 0, letterSpacing: "0.04em", textTransform: "uppercase" }}>
-              Hotel {index + 1} · {stay.city}
-            </p>
+            <div className="flex items-center gap-2 mb-0.5">
+              <p style={{ fontSize: 11, opacity: 0.8, margin: 0, letterSpacing: "0.04em", textTransform: "uppercase" }}>
+                Hotel {index + 1} · {stay.city}
+              </p>
+              {isTodayHotel && (
+                <span 
+                  className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full" 
+                  style={{ background: "rgba(232, 183, 74, 0.35)", color: "#fef08a", border: "1px solid rgba(254, 240, 138, 0.5)" }}
+                >
+                  ⭐ Tu hotel de hoy
+                </span>
+              )}
+            </div>
             <h3 className="font-display text-xl mt-0.5 leading-tight" style={{ margin: 0 }}>
               {hotel.name}
             </h3>
@@ -239,6 +259,8 @@ function HotelCard({ stay, index, anchorId }) {
 export default function HotelsPage() {
   const { stays } = useContent();
   const t = useT();
+  const currentDay = getDefaultTripDay();
+  const todayHotelId = getHotelForDay(currentDay);
 
   return (
     <div className="px-4 pt-3 pb-12">
@@ -258,9 +280,19 @@ export default function HotelsPage() {
           alignItems: "start",
         }}
       >
-        {stays.map((stay, i) => (
-          <HotelCard key={stay.id} stay={stay} index={i} anchorId={slug("hotel", stay.id)} />
-        ))}
+        {stays.map((stay, i) => {
+          const isToday = stay.id === todayHotelId;
+          return (
+            <HotelCard 
+              key={stay.id} 
+              stay={stay} 
+              index={i} 
+              anchorId={slug("hotel", stay.id)} 
+              defaultExpanded={isToday}
+              isTodayHotel={isToday}
+            />
+          );
+        })}
       </div>
     </div>
   );

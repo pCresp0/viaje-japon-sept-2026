@@ -35,6 +35,15 @@ export function getDefaultTripDay() {
   return 0;
 }
 
+// Devuelve el id del hotel (de 'stays') en el que se duerme la noche del día indicado
+export function getHotelForDay(dayNum) {
+  if (dayNum == null || dayNum <= 5) return "kioto";
+  if (dayNum === 6) return "kanazawa";
+  if (dayNum === 7) return "takayama";
+  if (dayNum === 8) return "magome";
+  return "tokio";
+}
+
 export function diffDays(fromISO, toISO) {
   const a = new Date(fromISO + "T00:00:00");
   const b = new Date(toISO + "T00:00:00");

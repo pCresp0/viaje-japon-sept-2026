@@ -21,8 +21,8 @@ const memberSeats = {
   thibaut: { seat: "12-D", qr: "/images/tickets/nozomi-day9/seat-12d.png" },
 };
 
-export default function NozomiNagoyaTicketCard({ onGoToDay } = {}) {
-  const [isExpanded, setIsExpanded] = useState(false);
+export default function NozomiNagoyaTicketCard({ onGoToDay, defaultExpanded = false } = {}) {
+  const [isExpanded, setIsExpanded] = useState(defaultExpanded);
   const [showImageModal, setShowImageModal] = useState(false);
   const [selectedMember, setSelectedMember] = useState(null);
   const [showFullQR, setShowFullQR] = useState(false);
