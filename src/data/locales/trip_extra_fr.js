@@ -4,7 +4,7 @@ export const tripMeta = {
   welcomeParagraphs: [
     "Bienvenue au voyage Morisqueño au Japon ! Ce site est la <strong>base du voyage pour nous 5</strong>. Vous y trouverez nos vols, les hôtels avec code PIN et confirmation, les bus déjà réservés, le plan au jour le jour et ce qu'il reste à finaliser.",
     "C'est notre <strong>guide de groupe privé</strong> : itinéraire, réservations, hôtels, transports, carte et astuces. Tout ce dont nous avons besoin sur notre téléphone, sans dépendre de discussions ou de PDF éparpillés.",
-    "Toutes les sections ci-dessous sont cliquables pour accéder aux détails. Vous pouvez également utiliser le <strong>menu en haut à gauche</strong> pour naviguer rapidement dans toutes les sections à tout moment. Une fois le voyage commencé (à partir du 6-7 septembre), le site s'ouvrira automatiquement sur l'onglet « Aujourd'hui » avec les détails du jour.",
+    "Toutes les sections ci-dessous sont cliquables pour accéder aux détails. Vous pouvez également utiliser le <strong>menu en haut à gauche</strong> pour naviguer rapidement dans toutes les sections à tout moment. Le site s'ouvre directement sur l'<strong>Itinéraire</strong> avec les détails du jour (ouvrant le Jour 0 par défaut avant le départ).",
     "De plus, vous pouvez <strong>changer la langue</strong> de l'application à tout moment (Español, English, Français, Tagalog) en utilisant le bouton en haut."
   ],
   about: {

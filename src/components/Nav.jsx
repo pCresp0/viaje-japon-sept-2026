@@ -9,12 +9,10 @@ import DrawerWeatherWidget from "./DrawerWeatherWidget";
 // traducción, para que el menú cambie de idioma sin recargar la página.
 export const navStructure = [
   { type: "item", id: "pendientes", labelKey: "nav.pendientes", descKey: "nav.desc.pendientes", icon: ListTodo, alert: true },
-  { type: "item", id: "inicio", labelKey: "nav.inicio", descKey: "nav.desc.hoy", icon: Home },
-  { type: "item", id: "hoy", labelKey: "nav.hoy", descKey: "nav.desc.hoy", icon: Compass },
   
   { type: "group", id: "plan", labelKey: "nav.group.plan", items: [
-      { id: "calendario", labelKey: "nav.calendario", descKey: "nav.desc.calendario", icon: CalendarDays },
       { id: "itinerario", labelKey: "nav.itinerario", descKey: "nav.desc.itinerario", icon: Route },
+      { id: "calendario", labelKey: "nav.calendario", descKey: "nav.desc.calendario", icon: CalendarDays },
       { id: "mapa", labelKey: "nav.mapa", descKey: "nav.desc.mapa", icon: Map },
     ]
   },
@@ -245,11 +243,11 @@ function Drawer({ active, onChange, open, onClose }) {
                  borderTop: "none"
                }}>
             {[
-              { id: "hoy", icon: Compass },
-              { id: "calendario", icon: CalendarDays },
               { id: "itinerario", icon: Route },
+              { id: "calendario", icon: CalendarDays },
               { id: "mapa", icon: Map },
-              { id: "transportes", icon: Train }
+              { id: "transportes", icon: Train },
+              { id: "clima", icon: Cloud }
             ].map(item => {
               const isActive = active === item.id;
               const Icon = item.icon;

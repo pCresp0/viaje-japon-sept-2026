@@ -29,18 +29,18 @@ import AboutPage from "./pages/AboutPage";
 import FrikadasPage from "./pages/FrikadasPage";
 import { useHighlight } from "./context/HighlightContext";
 import { slug } from "./utils/slug";
-import { getTripStatus } from "./utils/date";
+import { getTripStatus, getDefaultTripDay } from "./utils/date";
 
 function defaultTab() {
-  // Antes del viaje → Inicio. Cuando empieza (o ya terminó) → Hoy.
-  return getTripStatus().phase === "before" ? "inicio" : "hoy";
+  // Por defecto ir al itinerario, al día correspondiente
+  return "itinerario";
 }
 
 export default function App() {
   const [unlocked, setUnlocked] = useState(() => isUnlocked());
   const [tab, setTab] = useState(defaultTab);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [openDay, setOpenDay] = useState(getTripStatus().dayNum ?? 0);
+  const [openDay, setOpenDay] = useState(getDefaultTripDay);
   const [quickView, setQuickView] = useState(false);
   const [mapInitialDay, setMapInitialDay] = useState(null);
   const scrollContainerRef = useRef(null);

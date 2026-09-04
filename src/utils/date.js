@@ -23,6 +23,18 @@ export function getTripStatus() {
   return { phase: "during", dayNum: null };
 }
 
+export function getDefaultTripDay() {
+  const status = getTripStatus();
+  if (status.phase === "during") {
+    return status.dayNum ?? 0;
+  }
+  if (status.phase === "after") {
+    return 15;
+  }
+  // Antes del inicio del viaje: abrir por defecto el Día 0
+  return 0;
+}
+
 export function diffDays(fromISO, toISO) {
   const a = new Date(fromISO + "T00:00:00");
   const b = new Date(toISO + "T00:00:00");

@@ -4,7 +4,7 @@ export const tripMeta = {
   welcomeParagraphs: [
     "Welcome to the Morisqueño Trip to Japan! This website is the <strong>base for the 5 of us</strong>. Here you can find our flights, hotels with PINs and confirmations, booked buses, the day-by-day plan, and what's still pending.",
     "This is our <strong>private group guide</strong>: itinerary, reservations, hotels, transport, map, and tips. Everything we need on our phones, without relying on chats or loose PDFs.",
-    "All the sections below are clickable so you can see the details. You can also use the <strong>menu on the top left</strong> to quickly navigate through all sections at any time. Once the trip begins (around Sept 6–7), the web will automatically open on the 'Today' tab with the details for that day.",
+    "All the sections below are clickable so you can see the details. You can also use the <strong>menu on the top left</strong> to quickly navigate through all sections at any time. The web opens directly on the <strong>Itinerary</strong>, displaying the details for the current day (opening Day 0 by default before departure).",
     "Additionally, you can <strong>change the application language</strong> at any time (Español, English, Français, Tagalog) using the button at the top."
   ],
   about: {

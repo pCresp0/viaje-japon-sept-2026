@@ -58,14 +58,6 @@ function buildSearchIndex(lang) {
   // ── Apartados y Subapartados de Navegación ───────────────────────
   const navSections = [
     {
-      id: "nav-inicio",
-      title: "Inicio · Portada",
-      subtitle: "Resumen del viaje, cuenta atrás y accesos directos",
-      category: "Apartados",
-      tab: "inicio",
-      terms: ["inicio", "portada", "home", "resumen", "bienvenida", "cuenta atras", "apartado inicio"],
-    },
-    {
       id: "nav-pendientes",
       title: "Cosas pendientes",
       subtitle: "Checklist de tareas antes y durante el viaje",
@@ -74,12 +66,12 @@ function buildSearchIndex(lang) {
       terms: ["pendientes", "cosas pendientes", "checklist", "tareas", "antes de viajar", "durante el viaje", "to do", "por hacer"],
     },
     {
-      id: "nav-hoy",
-      title: "Hoy",
-      subtitle: "Vista del día actual en tiempo real",
+      id: "nav-itinerario-hoy",
+      title: "Itinerario · Día actual",
+      subtitle: "Plan del día en curso del viaje",
       category: "Apartados",
-      tab: "hoy",
-      terms: ["hoy", "dia actual", "dia de hoy", "today"],
+      tab: "itinerario",
+      terms: ["hoy", "dia actual", "dia de hoy", "today", "itinerario hoy"],
     },
     {
       id: "nav-calendario",
