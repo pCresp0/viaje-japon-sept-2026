@@ -192,23 +192,28 @@ export default function WeatherPage() {
         const cityData = weatherMap[d.city];
         if (!cityData) return { ...d, daysLeft, dateStr };
         
-        const dateIndex = cityData.time.indexOf(dateStr);
+        const dateIndex = cityData.time ? cityData.time.indexOf(dateStr) : -1;
         let high, low, rain, sky, condition, isFallback = false;
 
-        if (dateIndex !== -1) {
-          high = Math.round(cityData.temperature_2m_max[dateIndex]);
-          low = Math.round(cityData.temperature_2m_min[dateIndex]);
-          rain = cityData.precipitation_probability_max[dateIndex] || 0;
-          const wmo = cityData.weathercode[dateIndex];
-          sky = getSkyFromWMO(wmo);
-          condition = getConditionFromWMO(wmo);
+        const liveMax = dateIndex !== -1 ? cityData.temperature_2m_max?.[dateIndex] : null;
+        const liveMin = dateIndex !== -1 ? cityData.temperature_2m_min?.[dateIndex] : null;
+        const liveRain = dateIndex !== -1 ? cityData.precipitation_probability_max?.[dateIndex] : null;
+        const liveWmo = dateIndex !== -1 ? cityData.weathercode?.[dateIndex] : null;
+
+        if (dateIndex !== -1 && liveMax != null && liveMin != null) {
+          high = Math.round(liveMax);
+          low = Math.round(liveMin);
+          rain = liveRain != null ? liveRain : d.rain;
+          sky = liveWmo != null ? getSkyFromWMO(liveWmo) : d.sky;
+          condition = liveWmo != null ? getConditionFromWMO(liveWmo) : d.condition;
+          isFallback = false;
         } else {
-          high = Math.round(cityData.temperature_2m_max[0]);
-          low = Math.round(cityData.temperature_2m_min[0]);
-          rain = cityData.precipitation_probability_max[0] || 0;
-          const wmo = cityData.weathercode[0];
-          sky = getSkyFromWMO(wmo);
-          condition = getConditionFromWMO(wmo);
+          // Si el día está fuera del rango de predicción o la API aún no tiene temps calculadas (p.ej. null a 16 días)
+          high = d.high;
+          low = d.low;
+          rain = liveRain != null ? liveRain : d.rain;
+          sky = liveWmo != null ? getSkyFromWMO(liveWmo) : d.sky;
+          condition = liveWmo != null ? getConditionFromWMO(liveWmo) : d.condition;
           isFallback = true;
         }
         
