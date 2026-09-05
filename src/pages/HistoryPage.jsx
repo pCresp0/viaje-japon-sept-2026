@@ -42,11 +42,20 @@ function PeriodCard({ period, isOpen, onToggle, speak, stop, speakingId, support
     }
   }, [isHighlighted]);
 
+  useEffect(() => {
+    if (isOpen && cardRef.current) {
+      const t = window.setTimeout(() => {
+        cardRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 120);
+      return () => window.clearTimeout(t);
+    }
+  }, [isOpen]);
+
   return (
     <div
       id={anchorId}
       ref={cardRef}
-      className={"rounded-2xl border overflow-hidden mb-3" + (isHighlighted ? " search-highlight-pulse" : "")}
+      className={"period-card-anchor rounded-2xl border overflow-hidden mb-3" + (isHighlighted ? " search-highlight-pulse" : "")}
       style={{
         borderColor: isOpen ? SHU + "55" : "var(--line)",
         background: "var(--paper-raised)",
@@ -217,7 +226,7 @@ export default function HistoryPage() {
   const { lang } = useLang();
   const { supported, speakingId, speak, stop } = useTextSpeech(lang);
 
-  // 4 Secciones principales colapsadas por defecto
+  // 4 Secciones principales: solo una abierta a la vez (cierra el resto y hace scroll al abrir)
   const [openSections, setOpenSections] = useState({
     historia: false,
     podcasts: false,
@@ -225,8 +234,31 @@ export default function HistoryPage() {
     books: false,
   });
 
+  const sectionRefs = useRef({});
+
   const toggleSection = (key) => {
-    setOpenSections((prev) => ({ ...prev, [key]: !prev[key] }));
+    setOpenSections((prev) => {
+      const willOpen = !prev[key];
+      if (willOpen) {
+        window.setTimeout(() => {
+          const el = sectionRefs.current[key];
+          el?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 120);
+        return {
+          historia: key === "historia",
+          podcasts: key === "podcasts",
+          documentaries: key === "documentaries",
+          books: key === "books",
+        };
+      } else {
+        return {
+          historia: false,
+          podcasts: false,
+          documentaries: false,
+          books: false,
+        };
+      }
+    });
   };
 
   // Acordeón exclusivo para periodos dentro de la sección de Historia
@@ -238,19 +270,19 @@ export default function HistoryPage() {
   }
 
   // Si llegamos desde el buscador apuntando a un elemento concreto,
-  // se abre automáticamente la sección padre correspondiente.
+  // se abre automáticamente la sección padre correspondiente y se cierran las demás.
   useEffect(() => {
     if (!highlightId) return;
     if (highlightId.startsWith("history-podcasts")) {
-      setOpenSections((prev) => ({ ...prev, podcasts: true }));
+      setOpenSections({ historia: false, podcasts: true, documentaries: false, books: false });
     } else if (highlightId.startsWith("history-documentaries")) {
-      setOpenSections((prev) => ({ ...prev, documentaries: true }));
+      setOpenSections({ historia: false, podcasts: false, documentaries: true, books: false });
     } else if (highlightId.startsWith("history-books")) {
-      setOpenSections((prev) => ({ ...prev, books: true }));
+      setOpenSections({ historia: false, podcasts: false, documentaries: false, books: true });
     } else {
       const match = historyPeriods.find((p) => slug("history", p.id) === highlightId);
       if (match) {
-        setOpenSections((prev) => ({ ...prev, historia: true }));
+        setOpenSections({ historia: true, podcasts: false, documentaries: false, books: false });
         setOpenId(match.id);
       }
     }
@@ -308,7 +340,8 @@ export default function HistoryPage() {
 
       {/* ── 1. SECCIÓN: HISTORIA DE JAPÓN ────────────────────────── */}
       <div 
-        className="rounded-2xl border overflow-hidden mb-4 shadow-xs"
+        ref={(el) => (sectionRefs.current.historia = el)}
+        className="history-section-anchor rounded-2xl border overflow-hidden mb-4 shadow-xs"
         style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}
       >
         <button
@@ -356,7 +389,8 @@ export default function HistoryPage() {
 
       {/* ── 2. SECCIÓN: PODCASTS (MORADO) ────────────────────────── */}
       <div 
-        className="rounded-2xl border overflow-hidden mb-4 shadow-xs"
+        ref={(el) => (sectionRefs.current.podcasts = el)}
+        className="history-section-anchor rounded-2xl border overflow-hidden mb-4 shadow-xs"
         style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}
       >
         <button
@@ -431,7 +465,8 @@ export default function HistoryPage() {
       {/* ── 3. SECCIÓN: DOCUMENTALES (ROJO YOUTUBE) ────────────────── */}
       {furtherReading.documentaries && furtherReading.documentaries.length > 0 && (
         <div 
-          className="rounded-2xl border overflow-hidden mb-4 shadow-xs"
+          ref={(el) => (sectionRefs.current.documentaries = el)}
+          className="history-section-anchor rounded-2xl border overflow-hidden mb-4 shadow-xs"
           style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}
         >
           <button
@@ -495,7 +530,8 @@ export default function HistoryPage() {
 
       {/* ── 4. SECCIÓN: LIBROS (AZUL / ÍNDIGO) ────────────────────── */}
       <div 
-        className="rounded-2xl border overflow-hidden mb-4 shadow-xs"
+        ref={(el) => (sectionRefs.current.books = el)}
+        className="history-section-anchor rounded-2xl border overflow-hidden mb-4 shadow-xs"
         style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}
       >
         <button

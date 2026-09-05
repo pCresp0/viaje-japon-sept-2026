@@ -145,13 +145,17 @@ main > div > * {
   }
 }
 
-/* Ancla de día en itinerario: deja margen bajo la cabecera fija móvil
-   para que scrollIntoView muestre la card completa, no cortada. */
-.itinerary-day-anchor {
-  scroll-margin-top: 12px;
+/* Anclas de día en itinerario y apartados de historia: dejan margen bajo la cabecera fija
+   para que scrollIntoView muestre la card completa arriba, sin tapar ni cortar. */
+.itinerary-day-anchor,
+.history-section-anchor,
+.period-card-anchor {
+  scroll-margin-top: 14px;
 }
 @media (max-width: 767px) {
-  .itinerary-day-anchor {
+  .itinerary-day-anchor,
+  .history-section-anchor,
+  .period-card-anchor {
     scroll-margin-top: calc(var(--mobile-topbar) + 10px);
   }
 }
