@@ -76,7 +76,7 @@ export const flights = {
     dir: "out",
     label: "Ida",
     date: "2026-09-06",
-    text: "Salida Dom 6 sept desde Madrid (T4S) a las 09:05 (Qatar Airways QR148). Escala en Doha de 3h 45m (16:50 → 20:35). Llegada a Narita (NRT), Terminal 2, el Lun 7 sept a las 12:55.",
+    text: "Salida Dom 6 sept desde Madrid (T4 / T4S) a las 09:05 (Qatar Airways QR148). Escala en Doha de 3h 45m (16:50 → 20:35). Llegada a Narita (NRT), Terminal 2, el Lun 7 sept a las 12:55.",
     flightNumber: "QR148 + QR808",
     leg1: {
       number: "QR148",
@@ -99,7 +99,7 @@ export const flights = {
       trackUrl: "https://www.google.com/search?q=vuelo+QR808",
     },
     trackUrl: "https://www.google.com/search?q=vuelo+QR148",
-    depart: { city: "Madrid", time: "2026-09-06T09:05", terminal: "T4S (Satélite)" },
+    depart: { city: "Madrid", time: "2026-09-06T09:05", terminal: "T4 / T4S (Satélite)" },
     arrive: { city: "Narita (NRT)", time: "2026-09-07T12:55", terminal: "T2" },
     totalDuration: "20h 50m",
     layover: {
@@ -301,10 +301,10 @@ export const days = [
     history:
       "Qatar Airways es la aerolínea nacional de Catar y una de las más valoradas del mundo. Doha es el hub central de la compañía en Oriente Medio, punto de conexión entre Europa y Asia.",
     schedule: [
-      { time: "09:05", text: "Salida desde el Aeropuerto Adolfo Suárez Madrid-Barajas en vuelo QR148 (Qatar Airways). Seguimiento en vivo: https://www.google.com/search?q=vuelo+QR148" },
+      { time: "09:05", text: "Salida desde el Aeropuerto Adolfo Suárez Madrid-Barajas (T4 / T4S) en vuelo QR148 (Qatar Airways). Seguimiento en vivo: https://www.google.com/search?q=vuelo+QR148" },
       { time: "16:50", text: "Llegada a Doha (Aeropuerto Internacional de Hamad, DOH). Escala en terminal única, cambio de avión. Tiempo en escala: 3 h 45 min (16:50 → 20:35)." },
       { time: "20:35", text: "Salida desde Doha hacia Narita (NRT) en el vuelo QR808 (Qatar Airways). Duración aprox. 10 h 20 min. Seguimiento en vivo: https://www.google.com/search?q=vuelo+QR808" },
-      { time: "12:55 (+1 día)", text: "Llegada a Narita (lunes 7 sept). Aduanas y recogida de equipajes con el código QR de Visit Japan Web. Luego: traslado en Narita Express + Shinkansen a Kioto." },
+      { time: "12:55 (+1 día)", text: "Llegada a Narita (Terminal 2, lunes 7 sept). Aduanas y recogida de equipajes con el código QR de Visit Japan Web. Luego: traslado en Narita Express + Shinkansen a Kioto." },
     ],
     money: "Vuelo incluido en el presupuesto de grupo",
   },
