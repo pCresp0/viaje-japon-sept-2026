@@ -92,7 +92,7 @@ export const filterData = {
     { name: "Mont Fuji avec Ken", day: "Jour 14", detail: "Tour privé 8h en mini-van avec guide hispanophone" },
   ],
   transportes: [
-    { name: "Aéroport de Narita", day: "Jours 1 et 15", detail: "Vols internationaux QR148 / QR807" },
+    { name: "Aéroport de Narita", day: "Jours 1 et 15", detail: "Vols internationaux QR808 (arrivée) / QR809 (départ)" },
     { name: "Gare de Kyoto", day: "Jours 1–5", detail: "Shinkansen Nozomi et trains régionaux" },
     { name: "Gare de Kanazawa", day: "Jours 5–7", detail: "Thunderbird / Hokuriku Shinkansen" },
     { name: "Takayama Nohi Bus Center", day: "Jours 7–8", detail: "Bus vers Shirakawa-go et Magome" },

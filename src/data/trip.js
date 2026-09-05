@@ -81,6 +81,7 @@ export const flights = {
     leg1: {
       number: "QR148",
       operator: "Qatar Airways",
+      aircraft: "Boeing 787-9 Dreamliner",
       duration: "6h 45m",
       route: "Madrid → Doha",
       depTime: "09:05",
@@ -90,6 +91,7 @@ export const flights = {
     leg2: {
       number: "QR808",
       operator: "Qatar Airways",
+      aircraft: "Boeing 777-300ER",
       duration: "10h 20m",
       route: "Doha → Narita",
       depTime: "20:35",

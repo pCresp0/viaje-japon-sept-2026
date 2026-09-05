@@ -171,7 +171,7 @@ function FlightRow({ flight, icon: Icon, defaultExpanded = false, isTodayFlight 
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
             <div>
               <div style={{ fontSize: 10, fontWeight: 600, color: "var(--ink-soft)" }}>
-                {flight.leg1 ? flight.leg1.number : "LEG 1"} · {flight.leg1?.operator ?? "Qatar Airways"}
+                {flight.leg1 ? flight.leg1.number : "LEG 1"} · {flight.leg1?.operator ?? "Qatar Airways"}{flight.leg1?.aircraft ? ` (${flight.leg1.aircraft})` : ""}
               </div>
               <div style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)" }}>
                 {isOutbound ? "Madrid" : "Narita"} → Doha
@@ -230,7 +230,7 @@ function FlightRow({ flight, icon: Icon, defaultExpanded = false, isTodayFlight 
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
             <div>
               <div style={{ fontSize: 10, fontWeight: 600, color: "var(--ink-soft)" }}>
-                {flight.leg2 ? flight.leg2.number : "LEG 2"} · {flight.leg2?.operator ?? "Qatar Airways"}
+                {flight.leg2 ? flight.leg2.number : "LEG 2"} · {flight.leg2?.operator ?? "Qatar Airways"}{flight.leg2?.aircraft ? ` (${flight.leg2.aircraft})` : ""}
               </div>
               <div style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)" }}>
                 Doha → {isOutbound ? "Narita" : "Madrid"}

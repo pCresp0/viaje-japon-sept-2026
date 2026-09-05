@@ -92,7 +92,7 @@ export const filterData = {
     { name: "Bundok Fuji kasama si Ken", day: "Araw 14", detail: "Pribadong 8-oras na mini-van tour kasama ang Spanish guide" },
   ],
   transportes: [
-    { name: "Narita Airport", day: "Araw 1 at 15", detail: "Internasyonal na flight QR148 / QR807" },
+    { name: "Narita Airport", day: "Araw 1 at 15", detail: "Internasyonal na flight QR808 (dating) / QR809 (alis)" },
     { name: "Estasyon ng Kyoto", day: "Araw 1–5", detail: "Shinkansen Nozomi at mga panrehiyong tren" },
     { name: "Estasyon ng Kanazawa", day: "Araw 5–7", detail: "Thunderbird / Hokuriku Shinkansen" },
     { name: "Takayama Nohi Bus Center", day: "Araw 7–8", detail: "Mga bus papuntang Shirakawa-go at Magome" },
