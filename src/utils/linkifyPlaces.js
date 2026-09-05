@@ -179,6 +179,8 @@ export function tokenizePlaces(text) {
   
   // Eliminar paréntesis que rodeen directamente a cualquier URL para que el botón se renderice limpio
   textStr = textStr.replace(/\(\s*(https?:\/\/[^\s)]+)\s*\)/gi, ' $1 ');
+  // Normalizar viñetas con asterisco suelto (* Item) a viñeta limpia (• Item)
+  textStr = textStr.replace(/(^|\n)\s*\*\s+/g, '$1• ');
 
   // 1. Primero extraemos las URLs completas para que no sean divididas por nombres de lugares
   const chunks = [];
@@ -221,9 +223,33 @@ export function tokenizePlaces(text) {
     }
   }
 
+  // 2b. Extraer formato en cursiva (*texto*) de los fragmentos restantes
+  const withFormat = [];
+  for (const chunk of withBold) {
+    if (chunk.type !== "raw") {
+      withFormat.push(chunk);
+      continue;
+    }
+
+    let last = 0;
+    let italicMatch;
+    const italicRe = /\*([^*\n]+)\*/g;
+
+    while ((italicMatch = italicRe.exec(chunk.value)) !== null) {
+      if (italicMatch.index > last) {
+        withFormat.push({ type: "raw", value: chunk.value.slice(last, italicMatch.index) });
+      }
+      withFormat.push({ type: "italic", value: italicMatch[1] });
+      last = italicMatch.index + italicMatch[0].length;
+    }
+    if (last < chunk.value.length) {
+      withFormat.push({ type: "raw", value: chunk.value.slice(last) });
+    }
+  }
+
   // 3. En los bloques de texto puro (raw), aplicamos la detección de lugares
   const finalParts = [];
-  for (const part of withBold) {
+  for (const part of withFormat) {
     if (part.type !== "raw") {
       finalParts.push(part);
       continue;

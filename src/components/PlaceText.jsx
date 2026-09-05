@@ -148,6 +148,10 @@ export default function PlaceText({ text, linkStyle, className, style, as: Tag =
           return <strong key={i} style={{ fontWeight: 700, color: "var(--ink-bold)" }}>{p.value}</strong>;
         }
 
+        if (p.type === "italic") {
+          return <em key={i} style={{ fontStyle: "italic" }}>{p.value}</em>;
+        }
+
         return <span key={i}>{p.value}</span>;
       })}
     </Tag>
