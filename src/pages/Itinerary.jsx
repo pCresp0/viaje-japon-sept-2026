@@ -70,7 +70,7 @@ export default function Itinerary({ openDay, setOpenDay, quickView, setQuickView
       </div>
 
       <p className="text-xs mb-4" style={{ color: "var(--ink-soft)" }}>
-        El PDF incluye el itinerario completo (días 0–15) y anexos: vuelos, hoteles, billetes, Fuji, transporte, presupuesto, emergencias, pendientes, preparativos, comidas y frases.
+        El PDF incluye el itinerario completo (días 0–15) y anexos: vuelos, hoteles, billetes, Fuji, transporte, presupuesto, emergencias, pendientes, preparativos, comidas, frases e historia de Japón.
       </p>
 
       {/* ── Toggle vista rápida / completa ────────────────────── */}

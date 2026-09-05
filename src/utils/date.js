@@ -9,8 +9,31 @@ export function todayISO() {
   return `${y}-${m}-${day}`;
 }
 
+// Devuelve la fecha actual en la zona horaria de Japón (Asia/Tokyo) en formato YYYY-MM-DD
+export function getTokyoISO() {
+  try {
+    const f = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Tokyo", year: "numeric", month: "2-digit", day: "2-digit" });
+    return f.format(new Date());
+  } catch {
+    return todayISO();
+  }
+}
+
 export function getTripStatus() {
-  const today = todayISO();
+  const localToday = todayISO();
+  const tokyoToday = getTokyoISO();
+
+  // Durante las fechas del viaje, preferimos la hora de Japón (Asia/Tokyo)
+  // para que a las 00:00 de Japón la web avance automáticamente al día correspondiente.
+  const isDuringTrip = (date) => date >= tripMeta.start && date <= tripMeta.end;
+
+  let today = localToday;
+  if (isDuringTrip(tokyoToday)) {
+    today = tokyoToday;
+  } else if (isDuringTrip(localToday)) {
+    today = localToday;
+  }
+
   if (today < tripMeta.start) {
     return { phase: "before", daysUntil: diffDays(today, tripMeta.start) };
   }

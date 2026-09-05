@@ -594,7 +594,9 @@ function Appendix({ title, children }) {
  * transporte, presupuesto, emergencias, pendientes, preparativos, comidas, frases).
  */
 export default function ItineraryPrintView({ days }) {
-  const { tripMeta, flights, stays, blocks, transports, budget, guides } = useContent();
+  const { tripMeta, flights, stays, blocks, transports, budget, guides, historyPeriods, foods: cFoods, pendingItems: cPending } = useContent();
+  const allFoods = cFoods || foods;
+  const allPending = cPending || pendingItems;
   const purchased = transports.filter((x) => x.purchased);
   const pending = transports.filter((x) => !x.purchased);
   const jrCovered = transports.filter((x) => x.jrPassCovered);
@@ -625,6 +627,7 @@ export default function ItineraryPrintView({ days }) {
           <li>Itinerario día a día (días 0–15) con guías de lugares</li>
           <li>Anexos: hoteles · billetes confirmados · Fuji · transporte · presupuesto</li>
           <li>Anexos: emergencias · pendientes · preparativos · comidas · frases</li>
+          <li>Anexo: Historia de Japón (12 periodos con referencias del viaje e ilustraciones)</li>
         </ol>
 
         <div style={{ padding: "10px 12px", background: "#f7f0e3", borderRadius: 8, marginBottom: 14, fontSize: 10.5, lineHeight: 1.55 }}>
@@ -879,7 +882,7 @@ export default function ItineraryPrintView({ days }) {
 
       {/* ── Anexo: Pendientes ───────────────────────────────────── */}
       <Appendix title="Anexo · Pendientes">
-        {pendingItems.map((item) => (
+        {allPending.map((item) => (
           <div key={item.id} style={{
             marginBottom: 10, padding: "8px 10px", border: "1px solid #e6dcc4",
             borderRadius: 6, fontSize: 10, lineHeight: 1.5, pageBreakInside: "avoid",
@@ -917,7 +920,7 @@ export default function ItineraryPrintView({ days }) {
             </tr>
           </thead>
           <tbody>
-            {foods.map((f) => (
+            {allFoods.map((f) => (
               <tr key={f.id} style={{ borderBottom: "1px solid #e6dcc4" }}>
                 <td style={{ padding: 5, verticalAlign: "top" }}>
                   <strong>{f.name}</strong> <span style={{ color: "#5a6070" }}>{f.jp}</span>
@@ -958,6 +961,83 @@ export default function ItineraryPrintView({ days }) {
           </p>
         ))}
       </Appendix>
+
+      {/* ── Anexo: Historia de Japón ────────────────────────────── */}
+      {historyPeriods?.length > 0 && (
+        <Appendix title="Anexo · Historia de Japón">
+          <p style={{ fontSize: 10, color: "#5a6070", marginBottom: 12, lineHeight: 1.5 }}>
+            Recorrido cronológico completo por la historia de Japón con referencias directas a los lugares visitados durante el viaje.
+          </p>
+          {historyPeriods.map((period) => (
+            <div
+              key={period.id}
+              style={{
+                marginBottom: 12, padding: "10px 12px", border: "1px solid #e6dcc4",
+                borderRadius: 6, fontSize: 10, lineHeight: 1.5, pageBreakInside: "avoid",
+                background: "#fff",
+              }}
+            >
+              <p style={{ fontSize: 9.5, fontWeight: 700, color: "#7a2c2e", letterSpacing: "0.04em", margin: "0 0 2px" }}>
+                {period.era}
+              </p>
+              <h3 style={{ fontSize: 13, fontWeight: 700, color: "#1d3557", margin: "0 0 4px" }}>
+                {period.title}
+              </h3>
+              <p style={{ fontSize: 10, color: "#5a6070", margin: "0 0 8px", fontStyle: "italic" }}>
+                {period.summary}
+              </p>
+
+              {period.image && (
+                <div style={{ margin: "8px 0 10px", textAlign: "center" }}>
+                  <img
+                    src={period.image}
+                    alt={period.title}
+                    style={{
+                      maxHeight: "52mm", maxWidth: "100%", height: "auto",
+                      borderRadius: 4, display: "inline-block", border: "1px solid #e6dcc4",
+                    }}
+                    onError={(e) => { e.currentTarget.style.display = "none"; }}
+                  />
+                  {period.imageCaption && (
+                    <p style={{ fontSize: 8.5, color: "#5a6070", margin: "4px 0 0", fontStyle: "italic" }}>
+                      {period.imageCaption}
+                    </p>
+                  )}
+                </div>
+              )}
+
+              {period.content?.map((block, i) => (
+                <div key={i} style={{ marginBottom: 6 }}>
+                  <p style={{ fontSize: 10, fontWeight: 700, color: "#1d3557", margin: "0 0 2px" }}>
+                    {block.heading}
+                  </p>
+                  <p style={{ fontSize: 9.5, lineHeight: 1.5, color: "#1b1f27", margin: 0 }}>
+                    {block.text}
+                  </p>
+                </div>
+              ))}
+
+              {period.seeOnTrip?.length > 0 && (
+                <div style={{ marginTop: 6, padding: "6px 8px", background: "#f7f0e3", borderRadius: 4 }}>
+                  <strong style={{ fontSize: 9, color: "#1d3557", textTransform: "uppercase" }}>
+                    Lo veréis en el viaje:
+                  </strong>
+                  <ul style={{ margin: "3px 0 0", paddingLeft: 14, fontSize: 9, lineHeight: 1.45, color: "#5a6070" }}>
+                    {period.seeOnTrip.map((ref, i) => {
+                      const placeName = guides[ref.id]?.name ?? ref.place ?? ref.name ?? ref.id;
+                      return (
+                        <li key={i}>
+                          <strong>{placeName}:</strong> {ref.note}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              )}
+            </div>
+          ))}
+        </Appendix>
+      )}
     </div>,
     document.body
   );

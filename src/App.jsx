@@ -115,6 +115,33 @@ export default function App() {
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
+  // Preload silencioso en segundo plano de las imágenes históricas para que al abrir la sección no haya saltos
+  useEffect(() => {
+    const preload = () => {
+      const imgs = [
+        "/images/history/jomon-dogu.jpg",
+        "/images/history/nara-daibutsu.jpg",
+        "/images/history/heian-genji.jpg",
+        "/images/history/muromachi-kinkakuji.jpg",
+        "/images/history/azuchi-himeji.jpg",
+        "/images/history/edo-kanagawa.jpg",
+        "/images/history/meiji-yamagata.jpg",
+        "/images/history/taisho-tokio.jpg",
+        "/images/history/showa-shinkansen.jpg",
+        "/images/history/heisei-shibuya.jpg",
+      ];
+      imgs.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+      });
+    };
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(preload, { timeout: 2500 });
+    } else {
+      window.setTimeout(preload, 1200);
+    }
+  }, []);
+
   // Configuración de gestos (swipe)
   const swipeHandlers = useSwipeable({
     onSwipedRight: (e) => {

@@ -382,6 +382,10 @@ main > div > * {
 }
 
 @media print {
+  html, body {
+    background: #fff !important;
+    color: #1b1f27 !important;
+  }
   body::before {
     display: none !important;
   }

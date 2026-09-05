@@ -119,18 +119,40 @@ function PeriodCard({ period, isOpen, onToggle, speak, stop, speakingId, support
       {isOpen && (
         <div className="px-5 pb-5" style={{ borderTop: "1px solid var(--line)", paddingTop: 16 }}>
           {period.image && (
-            <div className="mb-5 rounded-xl overflow-hidden shadow-sm" style={{ border: "1px solid var(--line)", background: "var(--paper-raised)" }}>
-              <div className="w-full flex items-center justify-center bg-black/5 dark:bg-black/20 overflow-hidden" style={{ maxHeight: 280 }}>
+            <div 
+              className="mb-5 rounded-2xl overflow-hidden shadow-sm" 
+              style={{ border: "1px solid var(--line)", background: "var(--paper-raised)" }}
+            >
+              <div 
+                className="relative w-full flex items-center justify-center overflow-hidden min-h-[220px] sm:min-h-[340px] md:min-h-[420px] max-h-[290px] sm:max-h-[420px] md:max-h-[490px]"
+                style={{ background: "rgba(0,0,0,0.03)" }}
+              >
+                {/* Fondo ambiente desenfocado con los tonos de la propia obra histórica */}
+                <img 
+                  src={period.image} 
+                  alt="" 
+                  aria-hidden="true" 
+                  className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-35 dark:opacity-20 scale-125 pointer-events-none select-none" 
+                  decoding="async"
+                />
+                <div 
+                  className="absolute inset-0 pointer-events-none" 
+                  style={{ background: "radial-gradient(ellipse at center, rgba(0,0,0,0) 35%, rgba(0,0,0,0.14) 100%)" }} 
+                />
+
+                {/* Imagen de la obra nítida y destacada */}
                 <img 
                   src={period.image} 
                   alt={period.title} 
-                  className="w-full h-auto object-cover sm:object-contain" 
-                  style={{ maxHeight: 280, display: "block" }} 
-                  loading="lazy"
+                  className="relative z-10 w-auto h-auto max-w-full max-h-[270px] sm:max-h-[390px] md:max-h-[460px] object-contain rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.015]" 
+                  decoding="async"
                 />
               </div>
               {period.imageCaption && (
-                <div className="px-3.5 py-2.5 text-[11.5px] italic text-center" style={{ borderTop: "1px solid var(--line)", color: "var(--ink-soft)" }}>
+                <div 
+                  className="px-4 py-2.5 text-[12px] italic text-center font-medium" 
+                  style={{ borderTop: "1px solid var(--line)", color: "var(--ink-soft)", background: "var(--paper-raised)" }}
+                >
                   {period.imageCaption}
                 </div>
               )}
@@ -232,6 +254,16 @@ export default function HistoryPage() {
       }
     }
   }, [highlightId, historyPeriods]);
+
+  // Preload de todas las imágenes de historia para que se muestren al instante sin salto
+  useEffect(() => {
+    historyPeriods.forEach((p) => {
+      if (p.image) {
+        const img = new Image();
+        img.src = p.image;
+      }
+    });
+  }, [historyPeriods]);
 
   return (
     <div className="px-4 pt-3 pb-12">
