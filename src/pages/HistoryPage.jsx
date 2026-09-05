@@ -118,6 +118,24 @@ function PeriodCard({ period, isOpen, onToggle, speak, stop, speakingId, support
 
       {isOpen && (
         <div className="px-5 pb-5" style={{ borderTop: "1px solid var(--line)", paddingTop: 16 }}>
+          {period.image && (
+            <div className="mb-5 rounded-xl overflow-hidden shadow-sm" style={{ border: "1px solid var(--line)", background: "var(--paper-raised)" }}>
+              <div className="w-full flex items-center justify-center bg-black/5 dark:bg-black/20 overflow-hidden" style={{ maxHeight: 280 }}>
+                <img 
+                  src={period.image} 
+                  alt={period.title} 
+                  className="w-full h-auto object-cover sm:object-contain" 
+                  style={{ maxHeight: 280, display: "block" }} 
+                  loading="lazy"
+                />
+              </div>
+              {period.imageCaption && (
+                <div className="px-3.5 py-2.5 text-[11.5px] italic text-center" style={{ borderTop: "1px solid var(--line)", color: "var(--ink-soft)" }}>
+                  {period.imageCaption}
+                </div>
+              )}
+            </div>
+          )}
           {period.content.map((block, i) => (
             <div key={i} style={{ marginBottom: 14 }}>
               <p style={{ fontSize: 12.5, fontWeight: 700, color: "var(--indigo)", marginBottom: 4 }}>
