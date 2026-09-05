@@ -1,216 +1,328 @@
 export const historyPeriods = [
   {
+    id: "religion",
+    era: "From Origins to Today",
     title: "Beliefs: Shintoism and Buddhism",
     summary: "The soul of Japan: the peaceful coexistence and syncretism between native kami and continental Buddhism.",
     content: [
       {
         heading: "Shintoism (Shintō)",
-        text: "Shintoism ('The way of the gods') is the native religion of Japan. It has no founder, no absolute sacred texts, and no strict dogmas. It is based on the veneration of 'kami', spirits or deities that inhabit nature (mountains, ancient trees, waterfalls) and abstract concepts or famous ancestors. It focuses on ritual purity and the celebration of life. Shinto shrines are recognized by their 'torii' gates (often red), which mark the passage from the profane to the sacred. During the trip, you will see this natural mysticism in places like the Fushimi Inari shrine or the gigantic trees of the Japanese Alps.",
+        text: "Shintoism ('The way of the gods') is the native religion of Japan. It has no founder, no absolute sacred texts, and no strict dogmas. It is based on the veneration of 'kami', spirits or deities that inhabit nature (mountains, ancient trees, waterfalls) as well as abstract concepts or celebrated ancestors. It focuses on ritual purity and the celebration of life. Shinto shrines are recognized by their 'torii' gates (often vermilion red), which mark the passage from the profane to the sacred. During your trip, you will experience this natural mysticism in places like the Fushimi Inari shrine or among the gigantic cedars of the Japanese Alps.",
       },
       {
         heading: "Buddhism (Bukkyō)",
-        text: "Buddhism arrived in Japan in the 6th century AD from Korea and China. Unlike Shintoism, it brought a complex philosophical doctrine about suffering, reincarnation, and salvation, as well as monumental art and architecture. It strongly took hold in the ruling classes and transformed the country's culture. Its places of worship are temples (tera / ji), which usually have pagodas, Buddha statues, and huge bells. Tōdai-ji in Nara and Sanjūsangen-dō in Kyoto are impressive examples of its power.",
+        text: "Buddhism arrived in Japan in the 6th century AD from Korea and China. Unlike Shintoism, it brought a complex philosophical doctrine about suffering, reincarnation, and enlightenment, as well as monumental art and architecture. It strongly took hold among the ruling classes and transformed the nation's culture. Its places of worship are temples (tera / ji), featuring pagodas, Buddha statues, and immense bronze bells. Tōdai-ji in Nara and Sanjūsangen-dō in Kyoto are awe-inspiring examples of its grandeur.",
       },
       {
-        heading: "Syncretism: 'Born Shinto, die Buddhist'",
-        text: "Instead of clashing, both religions merged (Shinbutsu-shūgō). Kami came to be considered local manifestations of Buddhas. Today, most Japanese practice both religions depending on the occasion: life celebrations (births, weddings, local festivals or Matsuri) are held according to Shinto rites, while funerals and ancestor worship are governed by Buddhist rites. This peaceful and pragmatic coexistence is fundamental to understanding the modern Japanese mindset.",
+        heading: "Syncretism: 'Born Shinto, Die Buddhist'",
+        text: "Instead of clashing, both faiths harmoniously merged (Shinbutsu-shūgō). Kami came to be viewed as local manifestations of Buddhist deities. Today, most Japanese people embrace both traditions depending on the occasion: joyful life milestones (births, weddings, local Matsuri festivals) follow Shinto rituals, while funerals and ancestral remembrance follow Buddhist rites. This peaceful, pragmatic coexistence is key to understanding the modern Japanese mindset.",
       },
     ],
     seeOnTrip: [
-      { note: "The most important Shinto shrine dedicated to Inari (kami of rice and business), famous for its thousands of red torii gates (Day 2)." },
-      { note: "The center of Buddhism in ancient Japan, with the world's largest bronze Buddha statue under the world's largest wooden roof (Day 2)." },
-      { note: "The oldest and most important Buddhist temple in Tokyo in Asakusa (Day 10)." },
+      { id: "fushimi-inari", note: "The most important Shinto shrine dedicated to Inari (kami of rice and prosperity), renowned for its thousands of red torii gates (Day 2)." },
+      { id: "todai-ji", note: "The spiritual heart of ancient Japanese Buddhism, housing the world's largest bronze Buddha statue under the world's largest wooden roof (Day 2)." },
+      { id: "senso-ji", note: "Tokyo's oldest and most venerated Buddhist temple in Asakusa (Day 10)." },
     ],
   },
   {
-    title: "The Origins: Jōmon and Yayoi",
-    summary: "Hunter-gatherers with the oldest pottery in the world, and the arrival of rice that changed everything.",
+    id: "origenes",
+    era: "14,000 BC – 538 AD",
+    title: "Prehistory & Antiquity: Jōmon, Yayoi and Kofun",
+    imageCaption: "Ritual clay 'dogū' figurine from the Jōmon period (Tokyo National Museum).",
+    summary: "Hunter-gatherers with the world's earliest pottery, the advent of wet-rice farming, and colossal keyhole tumuli.",
     content: [
       {
-        heading: "The Jōmon Period",
-        text: "The history of Japan begins, according to standard archaeological dating, around 14,000 BC, with a culture of semi-sedentary hunter-gatherers known as Jōmon (縄文, 'cord mark'), due to the technique with which they decorated their pottery by pressing braided cords on wet clay. It is, in fact, some of the oldest known pottery in the world. They lived in villages with semi-underground huts, fished, gathered chestnuts and seafood, and made small clay figurines called dogū, probably for ritual purposes, often with quite strange shapes—some appear to be wearing spacesuits, which has fueled pseudoscientific theories with no real archaeological basis.",
+        heading: "The Jōmon Period (14,000 BC – 300 BC)",
+        text: "Japanese history begins with a culture of semi-sedentary hunter-gatherers known as Jōmon (縄文, 'cord-marked'), named for the cord impressions pressed into wet clay vessels. It is among the oldest pottery ever discovered. They crafted mysterious clay figurines known as 'dogū', whose ritual and spiritual functions remain fascinating today.",
       },
       {
-        heading: "The Yayoi Revolution",
-        text: "Around 300 BC (some dating push it back to 1000 BC) a new wave of population arrived from the Korean Peninsula and southern China, the Yayoi people, bringing with them two technologies that transformed the archipelago: wet-field rice cultivation and bronze and iron metallurgy. Rice required large-scale coordinated work—building and maintaining canals, sowing and harvesting as a community—and this accelerated the formation of social hierarchies, chiefdoms and, over time, the first kingdoms. Almost everything we associate today with 'the Japanese' in terms of social and agricultural organization has its seeds in this change.",
+        heading: "The Yayoi Revolution (300 BC – 300 AD)",
+        text: "A new wave of population arrived from the Korean Peninsula, the Yayoi people, introducing two transformative technologies: wet-field rice cultivation and bronze/iron metallurgy. Irrigated rice required structured community coordination, accelerating social hierarchies and giving rise to the first regional kingdoms.",
       },
       {
-        heading: "The Foundational Myth",
-        text: "Shinto mythology places the founding of the imperial line in the year 660 BC, when Emperor Jinmu, grandson of the sun goddess Amaterasu, founds a kingdom in the Yamato region (current Nara). It is a mythical tale, not a verifiable archaeological fact, but it is important because the current Japanese imperial house—the oldest continuous hereditary monarchy in the world, with Emperor Naruhito reigning since 2019—claims to descend directly from that legendary line.",
+        heading: "The Kofun Period (300 AD – 538 AD)",
+        text: "Named after the colossal keyhole-shaped earthen burial mounds ('kofun') erected for clan rulers. During this era, the Yamato clan consolidated sovereignty across central Japan, founding the imperial dynasty from which today's Emperor descends. Terracotta cylinders called 'haniwa' were placed around tombs to guard the departed.",
       },
     ],
     seeOnTrip: [],
   },
-
   {
-    title: "Nara and Heian: The Classical Court",
-    summary: "The first permanent capitals, the birth of Japanese literature and the aesthetic refinement you will see in Kyoto.",
+    id: "asuka",
+    era: "538 – 710",
+    title: "Asuka Period: The Introduction of Buddhism",
+    summary: "Buddhism transforms Japan, Chinese writing is adopted, and the first imperial constitution is drafted.",
     content: [
       {
-        heading: "Nara, the First Permanent Capital",
-        text: "Until the 8th century, the Japanese capital moved with each emperor, following the Shinto belief that death contaminated a place. In 710, this custom was broken and a permanent capital was established in Nara (then called Heijō-kyō), directly inspired by the urban layout of the Chinese capital Chang'an. It was in Nara where, in the year 752, the Tōdai-ji temple was completed with its gigantic bronze Buddha, a state project of a magnitude that almost ruined the country's economy.",
+        heading: "The Arrival of Buddhism",
+        text: "In 538 AD, a Korean king presented the Emperor of Japan with a bronze Buddha statue and sacred sutras, marking the official introduction of Buddhism. This triggered rivalry between the pro-Buddhist Soga clan and native ritual traditionalists (the Mononobe and Nakatomi clans). The Soga prevailed, making Buddhism a state pillar and ushering in continental Chinese and Korean arts, architecture, and technology.",
       },
       {
-        heading: "The Move to Heian-kyō",
-        text: "In 784 Emperor Kanmu moved the capital, first briefly to Nagaoka and, in 794, to Heian-kyō ('capital of peace and tranquility') — the city we know today as Kyoto. It was the imperial capital of Japan for over a thousand years, until 1868. The Heian period that gives its name to this era (794-1185) is considered the peak of aesthetic and literary refinement of the classical Japanese court.",
+        heading: "Prince Shōtoku",
+        text: "The driving visionary of this era was Prince Shōtoku, a legendary scholar-statesman who drafted the 'Seventeen-Article Constitution' in 604 AD—an ethical code blending Confucian morals with Buddhist compassion to foster social harmony (wa). He also dispatched official diplomatic missions directly to Sui Dynasty China.",
       },
       {
-        heading: "Court Culture",
-        text: "In this period, around the year 1000, the Genji Monogatari (The Tale of Genji) was written by court lady Murasaki Shikibu, considered by many the first psychological novel in the world. The kana writing system was also developed, simpler than Chinese characters, which allowed court women—excluded from classical education in Chinese—to write and publish much of the best literature of the time. It is also the period in which the lyrics of Kimigayo, the current national anthem of Japan, were composed.",
+        heading: "The Taika Reforms",
+        text: "In 645 AD, following a coup against Soga dominance, the Taika Reforms were enacted. Modeled after Tang China's imperial system, they centralized authority: all land nominally belonged to the Emperor, redistributed to peasants in exchange for taxes. Japan took its first steps toward a unified bureaucratic state governed by written law codes (Ritsuryō).",
+      },
+    ],
+    seeOnTrip: [],
+  },
+  {
+    id: "nara",
+    era: "710 – 794",
+    title: "Nara Period: The First Permanent Capital",
+    imageCaption: "The colossal bronze Daibutsu (Great Buddha) at Tōdai-ji Temple in Nara, consecrated in 752 AD.",
+    summary: "The construction of Japan's first grand imperial grid capital and monumental state-sponsored Buddhism.",
+    content: [
+      {
+        heading: "Heijō-kyō (Nara)",
+        text: "Prior to this era, the capital was relocated upon the death of each emperor due to Shinto concepts of death pollution. In 710 AD, Heijō-kyō (modern Nara) was established as the first permanent capital, laid out on a grand grid mirroring Tang China's capital, Chang'an. During these decades, Japan's foundational historical chronicles (the Kojiki and Nihon Shoki) were compiled to establish imperial legitimacy.",
+      },
+      {
+        heading: "The Splendor of Buddhism & Tōdai-ji",
+        text: "The Nara court embraced Buddhism with immense devotion to protect the nation against epidemics and rebellions. In 752 AD, Emperor Shōmu dedicated the monumental Tōdai-ji temple and its colossal 15-meter bronze Daibutsu (Great Buddha). The project consumed virtually all of Japan's copper and bronze reserves, showcasing the sheer administrative power of the central government.",
       },
     ],
     seeOnTrip: [
-      { id: "todai-ji", note: "The Great Buddha and the temple that almost ruined the coffers of 8th-century Nara Japan." },
-      { id: "kiyomizu-dera", note: "Founded in 778, even before the capital moved to Heian-kyō." },
-      { id: "fushimi-inari", note: "Established in 711, before Kyoto was even a capital." },
+      { id: "todai-ji", note: "The Great Buddha Hall is the living heart of this era; you will step into the very sanctuary inaugurated in the 8th century (Day 2)." },
+      { id: "nara-park", note: "Nara's sacred deer, revered as divine messengers of Kasuga Taisha shrine, have roamed here since this era (Day 2)." },
     ],
   },
-
   {
-    title: "The Samurai Era",
-    summary: "Power shifts from the court to the warriors: shoguns, bushido code and two centuries of civil war.",
+    id: "heian",
+    era: "794 – 1185",
+    title: "Heian Period: Kyoto's Classical Court",
+    imageCaption: "Classical illustration from 'The Tale of Genji' (Genji Monogatari), masterpiece of Heian courtly literature.",
+    summary: "Nearly four centuries of peace and exquisite aesthetic refinement at the new imperial capital of Kyoto.",
     content: [
       {
-        heading: "The Genpei Wars and the First Shogunate",
-        text: "In 1185, after the defeat of the Taira clan by the Minamoto clan in the Genpei Wars, samurai Minamoto no Yoritomo established the first military government (bakufu) in Japanese history, headquartered in the city of Kamakura, far away from the imperial court in Kyoto. From here until 1868, the pattern repeats with variations: the emperor retains spiritual and ceremonial legitimacy in Kyoto, but actual political and military power is exercised by a shōgun elsewhere. It's a situation somewhat parallel to that of the Holy Roman Emperor and the Pope in medieval Europe: two parallel authorities, one spiritual and one temporal.",
+        heading: "Relocation to Heian-kyō",
+        text: "Seeking freedom from the overbearing political influence of Nara's Buddhist monasteries, Emperor Kanmu relocated the imperial capital in 794 AD to Heian-kyō ('Capital of Peace and Tranquility')—modern Kyoto. It remained the imperial seat for over a millennium until 1868.",
       },
       {
-        heading: "Bushidō and the Mongol Invasions",
-        text: "During the Kamakura period, bushidō was consolidated, the samurai code of conduct based on honor, loyalty, and contempt for death—although it should be known that it never existed as a single text, oral or written, but as a tradition of several later treatises that systematized earlier ideals. Japan resisted two Mongol invasion attempts, in 1274 and 1281; in the second, a typhoon destroyed much of the invading fleet, an event that gave rise to the term kamikaze ('divine wind'), reused centuries later for World War II suicide pilots.",
+        heading: "Courtly Elegance and the Fujiwara Clan",
+        text: "While the Emperor reigned, true power was wielded behind the scenes by the aristocratic Fujiwara clan through strategic intermarriage. The Heian nobility immersed themselves in poetry, calligraphy, incense appreciation, and refined romance, cultivating a bittersweet awareness of life's transience known as 'mono no aware'.",
       },
       {
-        heading: "Muromachi: The Kyoto of the Golden and Silver Pavilions",
-        text: "The Muromachi period (1336-1573) moved the military government back to Kyoto, under the Ashikaga clan. This is the era when Kinkaku-ji (1397) and Ginkaku-ji (1482) were built, retirement villas of two shoguns from the same family—grandfather and grandson—which established much of the Japanese aesthetics we today associate with the 'classical': the formalized tea ceremony, the zen rock garden, ikebana, and wabi-sabi aesthetics.",
-      },
-      {
-        heading: "The Sengoku Period: A Hundred Years of Civil War",
-        text: "The Ōnin War (1467-1477), triggered by a succession dispute, devastated much of Kyoto and plunged Japan into the Sengoku period ('warring states'), a long century of fragmentation in which dozens of feudal lords (daimyō) fought each other for territory. This is the setting for much of Kurosawa's samurai cinema and series like Shōgun.",
+        heading: "The Dawn of Japanese Literature",
+        text: "The development of the phonetic 'kana' syllabary allowed writing in genuine Japanese vernacular rather than classical Chinese. Noble court women, observing palace life from behind silk screens, authored masterpieces: Sei Shōnagon penned 'The Pillow Book', and Murasaki Shikibu completed 'The Tale of Genji' (Genji Monogatari) around 1000 AD, widely recognized as the world's first psychological novel.",
       },
     ],
     seeOnTrip: [
-      { id: "kinkaku-ji", note: "Retirement villa of Ashikaga Yoshimitsu (1397), rebuilt after a fire in 1955." },
-      { id: "ginkaku-ji", note: "Built in 1482 by his grandson Ashikaga Yoshimasa, while Kyoto burned in the Ōnin War." },
-      { id: "nakasendo", note: "The route and its post towns will consolidate as a communications network in the following Edo period, but the mountain pass was used long before." },
+      { id: "kiyomizu-dera", note: "Though founded slightly earlier, its prestige blossomed throughout the classical Heian era (Day 3)." },
+      { id: "fushimi-inari", note: "Imperial patronage during the Heian period elevated this shrine into one of Japan's most revered holy sites (Day 2)." },
     ],
   },
-
   {
-    title: "The Edo Period: Peace, Isolation, and Control",
-    summary: "Two and a half centuries of forced peace under the Tokugawa, with Japan almost completely closed off to the outside world.",
+    id: "kamakura-muromachi",
+    era: "1185 – 1573",
+    title: "Kamakura & Muromachi: The Samurai Era",
+    imageCaption: "The Golden Pavilion (Kinkaku-ji) in Kyoto, symbol of Ashikaga shogunate Zen culture during the Muromachi period.",
+    summary: "Power shifts from aristocrats to warriors: shoguns, the bushido code, and two turbulent centuries of Zen culture.",
     content: [
       {
-        heading: "Tokugawa Ieyasu and Unification",
-        text: "After the death of Toyotomi Hideyoshi—who had almost completed the unification of Japan after the Sengoku, and who built Osaka Castle in 1583 as a symbol of his power—samurai Tokugawa Ieyasu prevailed at the Battle of Sekigahara (1600) and became shōgun in 1603, with the capital in Edo (modern Tokyo). His clan would rule Japan for the next 265 years.",
+        heading: "The First Shogunate (Kamakura)",
+        text: "While Kyoto's nobles composed poetry, provincial warrior clans (samurai) rose to prominence. In 1185, following the bloody Genpei War, Minamoto no Yoritomo established a military government (bakufu) in coastal Kamakura, receiving the supreme title of Shōgun. The Emperor remained a spiritual figurehead in Kyoto, but political reality belonged to the warrior class.",
       },
       {
-        heading: "The Sankin-Kōtai System",
-        text: "The Tokugawa shogunate maintained peace through strict control of feudal lords. One of its most ingenious mechanisms was the sankin-kōtai: every daimyō was required to reside in Edo one out of every two years, leaving their family there permanently as hostages. This generated constant parades of retinues of hundreds or thousands of people between the provinces and the capital, and economically ruined the feudal lords—which was exactly the intention. Five official roads (Gokaidō) were established for this traffic, among them the Nakasendō, with its post towns where the retinues stopped to rest.",
+        heading: "Mongol Invasions & the 'Kamikaze'",
+        text: "In 1274 and 1281, Kublai Khan's Mongol-led armada launched massive invasion attempts against Japan. Both fleets were devastated by fierce typhoons, hailed by the Japanese as 'kamikaze' (divine winds). While Japan was saved, the bankrupting cost of coastal defenses weakened the Kamakura shogunate, precipitating its collapse.",
       },
       {
-        heading: "Sakoku: The Closing of the Country",
-        text: "Starting in the 1630s, and partly due to fear of the political influence of Christianity after the Shimabara Rebellion, the shogunate established the sakoku ('closed country'): it forbade Japanese from leaving the country and foreigners from entering, with the sole exception of a highly restricted Dutch trading post on the artificial island of Dejima in Nagasaki. Japan remained this way, practically isolated from the world, for over two centuries.",
+        heading: "Muromachi Period & Higashiyama Culture",
+        text: "The Ashikaga clan moved the shogunate back to Kyoto's Muromachi district in 1336. Despite political friction, this era sparked an unparalleled cultural renaissance. Influenced by Zen Buddhism, shoguns patronized the tea ceremony (chanoyu), rock gardens (karesansui), Noh theatre, ink wash painting, and the aesthetic of imperfect beauty (wabi-sabi), immortalized in Kinkaku-ji (Golden Pavilion) and Ginkaku-ji (Silver Pavilion).",
       },
       {
-        heading: "Peace, Urban Culture, and Mountain Isolation",
-        text: "Paradoxically, this isolation and forced peace by Tokugawa control allowed a huge cultural flourishing: kabuki theater, ukiyo-e woodblock printing (with Hokusai and his Thirty-six Views of Mount Fuji as the prime example), and the consolidation of Edo as one of the most populated cities in the world. In the more remote mountain areas, such as the Shirakawa-go valley or the Takayama region, geographical isolation—more than political—gave rise to unique forms of construction and social organization, with very little outside influence until well into the 20th century.",
+        heading: "Sengoku Jidai: The Warring States",
+        text: "In 1467, the devastating Ōnin War erupted over shogunal succession, laying Kyoto to ash. Central control disintegrated, plunging Japan into the Sengoku Jidai—over a century of ruthless civil warfare among rival regional warlords (daimyō).",
       },
     ],
     seeOnTrip: [
-      { id: "nakasendo", note: "The road network that supported the sankin-kōtai system; Tsumago was the first town in Japan to systematically restore its appearance from this period, in 1968." },
-      { id: "takayama", note: "Under direct shogunate administration from 1692 due to the value of its timber forests." },
-      { id: "shirakawa-go", note: "The valley's isolation, more geographical than political, preserved the gasshō-zukuri houses practically intact." },
-      { id: "osaka", note: "The castle, built by Hideyoshi in 1583, was destroyed by Tokugawa Ieyasu in 1615, precisely to eliminate the rival clan." },
+      { id: "kinkaku-ji", note: "The world-famous Golden Pavilion, originally built as the retirement villa for Shogun Ashikaga Yoshimitsu (Day 3)." },
+      { id: "ginkaku-ji", note: "The Silver Pavilion, the ultimate sanctuary of Zen wabi-sabi minimalism and Higashiyama culture (Day 3)." },
     ],
   },
-
   {
-    title: "The Meiji Restoration: Express Modernization",
-    summary: "In 45 years, Japan goes from a closed feudal shogunate to a globally recognized industrial and military power.",
+    id: "azuchi-momoyama",
+    era: "1573 – 1603",
+    title: "Azuchi-Momoyama: The Great Unifiers",
+    imageCaption: "Main keep of Himeji Castle, the pinnacle of defensive and palatial architecture of the Azuchi-Momoyama era.",
+    summary: "Three brilliant military leaders reunify Japan through strategy, firearms, and monumental fortress architecture.",
     content: [
       {
-        heading: "The End of the Shogunate",
-        text: "In 1853, US Commodore Matthew Perry arrived in Edo Bay with warships ('the black ships') and forced the commercial opening of Japan. The subsequent crisis—between those who wanted to maintain isolation and those who saw modernization as inevitable—led to the fall of the Tokugawa shogunate and the restoration, in 1868, of the effective power of the emperor, then the young Meiji.",
+        heading: "Oda Nobunaga",
+        text: "The reunification of Japan after a century of turmoil was led by three successive legendary figures. The first was Oda Nobunaga, a brilliant and ruthless commander who revolutionized warfare by deploying massed matchlock firearms acquired from Portuguese traders. He broke rival warlords and militant Buddhist sects before being ambushed and forced to commit seppuku in Kyoto in 1582.",
       },
       {
-        heading: "An Unprecedented Transformation",
-        text: "What followed was one of the fastest modernizations in history. In just 45 years, Japan abolished the samurai class and its feudal privileges, created a modern army and navy based on Western models, promulgated a constitution (1889), established compulsory public education, built railways and heavy industry, and adopted the Gregorian calendar and a national currency, the yen. Edo was renamed Tokyo ('eastern capital') and became the new imperial capital.",
+        heading: "Toyotomi Hideyoshi",
+        text: "General Toyotomi Hideyoshi avenged Nobunaga and completed the unification. Rising from humble peasant origins to supreme ruler (Taiko), he erected the colossal Osaka Castle, instituted the 'sword hunt' to disarm all non-samurai, and codified rigid social castes. In his later ambition, he launched invasions into Korea that ended upon his death.",
       },
       {
-        heading: "From Regional Power to Empire",
-        text: "The transformation was not just internal: Japan won wars against China (1894-95) and Russia (1904-05)—the latter being the first time in the modern era that an Asian power defeated a European one—and began to expand territorially, annexing Taiwan and, later, Korea. The Meiji period laid, for better and for worse, the foundations of 20th-century Japan: both the industrialized and technological country you visit today and the militaristic empire that would lead to World War II.",
+        heading: "The Castle Age",
+        text: "This brief, vibrant era witnessed the construction of towering multi-tiered stone fortresses (such as Himeji and Matsumoto). Built not merely as military citadels, they stood as formidable declarations of daimyo power, lavishly appointed inside with sliding screens adorned in gold leaf.",
       },
     ],
     seeOnTrip: [
-      { id: "meiji-jingu", note: "Shrine dedicated to this emperor, built in 1920 with a forest of 100,000 hand-planted trees." },
-      { id: "osaka", note: "The current castle tower, made of reinforced concrete, is from 1931 — fully from the modern era that started with Meiji." },
+      { id: "osaka", note: "Osaka Castle was originally constructed by Hideyoshi in 1583 as the triumphant headquarters of his united realm (Day 5)." },
     ],
   },
-
   {
-    title: "War, Defeat, and Economic Miracle",
-    summary: "From World War II to reconstruction, and from there to becoming the second largest economy in the world.",
+    id: "edo",
+    era: "1603 – 1868",
+    title: "Edo Period: Enforced Peace & Isolation",
+    imageCaption: "'Under the Wave off Kanagawa' by Katsushika Hokusai (c. 1831), peak of Edo period ukiyo-e and urban culture.",
+    summary: "265 years of strict internal stability under the Tokugawa shogunate and nearly complete isolation from the outside world.",
     content: [
       {
-        heading: "The Road to War",
-        text: "After the death of Emperor Taishō in 1926, the Shōwa period began under Emperor Hirohito. The 1920s and 1930s saw the rise of Japanese militarism, the invasion of Manchuria (1931) and China (1937), and finally entry into World War II with the attack on Pearl Harbor in December 1941.",
+        heading: "Tokugawa Ieyasu & Feudal Control",
+        text: "Following the historic Battle of Sekigahara (1600), Tokugawa Ieyasu emerged as sole ruler and founded the Tokugawa shogunate in Edo (modern Tokyo). To prevent rebellions, he enforced a four-tier caste system (samurai, peasants, artisans, merchants) and the 'sankin-kōtai' system, which mandated that feudal lords alternate residence in Edo every other year, leaving their families as permanent hostages.",
       },
       {
-        heading: "The Destruction of the Cities",
-        text: "Allied bombings devastated major Japanese cities. The Tokyo bombing on March 10, 1945, was, in terms of deaths in a single night—about 100,000—the deadliest air raid in history, more than Hiroshima or Nagasaki individually. Asakusa and its Senso-ji temple, one of the oldest neighborhoods in the city, were completely flattened; what you visit today is a 1958 reconstruction. In August 1945, the atomic bombs on Hiroshima and Nagasaki precipitated the Japanese surrender, announced by the emperor on August 15—the first time the Japanese population heard his voice.",
+        heading: "Sakoku: The Closed Country",
+        text: "To eliminate European colonial and missionary influence, the shogunate enacted Sakoku edicts in 1639. Foreigners were expelled, and Japanese citizens were barred from leaving abroad under penalty of death. Overseas trade was strictly confined to Dutch and Chinese merchants at Nagasaki's Dejima islet.",
       },
       {
-        heading: "The Allied Occupation",
-        text: "Between 1945 and 1952, Japan was under US military occupation, led by General Douglas MacArthur. A new pacifist constitution was drafted (which remains in effect), the military apparatus was dismantled, and the legal and economic foundations of postwar democratic Japan were laid. Kyoto, by the way, was deliberately spared from the major bombings—unlike Tokyo, Osaka, or Nagoya—precisely because of its historical and cultural value, which explains why it preserves so much pre-20th century heritage.",
-      },
-      {
-        heading: "The Economic Miracle",
-        text: "Between the 50s and 80s, Japan experienced one of the fastest economic growths in history, going from a devastated country to the world's second-largest economy. Neighborhoods like Akihabara, which in the postwar black market sold radio components recovered from the rubble, became the showcase of that new technological strength: here the first televisions, refrigerators, and washing machines of the Japanese boom were bought.",
+        heading: "The Floating World & Post Towns",
+        text: "This uninterrupted peace fostered a vibrant urban merchant culture known as the 'Floating World' (Ukiyo): Kabuki theatre, Geisha entertainment, and woodblock prints (ukiyo-e) flourished. The massive travel generated by sankin-kōtai stimulated great highway networks like the Nakasendō, lined with post towns (juku) to lodge travelers.",
       },
     ],
     seeOnTrip: [
-      { id: "senso-ji", note: "Flattened in the 1945 bombing; the current building is a 1958 reconstruction, in concrete so it won't burn again." },
-      { id: "akihabara", note: "Literally born from the postwar ruins, as a black market for electronic components." },
-      { id: "todai-ji", note: "Nara, like Kyoto, was spared from the major bombings due to its heritage value." },
+      { id: "nakasendo", note: "Walk an authentic cobblestone section of the Nakasendō trail between Magome and Tsumago, preserved exactly as in the Edo era (Day 8)." },
+      { id: "takayama", note: "The Sanmachi Suji historic district in Takayama preserves entire streets of Edo-period merchant townhouses (Day 7)." },
+      { id: "shirakawa-go", note: "Isolated mountain hamlets developed steep thatched-roof 'gasshō-zukuri' farmhouses during this era (Day 7)." },
     ],
   },
-
   {
-    title: "Heisei, Reiwa, and Contemporary Japan",
-    summary: "From the economic bubble to the global pop culture that has made Japan a tourist and cultural magnet.",
+    id: "meiji",
+    era: "1868 – 1912",
+    title: "Meiji Restoration: Rapid Modernization",
+    imageCaption: "'Views of Yamagata City' by Takahashi Yuichi (1881–1882), depicting Western architectural influences and rapid Meiji progress.",
+    summary: "In just 45 years, Japan leaps from a feudal realm to an industrialized, constitutional world power.",
     content: [
       {
-        heading: "The Burst of the Bubble",
-        text: "The Heisei period (1989-2019) began with the burst of a massive real estate and stock market speculative bubble, leading to the so-called 'lost decade' of economic stagnation in the 90s. Despite this, it was also the time when Japanese pop culture—manga, anime, video games—became a massive cultural export phenomenon worldwide, with Akihabara as the physical epicenter of that universe.",
+        heading: "The Fall of the Shogunate",
+        text: "In 1853, Commodore Matthew Perry's American 'black ships' sailed into Tokyo Bay, forcing Japan to open its ports. The political crisis doomed the Tokugawa shogunate. In 1868, power was nominally restored to young Emperor Meiji. Edo was rechristened Tokyo ('Eastern Capital') and became the new imperial center.",
       },
       {
-        heading: "From Samurai to Robot: Japan's Image Abroad",
-        text: "The Japan that fascinates travelers from all over the world today visibly combines both sides of its history: temples and gardens over a thousand years old coexisting with the neon lights of Shibuya or Akihabara. It is no coincidence that video game and animation studios have drawn so directly from that real historical heritage to build their own fictional worlds—from Kinkaku-ji converted into Pokémon's Bell Tower to the Shibuya crossing immortalized in Digimon and dozens of movies.",
+        heading: "Rapid Westernization",
+        text: "Japan realized that to avert Western colonization, it had to modernize with extreme urgency. Samurai class privileges and swords were outlawed (triggering rebellions like Saigō Takamori's last stand), universal conscription was instituted, and compulsory education, heavy industry, national railways, Western attire, and a Prussian-style constitution were adopted.",
       },
       {
-        heading: "The Reiwa Era",
-        text: "In April 2019, Emperor Akihito abdicated—something that had not happened in two centuries—and his son Naruhito became emperor, inaugurating the Reiwa ('beautiful harmony') era, the one you are experiencing during this trip.",
+        heading: "Birth of an Empire",
+        text: "Intensive industrialization demanded natural resources Japan lacked, spurring outward expansion. Japan stunned the world by defeating Qing China (1894–95) and Tsarist Russia (1904–05), emerging as the premier industrial power in East Asia and establishing territorial control over Taiwan and Korea.",
       },
     ],
     seeOnTrip: [
-      { id: "akihabara", note: "The physical epicenter of the cultural explosion of Japanese manga, anime, and video games." },
-      { id: "shibuya", note: "The most reproduced visual symbol of contemporary urban Japan in movies and series worldwide." },
-      { id: "teamlab", note: "The most recent Japanese digital art, direct heir to centuries of unique visual aesthetics." },
+      { id: "meiji-jingu", note: "Tokyo's majestic forested Shinto shrine, dedicated to the spirits of Emperor Meiji and Empress Shōken (Day 9)." },
+    ],
+  },
+  {
+    id: "taisho",
+    era: "1912 – 1926",
+    title: "Taishō Period: Democracy & Cultural Ferment",
+    imageCaption: "Bustling Tokyo commercial street in the 1920s: streetcars, automobiles, and the cosmopolitan flair of Taishō Democracy.",
+    summary: "A brief, vibrant era marked by liberal parliamentary politics and an energetic fusion of Eastern and Western culture.",
+    content: [
+      {
+        heading: "Taishō Democracy",
+        text: "Under the reign of Emperor Taishō, political power shifted away from the elder oligarchs toward elected parliamentary parties. In 1925, universal male suffrage was enacted, accompanied by spirited debates, flourishing labor movements, and modern intellectual discourse.",
+      },
+      {
+        heading: "Urban Modernity & the Great Earthquake",
+        text: "Cities saw the rise of 'Mobo' and 'Moga' (modern boys and modern girls) listening to American jazz, frequenting European-style cafes, and redefining fashion. However, on September 1, 1923, the catastrophic Great Kantō Earthquake devastated Tokyo and Yokohama, killing over 100,000 people and necessitating the comprehensive reconstruction of the capital.",
+      },
+    ],
+    seeOnTrip: [],
+  },
+  {
+    id: "guerra-posguerra",
+    era: "1926 – 1989",
+    title: "Shōwa Period: War, Tragedy & the Economic Miracle",
+    imageCaption: "Inauguration of the Tokaido Shinkansen (bullet train) in October 1964, symbol of Japan's miraculous postwar resurrection.",
+    summary: "From militarist expansion and WWII ruin to atomic catastrophe and a stunning economic resurrection.",
+    content: [
+      {
+        heading: "Militarism & World War II",
+        text: "Under Emperor Hirohito (Shōwa), military factions seized control of the government, invading Manchuria and mainland China in the 1930s. In December 1941, the attack on Pearl Harbor ignited war in the Pacific. After harrowing battles and catastrophic civilian devastation from incendiary bombing, Tokyo and dozens of major cities were flattened.",
+      },
+      {
+        heading: "Atomic Bombs & Surrender",
+        text: "In August 1945, atomic bombs were dropped on Hiroshima and Nagasaki. Days later, Japan announced its unconditional surrender. Allied forces under General Douglas MacArthur occupied the nation until 1952, enacting a pacifist constitution that renounced war and redefined the Emperor as a constitutional 'symbol of the State'.",
+      },
+      {
+        heading: "The Japanese Economic Miracle",
+        text: "Rising from rubble through tireless discipline, international trade, and technological innovation, Japan achieved unprecedented economic growth throughout the 1960s, 70s, and 80s. Pioneering electronics and automotive excellence (Sony, Toyota, Panasonic), it became the world's second-largest economy. The 1964 Tokyo Olympics and the inaugural Shinkansen bullet train heralded its triumphant return to the world stage.",
+      },
+    ],
+    seeOnTrip: [
+      { id: "akihabara", note: "Born out of postwar ruins as a black market for vacuum tubes and radio parts, laying the bedrock for today's electronics capital (Day 10)." },
+      { id: "senso-ji", note: "Tokyo's ancient temple was destroyed in the 1945 air raids and rebuilt in the postwar era through popular citizen donations (Day 10)." },
+    ],
+  },
+  {
+    id: "japon-hoy",
+    era: "1989 – Present",
+    title: "Heisei, Reiwa & Contemporary Japan",
+    imageCaption: "Shibuya Crossing bathed in nighttime neon, the definitive icon of contemporary urban Japan (Heisei and Reiwa eras).",
+    summary: "From the burst of the economic bubble to global cultural soft power in anime, gaming, and design.",
+    content: [
+      {
+        heading: "The Bubble Burst & Heisei Era",
+        text: "In the early 1990s, Japan's massive asset price bubble burst, ushering in the 'Lost Decades' of economic plateau. Even so, the nation preserved exceptionally high living standards, public safety, and technological innovation. It also weathered severe natural tragedies, including the 1995 Kobe earthquake and the 2011 Great East Japan earthquake and tsunami.",
+      },
+      {
+        heading: "Cool Japan: Global Soft Power",
+        text: "Throughout these decades, Japan captivated the globe through its cultural 'soft power': anime (Studio Ghibli), manga, video game franchises (Nintendo, PlayStation), design aesthetics, and culinary heritage. This seamless marriage of hypermodern technology with ancestral craftsmanship makes Japan one of the world's premier destinations.",
+      },
+      {
+        heading: "The Reiwa Era (2019–Present)",
+        text: "Following Emperor Akihito's abdication and Emperor Naruhito's ascension in 2019, the Reiwa ('Beautiful Harmony') era commenced. This is the sophisticated, vibrant, hyper-connected, and deeply respectful Japan you will explore throughout this trip.",
+      },
+    ],
+    seeOnTrip: [
+      { id: "shibuya", note: "The famous scramble crossing, Hachiko statue, and towering neon billboards: the epitome of modern Japan (Days 9 & 12)." },
+      { id: "akihabara", note: "The global epicenter of otaku subculture, retro gaming, anime, and electronics (Day 10)." },
+      { id: "teamlab", note: "The immersive 3D digital art of teamLab Planets embodies Tokyo's cutting-edge modern aesthetic (Day 11)." },
     ],
   },
 ];
 
 export const furtherReading = {
   books: [
-    { note: "The classic to start with: 416 pages covering from prehistory to the late 20th century in an entertaining and comprehensive way. It is the reference cited by almost all history podcasts about Japan." },
-    { note: "Work in Spanish by two Doctors in History, with maps, graphs and a recommendation for additional reading at the end of each chapter. Very useful as a reference book before or after each stage of the trip." },
-    { note: "The Spanish specialist of reference on the Kamakura-Edo period and the warrior class. His blog, historiasamurai.com, is also a reliable and entertaining source to delve into any samurai anecdote of the trip." },
-    { note: "A short, classic essay (1906) on the tea ceremony, Zen Buddhism, and Japanese aesthetics—perfect for understanding the cultural background of Ginkaku-ji and the Zen gardens you will visit." },
-    { note: "Written around the year 1000 in the Heian court of Kyoto. Very extensive, but reading even the first chapter gives a direct idea of the aesthetic sensibility of the era that left its mark on the whole city." },
+    {
+      title: "A Short History of Japan",
+      note: "The quintessential introductory history: 416 pages covering from prehistoric times to the late 20th century in an accessible and engaging style.",
+    },
+    {
+      title: "Japan in Its History",
+      note: "Authored by two Spanish university historians, with maps, charts, and recommended reading for every chapter. Excellent companion throughout the journey.",
+    },
+    {
+      title: "History of the Samurai",
+      note: "The essential guide on the warrior class from the Kamakura to Edo periods. His blog, historiasamurai.com, is an invaluable resource for samurai lore.",
+    },
+    {
+      title: "The Book of Tea",
+      note: "Kakuzo Okakura's 1906 classic essay on the tea ceremony, Zen philosophy, and Japanese aesthetic sensibilities—ideal preparation for Kyoto's zen gardens.",
+    },
+    {
+      title: "The Tale of Genji",
+      note: "Written around 1000 AD in the imperial court of Heian Kyoto. Reading even the opening chapters conveys the profound aesthetic sensitivity of the era.",
+    },
   ],
   podcasts: [
-    { note: "A two-hour episode that covers all of Japanese history, from mythical origins to the Meiji Restoration. Good overall starting point before the trip." },
-    { note: "Focused right on the Edo period, with bibliography cited at the end of the episode (includes Mikiso Hane and Jonathan López-Vera)." },
-    { note: "Weekly podcast in Spanish with current affairs, history, and Japanese culture told by specialists—good for listening to individual episodes depending on the topic that interests you most." },
-    { note: "A classic radio review of the samurai class, from the Sengoku period to their disappearance in the Meiji Restoration." },
+    { note: "Narita complex beyond the airport: Naritasan Shinsho-ji temple, traditional Omotesando street, and roasted eel culture. Great for the Narita Express train." },
+    { note: "Essential guide to the ancient capital: UNESCO wooden temples, Shinto shrines, Zen rock gardens, and historic quarters. Ideal during the Nozomi Shinkansen ride." },
+    { note: "Demystifying the geisha (geiko and maiko) in Kyoto: rigorous artistic training, ochaya teahouses, kimono dress, and etiquette in Gion and Pontocho." },
+    { note: "The distinct energy of Kansai: the 'kuidaore' food philosophy, takoyaki, okonomiyaki, Dotonbori neons, and the retro vibe of Shinsekai and Osaka Castle." },
+    { note: "Kanazawa, jewel of the Maeda clan: Kenroku-en garden, Nagamachi samurai residences, Higashi Chaya teahouses, and gold leaf workshops." },
+    { note: "Deep dive into the Japanese Alps: thatched-roof gasshō-zukuri houses in Shirakawa-go, preserved timber streets in Takayama, and Hida beef." },
+    { note: "Guide to the historic Nakasendō trail walk between Magome and Tsumago: Edo post-town history, bear bells, and Kiso Valley nature." },
+    { note: "Key tips for spotting sacred Mount Fuji: top viewpoints (Chureito Pagoda, Lake Kawaguchiko), weather visibility checks, and train seats." },
+    { note: "A comprehensive two-hour audio journey through Japanese history from mythical origins to the Meiji Restoration." },
+    { note: "In-depth review of the Edo period and the Tokugawa shogunate, drawing from leading international and Japanese historiography." },
+    { note: "A classic radio history documentary detailing the evolution and eventual decline of the samurai warrior class." },
+    { note: "Weekly podcast covering Japanese culture, current affairs, and historical insights." },
+    { note: "The flagship travel podcast series covering destinations across Japan with cultural and practical tips." },
   ],
 };

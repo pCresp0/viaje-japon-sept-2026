@@ -1,216 +1,328 @@
 export const historyPeriods = [
   {
+    id: "religion",
+    era: "Des origines à nos jours",
     title: "Croyances : Shintoïsme et Bouddhisme",
-    summary: "L'âme du Japon : la coexistence pacifique et le syncrétisme entre les kami indigènes et le bouddhisme continental.",
+    summary: "L'âme du Japon : la coexistence pacifique et le syncrétisme entre les kamis autochtones et le bouddhisme continental.",
     content: [
       {
-        heading: "Shintoïsme (Shintō)",
-        text: "Le shintoïsme ('La voie des dieux') est la religion autochtone du Japon. Il n'a pas de fondateur, de textes sacrés absolus ou de dogmes stricts. Il est basé sur la vénération des 'kami', des esprits ou divinités qui habitent la nature (montagnes, arbres centenaires, cascades) et des concepts abstraits ou des ancêtres célèbres. Il se concentre sur la pureté rituelle et la célébration de la vie. Les sanctuaires shintoïstes se reconnaissent à leurs portes 'torii' (souvent rouges), qui marquent le passage du profane au sacré. Pendant le voyage, vous verrez ce mysticisme naturel dans des endroits comme le sanctuaire Fushimi Inari ou les arbres gigantesques des Alpes japonaises.",
+        heading: "Le Shintoïsme (Shintō)",
+        text: "Le Shintoïsme ('La voie des dieux') est la religion autochtone du Japon. Il n'a ni fondateur, ni textes sacrés absolus, ni dogmes stricts. Il repose sur la vénération des 'kami', esprits ou divinités qui habitent la nature (montagnes, arbres séculaires, cascades) ainsi que des concepts abstraits ou des ancêtres illustres. Il est axé sur la pureté rituelle et la célébration de la vie. Les sanctuaires shintoïstes se reconnaissent à leurs portiques 'torii' (souvent rouge vermillon), marquant le passage du profane au sacré. Pendant le voyage, vous ressentirez ce mysticisme naturel dans des lieux comme le sanctuaire Fushimi Inari ou au milieu des cèdres géants des Alpes japonaises.",
       },
       {
-        heading: "Bouddhisme (Bukkyō)",
-        text: "Le bouddhisme est arrivé au Japon au 6ème siècle après JC de Corée et de Chine. Contrairement au shintoïsme, il a apporté une doctrine philosophique complexe sur la souffrance, la réincarnation et le salut, ainsi qu'un art et une architecture monumentaux. Il s'est fortement implanté dans les classes dirigeantes et a transformé la culture du pays. Ses lieux de culte sont les temples (tera / ji), qui ont généralement des pagodes, des statues de Bouddha et d'énormes cloches. Tōdai-ji à Nara et Sanjūsangen-dō à Kyoto sont des exemples impressionnants de sa puissance.",
+        heading: "Le Bouddhisme (Bukkyō)",
+        text: "Le Bouddhisme est arrivé au Japon au VIe siècle depuis la Corée et la Chine. Contrairement au shintoïsme, il a apporté une doctrine philosophique élaborée sur la souffrance, la réincarnation et l'éveil, ainsi qu'un art et une architecture monumentaux. Il s'est profondément enraciné au sein des classes dirigeantes et a métamorphosé la culture nippone. Ses lieux de culte sont les temples (tera / ji), dotés de pagodes, de statues de Bouddha et de cloches monumentales. Le Tōdai-ji à Nara et le Sanjūsangen-dō à Kyoto sont des témoins grandioses de sa splendeur.",
       },
       {
-        heading: "Syncrétisme : 'Naître shintoïste, mourir bouddhiste'",
-        text: "Au lieu de s'affronter, les deux religions ont fusionné (Shinbutsu-shūgō). Les kami en sont venus à être considérés comme des manifestations locales des bouddhas. Aujourd'hui, la plupart des Japonais pratiquent les deux religions selon l'occasion : les célébrations de la vie (naissances, mariages, fêtes locales ou Matsuri) se déroulent selon des rites shintoïstes, tandis que les funérailles et le culte des ancêtres sont régis par des rites bouddhistes. Cette coexistence pacifique et pragmatique est fondamentale pour comprendre la mentalité japonaise moderne.",
+        heading: "Le Syncrétisme : 'Naître shintoïste, mourir bouddhiste'",
+        text: "Au lieu de s'affronter, les deux religions ont fusionné (Shinbutsu-shūgō). Les kamis ont été assimilés à des manifestations locales des bouddhas. Aujourd'hui, la plupart des Japonais pratiquent les deux cultes selon les circonstances : les célébrations de la vie (naissances, mariages, fêtes locales ou Matsuri) suivent le rite shintoïste, tandis que les funérailles et le culte des ancêtres relèvent du rite bouddhiste. Cette coexistence pacifique et pragmatique est essentielle pour comprendre la mentalité japonaise contemporaine.",
       },
     ],
     seeOnTrip: [
-      { note: "Le sanctuaire shintoïste le plus important dédié à Inari (kami du riz et des affaires), célèbre pour ses milliers de portes torii rouges (Jour 2)." },
-      { note: "Le centre du bouddhisme dans le Japon ancien, avec la plus grande statue de Bouddha en bronze au monde (Jour 2)." },
-      { note: "Le temple bouddhiste le plus ancien et important de Tokyo à Asakusa (Jour 10)." },
+      { id: "fushimi-inari", note: "Le sanctuaire shintoïste le plus important dédié à Inari (kami du riz et de la prospérité), célèbre pour ses milliers de toriis vermillon (Jour 2)." },
+      { id: "todai-ji", note: "Le foyer du bouddhisme dans le Japon ancien, abritant le plus grand Bouddha de bronze du monde sous le plus grand toit en bois du monde (Jour 2)." },
+      { id: "senso-ji", note: "Le plus ancien et vénéré temple bouddhiste de Tokyo à Asakusa (Jour 10)." },
     ],
   },
   {
-    title: "Les Origines : Jōmon et Yayoi",
-    summary: "Des chasseurs-cueilleurs avec la plus ancienne poterie du monde, et l'arrivée du riz qui a tout changé.",
+    id: "origenes",
+    era: "14 000 av. J.-C. – 538 apr. J.-C.",
+    title: "Préhistoire et Antiquité : Jōmon, Yayoi et Kofun",
+    imageCaption: "Statuette rituelle en terre cuite 'dogū' de la période Jōmon (Musée national de Tokyo).",
+    summary: "Chasseurs-cueilleurs à la poterie millénaire, avènement de la riziculture inondée et gigantesques tumulus.",
     content: [
       {
-        heading: "La période Jōmon",
-        text: "L'histoire du Japon commence, selon la datation archéologique standard, vers 14 000 avant J.-C., avec une culture de chasseurs-cueilleurs semi-sédentaires connue sous le nom de Jōmon (縄文, 'marque de corde'), en raison de la technique avec laquelle ils décoraient leur poterie en pressant des cordes tressées sur l'argile humide. C'est en fait l'une des plus anciennes poteries connues au monde. Ils vivaient dans des villages avec des huttes semi-enterrées, pêchaient, ramassaient des châtaignes et des fruits de mer, et fabriquaient de petites figurines en argile appelées dogū, probablement à des fins rituelles, souvent avec des formes assez étranges — certaines semblent porter des combinaisons spatiales, ce qui a alimenté des théories pseudo-scientifiques sans base archéologique réelle.",
+        heading: "La période Jōmon (14 000 av. J.-C. – 300 av. J.-C.)",
+        text: "L'histoire du Japon débute avec une culture de chasseurs-cueilleurs semi-sédentaires baptisée Jōmon (縄文, 'motif de corde'), en référence à la technique d'impression de cordes tressées sur l'argile humide. C'est l'une des poteries les plus anciennes connues au monde. Ils façonnaient d'étranges figurines d'argile appelées 'dogū', vouées à des rituels sacrés.",
       },
       {
-        heading: "La révolution Yayoi",
-        text: "Vers 300 avant J.-C. (certaines datations la font reculer à 1000 avant J.-C.), une nouvelle vague de population est arrivée de la péninsule coréenne et du sud de la Chine, le peuple Yayoi, apportant avec elle deux technologies qui ont transformé l'archipel : la culture du riz en rizière inondée et la métallurgie du bronze et du fer. Le riz exigeait un travail coordonné à grande échelle — construire et entretenir des canaux, semer et récolter en communauté — et cela a accéléré la formation de hiérarchies sociales, de chefferies et, avec le temps, des premiers royaumes. Presque tout ce que nous associons aujourd'hui aux 'Japonais' en termes d'organisation sociale et agricole trouve son origine dans ce changement.",
+        heading: "La révolution Yayoi (300 av. J.-C. – 300 apr. J.-C.)",
+        text: "Venue de la péninsule coréenne, une nouvelle vague de peuplement, le peuple Yayoi, introduisit deux révolutions technologiques majeures : la culture du riz en rizières inondées et la métallurgie du bronze et du fer. Le riz exigeant une organisation communautaire rigoureuse, il accéléra la stratification sociale et l'émergence des premiers royaumes.",
       },
       {
-        heading: "Le mythe fondateur",
-        text: "La mythologie shintoïste situe la fondation de la lignée impériale en l'an 660 avant J.-C., lorsque l'empereur Jinmu, petit-fils de la déesse du soleil Amaterasu, fonde un royaume dans la région de Yamato (actuelle Nara). C'est un récit mythique, et non un fait archéologique vérifiable, mais il est important car l'actuelle maison impériale japonaise — la plus ancienne monarchie héréditaire ininterrompue au monde, avec l'empereur Naruhito régnant depuis 2019 — prétend descendre directement de cette lignée légendaire.",
+        heading: "La période Kofun (300 – 538 apr. J.-C.)",
+        text: "Nommée d'après les 'kofun', d'immenses tertres funéraires de terre (souvent en forme de trou de serrure) érigés pour les chefs de clans. Le clan Yamato y consolida son autorité sur le centre de l'archipel, fondant la lignée impériale dont descend l'empereur actuel. Pour protéger ces tombes, on disposait autour des cylindres en terre cuite appelés 'haniwa'.",
       },
     ],
     seeOnTrip: [],
   },
-
   {
-    title: "Nara et Heian : La Cour Classique",
-    summary: "Les premières capitales permanentes, la naissance de la littérature japonaise et le raffinement esthétique que vous verrez à Kyoto.",
+    id: "asuka",
+    era: "538 – 710",
+    title: "Période Asuka : L'introduction du bouddhisme",
+    summary: "Le bouddhisme transforme le Japon, l'écriture chinoise s'installe et la première constitution impériale voit le jour.",
     content: [
       {
-        heading: "Nara, la première capitale permanente",
-        text: "Jusqu'au VIIIe siècle, la capitale japonaise se déplaçait avec chaque empereur, suivant la croyance shintoïste selon laquelle la mort contaminait un lieu. En 710, cette coutume a été rompue et une capitale permanente a été établie à Nara (alors appelée Heijō-kyō), directement inspirée de l'aménagement urbain de la capitale chinoise Chang'an. C'est à Nara qu'en l'an 752, le temple Tōdai-ji a été achevé avec son gigantesque Bouddha en bronze, un projet d'État d'une telle ampleur qu'il a presque ruiné l'économie du pays.",
+        heading: "L'arrivée du bouddhisme",
+        text: "En 538 apr. J.-C., un souverain coréen offrit à l'empereur du Japon une statue de Bouddha et des sutras sacrés, marquant l'introduction officielle du bouddhisme. Cela déclencha un affrontement entre le clan Soga (favorable au bouddhisme) et les clans Mononobe et Nakatomi (gardiens des rites natifs). Les Soga triomphèrent et le bouddhisme devint religion d'État, important l'art, l'architecture et les lettres continentales.",
       },
       {
-        heading: "Le déménagement à Heian-kyō",
-        text: "En 784, l'empereur Kanmu déplaça la capitale, d'abord brièvement à Nagaoka et, en 794, à Heian-kyō ('capitale de la paix et de la tranquillité') — la ville que nous connaissons aujourd'hui sous le nom de Kyoto. Elle fut la capitale impériale du Japon pendant plus de mille ans, jusqu'en 1868. La période Heian qui donne son nom à cette ère (794-1185) est considérée comme le sommet du raffinement esthétique et littéraire de la cour classique japonaise.",
+        heading: "Le Prince Shōtoku",
+        text: "Figure emblématique de cette époque, le prince Shōtoku rédigea en 604 la 'Constitution en dix-sept articles', un code éthique harmonisant sagesse confucéenne et spiritualité bouddhique pour promouvoir l'harmonie sociale (wa). Il initia également des ambassades officielles auprès de la Chine impériale.",
       },
       {
-        heading: "La culture de la cour",
-        text: "Durant cette période, vers l'an 1000, le Genji Monogatari (Le Dit du Genji) a été écrit par la dame de cour Murasaki Shikibu, considéré par beaucoup comme le premier roman psychologique au monde. Le système d'écriture kana a également été développé, plus simple que les caractères chinois, ce qui a permis aux femmes de la cour — exclues de l'éducation classique en chinois — d'écrire et de publier une grande partie de la meilleure littérature de l'époque. C'est aussi la période où ont été composées les paroles du Kimigayo, l'actuel hymne national du Japon.",
+        heading: "Les Réformes de Taika",
+        text: "En 645, après la chute des Soga, les Réformes de Taika calquées sur le modèle impérial chinois centralisèrent l'État : les terres devinrent possession éminente de l'empereur, redistribuées aux paysans contre impôt. Le Japon se structura en un État de droit unifié régi par des codes écrits (Ritsuryō).",
+      },
+    ],
+    seeOnTrip: [],
+  },
+  {
+    id: "nara",
+    era: "710 – 794",
+    title: "Période Nara : La première capitale permanente",
+    imageCaption: "Le Grand Bouddha Daibutsu en bronze du temple Tōdai-ji à Nara, consacré en l'an 752.",
+    summary: "Édification de la première grande cité impériale en damier et apogée du bouddhisme d'État monumental.",
+    content: [
+      {
+        heading: "Heijō-kyō (Nara)",
+        text: "Auparavant, la capitale changeait à la mort de chaque empereur (la mort étant vue comme source de souillure rituelle dans le shintoïsme). En 710, Heijō-kyō (l'actuelle Nara) devint la première capitale fixe, construite en damier sur le modèle de Chang'an en Chine. Durant cette période furent compilées les chroniques fondatrices (Kojiki et Nihon Shoki) pour légitimer l'origine divine de la lignée impériale.",
+      },
+      {
+        heading: "L'essor du bouddhisme et le Tōdai-ji",
+        text: "La cour impériale de Nara embrassa le bouddhisme avec ferveur pour protéger la nation. En 752, l'empereur Shōmu inaugura l'immense temple Tōdai-ji et son colossal Bouddha de bronze (Daibutsu) de 15 mètres. Le chantier mobilisa une telle part des réserves de métal du pays qu'il frôla la ruine économique, attestant l'incroyable autorité du pouvoir central.",
       },
     ],
     seeOnTrip: [
-      { id: "todai-ji", note: "Le grand Bouddha et le temple qui a presque ruiné les coffres du Japon de Nara au VIIIe siècle." },
-      { id: "kiyomizu-dera", note: "Fondé en 778, avant même le transfert de la capitale à Heian-kyō." },
-      { id: "fushimi-inari", note: "Établi en 711, avant même que Kyoto ne soit une capitale." },
+      { id: "todai-ji", note: "La grande salle du Bouddha constitue le cœur vivant de cette époque ; vous foulerez l'enceinte inaugurée au VIIIe siècle (Jour 2)." },
+      { id: "nara-park", note: "Les cerfs sacrés de Nara, messagers divins du sanctuaire Kasuga Taisha, y évoluent librement depuis cette époque (Jour 2)." },
     ],
   },
-
   {
-    title: "L'ère des Samouraïs",
-    summary: "Le pouvoir passe de la cour aux guerriers : shoguns, code bushido et deux siècles de guerre civile.",
+    id: "heian",
+    era: "794 – 1185",
+    title: "Période Heian : La cour classique de Kyoto",
+    imageCaption: "Illustration classique du 'Dit du Genji' (Genji Monogatari), chef-d'œuvre de la littérature courtoise de Heian.",
+    summary: "Près de quatre siècles de paix et de raffinement esthétique raffiné dans la nouvelle capitale impériale, Kyoto.",
     content: [
       {
-        heading: "Les guerres de Genpei et le premier shogunat",
-        text: "En 1185, après la défaite du clan Taira par le clan Minamoto lors des guerres de Genpei, le samouraï Minamoto no Yoritomo a établi le premier gouvernement militaire (bakufu) de l'histoire japonaise, dont le siège était dans la ville de Kamakura, loin de la cour impériale de Kyoto. À partir de là et jusqu'en 1868, le modèle se répète avec des variations : l'empereur conserve la légitimité spirituelle et cérémonielle à Kyoto, mais le véritable pouvoir politique et militaire est exercé par un shōgun ailleurs. C'est une situation un peu parallèle à celle du Saint Empereur romain et du Pape dans l'Europe médiévale : deux autorités parallèles, l'une spirituelle et l'autre temporelle.",
+        heading: "Le transfert à Heian-kyō",
+        text: "Pour s'émanciper de la tutelle politique pesante des monastères bouddhistes de Nara, l'empereur Kanmu déplaça la capitale en 794 à Heian-kyō ('Capitale de la paix et de la tranquillité'), aujourd'hui Kyoto. Elle demeura le séjour des empereurs pendant plus de mille ans, jusqu'en 1868.",
       },
       {
-        heading: "Le bushidō et les invasions mongoles",
-        text: "Pendant la période de Kamakura, le bushidō s'est consolidé, le code de conduite des samouraïs basé sur l'honneur, la loyauté et le mépris de la mort — bien qu'il faille savoir qu'il n'a jamais existé en tant que texte unique, oral ou écrit, mais comme une tradition de plusieurs traités ultérieurs qui ont systématisé les idéaux antérieurs. Le Japon a résisté à deux tentatives d'invasion mongole, en 1274 et 1281 ; lors de la seconde, un typhon a détruit une grande partie de la flotte d'invasion, un événement qui a donné naissance au terme kamikaze ('vent divin'), réutilisé des siècles plus tard pour les pilotes kamikazes de la Seconde Guerre mondiale.",
+        heading: "Le raffinement de la cour et le clan Fujiwara",
+        text: "Tandis que l'empereur régnait, le clan aristocratique Fujiwara gouvernait dans l'ombre grâce à une politique matrimoniale habile. La noblesse Heian se consacrait à la poésie, la calligraphie, les parfums et les amours courtoises, cultivant une mélancolie contemplative face à l'éphémère des choses ('mono no aware').",
       },
       {
-        heading: "Muromachi : Le Kyoto des pavillons d'or et d'argent",
-        text: "La période de Muromachi (1336-1573) a ramené le gouvernement militaire à Kyoto, sous le clan Ashikaga. C'est l'époque où le Kinkaku-ji (1397) et le Ginkaku-ji (1482) ont été construits, villas de retraite de deux shoguns de la même famille — grand-père et petit-fils — qui ont établi une grande partie de l'esthétique japonaise que nous associons aujourd'hui au 'classique' : la cérémonie du thé formalisée, le jardin de pierres zen, l'ikebana et l'esthétique wabi-sabi.",
-      },
-      {
-        heading: "La période Sengoku : Cent ans de guerre civile",
-        text: "La guerre d'Ōnin (1467-1477), déclenchée par un conflit de succession, a dévasté une grande partie de Kyoto et a plongé le Japon dans la période Sengoku ('États en guerre'), un long siècle de fragmentation au cours duquel des dizaines de seigneurs féodaux (daimyō) se sont affrontés pour le territoire. C'est le cadre d'une grande partie du cinéma de samouraïs de Kurosawa et de séries comme Shōgun.",
+        heading: "La naissance de la littérature japonaise",
+        text: "L'apparition du syllabaire phonétique 'kana' permit d'écrire en véritable langue japonaise. Les dames d'honneur de la cour, isolées derrière des paravents en soie, composèrent des chefs-d'œuvre : Sei Shōnagon écrivit 'Les Notes de chevet', et Murasaki Shikibu acheva vers l'an 1000 'Le Dit du Genji' (Genji Monogatari), considéré comme le premier roman psychologique au monde.",
       },
     ],
     seeOnTrip: [
-      { id: "kinkaku-ji", note: "Villa de retraite d'Ashikaga Yoshimitsu (1397), reconstruite après un incendie en 1955." },
-      { id: "ginkaku-ji", note: "Construit en 1482 par son petit-fils Ashikaga Yoshimasa, tandis que Kyoto brûlait pendant la guerre d'Ōnin." },
-      { id: "nakasendo", note: "L'itinéraire et ses villes-relais se consolideront en tant que réseau de communication lors de la période Edo suivante, mais le col de la montagne était utilisé bien avant." },
+      { id: "kiyomizu-dera", note: "Bien que fondé peu avant, son rayonnement s'est épanoui tout au long de l'ère classique Heian (Jour 3)." },
+      { id: "fushimi-inari", note: "La dévotion fervente de la cour impériale fit prospérer ce sanctuaire millénaire (Jour 2)." },
     ],
   },
-
   {
-    title: "La Période Edo : Paix, Isolement et Contrôle",
-    summary: "Deux siècles et demi de paix forcée sous les Tokugawa, avec le Japon presque complètement fermé au monde extérieur.",
+    id: "kamakura-muromachi",
+    era: "1185 – 1573",
+    title: "Kamakura et Muromachi : L'ère des samouraïs",
+    imageCaption: "Le Pavillon d'or (Kinkaku-ji) à Kyoto, emblème de la culture zen et shogounale sous les Ashikaga (période Muromachi).",
+    summary: "Le pouvoir passe de la cour aux guerriers : shoguns, code bushido et deux siècles de floraison zen.",
     content: [
       {
-        heading: "Tokugawa Ieyasu et l'Unification",
-        text: "Après la mort de Toyotomi Hideyoshi — qui avait presque achevé l'unification du Japon après le Sengoku, et qui a construit le château d'Osaka en 1583 comme symbole de son pouvoir — le samouraï Tokugawa Ieyasu a prévalu à la bataille de Sekigahara (1600) et est devenu shōgun en 1603, avec pour capitale Edo (l'actuelle Tokyo). Son clan allait diriger le Japon pendant les 265 années suivantes.",
+        heading: "Le premier shogunat (Kamakura)",
+        text: "Alors que les nobles de Kyoto composaient des poèmes, les clans de guerriers provinciaux (samouraïs) prirent l'ascendant. En 1185, au terme des guerres de Genpei, Minamoto no Yoritomo établit un gouvernement militaire (bakufu) à Kamakura et reçut le titre suprême de Shōgun. L'empereur resta à Kyoto comme figure spirituelle, mais le pouvoir réel appartenait aux militaires.",
       },
       {
-        heading: "Le système Sankin-Kōtai",
-        text: "Le shogunat Tokugawa a maintenu la paix grâce à un contrôle strict des seigneurs féodaux. L'un de ses mécanismes les plus ingénieux fut le sankin-kōtai : chaque daimyō était tenu de résider à Edo un an sur deux, y laissant sa famille en permanence en tant qu'otages. Cela a généré des défilés constants de suites de centaines ou de milliers de personnes entre les provinces et la capitale, et a ruiné économiquement les seigneurs féodaux — ce qui était exactement l'intention. Cinq routes officielles (Gokaidō) ont été établies pour ce trafic, parmi lesquelles le Nakasendō, avec ses villes-relais où les suites s'arrêtaient pour se reposer.",
+        heading: "Invasions mongoles et 'Kamikaze'",
+        text: "À la fin du XIIIe siècle, les armadas mongoles de Kublai Khan tentèrent à deux reprises d'envahir le Japon (1274 et 1281). À chaque fois, de terribles typhons anéantirent les flottes ennemies, salués par les Japonais comme 'kamikaze' (vents divins). Mais l'effort financier des défenses ruina le shogunat, précipitant son déclin.",
       },
       {
-        heading: "Sakoku : La fermeture du pays",
-        text: "À partir des années 1630, et en partie par crainte de l'influence politique du christianisme après la rébellion de Shimabara, le shogunat a établi le sakoku ('pays fermé') : il a interdit aux Japonais de quitter le pays et aux étrangers d'y entrer, à la seule exception d'un comptoir commercial néerlandais très restreint sur l'île artificielle de Dejima à Nagasaki. Le Japon est resté ainsi, pratiquement isolé du monde, pendant plus de deux siècles.",
+        heading: "Période Muromachi et Culture Higashiyama",
+        text: "Le clan Ashikaga réinstalla le shogunat à Kyoto (quartier de Muromachi) en 1336. Malgré l'instabilité politique, la culture connut un éclat exceptionnel. Sous l'impulsion du bouddhisme zen naquirent la cérémonie du thé, les jardins de pierres (karesansui), le théâtre Nō et l'esthétique du wabi-sabi, incarnés par le Kinkaku-ji (Pavillon d'or) et le Ginkaku-ji (Pavillon d'argent).",
       },
       {
-        heading: "Paix, culture urbaine et isolement des montagnes",
-        text: "Paradoxalement, cet isolement et cette paix forcée par le contrôle des Tokugawa ont permis un immense épanouissement culturel : le théâtre kabuki, la gravure sur bois ukiyo-e (avec Hokusai et ses Trente-six vues du mont Fuji comme exemple principal), et la consolidation d'Edo comme l'une des villes les plus peuplées du monde. Dans les zones montagneuses plus reculées, comme la vallée de Shirakawa-go ou la région de Takayama, l'isolement géographique — plus que politique — a donné naissance à des formes uniques de construction et d'organisation sociale, avec très peu d'influence extérieure jusque tard dans le XXe siècle.",
+        heading: "Sengoku Jidai : Les provinces en guerre",
+        text: "En 1467, la guerre d'Ōnin embrasa Kyoto pour la succession shogounale. L'autorité centrale s'effondra et le Japon sombra dans le Sengoku Jidai : plus d'un siècle de guerres civiles sanglantes entre seigneurs territoriaux (daimyō).",
       },
     ],
     seeOnTrip: [
-      { id: "nakasendo", note: "Le réseau routier qui soutenait le système sankin-kōtai ; Tsumago a été la première ville du Japon à restaurer systématiquement son aspect de cette période, en 1968." },
-      { id: "takayama", note: "Sous l'administration directe du shogunat à partir de 1692 en raison de la valeur de ses forêts de bois." },
-      { id: "shirakawa-go", note: "L'isolement de la vallée, plus géographique que politique, a préservé les maisons gasshō-zukuri pratiquement intactes." },
-      { id: "osaka", note: "Le château, construit par Hideyoshi en 1583, a été détruit par Tokugawa Ieyasu en 1615, précisément pour éliminer le clan rival." },
+      { id: "kinkaku-ji", note: "Le célébrissime Pavillon d'or, villa de villégiature du shogun Ashikaga Yoshimitsu (Jour 3)." },
+      { id: "ginkaku-ji", note: "Le Pavillon d'argent, sommet de l'esthétique zen wabi-sabi et de la culture Higashiyama (Jour 3)." },
     ],
   },
-
   {
-    title: "La Restauration Meiji : Modernisation Express",
-    summary: "En 45 ans, le Japon passe d'un shogunat féodal fermé à une puissance industrielle et militaire reconnue mondialement.",
+    id: "azuchi-momoyama",
+    era: "1573 – 1603",
+    title: "Azuchi-Momoyama : Les grands unificateurs",
+    imageCaption: "Donjon principal du Château de Himeji, apogée de l'architecture castrale et défensive d'Azuchi-Momoyama.",
+    summary: "Trois chefs militaires exceptionnels réunifient le Japon par les armes, érigeant les grands châteaux de pierre.",
     content: [
       {
-        heading: "La fin du shogunat",
-        text: "En 1853, le commodore américain Matthew Perry est arrivé dans la baie d'Edo avec des navires de guerre ('les navires noirs') et a forcé l'ouverture commerciale du Japon. La crise qui a suivi — entre ceux qui voulaient maintenir l'isolement et ceux qui considéraient la modernisation comme inévitable — a conduit à la chute du shogunat Tokugawa et à la restauration, en 1868, du pouvoir effectif de l'empereur, alors le jeune Meiji.",
+        heading: "Oda Nobunaga",
+        text: "La réunification de l'archipel fut menée par trois figures légendaires successives. Le premier fut Oda Nobunaga, stratège implacable qui utilisa pour la première fois en masse des arquebuses portugaises pour briser ses rivaux et les moines guerriers. Trahi par un général, il fut acculé au suicide rituel à Kyoto en 1582.",
       },
       {
-        heading: "Une transformation sans précédent",
-        text: "Ce qui a suivi a été l'une des modernisations les plus rapides de l'histoire. En à peine 45 ans, le Japon a aboli la classe des samouraïs et ses privilèges féodaux, a créé une armée et une marine modernes basées sur des modèles occidentaux, a promulgué une constitution (1889), a établi l'enseignement public obligatoire, a construit des chemins de fer et une industrie lourde, et a adopté le calendrier grégorien et une monnaie nationale, le yen. Edo a été rebaptisée Tokyo ('capitale de l'est') et est devenue la nouvelle capitale impériale.",
+        heading: "Toyotomi Hideyoshi",
+        text: "Le général Toyotomi Hideyoshi vengea Nobunaga et paracheva l'unification. D'humble extraction paysanne, devenu régent absolu, il fit ériger le formidable château d'Osaka, confisqua les armes des paysans ('chasse aux sabres') et figea la hiérarchie sociale. Il lança ensuite des campagnes militaires en Corée qui prirent fin à sa mort.",
       },
       {
-        heading: "De puissance régionale à empire",
-        text: "La transformation n'a pas été seulement interne : le Japon a remporté des guerres contre la Chine (1894-95) et la Russie (1904-05) — cette dernière étant la première fois à l'époque moderne qu'une puissance asiatique battait une puissance européenne — et a commencé à s'étendre territorialement, annexant Taïwan et, plus tard, la Corée. La période Meiji a jeté, pour le meilleur et pour le pire, les bases du Japon du XXe siècle : à la fois le pays industrialisé et technologique que vous visitez aujourd'hui et l'empire militariste qui conduirait à la Seconde Guerre mondiale.",
+        heading: "L'âge d'or des châteaux",
+        text: "Cette brève période fut marquée par la construction de monumentales forteresses à étages en pierre (comme Himeji ou Matsumoto), conçues à la fois comme bastions imprenables et symboles d'autorité suprême, ornées à l'intérieur de splendides paravents dorés.",
       },
     ],
     seeOnTrip: [
-      { id: "meiji-jingu", note: "Sanctuaire dédié à cet empereur, construit en 1920 avec une forêt de 100 000 arbres plantés à la main." },
-      { id: "osaka", note: "La tour actuelle du château, en béton armé, date de 1931 — en plein dans l'ère moderne qui a commencé avec Meiji." },
+      { id: "osaka", note: "Le château d'Osaka fut érigé à l'origine en 1583 par Hideyoshi comme siège majestueux de son pouvoir (Jour 5)." },
     ],
   },
-
   {
-    title: "Guerre, Défaite et Miracle Économique",
-    summary: "De la Seconde Guerre mondiale à la reconstruction, et de là à devenir la deuxième économie du monde.",
+    id: "edo",
+    era: "1603 – 1868",
+    title: "Période Edo : Paix sous contrôle et isolement",
+    imageCaption: "'Sous la vague au large de Kanagawa' de Katsushika Hokusai (v. 1831), sommet de l'ukiyo-e à l'ère Edo.",
+    summary: "265 ans de paix stricte sous les shoguns Tokugawa et fermeture quasi hermétique du pays au reste du monde.",
     content: [
       {
-        heading: "Le chemin de la guerre",
-        text: "Après la mort de l'empereur Taishō en 1926, la période Shōwa a commencé sous l'empereur Hirohito. Les années 1920 et 1930 ont vu la montée du militarisme japonais, l'invasion de la Mandchourie (1931) et de la Chine (1937), et finalement l'entrée dans la Seconde Guerre mondiale avec l'attaque sur Pearl Harbor en décembre 1941.",
+        heading: "Tokugawa Ieyasu et l'ordre féodal",
+        text: "Vainqueur de la bataille de Sekigahara (1600), Tokugawa Ieyasu fonda le shogunat Tokugawa à Edo (Tokyo). Pour conjurer les révoltes, il instaura un système de castes rigide (samouraïs, paysans, artisans, marchands) et le 'sankin-kōtai', obligeant les daimyōs à résider un an sur deux à Edo en y laissant leur famille en otage permanent.",
       },
       {
-        heading: "La destruction des villes",
-        text: "Les bombardements alliés ont dévasté les grandes villes japonaises. Le bombardement de Tokyo le 10 mars 1945 a été, en termes de morts en une seule nuit — environ 100 000 —, le raid aérien le plus meurtrier de l'histoire, plus qu'Hiroshima ou Nagasaki individuellement. Asakusa et son temple Senso-ji, l'un des plus anciens quartiers de la ville, ont été complètement rasés ; ce que vous visitez aujourd'hui est une reconstruction de 1958. En août 1945, les bombes atomiques sur Hiroshima et Nagasaki ont précipité la reddition japonaise, annoncée par l'empereur le 15 août — la première fois que la population japonaise entendait sa voix.",
+        heading: "Sakoku : Le pays fermé",
+        text: "Afin d'éradiquer toute influence chrétienne et européenne perçue comme séditieuse, le shogunat décréta le Sakoku en 1639. Les étrangers furent expulsés et il fut interdit aux Japonais de quitter le pays sous peine de mort. Seul un commerce étroit avec les Hollandais et les Chinois fut toléré sur l'îlot de Dejima à Nagasaki.",
       },
       {
-        heading: "L'occupation alliée",
-        text: "Entre 1945 et 1952, le Japon a été sous occupation militaire américaine, dirigée par le général Douglas MacArthur. Une nouvelle constitution pacifiste a été rédigée (qui reste en vigueur), l'appareil militaire a été démantelé et les fondations juridiques et économiques du Japon démocratique d'après-guerre ont été posées. Kyoto, d'ailleurs, a été délibérément épargnée par les grands bombardements — contrairement à Tokyo, Osaka ou Nagoya — précisément en raison de sa valeur historique et culturelle, ce qui explique pourquoi elle conserve tant de patrimoine antérieur au XXe siècle.",
-      },
-      {
-        heading: "Le miracle économique",
-        text: "Entre les années 50 et 80, le Japon a connu l'une des croissances économiques les plus rapides de l'histoire, passant d'un pays dévasté à la deuxième économie mondiale. Des quartiers comme Akihabara, qui dans le marché noir de l'après-guerre vendaient des composants radio récupérés dans les décombres, sont devenus la vitrine de cette nouvelle force technologique : c'est ici qu'ont été achetés les premiers téléviseurs, réfrigérateurs et machines à laver du boom japonais.",
+        heading: "Le monde flottant et les voies postales",
+        text: "Cette longue ère de paix engendra une culture urbaine citadine foisonnante (le 'monde flottant' ou Ukiyo) : essor du théâtre Kabuki, estampes ukiyo-e et maisons de thé. Les déplacements obligatoires liés au sankin-kōtai dynamisèrent de grandes routes comme la Nakasendō, jalonnée de villes-étapes (juku) pour accueillir les voyageurs.",
       },
     ],
     seeOnTrip: [
-      { id: "senso-ji", note: "Rasé lors du bombardement de 1945 ; le bâtiment actuel est une reconstruction de 1958, en béton pour qu'il ne brûle plus." },
-      { id: "akihabara", note: "Littéralement né des ruines de l'après-guerre, en tant que marché noir de composants électroniques." },
-      { id: "todai-ji", note: "Nara, tout comme Kyoto, a été épargnée par les grands bombardements en raison de sa valeur patrimoniale." },
+      { id: "nakasendo", note: "Parcourez à pied un tronçon pavé d'origine de la voie Nakasendō entre Magome et Tsumago, resté fidèle à l'époque d'Edo (Jour 8)." },
+      { id: "takayama", note: "Le quartier historique de Sanmachi Suji à Takayama conserve intactes ses maisons de marchands d'époque Edo (Jour 7)." },
+      { id: "shirakawa-go", note: "Ces hameaux isolés dans les montagnes développèrent d'admirables fermes au toit de chaume 'gasshō-zukuri' (Jour 7)." },
     ],
   },
-
   {
-    title: "Heisei, Reiwa et le Japon Contemporain",
-    summary: "De la bulle économique à la culture pop mondiale qui a fait du Japon un aimant touristique et culturel.",
+    id: "meiji",
+    era: "1868 – 1912",
+    title: "Restauration Meiji : Modernisation express",
+    imageCaption: "'Vues de la ville de Yamagata' par Takahashi Yuichi (1881–1882), illustrant l'occidentalisation rapide de l'ère Meiji.",
+    summary: "En seulement 45 ans, le Japon passe du féodalisme au rang de puissance industrielle et constitutionnelle mondiale.",
     content: [
       {
-        heading: "L'éclatement de la bulle",
-        text: "La période Heisei (1989-2019) a commencé avec l'éclatement d'une bulle spéculative immobilière et boursière massive, conduisant à la soi-disant 'décennie perdue' de stagnation économique dans les années 90. Malgré cela, c'est aussi l'époque où la culture pop japonaise — manga, anime, jeux vidéo — est devenue un phénomène d'exportation culturelle massif dans le monde entier, avec Akihabara comme épicentre physique de cet univers.",
+        heading: "La chute du shogunat",
+        text: "En 1853, les 'vaisseaux noirs' de l'amiral américain Perry forcèrent l'ouverture des ports japonais. Cette crise précipita l'effondrement du shogunat. En 1868, le pouvoir revint symboliquement au jeune empereur Meiji. Edo fut renommée Tokyo ('Capitale de l'Est') et devint le nouveau centre impérial.",
       },
       {
-        heading: "Du samouraï au robot : l'image du Japon à l'étranger",
-        text: "Le Japon qui fascine aujourd'hui les voyageurs du monde entier combine de manière visible les deux facettes de son histoire : des temples et des jardins vieux de plus de mille ans coexistant avec les néons de Shibuya ou Akihabara. Ce n'est pas un hasard si les studios de jeux vidéo et d'animation ont puisé si directement dans ce véritable patrimoine historique pour construire leurs propres mondes fictifs — du Kinkaku-ji reconverti en Tour Cendrée de Pokémon au carrefour de Shibuya immortalisé dans Digimon et des dizaines de films.",
+        heading: "L'occidentalisation accélérée",
+        text: "Conscient du risque d'être colonisé, le Japon se modernisa à marche forcée. Les privilèges samouraïs furent abolis, la conscription militaire et l'instruction obligatoire instituées, et l'industrie lourde, les chemins de fer, les tenues occidentales et une constitution inspirée de la Prusse furent adoptés.",
       },
       {
-        heading: "L'ère Reiwa",
-        text: "En avril 2019, l'empereur Akihito a abdiqué — une chose qui ne s'était pas produite depuis deux siècles — et son fils Naruhito est devenu empereur, inaugurant l'ère Reiwa ('belle harmonie'), celle que vous vivez pendant ce voyage.",
+        heading: "L'émergence d'un empire",
+        text: "Cette industrialisation fulgurante exigeant des matières premières, le Japon s'engagea dans une politique expansionniste. Il stupéfia le monde en battant la Chine des Qing (1894-95) puis la Russie tsariste (1904-05), s'imposant comme la première puissance d'Asie et annexant Taïwan et la Corée.",
       },
     ],
     seeOnTrip: [
-      { id: "akihabara", note: "L'épicentre physique de l'explosion culturelle des mangas, animes et jeux vidéo japonais." },
-      { id: "shibuya", note: "Le symbole visuel le plus reproduit du Japon urbain contemporain dans les films et séries du monde entier." },
-      { id: "teamlab", note: "L'art numérique japonais le plus récent, héritier direct de siècles d'esthétique visuelle unique." },
+      { id: "meiji-jingu", note: "Le majestueux sanctuaire au cœur d'une forêt sacrée à Tokyo, dédié aux esprits de l'empereur Meiji et de l'impératrice Shōken (Jour 9)." },
+    ],
+  },
+  {
+    id: "taisho",
+    era: "1912 – 1926",
+    title: "Période Taishō : Démocratie et bouillonnement culturel",
+    imageCaption: "Rues commerçantes de Tokyo dans les années 1920 : tramways, automobiles et effervescence de la Démocratie Taishō.",
+    summary: "Une ère brève et vibrante, caractérisée par la libéralisation politique et une synthèse originale Orient-Occident.",
+    content: [
+      {
+        heading: "La Démocratie Taishō",
+        text: "Sous le règne de l'empereur Taishō, le pouvoir politique s'est déplacé de l'oligarchie vers le parlement et les partis politiques. En 1925, le suffrage universel masculin fut promulgué, accompagné de débats intellectuels passionnés et d'un syndicalisme dynamique.",
+      },
+      {
+        heading: "Modernité urbaine et grand séisme",
+        text: "Dans les métropoles apparurent les 'Mobo' et 'Moga' (garçons et filles modernes) épris de jazz, fréquentant les cafés et bousculant les convenances. Mais le 1er septembre 1923, le terrible grand tremblement de terre du Kantō dévasta Tokyo et Yokohama, faisant plus de 100 000 morts et imposant une reconstruction totale de la capitale.",
+      },
+    ],
+    seeOnTrip: [],
+  },
+  {
+    id: "guerra-posguerra",
+    era: "1926 – 1989",
+    title: "Période Shōwa : Guerre, tragédie et miracle",
+    imageCaption: "Inauguration du train à grande vitesse Tokaido Shinkansen en octobre 1964, icône de la renaissance économique japonaise.",
+    summary: "Du militarisme et de la Seconde Guerre mondiale aux bombes atomiques et au spectaculaire renouveau économique.",
+    content: [
+      {
+        heading: "Militarisme et Seconde Guerre mondiale",
+        text: "Sous l'empereur Hirohito (Shōwa), les factions militaires prirent le contrôle du pays, envahissant la Mandchourie puis la Chine. En décembre 1941, l'attaque de Pearl Harbor déclencha la guerre du Pacifique. Après des combats acharnés et d'effroyables bombardements incendiaires, Tokyo et la plupart des métropoles furent réduites en cendres.",
+      },
+      {
+        heading: "Les bombes atomiques et la capitulation",
+        text: "En août 1945, les bombes atomiques frappèrent Hiroshima et Nagasaki. Le Japon capitula sans condition. Les forces alliées conduites par le général MacArthur occupèrent le pays jusqu'en 1952, promulguant une constitution pacifiste qui renonça à la guerre et redéfinit l'empereur comme simple 'symbole de l'État'.",
+      },
+      {
+        heading: "Le 'Miracle économique japonais'",
+        text: "Renaissant de ses décombres par le travail acharné et l'innovation, le Japon connut dans les années 60, 70 et 80 une expansion phénoménale. Porté par l'électronique et l'automobile (Sony, Toyota, Panasonic), il devint la deuxième puissance économique mondiale. Les Jeux olympiques de Tokyo en 1964 et le Shinkansen symbolisèrent ce retour triomphal.",
+      },
+    ],
+    seeOnTrip: [
+      { id: "akihabara", note: "Né après-guerre comme marché noir de composants radio, à l'origine du quartier technologique mondial d'aujourd'hui (Jour 10)." },
+      { id: "senso-ji", note: "Le grand temple de Tokyo fut détruit lors des raids de 1945 et rebâti dans l'après-guerre par la ferveur populaire (Jour 10)." },
+    ],
+  },
+  {
+    id: "japon-hoy",
+    era: "1989 – Aujourd'hui",
+    title: "Heisei, Reiwa et le Japon contemporain",
+    imageCaption: "Le carrefour de Shibuya illuminé de nuit, épicentre visuel du Japon contemporain (ères Heisei et Reiwa).",
+    summary: "De l'éclatement de la bulle économique au rayonnement planétaire de la pop culture (manga, anime, jeux vidéo).",
+    content: [
+      {
+        heading: "Éclatement de la bulle et ère Heisei",
+        text: "Au début des années 1990, la colossale bulle spéculative éclata, ouvrant les 'décennies perdues' de stagnation économique. Malgré cela, le niveau de vie et la sécurité restèrent incomparables. Le pays surmonta des épreuves majeures, dont le séisme de Kobe en 1995 et la triple catastrophe de Fukushima en 2011.",
+      },
+      {
+        heading: "Cool Japan : Puissance culturelle globale",
+        text: "Le Japon a conquis le monde par son 'soft power' : l'animation (Studio Ghibli), les mangas et les jeux vidéo (Nintendo, PlayStation) sont devenus des phénomènes planétaires. Son alliance d'hypertechnologie et d'artisanat ancestral en fait un pôle d'attraction touristique universel.",
+      },
+      {
+        heading: "L'Ère Reiwa (2019-présent)",
+        text: "Avec l'abdication d'Akihito et l'accession au trône de Naruhito en 2019 s'est ouverte l'ère Reiwa ('Belle Harmonie'). C'est le Japon raffiné, pop, connecté et chaleureux que vous allez découvrir au cours de cette aventure.",
+      },
+    ],
+    seeOnTrip: [
+      { id: "shibuya", note: "Le célèbre carrefour géant, la statue de Hachiko et les écrans géants : le symbole par excellence du Japon moderne (Jours 9 et 12)." },
+      { id: "akihabara", note: "L'épicentre mondial de la culture otaku, des mangas, de l'animation et des maid cafés (Jour 10)." },
+      { id: "teamlab", note: "L'art numérique immersif de teamLab Planets incarne le génie créatif du Tokyo d'aujourd'hui (Jour 11)." },
     ],
   },
 ];
 
 export const furtherReading = {
   books: [
-    { note: "Le classique pour commencer : 416 pages couvrant de la préhistoire à la fin du XXe siècle de manière ludique et exhaustive. C'est la référence citée par presque tous les podcasts d'histoire sur le Japon." },
-    { note: "Ouvrage en espagnol par deux docteurs en histoire, avec des cartes, des graphiques et une recommandation de lectures complémentaires à la fin de chaque chapitre. Très utile comme livre de référence avant ou après chaque étape du voyage." },
-    { note: "Le spécialiste hispanophone de référence sur la période Kamakura-Edo et la classe guerrière. Son blog, historiasamurai.com, est aussi une source fiable et ludique pour se plonger dans la moindre anecdote de samouraï du voyage." },
-    { note: "Un court essai classique (1906) sur la cérémonie du thé, le bouddhisme zen et l'esthétique japonaise — parfait pour comprendre le contexte culturel du Ginkaku-ji et des jardins zen que vous visiterez." },
-    { note: "Écrit vers l'an 1000 à la cour Heian de Kyoto. Très long, mais lire ne serait-ce que le premier chapitre donne une idée directe de la sensibilité esthétique de l'époque qui a marqué toute la ville." },
+    {
+      title: "Petite histoire du Japon",
+      note: "Le classique d'initiation : plus de 400 pages retraçant la préhistoire jusqu'à la fin du XXe siècle de manière accessible et captivante.",
+    },
+    {
+      title: "Le Japon dans son histoire",
+      note: "Ouvrage de référence rédigé par des historiens universitaires, enrichi de cartes, de graphiques et de pistes bibliographiques pour chaque étape.",
+    },
+    {
+      title: "Histoire des Samouraïs",
+      note: "L'ouvrage de référence sur la caste des guerriers de Kamakura à Edo. Indispensable pour s'immerger dans les récits de samouraïs du voyage.",
+    },
+    {
+      title: "Le Livre du thé",
+      note: "L'essai classique d'Okakura Kakuzo (1906) sur la cérémonie du thé, le bouddhisme zen et la sensibilité esthétique nippone.",
+    },
+    {
+      title: "Le Dit du Genji",
+      note: "Écrit vers l'an 1000 à la cour Heian de Kyoto. Lire ses premières pages offre un aperçu immédiat de la délicatesse esthétique de cette époque.",
+    },
   ],
   podcasts: [
-    { note: "Un épisode de deux heures qui couvre toute l'histoire japonaise, des origines mythiques à la restauration Meiji. Bon point de départ global avant le voyage." },
-    { note: "Centré exactement sur la période d'Edo, avec une bibliographie citée à la fin de l'épisode (incluant Mikiso Hane et Jonathan López-Vera)." },
-    { note: "Podcast hebdomadaire en espagnol avec l'actualité, l'histoire et la culture japonaises racontées par des spécialistes — idéal pour écouter des épisodes individuels en fonction du sujet qui vous intéresse le plus." },
-    { note: "Une revue radiophonique classique de la classe des samouraïs, de la période Sengoku à leur disparition lors de la restauration Meiji." },
+    { note: "Découverte de Narita au-delà de l'aéroport : le grand temple Naritasan Shinsho-ji, sa rue Omotesando et la tradition de l'anguille grillée." },
+    { note: "Guide complet pour aborder l'ancienne capitale impériale : temples séculaires, sanctuaires shinto, jardins zen et quartiers préservés." },
+    { note: "Immersion dans le monde des geishas (geiko et maiko) à Kyoto : leur formation artistique, les maisons de thé et les règles de bienséance." },
+    { note: "La personnalité chaleureuse du Kansai : philosophie culinaire du 'kuidaore', takoyaki, néons de Dotonbori et atmosphère rétro de Shinsekai." },
+    { note: "Kanazawa, fleuron du clan Maeda : jardin Kenroku-en, demeures de samouraïs de Nagamachi, maisons de thé et ateliers de feuille d'or." },
+    { note: "Cœur des Alpes japonaises : toits de chaume gasshō-zukuri à Shirakawa-go, ruelles de bois de Takayama et bœuf de Hida." },
+    { note: "Randonnée historique sur la voie Nakasendō entre Magome et Tsumago : histoire des relais de l'ère Edo et nature de la vallée de Kiso." },
+    { note: "Conseils clés pour contempler le mont Fuji : meilleurs belvédères (pagode Chureito, lac Kawaguchiko) et repérage depuis le Shinkansen." },
+    { note: "Grand panorama audio de deux heures retraçant l'histoire japonaise depuis ses mythes d'origine jusqu'à l'ère Meiji." },
+    { note: "Épisode centré sur l'époque d'Edo et le règne pacifique des shoguns Tokugawa." },
+    { note: "Récit documentaire retraçant l'évolution de la classe guerrière des samouraïs, de la période Sengoku à leur disparition sous Meiji." },
+    { note: "Chronique hebdomadaire abordant la culture, l'histoire et l'actualité japonaise à travers le regard de spécialistes." },
+    { note: "Série audio de référence explorant les destinations incontournables et les secrets de voyage à travers tout le Japon." },
   ],
 };

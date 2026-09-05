@@ -58,7 +58,13 @@ function deepMerge(source, patch) {
 
   if (Array.isArray(source)) {
     if (!Array.isArray(patch)) return source;
-    return source.map((item, i) => deepMerge(item, patch[i]));
+    return source.map((item, i) => {
+      if (item && typeof item === "object" && item.id) {
+        const matchingPatch = patch.find((p) => p && p.id === item.id);
+        if (matchingPatch) return deepMerge(item, matchingPatch);
+      }
+      return deepMerge(item, patch[i]);
+    });
   }
 
   if (isPlainObject(source)) {
