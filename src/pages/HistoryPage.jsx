@@ -316,6 +316,17 @@ export default function HistoryPage() {
                 >
                   <div className="flex items-start justify-between gap-3">
                     <div className="min-w-0 flex-1">
+                      {p.dayBadge && (
+                        <span
+                          className="inline-flex items-center gap-1 text-[11px] font-bold px-2 py-0.5 rounded-md mb-1.5"
+                          style={{
+                            background: p.dayBadge.includes("Día") ? "rgba(135,46,196,0.12)" : "rgba(0,0,0,0.06)",
+                            color: p.dayBadge.includes("Día") ? "#872ec4" : "var(--ink-soft)",
+                          }}
+                        >
+                          {p.dayBadge.includes("Día") ? "🗓️" : "📚"} {p.dayBadge}
+                        </span>
+                      )}
                       <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", margin: 0, lineHeight: 1.35 }}>{p.title}</p>
                       <p style={{ fontSize: 12, color: "#872ec4", fontWeight: 600, marginTop: 2, marginBottom: 0 }}>{p.show}</p>
                     </div>
