@@ -46,9 +46,15 @@ export default function BudgetPage() {
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))", gap: 14 }}>
             <div>
-              <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 3 }}>{t("flights.reference")}</p>
+              <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 3 }}>{t("flights.reference")} (PNR)</p>
               <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", fontFamily: "monospace", margin: 0 }}>{flights.booking.ref}</p>
             </div>
+            {flights.booking.agencyRef && (
+              <div>
+                <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 3 }}>Ref. Agencia</p>
+                <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", fontFamily: "monospace", margin: 0 }}>{flights.booking.agencyRef}</p>
+              </div>
+            )}
             <div>
               <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 3 }}>PIN</p>
               <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", fontFamily: "monospace", margin: 0 }}>{flights.booking.pin}</p>

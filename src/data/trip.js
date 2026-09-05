@@ -70,25 +70,43 @@ export const tripMeta = {
 };
 
 export const flights = {
-  booking: { ref: "40-892227078", pin: "2534" },
+  booking: { ref: "YQXPVE", agencyRef: "40-892227078", pin: "2534" },
   price: { perPerson: "890€", total: "4.450€", people: 5 },
   out: {
     dir: "out",
     label: "Ida",
     date: "2026-09-06",
-    text: "Salida Dom 6 sept desde Madrid (T4S) a las 09:05 (Qatar Airways QR148). Escala en Doha (aeropuerto de terminal única). Llegada a Narita (NRT), Terminal 2, el Lun 7 sept a las 12:55.",
+    text: "Salida Dom 6 sept desde Madrid (T4S) a las 09:05 (Qatar Airways QR148). Escala en Doha de 3h 45m (16:50 → 20:35). Llegada a Narita (NRT), Terminal 2, el Lun 7 sept a las 12:55.",
     flightNumber: "QR148 + QR808",
-    leg1: { number: "QR148", operator: "Qatar Airways", duration: "7h", route: "Madrid → Doha", trackUrl: "https://www.google.com/search?q=vuelo+QR148" },
-    leg2: { number: "QR808", operator: "Qatar Airways", duration: "8h 50m", route: "Doha → Narita", trackUrl: "https://www.google.com/search?q=vuelo+QR808" },
+    leg1: {
+      number: "QR148",
+      operator: "Qatar Airways",
+      duration: "6h 45m",
+      route: "Madrid → Doha",
+      depTime: "09:05",
+      arrTime: "16:50",
+      trackUrl: "https://www.google.com/search?q=vuelo+QR148",
+    },
+    leg2: {
+      number: "QR808",
+      operator: "Qatar Airways",
+      duration: "10h 20m",
+      route: "Doha → Narita",
+      depTime: "20:35",
+      arrTime: "12:55",
+      trackUrl: "https://www.google.com/search?q=vuelo+QR808",
+    },
     trackUrl: "https://www.google.com/search?q=vuelo+QR148",
     depart: { city: "Madrid", time: "2026-09-06T09:05", terminal: "T4S (Satélite)" },
     arrive: { city: "Narita (NRT)", time: "2026-09-07T12:55", terminal: "T2" },
+    totalDuration: "20h 50m",
     layover: {
       city: "Doha (DOH)",
       airport: "Hamad International",
+      duration: "3h 45m",
       terminal: "Terminal única — todos los vuelos Qatar Airways",
       connection:
-        "Aeropuerto de terminal única: no hay que cambiar de edificio ni volver a facturar. De concourse A a E se tarda unos 15 min andando; entre concourses cercanos, unos 9 min de media (90 seg en tren). La puerta de embarque cierra 20 min antes de la salida.",
+        "Escala en Doha de 3 h 45 min (16:50 → 20:35). Aeropuerto de terminal única: no hay que cambiar de edificio ni volver a facturar. De concourse A a E se tarda unos 15 min andando; entre concourses cercanos, unos 9 min de media (90 seg en tren). La puerta de embarque cierra 20 min antes de la salida.",
     },
   },
   back: {
@@ -102,6 +120,7 @@ export const flights = {
     trackUrl: "https://www.google.com/search?q=vuelo+QR809",
     depart: { city: "Narita (NRT)", time: "2026-09-21T17:25", terminal: "T2" },
     arrive: { city: "Madrid", time: "2026-09-22T08:15", terminal: "T4S (Satélite)" },
+    totalDuration: "21h 50m",
     layover: {
       city: "Doha (DOH)",
       airport: "Hamad International",
@@ -281,9 +300,9 @@ export const days = [
       "Qatar Airways es la aerolínea nacional de Catar y una de las más valoradas del mundo. Doha es el hub central de la compañía en Oriente Medio, punto de conexión entre Europa y Asia.",
     schedule: [
       { time: "09:05", text: "Salida desde el Aeropuerto Adolfo Suárez Madrid-Barajas en vuelo QR148 (Qatar Airways). Seguimiento en vivo: https://www.google.com/search?q=vuelo+QR148" },
-      { time: "13:35", text: "Llegada a Doha (Aeropuerto Internacional de Hamad, HIA). Escala técnica, cambio de avión. Tiempo en escala: aprox. 2 horas." },
-      { time: "15:35", text: "Salida desde Doha hacia Narita (NRT) en el vuelo QR808 (Qatar Airways). Seguimiento en vivo: https://www.google.com/search?q=vuelo+QR808" },
-      { time: "12:55 (+1 día)", text: "Llegada a Narita (lunes 7 sept). Aduanas y recogida de equipajes. Luego: traslado en Narita Express + Shinkansen a Kioto." },
+      { time: "16:50", text: "Llegada a Doha (Aeropuerto Internacional de Hamad, DOH). Escala en terminal única, cambio de avión. Tiempo en escala: 3 h 45 min (16:50 → 20:35)." },
+      { time: "20:35", text: "Salida desde Doha hacia Narita (NRT) en el vuelo QR808 (Qatar Airways). Duración aprox. 10 h 20 min. Seguimiento en vivo: https://www.google.com/search?q=vuelo+QR808" },
+      { time: "12:55 (+1 día)", text: "Llegada a Narita (lunes 7 sept). Aduanas y recogida de equipajes con el código QR de Visit Japan Web. Luego: traslado en Narita Express + Shinkansen a Kioto." },
     ],
     money: "Vuelo incluido en el presupuesto de grupo",
   },

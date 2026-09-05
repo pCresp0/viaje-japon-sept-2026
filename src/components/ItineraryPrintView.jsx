@@ -630,7 +630,8 @@ export default function ItineraryPrintView({ days }) {
         <div style={{ padding: "10px 12px", background: "#f7f0e3", borderRadius: 8, marginBottom: 14, fontSize: 10.5, lineHeight: 1.55 }}>
           <strong>Reserva Qatar Airways</strong>
           <br />
-          Referencia: <strong style={{ fontFamily: "monospace" }}>{flights.booking.ref}</strong>
+          Localizador (PNR): <strong style={{ fontFamily: "monospace" }}>{flights.booking.ref}</strong>
+          {flights.booking.agencyRef && <> · Ref. Agencia: <strong style={{ fontFamily: "monospace" }}>{flights.booking.agencyRef}</strong></>}
           {" · "}PIN: <strong style={{ fontFamily: "monospace" }}>{flights.booking.pin}</strong>
           <br />
           {flights.price.people} personas · <strong>{flights.price.total}</strong> ({flights.price.perPerson}/persona)

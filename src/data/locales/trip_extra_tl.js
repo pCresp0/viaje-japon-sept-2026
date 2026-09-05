@@ -68,13 +68,13 @@ export const tripMeta = {
 export const flights = {
   out: {
     label: "Pag-alis",
-    text: "Pag-alis Linggo Set 6 mula Madrid (T4S) nang 09:05 (Qatar Airways QR148). Layover sa Doha (single terminal airport). Pagdating sa Narita (NRT), Terminal 2, sa Lun Set 7 nang 12:55.",
+    text: "Pag-alis Linggo Set 6 mula Madrid (T4S) nang 09:05 (Qatar Airways QR148). Layover sa Doha nang 3h 45m (16:50 → 20:35). Pagdating sa Narita (NRT), Terminal 2, sa Lun Set 7 nang 12:55.",
     leg1: { route: "Madrid → Doha" },
     leg2: { route: "Doha → Narita" },
     depart: { terminal: "T4S (Satellite)" },
     layover: {
       terminal: "Single terminal — lahat ng Qatar Airways flights",
-      connection: "Single terminal airport: hindi na kailangang lumipat ng building o mag-check in ulit. Mula concourse A hanggang E ay aabutin ng 15 min paglalakad; sa pagitan ng magkakalapit na concourse, mga 9 min sa average (90 sec sa tren). Nagsasara ang boarding gate 20 min bago ang pag-alis.",
+      connection: "Layover sa Doha nang 3 h 45 min (16:50 → 20:35). Single terminal airport: hindi na kailangang lumipat ng building o mag-check in ulit. Mula concourse A hanggang E ay aabutin ng 15 min paglalakad; sa pagitan ng magkakalapit na concourse, mga 9 min sa average (90 sec sa tren). Nagsasara ang boarding gate 20 min bago ang pag-alis.",
     },
   },
   back: {

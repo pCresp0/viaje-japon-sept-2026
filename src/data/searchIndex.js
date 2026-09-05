@@ -240,7 +240,7 @@ function buildSearchIndex(lang) {
     terms: [
       "vuelo", "ida", "qatar", "qr148", "qr808", "madrid", "barajas", "t4s",
       "doha", "doh", "hamad", "narita", "nrt", "t2", "escala",
-      flights.booking.ref, flights.booking.pin, "pin vuelo", "referencia",
+      flights.booking.ref, "yqxpve", flights.booking.pin, "pin vuelo", "referencia",
     ],
   }));
   items.push(entry({
@@ -252,7 +252,7 @@ function buildSearchIndex(lang) {
     targetId: "flight-return-card",
     terms: [
       "vuelo", "vuelta", "qatar", "iberia", "qr809", "qr6952",
-      "narita", "doha", "madrid", flights.booking.ref, flights.booking.pin,
+      "narita", "doha", "madrid", flights.booking.ref, "yqxpve", flights.booking.pin,
     ],
   }));
   items.push(entry({
@@ -263,7 +263,7 @@ function buildSearchIndex(lang) {
     tab: "presupuesto",
     targetId: "budget-flights-booking",
     terms: [
-      "reserva", "booking", "referencia", "pin", flights.booking.ref,
+      "reserva", "booking", "referencia", "pin", "pnr", flights.booking.ref, "yqxpve",
       flights.booking.pin, "40-892227078", "2534", "vuelos", "qatar", "precio vuelo",
     ],
   }));

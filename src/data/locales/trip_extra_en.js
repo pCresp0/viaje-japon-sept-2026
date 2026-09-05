@@ -68,13 +68,13 @@ export const tripMeta = {
 export const flights = {
   out: {
     label: "Outbound",
-    text: "Departure Sun Sep 6 from Madrid (T4S) at 09:05 (Qatar Airways QR148). Layover in Doha (single terminal airport). Arrival at Narita (NRT), Terminal 2, on Mon Sep 7 at 12:55.",
+    text: "Departure Sun Sep 6 from Madrid (T4S) at 09:05 (Qatar Airways QR148). Layover in Doha of 3h 45m (16:50 → 20:35). Arrival at Narita (NRT), Terminal 2, on Mon Sep 7 at 12:55.",
     leg1: { route: "Madrid → Doha" },
     leg2: { route: "Doha → Narita" },
     depart: { terminal: "T4S (Satellite)" },
     layover: {
       terminal: "Single terminal — all Qatar Airways flights",
-      connection: "Single terminal airport: no need to change buildings or check in again. From concourse A to E takes about 15 min walking; between close concourses, about 9 min on average (90 sec by train). The boarding gate closes 20 min before departure.",
+      connection: "Layover in Doha of 3h 45m (16:50 → 20:35). Single terminal airport: no need to change buildings or check in again. From concourse A to E takes about 15 min walking; between close concourses, about 9 min on average (90 sec by train). The boarding gate closes 20 min before departure.",
     },
   },
   back: {

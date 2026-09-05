@@ -5,10 +5,10 @@ import { useT } from "../i18n/LanguageContext";
 
 // passHash = sha256(contraseña en minúsculas) — valores en claro en /memories/repo/secrets.md (fuera del repo).
 export const groupMembers = [
-  { id: "pablo", name: "Pablo Crespo Bellido", hasQR: true, qrPath: "/images/visit-japan-qr.png", role: "Titular", passHash: "1d8b070e797a48a1b935e9622415c50a4914a19bbcc7a3bffa909fe65c1d07b7" },
+  { id: "pablo", name: "Pablo Crespo Bellido", hasQR: true, qrPath: "/images/visit-japan-qr.png", role: "Titular", passHash: "72557059a60471cfbe6b2df3cf29c888b8be077195301fcd5f8463151abf1c74" },
   { id: "sergio", name: "Sergio Crespo Bellido", hasQR: true, qrPath: "/images/visit-japan-qr-sergio.png", role: "Titular", passHash: "296fb098929ae462b109e0df2726da063f371ad993a0ebe6dadf18a36fa1583c" },
-  { id: "juancarlos", name: "Juan Carlos Rodríguez", hasQR: false, role: "Viajero", passHash: "1d8b070e797a48a1b935e9622415c50a4914a19bbcc7a3bffa909fe65c1d07b7" },
-  { id: "gerundio", name: "Randy (Gerundio)", hasQR: false, role: "Viajero", passHash: "1d8b070e797a48a1b935e9622415c50a4914a19bbcc7a3bffa909fe65c1d07b7" },
+  { id: "juancarlos", name: "Juan Carlos Rodríguez", hasQR: true, qrPath: "/images/visit-japan-qr-juancarlos.png", role: "Titular", passHash: "0604c4ef4f9f496aa0958497726bee1c99ac365ea5b376f9b7792d8de7fbff55" },
+  { id: "gerundio", name: "Randy (Gerundio)", hasQR: true, qrPath: "/images/visit-japan-qr-randy.png", role: "Titular", passHash: "6aac1e2f1838b854ba9d1abf94f018fdf70cf4aedfb8e46f513f49854df3be4e" },
   { id: "thibaut", name: "Thibaut Fossat", hasQR: true, qrPath: "/images/visit-japan-qr-thibaut.png", role: "Titular", passHash: "97cf94ea5536d9ce870ce055760f81c6b355df478d4566ae3140a4dc1cdec3d5" },
 ];
 

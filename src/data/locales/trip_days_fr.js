@@ -9,13 +9,13 @@ export const days = [
         "text": "Départ de l'aéroport Adolfo Suárez Madrid-Barajas sur le vol QR148 (Qatar Airways). Suivi de vol en direct : https://www.google.com/search?q=vol+QR148"
       },
       {
-        "text": "Arrivée à Doha (Aéroport international Hamad, HIA). Arrêt technique, changement d'avion. Temps d'escale : env. 2 heures."
+        "text": "Arrivée à Doha (Aéroport international Hamad, DOH). Escale dans le terminal unique, changement d'avion. Temps d'escale : 3 h 45 min (16:50 → 20:35)."
       },
       {
-        "text": "Départ de Doha vers Narita (NRT) sur le vol QR808 (Qatar Airways). Suivi de vol en direct : https://www.google.com/search?q=vol+QR808"
+        "text": "Départ de Doha vers Narita (NRT) sur le vol QR808 (Qatar Airways). Durée du vol : env. 10 h 20 min. Suivi de vol en direct : https://www.google.com/search?q=vol+QR808"
       },
       {
-        "text": "Arrivée à Narita (lundi 7 sept). Douanes et récupération des bagages. Ensuite : transfert via Narita Express + Shinkansen vers Kyoto."
+        "text": "Arrivée à Narita (lundi 7 sept). Douanes et récupération des bagages avec le QR code Visit Japan Web. Ensuite : transfert via Narita Express + Shinkansen vers Kyoto."
       }
     ],
     "money": "Vol inclus dans le budget du groupe"

@@ -9,13 +9,13 @@ export const days = [
         "text": "Pag-alis mula sa Adolfo Suárez Madrid-Barajas Airport sa flight QR148 (Qatar Airways). Live flight tracking: https://www.google.com/search?q=flight+QR148"
       },
       {
-        "text": "Pagdating sa Doha (Hamad International Airport, HIA). Teknikal na paghinto, paglipat ng eroplano. Oras ng layover: humigit-kumulang 2 oras."
+        "text": "Pagdating sa Doha (Hamad International Airport, DOH). Layover sa iisang terminal, paglipat ng eroplano. Oras ng layover: 3 h 45 min (16:50 → 20:35)."
       },
       {
-        "text": "Pag-alis mula sa Doha papuntang Narita (NRT) sa flight QR808 (Qatar Airways). Live flight tracking: https://www.google.com/search?q=flight+QR808"
+        "text": "Pag-alis mula sa Doha papuntang Narita (NRT) sa flight QR808 (Qatar Airways). Tagal ng flight: humigit-kumulang 10 h 20 min. Live flight tracking: https://www.google.com/search?q=flight+QR808"
       },
       {
-        "text": "Pagdating sa Narita (Lunes, Set 7). Customs at pagkuha ng bagahe. Pagkatapos: paglipat via Narita Express + Shinkansen papuntang Kyoto."
+        "text": "Pagdating sa Narita (Lunes, Set 7). Customs at pagkuha ng bagahe gamit ang QR code ng Visit Japan Web. Pagkatapos: paglipat via Narita Express + Shinkansen papuntang Kyoto."
       }
     ],
     "money": "Kasama ang flight sa budget ng grupo"

@@ -9,13 +9,13 @@ export const days = [
         "text": "Departure from Adolfo Suárez Madrid-Barajas Airport on flight QR148 (Qatar Airways). Live flight tracking: https://www.google.com/search?q=flight+QR148"
       },
       {
-        "text": "Arrival in Doha (Hamad International Airport, HIA). Technical stop, change of plane. Layover time: approx. 2 hours."
+        "text": "Arrival in Doha (Hamad International Airport, DOH). Layover in single terminal, plane change. Layover time: 3 h 45 min (16:50 → 20:35)."
       },
       {
-        "text": "Departure from Doha to Narita (NRT) on flight QR808 (Qatar Airways). Live flight tracking: https://www.google.com/search?q=flight+QR808"
+        "text": "Departure from Doha to Narita (NRT) on flight QR808 (Qatar Airways). Flight duration: approx. 10 h 20 min. Live flight tracking: https://www.google.com/search?q=flight+QR808"
       },
       {
-        "text": "Arrival in Narita (Monday, Sept 7). Customs and baggage claim. Then: transfer via Narita Express + Shinkansen to Kyoto."
+        "text": "Arrival in Narita (Monday, Sept 7). Customs and baggage claim with Visit Japan Web QR code. Then: transfer via Narita Express + Shinkansen to Kyoto."
       }
     ],
     "money": "Flight included in group budget"

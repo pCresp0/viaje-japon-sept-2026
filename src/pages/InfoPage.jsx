@@ -141,8 +141,8 @@ function FlightRow({ flight, icon: Icon, defaultExpanded = false, isTodayFlight 
             </div>
             <p className="text-sm font-bold m-0" style={{ color: "var(--ink)" }}>{routeSummary}</p>
             <p className="text-xs mt-1 m-0" style={{ color: "var(--ink-soft)" }}>
-              {formatDate(depTime)} · {formatTime(depTime)} → {formatTime(arrTime)}
-              {arrTime.getDate() !== depTime.getDate() ? " (+1)" : ""} · {totalDuration}h {totalMins}m
+              {formatDate(depTime)} · {flight.leg1?.depTime || formatTime(depTime)} → {flight.leg2?.arrTime || formatTime(arrTime)}
+              {arrTime.getDate() !== depTime.getDate() ? " (+1)" : ""} · {flight.totalDuration || `${totalDuration}h ${totalMins}m`}
             </p>
           </div>
           <ChevronDown
@@ -163,7 +163,7 @@ function FlightRow({ flight, icon: Icon, defaultExpanded = false, isTodayFlight 
         marginBottom: 12,
       }}>
         <div style={{ fontSize: 11, color: "var(--ink-soft)", marginBottom: 8, fontWeight: 600, textTransform: "uppercase" }}>
-          Ruta completa: {totalDuration}h {totalMins}m
+          Ruta completa: {flight.totalDuration || `${totalDuration}h ${totalMins}m`}
         </div>
         
         {/* Leg 1 */}
@@ -185,14 +185,14 @@ function FlightRow({ flight, icon: Icon, defaultExpanded = false, isTodayFlight 
           <div style={{ display: "flex", justifyContent: "space-between", fontSize: 12, fontWeight: 500 }}>
             <div>
               <div style={{ color: "var(--ink-soft)", fontSize: 10 }}>{formatDate(depTime)}</div>
-              <div style={{ color: "var(--indigo)", fontWeight: 700 }}>{formatTime(depTime)}</div>
+              <div style={{ color: "var(--indigo)", fontWeight: 700 }}>{flight.leg1?.depTime || formatTime(depTime)}</div>
               {flight.depart.terminal && (
                 <div style={{ color: "var(--ink-soft)", fontSize: 10, marginTop: 1 }}>Terminal {flight.depart.terminal}</div>
               )}
             </div>
             <div style={{ textAlign: "right" }}>
               <div style={{ color: "var(--ink-soft)", fontSize: 10 }}>{formatDate(leg1End)}</div>
-              <div style={{ color: "var(--indigo)", fontWeight: 700 }}>{formatTime(leg1End)}</div>
+              <div style={{ color: "var(--indigo)", fontWeight: 700 }}>{flight.leg1?.arrTime || formatTime(leg1End)}</div>
               {flight.layover?.terminal && (
                 <div style={{ color: "var(--ink-soft)", fontSize: 10, marginTop: 1 }}>Doha</div>
               )}
@@ -207,7 +207,7 @@ function FlightRow({ flight, icon: Icon, defaultExpanded = false, isTodayFlight 
               ⏸ ESCALA EN DOHA
             </div>
             <div style={{ fontSize: 11, fontWeight: 600, color: "var(--forest)" }}>
-              ~2h
+              {flight.layover?.duration || "~2h"}
             </div>
           </div>
           {flight.layover && (
@@ -243,13 +243,13 @@ function FlightRow({ flight, icon: Icon, defaultExpanded = false, isTodayFlight 
           </div>
           <div style={{ display: "flex", justifyContent: "space-between", fontSize: 12, fontWeight: 500 }}>
             <div>
-              <div style={{ color: "var(--ink-soft)", fontSize: 10 }}>{formatDate(leg2Start)}</div>
-              <div style={{ color: "var(--indigo)", fontWeight: 700 }}>{formatTime(leg2Start)}</div>
+              <div style={{ color: "var(--ink-soft)", fontSize: 10 }}>{isOutbound ? formatDate(depTime) : formatDate(leg2Start)}</div>
+              <div style={{ color: "var(--indigo)", fontWeight: 700 }}>{flight.leg2?.depTime || formatTime(leg2Start)}</div>
               <div style={{ color: "var(--ink-soft)", fontSize: 10, marginTop: 1 }}>Doha</div>
             </div>
             <div style={{ textAlign: "right" }}>
               <div style={{ color: "var(--ink-soft)", fontSize: 10 }}>{formatDate(arrTime)}</div>
-              <div style={{ color: "var(--indigo)", fontWeight: 700 }}>{formatTime(arrTime)}</div>
+              <div style={{ color: "var(--indigo)", fontWeight: 700 }}>{flight.leg2?.arrTime || formatTime(arrTime)}</div>
               {arrTime.getDate() !== depTime.getDate() && <div style={{ fontSize: 9, color: "var(--shu)", fontWeight: 700 }}>+1 día</div>}
               {flight.arrive.terminal && (
                 <div style={{ color: "var(--ink-soft)", fontSize: 10, marginTop: 1 }}>Terminal {flight.arrive.terminal}</div>

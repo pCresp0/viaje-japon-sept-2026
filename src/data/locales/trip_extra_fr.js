@@ -68,13 +68,13 @@ export const tripMeta = {
 export const flights = {
   out: {
     label: "Aller",
-    text: "Départ Dim 6 sept de Madrid (T4S) à 09:05 (Qatar Airways QR148). Escale à Doha (aéroport à terminal unique). Arrivée à Narita (NRT), Terminal 2, le Lun 7 sept à 12:55.",
+    text: "Départ Dim 6 sept de Madrid (T4S) à 09:05 (Qatar Airways QR148). Escale à Doha de 3h 45m (16:50 → 20:35). Arrivée à Narita (NRT), Terminal 2, le Lun 7 sept à 12:55.",
     leg1: { route: "Madrid → Doha" },
     leg2: { route: "Doha → Narita" },
     depart: { terminal: "T4S (Satellite)" },
     layover: {
       terminal: "Terminal unique — tous les vols Qatar Airways",
-      connection: "Aéroport à terminal unique : pas besoin de changer de bâtiment ou de s'enregistrer à nouveau. Du hall A au E, il faut environ 15 min à pied ; entre les halls proches, environ 9 min en moyenne (90 sec en train). La porte d'embarquement ferme 20 min avant le départ.",
+      connection: "Escale à Doha de 3 h 45 min (16:50 → 20:35). Aéroport à terminal unique : pas besoin de changer de bâtiment ou de s'enregistrer à nouveau. Du hall A au E, il faut environ 15 min à pied ; entre les halls proches, environ 9 min en moyenne (90 sec en train). La porte d'embarquement ferme 20 min avant le départ.",
     },
   },
   back: {
