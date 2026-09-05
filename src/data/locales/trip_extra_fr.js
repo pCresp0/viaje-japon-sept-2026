@@ -79,14 +79,14 @@ export const flights = {
   },
   back: {
     label: "Retour",
-    text: "Départ Lun 21 sept de Narita (Terminal 2) à 17:25 (Qatar Airways QR809). Escale à Doha. Arrivée à Madrid (T4S) le Mar 22 sept à 08:15.",
+    text: "Départ Lun 21 sept de Narita (Terminal 2) à 17:25 (Qatar Airways QR809). Escale à Doha de 2h 50m (22:20 → 01:10). Arrivée à Madrid (T4S) le Mar 22 sept à 07:35.",
     leg1: { route: "Narita → Doha" },
     leg2: { route: "Doha → Madrid" },
     depart: { terminal: "T2" },
     arrive: { terminal: "T4S (Satellite)" },
     layover: {
       terminal: "Terminal unique — tous les vols Qatar Airways",
-      connection: "Même aéroport à terminal unique qu'à l'aller : pas de changement de bâtiment. Suivez les panneaux de transit violets jusqu'à la porte de correspondance ; le trajet le plus long (entre les extrémités de l'aéroport) prend environ 15 min à pied.",
+      connection: "Escale à Doha de 2h 50m (22:20 → 01:10). Même aéroport à terminal unique qu'à l'aller : pas de changement de bâtiment ni de réenregistrement des bagages. Suivez les panneaux de transit violets jusqu'à la porte de correspondance ; le trajet le plus long prend environ 15 min à pied.",
     },
   },
 };
@@ -202,7 +202,7 @@ export const budget = {
       details: [
         "Qatar Airways Madrid ↔ Tokyo (via Doha). 5 personnes × 890€.",
         "Aller : QR148 MAD→DOH + QR808 DOH→NRT (6 sept, 09:05 → 7 sept, 12:55, 20h 50m).",
-        "Retour : QR809 NRT→DOH + QR6952 DOH→MAD (21 sept, 17:25 → 22 sept, 08:15, 21h 50m).",
+        "Retour : QR809 NRT→DOH + QR6952 DOH→MAD (21 sept, 17:25 → 22 sept, 07:35, 21h 10m).",
         "Réservation : réf. 40-892227078 · PIN 2534.",
       ],
     },

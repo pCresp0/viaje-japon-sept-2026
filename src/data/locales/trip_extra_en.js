@@ -79,14 +79,14 @@ export const flights = {
   },
   back: {
     label: "Inbound",
-    text: "Departure Mon Sep 21 from Narita (Terminal 2) at 17:25 (Qatar Airways QR809). Layover in Doha. Arrival at Madrid (T4S) on Tue Sep 22 at 08:15.",
+    text: "Departure Mon Sep 21 from Narita (Terminal 2) at 17:25 (Qatar Airways QR809). Layover in Doha of 2h 50m (22:20 → 01:10). Arrival at Madrid (T4S) on Tue Sep 22 at 07:35.",
     leg1: { route: "Narita → Doha" },
     leg2: { route: "Doha → Madrid" },
     depart: { terminal: "T2" },
     arrive: { terminal: "T4S (Satellite)" },
     layover: {
       terminal: "Single terminal — all Qatar Airways flights",
-      connection: "Same single terminal airport as the outbound flight: no building change. Follow the purple transit signs to the connection gate; the longest walk (between airport ends) is about 15 min.",
+      connection: "Layover in Doha of 2h 50m (22:20 → 01:10). Same single terminal airport as the outbound flight: no building change or re-checking luggage. Follow the purple transit signs to the connection gate; the longest walk is about 15 min.",
     },
   },
 };
@@ -202,7 +202,7 @@ export const budget = {
       details: [
         "Qatar Airways Madrid ↔ Tokyo (via Doha). 5 people × 890€.",
         "Outbound: QR148 MAD→DOH + QR808 DOH→NRT (Sep 6, 09:05 → Sep 7, 12:55, 20h 50m).",
-        "Inbound: QR809 NRT→DOH + QR6952 DOH→MAD (Sep 21, 17:25 → Sep 22, 08:15, 21h 50m).",
+        "Inbound: QR809 NRT→DOH + QR6952 DOH→MAD (Sep 21, 17:25 → Sep 22, 07:35, 21h 10m).",
         "Booking: ref. 40-892227078 · PIN 2534.",
       ],
     },

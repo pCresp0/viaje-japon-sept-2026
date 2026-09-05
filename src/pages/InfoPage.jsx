@@ -101,9 +101,9 @@ function FlightRow({ flight, icon: Icon, defaultExpanded = false, isTodayFlight 
     leg1End = new Date(depTime.getTime() + 7 * 60 * 60 * 1000); // 7 hours
     leg2Start = new Date(leg1End.getTime() + 2 * 60 * 60 * 1000); // 2h stopover
   } else {
-    // Return: Narita 17:25 -> Doha (8h flight) + 2h stopover -> Madrid 08:15 next day
-    leg1End = new Date(depTime.getTime() + 8 * 60 * 60 * 1000); // 8 hours
-    leg2Start = new Date(leg1End.getTime() + 2 * 60 * 60 * 1000); // 2h stopover
+    // Return: Narita 17:25 -> Doha (10h 55m flight) + 2h 50m stopover -> Madrid 07:35 next day
+    leg1End = new Date(depTime.getTime() + (10 * 60 + 55) * 60 * 1000);
+    leg2Start = new Date(leg1End.getTime() + (2 * 60 + 50) * 60 * 1000);
   }
   
   const totalDuration = Math.floor((arrTime - depTime) / (1000 * 60 * 60));

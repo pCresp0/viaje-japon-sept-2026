@@ -599,7 +599,7 @@ export const days = [
         "text": "Enregistrement et contrôles de sécurité à Narita."
       },
       {
-        "text": "Vol QR809 Narita → Doha (Qatar Airways, ~8h). Escale à Doha, puis vol QR6952 Doha → Madrid (Iberia). Arrivée à Madrid le Mar 22 sept à 08h15."
+        "text": "Vol QR809 Narita → Doha (Qatar Airways, 10h 55m · 17:25 → 22:20). Suivi : https://www.google.com/search?q=vol+QR809. Escale à Doha de 2h 50m (22:20 → 01:10), puis vol QR6952 Doha → Madrid (Qatar Airways / Iberia, 7h 25m · 01:10 → 07:35). Suivi : https://www.google.com/search?q=vol+IB6952. Arrivée à Madrid (T4S) le Mar 22 sept à 07:35."
       }
     ],
     "money": "Env. 40 € (repas)"

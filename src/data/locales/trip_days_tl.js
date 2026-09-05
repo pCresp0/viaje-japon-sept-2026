@@ -599,7 +599,7 @@ export const days = [
         "text": "Check-in at mga pagsusuri sa seguridad sa Narita."
       },
       {
-        "text": "Flight QR809 Narita → Doha (Qatar Airways, ~8h). Layover sa Doha, tapos flight QR6952 Doha → Madrid (Iberia). Pagdating sa Madrid sa Mar Set 22 nang 08:15."
+        "text": "Flight QR809 Narita → Doha (Qatar Airways, 10h 55m · 17:25 → 22:20). Pagsubaybay: https://www.google.com/search?q=flight+QR809. Layover sa Doha nang 2h 50m (22:20 → 01:10), tapos flight QR6952 Doha → Madrid (Qatar Airways / Iberia, 7h 25m · 01:10 → 07:35). Pagsubaybay: https://www.google.com/search?q=flight+IB6952. Pagdating sa Madrid (T4S) sa Mar Set 22 nang 07:35."
       }
     ],
     "money": "Tinatayang €40 (pagkain)"

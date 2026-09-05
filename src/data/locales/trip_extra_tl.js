@@ -79,14 +79,14 @@ export const flights = {
   },
   back: {
     label: "Pauwi",
-    text: "Pag-alis Lun Set 21 mula Narita (Terminal 2) nang 17:25 (Qatar Airways QR809). Layover sa Doha. Pagdating sa Madrid (T4S) sa Mar Set 22 nang 08:15.",
+    text: "Pag-alis Lun Set 21 mula Narita (Terminal 2) nang 17:25 (Qatar Airways QR809). Layover sa Doha nang 2h 50m (22:20 → 01:10). Pagdating sa Madrid (T4S) sa Mar Set 22 nang 07:35.",
     leg1: { route: "Narita → Doha" },
     leg2: { route: "Doha → Madrid" },
     depart: { terminal: "T2" },
     arrive: { terminal: "T4S (Satellite)" },
     layover: {
       terminal: "Single terminal — lahat ng Qatar Airways flights",
-      connection: "Parehong single terminal airport sa pag-alis: walang pagbabago ng building. Sundan ang purple transit signs papunta sa connection gate; ang pinakamahabang lakarin (sa pagitan ng dulo ng airport) ay aabutin ng mga 15 min.",
+      connection: "Layover sa Doha nang 2h 50m (22:20 → 01:10). Parehong single terminal airport sa pag-alis: walang pagbabago ng building o pag-recheck ng bagahe. Sundan ang purple transit signs papunta sa connection gate; ang pinakamahabang lakarin ay aabutin ng mga 15 min.",
     },
   },
 };
@@ -202,7 +202,7 @@ export const budget = {
       details: [
         "Qatar Airways Madrid ↔ Tokyo (via Doha). 5 tao × 890€.",
         "Papunta: QR148 MAD→DOH + QR808 DOH→NRT (Set 6, 09:05 → Set 7, 12:55, 20h 50m).",
-        "Pauwi: QR809 NRT→DOH + QR6952 DOH→MAD (Set 21, 17:25 → Set 22, 08:15, 21h 50m).",
+        "Pauwi: QR809 NRT→DOH + QR6952 DOH→MAD (Set 21, 17:25 → Set 22, 07:35, 21h 10m).",
         "Booking: ref. 40-892227078 · PIN 2534.",
       ],
     },
