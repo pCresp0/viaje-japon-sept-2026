@@ -236,6 +236,8 @@ export default {
   "history.readOnline": "Read online",
   "history.podcasts": "Podcasts",
   "history.documentaries": "Documentaries",
+  "history.exportPdf": "Export History PDF",
+  "history.exportPdfSub": "Download the complete Japanese history guide in PDF with artwork, chronological eras, trip places and reading recommendations for flights or bullet trains.",
 
   // ── Phrases ───────────────────────────────────────────────────────
   "phrases.eyebrow": "Language and culture",

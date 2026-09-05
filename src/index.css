@@ -399,6 +399,10 @@ main > div > * {
   .print-only {
     display: block !important;
   }
+  .history-period-print-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
   @page {
     margin: 12mm 10mm;
   }

@@ -234,6 +234,8 @@ export default {
   "history.readOnline": "Leer online",
   "history.podcasts": "Podcasts",
   "history.documentaries": "Documentales",
+  "history.exportPdf": "Exportar historia PDF",
+  "history.exportPdfSub": "Descarga la guía histórica completa en PDF con todas las ilustraciones, resúmenes cronológicos, lugares del viaje y lecturas para el vuelo o tren.",
 
   // ── Frases ────────────────────────────────────────────────────────
   "phrases.eyebrow": "Idioma y cultura",

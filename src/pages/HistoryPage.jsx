@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
-import { ChevronDown, BookOpen, Headphones, MonitorPlay, MapPinned, Scroll, Volume2, ExternalLink } from "lucide-react";
+import { ChevronDown, BookOpen, Headphones, MonitorPlay, MapPinned, Scroll, Volume2, ExternalLink, FileDown, Loader2 } from "lucide-react";
 import { useContent, useT, useLang } from "../i18n/LanguageContext";
+import HistoryPrintView from "../components/HistoryPrintView";
 import { useTextSpeech } from "../utils/useTextSpeech";
 import { useHighlight, Highlightable } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
@@ -265,18 +266,45 @@ export default function HistoryPage() {
     });
   }, [historyPeriods]);
 
+  const [exporting, setExporting] = useState(false);
+
+  function handleExportPdf() {
+    setExporting(true);
+    window.setTimeout(() => {
+      window.print();
+      setExporting(false);
+    }, 80);
+  }
+
   return (
     <div className="px-4 pt-3 pb-12">
       {/* Header */}
-      <div className="mb-6">
-        <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{t("history.eyebrow")}</p>
-        <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>
-          {t("history.title")}
-        </h2>
-        <p style={{ fontSize: 13, color: "var(--ink-soft)", marginTop: 8, lineHeight: 1.6 }}>
-          {t("history.intro")}
-        </p>
+      <div className="flex items-start justify-between gap-3 mb-2">
+        <div>
+          <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>{t("history.eyebrow")}</p>
+          <h2 className="font-display text-2xl" style={{ color: "var(--indigo)" }}>
+            {t("history.title")}
+          </h2>
+        </div>
+        <button
+          onClick={handleExportPdf}
+          disabled={exporting}
+          className="shrink-0 flex items-center gap-1.5 rounded-full px-3.5 py-2 text-xs font-semibold cursor-pointer shadow-xs transition-opacity hover:opacity-90 active:scale-95"
+          style={{ background: "var(--indigo)", color: "white", border: "none" }}
+          title={t("history.exportPdf") || "Exportar historia PDF"}
+        >
+          {exporting ? <Loader2 size={14} className="animate-spin" /> : <FileDown size={14} />}
+          {t("history.exportPdf") || "Exportar historia PDF"}
+        </button>
       </div>
+
+      <p style={{ fontSize: 13, color: "var(--ink-soft)", marginTop: 4, marginBottom: 8, lineHeight: 1.6 }}>
+        {t("history.intro")}
+      </p>
+
+      <p className="text-xs mb-5" style={{ color: "var(--ink-soft)" }}>
+        {t("history.exportPdfSub") || "Descarga la guía histórica completa en PDF con todas las ilustraciones, resúmenes cronológicos, lugares del viaje y lecturas para el vuelo o tren."}
+      </p>
 
       {/* ── 1. SECCIÓN: HISTORIA DE JAPÓN ────────────────────────── */}
       <div 
@@ -528,6 +556,9 @@ export default function HistoryPage() {
           </div>
         )}
       </div>
+
+      {/* Vista de impresión / exportación PDF dedicada de Historia */}
+      <HistoryPrintView />
     </div>
   );
 }

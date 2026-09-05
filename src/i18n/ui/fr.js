@@ -236,6 +236,8 @@ export default {
   "history.readOnline": "Lire en ligne",
   "history.podcasts": "Podcasts",
   "history.documentaries": "Documentaires",
+  "history.exportPdf": "Exporter histoire PDF",
+  "history.exportPdfSub": "Téléchargez le guide historique complet du Japon en PDF avec illustrations, ères chronologiques, lieux du voyage et lectures pour le vol ou le train.",
 
   // ── Phrases ───────────────────────────────────────────────────────
   "phrases.eyebrow": "Langue et culture",

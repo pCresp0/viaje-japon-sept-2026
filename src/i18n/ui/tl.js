@@ -241,6 +241,8 @@ export default {
   "history.readOnline": "Basahin online",
   "history.podcasts": "Mga podcast",
   "history.documentaries": "Mga Dokumentaryo",
+  "history.exportPdf": "I-download ang Kasaysayan PDF",
+  "history.exportPdfSub": "I-download ang kumpletong gabay sa kasaysayan ng Hapon sa PDF na may mga sining, panahon, mga lugar sa biyahe at babasahin para sa eroplano o tren.",
 
   // ── Mga parirala ──────────────────────────────────────────────────
   "phrases.eyebrow": "Wika at kultura",
