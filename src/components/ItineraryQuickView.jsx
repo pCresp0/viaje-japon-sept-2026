@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, ChevronUp, LayoutList, X, Map, Headphones } from "lucide-react";
+import { ChevronDown, ChevronUp, LayoutList, X, Map } from "lucide-react";
 import { formatDateShort } from "../utils/date";
 import PlaceText from "./PlaceText";
 import { useContent } from "../i18n/LanguageContext";
@@ -270,28 +270,6 @@ export function QuickDayCard({ day, blockColor, onShowFullDay, onClose, onViewMa
             </div>
           )}
 
-          {day.podcasts && day.podcasts.length > 0 && (
-            <div className="pt-2.5 border-t mt-3 flex flex-wrap items-center gap-2" style={{ borderColor: "var(--line)" }}>
-              <span className="text-[11px] font-bold text-[#872ec4] flex items-center gap-1">
-                <Headphones size={12} />
-                Podcast:
-              </span>
-              {day.podcasts.map((p, pIdx) => (
-                <a
-                  key={pIdx}
-                  href={p.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold text-white transition-opacity hover:opacity-90"
-                  style={{ background: "#872ec4", textDecoration: "none" }}
-                  onClick={(e) => e.stopPropagation()}
-                  title={`Escuchar en Apple Podcasts: ${p.title}`}
-                >
-                  <span>{p.title.split(":")[0].replace(/\(.*\)/, "").trim()} ↗</span>
-                </a>
-              ))}
-            </div>
-          )}
         </div>
       )}
     </div>

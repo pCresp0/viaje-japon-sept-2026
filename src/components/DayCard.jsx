@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { ScrollText, ChevronDown, ChevronUp, Map, BookOpen, List, X, Headphones } from "lucide-react";
+import { ScrollText, ChevronDown, ChevronUp, Map, BookOpen, List, X } from "lucide-react";
 import { useContent } from "../i18n/LanguageContext";
 import { useHighlight } from "../context/HighlightContext";
 import { guidesByDay, guideMeta } from "../data/guides";
@@ -386,45 +386,6 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
           </div>
         )}
 
-        {day.podcasts && day.podcasts.length > 0 && (
-          <div className="rounded-xl border p-4" style={{ borderColor: "rgba(135,46,196,0.25)", background: "rgba(135,46,196,0.04)" }}>
-            <div className="flex items-center gap-2 mb-2.5">
-              <Headphones size={16} style={{ color: "#872ec4" }} />
-              <p className="eyebrow m-0" style={{ color: "#872ec4", fontSize: 11.5, fontWeight: 700 }}>
-                Podcast recomendado para hoy
-              </p>
-            </div>
-            <div className="space-y-3">
-              {day.podcasts.map((p, idx) => (
-                <div key={idx} className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2" style={{ borderTop: idx > 0 ? "1px solid rgba(135,46,196,0.15)" : "none" }}>
-                  <div className="min-w-0 flex-1">
-                    <p style={{ fontSize: 11, fontWeight: 700, color: "#872ec4", margin: 0, textTransform: "uppercase", letterSpacing: "0.03em" }}>
-                      {p.show || "Japón a fondo · Japonismo"}
-                    </p>
-                    <p style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", margin: "2px 0 0", lineHeight: 1.3 }}>
-                      {p.title}
-                    </p>
-                    {p.moment && (
-                      <p style={{ fontSize: 12, color: "var(--ink-soft)", margin: "3px 0 0", lineHeight: 1.4 }}>
-                        🎧 <strong>Momento ideal:</strong> {p.moment}
-                      </p>
-                    )}
-                  </div>
-                  <a
-                    href={p.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold text-white transition-all hover:opacity-90 active:scale-95 shrink-0 self-start sm:self-center"
-                    style={{ background: "#872ec4", textDecoration: "none" }}
-                  >
-                    <Headphones size={13} />
-                    Apple Podcasts ↗
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
 
         {stay && (
           <div className="rounded-xl p-4" style={{ background: "var(--paper)" }}>
