@@ -430,6 +430,63 @@ function buildSearchIndex(lang) {
     terms: ["nohi", "12go31991741", "12go31992254", "12go", "shirakawa bus"],
   }));
 
+  // ── Billetes Confirmados (Tarjetas interactivas con QR y asientos) ─
+  const confirmedTickets = [
+    {
+      id: "ticket-search-nozomi-53",
+      title: "Billete Shinkansen Nozomi 53 (Shinagawa → Kioto)",
+      subtitle: "7 sept · 17:19 → 19:23 · Smart EX 2000 · Coche 13",
+      category: "Transportes",
+      tab: "transportes",
+      day: 1,
+      targetId: "ticket-day-1",
+      terms: ["billete", "ticket", "nozomi", "nozomi 53", "shinkansen", "smart ex", "smart ex 2000", "2000", "coche 13", "13c", "13d", "13e", "14d", "14e", "asientos", "qr ticket", "tren bala", "shinagawa", "kioto"],
+    },
+    {
+      id: "ticket-search-thunderbird-5",
+      title: "Billete Thunderbird 5 + Kagayaki (Kioto → Kanazawa)",
+      subtitle: "12 sept · 08:10 · JR-WEST 47932 · Recoger en Kyoto Station",
+      category: "Transportes",
+      tab: "transportes",
+      day: 6,
+      targetId: "ticket-day-6",
+      terms: ["billete", "ticket", "thunderbird", "thunderbird 5", "kagayaki", "47932", "jr west", "reserva 47932", "recoger", "estacion kioto", "kanazawa", "tsuruga"],
+    },
+    {
+      id: "ticket-search-nohi-magome",
+      title: "Billete Nohi Bus (Takayama → Magome)",
+      subtitle: "14 sept · 08:00 · Reserva 08302008262 · Coche 1 · Asientos 2C-3D",
+      category: "Transportes",
+      tab: "transportes",
+      day: 8,
+      targetId: "ticket-day-8",
+      terms: ["billete", "ticket", "nohi bus", "magome", "takayama", "08302008262", "asientos", "coche 1", "08:00", "bus magome", "nakasendo"],
+    },
+    {
+      id: "ticket-search-shinano-4",
+      title: "Billete JR Shinano 4 (Nakatsugawa → Nagoya)",
+      subtitle: "15 sept · 09:57 · Reserva 42093 · Ref. AEE6606M · Coche 4",
+      category: "Transportes",
+      tab: "transportes",
+      day: 9,
+      targetId: "ticket-day-9",
+      terms: ["billete", "ticket", "shinano", "shinano 4", "42093", "aee6606m", "coche 4", "nakatsugawa", "nagoya", "tren"],
+    },
+    {
+      id: "ticket-search-nozomi-358",
+      title: "Billete Shinkansen Nozomi 358 (Nagoya → Tokio)",
+      subtitle: "15 sept · 11:29 → 13:06 · Smart EX 2002 · Coche 12",
+      category: "Transportes",
+      tab: "transportes",
+      day: 9,
+      targetId: "ticket-day-9-nozomi",
+      terms: ["billete", "ticket", "nozomi 358", "smart ex 2002", "2002", "coche 12", "nagoya", "tokio", "shinkansen", "tren bala", "11d", "11e", "12c", "12d", "12e", "asientos"],
+    },
+  ];
+  for (const ct of confirmedTickets) {
+    items.push(entry(ct));
+  }
+
   // ── Comidas ───────────────────────────────────────────────────────
   for (const f of foods) {
     items.push(entry({
@@ -487,8 +544,10 @@ function buildSearchIndex(lang) {
     });
   }
 
-  // ── Lugares (guías) ───────────────────────────────────────────────
+  // ── Lugares (guías detalladas) ──────────────────────────────────
   for (const [gid, g] of Object.entries(guides)) {
+    const secTerms = (g.sections || []).flatMap((s) => [s.title, s.body]);
+    const curTerms = g.curiosities || [];
     items.push(entry({
       id: `lugar-${gid}`,
       title: g.name,
@@ -496,7 +555,17 @@ function buildSearchIndex(lang) {
       category: "Lugares",
       tab: "lugares",
       targetId: slug("guide", gid),
-      terms: [g.name, g.jp, gid.replace(/-/g, " "), g.tagline],
+      terms: [
+        g.name,
+        g.jp,
+        gid.replace(/-/g, " "),
+        g.tagline,
+        g.founded,
+        g.wiki,
+        g.tip,
+        ...secTerms,
+        ...curTerms,
+      ].filter(Boolean),
     }));
   }
 
@@ -545,32 +614,73 @@ function buildSearchIndex(lang) {
     }));
   }
 
-  // ── Historia ──────────────────────────────────────────────────────
+  // ── Historia de Japón ────────────────────────────────────────────
   for (const period of historyPeriods) {
+    const seeOnTripNotes = (period.seeOnTrip || []).map((r) => {
+      const pName = guides[r.id]?.name || r.place || r.id;
+      return `${pName} ${r.note || ""}`;
+    });
     items.push(entry({
       id: `history-${period.id}`,
-      title: period.title,
-      subtitle: "Historia de Japón",
+      title: `${period.title} (${period.era})`,
+      subtitle: `Historia de Japón · ${period.era}`,
       category: "Historia",
       tab: "historia",
       targetId: slug("history", period.id),
-      terms: [period.title, period.summary, ...(period.content || []).map((block) => block.text)],
+      terms: [
+        period.title,
+        period.era,
+        period.summary,
+        period.imageCaption,
+        ...(period.content || []).flatMap((block) => [block.heading, block.text]),
+        ...seeOnTripNotes,
+        "historia", "periodo", "era", "japon", "cronologia", "arte",
+      ].filter(Boolean),
     }));
   }
+
   for (const kind of ["books", "podcasts", "documentaries"]) {
     for (const item of furtherReading[kind] || []) {
       const sub = kind === "books" ? "Libro recomendado" : kind === "podcasts" ? "Podcast recomendado" : "Documental recomendado";
       items.push(entry({
         id: `history-${kind}-${item.title}`,
         title: item.title,
-        subtitle: `${sub} · Historia`,
+        subtitle: `${sub} · ${item.author || item.show || item.channel || "Historia"}`,
         category: "Historia",
         tab: "historia",
         targetId: slug("history", kind, item.title),
-        terms: [item.title, item.author, item.description, item.text, "historia", "japon"],
+        terms: [
+          item.title,
+          item.author,
+          item.show,
+          item.channel,
+          item.dayBadge,
+          item.note,
+          item.description,
+          item.text,
+          "historia", "japon", "cultura", kind,
+        ].filter(Boolean),
       }));
     }
   }
+
+  // ── Descargas en PDF ──────────────────────────────────────────────
+  items.push(entry({
+    id: "pdf-itinerario",
+    title: "Exportar Guía Completa en PDF",
+    subtitle: "Itinerario completo (Días 0–15) + todos los anexos para imprimir o guardar",
+    category: "Itinerario",
+    tab: "itinerario",
+    terms: ["pdf", "descargar", "imprimir", "guia pdf", "itinerario pdf", "exportar", "papel", "offline", "documento"],
+  }));
+  items.push(entry({
+    id: "pdf-historia",
+    title: "Exportar Historia de Japón en PDF",
+    subtitle: "12 periodos históricos, obras de arte y recomendaciones de lectura",
+    category: "Historia",
+    tab: "historia",
+    terms: ["pdf", "descargar", "imprimir", "historia pdf", "guia historia", "cultura pdf", "exportar", "arte pdf"],
+  }));
 
   // ── Clima, mapa y presupuesto ─────────────────────────────────────
   for (const weather of weatherData) {
@@ -661,6 +771,15 @@ function buildSearchIndex(lang) {
       }));
     }
   }
+  items.push(entry({
+    id: "prep-esim-holafly",
+    title: "eSIM Holafly · Conexión a Internet en Japón",
+    subtitle: "Instalación previa y activación automática al aterrizar · 4 eSIMs compradas",
+    category: "Preparativos",
+    tab: "preparativos",
+    targetId: "prep-esim",
+    terms: ["esim", "holafly", "internet", "datos", "movil", "conexion", "roaming", "qr esim", "pablo", "sergio", "juan carlos", "randy", "thibaut"],
+  }));
   for (const emergency of emergencyNumbers) {
     items.push(entry({
       id: `emergency-${emergency.number}`,
@@ -849,7 +968,10 @@ export const QUICK_SUGGESTIONS = [
   { label: "Famichiki / 7-Eleven", query: "famichiki" },
   { label: "Fushimi Inari", query: "fushimi" },
   { label: "eSIM / Holafly", query: "holafly" },
+  { label: "Historia de Japón", query: "historia" },
+  { label: "Descargar PDF", query: "pdf" },
   { label: "Nozomi 53", query: "nozomi" },
+  { label: "Billetes de tren", query: "billete" },
   { label: "Hotel Kioto", query: "keihan" },
   { label: "Monte Fuji", query: "fuji" },
   { label: "Shinkansen", query: "shinkansen" },

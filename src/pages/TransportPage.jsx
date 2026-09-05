@@ -46,10 +46,13 @@ export default function TransportPage({ onNavigate }) {
   const [suicaOpen, setSuicaOpen] = useState(false);
   const [smartExOpen, setSmartExOpen] = useState(false);
 
-  // Auto-switch a "trayectos" si la búsqueda global aterriza en un trayecto concreto
+  // Auto-switch de pestaña si la búsqueda global aterriza en un elemento concreto
   useEffect(() => {
-    if (highlightId && highlightId.startsWith("transport-")) {
+    if (!highlightId) return;
+    if (highlightId.startsWith("transport-")) {
       setActiveTab("trayectos");
+    } else if (highlightId.startsWith("ticket-")) {
+      setActiveTab("billetes");
     }
   }, [highlightId]);
 
@@ -162,36 +165,46 @@ export default function TransportPage({ onNavigate }) {
       {activeTab === "billetes" && (
         <div className="px-4 pt-5">
           {/* Tarjetas de billetes */}
-          <div id="ticket-day-1">
-            <ShinkansenTicketCard
-              defaultExpanded={currentDay === 1 || currentDay === 0}
-              onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 1, targetId: slug("itinerary-day", 1) }) : undefined}
-            />
-          </div>
-          <div id="ticket-day-6">
-            <ThunderbirdTicketCard
-              defaultExpanded={currentDay === 6}
-              onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 6, targetId: slug("itinerary-day", 6) }) : undefined}
-            />
-          </div>
-          <div id="ticket-day-8">
-            <NohiMagomeTicketCard
-              defaultExpanded={currentDay === 8}
-              onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 8, targetId: slug("itinerary-day", 8) }) : undefined}
-            />
-          </div>
-          <div id="ticket-day-9">
-            <ShinanoTicketCard
-              defaultExpanded={currentDay === 9}
-              onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 9, targetId: slug("itinerary-day", 9) }) : undefined}
-            />
-          </div>
-          <div id="ticket-day-9-nozomi">
-            <NozomiNagoyaTicketCard
-              defaultExpanded={currentDay === 9}
-              onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 9, targetId: slug("itinerary-day", 9) }) : undefined}
-            />
-          </div>
+          <Highlightable id="ticket-day-1">
+            <div id="ticket-day-1">
+              <ShinkansenTicketCard
+                defaultExpanded={currentDay === 1 || currentDay === 0}
+                onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 1, targetId: slug("itinerary-day", 1) }) : undefined}
+              />
+            </div>
+          </Highlightable>
+          <Highlightable id="ticket-day-6">
+            <div id="ticket-day-6">
+              <ThunderbirdTicketCard
+                defaultExpanded={currentDay === 6}
+                onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 6, targetId: slug("itinerary-day", 6) }) : undefined}
+              />
+            </div>
+          </Highlightable>
+          <Highlightable id="ticket-day-8">
+            <div id="ticket-day-8">
+              <NohiMagomeTicketCard
+                defaultExpanded={currentDay === 8}
+                onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 8, targetId: slug("itinerary-day", 8) }) : undefined}
+              />
+            </div>
+          </Highlightable>
+          <Highlightable id="ticket-day-9">
+            <div id="ticket-day-9">
+              <ShinanoTicketCard
+                defaultExpanded={currentDay === 9}
+                onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 9, targetId: slug("itinerary-day", 9) }) : undefined}
+              />
+            </div>
+          </Highlightable>
+          <Highlightable id="ticket-day-9-nozomi">
+            <div id="ticket-day-9-nozomi">
+              <NozomiNagoyaTicketCard
+                defaultExpanded={currentDay === 9}
+                onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 9, targetId: slug("itinerary-day", 9) }) : undefined}
+              />
+            </div>
+          </Highlightable>
 
           {/* Estado general — al final */}
           <div className="rounded-2xl p-4 mt-2 mb-4 border" style={{ background: "var(--paper-raised)", borderColor: "var(--line)" }}>

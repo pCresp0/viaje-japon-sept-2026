@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useId } from "react";
 import { createPortal } from "react-dom";
-import { Search, X, Calendar, Hotel, Train, Utensils, MapPin, Plane, AlertCircle, Clock, Star, LayoutGrid } from "lucide-react";
+import { Search, X, Calendar, Hotel, Train, Utensils, MapPin, Plane, AlertCircle, Clock, Star, LayoutGrid, Scroll } from "lucide-react";
 import { searchGlobal, QUICK_SUGGESTIONS } from "../data/searchIndex";
 import { useLang } from "../i18n/LanguageContext";
 
@@ -27,7 +27,7 @@ const CATEGORY_META = {
   "Mapa":         { color: "#2e7d5b", bg: "rgba(46,125,91,0.1)",  icon: MapPin },
   "Frases":       { color: "#7a4a00", bg: "rgba(122,74,0,0.1)",   icon: Star },
   "Frikadas":     { color: "#6b21a8", bg: "rgba(107,33,168,0.1)", icon: Star },
-  "Historia":     { color: "#5a6070", bg: "rgba(90,96,112,0.1)",  icon: Star },
+  "Historia":     { color: "#bc4749", bg: "rgba(188,71,73,0.12)",  icon: Scroll },
   "Preparativos": { color: "#2e7d5b", bg: "rgba(46,125,91,0.1)",  icon: Star },
   "Emergencias":  { color: "#bc4749", bg: "rgba(188,71,73,0.1)",  icon: AlertCircle },
   "Presupuesto":  { color: "#c9a227", bg: "rgba(201,162,39,0.1)", icon: Star },
