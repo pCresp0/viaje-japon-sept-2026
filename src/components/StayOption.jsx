@@ -1,4 +1,4 @@
-import { MapPin, Droplets, KeyRound, BedDouble, Phone, CalendarCheck, CalendarX } from "lucide-react";
+import { MapPin, KeyRound, BedDouble, Phone, CalendarCheck, CalendarX } from "lucide-react";
 import { mapsUrl } from "../utils/maps";
 
 // Etiqueta pequeña en mayúsculas + valor debajo — mismo lenguaje visual
@@ -78,7 +78,7 @@ export default function StayOption({ option, city }) {
 
       {option.onsen?.has && (
         <div className="flex gap-1.5 rounded-md px-2.5 py-2 mb-2" style={{ background: "#1d355712" }}>
-          <Droplets size={13} style={{ color: "var(--indigo)", flexShrink: 0, marginTop: 1 }} />
+          <span style={{ fontSize: 13, lineHeight: 1, flexShrink: 0 }}>♨️</span>
           <p style={{ margin: 0, fontSize: 11.5, color: "var(--ink)", lineHeight: 1.4 }}>
             <strong>Onsen:</strong> {option.onsen.hours}
           </p>

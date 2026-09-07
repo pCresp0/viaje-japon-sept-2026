@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useContent, useT } from "../i18n/LanguageContext";
 import { mapsUrl } from "../utils/maps";
-import { MapPin, Phone, KeyRound, CalendarCheck, CalendarX, BedDouble, ExternalLink, ChevronDown, ChevronUp, Droplets } from "lucide-react";
+import { MapPin, Phone, KeyRound, CalendarCheck, CalendarX, BedDouble, ExternalLink, ChevronDown, ChevronUp } from "lucide-react";
 import { useHighlight } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 import { getDefaultTripDay, getHotelForDay } from "../utils/date";
@@ -191,7 +191,7 @@ function HotelCard({ stay, index, anchorId, defaultExpanded = false, isTodayHote
             )}
             {hotel.onsen && (
               <div className="flex gap-2">
-                <Droplets size={15} style={{ color: hotel.onsen.has ? "var(--indigo)" : "var(--ink-soft)", flexShrink: 0, marginTop: 2 }} />
+                <span style={{ fontSize: 15, lineHeight: 1, marginTop: 2, opacity: hotel.onsen.has ? 1 : 0.45 }}>♨️</span>
                 <Field label="Onsen / baño público">
                   {hotel.onsen.has ? hotel.onsen.hours : "No tiene — sólo baño privado en cada habitación"}
                 </Field>

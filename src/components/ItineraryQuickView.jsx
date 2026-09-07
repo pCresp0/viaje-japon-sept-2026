@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, ChevronUp, LayoutList, X, Map, Droplets } from "lucide-react";
+import { ChevronDown, ChevronUp, LayoutList, X, Map } from "lucide-react";
 import { formatDateShort } from "../utils/date";
 import PlaceText from "./PlaceText";
 import { useContent } from "../i18n/LanguageContext";
@@ -280,7 +280,7 @@ export function QuickDayCard({ day, blockColor, onShowFullDay, onClose, onViewMa
               className="flex items-center gap-1.5 text-[11px] sm:text-xs mt-2 pt-2"
               style={{ color: "var(--indigo)", borderTop: "1px dashed var(--line)" }}
             >
-              <Droplets size={11} style={{ flexShrink: 0 }} />
+              <span style={{ fontSize: 11, lineHeight: 1, flexShrink: 0 }}>♨️</span>
               Onsen en {onsenOption.name}: {onsenOption.onsen.hours}
             </p>
           )}
