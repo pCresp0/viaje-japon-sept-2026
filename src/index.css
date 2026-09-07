@@ -326,6 +326,31 @@ main > div > * {
   .search-highlight-pulse { animation: none; outline: 2px solid var(--gold, #c9a227); }
 }
 
+/* ── Día de hoy en el Calendario ──────────────────────────────────────
+   A diferencia del resaltado del buscador (que se desvanece a los
+   2.5s), este es permanente mientras la celda de "hoy" esté visible:
+   un anillo dorado fijo, más un pulso hacia fuera en bucle para que se
+   note incluso sin fijarse mucho. */
+.today-pulse-ring {
+  animation: todayPulse 1.8s ease-out infinite;
+}
+
+@keyframes todayPulse {
+  0% {
+    box-shadow: 0 0 0 2px var(--gold, #c9a227), 0 0 0 2px rgba(201, 162, 39, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 2px var(--gold, #c9a227), 0 0 0 9px rgba(201, 162, 39, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 2px var(--gold, #c9a227), 0 0 0 9px rgba(201, 162, 39, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .today-pulse-ring { animation: none; box-shadow: 0 0 0 2px var(--gold, #c9a227); }
+}
+
 /* ── Botón de altavoz (afordancia clara de "esto se pulsa") ─────────── */
 .speaker-btn {
   transition: transform 0.12s ease, box-shadow 0.15s ease, filter 0.15s ease;

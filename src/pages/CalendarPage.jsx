@@ -4,6 +4,7 @@ import { useContent, useT } from "../i18n/LanguageContext";
 import DayCard from "../components/DayCard";
 import { X, CalendarPlus, Download, ExternalLink } from "lucide-react";
 import { downloadIcsCalendar } from "../utils/exportCalendar";
+import { getTripStatus } from "../utils/date";
 import { QuickDayCard } from "../components/ItineraryQuickView";
 
 // blockColors removed, we use blocks from context now
@@ -45,6 +46,13 @@ export default function CalendarPage() {
   const [showExportModal, setShowExportModal] = useState(false);
   const [selectedDayNum, setSelectedDayNum] = useState(null);
   const [detailMode, setDetailMode] = useState(false);
+
+  // Día real de hoy dentro del viaje (si estamos en él). getTripStatus()
+  // ya tiene en cuenta la zona horaria de Japón durante el viaje, así
+  // que a las 00:00 en Tokio el "hoy" avanza solo, sin esperar a que
+  // amanezca en España.
+  const tripStatus = getTripStatus();
+  const todayDayNum = tripStatus.phase === "during" ? tripStatus.dayNum : null;
   
   const dayByDate = {};
   days.forEach((d) => {
@@ -148,23 +156,27 @@ export default function CalendarPage() {
                 const color = blockData ? blockData.color : "#bc4749";
                 const isWeekend = di >= 5;
                 const isSelected = tripDay && tripDay.num === selectedDayNum;
+                const isToday = tripDay && tripDay.num === todayDayNum;
                 const meta = tripDay ? dayHighlights[tripDay.num] : null;
                 
                 return (
                   <button
                     key={di}
                     onClick={() => { if (tripDay) { setSelectedDayNum(tripDay.num); setDetailMode(false); } }}
+                    className={isToday ? "today-pulse-ring" : ""}
                     style={{
                       borderRight: di < 6 ? "1px solid var(--line)" : "none",
                       borderTop: tripDay ? `3px solid ${color}` : "none",
                       background: isSelected ? `${color}35` : tripDay ? `${color}15` : "transparent",
-                      boxShadow: isSelected ? `inset 0 0 0 2px ${color}` : "none",
+                      boxShadow: !isToday && isSelected ? `inset 0 0 0 2px ${color}` : undefined,
                       cursor: tripDay ? "pointer" : "default",
                       minHeight: 96,
                       padding: 6,
                       display: "flex",
                       flexDirection: "column",
                       transition: "all 0.15s",
+                      position: "relative",
+                      zIndex: isToday ? 1 : "auto",
                     }}
                     onMouseEnter={(e) => {
                       if (tripDay) e.currentTarget.style.background = `${color}28`;
