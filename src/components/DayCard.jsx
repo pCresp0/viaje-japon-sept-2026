@@ -37,6 +37,12 @@ function findMatchedGuideIds(text, dayGuides) {
 
 // Auto-detect transport type from schedule text and return matching emoji
 function getScheduleEmoji(text) {
+  // El check de hotel/check-in va SIEMPRE primero: si no, una frase como
+  // "...tras el vuelo internacional..." dentro de la descripción de un
+  // check-in hacía que se colara el emoji de avión ✈️ en vez del de
+  // hotel 🏨, aunque la entrada entera fuera sobre llegar al hotel.
+  if (/regreso al hotel|vuelta al hotel|descanso en hotel|dormir en|dormimos en/i.test(text)) return "🏠";
+  if (/check.?in|alojamiento\b|minshuku|ryokan/i.test(text)) return "🏨";
   if (/\bvuelo\b|aterriza|\bavión\b/i.test(text)) return "✈️";
   if (/shinkansen|nozomi|hikari/i.test(text)) return "🚄";
   if (/\bbus\b|nohi|autobús/i.test(text)) return "🚌";
