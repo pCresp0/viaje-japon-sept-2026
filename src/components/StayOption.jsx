@@ -105,21 +105,28 @@ export default function StayOption({ option, city }) {
         </p>
       )}
 
-      <span className="flex items-center gap-3 mt-2.5">
+      <div className="flex gap-2 mt-2.5">
         {option.url && (
-          <a href={option.url} target="_blank" rel="noopener noreferrer" className="text-xs font-bold" style={{ color: "var(--indigo)" }}>
+          <a
+            href={option.url}
+            target="_blank" rel="noopener noreferrer"
+            className="flex-1 flex items-center justify-center gap-1.5 rounded-lg py-2 px-2 transition-colors"
+            style={{ background: "var(--indigo)", color: "white", fontSize: 12, fontWeight: 700, textDecoration: "none" }}
+          >
+            <img src="/icons/booking.png" alt="" width={14} height={14} style={{ borderRadius: 3, flexShrink: 0 }} />
             Ver reserva ↗
           </a>
         )}
         <a
           href={mapsUrl(mapQuery)}
           target="_blank" rel="noopener noreferrer"
-          className="flex items-center gap-1 text-xs font-bold"
-          style={{ color: "var(--shu)" }}
+          className="flex-1 flex items-center justify-center gap-1.5 rounded-lg py-2 px-2 transition-colors"
+          style={{ background: "var(--paper-raised)", color: "var(--shu)", fontSize: 12, fontWeight: 700, border: "1px solid var(--line)", textDecoration: "none" }}
         >
-          <MapPin size={12} /> Cómo llegar ↗
+          <img src="/icons/google-maps.png" alt="" width={14} height={14} style={{ flexShrink: 0 }} />
+          Cómo llegar ↗
         </a>
-      </span>
+      </div>
     </div>
   );
 }

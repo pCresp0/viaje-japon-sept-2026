@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useContent, useT } from "../i18n/LanguageContext";
 import { mapsUrl } from "../utils/maps";
-import { MapPin, Phone, KeyRound, CalendarCheck, CalendarX, BedDouble, ExternalLink, ChevronDown, ChevronUp } from "lucide-react";
+import { MapPin, Phone, KeyRound, CalendarCheck, CalendarX, BedDouble, ChevronDown, ChevronUp } from "lucide-react";
 import { useHighlight } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 import { getDefaultTripDay, getHotelForDay } from "../utils/date";
@@ -128,7 +128,7 @@ function HotelCard({ stay, index, anchorId, defaultExpanded = false, isTodayHote
               className="inline-flex items-center justify-center gap-1.5 text-xs font-semibold rounded-full px-3 py-1.5 transition-colors"
               style={{ background: "rgba(255,255,255,0.2)", color: "white", textDecoration: "none" }}
             >
-              <MapPin size={12} /> Maps
+              <img src="/icons/google-maps.png" alt="" width={13} height={13} /> Maps
             </a>
             <div className="p-1 rounded-full" style={{ background: "rgba(255,255,255,0.15)" }}>
               {expanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
@@ -238,7 +238,7 @@ function HotelCard({ stay, index, anchorId, defaultExpanded = false, isTodayHote
                 className="inline-flex items-center gap-1.5 text-sm font-medium rounded-lg px-3 py-2"
                 style={{ background: headerBg, color: "white", textDecoration: "none" }}
               >
-                <ExternalLink size={14} /> Ver reserva Booking
+                <img src="/icons/booking.png" alt="" width={16} height={16} style={{ borderRadius: 3 }} /> Ver reserva Booking
               </a>
             )}
             {hotel.total && (

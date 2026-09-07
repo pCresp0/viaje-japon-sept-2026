@@ -253,7 +253,12 @@ function HotelCard({ stay, compact = false }) {
       {opt.rooms && <>Habitaciones: {opt.rooms}{opt.guests ? ` · ${opt.guests}` : ""}<br /></>}
       {opt.total && <>Total: <strong>{opt.total}</strong>{opt.cancel ? ` · ${opt.cancel}` : ""}<br /></>}
       {opt.note && <><span style={{ color: "#5a6070" }}>{opt.note}</span><br /></>}
-      {opt.url && <a href={opt.url} style={{ color: "#7a2c2e" }}>Ver reserva ↗</a>}
+      {opt.url && (
+        <a href={opt.url} style={{ color: "#7a2c2e", display: "inline-flex", alignItems: "center", gap: 4 }}>
+          <img src="/icons/booking.png" alt="" width={11} height={11} style={{ borderRadius: 2 }} />
+          Ver reserva ↗
+        </a>
+      )}
       {stay.warning && (
         <div style={{ marginTop: 4, padding: "4px 8px", background: "#fbeaea", color: "#bc4749", borderRadius: 4, fontSize: 9.5 }}>
           ⚠️ {stay.warning}
@@ -291,7 +296,10 @@ function GuideBlock({ id, accentColor, guides }) {
           <strong style={{ fontSize: 12.5, color: accentColor }}>
             {g.name} <span style={{ fontWeight: 400, color: "#5a6070", fontSize: 10 }}>{g.jp}</span>
           </strong>
-          <a href={mapsUrl} style={{ color: "#7a2c2e", fontSize: 9.5 }}>Ver en mapa ↗</a>
+          <a href={mapsUrl} style={{ color: "#7a2c2e", fontSize: 9.5, display: "inline-flex", alignItems: "center", gap: 4 }}>
+            <img src="/icons/google-maps.png" alt="" width={10} height={10} />
+            Ver en mapa ↗
+          </a>
         </div>
         <p style={{ fontSize: 9.5, color: "#5a6070", marginBottom: 6 }}>{g.founded} · {g.tagline}</p>
 

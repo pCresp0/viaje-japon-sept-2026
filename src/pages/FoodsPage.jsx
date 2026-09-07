@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { UtensilsCrossed, Store, Sparkles, ChevronRight, Info, Flame, Coffee, Tag, ShoppingBag, MapPin, ExternalLink } from "lucide-react";
+import { UtensilsCrossed, Store, Sparkles, ChevronRight, Info, Flame, Coffee, Tag, ShoppingBag, ExternalLink } from "lucide-react";
 import { useContent, useT } from "../i18n/LanguageContext";
 import { useHighlight } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
@@ -285,7 +285,7 @@ function KonbiniView() {
                       }}
                       title={t("foods.searchNearby", { chain: chain.name })}
                     >
-                      <MapPin size={12} style={{ color: chain.themeColor }} />
+                      <img src="/icons/google-maps.png" alt="" width={13} height={13} style={{ flexShrink: 0 }} />
                       <span>{t("foods.seeNearby")}</span>
                       <ExternalLink size={10} style={{ opacity: 0.55 }} />
                     </a>

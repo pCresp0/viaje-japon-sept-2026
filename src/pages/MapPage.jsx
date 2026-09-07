@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { ExternalLink, CalendarDays } from "lucide-react";
+import { CalendarDays } from "lucide-react";
 
 import { useContent } from "../i18n/LanguageContext";
 import { Highlightable } from "../context/HighlightContext";
@@ -327,8 +327,9 @@ export default function MapPage({ onGoToDay, initialDay }) {
                       <a
                         href={`https://www.google.com/maps/search/?api=1&query=${stop.lat},${stop.lng}`}
                         target="_blank" rel="noopener noreferrer"
-                        style={{ fontSize: 12, color: stop.color, fontWeight: 600, textDecoration: "none" }}
+                        style={{ fontSize: 12, color: stop.color, fontWeight: 600, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 4 }}
                       >
+                        <img src="/icons/google-maps.png" alt="" width={13} height={13} />
                         {mapLabels.abrirGoogleMaps}
                       </a>
                     </>
@@ -440,7 +441,7 @@ export default function MapPage({ onGoToDay, initialDay }) {
                     overflow: "hidden",
                   }}
                 >
-                  <ExternalLink size={13} style={{ flexShrink: 0 }} />
+                  <img src="/icons/google-maps.png" alt="" width={13} height={13} style={{ flexShrink: 0 }} />
                   <span className="truncate">{mapLabels.verEnGoogleMaps}</span>
                 </a>
               </div>

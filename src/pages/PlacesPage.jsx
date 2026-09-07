@@ -191,7 +191,8 @@ export default function PlacesPage() {
               className="text-xs font-semibold px-3.5 py-2 rounded-xl border flex items-center gap-1.5 transition-opacity hover:opacity-85"
               style={{ background: "var(--paper)", borderColor: "var(--line)", color: "var(--forest)", textDecoration: "none" }}
             >
-              📍 Punto de Encuentro en Maps (Tokyo Mode Gakuen) ↗
+              <img src="/icons/google-maps.png" alt="" width={14} height={14} style={{ display: "inline", verticalAlign: "-2px", marginRight: 2 }} />
+              Punto de Encuentro en Maps (Tokyo Mode Gakuen) ↗
             </a>
           </div>
         </div>
