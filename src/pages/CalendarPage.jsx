@@ -40,7 +40,7 @@ function buildGrid() {
 
 const grid = buildGrid();
 
-export default function CalendarPage() {
+export default function CalendarPage({ onGoToMapDay }) {
   const { days, blocks } = useContent();
   const t = useT();
   const [showExportModal, setShowExportModal] = useState(false);
@@ -263,6 +263,7 @@ export default function CalendarPage() {
               blockColor={blockMap[selectedDay.block]?.color || "#1d3557"} 
               onShowFullDay={() => setDetailMode(true)} 
               onClose={() => setSelectedDayNum(null)}
+              onViewMap={onGoToMapDay}
               standalone={true}
             />
           ) : (
@@ -272,6 +273,7 @@ export default function CalendarPage() {
                 defaultOpenHistory={true} 
                 onClose={() => setSelectedDayNum(null)} 
                 onShowQuickView={() => setDetailMode(false)} 
+                onViewMap={() => onGoToMapDay?.(selectedDay.num)}
               />
             </div>
           )}
@@ -289,6 +291,7 @@ export default function CalendarPage() {
                   blockColor={blockMap[selectedDay.block]?.color || "#1d3557"} 
                   onShowFullDay={() => setDetailMode(true)} 
                   onClose={() => setSelectedDayNum(null)}
+                  onViewMap={onGoToMapDay}
                   standalone={true}
                 />
               </div>
@@ -299,6 +302,7 @@ export default function CalendarPage() {
                   defaultOpenHistory={true} 
                   onClose={() => setSelectedDayNum(null)} 
                   onShowQuickView={() => setDetailMode(false)} 
+                  onViewMap={() => onGoToMapDay?.(selectedDay.num)}
                 />
               </div>
             )}
