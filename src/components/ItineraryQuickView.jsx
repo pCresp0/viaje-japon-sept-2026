@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, ChevronUp, LayoutList, X, Map } from "lucide-react";
+import { ChevronDown, ChevronUp, LayoutList, X, Map, Droplets } from "lucide-react";
 import { formatDateShort } from "../utils/date";
 import PlaceText from "./PlaceText";
 import { useContent } from "../i18n/LanguageContext";
@@ -130,8 +130,13 @@ function hasRealTime(entry) {
 
 export function QuickDayCard({ day, blockColor, onShowFullDay, onClose, onViewMap, standalone = false, isOpen = true, onToggle }) {
   const keyEntries = (day.schedule ?? []).filter(hasRealTime);
-  const { mapStops } = useContent();
+  const { mapStops, stays } = useContent();
   const hasMapStops = mapStops.some((s) => parseDayNumbers(s.day).includes(day.num));
+  // Hotel de esa noche, sólo para el aviso compacto de onsen — el resto
+  // de datos del hotel (dirección, PIN...) siguen viviendo únicamente
+  // en la vista detallada, aquí sólo se añade una línea si hay onsen.
+  const stay = stays.find((s) => s.afterDay === day.num);
+  const onsenOption = stay?.options.find((o) => o.onsen?.has);
 
   return (
     <div
@@ -270,6 +275,15 @@ export function QuickDayCard({ day, blockColor, onShowFullDay, onClose, onViewMa
             </div>
           )}
 
+          {onsenOption && (
+            <p
+              className="flex items-center gap-1.5 text-[11px] sm:text-xs mt-2 pt-2"
+              style={{ color: "var(--indigo)", borderTop: "1px dashed var(--line)" }}
+            >
+              <Droplets size={11} style={{ flexShrink: 0 }} />
+              Onsen en {onsenOption.name}: {onsenOption.onsen.hours}
+            </p>
+          )}
         </div>
       )}
     </div>
