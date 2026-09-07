@@ -1,4 +1,4 @@
-import { MapPin } from "lucide-react";
+import { MapPin, Droplets } from "lucide-react";
 import { mapsUrl } from "../utils/maps";
 
 export default function StayOption({ option, city }) {
@@ -30,6 +30,11 @@ export default function StayOption({ option, city }) {
           </p>
         )}
         {option.rooms && <p style={{ margin: 0 }}>{option.rooms}</p>}
+        {option.onsen?.has && (
+          <p style={{ margin: 0, display: "flex", alignItems: "center", gap: 4 }}>
+            <Droplets size={11} style={{ flexShrink: 0 }} /> Onsen: {option.onsen.hours}
+          </p>
+        )}
         {option.checkIn && <p style={{ margin: 0 }}>Entrada: {option.checkIn}</p>}
         {option.checkOut && <p style={{ margin: 0 }}>Salida: {option.checkOut}</p>}
         {option.address && <p style={{ margin: 0 }}>{option.address}</p>}
