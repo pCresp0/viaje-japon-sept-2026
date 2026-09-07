@@ -335,20 +335,27 @@ main > div > * {
   animation: todayPulse 1.8s ease-out infinite;
 }
 
+/* El anillo pulsa hacia DENTRO (inset), no hacia fuera. La tabla del
+   calendario recorta el contenido con overflow:hidden para redondear
+   sus esquinas exteriores — un box-shadow que creciera hacia fuera se
+   cortaba en seco contra ese límite en cualquier celda pegada a un
+   borde (la columna de la izquierda, la última fila...). Con inset el
+   anillo nunca sale de los límites de la propia celda, así que se ve
+   bien en cualquier posición de la rejilla. */
 @keyframes todayPulse {
   0% {
-    box-shadow: 0 0 0 2px var(--gold, #c9a227), 0 0 0 2px rgba(201, 162, 39, 0.5);
+    box-shadow: inset 0 0 0 2px var(--gold, #c9a227), inset 0 0 0 2px rgba(201, 162, 39, 0.5);
   }
   70% {
-    box-shadow: 0 0 0 2px var(--gold, #c9a227), 0 0 0 9px rgba(201, 162, 39, 0);
+    box-shadow: inset 0 0 0 2px var(--gold, #c9a227), inset 0 0 0 9px rgba(201, 162, 39, 0);
   }
   100% {
-    box-shadow: 0 0 0 2px var(--gold, #c9a227), 0 0 0 9px rgba(201, 162, 39, 0);
+    box-shadow: inset 0 0 0 2px var(--gold, #c9a227), inset 0 0 0 9px rgba(201, 162, 39, 0);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .today-pulse-ring { animation: none; box-shadow: 0 0 0 2px var(--gold, #c9a227); }
+  .today-pulse-ring { animation: none; box-shadow: inset 0 0 0 2px var(--gold, #c9a227); }
 }
 
 /* ── Botón de altavoz (afordancia clara de "esto se pulsa") ─────────── */
