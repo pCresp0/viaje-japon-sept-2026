@@ -1,5 +1,35 @@
-import { MapPin, Droplets } from "lucide-react";
+import { MapPin, Droplets, KeyRound, BedDouble, Phone, CalendarCheck, CalendarX } from "lucide-react";
 import { mapsUrl } from "../utils/maps";
+
+// Etiqueta pequeña en mayúsculas + valor debajo — mismo lenguaje visual
+// que ya usa la ficha completa de Hoteles, para que ambos sitios se
+// lean igual de bien en vez de ser un bloque de líneas sueltas sin
+// jerarquía.
+function Field({ label, icon: Icon, children, mono = false }) {
+  if (!children) return null;
+  return (
+    <div className="flex gap-1.5">
+      {Icon && <Icon size={12} style={{ color: "var(--ink-soft)", flexShrink: 0, marginTop: 2 }} />}
+      <div style={{ minWidth: 0 }}>
+        <p style={{
+          fontSize: 9.5, color: "var(--ink-soft)", textTransform: "uppercase",
+          letterSpacing: "0.05em", marginBottom: 1, fontWeight: 700,
+        }}>
+          {label}
+        </p>
+        <div style={{
+          fontSize: mono ? 12.5 : 12,
+          fontWeight: mono ? 700 : 600,
+          color: "var(--ink)",
+          lineHeight: 1.4,
+          fontFamily: mono ? "ui-monospace, SFMono-Regular, Menlo, monospace" : "inherit",
+        }}>
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function StayOption({ option, city }) {
   const mapQuery = option.address
@@ -8,53 +38,83 @@ export default function StayOption({ option, city }) {
 
   return (
     <div
-      className="rounded-lg px-3 py-2.5 text-sm border"
+      className="rounded-lg px-3 py-3 text-sm border"
       style={{ borderColor: "var(--line)", background: "var(--paper)" }}
     >
-      <span className="font-medium block" style={{ color: "var(--ink)" }}>
-        {option.name}
-      </span>
-
-      <div className="mt-1 space-y-0.5" style={{ color: "var(--ink-soft)", fontSize: 12, lineHeight: 1.45 }}>
+      <div className="flex items-baseline justify-between gap-2 mb-2">
+        <span className="font-bold" style={{ color: "var(--ink)", fontSize: 14 }}>
+          {option.name}
+        </span>
         {option.total && (
-          <p style={{ margin: 0 }}>
+          <span className="shrink-0" style={{ color: "var(--forest)", fontWeight: 700, fontSize: 12.5 }}>
             {option.total}
-            {option.guests ? ` · ${option.guests}` : ""}
-          </p>
-        )}
-        {(option.confirmation || option.pin) && (
-          <p style={{ margin: 0, fontFamily: "ui-monospace, monospace", fontSize: 11.5 }}>
-            {option.confirmation ? `Conf. ${option.confirmation}` : ""}
-            {option.confirmation && option.pin ? " · " : ""}
-            {option.pin ? `PIN ${option.pin}` : ""}
-          </p>
-        )}
-        {option.rooms && <p style={{ margin: 0 }}>{option.rooms}</p>}
-        {option.onsen?.has && (
-          <p style={{ margin: 0, display: "flex", alignItems: "center", gap: 4 }}>
-            <Droplets size={11} style={{ flexShrink: 0 }} /> Onsen: {option.onsen.hours}
-          </p>
-        )}
-        {option.checkIn && <p style={{ margin: 0 }}>Entrada: {option.checkIn}</p>}
-        {option.checkOut && <p style={{ margin: 0 }}>Salida: {option.checkOut}</p>}
-        {option.address && <p style={{ margin: 0 }}>{option.address}</p>}
-        {option.phone && <p style={{ margin: 0 }}>Tel. {option.phone}</p>}
-        {option.cancel && <p style={{ margin: 0 }}>{option.cancel}</p>}
-        {option.note && (
-          <p style={{ margin: 0, fontStyle: "italic", color: "var(--ink-soft)" }}>{option.note}</p>
+          </span>
         )}
       </div>
 
-      <span className="flex items-center gap-3 mt-2">
+      {option.guests && (
+        <p style={{ margin: "0 0 8px", color: "var(--ink-soft)", fontSize: 11.5 }}>{option.guests}</p>
+      )}
+
+      {(option.confirmation || option.pin) && (
+        <div className="flex gap-3 rounded-md px-2.5 py-2 mb-2.5" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
+          <Field label="Confirmación" icon={KeyRound} mono>{option.confirmation}</Field>
+          <Field label="PIN" mono>{option.pin}</Field>
+        </div>
+      )}
+
+      <div className="grid gap-2 mb-2" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(110px, 1fr))" }}>
+        <Field label="Entrada" icon={CalendarCheck}>{option.checkIn}</Field>
+        <Field label="Salida" icon={CalendarX}>{option.checkOut}</Field>
+        <Field label="Habitaciones" icon={BedDouble}>{option.rooms}</Field>
+        {option.phone && (
+          <Field label="Teléfono" icon={Phone}>
+            <a href={`tel:${option.phone.replace(/\s/g, "")}`} style={{ color: "var(--indigo)", textDecoration: "none" }}>
+              {option.phone}
+            </a>
+          </Field>
+        )}
+      </div>
+
+      {option.onsen?.has && (
+        <div className="flex gap-1.5 rounded-md px-2.5 py-2 mb-2" style={{ background: "#1d355712" }}>
+          <Droplets size={13} style={{ color: "var(--indigo)", flexShrink: 0, marginTop: 1 }} />
+          <p style={{ margin: 0, fontSize: 11.5, color: "var(--ink)", lineHeight: 1.4 }}>
+            <strong>Onsen:</strong> {option.onsen.hours}
+          </p>
+        </div>
+      )}
+
+      {option.address && (
+        <div className="flex gap-1.5 mb-2">
+          <MapPin size={12} style={{ color: "var(--ink-soft)", flexShrink: 0, marginTop: 2 }} />
+          <p style={{ margin: 0, fontSize: 11.5, color: "var(--ink-soft)", lineHeight: 1.4 }}>{option.address}</p>
+        </div>
+      )}
+
+      {option.cancel && (
+        <p style={{ margin: "0 0 4px", fontSize: 11, color: "var(--ink-soft)" }}>{option.cancel}</p>
+      )}
+
+      {option.note && (
+        <p className="rounded-md px-2.5 py-2 mt-1" style={{
+          margin: 0, fontSize: 11.5, lineHeight: 1.45,
+          background: "rgba(201,162,39,0.12)", color: "var(--ink)",
+        }}>
+          {option.note}
+        </p>
+      )}
+
+      <span className="flex items-center gap-3 mt-2.5">
         {option.url && (
-          <a href={option.url} target="_blank" rel="noopener noreferrer" className="text-xs font-medium" style={{ color: "var(--indigo)" }}>
+          <a href={option.url} target="_blank" rel="noopener noreferrer" className="text-xs font-bold" style={{ color: "var(--indigo)" }}>
             Ver reserva ↗
           </a>
         )}
         <a
           href={mapsUrl(mapQuery)}
           target="_blank" rel="noopener noreferrer"
-          className="flex items-center gap-1 text-xs font-medium"
+          className="flex items-center gap-1 text-xs font-bold"
           style={{ color: "var(--shu)" }}
         >
           <MapPin size={12} /> Cómo llegar ↗

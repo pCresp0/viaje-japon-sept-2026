@@ -142,6 +142,7 @@ function CollapsibleScheduleItem({ s, color }) {
 
 export default function DayCard({ day, defaultOpenHistory = false, onClose, onViewMap, onShowQuickView }) {
   const [showHistory, setShowHistory] = useState(defaultOpenHistory);
+  const [showStay, setShowStay] = useState(false);
   const [selectedGuide, setSelectedGuide] = useState(null);
   const { blocks, stays, days, mapStops, guides } = useContent();
   const { triggerHighlight } = useHighlight();
@@ -395,23 +396,34 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
 
         {stay && (
           <div className="rounded-xl p-4" style={{ background: "var(--paper)" }}>
-            <p className="eyebrow" style={{ color: "var(--indigo)" }}>
-              🏨 Dónde dormimos —{" "}
-              <PlaceText text={stay.city} linkStyle={{ color: "var(--shu)" }} />
-            </p>
-            <p className="text-xs mt-0.5" style={{ color: "var(--ink-soft)" }}>
-              {stay.nights}
-            </p>
+            <button
+              onClick={() => setShowStay((v) => !v)}
+              className="flex items-center justify-between w-full text-left"
+              style={{ background: "none", border: "none", padding: 0, cursor: "pointer" }}
+            >
+              <div>
+                <p className="eyebrow" style={{ color: "var(--indigo)", margin: 0 }}>
+                  🏨 Dónde dormimos —{" "}
+                  <PlaceText text={stay.city} linkStyle={{ color: "var(--shu)" }} />
+                </p>
+                <p className="text-xs mt-0.5" style={{ color: "var(--ink-soft)" }}>
+                  {stay.nights}
+                </p>
+              </div>
+              <ChevronDown size={16} className={`shrink-0 transition-transform ${showStay ? "rotate-180" : ""}`} style={{ color: "var(--indigo)" }} />
+            </button>
             {stay.warning && (
               <p className="text-xs mt-2 rounded-lg p-2" style={{ background: "#FBEAEA", color: "var(--shu)" }}>
                 {stay.warning}
               </p>
             )}
-            <div className="mt-2 space-y-2">
-              {stay.options.map((o, i) => (
-                <StayOption key={i} option={o} city={stay.city} />
-              ))}
-            </div>
+            {showStay && (
+              <div className="mt-2 space-y-2">
+                {stay.options.map((o, i) => (
+                  <StayOption key={i} option={o} city={stay.city} />
+                ))}
+              </div>
+            )}
           </div>
         )}
 
