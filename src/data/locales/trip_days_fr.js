@@ -111,82 +111,134 @@ export const days = [
     "money": "Environ 40€ (repas)"
   },
   {
-    "title": "Kyoto Nord-Ouest et Bambou",
-    "cities": "Kyoto (Arashiyama)",
-    "summary": "Nous explorerons le nord-ouest en commençant par le brillant Pavillon d'Or et le sentier Kinukake no Michi. À midi, un tramway nous emmène à Arashiyama, en priorisant la zone historique supérieure avant de descendre par la célèbre bambouseraie. Juancar cherche probablement déjà des erreurs historiques dans la brochure.",
-    "history": "Le Kinkakuji (Pavillon d'Or) était la somptueuse villa de retraite du shogun Ashikaga Yoshimitsu à la fin du XIVe siècle. Arashiyama est une destination de vacances pour la noblesse impériale depuis l'époque de Heian.",
+    "title": "Route Nord Higashiyama et Geishas",
+    "cities": "Kyoto",
+    "summary": "Nous explorerons la partie est de la ville, en commençant par le Pavillon d'Argent et en descendant à pied l'Allée de la Philosophie le long du canal. Nous déjeunerons au marché de Nishiki et passerons l'après-midi à découvrir en profondeur les quartiers historiques des geishas.",
+    "history": "Le Pavillon d'Argent (Ginkakuji) représente la culture raffinée de Higashiyama de la période Muromachi, centrée sur l'esthétique wabi-sabi. Les hanamachi (quartiers de geishas) ont prospéré pendant la période Edo comme centres d'arts de la scène de haut niveau.",
     "schedule": [
       {
-        "text": "Réveil. 🍳 Petit-déjeuner à l'hôtel à partir de 07:00 ou petit-déjeuner léger acheté au préalable."
+        "time": "07:00",
+        "text": "Réveil."
       },
       {
-        "text": "🚇 Hôtel → Kinkaku-ji. Depuis l'hôtel, marchez jusqu'à Kyoto Station. Prenez la Kyoto Subway Karasuma Line : Kyoto → Kitaoji. À Kitaoji : suivez les panneaux vers Kitaoji Bus Terminal ; utilisez la zone bleue ; prenez le bus n° 204 ou 205 vers Kinkaku-ji ; descendez à Kinkakuji-michi. Depuis Kinkakuji-michi : environ 5 min à pied jusqu'à l'entrée. Cette combinaison est préférable au bus direct 205 de Kyoto Station car elle évite une partie du trafic et de la foule. Aucune réservation. Utilisez la carte IC."
+        "time": "07:15",
+        "text": "🍙 Départ de l'hôtel vers le konbini le plus proche (Lawson ou 7-Eleven, celui qui est le plus près)."
       },
       {
-        "text": "🏯 Kinkaku-ji (Pavillon d'Or). IMPORTANT : L'heure précédente de 08:30 était incorrecte. Kinkaku-ji ouvre à 09:00. Entrée : environ 500 ¥. Aucune réservation requise. Conseil : Essayez d'arriver juste à l'ouverture pour profiter du site avec moins de monde."
+        "time": "07:15–07:45",
+        "text": "🍙 Petit-déjeuner au konbini. Entre choisir, acheter et manger tranquillement, cela prend du temps — comptez jusqu'à environ 07h45 avant de continuer vers l'arrêt de bus."
       },
       {
-        "text": "🚶 Chemin Kinukake no Michi. Parcourez dans cet ordre : 1. Kinkaku-ji 2. Ryoan-ji 3. Ninna-ji"
+        "time": "07:45–08:30",
+        "text": "🚌 Vers Ginkaku-ji. Depuis le konbini, marcher jusqu'à Kyoto Station. Prendre le Kyoto City Bus n°5 ou n°7 vers Ginkaku-ji et descendre à Ginkakuji-michi.\n\n🎫 **SUICA :** ✅ OUI ; passer la carte sur le lecteur du bus en montant/descendant.\n\nDurée approximative : 35–45 min porte à porte, selon le trafic — arrivée juste à l'ouverture de Ginkaku-ji. Alternative si le trafic est mauvais : utiliser métro + bus selon Google Maps/Navitime sur le moment. Paiement : sans réservation. Utiliser Suica. On peut aussi acheter un billet simple."
       },
       {
-        "text": "🏯 Ryoan-ji. De Kinkaku-ji, marchez par Kinukake no Michi. Distance : environ 1,5 km / 20 min. Ryoan-ji ouvre en septembre de 08:00 à 17:00. Entrée : environ 600 ¥. Aucune réservation requise. À voir absolument : jardin de pierres ; Hojo ; jardin."
+        "time": "08:30–10:00",
+        "text": "🩶 Ginkaku-ji (Pavillon d'Argent). Horaires officiels en septembre : 08h30–17h00. À visiter : le Pavillon d'Argent, les jardins, l'étang, le chemin surélevé du jardin. Sans réservation."
       },
       {
-        "text": "🏯 Ninna-ji. Continuez à pied de Ryoan-ji vers Ninna-ji. Distance : environ 10–15 min. Ninna-ji ouvre en septembre de 09:00 à 17:00. L'entrée aux zones spéciales peut avoir un coût supplémentaire. Aucune réservation requise."
+        "time": "10:00–11:00",
+        "text": "🚶 Allée de la Philosophie. Quitter Ginkaku-ji et marcher vers le sud le long du canal. C'est un tronçon principalement piéton."
       },
       {
-        "text": "🚋 Ninna-ji → Arashiyama. Marchez jusqu'à Omuro-Ninnaji Station. Prenez la Randen Kitano Line vers Katabiranotsuji. À Katabiranotsuji, transférez sur la Randen Arashiyama Line vers Arashiyama. Descendez à Arashiyama Station. Durée totale environ 20–25 min. IMPORTANT : Le Randen N'EST PAS un train JR. Il ne nécessite pas de Japan Rail Pass. Tarif actuel du Randen : 250 ¥ par adulte et par trajet. Peut être payé avec une carte IC. En montant, NE BIPEZ PAS la carte IC. Vous payez en descendant / à la gare selon le cas. Aucune réservation."
+        "time": "11:00–13:15",
+        "text": "⛩️ Eikando + Nanzen-ji. D'abord Eikando, puis Nanzen-ji. Eikando : entrée environ ¥1 000 (~6€). En saison normale, ouvert 09h00–17h00. Sans réservation. Prévoir un sac pour les chaussures. Nanzen-ji : ouvert 08h40–17h00 en septembre. Sans réservation. Pour entrer dans le jardin Hojo ou monter au Sanmon, payer l'entrée sur place.\n\n⚠️ **IMPORTANT :**\nNanzen-ji et Eikando sont tout proches et cet ordre garde une progression logique vers le sud."
       },
       {
-        "text": "🍜 Déjeuner rapide à Arashiyama. Gardez un repas rapide pour ne pas compromettre la partie Otagi. 🍜 Déjeuner rapide à Arashiyama. Gardez un repas rapide pour ne pas compromettre la partie Otagi.\n⚠️ Ne retardez pas trop le repas. À Arashiyama, beaucoup de restaurants prennent la dernière commande vers 14:00 et certains ferment la cuisine l'après-midi. Que manger : udon ; soba ; tempura ; donburi ; curry ; onigiri/bento si vous êtes pressés. Si vous manquez de temps, achetez un onigiri/sandwich/bento dans la zone d'Arashiyama et continuez. Mieux vaut cela que perdre du temps à attendre une table."
+        "time": "13:15–13:45",
+        "text": "🚇 Nanzen-ji → centre de Kyoto. Marcher environ 10 min jusqu'à Keage Station. Prendre la ligne de métro Kyoto Tozai : Keage → Karasuma Oike.\n\n🎫 **SUICA :** ✅ OUI ; passer la carte directement aux portillons.\n\nDepuis Karasuma Oike :\n\nmarcher vers le marché de Nishiki, environ 15 min ; ou continuer avec la combinaison de métro la plus pratique. Sans réservation. Payer avec Suica."
       },
       {
-        "text": "🚌 Arashiyama → Otagi Nenbutsu-ji. IMPORTANT : Ne montez PAS à pied depuis Arashiyama. Le site web d'Otagi recommande d'arriver en taxi ou en bus puis de faire le parcours en descente. Option recommandée : Kyoto Bus n° 94 vers Kiyotaki. Montez à un arrêt dans la zone d'Arashiyama et descendez à Otagidera-mae. Environ 20–25 min. Alternative : Taxi depuis la zone d'Arashiyama. Le taxi est plus cher mais peut faire gagner du temps si vous êtes pressés. Ne réservez pas le bus."
+        "time": "13:45–16:00",
+        "text": "🍣 Marché de Nishiki. Déjeuner et balade dans le marché. Conseil : ne pas essayer de parcourir absolument tous les stands. Choisir quelques produits/plats et manger devant l'échoppe elle-même.\n\n⚠️ **IMPORTANT :**\nNe pas faire de 'tabearuki' (manger en marchant). Le marché lui-même demande de l'éviter. Nishiki n'a pas d'heure de fermeture unique : chaque boutique a son propre horaire. Beaucoup de boutiques fonctionnent environ entre 09h00/10h00 et 17h00/18h00. 🍣 Manger ici en goûtant surtout différentes spécialités, pas forcément comme un repas formel. À chercher : dashimaki tamago ; yuba ; tofu ; tsukemono ; fu ; matcha ; poisson/fruits de mer préparés. NE PAS manger en marchant. Acheter → s'écarter → manger devant le stand ou à l'intérieur de la boutique.\n⚠️ IMPORTANT : aujourd'hui, c'est mercredi 9 septembre. Le marché de Nishiki ne ferme pas dans son ensemble, mais de nombreuses boutiques individuelles sont fermées le mercredi. Donc ne pas compter uniquement sur Nishiki pour manger. Si trop de stands sont fermés, chercher à manger vers Shijo/Teramachi/Kawaramachi, en gardant le même itinéraire général."
       },
       {
-        "text": "🏨 **RETOUR À L'HÔTEL : HOTEL KEIHAN KYOTO HACHIJOGUCHI** (https://www.google.com/maps/search/?api=1&query=Hotel+Keihan+Kyoto+Hachijoguchi)\n\nRetour après le dîner à Gion/Pontocho à notre hôtel à Kyoto pour se reposer (3e nuit à l'Hotel Keihan Kyoto Hachijoguchi)."
+        "time": "16:00–17:30",
+        "text": "🏮 Pontocho → Miyagawacho. Trajet à pied. Pas besoin de transport."
       },
       {
-        "text": "🚶 Saga-Toriimoto. Depuis Otagi, commencez la descente à pied. Traversez le quartier historique de Saga-Toriimoto. IMPORTANT : Ce sens de parcours est délibéré : Otagi → Saga-Toriimoto → bambouseraie → centre d'Arashiyama. C'est le sens recommandé par le temple lui-même."
+        "time": "17:30–19:00",
+        "text": "🏮 Gion. Parcours : Hanamikoji, le quartier d'Ichiriki, Shirakawa, Tatsumi Jinja. Balade et dîner autour de Gion/Pontocho. Espérons que Randy nous prépare aujourd'hui sa fameuse lasagne spectaculaire. Randy va adorer à quel point les gens sont calmes et discrets ici."
       },
       {
-        "text": "🎋 Bambouseraie d'Arashiyama. Descendez à pied vers le centre à travers la bambouseraie. Conseil : Ne vous attendez pas à trouver la forêt complètement vide. C'est une zone très fréquentée. Le tronçon de Saga-Toriimoto à la forêt permet de profiter d'une transition progressive entre la zone rurale/historique et l'Arashiyama plus touristique. 🍵 En-cas optionnel après la bambouseraie : matcha ; dango ; taiyaki ; glace ; melon pan."
+        "time": "~21:30",
+        "text": "🏨 **RETOUR À L'HÔTEL : HOTEL KEIHAN KYOTO HACHIJOGUCHI** (https://www.google.com/maps/search/?api=1&query=Hotel+Keihan+Kyoto+Hachijoguchi)\n\nRetour après le dîner à Gion/Pontocho vers notre hôtel à Kyoto pour se reposer (3e nuit à l'Hotel Keihan Kyoto Hachijoguchi)."
       },
       {
-        "text": "🚆 Retour à Kyoto. Marchez jusqu'à JR Saga-Arashiyama Station. Prenez la ligne JR Sagano/San-in : Saga-Arashiyama → Kyoto. Trajet direct, environ 15–20 min. Aucune réservation. Utilisez la carte IC ou un billet simple. IMPORTANT : Ce train EST un JR, mais AUCUN Japan Rail Pass n'est requis. Vous pouvez payer normalement avec une carte IC. Ce soir pourrait être bien pour un dîner tranquille près de Kyoto Station ou Pontocho, selon votre énergie."
-      },
-      {
-        "text": "🎫 RÉSERVATIONS : NE RÉSERVEZ AUCUN transport aujourd'hui. Ne réservez pas : Métro, Bus 204/205, Randen, Kyoto Bus n° 94, JR Saga-Arashiyama → Kyoto. Vous n'avez pas non plus besoin de réserver : Kinkaku-ji, Ryoan-ji, Ninna-ji, Otagi Nenbutsu-ji. Achetez les billets directement sur chaque site. JAPAN RAIL PASS : Nous n'avons pas de Japan Rail Pass. NE MODIFIEZ PAS l'itinéraire pour cette raison. Les transports d'aujourd'hui peuvent être utilisés et payés individuellement. Carte IC : Kyoto Subway, Kyoto City Bus, Randen, Kyoto Bus, JR local."
+        "time": "🎫 RÉSERVATIONS",
+        "text": "Aucun transport ne nécessite de réservation à l'avance. Ne pas réserver : bus, métro, billets pour Ginkaku-ji, Eikando, Nanzen-ji, marché de Nishiki. Tous les transports peuvent être payés sur place avec Suica."
       }
     ],
-    "money": "Env. 40 € (repas)"
+    "money": "Environ 40€ (repas)"
   },
   {
-    "title": "Route Nord Higashiyama & Geishas",
-    "cities": "Kyoto",
-    "summary": "Nous parcourrons la partie est de la ville, depuis le Pavillon d'Argent en descendant le long du Chemin de la Philosophie à côté du canal. Nous déjeunerons au marché de Nishiki et passerons l'après-midi à découvrir en profondeur les quartiers historiques des geishas.",
-    "history": "Le Pavillon d'Argent (Ginkakuji) représente la culture raffinée d'Higashiyama de l'époque de Muromachi, centrée sur l'esthétique wabi-sabi. Les hanamachi (quartiers des geishas) ont fleuri à l'époque d'Edo comme centres d'arts du spectacle de haut niveau.",
+    "title": "Kyoto Nord-Ouest et Bambou",
+    "cities": "Kyoto (Arashiyama)",
+    "summary": "Nous explorerons le nord-ouest en commençant par le brillant Pavillon d'Or et le sentier Kinukake no Michi. À midi, un tramway nous emmène à Arashiyama, en donnant la priorité à la partie historique en hauteur avant de descendre par la célèbre forêt de bambous. Sergio, ne ramène pas de bambou pour tes plantes à Aluche. Juancar est sûrement déjà en train de chercher des erreurs historiques dans le dépliant.",
+    "history": "Le Kinkakuji (Pavillon d'Or) fut la somptueuse villa de retraite du shogun Ashikaga Yoshimitsu à la fin du XIVe siècle. Arashiyama est une destination de villégiature de la noblesse impériale depuis la période Heian.",
     "schedule": [
       {
-        "text": "Arrivée en bus au temple Ginkakuji (Pavillon d'Argent)."
+        "time": "07:30",
+        "text": "Réveil. 🍳 Petit-déjeuner à l'hôtel dès 07h00, ou petit-déjeuner léger acheté à l'avance."
       },
       {
-        "text": "Marche vers le sud le long du Chemin de la Philosophie, en suivant le canal."
+        "time": "08:00–09:00",
+        "text": "🚇 Hôtel → Kinkaku-ji. Depuis l'hôtel, marcher jusqu'à Kyoto Station. Prendre la ligne de métro Kyoto Karasuma :\n\nKyoto → Kitaoji. À Kitaoji : suivre les panneaux vers le Kitaoji Bus Terminal ; utiliser la zone bleue ; prendre le bus n°204 ou 205 vers Kinkaku-ji ; descendre à Kinkakuji-michi. Depuis Kinkakuji-michi :\n\nenviron 5 min à pied jusqu'à l'entrée. Cette combinaison est préférable au bus 205 direct depuis Kyoto Station car elle évite une partie du trafic et de l'affluence. Sans réservation. Utiliser Suica."
       },
       {
-        "text": "Visite des temples Eikando et Nanzen-ji."
+        "time": "09:00–10:15",
+        "text": "🏯 Kinkaku-ji (Pavillon d'Or).\n\n⚠️ **IMPORTANT :**\nL'horaire précédent de 08h30 était incorrect. Kinkaku-ji ouvre à 09h00. Entrée : environ ¥500 (~3€). Sans réservation. Conseil : essayer d'arriver juste à l'ouverture pour profiter du site avec moins de monde."
       },
       {
-        "text": "De Nanzen-ji, marche jusqu'à la station de métro Keage vers le centre. Déjeuner au marché de Nishiki."
+        "time": "10:15–12:15",
+        "text": "🚶 Sentier Kinukake no Michi. Suivre cet ordre : 1. Kinkaku-ji 2. Ryoan-ji 3. Ninna-ji"
       },
       {
-        "text": "Quartiers des geishas : Pontocho, traversée de la rivière Kamogawa jusqu'à Miyagawacho."
+        "time": "10:15–11:00",
+        "text": "🏯 Ryoan-ji. Depuis Kinkaku-ji, marcher le long de Kinukake no Michi. Distance approximative :\n\n1,5 km / 20 min. Ryoan-ji est ouvert en septembre 08h00–17h00. Entrée : environ ¥600 (~4€). Sans réservation. À voir en particulier : le jardin de pierres ; le Hojo ; le jardin."
       },
       {
-        "text": "Promenade dans Gion : rue Hanamikoji jusqu'à la maison de thé Ichiriki, ruisseau Shirakawa et sanctuaire Tatsumi (Thibaut, retiens-toi de draguer toutes les geishas en leur proposant un massage de kiné, elles n'ont pas le temps pour les tactiques de Toulouse). Si vous voulez dîner à Gion/Pontocho, il vaut mieux commencer entre 18:00 et 19:00 (l'occasion parfaite pour rappeler que l'Espagne a encore gagné le dernier Mondial). Pour les restaurants kaiseki ou très populaires, réservez à l'avance ; pour les options décontractées, restez flexibles. Randy sera ravi de voir à quel point ils sont calmes et paisibles ici."
+        "time": "11:00–12:15",
+        "text": "🏯 Ninna-ji. Continuer à pied depuis Ryoan-ji vers Ninna-ji. Distance approximative : 10–15 min. Ninna-ji est ouvert en septembre 09h00–17h00. L'accès aux zones spéciales peut avoir un coût supplémentaire. Sans réservation."
+      },
+      {
+        "time": "12:15–12:40",
+        "text": "🚋 Ninna-ji → Arashiyama. Marcher jusqu'à Omuro-Ninnaji Station. Prendre la ligne Randen Kitano vers Katabiranotsuji. À Katabiranotsuji, correspondance avec la ligne Randen Arashiyama vers Arashiyama. Descendre à Arashiyama Station. Durée totale approximative : 20–25 min.\n\n⚠️ **IMPORTANT :**\nLe Randen n'est PAS un train JR. Il ne nécessite pas de Japan Rail Pass. Tarif actuel du Randen : ¥250 (~1,5€) par adulte et par trajet. Peut être payé avec Suica. NE PAS badger le Suica en montant. On paie en descendant/à la gare selon le cas. Sans réservation."
+      },
+      {
+        "time": "12:40–13:20",
+        "text": "🍜 Déjeuner rapide à Arashiyama. Rester rapide pour ne pas compromettre la partie Otagi.\n⚠️ Ne pas trop retarder le déjeuner. À Arashiyama, beaucoup de restaurants prennent leur dernière commande vers 14h00 et certains ferment la cuisine l'après-midi. Que manger : udon ; soba ; tempura ; donburi ; curry ; onigiri/bento si on est pressés. Si on manque de temps, acheter onigiri/sandwich/bento dans le quartier d'Arashiyama et continuer. C'est préférable à perdre du temps à attendre une table."
+      },
+      {
+        "time": "13:20–13:50",
+        "text": "🚌 Arashiyama → Otagi Nenbutsu-ji.\n\n⚠️ **IMPORTANT :**\nNe pas faire toute la montée à pied depuis Arashiyama. Le site officiel d'Otagi recommande d'arriver en taxi ou en bus puis de faire la descente à pied ensuite. Option recommandée : Kyoto Bus n°94 vers Kiyotaki. Monter à un arrêt du quartier d'Arashiyama et descendre à Otagidera-mae. Durée approximative : 20–25 min.\n\n**Alternative :** taxi depuis le quartier d'Arashiyama. Le taxi est plus cher mais peut faire gagner du temps si on est justes. Ne pas réserver le bus."
+      },
+      {
+        "time": "13:50–14:45",
+        "text": "🏯 Otagi Nenbutsu-ji.\n\n⚠️ **IMPORTANT :**\nCette visite se fait maintenant le jeudi 10 septembre. Horaires : 09h00–16h00. Fermé les mercredis et samedis, donc le changement de jour résout le problème. Entrée : ¥1 000 (~6€). Sans réservation. À voir en particulier : les environ 1 200 statues de rakan."
+      },
+      {
+        "time": "14:45–15:30",
+        "text": "🚶 Saga-Toriimoto. Depuis Otagi, commencer la descente à pied. Parcourir le quartier historique de Saga-Toriimoto.\n\n⚠️ **IMPORTANT :**\n\nCe sens de parcours est délibéré : Otagi → Saga-Toriimoto → forêt de bambous → centre d'Arashiyama. C'est le sens recommandé par le temple lui-même."
+      },
+      {
+        "time": "15:30–17:00",
+        "text": "🎋 Forêt de bambous d'Arashiyama. Descendre à pied vers le centre en traversant la forêt de bambous. Conseil : ne pas s'attendre à trouver la forêt complètement vide. C'est une zone très fréquentée. Le tronçon depuis Saga-Toriimoto vers la forêt permet une transition progressive de la zone rurale/historique vers l'Arashiyama plus touristique. 🍵 Encas facultatif après la forêt de bambous : matcha ; dango ; taiyaki ; glace ; melon pan."
+      },
+      {
+        "time": "17:00",
+        "text": "🚆 Retour à Kyoto. Prendre la ligne JR Sagano/San-in depuis Saga-Arashiyama jusqu'à Kyoto Station (~15–20 min, 🎫 **SUICA :** ✅ OUI). Dîner du côté de Kyoto Station ou de Pontocho."
+      },
+      {
+        "time": "~21:30",
+        "text": "🏨 **RETOUR À L'HÔTEL : HOTEL KEIHAN KYOTO HACHIJOGUCHI** (https://www.google.com/maps/search/?api=1&query=Hotel+Keihan+Kyoto+Hachijoguchi)\n\nRetour à l'hôtel pour se reposer et préparer les sacs pour l'envoi des bagages le lendemain matin (4e nuit à l'Hotel Keihan Kyoto Hachijoguchi)."
+      },
+      {
+        "time": "🎫 RÉSERVATIONS",
+        "text": "NE réserver aucun transport aujourd'hui. Ne pas réserver : métro, bus 204/205, Randen, Kyoto Bus n°94, JR Saga-Arashiyama → Kyoto. Pas besoin non plus de réserver : Kinkaku-ji, Ryoan-ji, Ninna-ji, Otagi Nenbutsu-ji. Acheter les billets directement sur place. JAPAN RAIL PASS : nous n'avons pas de Japan Rail Pass. NE PAS modifier l'itinéraire pour cette raison. Les transports d'aujourd'hui peuvent être utilisés et payés individuellement. Suica : métro de Kyoto, bus de la ville de Kyoto, Randen, Kyoto Bus, JR local."
       }
     ],
-    "money": "Env. 40 € (repas)"
+    "money": "Environ 40€ (repas)"
   },
   {
     "title": "Kyoto Traditionnel et Château d'Osaka",

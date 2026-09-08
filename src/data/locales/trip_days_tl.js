@@ -111,82 +111,134 @@ export const days = [
     "money": "Mga 40€ (pagkain)"
   },
   {
-    "title": "Hilagang-kanlurang Kyoto at Bamboo",
-    "cities": "Kyoto (Arashiyama)",
-    "summary": "I-e-explore natin ang hilagang-kanluran simula sa maningning na Golden Pavilion at sa daan ng Kinukake no Michi. Sa tanghali, dadalhin tayo ng tram sa Arashiyama, uunahin ang nasa itaas na makasaysayang lugar bago bumaba sa tanyag na kakahuyan ng kawayan. Siguradong naghahanap na si Juancar ng mga pagkakamali sa kasaysayan sa brochure.",
-    "history": "Ang Kinkakuji (Golden Pavilion) ay ang marangyang rest house ng shogun Ashikaga Yoshimitsu noong huling bahagi ng ika-14 na siglo. Ang Arashiyama ay naging destinasyon para magbakasyon ng imperyal na maharlika simula noong panahon ng Heian.",
+    "title": "Hilagang Ruta ng Higashiyama at mga Geisha",
+    "cities": "Kyoto",
+    "summary": "Susuriin natin ang silangang bahagi ng lungsod, magsisimula sa Silver Pavilion at maglalakad pababa sa Philosopher's Path sa tabi ng kanal. Kakain tayo sa Nishiki Market at gugugulin ang hapon sa masusing paggalugad sa makasaysayang mga distrito ng geisha.",
+    "history": "Kinakatawan ng Silver Pavilion (Ginkakuji) ang sopistikadong kultura ng Higashiyama noong Muromachi period, na nakasentro sa wabi-sabi aesthetics. Umunlad ang mga hanamachi (distrito ng geisha) noong Edo period bilang mga sentro ng mataas na antas na performing arts.",
     "schedule": [
       {
-        "text": "Gumising. 🍳 Almusal sa hotel mula 07:00 o magaang almusal na binili nang maaga."
+        "time": "07:00",
+        "text": "Gising na."
       },
       {
-        "text": "🚇 Hotel → Kinkaku-ji. Maglakad mula sa hotel hanggang Kyoto Station. Sakyan ang Kyoto Subway Karasuma Line: Kyoto → Kitaoji. Sa Kitaoji: sundan ang mga sign papuntang Kitaoji Bus Terminal; gamitin ang asul na zone; sakyan ang bus No. 204 o 205 papuntang Kinkaku-ji; bumaba sa Kinkakuji-michi. Mula Kinkakuji-michi: halos 5 min na lakad papunta sa pasukan. Ang kombinasyon na ito ay mas mabuti kaysa sa direktang 205 bus mula Kyoto Station dahil iniiwasan nito ang ilang trapik at karamihan. Walang reserbasyon. Gumamit ng IC card."
+        "time": "07:15",
+        "text": "🍙 Alis mula sa hotel patungong pinakamalapit na konbini (Lawson o 7-Eleven, kung alin ang mas malapit)."
       },
       {
-        "text": "🏯 Kinkaku-ji (Golden Pavilion). MAHALAGA: Ang nakaraang nakasulat na 08:30 ay mali. Nagbubukas ang Kinkaku-ji ng 09:00. Bayad sa pagpasok: halos ¥500 (~3€). Walang kailangang reserbasyon. Tip: Subukang dumating eksakto sa pagbukas para ma-enjoy ang lugar nang mas kaunti ang tao."
+        "time": "07:15–07:45",
+        "text": "🍙 Konbini breakfast. Sa pagpili, pagbili, at pagkain nang walang pagmamadali, may oras na inaabot ito — asahan hanggang mga 07:45 bago tumuloy sa hintuan ng bus."
       },
       {
-        "text": "🚶 Kinukake no Michi path. Maglakad sa ganitong ayos: 1. Kinkaku-ji 2. Ryoan-ji 3. Ninna-ji"
+        "time": "07:45–08:30",
+        "text": "🚌 Papuntang Ginkaku-ji. Mula sa konbini, maglakad papuntang Kyoto Station. Sumakay ng Kyoto City Bus No. 5 o No. 7 patungong Ginkaku-ji at bumaba sa Ginkakuji-michi.\n\n🎫 **SUICA:** ✅ OO; i-tap ang card sa reader ng bus pagsakay/pagbaba.\n\nTinatayang tagal: 35–45 min door to door, depende sa trapiko — dadating nang mismong nagbukas ang Ginkaku-ji. Alternatibo kung masama ang trapiko: gamitin ang metro + bus base sa Google Maps/Navitime sa mismong oras. Bayad: Walang reserbasyon. Gamitin ang Suica. Puwede ring bumili ng single ticket."
       },
       {
-        "text": "🏯 Ryoan-ji. Mula Kinkaku-ji, maglakad gamit ang Kinukake no Michi. Layo: halos 1.5 km / 20 min. Oras sa Ryoan-ji sa Setyembre: 08:00–17:00. Bayad sa pagpasok: halos ¥600. Walang kailangang reserbasyon. Dapat makita: rock garden; Hojo; hardin."
+        "time": "08:30–10:00",
+        "text": "🩶 Ginkaku-ji (Silver Pavilion). Opisyal na oras ng Setyembre: 08:30–17:00. Bisitahin: Silver Pavilion, Gardens, Lawa, elevated garden path. Walang kailangang reserbasyon."
       },
       {
-        "text": "🏯 Ninna-ji. Ipagpatuloy ang paglalakad mula Ryoan-ji papuntang Ninna-ji. Layo: halos 10–15 min. Oras sa Ninna-ji sa Setyembre: 09:00–17:00. Maaaring may dagdag na bayad ang pagpasok sa mga special areas. Walang kailangang reserbasyon."
+        "time": "10:00–11:00",
+        "text": "🚶 Philosopher's Path. Umalis sa Ginkaku-ji at maglakad pahilaga... papuntang timog sa tabi ng kanal. Karamihan ay para lang sa naglalakad."
       },
       {
-        "text": "🚋 Ninna-ji → Arashiyama. Maglakad hanggang Omuro-Ninnaji Station. Sakyan ang Randen Kitano Line hanggang Katabiranotsuji. Sa Katabiranotsuji lumipat sa Randen Arashiyama Line patungong Arashiyama. Bumaba sa Arashiyama Station. Kabuuang oras: 20–25 min. MAHALAGA: Ang Randen ay HINDI JR train. Hindi mo kailangan ng Japan Rail Pass. Kasalukuyang pamasahe sa Randen: ¥250 bawat matanda. Maaaring magbayad gamit ang IC card. Sa pag-akyat, HUWAG i-tap ang IC card. Magbayad pagbaba / sa istasyon. Walang reserbasyon."
+        "time": "11:00–13:15",
+        "text": "⛩️ Eikando + Nanzen-ji. Una ang Eikando, pagkatapos ang Nanzen-ji. Eikando: entrance mga ¥1,000 (~6€). Sa normal na season bukas 09:00–17:00. Walang kailangang reserbasyon. Magdala ng bag para sa sapatos. Nanzen-ji: bukas 08:40–17:00 sa Setyembre. Walang kailangang reserbasyon. Kung gustong pumasok sa Hojo Garden o umakyat sa Sanmon, magbayad ng entrance doon.\n\n⚠️ **MAHALAGA:**\nMagkalapit ang Nanzen-ji at Eikando at pinapanatili ng pagkakasunod-sunod na ito ang lohikal na ruta papuntang timog."
       },
       {
-        "text": "🍜 Mabilisang tanghalian sa Arashiyama. Panatilihing mabilis ang pagkain upang hindi maapektuhan ang pagbisita sa Otagi. 🍜 Mabilisang tanghalian sa Arashiyama. Panatilihing mabilis ang pagkain upang hindi maapektuhan ang pagbisita sa Otagi.\n⚠️ Huwag patagalin ang tanghalian. Sa Arashiyama, maraming restawran ang huling order ay bandang 14:00 at may mga nagsasara na ng kusina sa hapon. Mga pwedeng kainin: udon; soba; tempura; donburi; curry; onigiri/bento kung nagmamadali. Kung gipit sa oras, bumili ng onigiri/sandwich/bento sa Arashiyama at magpatuloy. Mas mainam ito kaysa mag-aksaya ng oras sa paghihintay ng upuan."
+        "time": "13:15–13:45",
+        "text": "🚇 Nanzen-ji → sentro ng Kyoto. Maglakad ng mga 10 min papuntang Keage Station. Sumakay ng Kyoto Subway Tozai Line: Keage → Karasuma Oike.\n\n🎫 **SUICA:** ✅ OO; i-tap ang card nang direkta sa mga gate.\n\nMula sa Karasuma Oike:\n\nmaglakad papuntang Nishiki Market, mga 15 min; o magpatuloy gamit ang pinaka-maginhawang kombinasyon ng subway. Walang reserbasyon. Magbayad gamit ang Suica."
       },
       {
-        "text": "🚌 Arashiyama → Otagi Nenbutsu-ji. MAHALAGA: HUWAG maglakad pataas nang buong daan mula sa Arashiyama. Inirerekomenda ng mismong website ng Otagi na dumating sakay ng taxi o bus tapos ay maglakad pababa. Inirerekomendang opsyon: Kyoto Bus No. 94 patungong Kiyotaki. Sumakay sa bus stop sa Arashiyama at bumaba sa Otagidera-mae. Halos 20–25 min. Alternatibo: Taxi mula sa Arashiyama. Mas mahal ang taxi pero nakakatipid ng oras kung nagmamadali. Huwag mag-book sa bus."
+        "time": "13:45–16:00",
+        "text": "🍣 Nishiki Market. Tanghalian at paglibot sa palengke. Tip: huwag subukang libutin ang lahat ng puwesto. Pumili ng ilang produkto/pagkain at kumain mismo sa harap ng puwesto.\n\n⚠️ **MAHALAGA:**\nHuwag mag-'tabearuki' (kumain habang naglalakad). Hinihiling mismo ng palengke na iwasan ito. Walang iisang oras ng pagsara ang Nishiki: may sariling oras ang bawat tindahan. Karamihan sa mga tindahan ay bukas mga 09:00/10:00 hanggang 17:00/18:00. 🍣 Kumain dito sa pamamagitan ng pagtikim ng iba't ibang specialty, hindi kailangang isang pormal na pagkain. Ano ang hanapin: dashimaki tamago; yuba; tofu; tsukemono; fu; matcha; luto na isda/seafood. HUWAG kumain habang naglalakad. Bumili → lumayo → kumain sa harap ng puwesto o sa loob ng tindahan.\n⚠️ MAHALAGA: Ngayong araw ay Miyerkules, Setyembre 9. Hindi nagsasara ang buong Nishiki Market, pero maraming indibidwal na tindahan ang sarado tuwing Miyerkules. Kaya huwag umasa lang sa Nishiki para sa pagkain. Kung sobrang dami ng sarado, maghanap ng pagkain sa Shijo/Teramachi/Kawaramachi, habang pinapanatili ang parehong pangkalahatang ruta."
       },
       {
-        "text": "🏨 **BALIK SA HOTEL: HOTEL KEIHAN KYOTO HACHIJOGUCHI** (https://www.google.com/maps/search/?api=1&query=Hotel+Keihan+Kyoto+Hachijoguchi)\n\nBumalik pagkatapos ng hapunan sa Gion/Pontocho sa hotel sa Kyoto (ika-3 gabi sa Hotel Keihan Kyoto Hachijoguchi)."
+        "time": "16:00–17:30",
+        "text": "🏮 Pontocho → Miyagawacho. Lakad. Hindi kailangan ng transportasyon."
       },
       {
-        "text": "🚶 Saga-Toriimoto. Mula sa Otagi, simulan ang paglalakad pababa. Maglakad sa makasaysayang Saga-Toriimoto area. MAHALAGA: Ang direksyon na ito ay sinadya: Otagi → Saga-Toriimoto → bamboo grove → sentro ng Arashiyama. Ito ang rutang inirerekomenda ng mismong templo."
+        "time": "17:30–19:00",
+        "text": "🏮 Gion. Ruta: Hanamikoji, lugar ng Ichiriki, Shirakawa, Tatsumi Jinja. Lakad at hapunan sa paligid ng Gion/Pontocho. Sana gawin ni Randy ang kanyang sikat at kahanga-hangang lasagna ngayong araw. Magugustuhan ni Randy kung gaano katahimik at kalmado ang mga tao dito."
       },
       {
-        "text": "🎋 Arashiyama Bamboo Grove. Maglakad pababa sa sentro sa pamamagitan ng bamboo grove. Tip: Huwag asahang makita ang grove na ganap na walang tao. Isa itong napaka-busy na lugar. Ang daan mula Saga-Toriimoto patungong grove ay nagbibigay daan para sa maayos na paglipat mula sa rural/makasaysayang lugar papunta sa mas sikat na Arashiyama. 🍵 Opsiyonal na meryenda pagkatapos ng bamboo grove: matcha; dango; taiyaki; ice cream; melon pan."
+        "time": "~21:30",
+        "text": "🏨 **BALIK SA HOTEL: HOTEL KEIHAN KYOTO HACHIJOGUCHI** (https://www.google.com/maps/search/?api=1&query=Hotel+Keihan+Kyoto+Hachijoguchi)\n\nPagbalik pagkatapos ng hapunan sa Gion/Pontocho papunta sa ating hotel sa Kyoto para magpahinga (3rd gabi sa Hotel Keihan Kyoto Hachijoguchi)."
       },
       {
-        "text": "🚆 Pabalik sa Kyoto. Maglakad papuntang JR Saga-Arashiyama Station. Sakyan ang JR Sagano/San-in Line: Saga-Arashiyama → Kyoto. Direktang byahe, halos 15–20 min. Walang reserbasyon. Gumamit ng IC card o single ticket. MAHALAGA: Ang tren na ito ay JR, pero HINDI kailangan ng Japan Rail Pass. Maaari kang magbayad nang normal gamit ang IC card. Maaaring maganda ang gabing ito para sa tahimik na hapunan malapit sa Kyoto Station o Pontocho, depende sa lakas."
-      },
-      {
-        "text": "🎫 MGA RESERBASYON: HUWAG mag-book ng anumang transportasyon ngayong araw. Huwag mag-book: Subway, Bus 204/205, Randen, Kyoto Bus No. 94, JR Saga-Arashiyama → Kyoto. Hindi mo rin kailangang i-book ang: Kinkaku-ji, Ryoan-ji, Ninna-ji, Otagi Nenbutsu-ji. Bumili ng tiket nang direkta sa bawat site. JAPAN RAIL PASS: Wala tayong Japan Rail Pass. HUWAG baguhin ang itinerary dahil dito. Ang mga transportasyon ngayon ay maaaring magamit at bayaran nang isa-isa. IC card: Kyoto Subway, Kyoto City Bus, Randen, Kyoto Bus, local JR."
+        "time": "🎫 MGA RESERBASYON",
+        "text": "Walang kailangang i-book nang maaga na transportasyon. Huwag mag-book ng: Bus, Metro, tiket ng Ginkaku-ji, Eikando, Nanzen-ji, Nishiki Market. Lahat ng transportasyon ay puwedeng bayaran sa mismong oras gamit ang Suica."
       }
     ],
-    "money": "Tinatayang €40 (pagkain)"
+    "money": "Mga 40€ (pagkain)"
   },
   {
-    "title": "Hilagang Ruta ng Higashiyama & mga Geisha",
-    "cities": "Kyoto",
-    "summary": "Maglalakad tayo sa silangang bahagi ng lungsod, mula sa Silver Pavilion pababa sa tabi ng Philosopher's Path sa tabi ng kanal. Manananghalian tayo sa Nishiki Market at gugugulin ang hapon para tuklasin nang mabuti ang mga makasaysayang distrito ng mga geisha.",
-    "history": "Kinakatawan ng Silver Pavilion (Ginkakuji) ang pino na kultura ng Higashiyama sa panahon ng Muromachi, na nakasentro sa aesthetics ng wabi-sabi. Ang hanamachi (distrito ng geisha) ay yumabong sa panahon ng Edo bilang mataas na antas ng mga performing arts center.",
+    "title": "Hilagang-kanlurang Kyoto at Bamboo",
+    "cities": "Kyoto (Arashiyama)",
+    "summary": "Susuriin natin ang hilagang-kanluran, magsisimula sa makintab na Golden Pavilion at ang daanan ng Kinukake no Michi. Sa tanghali, dadalhin tayo ng tram papuntang Arashiyama, unang bibisitahin ang mataas na makasaysayang bahagi bago bumaba sa sikat na bamboo forest. Sergio, huwag kang magdala ng bamboo pauwi para sa mga halaman mo sa Aluche. Sigurado nang naghahanap si Juancar ng mga historical error sa pamphlet.",
+    "history": "Ang Kinkakuji (Golden Pavilion) ay ang marangyang retirement villa ni shogun Ashikaga Yoshimitsu noong huling bahagi ng ika-14 na siglo. Ang Arashiyama ay destinasyon ng bakasyon ng imperial nobility mula pa noong Heian period.",
     "schedule": [
       {
-        "text": "Pagdating gamit ang bus sa Ginkakuji Temple (Silver Pavilion)."
+        "time": "07:30",
+        "text": "Gising na. 🍳 Breakfast sa hotel mula 07:00, o magaang breakfast na binili nang maaga."
       },
       {
-        "text": "Maglakad patimog sa Philosopher's Path, sumusunod sa kanal."
+        "time": "08:00–09:00",
+        "text": "🚇 Hotel → Kinkaku-ji. Mula sa hotel, maglakad papuntang Kyoto Station. Sumakay ng Kyoto Subway Karasuma Line:\n\nKyoto → Kitaoji. Sa Kitaoji: sundin ang mga signage papuntang Kitaoji Bus Terminal; gamitin ang blue zone; sumakay ng bus No. 204 o 205 patungong Kinkaku-ji; bumaba sa Kinkakuji-michi. Mula sa Kinkakuji-michi:\n\nmga 5 minutong lakad papuntang entrance. Mas mainam ang kombinasyong ito kaysa sa direktang bus 205 mula sa Kyoto Station dahil naiiwasan nito ang bahagi ng trapiko at ang mga tao. Walang reserbasyon. Gamitin ang Suica."
       },
       {
-        "text": "Pagbisita sa mga templo ng Eikando at Nanzen-ji."
+        "time": "09:00–10:15",
+        "text": "🏯 Kinkaku-ji (Golden Pavilion).\n\n⚠️ **MAHALAGA:**\nMali ang naunang oras na 08:30. Nagbubukas ang Kinkaku-ji ng 09:00. Entrance: mga ¥500 (~3€). Walang kailangang reserbasyon. Tip: subukang dumating mismong pagbukas para ma-enjoy ang lugar na kaunti pa lang ang tao."
       },
       {
-        "text": "Mula Nanzen-ji, maglakad patungo sa istasyon ng subway ng Keage sa sentro. Tanghalian sa Nishiki Market. 🍣 Kumain dito higit sa lahat sa pagtikim ng iba't ibang specialty, hindi kailangang formal na kainan. Mga hahanapin: dashimaki tamago; yuba; tofu; tsukemono; fu; matcha; handang isda/seafood. HUWAG kumain habang naglalakad. Bumili → tumabi → kumain sa harap ng stall o sa loob ng tindahan.\n⚠️ MAHALAGA: Miyerkules ngayon, Setyembre 9. HINDI buong nagsasara ang Nishiki Market, pero maraming indibidwal na tindahan ang nagpapahinga tuwing Miyerkules. Kaya huwag umasa nang buo sa Nishiki para sa pagkain. Kung masyadong maraming sarado, maghanap ng pagkain sa Shijo/Teramachi/Kawaramachi, panatilihin ang pangkalahatang ruta."
+        "time": "10:15–12:15",
+        "text": "🚶 Daanan ng Kinukake no Michi. Sundin ang pagkakasunod-sunod na ito: 1. Kinkaku-ji 2. Ryoan-ji 3. Ninna-ji"
       },
       {
-        "text": "Distrito ng geisha: Pontocho, pagtawid sa ilog Kamogawa hanggang Miyagawacho."
+        "time": "10:15–11:00",
+        "text": "🏯 Ryoan-ji. Mula sa Kinkaku-ji, maglakad sa Kinukake no Michi. Tinatayang distansya:\n\n1.5 km / 20 min. Bukas ang Ryoan-ji sa Setyembre 08:00–17:00. Entrance: mga ¥600 (~4€). Walang kailangang reserbasyon. Bisitahin lalo na: ang rock garden; ang Hojo; ang hardin."
       },
       {
-        "text": "Mamasyal sa Gion: Hanamikoji street hanggang Ichiriki teahouse, batis ng Shirakawa, at Tatsumi shrine. Kung gusto niyong maghapunan sa Gion/Pontocho, mas mainam magsimula ng 18:00 hanggang 19:00. Para sa mga kaiseki o sikat na restawran, magpareserba; para sa kaswal, panatilihing magaan ang plano. Siguradong matutuwa si Randy kung gaano katahimik at kapayapa dito."
+        "time": "11:00–12:15",
+        "text": "🏯 Ninna-ji. Ituloy ang paglalakad mula sa Ryoan-ji papuntang Ninna-ji. Tinatayang distansya: 10–15 min. Bukas ang Ninna-ji sa Setyembre 09:00–17:00. Ang access sa mga special na bahagi ay maaaring may karagdagang bayad. Walang kailangang reserbasyon."
+      },
+      {
+        "time": "12:15–12:40",
+        "text": "🚋 Ninna-ji → Arashiyama. Maglakad papuntang Omuro-Ninnaji Station. Sumakay ng Randen Kitano Line patungong Katabiranotsuji. Sa Katabiranotsuji, lumipat sa Randen Arashiyama Line patungong Arashiyama. Bumaba sa Arashiyama Station. Tinatayang kabuuang tagal: 20–25 min.\n\n⚠️ **MAHALAGA:**\nAng Randen ay HINDI JR train. Hindi kailangan ng Japan Rail Pass. Kasalukuyang pamasahe ng Randen: ¥250 (~1.5€) bawat adult bawat biyahe. Puwedeng bayaran gamit ang Suica. HUWAG i-tap ang Suica pagsakay. Magbayad pagbaba/sa istasyon depende sa sitwasyon. Walang reserbasyon."
+      },
+      {
+        "time": "12:40–13:20",
+        "text": "🍜 Mabilisang tanghalian sa Arashiyama. Panatilihing mabilis para hindi maapektuhan ang bahagi ng Otagi.\n⚠️ Huwag masyadong iantala ang tanghalian. Sa Arashiyama, maraming restaurant ang may last order mga 14:00 at may nagsasara ng kusina sa hapon. Ano ang kainin: udon; soba; tempura; donburi; curry; onigiri/bento kung nagmamadali. Kung nauubusan na ng oras, bumili na lang ng onigiri/sandwich/bento sa lugar ng Arashiyama at magpatuloy. Mas mainam ito kaysa mag-aksaya ng oras sa paghihintay ng mesa."
+      },
+      {
+        "time": "13:20–13:50",
+        "text": "🚌 Arashiyama → Otagi Nenbutsu-ji.\n\n⚠️ **MAHALAGA:**\nHuwag akyatin lahat papunta ng lakad mula sa Arashiyama. Inirerekomenda mismo ng website ng Otagi na dumating sakay ng taxi o bus at gawin na lang ang paglalakad pababa pagkatapos. Rekomendadong opsyon: Kyoto Bus No. 94 patungong Kiyotaki. Sumakay sa isang hintuan sa lugar ng Arashiyama at bumaba sa Otagidera-mae. Tinatayang tagal: 20–25 min.\n\n**Alternatibo:** Taxi mula sa lugar ng Arashiyama. Mas mahal ang taxi pero makakatipid ng oras kung nagmamadali. Huwag i-book ang bus."
+      },
+      {
+        "time": "13:50–14:45",
+        "text": "🏯 Otagi Nenbutsu-ji.\n\n⚠️ **MAHALAGA:**\nBinibisita na ito ngayon sa Huwebes, Setyembre 10. Oras: 09:00–16:00. Sarado tuwing Miyerkules at Sabado, kaya nalutas ng pagpalit ng araw ang problema. Entrance: ¥1,000 (~6€). Walang kailangang reserbasyon. Bisitahin lalo na ang mga 1,200 estatwa ng rakan."
+      },
+      {
+        "time": "14:45–15:30",
+        "text": "🚶 Saga-Toriimoto. Mula sa Otagi, simulan ang paglakad pababa. Libutin ang makasaysayang lugar ng Saga-Toriimoto.\n\n⚠️ **MAHALAGA:**\n\nSinadya ang direksyon na ito: Otagi → Saga-Toriimoto → bamboo forest → sentro ng Arashiyama. Ito ang direksyon na inirerekomenda mismo ng templo."
+      },
+      {
+        "time": "15:30–17:00",
+        "text": "🎋 Arashiyama Bamboo Grove. Bumaba papuntang sentro sa pamamagitan ng bamboo forest. Tip: huwag umasang ganap na walang tao ang forest. Napaka-busy na lugar ito. Ang bahagi mula sa Saga-Toriimoto papuntang forest ay nagbibigay ng unti-unting transition mula sa rural/makasaysayang lugar papuntang mas turistang Arashiyama. 🍵 Optional na snack pagkatapos ng bamboo forest: matcha; dango; taiyaki; ice cream; melon pan."
+      },
+      {
+        "time": "17:00",
+        "text": "🚆 Balik sa Kyoto. Sumakay ng JR Sagano/San-in Line mula sa Saga-Arashiyama papuntang Kyoto Station (~15–20 min, 🎫 **SUICA:** ✅ OO). Hapunan sa paligid ng Kyoto Station o Pontocho."
+      },
+      {
+        "time": "~21:30",
+        "text": "🏨 **BALIK SA HOTEL: HOTEL KEIHAN KYOTO HACHIJOGUCHI** (https://www.google.com/maps/search/?api=1&query=Hotel+Keihan+Kyoto+Hachijoguchi)\n\nBalik sa hotel para magpahinga at ihanda ang mga bag para sa luggage forwarding kinaumagahan (4th gabi sa Hotel Keihan Kyoto Hachijoguchi)."
+      },
+      {
+        "time": "🎫 MGA RESERBASYON",
+        "text": "HUWAG mag-book ng anumang transportasyon ngayong araw. Huwag mag-book ng: Metro, Bus 204/205, Randen, Kyoto Bus No. 94, JR Saga-Arashiyama → Kyoto. Hindi rin kailangang i-book: Kinkaku-ji, Ryoan-ji, Ninna-ji, Otagi Nenbutsu-ji. Bumili ng tiket direkta sa bawat lugar. JAPAN RAIL PASS: wala tayong Japan Rail Pass. HUWAG baguhin ang itinerary dahil dito. Ang mga transportasyon ngayong araw ay puwedeng gamitin at bayaran nang isa-isa. Suica: Kyoto Subway, Kyoto City Bus, Randen, Kyoto Bus, local JR."
       }
     ],
-    "money": "Tinatayang €40 (pagkain)"
+    "money": "Mga 40€ (pagkain)"
   },
   {
     "title": "Tradisyonal na Kyoto at Osaka Castle",
