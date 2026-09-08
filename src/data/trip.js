@@ -377,7 +377,7 @@ export const days = [
     title: "Fushimi Inari + Nara: Gran Buda, ciervos y Pontocho",
     cities: "Kioto, Nara",
     summary:
-      "Empezaremos muy temprano en el icónico Fushimi Inari para recorrer sus toriis rojos evitando multitudes. Después, tren hacia Nara para visitar el imponente Gran Buda de Tōdai-ji, comer gyumabushi cerca del parque, y pasear entre los famosos ciervos. La jornada acaba de vuelta en Kioto con un paseo y cena en los callejones tradicionales de Pontocho y Gion.",
+      "Empezaremos muy temprano en el icónico Fushimi Inari para recorrer sus toriis rojos evitando multitudes. Después, tren hacia Nara para visitar el imponente Gran Buda de Tōdai-ji, comer gyumabushi cerca del parque, y pasear entre los famosos ciervos. La jornada acaba de vuelta en Kioto con un paseo y cena en los callejones tradicionales de Pontocho.",
     history:
       "Fushimi Inari está dedicado a Inari, la deidad sintoísta del arroz, elemento fundamental para la antigua economía japonesa. Nara fue la primera capital permanente de Japón en el siglo VIII y es la cuna del budismo en el país.",
     schedule: [
@@ -394,9 +394,9 @@ export const days = [
       { time: "15:20–16:00", text: "Regreso desde Nara hacia JR Nara. No hacer ninguna visita adicional en este tramo: el objetivo es estar en JR Nara aproximadamente entre las 15:40 y las 16:00. Según dónde estemos, en bus o andando — sin hora exacta fijada de antemano." },
       { time: "~16:00–17:00", text: "🚆 JR Nara → Kyoto.\n\n🎫 **SUICA:** ✅ SÍ; pasar la tarjeta directamente por los tornos.\n\nCoger el siguiente servicio conveniente hacia Kyoto, sin hora fija. No requiere reserva. Si aparece un Miyakoji Rapid conveniente, usarlo porque reduce el tiempo de viaje. Objetivo: llegar a Kyoto aproximadamente entre las 16:45 y las 17:00, según el servicio." },
       { time: "17:00–18:15", text: "🏨 Regreso al Hotel Keihan Kyoto Hachijoguchi y descanso — ducha y relax antes de volver a salir. Bloque importante: no rellenar con nuevas visitas ni actividades turísticas." },
-      { time: "18:15–18:30", text: "Salida hacia Pontocho/Gion." },
-      { time: "18:30–21:30", text: "🍜 **PONTOCHO + GION + CENA**\n\nPaseo por Pontocho, después hacia la zona de Gion/Shirakawa. Cenamos en **Kyoto Engine Ramen 京都炎神** (https://maps.app.goo.gl/pMtT5gkMDACvSnNu8?g_st=ic) — el ramen estaba genial, riquísimo, recomendado por Japonismo. Después de cenar, paseo nocturno tranquilo si apetece." },
-      { time: "~21:30", text: "🏨 **REGRESO AL HOTEL: HOTEL KEIHAN KYOTO HACHIJOGUCHI** (https://www.google.com/maps/search/?api=1&query=Hotel+Keihan+Kyoto+Hachijoguchi)\n\nRegreso desde Gion/Pontocho a nuestro hotel en Kioto para descansar (2ª noche aquí).\n\n**Cómo volver:**\n- 🚇 Metro/Bus: Bus urbano o metro desde Shijo/Gion hasta Kyoto Station (~10–15 min, 🎫 **SUICA:** ✅ SÍ).\n- 🚶 A pie: Aprox. 25–30 min andando cruzando el río Kamo." },
+      { time: "18:15–18:30", text: "Salida hacia Pontocho." },
+      { time: "18:30–21:30", text: "🍜 **PONTOCHO + CENA**\n\nPaseo por Pontocho. Cenamos en **Kyoto Engine Ramen 京都炎神** (https://maps.app.goo.gl/pMtT5gkMDACvSnNu8?g_st=ic) — el ramen estaba genial, riquísimo, recomendado por Japonismo. Después de cenar, paseo nocturno tranquilo si apetece." },
+      { time: "~21:30", text: "🏨 **REGRESO AL HOTEL: HOTEL KEIHAN KYOTO HACHIJOGUCHI** (https://www.google.com/maps/search/?api=1&query=Hotel+Keihan+Kyoto+Hachijoguchi)\n\nRegreso desde Pontocho a nuestro hotel en Kioto para descansar (2ª noche aquí).\n\n**Cómo volver:**\n- 🚇 Metro/Bus: Bus urbano o metro desde Shijo hasta Kyoto Station (~10–15 min, 🎫 **SUICA:** ✅ SÍ).\n- 🚶 A pie: Aprox. 25–30 min andando cruzando el río Kamo." },
       { time: "🎫 RESERVAS", text: "No es necesario reservar por adelantado ninguno de los trenes ni transportes de este día. Todos son servicios regionales/locales que se pagan sobre la marcha con Suica. El restaurante Gyumabushi Miyama tampoco acepta reservas." }
     ],
     money: "Aprox. 40€ (comidas)",
