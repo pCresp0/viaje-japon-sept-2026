@@ -1,78 +1,65 @@
 export const stops = [
-  // ── ARAW 1: Pagdating sa Japan ───────────────────────────────────
-  { name: "Narita Airport", city: "Chiba", day: "Araw 1 at 15", detail: "Internasyonal na pagdating · N'EX papuntang Tokyo / Shinkansen papuntang Kyoto" },
-  { name: "Estasyon ng Kyoto", city: "Kyoto", day: "Araw 1–5", detail: "Pagdating gamit ang Shinkansen Nozomi · Sentral na estasyon sa Kyoto" },
-
-  // ── ARAW 2: Timog Kyoto at Nara ──────────────────────────────────
+  { name: "Narita Airport", city: "Chiba", day: "Mga Araw 1 at 15", detail: "Pagdating mula ibang bansa · N'EX papuntang Tokyo / Shinkansen papuntang Kyoto" },
+  { name: "Kyoto Station", city: "Kyoto", day: "Mga Araw 1–5", detail: "Pagdating gamit ang Nozomi Shinkansen · Base connection sa Kyoto" },
+  { name: "Hotel Keihan Kyoto Hachijoguchi", city: "Kyoto", day: "Araw 1", detail: "Pagdating, check-in at hapunan malapit sa AEON MALL" },
   { name: "Fushimi Inari Taisha", city: "Kyoto", day: "Araw 2", detail: "Dambana ng 10,000 pulang torii at mga daanan sa Bundok Inari" },
-  { name: "Nara at Todai-ji", city: "Nara", day: "Araw 2", detail: "Todai-ji, Bronze Great Buddha at parke ng mga usa" },
-  { name: "Pontocho at Miyagawacho", city: "Kyoto", day: "Araw 2", detail: "Panggabing lakad sa mga tradisyunal na eskinita sa tabi ng Ilog Kamo" },
-
-  // ── ARAW 3: Hilagang Higashiyama at mga Geisha ────────────────────
+  { name: "Tōdai-ji", city: "Nara", day: "Araw 2", detail: "Daibutsuden at ang bronze na Great Buddha" },
+  { name: "Gyumabushi Miyama 牛まぶし三山", city: "Nara", day: "Araw 2", detail: "Tanghalian — restaurant ng gyumabushi, walang reserbasyon" },
+  { name: "Parke ng Nara", city: "Nara", day: "Araw 2", detail: "Sagradong mga usa at shika senbei" },
+  { name: "Nigatsu-do", city: "Nara", day: "Araw 2", detail: "OPTIONAL — maikling akyat para sa panoramic views, kung maganda lang ang takbo ng oras" },
+  { name: "Pontocho at Miyagawacho", city: "Kyoto", day: "Araw 2", detail: "Lakad at hapunan sa mga tradisyunal na eskinita sa tabi ng Ilog Kamo" },
   { name: "Ginkaku-ji", city: "Kyoto", day: "Araw 3", detail: "Silver Pavilion at zen sand garden" },
-  { name: "Philosopher's Path", city: "Kyoto", day: "Araw 3", detail: "Daanang may cobblestone sa tabi ng kanal" },
-  { name: "Eikando at Nanzen-ji", city: "Kyoto", day: "Araw 3", detail: "Mga zen temple sa Higashiyama at aqueduct na ladrilyo" },
-  { name: "Nishiki Market", city: "Kyoto", day: "Araw 3", detail: "Kusina ng Kyoto at pagtikim ng lokal na pagkain" },
+  { name: "Philosopher's Path", city: "Kyoto", day: "Araw 3", detail: "Batong daanan sa tabi ng kanal" },
+  { name: "Eikando at Nanzen-ji", city: "Kyoto", day: "Araw 3", detail: "Mga zen temple sa Higashiyama at brick aqueduct" },
+  { name: "Nishiki Market", city: "Kyoto", day: "Araw 3", detail: "Kusina ng Kyoto at pagtikim ng pagkain" },
+  { name: "Pontocho at Miyagawacho", city: "Kyoto", day: "Araw 3", detail: "Panggabing lakad sa mga tradisyunal na eskinita sa tabi ng Ilog Kamo" },
   { name: "Distrito ng Gion", city: "Kyoto", day: "Araw 3", detail: "Hanamikoji, Shirakawa at makasaysayang distrito ng geisha" },
-
-  // ── ARAW 4: Hilagang-Kanlurang Kyoto at Arashiyama ───────────────
-  { name: "Kinkaku-ji", city: "Kyoto", day: "Araw 4", detail: "Ang Golden Pavilion na nababalutan ng gold leaf" },
-  { name: "Ryoan-ji", city: "Kyoto", day: "Araw 4", detail: "Ang pinakatanyag na dry zen rock garden sa Japan (15 bato)" },
-  { name: "Ninna-ji", city: "Kyoto", day: "Araw 4", detail: "Imperyal na templo, World Heritage Site na may mga dwarf cherry tree" },
-  { name: "Otagi Nenbutsu-ji", city: "Kyoto", day: "Araw 4", detail: "1,200 natatanging batong estatwa ng rakan sa Saga-Toriimoto" },
-  { name: "Arashiyama at Bamboo Grove", city: "Kyoto", day: "Araw 4", detail: "Kagubatan ng kawayan, tulay ng Togetsukyo at tramway ng Randen" },
-
-  // ── ARAW 5: Tradisyunal na Kyoto at Osaka Castle ─────────────────
-  { name: "Kiyomizu-dera", city: "Kyoto", day: "Araw 5", detail: "Malaking kahoy na terasa sa ibabaw ng lambak at talon ng Otowa" },
-  { name: "Higashiyama, Yasaka at Chion-in", city: "Kyoto", day: "Araw 5", detail: "Mga kalsada ng Ninenzaka/Sannenzaka, Maruyama Park at Chion-in" },
-  { name: "Kastilyo ng Osaka", city: "Osaka", day: "Araw 5", detail: "Makasaysayang kuta ni Toyotomi Hideyoshi at parke" },
-  { name: "Dotonbori at Namba", city: "Osaka", day: "Araw 5", detail: "Nagliliwanag na neon, Glico Man, takoyaki at street food" },
-
-  // ── ARAW 6: Kanazawa ─────────────────────────────────────────────
-  { name: "Kenroku-en", city: "Ishikawa", day: "Araw 6", detail: "Isa sa tatlong dakilang landscape garden sa Japan" },
-  { name: "Nagamachi Samurai District", city: "Ishikawa", day: "Araw 6", detail: "Mga lumang eskinita na may lupang pader ng tahanan ng mga samurai" },
-  { name: "Omicho Market", city: "Ishikawa", day: "Araw 6", detail: "Sariwang seafood mula sa Dagat ng Japan" },
-  { name: "Higashi Chaya", city: "Ishikawa", day: "Araw 6", detail: "Makasaysayang distrito ng mga teahouse at kulturang geiko ng Kanazawa" },
-
-  // ── ARAW 7: Shirakawa-go at Takayama ────────────────────────────
-  { name: "Shirakawa-go", city: "Gifu", day: "Araw 7", detail: "Tradisyunal na baryong gassho-zukuri, UNESCO heritage" },
-  { name: "Takayama (Sanmachi Suji)", city: "Gifu", day: "Araw 7–8", detail: "Makasaysayang lumang bayan, mga pagawaan ng sake at Hida beef" },
-
-  // ── ARAW 8: Ang Nakasendo Trail ──────────────────────────────────
-  { name: "Magome", city: "Nakatsugawa", day: "Araw 8", detail: "Nakasandal na post town, simula ng lakad sa Nakasendo · Magome Chaya" },
-  { name: "Tsumago", city: "Nagano", day: "Araw 8", detail: "Makasaysayang post town sa dulo ng Magome → Tsumago hike (8 km)" },
-
-  // ── ARAW 9: Biyahe papuntang Tokyo at Akihabara ──────────────────
-  { name: "Estasyon ng Nagoya", city: "Aichi", day: "Araw 9", detail: "Sentro ng transit · hinto para sa ekiben bago ang Tokaido Shinkansen" },
-  { name: "Akihabara", city: "Tokyo", day: "Araw 9", detail: "Electric Town, electronics, manga at mga tindahan ng anime figure" },
-
-  // ── ARAW 10: Asakusa, Ueno at Odaiba ────────────────────────────
-  { name: "Asakusa at Senso-ji", city: "Tokyo", day: "Araw 10", detail: "Templo ng Senso-ji, tarangkahan ng Kaminarimon at Nakamise-dori" },
-  { name: "Ueno at Ameyoko", city: "Tokyo", day: "Araw 10", detail: "Ueno Park at sikat na bukas na pamilihan ng Ameyoko" },
-  { name: "Odaiba at Look ng Tokyo", city: "Tokyo", day: "Araw 10", detail: "Yurikamome automated train, higanteng Gundam at paglubog ng araw sa look" },
-
-  // ── ARAW 11: Shibuya, Harajuku at Shinjuku ───────────────────────
-  { name: "Shibuya Crossing", city: "Tokyo", day: "Araw 11", detail: "Ang pinaka-abalang tawiran ng tao sa mundo at Pokémon Center" },
-  { name: "Harajuku", city: "Tokyo", day: "Araw 11", detail: "Takeshita Street, kulturang kabataan, vintage fashion at crepes" },
-  { name: "Meiji Jingu", city: "Tokyo", day: "Araw 11", detail: "Imperyal na dambana ng Shinto sa banal na gubat ng 100,000 puno sa Yoyogi" },
-  { name: "Shinjuku", city: "Tokyo", day: "Araw 11", detail: "Observatory ng Metropolitan Gov., Omoide Yokocho at neon ng Kabukicho" },
-
-  // ── ARAW 12: Gastronomiya, Karangyaan at mga Mirador ────────────
-  { name: "Toyosu Market", city: "Tokyo", day: "Araw 12", detail: "Kahalili ng Tsukiji, wholesale market at sariwang agahang sushi" },
-  { name: "Estasyon ng Tokyo at Palasyo Imperyal", city: "Tokyo", day: "Araw 12", detail: "Arkitekturang pulang ladrilyo ng estasyon at plaza ng palasyo" },
-  { name: "Ginza", city: "Tokyo", day: "Araw 12", detail: "Modernong arkitektura at mga luxury boutique" },
-  { name: "Roppongi (Mori Tower)", city: "Tokyo", day: "Araw 12", detail: "Tokyo City View observation deck na may tanawin ng Tokyo Tower" },
-
-  // ── ARAW 13: Ruta ng Nintendo at Pamimili ────────────────────────
-  { name: "Ikebukuro", city: "Tokyo", day: "Araw 13", detail: "Mega Pokémon Center Ikebukuro at Nintendo Store Tokyo" },
-  { name: "Nakano Broadway", city: "Tokyo", day: "Araw 13", detail: "Sentro ng mga retro collectible, vintage figure at manga" },
-
-  // ── ARAW 14: Eksklusibong Ekskursiyon sa Bundok Fuji ─────────────
-  { name: "Chureito Pagoda (Arakurayama Sengen)", city: "Yamanashi", day: "Araw 14", detail: "Tanyag na tanawing postcard ng 5-palapag na pagoda at Bundok Fuji" },
-  { name: "Baryo ng Oshino Hakkai", city: "Yamanashi", day: "Araw 14", detail: "Malilinaw na bukal ng tubig mula sa natunaw na niyebe ng Fuji" },
-  { name: "Gubat ng Aokigahara", city: "Yamanashi", day: "Araw 14", detail: "Ang 'Dagat ng mga Puno' na tumutubo sa ibabaw ng batong lava" },
-  { name: "Talon ng Shiraito", city: "Shizuoka", day: "Araw 14", detail: "Kahanga-hangang talon ng mga hibla ng sutla mula sa bukal ng bulkan" },
-  { name: "Ruta ng mga Lawa ng Fuji", city: "Yamanashi", day: "Araw 14", detail: "Magagandang tanawin ng Bundok Fuji sa Lawa ng Kawaguchiko at Saiko" },
+  { name: "Kinkaku-ji", city: "Kyoto", day: "Araw 4", detail: "Ang Golden Pavilion na may gold leaf" },
+  { name: "Ryoan-ji", city: "Kyoto", day: "Araw 4", detail: "Ang pinakasikat na dry zen garden sa Japan, may 15 bato" },
+  { name: "Ninna-ji", city: "Kyoto", day: "Araw 4", detail: "Imperial temple, World Heritage Site, may dwarf cherry trees" },
+  { name: "Otagi Nenbutsu-ji", city: "Kyoto", day: "Araw 4", detail: "1,200 estatwa ng rakan na iba-iba ang mukha, sa Saga-Toriimoto" },
+  { name: "Saga-Toriimoto", city: "Kyoto", day: "Araw 4", detail: "Makasaysayang kalye na may mga bahay na may thatched roof" },
+  { name: "Arashiyama at Bamboo Grove", city: "Kyoto", day: "Araw 4", detail: "Bamboo grove, Togetsukyo bridge at Randen tram" },
+  { name: "Kiyomizu-dera", city: "Kyoto", day: "Araw 5", detail: "Malaking wooden terrace sa ibabaw ng lambak at Otowa waterfall" },
+  { name: "Ninenzaka at Sannenzaka", city: "Kyoto", day: "Araw 5", detail: "Lakad sa sikat na batong daanan na may tradisyunal na mga bahay" },
+  { name: "Yasaka, Maruyama at Chion-in", city: "Kyoto", day: "Araw 5", detail: "Yasaka Shrine, Maruyama Park at malaking gate ng Chion-in" },
+  { name: "Heian Jingu", city: "Kyoto", day: "Araw 5", detail: "Dambana na may malaking pulang torii at magandang hardin" },
+  { name: "Osaka Castle", city: "Osaka", day: "Araw 5", detail: "Makasaysayang kuta ni Toyotomi Hideyoshi at parke" },
+  { name: "Dotonbori at Namba", city: "Osaka", day: "Araw 5", detail: "Mga neon, Glico sign, takoyaki at street food" },
+  { name: "Shinsekai", city: "Osaka", day: "Araw 5", detail: "Retro na distrito na may Tsutenkaku tower at mga kushikatsu stall" },
+  { name: "Kenroku-en", city: "Ishikawa", day: "Araw 6", detail: "Isa sa tatlong pinakamagandang landscape garden sa Japan" },
+  { name: "Nagamachi Samurai District", city: "Ishikawa", day: "Araw 6", detail: "Mga kalyeng may lupang pader ng lumang tahanan ng samurai" },
+  { name: "Omicho Market", city: "Ishikawa", day: "Araw 6", detail: "Ang pinakamagandang sariwang seafood sa baybayin ng Sea of Japan" },
+  { name: "Higashi Chaya", city: "Ishikawa", day: "Araw 6", detail: "Makasaysayang distrito ng teahouse at mga geiko ng Kanazawa" },
+  { name: "Shirakawa-go", city: "Gifu", day: "Araw 7", detail: "Tradisyunal na gassho-zukuri village, UNESCO World Heritage" },
+  { name: "Takayama (Sanmachi Suji)", city: "Gifu", day: "Mga Araw 7–8", detail: "Tradisyunal na lumang bayan, sake brewery at Hida beef" },
+  { name: "Magome", city: "Nakatsugawa", day: "Araw 8", detail: "Post town sa burol, simula ng hike · Magome Chaya" },
+  { name: "Tsumago", city: "Nagano", day: "Araw 8", detail: "Katapusan ng makasaysayang Magome → Tsumago hike (8 km)" },
+  { name: "Nakatsugawa Station", city: "Gifu", day: "Araw 9", detail: "Mahalagang palitan ng physical JR tickets bago sumakay sa Shinano 4" },
+  { name: "Nagoya Station", city: "Aichi", day: "Araw 9", detail: "Transit connection · hinto para sa ekiben bago ang Shinkansen" },
+  { name: "Akihabara", city: "Tokyo", day: "Araw 9", detail: "Electric Town, mga tindahan ng electronics, figures at otaku culture" },
+  { name: "Asakusa at Senso-ji", city: "Tokyo", day: "Araw 10", detail: "Senso-ji Temple, Kaminarimon gate at Nakamise street" },
+  { name: "Ueno at Ameyoko", city: "Tokyo", day: "Araw 10", detail: "Ueno Park at ang street market na Ameyoko" },
+  { name: "Odaiba at Tokyo Bay", city: "Tokyo", day: "Araw 10", detail: "Yurikamome train, Gundam statue at sunset sa bay" },
+  { name: "Shibuya Crossing", city: "Tokyo", day: "Araw 11", detail: "Ang pinaka-busy na pedestrian crossing, Miyashita Park at Pokémon Center" },
+  { name: "Harajuku", city: "Tokyo", day: "Araw 11", detail: "Takeshita Street, alternative na youth fashion at crepes" },
+  { name: "Meiji Jingu", city: "Tokyo", day: "Araw 11", detail: "Imperial shrine sa masukal na gubat ng Yoyogi Park" },
+  { name: "Shinjuku", city: "Tokyo", day: "Araw 11", detail: "Metropolitan Government observation deck, Omoide Yokocho at Kabukicho" },
+  { name: "Toyosu Market", city: "Tokyo", day: "Araw 12", detail: "Kahalili ng Tsukiji, wholesale market at sariwang sushi breakfast" },
+  { name: "Tokyo Station at Shiodome", city: "Tokyo", day: "Araw 12", detail: "Imperial Palace plaza, brick facade at mga skyscraper ng Shiodome" },
+  { name: "Ginza", city: "Tokyo", day: "Araw 12", detail: "Modernong arkitektura at mga flagship store" },
+  { name: "Roppongi (Mori Tower)", city: "Tokyo", day: "Araw 12", detail: "Tokyo City View observation deck na may panoramic views at Tokyo Tower" },
+  { name: "Ikebukuro", city: "Tokyo", day: "Araw 13", detail: "Mega Pokémon Center Ikebukuro at mga tindahan ng anime" },
+  { name: "Nakano Broadway", city: "Tokyo", day: "Araw 13", detail: "Mecca ng retro collectibles, vintage figures at manga" },
+  { name: "Mishima Station", city: "Shizuoka", day: "Araw 14", detail: "Pagdating gamit ang Kodama Shinkansen at meeting point para simulan ang ruta gamit ang mini-van" },
+  { name: "Chureito Pagoda (Arakurayama Sengen)", city: "Yamanashi", day: "Araw 14", detail: "Ang pinaka-iconic na postcard view ng Japan na may pagoda at Fuji" },
+  { name: "Kitaguchi Hongu Fuji Sengen Shrine", city: "Yamanashi", day: "Araw 14", detail: "Makasaysayang simulan ng mga pilgrim, may mga sedar na daan-daang taon na" },
+  { name: "Oshino Hakkai Village", city: "Yamanashi", day: "Araw 14", detail: "Mga bukal ng natunaw na yelo at tradisyunal na mga bahay na thatched-roof" },
+  { name: "Aokigahara Forest", city: "Yamanashi", day: "Araw 14", detail: "Ang Sea of Trees sa ibabaw ng lava flow ng bulkan" },
+  { name: "Shiraito Falls", city: "Shizuoka", day: "Araw 14", detail: "Napakagandang talon ng volcanic water na parang sutla" },
+  { name: "Fuji Five Lakes Route", city: "Yamanashi", day: "Araw 14", detail: "Panoramic views ng Bundok Fuji mula sa Lake Kawaguchiko at Lake Saiko" },
+  { name: "Shin-Fuji Station", city: "Shizuoka", day: "Araw 14", detail: "Katapusan ng tour at pagbalik sa Tokyo gamit ang Shinkansen" },
+  { name: "Keisei-Ueno Station", city: "Tokyo", day: "Araw 15", detail: "Alis ng Keisei Skyliner diretso papuntang Narita (may bagahe)" },
 ];
 
 export const filterData = {

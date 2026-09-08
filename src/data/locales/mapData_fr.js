@@ -1,78 +1,65 @@
 export const stops = [
-  // ── JOUR 1 : Arrivée au Japon ────────────────────────────────────
   { name: "Aéroport de Narita", city: "Chiba", day: "Jours 1 et 15", detail: "Arrivée internationale · N'EX vers Tokyo / Shinkansen vers Kyoto" },
-  { name: "Gare de Kyoto", city: "Kyoto", day: "Jours 1–5", detail: "Arrivée en Shinkansen Nozomi · Nœud central à Kyoto" },
-
-  // ── JOUR 2 : Sud de Kyoto et Nara ────────────────────────────────
+  { name: "Gare de Kyoto", city: "Kyoto", day: "Jours 1–5", detail: "Arrivée en Shinkansen Nozomi · Connexion de base à Kyoto" },
+  { name: "Hotel Keihan Kyoto Hachijoguchi", city: "Kyoto", day: "Jour 1", detail: "Arrivée, check-in et dîner à proximité à l'AEON MALL" },
   { name: "Fushimi Inari Taisha", city: "Kyoto", day: "Jour 2", detail: "Sanctuaire aux 10 000 torii rouges et sentiers du mont Inari" },
-  { name: "Nara et Todai-ji", city: "Nara", day: "Jour 2", detail: "Todai-ji, Grand Bouddha en bronze et parc aux daims" },
-  { name: "Pontocho et Miyagawacho", city: "Kyoto", day: "Jour 2", detail: "Balade du soir dans les ruelles traditionnelles au bord du fleuve Kamo" },
-
-  // ── JOUR 3 : Nord de Higashiyama et Geishas ──────────────────────
+  { name: "Tōdai-ji", city: "Nara", day: "Jour 2", detail: "Daibutsuden et le Grand Bouddha en bronze" },
+  { name: "Gyumabushi Miyama 牛まぶし三山", city: "Nara", day: "Jour 2", detail: "Déjeuner — restaurant de gyumabushi, sans réservation" },
+  { name: "Parc de Nara", city: "Nara", day: "Jour 2", detail: "Daims sacrés et shika senbei" },
+  { name: "Nigatsu-do", city: "Nara", day: "Jour 2", detail: "FACULTATIF — brève montée pour vues panoramiques, seulement si on est bien dans les temps" },
+  { name: "Pontocho et Miyagawacho", city: "Kyoto", day: "Jour 2", detail: "Balade et dîner dans les ruelles traditionnelles le long de la rivière Kamo" },
   { name: "Ginkaku-ji", city: "Kyoto", day: "Jour 3", detail: "Pavillon d'Argent et jardin zen de sable" },
-  { name: "Chemin de la Philosophie", city: "Kyoto", day: "Jour 3", detail: "Promenade piétonne pavée le long du canal" },
+  { name: "Allée de la Philosophie", city: "Kyoto", day: "Jour 3", detail: "Sentier pavé le long du canal" },
   { name: "Eikando et Nanzen-ji", city: "Kyoto", day: "Jour 3", detail: "Temples zen de Higashiyama et aqueduc en briques" },
-  { name: "Marché de Nishiki", city: "Kyoto", day: "Jour 3", detail: "Le garde-manger de Kyoto et dégustations culinaires" },
+  { name: "Marché de Nishiki", city: "Kyoto", day: "Jour 3", detail: "La cuisine de Kyoto et dégustation gastronomique" },
+  { name: "Pontocho et Miyagawacho", city: "Kyoto", day: "Jour 3", detail: "Balade du soir dans les ruelles traditionnelles le long de la rivière Kamo" },
   { name: "Quartier de Gion", city: "Kyoto", day: "Jour 3", detail: "Hanamikoji, Shirakawa et quartier historique des geishas" },
-
-  // ── JOUR 4 : Nord-ouest de Kyoto et Arashiyama ───────────────────
   { name: "Kinkaku-ji", city: "Kyoto", day: "Jour 4", detail: "Le Pavillon d'Or recouvert de feuilles d'or" },
-  { name: "Ryoan-ji", city: "Kyoto", day: "Jour 4", detail: "Le plus célèbre jardin sec zen du Japon (15 rochers)" },
-  { name: "Ninna-ji", city: "Kyoto", day: "Jour 4", detail: "Temple impérial, patrimoine mondial avec cerisiers nains" },
-  { name: "Otagi Nenbutsu-ji", city: "Kyoto", day: "Jour 4", detail: "1 200 statues de rakan aux visages uniques à Saga-Toriimoto" },
-  { name: "Arashiyama et Forêt de Bambous", city: "Kyoto", day: "Jour 4", detail: "Bambouseraie, pont Togetsukyo et tramway Randen" },
-
-  // ── JOUR 5 : Kyoto Traditionnel et Château d'Osaka ───────────────
+  { name: "Ryoan-ji", city: "Kyoto", day: "Jour 4", detail: "Le plus célèbre jardin sec zen du Japon, 15 rochers" },
+  { name: "Ninna-ji", city: "Kyoto", day: "Jour 4", detail: "Temple impérial, patrimoine mondial, avec cerisiers nains" },
+  { name: "Otagi Nenbutsu-ji", city: "Kyoto", day: "Jour 4", detail: "1 200 statues de rakan au visage unique, à Saga-Toriimoto" },
+  { name: "Saga-Toriimoto", city: "Kyoto", day: "Jour 4", detail: "Rue historique préservée aux maisons de chaume" },
+  { name: "Arashiyama et forêt de bambous", city: "Kyoto", day: "Jour 4", detail: "Forêt de bambous, pont Togetsukyo et tramway Randen" },
   { name: "Kiyomizu-dera", city: "Kyoto", day: "Jour 5", detail: "Grande terrasse en bois sur la vallée et cascade Otowa" },
-  { name: "Higashiyama, Yasaka et Chion-in", city: "Kyoto", day: "Jour 5", detail: "Pentes Ninenzaka/Sannenzaka, parc Maruyama et Chion-in" },
+  { name: "Ninenzaka et Sannenzaka", city: "Kyoto", day: "Jour 5", detail: "Balade sur les célèbres pentes pavées aux maisons traditionnelles" },
+  { name: "Yasaka, Maruyama et Chion-in", city: "Kyoto", day: "Jour 5", detail: "Sanctuaire Yasaka, parc Maruyama et grande porte du Chion-in" },
+  { name: "Heian Jingu", city: "Kyoto", day: "Jour 5", detail: "Sanctuaire avec un grand torii rouge et de beaux jardins" },
   { name: "Château d'Osaka", city: "Osaka", day: "Jour 5", detail: "Forteresse historique de Toyotomi Hideyoshi et parc" },
-  { name: "Dotonbori et Namba", city: "Osaka", day: "Jour 5", detail: "Néons géants, Glico Man, takoyaki et street food" },
-
-  // ── JOUR 6 : Kanazawa ────────────────────────────────────────────
-  { name: "Kenroku-en", city: "Ishikawa", day: "Jour 6", detail: "L'un des trois grands jardins paysagers célèbres du Japon" },
-  { name: "Quartier samouraï de Nagamachi", city: "Ishikawa", day: "Jour 6", detail: "Ruelles aux murs de terre des anciennes demeures de samouraïs" },
-  { name: "Marché Omicho", city: "Ishikawa", day: "Jour 6", detail: "Les meilleurs fruits de mer frais de la mer du Japon" },
+  { name: "Dotonbori et Namba", city: "Osaka", day: "Jour 5", detail: "Néons, enseigne Glico, takoyaki et street food" },
+  { name: "Shinsekai", city: "Osaka", day: "Jour 5", detail: "Quartier rétro avec la tour Tsutenkaku et les stands de kushikatsu" },
+  { name: "Kenroku-en", city: "Ishikawa", day: "Jour 6", detail: "L'un des trois grands jardins paysagers du Japon" },
+  { name: "Quartier samouraï de Nagamachi", city: "Ishikawa", day: "Jour 6", detail: "Ruelles aux murs de terre de l'ancienne résidence samouraï" },
+  { name: "Marché Omicho", city: "Ishikawa", day: "Jour 6", detail: "Les meilleurs fruits de mer frais de la côte de la mer du Japon" },
   { name: "Higashi Chaya", city: "Ishikawa", day: "Jour 6", detail: "Quartier historique des maisons de thé et geiko de Kanazawa" },
-
-  // ── JOUR 7 : Shirakawa-go et Takayama ────────────────────────────
-  { name: "Shirakawa-go", city: "Gifu", day: "Jour 7", detail: "Village traditionnel gassho-zukuri classé à l'UNESCO" },
-  { name: "Takayama (Sanmachi Suji)", city: "Gifu", day: "Jours 7–8", detail: "Cité historique préservée, brasseries de saké et bœuf de Hida" },
-
-  // ── JOUR 8 : La Route du Nakasendo ───────────────────────────────
-  { name: "Magome", city: "Nakatsugawa", day: "Jour 8", detail: "Bourg-relais en pente, départ du Nakasendo · Magome Chaya" },
-  { name: "Tsumago", city: "Nagano", day: "Jour 8", detail: "Arrivée de la randonnée historique Magome → Tsumago (8 km)" },
-
-  // ── JOUR 9 : Transit vers Tokyo et Akihabara ─────────────────────
-  { name: "Gare de Nagoya", city: "Aichi", day: "Jour 9", detail: "Nœud de correspondance · arrêt ekiben avant le Tokaido Shinkansen" },
-  { name: "Akihabara", city: "Tokyo", day: "Jour 9", detail: "Electric Town, électronique, mangas et boutiques de figurines" },
-
-  // ── JOUR 10 : Asakusa, Ueno et Odaiba ────────────────────────────
-  { name: "Asakusa et Senso-ji", city: "Tokyo", day: "Jour 10", detail: "Temple Senso-ji, porte Kaminarimon et rue commerçante Nakamise" },
-  { name: "Ueno et Ameyoko", city: "Tokyo", day: "Jour 10", detail: "Parc d'Ueno et grand marché populaire d'Ameyoko" },
-  { name: "Odaiba et Baie de Tokyo", city: "Tokyo", day: "Jour 10", detail: "Train sans conducteur Yurikamome, Gundam géant et coucher de soleil" },
-
-  // ── JOUR 11 : Shibuya, Harajuku et Shinjuku ──────────────────────
-  { name: "Carrefour de Shibuya", city: "Tokyo", day: "Jour 11", detail: "Le carrefour piéton le plus célèbre du monde et Pokémon Center" },
-  { name: "Harajuku", city: "Tokyo", day: "Jour 11", detail: "Rue Takeshita, culture jeune alternative et crêpes" },
-  { name: "Meiji Jingu", city: "Tokyo", day: "Jour 11", detail: "Sanctuaire impérial dans la forêt sacrée de 100 000 arbres de Yoyogi" },
-  { name: "Shinjuku", city: "Tokyo", day: "Jour 11", detail: "Observatoire du gouvernement métropolitain, Omoide Yokocho et néons" },
-
-  // ── JOUR 12 : Gastronomie, Luxe et Belvédères ────────────────────
-  { name: "Marché de Toyosu", city: "Tokyo", day: "Jour 12", detail: "Successeur de Tsukiji, marché de gros et sushis ultra-frais du matin" },
-  { name: "Gare de Tokyo et Palais Impérial", city: "Tokyo", day: "Jour 12", detail: "Architecture en briques rouges de la gare et esplanade du palais" },
-  { name: "Ginza", city: "Tokyo", day: "Jour 12", detail: "Architecture contemporaine et boutiques de haute couture" },
-  { name: "Roppongi (Mori Tower)", city: "Tokyo", day: "Jour 12", detail: "Belvédère Tokyo City View avec panorama sur la Tour de Tokyo" },
-
-  // ── JOUR 13 : Route Nintendo et Shopping ─────────────────────────
-  { name: "Ikebukuro", city: "Tokyo", day: "Jour 13", detail: "Mega Pokémon Center Ikebukuro et Nintendo Store Tokyo" },
-  { name: "Nakano Broadway", city: "Tokyo", day: "Jour 13", detail: "Mecque des objets de collection rétro, figurines vintage et mangas" },
-
-  // ── JOUR 14 : Excursion Exclusive au Mont Fuji ───────────────────
-  { name: "Pagode Chureito (Arakurayama Sengen)", city: "Yamanashi", day: "Jour 14", detail: "La vue carte postale légendaire de la pagode à 5 étages et du Fuji" },
-  { name: "Village d'Oshino Hakkai", city: "Yamanashi", day: "Jour 14", detail: "Bassins cristallins alimentés par la fonte des neiges du Fuji" },
-  { name: "Forêt d'Aokigahara", city: "Yamanashi", day: "Jour 14", detail: "La Mer d'Arbres millénaire sur coulée de lave volcanique" },
-  { name: "Cascades de Shiraito", city: "Shizuoka", day: "Jour 14", detail: "Spectaculaire chute d'eau en fils de soie blanche" },
-  { name: "Route des Lacs du Fuji", city: "Yamanashi", day: "Jour 14", detail: "Panoramas sur le mont Fuji depuis les lacs Kawaguchiko et Saiko" },
+  { name: "Shirakawa-go", city: "Gifu", day: "Jour 7", detail: "Village traditionnel gassho-zukuri, patrimoine mondial UNESCO" },
+  { name: "Takayama (Sanmachi Suji)", city: "Gifu", day: "Jours 7–8", detail: "Vieille ville traditionnelle, distilleries de saké et bœuf de Hida" },
+  { name: "Magome", city: "Nakatsugawa", day: "Jour 8", detail: "Village-étape en pente, début de la randonnée · Magome Chaya" },
+  { name: "Tsumago", city: "Nagano", day: "Jour 8", detail: "Fin de la randonnée historique Magome → Tsumago (8 km)" },
+  { name: "Gare de Nakatsugawa", city: "Gifu", day: "Jour 9", detail: "Échange crucial des billets JR physiques avant de monter dans le Shinano 4" },
+  { name: "Gare de Nagoya", city: "Aichi", day: "Jour 9", detail: "Correspondance de transit · arrêt ekiben avant le Shinkansen" },
+  { name: "Akihabara", city: "Tokyo", day: "Jour 9", detail: "Electric Town, magasins d'électronique, figurines et culture otaku" },
+  { name: "Asakusa et Senso-ji", city: "Tokyo", day: "Jour 10", detail: "Temple Senso-ji, porte Kaminarimon et rue Nakamise" },
+  { name: "Ueno et Ameyoko", city: "Tokyo", day: "Jour 10", detail: "Parc d'Ueno et marché de rue Ameyoko" },
+  { name: "Odaiba et la baie de Tokyo", city: "Tokyo", day: "Jour 10", detail: "Train Yurikamome, statue Gundam et coucher de soleil sur la baie" },
+  { name: "Carrefour de Shibuya", city: "Tokyo", day: "Jour 11", detail: "Le carrefour piéton le plus fréquenté, Miyashita Park et Pokémon Center" },
+  { name: "Harajuku", city: "Tokyo", day: "Jour 11", detail: "Rue Takeshita, mode jeune alternative et crêpes" },
+  { name: "Meiji Jingu", city: "Tokyo", day: "Jour 11", detail: "Sanctuaire impérial dans la forêt luxuriante du parc Yoyogi" },
+  { name: "Shinjuku", city: "Tokyo", day: "Jour 11", detail: "Belvédère du gouvernement métropolitain, Omoide Yokocho et Kabukicho" },
+  { name: "Marché de Toyosu", city: "Tokyo", day: "Jour 12", detail: "Successeur de Tsukiji, marché de gros et petit-déjeuner de sushi frais" },
+  { name: "Gare de Tokyo et Shiodome", city: "Tokyo", day: "Jour 12", detail: "Esplanade du palais impérial, façade en briques et gratte-ciel de Shiodome" },
+  { name: "Ginza", city: "Tokyo", day: "Jour 12", detail: "Architecture contemporaine et boutiques emblématiques" },
+  { name: "Roppongi (Mori Tower)", city: "Tokyo", day: "Jour 12", detail: "Belvédère Tokyo City View avec vues panoramiques et Tour de Tokyo" },
+  { name: "Ikebukuro", city: "Tokyo", day: "Jour 13", detail: "Méga Pokémon Center Ikebukuro et boutiques d'anime" },
+  { name: "Nakano Broadway", city: "Tokyo", day: "Jour 13", detail: "Mecque des objets rétro, figurines vintage et manga" },
+  { name: "Gare de Mishima", city: "Shizuoka", day: "Jour 14", detail: "Arrivée en Shinkansen Kodama et point de rendez-vous pour démarrer l'itinéraire en mini-van" },
+  { name: "Pagode Chureito (Arakurayama Sengen)", city: "Yamanashi", day: "Jour 14", detail: "La vue carte postale la plus emblématique du Japon avec la pagode et le Fuji" },
+  { name: "Sanctuaire Kitaguchi Hongu Fuji Sengen", city: "Yamanashi", day: "Jour 14", detail: "Point de départ historique des pèlerins, avec des cèdres centenaires" },
+  { name: "Village d'Oshino Hakkai", city: "Yamanashi", day: "Jour 14", detail: "Sources d'eau de fonte et maisons traditionnelles en chaume" },
+  { name: "Forêt d'Aokigahara", city: "Yamanashi", day: "Jour 14", detail: "La mer d'arbres sur les coulées de lave du volcan" },
+  { name: "Chutes de Shiraito", city: "Shizuoka", day: "Jour 14", detail: "Spectaculaire cascade d'eau volcanique en fils de soie" },
+  { name: "Route des lacs du Fuji", city: "Yamanashi", day: "Jour 14", detail: "Vues panoramiques du mont Fuji depuis les lacs Kawaguchiko et Saiko" },
+  { name: "Gare de Shin-Fuji", city: "Shizuoka", day: "Jour 14", detail: "Fin du tour et retour à Tokyo en Shinkansen" },
+  { name: "Gare de Keisei-Ueno", city: "Tokyo", day: "Jour 15", detail: "Départ du Keisei Skyliner direct vers Narita (avec les bagages)" },
 ];
 
 export const filterData = {

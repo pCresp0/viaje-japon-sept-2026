@@ -51,49 +51,64 @@ export const days = [
     "money": "Tinatayang €40 (pagkain) + transportasyon"
   },
   {
-    "title": "Timog Kyoto at Nara",
+    "title": "Fushimi Inari + Nara: Great Buddha, mga usa at Pontocho",
     "cities": "Kyoto, Nara",
-    "summary": "Magsisimula tayo nang napakaaga sa iconic na Fushimi Inari para maglakad sa mga pulang torii nito upang iwasan ang karamihan. Pagkatapos, isang direktang tren papuntang Nara para makita ang mga sikat nitong usa at ang napakalaking Great Buddha. Magtatapos ang araw pabalik sa Kyoto na may paglubog ng araw sa paglalakad sa mga tradisyonal na eskinita ng mga geisha.",
-    "history": "Ang Fushimi Inari ay nakatuon kay Inari, ang diyos ng Shinto ng bigas, isang pangunahing elemento para sa sinaunang ekonomiya ng Hapon. Ang Nara ay ang unang permanenteng kabisera ng Japan noong ika-8 siglo at siya ring pinagmulan ng Budismo sa bansa.",
+    "summary": "Magsisimula tayo nang maaga sa kilalang Fushimi Inari para libutin ang mga pulang torii nito habang iniiwasan ang mga tao. Pagkatapos, tren papuntang Nara para bisitahin ang napakalaking Great Buddha ng Tōdai-ji, kumain ng gyumabushi malapit sa parke, at maglakad-lakad kasama ang mga sikat na usa. Magtatapos ang araw pabalik sa Kyoto na may lakad at hapunan sa mga tradisyunal na eskinita ng Pontocho at Gion.",
+    "history": "Nakatuon ang Fushimi Inari kay Inari, ang diyos ng bigas sa Shinto, mahalagang elemento para sa sinaunang ekonomiya ng Japan. Ang Nara ang unang permanenteng kabisera ng Japan noong ika-8 siglo at ang pinagmulan ng Budismo sa bansa.",
     "schedule": [
       {
-        "text": "Gumising. 🍙 Takeaway almusal na binili kagabi. Kainin bago dumating sa shrine o habang nagbibyahe."
+        "text": "Gising na. 🍙 Take-away breakfast na binili kagabi. Kumain bago dumating sa dambana o habang nasa biyahe."
       },
       {
-        "text": "🚆 JR Nara Line: Kyoto Station → Inari Station (~5 min). Walang reserbasyon. Gumamit ng IC card o bumili ng single ticket sa istasyon. Ang Inari Station ay nasa tabi mismo ng shrine."
+        "text": "🚆 JR Nara Line: Kyoto Station → Inari Station (~5 min).\n\n🎫 **SUICA:** ✅ OO; i-tap ang card nang direkta sa mga gate.\n\nWalang kailangang reserbasyon. Gamitin ang Suica o bumili ng single ticket sa istasyon. Ang Inari Station ay katabi mismo ng dambana."
       },
       {
-        "text": "Fushimi Inari Shrine. 💡 Tip: ang pagdating ng maaga ay lubos na inirerekomenda upang maiwasan ang maraming tao. Hindi kailangang umakyat hanggang sa tuktok ng Mount Inari; kung kapos sa oras o pagod, umakyat lang nang bahagya at bumalik. Walang kahirap-hirap itong akyatin para kay Pablo, pumupunta siya sa gym para lumakas."
+        "text": "Fushimi Inari Shrine. 💡 Tip: mas mainam na dumating nang maaga para maiwasan ang pinakamaraming tao. Hindi kailangang umakyat hanggang sa tuktok ng Bundok Inari; kung kulang sa oras o pagod na, gumawa ng partial climb at bumalik na lang. Wala namang problema kay Pablo umakyat, para saan pa ang gym."
       },
       {
-        "text": "🚆 JR Nara Line: Inari → Nara. Direktang tren pa-Nara, walang transfer, tinatayang 50–55 min. Walang kailangang reserbasyon. Sa Inari, siguraduhin na ang napiling tren ay humihinto sa Inari at didiretso sa Nara."
+        "text": "🚆 JR Nara Line: Inari → Nara.\n\n🎫 **SUICA:** ✅ OO; i-tap ang card nang direkta sa mga gate.\n\nDirektang tren papuntang Nara, walang lipat, mga 1h20. Walang kailangang reserbasyon. Sa Inari, tiyakin na ang napiling serbisyo ay tumitigil sa Inari at magpapatuloy papuntang Nara."
       },
       {
-        "text": "🚌 Mula JR Nara Station → Tōdai-ji: Local Nara Kotsu bus papuntang Tōdai-ji Daibutsuden/Kasuga Taisha-mae area, tapos ilang minutong lakad. Alternatibo: taxi mula JR Nara Station kung kapos sa oras. Pwede ring lakarin, pero mas matagal. Huwag mag-book ng maaga. Tingnan natin kung anong sasabihin ni Juancar bilang isang magaling na historian na may PhD, siguradong may nabasa na siyang libro tungkol dito."
+        "text": "**🚌 Mula sa JR Nara Station → Tōdai-ji:**\n🎫 **SUICA:** ✅ OO; i-tap ang card sa reader ng bus pagsakay/pagbaba.\n\nPagdating sa JR Nara, lumabas sa East Exit at sumakay ng bus papuntang lugar ng \"Tōdai-ji Daibutsuden / Kasuga Taisha-mae\". Hindi na kailangang tiyakin nang maaga ang eksaktong linya, maaaring magbago depende sa serbisyo — tingnan na lang ang susunod na maginhawang bus gamit ang Google Maps sa mismong oras. Mula sa hintuan, mga 5 minutong lakad papuntang Tōdai-ji.\n\n**Alternatibo:** maglakad mula sa JR Nara Station, pero mas matagal. Huwag mag-book nang maaga."
       },
       {
-        "text": "🏯 Bisitahin ang Daibutsuden at ang Great Buddha. Ang pagbisita sa loob ng Great Buddha ang pangunahing bahagi; pagkatapos ay pwede tayong umikot sandali sa paligid. Huwag mag-book ng tiket nang maaga."
+        "text": "🏯 Tōdai-ji, Daibutsuden at ang Great Buddha. Ito ang pangunahing bisita sa Nara: pumasok sa Daibutsuden at makita ang Great Buddha, pagkatapos ay maikling paglibot sa lugar. Hindi na kailangang mag-book ng tiket nang maaga o magdagdag pa ng ibang mahabang bisita dito."
       },
       {
-        "text": "🦌 Nara Park at mga usa. 🦌 Kung bibili tayo ng shika senbei para sa mga usa, ibigay ang mga biskwit at ipakita ang mga walang laman na kamay kapag ubos na: ang ilang mga usa ay maaaring maging mapilit kung akala nila ay mayroon pa tayong pagkain (halos kasing gutom at tindi sila ni Randy kapag nakakita ng Chickenjoy mula sa Jollibee o Adobo!)."
+        "text": "🚶 Maglakad papuntang restaurant na **Gyumabushi Miyama 牛まぶし三山** (11 Kasuganocho, Nara), napakalapit sa Tōdai-ji — kaya naman makatuwiran kumain kaagad pagkatapos ng Great Buddha."
       },
       {
-        "text": "🍜 Tanghalian sa Nara."
+        "text": "🍚 **TANGHALIAN: Gyumabushi Miyama 牛まぶし三山** (https://maps.app.goo.gl/NjR7MNt97GDZszJm6?g_st=iw)\n\nRestaurant na nakatakda para ngayong araw — ang specialty nito ay ang gyumabushi. Hindi tumatanggap ng reserbasyon at posibleng magkaroon ng pila o maubusan ng stock, kaya mainam na dumating nang medyo maaga."
       },
       {
-        "text": "Payapang paglalakad sa Nara. Opsiyonal ang Nigatsu-do kung may sapat na oras."
+        "text": "🦌 Parke ng Nara at mga usa. Kung bibili tayo ng shika senbei para sa mga usa, ibigay ang mga biskwit at ipakita ang walang lamang kamay kapag naubos na: may mga usang medyo mapilit kung akala nila may pagkain pa tayo. Mahinahong lakad, hindi na kailangang libutin ang buong parke."
       },
       {
-        "text": "🚆 JR Nara → Kyoto. Sakyan ang susunod na maginhawang byahe papuntang Kyoto. Walang kailangang reserbasyon. Gumamit ng IC card o bumili ng single ticket. Kung mayroong maginhawang Miyakoji Rapid, pwede itong sakyan upang mapabilis ang byahe."
+        "text": "⛩️ Nigatsu-dō — **OPTIONAL.** Kung maganda lang ang takbo ng oras at lakas: maikling bisita, para lang sa templo at sa tanawin. Kung nagmamadali o pagod na, laktawan na lang ito at magsimula nang mas maaga ang pagbalik sa JR Nara."
       },
       {
-        "text": "🌇 Paglalakad sa Pontocho, Kamogawa, Miyagawacho, at Gion. Ang paglubog ng araw ay bandang 18:15, kaya mae-enjoy mo rin ang blue hour. Opsiyonal ang Yasaka Jinja kung may sapat na oras. 🚶 Pagdating sa Gion/Pontocho area, dapat gawin ang paglilibot sa pamamagitan ng paglalakad. Magandang gabi ito para maghapunan sa paligid ng Pontocho/Gion. Mga inirerekomenda: gyukatsu; yakitori; ramen; izakaya; okonomiyaki. Tiyak na opsyon: GYUKATSU Kyoto Katsugyu Pontocho Honten: gyukatsu, halos ¥2,000–6,000, bukas hanggang halos 22:30."
+        "text": "Pagbalik mula sa Nara papuntang JR Nara. Walang dagdag na bisita sa bahaging ito: ang target ay nasa JR Nara na sa pagitan ng 15:40 at 16:00. Depende kung saan tayo, sakay ng bus o lakad — walang eksaktong oras na naitakda nang maaga."
       },
       {
-        "text": "🏨 **BALIK SA HOTEL: HOTEL KEIHAN KYOTO HACHIJOGUCHI** (https://www.google.com/maps/search/?api=1&query=Hotel+Keihan+Kyoto+Hachijoguchi)\n\nBumalik mula Gion/Pontocho sa hotel sa Kyoto para magpahinga (ika-2 gabi dito)."
+        "text": "🚆 JR Nara → Kyoto.\n\n🎫 **SUICA:** ✅ OO; i-tap ang card nang direkta sa mga gate.\n\nSumakay sa susunod na maginhawang serbisyo papuntang Kyoto, walang fixed na oras. Walang kailangang reserbasyon. Kung may maginhawang Miyakoji Rapid, gamitin ito dahil mas mabilis. Target: makarating sa Kyoto sa pagitan ng 16:45 at 17:00, depende sa serbisyo."
+      },
+      {
+        "text": "🏨 Balik sa Hotel Keihan Kyoto Hachijoguchi at magpahinga — maligo at mag-relax bago lumabas ulit. Mahalagang bahagi ito: huwag nang punuin ng bagong bisita o aktibidad."
+      },
+      {
+        "text": "Alis patungong Pontocho/Gion."
+      },
+      {
+        "text": "🍜 **PONTOCHO + GION + HAPUNAN**\n\nLakad sa Pontocho, pagkatapos patungong lugar ng Gion/Shirakawa, at hapunan sa lugar (mga tradisyunal na eskinita sa tabi ng Ilog Kamo). Ang Pontocho at Gion ay hindi dalawang magkahiwalay na bisita na may mahigpit na iskedyul — parte sila ng iisang karanasan sa gabi. Mga opsyon sa hapunan: yakitori, ramen, izakaya, okonomiyaki o gyukatsu (hal. GYUKATSU Kyoto Katsugyu Pontocho Honten, bukas hanggang 22:30, mga ¥2,000–6,000 (~12–37€) — isa lang sa mga opsyon, hindi ito ang required na hapunan). Pagkatapos kumain, mahinahong paglalakad sa gabi kung gusto."
+      },
+      {
+        "text": "🏨 **BALIK SA HOTEL: HOTEL KEIHAN KYOTO HACHIJOGUCHI** (https://www.google.com/maps/search/?api=1&query=Hotel+Keihan+Kyoto+Hachijoguchi)\n\nPagbalik mula Gion/Pontocho papunta sa ating hotel sa Kyoto para magpahinga (2nd gabi dito).\n\n**Paano bumalik:**\n- 🚇 Metro/Bus: City bus o metro mula Shijo/Gion papuntang Kyoto Station (~10–15 min, 🎫 **SUICA:** ✅ OO).\n- 🚶 Lakad: mga 25–30 min na lakad tawid sa Ilog Kamo."
+      },
+      {
+        "text": "Walang kailangang i-book nang maaga sa mga tren o transportasyon ngayong araw. Lahat ito ay regional/local na serbisyo na binabayaran sa mismong oras gamit ang Suica. Hindi rin tumatanggap ng reserbasyon ang restaurant na Gyumabushi Miyama."
       }
     ],
-    "money": "Tinatayang €40 (pagkain)"
+    "money": "Mga 40€ (pagkain)"
   },
   {
     "title": "Hilagang-kanlurang Kyoto at Bamboo",

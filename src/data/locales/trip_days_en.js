@@ -51,49 +51,64 @@ export const days = [
     "money": "Approx. €40 (meals) + transport"
   },
   {
-    "title": "South Kyoto and Nara",
+    "title": "Fushimi Inari + Nara: Great Buddha, Deer and Pontocho",
     "cities": "Kyoto, Nara",
-    "summary": "We'll start very early at the iconic Fushimi Inari to walk through its red toriis avoiding crowds. Then, a direct train to Nara to see its famous deer and the imposing Great Buddha. The day ends back in Kyoto with a sunset walk through the traditional geisha alleys.",
-    "history": "Fushimi Inari is dedicated to Inari, the Shinto deity of rice, a fundamental element for the ancient Japanese economy. Nara was Japan's first permanent capital in the 8th century and is the cradle of Buddhism in the country.",
+    "summary": "We'll start very early at the iconic Fushimi Inari to walk through its red torii gates while avoiding crowds. Then, a train to Nara to visit the imposing Great Buddha of Tōdai-ji, eat gyumabushi near the park, and stroll among the famous deer. The day ends back in Kyoto with a walk and dinner in the traditional alleys of Pontocho and Gion.",
+    "history": "Fushimi Inari is dedicated to Inari, the Shinto deity of rice, a fundamental element for Japan's ancient economy. Nara was Japan's first permanent capital in the 8th century and is the cradle of Buddhism in the country.",
     "schedule": [
       {
-        "text": "Wake up. 🍙 Takeaway breakfast bought the night before. Eat before arriving at the shrine or during the journey."
+        "text": "Wake up. 🍙 Takeaway breakfast bought the night before. Eat before reaching the shrine or during the journey."
       },
       {
-        "text": "🚆 JR Nara Line: Kyoto Station → Inari Station (~5 min). No reservation. Use IC card or buy a single ticket at the station. Inari Station is right next to the shrine."
+        "text": "🚆 JR Nara Line: Kyoto Station → Inari Station (~5 min).\n\n🎫 **SUICA:** ✅ YES; tap the card directly at the gates.\n\nNo reservation needed. Use Suica or buy a single ticket at the station. Inari Station is right next to the shrine grounds."
       },
       {
-        "text": "Fushimi Inari Shrine. 💡 Tip: arriving early is highly recommended to avoid major crowds. It is not necessary to climb to the top of Mount Inari; if pressed for time or tired, do a partial climb and return. Pablo won't have any trouble climbing, he goes to the gym to get strong for a reason."
+        "text": "Fushimi Inari Shrine. 💡 Tip: arriving early is especially recommended to avoid the biggest crowds. You don't need to climb all the way to the top of Mount Inari; if time or tiredness is an issue, do a partial climb and turn back. Pablo won't have any trouble climbing, that's what the gym is for."
       },
       {
-        "text": "🚆 JR Nara Line: Inari → Nara. Direct train to Nara, no transfers, approx. 50–55 min. No reservation required. In Inari, verify that the chosen service stops at Inari and continues to Nara."
+        "text": "🚆 JR Nara Line: Inari → Nara.\n\n🎫 **SUICA:** ✅ YES; tap the card directly at the gates.\n\nDirect train to Nara, no transfer, approximately 1h20. No reservation needed. At Inari, check that the chosen service stops at Inari and continues to Nara."
       },
       {
-        "text": "🚌 From JR Nara Station → Tōdai-ji: Local Nara Kotsu bus to the Tōdai-ji Daibutsuden/Kasuga Taisha-mae area, then a few minutes walk. Alternative: taxi from JR Nara Station if tight on time. Walking is also possible but takes longer. Do not book in advance. Let's see what Juancar tells us as a good historian with a PhD, he's surely read a book about this."
+        "text": "**🚌 From JR Nara Station → Tōdai-ji:**\n🎫 **SUICA:** ✅ YES; tap the card on the bus reader when boarding/alighting.\n\nOn arriving at JR Nara, exit through the East Exit and take the bus toward the \"Tōdai-ji Daibutsuden / Kasuga Taisha-mae\" area. No need to fix a specific line number in advance, it may vary by service — check the next convenient bus with Google Maps on the spot. From the stop it's about a 5-minute walk to Tōdai-ji.\n\n**Alternative:** walk from JR Nara Station, but it takes more time. Don't book in advance."
       },
       {
-        "text": "🏯 Visit the Daibutsuden and the Great Buddha. The visit inside the Great Buddha is the main part; afterwards we can briefly tour the grounds. Do not book tickets in advance."
+        "text": "🏯 Tōdai-ji, Daibutsuden and the Great Buddha. This is the main visit in Nara: enter the Daibutsuden and see the Great Buddha, then a brief walk around the grounds. No need to book tickets in advance or add other long visits here."
       },
       {
-        "text": "🦌 Nara Park and deer. 🦌 If we buy shika senbei for the deer, give them the crackers and show empty hands when finished: some deer can get quite insistent if they think we still have food (they are almost as hungry and intense as Randy when he sees a Chickenjoy from Jollibee!)."
+        "text": "🚶 Walk to the restaurant **Gyumabushi Miyama 牛まぶし三山** (11 Kasuganocho, Nara), very close to Tōdai-ji — that's why it makes sense to eat right after the Great Buddha."
       },
       {
-        "text": "🍜 Lunch in Nara."
+        "text": "🍚 **LUNCH: Gyumabushi Miyama 牛まぶし三山** (https://maps.app.goo.gl/NjR7MNt97GDZszJm6?g_st=iw)\n\nThe restaurant planned for today — its specialty is gyumabushi. It doesn't take reservations and there may be a queue or it may run out, so it's worth arriving relatively early."
       },
       {
-        "text": "Peaceful stroll through Nara. Nigatsu-do optional if there's enough time."
+        "text": "🦌 Nara Park and the deer. If we buy shika senbei for the deer, hand over the crackers and show empty hands once they're gone: some deer can get quite pushy if they think we still have food. A relaxed stroll, no need to cover the whole park."
       },
       {
-        "text": "🚆 JR Nara → Kyoto. Catch the next convenient service to Kyoto. No reservation required. Use an IC card or buy a single ticket. If there is a convenient Miyakoji Rapid, it can be used to reduce travel time."
+        "text": "⛩️ Nigatsu-dō — **OPTIONAL.** Only if we're doing well on time and energy: a brief visit, mainly for the temple and the views. If we're running late or tired, skip it and start heading back to JR Nara earlier."
       },
       {
-        "text": "🌇 Walk through Pontocho, Kamogawa, Miyagawacho, and Gion. Sunset will be around 18:15, allowing you to enjoy the blue hour. Yasaka Jinja can optionally be visited if time permits. 🚶 Once in the Gion/Pontocho area, the tour should be done mainly on foot. This is a good night to dine around Pontocho/Gion. Recommended categories: gyukatsu; yakitori; ramen; izakaya; okonomiyaki. Specific option: GYUKATSU Kyoto Katsugyu Pontocho Honten: gyukatsu, approx. ¥2,000–6,000, open until approx. 22:30."
+        "text": "Heading back from Nara toward JR Nara. No additional visits on this stretch: the goal is to be at JR Nara approximately between 15:40 and 16:00. Depending on where we are, by bus or on foot — no fixed time set in advance."
       },
       {
-        "text": "🏨 **RETURN TO HOTEL: HOTEL KEIHAN KYOTO HACHIJOGUCHI** (https://www.google.com/maps/search/?api=1&query=Hotel+Keihan+Kyoto+Hachijoguchi)\n\nReturn from Gion/Pontocho to our hotel in Kyoto to rest (2nd night here).\n\n**How to get back:**\n- 🚇 Metro/Bus: city bus or metro from Shijo/Gion to Kyoto Station (~10–15 min, 🎫 **SUICA:** ✅ YES).\n- 🚶 On foot: ~25–30 min walking across the Kamo River."
+        "text": "🚆 JR Nara → Kyoto.\n\n🎫 **SUICA:** ✅ YES; tap the card directly at the gates.\n\nTake the next convenient service to Kyoto, no fixed time. No reservation needed. If a convenient Miyakoji Rapid comes up, use it since it cuts travel time. Goal: arrive in Kyoto approximately between 16:45 and 17:00, depending on the service."
+      },
+      {
+        "text": "🏨 Back to Hotel Keihan Kyoto Hachijoguchi and rest — shower and relax before heading out again. Important block: don't fill it with new sightseeing or activities."
+      },
+      {
+        "text": "Head out toward Pontocho/Gion."
+      },
+      {
+        "text": "🍜 **PONTOCHO + GION + DINNER**\n\nA stroll through Pontocho, then toward the Gion/Shirakawa area, and dinner in the area (traditional alleys along the Kamo River). Pontocho and Gion aren't two separate visits with rigid schedules; they're part of the same evening experience. Dinner options: yakitori, ramen, izakaya, okonomiyaki or gyukatsu (e.g. GYUKATSU Kyoto Katsugyu Pontocho Honten, open until 22:30, approx. ¥2,000–6,000 (~12–37€) — one option, not the mandatory dinner). After dinner, a relaxed night stroll if we feel like it."
+      },
+      {
+        "text": "🏨 **BACK TO THE HOTEL: HOTEL KEIHAN KYOTO HACHIJOGUCHI** (https://www.google.com/maps/search/?api=1&query=Hotel+Keihan+Kyoto+Hachijoguchi)\n\nHeading back from Gion/Pontocho to our hotel in Kyoto to rest (2nd night here).\n\n**How to get back:**\n- 🚇 Metro/Bus: City bus or metro from Shijo/Gion to Kyoto Station (~10–15 min, 🎫 **SUICA:** ✅ YES).\n- 🚶 On foot: approx. 25–30 min walking across the Kamo River."
+      },
+      {
+        "text": "None of today's trains or transport need to be booked in advance. They're all regional/local services paid on the spot with Suica. The restaurant Gyumabushi Miyama doesn't take reservations either."
       }
     ],
-    "money": "Approx. €40 (meals)"
+    "money": "Approx. 40€ (meals)"
   },
   {
     "title": "Northwest Kyoto and Bamboo",
