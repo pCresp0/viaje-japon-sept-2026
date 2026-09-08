@@ -69,7 +69,7 @@ export const days = [
         "text": "🚆 JR Nara Line : Inari → Nara.\n\n🎫 **SUICA :** ✅ OUI ; passer la carte directement aux portillons.\n\nTrain direct vers Nara, sans correspondance, environ 1h20. Sans réservation. À Inari, vérifier que le service choisi s'arrête à Inari et continue vers Nara."
       },
       {
-        "text": "**🚌 De JR Nara Station → Tōdai-ji :**\n🎫 **SUICA :** ✅ OUI ; passer la carte sur le lecteur du bus en montant/descendant.\n\nEn arrivant à JR Nara, sortir par la East Exit et prendre le bus vers la zone \"Tōdai-ji Daibutsuden / Kasuga Taisha-mae\". Pas besoin de fixer à l'avance un numéro de ligne précis, cela peut varier selon le service — vérifier le prochain bus pratique avec Google Maps sur place. Depuis l'arrêt, environ 5 minutes à pied jusqu'au Tōdai-ji.\n\n**Alternative :** marcher depuis JR Nara Station, mais cela prend plus de temps. Ne pas réserver à l'avance."
+        "text": "**🚌 De JR Nara Station → Tōdai-ji :**\n🎫 **SUICA :** ✅ OUI, mais ⚠️ à Nara le bus ne fonctionne PAS comme à Kyoto — il y a deux types, il faut donc regarder lequel arrive :\n- Bus circulaire (jaune, « Loop Line ») : on monte par la porte AVANT et on passe la carte Suica EN MONTANT (tarif fixe, environ ¥250). On descend par la porte arrière.\n- Bus normal (vert, lignes numérotées 2/6/70/72/97/160) : on monte par la porte ARRIÈRE sans badger, et on paie en passant la Suica SEULEMENT EN DESCENDANT, par la porte avant (tarif selon la distance).\n\nEn arrivant à JR Nara, sortir par la East Exit et prendre le bus vers la zone « Tōdai-ji Daibutsuden / Kasuga Taisha-mae ». Pas besoin de fixer à l'avance un numéro de ligne précis, cela peut varier selon le service — vérifier le prochain bus pratique avec Google Maps sur place. Depuis l'arrêt, environ 5 minutes à pied jusqu'au Tōdai-ji.\n\n**Alternative :** marcher depuis JR Nara Station, mais cela prend plus de temps. Ne pas réserver à l'avance."
       },
       {
         "text": "🏯 Tōdai-ji, Daibutsuden et le Grand Bouddha. C'est la visite principale de Nara : entrer dans le Daibutsuden et voir le Grand Bouddha, puis un bref tour du site. Pas besoin de réserver un billet à l'avance ni d'ajouter d'autres visites longues ici."
@@ -130,7 +130,7 @@ export const days = [
       },
       {
         "time": "07:45–08:30",
-        "text": "🚌 Vers Ginkaku-ji. Depuis le konbini, marcher jusqu'à Kyoto Station. Prendre le Kyoto City Bus n°5 ou n°7 vers Ginkaku-ji et descendre à Ginkakuji-michi.\n\n🎫 **SUICA :** ✅ OUI ; passer la carte sur le lecteur du bus en montant/descendant.\n\nDurée approximative : 35–45 min porte à porte, selon le trafic — arrivée juste à l'ouverture de Ginkaku-ji. Alternative si le trafic est mauvais : utiliser métro + bus selon Google Maps/Navitime sur le moment. Paiement : sans réservation. Utiliser Suica. On peut aussi acheter un billet simple."
+        "text": "🚌 Vers Ginkaku-ji. Depuis le konbini, marcher jusqu'à Kyoto Station. Prendre le Kyoto City Bus n°5 ou n°7 vers Ginkaku-ji et descendre à Ginkakuji-michi.\n\n🎫 **SUICA :** ✅ OUI ; tarif fixe de ¥230 (dans la zone à tarif unique de Kyoto). On monte par la porte ARRIÈRE (pas besoin de badger), et on paie en passant la Suica SEULEMENT en descendant, par la porte avant.\n\nDurée approximative : 35–45 min porte à porte, selon le trafic — arrivée juste à l'ouverture de Ginkaku-ji. Alternative si le trafic est mauvais : utiliser métro + bus selon Google Maps/Navitime sur le moment. Paiement : sans réservation. Utiliser Suica. On peut aussi acheter un billet simple."
       },
       {
         "time": "08:30–10:00",
@@ -183,7 +183,7 @@ export const days = [
       },
       {
         "time": "08:00–09:00",
-        "text": "🚇 Hôtel → Kinkaku-ji. Depuis l'hôtel, marcher jusqu'à Kyoto Station. Prendre la ligne de métro Kyoto Karasuma :\n\nKyoto → Kitaoji. À Kitaoji : suivre les panneaux vers le Kitaoji Bus Terminal ; utiliser la zone bleue ; prendre le bus n°204 ou 205 vers Kinkaku-ji ; descendre à Kinkakuji-michi. Depuis Kinkakuji-michi :\n\nenviron 5 min à pied jusqu'à l'entrée. Cette combinaison est préférable au bus 205 direct depuis Kyoto Station car elle évite une partie du trafic et de l'affluence. Sans réservation. Utiliser Suica."
+        "text": "🚇 Hôtel → Kinkaku-ji. Depuis l'hôtel, marcher jusqu'à Kyoto Station. Prendre la ligne de métro Kyoto Karasuma :\n\nKyoto → Kitaoji. À Kitaoji : suivre les panneaux vers le Kitaoji Bus Terminal ; utiliser la zone bleue ; prendre le bus n°204 ou 205 vers Kinkaku-ji ; descendre à Kinkakuji-michi. Depuis Kinkakuji-michi :\n\nenviron 5 min à pied jusqu'à l'entrée. Cette combinaison est préférable au bus 205 direct depuis Kyoto Station car elle évite une partie du trafic et de l'affluence. Sans réservation.\n\n🎫 **SUICA :** ✅ OUI ; tarif fixe de ¥230. On monte par la porte arrière (pas besoin de badger), et on paie en passant la Suica SEULEMENT en descendant, par la porte avant."
       },
       {
         "time": "09:00–10:15",

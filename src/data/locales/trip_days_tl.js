@@ -69,7 +69,7 @@ export const days = [
         "text": "🚆 JR Nara Line: Inari → Nara.\n\n🎫 **SUICA:** ✅ OO; i-tap ang card nang direkta sa mga gate.\n\nDirektang tren papuntang Nara, walang lipat, mga 1h20. Walang kailangang reserbasyon. Sa Inari, tiyakin na ang napiling serbisyo ay tumitigil sa Inari at magpapatuloy papuntang Nara."
       },
       {
-        "text": "**🚌 Mula sa JR Nara Station → Tōdai-ji:**\n🎫 **SUICA:** ✅ OO; i-tap ang card sa reader ng bus pagsakay/pagbaba.\n\nPagdating sa JR Nara, lumabas sa East Exit at sumakay ng bus papuntang lugar ng \"Tōdai-ji Daibutsuden / Kasuga Taisha-mae\". Hindi na kailangang tiyakin nang maaga ang eksaktong linya, maaaring magbago depende sa serbisyo — tingnan na lang ang susunod na maginhawang bus gamit ang Google Maps sa mismong oras. Mula sa hintuan, mga 5 minutong lakad papuntang Tōdai-ji.\n\n**Alternatibo:** maglakad mula sa JR Nara Station, pero mas matagal. Huwag mag-book nang maaga."
+        "text": "**🚌 Mula sa JR Nara Station → Tōdai-ji:**\n🎫 **SUICA:** ✅ OO, pero ⚠️ sa Nara iba ang takbo ng bus kumpara sa Kyoto — may dalawang uri, kaya tignan kung alin ang dumating:\n- Loop Bus (yellow, \"Loop Line\"): sumakay sa HARAP na pinto at i-tap ang Suica PAGSAKAY (fixed na fare, mga ¥250). Bumaba sa likod na pinto.\n- Regular na bus (green, mga linyang 2/6/70/72/97/160): sumakay sa LIKOD na pinto nang hindi nag-ta-tap, at magbayad sa pamamagitan ng pag-tap ng Suica PAGBABA LANG, sa harap na pinto (fare base sa distansya).\n\nPagdating sa JR Nara, lumabas sa East Exit at sumakay ng bus papuntang lugar ng \"Tōdai-ji Daibutsuden / Kasuga Taisha-mae\". Hindi na kailangang tiyakin nang maaga ang eksaktong linya, maaaring magbago depende sa serbisyo — tingnan na lang ang susunod na maginhawang bus gamit ang Google Maps sa mismong oras. Mula sa hintuan, mga 5 minutong lakad papuntang Tōdai-ji.\n\n**Alternatibo:** maglakad mula sa JR Nara Station, pero mas matagal. Huwag mag-book nang maaga."
       },
       {
         "text": "🏯 Tōdai-ji, Daibutsuden at ang Great Buddha. Ito ang pangunahing bisita sa Nara: pumasok sa Daibutsuden at makita ang Great Buddha, pagkatapos ay maikling paglibot sa lugar. Hindi na kailangang mag-book ng tiket nang maaga o magdagdag pa ng ibang mahabang bisita dito."
@@ -130,7 +130,7 @@ export const days = [
       },
       {
         "time": "07:45–08:30",
-        "text": "🚌 Papuntang Ginkaku-ji. Mula sa konbini, maglakad papuntang Kyoto Station. Sumakay ng Kyoto City Bus No. 5 o No. 7 patungong Ginkaku-ji at bumaba sa Ginkakuji-michi.\n\n🎫 **SUICA:** ✅ OO; i-tap ang card sa reader ng bus pagsakay/pagbaba.\n\nTinatayang tagal: 35–45 min door to door, depende sa trapiko — dadating nang mismong nagbukas ang Ginkaku-ji. Alternatibo kung masama ang trapiko: gamitin ang metro + bus base sa Google Maps/Navitime sa mismong oras. Bayad: Walang reserbasyon. Gamitin ang Suica. Puwede ring bumili ng single ticket."
+        "text": "🚌 Papuntang Ginkaku-ji. Mula sa konbini, maglakad papuntang Kyoto Station. Sumakay ng Kyoto City Bus No. 5 o No. 7 patungong Ginkaku-ji at bumaba sa Ginkakuji-michi.\n\n🎫 **SUICA:** ✅ OO; fixed na fare na ¥230 (sa loob ng flat-fare zone ng Kyoto). Sumakay sa LIKOD na pinto (walang kailangang i-tap), at magbayad sa pamamagitan ng pag-tap ng Suica PAGBABA LANG, sa harap na pinto.\n\nTinatayang tagal: 35–45 min door to door, depende sa trapiko — dadating nang mismong nagbukas ang Ginkaku-ji. Alternatibo kung masama ang trapiko: gamitin ang metro + bus base sa Google Maps/Navitime sa mismong oras. Bayad: Walang reserbasyon. Gamitin ang Suica. Puwede ring bumili ng single ticket."
       },
       {
         "time": "08:30–10:00",
@@ -183,7 +183,7 @@ export const days = [
       },
       {
         "time": "08:00–09:00",
-        "text": "🚇 Hotel → Kinkaku-ji. Mula sa hotel, maglakad papuntang Kyoto Station. Sumakay ng Kyoto Subway Karasuma Line:\n\nKyoto → Kitaoji. Sa Kitaoji: sundin ang mga signage papuntang Kitaoji Bus Terminal; gamitin ang blue zone; sumakay ng bus No. 204 o 205 patungong Kinkaku-ji; bumaba sa Kinkakuji-michi. Mula sa Kinkakuji-michi:\n\nmga 5 minutong lakad papuntang entrance. Mas mainam ang kombinasyong ito kaysa sa direktang bus 205 mula sa Kyoto Station dahil naiiwasan nito ang bahagi ng trapiko at ang mga tao. Walang reserbasyon. Gamitin ang Suica."
+        "text": "🚇 Hotel → Kinkaku-ji. Mula sa hotel, maglakad papuntang Kyoto Station. Sumakay ng Kyoto Subway Karasuma Line:\n\nKyoto → Kitaoji. Sa Kitaoji: sundin ang mga signage papuntang Kitaoji Bus Terminal; gamitin ang blue zone; sumakay ng bus No. 204 o 205 patungong Kinkaku-ji; bumaba sa Kinkakuji-michi. Mula sa Kinkakuji-michi:\n\nmga 5 minutong lakad papuntang entrance. Mas mainam ang kombinasyong ito kaysa sa direktang bus 205 mula sa Kyoto Station dahil naiiwasan nito ang bahagi ng trapiko at ang mga tao. Walang reserbasyon.\n\n🎫 **SUICA:** ✅ OO; fixed na fare na ¥230. Sumakay sa likod na pinto (walang kailangang i-tap), at magbayad sa pamamagitan ng pag-tap ng Suica PAGBABA LANG, sa harap na pinto."
       },
       {
         "time": "09:00–10:15",

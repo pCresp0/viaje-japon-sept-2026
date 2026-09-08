@@ -69,7 +69,7 @@ export const days = [
         "text": "🚆 JR Nara Line: Inari → Nara.\n\n🎫 **SUICA:** ✅ YES; tap the card directly at the gates.\n\nDirect train to Nara, no transfer, approximately 1h20. No reservation needed. At Inari, check that the chosen service stops at Inari and continues to Nara."
       },
       {
-        "text": "**🚌 From JR Nara Station → Tōdai-ji:**\n🎫 **SUICA:** ✅ YES; tap the card on the bus reader when boarding/alighting.\n\nOn arriving at JR Nara, exit through the East Exit and take the bus toward the \"Tōdai-ji Daibutsuden / Kasuga Taisha-mae\" area. No need to fix a specific line number in advance, it may vary by service — check the next convenient bus with Google Maps on the spot. From the stop it's about a 5-minute walk to Tōdai-ji.\n\n**Alternative:** walk from JR Nara Station, but it takes more time. Don't book in advance."
+        "text": "**🚌 From JR Nara Station → Tōdai-ji:**\n🎫 **SUICA:** ✅ YES, but ⚠️ in Nara the bus does NOT work the same way as in Kyoto — there are two types, so pay attention to which one arrives:\n- Loop Bus (yellow, \"Loop Line\"): board through the FRONT door and tap your Suica WHEN BOARDING (flat fare, approx. ¥250). Exit through the rear door.\n- Regular bus (green, numbered routes 2/6/70/72/97/160): board through the REAR door without tapping, and pay by tapping Suica ONLY WHEN EXITING, through the front door (distance-based fare).\n\nOn arriving at JR Nara, exit through the East Exit and take the bus toward the \"Tōdai-ji Daibutsuden / Kasuga Taisha-mae\" area. No need to fix a specific line number in advance, it may vary by service — check the next convenient bus with Google Maps on the spot. From the stop it's about a 5-minute walk to Tōdai-ji.\n\n**Alternative:** walk from JR Nara Station, but it takes more time. Don't book in advance."
       },
       {
         "text": "🏯 Tōdai-ji, Daibutsuden and the Great Buddha. This is the main visit in Nara: enter the Daibutsuden and see the Great Buddha, then a brief walk around the grounds. No need to book tickets in advance or add other long visits here."
@@ -130,7 +130,7 @@ export const days = [
       },
       {
         "time": "07:45–08:30",
-        "text": "🚌 To Ginkaku-ji. From the konbini, walk to Kyoto Station. Take Kyoto City Bus No. 5 or No. 7 toward Ginkaku-ji and get off at Ginkakuji-michi.\n\n🎫 **SUICA:** ✅ YES; tap the card on the bus reader when boarding/alighting.\n\nApproximate duration: 35–45 min door to door, depending on traffic — arriving right when Ginkaku-ji opens. Alternative if traffic is bad: use metro + bus based on Google Maps/Navitime at that moment. Payment: No reservation. Use Suica. A single ticket can also be bought."
+        "text": "🚌 To Ginkaku-ji. From the konbini, walk to Kyoto Station. Take Kyoto City Bus No. 5 or No. 7 toward Ginkaku-ji and get off at Ginkakuji-michi.\n\n🎫 **SUICA:** ✅ YES; flat fare of ¥230 (within Kyoto's flat-fare zone). Board through the REAR door (no tap needed), and pay by tapping Suica ONLY when exiting, through the front door.\n\nApproximate duration: 35–45 min door to door, depending on traffic — arriving right when Ginkaku-ji opens. Alternative if traffic is bad: use metro + bus based on Google Maps/Navitime at that moment. Payment: No reservation. Use Suica. A single ticket can also be bought."
       },
       {
         "time": "08:30–10:00",
@@ -183,7 +183,7 @@ export const days = [
       },
       {
         "time": "08:00–09:00",
-        "text": "🚇 Hotel → Kinkaku-ji. From the hotel walk to Kyoto Station. Take the Kyoto Subway Karasuma Line:\n\nKyoto → Kitaoji. At Kitaoji: follow signs to Kitaoji Bus Terminal; use the blue zone; take bus No. 204 or 205 toward Kinkaku-ji; get off at Kinkakuji-michi. From Kinkakuji-michi:\n\nabout a 5-minute walk to the entrance. This combination is preferable to the direct 205 bus from Kyoto Station because it avoids some traffic and crowding. No reservation. Use Suica."
+        "text": "🚇 Hotel → Kinkaku-ji. From the hotel walk to Kyoto Station. Take the Kyoto Subway Karasuma Line:\n\nKyoto → Kitaoji. At Kitaoji: follow signs to Kitaoji Bus Terminal; use the blue zone; take bus No. 204 or 205 toward Kinkaku-ji; get off at Kinkakuji-michi. From Kinkakuji-michi:\n\nabout a 5-minute walk to the entrance. This combination is preferable to the direct 205 bus from Kyoto Station because it avoids some traffic and crowding. No reservation.\n\n🎫 **SUICA:** ✅ YES; flat fare of ¥230. Board through the rear door (no tap needed), and pay by tapping Suica ONLY when exiting, through the front door."
       },
       {
         "time": "09:00–10:15",
