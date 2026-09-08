@@ -22,7 +22,7 @@ export const stops = [
     detail: "Llegada, check-in y cena cercana en AEON MALL",
   },
 
-  // ── DÍA 2: Kioto Sur y Nara ──────────────────────────────────────
+  // ── DÍA 2: Fushimi Inari + Nara: Gran Buda, ciervos y Pontocho ────
   {
     id: "fushimi-inari", name: "Fushimi Inari Taisha", city: "Kioto",
     lat: 34.9671, lng: 135.7727,
@@ -31,25 +31,39 @@ export const stops = [
     detail: "Santuario de los 10.000 torii rojos y senderos del monte Inari",
   },
   {
-    id: "nara", name: "Nara y Todai-ji", city: "Nara",
-    lat: 34.689, lng: 135.8398,
+    id: "todai-ji", name: "Tōdai-ji", city: "Nara",
+    lat: 34.6890, lng: 135.8398,
+    emoji: "🏯", color: "#bc4749",
+    day: "Día 2",
+    detail: "Daibutsuden y el Gran Buda de bronce",
+  },
+  {
+    id: "gyumabushi", name: "Gyumabushi Miyama 牛まぶし三山", city: "Nara",
+    lat: 34.6836628, lng: 135.8396976,
+    emoji: "🍚", color: "#bc4749",
+    day: "Día 2",
+    detail: "Comida — restaurante de gyumabushi, no acepta reservas",
+  },
+  {
+    id: "nara-park", name: "Parque de Nara", city: "Nara",
+    lat: 34.6851, lng: 135.8433,
     emoji: "🦌", color: "#bc4749",
     day: "Día 2",
-    detail: "Todai-ji, Gran Buda de bronce y parque de los ciervos",
+    detail: "Ciervos sagrados y shika senbei",
   },
   {
     id: "nigatsudo", name: "Nigatsu-do", city: "Nara",
     lat: 34.6894, lng: 135.8450,
     emoji: "🏮", color: "#bc4749",
     day: "Día 2",
-    detail: "Subida opcional para vistas panorámicas tras el Todai-ji",
+    detail: "OPCIONAL — subida breve para vistas panorámicas, sólo si vamos bien de tiempo",
   },
   {
     id: "pontocho-day2", name: "Pontocho y Miyagawacho", city: "Kioto",
     lat: 35.009, lng: 135.77,
     emoji: "🏮", color: "#bc4749",
     day: "Día 2",
-    detail: "Paseo al atardecer por los callejones tradicionales junto al río Kamo",
+    detail: "Paseo y cena en los callejones tradicionales junto al río Kamo",
   },
 
   // ── DÍA 3: Ruta Norte de Higashiyama y Geishas ────────────────────
