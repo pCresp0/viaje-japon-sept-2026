@@ -565,6 +565,9 @@ export const days = [
       },
       {
         "text": "Gabi sa Shinjuku: libreng Metropolitan Government observation deck, hapunan sa Omoide Yokocho, mga neon sa Kabukicho."
+      },
+      {
+        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nPagbalik gamit ang metro mula Shinjuku papunta sa ating residence sa Asakusa Kappabashi para magpahinga (3rd gabi sa Tokyo)."
       }
     ],
     "money": "Humigit-kumulang €40 (pagkain)"
@@ -586,6 +589,12 @@ export const days = [
       },
       {
         "text": "Paglubog ng araw sa Tokyo City View deck sa Mori Tower (Roppongi)."
+      },
+      {
+        "text": "🍜 Hapunan sa paligid ng Roppongi o Asakusa."
+      },
+      {
+        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nPagbalik gamit ang metro papunta sa ating residence sa Asakusa Kappabashi para magpahinga (4th gabi sa Tokyo)."
       }
     ],
     "money": "Humigit-kumulang €50 (pagkain at Mori Tower)"
@@ -604,6 +613,12 @@ export const days = [
       },
       {
         "text": "Pamimili sa Nakano Broadway ng mga retro collectibles at manga."
+      },
+      {
+        "text": "🍜 Hapunan sa paligid ng Nakano o Asakusa."
+      },
+      {
+        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nPagbalik sa residence para magpahinga at maghanda para sa maagang simula ng Mount Fuji excursion (5th gabi sa Tokyo)."
       }
     ],
     "money": "Humigit-kumulang €40 (pagkain) + pamimili"
@@ -651,7 +666,10 @@ export const days = [
         "text": "Pagdating sa Shin-Fuji Station (~17:30) at pagbalik sa Tokyo sakay ng bullet train (~60 min)."
       },
       {
-        "text": "Huling salo-salo at pag-impake sa hotel."
+        "text": "🍜 Farewell na hapunan ng grupo sa Tokyo (Asakusa / Ginza)."
+      },
+      {
+        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nPagbalik sa residence sa Asakusa Kappabashi para ihanda ang mga bagahe para sa check-out at magpahinga (6th at huling gabi sa Tokyo)."
       }
     ],
     "money": "13,000 ¥ tour (kasama ang tiket at minivan) + Shinkansen + pagkain"

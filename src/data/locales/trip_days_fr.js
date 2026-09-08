@@ -565,6 +565,9 @@ export const days = [
       },
       {
         "text": "Soirée à Shinjuku : observatoire gratuit du gouvernement métropolitain, dîner à Omoide Yokocho, néons de Kabukicho."
+      },
+      {
+        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nRetour en métro depuis Shinjuku vers notre résidence à Asakusa Kappabashi pour se reposer (3e nuit à Tokyo)."
       }
     ],
     "money": "Env. 40 € (repas)"
@@ -586,6 +589,12 @@ export const days = [
       },
       {
         "text": "Coucher de soleil à l'observatoire Tokyo City View de la tour Mori (Roppongi)."
+      },
+      {
+        "text": "🍜 Dîner du côté de Roppongi ou Asakusa."
+      },
+      {
+        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nRetour en métro vers notre résidence à Asakusa Kappabashi pour se reposer (4e nuit à Tokyo)."
       }
     ],
     "money": "Env. 50 € (repas et observatoire Mori)"
@@ -604,6 +613,12 @@ export const days = [
       },
       {
         "text": "Après-midi de shopping de figurines et mangas rétro à Nakano Broadway."
+      },
+      {
+        "text": "🍜 Dîner du côté de Nakano ou Asakusa."
+      },
+      {
+        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nRetour à la résidence pour se reposer et se préparer pour le départ matinal de l'excursion au Mont Fuji (5e nuit à Tokyo)."
       }
     ],
     "money": "Env. 40 € (repas) + shopping"
@@ -651,7 +666,10 @@ export const days = [
         "text": "Arrivée à la gare Shinkansen de Shin-Fuji vers 17h30 et retour en train à Tokyo (~60 min)."
       },
       {
-        "text": "Dîner d'adieu du groupe et valises à l'hôtel."
+        "text": "🍜 Dîner d'adieu du groupe à Tokyo (Asakusa / Ginza)."
+      },
+      {
+        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nRetour à la résidence à Asakusa Kappabashi pour préparer les valises et se reposer (6e et dernière nuit à Tokyo)."
       }
     ],
     "money": "13 000 ¥ tour (entrées et minivan inc.) + Shinkansen + repas Houtou"
