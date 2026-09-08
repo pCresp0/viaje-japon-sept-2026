@@ -391,6 +391,9 @@ export const days = [
         "text": "🏨 **RETURN TO HOTEL: HOTEL WOOD TAKAYAMA** (https://www.google.com/maps/search/?api=1&query=Hotel+Wood+Takayama)\n\nEvening walk through the old town back to the hotel to rest (1st and only night in Takayama at Hotel Wood Takayama)."
       },
       {
+        "text": "ALREADY BOOKED: Kanazawa → Shirakawa-go (08:40, 5 seats) and Shirakawa-go → Takayama (13:15, 5 seats). We don't need a Japan Rail Pass, trains, or Suica for these buses.\nPENDING / RECOMMENDED: book the Hida beef dinner for 5 people at 19:00."
+      },
+      {
         "text": "🚍 TRANSPORT SUMMARY: Kanazawa → Shirakawa-go: Nohi Bus booked, 08:40 → 10:05.\nShirakawa-go: All on foot.\nShirakawa-go → Takayama: Nohi Bus booked, 13:15 → 14:05.\nTakayama Bus Terminal → Hotel Wood: approx. 12 min walk.\nHotel → Sanmachi: right next to it.\nWe do not need a Japan Rail Pass or trains today."
       },
       {
@@ -449,6 +452,9 @@ export const days = [
       },
       {
         "text": "🏮 **OPTIONAL EVENING STROLL IN MAGOME**\n\nIf you still have energy, a short walk along the lantern-lit stone streets. The village closes early — don't wander far from the inn."
+      },
+      {
+        "text": "🏨 Hotel Wood Takayama\n↓ 10–15 min walk (07:20)\n↓ 🚌 Takayama Nohi Bus Center (07:35 ticket exchange)\n↓ 08:00–10:45 🚌 Direct Nohi Bus (✅ Booked)\n↓ 📍 Magome (get off 10:45)\n↓ leave luggage\n↓ 🥾 8 km / ~3 h Nakasendo Trail\n↓ 📍 Tsumago\n↓ pick up luggage\n↓ 🚌 14:22–14:50 Local bus\n↓ 📍 Magome\n↓ 🏨 Magome Chaya\n↓ 🍱 Dinner 18:00."
       },
       {
         "text": "💡 NAKASENDO TIPS: 🥤 Bring enough water and light food before starting. 🍵 Teahouses exist but with variable hours. 🌙 Magome closes early, dinner at 18:00 is the safe bet. 🥾 Comfortable shoes with good soles. 🌧️ Watch for mud if it rains. 🐻 Use bear bells. 🎒 Hike only with a small backpack using the luggage service. 📸 Don't rush, enjoy the trail."

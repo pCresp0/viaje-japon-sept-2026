@@ -391,6 +391,9 @@ export const days = [
         "text": "🏨 **RETOUR À L'HÔTEL : HOTEL WOOD TAKAYAMA** (https://www.google.com/maps/search/?api=1&query=Hotel+Wood+Takayama)\n\nPromenade nocturne dans la vieille ville jusqu'à l'hôtel pour se reposer (1re et unique nuit à Takayama à l'Hotel Wood Takayama)."
       },
       {
+        "text": "DÉJÀ RÉSERVÉ : Kanazawa → Shirakawa-go (08h40, 5 places) et Shirakawa-go → Takayama (13h15, 5 places). Nous n'avons pas besoin de Japan Rail Pass, de trains, ni de Suica pour ces bus.\nEN ATTENTE / RECOMMANDÉ : réserver le dîner de bœuf de Hida pour 5 personnes à 19h00."
+      },
+      {
         "text": "🚍 RÉSUMÉ DES TRANSPORTS : Kanazawa → Shirakawa-go : Nohi Bus réservé, 08:40 → 10:05.\nShirakawa-go : Tout à pied.\nShirakawa-go → Takayama : Nohi Bus réservé, 13:15 → 14:05.\nTerminal de bus de Takayama → Hotel Wood : env. 12 min à pied.\nHôtel → Sanmachi : juste à côté.\nNous n'avons pas besoin de Japan Rail Pass ni de trains aujourd'hui."
       },
       {
@@ -449,6 +452,9 @@ export const days = [
       },
       {
         "text": "🏮 **PROMENADE NOCTURNE OPTIONNELLE À MAGOME**\n\nS'il reste de l'énergie, courte promenade dans les rues pavées éclairées aux lanternes. Le village ferme tôt : ne pas s'éloigner de l'auberge."
+      },
+      {
+        "text": "🏨 Hotel Wood Takayama\n↓ 10–15 min à pied (07h20)\n↓ 🚌 Takayama Nohi Bus Center (07h35 échange des billets)\n↓ 08h00–10h45 🚌 Bus Nohi direct (✅ Réservé)\n↓ 📍 Magome (descente 10h45)\n↓ déposer les bagages\n↓ 🥾 8 km / ~3 h randonnée Nakasendo\n↓ 📍 Tsumago\n↓ récupérer les bagages\n↓ 🚌 14h22–14h50 Bus local\n↓ 📍 Magome\n↓ 🏨 Magome Chaya\n↓ 🍱 Dîner 18h00."
       },
       {
         "text": "💡 CONSEILS NAKASENDO : 🥤 Emportez de l'eau et de la nourriture légère avant de partir. 🍵 Des maisons de thé existent mais horaires variables. 🌙 Magome ferme tôt, le dîner à 18:00 est l'option sûre. 🥾 Chaussures confortables avec bonne semelle. 🌧️ Attention à la boue s'il pleut. 🐻 Utilisez les cloches à ours. 🎒 Marchez avec un petit sac à dos grâce au service de bagages. 📸 Ne courez pas, profitez de la randonnée."

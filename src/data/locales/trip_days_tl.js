@@ -391,6 +391,9 @@ export const days = [
         "text": "🏨 **BALIK SA HOTEL: HOTEL WOOD TAKAYAMA** (https://www.google.com/maps/search/?api=1&query=Hotel+Wood+Takayama)\n\nGabing lakad sa old town pabalik sa hotel para magpahinga (una at tanging gabi sa Takayama sa Hotel Wood Takayama)."
       },
       {
+        "text": "NAKA-BOOK NA: Kanazawa → Shirakawa-go (08:40, 5 upuan) at Shirakawa-go → Takayama (13:15, 5 upuan). Hindi natin kailangan ng Japan Rail Pass, tren, o Suica para sa mga bus na ito.\nPENDING / INIREREKOMENDA: mag-book ng Hida beef dinner para sa 5 katao ng 19:00."
+      },
+      {
         "text": "🚍 BUOD NG TRANSPORTASYON: Kanazawa → Shirakawa-go: Nohi Bus booked, 08:40 → 10:05.\nShirakawa-go: Lakad lang.\nShirakawa-go → Takayama: Nohi Bus booked, 13:15 → 14:05.\nTakayama Bus Terminal → Hotel Wood: halos 12 min na lakad.\nHotel → Sanmachi: katabi lang.\nHindi natin kailangan ng Japan Rail Pass o tren ngayong araw."
       },
       {
@@ -449,6 +452,9 @@ export const days = [
       },
       {
         "text": "🏮 **OPTIONAL NA GABING LAKAD SA MAGOME**\n\nKung may energy pa, maikling lakad sa mga batong kalye na may farol. Maagang nagsasara ang bayan — huwag lumayo sa minshuku."
+      },
+      {
+        "text": "🏨 Hotel Wood Takayama\n↓ 10–15 min na lakad (07:20)\n↓ 🚌 Takayama Nohi Bus Center (07:35 palitan ng tiket)\n↓ 08:00–10:45 🚌 Direktang Nohi Bus (✅ Naka-book)\n↓ 📍 Magome (baba 10:45)\n↓ iwan ang bagahe\n↓ 🥾 8 km / ~3 h Nakasendo Trail\n↓ 📍 Tsumago\n↓ kunin ang bagahe\n↓ 🚌 14:22–14:50 Local bus\n↓ 📍 Magome\n↓ 🏨 Magome Chaya\n↓ 🍱 Hapunan 18:00."
       },
       {
         "text": "💡 NAKASENDO TIPS: 🥤 Magdala ng sapat na tubig at magaan na pagkain bago magsimula. 🍵 May mga teahouse pero paiba-iba ang oras. 🌙 Maagang nagsasara ang Magome, ang hapunan ng 18:00 ay pinakasigurado. 🥾 Kumportableng sapatos na may magandang swelas. 🌧️ Mag-ingat sa putik kung umulan. 🐻 Gamitin ang bear bells. 🎒 Maglakad lang nang may maliit na backpack gamit ang luggage service. 📸 Huwag magmadali, i-enjoy ang trail."
