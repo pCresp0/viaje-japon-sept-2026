@@ -4,7 +4,7 @@ export const popCulture = {
       franchise: "pokemon",
       title: "Bell Tower in Ecruteak City",
       detail:
-        "Kinkaku-ji is the direct and confirmed inspiration for the Bell Tower in Ecruteak City in Pokémon Gold/Silver/Crystal. The definitive proof: on the roof of Kinkaku-ji there is a golden statue of a phoenix (hō-ō, 鳳凰), and from there comes directly the name and design of the legendary Pokémon Ho-Oh. In the game, Ho-Oh resurrects the three legendary Pokémon after the Burned Tower catches fire — an almost literal echo of Kinkaku-ji itself burning down in 1950 and being rebuilt.",
+        "Kinkaku-ji is the most frequently cited Pokémon connection in all of Kyoto. On its roof is a golden statue of a phoenix (hō-ō, 鳳凰) — and from there comes, letter for letter, the name of the legendary Pokémon Ho-Oh, whose golden, feathered silhouette also matches the real statue's design. This connection has never been officially confirmed by Game Freak, but it's the interpretation most repeated among fans and specialized travel guides, and the visual coincidence is hard to ignore once you see it in person. In the game, Ho-Oh lives in the Bell Tower, in Ecruteak City. In the game, Ho-Oh resurrects the three legendary Pokémon after the Burned Tower catches fire — an almost literal echo of Kinkaku-ji itself burning down in 1950 and being rebuilt.",
     },
   ],
   "ginkaku-ji": [

@@ -4,7 +4,7 @@ export const popCulture = {
       franchise: "pokemon",
       title: "Tour Carillon d'Ecruteak City",
       detail:
-        "Le Kinkaku-ji est l'inspiration directe et confirmée de la Tour Carillon d'Ecruteak City dans Pokémon Or/Argent/Cristal. La preuve irréfutable : sur le toit du Kinkaku-ji se trouve une statue dorée d'un phénix (hō-ō, 鳳凰), et de là vient directement le nom et le design du Pokémon légendaire Ho-Oh. Dans le jeu, Ho-Oh ressuscite les trois Pokémon légendaires après l'incendie de la Tour Cendrée — un écho presque littéral au fait que le Kinkaku-ji lui-même a brûlé en 1950 et a été reconstruit.",
+        "Le Kinkaku-ji est la connexion Pokémon la plus citée de tout Kyoto. Sur son toit se trouve une statue dorée d'un phénix (hō-ō, 鳳凰) — d'où vient, lettre pour lettre, le nom du Pokémon légendaire Ho-Oh, dont la silhouette dorée et emplumée correspond aussi au design réel de la statue. Cette connexion n'a jamais été confirmée officiellement par Game Freak, mais c'est l'interprétation la plus répétée parmi les fans et les guides de voyage spécialisés, et la coïncidence visuelle est difficile à ignorer une fois qu'on la voit en personne. Dans le jeu, Ho-Oh habite la Tour Carillon, à Ecruteak City. Dans le jeu, Ho-Oh ressuscite les trois Pokémon légendaires après l'incendie de la Tour Cendrée — un écho presque littéral au fait que le Kinkaku-ji lui-même a brûlé en 1950 et a été reconstruit.",
     },
   ],
   "ginkaku-ji": [

@@ -4,7 +4,7 @@ export const popCulture = {
       franchise: "pokemon",
       title: "Bell Tower sa Ecruteak City",
       detail:
-        "Ang Kinkaku-ji ay ang direkta at kumpirmadong inspirasyon para sa Bell Tower sa Ecruteak City sa Pokémon Gold/Silver/Crystal. Ang tiyak na patunay: sa bubong ng Kinkaku-ji ay mayroong gintong estatwa ng phoenix (hō-ō, 鳳凰), at mula doon ay direktang nagmula ang pangalan at disenyo ng maalamat na Pokémon na Ho-Oh. Sa laro, muling binuhay ni Ho-Oh ang tatlong maalamat na Pokémon pagkatapos masunog ang Burned Tower — isang halos literal na pag-echo sa Kinkaku-ji na mismong nasunog noong 1950 at muling itinayo.",
+        "Ang Kinkaku-ji ang pinaka-madalas na banggitin na koneksyon sa Pokémon sa buong Kyoto. Sa bubong nito ay may gintong estatwa ng phoenix (hō-ō, 鳳凰) — at mula doon nagmula, letra por letra, ang pangalan ng maalamat na Pokémon na Ho-Oh, na ang gintong balahibong anyo ay tumutugma rin sa disenyo ng totoong estatwa. Hindi pa ito kailanman kumpirmado nang opisyal ng Game Freak, pero ito ang pinaka-madalas na interpretasyon sa mga fan at sa mga espesyal na travel guide, at mahirap balewalain ang pagkakatulad kapag nakita mo na ito nang personal. Sa laro, nakatira si Ho-Oh sa Bell Tower, sa Ecruteak City. Sa laro, muling binuhay ni Ho-Oh ang tatlong maalamat na Pokémon pagkatapos masunog ang Burned Tower — isang halos literal na pag-echo sa Kinkaku-ji na mismong nasunog noong 1950 at muling itinayo.",
     },
   ],
   "ginkaku-ji": [

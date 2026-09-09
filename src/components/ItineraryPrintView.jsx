@@ -3,7 +3,6 @@ import { createPortal } from "react-dom";
 import { useContent, useT } from "../i18n/LanguageContext";
 import { guidesByDay } from "../data/guides";
 import { guideImages } from "../data/guideImages";
-import { popCulture } from "../data/popCulture";
 import { pendingItems } from "../data/pending";
 import { heymondoInsurance } from "../data/insurance";
 import { gygFujiActivity, kenFujiActivity, visibilityTools } from "../data/fujiBookings";
@@ -269,6 +268,7 @@ function HotelCard({ stay, compact = false }) {
 }
 
 function GuideBlock({ id, accentColor, guides }) {
+  const { popCulture } = useContent();
   const g = guides[id];
   if (!g) return null;
   const img = guideImages[id];
