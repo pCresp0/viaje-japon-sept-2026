@@ -178,16 +178,20 @@ export const days = [
     "history": "Kinkakuji (the Golden Pavilion) was the lavish retirement villa of shogun Ashikaga Yoshimitsu in the late 14th century. Arashiyama has been a holiday destination for imperial nobility since the Heian period.",
     "schedule": [
       {
-        "time": "07:30",
-        "text": "Wake up. 🍳 Hotel breakfast from 07:00, or a light breakfast bought beforehand."
+        "text": "Wake up."
       },
       {
-        "time": "08:00–09:00",
-        "text": "🚇 Hotel → Kinkaku-ji. From the hotel walk to Kyoto Station. Take the Kyoto Subway Karasuma Line:\n\nKyoto → Kitaoji. At Kitaoji: follow signs to Kitaoji Bus Terminal; use the blue zone; take bus No. 204 or 205 toward Kinkaku-ji; get off at Kinkakuji-michi. From Kinkakuji-michi:\n\nabout a 5-minute walk to the entrance. This combination is preferable to the direct 205 bus from Kyoto Station because it avoids some traffic and crowding. No reservation.\n\n🎫 **SUICA:** ✅ YES; flat fare of ¥230. Board through the rear door (no tap needed), and pay by tapping Suica ONLY when exiting, through the front door."
+        "text": "🍙 Leave the hotel toward the nearest konbini (Lawson or 7-Eleven, whichever is closer). We're meeting at the hotel door at 07:20."
+      },
+      {
+        "text": "🍙 Konbini breakfast. Between choosing, buying and eating without rushing, this takes a while — count on until about 07:50 before heading to Kinkaku-ji."
+      },
+      {
+        "text": "🚇 To Kinkaku-ji. From the konbini walk to Kyoto Station. Take the Kyoto Subway Karasuma Line:\n\nKyoto → Kitaoji. At Kitaoji: follow signs to Kitaoji Bus Terminal; use the blue zone; take bus No. 204 or 205 toward Kinkaku-ji; get off at Kinkakuji-michi. From Kinkakuji-michi:\n\nabout a 5-minute walk to the entrance. This combination is preferable to the direct 205 bus from Kyoto Station because it avoids some traffic and crowding. No reservation.\n\n🎫 **SUICA:** ✅ YES; flat fare of ¥230. Board through the rear door (no tap needed), and pay by tapping Suica ONLY when exiting, through the front door.\n\nWith the earlier departure and breakfast already done, there's plenty of time to arrive right when Kinkaku-ji opens at 09:00, without rushing."
       },
       {
         "time": "09:00–10:15",
-        "text": "🏯 Kinkaku-ji (Golden Pavilion).\n\n⚠️ **IMPORTANT:**\nThe earlier 08:30 time was incorrect. Kinkaku-ji opens at 09:00. Admission: approx. ¥500 (~3€). No reservation needed. Tip: try to arrive right at opening to enjoy the grounds with fewer people."
+        "text": "🏯 Kinkaku-ji (Golden Pavilion), with its famous garden and reflecting pond.\n\n⚠️ **IMPORTANT:**\nThe earlier 08:30 time was incorrect. Kinkaku-ji opens at 09:00. Admission: approx. ¥500 (~3€). No reservation needed. Tip: try to arrive right at opening to enjoy the grounds with fewer people."
       },
       {
         "time": "10:15–12:15",

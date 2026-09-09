@@ -178,16 +178,20 @@ export const days = [
     "history": "Le Kinkakuji (Pavillon d'Or) fut la somptueuse villa de retraite du shogun Ashikaga Yoshimitsu à la fin du XIVe siècle. Arashiyama est une destination de villégiature de la noblesse impériale depuis la période Heian.",
     "schedule": [
       {
-        "time": "07:30",
-        "text": "Réveil. 🍳 Petit-déjeuner à l'hôtel dès 07h00, ou petit-déjeuner léger acheté à l'avance."
+        "text": "Réveil."
       },
       {
-        "time": "08:00–09:00",
-        "text": "🚇 Hôtel → Kinkaku-ji. Depuis l'hôtel, marcher jusqu'à Kyoto Station. Prendre la ligne de métro Kyoto Karasuma :\n\nKyoto → Kitaoji. À Kitaoji : suivre les panneaux vers le Kitaoji Bus Terminal ; utiliser la zone bleue ; prendre le bus n°204 ou 205 vers Kinkaku-ji ; descendre à Kinkakuji-michi. Depuis Kinkakuji-michi :\n\nenviron 5 min à pied jusqu'à l'entrée. Cette combinaison est préférable au bus 205 direct depuis Kyoto Station car elle évite une partie du trafic et de l'affluence. Sans réservation.\n\n🎫 **SUICA :** ✅ OUI ; tarif fixe de ¥230. On monte par la porte arrière (pas besoin de badger), et on paie en passant la Suica SEULEMENT en descendant, par la porte avant."
+        "text": "🍙 Départ de l'hôtel vers le konbini le plus proche (Lawson ou 7-Eleven, celui qui est le plus près). Rendez-vous à la porte de l'hôtel à 07h20."
+      },
+      {
+        "text": "🍙 Petit-déjeuner au konbini. Entre choisir, acheter et manger tranquillement, cela prend du temps — comptez jusqu'à environ 07h50 avant de continuer vers Kinkaku-ji."
+      },
+      {
+        "text": "🚇 Vers Kinkaku-ji. Depuis le konbini, marcher jusqu'à Kyoto Station. Prendre la ligne de métro Kyoto Karasuma :\n\nKyoto → Kitaoji. À Kitaoji : suivre les panneaux vers le Kitaoji Bus Terminal ; utiliser la zone bleue ; prendre le bus n°204 ou 205 vers Kinkaku-ji ; descendre à Kinkakuji-michi. Depuis Kinkakuji-michi :\n\nenviron 5 min à pied jusqu'à l'entrée. Cette combinaison est préférable au bus 205 direct depuis Kyoto Station car elle évite une partie du trafic et de l'affluence. Sans réservation.\n\n🎫 **SUICA :** ✅ OUI ; tarif fixe de ¥230. On monte par la porte arrière (pas besoin de badger), et on paie en passant la Suica SEULEMENT en descendant, par la porte avant.\n\nAvec le départ plus tôt et le petit-déjeuner déjà fait, il y a largement le temps d'arriver juste à l'ouverture de Kinkaku-ji à 09h00, sans se presser."
       },
       {
         "time": "09:00–10:15",
-        "text": "🏯 Kinkaku-ji (Pavillon d'Or).\n\n⚠️ **IMPORTANT :**\nL'horaire précédent de 08h30 était incorrect. Kinkaku-ji ouvre à 09h00. Entrée : environ ¥500 (~3€). Sans réservation. Conseil : essayer d'arriver juste à l'ouverture pour profiter du site avec moins de monde."
+        "text": "🏯 Kinkaku-ji (Pavillon d'Or), avec son célèbre jardin et son étang miroir.\n\n⚠️ **IMPORTANT :**\nL'horaire précédent de 08h30 était incorrect. Kinkaku-ji ouvre à 09h00. Entrée : environ ¥500 (~3€). Sans réservation. Conseil : essayer d'arriver juste à l'ouverture pour profiter du site avec moins de monde."
       },
       {
         "time": "10:15–12:15",

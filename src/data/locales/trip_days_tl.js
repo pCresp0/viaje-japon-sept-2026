@@ -178,16 +178,20 @@ export const days = [
     "history": "Ang Kinkakuji (Golden Pavilion) ay ang marangyang retirement villa ni shogun Ashikaga Yoshimitsu noong huling bahagi ng ika-14 na siglo. Ang Arashiyama ay destinasyon ng bakasyon ng imperial nobility mula pa noong Heian period.",
     "schedule": [
       {
-        "time": "07:30",
-        "text": "Gising na. 🍳 Breakfast sa hotel mula 07:00, o magaang breakfast na binili nang maaga."
+        "text": "Gising na."
       },
       {
-        "time": "08:00–09:00",
-        "text": "🚇 Hotel → Kinkaku-ji. Mula sa hotel, maglakad papuntang Kyoto Station. Sumakay ng Kyoto Subway Karasuma Line:\n\nKyoto → Kitaoji. Sa Kitaoji: sundin ang mga signage papuntang Kitaoji Bus Terminal; gamitin ang blue zone; sumakay ng bus No. 204 o 205 patungong Kinkaku-ji; bumaba sa Kinkakuji-michi. Mula sa Kinkakuji-michi:\n\nmga 5 minutong lakad papuntang entrance. Mas mainam ang kombinasyong ito kaysa sa direktang bus 205 mula sa Kyoto Station dahil naiiwasan nito ang bahagi ng trapiko at ang mga tao. Walang reserbasyon.\n\n🎫 **SUICA:** ✅ OO; fixed na fare na ¥230. Sumakay sa likod na pinto (walang kailangang i-tap), at magbayad sa pamamagitan ng pag-tap ng Suica PAGBABA LANG, sa harap na pinto."
+        "text": "🍙 Alis mula sa hotel patungong pinakamalapit na konbini (Lawson o 7-Eleven, kung alin ang mas malapit). Magkita tayo sa pinto ng hotel ng 07:20."
+      },
+      {
+        "text": "🍙 Konbini breakfast. Sa pagpili, pagbili, at pagkain nang walang pagmamadali, may oras na inaabot ito — asahan hanggang mga 07:50 bago tumuloy papuntang Kinkaku-ji."
+      },
+      {
+        "text": "🚇 Papuntang Kinkaku-ji. Mula sa konbini, maglakad papuntang Kyoto Station. Sumakay ng Kyoto Subway Karasuma Line:\n\nKyoto → Kitaoji. Sa Kitaoji: sundin ang mga signage papuntang Kitaoji Bus Terminal; gamitin ang blue zone; sumakay ng bus No. 204 o 205 patungong Kinkaku-ji; bumaba sa Kinkakuji-michi. Mula sa Kinkakuji-michi:\n\nmga 5 minutong lakad papuntang entrance. Mas mainam ang kombinasyong ito kaysa sa direktang bus 205 mula sa Kyoto Station dahil naiiwasan nito ang bahagi ng trapiko at ang mga tao. Walang reserbasyon.\n\n🎫 **SUICA:** ✅ OO; fixed na fare na ¥230. Sumakay sa likod na pinto (walang kailangang i-tap), at magbayad sa pamamagitan ng pag-tap ng Suica PAGBABA LANG, sa harap na pinto.\n\nDahil mas maaga ang alis at tapos na ang breakfast, may sapat na oras para dumating mismong nagbukas ang Kinkaku-ji ng 09:00, nang walang pagmamadali."
       },
       {
         "time": "09:00–10:15",
-        "text": "🏯 Kinkaku-ji (Golden Pavilion).\n\n⚠️ **MAHALAGA:**\nMali ang naunang oras na 08:30. Nagbubukas ang Kinkaku-ji ng 09:00. Entrance: mga ¥500 (~3€). Walang kailangang reserbasyon. Tip: subukang dumating mismong pagbukas para ma-enjoy ang lugar na kaunti pa lang ang tao."
+        "text": "🏯 Kinkaku-ji (Golden Pavilion), kasama ang sikat nitong hardin at reflecting pond.\n\n⚠️ **MAHALAGA:**\nMali ang naunang oras na 08:30. Nagbubukas ang Kinkaku-ji ng 09:00. Entrance: mga ¥500 (~3€). Walang kailangang reserbasyon. Tip: subukang dumating mismong pagbukas para ma-enjoy ang lugar na kaunti pa lang ang tao."
       },
       {
         "time": "10:15–12:15",
