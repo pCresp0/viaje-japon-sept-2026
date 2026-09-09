@@ -191,11 +191,11 @@ export const days = [
       },
       {
         "time": "09:00–10:15",
-        "text": "🏯 Kinkaku-ji (Golden Pavilion), with its famous garden and reflecting pond.\n\n⚠️ **IMPORTANT:**\nThe earlier 08:30 time was incorrect. Kinkaku-ji opens at 09:00. Admission: approx. ¥500 (~3€). No reservation needed. Tip: try to arrive right at opening to enjoy the grounds with fewer people."
+        "text": "🏯 Kinkaku-ji (Golden Pavilion), with its famous garden and reflecting pond.\n\nKinkaku-ji opens at 09:00. Admission: approx. ¥500 (~3€). No reservation needed. Tip: try to arrive right at opening to enjoy the grounds with fewer people."
       },
       {
         "time": "10:15–12:15",
-        "text": "🚶 Kinukake no Michi Path. Follow this order: 1. Kinkaku-ji 2. Ryoan-ji 3. Ninna-ji"
+        "text": "🚶 Kinukake no Michi Path. Follow this order: 1. Kinkaku-ji 2. Ryoan-ji 3. Ninna-ji\n\n⛩️ **ABOUT THE PATH:**\n\"Kinukake\" literally means \"draped with silk\": the name comes from a 9th-century legend about Emperor Uda, who wanted to gaze at a snowy landscape even in midsummer, so he had the slopes of nearby Mount Kinugasa covered with white silk to simulate snow.\n\nIt's by far Japan's most famous stretch for linking UNESCO World Heritage Sites on foot: Kinkaku-ji, Ryoan-ji and Ninna-ji, all three in a row, in barely 2.5 km through the foothills of Mount Kinugasa. From Kinkaku-ji to Ryoan-ji is about 18 minutes on foot, and from there to Ninna-ji about 11 more.\n\n💡 Despite the poetic name, it's not an exclusive pedestrian path but a regular road with a sidewalk — walk on the sidewalk, not the roadway. If the stretch feels like too much, bus No. 59 runs the same route."
       },
       {
         "time": "10:15–11:00",

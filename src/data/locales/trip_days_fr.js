@@ -191,11 +191,11 @@ export const days = [
       },
       {
         "time": "09:00–10:15",
-        "text": "🏯 Kinkaku-ji (Pavillon d'Or), avec son célèbre jardin et son étang miroir.\n\n⚠️ **IMPORTANT :**\nL'horaire précédent de 08h30 était incorrect. Kinkaku-ji ouvre à 09h00. Entrée : environ ¥500 (~3€). Sans réservation. Conseil : essayer d'arriver juste à l'ouverture pour profiter du site avec moins de monde."
+        "text": "🏯 Kinkaku-ji (Pavillon d'Or), avec son célèbre jardin et son étang miroir.\n\nKinkaku-ji ouvre à 09h00. Entrée : environ ¥500 (~3€). Sans réservation. Conseil : essayer d'arriver juste à l'ouverture pour profiter du site avec moins de monde."
       },
       {
         "time": "10:15–12:15",
-        "text": "🚶 Sentier Kinukake no Michi. Suivre cet ordre : 1. Kinkaku-ji 2. Ryoan-ji 3. Ninna-ji"
+        "text": "🚶 Sentier Kinukake no Michi. Suivre cet ordre : 1. Kinkaku-ji 2. Ryoan-ji 3. Ninna-ji\n\n⛩️ **À PROPOS DU SENTIER :**\n« Kinukake » signifie littéralement « drapé de soie » : le nom vient d'une légende du IXe siècle sur l'empereur Uda, qui voulait pouvoir contempler un paysage enneigé même en plein été — il fit donc recouvrir les pentes du mont Kinugasa voisin de soie blanche pour simuler la neige.\n\nC'est de loin le tronçon le plus célèbre du Japon pour enchaîner à pied des sites du patrimoine mondial de l'UNESCO : Kinkaku-ji, Ryoan-ji et Ninna-ji, les trois d'affilée, en à peine 2,5 km à travers les contreforts du mont Kinugasa. De Kinkaku-ji à Ryoan-ji, il faut environ 18 minutes à pied, puis encore 11 minutes environ jusqu'à Ninna-ji.\n\n💡 Malgré son nom poétique, ce n'est pas un sentier piéton exclusif mais une route normale avec trottoir — marchez sur le trottoir, pas sur la chaussée. Si le trajet semble trop long, le bus n°59 suit le même itinéraire."
       },
       {
         "time": "10:15–11:00",

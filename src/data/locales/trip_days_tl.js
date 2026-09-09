@@ -191,11 +191,11 @@ export const days = [
       },
       {
         "time": "09:00–10:15",
-        "text": "🏯 Kinkaku-ji (Golden Pavilion), kasama ang sikat nitong hardin at reflecting pond.\n\n⚠️ **MAHALAGA:**\nMali ang naunang oras na 08:30. Nagbubukas ang Kinkaku-ji ng 09:00. Entrance: mga ¥500 (~3€). Walang kailangang reserbasyon. Tip: subukang dumating mismong pagbukas para ma-enjoy ang lugar na kaunti pa lang ang tao."
+        "text": "🏯 Kinkaku-ji (Golden Pavilion), kasama ang sikat nitong hardin at reflecting pond.\n\nNagbubukas ang Kinkaku-ji ng 09:00. Entrance: mga ¥500 (~3€). Walang kailangang reserbasyon. Tip: subukang dumating mismong pagbukas para ma-enjoy ang lugar na kaunti pa lang ang tao."
       },
       {
         "time": "10:15–12:15",
-        "text": "🚶 Daanan ng Kinukake no Michi. Sundin ang pagkakasunod-sunod na ito: 1. Kinkaku-ji 2. Ryoan-ji 3. Ninna-ji"
+        "text": "🚶 Daanan ng Kinukake no Michi. Sundin ang pagkakasunod-sunod na ito: 1. Kinkaku-ji 2. Ryoan-ji 3. Ninna-ji\n\n⛩️ **TUNGKOL SA DAANAN:**\nAng \"Kinukake\" ay literal na nangangahulugang \"nabalutan ng seda\": nagmula ang pangalan sa isang alamat noong ika-9 na siglo tungkol kay Emperor Uda, na gustong makakita ng maniyebe na tanawin kahit sa gitna ng tag-init, kaya pinabalot niya ng puting seda ang mga gilid ng malapit na Bundok Kinugasa para gayahin ang niyebe.\n\nIto ang pinakasikat na daanan sa buong Japan para sunud-sunod na malibot na naglalakad ang tatlong UNESCO World Heritage Site: Kinkaku-ji, Ryoan-ji, at Ninna-ji, magkakasunod, sa loob lang ng 2.5 km sa paanan ng Bundok Kinugasa. Mula Kinkaku-ji papuntang Ryoan-ji ay mga 18 minutong lakad, at mula doon papuntang Ninna-ji ay mga 11 minuto pa.\n\n💡 Sa kabila ng patula na pangalan, hindi ito eksklusibong daanan para sa naglalakad kundi normal na kalsada na may sidewalk — maglakad sa sidewalk, hindi sa kalsada. Kung sobra na ang lakad, ang bus No. 59 ay dumadaan din sa parehong ruta."
       },
       {
         "time": "10:15–11:00",
