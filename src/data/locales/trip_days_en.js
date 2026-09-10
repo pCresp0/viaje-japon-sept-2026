@@ -226,16 +226,19 @@ export const days = [
         "text": "🚶 Saga-Toriimoto. Start the walk down from Otagi. Walk through the historic Saga-Toriimoto area.\n\n⚠️ **IMPORTANT:**\n\nThis direction is deliberate: Otagi → Saga-Toriimoto → bamboo forest → central Arashiyama. It's the direction recommended by the temple itself."
       },
       {
-        "time": "15:30–17:00",
         "text": "🎋 Arashiyama Bamboo Grove. Walk down toward the center through the bamboo grove. Tip: don't expect the grove to be completely empty. It's a very busy area. The stretch from Saga-Toriimoto to the grove offers a gradual transition from the rural/historic area to the more touristy Arashiyama. 🍵 Optional snack after the bamboo grove: matcha; dango; taiyaki; ice cream; melon pan."
       },
       {
-        "time": "17:00",
+        "text": "🌉 Togetsukyō Bridge. Walk from the bamboo grove, very close (~5 min). One of Arashiyama's symbols: a wooden bridge over the Katsura River, with the mountains as a backdrop — a must-stop for photos."
+      },
+      {
+        "text": "🚶 Stroll through central Arashiyama. Free time to browse the local shops (sweets, crafts, fans) and grab a bite before heading back."
+      },
+      {
         "text": "🚆 Back to Kyoto. Take the JR Sagano/San-in Line from Saga-Arashiyama to Kyoto Station (~15–20 min, 🎫 **SUICA:** ✅ YES). Dinner around Kyoto Station or Pontocho."
       },
       {
-        "time": "~21:30",
-        "text": "🏨 **BACK TO THE HOTEL: HOTEL KEIHAN KYOTO HACHIJOGUCHI** (https://www.google.com/maps/search/?api=1&query=Hotel+Keihan+Kyoto+Hachijoguchi)\n\nBack to the hotel to rest and get bags ready for next morning's luggage forwarding (4th night at Hotel Keihan Kyoto Hachijoguchi)."
+        "text": "🏨 **BACK TO THE HOTEL: HOTEL KEIHAN KYOTO HACHIJOGUCHI** (https://www.google.com/maps/search/?api=1&query=Hotel+Keihan+Kyoto+Hachijoguchi)\n\nBack to the hotel to rest and get bags ready for next morning's luggage forwarding (4th night at Hotel Keihan Kyoto Hachijoguchi).\n\n🧺 **LAUNDRY:** The hotel has self-service coin laundry machines and an automatic washer-dryer that doesn't need detergent. There's also a hotel laundry service, but only if clothes are dropped off at reception before 10:00 (ready by 16:00 the same day) — that won't work if we're back at night, so better use the self-service machines tonight."
       },
       {
         "time": "🎫 RESERVATIONS",

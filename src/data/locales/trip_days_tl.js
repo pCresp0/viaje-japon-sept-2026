@@ -226,16 +226,19 @@ export const days = [
         "text": "🚶 Saga-Toriimoto. Mula sa Otagi, simulan ang paglakad pababa. Libutin ang makasaysayang lugar ng Saga-Toriimoto.\n\n⚠️ **MAHALAGA:**\n\nSinadya ang direksyon na ito: Otagi → Saga-Toriimoto → bamboo forest → sentro ng Arashiyama. Ito ang direksyon na inirerekomenda mismo ng templo."
       },
       {
-        "time": "15:30–17:00",
         "text": "🎋 Arashiyama Bamboo Grove. Bumaba papuntang sentro sa pamamagitan ng bamboo forest. Tip: huwag umasang ganap na walang tao ang forest. Napaka-busy na lugar ito. Ang bahagi mula sa Saga-Toriimoto papuntang forest ay nagbibigay ng unti-unting transition mula sa rural/makasaysayang lugar papuntang mas turistang Arashiyama. 🍵 Optional na snack pagkatapos ng bamboo forest: matcha; dango; taiyaki; ice cream; melon pan."
       },
       {
-        "time": "17:00",
+        "text": "🌉 Togetsukyō Bridge. Maglakad mula sa bamboo forest, napakalapit (~5 min). Isa sa mga simbolo ng Arashiyama: kahoy na tulay sa Ilog Katsura, may bundok sa likod — dapat talagang dumaan dito para sa litrato."
+      },
+      {
+        "text": "🚶 Lakad sa sentro ng Arashiyama. Libreng oras para tignan ang mga lokal na tindahan (matamis, gawang-kamay, abaniko) at kumain ng konti bago bumalik."
+      },
+      {
         "text": "🚆 Balik sa Kyoto. Sumakay ng JR Sagano/San-in Line mula sa Saga-Arashiyama papuntang Kyoto Station (~15–20 min, 🎫 **SUICA:** ✅ OO). Hapunan sa paligid ng Kyoto Station o Pontocho."
       },
       {
-        "time": "~21:30",
-        "text": "🏨 **BALIK SA HOTEL: HOTEL KEIHAN KYOTO HACHIJOGUCHI** (https://www.google.com/maps/search/?api=1&query=Hotel+Keihan+Kyoto+Hachijoguchi)\n\nBalik sa hotel para magpahinga at ihanda ang mga bag para sa luggage forwarding kinaumagahan (4th gabi sa Hotel Keihan Kyoto Hachijoguchi)."
+        "text": "🏨 **BALIK SA HOTEL: HOTEL KEIHAN KYOTO HACHIJOGUCHI** (https://www.google.com/maps/search/?api=1&query=Hotel+Keihan+Kyoto+Hachijoguchi)\n\nBalik sa hotel para magpahinga at ihanda ang mga bag para sa luggage forwarding kinaumagahan (4th gabi sa Hotel Keihan Kyoto Hachijoguchi).\n\n🧺 **LABA:** May self-service coin laundry machine ang hotel at automatic washer-dryer na hindi na kailangan ng sariling detergent. May laundry service din ang hotel, pero kailangan lang iwan ang damit sa reception bago mag-10:00 (tapos na sa 16:00 ng parehong araw) — hindi ito aabot kung babalik tayo sa gabi, kaya mas mainam gamitin ang self-service machines ngayong gabi."
       },
       {
         "time": "🎫 MGA RESERBASYON",

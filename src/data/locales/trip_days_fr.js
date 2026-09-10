@@ -226,16 +226,19 @@ export const days = [
         "text": "🚶 Saga-Toriimoto. Depuis Otagi, commencer la descente à pied. Parcourir le quartier historique de Saga-Toriimoto.\n\n⚠️ **IMPORTANT :**\n\nCe sens de parcours est délibéré : Otagi → Saga-Toriimoto → forêt de bambous → centre d'Arashiyama. C'est le sens recommandé par le temple lui-même."
       },
       {
-        "time": "15:30–17:00",
         "text": "🎋 Forêt de bambous d'Arashiyama. Descendre à pied vers le centre en traversant la forêt de bambous. Conseil : ne pas s'attendre à trouver la forêt complètement vide. C'est une zone très fréquentée. Le tronçon depuis Saga-Toriimoto vers la forêt permet une transition progressive de la zone rurale/historique vers l'Arashiyama plus touristique. 🍵 Encas facultatif après la forêt de bambous : matcha ; dango ; taiyaki ; glace ; melon pan."
       },
       {
-        "time": "17:00",
+        "text": "🌉 Pont Togetsukyō. Marcher depuis la forêt de bambous, tout près (~5 min). L'un des symboles d'Arashiyama : un pont en bois sur la rivière Katsura, avec les montagnes en arrière-plan — un arrêt incontournable pour les photos."
+      },
+      {
+        "text": "🚶 Balade dans le centre d'Arashiyama. Temps libre pour flâner dans les boutiques locales (douceurs, artisanat, éventails) et grignoter quelque chose avant de repartir."
+      },
+      {
         "text": "🚆 Retour à Kyoto. Prendre la ligne JR Sagano/San-in depuis Saga-Arashiyama jusqu'à Kyoto Station (~15–20 min, 🎫 **SUICA :** ✅ OUI). Dîner du côté de Kyoto Station ou de Pontocho."
       },
       {
-        "time": "~21:30",
-        "text": "🏨 **RETOUR À L'HÔTEL : HOTEL KEIHAN KYOTO HACHIJOGUCHI** (https://www.google.com/maps/search/?api=1&query=Hotel+Keihan+Kyoto+Hachijoguchi)\n\nRetour à l'hôtel pour se reposer et préparer les sacs pour l'envoi des bagages le lendemain matin (4e nuit à l'Hotel Keihan Kyoto Hachijoguchi)."
+        "text": "🏨 **RETOUR À L'HÔTEL : HOTEL KEIHAN KYOTO HACHIJOGUCHI** (https://www.google.com/maps/search/?api=1&query=Hotel+Keihan+Kyoto+Hachijoguchi)\n\nRetour à l'hôtel pour se reposer et préparer les sacs pour l'envoi des bagages le lendemain matin (4e nuit à l'Hotel Keihan Kyoto Hachijoguchi).\n\n🧺 **LESSIVE :** L'hôtel dispose de machines à laver en libre-service (à pièces) et d'un lave-linge séchant automatique sans besoin de lessive. Il y a aussi un service de blanchisserie de l'hôtel, mais seulement si on dépose le linge à la réception avant 10h00 (prêt à 16h00 le jour même) — ça ne marchera pas si on rentre le soir, mieux vaut donc utiliser les machines en libre-service ce soir."
       },
       {
         "time": "🎫 RÉSERVATIONS",
