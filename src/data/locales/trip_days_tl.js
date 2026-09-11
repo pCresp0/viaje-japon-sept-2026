@@ -275,22 +275,19 @@ export const days = [
         "text": "⛩️ HEIAN JINGU. Bisitahin ang shrine at ang malaking torii. Nagbubukas ang grounds mula 06:00. Kung nais bisitahin ang hardin (Shin-en), ang oras nito sa Setyembre 11 ay halos 08:30–18:00, huling pasok ay 17:30. Walang kailangang reserbasyon."
       },
       {
-        "text": "🍜 TANGHALIAN SA KYOTO. \n\n⚠️ **MAHALAGA:**\nSubukang matapos mga 13:45 para may buffer para sa tren papuntang Osaka.\n⚠️ Dahil sa oras na nakuha kaninang umaga, hindi na kailangang magmadali sa pagkain gaya ng orihinal na plano. May tren tayo papuntang Osaka ng 14:30. Rekomendasyon: kumain malapit sa daan papuntang Kyoto Station; ramen; udon/soba; curry; donburi; mabilis na teishoku. Hindi na kailangan mag-book ng restaurant para dito. \n\n\n**Alternatibo:** Bumili ng bento/ekiben sa Kyoto Station kung nauubusan tayo ng oras."
+        "text": "🥟 **TANGHALIAN: CHAO CHAO GYOZA - SANJO KIYAMACHI** (https://maps.app.goo.gl/ScXREEXfRmmTKcj88?g_st=ic)\n\n浪花ひとくち餃子 餃々 三条木屋町店 — mataas ang rating na izakaya gyoza restaurant (4.6★, 2700+ reviews), katabi ng Kiyamachi, malapit lang lakad mula sa Sanjo Station. Mga ¥1,000–2,000/tao. Walang kailangang reserbasyon.\n\n💡 Rekomendasyon ng ibang bisita: ang chocolate gyoza na may ice cream bilang dessert."
       },
       {
-        "text": "🚶 Paglipat sa Kyoto Station."
+        "text": "🚶 Maglakad papuntang Sanjo Station (Keihan). Mga 200 m lang, mga 3 min."
       },
       {
-        "text": "🚆 KYOTO → OSAKA. Sakyan ang JR Kyoto Line mula Kyoto Station patungong Osaka Station. Mas maigi ang Special Rapid (新快速) kung mayroon. Ang byahe ay halos 30 min. Walang reserbasyon. Hindi kailangan ng JR Pass. Magbayad gamit ang IC card o single ticket."
+        "text": "🚆 SANJO → TEMMABASHI (Osaka).\n\n🎫 **SUICA:** ✅ OO; i-tap ang card nang direkta sa mga gate.\n\nKeihan Electric Railway, main line (Keihan Main Line), Limited Express patungong Yodoyabashi. 8 hintuan, mga 47 min — tinatayang pagdating mga 15:17. Pamasahe mga ¥490. Walang reserbasyon. Ang linyang ito ng Keihan (hindi JR) ay direktang kumokonekta sa gitna ng Kyoto papuntang puso ng Osaka, mas malapit sa castle kaysa sa karaniwang ruta via Kyoto Station/Osaka Station.\n\n🎧 **Podcast para sa biyahe:** [Osaka: pagkain, kapaligiran at saya](https://podcasts.apple.com/es/podcast/jap%C3%B3n-a-fondo/id1545542012?i=1000516234185) (*Japón a fondo* · Japonismo). Maganda para ma-appreciate ang kultura ng 'kuidaore' (kumain hanggang mauntog), Dotonbori at ang street atmosphere habang nasa tren."
       },
       {
-        "text": "🚆 OSAKA STATION → MORINOMIYA. Mula Osaka Station, sakyan ang JR Osaka Loop Line patungong Morinomiya. Walang reserbasyon. Magbayad gamit ang IC card."
+        "text": "🚶 TEMMABASHI → OSAKA CASTLE. Maglakad diretso papuntang castle, hindi na kailangan dumaan sa Osaka Station o Morinomiya. Mga 1.6 km, mga 24 min."
       },
       {
-        "text": "🚶 MORINOMIYA → OSAKA CASTLE. Maglakad sa Osaka Castle Park patungong kastilyo. Maglaan ng halos 15–20 min."
-      },
-      {
-        "text": "🏯 OSAKA CASTLE. MAHALAGA: Ang Osaka Castle Museum ay bukas mula 09:00–18:00, huling pasok ay 17:30. PAGPASOK SA LOOB NG KASTILYO: Gawing pangunahing bisita ang museo sa tore at ang observation deck. Pagpasok: ¥1,200 matanda. Hindi na kailangang magpareserba nang maaga. Bumili ng tiket sa mismong kastilyo. Pwedeng magbayad ng cash, card, at IC card. 💡 Tip: Sa Osaka Castle, maglaan ng halos 1.5–2 oras para sa museo + observation deck + labas."
+        "text": "🏯 OSAKA CASTLE. MAHALAGA: Bukas ang Osaka Castle Museum ng 09:00–18:00, huling pasukan 17:30. PAGPASOK SA LOOB NG CASTLE: Panatilihing pangunahing bisita ang main tower museum at observation deck. Entrance: ¥1,200 adult. Hindi na kailangang mag-book nang maaga para sa araw na ito. Bumili ng tiket mismo sa castle. Puwedeng magbayad ng cash, card, at IC card. 💡 Tip: Sa Osaka Castle, maglaan ng mga 1.5–2 oras para sa museum + observation deck + exterior."
       },
       {
         "text": "🚇 OSAKA CASTLE → DOTONBORI. Mula Morinomiya gamitin ang Osaka Metro papuntang Namba/Dotonbori area. Walang reserbasyon. Gumamit ng IC card."
@@ -308,7 +305,7 @@ export const days = [
         "text": "🎟️ LOGISTIKA: ⚠️ **PAGKUHA NG JR-WEST TICKETS:**\nPagbalik sa Kyoto Station (o kahit anong libreng oras sa araw na ito), pumunta sa mga berdeng ticket machines (na may 5489 logo) para **i-print ang pisikal na tiket** para sa tren bukas papuntang Kanazawa. KAILANGANG dalhin:\n- Ang **pisikal** na credit card (Mastercard na nagtatapos sa 8625).\n- Ang reservation number (47932).\n- Ang 4-digit Identification Number (PIN)."
       },
       {
-        "text": "🎫 MGA RESERBASYON PARA SA ARAW NA ITO: HUWAG mag-book ng anumang transportasyon.\nHUWAG gumamit ng SmartEX.\nHUWAG gumamit ng JR-WEST Online.\nHindi natin kailangan ng Japan Rail Pass.\nLahat ng byahe ay pwedeng bayaran nang isa-isa gamit ang IC card.\nBUOD NG TRANSPORTASYON: Hotel → Kiyomizu: Bus 100/206 o Kiyomizu-dera Line → IC card/ticket.\nKiyomizu → Yasaka → Maruyama → Chion-in → Heian: Paglalakad.\nHeian → Kyoto Station: Paglalakad + urban transit kung kailangan.\nKyoto → Osaka: JR Kyoto Line Special Rapid → IC card/ticket.\nOsaka → Morinomiya: JR Osaka Loop Line → IC card/ticket.\nMorinomiya → Osaka Castle: Paglalakad.\nOsaka Castle → Dotonbori: Osaka Metro → IC card.\nDotonbori → Kyoto: JR/metro depende sa lokasyon → IC card/ticket."
+        "text": "🎫 MGA RESERBASYON PARA SA ARAW NA ITO: HUWAG mag-book ng anumang transportasyon.\nHUWAG gumamit ng SmartEX.\nHUWAG gumamit ng JR-WEST Online.\nHindi natin kailangan ng Japan Rail Pass.\nLahat ng byahe ay puwedeng bayaran nang isa-isa gamit ang IC card.\nBUOD NG TRANSPORTASYON: Hotel → Kiyomizu: Bus 100/206 o Kiyomizu-dera Line → Suica/tiket.\nKiyomizu → Yasaka → Maruyama → Chion-in → Heian: Lakad.\nHeian → Tanghalian (Chao Chao Gyoza) → Sanjo Station: Lakad.\nSanjo → Temmabashi: Keihan Electric Railway (Keihan Main Line) → Suica/tiket.\nTemmabashi → Osaka Castle: Lakad.\nOsaka Castle → Dotonbori: Osaka Metro → Suica.\nDotonbori → Kyoto: JR/metro depende sa lokasyon → Suica/tiket."
       },
       {
         "text": "Bago ang isang araw na may maagang byahe, bumili sa gabi ng: 1–2 onigiri; egg sandwich; prutas/saging; inumin; kape kung gusto. Ang mga konbini sa Japan ay perpekto para sa almusal at mabilisang pagkain."

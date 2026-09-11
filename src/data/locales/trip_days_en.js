@@ -275,19 +275,16 @@ export const days = [
         "text": "⛩️ HEIAN JINGU. Visit the shrine and its large torii. The grounds open from 06:00. If you wish to visit the garden (Shin-en), its September 11 hours are approx. 08:30–18:00, last entry 17:30. No reservation required."
       },
       {
-        "text": "🍜 LUNCH IN KYOTO. \n\n⚠️ **IMPORTANT:**\nTry to finish around 13:45 to keep a buffer for the train to Osaka.\n⚠️ With the time gained this morning, there's no longer as much rush to eat as originally planned. We have the train to Osaka at 14:30. Recommendation: eat somewhere on the way to Kyoto Station; ramen; udon/soba; curry; donburi; quick teishoku. No need to book a restaurant for this meal. \n\n\n**Alternative:** Buy a bento/ekiben at Kyoto Station if we're short on time."
+        "text": "🥟 **LUNCH: CHAO CHAO GYOZA - SANJO KIYAMACHI** (https://maps.app.goo.gl/ScXREEXfRmmTKcj88?g_st=ic)\n\n浪花ひとくち餃子 餃々 三条木屋町店 — highly-rated izakaya gyoza restaurant (4.6★, 2700+ reviews), right by Kiyamachi, a short walk from Sanjo Station. Approx. ¥1,000–2,000/person. No reservation needed.\n\n💡 Other visitors' recommendation: the chocolate gyoza with ice cream for dessert."
       },
       {
-        "text": "🚶 Transfer to Kyoto Station."
+        "text": "🚶 Walk to Sanjo Station (Keihan). Barely 200 m, about 3 min."
       },
       {
-        "text": "🚆 KYOTO → OSAKA. Take the JR Kyoto Line from Kyoto Station to Osaka Station. Prefer a Special Rapid (新快速) if one is convenient. Journey is approx. 30 min. No reservation. Does not require JR Pass. Pay with IC card or single ticket."
+        "text": "🚆 SANJO → TEMMABASHI (Osaka).\n\n🎫 **SUICA:** ✅ YES; tap the card directly at the gates.\n\nKeihan Electric Railway, main line (Keihan Main Line), Limited Express toward Yodoyabashi. 8-stop journey, approximately 47 min — estimated arrival around 15:17. Fare approx. ¥490. No reservation. This Keihan line (not JR) connects central Kyoto directly to the heart of Osaka, closer to the castle than the usual route via Kyoto Station/Osaka Station.\n\n🎧 **Podcast for the ride:** [Osaka: food, atmosphere and fun](https://podcasts.apple.com/es/podcast/jap%C3%B3n-a-fondo/id1545542012?i=1000516234185) (*Japón a fondo* · Japonismo). Great for getting into the 'kuidaore' culture (eating until you go broke), Dotonbori and the street atmosphere during the train ride."
       },
       {
-        "text": "🚆 OSAKA STATION → MORINOMIYA. From Osaka Station take the JR Osaka Loop Line towards Morinomiya. No reservation. Pay with IC card."
-      },
-      {
-        "text": "🚶 MORINOMIYA → OSAKA CASTLE. Walk through Osaka Castle Park to the castle. Estimate approx. 15–20 min."
+        "text": "🚶 TEMMABASHI → OSAKA CASTLE. Walk directly to the castle, no need to go through Osaka Station or Morinomiya. Approx. 1.6 km, about 24 min."
       },
       {
         "text": "🏯 OSAKA CASTLE. IMPORTANT: The Osaka Castle Museum is open 09:00–18:00, last entry 17:30. ENTERING THE CASTLE INTERIOR: Keep the main tower museum and observation deck as the primary visit. Admission: ¥1,200 adult. No need to book in advance for this day. Buy tickets at the castle itself. You can pay with cash, card, and IC card. 💡 Tip: At Osaka Castle, reserve approx. 1.5–2 hours for the museum + observation deck + exterior."
@@ -308,7 +305,7 @@ export const days = [
         "text": "🎟️ LOGISTICS: ⚠️ **JR-WEST TICKET PICKUP:**\nWhen returning to Kyoto Station (or anytime during the day), go to the green ticket machines (with the 5489 logo) to **print the physical tickets** for tomorrow's train to Kanazawa. REQUIRED to bring:\n- The **physical** credit card (Mastercard ending in 8625).\n- The reservation number (47932).\n- The 4-digit Identification Number (PIN)."
       },
       {
-        "text": "🎫 DAY's RESERVATIONS: DO NOT book any transport.\nDO NOT use SmartEX.\nDO NOT use JR-WEST Online.\nWe do not need a Japan Rail Pass.\nAll journeys can be paid individually with an IC card.\nTRANSPORT SUMMARY: Hotel → Kiyomizu: Bus 100/206 or Kiyomizu-dera Line → IC card/ticket.\nKiyomizu → Yasaka → Maruyama → Chion-in → Heian: On foot.\nHeian → Kyoto Station: On foot + urban transit if needed.\nKyoto → Osaka: JR Kyoto Line Special Rapid → IC card/ticket.\nOsaka → Morinomiya: JR Osaka Loop Line → IC card/ticket.\nMorinomiya → Osaka Castle: On foot.\nOsaka Castle → Dotonbori: Osaka Metro → IC card.\nDotonbori → Kyoto: JR/metro depending on location → IC card/ticket."
+        "text": "🎫 DAY's RESERVATIONS: DO NOT book any transport.\nDO NOT use SmartEX.\nDO NOT use JR-WEST Online.\nWe do not need a Japan Rail Pass.\nAll journeys can be paid individually with an IC card.\nTRANSPORT SUMMARY: Hotel → Kiyomizu: Bus 100/206 or Kiyomizu-dera Line → Suica/ticket.\nKiyomizu → Yasaka → Maruyama → Chion-in → Heian: On foot.\nHeian → Lunch (Chao Chao Gyoza) → Sanjo Station: On foot.\nSanjo → Temmabashi: Keihan Electric Railway (Keihan Main Line) → Suica/ticket.\nTemmabashi → Osaka Castle: On foot.\nOsaka Castle → Dotonbori: Osaka Metro → Suica.\nDotonbori → Kyoto: JR/metro depending on location → Suica/ticket."
       },
       {
         "text": "Before a day with a very early departure, buy the night before: 1–2 onigiri; egg sandwich; fruit/banana; drink; coffee if wanted. Japanese konbinis are a completely normal solution for breakfasts and quick meals."

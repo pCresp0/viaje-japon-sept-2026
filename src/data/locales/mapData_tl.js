@@ -24,6 +24,7 @@ export const stops = [
   { name: "Ninenzaka at Sannenzaka", city: "Kyoto", day: "Araw 5", detail: "Lakad sa sikat na batong daanan na may tradisyunal na mga bahay" },
   { name: "Yasaka, Maruyama at Chion-in", city: "Kyoto", day: "Araw 5", detail: "Yasaka Shrine, Maruyama Park at malaking gate ng Chion-in" },
   { name: "Heian Jingu", city: "Kyoto", day: "Araw 5", detail: "Dambana na may malaking pulang torii at magandang hardin" },
+  { name: "Chao Chao Gyoza (Sanjo Kiyamachi)", city: "Kyoto", day: "Araw 5", detail: "Tanghalian — mataas ang rating na gyoza izakaya, katabi ng Sanjo Station" },
   { name: "Osaka Castle", city: "Osaka", day: "Araw 5", detail: "Makasaysayang kuta ni Toyotomi Hideyoshi at parke" },
   { name: "Dotonbori at Namba", city: "Osaka", day: "Araw 5", detail: "Mga neon, Glico sign, takoyaki at street food" },
   { name: "Shinsekai", city: "Osaka", day: "Araw 5", detail: "Retro na distrito na may Tsutenkaku tower at mga kushikatsu stall" },

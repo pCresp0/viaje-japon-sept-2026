@@ -24,6 +24,7 @@ export const stops = [
   { name: "Ninenzaka and Sannenzaka", city: "Kyoto", day: "Day 5", detail: "Stroll along famous cobblestone slopes with traditional houses" },
   { name: "Yasaka, Maruyama and Chion-in", city: "Kyoto", day: "Day 5", detail: "Yasaka Shrine, Maruyama Park and Chion-in's great gate" },
   { name: "Heian Jingu", city: "Kyoto", day: "Day 5", detail: "Shrine with a great red torii and beautiful gardens" },
+  { name: "Chao Chao Gyoza (Sanjo Kiyamachi)", city: "Kyoto", day: "Day 5", detail: "Lunch — highly-rated gyoza izakaya, right by Sanjo Station" },
   { name: "Osaka Castle", city: "Osaka", day: "Day 5", detail: "Historic fortress of Toyotomi Hideyoshi and park" },
   { name: "Dotonbori and Namba", city: "Osaka", day: "Day 5", detail: "Neon lights, the Glico sign, takoyaki and street food" },
   { name: "Shinsekai", city: "Osaka", day: "Day 5", detail: "Retro district with the Tsutenkaku tower and kushikatsu stalls" },

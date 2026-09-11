@@ -275,22 +275,19 @@ export const days = [
         "text": "⛩️ HEIAN JINGU. Visitez le sanctuaire et son grand torii. Le domaine ouvre à 06:00. Si vous souhaitez visiter le jardin (Shin-en), ses horaires le 11 septembre sont environ 08:30–18:00, dernière entrée à 17:30. Aucune réservation requise."
       },
       {
-        "text": "🍜 DÉJEUNER À KYOTO. \n\n⚠️ **IMPORTANT :**\nEssayer de terminer vers 13h45 pour garder une marge pour le train vers Osaka.\n⚠️ Avec le temps gagné ce matin, il n'y a plus autant besoin de se presser pour manger que prévu initialement. Nous avons le train vers Osaka à 14h30. Recommandation : manger sur le chemin vers Kyoto Station ; ramen ; udon/soba ; curry ; donburi ; teishoku rapide. Pas besoin de réserver de restaurant pour ce repas. \n\n\n**Alternative :** Acheter un bento/ekiben à Kyoto Station si on est justes en temps."
+        "text": "🥟 **DÉJEUNER : CHAO CHAO GYOZA - SANJO KIYAMACHI** (https://maps.app.goo.gl/ScXREEXfRmmTKcj88?g_st=ic)\n\n浪花ひとくち餃子 餃々 三条木屋町店 — restaurant izakaya de gyozas très bien noté (4,6★, +2700 avis), juste à côté de Kiyamachi, à quelques pas de la gare de Sanjo. Environ ¥1 000–2 000/personne. Sans réservation.\n\n💡 Recommandation d'autres visiteurs : les gyozas au chocolat avec glace en dessert."
       },
       {
-        "text": "🚶 Transfert vers Kyoto Station."
+        "text": "🚶 Marcher jusqu'à la gare de Sanjo (Keihan). À peine 200 m, environ 3 min."
       },
       {
-        "text": "🚆 KYOTO → OSAKA. Prenez la JR Kyoto Line depuis Kyoto Station jusqu'à Osaka Station. Privilégiez un Special Rapid (新快速) s'il y en a un pratique. Trajet d'environ 30 min. Aucune réservation. Pas besoin de JR Pass. Payez avec carte IC ou billet simple."
+        "text": "🚆 SANJO → TEMMABASHI (Osaka).\n\n🎫 **SUICA :** ✅ OUI ; passer la carte directement aux portillons.\n\nKeihan Electric Railway, ligne principale (Keihan Main Line), Limited Express vers Yodoyabashi. Trajet de 8 arrêts, environ 47 min — arrivée estimée vers 15h17. Tarif environ ¥490. Sans réservation. Cette ligne Keihan (pas JR) relie directement le centre de Kyoto au cœur d'Osaka, plus près du château que l'itinéraire habituel via Kyoto Station/Osaka Station.\n\n🎧 **Podcast pour le trajet :** [Osaka : gastronomie, ambiance et divertissement](https://podcasts.apple.com/es/podcast/jap%C3%B3n-a-fondo/id1545542012?i=1000516234185) (*Japón a fondo* · Japonismo). Idéal pour se plonger dans la culture du « kuidaore » (manger jusqu'à se ruiner), Dotonbori et l'ambiance de rue pendant le trajet en train."
       },
       {
-        "text": "🚆 OSAKA STATION → MORINOMIYA. Depuis Osaka Station, prenez la JR Osaka Loop Line vers Morinomiya. Aucune réservation. Payez avec carte IC."
+        "text": "🚶 TEMMABASHI → OSAKA CASTLE. Marcher directement jusqu'au château, sans passer par Osaka Station ni Morinomiya. Environ 1,6 km, environ 24 min."
       },
       {
-        "text": "🚶 MORINOMIYA → OSAKA CASTLE. Marchez à travers l'Osaka Castle Park jusqu'au château. Comptez environ 15–20 min."
-      },
-      {
-        "text": "🏯 OSAKA CASTLE. IMPORTANT : Le musée du château d'Osaka ouvre 09:00–18:00, dernière entrée 17:30. ENTRER À L'INTÉRIEUR DU CHÂTEAU : Gardez comme visite principale le musée de la tour et l'observatoire. Entrée : 1 200 ¥ adulte. Il n'est pas nécessaire de réserver à l'avance pour ce jour. Achetez le billet directement au château. Vous pouvez payer en espèces, par carte ou carte IC. 💡 Conseil : À Osaka Castle, prévoyez environ 1,5–2 h pour le musée + observatoire + extérieurs."
+        "text": "🏯 OSAKA CASTLE. IMPORTANT : le musée du château d'Osaka est ouvert de 09h00 à 18h00, dernière entrée à 17h30. ENTRER À L'INTÉRIEUR DU CHÂTEAU : garder le musée de la tour principale et le belvédère comme visite principale. Entrée : ¥1 200 adulte. Pas besoin de réserver à l'avance pour ce jour. Acheter les billets sur place au château. On peut payer en espèces, par carte et avec la carte IC. 💡 Conseil : à Osaka Castle, prévoir environ 1h30–2h pour le musée + le belvédère + l'extérieur."
       },
       {
         "text": "🚇 OSAKA CASTLE → DOTONBORI. Depuis Morinomiya, utilisez l'Osaka Metro vers la zone de Namba/Dotonbori. Aucune réservation. Utilisez la carte IC."
@@ -308,7 +305,7 @@ export const days = [
         "text": "🎟️ LOGISTIQUE : ⚠️ **RÉCUPÉRATION DES BILLETS JR-WEST :**\nEn rentrant à Kyoto Station (ou à tout moment libre de la journée), rendez-vous aux machines vertes (avec le logo 5489) pour **imprimer les billets physiques** du train du lendemain vers Kanazawa. OBLIGATOIRE d'apporter :\n- La carte de crédit **physique** (Mastercard terminée par 8625).\n- Le numéro de réservation (47932).\n- Le code d'identification à 4 chiffres (PIN)."
       },
       {
-        "text": "🎫 RÉSERVATIONS DU JOUR : NE RÉSERVEZ AUCUN transport.\nN'UTILISEZ PAS SmartEX.\nN'UTILISEZ PAS JR-WEST Online.\nNous n'avons pas besoin du Japan Rail Pass.\nTous les trajets peuvent être payés individuellement avec une carte IC.\nRÉSUMÉ DES TRANSPORTS : Hôtel → Kiyomizu : Bus 100/206 ou Ligne Kiyomizu-dera → Carte IC/billet.\nKiyomizu → Yasaka → Maruyama → Chion-in → Heian : À pied.\nHeian → Kyoto Station : À pied + transport urbain si besoin.\nKyoto → Osaka : JR Kyoto Line Special Rapid → Carte IC/billet.\nOsaka → Morinomiya : JR Osaka Loop Line → Carte IC/billet.\nMorinomiya → Osaka Castle : À pied.\nOsaka Castle → Dotonbori : Osaka Metro → Carte IC.\nDotonbori → Kyoto : JR/métro selon emplacement → Carte IC/billet."
+        "text": "🎫 RÉSERVATIONS DU JOUR : NE RÉSERVEZ AUCUN transport.\nN'UTILISEZ PAS SmartEX.\nN'UTILISEZ PAS JR-WEST Online.\nNous n'avons pas besoin du Japan Rail Pass.\nTous les trajets peuvent être payés individuellement avec une carte IC.\nRÉSUMÉ DES TRANSPORTS : Hôtel → Kiyomizu : Bus 100/206 ou Kiyomizu-dera Line → Suica/billet.\nKiyomizu → Yasaka → Maruyama → Chion-in → Heian : à pied.\nHeian → Déjeuner (Chao Chao Gyoza) → Gare de Sanjo : à pied.\nSanjo → Temmabashi : Keihan Electric Railway (Keihan Main Line) → Suica/billet.\nTemmabashi → Osaka Castle : à pied.\nOsaka Castle → Dotonbori : métro d'Osaka → Suica.\nDotonbori → Kyoto : JR/métro selon l'emplacement → Suica/billet."
       },
       {
         "text": "Avant une journée avec un départ très matinal, achetez la veille : 1–2 onigiri ; sandwich aux œufs ; fruit/banane ; boisson ; café si vous voulez. Les konbini japonais sont une solution tout à fait normale pour les petits-déjeuners et repas rapides."

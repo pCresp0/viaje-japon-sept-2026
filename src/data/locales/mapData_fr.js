@@ -24,6 +24,7 @@ export const stops = [
   { name: "Ninenzaka et Sannenzaka", city: "Kyoto", day: "Jour 5", detail: "Balade sur les célèbres pentes pavées aux maisons traditionnelles" },
   { name: "Yasaka, Maruyama et Chion-in", city: "Kyoto", day: "Jour 5", detail: "Sanctuaire Yasaka, parc Maruyama et grande porte du Chion-in" },
   { name: "Heian Jingu", city: "Kyoto", day: "Jour 5", detail: "Sanctuaire avec un grand torii rouge et de beaux jardins" },
+  { name: "Chao Chao Gyoza (Sanjo Kiyamachi)", city: "Kyoto", day: "Jour 5", detail: "Déjeuner — izakaya de gyozas très bien noté, juste à côté de la gare de Sanjo" },
   { name: "Château d'Osaka", city: "Osaka", day: "Jour 5", detail: "Forteresse historique de Toyotomi Hideyoshi et parc" },
   { name: "Dotonbori et Namba", city: "Osaka", day: "Jour 5", detail: "Néons, enseigne Glico, takoyaki et street food" },
   { name: "Shinsekai", city: "Osaka", day: "Jour 5", detail: "Quartier rétro avec la tour Tsutenkaku et les stands de kushikatsu" },

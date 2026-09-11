@@ -184,6 +184,13 @@ export const stops = [
     detail: "Santuario con gran torii rojo y hermosos jardines",
   },
   {
+    id: "chao-chao-gyoza", name: "Chao Chao Gyoza (Sanjo Kiyamachi)", city: "Kioto",
+    lat: 35.0106, lng: 135.7712,
+    emoji: "🥟", color: "#bc4749",
+    day: "Día 5",
+    detail: "Comida — izakaya de gyozas muy valorado, junto a la estación de Sanjo",
+  },
+  {
     id: "osaka-castle", name: "Castillo de Osaka", city: "Osaka",
     lat: 34.6873, lng: 135.5262,
     emoji: "🏯", color: "#bc4749",
