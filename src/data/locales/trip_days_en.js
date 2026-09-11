@@ -452,7 +452,7 @@ export const days = [
         "text": "📍 Return to Magome at 14:50. We now have our luggage."
       },
       {
-        "text": "Leisurely walk through Magome-juku (15:00–17:30), its traditional houses and historic streets. This time is for: check-in, dropping off luggage, resting, showering, and enjoying the village. IMPORTANT: Many shops and restaurants close early. Do not leave shopping or food for the last minute."
+        "text": "Leisurely walk through Magome-juku (15:00–17:30), its traditional houses and historic streets. This time is for: check-in, dropping off luggage, resting, showering, and enjoying the village.\n\n🚶 **How to get to Magome Chaya:** the minshuku is right on the village's main street (the stone-paved Nakasendo slope), very close to where the local bus stops — barely a couple of minutes' walk uphill. The historic street is closed to vehicle traffic, so the whole final stretch is on foot, no taxi or other transport needed.\n\n⚠️ **PAYING FOR THE ACCOMMODATION:** Magome Chaya is NOT prepaid. **It must be paid there at the inn in CASH (~¥32,000 group / ~€178.98 · ~€35.80/person)**, so cash needs to be **withdrawn beforehand** (at a 7-Eleven / konbini ATM).\n\n⚠️ **IMPORTANT:**\nMany shops and restaurants close early. Don't leave shopping or food for the last minute."
       },
       {
         "text": "🍱 **TRADITIONAL DINNER AT MAGOME CHAYA**\n\nTraditional dinner confirmed at the accommodation (served promptly at 18:00). Price: ¥3,630/person (~23€).\n\nThere are two main menu options to choose from:\n\n• **Menu A:** Salt-grilled river fish and pork & mushroom hot pot (nabemono).\n• **Menu B:** Tonkatsu (deep-fried breaded pork cutlet).\n\nBoth menus include vegetable tempura, sashimi, rice, side dishes, and dessert."
