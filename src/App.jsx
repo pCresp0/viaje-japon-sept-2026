@@ -149,6 +149,12 @@ export default function App() {
       // los gestos de arrastre son constantes (mover el mapa) y no
       // tienen nada que ver con la intención de abrir el menú.
       if (tab === "mapa") return;
+      // Se ignora si hay una selección de texto activa en ese momento
+      // (mantener pulsado y arrastrar para seleccionar/copiar un PIN,
+      // una dirección, etc.) -- ese arrastre es indistinguible a nivel
+      // táctil del gesto de abrir el menú, así que se comprueba si el
+      // navegador tiene algo seleccionado justo al soltar el dedo.
+      if (window.getSelection && window.getSelection().toString().length > 0) return;
       // Ignoramos si el evento se originó muy al borde izquierdo (< 30px) 
       // porque suele ser capturado por el "ir atrás" nativo de iOS.
       // Así aseguramos que solo un gesto intencionado en la zona central lo abra.
