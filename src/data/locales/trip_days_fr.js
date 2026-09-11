@@ -263,7 +263,7 @@ export const days = [
         "text": "🏯 KIYOMIZU-DERA. Ouvre à 06:00 et le 11 septembre ferme à 18:00. Visite : Bâtiment principal / scène de Kiyomizu, Otowa-no-taki, Pagode et environs, rues de Kiyomizu-zaka à la sortie. Aucune réservation requise. 💡 Conseil : Kiyomizu-dera à la première heure est un bon choix pour éviter la foule."
       },
       {
-        "text": "🚶 HIGASHIYAMA → YASAKA → MARUYAMA → CHION-IN. Faites tout le trajet à pied : Kiyomizu-dera → Ninenzaka/Sannenzaka → Yasaka Jinja → Parc Maruyama → Chion-in. 💡 Conseil : Cette zone s'apprécie mieux à pied et il ne faut pas essayer de suivre un itinéraire trop rigide dans les ruelles. N'essayez pas de tout faire à Higashiyama rapidement : l'attrait réside précisément dans les rues et petites boutiques entre les temples."
+        "text": "🚶 HIGASHIYAMA → YASAKA → MARUYAMA → CHION-IN. Faites tout le trajet à pied : Kiyomizu-dera → Ninenzaka/Sannenzaka → Yasaka Jinja → Parc Maruyama → Chion-in.\n\n🗺️ Itinéraire complet sur Maps : https://maps.app.goo.gl/FTYMDo7piFPbU8X66?g_st=iw\n\n💡 Conseil : Cette zone s'apprécie mieux à pied et il ne faut pas essayer de suivre un itinéraire trop rigide dans les ruelles. N'essayez pas de tout faire à Higashiyama rapidement : l'attrait réside précisément dans les rues et petites boutiques entre les temples."
       },
       {
         "text": "⛩️ CHION-IN. Visitez l'enceinte et la Sanmon. Le domaine ouvre à 06:00 ; les visites/réceptions des zones intérieures commencent à 09:00. Si vous souhaitez visiter les jardins intérieurs, vérifiez l'ouverture et achetez l'entrée sur place. Aucune réservation."

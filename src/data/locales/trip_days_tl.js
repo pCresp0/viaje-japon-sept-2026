@@ -263,7 +263,7 @@ export const days = [
         "text": "🏯 KIYOMIZU-DERA. Nagbubukas ng 06:00 at sa Setyembre 11 ay magsasara ng 18:00. Bisitahin: Main Hall / entablado ng Kiyomizu, Otowa-no-taki, Pagoda at paligid, mga kalsada ng Kiyomizu-zaka paglabas. Walang kailangang reserbasyon. 💡 Tip: Magandang unahin ang Kiyomizu-dera sa umaga upang maiwasan ang maraming tao."
       },
       {
-        "text": "🚶 HIGASHIYAMA → YASAKA → MARUYAMA → CHION-IN. Gawing puro paglalakad ang buong ruta: Kiyomizu-dera → Ninenzaka/Sannenzaka → Yasaka Jinja → Maruyama Park → Chion-in. 💡 Tip: Mas mae-enjoy ang lugar na ito kung lalakarin, at huwag sundan ang isang masyadong striktong ruta sa maliliit na eskinita. Huwag madaliin ang Higashiyama: ang kagandahan ay nasa mga kalye at maliliit na tindahan sa pagitan ng mga templo."
+        "text": "🚶 HIGASHIYAMA → YASAKA → MARUYAMA → CHION-IN. Gawing puro paglalakad ang buong ruta: Kiyomizu-dera → Ninenzaka/Sannenzaka → Yasaka Jinja → Maruyama Park → Chion-in.\n\n🗺️ Buong ruta sa Maps: https://maps.app.goo.gl/FTYMDo7piFPbU8X66?g_st=iw\n\n💡 Tip: Mas mae-enjoy ang lugar na ito kung lalakarin, at huwag sundan ang isang masyadong striktong ruta sa maliliit na eskinita. Huwag madaliin ang Higashiyama: ang kagandahan ay nasa mga kalye at maliliit na tindahan sa pagitan ng mga templo."
       },
       {
         "text": "⛩️ CHION-IN. Bisitahin ang grounds at ang Sanmon. Nagbubukas ang grounds ng 06:00; ang mga pagbisita/reception sa panloob na bahagi ay nagsisimula ng 09:00. Kung nais bisitahin ang mga panloob na hardin, suriin ang pagbubukas at bumili ng tiket doon. Walang reserbasyon."
