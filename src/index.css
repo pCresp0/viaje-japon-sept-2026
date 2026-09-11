@@ -160,6 +160,19 @@ main > div > * {
   }
 }
 
+/* Anclas de billetes/trayectos en Transportes: aquí hay DOS barras fijas
+   apiladas (la cabecera general + la pestaña Billetes/Trayectos, que
+   también es sticky), así que necesitan más margen que el resto de
+   anclas para que scrollIntoView no deje la tarjeta tapada a medias. */
+.transport-anchor {
+  scroll-margin-top: 90px;
+}
+@media (max-width: 767px) {
+  .transport-anchor {
+    scroll-margin-top: calc(var(--mobile-topbar) + 70px);
+  }
+}
+
 /* Home page: countdown + next-day cards stack on mobile, side by side on desktop */
 .before-trip-grid {
   grid-template-columns: 1fr;

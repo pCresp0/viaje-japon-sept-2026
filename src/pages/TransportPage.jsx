@@ -166,7 +166,7 @@ export default function TransportPage({ onNavigate }) {
         <div className="px-4 pt-5">
           {/* Tarjetas de billetes */}
           <Highlightable id="ticket-day-1">
-            <div id="ticket-day-1">
+            <div id="ticket-day-1" className="transport-anchor">
               <ShinkansenTicketCard
                 defaultExpanded={currentDay === 1 || currentDay === 0}
                 onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 1, targetId: slug("itinerary-day", 1) }) : undefined}
@@ -174,7 +174,7 @@ export default function TransportPage({ onNavigate }) {
             </div>
           </Highlightable>
           <Highlightable id="ticket-day-6">
-            <div id="ticket-day-6">
+            <div id="ticket-day-6" className="transport-anchor">
               <ThunderbirdTicketCard
                 defaultExpanded={currentDay === 6}
                 onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 6, targetId: slug("itinerary-day", 6) }) : undefined}
@@ -182,7 +182,7 @@ export default function TransportPage({ onNavigate }) {
             </div>
           </Highlightable>
           <Highlightable id="ticket-day-8">
-            <div id="ticket-day-8">
+            <div id="ticket-day-8" className="transport-anchor">
               <NohiMagomeTicketCard
                 defaultExpanded={currentDay === 8}
                 onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 8, targetId: slug("itinerary-day", 8) }) : undefined}
@@ -190,7 +190,7 @@ export default function TransportPage({ onNavigate }) {
             </div>
           </Highlightable>
           <Highlightable id="ticket-day-9">
-            <div id="ticket-day-9">
+            <div id="ticket-day-9" className="transport-anchor">
               <ShinanoTicketCard
                 defaultExpanded={currentDay === 9}
                 onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 9, targetId: slug("itinerary-day", 9) }) : undefined}
@@ -198,7 +198,7 @@ export default function TransportPage({ onNavigate }) {
             </div>
           </Highlightable>
           <Highlightable id="ticket-day-9-nozomi">
-            <div id="ticket-day-9-nozomi">
+            <div id="ticket-day-9-nozomi" className="transport-anchor">
               <NozomiNagoyaTicketCard
                 defaultExpanded={currentDay === 9}
                 onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 9, targetId: slug("itinerary-day", 9) }) : undefined}
@@ -281,7 +281,7 @@ export default function TransportPage({ onNavigate }) {
                 <div
                   key={key}
                   id={`transport-group-${key}`}
-                  className="rounded-2xl border overflow-hidden transition-all"
+                  className="rounded-2xl border overflow-hidden transition-all transport-anchor"
                   style={{ 
                     borderColor: isToday ? "var(--shu)" : "var(--line)", 
                     background: "var(--paper-raised)",
