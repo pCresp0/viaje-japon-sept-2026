@@ -242,6 +242,33 @@ export const guides = {
   // ALPES ET KANAZAWA
   // ══════════════════════════════════════════════════════════════════
 
+  "kanazawa": {
+    name: "Kanazawa",
+    jp: "金沢",
+    founded: "Château : 1583",
+    wiki: "Kanazawa",
+    tagline: "Le « petit Kyoto » de la mer du Japon : le domaine le plus riche du pays, sans jamais en avoir été la capitale.",
+    sections: [
+      {
+        title: "La ville des Maeda",
+        body: "Kanazawa fut pendant 300 ans (1583-1871) la capitale du domaine de Kaga, le fief le plus riche de tout le Japon sous le shogunat Tokugawa -- plus riche que de nombreux domaines réunis, juste derrière le territoire du shogun lui-même. Le clan Maeda, qui l'a gouverné pendant 14 générations, a délibérément évité de constituer une grande armée (ce qui aurait alarmé les Tokugawa) et a plutôt investi sa fortune dans la culture : art, artisanat, jardinage et gastronomie. C'est pourquoi Kanazawa conserve aujourd'hui autant de patrimoine intact -- et pourquoi on l'appelle le « petit Kyoto », bien que contrairement à Kyoto, elle n'ait jamais été bombardée pendant la Seconde Guerre mondiale ni touchée par de grands séismes, si bien qu'une bonne partie de son tracé féodal est littéralement d'origine, non reconstruite.",
+      },
+      {
+        title: "La capitale de la feuille d'or",
+        body: "Kanazawa produit plus de 99 % de la feuille d'or (kinpaku) du Japon. La technique consiste à marteler l'or en feuilles d'à peine 0,0001 mm d'épaisseur -- si fines qu'elles flottent presque dans l'air. On l'utilise pour décorer temples, statues de Bouddha, laques et, aujourd'hui, aussi les glaces au matcha et les cosmétiques (cherchez les 'gold leaf soft cream' dans la ville, une tradition touristique récente mais authentique, puisqu'elle vient bien des mêmes ateliers). Le climat humide de Kanazawa, curieusement, est idéal pour travailler l'or sans qu'il se casse.",
+      },
+      {
+        title: "Le château",
+        body: "Contrairement à Kyoto ou Osaka, le château de Kanazawa n'a pas de donjon principal (tenshu) reconstruit -- il a brûlé en 1602 et n'a jamais été rebâti, les Maeda craignant qu'une tour imposante n'éveille des soupçons de rébellion auprès du shogunat. Ce qui a bien été reconstruit avec fidélité historique (avec des techniques et matériaux traditionnels, sans béton), ce sont plusieurs portes et tourelles, dont l'emblématique Ishikawa-mon. Le résultat est un ensemble plus discret que d'autres châteaux japonais, mais paradoxalement plus authentique dans ses matériaux.",
+      },
+    ],
+    curiosities: [
+      "À Kanazawa, on se tient à gauche sur les escalators, comme à Tokyo -- contrairement à Osaka, où l'on va à droite.",
+      "Le Musée d'Art Contemporain du XXIe siècle, avec sa célèbre installation « Piscine » de Leandro Erlich (où l'on a l'impression que les gens marchent sous l'eau), est l'une des raisons pour lesquelles Kanazawa est devenue une étape incontournable de l'art contemporain japonais, pas seulement de la tradition Edo.",
+      "La pluie est si fréquente à Kanazawa qu'il existe un dicton local : « pas besoin de parapluie à Kanazawa, il suffit d'en avoir un sous la main » (presque personne ne sort sans !).",
+    ],
+    tip: "La ville étant si compacte, on peut très bien marcher entre Kenroku-en, le château, Nagamachi et Omicho sans dépendre du Loop Bus.",
+  },
   "kenroku-en": {
     name: "Kanazawa : Kenroku-en et Quartiers Samouraïs",
     tagline: "L'un des trois plus beaux jardins du Japon et une ville épargnée par les guerres modernes.",

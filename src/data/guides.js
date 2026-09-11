@@ -345,6 +345,34 @@ export const guides = {
   // ALPES JAPONESES
   // ══════════════════════════════════════════════════════════════════
 
+  "kanazawa": {
+    name: "Kanazawa",
+    jp: "金沢",
+    founded: "Castillo: 1583",
+    wiki: "Kanazawa",
+    tagline: "La 'pequeña Kioto' del Mar de Japón: el dominio más rico del país, sin haber sido nunca su capital.",
+    sections: [
+      {
+        title: "La ciudad de los Maeda",
+        body: "Kanazawa fue durante 300 años (1583–1871) la capital del dominio de Kaga, el feudo más rico de todo Japón bajo el shogunato Tokugawa — más rico que muchos dominios juntos, y solo por detrás del propio territorio del shogún. El clan Maeda, que lo gobernó durante 14 generaciones, evitó deliberadamente construir un ejército grande (algo que habría alarmado a Tokugawa) y en su lugar volcó su riqueza en cultura: arte, artesanía, jardinería y gastronomía. Es la razón por la que hoy Kanazawa conserva tanto patrimonio intacto — y por la que se la conoce como 'la pequeña Kioto', aunque a diferencia de Kioto, jamás fue bombardeada en la Segunda Guerra Mundial ni sufrió terremotos importantes, por lo que buena parte de su trazado feudal es literalmente original, no reconstruido.",
+      },
+      {
+        title: "La capital del pan de oro",
+        body: "Kanazawa produce más del 99% del pan de oro (kinpaku) de todo Japón. La técnica consiste en martillear el oro hasta láminas de apenas 0,0001 mm de grosor — tan finas que casi flotan con el aire. Se usa para decorar templos, budas, lacas y, hoy en día, también helados de té verde y cosmética (busca los 'gold leaf soft cream' por la ciudad, es una tradición turística reciente pero genuina, ya que en efecto sale de los mismos talleres). El clima húmedo de Kanazawa, curiosamente, es ideal para trabajar el oro sin que se rompa.",
+      },
+      {
+        title: "El castillo",
+        body: "A diferencia de Kioto o Osaka, el castillo de Kanazawa no tiene una torre principal (tenshu) reconstruida — se quemó en 1602 y nunca se volvió a levantar, ya que los Maeda temían que una torre imponente despertara sospechas de rebelión ante el shogunato. Lo que sí se ha reconstruido con fidelidad histórica (usando técnicas y materiales tradicionales, sin hormigón) son varias puertas y torretas, incluida la icónica Ishikawa-mon. El resultado es un recinto más discreto que otros castillos japoneses, pero paradójicamente más auténtico en sus materiales.",
+      },
+    ],
+    curiosities: [
+      "En Kanazawa la gente se coloca a la izquierda en las escaleras mecánicas, como en Tokio — a diferencia de Osaka, que va a la derecha.",
+      "El museo de Arte Contemporáneo del Siglo XXI, con su icónica 'Piscina' de Leandro Erlich (donde parece que la gente camina bajo el agua), es una de las razones por las que Kanazawa se ha vuelto una parada obligada del arte contemporáneo japonés, no solo de la tradición Edo.",
+      "La lluvia es tan habitual en Kanazawa que hay un dicho local: 'no hace falta paraguas en Kanazawa, basta con tener uno a mano' (¡casi nadie sale sin él!).",
+    ],
+    tip: "Con la ciudad tan compacta, ir caminando entre Kenroku-en, el castillo, Nagamachi y Omicho es perfectamente viable sin depender del Loop Bus.",
+  },
+
   "kenroku-en": {
     name: "Jardín Kenroku-en",
     jp: "兼六園",
@@ -729,7 +757,7 @@ export const guidesByDay = {
   3: ["ginkaku-ji", "nishiki", "gion"],
   4: ["kinkaku-ji", "arashiyama"],
   5: ["kiyomizu-dera", "osaka"],
-  6: ["kenroku-en"],
+  6: ["kanazawa", "kenroku-en"],
   7: ["shirakawa-go", "takayama"],
   8: ["nakasendo"],
   9: ["akihabara"],
@@ -782,6 +810,10 @@ export const guideMeta = {
   "kenroku-en": {
     shortName: "Jardín Kenroku-en",
     keywords: ["kenroku-en", "kenrokuen", "jardin kenroku"],
+  },
+  "kanazawa": {
+    shortName: "Kanazawa",
+    keywords: ["castillo de kanazawa", "kanazawa-jo", "ishikawa-mon"],
   },
   "shirakawa-go": {
     shortName: "Shirakawa-go",

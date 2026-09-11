@@ -242,6 +242,33 @@ export const guides = {
   // ALPS AND KANAZAWA
   // ══════════════════════════════════════════════════════════════════
 
+  "kanazawa": {
+    name: "Kanazawa",
+    jp: "金沢",
+    founded: "Castle: 1583",
+    wiki: "Kanazawa",
+    tagline: "The 'little Kyoto' of the Sea of Japan: the richest domain in the country, without ever being its capital.",
+    sections: [
+      {
+        title: "The city of the Maeda",
+        body: "Kanazawa was for 300 years (1583-1871) the capital of the Kaga domain, the richest fief in all of Japan under the Tokugawa Shogunate -- richer than many domains combined, second only to the shogun's own territory. The Maeda clan, who ruled it for 14 generations, deliberately avoided building a large army (which would have alarmed Tokugawa) and instead poured their wealth into culture: art, craftsmanship, gardening and gastronomy. That's why Kanazawa today retains so much intact heritage -- and why it's known as 'little Kyoto', although unlike Kyoto, it was never bombed in World War II nor hit by major earthquakes, so much of its feudal layout is literally original, not rebuilt.",
+      },
+      {
+        title: "The gold leaf capital",
+        body: "Kanazawa produces over 99% of Japan's gold leaf (kinpaku). The technique involves hammering gold into sheets barely 0.0001 mm thick -- so thin they almost float on air. It's used to decorate temples, Buddha statues, lacquerware and, nowadays, also matcha ice cream and cosmetics (look for 'gold leaf soft cream' around the city; it's a recent but genuine tourist tradition, since it really does come from the same workshops). Kanazawa's humid climate, curiously, is ideal for working gold without it breaking.",
+      },
+      {
+        title: "The castle",
+        body: "Unlike Kyoto or Osaka, Kanazawa Castle has no reconstructed main keep (tenshu) -- it burned down in 1602 and was never rebuilt, since the Maeda feared an imposing tower would raise suspicions of rebellion with the shogunate. What HAS been rebuilt with historical accuracy (using traditional techniques and materials, no concrete) are several gates and turrets, including the iconic Ishikawa-mon. The result is a more understated compound than other Japanese castles, but paradoxically more authentic in its materials.",
+      },
+    ],
+    curiosities: [
+      "In Kanazawa people stand on the left on escalators, like in Tokyo -- unlike Osaka, which goes right.",
+      "The 21st Century Museum of Contemporary Art, with its iconic 'Swimming Pool' by Leandro Erlich (where people appear to walk underwater), is one of the reasons Kanazawa has become a must-visit for Japanese contemporary art, not just the Edo tradition.",
+      "Rain is so common in Kanazawa that there's a local saying: 'you don't need an umbrella in Kanazawa, just keep one handy' (almost nobody leaves home without one!).",
+    ],
+    tip: "With the city being so compact, walking between Kenroku-en, the castle, Nagamachi and Omicho is perfectly viable without relying on the Loop Bus.",
+  },
   "kenroku-en": {
     name: "Kanazawa: Kenroku-en and Samurai Districts",
     tagline: "One of the three best gardens in Japan and a city untouched by modern wars.",

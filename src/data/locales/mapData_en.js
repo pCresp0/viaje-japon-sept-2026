@@ -29,6 +29,7 @@ export const stops = [
   { name: "Dotonbori and Namba", city: "Osaka", day: "Day 5", detail: "Neon lights, the Glico sign, takoyaki and street food" },
   { name: "Shinsekai", city: "Osaka", day: "Day 5", detail: "Retro district with the Tsutenkaku tower and kushikatsu stalls" },
   { name: "Kenroku-en", city: "Ishikawa", day: "Day 6", detail: "One of Japan's three great landscape gardens" },
+  { name: "Kanazawa Castle", city: "Ishikawa", day: "Day 6", detail: "Across the bridge from Kenroku-en -- free admission to the grounds and gardens" },
   { name: "Nagamachi Samurai District", city: "Ishikawa", day: "Day 6", detail: "Earthen-walled streets of the old samurai residences" },
   { name: "Omicho Market", city: "Ishikawa", day: "Day 6", detail: "The best fresh seafood on the Sea of Japan coast" },
   { name: "Higashi Chaya", city: "Ishikawa", day: "Day 6", detail: "Historic teahouse district and Kanazawa's geiko" },

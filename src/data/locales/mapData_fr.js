@@ -29,6 +29,7 @@ export const stops = [
   { name: "Dotonbori et Namba", city: "Osaka", day: "Jour 5", detail: "Néons, enseigne Glico, takoyaki et street food" },
   { name: "Shinsekai", city: "Osaka", day: "Jour 5", detail: "Quartier rétro avec la tour Tsutenkaku et les stands de kushikatsu" },
   { name: "Kenroku-en", city: "Ishikawa", day: "Jour 6", detail: "L'un des trois grands jardins paysagers du Japon" },
+  { name: "Château de Kanazawa", city: "Ishikawa", day: "Jour 6", detail: "De l'autre côté du pont depuis Kenroku-en -- entrée gratuite au domaine et aux jardins" },
   { name: "Quartier samouraï de Nagamachi", city: "Ishikawa", day: "Jour 6", detail: "Ruelles aux murs de terre de l'ancienne résidence samouraï" },
   { name: "Marché Omicho", city: "Ishikawa", day: "Jour 6", detail: "Les meilleurs fruits de mer frais de la côte de la mer du Japon" },
   { name: "Higashi Chaya", city: "Ishikawa", day: "Jour 6", detail: "Quartier historique des maisons de thé et geiko de Kanazawa" },

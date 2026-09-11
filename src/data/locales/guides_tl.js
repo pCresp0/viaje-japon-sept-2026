@@ -242,6 +242,33 @@ export const guides = {
   // ALPS AT KANAZAWA
   // ══════════════════════════════════════════════════════════════════
 
+  "kanazawa": {
+    name: "Kanazawa",
+    jp: "金沢",
+    founded: "Kastilyo: 1583",
+    wiki: "Kanazawa",
+    tagline: "Ang 'maliit na Kyoto' ng Sea of Japan: ang pinakamayamang domain sa bansa, kahit hindi ito naging kabisera nito.",
+    sections: [
+      {
+        title: "Ang lungsod ng mga Maeda",
+        body: "Sa loob ng 300 taon (1583-1871), naging kabisera ng Kanazawa ang Kaga domain, ang pinakamayamang piyudo sa buong Japan sa ilalim ng Tokugawa Shogunate -- mas mayaman pa sa maraming domain na pinagsama, pangalawa lang sa mismong teritoryo ng shogun. Ang Maeda clan, na namuno rito sa loob ng 14 henerasyon, sinadyang iwasan ang pagtatayo ng malaking hukbo (na sana ay ikinabahala ni Tokugawa) at sa halip ay inilaan ang kanilang yaman sa kultura: sining, craftsmanship, paghahardin, at gastronomiya. Ito ang dahilan kung bakit ngayon ay marami pa ring buo na pamana ang Kanazawa -- at kung bakit kilala itong 'maliit na Kyoto', bagama't hindi tulad ng Kyoto, hindi ito kailanman binomba noong World War II o tinamaan ng malalaking lindol, kaya malaking bahagi ng piyudal na disenyo nito ay literal na orihinal, hindi rebuilt.",
+      },
+      {
+        title: "Ang kabisera ng gold leaf",
+        body: "Ang Kanazawa ang gumagawa ng mahigit 99% ng gold leaf (kinpaku) ng Japan. Ang teknik ay pagmartilyo ng ginto papuntang mga sheet na 0.0001 mm lang ang kapal -- napakanipis na halos lumulutang na sa hangin. Ginagamit ito para dekorasyunan ang mga templo, estatwa ni Buddha, lacquerware at, ngayon, gamit din sa matcha ice cream at cosmetics (hanapin ang 'gold leaf soft cream' sa buong lungsod, bagong tradisyon pero tunay, dahil galing talaga ito sa parehong mga workshop). Ang mahalumigmig na klima ng Kanazawa, kakaiba man, ay perpekto para sa paggawa ng ginto nang hindi ito nasisira.",
+      },
+      {
+        title: "Ang kastilyo",
+        body: "Kaiba sa Kyoto o Osaka, walang rebuilt na pangunahing tore (tenshu) ang Kanazawa Castle -- nasunog ito noong 1602 at hindi na muling itinayo, dahil natakot ang mga Maeda na baka ang isang mataas na tore ay magdulot ng hinala ng paghihimagsik sa shogunate. Ang muling itinayo nang may historical accuracy (gamit ang tradisyunal na teknik at materyales, walang konkreto) ay ilang gate at turret, kabilang ang kilalang Ishikawa-mon. Ang resulta ay mas simpleng kumpleks kaysa sa ibang kastilyo ng Japan, pero kakaiba dahil mas authentic ang mga materyales nito.",
+      },
+    ],
+    curiosities: [
+      "Sa Kanazawa, tumatayo ang mga tao sa kaliwang bahagi ng escalator, tulad sa Tokyo -- kaiba sa Osaka, na sa kanan.",
+      "Ang 21st Century Museum of Contemporary Art, na may kilalang 'Swimming Pool' installation ni Leandro Erlich (kung saan mukhang naglalakad ang mga tao sa ilalim ng tubig), ay isa sa mga dahilan kung bakit naging obligadong bisitahin ang Kanazawa para sa contemporary art ng Japan, hindi lang sa Edo tradition.",
+      "Napaka-karaniwan ng ulan sa Kanazawa kaya may lokal na kasabihan: 'hindi mo kailangan ng payong sa Kanazawa, sapat nang laging may isa' (halos walang lumalabas nang walang payong!).",
+    ],
+    tip: "Dahil sobrang compact ng lungsod, puwede talagang maglakad sa pagitan ng Kenroku-en, ang kastilyo, Nagamachi at Omicho nang hindi umaasa sa Loop Bus.",
+  },
   "kenroku-en": {
     name: "Kanazawa: Ang Kenroku-en at Samurai ng mga Distritong Nag-uugnay",
     tagline: "Pinaka-kilala at kabilang the 3 pinaka nakakabighaning lungsod dahil hindi the hindi the madalas buong in madalas ng pinaka maganda na natitirang natatanging kabilang the modern the.",

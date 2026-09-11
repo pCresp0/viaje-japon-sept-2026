@@ -221,6 +221,13 @@ export const stops = [
     detail: "Uno de los tres grandes jardines paisajísticos de Japón",
   },
   {
+    id: "kanazawa-castle", name: "Castillo de Kanazawa", city: "Ishikawa",
+    lat: 36.5636, lng: 136.6592,
+    emoji: "🏯", color: "#2e7d5b",
+    day: "Día 6",
+    detail: "Cruzando el puente desde Kenroku-en — recinto y jardines de entrada gratuita",
+  },
+  {
     id: "nagamachi", name: "Barrio samurái de Nagamachi", city: "Ishikawa",
     lat: 36.5644, lng: 136.6486,
     emoji: "🗡️", color: "#2e7d5b",

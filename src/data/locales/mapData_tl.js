@@ -29,6 +29,7 @@ export const stops = [
   { name: "Dotonbori at Namba", city: "Osaka", day: "Araw 5", detail: "Mga neon, Glico sign, takoyaki at street food" },
   { name: "Shinsekai", city: "Osaka", day: "Araw 5", detail: "Retro na distrito na may Tsutenkaku tower at mga kushikatsu stall" },
   { name: "Kenroku-en", city: "Ishikawa", day: "Araw 6", detail: "Isa sa tatlong pinakamagandang landscape garden sa Japan" },
+  { name: "Kanazawa Castle", city: "Ishikawa", day: "Araw 6", detail: "Tawid sa tulay mula Kenroku-en -- libreng pasukan sa lugar at mga hardin" },
   { name: "Nagamachi Samurai District", city: "Ishikawa", day: "Araw 6", detail: "Mga kalyeng may lupang pader ng lumang tahanan ng samurai" },
   { name: "Omicho Market", city: "Ishikawa", day: "Araw 6", detail: "Ang pinakamagandang sariwang seafood sa baybayin ng Sea of Japan" },
   { name: "Higashi Chaya", city: "Ishikawa", day: "Araw 6", detail: "Makasaysayang distrito ng teahouse at mga geiko ng Kanazawa" },
