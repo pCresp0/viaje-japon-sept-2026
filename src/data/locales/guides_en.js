@@ -458,33 +458,50 @@ export const guides = {
     tip: "Odaiba is one of the best places in Tokyo for sunset, watching the sun go down behind the Rainbow Bridge and the city skyline.",
   },
 
-  "osaka": {
-    name: "Osaka: Castle and Dotonbori",
-    tagline: "Japan's kitchen and the merchants' city, with a castle that is a pure symbol.",
+    "osaka": {
+    name: "Osaka: castle and Dotonbori",
+    jp: "大阪",
+    founded: "Castle: 1583",
+    wiki: "Osaka Castle",
+    tagline: "Japan's kitchen and the merchants' city, with a castle that's pure symbolism.",
     sections: [
       {
-        title: "The Castle",
-        body: "Toyotomi Hideyoshi built it in 1583 as the largest castle in Japan, a symbol of the unification of the country he had completed. It was destroyed in 1615 by Tokugawa Ieyasu during the Siege of Osaka, which ended the Toyotomi clan. It was rebuilt, and the tower burned again from a lightning strike in 1665.",
+        title: "The castle",
+        body: "Built by Toyotomi Hideyoshi in 1583 as Japan's largest castle, a symbol of the country's unification that he had just completed. In its time it was described as 'unrivaled within the three kingdoms' (Japan, China and India) and 'the strongest in Japan'. It was destroyed in 1615 by Tokugawa Ieyasu during the Siege of Osaka (the Summer Campaign), which ended the Toyotomi clan. It was rebuilt between 1620 and 1629, and the new tower burned down again after a lightning strike in 1665. Most of what remained was destroyed by fire during the Meiji Restoration (1868), and further parts were lost in the 1945 air raids.",
       },
       {
-        title: "What You Will Actually See",
-        body: "Worth knowing: the current tower is from 1931, made of reinforced concrete, and inside it is a modern museum with an elevator. It is not an archaeological reconstruction but a free recreation, funded by public donations. What is authentic and spectacular are the stone walls and moats, from the 17th century: some individual rocks weigh more than 100 tons and were transported by sea from quarries hundreds of kilometers away.",
+        title: "Two castles, one buried",
+        body: "This is the most surprising part of the grounds, and most visitors miss it: the Hideyoshi castle you see in the brochures today is NOT the one you're standing on. After defeating the Toyotomi in 1615, the Tokugawa Shogunate didn't just rebuild the castle — they literally buried it under tons of earth, as if erasing the Toyotomi family's authority, and built their own, larger castle on top. Every wall and moat you see above ground today is from the Tokugawa reconstruction; the Toyotomi-period ones spent almost 400 years buried underground. In 1959, a geological survey of the inner bailey (Honmaru) unexpectedly found a stone wall extending some 7 meters underground — it was called the 'mysterious stone wall' until investigations confirmed it had been built by Hideyoshi. In 1984, water pipe renovation work uncovered a much larger stretch of the same buried wall, 6 meters high, part of the Tsumenomaru (the core of Toyotomi's castle). To get a sense of the scale difference: Toyotomi's castle tower stood about 39 m tall from its own ground level; the Tokugawa tower that replaced it, already built on the piled-up earth, stood about 58 m.",
+      },
+      {
+        title: "What you'll actually see",
+        body: "Worth knowing: today's tower dates from 1931, made of reinforced concrete, and inside it's a modern museum with an elevator. It's not an archaeological reconstruction but a free recreation, funded by citizen donations. What IS authentic and spectacular are the stone walls and moats, from the 17th century: some individual rocks weigh over 100 tons and were transported by sea from quarries hundreds of kilometers away (Mount Rokko, islands in the Seto Inland Sea, and quarries in Kyushu 420 km away). Roughly a million granite stones were used in the walls in total.",
+      },
+      {
+        title: "The marked stones (kokuin-ishi)",
+        body: "A detail almost nobody looks at closely: many of the wall stones have symbols or characters carved into them. There are an estimated 50,000 to 60,000 marked stones throughout the castle, with about 2,000 different designs. The Tokugawa Shogunate split the reconstruction among 64 daimyo clans from western Japan, and each one marked the stones in their assigned section — with their family crest, their own symbol, or the name of the quarry of origin — both to mark the boundaries of each section and, according to historians, so each lord could leave proof (and show off) the quality of their work to the shogun. A telling detail about the politics of the era: not a single mark has ever been found from any clan that lost at the Battle of Sekigahara (such as Ishida Mitsunari or Konishi Yukinaga) — every identified mark belongs to a clan that had kept Tokugawa's favor. Today you can compare over 80 marked stones side by side at the so-called Kokuinseki Hiroba ('Marked Stones Square'), near the Gokurakubashi bridge.",
+      },
+      {
+        title: "The Toyotomi Stone Wall Museum",
+        body: "Right next to the main tower (about 160 m southeast, a 2-minute walk) there's a small pavilion that's easy to miss: the Osaka Castle Toyotomi Stone Wall Museum (大阪城 豊臣石垣館). Going down below street level, it displays the very stretch of buried wall discovered in 1984 — stone that went unseen for almost 400 years, built in 1583 with the most advanced technology of the time to protect the military base from which Hideyoshi unified Japan. The surface still bears visible traces of the fire from the 1615 Siege of Osaka. Entry is included with the main tower museum ticket, so if you've already paid for castle admission, it costs nothing extra to take a look.",
       },
       {
         title: "Dotonbori",
-        body: "The canal was dug in 1615 and the area became Osaka's theater district (kabuki and bunraku). Today it is the zone of neon signs, restaurants, and giant billboards. The Glico running man sign has been there since 1935 and is on its sixth version; the mechanical crab of the Kani Doraku restaurant, since 1960.",
+        body: "The canal was dug in 1615 and the area became Osaka's theater district (kabuki and bunraku). Today it's the neon-lit zone of restaurants and giant signs. The Glico running-man sign has stood there since 1935 and is now on its sixth version; the mechanical crab at Kani Dōraku restaurant has been there since 1960.",
       },
       {
         title: "Kuidaore",
-        body: "Osaka has its own word: kuidaore, 'to ruin oneself eating'. For centuries the city was Japan's center for rice trading and developed a popular, unpretentious gastronomic culture. From here come takoyaki (octopus balls), okonomiyaki (cabbage omelette on the griddle) and kushikatsu (breaded skewers).",
+        body: "Osaka has its own word: kuidaore, 'to ruin yourself eating'. The city was Japan's rice-trading center for centuries and developed a popular, unpretentious food culture. This is where takoyaki (octopus balls), okonomiyaki (grilled cabbage pancake) and kushikatsu (breaded skewers) come from.",
       },
     ],
     curiosities: [
-      "Strict rule of kushikatsu: you cannot dip the skewer twice into the communal sauce. It is written in every establishment.",
-      "In Osaka people stand on the right of escalators; in Tokyo, on the left. No one knows exactly why.",
-      "Shinsekai ('new world') was built in 1912 inspired by Paris to the north and Coney Island to the south; its Tsūtenkaku tower imitated the Eiffel Tower.",
+      "Strict kushikatsu rule: you can't dip the skewer twice in the shared sauce. It's posted in every shop.",
+      "In Osaka people stand on the right side of escalators; in Tokyo, the left. Nobody knows for sure why.",
+      "Shinsekai ('new world') was built in 1912, inspired by Paris to the north and Coney Island to the south; its Tsūtenkaku tower imitated the Eiffel Tower.",
+      "Near Sakuramon Gate there's a stone called Higo-ishi, over 15 meters wide, one of the largest single stones in the whole castle — a genuine feat of 17th-century engineering just to transport it.",
+      "During the survey of the marked stones, bullet impacts from the 1945 air raids were also found in some sections, still visible next to the stairs leading up to the castle.",
     ],
-    tip: "The castle interior can be skipped without regret if you are short on time. The park and the walls are what is worth it.",
+    tip: "You can skip the castle interior without guilt if you're short on time. The park and the walls are what's really worth it — and if you go in, don't miss the small Toyotomi Stone Wall Museum next to the tower, which almost nobody visits and tells the most interesting part of the story.",
   },
 
   "meiji-jingu": {

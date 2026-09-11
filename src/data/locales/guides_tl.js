@@ -467,33 +467,50 @@ export const guides = {
     tip: "The of buong na (the The the The) buong of buong na buong The na of (the buong The the) buong of buong buong The na of buong (buong).",
   },
 
-  "osaka": {
-    name: "Osaka: Kastilyo at Dotonbori",
-    tagline: "Ang kusina ng Japan at lungsod ng mga mangangalakal, na may kastilyo na puro simbolo.",
+    "osaka": {
+    name: "Osaka: kastilyo at Dotonbori",
+    jp: "大阪",
+    founded: "Kastilyo: 1583",
+    wiki: "Osaka Castle",
+    tagline: "Ang kusina ng Japan at ang lungsod ng mga negosyante, may kastilyong purong simbolo.",
     sections: [
       {
-        title: "Ang Kastilyo",
-        body: "Itinayo ito ni Toyotomi Hideyoshi noong 1583 bilang pinakamalaking kastilyo sa Japan, simbolo ng pagsasama-sama ng bansa na natapos na niya. Winasak ito noong 1615 ni Tokugawa Ieyasu sa Siege of Osaka, na nagwakas sa Toyotomi clan. Itinayo itong muli, at ang tore ay nasunog muli dahil sa kidlat noong 1665.",
+        title: "Ang kastilyo",
+        body: "Itinayo ni Toyotomi Hideyoshi noong 1583 bilang pinakamalaking kastilyo sa Japan, simbolo ng pagkakaisa ng bansa na kakatapos lang niyang makamit. Noong panahon niya, inilarawan itong 'walang katulad sa tatlong kaharian' (Japan, China, at India) at 'ang pinakamalakas sa Japan'. Nawasak ito noong 1615 ni Tokugawa Ieyasu sa Pagkubkob ng Osaka (Summer Campaign), na nagwakas sa Toyotomi clan. Muling itinayo sa pagitan ng 1620 at 1629, at ang bagong tower ay muling nasunog dahil sa kidlat noong 1665. Karamihan sa natira ay nasunog noong Meiji Restoration (1868), at may mga bahagi pang nawala sa air raids noong 1945.",
       },
       {
-        title: "Ang Tunay na Makikita Mo",
-        body: "Dapat malaman: ang kasalukuyang tore ay mula 1931, gawa sa reinforced concrete, at sa loob ay isang modernong museo na may elevator. Hindi ito isang arkeolohikal na rekonstruksyon kundi isang malayang replika, na pinondohan ng mga donasyon ng publiko. Ang tunay at kamangha-mangha ay ang mga pader ng bato at mga moat, mula ika-17 siglo: ang ilang indibidwal na bato ay tumitimbang ng higit sa 100 tonelada at dinala sa dagat mula sa mga quarry na daan-daang kilometro ang layo.",
+        title: "Dalawang kastilyo, isa ang nakalibing",
+        body: "Ito ang pinaka-nakakagulat sa buong lugar, at halos hindi napapansin ng mga bisita: ang kastilyo ni Hideyoshi na nakikita mo sa mga brochure ngayon ay HINDI ang tinatapakan mo. Pagkatalo sa mga Toyotomi noong 1615, hindi lang muling itinayo ng Tokugawa Shogunate ang kastilyo — literal nilang inilibing ito sa ilalim ng tonelada ng lupa, na para bang binubura ang awtoridad ng pamilya Toyotomi, at itinayo ang sarili nilang mas malaking kastilyo sa ibabaw nito. Lahat ng pader at moat na nakikita mo ngayon sa ibabaw ay mula sa rekonstruksyon ng Tokugawa; ang mga galing sa Toyotomi period ay halos 400 taon na nakalibing sa ilalim ng lupa. Noong 1959, isang geological survey ng inner bailey (Honmaru) ang biglang nakahanap ng isang pader na bato na umaabot mga 7 metro sa ilalim ng lupa — tinawag itong 'mysterious stone wall' hanggang kumpirmado ng mga imbestigasyon na itinayo ito ni Hideyoshi. Noong 1984, natuklasan ng water pipe renovation work ang mas malaking bahagi ng parehong nakalibing na pader, 6 metro ang taas, bahagi ng Tsumenomaru (ang puso ng kastilyo ni Toyotomi). Para mabigyan ng ideya ang pagkakaiba ng laki: ang tower ng kastilyo ni Toyotomi ay mga 39 m ang taas mula sa sariling ground level nito; ang Tokugawa tower na pumalit dito, na nakatayo na sa ibabaw ng inipong lupa, ay mga 58 m.",
+      },
+      {
+        title: "Ang talagang makikita mo",
+        body: "Dapat malaman: ang kasalukuyang tower ay mula 1931, gawa sa reinforced concrete, at sa loob ay modernong museo na may elevator. Hindi ito archaeological reconstruction kundi malayang recreation, na pinondohan ng donasyon ng mga mamamayan. Ang tunay na authentic at kahanga-hanga ay ang mga pader na bato at moat, mula ika-17 siglo: may mga bato na tumitimbang ng higit 100 tonelada na dinala sa dagat mula sa mga quarry na daan-daang kilometro ang layo (Mount Rokko, mga isla sa Seto Inland Sea, at mga quarry sa Kyushu na 420 km ang layo). Humigit-kumulang isang milyong granite stone ang nagamit sa mga pader sa kabuuan.",
+      },
+      {
+        title: "Ang mga batong may marka (kokuin-ishi)",
+        body: "Isang detalyeng halos walang tumitingin nang malapitan: maraming bato sa mga pader ang may ukit na simbolo o character. Tinatayang may 50,000 hanggang 60,000 markadong bato sa buong kastilyo, na may mga 2,000 magkakaibang disenyo. Hinati ng Tokugawa Shogunate ang rekonstruksyon sa 64 na daimyō clan mula kanlurang Japan, at bawat isa ay minamarkahan ang mga bato sa kanilang itinalagang bahagi — gamit ang family crest nila, sariling simbolo, o pangalan ng quarry na pinagmulan — parehong para markahan ang hangganan ng bawat bahagi ng trabaho at, ayon sa mga historyador, para maiwan ng bawat panginoon ang patunay (at maipagmalaki) ang kalidad ng kanilang trabaho sa shogun. Isang kawili-wiling detalye tungkol sa politika ng panahong iyon: wala ni isang marka ang natagpuan mula sa mga clan na natalo sa Battle of Sekigahara (tulad nina Ishida Mitsunari o Konishi Yukinaga) — lahat ng nakilalang marka ay eksaktong tumutugma sa mga clan na pinanatili ang pabor ni Tokugawa. Ngayon, puwede mong ihambing ang mahigit 80 markadong bato nang sabay-sabay sa tinatawag na Kokuinseki Hiroba ('Marked Stones Square'), malapit sa Gokurakubashi bridge.",
+      },
+      {
+        title: "Ang Osaka Castle Toyotomi Stone Wall Museum",
+        body: "Katabi mismo ng main tower (mga 160 m sa timog-silangan, 2 minutong lakad) may maliit na pavilion na madaling hindi mapansin: ang Osaka Castle Toyotomi Stone Wall Museum (大阪城 豊臣石垣館). Bababa sa ibaba ng level ng kalye, ipinapakita rito ang mismong bahagi ng nakalibing na pader na natuklasan noong 1984 — batong hindi nakita ng halos 400 taon, itinayo noong 1583 gamit ang pinaka-advanced na teknolohiya noong panahong iyon para protektahan ang base militar kung saan pinag-isa ni Hideyoshi ang Japan. Ang ibabaw ay may nakikitang bakas pa rin ng apoy mula sa Siege of Osaka noong 1615. Kasama na ang entrance dito sa tiket ng main tower museum, kaya kung nakabayad ka na ng entrance sa kastilyo, wala nang dagdag na bayad para dumaan dito.",
       },
       {
         title: "Dotonbori",
-        body: "Ang kanal ay hinukay noong 1615 at ang lugar ay naging teatro district ng Osaka (kabuki at bunraku). Ngayon ay ito ang zone ng mga neon light, restaurant, at malalaking billboard. Ang Glico running man sign ay nandoon na mula 1935 at nasa ikaanim na bersyon na; ang mechanical crab ng restaurant na Kani Dōraku, mula 1960.",
+        body: "Hinukay ang kanal noong 1615 at naging theater district ng Osaka (kabuki at bunraku) ang lugar. Ngayon, ito ang lugar ng neon lights, mga restaurant, at malalaking signage. Nandiyan na ang Glico running-man sign mula 1935 at nasa ikaanim na bersyon na ngayon; ang mechanical crab ng Kani Dōraku restaurant, mula 1960.",
       },
       {
         title: "Kuidaore",
-        body: "May sariling salita ang Osaka: kuidaore, 'maging wasak sa pagkain'. Sa loob ng maraming siglo ang lungsod ay sentro ng kalakalan ng bigas sa Japan at nagkaroon ng popular at walang pagmamalabis na kultura sa pagkain. Mula dito nagmula ang takoyaki (ball ng octopus), okonomiyaki (tortilla ng repolyo sa grill) at kushikatsu (breaded na skewer).",
+        body: "May sariling salita ang Osaka: kuidaore, 'magwasak sa sarili sa pagkain'. Ang lungsod ay naging sentro ng kalakalan ng bigas ng Japan sa loob ng daan-daang taon at nagkaroon ng sikat, simpleng kultura ng pagkain. Dito nagmula ang takoyaki (octopus balls), okonomiyaki (inihaw na cabbage pancake) at kushikatsu (breaded skewers).",
       },
     ],
     curiosities: [
-      "Mahigpit na patakaran ng kushikatsu: hindi maaaring isawsaw ang skewer nang dalawang beses sa komunal na sarsa. Nakasulat ito sa bawat establisyimento.",
-      "Sa Osaka ang mga tao ay nakatayo sa kanan ng mga escalator; sa Tokyo, sa kaliwa. Walang nakakaalam kung bakit.",
-      "Ang Shinsekai ('bagong mundo') ay itinayo noong 1912 na inspirado ng Paris sa hilaga at Coney Island sa timog; ang tore nitong Tsūtenkaku ay ginaya ang Eiffel Tower.",
+      "Mahigpit na patakaran ng kushikatsu: hindi puwedeng i-dip nang dalawang beses ang skewer sa shared sauce. Nakasulat ito sa lahat ng tindahan.",
+      "Sa Osaka, tumatayo ang mga tao sa kanang bahagi ng escalator; sa Tokyo, sa kaliwa. Walang tiyak na dahilan kung bakit.",
+      "Itinayo ang Shinsekai ('bagong mundo') noong 1912, inspirasyon ang Paris sa hilaga at Coney Island sa timog; ang Tsūtenkaku tower nito ay ginaya ang Eiffel Tower.",
+      "Malapit sa Sakuramon Gate may batong tinatawag na Higo-ishi, mahigit 15 metro ang lapad, isa sa pinakamalaking indibidwal na bato sa buong kastilyo — tunay na engineering feat noong ika-17 siglo para lang mailipat ito.",
+      "Habang isinasagawa ang survey ng mga markadong bato, may nakita ring bakas ng bala mula sa air raids noong 1945 sa ilang bahagi, nakikita pa rin malapit sa hagdanan papuntang kastilyo.",
     ],
-    tip: "Ang loob ng kastilyo ay maaaring laktawan nang walang pagsisisi kung limitado ang oras. Ang parke at ang mga pader ang tunay na sulit.",
+    tip: "Puwedeng laktawan ang loob ng kastilyo nang walang panghihinayang kung nagmamadali sa oras. Ang parke at ang mga pader ang talagang worth it — at kung papasok ka, huwag palampasin ang maliit na Toyotomi Stone Wall Museum katabi ng tower, na halos walang bumibisita pero nagkukwento ng pinaka-interesanteng bahagi ng kasaysayan.",
   },
 
   "meiji-jingu": {

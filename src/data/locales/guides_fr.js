@@ -458,33 +458,50 @@ export const guides = {
     tip: "Odaiba est l'un des meilleurs endroits de Tokyo pour le coucher du soleil, en regardant le soleil se coucher derrière le Rainbow Bridge et la ligne d'horizon de la ville.",
   },
 
-  "osaka": {
-    name: "Osaka : Château et Dotonbori",
-    tagline: "La cuisine du Japon et la ville des marchands, avec un château qui est un pur symbole.",
+    "osaka": {
+    name: "Osaka : château et Dotonbori",
+    jp: "大阪",
+    founded: "Château : 1583",
+    wiki: "Osaka Castle",
+    tagline: "La cuisine du Japon et la ville des marchands, avec un château qui est pur symbole.",
     sections: [
       {
-        title: "Le Château",
-        body: "Toyotomi Hideyoshi l'a construit en 1583 comme le plus grand château du Japon, symbole de l'unification du pays qu'il venait d'achever. Il fut détruit en 1615 par Tokugawa Ieyasu lors du Siège d'Osaka, qui mit fin au clan Toyotomi. Il fut reconstruit, et la tour brûla à nouveau lors d'un coup de foudre en 1665.",
+        title: "Le château",
+        body: "Construit par Toyotomi Hideyoshi en 1583 comme le plus grand château du Japon, symbole de l'unification du pays qu'il venait d'achever. À l'époque, on le décrivait comme « sans rival dans les trois royaumes » (Japon, Chine et Inde) et « le plus fort du Japon ». Il fut détruit en 1615 par Tokugawa Ieyasu lors du siège d'Osaka (la campagne d'été), qui mit fin au clan Toyotomi. Il fut reconstruit entre 1620 et 1629, et la nouvelle tour brûla de nouveau après un coup de foudre en 1665. Le gros de ce qui restait fut détruit par un incendie lors de la Restauration Meiji (1868), et d'autres parties furent perdues lors des bombardements de 1945.",
+      },
+      {
+        title: "Deux châteaux, l'un enterré",
+        body: "C'est le plus surprenant du site, et la plupart des visiteurs passent à côté : le château de Hideyoshi que l'on voit aujourd'hui dans les brochures n'est PAS celui sur lequel on marche. Après avoir vaincu les Toyotomi en 1615, le shogunat Tokugawa ne s'est pas contenté de reconstruire le château — il l'a littéralement enterré sous des tonnes de terre, comme pour effacer l'autorité de la famille Toyotomi, et a construit son propre château, plus grand, par-dessus. Tous les murs et douves visibles aujourd'hui en surface datent de la reconstruction Tokugawa ; ceux de la période Toyotomi sont restés enfouis près de 400 ans. En 1959, une étude géologique de l'enceinte principale (Honmaru) a mis au jour, par surprise, un mur de pierre s'enfonçant sur environ 7 mètres sous terre — on l'a appelé le « mur mystérieux » jusqu'à ce que des recherches confirment qu'il avait été construit par Hideyoshi. En 1984, des travaux de rénovation de canalisations ont révélé un tronçon bien plus large du même mur enterré, haut de 6 mètres, faisant partie du Tsumenomaru (le cœur du château de Toyotomi). Pour se donner une idée de la différence d'échelle : la tour du château de Toyotomi mesurait environ 39 m depuis son propre niveau de sol ; la tour Tokugawa qui l'a remplacée, déjà construite sur la terre rapportée, mesurait environ 58 m.",
       },
       {
         title: "Ce que vous verrez réellement",
-        body: "Il vaut mieux le savoir : la tour actuelle date de 1931, en béton armé, et l'intérieur est un musée moderne avec ascenseur. Ce n'est pas une reconstruction archéologique mais une recréation libre, financée par des dons publics. Ce qui est authentique et spectaculaire, ce sont les murailles en pierre et les douves, du XVIIe siècle : certaines pierres individuelles pèsent plus de 100 tonnes et furent transportées par mer depuis des carrières situées à des centaines de kilomètres.",
+        body: "À savoir : la tour actuelle date de 1931, en béton armé, et l'intérieur est un musée moderne avec ascenseur. Ce n'est pas une reconstitution archéologique mais une recréation libre, financée par des dons citoyens. Ce qui est authentique et spectaculaire, en revanche, ce sont les murs de pierre et les douves, du XVIIe siècle : certaines roches individuelles pèsent plus de 100 tonnes et ont été transportées par mer depuis des carrières situées à des centaines de kilomètres (mont Rokko, îles de la mer intérieure de Seto, et carrières de Kyushu à 420 km). Au total, on estime qu'environ un million de pierres de granit ont été utilisées dans les murailles.",
+      },
+      {
+        title: "Les pierres marquées (kokuin-ishi)",
+        body: "Un détail que presque personne n'observe de près : beaucoup de pierres des murailles portent des symboles ou des caractères gravés. On estime qu'il y a entre 50 000 et 60 000 pierres marquées dans tout le château, avec environ 2 000 motifs différents. Le shogunat Tokugawa a réparti la reconstruction entre 64 clans daimyō de l'ouest du Japon, et chacun marquait les pierres de sa section attribuée — avec son blason familial, son propre symbole, ou le nom de la carrière d'origine — à la fois pour délimiter chaque section de chantier et, selon les historiens, pour que chaque seigneur laisse une preuve (et fasse valoir) la qualité de son travail auprès du shogun. Un détail révélateur du contexte politique de l'époque : on n'a jamais trouvé la moindre marque des clans qui avaient perdu à la bataille de Sekigahara (comme Ishida Mitsunari ou Konishi Yukinaga) — toutes les marques identifiées correspondent exactement aux clans qui avaient conservé la faveur de Tokugawa. Aujourd'hui, on peut comparer plus de 80 pierres marquées d'un coup d'œil à la Kokuinseki Hiroba (« place des pierres marquées »), près du pont Gokurakubashi.",
+      },
+      {
+        title: "Le Musée de la Muraille Toyotomi",
+        body: "Juste à côté de la tour principale (environ 160 m au sud-est, 2 minutes à pied), se trouve un petit pavillon facile à manquer : le Musée de la Muraille de Pierre Toyotomi (大阪城 豊臣石垣館). En descendant sous le niveau de la rue, on y expose le tronçon même de muraille enterrée découvert en 1984 — une pierre restée invisible pendant près de 400 ans, construite en 1583 avec la technologie la plus avancée de l'époque pour protéger la base militaire depuis laquelle Hideyoshi a unifié le Japon. La surface porte encore des traces visibles de l'incendie du siège d'Osaka de 1615. L'entrée est incluse dans le billet du musée de la tour principale, donc si vous avez déjà payé l'entrée du château, cela ne coûte rien de plus d'y jeter un œil.",
       },
       {
         title: "Dotonbori",
-        body: "Le canal fut creusé en 1615 et le quartier est devenu le district théâtral d'Osaka (kabuki et bunraku). Aujourd'hui, c'est la zone des néons, des restaurants et des panneaux géants. Le panneau du coureur Glico est là depuis 1935 et en est à sa sixième version ; le crabe mécanique du restaurant Kani Dōraku, depuis 1960.",
+        body: "Le canal fut creusé en 1615 et le quartier devint le district des théâtres d'Osaka (kabuki et bunraku). C'est aujourd'hui la zone des néons, des restaurants et des enseignes géantes. L'enseigne du coureur Glico est là depuis 1935 et en est à sa sixième version ; le crabe mécanique du restaurant Kani Dōraku, depuis 1960.",
       },
       {
         title: "Kuidaore",
-        body: "Osaka a son propre mot : kuidaore, 'se ruiner en mangeant'. Pendant des siècles, la ville a été le centre du commerce du riz au Japon et a développé une culture gastronomique populaire et sans prétention. C'est de là que viennent le takoyaki (boulettes de pieuvre), l'okonomiyaki (omelette au chou sur plaque chauffante) et le kushikatsu (brochettes panées).",
+        body: "Osaka a son propre mot : kuidaore, « se ruiner en mangeant ». La ville fut pendant des siècles le centre du commerce du riz au Japon et développa une culture culinaire populaire et sans prétention. C'est d'ici que viennent le takoyaki (boulettes de poulpe), l'okonomiyaki (galette de chou grillée) et le kushikatsu (brochettes panées).",
       },
     ],
     curiosities: [
-      "Règle stricte du kushikatsu : on ne peut pas tremper la brochette deux fois dans la sauce commune. C'est écrit dans chaque établissement.",
-      "À Osaka, les gens se placent à droite des escalators ; à Tokyo, à gauche. Personne ne sait exactement pourquoi.",
-      "Shinsekai ('nouveau monde') a été construit en 1912 en s'inspirant de Paris au nord et de Coney Island au sud ; sa tour Tsūtenkaku imitait la Tour Eiffel.",
+      "Règle stricte du kushikatsu : on ne peut pas tremper deux fois la brochette dans la sauce commune. C'est affiché dans tous les restaurants.",
+      "À Osaka, on se tient à droite sur les escalators ; à Tokyo, à gauche. Personne ne sait vraiment pourquoi.",
+      "Shinsekai (« nouveau monde ») fut construit en 1912, inspiré de Paris au nord et de Coney Island au sud ; sa tour Tsūtenkaku imitait la tour Eiffel.",
+      "Près de la porte Sakuramon se trouve une pierre appelée Higo-ishi, large de plus de 15 mètres, l'une des plus grandes pierres individuelles de tout le château — un véritable exploit d'ingénierie du XVIIe siècle rien que pour son transport.",
+      "Lors de l'étude des pierres marquées, des impacts de balles des bombardements aériens de 1945 ont aussi été retrouvés sur certains tronçons, encore visibles près des escaliers menant au château.",
     ],
-    tip: "L'intérieur du château peut être ignoré sans regret si vous êtes pressé. Le parc et les murailles valent vraiment le coup.",
+    tip: "On peut sauter l'intérieur du château sans regret si on manque de temps. Le parc et les murailles sont ce qui vaut vraiment le détour — et si vous entrez, ne manquez pas le petit Musée de la Muraille Toyotomi à côté de la tour, que presque personne ne visite et qui raconte la partie la plus intéressante de l'histoire.",
   },
 
   "meiji-jingu": {

@@ -284,11 +284,23 @@ export const guides = {
     sections: [
       {
         title: "El castillo",
-        body: "Lo construyó Toyotomi Hideyoshi en 1583 como el castillo más grande de Japón, símbolo de la unificación del país que él había completado. Fue destruido en 1615 por Tokugawa Ieyasu en el sitio de Osaka, que acabó con el clan Toyotomi. Se reconstruyó, y la torre volvió a arder por un rayo en 1665.",
+        body: "Lo construyó Toyotomi Hideyoshi en 1583 como el castillo más grande de Japón, símbolo de la unificación del país que él había completado. En su época, se le llegó a describir como 'sin rival en los tres reinos' (Japón, China e India) y 'el más fuerte de Japón'. Fue destruido en 1615 por Tokugawa Ieyasu en el sitio de Osaka (la Campaña de Verano), que acabó con el clan Toyotomi. Se reconstruyó entre 1620 y 1629, y la nueva torre volvió a arder por un rayo en 1665. El grueso de lo que quedaba en pie se quemó en un incendio durante la Restauración Meiji (1868), y algunas partes más se perdieron en los bombardeos de 1945.",
+      },
+      {
+        title: "Dos castillos, uno enterrado",
+        body: "Esto es lo más sorprendente del recinto, y mucha gente se lo pierde: el castillo de Hideyoshi que ves hoy en los folletos NO es el que pisas. Tras derrotar a los Toyotomi en 1615, el shogunato Tokugawa no se limitó a reconstruir el castillo — lo enterró literalmente bajo toneladas de tierra, como borrando la autoridad de la familia Toyotomi, y construyó su propio castillo encima, a mayor escala. Todos los muros y fosos que ves hoy en superficie son de la reconstrucción Tokugawa; los del periodo Toyotomi llevaban casi 400 años bajo tierra. En 1959, una prospección geológica del recinto principal (Honmaru) encontró por sorpresa un muro de piedra que se hundía unos 7 metros bajo tierra — se le llamó el 'muro misterioso' hasta que las investigaciones confirmaron que era obra de Hideyoshi. En 1984, unas obras de renovación de tuberías destaparon un tramo mucho mayor del mismo muro enterrado, de 6 metros de alto, perteneciente al Tsumenomaru (el núcleo del castillo de Toyotomi). Para hacerte una idea de la diferencia de escala: la torre del castillo de Toyotomi medía unos 39 m desde su propio nivel del suelo; la torre Tokugawa que la sustituyó, ya sobre el terrón añadido, unos 58 m.",
       },
       {
         title: "Lo que verás realmente",
-        body: "Conviene saberlo: la torre actual es de 1931, de hormigón armado, y por dentro es un museo moderno con ascensor. No es una reconstrucción arqueológica sino una recreación libre, financiada por donaciones ciudadanas. Lo que sí es auténtico y espectacular son los muros de piedra y los fosos, del siglo XVII: algunas rocas individuales pesan más de 100 toneladas y fueron transportadas por mar desde canteras a cientos de kilómetros.",
+        body: "Conviene saberlo: la torre actual es de 1931, de hormigón armado, y por dentro es un museo moderno con ascensor. No es una reconstrucción arqueológica sino una recreación libre, financiada por donaciones ciudadanas. Lo que sí es auténtico y espectacular son los muros de piedra y los fosos, del siglo XVII: algunas rocas individuales pesan más de 100 toneladas y fueron transportadas por mar desde canteras a cientos de kilómetros (monte Rokko, islas del mar interior de Seto, y canteras de Kyushu a 420 km de distancia). En total se calcula que se usó cerca de un millón de piedras de granito en las murallas.",
+      },
+      {
+        title: "Las piedras con marca (kokuin-ishi)",
+        body: "Un detalle que casi nadie mira de cerca: muchas de las piedras de las murallas tienen símbolos o caracteres grabados. Se calcula que hay entre 50.000 y 60.000 piedras marcadas en todo el castillo, con unos 2.000 diseños distintos. El shogunato Tokugawa dividió la reconstrucción entre 64 clanes daimyō del oeste de Japón, y cada uno marcaba las piedras de su tramo asignado — con su escudo familiar, un símbolo propio, o el nombre de la cantera de origen — tanto para señalar los límites de cada tramo de obra como, según los historiadores, para que cada señor dejara constancia (y presumiera) de la calidad de su trabajo ante el shogun. Un dato curioso que revela el trasfondo político de la época: no se ha encontrado ni una sola marca de los clanes que perdieron en la batalla de Sekigahara (como Ishida Mitsunari o Konishi Yukinaga) — todas las marcas identificadas corresponden exactamente a los clanes que sí conservaron el favor de Tokugawa. Hoy se pueden comparar más de 80 piedras marcadas de golpe en la llamada Kokuinseki Hiroba ('Plaza de las Piedras con Marca'), cerca del Gokurakubashi.",
+      },
+      {
+        title: "El Museo de la Muralla Toyotomi",
+        body: "Justo al lado de la torre principal (unos 160 m al sureste, 2 minutos andando) hay un pabellón pequeño y fácil de pasar por alto: el Museo de la Muralla de Piedra Toyotomi (大阪城 豊臣石垣館). Ahí se expone, bajando bajo el nivel de la calle, el propio tramo de muralla enterrada que se descubrió en 1984 — piedra que llevaba casi 400 años sin que nadie la viera, construida en 1583 con la tecnología más avanzada de la época para proteger la base militar desde la que Hideyoshi unificó Japón. La superficie todavía conserva marcas visibles del fuego de la Campaña de Osaka de 1615. Se entra con la misma entrada del museo de la torre principal, así que si ya has pagado la entrada al castillo, no cuesta nada de más asomarse.",
       },
       {
         title: "Dotonbori",
@@ -303,8 +315,10 @@ export const guides = {
       "Regla estricta del kushikatsu: no se puede mojar dos veces la brocheta en la salsa comunitaria. Está escrito en todos los locales.",
       "En Osaka la gente se coloca a la derecha de las escaleras mecánicas; en Tokio, a la izquierda. Nadie sabe con certeza por qué.",
       "Shinsekai ('mundo nuevo') se construyó en 1912 inspirándose en París por el norte y Coney Island por el sur; su torre Tsūtenkaku imitaba a la Torre Eiffel.",
+      "Cerca de la Puerta Sakuramon hay una piedra llamada Higo-ishi de más de 15 metros de ancho, una de las piedras individuales más grandes de todo el castillo — un auténtico alarde de ingeniería del siglo XVII solo para el transporte.",
+      "Durante la investigación de las piedras marcadas, en algunos tramos se encontraron también impactos de bala de los bombardeos aéreos de 1945, todavía visibles junto a las escaleras de acceso al castillo.",
     ],
-    tip: "El castillo por dentro se puede saltar sin remordimiento si vas justo de tiempo. El parque y los muros son lo que merece la pena.",
+    tip: "El castillo por dentro se puede saltar sin remordimiento si vas justo de tiempo. El parque y los muros son lo que merece la pena — y si entras, no te pierdas el pequeño Museo de la Muralla Toyotomi junto a la torre, que casi nadie visita y cuenta la parte más interesante de la historia.",
   },
 
   // ══════════════════════════════════════════════════════════════════
