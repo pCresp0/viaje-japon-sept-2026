@@ -4,6 +4,7 @@ import { guideImages } from "../data/guideImages";
 import { useContent } from "../i18n/LanguageContext";
 import { useHighlight } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
+import PlaceText from "./PlaceText";
 
 const franchiseStyle = {
   pokemon: { label: "Pokémon", emoji: "⚡", color: "#d9720a" },
@@ -44,9 +45,12 @@ function GuideBody({ guide, refs, localImage, accent }) {
           }}>
             {s.title}
           </p>
-          <p style={{ fontSize: 13.5, color: "var(--ink)", lineHeight: 1.65 }}>
-            {s.body}
-          </p>
+          <PlaceText
+            as="p"
+            text={s.body}
+            style={{ fontSize: 13.5, color: "var(--ink)", lineHeight: 1.65, whiteSpace: "pre-wrap" }}
+            linkStyle={{ color: accent }}
+          />
         </div>
       ))}
 
