@@ -67,6 +67,56 @@ export function getHotelForDay(dayNum) {
   return "tokio";
 }
 
+// Minutos transcurridos desde medianoche, en la hora de Japón (o local si falla),
+// usados para encontrar en qué punto del horario de hoy estamos ahora mismo.
+export function getCurrentMinutesTokyo() {
+  try {
+    const f = new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Tokyo", hour: "2-digit", minute: "2-digit", hour12: false });
+    const parts = f.formatToParts(new Date());
+    const h = Number(parts.find((p) => p.type === "hour")?.value ?? 0);
+    const m = Number(parts.find((p) => p.type === "minute")?.value ?? 0);
+    return h * 60 + m;
+  } catch {
+    const d = new Date();
+    return d.getHours() * 60 + d.getMinutes();
+  }
+}
+
+// Dado el horario de un día (array de { time, text }), devuelve el índice (dentro
+// de las entradas que SÍ tienen una hora real) de la parada correspondiente al
+// momento actual: la última parada cuya hora de inicio ya ha pasado -- es decir,
+// el punto ANTERIOR a la hora actual, nunca uno posterior, para no adelantarse a
+// algo que todavía no ha pasado. Si la hora actual es anterior a la primera
+// parada del día, devuelve 0 (la primera). Devuelve null si no hay ninguna
+// entrada con hora reconocible.
+export function findCurrentScheduleIndex(schedule) {
+  if (!schedule || schedule.length === 0) return null;
+  const timed = schedule
+    .map((s, i) => ({ ...s, _origIndex: i }))
+    .filter((s) => s.time && /\d/.test(s.time));
+  if (timed.length === 0) return null;
+
+  const nowMinutes = getCurrentMinutesTokyo();
+
+  const parseStartMinutes = (timeStr) => {
+    const match = String(timeStr).match(/(\d{1,2}):(\d{2})/);
+    if (!match) return null;
+    return Number(match[1]) * 60 + Number(match[2]);
+  };
+
+  let bestFilteredIndex = 0;
+  let bestMinutes = -Infinity;
+  timed.forEach((s, filteredIdx) => {
+    const startMinutes = parseStartMinutes(s.time);
+    if (startMinutes == null) return;
+    if (startMinutes <= nowMinutes && startMinutes > bestMinutes) {
+      bestMinutes = startMinutes;
+      bestFilteredIndex = filteredIdx;
+    }
+  });
+  return bestFilteredIndex;
+}
+
 export function diffDays(fromISO, toISO) {
   const a = new Date(fromISO + "T00:00:00");
   const b = new Date(toISO + "T00:00:00");

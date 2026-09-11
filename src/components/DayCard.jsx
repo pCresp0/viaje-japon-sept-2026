@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { ScrollText, ChevronDown, ChevronUp, Map, BookOpen, List, X } from "lucide-react";
 import { useContent } from "../i18n/LanguageContext";
@@ -14,7 +14,7 @@ import NozomiNagoyaTicketCard from "./NozomiNagoyaTicketCard";
 import GuideCard from "./GuideCard";
 import StayOption from "./StayOption";
 import PlaceText from "./PlaceText";
-import { formatDateLong } from "../utils/date";
+import { formatDateLong, getTripStatus, findCurrentScheduleIndex } from "../utils/date";
 import { parseDayNumbers } from "../utils/mapDay";
 import { slug } from "../utils/slug";
 
@@ -143,6 +143,31 @@ function CollapsibleScheduleItem({ s, color }) {
 export default function DayCard({ day, defaultOpenHistory = false, onClose, onViewMap, onShowQuickView }) {
   const [showHistory, setShowHistory] = useState(defaultOpenHistory);
   const [showStay, setShowStay] = useState(false);
+  // Ir directos al punto del horario en el que estamos ahora mismo, sólo
+  // cuando este es el día de hoy y sólo la primera vez que se abre (no en
+  // cada re-render, para no interrumpir si el usuario ya está desplazándose
+  // por su cuenta).
+  const scheduleItemRefs = useRef([]);
+  const [nowIndex, setNowIndex] = useState(null);
+  const hasScrolledToNow = useRef(false);
+
+  useEffect(() => {
+    if (hasScrolledToNow.current) return;
+    const status = getTripStatus();
+    const isToday = status.phase === "during" && status.dayNum === day.num;
+    if (!isToday) return;
+    const idx = findCurrentScheduleIndex(day.schedule);
+    if (idx == null) return;
+    hasScrolledToNow.current = true;
+    setNowIndex(idx);
+    // Pequeño margen para que el DOM ya tenga las referencias montadas.
+    const timer = setTimeout(() => {
+      scheduleItemRefs.current[idx]?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 150);
+    // El aviso visual se apaga solo tras unos segundos, igual que el resaltado del buscador.
+    const clearTimer = setTimeout(() => setNowIndex(null), 3200);
+    return () => { clearTimeout(timer); clearTimeout(clearTimer); };
+  }, [day.num, day.schedule]);
   const [selectedGuide, setSelectedGuide] = useState(null);
   const { blocks, stays, days, mapStops, guides } = useContent();
   const { triggerHighlight } = useHighlight();
@@ -289,13 +314,25 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
               }
 
               return (
-                <li key={i} className="relative">
+                <li
+                  key={i}
+                  ref={(el) => (scheduleItemRefs.current[i] = el)}
+                  className={"relative" + (i === nowIndex ? " search-highlight-pulse" : "")}
+                >
                   <span
                     className="absolute -left-[21px] top-1 w-2.5 h-2.5 rounded-full"
                     style={{ background: block.color }}
                   />
                   <p className="font-display text-[16px] sm:text-[17px] font-extrabold flex items-center gap-1.5 mb-1 tracking-tight" style={{ color: block.color }}>
                     {emoji && <span className="text-[17px]">{emoji}</span>}{s.time}
+                    {i === nowIndex && (
+                      <span
+                        className="ml-1 text-[10px] font-bold px-1.5 py-0.5 rounded-full"
+                        style={{ background: "var(--gold, #c9a227)", color: "#3a2e05" }}
+                      >
+                        AHORA
+                      </span>
+                    )}
                   </p>
                   <PlaceText
                     as="p"
