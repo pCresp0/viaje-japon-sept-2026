@@ -281,13 +281,16 @@ export const days = [
         "text": "🚶 Maglakad papuntang Sanjo Station (Keihan). Mga 200 m lang, mga 3 min."
       },
       {
-        "text": "🚆 SANJO → TEMMABASHI (Osaka).\n\n🎫 **SUICA:** ✅ OO; i-tap ang card nang direkta sa mga gate.\n\nKeihan Electric Railway, main line (Keihan Main Line), Limited Express patungong Yodoyabashi. 8 hintuan, mga 47 min — tinatayang pagdating mga 15:17. Pamasahe mga ¥490. Walang reserbasyon. Ang linyang ito ng Keihan (hindi JR) ay direktang kumokonekta sa gitna ng Kyoto papuntang puso ng Osaka, mas malapit sa castle kaysa sa karaniwang ruta via Kyoto Station/Osaka Station.\n\n🎧 **Podcast para sa biyahe:** [Osaka: pagkain, kapaligiran at saya](https://podcasts.apple.com/es/podcast/jap%C3%B3n-a-fondo/id1545542012?i=1000516234185) (*Japón a fondo* · Japonismo). Maganda para ma-appreciate ang kultura ng 'kuidaore' (kumain hanggang mauntog), Dotonbori at ang street atmosphere habang nasa tren."
+        "text": "🚆 SANJO → OSAKA (Temmabashi).\n\n🎫 **SUICA:** ✅ OO; i-tap ang card nang direkta sa mga gate.\n\nKeihan Electric Railway, main line (Keihan Main Line), Limited Express patungong Yodoyabashi. 8 hintuan, mga 47 min. Pamasahe mga ¥490. Walang reserbasyon. Ang linyang ito ng Keihan (hindi JR) ay direktang kumokonekta sa gitna ng Kyoto papuntang puso ng Osaka.\n\n🎧 **Podcast para sa biyahe:** [Osaka: pagkain, kapaligiran at saya](https://podcasts.apple.com/es/podcast/jap%C3%B3n-a-fondo/id1545542012?i=1000516234185) (*Japón a fondo* · Japonismo). Maganda para ma-appreciate ang kultura ng 'kuidaore' (kumain hanggang mauntog), Dotonbori at ang street atmosphere habang nasa tren."
       },
       {
-        "text": "🚶 TEMMABASHI → OSAKA CASTLE. Maglakad diretso papuntang castle, hindi na kailangan dumaan sa Osaka Station o Morinomiya. Mga 1.6 km, mga 24 min."
+        "text": "🎫 **PAGKUHA NG PHYSICAL JR-WEST TICKETS (SA OSAKA STATION)**\n\nSamantalahin ang paghinto sa Osaka para kunin sa green 5489 machines ang physical tickets ng DALAWANG reserbasyon:\n- 🚆 Thunderbird 5 Kyoto → Tsuruga (bukas, September 12), locator **47932**.\n- 🚆 Shinano 4 Nakatsugawa → Nagoya (September 15), locator **42093**.\n\nPareho itong papalitan gamit ang parehong physical credit card (Mastercard na nagtatapos sa 8625) at parehong 4-digit na PIN. Kapag tapos na ito, hindi na kailangang bumalik pa sa 5489 machine para sa dalawang reserbasyong ito sa buong natitirang biyahe."
       },
       {
-        "text": "🏯 OSAKA CASTLE. MAHALAGA: Bukas ang Osaka Castle Museum ng 09:00–18:00, huling pasukan 17:30. PAGPASOK SA LOOB NG CASTLE: Panatilihing pangunahing bisita ang main tower museum at observation deck. Entrance: ¥1,200 adult. Hindi na kailangang mag-book nang maaga para sa araw na ito. Bumili ng tiket mismo sa castle. Puwedeng magbayad ng cash, card, at IC card. 💡 Tip: Sa Osaka Castle, maglaan ng mga 1.5–2 oras para sa museum + observation deck + exterior."
+        "text": "🚶 OSAKA STATION → OSAKA CASTLE. Maglakad papuntang castle."
+      },
+      {
+        "text": "🏯 OSAKA CASTLE. \n\n⚠️ **MAHALAGA — masikip na bisita:**\nSa pagdating mga 17:00, kaunti na lang ang oras sa Osaka Castle Museum (bukas 09:00–18:00, huling pasukan 17:30): 30 minuto na lang bago ang huling pasukan, at ganap na sasara ng 18:00. Kung gustong pumasok sa loob, pumasok agad at unahin ang observation deck sa itaas; kung ayaw magmadali, sa exterior na lang (pader, moat, parke) at itago na lang ang interior para sa ibang pagkakataon. Entrance: ¥1,200 (~7.5€) adult. Puwedeng magbayad ng cash, card, o IC card."
       },
       {
         "text": "🚇 OSAKA CASTLE → DOTONBORI. Mula Morinomiya gamitin ang Osaka Metro papuntang Namba/Dotonbori area. Walang reserbasyon. Gumamit ng IC card."

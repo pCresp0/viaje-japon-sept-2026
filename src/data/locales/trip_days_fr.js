@@ -281,13 +281,16 @@ export const days = [
         "text": "🚶 Marcher jusqu'à la gare de Sanjo (Keihan). À peine 200 m, environ 3 min."
       },
       {
-        "text": "🚆 SANJO → TEMMABASHI (Osaka).\n\n🎫 **SUICA :** ✅ OUI ; passer la carte directement aux portillons.\n\nKeihan Electric Railway, ligne principale (Keihan Main Line), Limited Express vers Yodoyabashi. Trajet de 8 arrêts, environ 47 min — arrivée estimée vers 15h17. Tarif environ ¥490. Sans réservation. Cette ligne Keihan (pas JR) relie directement le centre de Kyoto au cœur d'Osaka, plus près du château que l'itinéraire habituel via Kyoto Station/Osaka Station.\n\n🎧 **Podcast pour le trajet :** [Osaka : gastronomie, ambiance et divertissement](https://podcasts.apple.com/es/podcast/jap%C3%B3n-a-fondo/id1545542012?i=1000516234185) (*Japón a fondo* · Japonismo). Idéal pour se plonger dans la culture du « kuidaore » (manger jusqu'à se ruiner), Dotonbori et l'ambiance de rue pendant le trajet en train."
+        "text": "🚆 SANJO → OSAKA (Temmabashi).\n\n🎫 **SUICA :** ✅ OUI ; passer la carte directement aux portillons.\n\nKeihan Electric Railway, ligne principale (Keihan Main Line), Limited Express vers Yodoyabashi. Trajet de 8 arrêts, environ 47 min. Tarif environ ¥490. Sans réservation. Cette ligne Keihan (pas JR) relie directement le centre de Kyoto au cœur d'Osaka.\n\n🎧 **Podcast pour le trajet :** [Osaka : gastronomie, ambiance et divertissement](https://podcasts.apple.com/es/podcast/jap%C3%B3n-a-fondo/id1545542012?i=1000516234185) (*Japón a fondo* · Japonismo). Idéal pour se plonger dans la culture du « kuidaore » (manger jusqu'à se ruiner), Dotonbori et l'ambiance de rue pendant le trajet en train."
       },
       {
-        "text": "🚶 TEMMABASHI → OSAKA CASTLE. Marcher directement jusqu'au château, sans passer par Osaka Station ni Morinomiya. Environ 1,6 km, environ 24 min."
+        "text": "🎫 **RÉCUPÉRATION DES BILLETS PHYSIQUES JR-WEST (À OSAKA STATION)**\n\nProfiter de l'arrêt à Osaka pour récupérer aux bornes vertes 5489 les billets physiques de DEUX réservations :\n- 🚆 Thunderbird 5 Kyoto → Tsuruga (demain, 12 septembre), référence **47932**.\n- 🚆 Shinano 4 Nakatsugawa → Nagoya (15 septembre), référence **42093**.\n\nLes deux s'échangent avec la même carte de crédit physique (Mastercard se terminant par 8625) et le même code PIN à 4 chiffres. Une fois fait, plus besoin de repasser par une borne 5489 pour ces deux réservations pour le reste du voyage."
       },
       {
-        "text": "🏯 OSAKA CASTLE. IMPORTANT : le musée du château d'Osaka est ouvert de 09h00 à 18h00, dernière entrée à 17h30. ENTRER À L'INTÉRIEUR DU CHÂTEAU : garder le musée de la tour principale et le belvédère comme visite principale. Entrée : ¥1 200 adulte. Pas besoin de réserver à l'avance pour ce jour. Acheter les billets sur place au château. On peut payer en espèces, par carte et avec la carte IC. 💡 Conseil : à Osaka Castle, prévoir environ 1h30–2h pour le musée + le belvédère + l'extérieur."
+        "text": "🚶 OSAKA STATION → OSAKA CASTLE. Marcher jusqu'au château."
+      },
+      {
+        "text": "🏯 OSAKA CASTLE. \n\n⚠️ **IMPORTANT — visite serrée :**\nAvec une arrivée vers 17h00, le musée du château d'Osaka (ouvert 09h00–18h00, dernière entrée 17h30) laisse très peu de marge : à peine 30 min avant la dernière entrée, et fermeture totale à 18h00. Pour entrer à l'intérieur, y aller au plus vite et privilégier le belvédère en haut ; pour ne pas se presser, se contenter de l'extérieur (remparts, douves, parc) et garder l'intérieur pour une autre fois. Entrée : ¥1 200 (~7,5€) adulte. Paiement possible en espèces, par carte ou avec la carte IC."
       },
       {
         "text": "🚇 OSAKA CASTLE → DOTONBORI. Depuis Morinomiya, utilisez l'Osaka Metro vers la zone de Namba/Dotonbori. Aucune réservation. Utilisez la carte IC."

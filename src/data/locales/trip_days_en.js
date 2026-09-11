@@ -281,13 +281,16 @@ export const days = [
         "text": "🚶 Walk to Sanjo Station (Keihan). Barely 200 m, about 3 min."
       },
       {
-        "text": "🚆 SANJO → TEMMABASHI (Osaka).\n\n🎫 **SUICA:** ✅ YES; tap the card directly at the gates.\n\nKeihan Electric Railway, main line (Keihan Main Line), Limited Express toward Yodoyabashi. 8-stop journey, approximately 47 min — estimated arrival around 15:17. Fare approx. ¥490. No reservation. This Keihan line (not JR) connects central Kyoto directly to the heart of Osaka, closer to the castle than the usual route via Kyoto Station/Osaka Station.\n\n🎧 **Podcast for the ride:** [Osaka: food, atmosphere and fun](https://podcasts.apple.com/es/podcast/jap%C3%B3n-a-fondo/id1545542012?i=1000516234185) (*Japón a fondo* · Japonismo). Great for getting into the 'kuidaore' culture (eating until you go broke), Dotonbori and the street atmosphere during the train ride."
+        "text": "🚆 SANJO → OSAKA (Temmabashi).\n\n🎫 **SUICA:** ✅ YES; tap the card directly at the gates.\n\nKeihan Electric Railway, main line (Keihan Main Line), Limited Express toward Yodoyabashi. 8-stop journey, approximately 47 min. Fare approx. ¥490. No reservation. This Keihan line (not JR) connects central Kyoto directly to the heart of Osaka.\n\n🎧 **Podcast for the ride:** [Osaka: food, atmosphere and fun](https://podcasts.apple.com/es/podcast/jap%C3%B3n-a-fondo/id1545542012?i=1000516234185) (*Japón a fondo* · Japonismo). Great for getting into the 'kuidaore' culture (eating until you go broke), Dotonbori and the street atmosphere during the train ride."
       },
       {
-        "text": "🚶 TEMMABASHI → OSAKA CASTLE. Walk directly to the castle, no need to go through Osaka Station or Morinomiya. Approx. 1.6 km, about 24 min."
+        "text": "🎫 **PICKING UP PHYSICAL JR-WEST TICKETS (AT OSAKA STATION)**\n\nTaking advantage of the stop in Osaka, pick up the physical tickets for TWO reservations at the green 5489 machines:\n- 🚆 Thunderbird 5 Kyoto → Tsuruga (tomorrow, September 12), locator **47932**.\n- 🚆 Shinano 4 Nakatsugawa → Nagoya (September 15), locator **42093**.\n\nBoth are exchanged with the same physical credit card (Mastercard ending in 8625) and the same 4-digit PIN. With this done, there's no need to visit another 5489 machine for these two reservations for the rest of the trip."
       },
       {
-        "text": "🏯 OSAKA CASTLE. IMPORTANT: The Osaka Castle Museum is open 09:00–18:00, last entry 17:30. ENTERING THE CASTLE INTERIOR: Keep the main tower museum and observation deck as the primary visit. Admission: ¥1,200 adult. No need to book in advance for this day. Buy tickets at the castle itself. You can pay with cash, card, and IC card. 💡 Tip: At Osaka Castle, reserve approx. 1.5–2 hours for the museum + observation deck + exterior."
+        "text": "🚶 OSAKA STATION → OSAKA CASTLE. Walk to the castle."
+      },
+      {
+        "text": "🏯 OSAKA CASTLE. \n\n⚠️ **IMPORTANT — tight visit:**\nArriving around 17:00 leaves very little time at the Osaka Castle Museum (open 09:00–18:00, last entry 17:30): barely 30 min before last entry, and full closing at 18:00. If going inside, enter as soon as possible and prioritize the observation deck at the top; if you'd rather not rush, just do the exterior (walls, moat, park) and save the interior for another time. Admission: ¥1,200 (~7.5€) adult. Can pay with cash, card, or IC card."
       },
       {
         "text": "🚇 OSAKA CASTLE → DOTONBORI. From Morinomiya use the Osaka Metro towards the Namba/Dotonbori area. No reservation. Use IC card."
