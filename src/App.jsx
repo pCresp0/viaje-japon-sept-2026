@@ -145,6 +145,10 @@ export default function App() {
   // Configuración de gestos (swipe)
   const swipeHandlers = useSwipeable({
     onSwipedRight: (e) => {
+      // Se ignora del todo mientras se está en la pestaña del Mapa: ahí
+      // los gestos de arrastre son constantes (mover el mapa) y no
+      // tienen nada que ver con la intención de abrir el menú.
+      if (tab === "mapa") return;
       // Ignoramos si el evento se originó muy al borde izquierdo (< 30px) 
       // porque suele ser capturado por el "ir atrás" nativo de iOS.
       // Así aseguramos que solo un gesto intencionado en la zona central lo abra.
