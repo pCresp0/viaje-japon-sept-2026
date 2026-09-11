@@ -31,17 +31,6 @@ export default function TransportPage({ onNavigate }) {
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
-    
-    const scrollToTop = () => {
-      const scrollContainer = document.getElementById("main-scroll-container");
-      if (!scrollContainer) return;
-      scrollContainer.scrollTo({ top: 0, behavior: "smooth" });
-    };
-
-    scrollToTop();
-    requestAnimationFrame(() => {
-      scrollToTop();
-    });
   };
   const [suicaOpen, setSuicaOpen] = useState(false);
   const [smartExOpen, setSmartExOpen] = useState(false);
@@ -56,21 +45,34 @@ export default function TransportPage({ onNavigate }) {
     }
   }, [highlightId]);
 
-  // Auto-scroll al transporte del día actual al entrar
+  // Auto-scroll al transporte del día actual al entrar (o al cambiar de pestaña
+  // manualmente) -- es la ÚNICA fuente de scroll de esta página. Antes había
+  // otro scroll-a-cero disparado al pulsar la pestaña, que competía con este
+  // mismo useEffect (ambos con animación 'smooth' a la vez) y el resultado
+  // final se quedaba a medio camino entre los dos destinos. Ahora sólo hay un
+  // scroll: al billete/transporte concreto si existe, o arriba del todo si no.
   useEffect(() => {
     if (highlightId) return; // si viene de búsqueda o highlight, no interferir
     const t = window.setTimeout(() => {
+      const scrollToTop = () => {
+        const scrollContainer = document.getElementById("main-scroll-container");
+        scrollContainer?.scrollTo({ top: 0, behavior: "smooth" });
+      };
       if (activeTab === "billetes") {
         const ticketDay = [0, 1].includes(currentDay) ? 1 : currentDay;
         const el = document.getElementById(`ticket-day-${ticketDay}`);
         if (el && ticketDay !== 1) {
           el.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else {
+          scrollToTop();
         }
       } else {
         const dayKey = String(currentDay === 0 ? 1 : currentDay);
         const el = document.getElementById(`transport-group-${dayKey}`);
         if (el && dayKey !== "1") {
           el.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else {
+          scrollToTop();
         }
       }
     }, 140);
