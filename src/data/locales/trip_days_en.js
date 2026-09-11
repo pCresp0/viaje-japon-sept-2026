@@ -275,7 +275,7 @@ export const days = [
         "text": "⛩️ HEIAN JINGU. Visit the shrine and its large torii. The grounds open from 06:00. If you wish to visit the garden (Shin-en), its September 11 hours are approx. 08:30–18:00, last entry 17:30. No reservation required."
       },
       {
-        "text": "🍜 LUNCH IN KYOTO. IMPORTANT: Try to finish around 14:15 to keep a buffer for the train to Osaka. 🍜 LUNCH IN KYOTO. IMPORTANT: Try to finish around 14:15 to keep a buffer for the train to Osaka.\n⚠️ This meal should be quick. We have the train to Osaka at 14:30. Recommendation: eat near the path to Kyoto Station; ramen; udon/soba; curry; donburi; quick teishoku. Do not book a restaurant for this meal. Alternative: Buy bento/ekiben at Kyoto Station if tight on time."
+        "text": "🍜 LUNCH IN KYOTO. \n\n⚠️ **IMPORTANT:**\nTry to finish around 13:45 to keep a buffer for the train to Osaka.\n⚠️ With the time gained this morning, there's no longer as much rush to eat as originally planned. We have the train to Osaka at 14:30. Recommendation: eat somewhere on the way to Kyoto Station; ramen; udon/soba; curry; donburi; quick teishoku. No need to book a restaurant for this meal. \n\n\n**Alternative:** Buy a bento/ekiben at Kyoto Station if we're short on time."
       },
       {
         "text": "🚶 Transfer to Kyoto Station."

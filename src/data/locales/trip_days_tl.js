@@ -275,7 +275,7 @@ export const days = [
         "text": "⛩️ HEIAN JINGU. Bisitahin ang shrine at ang malaking torii. Nagbubukas ang grounds mula 06:00. Kung nais bisitahin ang hardin (Shin-en), ang oras nito sa Setyembre 11 ay halos 08:30–18:00, huling pasok ay 17:30. Walang kailangang reserbasyon."
       },
       {
-        "text": "🍜 TANGHALIAN SA KYOTO. MAHALAGA: Subukang matapos bandang 14:15 para may oras pa sa pag-tren papuntang Osaka. 🍜 TANGHALIAN SA KYOTO. MAHALAGA: Subukang matapos bandang 14:15 para may oras pa sa pag-tren papuntang Osaka.\n⚠️ Dapat mabilis ang pagkaing ito. May tren tayo pa-Osaka ng 14:30. Inirerekomenda: kumain malapit sa daan papuntang Kyoto Station; ramen; udon/soba; curry; donburi; mabilis na teishoku. Huwag mag-book ng restawran para sa pagkaing ito. Alternatibo: Bumili ng bento/ekiben sa Kyoto Station kung nagmamadali."
+        "text": "🍜 TANGHALIAN SA KYOTO. \n\n⚠️ **MAHALAGA:**\nSubukang matapos mga 13:45 para may buffer para sa tren papuntang Osaka.\n⚠️ Dahil sa oras na nakuha kaninang umaga, hindi na kailangang magmadali sa pagkain gaya ng orihinal na plano. May tren tayo papuntang Osaka ng 14:30. Rekomendasyon: kumain malapit sa daan papuntang Kyoto Station; ramen; udon/soba; curry; donburi; mabilis na teishoku. Hindi na kailangan mag-book ng restaurant para dito. \n\n\n**Alternatibo:** Bumili ng bento/ekiben sa Kyoto Station kung nauubusan tayo ng oras."
       },
       {
         "text": "🚶 Paglipat sa Kyoto Station."

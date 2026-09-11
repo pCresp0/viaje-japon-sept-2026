@@ -275,7 +275,7 @@ export const days = [
         "text": "⛩️ HEIAN JINGU. Visitez le sanctuaire et son grand torii. Le domaine ouvre à 06:00. Si vous souhaitez visiter le jardin (Shin-en), ses horaires le 11 septembre sont environ 08:30–18:00, dernière entrée à 17:30. Aucune réservation requise."
       },
       {
-        "text": "🍜 DÉJEUNER À KYOTO. IMPORTANT : Essayez de terminer vers 14:15 pour garder une marge pour le train vers Osaka. 🍜 DÉJEUNER À KYOTO. IMPORTANT : Essayez de terminer vers 14:15 pour garder une marge pour le train vers Osaka.\n⚠️ Ce repas doit être rapide. Nous avons le train vers Osaka à 14:30. Recommandation : mangez près du chemin vers Kyoto Station ; ramen ; udon/soba ; curry ; donburi ; teishoku rapide. Ne réservez pas de restaurant pour ce repas. Alternative : Achetez un bento/ekiben à Kyoto Station si vous êtes pressés."
+        "text": "🍜 DÉJEUNER À KYOTO. \n\n⚠️ **IMPORTANT :**\nEssayer de terminer vers 13h45 pour garder une marge pour le train vers Osaka.\n⚠️ Avec le temps gagné ce matin, il n'y a plus autant besoin de se presser pour manger que prévu initialement. Nous avons le train vers Osaka à 14h30. Recommandation : manger sur le chemin vers Kyoto Station ; ramen ; udon/soba ; curry ; donburi ; teishoku rapide. Pas besoin de réserver de restaurant pour ce repas. \n\n\n**Alternative :** Acheter un bento/ekiben à Kyoto Station si on est justes en temps."
       },
       {
         "text": "🚶 Transfert vers Kyoto Station."
