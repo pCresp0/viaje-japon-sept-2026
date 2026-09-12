@@ -368,5 +368,16 @@ export default {
   "about.weatherDesc": "Integración con Open-Meteo para predicciones en vivo, con caché local de 12 horas para ahorrar batería.",
   "about.mapDesc": "Alternativa ligera sin coste a Google Maps API.",
   "geek.eyebrow": "Anime, juegos y cine",
-  "geek.title": "Frikadas en la ruta"
+  "geek.title": "Frikadas en la ruta",
+  "schedule.showDetails": "Ver más detalles (Suica, reserva, tip...)",
+  "schedule.hideDetails": "Ocultar detalles (Suica, reserva, tip...)",
+  "city.Kioto": "Kioto",
+  "city.Tokio": "Tokio",
+  "city.Kanazawa": "Kanazawa",
+  "city.Takayama": "Takayama",
+  "city.Tsumago": "Nakasendo",
+  "city.Osaka": "Osaka",
+  "city.Nara": "Nara",
+  "city.Fuji": "Mte. Fuji",
+  "city.Narita": "Narita"
 };

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import PlaceText from "./PlaceText";
+import { useT } from "../i18n/LanguageContext";
 
 // Marcadores que indican el inicio del bloque de "detalles técnicos"
 // (Suica, reserva, compra, consejo, podcast...) que se pliega bajo el
@@ -37,6 +38,7 @@ function findSplitIndex(text) {
  * que antes.
  */
 export default function ScheduleEntryBody({ text, textClassName, textStyle, linkStyle }) {
+  const t = useT();
   const [open, setOpen] = useState(false);
   const splitIdx = findSplitIndex(text);
 
@@ -61,7 +63,7 @@ export default function ScheduleEntryBody({ text, textClassName, textStyle, link
         style={{ color: "var(--shu)" }}
       >
         <ChevronDown size={13} style={{ transform: open ? "rotate(180deg)" : "none", transition: "transform 0.15s" }} />
-        {open ? "Ocultar detalles (Suica, reserva, tip...)" : "Ver más detalles (Suica, reserva, tip...)"}
+        {open ? t("schedule.hideDetails") : t("schedule.showDetails")}
       </button>
       {open && (
         <div className="mt-1.5 pt-2" style={{ borderTop: "1px dashed var(--line)" }}>

@@ -367,4 +367,15 @@ export default {
   "about.searchDesc": "Smart search engine with real-time visual highlighting across the entire app.",
   "about.weatherDesc": "Integration with Open-Meteo for live forecasts with 12h local cache to save battery.",
   "about.mapDesc": "Lightweight, zero-cost alternative to Google Maps API.",
+  "schedule.showDetails": "Show more details (Suica, reservation, tip...)",
+  "schedule.hideDetails": "Hide details (Suica, reservation, tip...)",
+  "city.Kioto": "Kyoto",
+  "city.Tokio": "Tokyo",
+  "city.Kanazawa": "Kanazawa",
+  "city.Takayama": "Takayama",
+  "city.Tsumago": "Nakasendo",
+  "city.Osaka": "Osaka",
+  "city.Nara": "Nara",
+  "city.Fuji": "Mt. Fuji",
+  "city.Narita": "Narita"
 };

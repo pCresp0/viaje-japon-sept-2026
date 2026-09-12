@@ -372,4 +372,15 @@ export default {
   "about.searchDesc": "Matalinong search engine na may visual highlighting sa buong app.",
   "about.weatherDesc": "Integrasyon sa Open-Meteo para sa live na panahon na may 12h local cache para makatipid sa baterya.",
   "about.mapDesc": "Magaang alternatibo na walang bayad sa Google Maps API.",
+  "schedule.showDetails": "Tingnan pa ang detalye (Suica, reserbasyon, tip...)",
+  "schedule.hideDetails": "Itago ang detalye (Suica, reserbasyon, tip...)",
+  "city.Kioto": "Kyoto",
+  "city.Tokio": "Tokyo",
+  "city.Kanazawa": "Kanazawa",
+  "city.Takayama": "Takayama",
+  "city.Tsumago": "Nakasendo",
+  "city.Osaka": "Osaka",
+  "city.Nara": "Nara",
+  "city.Fuji": "Mt. Fuji",
+  "city.Narita": "Narita"
 };

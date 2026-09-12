@@ -1,5 +1,6 @@
 import { Sun, CloudSun, Cloud, CloudRain, Droplets, Loader2 } from "lucide-react";
 import { useDayWeatherForecast } from "../utils/weatherService";
+import { useT } from "../i18n/LanguageContext";
 
 const SKY_ICON = { sun: Sun, partly: CloudSun, cloud: Cloud, rain: CloudRain };
 const SKY_COLOR = { sun: "#e8a83c", partly: "#7a8fa6", cloud: "#8a94a3", rain: "#4a7ab5" };
@@ -12,6 +13,7 @@ const SKY_COLOR = { sun: "#e8a83c", partly: "#7a8fa6", cloud: "#8a94a3", rain: "
  * espacio dentro de la vista del día.
  */
 export default function DayWeatherBar({ dayNum }) {
+  const t = useT();
   const { loading, citiesWeather } = useDayWeatherForecast(dayNum);
 
   if (!citiesWeather || citiesWeather.length === 0) return null;
@@ -31,7 +33,7 @@ export default function DayWeatherBar({ dayNum }) {
             {i > 0 && <span style={{ color: "var(--line)" }}>·</span>}
             <Icon size={15} style={{ color: SKY_COLOR[c.sky] || "var(--ink-soft)" }} />
             <span className="text-[12px] font-semibold" style={{ color: "var(--ink)" }}>
-              {c.displayName}
+              {t(`city.${c.cityKey}`) || c.displayName}
             </span>
             <span className="text-[12px] font-bold" style={{ color: "var(--ink)" }}>
               {c.high}°/{c.low}°
