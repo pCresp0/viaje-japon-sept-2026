@@ -305,7 +305,7 @@ function GuideBlock({ id, accentColor, guides }) {
 
         {g.sections?.map((s, i) => (
           <div key={i} style={{ marginBottom: 6 }}>
-            <p style={{ fontSize: 10, fontWeight: 700, color: "#1d3557", marginBottom: 2 }}>{s.title}</p>
+            <p style={{ fontSize: 11.5, fontWeight: 700, color: "#1d3557", marginBottom: 3 }}>{s.title}</p>
             <RichText text={s.body} style={{ fontSize: 10, lineHeight: 1.5, color: "#1b1f27" }} />
           </div>
         ))}

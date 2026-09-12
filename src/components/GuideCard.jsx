@@ -40,8 +40,8 @@ function GuideBody({ guide, refs, localImage, accent }) {
       {guide.sections.map((s, i) => (
         <div key={i} style={{ marginBottom: 14 }}>
           <p style={{
-            fontSize: 12, fontWeight: 700, color: accent,
-            letterSpacing: "0.02em", marginBottom: 4,
+            fontSize: 15.5, fontWeight: 800, color: accent,
+            letterSpacing: "0.01em", marginBottom: 5,
           }}>
             {s.title}
           </p>
