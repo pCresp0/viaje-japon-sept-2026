@@ -99,5 +99,6 @@ export const visibilityTools = {
     url: "https://mtfujitoday.com",
     desc: "Previsión a 7 días y acceso directo a webcams en directo en Kawaguchiko y alrededores."
   },
+  sideToCheck: "⚠️ IMPORTANTE — mirad SIEMPRE la vista NORTE (Kawaguchiko/Yamanashi), NO la vista Sur (Hakone/Mishima): estas webs muestran previsiones separadas para cada lado del Fuji, porque el tiempo puede estar despejado en un lado y nublado en el otro el mismo día. Tanto la excursión GYG (Kawaguchiko, Parque Oishi, Oshino Hakkai, Pagoda Chureito) como la de Ken Kaneshima (aunque empieza en Mishima, lado sur, casi todas sus paradas fotográficas -- Chureito, Kitaguchi Sengen Jinja, Oshino Hakkai, los lagos -- están también en el lado norte) dependen de que el Fuji se vea despejado desde el NORTE. Comprobad siempre esa vista, no la de Hakone.",
   goldenRule: "Abrid las webcams en directo desde el hotel a las 06:30 AM. Si a las 07:00 AM no es visible, es altamente improbable que aparezca más tarde (a partir de las 09:00 AM el calor evapora humedad y crea nubes sobre el cono)."
 };

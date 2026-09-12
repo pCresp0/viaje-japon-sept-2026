@@ -120,6 +120,17 @@ export default function DayFujiOptionCard({ dayNum }) {
             </ul>
           </div>
 
+          {/* Aviso de qué lado del Fuji comprobar */}
+          <div className="p-3 rounded-xl border space-y-1.5" style={{ background: "rgba(220, 38, 38, 0.06)", borderColor: "rgba(220, 38, 38, 0.3)" }}>
+            <p className="font-bold flex items-center gap-1.5" style={{ margin: 0, color: "#b91c1c" }}>
+              <AlertTriangle size={14} />
+              👁️ Qué lado del Fuji comprobar en la web de visibilidad:
+            </p>
+            <p style={{ color: "var(--ink)", margin: 0 }}>
+              Mirad siempre la vista <strong>NORTE (Kawaguchiko)</strong>, nunca la de Hakone/Sur — las webs de visibilidad muestran previsiones separadas para cada lado del Fuji, y puede estar despejado en uno y nublado en el otro el mismo día. Todas las paradas de esta excursión (Kawaguchiko, Parque Oishi, Oshino Hakkai, Pagoda Chureito) están en el lado norte.
+            </p>
+          </div>
+
           {/* Enlaces directos */}
           <div className="flex flex-wrap gap-2 pt-1">
             <a
@@ -144,7 +155,7 @@ export default function DayFujiOptionCard({ dayNum }) {
               className="font-bold px-3 py-1.5 rounded-lg border flex items-center gap-1 text-[11.5px]"
               style={{ background: "var(--paper-raised)", borderColor: "var(--line)", color: "var(--shu)", textDecoration: "none" }}
             >
-              👁️ Webcams en Directo (06:30 AM) ↗
+              👁️ Ver vista NORTE en Directo (06:30 AM) ↗
             </a>
           </div>
         </div>
