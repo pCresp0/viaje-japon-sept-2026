@@ -314,6 +314,15 @@ export function TopBar({ active, onOpenDrawer, onNavigate }) {
         left: 0,
         right: 0,
         borderBottom: "none",
+        // Fija el tamaño de letra de esta barra tal cual está definido,
+        // ignorando el "font boosting" automático que aplican los
+        // móviles según el ajuste de accesibilidad de texto grande de
+        // cada usuario -- aquí no hay espacio para que crezca sin que
+        // se apelotonen el título y los botones. El resto de la web
+        // (itinerario, guías...) no se toca, y sigue creciendo con la
+        // accesibilidad de cada persona con normalidad.
+        WebkitTextSizeAdjust: "100%",
+        textSizeAdjust: "100%",
         // Sombra de color sólido: tapa franjas subpíxel sin desalinear el contenido
         boxShadow: "0 2px 0 0 var(--shu-darker), 0 4px 14px rgba(0,0,0,0.18)",
       }}
