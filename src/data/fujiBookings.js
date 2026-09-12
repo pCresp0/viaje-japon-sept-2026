@@ -33,34 +33,7 @@ export const gygFujiActivity = {
       code: "GYGX7M7NZBNL",
       pin: "3342WSa=",
       cancelDeadline: "Antes de las 08:30 del 15 de septiembre",
-      status: "Reservado (comprobar visibilidad el 14–15 sept)"
-    },
-    {
-      dayNum: 11,
-      date: "2026-09-17",
-      dateFormatted: "Jueves, 17 de septiembre de 2026",
-      code: "GYGFWV2MNZV8",
-      pin: "rN#/Ec5r",
-      cancelDeadline: "Antes de las 08:30 del 16 de septiembre",
-      status: "Reservado (comprobar visibilidad el 15–16 sept)"
-    },
-    {
-      dayNum: 12,
-      date: "2026-09-18",
-      dateFormatted: "Viernes, 18 de septiembre de 2026",
-      code: "GYGZGZVLFL75",
-      pin: "ZPR=DM/Y",
-      cancelDeadline: "Antes de las 08:30 del 17 de septiembre",
-      status: "Reservado (comprobar visibilidad el 16–17 sept)"
-    },
-    {
-      dayNum: 13,
-      date: "2026-09-19",
-      dateFormatted: "Sábado, 19 de septiembre de 2026",
-      code: "GYGMX397LBNA",
-      pin: "qjQcmrJZ",
-      cancelDeadline: "Antes de las 08:30 del 18 de septiembre",
-      status: "Reservado (comprobar visibilidad el 17–18 sept)"
+      status: "✅ CONFIRMADO -- este es el día definitivo, ya no hay reservas alternativas en otros días"
     }
   ]
 };
@@ -99,6 +72,6 @@ export const visibilityTools = {
     url: "https://mtfujitoday.com",
     desc: "Previsión a 7 días y acceso directo a webcams en directo en Kawaguchiko y alrededores."
   },
-  sideToCheck: "⚠️ IMPORTANTE — mirad SIEMPRE la vista NORTE (Kawaguchiko/Yamanashi), NO la vista Sur (Hakone/Mishima): estas webs muestran previsiones separadas para cada lado del Fuji, porque el tiempo puede estar despejado en un lado y nublado en el otro el mismo día. Tanto la excursión GYG (Kawaguchiko, Parque Oishi, Oshino Hakkai, Pagoda Chureito) como la de Ken Kaneshima (aunque empieza en Mishima, lado sur, casi todas sus paradas fotográficas -- Chureito, Kitaguchi Sengen Jinja, Oshino Hakkai, los lagos -- están también en el lado norte) dependen de que el Fuji se vea despejado desde el NORTE. Comprobad siempre esa vista, no la de Hakone.",
+  sideToCheck: "⚠️ IMPORTANTE — mirad SIEMPRE la vista NORTE (Kawaguchiko/Yamanashi), NO la vista Sur (Hakone/Mishima): estas webs muestran previsiones separadas para cada lado del Fuji, porque el tiempo puede estar despejado en un lado y nublado en el otro el mismo día. La excursión GYG confirmada del 16 de septiembre (Kawaguchiko, Parque Oishi, Oshino Hakkai, Pagoda Chureito) depende de que el Fuji se vea despejado desde el NORTE ese día -- comprobad esa vista la mañana del 16, no la de Hakone. La excursión de Ken Kaneshima (día 20) es independiente y tiene su propia comprobación el mismo día.",
   goldenRule: "Abrid las webcams en directo desde el hotel a las 06:30 AM. Si a las 07:00 AM no es visible, es altamente improbable que aparezca más tarde (a partir de las 09:00 AM el calor evapora humedad y crea nubes sobre el cono)."
 };

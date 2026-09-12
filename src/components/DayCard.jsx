@@ -265,7 +265,7 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
           </div>
         )}
 
-        {/* Opción de Excursión Monte Fuji con GetYourGuide (Días 10 al 13) */}
+        {/* Excursión Monte Fuji con GetYourGuide -- confirmada solo para el Día 10 (16 sept.) */}
         <DayFujiOptionCard dayNum={day.num} />
 
         <PlaceText
