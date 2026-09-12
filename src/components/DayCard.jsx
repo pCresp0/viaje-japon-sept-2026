@@ -13,6 +13,7 @@ import ShinanoTicketCard from "./ShinanoTicketCard";
 import NozomiNagoyaTicketCard from "./NozomiNagoyaTicketCard";
 import TakkyubinQRCard from "./TakkyubinQRCard";
 import DayWeatherBar from "./DayWeatherBar";
+import ScheduleEntryBody from "./ScheduleEntryBody";
 import GuideCard from "./GuideCard";
 import StayOption from "./StayOption";
 import PlaceText from "./PlaceText";
@@ -338,11 +339,10 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
                       </span>
                     )}
                   </p>
-                  <PlaceText
-                    as="p"
+                  <ScheduleEntryBody
                     text={formattedText}
-                    className="text-[14px] leading-snug mt-0.5 whitespace-pre-wrap"
-                    style={{ color: "var(--ink)" }}
+                    textClassName="text-[14px] leading-snug mt-0.5 whitespace-pre-wrap"
+                    textStyle={{ color: "var(--ink)" }}
                     linkStyle={{ color: "var(--shu)" }}
                   />
                   
