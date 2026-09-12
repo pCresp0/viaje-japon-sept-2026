@@ -7,3 +7,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-12 10:31 UTC** — feat(cabecera): la bandera 🇯🇵 ahora borra caché y desregistra el ... (`6272472`)
 - **2026-09-12 10:34 UTC** — fix(cabecera): fijar el tamaño de letra de la barra superior, ... (`340296c`)
 - **2026-09-12 10:38 UTC** — fix(bandera): mostrar un giro inmediato mientras se borra la caché, ... (`63240fc`)
+- **2026-09-12 11:07 UTC** — fix(Día 7): añadir el punto exacto de salida de los ... (`f0294f5`)
