@@ -44,7 +44,27 @@ export default function BuildInfoButton() {
   const endPress = () => {
     if (pressTimer.current) window.clearTimeout(pressTimer.current);
     if (!longPressFired.current) {
-      // Toque rápido -> recargar la web (vuelve a Itinerario, día de hoy)
+      // Toque rápido -> recarga "dura": desregistra el service worker de
+      // la PWA y borra toda la caché antes de recargar, para asegurar
+      // que se ve la última versión real y no una copia cacheada.
+      hardRefresh();
+    }
+  };
+
+  const hardRefresh = async () => {
+    try {
+      if ("serviceWorker" in navigator) {
+        const registrations = await navigator.serviceWorker.getRegistrations();
+        await Promise.all(registrations.map((r) => r.unregister()));
+      }
+      if ("caches" in window) {
+        const keys = await caches.keys();
+        await Promise.all(keys.map((k) => caches.delete(k)));
+      }
+    } catch {
+      // Si algo falla (navegador sin soporte, etc.), seguimos con la
+      // recarga normal igualmente -- nunca debe quedarse sin hacer nada.
+    } finally {
       window.location.href = "/";
       window.location.reload();
     }

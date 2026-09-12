@@ -53,7 +53,7 @@ export default function LanguageSwitcher({ variant = "bar" }) {
           display: "flex",
           alignItems: "center",
           gap: onDesktop ? 7 : 5,
-          padding: onDesktop ? "9px 16px" : onBar ? "5px 9px" : "6px 10px",
+          padding: onDesktop ? "9px 16px" : onBar ? "7px" : "6px 10px",
           borderRadius: 999,
           background: onDesktop || onBar ? "rgba(255,255,255,0.16)" : "rgba(255,255,255,0.1)",
           border: "1px solid rgba(255,255,255,0.28)",
@@ -61,15 +61,17 @@ export default function LanguageSwitcher({ variant = "bar" }) {
           flexShrink: 0,
         }}
       >
-        <span style={{ fontSize: onDesktop ? 18 : 14, lineHeight: 1 }}>{current.flag}</span>
-        <span style={{
-          fontSize: onDesktop ? 14 : 11,
-          fontWeight: 700,
-          color: "#fff",
-          letterSpacing: "0.04em",
-        }}>
-          {current.short}
-        </span>
+        <span style={{ fontSize: onDesktop ? 18 : 16, lineHeight: 1 }}>{current.flag}</span>
+        {!onBar && (
+          <span style={{
+            fontSize: onDesktop ? 14 : 11,
+            fontWeight: 700,
+            color: "#fff",
+            letterSpacing: "0.04em",
+          }}>
+            {current.short}
+          </span>
+        )}
       </button>
 
       {open && coords && createPortal(
