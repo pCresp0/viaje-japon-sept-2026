@@ -16,3 +16,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-12 14:13 UTC** — fix: reconstruir el Día 1 completo en los 3 idiomas ... (`23dd4a6`)
 - **2026-09-12 14:18 UTC** — fix(Día 7): traducir el punto de subida del bus y ... (`b6a4821`)
 - **2026-09-12 22:50 UTC** — feat(Fuji): confirmada la excursión GYG para el Día 10 (16 ... (`3a79554`)
+- **2026-09-12 23:00 UTC** — feat: reorganizar Días 10-13 tras confirmar el Fuji para el ... (`70bfaac`)
