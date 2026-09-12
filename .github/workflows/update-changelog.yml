@@ -1,0 +1,70 @@
+name: Registro automático de cambios (main)
+
+# Se ejecuta en TODOS los push a main, sin importar desde qué entorno
+# se haga (Claude Code, Cursor, Antigravity, git por terminal, la web
+# de GitHub, lo que sea) -- esto corre en los servidores de GitHub,
+# no en el ordenador de nadie, así que nunca depende de qué
+# herramienta se use para subir el cambio.
+on:
+  push:
+    branches: [main]
+
+# Evita solapamientos si llegan varios push muy seguidos: los deja en
+# cola en vez de dejar que se pisen entre sí.
+concurrency:
+  group: changelog-main
+  cancel-in-progress: false
+
+jobs:
+  update-changelog:
+    runs-on: ubuntu-latest
+    # No seguir si el propio commit de este workflow fue el que disparó
+    # el push (medida de seguridad extra; por defecto GITHUB_TOKEN ya
+    # no vuelve a disparar workflows, pero así queda blindado también
+    # si algún día se cambia a un token distinto).
+    if: "!contains(github.event.head_commit.message, '[skip changelog]')"
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout main con historial completo
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Añadir una línea por cada commit de este push
+        run: |
+          set -euo pipefail
+          FILE="CHANGELOG_AUTO.md"
+
+          if [ ! -f "$FILE" ]; then
+            echo "# Registro automático de cambios" > "$FILE"
+            echo "" >> "$FILE"
+            echo "Una línea por cada commit subido a main, generada sola por GitHub Actions en cada push -- no depende de qué entorno se use para subir el cambio (Claude Code, Cursor, Antigravity, terminal, etc.). Formato: fecha y hora (UTC) — resumen breve." >> "$FILE"
+            echo "" >> "$FILE"
+          fi
+
+          # Recorre todos los commits incluidos en este push (puede haber
+          # más de uno si se hizo push de varios commits a la vez).
+          COMMITS=$(jq -r '.commits[] | .id' "$GITHUB_EVENT_PATH")
+
+          for SHA in $COMMITS; do
+            TIMESTAMP=$(git show -s --format=%cI "$SHA" | cut -c1-16 | tr 'T' ' ')
+            SUBJECT=$(git show -s --format=%s "$SHA")
+            # Recorta el resumen a unas 10 palabras para que quede breve.
+            SHORT=$(echo "$SUBJECT" | awk '{ for (i=1; i<=10 && i<=NF; i++) printf "%s ", $i } END { if (NF>10) printf "..." }' | sed 's/ *$//')
+            SHORT_SHA=$(echo "$SHA" | cut -c1-7)
+            echo "- **${TIMESTAMP} UTC** — ${SHORT} (\`${SHORT_SHA}\`)" >> "$FILE"
+          done
+
+      - name: Confirmar y subir el registro actualizado
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+          git add CHANGELOG_AUTO.md
+          if git diff --cached --quiet; then
+            echo "Sin cambios que registrar."
+            exit 0
+          fi
+          git commit -m "chore: actualizar registro automático de cambios [skip changelog]"
+          git push origin main
