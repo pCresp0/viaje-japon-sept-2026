@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { X, Clock } from "lucide-react";
+import { X, Clock, RefreshCw } from "lucide-react";
 import changelogRaw from "../../CHANGELOG_AUTO.md?raw";
 
 const LONG_PRESS_MS = 500;
@@ -16,6 +16,7 @@ const LONG_PRESS_MS = 500;
  */
 export default function BuildInfoButton() {
   const [showInfo, setShowInfo] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
   const pressTimer = useRef(null);
   const longPressFired = useRef(false);
 
@@ -46,7 +47,11 @@ export default function BuildInfoButton() {
     if (!longPressFired.current) {
       // Toque rápido -> recarga "dura": desregistra el service worker de
       // la PWA y borra toda la caché antes de recargar, para asegurar
-      // que se ve la última versión real y no una copia cacheada.
+      // que se ve la última versión real y no una copia cacheada. Esto
+      // tarda un poco de verdad (borrar 50+ archivos cacheados no es
+      // instantáneo), así que mostramos un giro inmediato en la bandera
+      // para que quede claro que está trabajando y no colgado.
+      setRefreshing(true);
       hardRefresh();
     }
   };
@@ -83,6 +88,7 @@ export default function BuildInfoButton() {
         onTouchStart={startPress}
         onTouchEnd={endPress}
         onTouchCancel={cancelPress}
+        disabled={refreshing}
         aria-label="Ir al inicio (toque) o ver registro de cambios (mantener pulsado)"
         style={{
           position: "absolute",
@@ -95,7 +101,11 @@ export default function BuildInfoButton() {
           WebkitTapHighlightColor: "transparent",
         }}
       >
-        🇯🇵
+        {refreshing ? (
+          <RefreshCw size={26} color="#fff" className="animate-spin" />
+        ) : (
+          "🇯🇵"
+        )}
       </button>
 
       {showInfo && (
