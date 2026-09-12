@@ -115,14 +115,30 @@ export default function BuildInfoButton() {
               </p>
             </div>
 
-            <div className="overflow-y-auto px-4 py-3">
+            <div className="overflow-y-auto px-4 py-3 min-h-0">
               {changelogEntries.length > 0 ? (
-                <ul className="space-y-2 list-none m-0 p-0">
-                  {changelogEntries.map((entry, i) => (
-                    <li key={i} className="text-[12.5px] leading-snug" style={{ color: "var(--ink)" }}>
-                      {entry.replace(/^- /, "").replace(/\*\*/g, "")}
-                    </li>
-                  ))}
+                <ul className="space-y-2.5 list-none m-0 p-0">
+                  {changelogEntries.map((entry, i) => {
+                    const clean = entry.replace(/^- /, "");
+                    const match = clean.match(/^\*\*(.+?)\*\*(.*)$/);
+                    const timestamp = match ? match[1] : null;
+                    const rest = match ? match[2] : clean;
+                    return (
+                      <li key={i} className="flex gap-2 text-[12.5px] leading-snug" style={{ color: "var(--ink)" }}>
+                        <span style={{ color: "var(--ink-soft)", flexShrink: 0 }}>•</span>
+                        <span>
+                          {timestamp ? (
+                            <>
+                              <strong style={{ fontSize: 13.5, fontWeight: 800, color: "var(--ink)" }}>{timestamp}</strong>
+                              {rest}
+                            </>
+                          ) : (
+                            clean
+                          )}
+                        </span>
+                      </li>
+                    );
+                  })}
                 </ul>
               ) : (
                 <p className="text-[12.5px] m-0" style={{ color: "var(--ink-soft)" }}>
