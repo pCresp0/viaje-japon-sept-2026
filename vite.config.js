@@ -5,6 +5,11 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
   base: '/',
+  define: {
+    // Marca de tiempo real de cuándo se generó este build, para poder
+    // comprobar en la propia web si un cambio ya se ha desplegado o no.
+    __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
+  },
   plugins: [
     react(),
     tailwindcss(),

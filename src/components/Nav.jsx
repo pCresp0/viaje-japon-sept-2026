@@ -3,6 +3,7 @@ import { Compass, Route, Plane, Wallet, X, Menu, CalendarDays, MessageCircle, Ba
 import { useT } from "../i18n";
 import LanguageSwitcher from "./LanguageSwitcher";
 import GlobalSearch from "./GlobalSearch";
+import BuildInfoButton from "./BuildInfoButton";
 import DrawerWeatherWidget from "./DrawerWeatherWidget";
 
 // El campo `labelKey` se resuelve en tiempo de render con la función de
@@ -334,6 +335,7 @@ export function TopBar({ active, onOpenDrawer, onNavigate }) {
       }}>
         {currentTab ? t(currentTab.labelKey) : ""}
       </span>
+      <BuildInfoButton />
       <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", gap: 6 }}>
         <GlobalSearch variant="bar" onNavigate={onNavigate} />
         <LanguageSwitcher variant="bar" />
