@@ -13,3 +13,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-12 12:22 UTC** — feat(itinerario): añadir barra compacta de clima debajo de la cabecera ... (`cfa3322`)
 - **2026-09-12 13:39 UTC** — feat(itinerario): plegar los detalles técnicos de transporte (Suica, reserva, compra, ... (`b56cfbf`)
 - **2026-09-12 14:07 UTC** — fix: traducir a los 4 idiomas el texto que había ... (`836c442`)
+- **2026-09-12 14:13 UTC** — fix: reconstruir el Día 1 completo en los 3 idiomas ... (`23dd4a6`)
