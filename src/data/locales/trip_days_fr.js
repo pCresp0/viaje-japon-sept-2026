@@ -566,21 +566,25 @@ export const days = [
     "history": "Le Senso-ji, le plus vieux temple de Tokyo, a été fondé en 628. Odaiba est née au XIXe siècle comme îles-forteresses pour défendre Tokyo des navires occidentaux.",
     "schedule": [
       {
-        "text": "Temple Senso-ji à Asakusa, en traversant l'emblématique porte Kaminarimon."
+        "text": "Réveil et petit-déjeuner rapide à l'hôtel ou en chemin."
       },
       {
-        "text": "Parc d'Ueno et marché d'Ameyoko, idéal pour des achats bon marché de thé et de bonbons."
+        "text": "Vers la gare de Shinjuku / point de rendez-vous (Tokyo Mode Gakuen). Arriver avec de la marge : le départ en bus est ponctuel à 08h30."
       },
       {
-        "text": "Train Yurikamome vers Odaiba en traversant le Rainbow Bridge (asseyez-vous dans la première voiture)."
+        "text": "🚌 **DÉPART DE L'EXCURSION AU MONT FUJI** (réservation confirmée). Voir la carte ci-dessous pour tous les détails : point de rendez-vous exact, arrêts du circuit (Kawaguchiko, Parc Oishi, Oshino Hakkai, Pagode Chureito), durée et contact du prestataire."
       },
       {
-        "text": "Gundam grandeur nature et coucher de soleil depuis la promenade avec la ligne d'horizon de Tokyo."
+        "text": "Retour prévu à Shinjuku, après environ 10 heures d'excursion."
       },
-      {},
-      {},
       {
-        "text": "🏮 **OPTIONNEL : SENSŌ-JI DE NUIT**\n\nL'hôtel est à ~10 min à pied de Sensō-ji / Kaminarimon. S'il reste de l'énergie, courte promenade jusqu'au temple illuminé (gratuit ; ambiance très différente du jour)."
+        "text": "🍜 Dîner du côté de Shinjuku ou sur le chemin du retour à l'hôtel."
+      },
+      {
+        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nRetour à notre résidence à Asakusa Kappabashi pour se reposer (2e nuit à Tokyo)."
+      },
+      {
+        "text": "🏮 **OPTIONNEL : SENSŌ-JI DE NUIT**\n\nL'hôtel est à ~10 min à pied de Sensō-ji / Kaminarimon. S'il reste de l'énergie après l'excursion, petite promenade jusqu'au temple illuminé (gratuit ; ambiance très différente de la journée)."
       }
     ],
     "money": "Env. 40 € (repas)"
@@ -592,7 +596,7 @@ export const days = [
     "history": "Ces quartiers se sont développés après le grand tremblement de terre de Kanto de 1923.",
     "schedule": [
       {
-        "text": "Carrefour de Shibuya et parc Miyashita. Arrêt au Pokémon Center Shibuya."
+        "text": "Croisement de Shibuya et Miyashita Park. Arrêt au Pokémon Center Shibuya (Shibuya Parco, 6e étage) — célèbre pour sa grande statue de Mewtwo (dans un tube en verre, idéale pour les photos) et son style néon futuriste. Nintendo TOKYO se trouve au même étage. Attention, Sergio va sûrement vouloir monter un jardin urbain ici pour ses plantes d'Aluche."
       },
       {
         "text": "Promenade vers Harajuku par la rue Takeshita, sanctuaire Meiji dans le parc Yoyogi."
@@ -613,22 +617,22 @@ export const days = [
     "history": "Ginza signifie 'siège d'argent', site de l'hôtel des monnaies à l'époque d'Edo.",
     "schedule": [
       {
-        "text": "Petit-déjeuner de sushi au marché de gros de Toyosu."
+        "text": "Petit-déjeuner sushi premium au marché de gros de Toyosu (successeur de Tsukiji)."
       },
       {
-        "text": "Gare de Tokyo, esplanade du Palais Impérial et gratte-ciel de Shiodome."
+        "text": "Parc d'Ueno et marché de rue d'Ameyoko, parfait pour du thé et des douceurs pas chers. Bel espace vert pour se promener tranquillement après le réveil matinal."
       },
       {
-        "text": "Balade dans Ginza et boutiques emblématiques."
+        "text": "🎫 **SUICA :** ✅ OUI ; passer la carte directement aux portillons.\n\nTrain Yurikamome vers Odaiba en traversant le Rainbow Bridge (asseyez-vous dans le premier wagon)."
       },
       {
-        "text": "Coucher de soleil à l'observatoire Tokyo City View de la tour Mori (Roppongi)."
+        "text": "Gundam grandeur nature et coucher de soleil depuis la promenade avec la skyline de Tokyo."
       },
       {
-        "text": "🍜 Dîner du côté de Roppongi ou Asakusa."
+        "text": "🍜 Dîner à Odaiba (Aqua City / DiverCity avec vue sur la baie de Tokyo)."
       },
       {
-        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nRetour en métro vers notre résidence à Asakusa Kappabashi pour se reposer (4e nuit à Tokyo)."
+        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nRetour en métro/Yurikamome à notre résidence à Asakusa Kappabashi pour se reposer (4e nuit à Tokyo)."
       }
     ],
     "money": "Env. 50 € (repas et observatoire Mori)"
@@ -640,13 +644,13 @@ export const days = [
     "history": "Nakano Broadway est la mecque du collectionnisme underground et des produits rétro.",
     "schedule": [
       {
-        "text": "Mega Pokémon Center Ikebukuro et Nintendo Store Tokyo."
+        "text": "Mega Pokémon Center Ikebukuro (Sunshine City, 2e étage) et Nintendo Store Tokyo. Le Mega Center est le plus grand du Japon : statues grandeur nature de Dracaufeu, Lucario et Mewtwo, la Pokémon Card Station, et des produits exclusifs introuvables ailleurs."
       },
       {
         "text": "Déjeuner dans le quartier d'Ikebukuro."
       },
       {
-        "text": "Après-midi de shopping de figurines et mangas rétro à Nakano Broadway."
+        "text": "Après-midi de shopping collector à Nakano Broadway : le meilleur endroit de Tokyo pour les cartes Pokémon originales (boutiques spécialisées de trading cards avec vitrines de cartes à l'unité et boosters), les figurines et produits dérivés Dragon Ball, et les articles rétro/manga en général à prix juste. Plusieurs étages de petites boutiques indépendantes — ça vaut le coup de toutes les faire."
       },
       {
         "text": "🍜 Dîner du côté de Nakano ou Asakusa."

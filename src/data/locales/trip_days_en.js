@@ -566,21 +566,25 @@ export const days = [
     "history": "Senso-ji, Tokyo's oldest temple, was founded in 628. Odaiba was born in the 19th century as fortress islands to defend Tokyo from Western ships.",
     "schedule": [
       {
-        "text": "Senso-ji Temple in Asakusa, crossing the iconic Kaminarimon gate."
+        "text": "Wake up and quick breakfast at the hotel or on the way."
       },
       {
-        "text": "Ueno Park and Ameyoko street market, ideal for cheap tea and sweets shopping."
+        "text": "To Shinjuku Station / meeting point (Tokyo Mode Gakuen). Arrive with time to spare: the bus departs punctually at 08:30."
       },
       {
-        "text": "Yurikamome train to Odaiba crossing the Rainbow Bridge (sit in the first car)."
+        "text": "🚌 **DEPARTURE OF THE MT. FUJI EXCURSION** (confirmed reservation). See the card below for all the details: exact meeting point, tour stops (Kawaguchiko, Oishi Park, Oshino Hakkai, Chureito Pagoda), duration and provider contact."
       },
       {
-        "text": "Life-size Gundam and sunset from the promenade with the Tokyo skyline."
+        "text": "Expected return to Shinjuku, after approx. 10 hours of excursion."
       },
-      {},
-      {},
       {
-        "text": "🏮 **OPTIONAL: SENSŌ-JI AT NIGHT**\n\nThe hotel is ~10 min walk from Sensō-ji / Kaminarimon. If you have energy, a short stroll to the illuminated temple (free; very different from daytime)."
+        "text": "🍜 Dinner around Shinjuku or on the way back to the hotel."
+      },
+      {
+        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nBack to our residence in Asakusa Kappabashi to rest (2nd night in Tokyo)."
+      },
+      {
+        "text": "🏮 **OPTIONAL: SENSŌ-JI AT NIGHT**\n\nThe hotel is ~10 min walk from Sensō-ji / Kaminarimon. If there's energy left after the excursion, a short walk to the illuminated temple (free; a very different atmosphere from daytime)."
       }
     ],
     "money": "Approx. €40 (meals)"
@@ -592,7 +596,7 @@ export const days = [
     "history": "These districts grew after the Great Kanto Earthquake of 1923, driven by urban train expansion. Shinjuku today hosts the busiest train station on the planet.",
     "schedule": [
       {
-        "text": "Shibuya Crossing and Miyashita Park. Stop at the Pokémon Center Shibuya. Watch out, Sergio will probably think about setting up an urban garden here for his plants in Aluche."
+        "text": "Shibuya Crossing and Miyashita Park. Stop at the Pokémon Center Shibuya (Shibuya Parco, 6th floor) — famous for its large Mewtwo statue (inside a glass tube, great for photos) and its futuristic neon style. Nintendo TOKYO is on the same floor. Watch out, Sergio will probably want to set up an urban garden here for his Aluche plants."
       },
       {
         "text": "Walk to Harajuku via Takeshita Street, ending at the Meiji Shrine in Yoyogi Park."
@@ -613,22 +617,22 @@ export const days = [
     "history": "Ginza means 'silver seat', the original site of the government mint in the Edo period. Rebuilt with Western architecture, a showcase of Japan's modernization.",
     "schedule": [
       {
-        "text": "Premium sushi breakfast at Toyosu wholesale market."
+        "text": "Premium sushi breakfast at the Toyosu wholesale market (Tsukiji's successor)."
       },
       {
-        "text": "Tokyo Station, Imperial Palace plaza, and Shiodome skyscrapers."
+        "text": "Ueno Park and Ameyoko street market, great for cheap tea and sweets. Nice green area to stroll calmly after the early start."
       },
       {
-        "text": "Stroll through the modern architecture of Ginza."
+        "text": "🎫 **SUICA:** ✅ YES; tap the card directly at the gates.\n\nYurikamome train to Odaiba crossing the Rainbow Bridge (sit in the first car)."
       },
       {
-        "text": "Sunset at Tokyo City View observation deck in Mori Tower (Roppongi)."
+        "text": "Life-size Gundam and sunset from the promenade with the Tokyo skyline."
       },
       {
-        "text": "🍜 Dinner around Roppongi or Asakusa."
+        "text": "🍜 Dinner in Odaiba (Aqua City / DiverCity with views of Tokyo Bay)."
       },
       {
-        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nBack by metro to our residence in Asakusa Kappabashi to rest (4th night in Tokyo)."
+        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nBack by metro/Yurikamome to our residence in Asakusa Kappabashi to rest (4th night in Tokyo)."
       }
     ],
     "money": "Approx. €50 (meals & Mori Tower ticket)"
@@ -640,13 +644,13 @@ export const days = [
     "history": "The Japanese video game industry, led by Nintendo, revitalized the country's cultural economy in the 80s. Nakano Broadway was born in the 60s as a luxury residential complex, today a mecca for underground collecting.",
     "schedule": [
       {
-        "text": "Mega Pokémon Center Ikebukuro and Nintendo Store Tokyo."
+        "text": "Mega Pokémon Center Ikebukuro (Sunshine City, 2nd floor) and Nintendo Store Tokyo. The Mega Center is the largest in Japan: life-size statues of Charizard, Lucario and Mewtwo, the Pokémon Card Station, and exclusive merchandise not found in other stores."
       },
       {
         "text": "Lunch around the Ikebukuro area."
       },
       {
-        "text": "Afternoon of retro collecting, manga, and figure shopping in Nakano Broadway."
+        "text": "Afternoon of collectible shopping at Nakano Broadway: Tokyo's best spot for original Pokémon cards (specialized trading card shops with display cases of individual cards and booster packs), Dragon Ball figures and merchandise, and retro/manga items in general at fair prices. Several floors of small independent shops — worth exploring all of them."
       },
       {
         "text": "🍜 Dinner around Nakano or Asakusa."

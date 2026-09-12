@@ -566,21 +566,25 @@ export const days = [
     "history": "Ang Senso-ji, ang pinakalumang templo ng Tokyo, ay itinatag noong 628. Ang Odaiba ay isinilang noong ika-19 na siglo bilang kuta ng mga isla upang ipagtanggol ang Tokyo mula sa mga barko ng Kanluran.",
     "schedule": [
       {
-        "text": "Senso-ji Temple sa Asakusa, dumadaan sa iconic na gate ng Kaminarimon."
+        "text": "Gising na at mabilisang almusal sa hotel o habang naglalakad."
       },
       {
-        "text": "Ueno Park at street market ng Ameyoko, mainam para sa murang pagbili ng tsaa at matatamis."
+        "text": "Papuntang Shinjuku Station / meeting point (Tokyo Mode Gakuen). Dumating nang may sapat na oras: eksakto ang alis ng bus ng 08:30."
       },
       {
-        "text": "Yurikamome na tren patungong Odaiba at dumadaan sa Rainbow Bridge (umupo sa unang sasakyan)."
+        "text": "🚌 **ALIS NG EXCURSION SA MOUNT FUJI** (nakumpirmang reserbasyon). Tingnan ang card sa ibaba para sa lahat ng detalye: eksaktong meeting point, mga hintuan ng tour (Kawaguchiko, Oishi Park, Oshino Hakkai, Chureito Pagoda), tagal, at contact ng provider."
       },
       {
-        "text": "Buhay-laking Gundam at ang paglubog ng araw mula sa promenade na may nakikita ang skyline ng Tokyo."
+        "text": "Inaasahang pagbalik sa Shinjuku, pagkatapos ng mga 10 oras na excursion."
       },
-      {},
-      {},
       {
-        "text": "🏮 **OPTIONAL: SENSŌ-JI SA GABI**\n\nAng hotel ay ~10 min lakad mula Sensō-ji / Kaminarimon. Kung may energy, maikling lakad papunta sa iluminadong templo (libre; ibang vibes kaysa sa umaga)."
+        "text": "🍜 Hapunan sa paligid ng Shinjuku o habang pauwi sa hotel."
+      },
+      {
+        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nBalik sa ating tinutuluyan sa Asakusa Kappabashi para magpahinga (2nd gabi sa Tokyo)."
+      },
+      {
+        "text": "🏮 **OPSYONAL: SENSŌ-JI SA GABI**\n\nMga 10 minutong lakad lang ang hotel mula sa Sensō-ji / Kaminarimon. Kung may sobrang lakas pa pagkatapos ng excursion, maikling lakad papuntang naiilawang templo (libre; ibang-iba ang atmosphere kaysa sa araw)."
       }
     ],
     "money": "Tinatayang €40 (pagkain)"
@@ -592,7 +596,7 @@ export const days = [
     "history": "Lumago ang mga distritong ito pagkatapos ng Great Kanto Earthquake noong 1923.",
     "schedule": [
       {
-        "text": "Shibuya Crossing at Miyashita Park. Huminto sa Pokémon Center Shibuya. Mag-ingat, siguradong maiisipan ni Sergio na magtayo ng urban garden dito para sa kanyang mga halaman sa Aluche."
+        "text": "Shibuya Crossing at Miyashita Park. Hintuan sa Pokémon Center Shibuya (Shibuya Parco, 6th floor) — kilala sa malaking Mewtwo statue nito (nasa loob ng glass tube, maganda para sa litrato) at futuristic neon style. Sa parehong palapag din ang Nintendo TOKYO. Mag-ingat, malamang gagawa si Sergio ng urban garden dito para sa mga halaman niya sa Aluche."
       },
       {
         "text": "Maglakad papuntang Harajuku sa Takeshita Street, patungo sa Meiji Shrine sa Yoyogi Park."
@@ -613,22 +617,22 @@ export const days = [
     "history": "Ang Ginza ay nangangahulugang 'upuan ng pilak'.",
     "schedule": [
       {
-        "text": "Masarap na almusal ng sushi sa Toyosu wholesale market."
+        "text": "Premium na sushi breakfast sa Toyosu wholesale market (kahalili ng Tsukiji)."
       },
       {
-        "text": "Tokyo Station, Imperial Palace plaza, at Shiodome skyscrapers."
+        "text": "Ueno Park at Ameyoko street market, maganda para sa murang tsaa at matamis. Magandang berdeng lugar para maglakad-lakad nang tahimik pagkatapos ng maagang gising."
       },
       {
-        "text": "Pamamasyal sa Ginza at mga modernong tindahan."
+        "text": "🎫 **SUICA:** ✅ OO; i-tap ang card nang direkta sa mga gate.\n\nYurikamome train papuntang Odaiba na tatawid sa Rainbow Bridge (umupo sa unang kotse)."
       },
       {
-        "text": "Paglubog ng araw sa Tokyo City View deck sa Mori Tower (Roppongi)."
+        "text": "Life-size na Gundam at paglubog ng araw mula sa promenade na may Tokyo skyline."
       },
       {
-        "text": "🍜 Hapunan sa paligid ng Roppongi o Asakusa."
+        "text": "🍜 Hapunan sa Odaiba (Aqua City / DiverCity na may tanawin ng Tokyo Bay)."
       },
       {
-        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nPagbalik gamit ang metro papunta sa ating residence sa Asakusa Kappabashi para magpahinga (4th gabi sa Tokyo)."
+        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nBalik sa pamamagitan ng metro/Yurikamome sa ating tinutuluyan sa Asakusa Kappabashi para magpahinga (4th gabi sa Tokyo)."
       }
     ],
     "money": "Humigit-kumulang €50 (pagkain at Mori Tower)"
@@ -640,13 +644,13 @@ export const days = [
     "history": "Ang Nakano Broadway ay sikat sa mga retro collectibles at anime.",
     "schedule": [
       {
-        "text": "Mega Pokémon Center Ikebukuro at Nintendo Store Tokyo."
+        "text": "Mega Pokémon Center Ikebukuro (Sunshine City, 2nd floor) at Nintendo Store Tokyo. Ang Mega Center ang pinakamalaki sa Japan: life-size na estatwa nina Charizard, Lucario at Mewtwo, ang Pokémon Card Station, at exclusive na merchandise na wala sa ibang tindahan."
       },
       {
         "text": "Tanghalian sa Ikebukuro."
       },
       {
-        "text": "Pamimili sa Nakano Broadway ng mga retro collectibles at manga."
+        "text": "Hapon ng pamimili ng koleksyon sa Nakano Broadway: ang pinakamagandang lugar sa Tokyo para sa orihinal na Pokémon card (mga espesyalisadong trading card shop na may display case ng indibidwal na card at booster pack), mga figure at merchandise ng Dragon Ball, at retro/manga na bagay sa pangkalahatan sa tamang presyo. Maraming palapag ng maliliit na independent na tindahan — sulit puntahan lahat."
       },
       {
         "text": "🍜 Hapunan sa paligid ng Nakano o Asakusa."
