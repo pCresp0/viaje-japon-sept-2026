@@ -11,3 +11,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-12 11:31 UTC** — feat: completar todas las traducciones pendientes -- Nagamachi, Higashi Chaya, ... (`7aeea70`)
 - **2026-09-12 11:40 UTC** — feat(Día 7): confirmar y añadir info de las taquillas en ... (`de26869`)
 - **2026-09-12 12:22 UTC** — feat(itinerario): añadir barra compacta de clima debajo de la cabecera ... (`cfa3322`)
+- **2026-09-12 13:39 UTC** — feat(itinerario): plegar los detalles técnicos de transporte (Suica, reserva, compra, ... (`b56cfbf`)
