@@ -341,16 +341,28 @@ export const days = [
         "text": "🏯 CHÂTEAU DE KANAZAWA (Kanazawa-jō). Littéralement de l'autre côté du pont depuis la sortie même de Kenroku-en — à peine 2-3 minutes à pied, sans besoin de transport. L'entrée au domaine et aux jardins est GRATUITE ; on ne paie (environ ¥320) que pour entrer dans certains bâtiments reconstruits comme le Hishi Yagura ou le Gojikken Nagaya. Une demi-heure suffit pour se promener dans la cour principale, voir la porte Ishikawa-mon (Bien culturel important, l'une des rares parties authentiquement d'origine de l'époque Edo) et les murs de pierre. 💡 S'il reste du temps et de l'énergie : le Musée d'Art Contemporain du XXIe siècle se trouve à seulement 5 minutes à pied au sud de Kenroku-en, avec la célèbre installation « Piscine » de Leandro Erlich."
       },
       {
-        "text": "🏯 QUARTIER DES SAMOURAÏS DE NAGAMACHI. Promenade par : rues aux murs de terre ; canaux ; anciennes résidences de samouraïs. Le quartier est résidentiel et se parcourt gratuitement à pied. Si nous voulons entrer dans une résidence, privilégiez Nomura-ke : Ouvert 08:30–17:30 en septembre. Entrée 550 ¥. Aucune réservation requise. Jardin intérieur particulièrement intéressant."
+        "text": "🚶 Marcher jusqu'au restaurant, juste à côté de l'entrée M'za d'Omicho Market."
       },
       {
-        "text": "🍣 DÉJEUNER AU MARCHÉ D'OMICHO. L'un des grands marchés gastronomiques de Kanazawa, célèbre pour ses fruits de mer et poissons frais de la mer du Japon. Privilégiez : kaisendon ; sushi ; amaebi (crevette douce) ; nodoguro ; poisson local ; produits frais d'Ishikawa. Septembre n'est pas la saison principale du crabe et du buri/sériole ; le marché met particulièrement en avant ces produits vers novembre. Ne faites pas du crabe l'objectif principal de ce repas. 💡 Conseil : Beaucoup de restaurants/stands commencent à fermer l'après-midi. Ne retardez pas trop le repas. Sur des forums récents, des voyageurs recommandent également d'explorer Omicho Ichibakan et son deuxième étage, où se trouvent de petits restaurants locaux. Budget indicatif : repas simple : 1 000–2 000 ¥ ; kaisendon/sushi plus complet : 2 000–4 000+ ¥. Ne faites pas de réservation obligatoire pour le repas."
+        "text": "🍽️ **DÉJEUNER : TEISHOKU SAKABA TOMOYA** (https://maps.app.goo.gl/SzGJUTSXByhtAskt6?g_st=ic)\n\nIzakaya de teishoku (menus type plat combiné) très bien noté, spécialisé dans le poisson frais de la mer du Japon et le bœuf de Noto. Juste à côté d'Omicho Market, donc on peut en profiter pour y faire un tour avant ou après le repas. Sans réservation."
       },
       {
-        "text": "🏮 QUARTIER HIGASHI CHAYA. Promenez-vous dans les rues historiques et les maisons de thé. Option : SHIMA — ancienne maison de thé, ouverte 09:30–17:30 en septembre. Entrée : 500 ¥ + supplément optionnel pour thé/gâteau. Si vous voulez entrer à SHIMA, faites-le avant 17:15 pour avoir de la marge. Option gastronomique : matcha + wagashi ; glace au matcha ; glace à la feuille d'or."
+        "text": "🏨 Vers l'hôtel — c'est tout près, pratiquement collé à Omicho Market (~2 min à pied)."
       },
       {
-        "text": "🍜 DÎNER À KANAZAWA. Recommandé de rester dans le centre de Kanazawa, de préférence près de : Korinbo ; Katamachi ; Musashigatsuji/Omicho ; Kanazawa Station. Que goûter : oden de Kanazawa ; sushi ; poisson de la mer du Japon ; nodoguro ; cuisine de Kaga ; bœuf wagyu/Noto si vous souhaitez dépenser plus. Budget : décontracté : 1 000–2 500 ¥ ; restaurant local moyen : 2 500–5 000 ¥ ; dîner spécial : 8 000+ ¥. Pour un dîner spécial ou un très petit restaurant populaire, réservez. Pour un izakaya/restaurant décontracté, restez flexible."
+        "text": "🏨 **CHECK-IN ET REPOS : HOTEL RESOL TRINITY KANAZAWA** (https://www.google.com/maps/search/?api=1&query=Hotel+Resol+Trinity+Kanazawa)\n\nCheck-in officiel (15h00) et un moment de repos dans la chambre avant de continuer l'après-midi. Bon moment pour se doucher ou simplement faire une pause."
+      },
+      {
+        "text": "🏯 NAGAMACHI SAMURAI DISTRICT. Promenade dans : rues aux murs de terre ; canaux ; anciennes résidences de samouraïs. Le quartier est résidentiel et se parcourt gratuitement à pied. Si on veut entrer dans une résidence, privilégier Nomura-ke : ouvert 08h30–17h30 en septembre. Entrée ¥550 (~3,5€). Sans réservation. Le jardin intérieur est particulièrement intéressant.\n\n💡 Visité maintenant, de jour, car c'est un quartier résidentiel tranquille sans ambiance nocturne particulière, et Nomura-ke ferme à 17h30."
+      },
+      {
+        "text": "🚶 Vers Higashi Chaya (ou Loop Bus si vous préférez ne pas marcher)."
+      },
+      {
+        "text": "🏮 HIGASHI CHAYA DISTRICT. Promenade dans les rues historiques et les maisons de thé. Optionnel : SHIMA — ancienne maison de thé, ouverte 09h30–17h30 en septembre. Entrée : ¥500 (~3€) + supplément optionnel pour thé/douceur. Si vous voulez entrer à SHIMA, faites-le avant 17h15 (il se peut que ce ne soit plus possible aujourd'hui — vérifier sur place). Option gourmande : matcha + wagashi ; glace au matcha ; glace à la feuille d'or.\n\n💡 Visité maintenant, au coucher du soleil : beaucoup de boutiques ferment vers 17h00-18h00 et le quartier se vide des touristes, laissant une ambiance bien plus authentique avec les lanternes à gaz qui s'allument."
+      },
+      {
+        "text": "🍜 DÎNER À KANAZAWA. Recommandé de rester dans le centre de Kanazawa, de préférence vers Korinbo / Katamachi / Omicho. Essayer l'oden de Kanazawa, les sushis ou le poisson de la mer du Japon."
       },
       {
         "text": "🏨 **RETOUR À L'HÔTEL : HOTEL RESOL TRINITY KANAZAWA** (https://www.google.com/maps/search/?api=1&query=Hotel+Resol+Trinity+Kanazawa)\n\nRetour à l'hôtel après le dîner pour se reposer (1re et unique nuit à Kanazawa à l'Hotel Resol Trinity Kanazawa)."

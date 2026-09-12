@@ -341,16 +341,28 @@ export const days = [
         "text": "🏯 KANAZAWA CASTLE (Kanazawa-jō). Literal na tawid lang sa tulay mula sa mismong labasan ng Kenroku-en — mga 2-3 minuto lang na lakad, hindi na kailangan ng transportasyon. Libre ang pagpasok sa lugar at mga hardin; babayaran lang (mga ¥320) kung papasok sa mga tiyak na rebuilt na gusali tulad ng Hishi Yagura o Gojikken Nagaya. Sapat na ang kalahating oras para maglakad-lakad sa pangunahing patyo, makita ang Ishikawa-mon gate (Important Cultural Property, isa sa iilang tunay na orihinal na bahagi mula sa Edo period) at ang mga pader na bato. 💡 Kung may sobrang oras at lakas: ang 21st Century Museum of Contemporary Art ay 5 minutong lakad lang sa timog ng Kenroku-en, may sikat na 'Swimming Pool' installation ni Leandro Erlich."
       },
       {
-        "text": "🏯 NAGAMACHI SAMURAI DISTRICT. Paglalakad sa: mga kalsada na may earthen walls; mga kanal; mga lumang tahanan ng samurai. Residential ang lugar at libre itong ikutin nang naglalakad. Kung gustong pumasok sa isang tahanan, unahin ang Nomura-ke: Bukas 08:30–17:30 sa Setyembre. Entrance ¥550. Walang reserbasyon na kailangan. Maganda ang panloob na hardin."
+        "text": "🚶 Maglakad papuntang restaurant, katabi ng M'za entrance ng Omicho Market."
       },
       {
-        "text": "🍣 TANGHALIAN SA OMICHO MARKET. Isa sa malalaking food market ng Kanazawa, sikat sa sariwang isda at seafood mula sa Sea of Japan. Unahin ang: kaisendon; sushi; amaebi (sweet shrimp); nodoguro; lokal na isda; sariwang produkto mula Ishikawa. Ang Setyembre ay hindi pa pangunahing season para sa crab at buri/yellowtail; ito ay mas sikat bandang Nobyembre. Huwag gawing crab ang pinaka-target ng pagkain dito. 💡 Tip: Maraming restawran o stall ang nag-uumpisang magsara pagdating ng hapon. Huwag patagalin ang oras ng kain. Sa mga forum ngayon, inirerekomenda din ang pag-ikot sa Omicho Ichibakan at sa ikalawang palapag nito, kung saan may mga lokal na kainan. Badyet: simpleng pagkain: ¥1,000–2,000; kaisendon/sushi na mas kumpleto: ¥2,000–4,000+. Walang kailangang reserbasyon para rito."
+        "text": "🍽️ **TANGHALIAN: TEISHOKU SAKABA TOMOYA** (https://maps.app.goo.gl/SzGJUTSXByhtAskt6?g_st=ic)\n\nMataas ang rating na izakaya ng teishoku (set meal), dalubhasa sa sariwang isda mula sa Sea of Japan at Noto beef. Katabi mismo ng Omicho Market, kaya puwedeng dumaan sa market bago o pagkatapos kumain. Walang kailangang reserbasyon."
       },
       {
-        "text": "🏮 HIGASHI CHAYA DISTRICT. Maglakad sa makasaysayang kalye at mga teahouses. Opsiyonal: SHIMA — lumang teahouse, bukas 09:30–17:30 sa Setyembre. Entrance: ¥500 (~3€) + opsiyonal na bayad para sa tsaa/matamis. Kung papasok sa SHIMA, gawin bago mag-17:15. Pwedeng subukan: matcha + wagashi; matcha ice cream; gold leaf ice cream."
+        "text": "🏨 Papuntang hotel — napakalapit, halos katabi ng Omicho Market (~2 minutong lakad)."
       },
       {
-        "text": "🍜 HAPUNAN SA KANAZAWA. Mas inirerekomenda na manatili sa sentro ng Kanazawa, mas mabuti kung malapit sa: Korinbo; Katamachi; Musashigatsuji/Omicho; Kanazawa Station. Ano ang pwedeng subukan: Kanazawa oden; sushi; isda sa Sea of Japan; nodoguro; Kaga cuisine; wagyu/Noto beef kung gustong gumastos pa. Badyet: kaswal: ¥1,000–2,500; katamtamang lokal na restawran: ¥2,500–5,000; special na hapunan: ¥8,000+. Para sa espesyal o sikat na kainan, magpa-reserve. Para sa izakaya/kaswal na restawran, hindi na kailangan."
+        "text": "🏨 **CHECK-IN AT PAHINGA: HOTEL RESOL TRINITY KANAZAWA** (https://www.google.com/maps/search/?api=1&query=Hotel+Resol+Trinity+Kanazawa)\n\nOpisyal na check-in (15:00) at oras para magpahinga sa kwarto bago ituloy ang hapon. Magandang oras para maligo o magpahinga lang nang kaunti."
+      },
+      {
+        "text": "🏯 NAGAMACHI SAMURAI DISTRICT. Lakad sa: kalye na may earthen walls; kanal; dating tahanan ng samurai. Residential ang lugar at puwedeng libutin nang libre. Kung gustong pumasok sa isang residensya, unahin ang Nomura-ke: bukas 08:30–17:30 sa September. Entrance ¥550 (~3.5€). Walang kailangang reserbasyon. Kawili-wili lalo na ang loob na hardin.\n\n💡 Binibisita ngayon, sa umaga/tanghali, dahil tahimik at residential na lugar ito na walang partikular na atmosphere sa gabi, at nagsasara ang Nomura-ke ng 17:30."
+      },
+      {
+        "text": "🚶 Papuntang Higashi Chaya (o Loop Bus kung ayaw maglakad)."
+      },
+      {
+        "text": "🏮 HIGASHI CHAYA DISTRICT. Lakad sa makasaysayang kalye at mga teahouse. Opsyonal: SHIMA — lumang teahouse, bukas 09:30–17:30 sa September. Entrance: ¥500 (~3€) + opsyonal na dagdag bayad para sa tsaa/matamis. Kung gustong pumasok sa SHIMA, gawin ito bago mag-17:15 (baka hindi na maabutan ngayon — tignan pagdating). Opsyon sa pagkain: matcha + wagashi; matcha ice cream; gold-leaf ice cream.\n\n💡 Binibisita ngayon, sa paglubog ng araw: maraming tindahan ang nagsasara mga 17:00-18:00 at nawawalan ng turista ang lugar, na nag-iiwan ng mas authentic na atmosphere habang nagsisindi ang gas lamps."
+      },
+      {
+        "text": "🍜 HAPUNAN SA KANAZAWA. Inirerekomenda na manatili sa gitna ng Kanazawa, mas mabuti sa paligid ng Korinbo / Katamachi / Omicho. Subukan ang Kanazawa oden, sushi, o isda mula sa Sea of Japan."
       },
       {
         "text": "🏨 **BALIK SA HOTEL: HOTEL RESOL TRINITY KANAZAWA** (https://www.google.com/maps/search/?api=1&query=Hotel+Resol+Trinity+Kanazawa)\n\nBumalik sa hotel pagkatapos ng hapunan para magpahinga (una at tanging gabi sa Kanazawa sa Hotel Resol Trinity Kanazawa)."

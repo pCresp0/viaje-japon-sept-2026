@@ -341,16 +341,28 @@ export const days = [
         "text": "🏯 KANAZAWA CASTLE (Kanazawa-jō). Literally across the bridge from Kenroku-en's own exit — barely 2-3 minutes on foot, no transport needed. Entry to the grounds and gardens is FREE; you only pay (approx. ¥320) to enter specific reconstructed buildings like the Hishi Yagura or the Gojikken Nagaya. Half an hour is enough to stroll the main courtyard, see the Ishikawa-mon gate (an Important Cultural Property, one of the few genuinely original Edo-period parts), and the stone walls. 💡 If there's extra time and energy: the 21st Century Museum of Contemporary Art is just a 5-minute walk south of Kenroku-en, with the famous 'Swimming Pool' installation by Leandro Erlich."
       },
       {
-        "text": "🏯 NAGAMACHI SAMURAI DISTRICT. Walk through: streets with earthen walls; canals; former samurai residences. The neighborhood is residential and can be explored on foot for free. If we want to enter a residence, prioritize Nomura-ke: Open 08:30–17:30 in September. Admission ¥550. No reservation required. Interior garden is particularly interesting."
+        "text": "🚶 Walk to the restaurant, right by the M'za entrance to Omicho Market."
       },
       {
-        "text": "🍣 LUNCH AT OMICHO MARKET. One of Kanazawa's great food markets, famous for fresh seafood from the Sea of Japan. Prioritize: kaisendon; sushi; amaebi (sweet shrimp); nodoguro; local fish; fresh Ishikawa produce. September is not the main season for crab and buri/yellowtail; the market particularly highlights these products around November. Do not make crab the main goal of this meal. 💡 Tip: Many restaurants/stalls start to close in the afternoon. Do not delay lunch too much. In recent forums, travelers recommend also exploring Omicho Ichibakan and its second floor, where there are small local restaurants. Guideline budget: simple meal: ¥1,000–2,000; fuller kaisendon/sushi: ¥2,000–4,000+. Do not make a mandatory reservation for lunch."
+        "text": "🍽️ **LUNCH: TEISHOKU SAKABA TOMOYA** (https://maps.app.goo.gl/SzGJUTSXByhtAskt6?g_st=ic)\n\nHighly-rated izakaya serving teishoku (set meals), specializing in fresh fish from the Sea of Japan and Noto beef. Right next to Omicho Market, so it's easy to pop into the market before or after eating. No reservation needed."
       },
       {
-        "text": "🏮 HIGASHI CHAYA DISTRICT. Walk through the historic streets and teahouses. Optional: SHIMA — former teahouse, open 09:30–17:30 in September. Admission: ¥500 (~3€) + optional supplement for tea/sweet. If you want to enter SHIMA, do so before 17:15 to have a margin. Gastronomic option: matcha + wagashi; matcha ice cream; gold leaf ice cream."
+        "text": "🏨 To the hotel — it's very close, practically next to Omicho Market (~2 min walk)."
       },
       {
-        "text": "🍜 DINNER IN KANAZAWA. Recommended to stay in central Kanazawa, preferably near: Korinbo; Katamachi; Musashigatsuji/Omicho; Kanazawa Station. What to try: Kanazawa oden; sushi; Sea of Japan fish; nodoguro; Kaga cuisine; wagyu/Noto beef if willing to spend more. Budget: casual: ¥1,000–2,500; average local restaurant: ¥2,500–5,000; special dinner: ¥8,000+. For a special dinner or very popular small restaurant, reserve. For casual izakaya/restaurant, keep flexibility."
+        "text": "🏨 **CHECK-IN AND REST: HOTEL RESOL TRINITY KANAZAWA** (https://www.google.com/maps/search/?api=1&query=Hotel+Resol+Trinity+Kanazawa)\n\nOfficial check-in (15:00) and some time to rest in the room before continuing with the afternoon. Good time for a shower or just a short break."
+      },
+      {
+        "text": "🏯 NAGAMACHI SAMURAI DISTRICT. Walk through: streets with earthen walls; canals; former samurai residences. The neighborhood is residential and can be walked through for free. If we want to enter a residence, prioritize Nomura-ke: open 08:30–17:30 in September. Admission ¥550 (~3.5€). No reservation needed. The inner garden is especially worth seeing.\n\n💡 Visited now, during the day, because it's a quiet residential neighborhood with no particular nighttime atmosphere, and Nomura-ke closes at 17:30."
+      },
+      {
+        "text": "🚶 To Higashi Chaya (or Loop Bus if you'd rather not walk)."
+      },
+      {
+        "text": "🏮 HIGASHI CHAYA DISTRICT. Walk through the historic streets and teahouses. Optional: SHIMA — old teahouse, open 09:30–17:30 in September. Admission: ¥500 (~3€) + optional charge for tea/sweets. If you want to enter SHIMA, do it before 17:15 (might not make it today — check on arrival). Food option: matcha + wagashi; matcha ice cream; gold-leaf ice cream.\n\n💡 Visited now, at sunset: many shops close around 17:00-18:00 and the district empties of tourists, leaving a much more authentic atmosphere as the gas lamps come on."
+      },
+      {
+        "text": "🍜 DINNER IN KANAZAWA. Recommended to stay in central Kanazawa, preferably around Korinbo / Katamachi / Omicho. Try Kanazawa oden, sushi, or Sea of Japan fish."
       },
       {
         "text": "🏨 **RETURN TO HOTEL: HOTEL RESOL TRINITY KANAZAWA** (https://www.google.com/maps/search/?api=1&query=Hotel+Resol+Trinity+Kanazawa)\n\nReturn to the hotel after dinner to rest (1st and only night in Kanazawa at Hotel Resol Trinity Kanazawa)."
