@@ -11,6 +11,7 @@ import ThunderbirdTicketCard from "./ThunderbirdTicketCard";
 import NohiMagomeTicketCard from "./NohiMagomeTicketCard";
 import ShinanoTicketCard from "./ShinanoTicketCard";
 import NozomiNagoyaTicketCard from "./NozomiNagoyaTicketCard";
+import TakkyubinQRCard from "./TakkyubinQRCard";
 import GuideCard from "./GuideCard";
 import StayOption from "./StayOption";
 import PlaceText from "./PlaceText";
@@ -388,6 +389,12 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
                   {day.num === 8 && s.time === "07:35" && (
                     <div className="mt-3 relative z-10">
                       <NohiMagomeTicketCard />
+                    </div>
+                  )}
+
+                  {day.num === 9 && s.time === "~14:00–15:00" && (
+                    <div className="relative z-10">
+                      <TakkyubinQRCard />
                     </div>
                   )}
 
