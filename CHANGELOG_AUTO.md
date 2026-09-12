@@ -17,3 +17,5 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-12 14:18 UTC** — fix(Día 7): traducir el punto de subida del bus y ... (`b6a4821`)
 - **2026-09-12 22:50 UTC** — feat(Fuji): confirmada la excursión GYG para el Día 10 (16 ... (`3a79554`)
 - **2026-09-12 23:00 UTC** — feat: reorganizar Días 10-13 tras confirmar el Fuji para el ... (`70bfaac`)
+- **2026-09-12 23:02 UTC** — feat: traducir la reorganización de los Días 10-13 a los ... (`4228bd4`)
+- **2026-09-12 23:03 UTC** — Merge branch 'main' of https://github.com/pCresp0/viaje-japon-sept-2026 (`3394961`)
