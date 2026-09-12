@@ -149,6 +149,15 @@ export async function fetchLiveWeatherMap() {
 }
 
 export function useTodayWeatherForecast() {
+  return useDayWeatherForecast(null);
+}
+
+/**
+ * Igual que useTodayWeatherForecast, pero para un día concreto del viaje
+ * (no necesariamente "hoy"). Si dayNum es null, usa el día activo del
+ * viaje tal cual hacía la función original.
+ */
+export function useDayWeatherForecast(dayNum) {
   const [liveMap, setLiveMap] = useState(() => {
     if (typeof window !== "undefined" && window.localStorage) {
       try {
@@ -171,15 +180,19 @@ export function useTodayWeatherForecast() {
     return () => { mounted = false; };
   }, []);
 
-  const status = getTripStatus();
-  let activeDayNum = 1;
-  if (status.phase === "during") {
-    activeDayNum = status.dayNum ?? 1;
-  } else if (status.phase === "after") {
-    activeDayNum = 15;
-  } else {
-    // Before trip: preview Day 1
-    activeDayNum = 1;
+  let activeDayNum = dayNum;
+  let tripPhase = "during";
+  if (activeDayNum == null) {
+    const status = getTripStatus();
+    tripPhase = status.phase;
+    if (status.phase === "during") {
+      activeDayNum = status.dayNum ?? 1;
+    } else if (status.phase === "after") {
+      activeDayNum = 15;
+    } else {
+      // Before trip: preview Day 1
+      activeDayNum = 1;
+    }
   }
 
   const cityKeys = DAY_CITIES[activeDayNum] || ["Tokio"];
@@ -237,6 +250,6 @@ export function useTodayWeatherForecast() {
     targetDateStr,
     isDisplacement,
     citiesWeather,
-    phase: status.phase,
+    phase: tripPhase,
   };
 }

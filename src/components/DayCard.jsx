@@ -12,6 +12,7 @@ import NohiMagomeTicketCard from "./NohiMagomeTicketCard";
 import ShinanoTicketCard from "./ShinanoTicketCard";
 import NozomiNagoyaTicketCard from "./NozomiNagoyaTicketCard";
 import TakkyubinQRCard from "./TakkyubinQRCard";
+import DayWeatherBar from "./DayWeatherBar";
 import GuideCard from "./GuideCard";
 import StayOption from "./StayOption";
 import PlaceText from "./PlaceText";
@@ -252,6 +253,8 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
           </div>
         )}
       </header>
+
+      <DayWeatherBar dayNum={day.num} />
 
       <div className="p-5 space-y-4">
         {/* QR de Visit Japan Web en el día de llegada (Día 1 / 7 de sept) */}
