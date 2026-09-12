@@ -373,6 +373,65 @@ export const guides = {
     tip: "Con la ciudad tan compacta, ir caminando entre Kenroku-en, el castillo, Nagamachi y Omicho es perfectamente viable sin depender del Loop Bus.",
   },
 
+  "nagamachi": {
+    name: "Nagamachi y la casa samurái Nomura",
+    jp: "長町・野村家",
+    founded: "Residencia Nomura: siglo XVII",
+    wiki: "Nagamachi",
+    tagline: "El barrio donde vivían los samuráis de rango medio-alto del clan Maeda, con una de sus casas abierta al público.",
+    sections: [
+      {
+        title: "El barrio de Nagamachi",
+        body: "Nagamachi era la zona residencial donde vivían los samuráis al servicio directo del clan Maeda, señores del dominio de Kaga -- el más rico de todo Japón bajo el shogunato Tokugawa, conocido como el dominio 'de un millón de koku' (hyakuman-goku), la unidad con la que se medía la riqueza de un feudo en arroz. Los muros de tierra (dorobei) que ves recorriendo sus callejuelas son originales de la época Edo, protegidos hoy por tejadillos de paja en invierno para que no se agrieten con la nieve. A diferencia de Kioto o de otras ciudades japonesas, Kanazawa no sufrió bombardeos en la Segunda Guerra Mundial ni grandes terremotos, así que el trazado de canales y calles estrechas que ves es literalmente el mismo que pisaban los samuráis del siglo XVII, no una reconstrucción.",
+      },
+      {
+        title: "La familia Nomura",
+        body: "En 1583 el señor Maeda Toshiie tomó el castillo de Kanazawa y sentó las bases de tres siglos de paz y prosperidad para el clan Kaga. Uno de sus seguidores de alto rango, Nomura Denbei Nobusada, recibió un feudo de 1.000 koku, más tarde ampliado a 1.200 koku, y sus descendientes sirvieron como retenedores superiores durante doce generaciones, hasta la Restauración Meiji (1868), cuando el sistema feudal se disolvió y muchas casas samurái fueron destruidas, convertidas en huertas o vendidas. De la propiedad original de los Nomura solo sobrevivieron partes del portón y el muro. La pieza que hoy se visita -- incluida la sala principal -- la compró en el periodo Shōwa temprano un industrial local, Kubo Hikobei, que trasladó hasta aquí la sala de una antigua casa señorial de la localidad de Daishōji, cerca de su pueblo natal, para reconstruir el conjunto tal como se ve hoy.",
+      },
+      {
+        title: "La sala Jyōdan-no-ma",
+        body: "Es la sala principal de la casa, de ciprés japonés, con diseños elaborados en palorrosa y ébano. El panel del tokonoma (la alcoba decorativa) es de madera de paulonia, y todos los clavos están ocultos con remates de caqui negro tallados en estilo calado -- un detalle típico de la carpintería samurái de más categoría, pensado para que no se viera ni un solo elemento metálico. Las puertas correderas de papel grueso tienen tiradores de hierro ornamental de estilo 'indio', y una de ellas incorpora una ventana de cristal tallado que refleja el arroyo serpenteante junto a la veranda -- una rareza arquitectónica que debió sorprender mucho a las visitas de la época. Cada puerta corredera está pintada con paisajes de Sasaki Senkei, un pintor de alto rango de la escuela Kanō; una de ellas, con una composición de tortugas ('Yūki no zu'), se considera una de sus obras maestras y una pieza de un valor cultural excepcional para Japón.",
+      },
+      {
+        title: "El jardín",
+        body: "Sentados en la sala Jyōdan-no-ma se contempla un jardín cuidadosamente diseñado, con una cascada, un arroyo transparente que serpentea entre piedras, un puente de granito rosado, varios tipos de farolillos de piedra y una pequeña pagoda de varios pisos repartidos por el conjunto. Destaca también un árbol de mirica (Myrica rubra) de más de 400 años, una especie que se considera difícil de cultivar en el clima de la región de Hokuriku. El jardín está reconocido como uno de los ejemplos más representativos del estilo Kobori Enshū, uno de los grandes maestros de la jardinería japonesa del periodo Edo.",
+      },
+    ],
+    curiosities: [
+      "El sitio lo gestiona hoy 'A Society for the Preservation of Nomura Family', una asociación dedicada exclusivamente a conservar esta única propiedad.",
+      "Los tejadillos de paja que cubren los muros de tierra en invierno (komo-gake) son los mismos que se usan para proteger los pinos de Kenroku-en de la nieve -- una técnica compartida por todo Kanazawa.",
+    ],
+    tip: "Aunque solo se visite una casa samurái, Nomura-ke es la más recomendable de Nagamachi por la combinación de arquitectura interior de altísimo nivel y el jardín -- muchas otras casas del barrio son solo fachada.",
+  },
+
+  "higashi-chaya": {
+    name: "Higashi Chaya",
+    jp: "東茶屋街",
+    founded: "1820",
+    wiki: "Higashi Chaya District",
+    tagline: "El mayor y más espectacular de los tres barrios de casas de té de Kanazawa.",
+    sections: [
+      {
+        title: "El barrio de las geishas",
+        body: "Higashi Chaya ('barrio de té del este') se estableció oficialmente en 1820, cuando el shogunato ordenó concentrar todas las casas de té con geishas de Kanazawa en distritos designados, fuera del centro. De los tres barrios de este tipo que tuvo la ciudad (Higashi, Nishi y Kazuemachi), Higashi es el más grande y el mejor conservado: una calle empedrada flanqueada por casas de dos plantas con fachadas de celosía de madera (kimusuko), diseñadas para que se pudiera ver algo desde fuera sin comprometer la intimidad del interior. Hoy en día todavía hay geiko (el término que usan en Kanazawa, en vez de 'geisha') en activo en el barrio, aunque las veladas con ellas requieren presentación previa de un cliente habitual -- el sistema ichigen-san okotowari, el mismo que en el Gion de Kioto.",
+      },
+      {
+        title: "Shima y Kaikaro: las dos casas de té abiertas",
+        body: "De todas las ochaya del barrio, solo dos abren sus puertas al público sin necesidad de presentación: Shima, una casa de té de 1820 convertida en pequeño museo que conserva su distribución original de habitaciones para las representaciones de geiko; y Kaikaro, todavía en funcionamiento como ochaya real por las noches, con un imponente salón decorado en pan de oro (Kanazawa produce el 99% del oro en pan de todo Japón). Ambas cobran entrada y son la forma más accesible de ver por dentro cómo era realmente una casa de té de este periodo.",
+      },
+      {
+        title: "De día o al anochecer",
+        body: "El barrio tiene dos caras. De día (hasta las 17:00-18:00 aprox.) las tiendas de artesanía, pan de oro y dulces están abiertas, así como las dos casas de té visitables -- es el momento para comprar y entrar a ver el interior. Al anochecer, cuando cierran las tiendas, las farolas de gas se encienden y las multitudes de turistas se disipan, el barrio recupera un ambiente mucho más parecido al original del periodo Edo -- más silencioso, más auténtico, y el mejor momento para pasear y hacer fotos de las fachadas iluminadas.",
+      },
+    ],
+    curiosities: [
+      "Según las guías locales, en la actualidad trabajan unas cinco geiko en todo el barrio -- un número muy reducido comparado con su apogeo histórico.",
+      "El monte Utatsu, justo encima del barrio, tiene varios miradores desde los que se ve Higashi Chaya y, en noches despejadas, las luces de los barcos pesqueros faenando en el mar de Japón.",
+      "La tienda de pan de oro Hakuza, en la calle principal, tiene una sala de ceremonia del té completamente recubierta de pan de oro -- de las pocas experiencias de este tipo abiertas al público sin reserva.",
+    ],
+    tip: "Si el tiempo apremia, prioriza pasear por la calle principal y entrar en una sola casa de té (Shima o Kaikaro, no ambas) antes que intentar verlo todo con prisas.",
+  },
+
   "kenroku-en": {
     name: "Jardín Kenroku-en",
     jp: "兼六園",
@@ -757,7 +816,7 @@ export const guidesByDay = {
   3: ["ginkaku-ji", "nishiki", "gion"],
   4: ["kinkaku-ji", "arashiyama"],
   5: ["kiyomizu-dera", "osaka"],
-  6: ["kanazawa", "kenroku-en"],
+  6: ["kanazawa", "kenroku-en", "nagamachi", "higashi-chaya"],
   7: ["shirakawa-go", "takayama"],
   8: ["nakasendo"],
   9: ["akihabara"],
@@ -810,6 +869,14 @@ export const guideMeta = {
   "kenroku-en": {
     shortName: "Jardín Kenroku-en",
     keywords: ["kenroku-en", "kenrokuen", "jardin kenroku"],
+  },
+  "nagamachi": {
+    shortName: "Nagamachi y casa Nomura",
+    keywords: ["nagamachi", "nomura-ke", "samurai district"],
+  },
+  "higashi-chaya": {
+    shortName: "Higashi Chaya",
+    keywords: ["higashi chaya", "higashi-chaya", "shima", "kaikaro"],
   },
   "kanazawa": {
     shortName: "Kanazawa",
