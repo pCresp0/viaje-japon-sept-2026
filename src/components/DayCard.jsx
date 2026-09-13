@@ -9,6 +9,7 @@ import VisitJapanQRCard from "./VisitJapanQRCard";
 import ShinkansenTicketCard from "./ShinkansenTicketCard";
 import ThunderbirdTicketCard from "./ThunderbirdTicketCard";
 import NohiMagomeTicketCard from "./NohiMagomeTicketCard";
+import TicketDownloadButton from "./TicketDownloadButton";
 import ShinanoTicketCard from "./ShinanoTicketCard";
 import NozomiNagoyaTicketCard from "./NozomiNagoyaTicketCard";
 import TakkyubinQRCard from "./TakkyubinQRCard";
@@ -386,6 +387,26 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
                   {day.num === 6 && s.time === "08:10" && (
                     <div className="mt-3 relative z-10">
                       <ThunderbirdTicketCard />
+                    </div>
+                  )}
+
+                  {day.num === 7 && s.time === "08:40" && (
+                    <div className="mt-3 relative z-10">
+                      <TicketDownloadButton
+                        pdfPath="/images/tickets/nohi_bus_kanazawa_shirakawago.pdf"
+                        filename="Billete_NohiBus_Kanazawa_Shirakawago_M26125669.pdf"
+                        label="billete Kanazawa → Shirakawa-go"
+                      />
+                    </div>
+                  )}
+
+                  {day.num === 7 && s.time === "13:15" && (
+                    <div className="mt-3 relative z-10">
+                      <TicketDownloadButton
+                        pdfPath="/images/tickets/nohi_bus_shirakawago_takayama.pdf"
+                        filename="Billete_NohiBus_Shirakawago_Takayama_M26125670.pdf"
+                        label="billete Shirakawa-go → Takayama"
+                      />
                     </div>
                   )}
 

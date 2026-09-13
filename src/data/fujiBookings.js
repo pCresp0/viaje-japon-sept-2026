@@ -38,29 +38,6 @@ export const gygFujiActivity = {
   ]
 };
 
-export const kenFujiActivity = {
-  title: "Excursión Exclusiva al Monte Fuji con Ken Kaneshima",
-  guide: "Ken Kaneshima (Excursiones Fujiyama)",
-  phone: "+81 90-5863-1635",
-  url: "https://excursionesfujiyama.com/",
-  date: "2026-09-20",
-  dateFormatted: "Domingo, 20 de septiembre de 2026 (Día 14)",
-  price: "13.000 ¥ / persona (~80 €) con todas las entradas y mini-van privada de 8h incluidas",
-  language: "Guía oficial en español",
-  transport: "Mini-van privada exclusiva para el grupo",
-  startPoint: "Estación de Mishima (Salida Sur) a las 08:20 AM (~50 min de Tokio en Shinkansen)",
-  endPoint: "Estación de tren bala Shin-Fuji (~17:30, a 60 min de Tokio en Shinkansen)",
-  food: "Parada al mediodía para degustar los fideos tradicionales Houtou en caldo de miso y verduras de montaña (comida no incluida en precio)",
-  stops: [
-    "Pagoda Chureito (Arakurayama Sengen)",
-    "Santuario Kitaguchi Hongu Fuji Sengen Jinja (cedros milenarios)",
-    "Aldea tradicional Oshino Hakkai (estanques de deshielo y casas de paja)",
-    "Bosque de Aokigahara (Mar de Árboles sobre colada de lava)",
-    "Cataratas Shiraito (cascada en hilos de seda)",
-    "Ruta de los Lagos del Fuji (Yamanakako, Saiko, Motosuko)"
-  ]
-};
-
 export const visibilityTools = {
   isFujiVisible: {
     name: "isfujivisible.com",

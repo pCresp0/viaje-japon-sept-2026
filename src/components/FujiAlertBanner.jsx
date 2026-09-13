@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { Mountain, ExternalLink, X, AlertTriangle, MapPin, Eye, Info, Calendar } from "lucide-react";
-import { gygFujiActivity, kenFujiActivity, visibilityTools } from "../data/fujiBookings";
+import { gygFujiActivity, visibilityTools } from "../data/fujiBookings";
 import { todayISO } from "../utils/date";
 
 export default function FujiAlertBanner() {
   const [dismissed, setDismissed] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
-  // El banner solo debe mostrarse a partir del 12 de septiembre y hasta el 20 de septiembre (ventana de decisión del Fuji)
+  // El banner solo debe mostrarse el día antes y el día de la excursión confirmada (15-16 de septiembre)
   // Permitimos forzarlo con query param ?fujiBanner=1 si se desea previsualizar
   const today = todayISO();
-  const isDateActive = today >= "2026-09-12" && today <= "2026-09-20";
+  const isDateActive = today >= "2026-09-15" && today <= "2026-09-16";
   const forcePreview = typeof window !== "undefined" && window.location.search.includes("fujiBanner=1");
 
   if (!isDateActive && !forcePreview) return null;
@@ -43,14 +43,14 @@ export default function FujiAlertBanner() {
                     Estrategia Fuji 🗻
                   </span>
                   <span className="text-xs text-slate-300 font-medium hidden sm:inline">
-                    4 Reservas GetYourGuide + Tour con Ken (20 Sept)
+                    Reserva confirmada · 16 de septiembre
                   </span>
                 </div>
                 <p className="text-sm font-bold text-white mt-1 leading-snug">
-                  Revisa la visibilidad 24h antes y cancela gratis las fechas con nubes
+                  Comprueba la visibilidad la mañana del día -- la excursión ya está confirmada, no hace falta cancelar nada
                 </p>
                 <p className="text-xs text-slate-300 mt-0.5 leading-relaxed">
-                  La regla de oro: Comprueba las webcams a las <strong>06:30 AM</strong>. Si a las 07:00 AM no se ve el pico, cancela antes del límite de 24h en GetYourGuide.
+                  La regla de oro: Comprueba las webcams a las <strong>06:30 AM</strong>. Si a las 07:00 AM no se ve el pico, es poco probable que despeje después.
                 </p>
               </div>
             </div>
@@ -83,7 +83,7 @@ export default function FujiAlertBanner() {
                 className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold bg-white hover:bg-slate-100 text-slate-900 shadow-md transition-all active:scale-95"
               >
                 <Info size={14} />
-                Ver 4 Reservas & Códigos
+                Ver Reserva & Código
               </button>
             </div>
 
@@ -118,8 +118,8 @@ export default function FujiAlertBanner() {
                   <Mountain size={22} />
                 </div>
                 <div>
-                  <h3 className="text-base font-bold text-white m-0">Estrategia de Excursión al Monte Fuji</h3>
-                  <p className="text-xs text-white/80 m-0">4 Reservas en GetYourGuide + Tour Privado con Ken</p>
+                  <h3 className="text-base font-bold text-white m-0">Excursión al Monte Fuji</h3>
+                  <p className="text-xs text-white/80 m-0">Reserva confirmada en GetYourGuide</p>
                 </div>
               </div>
               <button
@@ -133,27 +133,27 @@ export default function FujiAlertBanner() {
 
             <div className="p-6 space-y-6 text-sm">
               
-              {/* Cómo funciona la estrategia */}
+              {/* Cómo funciona la reserva */}
               <div className="rounded-xl p-4 border" style={{ background: "var(--paper)", borderColor: "rgba(2, 132, 199, 0.25)" }}>
                 <div className="flex items-start gap-2.5">
                   <AlertTriangle className="text-sky-600 shrink-0 mt-0.5" size={18} />
                   <div>
                     <h4 className="font-bold text-sm m-0" style={{ color: "var(--indigo)" }}>
-                      ¿Cómo funciona la cancelación gratuita?
+                      Reserva confirmada -- sin necesidad de cancelar nada
                     </h4>
                     <p className="text-xs mt-1 leading-relaxed m-0" style={{ color: "var(--ink)" }}>
-                      Se han reservado 4 días en GetYourGuide con antelación para asegurar plaza. Cada reserva permite <strong>reembolso íntegro cancelando con al menos 24 horas de antelación</strong> a través de la app/web de GetYourGuide. Revisad los enlaces de visibilidad y cancelad las fechas nubladas antes del límite indicado en cada bono.
+                      La excursión ya está confirmada para el 16 de septiembre. Comprobad de todos modos la visibilidad esa mañana con los enlaces de abajo, simplemente para saber qué esperar del día -- no hace falta cancelar ni reservar nada más.
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* Las 4 Reservas de GetYourGuide */}
+              {/* La reserva de GetYourGuide */}
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <h4 className="font-bold flex items-center gap-2 m-0" style={{ color: "var(--ink)" }}>
                     <Calendar size={16} style={{ color: "var(--indigo)" }} />
-                    Tus 4 Códigos de Reserva en GetYourGuide
+                    Tu Código de Reserva en GetYourGuide
                   </h4>
                   <a
                     href={gygFujiActivity.url}
@@ -214,24 +214,6 @@ export default function FujiAlertBanner() {
                 </p>
                 <p className="text-xs m-0" style={{ color: "var(--ink-soft)" }}>
                   👟 <strong>Recomendación:</strong> Calzado cómodo para subir los 400 escalones del Parque Arakurayama Sengen hasta la Pagoda Chureito.
-                </p>
-              </div>
-
-              {/* Tour Privado con Ken Kaneshima (20 Sept) */}
-              <div className="p-4 rounded-xl border space-y-2" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
-                <div className="flex items-center justify-between">
-                  <h4 className="font-bold text-sm flex items-center gap-2 m-0" style={{ color: "var(--ink)" }}>
-                    <span>🚐</span> Tour Exclusivo con Ken Kaneshima
-                  </h4>
-                  <span className="text-xs font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(46, 125, 91, 0.15)", color: "var(--forest)" }}>
-                    Domingo 20 Sept
-                  </span>
-                </div>
-                <p className="text-xs leading-relaxed m-0" style={{ color: "var(--ink)" }}>
-                  <strong>Precio:</strong> 13.000 ¥/persona (~70€) (entradas y mini-van privada 8h con guía oficial en español). Inicio en Estación de Mishima (08:20 AM) y fin en Estación Shin-Fuji (17:30). Incluye parada gastronómica tradicional para degustar fideos <strong>Houtou</strong>.
-                </p>
-                <p className="text-xs m-0" style={{ color: "var(--ink-soft)" }}>
-                  📞 Contacto Ken: <a href="tel:+819058631635" className="font-semibold underline" style={{ color: "var(--indigo)" }}>+81 90-5863-1635</a> · <a href="https://excursionesfujiyama.com" target="_blank" rel="noopener noreferrer" className="font-semibold underline" style={{ color: "var(--indigo)" }}>excursionesfujiyama.com ↗</a>
                 </p>
               </div>
 

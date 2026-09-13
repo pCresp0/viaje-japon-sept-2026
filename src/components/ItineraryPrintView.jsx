@@ -5,7 +5,7 @@ import { guidesByDay } from "../data/guides";
 import { guideImages } from "../data/guideImages";
 import { pendingItems } from "../data/pending";
 import { heymondoInsurance } from "../data/insurance";
-import { gygFujiActivity, kenFujiActivity, visibilityTools } from "../data/fujiBookings";
+import { gygFujiActivity, visibilityTools } from "../data/fujiBookings";
 import { foods } from "../data/foods";
 import { sections as prepSections } from "../pages/PrepPage";
 import { categories as phraseCategories, etiquette } from "../pages/PhrasesPage";
@@ -555,18 +555,6 @@ function DaySection({ day, guides }) {
       <DayTicketNote dayNum={day.num} />
       <DayFujiNote dayNum={day.num} />
 
-      {day.num === 14 && (
-        <div style={{ marginTop: 8, padding: "8px 10px", background: "#e8f4fc", border: "1px solid #7dd3fc", borderRadius: 6, fontSize: 9.5, lineHeight: 1.5 }}>
-          <strong>🗻 Excursión con Ken Kaneshima</strong> — {kenFujiActivity.dateFormatted}
-          <br />
-          {kenFujiActivity.price} · {kenFujiActivity.language}
-          <br />
-          Salida: {kenFujiActivity.startPoint} · Fin: {kenFujiActivity.endPoint}
-          <br />
-          Tel: {kenFujiActivity.phone} · <a href={kenFujiActivity.url} style={{ color: "#7a2c2e", fontWeight: 600 }}>Web excursión ↗</a>
-        </div>
-      )}
-
       {day.history && (
         <p style={{ fontSize: 10, lineHeight: 1.55, color: "#5a6070", background: "#f7f0e3", padding: "8px 10px", borderRadius: 6, marginTop: 8, marginBottom: 4 }}>
           <strong>Contexto histórico:</strong> {day.history}
@@ -701,28 +689,8 @@ export default function ItineraryPrintView({ days }) {
 
       {/* ── Anexo: Fuji ─────────────────────────────────────────── */}
       <Appendix title="Anexo · Excursión Monte Fuji">
-        <div style={{ fontSize: 10.5, lineHeight: 1.55, marginBottom: 12 }}>
-          <strong>{kenFujiActivity.title}</strong> (día 14 · confirmado)
-          <br />
-          Guía: {kenFujiActivity.guide} · Tel: {kenFujiActivity.phone}
-          <br />
-          {kenFujiActivity.dateFormatted} · {kenFujiActivity.price}
-          <br />
-          {kenFujiActivity.transport} · {kenFujiActivity.language}
-          <br />
-          Inicio: {kenFujiActivity.startPoint}
-          <br />
-          Fin: {kenFujiActivity.endPoint}
-          <br />
-          Comida: {kenFujiActivity.food}
-          <br />
-          Paradas: {kenFujiActivity.stops?.join(" · ")}
-          <br />
-          <a href={kenFujiActivity.url} style={{ color: "#7a2c2e", fontWeight: 600 }}>Web excursión ↗</a>
-        </div>
-
         <div style={{ fontSize: 10.5, lineHeight: 1.55, marginBottom: 10 }}>
-          <strong>Estrategia GYG (días 10–13)</strong> — {gygFujiActivity.title}
+          <strong>Reserva confirmada (Día 10)</strong> — {gygFujiActivity.title}
           <br />
           {gygFujiActivity.participants} · {gygFujiActivity.totalPrice} · pago: {gygFujiActivity.paymentDate}
           <br />
