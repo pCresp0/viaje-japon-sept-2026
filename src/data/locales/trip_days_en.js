@@ -362,13 +362,13 @@ export const days = [
         "text": "🏨 **CHECK-IN AND REST: HOTEL RESOL TRINITY KANAZAWA** (https://www.google.com/maps/search/?api=1&query=Hotel+Resol+Trinity+Kanazawa)\n\nOfficial check-in (15:00) and some time to rest in the room before continuing with the afternoon. Good time for a shower or just a short break."
       },
       {
-        "text": "🏯 NAGAMACHI SAMURAI DISTRICT. Walk through: streets with earthen walls; canals; former samurai residences. The neighborhood is residential and can be walked through for free. If we want to enter a residence, prioritize Nomura-ke: open 08:30–17:30 in September. Admission ¥550 (~3.5€). No reservation needed. The inner garden is especially worth seeing.\n\n💡 Visited now, during the day, because it's a quiet residential neighborhood with no particular nighttime atmosphere, and Nomura-ke closes at 17:30."
+        "text": "🏯 NAGAMACHI SAMURAI DISTRICT. Neighborhood where samurai of the Maeda clan lived, with streets and earthen walls original to the Edo era.\n\n📍 What to see here:\n• The earthen walls (dorobei), with their winter straw thatching\n• The Nomura-ke samurai house: the Jyōdan-no-ma room and its painted doors\n• The Nomura-ke garden, Kobori Enshū style\n• The narrow canals running through the whole neighborhood\n\nThe neighborhood is residential and can be explored for free on foot. If we want to enter a residence, prioritize Nomura-ke: Open 08:30–17:30 in September. Admission ¥550 (~3.5€). No reservation needed. The interior garden is especially interesting.\n\n💡 We visit now, in daylight, because it's a quiet residential neighborhood with no particular nightlife, and Nomura-ke closes at 17:30."
       },
       {
         "text": "🚶 To Higashi Chaya (or Loop Bus if you'd rather not walk)."
       },
       {
-        "text": "🏮 HIGASHI CHAYA DISTRICT. Walk through the historic streets and teahouses. Optional: SHIMA — old teahouse, open 09:30–17:30 in September. Admission: ¥500 (~3€) + optional charge for tea/sweets. If you want to enter SHIMA, do it before 17:15 (might not make it today — check on arrival). Food option: matcha + wagashi; matcha ice cream; gold-leaf ice cream.\n\n💡 Visited now, at sunset: many shops close around 17:00-18:00 and the district empties of tourists, leaving a much more authentic atmosphere as the gas lamps come on."
+        "text": "🏮 HIGASHI CHAYA DISTRICT. The largest and best preserved of Kanazawa's three teahouse districts, established in 1820.\n\n📍 What to see here:\n• The main street, with two-story ochaya and wooden lattice facades\n• Shima: an old teahouse turned museum\n• Kaikaro: an active ochaya with a hall decorated in gold leaf\n• Gold leaf shops and local crafts\n\nStroll through the historic streets and teahouses. Optional: SHIMA — old teahouse, open 09:30–17:30 in September. Admission: ¥500 (~3€) + optional surcharge for tea/sweets. If you want to go into SHIMA, do it before 17:15 (there may not be time today — check on arrival). Food option: matcha + wagashi; matcha ice cream; gold-leaf ice cream.\n\n💡 We visit now, at dusk: many shops close around 17:00-18:00 and the district empties of tourists, leaving a much more authentic atmosphere as the gas lamps come on."
       },
       {
         "text": "🍜 DINNER IN KANAZAWA. Recommended to stay in central Kanazawa, preferably around Korinbo / Katamachi / Omicho. Try Kanazawa oden, sushi, or Sea of Japan fish."
@@ -664,7 +664,7 @@ export const days = [
         "text": "Walk to Harajuku via Takeshita Street, ending at the Meiji Shrine in Yoyogi Park."
       },
       {
-        "text": "Night in Shinjuku: free Metropolitan Government observation deck, dinner in Omoide Yokocho, neons of Kabukicho."
+        "text": "Night in Shinjuku: free Metropolitan Government observation deck, dinner in Omoide Yokocho and a stroll under the neon lights of Kabukicho.\n\n🛍️ **SHOPPING: UNIQLO AND DON QUIJOTE (SEIKO WATCH).** Take the chance for two quick stops: there's a large Uniqlo near Shinjuku Station (good-quality basics at a good price), and the Don Quijote in Kabukicho has a watch section on the upper floor (4th floor) with Seiko, Citizen and Casio at discounted prices -- confirmed by several sources as one of the best in central Tokyo for this. Both open late, fitting well with the evening stroll."
       },
       {
         "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nBack by metro from Shinjuku to our residence in Asakusa Kappabashi to rest (3rd night in Tokyo)."
@@ -724,52 +724,54 @@ export const days = [
     "money": "Approx. €40 (meals) + shopping"
   },
   {
-    "title": "Exclusive Mount Fuji Excursion",
-    "cities": "Mishima, Chureito Pagoda, Oshino Hakkai, Aokigahara, Shiraito, Fuji Lakes",
-    "summary": "Full-day tour (8 hours) in a private minivan with an official Spanish-speaking guide (Ken Kaneshima · Excursiones Fujiyama). Small group visiting Chureito Pagoda, ancient Kitaguchi Hongu shrine, traditional thatched-roof village of Oshino Hakkai, Aokigahara forest, Shiraito waterfalls and lake route. Tasting local star dish: Houtou noodles. Thibaut, let's see if you can prove that CrossFit is good for something.",
-    "history": "Mount Fuji (3,776m) is Japan's sacred volcano and undisputed symbol. For centuries it has been a place of Shinto pilgrimage and inspiration for artists like Hokusai.",
+    "title": "Nikko Day Trip",
+    "cities": "Nikko",
+    "summary": "A full day of nature and temples 2 hours from Tokyo by direct train from Asakusa (literally next to the hotel): Toshogu Shrine, mausoleum of shogun Tokugawa Ieyasu and World Heritage Site, Shinkyo Bridge, and if time allows, Kegon Falls and Lake Chuzenji via the Irohazaka mountain road. Farewell group dinner in the evening in Tokyo.",
+    "history": "Nikko grew up around Toshogu Shrine, built in 1617 as the mausoleum of Tokugawa Ieyasu, founder of the shogunate that ruled Japan for over 250 years. His grandson Iemitsu expanded it into the lavishly decorated complex seen today, with over 5 million sheets of gold leaf spread across its buildings.",
     "schedule": [
       {
-        "text": "Check live webcams on mtfujitoday.com and isfujivisible.com from Tokyo hotel (the golden morning rule at 06:15 AM)."
+        "time": "06:45",
+        "text": "Wake up and quick breakfast at the hotel."
       },
       {
-        "text": "🚶 RECOMMENDED HOTEL DEPARTURE (~06:30 AM · KOKO HOTEL Residence Asakusa Kappabashi → Tokyo Station).\nRecommended hotel departure with ample margin (~06:30; not an official railway time, but a preventive group recommendation for 5 pax):\n1. Walk ~10 min to Tawaramachi Station (Tokyo Metro).\n2. Take Ginza Line to Ueno Station.\n3. Connect from Ueno to Tokyo Station (JR Yamanote / Keihin-Tohoku Line) and walk calmly to Tokaido Shinkansen platforms.\n⚠️ Critical connection: This deliberate margin ensures arriving calmly before the 07:27 Kodama 805 departure to meet guide Ken Kaneshima in Mishima at 08:25."
+        "time": "07:15",
+        "text": "To Tobu-Asakusa Station (same area as the hotel, just a few minutes on foot)."
       },
       {
-        "text": "🚅 Tokaido-Sanyo Shinkansen KODAMA 805. Depart Tokyo at 07:27, arrive at Mishima at 08:20. IMPORTANT: It must be the Kodama to stop at Mishima."
+        "time": "~07:30",
+        "text": "🚅 Tobu Limited Express to Tobu-Nikko Station.\n\n🎫 **SUICA:** ❌ NO (requires an express ticket with a seat)\n📅 **RESERVATION:** 🔴 Still need to buy\n🛒 **PURCHASE:** At the machines or ticket counters at Tobu Asakusa Station, or in advance via the Tobu Railway app/website. Approx. ¥2,700/person one way.\n\nJourney of approximately 2 hours. There's also the Tobu World Heritage Pass (~¥4,160), which includes round trip plus unlimited buses around Nikko for 2 days -- may be better value if doing the Chuzenji/Kegon route."
       },
       {
-        "text": "Meet guide Ken Kaneshima at Mishima Station South Exit (08:25 AM) and start private minivan tour."
+        "time": "~09:30",
+        "text": "Arrival at Tobu-Nikko Station. Pick up brochures/map at the station's tourist center."
       },
       {
-        "text": "Chureito Pagoda (Arakurayama Sengen): iconic 5-story pagoda with Mount Fuji in the background."
+        "time": "10:00–13:00",
+        "text": "🏯 **TOSHOGU SHRINE AND SURROUNDINGS.** Shinkyo Bridge (the iconic red bridge over the Daiya River, symbol of Nikko). Toshogu complex: the lavishly decorated Yomeimon Gate, the relief of the 'see no evil, hear no evil, speak no evil' monkeys, and the mausoleum of Tokugawa Ieyasu. Rinno-ji and Futarasan Jinja, the other two temples in the World Heritage ensemble.\n\n🎫 Combined admission Toshogu + Futarasan + Taiyuin: approx. ¥2,100/person. Toshogu only: approx. ¥1,600/person.\n\n💡 Involves climbing many steps and walking on uneven ground -- comfortable shoes essential."
       },
       {
-        "text": "Kitaguchi Hongu Fuji Sengen Shrine: historic pilgrim starting point among ancient giant cedars."
+        "time": "13:00–14:00",
+        "text": "🍜 Local lunch: try yuba (tofu skin), a Nikko specialty for centuries, at any of the restaurants near the shrine entrance."
       },
       {
-        "text": "Oshino Hakkai Village: picturesque village with crystal-clear snowmelt ponds and thatched roof houses."
+        "time": "14:00–17:00",
+        "text": "🚌 **OPTIONAL IF THERE'S TIME: LAKE CHUZENJI AND KEGON FALLS.** Bus from Tobu-Nikko Station along the Irohazaka mountain road (very sharp curves, spectacular views) to Lake Chuzenji, at the foot of Mount Nantai. Kegon Falls, a 97m drop, is a short walk from the lake -- you can take an elevator down to the lower platform to see it up close (admission approx. ¥570).\n\n💡 If the group prefers not to stretch the day too long, this block can be skipped in favor of spending more relaxed time around Toshogu, or strolling through central Nikko."
       },
       {
-        "text": "Traditional lunch: tasting Houtou (flat noodles in hot miso broth with mountain vegetables)."
+        "time": "~17:30",
+        "text": "Return by bus to Tobu-Nikko Station."
       },
       {
-        "text": "Aokigahara Forest: the 'Sea of Trees' grown over hardened volcanic lava with twisted roots."
+        "time": "~18:00",
+        "text": "🚅 Tobu Limited Express back to Tobu-Asakusa Station (approx. 2 hours)."
       },
       {
-        "text": "Shiraito Waterfalls: cascading water emerging from volcanic rocks like silk threads."
+        "time": "20:00",
+        "text": "🍜 Farewell group dinner in Tokyo (Asakusa)."
       },
       {
-        "text": "Scenic Fuji Lakes route (Yamanakako, Saiko, Motosuko) with multi-angle panoramic views."
-      },
-      {
-        "text": "Arrival at Shin-Fuji Shinkansen Station (~17:30) and return bullet train to Tokyo (~60 min)."
-      },
-      {
-        "text": "🍜 Farewell group dinner in Tokyo (Asakusa / Ginza)."
-      },
-      {
-        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nBack to the residence in Asakusa Kappabashi to pack bags for check-out and rest (6th and last night in Tokyo)."
+        "time": "~21:30",
+        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nLast night in Tokyo before heading back to Spain."
       }
     ],
     "money": "13,000 ¥ tour (tickets & minivan inc.) + Shinkansen + Houtou lunch"
@@ -784,7 +786,7 @@ export const days = [
         "text": "Last walk through the neighborhood and souvenir shopping (flavored Kit-Kats)."
       },
       {
-        "text": "🚆 TRANSFER TO NARITA AIRPORT — 2 OPTIONS (Recommended: Keisei Skyliner)\n\n🟢 RECOMMENDED OPTION: KEISEI SKYLINER (from Keisei-Ueno)\n- Transfer: KOKO HOTEL Residence Asakusa Kappabashi → Keisei-Ueno Station. For 5 people with large luggage, taking a direct taxi from the hotel door to Keisei-Ueno (~10 min) is highly recommended to simplify logistics.\n- Train: Keisei Skyliner from Keisei-Ueno direct to Narita Airport (~41 min, reserved seats, ample luggage space).\n- Key advantage: Avoids hauling large suitcases through Tokyo Station transfers.\n- Schedule: Check and book once the final September 2026 timetable is available, ensuring arrival with plenty of margin for the 17:25 flight.\n\n🟡 VALID ALTERNATIVE: JR NARITA EXPRESS (N'EX)\n- Hotel → Tokyo Station (metro/taxi) → JR N'EX direct to Narita (~1h, reserved seat required)."
+        "text": "🚆 TRANSFER TO NARITA AIRPORT — 2 OPTIONS (Recommended: Keisei Skyliner)\n\n🟢 **RECOMMENDED OPTION: KEISEI SKYLINER (from Keisei-Ueno)**\n- Transfer to the train: KOKO HOTEL Residence Asakusa Kappabashi → Keisei-Ueno Station. For 5 people with large suitcases, it's well worth considering a direct taxi from the hotel door to Keisei-Ueno (~10 min), notably simplifying the logistics.\n- Train: Keisei Skyliner from Keisei-Ueno direct to Narita Airport (~41 min). Express train with reserved seat and plenty of luggage space.\n- Advantage: Avoids having to drag large luggage through corridors and transfers to reach Tokyo Station.\n- Final schedule: Check and book once the definitive September 2026 timetable is published, making sure to arrive at Narita with enough margin for the 17:25 flight.\n\n🟡 **VALID ALTERNATIVE: JR NARITA EXPRESS (N'EX)**\n- Transfer: Hotel → Tokyo Station (metro or taxi) → JR Narita Express (N'EX) direct to Narita (~1h by train, reserved seat required).\n- The N'EX is still a perfectly valid option if you'd rather leave from Tokyo Station.\n\n💡 Keep enough margin to be at the Narita terminal before 14:30 for check-in and security."
       },
       {
         "text": "Check-in and security checks at Narita."

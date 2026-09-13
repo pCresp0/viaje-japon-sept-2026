@@ -362,13 +362,13 @@ export const days = [
         "text": "🏨 **CHECK-IN AT PAHINGA: HOTEL RESOL TRINITY KANAZAWA** (https://www.google.com/maps/search/?api=1&query=Hotel+Resol+Trinity+Kanazawa)\n\nOpisyal na check-in (15:00) at oras para magpahinga sa kwarto bago ituloy ang hapon. Magandang oras para maligo o magpahinga lang nang kaunti."
       },
       {
-        "text": "🏯 NAGAMACHI SAMURAI DISTRICT. Lakad sa: kalye na may earthen walls; kanal; dating tahanan ng samurai. Residential ang lugar at puwedeng libutin nang libre. Kung gustong pumasok sa isang residensya, unahin ang Nomura-ke: bukas 08:30–17:30 sa September. Entrance ¥550 (~3.5€). Walang kailangang reserbasyon. Kawili-wili lalo na ang loob na hardin.\n\n💡 Binibisita ngayon, sa umaga/tanghali, dahil tahimik at residential na lugar ito na walang partikular na atmosphere sa gabi, at nagsasara ang Nomura-ke ng 17:30."
+        "text": "🏯 NAGAMACHI SAMURAI DISTRICT. Kapitbahayan kung saan nakatira ang mga samurai ng Maeda clan, may mga kalye at earthen wall na orihinal mula sa Edo era.\n\n📍 Ano ang makikita dito:\n• Ang mga earthen wall (dorobei), na may straw thatching tuwing taglamig\n• Ang Nomura-ke samurai house: ang Jyōdan-no-ma room at ang mga pintadong pinto nito\n• Ang hardin ng Nomura-ke, Kobori Enshū style\n• Ang makikitid na kanal na dumadaloy sa buong kapitbahayan\n\nResidential ang kapitbahayan at puwedeng libutin nang libre sa paglalakad. Kung gusto nating pumasok sa isang residence, unahin ang Nomura-ke: Bukas 08:30–17:30 sa Setyembre. Bayad na ¥550 (~3.5€). Hindi na kailangang mag-reserve. Espesyal na kawili-wili ang hardin sa loob.\n\n💡 Bibisitahin natin ngayon, sa umaga, dahil ito ay tahimik na residential na kapitbahayan na walang partikular na buhay sa gabi, at nagsasara ang Nomura-ke ng 17:30."
       },
       {
         "text": "🚶 Papuntang Higashi Chaya (o Loop Bus kung ayaw maglakad)."
       },
       {
-        "text": "🏮 HIGASHI CHAYA DISTRICT. Lakad sa makasaysayang kalye at mga teahouse. Opsyonal: SHIMA — lumang teahouse, bukas 09:30–17:30 sa September. Entrance: ¥500 (~3€) + opsyonal na dagdag bayad para sa tsaa/matamis. Kung gustong pumasok sa SHIMA, gawin ito bago mag-17:15 (baka hindi na maabutan ngayon — tignan pagdating). Opsyon sa pagkain: matcha + wagashi; matcha ice cream; gold-leaf ice cream.\n\n💡 Binibisita ngayon, sa paglubog ng araw: maraming tindahan ang nagsasara mga 17:00-18:00 at nawawalan ng turista ang lugar, na nag-iiwan ng mas authentic na atmosphere habang nagsisindi ang gas lamps."
+        "text": "🏮 HIGASHI CHAYA DISTRICT. Ang pinakamalaki at pinakamahusay na napreserba sa tatlong teahouse district ng Kanazawa, itinatag noong 1820.\n\n📍 Ano ang makikita dito:\n• Ang pangunahing kalye, may dalawang-palapag na ochaya at wooden lattice facade\n• Shima: dating teahouse na ginawang museo\n• Kaikaro: aktibong ochaya na may bulwagang dekorado ng gold leaf\n• Mga tindahan ng gold leaf at lokal na crafts\n\nMaglakad-lakad sa makasaysayang kalye at mga teahouse. Opsyonal: SHIMA — dating teahouse, bukas 09:30–17:30 sa Setyembre. Bayad: ¥500 (~3€) + opsyonal na dagdag bayad para sa tsaa/matamis. Kung gusto ninyong pumasok sa SHIMA, gawin ito bago mag-17:15 (baka wala nang oras ngayon — tingnan pagdating). Opsyon sa pagkain: matcha + wagashi; matcha ice cream; gold-leaf ice cream.\n\n💡 Bibisitahin natin ngayon, sa paglubog ng araw: maraming tindahan ang nagsasara ng mga 17:00-18:00 at nawawalan ng turista ang distrito, na nag-iiwan ng mas authentic na atmosphere habang nagsisindi ang mga gas lamp."
       },
       {
         "text": "🍜 HAPUNAN SA KANAZAWA. Inirerekomenda na manatili sa gitna ng Kanazawa, mas mabuti sa paligid ng Korinbo / Katamachi / Omicho. Subukan ang Kanazawa oden, sushi, o isda mula sa Sea of Japan."
@@ -664,7 +664,7 @@ export const days = [
         "text": "Maglakad papuntang Harajuku sa Takeshita Street, patungo sa Meiji Shrine sa Yoyogi Park."
       },
       {
-        "text": "Gabi sa Shinjuku: libreng Metropolitan Government observation deck, hapunan sa Omoide Yokocho, mga neon sa Kabukicho."
+        "text": "Gabi sa Shinjuku: libreng observation deck ng Metropolitan Government, hapunan sa Omoide Yokocho at paglalakad sa ilalim ng neon lights ng Kabukicho.\n\n🛍️ **PAMIMILI: UNIQLO AT DON QUIJOTE (SEIKO WATCH).** Samantalahin ang lugar para sa dalawang mabilisang hintuan: may malaking Uniqlo malapit sa Shinjuku Station (magandang kalidad na basics sa magandang presyo), at ang Don Quijote sa Kabukicho ay may watch section sa itaas na palapag (4th floor) na may Seiko, Citizen at Casio sa mas murang presyo -- nakumpirma ng iba't ibang source bilang isa sa pinakamagaganda sa gitna ng Tokyo para dito. Pareho silang bukas hanggang gabi, bagay na bagay sa gabing paglalakad."
       },
       {
         "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nPagbalik gamit ang metro mula Shinjuku papunta sa ating residence sa Asakusa Kappabashi para magpahinga (3rd gabi sa Tokyo)."
@@ -724,52 +724,54 @@ export const days = [
     "money": "Humigit-kumulang €40 (pagkain) + pamimili"
   },
   {
-    "title": "Eksklusibong Pamamasyal sa Mount Fuji",
-    "cities": "Mishima, Chureito Pagoda, Oshino Hakkai, Aokigahara, Shiraito, Mga Lawa ng Fuji",
-    "summary": "Buong araw na tour (8 oras) sakay ng pribadong minivan kasama ang opisyal na Spanish-speaking guide (Ken Kaneshima · Excursiones Fujiyama). Pagbisita sa Chureito Pagoda, lumang dambana ng Kitaguchi Hongu, tradisyunal na nayon ng Oshino Hakkai, gubat ng Aokigahara, talon ng Shiraito at ruta ng mga lawa. Tikman ang Houtou noodles. Thibaut, tingnan natin kung mapapatunayan mong may silbi ang CrossFit na yan.",
-    "history": "Ang Mount Fuji (3,776 m) ang sagradong bulkan at tanyag na simbolo ng Japan.",
+    "title": "Nikko Day Trip",
+    "cities": "Nikko",
+    "summary": "Buong araw ng kalikasan at mga templo, 2 oras mula Tokyo sa direktang tren mula Asakusa (literal na katabi ng hotel): ang Toshogu Shrine, mausoleum ng shogun na si Tokugawa Ieyasu at UNESCO World Heritage Site, ang Shinkyo Bridge, at kung may oras pa, ang Kegon Falls at Lake Chuzenji sa Irohazaka mountain road. Farewell dinner ng grupo sa gabi sa Tokyo.",
+    "history": "Umunlad ang Nikko sa paligid ng Toshogu Shrine, itinayo noong 1617 bilang mausoleum ni Tokugawa Ieyasu, ang tagapagtatag ng shogunate na namuno sa Japan nang mahigit 250 taon. Pinalawak ito ng apo niyang si Iemitsu hanggang maging ang mayamang dekorasyon na kumplex na nakikita ngayon, na may mahigit 5 milyong piraso ng gold leaf na nakakalat sa mga gusali nito.",
     "schedule": [
       {
-        "text": "Tingnan ang live webcams sa mtfujitoday.com at isfujivisible.com mula sa hotel sa Tokyo (patakaran sa 06:15 AM)."
+        "time": "06:45",
+        "text": "Gising na at mabilisang almusal sa hotel."
       },
       {
-        "text": "🚶 INIREREKOMENDANG ORAS NG PAG-ALIS SA HOTEL (~06:30 · KOKO HOTEL Residence Asakusa Kappabashi → Tokyo Station).\nInirerekomendang pag-alis sa hotel na may sapat na palugit (~06:30; para sa 5 tao):\n1. Maglakad ng ~10 min papuntang Tawaramachi Station (Tokyo Metro).\n2. Sumakay sa Ginza Line papuntang Ueno Station.\n3. Mula Ueno, lumipat papuntang Tokyo Station (JR Yamanote / Keihin-Tohoku Line) at maglakad papunta sa Tokaido Shinkansen platforms.\n⚠️ Kritikal na koneksyon: Tinitiyak ng palugit na ito na makarating nang maaga bago ang 07:27 Kodama 805 para makipagkita kay guide Ken Kaneshima sa Mishima ng 08:25."
+        "time": "07:15",
+        "text": "Papuntang Tobu-Asakusa Station (parehong lugar ng hotel, ilang minuto lang na lakad)."
       },
       {
-        "text": "🚅 Tokaido-Sanyo Shinkansen KODAMA 805. Alis ng Tokyo ng 07:27, dating sa Mishima ng 08:20. MAHALAGA: Dapat itong Kodama upang huminto sa Mishima."
+        "time": "~07:30",
+        "text": "🚅 Tobu Limited Express papuntang Tobu-Nikko Station.\n\n🎫 **SUICA:** ❌ HINDI (kailangan ng express ticket na may upuan)\n📅 **RESERBASYON:** 🔴 Bibilhin pa\n🛒 **PAMBILI:** Sa mga makina o ticket counter sa Tobu Asakusa Station, o maaga sa app/website ng Tobu Railway. Mga ¥2,700/tao isang-daan.\n\nBiyahe nang mga 2 oras. May Tobu World Heritage Pass din (~¥4,160), na kasama ang round trip pati unlimited na bus sa Nikko sa loob ng 2 araw -- puwedeng mas sulit kung gagawin ang ruta ng Chuzenji/Kegon."
       },
       {
-        "text": "Magkita sa Mishima Station South Exit (08:25 AM) kasama si Ken Kaneshima."
+        "time": "~09:30",
+        "text": "Pagdating sa Tobu-Nikko Station. Kumuha ng brochure/mapa sa tourist center ng estasyon."
       },
       {
-        "text": "Chureito Pagoda (Arakurayama Sengen): iconic 5-story pagoda kasama ang Mt. Fuji."
+        "time": "10:00–13:00",
+        "text": "🏯 **TOSHOGU SHRINE AT PALIGID NITO.** Shinkyo Bridge (ang kilalang pulang tulay sa Ilog Daiya, simbolo ng Nikko). Toshogu complex: ang mayamang dekorasyon na Yomeimon Gate, ang relief ng mga unggoy na 'walang nakita, walang narinig, walang sinabi', at ang mausoleum ni Tokugawa Ieyasu. Rinno-ji at Futarasan Jinja, ang dalawa pang templo sa World Heritage ensemble.\n\n🎫 Kombinadong entrance sa Toshogu + Futarasan + Taiyuin: mga ¥2,100/tao. Toshogu lang: mga ¥1,600/tao.\n\n💡 Kailangan umakyat ng maraming hagdan at maglakad sa hindi pantay na lupa -- kailangan ng komportableng sapatos."
       },
       {
-        "text": "Kitaguchi Hongu Fuji Sengen Shrine: simula ng mga deboto sa gitna ng matatandang puno ng cedar."
+        "time": "13:00–14:00",
+        "text": "🍜 Lokal na tanghalian: subukan ang yuba (balat ng tofu), specialty ng Nikko sa loob ng mga siglo, sa alinman sa mga restaurant malapit sa pasukan ng dambana."
       },
       {
-        "text": "Nayon ng Oshino Hakkai: magandang baryo na may malilinaw na lawa at bahay na may bubong na pawid."
+        "time": "14:00–17:00",
+        "text": "🚌 **OPSYONAL KUNG MAY ORAS: LAKE CHUZENJI AT KEGON FALLS.** Bus mula Tobu-Nikko Station papunta sa Irohazaka mountain road (matatarik na kurbada, magagandang tanawin) hanggang sa Lake Chuzenji, sa paanan ng Mount Nantai. Ang Kegon Falls, 97m ang taas, ay ilang hakbang lang mula sa lawa -- puwedeng bumaba gamit ang elevator papunta sa mas mababang plataporma para makita ito nang malapitan (entrance mga ¥570).\n\n💡 Kung mas gusto ng grupo na hindi masyadong patagalin ang araw, puwedeng laktawan ang bahaging ito at mas magpahinga sa palibot ng Toshogu, o maglakad-lakad sa gitna ng Nikko."
       },
       {
-        "text": "Tradisyunal na tanghalian: pagtikim ng Houtou noodles sa mainit na sabaw ng miso."
+        "time": "~17:30",
+        "text": "Bumalik gamit ang bus sa Tobu-Nikko Station."
       },
       {
-        "text": "Gubat ng Aokigahara: 'Dagat ng mga Puno' sa ibabaw ng tumigas na lava."
+        "time": "~18:00",
+        "text": "🚅 Tobu Limited Express pabalik sa Tobu-Asakusa Station (mga 2 oras)."
       },
       {
-        "text": "Talon ng Shiraito: talon na parang telang seda na bumabagsak mula sa batong bulkan."
+        "time": "20:00",
+        "text": "🍜 Farewell dinner ng grupo sa Tokyo (Asakusa)."
       },
       {
-        "text": "Ruta sa mga Lawa ng Fuji (Yamanakako, Saiko, Motosuko)."
-      },
-      {
-        "text": "Pagdating sa Shin-Fuji Station (~17:30) at pagbalik sa Tokyo sakay ng bullet train (~60 min)."
-      },
-      {
-        "text": "🍜 Farewell na hapunan ng grupo sa Tokyo (Asakusa / Ginza)."
-      },
-      {
-        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nPagbalik sa residence sa Asakusa Kappabashi para ihanda ang mga bagahe para sa check-out at magpahinga (6th at huling gabi sa Tokyo)."
+        "time": "~21:30",
+        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nHuling gabi sa Tokyo bago bumalik sa Spain."
       }
     ],
     "money": "13,000 ¥ tour (kasama ang tiket at minivan) + Shinkansen + pagkain"
@@ -784,7 +786,7 @@ export const days = [
         "text": "Huling paglalakad sa paligid ng kapitbahayan at pamimili ng souvenir (mga may lasang Kit-Kats)."
       },
       {
-        "text": "Narita Express (N'EX) papuntang airport (eksaktong 1h)."
+        "text": "🚆 PAGPUNTA SA NARITA AIRPORT — 2 OPSYON (Inirerekomenda: Keisei Skyliner)\n\n🟢 **INIREREKOMENDANG OPSYON: KEISEI SKYLINER (mula Keisei-Ueno)**\n- Papuntang tren: KOKO HOTEL Residence Asakusa Kappabashi → Keisei-Ueno Station. Para sa 5 tao na may malalaking maleta, sulit isaalang-alang ang direktang taxi mula sa pintuan ng hotel hanggang Keisei-Ueno (~10 min), na malaking nagpapadali sa logistics.\n- Tren: Keisei Skyliner mula Keisei-Ueno diretso sa Narita Airport (~41 min). Express train na may reserved seat at maluwag na espasyo para sa bagahe.\n- Bentahe: Iniiwasan ang paghila ng malaking bagahe sa mga koridor at pagpapalit ng sasakyan papunta sa Tokyo Station.\n- Pangwakas na oras: Tingnan at mag-book kapag nailathala na ang pangwakas na iskedyul ng Setyembre 2026, siguraduhing may sapat na palugit para makarating sa Narita bago ang flight ng 17:25.\n\n🟡 **VALID NA ALTERNATIBO: JR NARITA EXPRESS (N'EX)**\n- Papuntang: Hotel → Tokyo Station (metro o taxi) → JR Narita Express (N'EX) diretso sa Narita (~1h na tren, kailangan ng reserved seat).\n- Ang N'EX ay isa pa ring perpektong valid na opsyon kung mas gusto umalis mula sa Tokyo Station.\n\n💡 Panatilihin ang sapat na palugit para makarating sa Narita terminal bago mag-14:30 para sa check-in at seguridad."
       },
       {
         "text": "Check-in at mga pagsusuri sa seguridad sa Narita."
