@@ -556,7 +556,7 @@ export const days = [
         "text": "🚇 TOKYO STATION → KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI\nAng hotel ay nasa: 3-24-2 Nishi-Asakusa, Taito-ku.\nMga Opsyon:\nSimpleng opsyon: JR mula Tokyo → Ueno + Tokyo Metro Ginza Line Ueno → Tawaramachi + 10 min lakad pa-hotel.\nAlternatibo: Tokyo → Ueno at mag-taxi kung marami tayong bagahe.\nAng hotel ay halos:\n- 4 min lakad mula sa Tsukuba Express Asakusa Station B\n- 10 min mula sa Tawaramachi Station\n- 10 min mula sa Iriya Station.\n\nHuwag i-reserve ang transportasyong ito.\nIbabayad doon gamit ang IC card/tiket.\nDahil 5 tao at may maleta, kung pagod, i-konsidera ang taxi mula Tokyo Station direkta sa hotel. Hindi obligadong i-reserve."
       },
       {
-        "text": "🏨 **CHECK-IN: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nPagdating at check-in (opisyal mula 15:00). Kung maaga, iwan ang bagahe sa reception kung pwede at punta sa Akihabara.\n\nAddress: 3-24-2 Nishi-Asakusa, Taito-ku. Maganda ang lokasyon papuntang Akihabara.\n\n🧳 **Ang 5 malalaking maleta na ipinadala mula Kyoto (Takkyubin/Yamato):**\n- Tracking number: **753-3690-9535**.\n- Iskedyul ng delivery: **Sept 15, umaga (AM)** — ibig sabihin, dapat nasa hotel na ito BAGO kayo dumating sa hapon. Sa check-in, itanong sa reception kung nandoon na ang mga ito.\n- Resibo sa pangalan ni Juan Carlos Rodríguez Pérez, sender Hotel Keihan Kyoto Hachijoguchi.\n- 5 piraso (品名: Clothes), kabuuang halaga ¥13,060 (bayad na sa hotel sa Kyoto noong ipinadala)."
+        "text": "🏨 **CHECK-IN: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nPagdating at check-in (opisyal mula 15:00). Kung maaga, iwan ang bagahe sa reception kung pwede at punta sa Akihabara.\n\nAddress: 3-24-2 Nishi-Asakusa, Taito-ku. Maganda ang lokasyon papuntang Akihabara.\n\n🧳 **Ang 5 malalaking maleta na ipinadala mula Kyoto (Takkyubin/Yamato):**\n- Tracking number: **753-3690-9535**.\n- Iskedyul ng delivery: **Sept 15, umaga (AM)** — ibig sabihin, dapat nasa hotel na ito BAGO kayo dumating sa hapon. Sa check-in, itanong sa reception kung nandoon na ang mga ito.\n- Resibo sa pangalan ni Juan Carlos Rodríguez Pérez, sender Hotel Keihan Kyoto Hachijoguchi.\n- 5 piraso (品名: Clothes), kabuuang halaga ¥13,060 (bayad na sa hotel sa Kyoto noong ipinadala)."
       },
       {
         "text": "Hapon sa Akihabara.\nBisitahin: Akihabara Electric Town, Radio Kaikan, Mandarake, mga tindahan ng electronics, anime/manga, figures, arcades, second-hand shops.\n\nMandarake Complex: 12:00–20:00. Bukas araw-araw. Kaya't ang pagbisita ng 15:00 ay saktong-sakto. Sergio, hindi ka pwedeng kumuha ng kahit ano sa mga basurahan kahit gaano pa ka 'bargain', at hindi mo na mapagkakasya ang higit pang board games sa maleta mo, may higit 130 ka na! Dito siguradong masisiraan ng bait si Pablo sa pagbili ng mga gadget na sinasabi ng AI sa kanya."
@@ -565,7 +565,7 @@ export const days = [
         "text": "TANGHALIAN/HAPUNAN\nTANGHALIAN\nDahil maaga ang almusal at sa Shinkansen ang pangunahing tanghalian, hindi na kailangang mag-reserve ng tanghalian sa Akihabara.\nKung nagugutom pagdating, kumain ng mabilis sa Akihabara. Mga karaniwang opsyon: ramen, curry, gyudon, kaiten sushi, tonkatsu, Japanese fast food.\n\nHAPUNAN\nIwan ang hapunan para sa Akihabara o Asakusa.\nHuwag ipagpalagay na lahat ng restaurant ay bukas hanggang gabi.\nPara sa isang partikular na restaurant at dahil 5 tao, mag-reserve kung sikat ang napili."
       },
       {
-        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nBumalik sa residence sa Tokyo para magpahinga at makasama ulit ang malalaking maleta mula Kyoto (unang gabi sa Tokyo)."
+        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nBumalik sa residence sa Tokyo para magpahinga at makasama ulit ang malalaking maleta mula Kyoto (unang gabi sa Tokyo)."
       },
       {
         "text": "TANGHALIAN\nDahil maaga ang almusal at sa Shinkansen ang pangunahing tanghalian, hindi na kailangang mag-reserve ng tanghalian sa Akihabara.\nKung nagugutom pagdating, kumain ng mabilis sa Akihabara. Mga karaniwang opsyon: ramen, curry, gyudon, kaiten sushi, tonkatsu, Japanese fast food.\n\nHAPUNAN\nIwan ang hapunan para sa Akihabara o Asakusa.\nHuwag ipagpalagay na lahat ng restaurant ay bukas hanggang gabi.\nPara sa isang partikular na restaurant at dahil 5 tao, mag-reserve kung sikat ang napili."
@@ -607,7 +607,7 @@ export const days = [
         "text": "🍜 Hapunan sa paligid ng Shinjuku o habang pauwi sa hotel."
       },
       {
-        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nBalik sa ating tinutuluyan sa Asakusa Kappabashi para magpahinga (2nd gabi sa Tokyo)."
+        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nBalik sa ating tinutuluyan sa Asakusa Kappabashi para magpahinga (2nd gabi sa Tokyo)."
       },
       {
         "text": "🏮 **OPSYONAL: SENSŌ-JI SA GABI**\n\nMga 10 minutong lakad lang ang hotel mula sa Sensō-ji / Kaminarimon. Kung may sobrang lakas pa pagkatapos ng excursion, maikling lakad papuntang naiilawang templo (libre; ibang-iba ang atmosphere kaysa sa araw)."
@@ -631,7 +631,7 @@ export const days = [
         "text": "Gabi sa Shinjuku: libreng observation deck ng Metropolitan Government, hapunan sa Omoide Yokocho at paglalakad sa ilalim ng neon lights ng Kabukicho.\n\n🛍️ **PAMIMILI: UNIQLO AT DON QUIJOTE (SEIKO WATCH).** Samantalahin ang lugar para sa dalawang mabilisang hintuan: may malaking Uniqlo malapit sa Shinjuku Station (magandang kalidad na basics sa magandang presyo), at ang Don Quijote sa Kabukicho ay may watch section sa itaas na palapag (4th floor) na may Seiko, Citizen at Casio sa mas murang presyo -- nakumpirma ng iba't ibang source bilang isa sa pinakamagaganda sa gitna ng Tokyo para dito. Pareho silang bukas hanggang gabi, bagay na bagay sa gabing paglalakad."
       },
       {
-        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nPagbalik gamit ang metro mula Shinjuku papunta sa ating residence sa Asakusa Kappabashi para magpahinga (3rd gabi sa Tokyo)."
+        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nPagbalik gamit ang metro mula Shinjuku papunta sa ating residence sa Asakusa Kappabashi para magpahinga (3rd gabi sa Tokyo)."
       }
     ],
     "money": "Humigit-kumulang €40 (pagkain)"
@@ -658,7 +658,7 @@ export const days = [
         "text": "🍜 Hapunan sa Odaiba (Aqua City / DiverCity na may tanawin ng Tokyo Bay)."
       },
       {
-        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nBalik sa pamamagitan ng metro/Yurikamome sa ating tinutuluyan sa Asakusa Kappabashi para magpahinga (4th gabi sa Tokyo)."
+        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nBalik sa pamamagitan ng metro/Yurikamome sa ating tinutuluyan sa Asakusa Kappabashi para magpahinga (4th gabi sa Tokyo)."
       }
     ],
     "money": "Humigit-kumulang €50 (pagkain at Mori Tower)"
@@ -682,7 +682,7 @@ export const days = [
         "text": "🍜 Hapunan sa paligid ng Nakano o Asakusa."
       },
       {
-        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nPagbalik sa residence para magpahinga at maghanda para sa maagang simula ng Mount Fuji excursion (5th gabi sa Tokyo)."
+        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nPagbalik sa residence para magpahinga at maghanda para sa maagang simula ng Mount Fuji excursion (5th gabi sa Tokyo)."
       }
     ],
     "money": "Humigit-kumulang €40 (pagkain) + pamimili"
@@ -735,7 +735,7 @@ export const days = [
       },
       {
         "time": "~21:30",
-        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nHuling gabi sa Tokyo bago bumalik sa Spain."
+        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nHuling gabi sa Tokyo bago bumalik sa Spain."
       }
     ],
     "money": "13,000 ¥ tour (kasama ang tiket at minivan) + Shinkansen + pagkain"

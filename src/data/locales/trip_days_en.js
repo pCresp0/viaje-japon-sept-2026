@@ -556,7 +556,7 @@ export const days = [
         "text": "🚇 TOKYO STATION → KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI\nThe hotel is at: 3-24-2 Nishi-Asakusa, Taito-ku.\nOptions:\nSimple option: JR from Tokyo → Ueno + Tokyo Metro Ginza Line Ueno → Tawaramachi + 10 min walk to the hotel.\nAlternatively: Tokyo → Ueno and then taxi if we carry a lot of luggage.\nThe hotel is approximately:\n- 4 min walk from Tsukuba Express Asakusa Station B\n- 10 min from Tawaramachi Station\n- 10 min from Iriya Station.\n\nDo not reserve this transport.\nIt is paid there using an IC card/ticket.\nWith 5 people and suitcases, if we are tired, consider a taxi from Tokyo Station directly to the hotel. It is not mandatory to reserve it."
       },
       {
-        "text": "🏨 **CHECK-IN: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nArrival and check-in (official from 15:00). If we arrive early, leave bags at reception if allowed and head to Akihabara.\n\nAddress: 3-24-2 Nishi-Asakusa, Taito-ku. Well placed for Akihabara by public transport.\n\n🧳 **The 5 big suitcases sent from Kyoto (Takkyubin/Yamato):**\n- Tracking number: **753-3690-9535**.\n- Scheduled delivery: **Sept 15, morning slot (AM)** — meaning they should have arrived at the hotel BEFORE you get there in the afternoon. When checking in, ask at reception if they already have them.\n- Receipt under the name of Juan Carlos Rodríguez Pérez, sender Hotel Keihan Kyoto Hachijoguchi.\n- 5 pieces (品名: Clothes), total cost ¥13,060 (already paid at the Kyoto hotel when sending them)."
+        "text": "🏨 **CHECK-IN: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nArrival and check-in (official from 15:00). If we arrive early, leave bags at reception if allowed and head to Akihabara.\n\nAddress: 3-24-2 Nishi-Asakusa, Taito-ku. Well placed for Akihabara by public transport.\n\n🧳 **The 5 big suitcases sent from Kyoto (Takkyubin/Yamato):**\n- Tracking number: **753-3690-9535**.\n- Scheduled delivery: **Sept 15, morning slot (AM)** — meaning they should have arrived at the hotel BEFORE you get there in the afternoon. When checking in, ask at reception if they already have them.\n- Receipt under the name of Juan Carlos Rodríguez Pérez, sender Hotel Keihan Kyoto Hachijoguchi.\n- 5 pieces (品名: Clothes), total cost ¥13,060 (already paid at the Kyoto hotel when sending them)."
       },
       {
         "text": "Afternoon in Akihabara.\nVisit: Akihabara Electric Town, Radio Kaikan, Mandarake, electronics stores, anime/manga, figures, arcades, second-hand shops.\n\nMandarake Complex: 12:00–20:00. Open every day. Therefore, the 15:00 visit fits perfectly. Sergio, you can't take anything from the dumpsters no matter what a 'bargain' it is, and you can't fit any more board games in your suitcase, you already have over 130! This is where Pablo will go crazy buying gadgets the AI tells him to."
@@ -565,7 +565,7 @@ export const days = [
         "text": "LUNCH\nSince breakfast will be early and the main meal will be on the Shinkansen, it is not necessary to reserve a meal in Akihabara.\nIf we are hungry upon arrival, eat something quick in Akihabara. Typical options: ramen, curry, gyudon, kaiten sushi, tonkatsu, Japanese fast food.\n\nDINNER\nLeave dinner for Akihabara or Asakusa.\nDo not assume all restaurants stay open very late.\nFor a specific restaurant and being 5 people, reserve if a popular one is decided on."
       },
       {
-        "text": "🏨 **RETURN TO HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nReturn to our Tokyo residence to rest and reunite with the large luggage forwarded from Kyoto (1st night in Tokyo)."
+        "text": "🏨 **RETURN TO HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nReturn to our Tokyo residence to rest and reunite with the large luggage forwarded from Kyoto (1st night in Tokyo)."
       },
       {
         "text": "LUNCH\nSince breakfast will be early and the main meal will be on the Shinkansen, it is not necessary to reserve a meal in Akihabara.\nIf we are hungry upon arrival, eat something quick in Akihabara. Typical options: ramen, curry, gyudon, kaiten sushi, tonkatsu, Japanese fast food.\n\nDINNER\nLeave dinner for Akihabara or Asakusa.\nDo not assume all restaurants stay open very late.\nFor a specific restaurant and being 5 people, reserve if a popular one is decided on."
@@ -607,7 +607,7 @@ export const days = [
         "text": "🍜 Dinner around Shinjuku or on the way back to the hotel."
       },
       {
-        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nBack to our residence in Asakusa Kappabashi to rest (2nd night in Tokyo)."
+        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nBack to our residence in Asakusa Kappabashi to rest (2nd night in Tokyo)."
       },
       {
         "text": "🏮 **OPTIONAL: SENSŌ-JI AT NIGHT**\n\nThe hotel is ~10 min walk from Sensō-ji / Kaminarimon. If there's energy left after the excursion, a short walk to the illuminated temple (free; a very different atmosphere from daytime)."
@@ -631,7 +631,7 @@ export const days = [
         "text": "Night in Shinjuku: free Metropolitan Government observation deck, dinner in Omoide Yokocho and a stroll under the neon lights of Kabukicho.\n\n🛍️ **SHOPPING: UNIQLO AND DON QUIJOTE (SEIKO WATCH).** Take the chance for two quick stops: there's a large Uniqlo near Shinjuku Station (good-quality basics at a good price), and the Don Quijote in Kabukicho has a watch section on the upper floor (4th floor) with Seiko, Citizen and Casio at discounted prices -- confirmed by several sources as one of the best in central Tokyo for this. Both open late, fitting well with the evening stroll."
       },
       {
-        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nBack by metro from Shinjuku to our residence in Asakusa Kappabashi to rest (3rd night in Tokyo)."
+        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nBack by metro from Shinjuku to our residence in Asakusa Kappabashi to rest (3rd night in Tokyo)."
       }
     ],
     "money": "Approx. €40 (meals)"
@@ -658,7 +658,7 @@ export const days = [
         "text": "🍜 Dinner in Odaiba (Aqua City / DiverCity with views of Tokyo Bay)."
       },
       {
-        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nBack by metro/Yurikamome to our residence in Asakusa Kappabashi to rest (4th night in Tokyo)."
+        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nBack by metro/Yurikamome to our residence in Asakusa Kappabashi to rest (4th night in Tokyo)."
       }
     ],
     "money": "Approx. €50 (meals & Mori Tower ticket)"
@@ -682,7 +682,7 @@ export const days = [
         "text": "🍜 Dinner around Nakano or Asakusa."
       },
       {
-        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nBack to the residence to rest and get ready for the early start of the Mount Fuji excursion (5th night in Tokyo)."
+        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nBack to the residence to rest and get ready for the early start of the Mount Fuji excursion (5th night in Tokyo)."
       }
     ],
     "money": "Approx. €40 (meals) + shopping"
@@ -735,7 +735,7 @@ export const days = [
       },
       {
         "time": "~21:30",
-        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nLast night in Tokyo before heading back to Spain."
+        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nLast night in Tokyo before heading back to Spain."
       }
     ],
     "money": "13,000 ¥ tour (tickets & minivan inc.) + Shinkansen + Houtou lunch"

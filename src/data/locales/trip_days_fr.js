@@ -556,7 +556,7 @@ export const days = [
         "text": "🚇 TOKYO STATION → KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI\nL'hôtel est au : 3-24-2 Nishi-Asakusa, Taito-ku.\nOptions :\nOption simple : JR de Tokyo → Ueno + Tokyo Metro Ginza Line Ueno → Tawaramachi + 10 min à pied de l'hôtel.\nAlternativement : Tokyo → Ueno puis taxi si nous avons beaucoup de bagages.\nL'hôtel est à environ :\n- 4 min à pied de Tsukuba Express Asakusa Station B\n- 10 min de Tawaramachi Station\n- 10 min d'Iriya Station.\n\nNe réservez pas ce transport.\nPayez sur place par carte IC/billet.\nÀ 5 personnes avec valises, si fatigués, envisagez un taxi de Tokyo Station directement à l'hôtel. Il n'est pas obligatoire de le réserver."
       },
       {
-        "text": "🏨 **CHECK-IN : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nArrivée et check-in (officiel dès 15:00). Si nous arrivons plus tôt, laisser les bagages à la réception si possible et partir vers Akihabara.\n\nAdresse : 3-24-2 Nishi-Asakusa, Taito-ku. Bien situé pour Akihabara en transports en commun.\n\n🧳 **Les 5 grandes valises envoyées depuis Kyoto (Takkyubin/Yamato) :**\n- Numéro de suivi : **753-3690-9535**.\n- Livraison prévue : **15/09, créneau du matin (AM)** — c'est-à-dire qu'elles devraient être arrivées à l'hôtel AVANT vous l'après-midi. Au check-in, demander à la réception si elles sont déjà là.\n- Reçu au nom de Juan Carlos Rodríguez Pérez, expéditeur Hotel Keihan Kyoto Hachijoguchi.\n- 5 colis (品名 : Clothes), coût total ¥13 060 (déjà payé à l'hôtel de Kyoto lors de l'envoi)."
+        "text": "🏨 **CHECK-IN : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nArrivée et check-in (officiel dès 15:00). Si nous arrivons plus tôt, laisser les bagages à la réception si possible et partir vers Akihabara.\n\nAdresse : 3-24-2 Nishi-Asakusa, Taito-ku. Bien situé pour Akihabara en transports en commun.\n\n🧳 **Les 5 grandes valises envoyées depuis Kyoto (Takkyubin/Yamato) :**\n- Numéro de suivi : **753-3690-9535**.\n- Livraison prévue : **15/09, créneau du matin (AM)** — c'est-à-dire qu'elles devraient être arrivées à l'hôtel AVANT vous l'après-midi. Au check-in, demander à la réception si elles sont déjà là.\n- Reçu au nom de Juan Carlos Rodríguez Pérez, expéditeur Hotel Keihan Kyoto Hachijoguchi.\n- 5 colis (品名 : Clothes), coût total ¥13 060 (déjà payé à l'hôtel de Kyoto lors de l'envoi)."
       },
       {
         "text": "Après-midi à Akihabara.\nVisitez : Akihabara Electric Town, Radio Kaikan, Mandarake, magasins d'électronique, anime/manga, figurines, arcades, boutiques d'occasion.\n\nMandarake Complex : 12:00–20:00. Ouvert tous les jours. Par conséquent, la visite à 15:00 convient parfaitement. Sergio, tu ne peux rien prendre dans les poubelles peu importe la 'bonne affaire', et tu ne peux plus mettre de jeux de société dans ta valise, tu en as déjà plus de 130 ! C'est là que Pablo va devenir fou en achetant des gadgets que l'IA lui dira d'acheter."
@@ -565,7 +565,7 @@ export const days = [
         "text": "DÉJEUNER/DÎNER\nDÉJEUNER\nComme le petit-déjeuner sera tôt et le repas principal dans le Shinkansen, il n'est pas nécessaire de réserver un repas à Akihabara.\nSi nous avons faim en arrivant, mangez un morceau rapide à Akihabara. Options typiques : ramen, curry, gyudon, kaiten sushi, tonkatsu, fast-food japonais.\n\nDÎNER\nLaissez le dîner pour Akihabara ou Asakusa.\nNe présumez pas que tous les restaurants restent ouverts très tard.\nPour un restaurant précis et à 5 personnes, réservez si vous en choisissez un populaire."
       },
       {
-        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nRetour à notre résidence à Tokyo pour se reposer et retrouver les grandes valises envoyées depuis Kyoto (1re nuit à Tokyo)."
+        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nRetour à notre résidence à Tokyo pour se reposer et retrouver les grandes valises envoyées depuis Kyoto (1re nuit à Tokyo)."
       },
       {
         "text": "DÉJEUNER\nComme le petit-déjeuner sera tôt et le repas principal dans le Shinkansen, il n'est pas nécessaire de réserver un repas à Akihabara.\nSi nous avons faim à l'arrivée, manger quelque chose de rapide à Akihabara. Options typiques : ramen, curry, gyudon, kaiten sushi, tonkatsu, fast-food japonais.\n\nDÎNER\nLaisser le dîner pour Akihabara ou Asakusa.\nNe pas supposer que tous les restaurants restent ouverts très tard.\nPour un restaurant précis et à 5 personnes, réserver si l'on choisit un lieu populaire."
@@ -607,7 +607,7 @@ export const days = [
         "text": "🍜 Dîner du côté de Shinjuku ou sur le chemin du retour à l'hôtel."
       },
       {
-        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nRetour à notre résidence à Asakusa Kappabashi pour se reposer (2e nuit à Tokyo)."
+        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nRetour à notre résidence à Asakusa Kappabashi pour se reposer (2e nuit à Tokyo)."
       },
       {
         "text": "🏮 **OPTIONNEL : SENSŌ-JI DE NUIT**\n\nL'hôtel est à ~10 min à pied de Sensō-ji / Kaminarimon. S'il reste de l'énergie après l'excursion, petite promenade jusqu'au temple illuminé (gratuit ; ambiance très différente de la journée)."
@@ -631,7 +631,7 @@ export const days = [
         "text": "Soirée à Shinjuku : belvédère gratuit du gouvernement métropolitain, dîner à Omoide Yokocho et promenade sous les néons de Kabukicho.\n\n🛍️ **SHOPPING : UNIQLO ET DON QUIJOTE (MONTRE SEIKO).** Profiter du coin pour deux arrêts rapides : il y a un grand Uniqlo près de la gare de Shinjuku (basiques de qualité à bon prix), et le Don Quijote de Kabukicho a un rayon montres à l'étage supérieur (4e étage) avec des Seiko, Citizen et Casio à prix réduits -- confirmé par plusieurs sources comme l'un des meilleurs du centre de Tokyo pour ça. Les deux sont ouverts tard, ce qui s'accorde bien avec la promenade nocturne."
       },
       {
-        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nRetour en métro depuis Shinjuku vers notre résidence à Asakusa Kappabashi pour se reposer (3e nuit à Tokyo)."
+        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nRetour en métro depuis Shinjuku vers notre résidence à Asakusa Kappabashi pour se reposer (3e nuit à Tokyo)."
       }
     ],
     "money": "Env. 40 € (repas)"
@@ -658,7 +658,7 @@ export const days = [
         "text": "🍜 Dîner à Odaiba (Aqua City / DiverCity avec vue sur la baie de Tokyo)."
       },
       {
-        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nRetour en métro/Yurikamome à notre résidence à Asakusa Kappabashi pour se reposer (4e nuit à Tokyo)."
+        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nRetour en métro/Yurikamome à notre résidence à Asakusa Kappabashi pour se reposer (4e nuit à Tokyo)."
       }
     ],
     "money": "Env. 50 € (repas et observatoire Mori)"
@@ -682,7 +682,7 @@ export const days = [
         "text": "🍜 Dîner du côté de Nakano ou Asakusa."
       },
       {
-        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nRetour à la résidence pour se reposer et se préparer pour le départ matinal de l'excursion au Mont Fuji (5e nuit à Tokyo)."
+        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nRetour à la résidence pour se reposer et se préparer pour le départ matinal de l'excursion au Mont Fuji (5e nuit à Tokyo)."
       }
     ],
     "money": "Env. 40 € (repas) + shopping"
@@ -735,7 +735,7 @@ export const days = [
       },
       {
         "time": "~21:30",
-        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Residence+Asakusa+Kappabashi)\n\nDernière nuit à Tokyo avant de rentrer en Espagne."
+        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nDernière nuit à Tokyo avant de rentrer en Espagne."
       }
     ],
     "money": "13 000 ¥ tour (entrées et minivan inc.) + Shinkansen + repas Houtou"
