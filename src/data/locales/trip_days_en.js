@@ -416,24 +416,36 @@ export const days = [
         "text": "🚌 Nohi Bus Shirakawa-go → Takayama.\n\n📍 **WHERE TO BOARD:** Shirakawa-go Bus Terminal (Ogimachi) — the same place the bus dropped you off on arrival, there's only one terminal in the village, so there's no way to miss it.\n\n🎫 **SUICA:** ❌ NO\n📅 **RESERVATION:** ✅ ALREADY BOUGHT (seats NOT individually reserved, it's a guaranteed-seat ticket without a seat number)\n🛒 **PURCHASE:** Use the confirmed 12GO / Nohi Bus reservation.\n\nDeparture: 13:15. Reservation: 12GO31992254. Booking ID M26125670. 5 confirmed seats. Approx. duration: 50 min. Estimated arrival at Takayama Nohi Bus Center: 14:05. Reservation required. Not JR. Does not require the Japan Rail Pass. Don't use Suica: use the bus reservation/ticket. ⚠️ **YOU MUST bring the PRINTED paper voucher** -- the driver must keep the physical paper, showing it on your phone or a screenshot is not accepted."
       },
       {
-        "time": "14:05–14:30",
-        "text": "Arrival in Takayama. From Takayama Bus Terminal to Hotel Wood Takayama: approximately 12 minutes on foot. The hotel is practically next to the historic center, so we do NOT need a taxi or public transport.\n\n🗺️ Full Takayama route: https://maps.app.goo.gl/VsKEtfcaxV6jcSmS9?g_st=ic\n\nDrop off luggage at reception / check in if the room is already ready (official check-in at 15:00).\n\n✅ Hotel already paid (274.98€ via Booking).\n\n♨️ The hotel has an onsen (separated by gender), open from 15:00 to 00:00 and from 6:00 to 9:00, with a free complimentary ice cream on the way out."
+        "time": "14:05–15:00",
+        "text": "🏨 Arrival in Takayama. From Takayama Bus Terminal to Hotel Wood Takayama: approximately 12 minutes on foot. The hotel is practically next to the historic center, so we do NOT need a taxi or public transport.\n\n🗺️ Full Takayama route: https://maps.app.goo.gl/VsKEtfcaxV6jcSmS9?g_st=ic\n\nDrop off luggage, check in (official at 15:00), and a moment to rest before heading out again.\n\n✅ Hotel already paid (274.98€ via Booking)."
       },
       {
-        "time": "14:30–16:00",
-        "text": "🍶 **SANMACHI SUJI** (a must, prioritize before 17:00 due to shop closing times): the 3 historic streets (Ichinomachi, Ninomachi, Sannomachi). Sake tastings (¥100/cup), woodcraft, sarubobo shops.\n\nFollowed by **Takayama Jinya** (¥430, closes 17:00, last entry 16:30) -- the only Edo-period government building preserved intact in Japan."
+        "time": "15:00–15:30",
+        "text": "⛩️ **HIDA KOKUBUNJI.** An 8th-century temple with a 3-story pagoda and a 1,200-year-old ginkgo tree. Don't leave it for later due to closing time."
       },
       {
-        "time": "16:00–17:45",
-        "text": "🌉 Cross the **Nakabashi Bridge** (the red bridge, a photo stop) and continue to **Hida Kokubunji** (an 8th-century temple with a 3-story pagoda and a 1,200-year-old ginkgo tree) and **Sakurayama Hachimangu** (free grounds; the Yatai Kaikan museum closes at 17:00, so only if you arrive with time to spare).\n\nFree time to stroll back through the old town. 🍡 Optional snack: Hida beef sushi, mitarashi dango, or sarubobo ice cream -- without filling up too much before dinner."
+        "time": "15:40–16:20",
+        "text": "🏛️ **TAKAYAMA JINYA** (高山陣屋). The only Edo-period government building preserved intact in Japan. The indoor visit usually takes about 30 minutes; try to get in before 16:00 (closes at 17:00, last entry 16:30, admission ¥430)."
+      },
+      {
+        "time": "16:20–17:30",
+        "text": "🍶 **SANMACHI SUJI + NAKABASHI BRIDGE.** The three historic streets (Ichinomachi, Ninomachi, Sannomachi): sake shops with tastings (¥100/cup), woodcraft, sarubobo. Also cross **Nakabashi Bridge**, the iconic red bridge."
+      },
+      {
+        "time": "17:30–19:00",
+        "text": "🚶 Free time to keep strolling through the old town on the way to the dinner restaurant. 🍡 Optional snack without filling up: Hida beef sushi, mitarashi dango, or sarubobo ice cream."
       },
       {
         "time": "19:00",
-        "text": "🥩 **Special Hida beef dinner in Takayama.**\n\n**What to order:** *rosu* (sirloin) for shabu-shabu or grilled, or *hire* (fillet) if you're after the most tender cut. **Hoba miso** (grilled beef on a magnolia leaf with local miso) is the local specialty -- order it no matter what. One or two pieces of **Hida beef nigiri-zushi** as a starter, paired with a local Hida **sake**."
+        "text": "🥩 **Premium Hida beef dinner in Takayama** (straight from the street, without going to the hotel first).\n\n**What to order:** *rosu* (sirloin) for shabu-shabu or grilled, or *hire* (fillet) if you're after the most tender cut. **Hoba miso** (grilled beef on a magnolia leaf with local miso) is the local specialty -- order it no matter what. One or two pieces of **Hida beef nigiri-zushi** as a starter, paired with a local Hida **sake**."
+      },
+      {
+        "time": "~21:00",
+        "text": "🌙 **EVENING STROLL THROUGH SANMACHI SUJI.** After dinner, before heading back to the hotel: the old town streets are packed with tourists during the day, but at night they become almost empty and very quiet -- a good time to stroll unhurried and see the wooden facades in a different light, without the shops or the crowds."
       },
       {
         "time": "~21:30",
-        "text": "🏨 **BACK TO THE HOTEL: HOTEL WOOD TAKAYAMA** (https://www.google.com/maps/search/?api=1&query=Hotel+Wood+Takayama)\n\nEvening stroll through the old town back to the hotel to rest (1st and only night in Takayama at Hotel Wood Takayama)."
+        "text": "🏨 **BACK TO THE HOTEL: HOTEL WOOD TAKAYAMA** (https://www.google.com/maps/search/?api=1&query=Hotel+Wood+Takayama)\n\nRest and **onsen** (separated by gender, open 15:00 to 00:00 and 6:00 to 9:00, with a free complimentary ice cream on the way out) -- 1st and only night in Takayama at Hotel Wood Takayama."
       },
       {
         "time": "🎫 BOOKINGS",

@@ -416,24 +416,36 @@ export const days = [
         "text": "🚌 Nohi Bus Shirakawa-go → Takayama.\n\n📍 **SAAN SASAKAY:** Shirakawa-go Bus Terminal (Ogimachi) — ang parehong lugar kung saan kayo binaba ng bus pagdating, iisa lang ang terminal sa nayon, kaya walang mali dito.\n\n🎫 **SUICA:** ❌ HINDI\n📅 **RESERBASYON:** ✅ NABILI NA (hindi indibidwal na naka-reserve ang upuan, ito ay tiket na garantisadong may puwesto pero walang seat number)\n🛒 **PAMBILI:** Gamitin ang nakumpirmang reserbasyon ng 12GO / Nohi Bus.\n\nAlis: 13:15. Reserbasyon: 12GO31992254. Booking ID M26125670. 5 nakumpirmang upuan. Tinatayang tagal: 50 min. Inaasahang pagdating sa Takayama Nohi Bus Center: 14:05. Kailangan ng reserbasyon. Hindi JR. Hindi kailangan ng Japan Rail Pass. Huwag gumamit ng Suica: gamitin ang reserbasyon/tiket ng bus. ⚠️ **KAILANGAN dalhin ang NAKA-PRINT na voucher sa papel** -- kailangang tanggapin ng driver ang pisikal na papel, hindi tinatanggap ang pagpapakita sa cellphone o screenshot."
       },
       {
-        "time": "14:05–14:30",
-        "text": "Pagdating sa Takayama. Mula Takayama Bus Terminal papuntang Hotel Wood Takayama: mga 12 minutong lakad. Halos katabi na ng makasaysayang sentro ang hotel, kaya HINDI na kailangan ng taxi o pampublikong transportasyon.\n\n🗺️ Kumpletong ruta ng Takayama: https://maps.app.goo.gl/VsKEtfcaxV6jcSmS9?g_st=ic\n\nIwan ang bagahe sa reception / mag-check-in kung handa na ang kwarto (opisyal na check-in ng 15:00).\n\n✅ Bayad na ang hotel (274.98€ sa pamamagitan ng Booking).\n\n♨️ May onsen ang hotel (hiwalay para sa lalaki't babae), bukas mula 15:00 hanggang 00:00 at 6:00 hanggang 9:00, may libreng ice cream pagpasok."
+        "time": "14:05–15:00",
+        "text": "🏨 Pagdating sa Takayama. Mula Takayama Bus Terminal papuntang Hotel Wood Takayama: mga 12 minutong lakad. Halos katabi na ng makasaysayang sentro ang hotel, kaya HINDI na kailangan ng taxi o pampublikong transportasyon.\n\n🗺️ Kumpletong ruta ng Takayama: https://maps.app.goo.gl/VsKEtfcaxV6jcSmS9?g_st=ic\n\nIwan ang bagahe, mag-check-in (opisyal ng 15:00), at magpahinga sandali bago lumabas ulit.\n\n✅ Bayad na ang hotel (274.98€ sa pamamagitan ng Booking)."
       },
       {
-        "time": "14:30–16:00",
-        "text": "🍶 **SANMACHI SUJI** (dapat puntahan, unahin bago mag-17:00 dahil sa pagsasara ng tindahan): ang 3 makasaysayang kalye (Ichinomachi, Ninomachi, Sannomachi). Sake tasting (¥100/tasa), gawaing kahoy, mga tindahan ng sarubobo.\n\nSusundan ng **Takayama Jinya** (¥430, nagsasara ng 17:00, huling entry 16:30) -- ang tanging gusali ng gobyerno mula Edo period na buong napreserba sa Japan."
+        "time": "15:00–15:30",
+        "text": "⛩️ **HIDA KOKUBUNJI.** Templo mula ika-8 siglo na may 3-palapag na pagoda at 1,200 taong gulang na ginkgo tree. Huwag itong ipagpaliban dahil sa oras ng pagsasara."
       },
       {
-        "time": "16:00–17:45",
-        "text": "🌉 Tawirin ang **Nakabashi Bridge** (ang pulang tulay, litrato stop) at magpatuloy papuntang **Hida Kokubunji** (templo mula ika-8 siglo na may 3-palapag na pagoda at 1,200 taong gulang na ginkgo tree) at **Sakurayama Hachimangu** (libreng lugar; ang Yatai Kaikan museum ay nagsasara ng 17:00, kaya lang kung may sapat na oras pa).\n\nMalayang oras para maglakad pabalik sa lumang bayan. 🍡 Opsyonal na meryenda: Hida beef sushi, mitarashi dango, o sarubobo ice cream -- huwag masyadong busugin bago ang hapunan."
+        "time": "15:40–16:20",
+        "text": "🏛️ **TAKAYAMA JINYA** (高山陣屋). Ang tanging gusali ng gobyerno mula Edo period na buong napreserba sa Japan. Karaniwang tumatagal ng 30 minuto ang pagbisita sa loob; subukang makapasok bago mag-16:00 (nagsasara ng 17:00, huling entry 16:30, bayad na ¥430)."
+      },
+      {
+        "time": "16:20–17:30",
+        "text": "🍶 **SANMACHI SUJI + NAKABASHI BRIDGE.** Ang tatlong makasaysayang kalye (Ichinomachi, Ninomachi, Sannomachi): mga tindahan ng sake na may tasting (¥100/tasa), gawaing kahoy, sarubobo. Tawirin din ang **Nakabashi Bridge**, ang kilalang pulang tulay."
+      },
+      {
+        "time": "17:30–19:00",
+        "text": "🚶 Malayang oras para magpatuloy sa paglalakad sa lumang bayan papunta sa restaurant ng hapunan. 🍡 Opsyonal na meryenda na hindi masyadong nakakabusog: Hida beef sushi, mitarashi dango, o sarubobo ice cream."
       },
       {
         "time": "19:00",
-        "text": "🥩 **Espesyal na hapunan ng Hida beef sa Takayama.**\n\n**Ano ang order:** *rosu* (sirloin) para sa shabu-shabu o inihaw, o *hire* (fillet) kung gusto ng pinakamalambot na klase. Ang **hoba miso** (inihaw na karne sa dahon ng magnolia na may lokal na miso) ang lokal na specialty -- order ito kahit ano pa mangyari. Isa o dalawang piraso ng **Hida beef nigiri-zushi** bilang starter, isabay sa lokal na **sake** ng Hida."
+        "text": "🥩 **Premium na hapunan ng Hida beef sa Takayama** (diretso mula sa kalye, hindi muna dadaan sa hotel).\n\n**Ano ang order:** *rosu* (sirloin) para sa shabu-shabu o inihaw, o *hire* (fillet) kung gusto ng pinakamalambot na klase. Ang **hoba miso** (inihaw na karne sa dahon ng magnolia na may lokal na miso) ang lokal na specialty -- order ito kahit ano pa mangyari. Isa o dalawang piraso ng **Hida beef nigiri-zushi** bilang starter, isabay sa lokal na **sake** ng Hida."
+      },
+      {
+        "time": "~21:00",
+        "text": "🌙 **GABING PAGLALAKAD SA SANMACHI SUJI.** Pagkatapos ng hapunan, bago bumalik sa hotel: puno ng turista ang mga kalye ng lumang bayan sa umaga, pero sa gabi halos walang tao at napakatahimik -- magandang oras para maglakad nang tahimik at makita ang mga kahoy na facade sa ibang liwanag, walang tindahan o mga tao."
       },
       {
         "time": "~21:30",
-        "text": "🏨 **BALIK SA HOTEL: HOTEL WOOD TAKAYAMA** (https://www.google.com/maps/search/?api=1&query=Hotel+Wood+Takayama)\n\nGabing lakad sa lumang bayan pabalik sa hotel para magpahinga (1st at tanging gabi sa Takayama sa Hotel Wood Takayama)."
+        "text": "🏨 **BALIK SA HOTEL: HOTEL WOOD TAKAYAMA** (https://www.google.com/maps/search/?api=1&query=Hotel+Wood+Takayama)\n\nMagpahinga at **onsen** (hiwalay para sa lalaki't babae, bukas mula 15:00 hanggang 00:00 at 6:00 hanggang 9:00, may libreng ice cream pagpasok) -- 1st at tanging gabi sa Takayama sa Hotel Wood Takayama."
       },
       {
         "time": "🎫 RESERBASYON",
