@@ -29,3 +29,5 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-13 05:22 UTC** — feat: traducir la consolidación del Día 7 a los 3 ... (`a9cf4c9`)
 - **2026-09-13 05:22 UTC** — Merge branch 'main' of https://github.com/pCresp0/viaje-japon-sept-2026 (`0e2ae75`)
 - **2026-09-13 06:40 UTC** — feat(Día 7): reordenar Takayama según la ruta optimizada de Google ... (`25d7d9c`)
+- **2026-09-13 06:42 UTC** — feat: traducir el reordenamiento de Takayama (ruta de Google + ... (`1b0eb8b`)
+- **2026-09-13 06:42 UTC** — Merge branch 'main' of https://github.com/pCresp0/viaje-japon-sept-2026 (`43c318e`)
