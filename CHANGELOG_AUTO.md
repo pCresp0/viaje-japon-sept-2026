@@ -36,3 +36,5 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-13 13:24 UTC** — fix(Día 8): aclarar que el equipaje Magome-Tsumago es transporte real ... (`d569fb9`)
 - **2026-09-13 13:25 UTC** — fix: traducir la aclaración del equipaje Magome-Tsumago a los 3 ... (`deb031f`)
 - **2026-09-13 13:25 UTC** — Merge branch 'main' of https://github.com/pCresp0/viaje-japon-sept-2026 (`e756352`)
+- **2026-09-13 13:31 UTC** — feat(Día 8): dejar las maletas directamente en Magome Chaya en ... (`2e5be04`)
+- **2026-09-13 13:31 UTC** — Merge branch 'main' of https://github.com/pCresp0/viaje-japon-sept-2026 (`b6518b5`)
