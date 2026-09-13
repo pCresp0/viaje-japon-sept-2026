@@ -119,7 +119,7 @@ export default function StayOption({ option, city }) {
         )}
         <a
           href={mapsUrl(mapQuery)}
-          target="_blank" rel="noopener noreferrer"
+          rel="noopener noreferrer"
           className="flex-1 flex items-center justify-center gap-1.5 rounded-lg py-2 px-2 transition-colors"
           style={{ background: "var(--paper-raised)", color: "var(--shu)", fontSize: 12, fontWeight: 700, border: "1px solid var(--line)", textDecoration: "none" }}
         >

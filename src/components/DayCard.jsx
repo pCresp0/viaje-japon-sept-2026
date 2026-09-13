@@ -394,7 +394,6 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
                     <div className="mt-3 relative z-10">
                       <TicketDownloadButton
                         pdfPath="/images/tickets/nohi_bus_kanazawa_shirakawago.pdf"
-                        filename="Billete_NohiBus_Kanazawa_Shirakawago_M26125669.pdf"
                         label="billete Kanazawa → Shirakawa-go"
                       />
                     </div>
@@ -404,7 +403,6 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
                     <div className="mt-3 relative z-10">
                       <TicketDownloadButton
                         pdfPath="/images/tickets/nohi_bus_shirakawago_takayama.pdf"
-                        filename="Billete_NohiBus_Shirakawago_Takayama_M26125670.pdf"
                         label="billete Shirakawa-go → Takayama"
                       />
                     </div>
