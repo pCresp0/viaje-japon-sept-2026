@@ -401,83 +401,35 @@ export const days = [
       },
       {
         "time": "10:05",
-        "text": "Pagdating sa Shirakawa-go ng 10:05. May mga 3 oras 10 minuto tayo sa Shirakawa-go (mula 10:05 hanggang sa alis ng bus papuntang Takayama ng 13:15).\n\n🗺️ Kumpletong ruta ng Shirakawa-go: https://maps.app.goo.gl/mBcF6hHWpwwC5HxeA?g_st=iw\n\n🔒 **LOCKER PARA SA MGA BACKPACK:** May coin lockers ang mismong Shirakawa-go Terminal (18 sa kabuuan) sa likod/tabi ng pangunahing gusali — maliit/katamtaman ¥500, malaki ¥1,000, oras 08:00–17:00 (bagay na bagay sa oras natin ngayon). Hindi puwedeng iwan nang magdamag, pero para sa ilang oras ngayon, walang problema. Kung puno lahat, puwedeng humingi sa information/ticket counter na mag-alaga ng bagahe nang manual (annex building, ilang metro lang ang layo). Magdala ng ¥100 coins o magpapalit ng malaking bill mismo sa counter."
+        "text": "Pagdating sa Shirakawa-go. May mga 3 oras 10 minuto tayo (hanggang sa alis ng bus papuntang Takayama ng 13:15).\n\n🗺️ Kumpletong ruta ng Shirakawa-go: https://maps.app.goo.gl/mBcF6hHWpwwC5HxeA?g_st=iw\n\n🔒 **LOCKER PARA SA MGA BACKPACK:** May coin lockers ang mismong Shirakawa-go Terminal (18 sa kabuuan) sa likod/tabi ng pangunahing gusali — maliit/katamtaman ¥500, malaki ¥1,000, oras 08:00–17:00. Kung puno lahat, puwedeng humingi sa information counter na mag-alaga ng bagahe nang manual."
       },
       {
-        "time": "10:05–10:15",
-        "text": "🌉 Tawirin ang **Deai Bridge**, ang suspension bridge na papasok sa nayon sa ibabaw ng Ilog Shogawa -- ang unang iconic na tanawin ng araw."
+        "time": "10:05–11:55",
+        "text": "🌉 Tawirin ang **Deai Bridge** (ang iconic na pasukan ng nayon) at umakyat papuntang **Shiroyama Viewpoint** (15-20 min, banayad na asphalt slope; alternatibo shuttle ¥200-300). Umakyat na ngayon, pagdating agad, dahil sa mga 11:30 medyo masisikip na ang nayon.\n\nBumaba at maglakad-lakad sa **Ogimachi**: mga kanal, palayan, tradisyunal na kalye. Tapusin sa pagbisita sa **Wada House** (ang tanging bahay na bisitahin, ang pinakamalaki at pinakamahusay na napreserba, ¥400, hindi na kailangang mag-reserve, 09:00–17:00, 3-4 minuto mula sa terminal)."
       },
       {
-        "time": "10:15–10:50",
-        "text": "⛰️ **SHIROYAMA VIEWPOINT** (dapat puntahan). Paglalakad pataas sa asphalt road, banayad na akyat, 15-20 min mula sa gitna ng nayon. Alternatibo: shuttle bus ¥200-300 (aalis kada 20 minuto malapit sa Wada House, may break sa tanghali).\n\n💡 Bakit umakyat ngayon at hindi mamaya: sa mga 11:30, magiging medyo masikip na ang nayon (ang pila sa shuttle ay puwedeng umabot ng 30 tao) -- kung pupunta agad pagdating, mapapasainyo ito nang halos mag-isa."
-      },
-      {
-        "time": "10:50–11:35",
-        "text": "🚶 Bumaba mula sa viewpoint (15-20 min) at maglakad-lakad sa **Ogimachi**: mga kanal, palayan, tradisyunal na kalye, tanawin ng bundok. Ito ang kaibuturan ng nayon -- hindi kailangang magmadali dito."
-      },
-      {
-        "time": "11:35–11:55",
-        "text": "🏠 **WADA HOUSE** (ang tanging bahay na bisitahin). Ang pinakamalaki at pinakamahusay na napreserba na gassho-zukuri house sa nayon, bukas 09:00–17:00, ¥400 (~2.5€), hindi na kailangang mag-reserve, cash payment, 3-4 minuto mula sa terminal. Hindi na kailangang pumasok sa ibang bahay (redundant na ang Kanda House / Nagase House)."
-      },
-      {
-        "time": "12:00–12:45",
-        "text": "🍜 **TANGHALIAN SA TANAKA-YA** (inirekomenda ng grupo). Restaurant na may mababang mesa, nakaupo sa sahig -- napakasarap na pagkain.\n\n🗺️ Tanaka-ya sa Google Maps: https://maps.app.goo.gl/GYV8d8g1gaTi3Emb7?g_st=ic\n\n💡 Huwag masyadong patagalin ang tanghalian: aalis ang bus papuntang Takayama ng 13:15 at kailangang bumalik sa terminal nang may sapat na oras."
-      },
-      {
-        "time": "12:45–13:05",
-        "text": "🚶 Huling lakad sa nayon at paglalakad pabalik sa Shirakawa-go Bus Terminal (15 min). Huwag nang lumayo sa sentral na lugar mula dito."
-      },
-      {
-        "time": "13:05–13:15",
-        "text": "⏳ Palugit na oras sa terminal bago umalis ang bus. Kunin ang backpack mula sa locker kung doon ito iniwan."
+        "time": "12:00–13:15",
+        "text": "🍜 **TANGHALIAN SA TANAKA-YA** (inirekomenda ng grupo, mababang mesa, nakaupo sa sahig, napakasarap na pagkain).\n\n🗺️ Tanaka-ya sa Google Maps: https://maps.app.goo.gl/GYV8d8g1gaTi3Emb7?g_st=ic\n\n💡 Huwag masyadong patagalin ang tanghalian, at maglakad pabalik sa terminal nang may sapat na oras -- aalis ang bus ng 13:15 at hindi ito naghihintay."
       },
       {
         "time": "13:15",
-        "text": "🚌 Nohi Bus Shirakawa-go → Takayama.\n\n📍 **SAAN SASAKAY:** Shirakawa-go Bus Terminal (Ogimachi) — ang parehong lugar kung saan kayo binaba ng bus pagdating ng 10:05, iisa lang ang terminal sa nayon, kaya walang mali dito.\n\n🎫 **SUICA:** ❌ HINDI\n📅 **RESERBASYON:** ✅ NABILI NA (hindi indibidwal na naka-reserve ang upuan, ito ay tiket na garantisadong may puwesto pero walang seat number)\n🛒 **PAMBILI:** Gamitin ang nakumpirmang reserbasyon ng 12GO / Nohi Bus.\n\nAlis: 13:15. Reserbasyon: 12GO31992254. Booking ID M26125670. 5 nakumpirmang upuan. Tinatayang tagal: 50 min. Inaasahang pagdating sa Takayama Nohi Bus Center: 14:05. Kailangan ng reserbasyon. Hindi JR. Hindi kailangan ng Japan Rail Pass. Huwag gumamit ng Suica: gamitin ang reserbasyon/tiket ng bus. ⚠️ **KAILANGAN dalhin ang NAKA-PRINT na voucher sa papel** -- kailangang tanggapin ng driver ang pisikal na papel, hindi tinatanggap ang pagpapakita sa cellphone o screenshot."
+        "text": "🚌 Nohi Bus Shirakawa-go → Takayama.\n\n📍 **SAAN SASAKAY:** Shirakawa-go Bus Terminal (Ogimachi) — ang parehong lugar kung saan kayo binaba ng bus pagdating, iisa lang ang terminal sa nayon, kaya walang mali dito.\n\n🎫 **SUICA:** ❌ HINDI\n📅 **RESERBASYON:** ✅ NABILI NA (hindi indibidwal na naka-reserve ang upuan, ito ay tiket na garantisadong may puwesto pero walang seat number)\n🛒 **PAMBILI:** Gamitin ang nakumpirmang reserbasyon ng 12GO / Nohi Bus.\n\nAlis: 13:15. Reserbasyon: 12GO31992254. Booking ID M26125670. 5 nakumpirmang upuan. Tinatayang tagal: 50 min. Inaasahang pagdating sa Takayama Nohi Bus Center: 14:05. Kailangan ng reserbasyon. Hindi JR. Hindi kailangan ng Japan Rail Pass. Huwag gumamit ng Suica: gamitin ang reserbasyon/tiket ng bus. ⚠️ **KAILANGAN dalhin ang NAKA-PRINT na voucher sa papel** -- kailangang tanggapin ng driver ang pisikal na papel, hindi tinatanggap ang pagpapakita sa cellphone o screenshot."
       },
       {
         "time": "14:05–14:30",
         "text": "Pagdating sa Takayama. Mula Takayama Bus Terminal papuntang Hotel Wood Takayama: mga 12 minutong lakad. Halos katabi na ng makasaysayang sentro ang hotel, kaya HINDI na kailangan ng taxi o pampublikong transportasyon.\n\n🗺️ Kumpletong ruta ng Takayama: https://maps.app.goo.gl/VsKEtfcaxV6jcSmS9?g_st=ic\n\nIwan ang bagahe sa reception / mag-check-in kung handa na ang kwarto (opisyal na check-in ng 15:00).\n\n✅ Bayad na ang hotel (274.98€ sa pamamagitan ng Booking).\n\n♨️ May onsen ang hotel (hiwalay para sa lalaki't babae), bukas mula 15:00 hanggang 00:00 at 6:00 hanggang 9:00, may libreng ice cream pagpasok."
       },
       {
-        "time": "14:30–14:45",
-        "text": "🚶 Maglakad mula sa hotel papuntang **Sanmachi Suji** (ang puso ng lumang bayan)."
+        "time": "14:30–16:00",
+        "text": "🍶 **SANMACHI SUJI** (dapat puntahan, unahin bago mag-17:00 dahil sa pagsasara ng tindahan): ang 3 makasaysayang kalye (Ichinomachi, Ninomachi, Sannomachi). Sake tasting (¥100/tasa), gawaing kahoy, mga tindahan ng sarubobo.\n\nSusundan ng **Takayama Jinya** (¥430, nagsasara ng 17:00, huling entry 16:30) -- ang tanging gusali ng gobyerno mula Edo period na buong napreserba sa Japan."
       },
       {
-        "time": "14:45–15:30",
-        "text": "🍶 **SANMACHI SUJI** (dapat puntahan): ang 3 makasaysayang kalye (Ichinomachi, Ninomachi, Sannomachi). Sake tasting (¥100/tasa sa iba't ibang brewery), gawaing kahoy, mga tindahan ng sarubobo.\n\n💡 Unahin ito ngayon: nagsasara ang mga tindahan ng mga 17:00, hindi tulad ng mga kalye at templo na puwedeng bisitahin mamaya."
-      },
-      {
-        "time": "15:30–16:00",
-        "text": "🏛️ **TAKAYAMA JINYA** (dapat puntahan). Ang tanging gusali ng gobyerno mula Edo period na buong napreserba sa Japan. Bukas 08:45–17:00 (huling entry 16:30), bayad na ¥430."
-      },
-      {
-        "time": "16:00–16:15",
-        "text": "🌉 Tawirin ang **Nakabashi Bridge**, ang kilalang pulang tulay -- mabilisang litrato habang papunta sa iba pang bahagi ng lumang bayan."
-      },
-      {
-        "time": "16:15–16:40",
-        "text": "⛩️ **HIDA KOKUBUNJI** (opsyonal pero inirerekomenda). Templo mula ika-8 siglo na may 3-palapag na pagoda at 1,200 taong gulang na ginkgo tree."
-      },
-      {
-        "time": "16:40–17:10",
-        "text": "⛩️ **SAKURAYAMA HACHIMANGU** (opsyonal). Libre at maganda ang loob ng dambana. Ang Yatai Kaikan museum (¥1,000) ay nagsasara ng 17:00, kaya pumasok lang kung may sapat na oras -- kung hindi, sa dambana na lang mismo."
-      },
-      {
-        "time": "17:10–17:45",
-        "text": "🚶 Malayang paglalakad pabalik sa lumang bayan. 🍡 Opsyonal na meryenda: Hida beef sushi, mitarashi dango, o sarubobo ice cream -- huwag masyadong busugin bago ang hapunan."
-      },
-      {
-        "time": "17:45–18:45",
-        "text": "🏨 Balik sa hotel: magpahinga + **onsen** kung gusto bago ang hapunan. Huwag nang mag-schedule ng iba pang pagbisita pagkatapos nito para makarating nang kalmado sa hapunan."
-      },
-      {
-        "time": "18:45–19:00",
-        "text": "🚶 Maglakad papuntang restaurant ng hapunan."
+        "time": "16:00–17:45",
+        "text": "🌉 Tawirin ang **Nakabashi Bridge** (ang pulang tulay, litrato stop) at magpatuloy papuntang **Hida Kokubunji** (templo mula ika-8 siglo na may 3-palapag na pagoda at 1,200 taong gulang na ginkgo tree) at **Sakurayama Hachimangu** (libreng lugar; ang Yatai Kaikan museum ay nagsasara ng 17:00, kaya lang kung may sapat na oras pa).\n\nMalayang oras para maglakad pabalik sa lumang bayan. 🍡 Opsyonal na meryenda: Hida beef sushi, mitarashi dango, o sarubobo ice cream -- huwag masyadong busugin bago ang hapunan."
       },
       {
         "time": "19:00",
-        "text": "🥩 **Espesyal na hapunan ng Hida beef sa Takayama.**\n\n**Ano ang order:** *rosu* (sirloin) para sa shabu-shabu o inihaw, o *hire* (fillet) kung gusto ng pinakamalambot na klase. Ang **hoba miso** (inihaw na karne sa dahon ng magnolia na may lokal na miso) ang lokal na specialty -- order ito kung nasa menu. Isa o dalawang piraso ng **Hida beef nigiri-zushi** bilang starter ang klasikong paraan para tikman ito nang hindi masyadong nabubusog. Isabay sa lokal na **sake** ng Hida."
+        "text": "🥩 **Espesyal na hapunan ng Hida beef sa Takayama.**\n\n**Ano ang order:** *rosu* (sirloin) para sa shabu-shabu o inihaw, o *hire* (fillet) kung gusto ng pinakamalambot na klase. Ang **hoba miso** (inihaw na karne sa dahon ng magnolia na may lokal na miso) ang lokal na specialty -- order ito kahit ano pa mangyari. Isa o dalawang piraso ng **Hida beef nigiri-zushi** bilang starter, isabay sa lokal na **sake** ng Hida."
       },
       {
         "time": "~21:30",

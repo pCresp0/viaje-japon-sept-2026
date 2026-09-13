@@ -401,83 +401,35 @@ export const days = [
       },
       {
         "time": "10:05",
-        "text": "Arrival in Shirakawa-go at 10:05. We have approximately 3 h 10 min in Shirakawa-go (from 10:05 until the bus to Takayama leaves at 13:15).\n\n🗺️ Full Shirakawa-go route: https://maps.app.goo.gl/mBcF6hHWpwwC5HxeA?g_st=iw\n\n🔒 **LOCKERS FOR THE BACKPACKS:** Shirakawa-go Terminal itself has coin lockers (18 in total) right behind/next to the main building — small/medium ¥500, large ¥1,000, hours 08:00–17:00 (fits perfectly with our window today). You can't leave luggage overnight, but for the few hours today there's no problem. If they're all taken, you can ask at the information/ticket counter to hold the luggage manually (annex building, a few meters away). Bring ¥100 coins or exchange large bills at the counter itself."
+        "text": "Arrival in Shirakawa-go. We have approximately 3 h 10 min (until the bus to Takayama leaves at 13:15).\n\n🗺️ Full Shirakawa-go route: https://maps.app.goo.gl/mBcF6hHWpwwC5HxeA?g_st=iw\n\n🔒 **LOCKERS FOR THE BACKPACKS:** Shirakawa-go Terminal itself has coin lockers (18 in total) right behind/next to the main building — small/medium ¥500, large ¥1,000, hours 08:00–17:00. If they're all taken, you can ask at the information counter to hold the luggage manually."
       },
       {
-        "time": "10:05–10:15",
-        "text": "🌉 Cross the **Deai Bridge**, the suspension bridge that leads into the village over the Shogawa River -- the first iconic view of the day."
+        "time": "10:05–11:55",
+        "text": "🌉 Cross the **Deai Bridge** (the iconic entrance to the village) and walk up to **Shiroyama Viewpoint** (15-20 min, gentle paved slope; shuttle alternative ¥200-300). Go up now, right when you arrive, because by around 11:30 the village gets quite crowded.\n\nWalk down and stroll through **Ogimachi**: canals, rice paddies, traditional streets. Finish with a visit to **Wada House** (the only house to visit, the largest and best-preserved, ¥400, no reservation, 09:00–17:00, 3-4 min from the terminal)."
       },
       {
-        "time": "10:15–10:50",
-        "text": "⛰️ **SHIROYAMA VIEWPOINT** (a must). Walk up a paved road, gentle slope, 15-20 min from the village center. Alternative: shuttle bus ¥200-300 (leaves every 20 min from near Wada House, with a midday break).\n\n💡 Why go up now and not later: by around 11:30 the village gets quite crowded (the shuttle queue can be 30 people deep) -- going right when you arrive, you'll have it almost to yourselves."
-      },
-      {
-        "time": "10:50–11:35",
-        "text": "🚶 Walk down from the viewpoint (15-20 min) and stroll through **Ogimachi**: canals, rice paddies, traditional streets, mountain views. This is the essence of the village -- no need to rush here."
-      },
-      {
-        "time": "11:35–11:55",
-        "text": "🏠 **WADA HOUSE** (the only house to visit). The largest and best-preserved gassho-zukuri house in the village, open 09:00–17:00, ¥400 (~2.5€), no reservation needed, cash payment, 3-4 min from the terminal. No need to enter other houses (Kanda House / Nagase House are redundant)."
-      },
-      {
-        "time": "12:00–12:45",
-        "text": "🍜 **LUNCH AT TANAKA-YA** (recommended by the group). Restaurant with low tables, sitting on the floor -- delicious food.\n\n🗺️ Tanaka-ya on Google Maps: https://maps.app.goo.gl/GYV8d8g1gaTi3Emb7?g_st=ic\n\n💡 Don't drag out lunch too long: the bus to Takayama leaves at 13:15 and we need to get back to the terminal with time to spare."
-      },
-      {
-        "time": "12:45–13:05",
-        "text": "🚶 One last stroll through the village and walk back to Shirakawa-go Bus Terminal (15 min). Don't stray from the central area from this point on."
-      },
-      {
-        "time": "13:05–13:15",
-        "text": "⏳ Buffer time at the terminal before the bus departs. Pick up your backpack from the locker if you left it there."
+        "time": "12:00–13:15",
+        "text": "🍜 **LUNCH AT TANAKA-YA** (recommended by the group, low tables, sitting on the floor, delicious food).\n\n🗺️ Tanaka-ya on Google Maps: https://maps.app.goo.gl/GYV8d8g1gaTi3Emb7?g_st=ic\n\n💡 Don't drag out lunch too long, and walk back to the terminal with time to spare -- the bus leaves at 13:15 and doesn't wait."
       },
       {
         "time": "13:15",
-        "text": "🚌 Nohi Bus Shirakawa-go → Takayama.\n\n📍 **WHERE TO BOARD:** Shirakawa-go Bus Terminal (Ogimachi) — the same place the bus dropped you off on arrival at 10:05, there's only one terminal in the village, so there's no way to miss it.\n\n🎫 **SUICA:** ❌ NO\n📅 **RESERVATION:** ✅ ALREADY BOUGHT (seats NOT individually reserved, it's a guaranteed-seat ticket without a seat number)\n🛒 **PURCHASE:** Use the confirmed 12GO / Nohi Bus reservation.\n\nDeparture: 13:15. Reservation: 12GO31992254. Booking ID M26125670. 5 confirmed seats. Approx. duration: 50 min. Estimated arrival at Takayama Nohi Bus Center: 14:05. Reservation required. Not JR. Does not require the Japan Rail Pass. Don't use Suica: use the bus reservation/ticket. ⚠️ **YOU MUST bring the PRINTED paper voucher** -- the driver must keep the physical paper, showing it on your phone or a screenshot is not accepted."
+        "text": "🚌 Nohi Bus Shirakawa-go → Takayama.\n\n📍 **WHERE TO BOARD:** Shirakawa-go Bus Terminal (Ogimachi) — the same place the bus dropped you off on arrival, there's only one terminal in the village, so there's no way to miss it.\n\n🎫 **SUICA:** ❌ NO\n📅 **RESERVATION:** ✅ ALREADY BOUGHT (seats NOT individually reserved, it's a guaranteed-seat ticket without a seat number)\n🛒 **PURCHASE:** Use the confirmed 12GO / Nohi Bus reservation.\n\nDeparture: 13:15. Reservation: 12GO31992254. Booking ID M26125670. 5 confirmed seats. Approx. duration: 50 min. Estimated arrival at Takayama Nohi Bus Center: 14:05. Reservation required. Not JR. Does not require the Japan Rail Pass. Don't use Suica: use the bus reservation/ticket. ⚠️ **YOU MUST bring the PRINTED paper voucher** -- the driver must keep the physical paper, showing it on your phone or a screenshot is not accepted."
       },
       {
         "time": "14:05–14:30",
         "text": "Arrival in Takayama. From Takayama Bus Terminal to Hotel Wood Takayama: approximately 12 minutes on foot. The hotel is practically next to the historic center, so we do NOT need a taxi or public transport.\n\n🗺️ Full Takayama route: https://maps.app.goo.gl/VsKEtfcaxV6jcSmS9?g_st=ic\n\nDrop off luggage at reception / check in if the room is already ready (official check-in at 15:00).\n\n✅ Hotel already paid (274.98€ via Booking).\n\n♨️ The hotel has an onsen (separated by gender), open from 15:00 to 00:00 and from 6:00 to 9:00, with a free complimentary ice cream on the way out."
       },
       {
-        "time": "14:30–14:45",
-        "text": "🚶 Walk from the hotel to **Sanmachi Suji** (the heart of the old town)."
+        "time": "14:30–16:00",
+        "text": "🍶 **SANMACHI SUJI** (a must, prioritize before 17:00 due to shop closing times): the 3 historic streets (Ichinomachi, Ninomachi, Sannomachi). Sake tastings (¥100/cup), woodcraft, sarubobo shops.\n\nFollowed by **Takayama Jinya** (¥430, closes 17:00, last entry 16:30) -- the only Edo-period government building preserved intact in Japan."
       },
       {
-        "time": "14:45–15:30",
-        "text": "🍶 **SANMACHI SUJI** (a must): the 3 historic streets (Ichinomachi, Ninomachi, Sannomachi). Sake tastings (¥100/cup at several breweries), woodcraft, sarubobo shops.\n\n💡 Prioritize this now: shops close around 17:00, unlike the streets and temples, which can be seen later."
-      },
-      {
-        "time": "15:30–16:00",
-        "text": "🏛️ **TAKAYAMA JINYA** (a must). The only Edo-period government building preserved intact in Japan. Open 08:45–17:00 (last entry 16:30), admission ¥430."
-      },
-      {
-        "time": "16:00–16:15",
-        "text": "🌉 Cross the **Nakabashi Bridge**, the iconic red bridge -- a quick photo stop on the way to the rest of the old town."
-      },
-      {
-        "time": "16:15–16:40",
-        "text": "⛩️ **HIDA KOKUBUNJI** (optional but recommended). An 8th-century temple with a 3-story pagoda and a 1,200-year-old ginkgo tree."
-      },
-      {
-        "time": "16:40–17:10",
-        "text": "⛩️ **SAKURAYAMA HACHIMANGU** (optional). The shrine grounds are free and beautiful. The Yatai Kaikan museum (¥1,000) closes at 17:00, so only go in if you arrive with time to spare -- otherwise, stick with the shrine itself."
-      },
-      {
-        "time": "17:10–17:45",
-        "text": "🚶 Free stroll back through the old town. 🍡 Optional snack: Hida beef sushi, mitarashi dango, or sarubobo ice cream -- without filling up too much before dinner."
-      },
-      {
-        "time": "17:45–18:45",
-        "text": "🏨 Back to the hotel: rest + **onsen** if you feel like it before dinner. Don't schedule any more sightseeing after this so we arrive calmly for dinner."
-      },
-      {
-        "time": "18:45–19:00",
-        "text": "🚶 Walk to the dinner restaurant."
+        "time": "16:00–17:45",
+        "text": "🌉 Cross the **Nakabashi Bridge** (the red bridge, a photo stop) and continue to **Hida Kokubunji** (an 8th-century temple with a 3-story pagoda and a 1,200-year-old ginkgo tree) and **Sakurayama Hachimangu** (free grounds; the Yatai Kaikan museum closes at 17:00, so only if you arrive with time to spare).\n\nFree time to stroll back through the old town. 🍡 Optional snack: Hida beef sushi, mitarashi dango, or sarubobo ice cream -- without filling up too much before dinner."
       },
       {
         "time": "19:00",
-        "text": "🥩 **Special Hida beef dinner in Takayama.**\n\n**What to order:** *rosu* (sirloin) for shabu-shabu or grilled, or *hire* (fillet) if you're after the most tender cut. **Hoba miso** (grilled beef on a magnolia leaf with local miso) is the local specialty -- order it if it's on the menu. One or two pieces of **Hida beef nigiri-zushi** as a starter are the classic way to try it without filling up. Pair it with a local Hida **sake**."
+        "text": "🥩 **Special Hida beef dinner in Takayama.**\n\n**What to order:** *rosu* (sirloin) for shabu-shabu or grilled, or *hire* (fillet) if you're after the most tender cut. **Hoba miso** (grilled beef on a magnolia leaf with local miso) is the local specialty -- order it no matter what. One or two pieces of **Hida beef nigiri-zushi** as a starter, paired with a local Hida **sake**."
       },
       {
         "time": "~21:30",
