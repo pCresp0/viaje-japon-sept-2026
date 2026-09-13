@@ -619,7 +619,7 @@ export const days = [
     "history": "These districts grew after the Great Kanto Earthquake of 1923, driven by urban train expansion. Shinjuku today hosts the busiest train station on the planet.",
     "schedule": [
       {
-        "text": "Shibuya Crossing and Miyashita Park. Stop at the Pokémon Center Shibuya (Shibuya Parco, 6th floor) — famous for its large Mewtwo statue (inside a glass tube, great for photos) and its futuristic neon style. Nintendo TOKYO is on the same floor. Watch out, Sergio will probably want to set up an urban garden here for his Aluche plants."
+        "text": "Shibuya Crossing and Miyashita Park. Stop at the Pokémon Center Shibuya (Shibuya Parco, 6th floor) — famous for its large Mewtwo statue (inside a glass tube, great for photos) and its futuristic neon style. Nintendo TOKYO is on the same floor. Watch out, Sergio will probably want to set up an urban garden here for his Aluche plants.\n\n🏙️ **OPTIONAL: SHIBUYA SKY** (decide on the spot). Paid observation deck right above Shibuya Station, 229m high, 360°. You already have a FREE viewpoint that evening in Shinjuku, so this is an extra if you feel like it.\n💰 Price: ¥2,700 online before 15:00 / ¥3,400 from 15:00 (at the counter, +¥300). Hours: 10:00–22:30, last entry 21:20.\n⚠️ Sunset slots sell out easily on days with good weather forecasts -- if you really want to go at that specific time, better to book in advance on the official site rather than deciding on the fly."
       },
       {
         "text": "Walk to Harajuku via Takeshita Street, ending at the Meiji Shrine in Yoyogi Park."
@@ -670,7 +670,10 @@ export const days = [
         "text": "Mega Pokémon Center Ikebukuro (Sunshine City, 2nd floor) and Nintendo Store Tokyo. The Mega Center is the largest in Japan: life-size statues of Charizard, Lucario and Mewtwo, the Pokémon Card Station, and exclusive merchandise not found in other stores."
       },
       {
-        "text": "Lunch around the Ikebukuro area."
+        "text": "🚃 Train to Akihabara (Yamanote Line, ~20 min from Ikebukuro, no transfer). Lunch in the area before starting to explore."
+      },
+      {
+        "text": "🎮 **AKIHABARA**, the ultimate otaku district -- different from Nakano Broadway, here it's more of a street experience with large specialized stores than secondhand collecting.\n\n• Mandarake Complex: 8 floors of manga, figures and collectibles from every era.\n• Super Potato: retro video games (NES, SNES, Game Boy...) in a setting straight out of the 90s.\n• Official Pokémon-related shops (not the Pokémon Center itself, but several specialized trading card shops).\n• Japanese arcades (Taito Station, GiGO) for UFO catcher, rhythm, or fighting games.\n• Main street (Chuo-dori), closed to traffic on Sunday afternoons -- check if it applies today.\n\n🚃 Afterward, train to Nakano (~20-25 min, one transfer)."
       },
       {
         "text": "Afternoon of collectible shopping at Nakano Broadway: Tokyo's best spot for original Pokémon cards (specialized trading card shops with display cases of individual cards and booster packs), Dragon Ball figures and merchandise, and retro/manga items in general at fair prices. Several floors of small independent shops — worth exploring all of them."
@@ -744,7 +747,7 @@ export const days = [
     "history": "After two intense weeks touring the history of the shoguns, Zen philosophy, and the technology of the archipelago, the trip concludes. Narita has been the main international entry and exit port of the Kanto region since 1978.",
     "schedule": [
       {
-        "text": "Last walk through the neighborhood and souvenir shopping (flavored Kit-Kats)."
+        "text": "🏮 **A REAL VISIT TO ASAKUSA AND SENSŌ-JI** (not as a backup plan from another day -- last morning, with time to spare and the shops already open).\n\n• **Kaminarimon Gate**: the great red lantern, the iconic entrance to the temple grounds.\n• **Nakamise Street**: almost 200 meters of traditional little shops -- sweets, crafts, souvenirs, fans, yukata -- all the way to the temple gate. Great for last-minute shopping (flavored Kit-Kats, matcha, Kappabashi souvenirs).\n• **Sensō-ji Temple**: Tokyo's oldest Buddhist temple (year 628), with the large incense burner and main hall.\n• A quiet stroll through the traditional side streets around it, before heading back to the hotel.\n\n💡 Since the hotel is only a 10-minute walk away, no transport is needed for this -- you can go back for the luggage at a relaxed pace before the airport transfer."
       },
       {
         "text": "🚆 TRANSFER TO NARITA AIRPORT — 2 OPTIONS (Recommended: Keisei Skyliner)\n\n🟢 **RECOMMENDED OPTION: KEISEI SKYLINER (from Keisei-Ueno)**\n- Transfer to the train: KOKO HOTEL Residence Asakusa Kappabashi → Keisei-Ueno Station. For 5 people with large suitcases, it's well worth considering a direct taxi from the hotel door to Keisei-Ueno (~10 min), notably simplifying the logistics.\n- Train: Keisei Skyliner from Keisei-Ueno direct to Narita Airport (~41 min). Express train with reserved seat and plenty of luggage space.\n- Advantage: Avoids having to drag large luggage through corridors and transfers to reach Tokyo Station.\n- Final schedule: Check and book once the definitive September 2026 timetable is published, making sure to arrive at Narita with enough margin for the 17:25 flight.\n\n🟡 **VALID ALTERNATIVE: JR NARITA EXPRESS (N'EX)**\n- Transfer: Hotel → Tokyo Station (metro or taxi) → JR Narita Express (N'EX) direct to Narita (~1h by train, reserved seat required).\n- The N'EX is still a perfectly valid option if you'd rather leave from Tokyo Station.\n\n💡 Keep enough margin to be at the Narita terminal before 14:30 for check-in and security."
