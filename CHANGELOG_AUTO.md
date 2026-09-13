@@ -38,3 +38,5 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-13 13:25 UTC** — Merge branch 'main' of https://github.com/pCresp0/viaje-japon-sept-2026 (`e756352`)
 - **2026-09-13 13:31 UTC** — feat(Día 8): dejar las maletas directamente en Magome Chaya en ... (`2e5be04`)
 - **2026-09-13 13:31 UTC** — Merge branch 'main' of https://github.com/pCresp0/viaje-japon-sept-2026 (`b6518b5`)
+- **2026-09-13 13:32 UTC** — feat: traducir el cambio de plan de equipaje del Día ... (`0d15607`)
+- **2026-09-13 13:32 UTC** — Merge branch 'main' of https://github.com/pCresp0/viaje-japon-sept-2026 (`892818d`)
