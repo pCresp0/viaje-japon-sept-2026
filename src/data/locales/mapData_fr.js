@@ -53,14 +53,11 @@ export const stops = [
   { name: "Roppongi (Mori Tower)", city: "Tokyo", day: "Jour 12", detail: "Belvédère Tokyo City View avec vues panoramiques et Tour de Tokyo" },
   { name: "Ikebukuro", city: "Tokyo", day: "Jour 13", detail: "Méga Pokémon Center Ikebukuro et boutiques d'anime" },
   { name: "Nakano Broadway", city: "Tokyo", day: "Jour 13", detail: "Mecque des objets rétro, figurines vintage et manga" },
-  { name: "Gare de Mishima", city: "Shizuoka", day: "Jour 14", detail: "Arrivée en Shinkansen Kodama et point de rendez-vous pour démarrer l'itinéraire en mini-van" },
-  { name: "Pagode Chureito (Arakurayama Sengen)", city: "Yamanashi", day: "Jour 14", detail: "La vue carte postale la plus emblématique du Japon avec la pagode et le Fuji" },
-  { name: "Sanctuaire Kitaguchi Hongu Fuji Sengen", city: "Yamanashi", day: "Jour 14", detail: "Point de départ historique des pèlerins, avec des cèdres centenaires" },
-  { name: "Village d'Oshino Hakkai", city: "Yamanashi", day: "Jour 14", detail: "Sources d'eau de fonte et maisons traditionnelles en chaume" },
-  { name: "Forêt d'Aokigahara", city: "Yamanashi", day: "Jour 14", detail: "La mer d'arbres sur les coulées de lave du volcan" },
-  { name: "Chutes de Shiraito", city: "Shizuoka", day: "Jour 14", detail: "Spectaculaire cascade d'eau volcanique en fils de soie" },
-  { name: "Route des lacs du Fuji", city: "Yamanashi", day: "Jour 14", detail: "Vues panoramiques du mont Fuji depuis les lacs Kawaguchiko et Saiko" },
-  { name: "Gare de Shin-Fuji", city: "Shizuoka", day: "Jour 14", detail: "Fin du tour et retour à Tokyo en Shinkansen" },
+  { name: "Gare de Tobu-Nikko", city: "Tochigi", day: "Jour 14", detail: "Arrivée en train direct depuis Tobu-Asakusa (environ 2h)" },
+  { name: "Pont Shinkyo", city: "Tochigi", day: "Jour 14", detail: "Le célèbre pont rouge sur la rivière Daiya, symbole de Nikko" },
+  { name: "Sanctuaire Toshogu", city: "Tochigi", day: "Jour 14", detail: "Mausolée de Tokugawa Ieyasu, site du patrimoine mondial de l'UNESCO" },
+  { name: "Lac Chuzenji", city: "Tochigi", day: "Jour 14", detail: "Lac au pied du mont Nantai, après la route de montagne Irohazaka" },
+  { name: "Chutes de Kegon", city: "Tochigi", day: "Jour 14", detail: "Chute d'eau de 97 m, l'une des plus célèbres du Japon" },
   { name: "Gare de Keisei-Ueno", city: "Tokyo", day: "Jour 15", detail: "Départ du Keisei Skyliner direct vers Narita (avec les bagages)" },
 ];
 
@@ -78,7 +75,7 @@ export const filterData = {
     { name: "Osaka", day: "Jour 5", detail: "Château et Dotonbori" },
     { name: "Shirakawa-go", day: "Jour 7", detail: "Village gassho-zukuri UNESCO" },
     { name: "Route du Nakasendo", day: "Jour 8", detail: "Randonnée de 8 km Magome → Tsumago" },
-    { name: "Mont Fuji avec Ken", day: "Jour 14", detail: "Tour privé 8h en mini-van avec guide hispanophone" },
+    { name: "Nikko", day: "Jour 14", detail: "Sanctuaire Toshogu, pont Shinkyo et chutes de Kegon" },
   ],
   transportes: [
     { name: "Aéroport de Narita", day: "Jours 1 et 15", detail: "Vols internationaux QR808 (arrivée) / QR809 (départ)" },
@@ -87,8 +84,7 @@ export const filterData = {
     { name: "Takayama Nohi Bus Center", day: "Jours 7–8", detail: "Bus vers Shirakawa-go et Magome" },
     { name: "Gare de Nagoya", day: "Jour 9", detail: "Correspondance Shinano 4 → Tokaido Shinkansen" },
     { name: "Gare de Tokyo", day: "Jours 9–15", detail: "Shinkansen et lignes JR" },
-    { name: "Gare de Mishima", day: "Jour 14", detail: "Point de rencontre tour Mont Fuji (08:20)" },
-    { name: "Gare Shin-Fuji", day: "Jour 14", detail: "Fin du tour Mont Fuji et retour en train à grande vitesse" },
+    { name: "Gare de Tobu-Asakusa", day: "Jour 14", detail: "Départ vers Nikko en Tobu Limited Express" },
   ]
 };
 

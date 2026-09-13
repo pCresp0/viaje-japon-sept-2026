@@ -73,7 +73,6 @@ export default function PlacesPage() {
   const t = useT();
   const { days } = useContent();
   const [gygOpen, setGygOpen] = useState(false);
-  const [kenOpen, setKenOpen] = useState(false);
 
   const dayByNum = Object.fromEntries(days.map((d) => [d.num, d]));
 
@@ -94,7 +93,7 @@ export default function PlacesPage() {
         </p>
       </div>
 
-      {/* 1. Estrategia de Reserva Múltiple GetYourGuide */}
+      {/* 1. Excursión confirmada al Monte Fuji con GetYourGuide */}
       <div className="rounded-2xl overflow-hidden border mb-6" style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
         <button
           type="button"
@@ -113,14 +112,14 @@ export default function PlacesPage() {
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 flex-wrap">
               <p style={{ fontSize: 15, fontWeight: 700, color: "white", margin: 0 }}>
-                Estrategia GetYourGuide · Monte Fuji, Lago Kawaguchi y Chureito
+                Excursión GetYourGuide · Monte Fuji, Lago Kawaguchi y Chureito
               </p>
               <span style={{ background: "rgba(255,255,255,0.25)", color: "white", fontSize: 10, fontWeight: 800, padding: "2px 8px", borderRadius: 9999, textTransform: "uppercase", letterSpacing: "0.03em" }}>
-                4 Días Reservados
+                Confirmado
               </span>
             </div>
             <p style={{ fontSize: 11.5, color: "rgba(255,255,255,0.9)", margin: 0 }}>
-              Cancelación gratuita hasta 24h antes · Elegir el mejor día por visibilidad y cancelar el resto
+              Miércoles 16 de septiembre · Reserva ya confirmada, sin necesidad de cancelar nada
             </p>
           </div>
           <ChevronDown
@@ -133,34 +132,25 @@ export default function PlacesPage() {
         {gygOpen && (
         <div className="px-5 py-4 space-y-4">
           <p style={{ fontSize: 13.5, color: "var(--ink)", lineHeight: 1.6, margin: 0 }}>
-            Para asegurar ver el cono del Monte Fuji despejado, se han reservado <strong>4 fechas consecutivas</strong> en GetYourGuide (Japan Visionary Tour). Revisaremos las webcams 24h antes de cada día y mantendremos únicamente la jornada con mejor pronóstico, cancelando las demás con <strong style={{ color: "var(--forest)" }}>reembolso íntegro del 100%</strong>.
+            Reserva confirmada en GetYourGuide (Japan Visionary Tour) para el <strong>16 de septiembre</strong>. Comprobad de todos modos la visibilidad del Fuji esa mañana con las webcams, simplemente para saber qué esperar del día -- no hace falta cancelar ni reservar nada más.
           </p>
 
-          {/* 4 Reservas Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-            {[
-              { day: "Miércoles 16 Sept (08:30)", code: "GYGX7M7NZBNL", pin: "3342WSa=", cancel: "Antes de 08:30 del 15 sept" },
-              { day: "Jueves 17 Sept (08:30)", code: "GYGFWV2MNZV8", pin: "rN#/Ec5r", cancel: "Antes de 08:30 del 16 sept" },
-              { day: "Viernes 18 Sept (08:30)", code: "GYGZGZVLFL75", pin: "ZPR=DM/Y", cancel: "Antes de 08:30 del 17 sept" },
-              { day: "Sábado 19 Sept (08:30)", code: "GYGMX397LBNA", pin: "qjQcmrJZ", cancel: "Antes de 08:30 del 18 sept" },
-            ].map((b, idx) => (
-              <div key={idx} className="p-3.5 rounded-xl border flex flex-col justify-between" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
-                <div>
-                  <p style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)", margin: 0 }}>{b.day}</p>
-                  <p style={{ fontSize: 11.5, fontWeight: 600, color: "var(--shu)", marginTop: 3, marginBottom: 0 }}>
-                    Cancela: {b.cancel}
-                  </p>
-                </div>
-                <div className="flex items-center gap-2 mt-2.5 pt-2.5 border-t" style={{ borderColor: "var(--line)" }}>
-                  <span className="font-mono text-xs font-bold px-2 py-0.5 rounded border" style={{ background: "rgba(2, 132, 199, 0.08)", borderColor: "rgba(2, 132, 199, 0.3)", color: "#0284c7" }}>
-                    {b.code}
-                  </span>
-                  <span className="font-mono text-[11px] px-2 py-0.5 rounded border" style={{ background: "var(--paper-raised)", borderColor: "var(--line)", color: "var(--ink-soft)" }}>
-                    PIN: {b.pin}
-                  </span>
-                </div>
-              </div>
-            ))}
+          {/* Reserva confirmada */}
+          <div className="p-3.5 rounded-xl border flex flex-col justify-between" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
+            <div>
+              <p style={{ fontSize: 13, fontWeight: 700, color: "var(--ink)", margin: 0 }}>Miércoles 16 Sept (08:30)</p>
+              <p style={{ fontSize: 11.5, fontWeight: 600, color: "var(--forest)", marginTop: 3, marginBottom: 0 }}>
+                ✅ Confirmada
+              </p>
+            </div>
+            <div className="flex items-center gap-2 mt-2.5 pt-2.5 border-t" style={{ borderColor: "var(--line)" }}>
+              <span className="font-mono text-xs font-bold px-2 py-0.5 rounded border" style={{ background: "rgba(2, 132, 199, 0.08)", borderColor: "rgba(2, 132, 199, 0.3)", color: "#0284c7" }}>
+                GYGX7M7NZBNL
+              </span>
+              <span className="font-mono text-[11px] px-2 py-0.5 rounded border" style={{ background: "var(--paper-raised)", borderColor: "var(--line)", color: "var(--ink-soft)" }}>
+                PIN: 3342WSa=
+              </span>
+            </div>
           </div>
 
           {/* Logística y aviso de comida */}
@@ -199,125 +189,6 @@ export default function PlacesPage() {
         )}
       </div>
 
-      {/* 2. Tour Privado con Ken Kaneshima */}
-      <div className="rounded-2xl overflow-hidden border mb-6" style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
-        <button
-          type="button"
-          onClick={() => setKenOpen((v) => !v)}
-          className="w-full text-left flex items-center gap-3 px-5 py-4 border-none cursor-pointer"
-          style={{ background: "#1d3557" }}
-        >
-          <div style={{
-            width: 36, height: 36, borderRadius: 10,
-            background: "rgba(255,255,255,0.18)",
-            display: "flex", alignItems: "center", justifyContent: "center",
-            flexShrink: 0,
-          }}>
-            <Mountain size={18} style={{ color: "white" }} />
-          </div>
-          <div className="flex-1 min-w-0">
-            <p style={{ fontSize: 15, fontWeight: 700, color: "white", margin: 0 }}>
-              Tour Exclusivo al Monte Fuji con Ken Kaneshima{" "}
-              <span style={{ fontWeight: 500, opacity: 0.85 }}>
-                ({dayLabel(14)})
-              </span>
-            </p>
-            <p style={{ fontSize: 11.5, color: "rgba(255,255,255,0.7)", margin: 0 }}>
-              Domingo 20 de septiembre · Tour de 8 horas en mini-van privada con guía en español
-            </p>
-          </div>
-          <ChevronDown
-            size={20}
-            className={`shrink-0 transition-transform ${kenOpen ? "rotate-180" : ""}`}
-            style={{ color: "rgba(255,255,255,0.9)" }}
-          />
-        </button>
-
-        {kenOpen && (
-        <div className="px-5 py-4 space-y-4">
-          <p style={{ fontSize: 13.5, color: "var(--ink)", lineHeight: 1.6, margin: 0 }}>
-            Descubrid la esencia del Japón rural con este tour de día completo para grupos reducidos con <strong>guía oficial en español</strong> (Ken Kaneshima). Recorreremos la Pagoda Chureito, santuarios milenarios, aldeas tradicionales de paja, el místico bosque de lava y las cataratas de la falda del volcán.
-          </p>
-
-          {/* Quick specs grid */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 150px), 1fr))", gap: 10 }}>
-            <div className="p-2.5 rounded-xl border" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
-              <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 2, fontWeight: 600 }}>Precio</p>
-              <p style={{ fontSize: 13, fontWeight: 700, color: "var(--shu)", margin: 0 }}>13.000 ¥ (~70€) / pers.</p>
-              <p style={{ fontSize: 9.5, color: "var(--ink-soft)", margin: 0 }}>Entradas + mini-van inc.</p>
-            </div>
-            <div className="p-2.5 rounded-xl border" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
-              <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 2, fontWeight: 600 }}>Punto de inicio</p>
-              <p style={{ fontSize: 12, fontWeight: 700, color: "var(--ink)", margin: 0 }}>Mishima Sta. (08:20 AM)</p>
-              <p style={{ fontSize: 9.5, color: "var(--ink-soft)", margin: 0 }}>Salida Sur · 50 min de Tokio</p>
-            </div>
-            <div className="p-2.5 rounded-xl border" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
-              <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 2, fontWeight: 600 }}>Punto de fin</p>
-              <p style={{ fontSize: 12, fontWeight: 700, color: "var(--ink)", margin: 0 }}>Shin-Fuji Sta. (~17:30)</p>
-              <p style={{ fontSize: 9.5, color: "var(--ink-soft)", margin: 0 }}>Tren bala · 60 min a Tokio</p>
-            </div>
-            <div className="p-2.5 rounded-xl border" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
-              <p style={{ fontSize: 10, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 2, fontWeight: 600 }}>Contacto Guía</p>
-              <p style={{ fontSize: 12, fontWeight: 700, color: "var(--ink)", margin: 0 }}>Ken Kaneshima</p>
-              <a href="tel:+819058631635" style={{ fontSize: 10.5, color: "var(--indigo)", fontWeight: 600, textDecoration: "none" }}>+81 90-5863-1635</a>
-            </div>
-          </div>
-
-          {/* Lugares a visitar */}
-          <div className="p-3.5 rounded-xl border" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
-            <p style={{ fontSize: 12, fontWeight: 700, color: "var(--ink)", marginBottom: 6 }}>🗺️ Itinerario del Tour con Ken (6 Paradas Principales):</p>
-            <ol style={{ fontSize: 12, color: "var(--ink)", paddingLeft: 18, lineHeight: 1.6, margin: 0 }} className="space-y-1">
-              <li><strong>Pagoda Chureito:</strong> La postal icónica de 5 pisos con el Monte Fuji de fondo.</li>
-              <li><strong>Santuario Kitaguchi Hongu:</strong> Inicio histórico de peregrinos entre cedros gigantes milenarios.</li>
-              <li><strong>Aldea Oshino Hakkai:</strong> Estanques cristalinos de agua de deshielo y casas de tejado de paja.</li>
-              <li><strong>Comida típica (Houtou):</strong> Parada técnica en restaurante tradicional para probar fideos anchos en sopa caliente de miso.</li>
-              <li><strong>Bosque de Aokigahara:</strong> El 'Mar de Árboles' sobre suelo de lava volcánica y raíces retorcidas.</li>
-              <li><strong>Cataratas Shiraito & Lagos:</strong> Cascadas en hilos de seda blanca y ruta panorámica de lagos (Yamanakako, Saiko, Motosuko).</li>
-            </ol>
-          </div>
-
-          {/* Herramientas de predicción de visibilidad y webcams */}
-          <div className="rounded-xl p-3.5" style={{ background: "rgba(29,53,87,0.06)", border: "1px solid rgba(29,53,87,0.18)" }}>
-            <p style={{ fontSize: 12.5, fontWeight: 700, color: "var(--indigo)", marginBottom: 4 }}>
-              📷 Predicción de Visibilidad y Cámaras Web en Directo
-            </p>
-            <p style={{ fontSize: 11.5, color: "var(--ink)", lineHeight: 1.5, marginBottom: 8 }}>
-              <strong>La Regla de Oro:</strong> Las mañanas tempranas son la garantía. Abrid las webcams en directo desde el hotel a las <strong>06:30 AM</strong>; si la montaña no es visible a las 07:00 AM, es improbable que se despeje más tarde (a partir de las 09:00 AM el calor forma nubes).
-            </p>
-            <div className="flex flex-wrap gap-2">
-              <a
-                href="https://isfujivisible.com"
-                target="_blank" rel="noopener noreferrer"
-                className="text-xs font-semibold px-2.5 py-1.5 rounded-lg border flex items-center gap-1"
-                style={{ background: "white", borderColor: "var(--line)", color: "var(--indigo)", textDecoration: "none" }}
-              >
-                🌐 isfujivisible.com (Score 1-10) ↗
-              </a>
-              <a
-                href="https://mtfujitoday.com"
-                target="_blank" rel="noopener noreferrer"
-                className="text-xs font-semibold px-2.5 py-1.5 rounded-lg border flex items-center gap-1"
-                style={{ background: "white", borderColor: "var(--line)", color: "var(--forest)", textDecoration: "none" }}
-              >
-                📹 mtfujitoday.com (Webcams) ↗
-              </a>
-              <a
-                href="https://excursionesfujiyama.com/"
-                target="_blank" rel="noopener noreferrer"
-                className="text-xs font-semibold px-2.5 py-1.5 rounded-lg border flex items-center gap-1"
-                style={{ background: "white", borderColor: "var(--line)", color: "var(--shu)", textDecoration: "none" }}
-              >
-                🚐 excursionesfujiyama.com ↗
-              </a>
-            </div>
-          </div>
-
-          <div style={{ marginTop: 4 }}>
-            <GuideCard id="fuji" accent="#1d3557" />
-          </div>
-        </div>
-        )}
-      </div>
 
       <div style={{
         display: "grid",

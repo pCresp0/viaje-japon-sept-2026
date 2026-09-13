@@ -344,7 +344,7 @@ function buildSearchIndex(lang) {
     { terms: ["shibuya", "harajuku", "shinjuku", "meiji", "takeshita", "omoide", "shibuya sky", "shibuya crossing", "cat street"], day: 11, title: "Shibuya / Harajuku / Shinjuku", subtitle: "Día 11" },
     { terms: ["toyosu", "ginza", "roppongi", "mori tower", "sushi", "sashimi", "tsukiji", "teamlab borderless"], day: 12, title: "Toyosu / Ginza / Roppongi", subtitle: "Día 12" },
     { terms: ["ikebukuro", "nakano", "nintendo", "pokemon", "sunshine", "animate", "mandarake", "broadway"], day: 13, title: "Ikebukuro / Nakano", subtitle: "Día 13" },
-    { terms: ["fuji", "monte fuji", "ken kaneshima", "kaneshima", "fujiyama", "chureito", "aokigahara", "shiraito", "oshino", "houtou", "mishima", "shin-fuji", "getyourguide", "gyg", "gygx7m7nzbnl", "gygfwv2mnzv8", "gygzgvzvlfl75", "gygmx397lbna", "visionary", "saiko", "oishi", "mode gakuen", "isfujivisible", "mtfujitoday"], day: 14, title: "Monte Fuji", subtitle: "Día 14 · excursión exclusiva Ken + reservas GYG" },
+    { terms: ["fuji", "monte fuji", "fujiyama", "chureito", "oshino hakkai", "kawaguchiko", "getyourguide", "gyg", "gygx7m7nzbnl", "visionary", "saiko", "oishi", "mode gakuen", "isfujivisible", "mtfujitoday"], day: 10, title: "Monte Fuji", subtitle: "Día 10 · excursión confirmada GetYourGuide" },
     // Transportes clave buscables por nombre y números de reserva/asiento
     { terms: ["nozomi", "nozomi 53", "shinkansen", "shinagawa", "17:19", "smart ex", "smart ex 2000", "2000", "coche 13", "13c", "13d", "13e", "14d", "14e"], day: 1, title: "Shinkansen Nozomi 53", subtitle: "Día 1 · Shinagawa → Kyoto 17:19" },
     { terms: ["check-in", "check in", "keihan", "hotel keihan"], day: 1, title: "Check-in Hotel Keihan Kyoto Hachijoguchi", subtitle: "Día 1 · 19:30" },
@@ -356,7 +356,7 @@ function buildSearchIndex(lang) {
     { terms: ["nohi bus", "nohi", "bus magome", "takayama magome", "08:00", "08302008262", "reserva 08302008262", "coche 1", "car 01", "2c", "2d", "3b", "3c", "3d"], day: 8, title: "Nohi Bus Takayama → Magome", subtitle: "Día 8 · 08:00" },
     { terms: ["shinano", "express shinano", "nakatsugawa", "nagoya", "09:57", "42093", "reserva 42093", "aee6606m", "car 4", "coche 4"], day: 9, title: "JR Shinano 4 → Nagoya", subtitle: "Día 9 · ✅ Reservado 42093 · 🎫 Recoger billetes" },
     { terms: ["nozomi 358", "nozomi", "shinkansen nagoya", "smart ex 2002", "2002", "11:29", "13:06", "coche 12", "car 12", "11-d", "11-e", "12-c", "12-d", "12-e"], day: 9, title: "Shinkansen Nozomi 358", subtitle: "Día 9 · ✅ Smart EX 2002 · Nagoya 11:29 → Tokyo 13:06" },
-    { terms: ["kodama", "kodama 805", "shin-fuji", "fuji shinkansen", "07:27"], day: 14, title: "Shinkansen Kodama 805", subtitle: "Día 14 · Tokio → Mishima/Shin-Fuji" },
+    { terms: ["tobu nikko", "nikko express", "tobu asakusa", "toshogu"], day: 14, title: "Tobu Limited Express a Nikko", subtitle: "Día 14 · Tobu-Asakusa → Tobu-Nikko" },
   ];
   for (const c of cityDayHints) {
     items.push(entry({
@@ -982,7 +982,7 @@ export const QUICK_SUGGESTIONS = [
   { label: "Seguro", query: "heymondo" },
   { label: "Visit Japan Web", query: "visit japan" },
   { label: "Pokémon", query: "pokemon" },
-  { label: "Ken Kaneshima", query: "ken kaneshima" },
+  { label: "Nikko", query: "nikko" },
 ];
 
 export function searchGlobal(query, { limit = 15, minChars = 3, lang = "es" } = {}) {

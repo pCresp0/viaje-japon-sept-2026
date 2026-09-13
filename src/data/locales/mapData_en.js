@@ -53,14 +53,11 @@ export const stops = [
   { name: "Roppongi (Mori Tower)", city: "Tokyo", day: "Day 12", detail: "Tokyo City View observation deck with panoramic views and Tokyo Tower" },
   { name: "Ikebukuro", city: "Tokyo", day: "Day 13", detail: "Mega Pokémon Center Ikebukuro and anime shops" },
   { name: "Nakano Broadway", city: "Tokyo", day: "Day 13", detail: "Mecca of retro collectibles, vintage figures and manga" },
-  { name: "Mishima Station", city: "Shizuoka", day: "Day 14", detail: "Arrival by Kodama Shinkansen and meeting point to start the mini-van route" },
-  { name: "Chureito Pagoda (Arakurayama Sengen)", city: "Yamanashi", day: "Day 14", detail: "Japan's most iconic postcard view with the pagoda and Mt. Fuji" },
-  { name: "Kitaguchi Hongu Fuji Sengen Shrine", city: "Yamanashi", day: "Day 14", detail: "Historic starting point for pilgrims, with centuries-old cedars" },
-  { name: "Oshino Hakkai Village", city: "Yamanashi", day: "Day 14", detail: "Meltwater springs and traditional thatched-roof houses" },
-  { name: "Aokigahara Forest", city: "Yamanashi", day: "Day 14", detail: "The Sea of Trees over the volcano's lava flows" },
-  { name: "Shiraito Falls", city: "Shizuoka", day: "Day 14", detail: "Spectacular waterfall of silk-thread-like volcanic water" },
-  { name: "Fuji Five Lakes Route", city: "Yamanashi", day: "Day 14", detail: "Panoramic views of Mt. Fuji from Lake Kawaguchiko and Lake Saiko" },
-  { name: "Shin-Fuji Station", city: "Shizuoka", day: "Day 14", detail: "End of the tour and return to Tokyo by Shinkansen" },
+  { name: "Tobu-Nikko Station", city: "Tochigi", day: "Day 14", detail: "Arrival by direct train from Tobu-Asakusa (approx. 2h)" },
+  { name: "Shinkyo Bridge", city: "Tochigi", day: "Day 14", detail: "The iconic red bridge over the Daiya River, symbol of Nikko" },
+  { name: "Toshogu Shrine", city: "Tochigi", day: "Day 14", detail: "Mausoleum of Tokugawa Ieyasu, UNESCO World Heritage Site" },
+  { name: "Lake Chuzenji", city: "Tochigi", day: "Day 14", detail: "Lake at the foot of Mt. Nantai, past the Irohazaka mountain road" },
+  { name: "Kegon Falls", city: "Tochigi", day: "Day 14", detail: "A 97m waterfall, one of the most famous in Japan" },
   { name: "Keisei-Ueno Station", city: "Tokyo", day: "Day 15", detail: "Departure of the Keisei Skyliner direct to Narita (with luggage)" },
 ];
 
@@ -78,7 +75,7 @@ export const filterData = {
     { name: "Osaka", day: "Day 5", detail: "Castle and Dotonbori" },
     { name: "Shirakawa-go", day: "Day 7", detail: "UNESCO gassho-zukuri village" },
     { name: "Nakasendo Route", day: "Day 8", detail: "8 km hike Magome → Tsumago" },
-    { name: "Mount Fuji with Ken", day: "Day 14", detail: "Full day private 8h mini-van tour with Spanish-speaking guide" },
+    { name: "Nikko", day: "Day 14", detail: "Toshogu Shrine, Shinkyo Bridge and Kegon Falls" },
   ],
   transportes: [
     { name: "Narita Airport", day: "Days 1 and 15", detail: "International flights QR808 (arrival) / QR809 (departure)" },
@@ -87,8 +84,7 @@ export const filterData = {
     { name: "Takayama Nohi Bus Center", day: "Days 7–8", detail: "Buses to Shirakawa-go and Magome" },
     { name: "Nagoya Station", day: "Day 9", detail: "Transit Shinano 4 → Tokaido Shinkansen" },
     { name: "Tokyo Station", day: "Days 9–15", detail: "Shinkansen and JR connections" },
-    { name: "Mishima Station", day: "Day 14", detail: "Mount Fuji tour meeting point (08:20 AM)" },
-    { name: "Shin-Fuji Station", day: "Day 14", detail: "Mount Fuji tour end point and bullet train return" },
+    { name: "Tobu-Asakusa Station", day: "Day 14", detail: "Departure to Nikko on the Tobu Limited Express" },
   ]
 };
 

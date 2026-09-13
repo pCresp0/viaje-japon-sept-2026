@@ -71,15 +71,6 @@ export const pendingItems = [
     deadline: "4 semanas antes (~18/08/2026)",
   },
   {
-    id: "shinkansen-fuji",
-    phase: "antes",
-    category: "reserva",
-    urgency: "alta",
-    title: "🔴 Reservar Shinkansen Excursión Fuji (Ida/Vuelta)",
-    detail: "📅 20/09/2026\n👥 5 personas\n🚆 Tokaido-Sanyo Shinkansen KODAMA 805 (Ida 07:27) y regreso Shin-Fuji→Tokio\n📍 Tokio ↔ Mishima / Shin-Fuji\n💳 Comprar: Smart EX App/Web\n⚠️ Excursión con el guía Ken ya confirmada para el 20/09. Comprar billetes de Shinkansen en Smart EX (1 mes antes / 20 de agosto a las 10:00 JST). Recordar salir del hotel ~06:30 para caminar a Tawaramachi, tomar Ginza Line a Ueno y conectar a Tokyo Station con margen.",
-    deadline: "1 mes antes (20/08/2026)",
-  },
-  {
     id: "cena-takayama",
     phase: "antes",
     category: "reserva",

@@ -738,16 +738,12 @@ export const guides = {
         body: "Esto es clave para planificar: el Fuji está despejado bastante menos de lo que la gente espera. En verano, la visibilidad clara es de apenas unos días al mes por la humedad y las nubes que genera la propia montaña. Los mejores meses son de noviembre a febrero. En septiembre las probabilidades son intermedias, y casi siempre mejores a primera hora de la mañana, antes de que el calor forme nubes. De ahí que la estrategia de reservar varios días y ejecutar el que amanezca despejado tenga todo el sentido.",
       },
       {
-        title: "Tour Exclusivo: Lugares a Visitar",
-        body: "El recorrido de 8h en mini-van con Ken Kaneshima incluye los enclaves más espectaculares de la región:\n1. Pagoda Chureito (Arakurayama Sengen): la postal clásica de 5 pisos con el Fuji al fondo.\n2. Santuario Kitaguchi Hongu Fuji Sengen Jinja: inicio histórico de peregrinos entre cedros gigantes.\n3. Aldea Oshino Hakkai: 8 estanques cristalinos de deshielo volcánico y casas con tejados de paja.\n4. Bosque de Aokigahara: el 'Mar de Árboles' sobre roca de lava endurecida.\n5. Cataratas Shiraito: cascada natural que brota de la roca como hilos de seda blanca.\n6. Ruta de los Lagos: vistas panorámicas desde las orillas de Yamanakako, Saiko y Motosuko.",
+        title: "La excursión: qué se visita",
+        body: "La excursión reservada con GetYourGuide (Japan Visionary Tour) recorre cuatro paradas en la zona norte del Fuji, en la región de los Cinco Lagos:\n1. Lago Kawaguchiko y Parque Oishi: paseo junto al lago con vistas clásicas del Fuji, famoso por sus campos de flores de temporada.\n2. Aldea Saiko Iyashi-no-Sato Nemba: réplica de un poblado tradicional de casas con tejado de paja, reconstruido tras un tifón en 1966.\n3. Manantiales de Oshino Hakkai: ocho estanques de agua cristalina alimentados por el deshielo del Fuji, declarados lugar de belleza natural.\n4. Pagoda Chureito (Arakurayama Sengen): la imagen postal más icónica de Japón, con la pagoda de cinco pisos y el Fuji al fondo -- 400 escalones para subir al mirador.",
       },
       {
-        title: "Gastronomía Local: Fideos Houtou",
-        body: "Al mediodía parada en restaurante tradicional para degustar Houtou (fideos planos y anchos cocinados a fuego lento en caldo caliente de miso con calabaza y verduras de temporada de la montaña), el plato insignia de la prefectura de Yamanashi.",
-      },
-      {
-        title: "Logística y Precios",
-        body: "• Precio: 13.000 ¥ / persona (~70€) (incluye mini-van privada y todas las entradas a los recintos). Comidas y bebidas no incluidas.\n• Punto de inicio: Estación de Mishima (Salida Sur) a las 08:20 AM (~50 min desde Tokio en Shinkansen).\n• Punto final: Estación de tren bala Shin-Fuji sobre las 17:30 (~60 min a Tokio en Shinkansen).\n• Idioma: Guía oficial en español (Ken Kaneshima · excursionesfujiyama.com · +81 90-5863-1635).",
+        title: "Logística y precios",
+        body: "• Precio: 42€ / persona (~210€ grupo), ya pagado.\n• Punto de encuentro: Tokyo Mode Gakuen (1-7-3 Nishishinjuku, Shinjuku), frente a la estación. Llegar antes de las 08:25 (salida 08:30).\n• Duración: aproximadamente 10 horas, con regreso previsto a Shinjuku sobre las 18:30.\n• Idioma: guía en inglés.\n• Comida NO incluida: no se puede comer en el autobús, conviene desayunar bien y llevar efectivo en yenes para los puestos locales de las paradas.",
       },
       {
         title: "Predicción de Visibilidad y Cámaras Web",
@@ -759,7 +755,7 @@ export const guides = {
       "Hay un dicho japonés: 'Es sabio subir el Fuji una vez, y necio subirlo dos'.",
       "El primer sueño del año con el Fuji se considera de muy buena suerte, especialmente combinado con un halcón y una berenjena.",
     ],
-    tip: "Tour reservado el Domingo 20 de septiembre (Día 14) con Ken Kaneshima (Excursiones Fujiyama · +81 90-5863-1635 · excursionesfujiyama.com) + 4 reservas flexibles en GetYourGuide del 16 al 19 de septiembre. Comprobar cámaras web a las 06:30 AM.",
+    tip: "Excursión confirmada para el miércoles 16 de septiembre (Día 10) con GetYourGuide (reserva GYGX7M7NZBNL). Comprobar cámaras web a las 06:30 AM la mañana del día.",
   },
   "tokyo-tower": {
     name: "Roppongi Hills y la Torre de Tokio",
@@ -822,11 +818,11 @@ export const guidesByDay = {
   7: ["shirakawa-go", "takayama"],
   8: ["nakasendo"],
   9: ["akihabara"],
-  10: ["senso-ji", "teamlab"],
+  10: ["senso-ji", "fuji"],
   11: ["meiji-jingu", "shibuya"],
   12: ["tokyo-tower"],
   13: ["nakano-broadway"],
-  14: ["fuji"],
+  14: [],
   15: [],
 };
 
@@ -918,7 +914,7 @@ export const guideMeta = {
   },
   "fuji": {
     shortName: "Monte Fuji",
-    keywords: ["chureito", "oshino hakkai", "aokigahara", "shiraito", "pagoda chureito", "kitaguchi hongu", "lagos del fuji"],
+    keywords: ["chureito", "oshino hakkai", "pagoda chureito", "kawaguchiko", "lago kawaguchi", "parque oishi", "saiko"],
   },
   "tokyo-tower": {
     shortName: "Torre de Tokio",

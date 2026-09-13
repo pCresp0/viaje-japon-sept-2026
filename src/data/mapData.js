@@ -403,62 +403,41 @@ export const stops = [
     detail: "Meca del coleccionismo retro, figuras vintage y manga",
   },
 
-  // ── DÍA 14: Excursión Exclusiva al Monte Fuji ────────────────────
+  // ── DÍA 14: Excursión a Nikko ────────────────────────────────────
   {
-    id: "mishima-fuji", name: "Estación de Mishima", city: "Shizuoka",
-    lat: 35.1271, lng: 138.9106,
-    emoji: "🚐", color: "#1d3557",
-    day: "Día 14",
-    detail: "Llegada en Shinkansen Kodama y encuentro para iniciar ruta en mini-van",
-  },
-  {
-    id: "chureito", name: "Pagoda Chureito (Arakurayama Sengen)", city: "Yamanashi",
-    lat: 35.5015, lng: 138.8016,
-    emoji: "⛩️", color: "#1d3557",
-    day: "Día 14",
-    detail: "La vista postal más icónica de Japón con la pagoda y el Fuji",
-  },
-  {
-    id: "sengen-jinja", name: "Santuario Kitaguchi Hongu Fuji Sengen", city: "Yamanashi",
-    lat: 35.4748, lng: 138.7944,
-    emoji: "⛩️", color: "#1d3557",
-    day: "Día 14",
-    detail: "Punto de partida histórico de los peregrinos con cedros milenarios",
-  },
-  {
-    id: "oshino-hakkai", name: "Aldea Oshino Hakkai", city: "Yamanashi",
-    lat: 35.4594, lng: 138.8329,
-    emoji: "🏡", color: "#1d3557",
-    day: "Día 14",
-    detail: "Manantiales de agua de deshielo y casas tradicionales de paja",
-  },
-  {
-    id: "aokigahara", name: "Bosque de Aokigahara", city: "Yamanashi",
-    lat: 35.4750, lng: 138.6475,
-    emoji: "🌲", color: "#1d3557",
-    day: "Día 14",
-    detail: "El Mar de Árboles sobre coladas de lava del volcán",
-  },
-  {
-    id: "shiraito", name: "Cataratas Shiraito", city: "Shizuoka",
-    lat: 35.3130, lng: 138.5878,
-    emoji: "🌊", color: "#1d3557",
-    day: "Día 14",
-    detail: "Espectacular cascada de hilos de seda de agua volcánica",
-  },
-  {
-    id: "fuji-lakes", name: "Ruta de los Lagos del Fuji", city: "Yamanashi",
-    lat: 35.4988, lng: 138.7690,
-    emoji: "🗻", color: "#1d3557",
-    day: "Día 14",
-    detail: "Vistas panorámicas del monte Fuji desde los lagos Kawaguchiko y Saiko",
-  },
-  {
-    id: "shinfuji", name: "Estación Shin-Fuji", city: "Shizuoka",
-    lat: 35.1422, lng: 138.6636,
+    id: "tobu-nikko-sta", name: "Estación de Tobu-Nikko", city: "Tochigi",
+    lat: 36.7573, lng: 139.6122,
     emoji: "🚅", color: "#1d3557",
     day: "Día 14",
-    detail: "Final del tour y regreso en Shinkansen a Tokio",
+    detail: "Llegada en tren directo desde Tobu-Asakusa (aprox. 2h)",
+  },
+  {
+    id: "shinkyo-bridge", name: "Puente Shinkyo", city: "Tochigi",
+    lat: 36.7567, lng: 139.5989,
+    emoji: "🌉", color: "#1d3557",
+    day: "Día 14",
+    detail: "El puente rojo icónico sobre el río Daiya, símbolo de Nikko",
+  },
+  {
+    id: "toshogu", name: "Santuario Toshogu", city: "Tochigi",
+    lat: 36.7581, lng: 139.5992,
+    emoji: "⛩️", color: "#1d3557",
+    day: "Día 14",
+    detail: "Mausoleo de Tokugawa Ieyasu, Patrimonio de la Humanidad UNESCO",
+  },
+  {
+    id: "lake-chuzenji", name: "Lago Chuzenji", city: "Tochigi",
+    lat: 36.7275, lng: 139.4767,
+    emoji: "🏞️", color: "#1d3557",
+    day: "Día 14",
+    detail: "Lago a los pies del monte Nantai, tras la carretera Irohazaka",
+  },
+  {
+    id: "kegon-falls", name: "Cataratas Kegon", city: "Tochigi",
+    lat: 36.7386, lng: 139.4989,
+    emoji: "🌊", color: "#1d3557",
+    day: "Día 14",
+    detail: "Cascada de 97 m de caída, una de las más famosas de Japón",
   },
   
   // ── DÍA 15: Vuelta a casa ────────────────────────────────────────
@@ -487,7 +466,7 @@ export const filterData = {
     { id: "e-osaka", name: "Osaka", day: "Día 5", lat: 34.6873, lng: 135.5262, emoji: "🏯", color: "#bc4749", detail: "Castillo y Dotonbori" },
     { id: "e-shirakawa", name: "Shirakawa-go", day: "Día 7", lat: 36.2577, lng: 136.9063, emoji: "🏡", color: "#2e7d5b", detail: "Aldea gassho-zukuri tradicional" },
     { id: "e-tsumago", name: "Ruta Nakasendo", day: "Día 8", lat: 35.5776, lng: 137.5957, emoji: "🚶", color: "#2e7d5b", detail: "Caminata de 8 km Magome → Tsumago" },
-    { id: "e-fuji", name: "Monte Fuji con Ken", day: "Día 14", lat: 35.5009, lng: 138.7606, emoji: "🗻", color: "#1d3557", detail: "Tour privado de 8h en mini-van con guía en español" },
+    { id: "e-nikko", name: "Nikko", day: "Día 14", lat: 36.7573, lng: 139.6122, emoji: "⛩️", color: "#1d3557", detail: "Santuario Toshogu, Puente Shinkyo y cataratas Kegon" },
   ],
   transportes: [
     { id: "t-narita", name: "Aeropuerto Narita", day: "Días 1 y 15", lat: 35.7719, lng: 140.3929, emoji: "✈️", color: "#c9a227", detail: "Vuelos internacionales QR808 (llegada) / QR809 (salida)" },
@@ -496,8 +475,7 @@ export const filterData = {
     { id: "t-takayama", name: "Takayama Nohi Bus Center", day: "Días 7–8", lat: 36.1415, lng: 137.2513, emoji: "🚌", color: "#2e7d5b", detail: "Buses a Shirakawa-go y Magome" },
     { id: "t-nagoya", name: "Estación de Nagoya", day: "Día 9", lat: 35.1709, lng: 136.8815, emoji: "🚄", color: "#2e7d5b", detail: "Transbordo Shinano 4 → Tokaido Shinkansen" },
     { id: "t-tokio", name: "Estación de Tokio", day: "Días 9–15", lat: 35.6812, lng: 139.7671, emoji: "🚄", color: "#1d3557", detail: "Shinkansen y conexiones JR" },
-    { id: "t-mishima", name: "Estación de Mishima", day: "Día 14", lat: 35.1271, lng: 138.9106, emoji: "🚐", color: "#1d3557", detail: "Punto de encuentro tour Monte Fuji (08:20 AM)" },
-    { id: "t-shinfuji", name: "Estación Shin-Fuji", day: "Día 14", lat: 35.1422, lng: 138.6636, emoji: "🚅", color: "#1d3557", detail: "Punto final tour Monte Fuji y regreso en tren bala" },
+    { id: "t-tobu-asakusa", name: "Estación de Tobu-Asakusa", day: "Día 14", lat: 35.7108, lng: 139.8006, emoji: "🚅", color: "#1d3557", detail: "Salida hacia Nikko en Tobu Limited Express" },
   ]
 };
 

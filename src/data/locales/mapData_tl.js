@@ -53,14 +53,11 @@ export const stops = [
   { name: "Roppongi (Mori Tower)", city: "Tokyo", day: "Araw 12", detail: "Tokyo City View observation deck na may panoramic views at Tokyo Tower" },
   { name: "Ikebukuro", city: "Tokyo", day: "Araw 13", detail: "Mega Pokémon Center Ikebukuro at mga tindahan ng anime" },
   { name: "Nakano Broadway", city: "Tokyo", day: "Araw 13", detail: "Mecca ng retro collectibles, vintage figures at manga" },
-  { name: "Mishima Station", city: "Shizuoka", day: "Araw 14", detail: "Pagdating gamit ang Kodama Shinkansen at meeting point para simulan ang ruta gamit ang mini-van" },
-  { name: "Chureito Pagoda (Arakurayama Sengen)", city: "Yamanashi", day: "Araw 14", detail: "Ang pinaka-iconic na postcard view ng Japan na may pagoda at Fuji" },
-  { name: "Kitaguchi Hongu Fuji Sengen Shrine", city: "Yamanashi", day: "Araw 14", detail: "Makasaysayang simulan ng mga pilgrim, may mga sedar na daan-daang taon na" },
-  { name: "Oshino Hakkai Village", city: "Yamanashi", day: "Araw 14", detail: "Mga bukal ng natunaw na yelo at tradisyunal na mga bahay na thatched-roof" },
-  { name: "Aokigahara Forest", city: "Yamanashi", day: "Araw 14", detail: "Ang Sea of Trees sa ibabaw ng lava flow ng bulkan" },
-  { name: "Shiraito Falls", city: "Shizuoka", day: "Araw 14", detail: "Napakagandang talon ng volcanic water na parang sutla" },
-  { name: "Fuji Five Lakes Route", city: "Yamanashi", day: "Araw 14", detail: "Panoramic views ng Bundok Fuji mula sa Lake Kawaguchiko at Lake Saiko" },
-  { name: "Shin-Fuji Station", city: "Shizuoka", day: "Araw 14", detail: "Katapusan ng tour at pagbalik sa Tokyo gamit ang Shinkansen" },
+  { name: "Tobu-Nikko Station", city: "Tochigi", day: "Araw 14", detail: "Pagdating sa direktang tren mula Tobu-Asakusa (mga 2 oras)" },
+  { name: "Shinkyo Bridge", city: "Tochigi", day: "Araw 14", detail: "Ang kilalang pulang tulay sa Ilog Daiya, simbolo ng Nikko" },
+  { name: "Toshogu Shrine", city: "Tochigi", day: "Araw 14", detail: "Mausoleum ni Tokugawa Ieyasu, UNESCO World Heritage Site" },
+  { name: "Lake Chuzenji", city: "Tochigi", day: "Araw 14", detail: "Lawa sa paanan ng Mount Nantai, lampas sa Irohazaka mountain road" },
+  { name: "Kegon Falls", city: "Tochigi", day: "Araw 14", detail: "97m na talon, isa sa pinakasikat sa Japan" },
   { name: "Keisei-Ueno Station", city: "Tokyo", day: "Araw 15", detail: "Alis ng Keisei Skyliner diretso papuntang Narita (may bagahe)" },
 ];
 
@@ -78,7 +75,7 @@ export const filterData = {
     { name: "Osaka", day: "Araw 5", detail: "Kastilyo at Dotonbori" },
     { name: "Shirakawa-go", day: "Araw 7", detail: "UNESCO gassho-zukuri village" },
     { name: "Nakasendo Route", day: "Araw 8", detail: "8 km hike Magome → Tsumago" },
-    { name: "Bundok Fuji kasama si Ken", day: "Araw 14", detail: "Pribadong 8-oras na mini-van tour kasama ang Spanish guide" },
+    { name: "Nikko", day: "Araw 14", detail: "Toshogu Shrine, Shinkyo Bridge at Kegon Falls" },
   ],
   transportes: [
     { name: "Narita Airport", day: "Araw 1 at 15", detail: "Internasyonal na flight QR808 (dating) / QR809 (alis)" },
@@ -87,8 +84,7 @@ export const filterData = {
     { name: "Takayama Nohi Bus Center", day: "Araw 7–8", detail: "Mga bus papuntang Shirakawa-go at Magome" },
     { name: "Estasyon ng Nagoya", day: "Araw 9", detail: "Transit Shinano 4 → Tokaido Shinkansen" },
     { name: "Estasyon ng Tokyo", day: "Araw 9–15", detail: "Shinkansen at mga linyang JR" },
-    { name: "Estasyon ng Mishima", day: "Araw 14", detail: "Tagpuan para sa tour sa Bundok Fuji (08:20 AM)" },
-    { name: "Estasyon ng Shin-Fuji", day: "Araw 14", detail: "Dulo ng tour sa Bundok Fuji at pagbalik gamit ang bullet train" },
+    { name: "Estasyon ng Tobu-Asakusa", day: "Araw 14", detail: "Alis papuntang Nikko sa Tobu Limited Express" },
   ]
 };
 

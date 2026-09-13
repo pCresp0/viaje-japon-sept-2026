@@ -497,16 +497,14 @@ function DayFujiNote({ dayNum }) {
   if (!booking) return null;
   return (
     <div style={{ marginTop: 8, padding: "8px 10px", background: "#e8f4fc", border: "1px solid #7dd3fc", borderRadius: 6, fontSize: 9.5, lineHeight: 1.5 }}>
-      <strong>🗻 Opción Monte Fuji GYG (reserva {booking.code})</strong>
+      <strong>🗻 Excursión Monte Fuji GYG (reserva {booking.code})</strong>
       <br />
       PIN: {booking.pin} · {booking.status}
-      <br />
-      Cancelar antes de: {booking.cancelDeadline}
       <br />
       Punto de encuentro: {gygFujiActivity.meetingPoint} · {gygFujiActivity.meetingTime}
       <br />
       <span style={{ color: "#0369a1", fontStyle: "italic" }}>
-        Si 24h antes la previsión meteorológica de visibilidad es favorable, se realiza esta excursión en lugar del plan previsto de Tokio.
+        Comprobar la visibilidad del Fuji la mañana del día -- la reserva ya está confirmada, no hace falta cancelar nada.
       </span>
     </div>
   );
