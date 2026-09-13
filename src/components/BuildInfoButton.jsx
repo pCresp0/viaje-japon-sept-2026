@@ -148,27 +148,39 @@ export default function BuildInfoButton() {
             <div className="overflow-y-auto px-4 py-3 min-h-0">
               {changelogEntries.length > 0 ? (
                 <ul className="space-y-2.5 list-none m-0 p-0">
-                  {changelogEntries.map((entry, i) => {
-                    const clean = entry.replace(/^- /, "");
-                    const match = clean.match(/^\*\*(.+?)\*\*(.*)$/);
-                    const timestamp = match ? match[1] : null;
-                    const rest = match ? match[2] : clean;
-                    return (
-                      <li key={i} className="flex gap-2 text-[12.5px] leading-snug" style={{ color: "var(--ink)" }}>
-                        <span style={{ color: "var(--ink-soft)", flexShrink: 0 }}>•</span>
-                        <span>
-                          {timestamp ? (
-                            <>
-                              <strong style={{ fontSize: 13.5, fontWeight: 800, color: "var(--ink)" }}>{timestamp}</strong>
-                              {rest}
-                            </>
-                          ) : (
-                            clean
-                          )}
-                        </span>
-                      </li>
-                    );
-                  })}
+                  {(() => {
+                    let prevDate = null;
+                    const items = [];
+                    changelogEntries.forEach((entry, i) => {
+                      const clean = entry.replace(/^- /, "");
+                      const match = clean.match(/^\*\*(.+?)\*\*(.*)$/);
+                      const timestamp = match ? match[1] : null;
+                      const rest = match ? match[2] : clean;
+                      const dateOnly = timestamp ? timestamp.slice(0, 10) : null;
+                      if (dateOnly && prevDate && dateOnly !== prevDate) {
+                        items.push(
+                          <li key={`div-${i}`} aria-hidden="true" className="list-none" style={{ borderTop: "1px solid var(--line)" }} />
+                        );
+                      }
+                      if (dateOnly) prevDate = dateOnly;
+                      items.push(
+                        <li key={i} className="flex gap-2 text-[12.5px] leading-snug" style={{ color: "var(--ink)" }}>
+                          <span style={{ color: "var(--ink-soft)", flexShrink: 0 }}>•</span>
+                          <span>
+                            {timestamp ? (
+                              <>
+                                <strong style={{ fontSize: 13.5, fontWeight: 800, color: "var(--ink)" }}>{timestamp}</strong>
+                                {rest}
+                              </>
+                            ) : (
+                              clean
+                            )}
+                          </span>
+                        </li>
+                      );
+                    });
+                    return items;
+                  })()}
                 </ul>
               ) : (
                 <p className="text-[12.5px] m-0" style={{ color: "var(--ink-soft)" }}>
