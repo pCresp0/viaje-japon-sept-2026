@@ -21,3 +21,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-12 23:03 UTC** — Merge branch 'main' of https://github.com/pCresp0/viaje-japon-sept-2026 (`3394961`)
 - **2026-09-13 04:21 UTC** — feat(Día 7): botón de descarga de los 2 billetes en ... (`c897798`)
 - **2026-09-13 04:50 UTC** — fix: limpiar todos los restos reales de la excursión cancelada ... (`e97e3ad`)
+- **2026-09-13 05:00 UTC** — feat(Día 7): reorganizar Shirakawa-go y Takayama con horario detallado, rutas ... (`df86230`)
