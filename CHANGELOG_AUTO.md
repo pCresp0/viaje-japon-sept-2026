@@ -34,3 +34,5 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-13 10:51 UTC** — fix: corregir el enlace de Google Maps del KOKO Hotel ... (`12a5755`)
 - **2026-09-13 12:26 UTC** — feat(registro de cambios): separar los cambios por día con una ... (`b20df70`)
 - **2026-09-13 13:24 UTC** — fix(Día 8): aclarar que el equipaje Magome-Tsumago es transporte real ... (`d569fb9`)
+- **2026-09-13 13:25 UTC** — fix: traducir la aclaración del equipaje Magome-Tsumago a los 3 ... (`deb031f`)
+- **2026-09-13 13:25 UTC** — Merge branch 'main' of https://github.com/pCresp0/viaje-japon-sept-2026 (`e756352`)
