@@ -43,3 +43,5 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-13 23:17 UTC** — feat: añadir Akihabara al Día 13 y convertir Asakusa/Sensō-ji en ... (`e8e430c`)
 - **2026-09-13 23:41 UTC** — feat(Día 11): añadir Shibuya Sky como mirador opcional, con precio ... (`5756300`)
 - **2026-09-13 23:41 UTC** — Merge branch 'main' of https://github.com/pCresp0/viaje-japon-sept-2026 (`16eacde`)
+- **2026-09-13 23:43 UTC** — feat: traducir Akihabara (Día 13), Asakusa real (Día 15) y ... (`6bfc8b7`)
+- **2026-09-13 23:43 UTC** — Merge branch 'main' of https://github.com/pCresp0/viaje-japon-sept-2026 (`3ee508a`)
