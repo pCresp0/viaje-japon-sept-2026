@@ -24,3 +24,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-13 05:00 UTC** — feat(Día 7): reorganizar Shirakawa-go y Takayama con horario detallado, rutas ... (`df86230`)
 - **2026-09-13 05:03 UTC** — feat: traducir a los 3 idiomas la reorganización completa del ... (`678d18a`)
 - **2026-09-13 05:03 UTC** — Merge branch 'main' of https://github.com/pCresp0/viaje-japon-sept-2026 (`6a0133d`)
+- **2026-09-13 05:10 UTC** — fix: auditoría completa de los 16 días en los 4 ... (`d5aa9b0`)
