@@ -392,46 +392,108 @@ export const days = [
     "history": "Shirakawa-go est célèbre pour ses maisons gassho-zukuri, avec des toits de chaume très inclinés pour résister à la neige. Takayama a prospéré en tant que riche ville marchande sous le shogunat Tokugawa, grâce à ses charpentiers.",
     "schedule": [
       {
-        "text": "🍙 Réveil + Petit-déjeuner rapide à emporter. L'hôtel Resol Trinity Kanazawa N'INCLUT PAS le petit-déjeuner dans notre réservation. Bien que l'hôtel propose un petit-déjeuner à partir de 07:00, pour ce matin, il est plus pratique d'acheter la veille dans un konbini : onigiri, sandwich, fruit, café/boisson. Ne comptez pas sur le petit-déjeuner de l'hôtel car nous devons prendre le bus de 08:40. Préparez également de l'eau à emporter."
+        "time": "07:30",
+        "text": "🍙 Réveil + petit-déjeuner rapide à emporter. L'Hotel Resol Trinity Kanazawa n'inclut PAS le petit-déjeuner dans notre réservation. Bien que l'hôtel propose le petit-déjeuner à partir de 07h00, il est plus pratique ce matin d'acheter la veille dans un konbini : onigiri, sandwich, fruits, café/boisson. Ne pas compter sur le petit-déjeuner de l'hôtel car il faut prendre le bus de 08h40. Prévoir aussi de l'eau à emporter."
       },
       {
-        "text": "🚌 Nohi Bus Kanazawa → Shirakawa-go.\n\n📍 **OÙ MONTER :** Gare de Kanazawa, sortie OUEST (West Exit / Kanazawa-ko guchi), Terminal de bus n°4 (selon le site officiel du tourisme de Kanazawa). ⚠️ Ce point de départ a changé en 2023 (avant c'était la sortie Est, arrêt 2) — à l'arrivée, vérifier les panneaux/écrans du terminal ou demander au bureau de Hokutetsu, car une source récente mentionne encore la sortie Est.\n\n🎫 **SUICA :** ❌ NON\n📅 **RÉSERVATION :** ✅ DÉJÀ ACHETÉE\n🛒 **ACHAT :** Utiliser la réservation confirmée de 12GO / Hokutetsu.\n\nDépart : 08h40. Réservation : 12GO31991741. 5 places confirmées. Durée approximative : 1h25. Arrivée prévue : 10h05. Réservation obligatoire pour ce service. Ce n'est pas un train JR. N'utilise pas le Japan Rail Pass. Ne pas utiliser Suica : on utilise la réservation/le billet du bus. 💡 Conseil : arriver à l'arrêt avec de la marge. Avoir la réservation à portée de main sur le téléphone et/ou une copie accessible.\n\n🎧 **Podcast pour le trajet :** [Takayama et Shirakawa-go : le cœur des Alpes](https://podcasts.apple.com/es/podcast/jap%C3%B3n-a-fondo/id1545542012?i=1000527462410) (*Japón a fondo* · Japonismo). Pour écouter l'histoire des maisons gassho-zukuri, la vie isolée dans la neige et l'artisanat traditionnel de Takayama."
+        "time": "08:40",
+        "text": "🚌 Nohi Bus Kanazawa → Shirakawa-go.\n\n📍 **OÙ MONTER :** Gare de Kanazawa, sortie OUEST (West Exit / Kanazawa-ko guchi), Terminal de bus n°4 -- confirmé directement sur le billet officiel 12GO/Nohi Bus (voir PDF ci-dessous), donc aucun doute possible.\n\n🎫 **SUICA :** ❌ NON\n📅 **RÉSERVATION :** ✅ DÉJÀ ACHETÉE\n🛒 **ACHAT :** Utiliser la réservation confirmée de 12GO / Hokutetsu.\n\nDépart : 08h40. Réservation : 12GO31991741. Booking ID M26125669. 5 places confirmées (1-2D, 3ABCD). Durée approximative : 1h25. Arrivée prévue : 10h05. Réservation obligatoire pour ce service. Ce n'est pas un train JR. N'utilise pas le Japan Rail Pass. Ne pas utiliser Suica : on utilise la réservation/le billet du bus. ⚠️ **INDISPENSABLE d'apporter le voucher IMPRIMÉ sur papier** -- le chauffeur doit garder le papier physique, le montrer sur le téléphone ou une capture d'écran n'est pas accepté. 💡 Conseil : arriver à l'arrêt avec de la marge. Retards possibles de 2h ou plus à cause du trafic, de la neige ou de fermetures d'autoroute en saison.\n\n🎧 **Podcast pour le trajet :** [Takayama et Shirakawa-go : le cœur des Alpes](https://podcasts.apple.com/es/podcast/jap%C3%B3n-a-fondo/id1545542012?i=1000527462410) (*Japón a fondo* · Japonismo). Pour écouter l'histoire des maisons gassho-zukuri, la vie isolée dans la neige et l'artisanat traditionnel de Takayama."
       },
       {
-        "text": "Arrivée à Shirakawa-go à 10h05. Nous disposons d'environ 3 h 10 à Shirakawa-go (de 10h05 jusqu'au départ du bus pour Takayama à 13h15). La visite à pied d'Ogimachi commence depuis le Terminal de bus de Shirakawa-go. Le centre historique est à quelques minutes du terminal.\n\n🔒 **CASIERS POUR LES SACS À DOS :** Le terminal de Shirakawa-go lui-même dispose de casiers à pièces (18 au total) juste derrière/à côté du bâtiment principal — petits/moyens ¥500, grands ¥1 000, horaires 08h00–17h00 (parfaitement adapté à notre créneau d'aujourd'hui). On ne peut pas laisser les bagages d'un jour sur l'autre, mais pour les quelques heures d'aujourd'hui, pas de problème. S'ils sont tous pris, on peut demander au comptoir d'information/billetterie de garder les bagages manuellement (bâtiment annexe, à quelques mètres). Prévoir des pièces de ¥100 ou faire de la monnaie au comptoir même."
+        "time": "10:05",
+        "text": "Arrivée à Shirakawa-go à 10h05. Nous disposons d'environ 3 h 10 à Shirakawa-go (de 10h05 jusqu'au départ du bus pour Takayama à 13h15).\n\n🗺️ Itinéraire complet de Shirakawa-go : https://maps.app.goo.gl/mBcF6hHWpwwC5HxeA?g_st=iw\n\n🔒 **CASIERS POUR LES SACS À DOS :** Le terminal de Shirakawa-go lui-même dispose de casiers à pièces (18 au total) juste derrière/à côté du bâtiment principal — petits/moyens ¥500, grands ¥1 000, horaires 08h00–17h00 (parfaitement adapté à notre créneau d'aujourd'hui). On ne peut pas laisser les bagages d'un jour sur l'autre, mais pour les quelques heures d'aujourd'hui, pas de problème. S'ils sont tous pris, on peut demander au comptoir d'information/billetterie de garder les bagages manuellement (bâtiment annexe, à quelques mètres). Prévoir des pièces de ¥100 ou faire de la monnaie au comptoir même."
       },
       {
-        "text": "SHIRAKAWA-GO (10:05–11:45). Visite d'Ogimachi : maisons gassho-zukuri, rues traditionnelles, canaux, sanctuaire Shirakawa Hachiman, vues sur la montagne. Privilégiez profiter du village plutôt que d'essayer d'entrer dans de nombreuses maisons. Visite intérieure recommandée : Wada House (09:00–17:00, 400 ¥, à env. 3–4 min du terminal, sans réservation, paiement en espèces). Facultatif : Musée en plein air (08:40–17:00 en septembre, 600 ¥, à 12 min à pied. N'y entrez que si nous avons le temps)."
+        "time": "10:05–10:15",
+        "text": "🌉 Traverser le **Pont Deai**, le pont suspendu qui mène au village au-dessus de la rivière Shogawa -- la première vue emblématique de la journée."
       },
       {
-        "text": "🍜 DÉJEUNER À SHIRAKAWA-GO (11:45–12:30). Ne retardez pas trop le repas car le bus pour Takayama part à 13:15 et nous devons être de retour au terminal avec de la marge. À goûter : bœuf de Hida, hoba miso, soba, udon, tofu de Shirakawa-go, légumes locaux. Options : 1. YOUCYA UDON (option rapide) ; 2. Hiiragi (bœuf de Hida A4/A5) ; 3. Magoemon (petite option traditionnelle, envisagez de réserver). Ne faites pas de réservation obligatoire. 💡 Conseil : De nombreux restaurants sont petits et ont des horaires variables. Si nous trouvons une option appropriée ouverte avec peu d'attente, profitez-en."
+        "time": "10:15–10:50",
+        "text": "⛰️ **BELVÉDÈRE DE SHIROYAMA** (incontournable). Montée à pied sur route goudronnée, pente douce, 15-20 min depuis le centre du village. Alternative : navette ¥200-300 (part toutes les 20 min près de la Wada House, avec une pause à midi).\n\n💡 Pourquoi y monter maintenant et pas plus tard : vers 11h30 le village se remplit pas mal (la file d'attente pour la navette peut atteindre 30 personnes) -- en y allant dès l'arrivée, vous l'aurez presque pour vous seuls."
       },
       {
-        "text": "DERNIÈRE PROMENADE + RETOUR AU TERMINAL (12:30–13:00). Laissez environ 15–20 minutes de marge pour retourner au terminal de bus de Shirakawa-go. Ne vous éloignez pas de la zone centrale."
+        "time": "10:50–11:35",
+        "text": "🚶 Redescendre du belvédère (15-20 min) et promenade dans **Ogimachi** : canaux, rizières, rues traditionnelles, vues sur les montagnes. C'est l'essence même du village -- pas besoin de se presser ici."
       },
       {
-        "text": "🚌 Nohi Bus Shirakawa-go → Takayama.\n\n📍 **OÙ MONTER :** Terminal de bus de Shirakawa-go — le même endroit où le bus vous a déposés à l'arrivée à 10h05, il n'y a qu'un seul terminal dans le village, donc impossible de se tromper.\n\n🎫 **SUICA :** ❌ NON\n📅 **RÉSERVATION :** ✅ DÉJÀ ACHETÉE\n🛒 **ACHAT :** Utiliser la réservation confirmée de 12GO / Nohi Bus.\n\nDépart : 13h15. Réservation : 12GO31992254. 5 places confirmées. Durée approximative : 50 min. Arrivée prévue au Terminal de bus de Takayama : 14h05. Réservation obligatoire. Ce n'est pas un train JR. Ne nécessite pas le Japan Rail Pass. Ne pas utiliser Suica : utiliser la réservation/le billet du bus."
+        "time": "11:35–11:55",
+        "text": "🏠 **WADA HOUSE** (la seule maison à visiter). La plus grande et la mieux conservée des maisons gassho-zukuri du village, ouverte 09h00–17h00, ¥400 (~2,5€), sans réservation, paiement en espèces, à 3-4 min du terminal. Pas besoin d'entrer dans d'autres maisons (Kanda House / Nagase House sont redondantes)."
       },
       {
-        "text": "Arrivée à Takayama à 14:05. Du terminal de bus de Takayama à l'hôtel Wood Takayama : environ 12 minutes à pied. L'hôtel est pratiquement à côté du centre historique, nous n'avons donc PAS besoin de taxi ni de transport urbain. Le check-in officiel est à 15:00. Nous pouvons laisser les bagages à la réception si la chambre n'est pas encore disponible."
+        "time": "12:00–12:45",
+        "text": "🍜 **DÉJEUNER À TANAKA-YA** (recommandé par le groupe). Restaurant avec tables basses, assis par terre -- cuisine délicieuse.\n\n🗺️ Tanaka-ya sur Google Maps : https://maps.app.goo.gl/GYV8d8g1gaTi3Emb7?g_st=ic\n\n💡 Ne pas trop faire durer le déjeuner : le bus pour Takayama part à 13h15 et il faut retourner au terminal avec de la marge."
       },
       {
-        "text": "VIEILLE VILLE DE TAKAYAMA (14:20–17:30). Visite : Sanmachi Suji, rues traditionnelles, petites boutiques, brasseries de saké, bâtiments historiques, Nakabashi et environs. IMPORTANT : De nombreuses boutiques et attractions de la vieille ville ferment vers 17:00. Profitez de ce créneau pour le shopping et les visites intérieures. Après 17:00 : Restez dans le quartier, reposez-vous à l'hôtel ou promenez-vous tranquillement dans les rues quand il y a moins de monde. 🍡 EN-CAS FACULTATIF : Goûtez une spécialité de rue de Hida (sushi au bœuf de Hida, croquette, mitarashi dango, pudding, saké local). Ne vous remplissez pas trop l'estomac si nous voulons un dîner de bœuf de Hida."
+        "time": "12:45–13:05",
+        "text": "🚶 Dernière promenade dans le village et retour à pied au terminal de bus de Shirakawa-go (15 min). Ne plus s'éloigner du centre à partir de maintenant."
       },
       {
-        "text": "🥩 Dîner spécial de bœuf de Hida à 19:00. Pour 5 personnes et un dimanche, RÉSERVATION RECOMMANDÉE. Ne laissez pas ce dîner complètement à l'improvisation. À goûter : bœuf de Hida A4/A5, yakiniku, sukiyaki, hoba miso, sushi au bœuf de Hida. Budget : repas décontracté 2 000–4 000 ¥/personne ; dîner de bœuf de Hida plus complet 4 000–8 000+ ¥ ; l'option premium peut dépasser 10 000 ¥ (~54€)/personne. Si nous voulons que ce soit l'un des repas spéciaux, réservez à l'avance."
+        "time": "13:05–13:15",
+        "text": "⏳ Marge au terminal avant le départ du bus. Récupérer le sac à dos du casier si on l'y a laissé."
       },
       {
-        "text": "🏨 **RETOUR À L'HÔTEL : HOTEL WOOD TAKAYAMA** (https://www.google.com/maps/search/?api=1&query=Hotel+Wood+Takayama)\n\nPromenade nocturne dans la vieille ville jusqu'à l'hôtel pour se reposer (1re et unique nuit à Takayama à l'Hotel Wood Takayama)."
+        "time": "13:15",
+        "text": "🚌 Nohi Bus Shirakawa-go → Takayama.\n\n📍 **OÙ MONTER :** Terminal de bus de Shirakawa-go (Ogimachi) — le même endroit où le bus vous a déposés à l'arrivée à 10h05, il n'y a qu'un seul terminal dans le village, donc impossible de se tromper.\n\n🎫 **SUICA :** ❌ NON\n📅 **RÉSERVATION :** ✅ DÉJÀ ACHETÉE (places NON réservées individuellement, c'est un billet de place garantie sans numéro de siège)\n🛒 **ACHAT :** Utiliser la réservation confirmée de 12GO / Nohi Bus.\n\nDépart : 13h15. Réservation : 12GO31992254. Booking ID M26125670. 5 places confirmées. Durée approximative : 50 min. Arrivée prévue au Terminal de bus de Takayama : 14h05. Réservation obligatoire. Ce n'est pas un train JR. Ne nécessite pas le Japan Rail Pass. Ne pas utiliser Suica : utiliser la réservation/le billet du bus. ⚠️ **INDISPENSABLE d'apporter le voucher IMPRIMÉ sur papier** -- le chauffeur doit garder le papier physique, le montrer sur le téléphone ou une capture d'écran n'est pas accepté."
       },
       {
-        "text": "DÉJÀ RÉSERVÉ : Kanazawa → Shirakawa-go (08h40, 5 places) et Shirakawa-go → Takayama (13h15, 5 places). Nous n'avons pas besoin de Japan Rail Pass, de trains, ni de Suica pour ces bus.\nEN ATTENTE / RECOMMANDÉ : réserver le dîner de bœuf de Hida pour 5 personnes à 19h00."
+        "time": "14:05–14:30",
+        "text": "Arrivée à Takayama. Du terminal de bus de Takayama à l'Hotel Wood Takayama : environ 12 minutes à pied. L'hôtel est pratiquement à côté du centre historique, donc on n'a PAS besoin de taxi ni de transport urbain.\n\n🗺️ Itinéraire complet de Takayama : https://maps.app.goo.gl/VsKEtfcaxV6jcSmS9?g_st=ic\n\nDéposer les bagages à la réception / check-in si la chambre est déjà prête (check-in officiel à 15h00).\n\n✅ Hôtel déjà payé (274,98€ via Booking).\n\n♨️ L'hôtel a un onsen (séparé par sexe), ouvert de 15h00 à 00h00 et de 6h00 à 9h00, avec une glace gratuite offerte à la sortie."
       },
       {
-        "text": "🚍 RÉSUMÉ DES TRANSPORTS : Kanazawa → Shirakawa-go : Nohi Bus réservé, 08:40 → 10:05.\nShirakawa-go : Tout à pied.\nShirakawa-go → Takayama : Nohi Bus réservé, 13:15 → 14:05.\nTerminal de bus de Takayama → Hotel Wood : env. 12 min à pied.\nHôtel → Sanmachi : juste à côté.\nNous n'avons pas besoin de Japan Rail Pass ni de trains aujourd'hui."
+        "time": "14:30–14:45",
+        "text": "🚶 Marcher de l'hôtel jusqu'à **Sanmachi Suji** (le cœur de la vieille ville)."
       },
       {
-        "text": "🍽️ CONSEILS DE REPAS :\n⚠️ À Shirakawa-go, n'attendez pas 13:00 pour manger. Établissements aux horaires limités et nous devons être de retour au terminal avant 13:15.\n⚠️ À Takayama, de nombreuses boutiques ferment vers 17:00, mais les restaurants pour le dîner ouvrent plus tard. Un dîner à 19:00 est viable. 🥩 Takayama est idéal pour goûter au bœuf de Hida. Conseil de voyageurs : réservez les restaurants populaires ou allez-y tôt car ils se remplissent."
+        "time": "14:45–15:30",
+        "text": "🍶 **SANMACHI SUJI** (incontournable) : les 3 rues historiques (Ichinomachi, Ninomachi, Sannomachi). Dégustations de saké (¥100/verre dans plusieurs brasseries), artisanat du bois, boutiques de sarubobo.\n\n💡 Prioriser cela maintenant : les boutiques ferment vers 17h00, contrairement aux rues et aux temples, qu'on peut voir plus tard."
+      },
+      {
+        "time": "15:30–16:00",
+        "text": "🏛️ **TAKAYAMA JINYA** (incontournable). Le seul bâtiment gouvernemental de l'époque Edo conservé intact au Japon. Ouvert 08h45–17h00 (dernière entrée 16h30), entrée ¥430."
+      },
+      {
+        "time": "16:00–16:15",
+        "text": "🌉 Traverser le **Pont Nakabashi**, le célèbre pont rouge -- un arrêt photo rapide en chemin vers le reste de la vieille ville."
+      },
+      {
+        "time": "16:15–16:40",
+        "text": "⛩️ **HIDA KOKUBUNJI** (optionnel mais recommandé). Temple du VIIIe siècle avec une pagode à 3 étages et un ginkgo de 1 200 ans."
+      },
+      {
+        "time": "16:40–17:10",
+        "text": "⛩️ **SAKURAYAMA HACHIMANGU** (optionnel). L'enceinte du sanctuaire est gratuite et magnifique. Le musée Yatai Kaikan (¥1 000) ferme à 17h00, donc n'y entrer que si on arrive avec de la marge -- sinon, se contenter du sanctuaire lui-même."
+      },
+      {
+        "time": "17:10–17:45",
+        "text": "🚶 Promenade libre en revenant dans la vieille ville. 🍡 Snack optionnel : sushi de bœuf de Hida, dango mitarashi, ou glace sarubobo -- sans trop se remplir avant le dîner."
+      },
+      {
+        "time": "17:45–18:45",
+        "text": "🏨 Retour à l'hôtel : repos + **onsen** si on en a envie avant le dîner. Ne plus programmer de visites après ça pour arriver tranquillement au dîner."
+      },
+      {
+        "time": "18:45–19:00",
+        "text": "🚶 Marcher jusqu'au restaurant du dîner."
+      },
+      {
+        "time": "19:00",
+        "text": "🥩 **Dîner spécial bœuf de Hida à Takayama.**\n\n**Que commander :** *rosu* (faux-filet) pour du shabu-shabu ou grillé, ou *hire* (filet) pour la coupe la plus tendre. Le **hoba miso** (bœuf grillé sur une feuille de magnolia avec du miso local) est la spécialité locale -- à commander absolument si c'est à la carte. Une ou deux pièces de **nigiri-sushi de bœuf de Hida** en entrée sont la façon classique d'y goûter sans trop se remplir. À accompagner d'un **saké** local de Hida."
+      },
+      {
+        "time": "~21:30",
+        "text": "🏨 **RETOUR À L'HÔTEL : HOTEL WOOD TAKAYAMA** (https://www.google.com/maps/search/?api=1&query=Hotel+Wood+Takayama)\n\nPromenade nocturne dans la vieille ville jusqu'à l'hôtel pour se reposer (1ère et unique nuit à Takayama à l'Hotel Wood Takayama)."
+      },
+      {
+        "time": "🎫 RÉSERVATIONS",
+        "text": "DÉJÀ RÉSERVÉ : Kanazawa → Shirakawa-go (08h40, 5 places) et Shirakawa-go → Takayama (13h15, 5 places). On n'a PAS besoin de Japan Rail Pass, de trains, ni de Suica pour ces bus."
+      },
+      {
+        "time": "🚍 RÉSUMÉ DES TRANSPORTS",
+        "text": "Kanazawa → Shirakawa-go : Nohi Bus réservé, 08h40 → 10h05 (3 h 10 de visite à Shirakawa-go).\nShirakawa-go : Tout à pied.\nShirakawa-go → Takayama : Nohi Bus réservé, 13h15 → 14h05.\nTerminal de bus de Takayama → Hotel Wood : environ 12 min à pied.\nHôtel → Sanmachi : juste à côté.\nOn n'a pas besoin de Japan Rail Pass ni de trains aujourd'hui."
+      },
+      {
+        "time": "🍽️ CONSEILS REPAS",
+        "text": "⚠️ À Shirakawa-go, manger vers 12h00 à Tanaka-ya pour ne pas risquer de rater le bus de 13h15.\n⚠️ À Takayama les boutiques ferment vers 17h00, mais les restaurants pour le dîner ouvrent plus tard. Le dîner à 19h00 est jouable. 🥩 Takayama est idéal pour goûter le bœuf de Hida -- commander le hoba miso et les nigiri-sushi de bœuf de Hida."
       }
     ],
     "money": "Env. 40 € + dîner wagyu premium"
