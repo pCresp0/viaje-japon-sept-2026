@@ -45,3 +45,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-13 23:41 UTC** — Merge branch 'main' of https://github.com/pCresp0/viaje-japon-sept-2026 (`16eacde`)
 - **2026-09-13 23:43 UTC** — feat: traducir Akihabara (Día 13), Asakusa real (Día 15) y ... (`6bfc8b7`)
 - **2026-09-13 23:43 UTC** — Merge branch 'main' of https://github.com/pCresp0/viaje-japon-sept-2026 (`3ee508a`)
+- **2026-09-14 00:51 UTC** — feat(Día 8): enriquecer la ruta Nakasendo con los hitos del ... (`59f9ac1`)
