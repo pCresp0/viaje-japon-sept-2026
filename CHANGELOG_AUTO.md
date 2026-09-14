@@ -51,3 +51,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-14 01:01 UTC** — fix(Día 8): equilibrar Magome y Tsumago, y verificar el bus ... (`16fba86`)
 - **2026-09-14 01:01 UTC** — Merge branch 'main' of https://github.com/pCresp0/viaje-japon-sept-2026 (`7e72ff5`)
 - **2026-09-14 05:27 UTC** — fix(Día 8): actualizar con el plan real que está siguiendo ... (`c35bb9a`)
+- **2026-09-14 05:59 UTC** — fix(Día 8): simplificar el paseo nocturno de Magome, sin condicionales ... (`37c3b39`)
