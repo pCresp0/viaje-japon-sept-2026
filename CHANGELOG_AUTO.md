@@ -50,3 +50,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-14 00:58 UTC** — Merge branch 'main' of https://github.com/pCresp0/viaje-japon-sept-2026 (`8fa8256`)
 - **2026-09-14 01:01 UTC** — fix(Día 8): equilibrar Magome y Tsumago, y verificar el bus ... (`16fba86`)
 - **2026-09-14 01:01 UTC** — Merge branch 'main' of https://github.com/pCresp0/viaje-japon-sept-2026 (`7e72ff5`)
+- **2026-09-14 05:27 UTC** — fix(Día 8): actualizar con el plan real que está siguiendo ... (`c35bb9a`)
