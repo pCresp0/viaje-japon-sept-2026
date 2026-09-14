@@ -48,3 +48,5 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-14 00:51 UTC** — feat(Día 8): enriquecer la ruta Nakasendo con los hitos del ... (`59f9ac1`)
 - **2026-09-14 00:58 UTC** — fix(Día 8): corregir el bus de vuelta de Tsumago -- ... (`3fc5a1a`)
 - **2026-09-14 00:58 UTC** — Merge branch 'main' of https://github.com/pCresp0/viaje-japon-sept-2026 (`8fa8256`)
+- **2026-09-14 01:01 UTC** — fix(Día 8): equilibrar Magome y Tsumago, y verificar el bus ... (`16fba86`)
+- **2026-09-14 01:01 UTC** — Merge branch 'main' of https://github.com/pCresp0/viaje-japon-sept-2026 (`7e72ff5`)
