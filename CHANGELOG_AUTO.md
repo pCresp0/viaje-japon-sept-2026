@@ -54,3 +54,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-14 05:59 UTC** — fix(Día 8): simplificar el paseo nocturno de Magome, sin condicionales ... (`37c3b39`)
 - **2026-09-14 06:05 UTC** — fix(konbini Magome/Nakatsugawa): no hay konbini en Magome -- corregido el ... (`790eb15`)
 - **2026-09-14 06:05 UTC** — Merge branch 'main' of https://github.com/pCresp0/viaje-japon-sept-2026 (`c2320e7`)
+- **2026-09-14 08:25 UTC** — fix: revisión completa del 15 de septiembre en adelante -- ... (`cb94004`)
