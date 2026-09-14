@@ -527,15 +527,19 @@ export const guides = {
   },
 
   "nakasendo": {
-    name: "Ruta Nakasendō: Magome y Tsumago",
+    name: "La Ruta Nakasendō: historia del camino",
     jp: "中山道",
     founded: "Siglo XVII",
     wiki: "Nakasendō",
-    tagline: "8 km del camino real del periodo Edo, entre dos pueblos-posta congelados en el tiempo.",
+    tagline: "534 km del camino real del periodo Edo entre Kioto y Tokio -- hoy solo sobreviven intactos 8 km, entre Magome y Tsumago.",
     sections: [
       {
         title: "Qué era el Nakasendō",
-        body: "Una de las cinco carreteras oficiales (Gokaidō) que el shogunato Tokugawa estableció desde 1601 para conectar Edo (Tokio) con Kioto. El Nakasendō, 'camino a través de las montañas', medía 534 km y tenía 69 pueblos-posta (shukuba). Su alternativa costera era el Tōkaidō, más rápido pero con ríos que se desbordaban; el Nakasendō era más largo pero fiable todo el año, y era el que usaban las princesas y comitivas importantes.",
+        body: "Una de las cinco carreteras oficiales (Gokaidō) que el shogunato Tokugawa estableció desde 1601 para conectar Edo (Tokio) con Kioto. El Nakasendō, \"camino a través de las montañas\", medía 534 km y tenía 69 pueblos-posta (shukuba o -juku). Su alternativa costera era el Tōkaidō, más rápido pero con ríos que se desbordaban; el Nakasendō era más largo pero fiable todo el año, y era el que usaban las princesas y comitivas importantes.",
+      },
+      {
+        title: "Qué era un pueblo-posta (-juku)",
+        body: "El sufijo \"-juku\" (宿) significa literalmente \"alojamiento\" o \"posada\", y se añadía al nombre de cualquier pueblo que existiera para dar servicio a los viajeros del camino: de ahí Magome (sin sufijo oficial en su nombre común, pero funcionalmente lo mismo) y Tsumago-juku. Cada pueblo-posta tenía honjin (posada principal, reservada a daimyō y funcionarios de alto rango) y waki-honjin (posada secundaria, de respaldo), además de casas de té (chaya) para descansos cortos.",
       },
       {
         title: "El sankin-kōtai",
@@ -546,16 +550,79 @@ export const guides = {
         body: "Tsumago fue el primer pueblo de Japón en emprender una restauración histórica sistemática, en 1968. Los vecinos firmaron un pacto de tres noes: no vender, no alquilar, no destruir. Se enterraron los cables eléctricos, se retiraron las máquinas expendedoras y las señales modernas, y los coches están prohibidos de 9:00 a 17:00. El resultado es que no se ve un solo elemento del siglo XX en la calle principal.",
       },
       {
-        title: "La caminata",
-        body: "Los 8 km entre Magome y Tsumago se hacen en unas 2,5-3 horas. El sentido Magome→Tsumago es el recomendado porque Magome está más alto: se sube unos 300 m hasta el paso de Magome-tōge y luego se baja. Parte del camino es empedrado original del periodo Edo. Hay campanas repartidas por el bosque para ahuyentar osos, que se tocan al pasar — los avistamientos son muy raros pero la costumbre se mantiene.",
+        title: "La caminata de hoy",
+        body: "Los 8 km entre Magome y Tsumago se hacen en unas 2,5-3 horas. El sentido Magome→Tsumago es el recomendado porque Magome está más alto: se sube el paso de Magome-tōge (~300 m) y luego se baja casi todo el resto. Parte del camino es empedrado original del periodo Edo (ishidatami). Hay campanas repartidas por el bosque para ahuyentar osos, que se tocan al pasar -- los avistamientos son muy raros pero la costumbre se mantiene.",
       },
     ],
     curiosities: [
-      "Magome se quemó completamente dos veces, en 1895 y 1915, así que sus edificios son reconstrucciones; Tsumago conserva estructuras originales.",
+      "Magome se quemó completamente dos veces, en 1895 y 1915, así que sus edificios son reconstrucciones; Tsumago conserva estructuras originales -- por eso los dos pueblos se sienten tan distintos a pesar de estar a solo 8 km.",
       "El servicio de transporte de equipaje entre ambos pueblos funciona de finales de marzo a finales de noviembre, con entrega sobre las 13:00.",
-      "En Tsumago se conservan dos honjin: los alojamientos reservados a daimyō y funcionarios de alto rango, con entrada separada y habitaciones elevadas.",
+      "Un mismo tramo del Nakasendō aparece mencionado en la novela \"Antes del amanecer\" de Shimazaki Tōson, ambientada precisamente en esta zona del valle de Kiso.",
     ],
     tip: "Los minshuku sirven la cena a hora fija, normalmente 18:00-18:30. Conviene salir de Magome antes de las 14:30 para no ir con prisa.",
+  },
+
+  "magome": {
+    name: "Magome-juku",
+    jp: "馬籠宿",
+    founded: "Siglo XVII (reconstruido tras incendios de 1895 y 1915)",
+    wiki: "Magome-juku",
+    tagline: "El pueblo-posta en cuesta, con vistas al valle -- reconstruido dos veces, pero fiel a su trazado original.",
+    sections: [
+      {
+        title: "El pueblo en cuesta",
+        body: "A diferencia de Tsumago, que es prácticamente llano, Magome está construido sobre una pendiente pronunciada, con la calle principal empedrada subiendo entre casas de madera, tiendas y miradores. Se quemó completamente dos veces (1895 y 1915), así que ningún edificio es original del periodo Edo -- son reconstrucciones fieles, pero reconstrucciones.",
+      },
+      {
+        title: "Rueda de molino y mirador",
+        body: "Cerca de la parte alta del pueblo hay una rueda de molino de agua (suisha) tradicional en funcionamiento, y un mirador con vistas al valle del Kiso y, en días despejados, hacia el monte Ena o incluso el propio Fuji en la distancia.",
+      },
+      {
+        title: "Tateba-chaya, la casa de té del camino",
+        body: "Ya en el tramo de senderismo hacia Tsumago, la Tateba-chaya es una casa de té tradicional donde, según la costumbre, se ofrece té gratuito a los caminantes que pasan -- un gesto que viene directamente de la función original de este tipo de casas en el periodo Edo, pensadas como paradas de descanso a mitad de camino entre pueblos.",
+      },
+      {
+        title: "Especialidades de Magome",
+        body: "El pueblo es conocido por el gohei-mochi (bolas de arroz a la brasa glaseadas con una salsa dulce de miso o nueces) y el oyaki (una especie de empanadilla al vapor o a la plancha, rellena de verduras o pasta de judía). Ambos se venden en puestos por la calle principal, ideales para picar durante el paseo.",
+      },
+    ],
+    curiosities: [
+      "El escritor Shimazaki Tōson, autor de la novela histórica \"Antes del amanecer\" ambientada en esta zona, nació en Magome -- hay un pequeño museo dedicado a él.",
+      "A pesar de las reconstrucciones, el trazado de la calle -- su curva, su pendiente, la disposición de las parcelas -- es el mismo desde el periodo Edo.",
+    ],
+    tip: "Si vais a comprar gohei-mochi u oyaki, mejor hacerlo nada más llegar o antes de iniciar la caminata -- los puestos pueden cerrar antes de que volváis por la tarde.",
+  },
+
+  "tsumago": {
+    name: "Tsumago-juku",
+    jp: "妻籠宿",
+    founded: "Siglo XVII (restaurado desde 1968)",
+    wiki: "Tsumago-juku",
+    tagline: "El primer pueblo de Japón en restaurarse a propósito -- y el que mejor conserva edificios originales del periodo Edo.",
+    sections: [
+      {
+        title: "Por qué se llama Tsumago-juku",
+        body: "El sufijo \"-juku\" (宿) significa \"pueblo de posta\" o \"alojamiento\": todos los pueblos con esta función en el Nakasendō lo llevaban en su nombre oficial. Tsumago-juku significa literalmente \"el pueblo-posta de Tsumago\".",
+      },
+      {
+        title: "Templo Kōtoku-ji",
+        body: "Reconocible por sus paredes blancas y su base de piedra, este templo budista data del año 1500 y se alza sobre un pequeño altozano que domina el pueblo. Es uno de los pocos edificios religiosos de la zona anterior al propio desarrollo del Nakasendō como ruta oficial.",
+      },
+      {
+        title: "Waki-Honjin Okuya y el Museo de Nagiso",
+        body: "El Waki-Honjin era la posada secundaria del pueblo (de respaldo al honjin principal), y su edificio actual, del siglo XIX, es original -- Bien Cultural Importante de Japón. Justo al lado está el Museo de Historia de Nagiso (Nagiso Rekishi Shiryokan), centrado en la historia del valle de Kiso y de la propia ruta Nakasendō, con piezas y documentos de la familia que gestionó la posada durante generaciones.",
+      },
+      {
+        title: "Qué es un minshuku",
+        body: "Un minshuku es un alojamiento familiar japonés, normalmente de tamaño pequeño y gestionado por sus propios dueños, que suele incluir cena y desayuno caseros en el precio -- el equivalente japonés a un B&B rural. Los pueblos-posta como Tsumago y Magome viven en gran parte de este tipo de alojamiento desde el periodo Edo, cuando cumplían la misma función para los viajeros del Nakasendō.",
+      },
+    ],
+    curiosities: [
+      "Tsumago fue el primer pueblo de Japón en firmar un pacto vecinal de restauración en 1968: no vender, no alquilar, no destruir -- el modelo que después copiaron otros pueblos históricos del país.",
+      "Los coches están prohibidos en la calle principal de 9:00 a 17:00, y todos los cables eléctricos están enterrados -- por eso no se ve ni un solo elemento moderno mirando la calle.",
+      "A diferencia de Magome, que se quemó dos veces, buena parte de los edificios de Tsumago son originales del periodo Edo -- por eso se siente notablemente más \"antiguo\" a pesar de estar a solo 8 km.",
+    ],
+    tip: "Con el tiempo justo de una excursión de un día, no da para entrar con calma en el Waki-Honjin ni en el museo -- mejor centrarse en pasear la calle principal y ver el templo Kōtoku-ji por fuera.",
   },
 
   // ══════════════════════════════════════════════════════════════════
@@ -816,7 +883,7 @@ export const guidesByDay = {
   5: ["kiyomizu-dera", "osaka"],
   6: ["kanazawa", "kenroku-en", "nagamachi", "higashi-chaya"],
   7: ["shirakawa-go", "takayama"],
-  8: ["nakasendo"],
+  8: ["nakasendo", "magome", "tsumago"],
   9: ["akihabara"],
   10: ["senso-ji", "fuji"],
   11: ["meiji-jingu", "shibuya"],
@@ -889,8 +956,16 @@ export const guideMeta = {
     keywords: ["sanmachi", "casco historico de takayama", "villa de takayama", "calles tradicionales de sanmachi"],
   },
   "nakasendo": {
-    shortName: "Ruta Nakasendo",
-    keywords: ["ruta nakasendo", "caminata nakasendo", "sendero nakasendo", "nakasendo"],
+    shortName: "Ruta Nakasendō (historia)",
+    keywords: ["ruta nakasendo", "caminata nakasendo", "sendero nakasendo", "sankin-kotai", "gokaido"],
+  },
+  "magome": {
+    shortName: "Magome-juku",
+    keywords: ["magome", "magome-juku", "tateba-chaya", "gohei-mochi", "oyaki"],
+  },
+  "tsumago": {
+    shortName: "Tsumago-juku",
+    keywords: ["tsumago", "tsumago-juku", "kotoku-ji", "waki-honjin", "nagiso", "minshuku"],
   },
   "senso-ji": {
     shortName: "Senso-ji y Asakusa",
