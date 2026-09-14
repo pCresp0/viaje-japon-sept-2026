@@ -602,7 +602,7 @@ export const days = [
     title: "La Ruta Nakasendo",
     cities: "Takayama, Magome, Tsumago",
     summary:
-      "Viajaremos en un precioso tren panorámico y luego en autobús hasta Magome para iniciar una suave ruta de senderismo por un bosque milenario. Caminaremos hasta Tsumago, donde pasaremos la noche en una posada rural.",
+      "Viajaremos en un precioso tren panorámico y luego en autobús hasta Magome para iniciar una suave ruta de senderismo por un bosque milenario. Caminaremos hasta Tsumago y volveremos en bus a Magome, donde pasaremos la noche en una posada rural.",
     history:
       "La Nakasendo era una de las cinco grandes rutas feudales del periodo Edo que conectaban Kioto con Edo (Tokio). Magome y Tsumago operaban como 'estaciones de posta' (juku) donde samuráis, daimyos y mercaderes descansaban en sus viajes a pie.",
     podcasts: [

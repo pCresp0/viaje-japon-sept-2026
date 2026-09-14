@@ -465,56 +465,68 @@ export const days = [
   {
     "title": "The Nakasendo Trail",
     "cities": "Takayama, Magome, Tsumago",
-    "summary": "We'll travel on a beautiful panoramic train and then by bus to Magome to start a gentle hiking trail through an ancient forest. We'll walk to Tsumago, where we'll spend the night in a rural inn.",
+    "summary": "We'll travel on a beautiful panoramic train and then by bus to Magome to start a gentle hiking trail through an ancient forest. We'll walk to Tsumago and come back by bus to Magome, where we'll spend the night in a rural inn.",
     "history": "The Nakasendo was one of the five great feudal routes of the Edo period connecting Kyoto with Edo (Tokyo). Magome and Tsumago operated as 'post towns' (juku) where samurai, daimyos, and merchants rested on their journeys on foot.",
     "schedule": [
       {
-        "text": "🍙 Wake up and quick breakfast. Hotel Wood Takayama should not be our breakfast source this morning if not included. Buy breakfast the night before: onigiri, sandwich, bread, fruit, coffee/drink. Eat before leaving or take it for the bus. 💡 Tip: Leave fully prepared because we have a bus booked at 08:00."
+        "time": "07:00",
+        "text": "🍙 Wake up and quick breakfast. Hotel Wood Takayama should not be our breakfast source this morning unless it's included in the booking. Buy breakfast the night before: onigiri, sandwich, bread, fruit, coffee/drink. Eat before leaving or take it for the bus. 💡 Tip: Leave with everything ready because we have a booked bus at 08:00."
       },
       {
-        "text": "🚶 Leave Hotel Wood Takayama towards Takayama Nohi Bus Center (approx 10–15 min walk). Target: arrive between 07:30 and 07:35 to calmly exchange physical tickets."
+        "time": "07:20 approx.",
+        "text": "🚶 Leave Hotel Wood Takayama toward Takayama Nohi Bus Center (approx. 10–15 minutes on foot). Goal: arrive between 07:30 and 07:35 to exchange the tickets calmly."
       },
       {
-        "text": "⚠️ **MANDATORY E-TICKET EXCHANGE:**\nAt Takayama Nohi Bus Center, present the Japan Bus Online E-ticket (on mobile or printed) at the counter to **exchange it for physical tickets**.\n\n⚠️ **IMPORTANT:** The operator requires completing the exchange at least 15 minutes before the 08:00 departure (arrive by 07:45 at the latest). Keep the physical tickets ready to board."
+        "time": "07:35",
+        "text": "⚠️ **MANDATORY E-TICKET EXCHANGE:**\n\nAt Takayama Nohi Bus Center, present the Japan Bus Online E-ticket (on your phone or printed) at the counter to **exchange it for physical tickets**.\n\n⚠️ **IMPORTANT:** The operator requires the exchange at least 15 minutes before the 08:00 departure (arrive by 07:45 at the latest). Keep the physical tickets to show when boarding the bus."
       },
       {
-        "text": "🚌 Direct Nohi Bus: Takayama → Magome.\n\n🎫 **SUICA:** ❌ NO\n📅 **RESERVATION:** ✅ BOUGHT & CONFIRMED\n📄 **E-TICKET:** Booking 08302008262 · Lead: Pablo Crespo Bellido\n\nDeparture: Takayama Nohi Bus Center (08:00) → Arrival: Magome (10:45).\nCar No. 01 · 5 Seats: 2C, 2D, 3B, 3C, 3D.\nTotal: ¥25,000 (5 adults · ¥5,000/person).\n\n⚠️ **IMPORTANT:**\nOur reservation ends in **MAGOME at 10:45**. Even though the bus service continues to Tsumago (11:10), we get off at Magome to start the historic Nakasendo walking trail."
+        "time": "08:00",
+        "text": "🚌 Direct Nohi Bus: Takayama → Magome.\n\n🎫 **SUICA:** ❌ NO\n📅 **RESERVATION:** ✅ BOOKED AND CONFIRMED\n📄 **E-TICKET:** Reservation 08302008262 · Holder: Pablo Crespo Bellido\n\nDeparture: Takayama Nohi Bus Center (08:00) → Arrival: Magome (10:45).\nCar No. 01 · 5 Seats: 2C, 2D, 3B, 3C, 3D.\nTotal: ¥25,000 (~135.61€) (5 adults · ¥5,000/pax · ~27€).\n\n⚠️ **IMPORTANT:**\nOur reservation ends in **MAGOME at 10:45**. Although the bus continues to Tsumago (11:10), we get off at Magome to start the hike on the historic Nakasendo trail.\n\n🎧 **Essential podcast for the day:** [Nakasendo Trail: hiking between postcard villages](https://podcasts.apple.com/es/podcast/jap%C3%B3n-a-fondo/id1545542012?i=1000655007075) (*Japón a fondo* · Japonismo). Great for the bus ride, diving into the feudal history of the samurai and the post towns of the Kiso Valley."
       },
       {
-        "text": "📍 Arrival in Magome at 10:45. End of the bus ride. The stop is only 2 minutes on foot from our lodging (Magome Chaya), right on the main cobblestone street.\n\n🧳 **PLAN: leave the luggage directly at Magome Chaya.** We walk to the minshuku (2 min) and ask at reception to hold our luggage before official check-in (15:00) -- this is a common and expected practice at Japanese lodgings, even without advance notice. This way we skip all the logistics and uncertain cost (¥500-1,000/bag) of the Magome↔Tsumago luggage transport service, since we're sleeping here in Magome tonight anyway.\n\n💡 **Backup alternative:** if for some reason Magome Chaya can't hold the luggage that early, the Magome and Tsumago tourist offices offer a real luggage transport service between the two (not a locker): drop off in Magome 08:30–11:30 and pick up in Tsumago from 13:00 onward, for ¥500-1,000/bag depending on the source (service runs March 20 to November 30)."
+        "time": "10:45",
+        "text": "📍 Arrival in MAGOME. End of the bus ride. The stop is only a 2-minute walk from our lodging (Magome Chaya), right on the cobblestone main street.\n\n🧳 **PLAN: leave the luggage directly at Magome Chaya.** We walk to the minshuku (2 min) and ask at reception to hold our luggage before official check-in (15:00) -- this is a common and expected practice at Japanese lodgings, even without advance notice. This way we skip all the logistics and uncertain cost (¥500-1,000/bag) of the Magome↔Tsumago luggage transport service, since we're sleeping here in Magome tonight anyway.\n\n🗼 **ALONG THE WAY, MAGOME'S MOST DISTINCTIVE SIGHTS:** heading up the main street toward the start of the trail, there's a traditional **water wheel (suisha)** and a **viewpoint** overlooking the Kiso Valley -- just a 10-15 min detour, and it's on the way to where the trail begins. Since you'll be back late and tired tonight, this is the best time to see it calmly in daylight.\n\n💡 **Backup alternative (luggage):** if for some reason Magome Chaya can't hold the luggage that early, the Magome and Tsumago tourist offices offer a real luggage transport service between the two (not a locker): drop off in Magome 08:30–11:30 and pick up in Tsumago from 13:00 onward, for ¥500-1,000/bag depending on the source (service runs March 20 to November 30)."
       },
       {
-        "text": "🥾 Nakasendo Trail: Magome → Tsumago. Approx 8 km and 3 hours at a leisurely pace. The Magome → Tsumago direction has less uphill. Practical info: easy–moderate difficulty; well-marked trail; forest and asphalt sections; bring water. There are bear bells along the way, ring them as you pass. Juancar, we know that as a civil servant at the Reina Sofía you don't move much, but today we walk!"
+        "time": "11:15",
+        "text": "🥾 Nakasendo Trail: Magome → Tsumago. Approximately 8 km and about 2h30-3h at a relaxed pace. The Magome → Tsumago direction has less climbing: you go up the Magome-tōge pass (~300 m) and then descend almost the rest of the way. Practical info: easy–moderate difficulty; well-marked trail; forest and paved sections; bring water. There are bear bells at several points, use them as you pass.\n\n📍 **Landmarks along the way** (no need to actively look for them, they'll appear on their own if you follow the signs):\n• **Tateba-chaya**: traditional teahouse where they offer free tea to hikers -- a good spot for a first rest.\n• **Odaki and Medaki Falls** (\"male\" and \"female\"): a small signposted detour, the Odaki drops about 18 m, the Medaki is smaller and gentler.\n• **Kurashina Shrine**: right next to the falls.\n• **Otsumago**: hamlet with traditional Edo-period houses, ~1 km before reaching Tsumago -- includes the Fujihara house, from the mid-17th century.\n\nJuancar, we know that as a civil servant at the Reina Sofía you don't move much, but today it's time to walk!"
       },
       {
-        "text": "🍙 LUNCH / SNACK ON THE TRAIL (12:30–13:00). Bring food from Takayama/Magome. Do not rely on finding a restaurant during the hike. Buy: onigiri, sandwich, fruit, drink. Priority is not prolonging the hike as we must pick up luggage and catch the bus back to Magome. If an open teahouse is found, we can stop, but do not count on it."
+        "time": "12:30–13:00",
+        "text": "🍙 LUNCH / SNACK DURING THE HIKE. Bring food from Takayama/Magome. Don't rely on finding a restaurant during the hike. Buy: onigiri, sandwich, fruit, drink. If we find an open teahouse (like Tateba-chaya), we can stop, but don't rely on it."
       },
       {
-        "text": "🏘️ Arrival in Tsumago approx 14:15. Short walk through the village -- no luggage business pending here, since the bags stayed at Magome Chaya."
+        "time": "13:45 approx.",
+        "text": "🏘️ Arrival in Tsumago (variable depending on hiking pace -- a real reference: a group that left at 11:11 arrived at 13:46, 8.15 km with 223 m of elevation gain). With the 14:22 bus back, there's time for a walk with real content, though tight -- Tsumago preserves more ORIGINAL buildings than Magome (which burned down twice and was rebuilt):\n\n• **Main street**: cars banned from 9:00 to 17:00, buried cables, not a single modern element in sight.\n• **Kōtoku-ji Temple**: recognizable by its white walls and stone base, from the year 1500, overlooks the village from a small rise.\n• **Waki-Honjin Okuya**: the old secondary inn, original 19th-century building, Important Cultural Property.\n• **Nagiso History Museum** (Nagiso Rekishi Shiryokan): next to the Waki-Honjin, if time allows.\n\n💡 With time tight, prioritize walking the main street and seeing Kōtoku-ji Temple from outside -- the Waki-Honjin and museum are optional if a few minutes are left over.\n\n🏠 **About minshuku**: a small Japanese family-run lodging, managed by the owning family itself, almost always with home-cooked dinner and breakfast included -- the equivalent of a rural B&B. It's the type of lodging you have booked tonight at Magome Chaya."
       },
       {
-        "text": "🚍 BUS TSUMAGO → MAGOME (Magome Line, local). Departure Tsumago: 14:22. Arrival Magome: 14:50. Duration: 28 min.\n\n🎫 **SUICA:** ❌ NO\n📅 **RESERVATION:** ❌ NO\n🛒 **PURCHASE:** Cash payment to the driver or ticket at the Tsumago office. Price: ¥1,000/person (~6€). Does not require JR Pass. No reservation needed.\n\n⚠️ **IMPORTANT:** This bus is essential to get back to Magome to sleep."
+        "time": "14:15–14:22",
+        "text": "🚍 BUS TSUMAGO → MAGOME (Ontake Kotsu, Nagiso-Tsumago-Magome line). Departure Tsumago: 14:22. Arrival Magome: 14:50. Duration: 28 min.\n\n🎫 **SUICA:** ❌ NO\n📅 **RESERVATION:** ❌ NO\n🛒 **PURCHASE:** Cash payment to the driver or ticket at the Tsumago office. Price: ¥1,000/person (~6€). Does not require JR Pass. No reservation needed.\n\n⚠️ Schedule verified with two independent sources (japan-guide.com and Rome2Rio): this line has 4 daily departures from Tsumago to Magome, every day of the week without exception."
       },
       {
-        "text": "📍 Return to Magome at 14:50. We now have our luggage."
+        "time": "14:50",
+        "text": "📍 Back in Magome. We already have the luggage with us.\n\n🍜 **EAT IN MAGOME.** With the whole afternoon ahead until dinner at 18:00, a good time to eat something calmly in the village itself -- gohei-mochi and oyaki at the stalls on the main street, or one of the small local restaurants."
       },
       {
-        "text": "Leisurely walk through Magome-juku, its traditional houses and historic streets. This block is for: official check-in (the luggage has already been there since morning), resting, showering and enjoying the village.\n\n🚶 **How to get to Magome Chaya:** the minshuku is right on the village's main street (the cobblestone slope of the Nakasendo), very close to where the local bus stops — just a couple of minutes uphill on foot. The historic street is closed to vehicle traffic, so the whole final stretch is on foot, no taxi or other transport needed.\n\n⚠️ **ACCOMMODATION PAYMENT:** The Magome Chaya hotel is NOT prepaid. **It must be paid there at the hotel in CASH (~178.98€ / ~¥32,000 group · ~35.80€/person)**, so you need to **withdraw cash** beforehand (at a 7-Eleven / konbini ATM).\n\n⚠️ **IMPORTANT:**\nMany shops and restaurants close early. Don't leave shopping or food for the last minute."
+        "time": "15:30–18:00",
+        "text": "🏨 Check-in at Magome Chaya (https://www.google.com/maps/search/?api=1&query=Magome+Chaya+Gifu) -- the luggage has already been there since the morning, shower and rest before dinner.\n\n🚶 **How to get to Magome Chaya:** the minshuku is right on the village's main street (the cobblestone slope of the Nakasendo), very close to where the local bus stops — just a couple of minutes uphill on foot. The historic street is closed to vehicle traffic, so the whole final stretch is on foot, no taxi or other transport needed.\n\n⚠️ **ACCOMMODATION PAYMENT:** The Magome Chaya hotel is NOT prepaid. **It must be paid there at the hotel in CASH (~178.98€ / ~¥32,000 group · ~35.80€/person)**, so you need to **withdraw cash** beforehand (at a 7-Eleven / konbini ATM) if you haven't already.\n\n♨️ It has a small communal onsen-style bath (separated by gender), with no fixed official hours — better to ask at check-in; it tends to be quieter around 18:00–19:00, when everyone else is having dinner."
       },
       {
-        "text": "🍱 **TRADITIONAL DINNER AT MAGOME CHAYA**\n\nTraditional dinner confirmed at the accommodation (served promptly at 18:00). Price: ¥3,630/person (~23€).\n\nThere are two main menu options to choose from:\n\n• **Menu A:** Salt-grilled river fish and pork & mushroom hot pot (nabemono).\n• **Menu B:** Tonkatsu (deep-fried breaded pork cutlet).\n\nBoth menus include vegetable tempura, sashimi, rice, side dishes, and dessert."
+        "time": "18:00",
+        "text": "🍱 **TRADITIONAL DINNER AT MAGOME CHAYA**\n\nTraditional dinner confirmed at the lodging (served punctually at 18:00). Price: ¥3,630/person (~23€).\n\nThere are two main menu options to choose from:\n\n• **Menu A:** Salt-grilled river fish and a hot pot (nabemono) of pork with mushrooms.\n• **Menu B:** Tonkatsu (breaded and fried pork cutlet).\n\nBoth menus include vegetable tempura, sashimi, rice, side dishes and dessert."
       },
       {
-        "text": "🏨 **STAY: MAGOME CHAYA (MINSHUKU)** (https://www.google.com/maps/search/?api=1&query=Magome+Chaya+Gifu)\n\nRest at the rural inn after dinner (1st and only night at Magome Chaya)."
+        "time": "~20:00",
+        "text": "🏮 **WALK MAGOME AT NIGHT.**\n\nCobblestone streets lit by traditional lanterns, much quieter than at midday. Shops will be closed, but the atmosphere and architecture are just as enjoyable. Don't stray far from the lodging, the village closes early.\n\n💧 There's no konbini or open shops at this hour in Magome -- bring water already bought if needed, don't count on finding anything during the walk."
       },
       {
-        "text": "🏮 **OPTIONAL EVENING STROLL IN MAGOME**\n\nIf you still have energy, a short walk along the lantern-lit stone streets. The village closes early — don't wander far from the inn."
+        "time": "🚍 TRANSPORT SUMMARY",
+        "text": "🏨 Hotel Wood Takayama\n↓ 10–15 min on foot (07:20)\n↓ 🚌 Takayama Nohi Bus Center (07:35 ticket exchange)\n↓ 08:00–10:45 🚌 Direct Nohi Bus (✅ Booked)\n↓ 📍 Magome (get off 10:45)\n↓ leave luggage at Magome Chaya (2 min on foot)\n↓ 🥾 8 km / ~2h30-3h Nakasendo Trail\n↓ 📍 Tsumago\n↓ 🚌 14:22–14:50 Bus (Ontake Kotsu)\n↓ 📍 Magome\n↓ 🍜 Eat in Magome\n↓ 🏨 Magome Chaya (check-in, luggage already there)\n↓ 🍱 Dinner 18:00\n↓ 🏮 Evening walk through Magome."
       },
       {
-        "text": "🏨 Hotel Wood Takayama\n↓ 10–15 min walk (07:20)\n↓ 🚌 Takayama Nohi Bus Center (07:35 ticket exchange)\n↓ 08:00–10:45 🚌 Direct Nohi Bus (✅ Booked)\n↓ 📍 Magome (get off 10:45)\n↓ leave luggage at Magome Chaya (2 min on foot)\n↓ 🥾 8 km / ~3 h Nakasendo Trail\n↓ 📍 Tsumago\n↓ 🚌 14:22–14:50 Local bus\n↓ 📍 Magome\n↓ 🏨 Magome Chaya (check-in, luggage already there)\n↓ 🍱 Dinner 18:00."
-      },
-      {
-        "text": "💡 NAKASENDO TIPS: 🥤 Bring enough water and light food before starting. 🍵 Teahouses exist but with variable hours. 🌙 Magome closes early, dinner at 18:00 is the safe bet. 🥾 Comfortable shoes with good soles. 🌧️ Watch for mud if it rains. 🐻 Use bear bells. 🎒 Hike only with a small backpack using the luggage service. 📸 Don't rush, enjoy the trail."
+        "time": "💡 NAKASENDO TIPS",
+        "text": "🥤 Bring enough water and light food before starting. 🍵 There are teahouses but with variable hours. 🌙 Magome closes early, dinner at 18:00 is the safe option. 🥾 Comfortable shoes with good soles. 🌧️ Watch out for mud if it rains. 🐻 Use bear bells. 🎒 Walk only with a small backpack using the luggage service. 📸 Don't rush, enjoy the route."
       }
     ],
     "money": "Approx. €40 (meals)"
