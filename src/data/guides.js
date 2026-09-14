@@ -884,11 +884,11 @@ export const guidesByDay = {
   6: ["kanazawa", "kenroku-en", "nagamachi", "higashi-chaya"],
   7: ["shirakawa-go", "takayama"],
   8: ["nakasendo", "magome", "tsumago"],
-  9: ["akihabara"],
+  9: [],
   10: ["senso-ji", "fuji"],
   11: ["meiji-jingu", "shibuya"],
   12: ["tokyo-tower"],
-  13: ["nakano-broadway"],
+  13: ["nakano-broadway", "akihabara"],
   14: [],
   15: [],
 };
