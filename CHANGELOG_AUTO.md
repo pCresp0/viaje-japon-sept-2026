@@ -79,3 +79,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-15 07:17 UTC** — fix(mapa): sincronizar puntos con el itinerario actual (Fuji, Toyosu/Ueno/Odaiba, Akihabara ... (`637dc7a`)
 - **2026-09-15 07:20 UTC** — feat: añadir cards de Shinjuku y Ueno (ES/EN) con guidesByDay ... (`8ff58ab`)
 - **2026-09-15 07:21 UTC** — feat: completar cards de Shinjuku y Ueno en francés y ... (`cf97025`)
+- **2026-09-15 09:38 UTC** — fix(Día 10): actualizar con el mensaje real del guía (Omar, ... (`9741bf8`)
