@@ -132,7 +132,7 @@ export default function ShinanoTicketCard({ onGoToDay, defaultExpanded = false }
             </div>
 
             <div className="mt-3 pt-3 border-t text-xs text-gray-600 flex flex-wrap items-center justify-between gap-2" style={{ borderColor: "var(--line)" }}>
-              <span>👤 Titular: <strong>Pablo Crespo</strong></span>
+              <span>👤 Titular: <strong>Pablo C.</strong></span>
               <span>💰 Revolut: <strong>¥14.350 (~77,84€) · ¥2.870/pax (~15,57€)</strong></span>
               <span>🧾 Receipt: <strong>AEE6606M</strong></span>
             </div>

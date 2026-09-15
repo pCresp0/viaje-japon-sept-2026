@@ -112,7 +112,7 @@ export default function NohiMagomeTicketCard({ defaultExpanded = false, onGoToDa
             </div>
 
             <div className="mt-3 pt-3 border-t text-xs text-gray-600 flex flex-wrap items-center justify-between gap-2" style={{ borderColor: "var(--line)" }}>
-              <span>👤 Titular: <strong>Pablo Crespo Bellido</strong></span>
+              <span>👤 Titular: <strong>Pablo C.</strong></span>
               <span>💰 Revolut: <strong>{PRICE_GROUP_JPY} (~{PRICE_GROUP_EUR}) · {PRICE_PAX}</strong></span>
               <span>⏳ Cancelación: <strong>Hasta 14/09 07:50 JST</strong></span>
             </div>
