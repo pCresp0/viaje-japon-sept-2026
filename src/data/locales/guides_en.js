@@ -823,6 +823,38 @@ export const guides = {
     tip: "Admission is free and you can visit without a reservation, but for the sushi breakfast it's worth arriving early -- the best-known restaurants usually have a line from first thing in the morning.",
   },
 
+  "ueno": {
+    name: "Ueno",
+    jp: "上野",
+    founded: "Park since 1873 · on the grounds of Kan'ei-ji temple (17th c.)",
+    wiki: "Ueno, Tokyo",
+    tagline: "From Tokugawa funerary temple to battlefield, and then to Japan's first public park.",
+    sections: [
+      {
+        title: "The temple that once crowned the hill",
+        body: "Before becoming a park, Ueno hill housed Kan'ei-ji, one of Edo's most powerful temples and the funerary temple of several Tokugawa shoguns, with grounds that at their peak rivaled the size of Edo Castle itself. Almost nothing of the original complex survived its near-total destruction in 1868 -- among the few pieces that did is a five-story pagoda, now curiously located inside the zoo's grounds.",
+      },
+      {
+        title: "The battle that decided the shogunate's fate",
+        body: "In July 1868, during the Boshin War that ended over 250 years of Tokugawa rule, Kan'ei-ji became the last stronghold of the Shogitai, a group of samurai loyal to the defeated shogun. Imperial forces crushed the resistance in a single day of fighting, and the devastated grounds sat abandoned until, a few years later, the new Meiji government decided to turn it into a Western-style public park.",
+      },
+      {
+        title: "Japan's first public park",
+        body: "Opened in 1873, Ueno was one of Japan's first public parks, part of the Meiji government's effort to modernize the country in the image of European capitals. Today a single walk through it takes in the Tokyo National Museum (1872, the country's oldest and largest museum), Japan's oldest zoo (1882), and Shinobazu Pond, with its island shrine dedicated to the goddess Benzaiten.",
+      },
+      {
+        title: "Ameyoko, the market born from the black market",
+        body: "Right outside the station, Ameyoko ('Ameya Yokocho') grew out of the postwar black market, when goods were scarce and everything from handmade candy to surplus American army goods was sold here -- both uses compete to explain the street's name, since 'ame' means both 'candy' and is short for 'America'. It remains a bustling street market today, with fresh fish, grilled seafood, cheap clothing and food stalls, far more informal than any Tokyo shopping mall.",
+      },
+    ],
+    curiosities: [
+      "The park's most photographed statue is of Saigo Takamori, the samurai who helped overthrow the shogunate -- and who, just a few years later, led his own rebellion against the very government he'd helped establish. He's depicted walking his dog, in a deliberately down-to-earth, unheroic pose.",
+      "Ueno received Japan's first pair of giant pandas in 1972, a gift from the Chinese government following the normalization of diplomatic relations -- ever since, Ueno Zoo has been synonymous with pandas for the Japanese public.",
+      "Shinobazu Pond fills with lotus flowers every summer, almost completely covering the water's surface -- a very different sight from the clear open water seen the rest of the year.",
+    ],
+    tip: "If you feel like snacking along the way, the Ameyoko stalls are a good stop for grilled seafood (oysters, eel) at street prices, much cheaper than sitting down at a restaurant.",
+  },
+
   "kappabashi": {
     name: "Kappabashi Dori",
     jp: "かっぱ橋道具街",
@@ -885,6 +917,38 @@ export const guides = {
       "On Sundays, before the pandemic, it was common to see young people in elaborate cosplay or specific subculture looks gathering near the Jingu-bashi bridge, by the entrance to Meiji Shrine -- a custom that has notably declined but can still occasionally be seen.",
     ],
     tip: "Takeshita Dori is very narrow and gets very crowded, especially on weekends -- if you want photos without crowds, better to go early on a weekday morning.",
+  },
+
+  "shinjuku": {
+    name: "Shinjuku",
+    jp: "新宿",
+    founded: "Station since 1885 · nightlife district since the postwar years",
+    wiki: "Shinjuku",
+    tagline: "The busiest train station on the planet and, at night, the densest neon in Tokyo.",
+    sections: [
+      {
+        title: "The busiest station in the world",
+        body: "Shinjuku Station holds the Guinness World Record for busiest train station, with a historical average of over 3.5 million passengers a day before the pandemic -- more people in a single day than the entire population of many countries. The complex connects several JR, Metro and private lines through more than 200 exits, to the point that getting lost inside the station itself is almost a rite of passage for any first-time visitor.",
+      },
+      {
+        title: "Kabukicho, the district that never got its kabuki theater",
+        body: "After World War II, a 1948 reconstruction plan aimed to build a grand kabuki theater here as the cultural anchor of the new district. The theater was never actually built, but the name 'Kabukicho' stuck for good. Over time it became Japan's largest nightlife and adult entertainment district, nicknamed 'the town that never sleeps' -- today restaurants, karaoke boxes, cinemas, themed bars and pachinko parlors sit side by side with the red-light area.",
+      },
+      {
+        title: "Omoide Yokocho, the alley that survived the black market",
+        body: "Tucked right against the train tracks, this cluster of narrow alleys lined with tiny yakitori stalls started life as a black market in the postwar years, when food was scarce and the area didn't even have its own toilets -- hence its informal nickname among foreigners, 'Piss Alley'. It survived several demolition attempts and is today one of the few corners of Shinjuku that still keeps the scale and atmosphere of mid-20th-century Tokyo.",
+      },
+      {
+        title: "The Metropolitan Government Building",
+        body: "Designed by architect Kenzo Tange and opened in 1991, the Tocho (Tokyo Metropolitan Government Building) has twin 243-meter towers that Tange himself said were inspired by both a printed circuit board and European gothic cathedrals. Its two free observation decks, at 202 meters, offer one of the few panoramic views of Tokyo at no cost at all -- on very clear days you can even spot Mount Fuji.",
+      },
+    ],
+    curiosities: [
+      "Golden Gai, a step from Kabukicho, packs about 200 tiny bars into six impossibly narrow alleys -- many literally fit only 5-6 people. Since the 1960s it has been a gathering spot for writers, filmmakers and musicians, and remains one of the most characterful corners of Tokyo.",
+      "The Kabukicho crossing has a giant 3D screen with an enormous cat (the 'Shinjuku Cat') that appears to peer out over the buildings -- it's become one of the most photographed spots in the area since debuting in 2021.",
+      "Before the Meiji era, Shinjuku (literally 'new post station') was one of the four post stations supplying travelers and goods along the route connecting Edo with the rest of Japan.",
+    ],
+    tip: "The Tocho's free observation deck is the perfect alternative to the paid Shibuya Sky: same illuminated-city views, zero cost -- just expect a line for the elevator during the sunset rush.",
   },
 
   "tokyo-skytree": {

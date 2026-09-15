@@ -722,6 +722,38 @@ export const guides = {
     tip: "La entrada es gratuita y se puede visitar sin reserva, pero para el desayuno de sushi conviene llegar temprano -- los restaurantes más conocidos suelen tener cola desde primera hora de la mañana.",
   },
 
+  "ueno": {
+    name: "Ueno",
+    jp: "上野",
+    founded: "Parque desde 1873 · sobre los terrenos del templo Kan'ei-ji (s. XVII)",
+    wiki: "Ueno, Tokyo",
+    tagline: "De templo funerario de los Tokugawa a campo de batalla y, después, al primer parque público de Japón.",
+    sections: [
+      {
+        title: "El templo que dominaba la colina",
+        body: "Antes de ser un parque, la colina de Ueno albergaba el Kan'ei-ji, uno de los templos más poderosos de Edo y templo funerario de varios shogunes Tokugawa, con un recinto que en su momento de máximo esplendor rivalizaba en tamaño con el propio castillo de Edo. Del complejo original, arrasado casi por completo en 1868, sobrevive hoy muy poco -- entre otras piezas, una pagoda de cinco pisos que ahora se encuentra, curiosamente, dentro del recinto del zoo.",
+      },
+      {
+        title: "La batalla que decidió el fin del shogunato",
+        body: "En julio de 1868, durante la Guerra Boshin que puso fin a más de 250 años de gobierno Tokugawa, el Kan'ei-ji fue el último bastión de los Shogitai, un grupo de samuráis leales al shogun derrotado. Las fuerzas imperiales aplastaron la resistencia en un solo día de combate, y el terreno arrasado quedó abandonado hasta que, pocos años después, el nuevo gobierno Meiji decidió convertirlo en un parque público al estilo occidental.",
+      },
+      {
+        title: "El primer parque público de Japón",
+        body: "Inaugurado en 1873, Ueno fue uno de los primeros parques públicos de todo Japón, parte de un esfuerzo del gobierno Meiji por modernizar el país a imagen de las capitales europeas. Hoy reúne, dentro de un mismo recorrido a pie, el Museo Nacional de Tokio (1872, el museo más antiguo y grande del país), el zoo más antiguo de Japón (1882) y el estanque de Shinobazu, con su santuario en una isla dedicado a la diosa Benzaiten.",
+      },
+      {
+        title: "Ameyoko, el mercado nacido del mercado negro",
+        body: "Justo a la salida de la estación, la calle de Ameyoko ('Ameya Yokocho') surgió en los años de posguerra como mercado negro, cuando escaseaba de todo y se vendían aquí desde caramelos artesanales hasta excedentes del ejército estadounidense -- ambos usos compiten por explicar su nombre, ya que 'ame' significa tanto 'caramelo' como es la forma abreviada de 'América'. Hoy sigue siendo un mercado callejero bullicioso, con pescado fresco, marisco a la brasa, ropa barata y puestos de comida, mucho más informal que cualquier centro comercial de Tokio.",
+      },
+    ],
+    curiosities: [
+      "La estatua más fotografiada del parque es la de Saigo Takamori, el samurái que ayudó a derrocar al shogunato -- y que, pocos años después, encabezó él mismo una rebelión contra el gobierno que había contribuido a instaurar. Se le representa paseando a su perro, en una pose deliberadamente cercana y poco heroica.",
+      "Ueno recibió en 1972 la primera pareja de pandas gigantes que llegó a Japón, regalo del gobierno chino tras la normalización de relaciones diplomáticas -- desde entonces el zoo de Ueno es sinónimo de pandas para el público japonés.",
+      "El estanque de Shinobazu se llena cada verano de flores de loto que lo cubren casi por completo, una estampa que dista mucho de la lámina de agua despejada que se ve el resto del año.",
+    ],
+    tip: "Si os apetece picar algo por el camino, los puestos de Ameyoko son buena parada para marisco a la brasa (ostras, anguila) a precio de calle, mucho más barato que sentarse en un restaurante.",
+  },
+
   "kappabashi": {
     name: "Kappabashi Dori",
     jp: "かっぱ橋道具街",
@@ -784,6 +816,38 @@ export const guides = {
       "Los domingos, antes de la pandemia, era habitual ver a jóvenes vestidos con looks elaborados de cosplay o subculturas concretas reunirse cerca del puente de Jingu-bashi, junto a la entrada del santuario Meiji -- una costumbre que se ha reducido notablemente pero que a veces todavía se puede ver.",
     ],
     tip: "Takeshita Dori es muy estrecha y se llena mucho, sobre todo los findes -- si buscáis fotos sin aglomeraciones, mejor ir a primera hora de la mañana entre semana.",
+  },
+
+  "shinjuku": {
+    name: "Shinjuku",
+    jp: "新宿",
+    founded: "Estación desde 1885 · distrito de ocio nocturno desde la posguerra",
+    wiki: "Shinjuku",
+    tagline: "La estación más transitada del planeta y, de noche, el neón más denso de Tokio.",
+    sections: [
+      {
+        title: "La estación más transitada del mundo",
+        body: "La Estación de Shinjuku ostenta el récord Guinness a la estación de tren más concurrida del mundo, con una media histórica de más de 3,5 millones de pasajeros al día antes de la pandemia -- más gente en una jornada que la población entera de muchos países. El complejo conecta varias líneas JR, Metro y privadas a través de más de 200 salidas, hasta el punto de que perderse dentro de la propia estación es una experiencia casi ritual para cualquier visitante primerizo.",
+      },
+      {
+        title: "Kabukicho, el barrio que nunca tuvo su teatro kabuki",
+        body: "Tras la Segunda Guerra Mundial, un plan de reconstrucción de 1948 pretendía levantar aquí un gran teatro de kabuki como ancla cultural del nuevo barrio. El teatro nunca llegó a construirse, pero el nombre 'Kabukicho' se quedó para siempre. Con el tiempo se convirtió en el mayor distrito de ocio nocturno y entretenimiento adulto de Japón, apodado 'la ciudad que nunca duerme' -- hoy conviven ahí restaurantes, karaokes, cines, bares temáticos y salas de pachinko con el barrio rojo.",
+      },
+      {
+        title: "Omoide Yokocho, el callejón que sobrevivió al mercado negro",
+        body: "Pegado a las vías del tren, este racimo de callejones estrechos con minúsculos puestos de yakitori nació como mercado negro en los años de posguerra, cuando la comida escaseaba y la zona no tenía ni siquiera baños propios -- de ahí su apodo informal entre extranjeros, 'Piss Alley'. Sobrevivió a varios intentos de demolición y hoy es uno de los pocos rincones de Shinjuku que conserva la escala y el ambiente de la Tokio de mediados del siglo XX.",
+      },
+      {
+        title: "El edificio del Gobierno Metropolitano",
+        body: "Diseñado por el arquitecto Kenzo Tange e inaugurado en 1991, el Tocho (Tokyo Metropolitan Government Building) tiene dos torres gemelas de 243 metros inspiradas, según el propio Tange, en un circuito impreso y en las catedrales góticas europeas a la vez. Sus dos miradores gratuitos, a 202 metros de altura, ofrecen una de las pocas vistas panorámicas de Tokio sin coste alguno -- en días muy despejados se llega a ver el monte Fuji.",
+      },
+    ],
+    curiosities: [
+      "Golden Gai, a un paso de Kabukicho, agrupa unos 200 bares minúsculos repartidos en seis callejones estrechísimos -- muchos caben literalmente 5-6 personas. Desde los años 60 ha sido punto de encuentro de escritores, cineastas y músicos, y hoy sigue siendo uno de los rincones con más carácter de todo Tokio.",
+      "El cruce de Kabukicho tiene una pantalla gigante en 3D con un gato gigante (el 'Shinjuku Cat') que se asoma sobre los edificios -- se ha convertido en uno de los puntos más fotografiados de la zona desde su estreno en 2021.",
+      "Antes de la Era Meiji, Shinjuku ('nueva estación de posta', literalmente) fue una de las cuatro estaciones de posta que abastecían de viajeros y mercancías la ruta que conectaba Edo con el resto de Japón.",
+    ],
+    tip: "El mirador gratuito del Tocho es la alternativa perfecta al Shibuya Sky de pago: mismas vistas de la ciudad iluminada, coste cero -- solo hay que guardar cola para el ascensor en las horas punta del atardecer.",
   },
 
   "tokyo-skytree": {
@@ -1084,11 +1148,11 @@ export const guidesByDay = {
   8: ["nakasendo", "magome", "tsumago"],
   9: ["tokyo-skytree"],
   10: ["senso-ji", "fuji"],
-  11: ["meiji-jingu", "shibuya", "harajuku"],
-  12: ["odaiba", "toyosu"],
+  11: ["meiji-jingu", "shibuya", "harajuku", "shinjuku"],
+  12: ["odaiba", "toyosu", "ueno"],
   13: ["nakano-broadway", "akihabara"],
   14: ["nikko"],
-  15: ["kappabashi"],
+  15: ["kappabashi", "senso-ji"],
 };
 
 // Metadatos y palabras clave para vincular cada guía con los eventos del itinerario
@@ -1220,5 +1284,13 @@ export const guideMeta = {
   "tokyo-skytree": {
     shortName: "Tokyo Skytree",
     keywords: ["tokyo skytree", "skytree", "musashi", "tembo deck", "torre de tokio"],
+  },
+  "shinjuku": {
+    shortName: "Shinjuku",
+    keywords: ["shinjuku", "kabukicho", "omoide yokocho", "gobierno metropolitano", "golden gai", "tocho"],
+  },
+  "ueno": {
+    shortName: "Ueno",
+    keywords: ["ueno", "parque de ueno", "ameyoko", "shinobazu"],
   },
 };
