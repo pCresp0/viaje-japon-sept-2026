@@ -598,10 +598,10 @@ export const days = [
     "money": "Approx. €40 (meals)"
   },
   {
-    "title": "Asakusa, Ueno and Odaiba",
-    "cities": "Asakusa, Ueno, Odaiba",
-    "summary": "Senso-ji Temple in Asakusa, crossing the Kaminarimon gate. Stroll through the Ameyoko street market next to Ueno Park. In the afternoon, a driverless futuristic train to Odaiba to watch the sunset over the bay.",
-    "history": "Senso-ji, Tokyo's oldest temple, was founded in 628. Odaiba was born in the 19th century as fortress islands to defend Tokyo from Western ships.",
+    "title": "Mount Fuji Excursion",
+    "cities": "Mount Fuji, Kawaguchiko",
+    "summary": "Full-day excursion with a CONFIRMED reservation (GetYourGuide GYGX7M7NZBNL): Oishi Park, Lake Kawaguchiko, Oshino Hakkai and the iconic Chureito Pagoda, with an English-speaking guide. In the evening, an optional walk to the illuminated Sensō-ji, a step from the hotel.",
+    "history": "Mount Fuji (3,776 m), an active volcano and Japan's tallest mountain, has been revered as sacred since ancient times and has been a UNESCO World Heritage Site since 2013 -- listed as a cultural site, not a natural one, for its role as a source of artistic and religious inspiration.",
     "schedule": [
       {
         "text": "Wake up and quick breakfast at the hotel or on the way."
@@ -625,12 +625,12 @@ export const days = [
         "text": "🏮 **OPTIONAL: SENSŌ-JI AT NIGHT**\n\nThe hotel is ~10 min walk from Sensō-ji / Kaminarimon. If there's energy left after the excursion, a short walk to the illuminated temple (free; a very different atmosphere from daytime)."
       }
     ],
-    "money": "Approx. €40 (meals)"
+    "money": "Approx. €40 (meals) + €42/person already paid for the excursion"
   },
   {
     "title": "Shibuya, Harajuku and Shinjuku",
     "cities": "Shibuya, Harajuku, Shinjuku",
-    "summary": "Intense day: Shibuya crossing and youth culture of Harajuku. We end under the neon lights of Shinjuku with its gastronomic alleys. (Flexible GetYourGuide booking GYGFWV2MNZV8). Thibaut, take the chance to get a haircut, even if it's not as cheap as in Spain, it's still better than in France.",
+    "summary": "Intense day: Shibuya crossing and youth culture of Harajuku. We end under the neon lights of Shinjuku with its gastronomic alleys. Thibaut, take the chance to get a haircut, even if it's not as cheap as in Spain, it's still better than in France.",
     "history": "These districts grew after the Great Kanto Earthquake of 1923, driven by urban train expansion. Shinjuku today hosts the busiest train station on the planet.",
     "schedule": [
       {
@@ -649,10 +649,10 @@ export const days = [
     "money": "Approx. €40 (meals)"
   },
   {
-    "title": "Gastronomy, Luxury and Viewpoints",
-    "cities": "Toyosu, Ginza, Roppongi",
-    "summary": "Early morning for fresh sushi at Toyosu market, walk through Ginza and its elegant architecture. Sunset at Mori Tower observation deck (Roppongi) with views of Tokyo Tower and skyline. (Flexible GetYourGuide booking GYGZGZVLFL75).",
-    "history": "Ginza means 'silver seat', the original site of the government mint in the Edo period. Rebuilt with Western architecture, a showcase of Japan's modernization.",
+    "title": "Toyosu, Ueno and Odaiba",
+    "cities": "Toyosu, Ueno, Odaiba",
+    "summary": "Early start for the freshest sushi in the world at Toyosu. In the morning, Ueno Park and the Ameyoko street market. In the afternoon, a driverless futuristic train to Odaiba for sunset over Tokyo Bay.",
+    "history": "Ueno Park, one of Japan's first public parks (1873), brings together temples, museums and the country's oldest zoo. Odaiba was born in the 19th century as fortress islands to defend Tokyo from Western ships, and today is a symbol of futuristic Tokyo.",
     "schedule": [
       {
         "text": "Premium sushi breakfast at the Toyosu wholesale market (Tsukiji's successor)."
@@ -664,7 +664,7 @@ export const days = [
         "text": "🎫 **SUICA:** ✅ YES; tap the card directly at the gates.\n\nYurikamome train to Odaiba crossing the Rainbow Bridge (sit in the first car)."
       },
       {
-        "text": "Life-size Gundam and sunset from the promenade with the Tokyo skyline."
+        "text": "Stroll through Odaiba and sunset from the seaside promenade with the Tokyo skyline.\n\n⚠️ **ABOUT THE GUNDAM: it's gone.** The life-size Unicorn Gundam statue that had stood since 2017 in front of DiverCity Tokyo Plaza ended its public display on August 31, 2026 -- right before your trip. As of this update there's no confirmation of a replacement statue, so don't count on seeing it. Still enjoy DiverCity all the same (shops, Gundam Base Tokyo with merchandise) and the rest of Odaiba."
       },
       {
         "text": "🍜 Dinner in Odaiba (Aqua City / DiverCity with views of Tokyo Bay)."
@@ -673,12 +673,12 @@ export const days = [
         "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nBack by metro/Yurikamome to our residence in Asakusa Kappabashi to rest (4th night in Tokyo)."
       }
     ],
-    "money": "Approx. €50 (meals & Mori Tower ticket)"
+    "money": "Approx. €45 (meals)"
   },
   {
     "title": "Nintendo Route and Shopping",
     "cities": "Ikebukuro, Nakano",
-    "summary": "Day of collecting and video games: official Nintendo and Pokémon stores. In the afternoon, Nakano Broadway, the best place for retro and geek items at a fair price. (Flexible GetYourGuide booking GYGMX397LBNA).",
+    "summary": "Day of collecting and video games: Mega Pokémon Center in Ikebukuro (with its life-size Mewtwo, Charizard and Lucario statues) and Nintendo Store Tokyo. In the afternoon, Nakano Broadway, Tokyo's best spot for original Pokémon cards, Dragon Ball figures and retro/geek items at a fair price -- great for gifts for friends.",
     "history": "The Japanese video game industry, led by Nintendo, revitalized the country's cultural economy in the 80s. Nakano Broadway was born in the 60s as a luxury residential complex, today a mecca for underground collecting.",
     "schedule": [
       {
@@ -697,7 +697,7 @@ export const days = [
         "text": "🍜 Dinner around Nakano or Asakusa."
       },
       {
-        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nBack to the residence to rest and get ready for the early start of the Mount Fuji excursion (5th night in Tokyo)."
+        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nBack to the residence to rest and get ready for tomorrow: a full-day excursion to Nikko, departing from Tobu-Asakusa Station (5th night in Tokyo)."
       }
     ],
     "money": "Approx. €40 (meals) + shopping"
@@ -753,7 +753,7 @@ export const days = [
         "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nLast night in Tokyo before heading back to Spain."
       }
     ],
-    "money": "13,000 ¥ tour (tickets & minivan inc.) + Shinkansen + Houtou lunch"
+    "money": "Approx. ¥2,700/person one way (Tobu Express) + Toshogu admission + meals"
   },
   {
     "title": "Return Home",

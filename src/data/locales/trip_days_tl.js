@@ -598,10 +598,10 @@ export const days = [
     "money": "Tinatayang €40 (pagkain)"
   },
   {
-    "title": "Asakusa, Ueno at Odaiba",
-    "cities": "Asakusa, Ueno, Odaiba",
-    "summary": "Senso-ji Temple sa Asakusa, tumatawid sa Kaminarimon gate. Maglakad sa pamilihan ng Ameyoko sa tabi ng Ueno Park. Sa hapon, isang driverless futuristic na tren patungong Odaiba upang panoorin ang paglubog ng araw sa look.",
-    "history": "Ang Senso-ji, ang pinakalumang templo ng Tokyo, ay itinatag noong 628. Ang Odaiba ay isinilang noong ika-19 na siglo bilang kuta ng mga isla upang ipagtanggol ang Tokyo mula sa mga barko ng Kanluran.",
+    "title": "Excursion sa Mount Fuji",
+    "cities": "Mount Fuji, Kawaguchiko",
+    "summary": "Full-day excursion na may KUMPIRMADONG reserbasyon (GetYourGuide GYGX7M7NZBNL): Oishi Park, Lake Kawaguchiko, Oshino Hakkai at ang kilalang Chureito Pagoda, may English-speaking guide. Sa gabi, opsyonal na lakad papuntang naiilawang Sensō-ji, isang hakbang lang mula sa hotel.",
+    "history": "Ang Mount Fuji (3,776 m), aktibong bulkan at pinakamataas na bundok sa Japan, ay pinararangalan bilang sagrado mula pa noong sinaunang panahon at UNESCO World Heritage Site mula 2013 -- nakalista bilang cultural site, hindi natural, dahil sa papel nito bilang pinagmumulan ng inspirasyong pansining at panrelihiyon.",
     "schedule": [
       {
         "text": "Gising na at mabilisang almusal sa hotel o habang naglalakad."
@@ -625,13 +625,13 @@ export const days = [
         "text": "🏮 **OPSYONAL: SENSŌ-JI SA GABI**\n\nMga 10 minutong lakad lang ang hotel mula sa Sensō-ji / Kaminarimon. Kung may sobrang lakas pa pagkatapos ng excursion, maikling lakad papuntang naiilawang templo (libre; ibang-iba ang atmosphere kaysa sa araw)."
       }
     ],
-    "money": "Tinatayang €40 (pagkain)"
+    "money": "Tinatayang €40 (pagkain) + €42/tao nabayaran na para sa excursion"
   },
   {
     "title": "Shibuya, Harajuku at Shinjuku",
     "cities": "Shibuya, Harajuku, Shinjuku",
-    "summary": "Matinding araw: Shibuya crossing at kultura ng kabataan sa Harajuku. (Opsyon sa GetYourGuide GYGFWV2MNZV8). Thibaut, samantalahin mo na magpagupit, kahit hindi kasing mura sa Spain, mas maganda pa rin kaysa sa France.",
-    "history": "Lumago ang mga distritong ito pagkatapos ng Great Kanto Earthquake noong 1923.",
+    "summary": "Matinding araw: Shibuya crossing at kultura ng kabataan sa Harajuku. Magtatapos tayo sa ilalim ng neon lights ng Shinjuku kasama ang mga food alley nito. Thibaut, samantalahin mo na magpagupit, kahit hindi kasing mura sa Spain, mas maganda pa rin kaysa sa France.",
+    "history": "Lumago ang mga distritong ito pagkatapos ng Great Kanto Earthquake noong 1923, dahil sa paglawak ng urban train. Ang Shinjuku ngayon ang tahanan ng pinaka-abalang train station sa mundo.",
     "schedule": [
       {
         "text": "Shibuya Crossing at Miyashita Park. Hintuan sa Pokémon Center Shibuya (Shibuya Parco, 6th floor) — kilala sa malaking Mewtwo statue nito (nasa loob ng glass tube, maganda para sa litrato) at futuristic neon style. Sa parehong palapag din ang Nintendo TOKYO. Mag-ingat, malamang gagawa si Sergio ng urban garden dito para sa mga halaman niya sa Aluche.\n\n🏙️ **OPSYONAL: SHIBUYA SKY** (magdesisyon sa mismong oras). May bayad na observation deck sa ibabaw mismo ng Shibuya Station, 229m ang taas, 360°. May libre na kayong viewpoint sa gabing iyon sa Shinjuku, kaya extra na lang ito kung gusto ninyo.\n💰 Presyo: ¥2,700 online bago mag-15:00 / ¥3,400 mula 15:00 (sa counter, +¥300). Oras: 10:00–22:30, huling entry 21:20.\n⚠️ Madaling maubos ang mga sunset slot kapag maganda ang forecast -- kung talagang gusto ninyo pumunta sa eksaktong oras na iyon, mas mabuting mag-book nang maaga sa opisyal na website kaysa magdesisyon na lang bigla."
@@ -649,10 +649,10 @@ export const days = [
     "money": "Humigit-kumulang €40 (pagkain)"
   },
   {
-    "title": "Gastronomiya, Karangyaan at mga Tanawin",
-    "cities": "Toyosu, Ginza, Roppongi",
-    "summary": "Sariwang sushi sa Toyosu market, pamamasyal sa Ginza at magagandang gusali. Paglubog ng araw sa Mori Tower viewpoint (Roppongi). (Opsyon sa GetYourGuide GYGZGZVLFL75).",
-    "history": "Ang Ginza ay nangangahulugang 'upuan ng pilak'.",
+    "title": "Toyosu, Ueno at Odaiba",
+    "cities": "Toyosu, Ueno, Odaiba",
+    "summary": "Maagang gising para sa pinakasariwang sushi sa mundo sa Toyosu. Sa umaga, Ueno Park at ang Ameyoko street market. Sa hapon, driverless futuristic na tren papuntang Odaiba para sa paglubog ng araw sa Tokyo Bay.",
+    "history": "Ang Ueno Park, isa sa mga unang pampublikong parke sa Japan (1873), pinagsasama ang mga templo, museo at ang pinakalumang zoo sa bansa. Ang Odaiba ay isinilang noong ika-19 na siglo bilang kuta ng mga isla upang ipagtanggol ang Tokyo mula sa mga barko ng Kanluran, at ngayon ay simbolo ng futuristic na Tokyo.",
     "schedule": [
       {
         "text": "Premium na sushi breakfast sa Toyosu wholesale market (kahalili ng Tsukiji)."
@@ -664,7 +664,7 @@ export const days = [
         "text": "🎫 **SUICA:** ✅ OO; i-tap ang card nang direkta sa mga gate.\n\nYurikamome train papuntang Odaiba na tatawid sa Rainbow Bridge (umupo sa unang kotse)."
       },
       {
-        "text": "Life-size na Gundam at paglubog ng araw mula sa promenade na may Tokyo skyline."
+        "text": "Paglalakad sa Odaiba at paglubog ng araw mula sa tabing-dagat na promenade na may Tokyo skyline.\n\n⚠️ **TUNGKOL SA GUNDAM: wala na ito.** Ang life-size na Unicorn Gundam statue na nandoon mula 2017 sa harap ng DiverCity Tokyo Plaza ay natapos ang public display nito noong Agosto 31, 2026 -- bago pa ang inyong biyahe. Sa petsa ng update na ito, walang kumpirmadong kapalit na estatwa, kaya huwag umasang makikita ito. Tamasahin pa rin ang DiverCity (mga tindahan, Gundam Base Tokyo na may merchandise) at ang natitirang bahagi ng Odaiba."
       },
       {
         "text": "🍜 Hapunan sa Odaiba (Aqua City / DiverCity na may tanawin ng Tokyo Bay)."
@@ -673,13 +673,13 @@ export const days = [
         "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nBalik sa pamamagitan ng metro/Yurikamome sa ating tinutuluyan sa Asakusa Kappabashi para magpahinga (4th gabi sa Tokyo)."
       }
     ],
-    "money": "Humigit-kumulang €50 (pagkain at Mori Tower)"
+    "money": "Humigit-kumulang €45 (pagkain)"
   },
   {
     "title": "Ruta sa Nintendo at Pamimili",
     "cities": "Ikebukuro, Nakano",
-    "summary": "Araw ng video games at retro shopping: Nintendo stores at Nakano Broadway. (Opsyon sa GetYourGuide GYGMX397LBNA).",
-    "history": "Ang Nakano Broadway ay sikat sa mga retro collectibles at anime.",
+    "summary": "Araw ng koleksyon at video games: Mega Pokémon Center sa Ikebukuro (may life-size na estatwa nina Mewtwo, Charizard at Lucario) at Nintendo Store Tokyo. Sa hapon, Nakano Broadway, ang pinakamagandang lugar sa Tokyo para sa orihinal na Pokémon cards, Dragon Ball figures, at retro/geek na bagay sa tamang presyo -- perpekto para sa mga regalo sa mga kaibigan.",
+    "history": "Ang industriya ng video game sa Japan, na pinamunuan ng Nintendo, ay muling nagbigay-buhay sa kultural na ekonomiya ng bansa noong dekada '80. Ang Nakano Broadway ay isinilang noong dekada '60 bilang luxury residential complex, ngayon ay mecca ng underground collecting.",
     "schedule": [
       {
         "text": "Mega Pokémon Center Ikebukuro (Sunshine City, 2nd floor) at Nintendo Store Tokyo. Ang Mega Center ang pinakamalaki sa Japan: life-size na estatwa nina Charizard, Lucario at Mewtwo, ang Pokémon Card Station, at exclusive na merchandise na wala sa ibang tindahan."
@@ -697,7 +697,7 @@ export const days = [
         "text": "🍜 Hapunan sa paligid ng Nakano o Asakusa."
       },
       {
-        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nPagbalik sa residence para magpahinga at maghanda para sa maagang simula ng Mount Fuji excursion (5th gabi sa Tokyo)."
+        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nPagbalik sa residence para magpahinga at maghanda para bukas: full-day excursion papuntang Nikko, na aalis mula sa Tobu-Asakusa Station (5th gabi sa Tokyo)."
       }
     ],
     "money": "Humigit-kumulang €40 (pagkain) + pamimili"
@@ -753,7 +753,7 @@ export const days = [
         "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nHuling gabi sa Tokyo bago bumalik sa Spain."
       }
     ],
-    "money": "13,000 ¥ tour (kasama ang tiket at minivan) + Shinkansen + pagkain"
+    "money": "Humigit-kumulang ¥2,700/tao paalis (Tobu Express) + Toshogu admission + pagkain"
   },
   {
     "title": "Pag-uwi",

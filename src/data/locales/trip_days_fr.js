@@ -598,10 +598,10 @@ export const days = [
     "money": "Env. 40 € (repas)"
   },
   {
-    "title": "Asakusa, Ueno et Odaiba",
-    "cities": "Asakusa, Ueno, Odaiba",
-    "summary": "Temple Senso-ji à Asakusa, en traversant la porte Kaminarimon. Promenade dans le marché de rue d'Ameyoko à côté du parc d'Ueno. L'après-midi, train futuriste sans conducteur vers Odaiba pour admirer le coucher de soleil sur la baie.",
-    "history": "Le Senso-ji, le plus vieux temple de Tokyo, a été fondé en 628. Odaiba est née au XIXe siècle comme îles-forteresses pour défendre Tokyo des navires occidentaux.",
+    "title": "Excursion au Mont Fuji",
+    "cities": "Mont Fuji, Kawaguchiko",
+    "summary": "Excursion d'une journée complète avec réservation CONFIRMÉE (GetYourGuide GYGX7M7NZBNL) : Parc Oishi, lac Kawaguchiko, Oshino Hakkai et l'emblématique pagode Chureito, avec guide en anglais. Le soir, promenade optionnelle au Sensō-ji illuminé, à deux pas de l'hôtel.",
+    "history": "Le mont Fuji (3 776 m), volcan actif et point culminant du Japon, est vénéré comme sacré depuis l'Antiquité et inscrit au Patrimoine mondial de l'UNESCO depuis 2013 -- en tant que site culturel, et non naturel, pour son rôle de source d'inspiration artistique et religieuse.",
     "schedule": [
       {
         "text": "Réveil et petit-déjeuner rapide à l'hôtel ou en chemin."
@@ -625,12 +625,12 @@ export const days = [
         "text": "🏮 **OPTIONNEL : SENSŌ-JI DE NUIT**\n\nL'hôtel est à ~10 min à pied de Sensō-ji / Kaminarimon. S'il reste de l'énergie après l'excursion, petite promenade jusqu'au temple illuminé (gratuit ; ambiance très différente de la journée)."
       }
     ],
-    "money": "Env. 40 € (repas)"
+    "money": "Env. 40 € (repas) + 42 €/personne déjà payés pour l'excursion"
   },
   {
     "title": "Shibuya, Harajuku et Shinjuku",
     "cities": "Shibuya, Harajuku, Shinjuku",
-    "summary": "Journée intense : carrefour de Shibuya et culture jeune d'Harajuku. Fin de journée sous les néons de Shinjuku et ses ruelles gourmandes. (Option flexible GetYourGuide GYGFWV2MNZV8). Thibaut, profite-en pour te faire couper les cheveux, même si ce n'est pas aussi bon marché qu'en Espagne, c'est toujours mieux qu'en France.",
+    "summary": "Journée intense : carrefour de Shibuya et culture jeune d'Harajuku. Fin de journée sous les néons de Shinjuku et ses ruelles gourmandes. Thibaut, profite-en pour te faire couper les cheveux, même si ce n'est pas aussi bon marché qu'en Espagne, c'est toujours mieux qu'en France.",
     "history": "Ces quartiers se sont développés après le grand tremblement de terre de Kanto de 1923.",
     "schedule": [
       {
@@ -649,10 +649,10 @@ export const days = [
     "money": "Env. 40 € (repas)"
   },
   {
-    "title": "Gastronomie, Luxe et Panoramas",
-    "cities": "Toyosu, Ginza, Roppongi",
-    "summary": "Matinée au marché de Toyosu pour le meilleur sushi frais, promenade à Ginza et architecture élégante. Coucher de soleil à la tour Mori (Roppongi). (Option flexible GetYourGuide GYGZGZVLFL75).",
-    "history": "Ginza signifie 'siège d'argent', site de l'hôtel des monnaies à l'époque d'Edo.",
+    "title": "Toyosu, Ueno et Odaiba",
+    "cities": "Toyosu, Ueno, Odaiba",
+    "summary": "Lever tôt pour le sushi le plus frais du monde à Toyosu. Le matin, parc d'Ueno et marché de rue d'Ameyoko. L'après-midi, train futuriste sans conducteur vers Odaiba pour le coucher de soleil sur la baie de Tokyo.",
+    "history": "Le parc d'Ueno, l'un des premiers parcs publics du Japon (1873), réunit temples, musées et le plus vieux zoo du pays. Odaiba est née au XIXe siècle comme îles-forteresses pour défendre Tokyo des navires occidentaux, et symbolise aujourd'hui le Tokyo futuriste.",
     "schedule": [
       {
         "text": "Petit-déjeuner sushi premium au marché de gros de Toyosu (successeur de Tsukiji)."
@@ -664,7 +664,7 @@ export const days = [
         "text": "🎫 **SUICA :** ✅ OUI ; passer la carte directement aux portillons.\n\nTrain Yurikamome vers Odaiba en traversant le Rainbow Bridge (asseyez-vous dans le premier wagon)."
       },
       {
-        "text": "Gundam grandeur nature et coucher de soleil depuis la promenade avec la skyline de Tokyo."
+        "text": "Promenade à Odaiba et coucher de soleil depuis le front de mer avec la skyline de Tokyo.\n\n⚠️ **À PROPOS DU GUNDAM : il n'est plus là.** La statue grandeur nature de l'Unicorn Gundam, présente depuis 2017 devant le DiverCity Tokyo Plaza, a terminé son exposition publique le 31 août 2026 -- juste avant votre voyage. À la date de cette mise à jour, aucune statue de remplacement n'est confirmée, ne comptez donc pas la voir. Profitez quand même de DiverCity (boutiques, Gundam Base Tokyo avec ses produits dérivés) et du reste d'Odaiba."
       },
       {
         "text": "🍜 Dîner à Odaiba (Aqua City / DiverCity avec vue sur la baie de Tokyo)."
@@ -673,13 +673,13 @@ export const days = [
         "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nRetour en métro/Yurikamome à notre résidence à Asakusa Kappabashi pour se reposer (4e nuit à Tokyo)."
       }
     ],
-    "money": "Env. 50 € (repas et observatoire Mori)"
+    "money": "Env. 45 € (repas)"
   },
   {
     "title": "Route Nintendo et Shopping",
     "cities": "Ikebukuro, Nakano",
-    "summary": "Journée rétrogaming et mangas : boutiques officielles Nintendo et Nakano Broadway. (Option flexible GetYourGuide GYGMX397LBNA).",
-    "history": "Nakano Broadway est la mecque du collectionnisme underground et des produits rétro.",
+    "summary": "Journée de collection et de jeux vidéo : Mega Pokémon Center d'Ikebukuro (avec ses statues grandeur nature de Mewtwo, Dracaufeu et Lucario) et Nintendo Store Tokyo. L'après-midi, Nakano Broadway, le meilleur endroit de Tokyo pour les cartes Pokémon originales, les figurines Dragon Ball et les articles rétro/geek à prix juste -- idéal pour les cadeaux des amis.",
+    "history": "L'industrie japonaise du jeu vidéo, menée par Nintendo, a revitalisé l'économie culturelle du pays dans les années 80. Nakano Broadway est né dans les années 60 comme complexe résidentiel de luxe, aujourd'hui mecque du collectionnisme underground.",
     "schedule": [
       {
         "text": "Mega Pokémon Center Ikebukuro (Sunshine City, 2e étage) et Nintendo Store Tokyo. Le Mega Center est le plus grand du Japon : statues grandeur nature de Dracaufeu, Lucario et Mewtwo, la Pokémon Card Station, et des produits exclusifs introuvables ailleurs."
@@ -697,7 +697,7 @@ export const days = [
         "text": "🍜 Dîner du côté de Nakano ou Asakusa."
       },
       {
-        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nRetour à la résidence pour se reposer et se préparer pour le départ matinal de l'excursion au Mont Fuji (5e nuit à Tokyo)."
+        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nRetour à la résidence pour se reposer et se préparer pour demain : excursion d'une journée complète à Nikko, avec départ depuis la gare de Tobu-Asakusa (5e nuit à Tokyo)."
       }
     ],
     "money": "Env. 40 € (repas) + shopping"
@@ -753,7 +753,7 @@ export const days = [
         "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nDernière nuit à Tokyo avant de rentrer en Espagne."
       }
     ],
-    "money": "13 000 ¥ tour (entrées et minivan inc.) + Shinkansen + repas Houtou"
+    "money": "Env. ¥2 700/personne aller (Tobu Express) + entrées Toshogu + repas"
   },
   {
     "title": "Retour à la maison",
