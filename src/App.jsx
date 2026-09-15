@@ -3,7 +3,6 @@ import { useSwipeable } from "react-swipeable";
 import Nav, { Sidebar, DesktopTopBar } from "./components/Nav";
 import Footer from "./components/Footer";
 import AccessGate, { isUnlocked } from "./components/AccessGate";
-import FujiAlertBanner from "./components/FujiAlertBanner";
 import ErrorBoundary from "./components/ErrorBoundary";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 
@@ -202,9 +201,6 @@ export default function App() {
             // Solo móvil: offset bajo la top bar fija
             paddingTop: "var(--mobile-topbar)",
           }}>
-            {/* Banner global de aviso de visibilidad y cancelaciones del Monte Fuji (activo del 12 al 20 de sept) */}
-            <FujiAlertBanner />
-
             <ErrorBoundary resetKey={tab}>
               <div>
                 {tab === "pendientes"   && <PendingPage />}
