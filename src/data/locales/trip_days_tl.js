@@ -682,36 +682,9 @@ export const days = [
     "money": "Humigit-kumulang €45 (pagkain)"
   },
   {
-    "title": "Ruta sa Nintendo at Pamimili",
-    "cities": "Ikebukuro, Nakano",
-    "summary": "Araw ng koleksyon at video games: Mega Pokémon Center sa Ikebukuro (may life-size na estatwa nina Mewtwo, Charizard at Lucario) at Nintendo Store Tokyo. Sa hapon, Nakano Broadway, ang pinakamagandang lugar sa Tokyo para sa orihinal na Pokémon cards, Dragon Ball figures, at retro/geek na bagay sa tamang presyo -- perpekto para sa mga regalo sa mga kaibigan.",
-    "history": "Ang industriya ng video game sa Japan, na pinamunuan ng Nintendo, ay muling nagbigay-buhay sa kultural na ekonomiya ng bansa noong dekada '80. Ang Nakano Broadway ay isinilang noong dekada '60 bilang luxury residential complex, ngayon ay mecca ng underground collecting.",
-    "schedule": [
-      {
-        "text": "Mega Pokémon Center Ikebukuro (Sunshine City, 2nd floor) at Nintendo Store Tokyo. Ang Mega Center ang pinakamalaki sa Japan: life-size na estatwa nina Charizard, Lucario at Mewtwo, ang Pokémon Card Station, at exclusive na merchandise na wala sa ibang tindahan."
-      },
-      {
-        "text": "🚃 Tren papuntang Akihabara (Yamanote Line, ~20 min mula Ikebukuro, walang transfer). Tanghalian sa lugar bago magsimulang mag-explore."
-      },
-      {
-        "text": "🎮 **AKIHABARA**, ang pinakamahusay na otaku district -- iba sa Nakano Broadway, dito mas street experience at malalaking espesyalisadong tindahan kaysa sa secondhand na koleksyon.\n\n• Mandarake Complex: 8 palapag ng manga, figure at koleksyon mula sa lahat ng panahon.\n• Super Potato: retro video games (NES, SNES, Game Boy...) sa isang ambiance na parang mula sa dekada '90.\n• Opisyal na mga tindahang may kaugnayan sa Pokémon (hindi mismo ang Pokémon Center, pero maraming espesyalisadong tindahan ng trading card).\n• Japanese arcade (Taito Station, GiGO) para sa UFO catcher, rhythm, o fighting games.\n• Pangunahing kalye (Chuo-dori), sarado sa sasakyan tuwing hapon ng Linggo -- tingnan kung applicable ngayon.\n\n🚃 Pagkatapos, tren papuntang Nakano (~20-25 min, isang transfer)."
-      },
-      {
-        "text": "Hapon ng pamimili ng koleksyon sa Nakano Broadway: ang pinakamagandang lugar sa Tokyo para sa orihinal na Pokémon card (mga espesyalisadong trading card shop na may display case ng indibidwal na card at booster pack), mga figure at merchandise ng Dragon Ball, at retro/manga na bagay sa pangkalahatan sa tamang presyo. Maraming palapag ng maliliit na independent na tindahan — sulit puntahan lahat.\n\n🛍️ **NAKANO SUN MALL** (rekomendasyon ng kaibigang keso-palayaw ni Thibaut): ang covered shopping arcade na diretsong dumadaan mula sa estasyon hanggang sa pasukan ng Nakano Broadway (~5 min na lakad) -- nakumpirma ang geography, ito ang natural na daan. Mas hindi turista kaysa Akihabara, may mga restaurant at izakaya na mas lokal ang vibe."
-      },
-      {
-        "text": "🍜 Hapunan sa paligid ng Nakano o Asakusa."
-      },
-      {
-        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nPagbalik sa residence para magpahinga at maghanda para bukas: full-day excursion papuntang Nikko, na aalis mula sa Tobu-Asakusa Station (5th gabi sa Tokyo)."
-      }
-    ],
-    "money": "Humigit-kumulang €40 (pagkain) + pamimili"
-  },
-  {
     "title": "Nikko Day Trip",
     "cities": "Nikko",
-    "summary": "Buong araw ng kalikasan at mga templo, 2 oras mula Tokyo sa direktang tren mula Asakusa (literal na katabi ng hotel): ang Toshogu Shrine, mausoleum ng shogun na si Tokugawa Ieyasu at UNESCO World Heritage Site, ang Shinkyo Bridge, at kung may oras pa, ang Kegon Falls at Lake Chuzenji sa Irohazaka mountain road. Farewell dinner ng grupo sa gabi sa Tokyo.",
+    "summary": "Buong araw ng kalikasan at mga templo, 2 oras mula Tokyo sa direktang tren mula Asakusa (literal na katabi ng hotel): ang Toshogu Shrine, mausoleum ng shogun na si Tokugawa Ieyasu at UNESCO World Heritage Site, ang Shinkyo Bridge, at kung may oras pa, ang Kegon Falls at Lake Chuzenji sa Irohazaka mountain road.",
     "history": "Umunlad ang Nikko sa paligid ng Toshogu Shrine, itinayo noong 1617 bilang mausoleum ni Tokugawa Ieyasu, ang tagapagtatag ng shogunate na namuno sa Japan nang mahigit 250 taon. Pinalawak ito ng apo niyang si Iemitsu hanggang maging ang mayamang dekorasyon na kumplex na nakikita ngayon, na may mahigit 5 milyong piraso ng gold leaf na nakakalat sa mga gusali nito.",
     "schedule": [
       {
@@ -724,7 +697,7 @@ export const days = [
       },
       {
         "time": "~07:30",
-        "text": "🚅 Tobu Limited Express papuntang Tobu-Nikko Station.\n\n🎫 **SUICA:** ❌ HINDI (kailangan ng express ticket na may upuan)\n📅 **RESERBASYON:** 🔴 Bibilhin pa\n🛒 **PAMBILI:** Sa mga makina o ticket counter sa Tobu Asakusa Station, o maaga sa app/website ng Tobu Railway. Mga ¥2,700/tao isang-daan.\n\nBiyahe nang mga 2 oras. May Tobu World Heritage Pass din (~¥4,160), na kasama ang round trip pati unlimited na bus sa Nikko sa loob ng 2 araw -- puwedeng mas sulit kung gagawin ang ruta ng Chuzenji/Kegon."
+        "text": "🚅 Tobu Limited Express papuntang Tobu-Nikko Station.\n\n🎫 **SUICA:** ❌ HINDI (kailangan ng express ticket na may upuan)\n📅 **RESERBASYON:** 🔴 BIBILHIN PA -- inirerekomenda ang **Tobu World Heritage Pass** (~¥4,160/tao ≈ 22,60€), na kasama ang round trip sa Tobu Limited Express PLUS unlimited na bus sa Nikko sa loob ng 2 araw -- ang bus na iyon ang eksaktong kailangan para makarating sa Lake Chuzenji at Kegon Falls, kaya mas sulit kaysa magbayad ng hiwalay na tren at bus.\n📅 **PAMBILI:** Sa mga makina o ticket counter sa Tobu Asakusa Station, o maaga sa app/website ng Tobu Railway. Dahil Sabado ito (mas maraming tao kaysa weekday), mainam bilhin ilang araw bago para masiguro ang 5 upuan na magkakasama.\n\nBiyahe nang mga 2 oras."
       },
       {
         "time": "~09:30",
@@ -732,7 +705,7 @@ export const days = [
       },
       {
         "time": "10:00–13:00",
-        "text": "🏯 **TOSHOGU SHRINE AT PALIGID NITO.** Shinkyo Bridge (ang kilalang pulang tulay sa Ilog Daiya, simbolo ng Nikko). Toshogu complex: ang mayamang dekorasyon na Yomeimon Gate, ang relief ng mga unggoy na 'walang nakita, walang narinig, walang sinabi', at ang mausoleum ni Tokugawa Ieyasu. Rinno-ji at Futarasan Jinja, ang dalawa pang templo sa World Heritage ensemble.\n\n🎫 Kombinadong entrance sa Toshogu + Futarasan + Taiyuin: mga ¥2,100/tao. Toshogu lang: mga ¥1,600/tao.\n\n💡 Kailangan umakyat ng maraming hagdan at maglakad sa hindi pantay na lupa -- kailangan ng komportableng sapatos."
+        "text": "🏯 **TOSHOGU SHRINE AT PALIGID NITO.** Shinkyo Bridge (ang kilalang pulang tulay sa Ilog Daiya, simbolo ng Nikko). Toshogu complex: ang mayamang dekorasyon na Yomeimon Gate, ang relief ng mga unggoy na 'walang nakita, walang narinig, walang sinabi', at ang mausoleum ni Tokugawa Ieyasu. Rinno-ji at Futarasan Jinja, ang dalawa pang templo sa World Heritage ensemble.\n\n🎫 Kombinadong entrance sa Toshogu + Futarasan + Taiyuin: mga ¥2,100/tao (≈11,40€). Toshogu lang: mga ¥1,600/tao. Hindi puwedeng i-reserve -- babayaran on the spot.\n\n💡 Kailangan umakyat ng maraming hagdan at maglakad sa hindi pantay na lupa -- kailangan ng komportableng sapatos."
       },
       {
         "time": "13:00–14:00",
@@ -740,7 +713,7 @@ export const days = [
       },
       {
         "time": "14:00–17:00",
-        "text": "🚌 **OPSYONAL KUNG MAY ORAS: LAKE CHUZENJI AT KEGON FALLS.** Bus mula Tobu-Nikko Station papunta sa Irohazaka mountain road (matatarik na kurbada, magagandang tanawin) hanggang sa Lake Chuzenji, sa paanan ng Mount Nantai. Ang Kegon Falls, 97m ang taas, ay ilang hakbang lang mula sa lawa -- puwedeng bumaba gamit ang elevator papunta sa mas mababang plataporma para makita ito nang malapitan (entrance mga ¥570).\n\n💡 Kung mas gusto ng grupo na hindi masyadong patagalin ang araw, puwedeng laktawan ang bahaging ito at mas magpahinga sa palibot ng Toshogu, o maglakad-lakad sa gitna ng Nikko."
+        "text": "🚌 **OPSYONAL KUNG MAY ORAS: LAKE CHUZENJI AT KEGON FALLS.** Bus mula Tobu-Nikko Station papunta sa Irohazaka mountain road (matatarik na kurbada, magagandang tanawin) hanggang sa Lake Chuzenji, sa paanan ng Mount Nantai -- kasama na sa Tobu World Heritage Pass. Ang Kegon Falls, 97m ang taas, ay ilang hakbang lang mula sa lawa; malinaw itong makikita nang libre mula sa itaas na plataporma, o puwedeng bumaba gamit ang elevator papunta sa mas mababang plataporma para makita ito nang malapitan (entrance mga ¥570 ≈ 3,10€, hindi puwedeng i-reserve, babayaran on the spot).\n\n💡 Kung mas gusto ng grupo na hindi masyadong patagalin ang araw, puwedeng laktawan ang bahaging ito at mas magpahinga sa palibot ng Toshogu, o maglakad-lakad sa gitna ng Nikko."
       },
       {
         "time": "~17:30",
@@ -751,15 +724,42 @@ export const days = [
         "text": "🚅 Tobu Limited Express pabalik sa Tobu-Asakusa Station (mga 2 oras)."
       },
       {
-        "time": "20:00",
-        "text": "🍜 Farewell dinner ng grupo sa Tokyo (Asakusa)."
+        "time": "~20:00",
+        "text": "🍜 Hapunan sa paligid ng Nakano o Asakusa."
       },
       {
         "time": "~21:30",
+        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nPagbalik sa residence para magpahinga at maghanda para bukas: Ruta sa Nintendo, Ikebukuro at Akihabara, ang huling buong araw bago umuwi (5th gabi sa Tokyo)."
+      }
+    ],
+    "money": "Humigit-kumulang €74/tao sa kabuuan (€40 pagkain + €11,40 Toshogu admission + €22,60 Tobu World Heritage Pass) -- 🔴 ang Tobu Pass ay BIBILHIN PA; opsyonal ang Kegon elevator (~€3,10/tao)."
+  },
+  {
+    "title": "Ruta sa Nintendo at Pamimili",
+    "cities": "Ikebukuro, Nakano",
+    "summary": "Araw ng koleksyon at video games: Mega Pokémon Center sa Ikebukuro (may life-size na estatwa nina Mewtwo, Charizard at Lucario) at Nintendo Store Tokyo. Sa hapon, Nakano Broadway, ang pinakamagandang lugar sa Tokyo para sa orihinal na Pokémon cards, Dragon Ball figures, at retro/geek na bagay sa tamang presyo -- perpekto para sa mga regalo sa mga kaibigan. Farewell dinner ng grupo sa gabi, sa huling buong araw bago bumalik sa Spain.",
+    "history": "Ang industriya ng video game sa Japan, na pinamunuan ng Nintendo, ay muling nagbigay-buhay sa kultural na ekonomiya ng bansa noong dekada '80. Ang Nakano Broadway ay isinilang noong dekada '60 bilang luxury residential complex, ngayon ay mecca ng underground collecting.",
+    "schedule": [
+      {
+        "text": "Mega Pokémon Center Ikebukuro (Sunshine City, 2nd floor) at Nintendo Store Tokyo. Ang Mega Center ang pinakamalaki sa Japan: life-size na estatwa nina Charizard, Lucario at Mewtwo, ang Pokémon Card Station, at exclusive na merchandise na wala sa ibang tindahan."
+      },
+      {
+        "text": "🚃 Tren papuntang Akihabara (Yamanote Line, ~20 min mula Ikebukuro, walang transfer). Tanghalian sa lugar bago magsimulang mag-explore."
+      },
+      {
+        "text": "🎮 **AKIHABARA**, ang pinakamahusay na otaku district -- iba sa Nakano Broadway, dito mas street experience at malalaking espesyalisadong tindahan kaysa sa secondhand na koleksyon.\n\n• Mandarake Complex: 8 palapag ng manga, figure at koleksyon mula sa lahat ng panahon.\n• Super Potato: retro video games (NES, SNES, Game Boy...) sa isang ambiance na parang mula sa dekada '90.\n• Opisyal na mga tindahang may kaugnayan sa Pokémon (hindi mismo ang Pokémon Center, pero maraming espesyalisadong tindahan ng trading card).\n• Japanese arcade (Taito Station, GiGO) para sa UFO catcher, rhythm, o fighting games.\n• Pangunahing kalye (Chuo-dori), sarado sa sasakyan tuwing hapon ng Linggo -- Linggo ngayon, kaya dapat applicable.\n\n🚃 Pagkatapos, tren papuntang Nakano (~20-25 min, isang transfer)."
+      },
+      {
+        "text": "Hapon ng pamimili ng koleksyon sa Nakano Broadway: ang pinakamagandang lugar sa Tokyo para sa orihinal na Pokémon card (mga espesyalisadong trading card shop na may display case ng indibidwal na card at booster pack), mga figure at merchandise ng Dragon Ball, at retro/manga na bagay sa pangkalahatan sa tamang presyo. Maraming palapag ng maliliit na independent na tindahan — sulit puntahan lahat.\n\n🛍️ **NAKANO SUN MALL** (rekomendasyon ng kaibigang keso-palayaw ni Thibaut): ang covered shopping arcade na diretsong dumadaan mula sa estasyon hanggang sa pasukan ng Nakano Broadway (~5 min na lakad) -- nakumpirma ang geography, ito ang natural na daan. Mas hindi turista kaysa Akihabara, may mga restaurant at izakaya na mas lokal ang vibe."
+      },
+      {
+        "text": "🍜 Farewell dinner ng grupo sa Tokyo (Asakusa), sa huling buong araw bago bumalik sa Spain."
+      },
+      {
         "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nHuling gabi sa Tokyo bago bumalik sa Spain."
       }
     ],
-    "money": "Humigit-kumulang ¥2,700/tao paalis (Tobu Express) + Toshogu admission + pagkain"
+    "money": "Humigit-kumulang €40 (pagkain, kasama ang farewell dinner) + pamimili"
   },
   {
     "title": "Pag-uwi",

@@ -682,36 +682,9 @@ export const days = [
     "money": "Env. 45 € (repas)"
   },
   {
-    "title": "Route Nintendo et Shopping",
-    "cities": "Ikebukuro, Nakano",
-    "summary": "Journée de collection et de jeux vidéo : Mega Pokémon Center d'Ikebukuro (avec ses statues grandeur nature de Mewtwo, Dracaufeu et Lucario) et Nintendo Store Tokyo. L'après-midi, Nakano Broadway, le meilleur endroit de Tokyo pour les cartes Pokémon originales, les figurines Dragon Ball et les articles rétro/geek à prix juste -- idéal pour les cadeaux des amis.",
-    "history": "L'industrie japonaise du jeu vidéo, menée par Nintendo, a revitalisé l'économie culturelle du pays dans les années 80. Nakano Broadway est né dans les années 60 comme complexe résidentiel de luxe, aujourd'hui mecque du collectionnisme underground.",
-    "schedule": [
-      {
-        "text": "Mega Pokémon Center Ikebukuro (Sunshine City, 2e étage) et Nintendo Store Tokyo. Le Mega Center est le plus grand du Japon : statues grandeur nature de Dracaufeu, Lucario et Mewtwo, la Pokémon Card Station, et des produits exclusifs introuvables ailleurs."
-      },
-      {
-        "text": "🚃 Train vers Akihabara (Yamanote Line, ~20 min depuis Ikebukuro, sans correspondance). Déjeuner dans le quartier avant de commencer à explorer."
-      },
-      {
-        "text": "🎮 **AKIHABARA**, le quartier otaku par excellence -- différent de Nakano Broadway, ici c'est plus une expérience de rue avec de grandes boutiques spécialisées que de la collection d'occasion.\n\n• Mandarake Complex : 8 étages de manga, figurines et objets de collection de toutes les époques.\n• Super Potato : jeux vidéo rétro (NES, SNES, Game Boy...) dans une ambiance tout droit sortie des années 90.\n• Boutiques officielles liées à Pokémon (pas le Pokémon Center lui-même, mais plusieurs boutiques spécialisées de trading cards).\n• Arcades japonaises (Taito Station, GiGO) pour des parties d'UFO catcher, de rythme ou de combat.\n• Rue principale (Chuo-dori), fermée à la circulation le dimanche après-midi -- vérifier si c'est le cas aujourd'hui.\n\n🚃 Ensuite, train vers Nakano (~20-25 min, une correspondance)."
-      },
-      {
-        "text": "Après-midi de shopping collector à Nakano Broadway : le meilleur endroit de Tokyo pour les cartes Pokémon originales (boutiques spécialisées de trading cards avec vitrines de cartes à l'unité et boosters), les figurines et produits dérivés Dragon Ball, et les articles rétro/manga en général à prix juste. Plusieurs étages de petites boutiques indépendantes — ça vaut le coup de toutes les faire.\n\n🛍️ **NAKANO SUN MALL** (recommandation de l'amie petit-fromage de Thibaut) : la galerie marchande couverte qui mène directement de la gare à l'entrée de Nakano Broadway (~5 min à pied) -- confirmé géographiquement, c'est le chemin naturel. Bien moins touristique qu'Akihabara, avec des restaurants et izakayas à l'ambiance plus locale."
-      },
-      {
-        "text": "🍜 Dîner du côté de Nakano ou Asakusa."
-      },
-      {
-        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nRetour à la résidence pour se reposer et se préparer pour demain : excursion d'une journée complète à Nikko, avec départ depuis la gare de Tobu-Asakusa (5e nuit à Tokyo)."
-      }
-    ],
-    "money": "Env. 40 € (repas) + shopping"
-  },
-  {
     "title": "Excursion à Nikko",
     "cities": "Nikko",
-    "summary": "Une journée complète de nature et de temples à 2 heures de Tokyo en train direct depuis Asakusa (littéralement à côté de l'hôtel) : le sanctuaire Toshogu, mausolée du shogun Tokugawa Ieyasu et site du patrimoine mondial, le pont Shinkyo, et si le temps le permet, les chutes de Kegon et le lac Chuzenji par la route de montagne Irohazaka. Dîner d'adieu du groupe le soir à Tokyo.",
+    "summary": "Une journée complète de nature et de temples à 2 heures de Tokyo en train direct depuis Asakusa (littéralement à côté de l'hôtel) : le sanctuaire Toshogu, mausolée du shogun Tokugawa Ieyasu et site du patrimoine mondial, le pont Shinkyo, et si le temps le permet, les chutes de Kegon et le lac Chuzenji par la route de montagne Irohazaka.",
     "history": "Nikko s'est développée autour du sanctuaire Toshogu, construit en 1617 comme mausolée de Tokugawa Ieyasu, fondateur du shogunat qui a gouverné le Japon pendant plus de 250 ans. Son petit-fils Iemitsu l'a agrandi jusqu'à en faire le complexe richement décoré que l'on voit aujourd'hui, avec plus de 5 millions de feuilles d'or réparties sur ses bâtiments.",
     "schedule": [
       {
@@ -724,7 +697,7 @@ export const days = [
       },
       {
         "time": "~07:30",
-        "text": "🚅 Tobu Limited Express vers la gare de Tobu-Nikko.\n\n🎫 **SUICA :** ❌ NON (nécessite un billet express avec place)\n📅 **RÉSERVATION :** 🔴 Encore à acheter\n🛒 **ACHAT :** Aux distributeurs ou guichets de la gare de Tobu Asakusa, ou à l'avance via l'appli/le site de Tobu Railway. Environ ¥2 700/personne aller simple.\n\nTrajet d'environ 2 heures. Il existe aussi le Tobu World Heritage Pass (~¥4 160), qui inclut l'aller-retour plus des bus illimités dans Nikko pendant 2 jours -- peut être plus intéressant si on fait la route de Chuzenji/Kegon."
+        "text": "🚅 Tobu Limited Express vers la gare de Tobu-Nikko.\n\n🎫 **SUICA :** ❌ NON (nécessite un billet express avec place)\n📅 **RÉSERVATION :** 🔴 ENCORE À ACHETER -- recommandé : le **Tobu World Heritage Pass** (~¥4 160/personne ≈ 22,60 €), qui inclut l'aller-retour en Tobu Limited Express PLUS des bus illimités dans Nikko pendant 2 jours -- ce bus est justement ce qu'il faut pour atteindre le lac Chuzenji et les chutes de Kegon, donc c'est plus rentable que de payer train et bus séparément.\n📅 **ACHAT :** Aux distributeurs ou guichets de la gare de Tobu Asakusa, ou à l'avance via l'appli/le site de Tobu Railway. Comme c'est un samedi (plus de monde qu'en semaine), mieux vaut l'acheter quelques jours à l'avance pour garantir les 5 places ensemble.\n\nTrajet d'environ 2 heures."
       },
       {
         "time": "~09:30",
@@ -732,7 +705,7 @@ export const days = [
       },
       {
         "time": "10:00–13:00",
-        "text": "🏯 **SANCTUAIRE TOSHOGU ET ALENTOURS.** Pont Shinkyo (le célèbre pont rouge sur la rivière Daiya, symbole de Nikko). Complexe de Toshogu : la porte Yomeimon richement décorée, le relief des singes 'je ne vois rien, je n'entends rien, je ne dis rien', et le mausolée de Tokugawa Ieyasu. Rinno-ji et Futarasan Jinja, les deux autres temples de l'ensemble du patrimoine mondial.\n\n🎫 Entrée combinée Toshogu + Futarasan + Taiyuin : environ ¥2 100/personne. Toshogu seul : environ ¥1 600/personne.\n\n💡 Nécessite de monter beaucoup de marches et de marcher sur un sol irrégulier -- chaussures confortables indispensables."
+        "text": "🏯 **SANCTUAIRE TOSHOGU ET ALENTOURS.** Pont Shinkyo (le célèbre pont rouge sur la rivière Daiya, symbole de Nikko). Complexe de Toshogu : la porte Yomeimon richement décorée, le relief des singes 'je ne vois rien, je n'entends rien, je ne dis rien', et le mausolée de Tokugawa Ieyasu. Rinno-ji et Futarasan Jinja, les deux autres temples de l'ensemble du patrimoine mondial.\n\n🎫 Entrée combinée Toshogu + Futarasan + Taiyuin : environ ¥2 100/personne (≈11,40 €). Toshogu seul : environ ¥1 600/personne. Non réservable -- se paie sur place.\n\n💡 Nécessite de monter beaucoup de marches et de marcher sur un sol irrégulier -- chaussures confortables indispensables."
       },
       {
         "time": "13:00–14:00",
@@ -740,7 +713,7 @@ export const days = [
       },
       {
         "time": "14:00–17:00",
-        "text": "🚌 **OPTIONNEL SI LE TEMPS LE PERMET : LAC CHUZENJI ET CHUTES DE KEGON.** Bus depuis la gare de Tobu-Nikko par la route de montagne Irohazaka (virages très serrés, vues spectaculaires) jusqu'au lac Chuzenji, au pied du mont Nantai. Les chutes de Kegon, une chute de 97 m, sont à quelques pas du lac -- on peut descendre en ascenseur jusqu'à la plateforme inférieure pour les voir de près (entrée environ ¥570).\n\n💡 Si le groupe préfère ne pas trop rallonger la journée, ce bloc peut être sauté au profit de plus de temps tranquille autour de Toshogu, ou d'une promenade dans le centre de Nikko."
+        "text": "🚌 **OPTIONNEL SI LE TEMPS LE PERMET : LAC CHUZENJI ET CHUTES DE KEGON.** Bus depuis la gare de Tobu-Nikko par la route de montagne Irohazaka (virages très serrés, vues spectaculaires) jusqu'au lac Chuzenji, au pied du mont Nantai -- inclus dans le Tobu World Heritage Pass. Les chutes de Kegon, une chute de 97 m, sont à quelques pas du lac ; bien visibles gratuitement depuis la plateforme supérieure, ou on peut descendre en ascenseur jusqu'à la plateforme inférieure pour les voir de près (entrée environ ¥570 ≈ 3,10 €, non réservable, se paie sur place).\n\n💡 Si le groupe préfère ne pas trop rallonger la journée, ce bloc peut être sauté au profit de plus de temps tranquille autour de Toshogu, ou d'une promenade dans le centre de Nikko."
       },
       {
         "time": "~17:30",
@@ -751,15 +724,42 @@ export const days = [
         "text": "🚅 Tobu Limited Express retour vers la gare de Tobu-Asakusa (environ 2 heures)."
       },
       {
-        "time": "20:00",
-        "text": "🍜 Dîner d'adieu du groupe à Tokyo (Asakusa)."
+        "time": "~20:00",
+        "text": "🍜 Dîner du côté de Nakano ou Asakusa."
       },
       {
         "time": "~21:30",
+        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nRetour à la résidence pour se reposer et se préparer pour demain : Route Nintendo, Ikebukuro et Akihabara, dernière journée complète avant de rentrer (5e nuit à Tokyo)."
+      }
+    ],
+    "money": "Env. 74 €/personne au total (40 € repas + 11,40 € entrées Toshogu + 22,60 € Tobu World Heritage Pass) -- 🔴 le Pass Tobu est ENCORE À ACHETER ; ascenseur Kegon optionnel en plus (~3,10 €/personne)."
+  },
+  {
+    "title": "Route Nintendo et Shopping",
+    "cities": "Ikebukuro, Nakano",
+    "summary": "Journée de collection et de jeux vidéo : Mega Pokémon Center d'Ikebukuro (avec ses statues grandeur nature de Mewtwo, Dracaufeu et Lucario) et Nintendo Store Tokyo. L'après-midi, Nakano Broadway, le meilleur endroit de Tokyo pour les cartes Pokémon originales, les figurines Dragon Ball et les articles rétro/geek à prix juste -- idéal pour les cadeaux des amis. Dîner d'adieu du groupe le soir, lors de la dernière journée complète avant de rentrer en Espagne.",
+    "history": "L'industrie japonaise du jeu vidéo, menée par Nintendo, a revitalisé l'économie culturelle du pays dans les années 80. Nakano Broadway est né dans les années 60 comme complexe résidentiel de luxe, aujourd'hui mecque du collectionnisme underground.",
+    "schedule": [
+      {
+        "text": "Mega Pokémon Center Ikebukuro (Sunshine City, 2e étage) et Nintendo Store Tokyo. Le Mega Center est le plus grand du Japon : statues grandeur nature de Dracaufeu, Lucario et Mewtwo, la Pokémon Card Station, et des produits exclusifs introuvables ailleurs."
+      },
+      {
+        "text": "🚃 Train vers Akihabara (Yamanote Line, ~20 min depuis Ikebukuro, sans correspondance). Déjeuner dans le quartier avant de commencer à explorer."
+      },
+      {
+        "text": "🎮 **AKIHABARA**, le quartier otaku par excellence -- différent de Nakano Broadway, ici c'est plus une expérience de rue avec de grandes boutiques spécialisées que de la collection d'occasion.\n\n• Mandarake Complex : 8 étages de manga, figurines et objets de collection de toutes les époques.\n• Super Potato : jeux vidéo rétro (NES, SNES, Game Boy...) dans une ambiance tout droit sortie des années 90.\n• Boutiques officielles liées à Pokémon (pas le Pokémon Center lui-même, mais plusieurs boutiques spécialisées de trading cards).\n• Arcades japonaises (Taito Station, GiGO) pour des parties d'UFO catcher, de rythme ou de combat.\n• Rue principale (Chuo-dori), fermée à la circulation le dimanche après-midi -- aujourd'hui c'est dimanche, ça devrait s'appliquer.\n\n🚃 Ensuite, train vers Nakano (~20-25 min, une correspondance)."
+      },
+      {
+        "text": "Après-midi de shopping collector à Nakano Broadway : le meilleur endroit de Tokyo pour les cartes Pokémon originales (boutiques spécialisées de trading cards avec vitrines de cartes à l'unité et boosters), les figurines et produits dérivés Dragon Ball, et les articles rétro/manga en général à prix juste. Plusieurs étages de petites boutiques indépendantes — ça vaut le coup de toutes les faire.\n\n🛍️ **NAKANO SUN MALL** (recommandation de l'amie petit-fromage de Thibaut) : la galerie marchande couverte qui mène directement de la gare à l'entrée de Nakano Broadway (~5 min à pied) -- confirmé géographiquement, c'est le chemin naturel. Bien moins touristique qu'Akihabara, avec des restaurants et izakayas à l'ambiance plus locale."
+      },
+      {
+        "text": "🍜 Dîner d'adieu du groupe à Tokyo (Asakusa), lors de la dernière journée complète avant de rentrer en Espagne."
+      },
+      {
         "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nDernière nuit à Tokyo avant de rentrer en Espagne."
       }
     ],
-    "money": "Env. ¥2 700/personne aller (Tobu Express) + entrées Toshogu + repas"
+    "money": "Env. 40 € (repas, dîner d'adieu inclus) + shopping"
   },
   {
     "title": "Retour à la maison",
