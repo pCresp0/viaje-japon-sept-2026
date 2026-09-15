@@ -69,3 +69,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-15 05:03 UTC** — fix(Día 9): actualizar la tarde con el plan real -- ... (`bcbde15`)
 - **2026-09-15 05:04 UTC** — fix: traducir la comida en Nikujiru Gyoza Dandadan Kappabashi y ... (`007c893`)
 - **2026-09-15 05:04 UTC** — Merge branch 'main' of https://github.com/pCresp0/viaje-japon-sept-2026 (`41a7620`)
+- **2026-09-15 05:20 UTC** — feat: quitar el prefijo redundante 'en Google Maps' en 2 ... (`d82fe0b`)
