@@ -1,7 +1,7 @@
 import { tokenizePlaces, placeMapsUrl } from "../utils/linkifyPlaces";
 
 function getUrlButtonInfo(href) {
-  if (/maps\.app\.goo\.gl|google\.com\/maps/i.test(href)) {
+  if (/maps\.app\.goo\.gl|google\.com\/maps|maps\.google\.com/i.test(href)) {
     return {
       label: "Maps ↗",
       iconSrc: "/icons/google-maps.png",
