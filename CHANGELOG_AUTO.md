@@ -62,3 +62,5 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-14 23:04 UTC** — fix: traducir a los 4 idiomas las recomendaciones de la ... (`ce200c0`)
 - **2026-09-14 23:13 UTC** — feat: añadir 5 guías nuevas y completas de Tokio (Nikko, ... (`838a497`)
 - **2026-09-15 03:56 UTC** — fix(Día 9): reducir el descanso de llegada a 1h máximo ... (`361274c`)
+- **2026-09-15 03:57 UTC** — fix: traducir el nuevo plan del Día 9 (descanso 1h ... (`7e67ce3`)
+- **2026-09-15 03:57 UTC** — Merge branch 'main' of https://github.com/pCresp0/viaje-japon-sept-2026 (`8b85080`)
