@@ -75,3 +75,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-15 06:37 UTC** — fix: quitar el banner de estrategia del Fuji (ya no ... (`e893901`)
 - **2026-09-15 06:58 UTC** — fix(Día 9): sincronizar traducciones EN/FR/TL con el plan actual (Skytree, ... (`55c381f`)
 - **2026-09-15 07:02 UTC** — fix: sincronizar traducciones EN/FR/TL de los Días 10-15 con el ... (`653cabd`)
+- **2026-09-15 07:04 UTC** — fix: anonimizar apellidos completos en toda la web (solo inicial), ... (`9d770a7`)
