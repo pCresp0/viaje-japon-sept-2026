@@ -887,4 +887,36 @@ export const guides = {
     tip: "Takeshita Dori is very narrow and gets very crowded, especially on weekends -- if you want photos without crowds, better to go early on a weekday morning.",
   },
 
+  "tokyo-skytree": {
+    name: "Tokyo Skytree",
+    jp: "東京スカイツリー",
+    founded: "2008-2012 (construction) · Opened May 22, 2012",
+    wiki: "Tokyo Skytree",
+    tagline: "634 meters chosen on purpose to sound like \"Musashi\" -- the world's tallest free-standing tower.",
+    sections: [
+      {
+        title: "Why it was built",
+        body: "Skytree was born as a replacement for Tokyo Tower (333m, 1958): as the city's skyscrapers grew taller, the old tower's broadcast signal started getting blocked by taller buildings. A new, taller transmission tower was needed, and the project -- originally called \"New Tokyo Tower\" -- ended up becoming a landmark in its own right, far beyond its original technical function.",
+      },
+      {
+        title: "Why it's exactly 634 meters tall",
+        body: "The figure isn't random: in classical Japanese number pronunciation, 6-3-4 reads as \"mu-sa-shi\", referencing the old Musashi Province, which covered what is now Tokyo, Saitama and part of Kanagawa. Engineers deliberately adjusted the final height to achieve this wordplay, while also making sure it would be the tallest free-standing tower in the world -- a Guinness World Record certified on November 17, 2011.",
+      },
+      {
+        title: "A construction that survived an earthquake",
+        body: "Work began on July 14, 2008 and was completed on February 29, 2012, with the structure reaching its full height in March 2011 -- right when the great Tōhoku earthquake struck Japan. The building, still under construction, came through unscathed thanks to a seismic damping system inspired by the construction principle of ancient five-story Japanese pagodas, which have withstood earthquakes for centuries using a central column that acts as a counterweight.",
+      },
+      {
+        title: "The observation decks",
+        body: "It has two glass-walled observation decks: the Tembo Deck, at 350m, and the Tembo Galleria, at 450m -- the highest in Japan. The elevators cover the 350m climb in under a minute. On clear winter days you can even see Mount Fuji, over 100 km away.",
+      },
+    ],
+    curiosities: [
+      "The name \"Skytree\" was chosen by public vote among several options, with 30% of the votes (about 33,000) -- the second most popular option was \"Tokyo Edo Tower\".",
+      "At 634m it's the 3rd tallest structure in the world, behind the Burj Khalifa (829.8m) and Merdeka 118 (678.9m) -- but it remains the tallest free-standing tower (not habitable skyscraper) on the planet.",
+      "In its first week open to the public, in May 2012, about 1.6 million people rode up to the observation deck.",
+    ],
+    tip: "Dated, timed tickets can be bought in advance to skip the longest queue -- if you're not going up, it's enough to see it up close and stroll through Tokyo Solamachi at its base.",
+  },
+
 };

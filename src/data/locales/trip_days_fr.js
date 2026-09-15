@@ -409,7 +409,7 @@ export const days = [
       },
       {
         "time": "12:00–13:15",
-        "text": "🍜 **DÉJEUNER À TANAKA-YA** (recommandé par le groupe, tables basses, assis par terre, cuisine délicieuse).\n\n🗺️ Tanaka-ya sur Google Maps : https://maps.app.goo.gl/GYV8d8g1gaTi3Emb7?g_st=ic\n\n💡 Ne pas trop faire durer le déjeuner, et retourner à pied au terminal avec de la marge -- le bus part à 13h15 et n'attend pas."
+        "text": "🍜 **DÉJEUNER À TANAKA-YA** (recommandé par le groupe, tables basses, assis par terre, cuisine délicieuse).\n\nhttps://maps.app.goo.gl/GYV8d8g1gaTi3Emb7?g_st=ic\n\n💡 Ne pas trop faire durer le déjeuner, et retourner à pied au terminal avec de la marge -- le bus part à 13h15 et n'attend pas."
       },
       {
         "time": "13:15",
@@ -565,7 +565,7 @@ export const days = [
         "text": "🚇 TOKYO STATION → KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI\nL'hôtel est au : 3-24-2 Nishi-Asakusa, Taito-ku.\nOptions :\nOption simple : JR de Tokyo → Ueno + Tokyo Metro Ginza Line Ueno → Tawaramachi + 10 min à pied de l'hôtel.\nAlternativement : Tokyo → Ueno puis taxi si nous avons beaucoup de bagages.\nL'hôtel est à environ :\n- 4 min à pied de Tsukuba Express Asakusa Station B\n- 10 min de Tawaramachi Station\n- 10 min d'Iriya Station.\n\nNe réservez pas ce transport.\nPayez sur place par carte IC/billet.\nÀ 5 personnes avec valises, si fatigués, envisagez un taxi de Tokyo Station directement à l'hôtel. Il n'est pas obligatoire de le réserver."
       },
       {
-        "text": "🍜 **DÉJEUNER : NIKUJIRU GYOZA DANDADAN KAPPABASHI.** Gyoza faits main et juteux, cuisinés devant vous sur un gril spécial -- ils ont aussi des nouilles, des salades et des ailes de poulet. En plein Kappabashi, à seulement 6 minutes à pied de l'hôtel.\n\n🗺️ Sur Google Maps : https://maps.app.goo.gl/6u6EkzqoowquijNY8?g_st=ic"
+        "text": "🍜 **DÉJEUNER : NIKUJIRU GYOZA DANDADAN KAPPABASHI.** Gyoza faits main et juteux, cuisinés devant vous sur un gril spécial -- ils ont aussi des nouilles, des salades et des ailes de poulet. En plein Kappabashi, à seulement 6 minutes à pied de l'hôtel.\n\nhttps://maps.app.goo.gl/6u6EkzqoowquijNY8?g_st=ic"
       },
       {
         "text": "🚶 Marcher jusqu'à l'hôtel (6 min).\n\n🏨 **CHECK-IN : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\n✅ Hôtel déjà payé (1 927,13€ via Booking · 6 nuits).\n\nCheck-in (officiel à partir de 15h00), environ 1 heure pour déposer les bagages, défaire un peu les affaires et se doucher après toute une journée de trains.\n\nAdresse : 3-24-2 Nishi-Asakusa, Taito-ku.\n\n🧳 **Les 5 grandes valises envoyées depuis Kyoto (Takkyubin/Yamato) :**\n- Numéro de suivi : **753-3690-9535**.\n- Livraison prévue : **15/09, créneau du matin (AM)** -- c'est-à-dire qu'elles devraient être arrivées à l'hôtel AVANT vous. Au check-in, demander à la réception s'ils les ont déjà mises de côté.\n- Reçu au nom de Juan Carlos Rodríguez Pérez, expéditeur Hotel Keihan Kyoto Hachijoguchi.\n- 5 colis (品名 : Clothes), coût total ¥13 060 (déjà payé à l'hôtel de Kyoto lors de l'expédition)."

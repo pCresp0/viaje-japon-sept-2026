@@ -409,7 +409,7 @@ export const days = [
       },
       {
         "time": "12:00–13:15",
-        "text": "🍜 **TANGHALIAN SA TANAKA-YA** (inirekomenda ng grupo, mababang mesa, nakaupo sa sahig, napakasarap na pagkain).\n\n🗺️ Tanaka-ya sa Google Maps: https://maps.app.goo.gl/GYV8d8g1gaTi3Emb7?g_st=ic\n\n💡 Huwag masyadong patagalin ang tanghalian, at maglakad pabalik sa terminal nang may sapat na oras -- aalis ang bus ng 13:15 at hindi ito naghihintay."
+        "text": "🍜 **TANGHALIAN SA TANAKA-YA** (inirekomenda ng grupo, mababang mesa, nakaupo sa sahig, napakasarap na pagkain).\n\nhttps://maps.app.goo.gl/GYV8d8g1gaTi3Emb7?g_st=ic\n\n💡 Huwag masyadong patagalin ang tanghalian, at maglakad pabalik sa terminal nang may sapat na oras -- aalis ang bus ng 13:15 at hindi ito naghihintay."
       },
       {
         "time": "13:15",
@@ -565,7 +565,7 @@ export const days = [
         "text": "🚇 TOKYO STATION → KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI\nAng hotel ay nasa: 3-24-2 Nishi-Asakusa, Taito-ku.\nMga Opsyon:\nSimpleng opsyon: JR mula Tokyo → Ueno + Tokyo Metro Ginza Line Ueno → Tawaramachi + 10 min lakad pa-hotel.\nAlternatibo: Tokyo → Ueno at mag-taxi kung marami tayong bagahe.\nAng hotel ay halos:\n- 4 min lakad mula sa Tsukuba Express Asakusa Station B\n- 10 min mula sa Tawaramachi Station\n- 10 min mula sa Iriya Station.\n\nHuwag i-reserve ang transportasyong ito.\nIbabayad doon gamit ang IC card/tiket.\nDahil 5 tao at may maleta, kung pagod, i-konsidera ang taxi mula Tokyo Station direkta sa hotel. Hindi obligadong i-reserve."
       },
       {
-        "text": "🍜 **TANGHALIAN: NIKUJIRU GYOZA DANDADAN KAPPABASHI.** Masarap at makatas na gyoza na gawang-kamay, niluluto sa harap ninyo sa espesyal na grill -- may mga noodle din, salad, at chicken wings. Nasa mismong Kappabashi, 6 minutong lakad lang mula sa hotel.\n\n🗺️ Sa Google Maps: https://maps.app.goo.gl/6u6EkzqoowquijNY8?g_st=ic"
+        "text": "🍜 **TANGHALIAN: NIKUJIRU GYOZA DANDADAN KAPPABASHI.** Masarap at makatas na gyoza na gawang-kamay, niluluto sa harap ninyo sa espesyal na grill -- may mga noodle din, salad, at chicken wings. Nasa mismong Kappabashi, 6 minutong lakad lang mula sa hotel.\n\nhttps://maps.app.goo.gl/6u6EkzqoowquijNY8?g_st=ic"
       },
       {
         "text": "🚶 Maglakad papuntang hotel (6 min).\n\n🏨 **CHECK-IN: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\n✅ Bayad na ang hotel (1,927.13€ sa pamamagitan ng Booking · 6 gabi).\n\nCheck-in (opisyal simula 15:00), mga 1 oras para iwan ang bagahe, mag-unpack nang kaunti at maligo pagkatapos ng buong araw ng tren.\n\nAddress: 3-24-2 Nishi-Asakusa, Taito-ku.\n\n🧳 **Ang 5 malaking maleta na ipinadala mula Kyoto (Takkyubin/Yamato):**\n- Numero ng tracking: **753-3690-9535**.\n- Naka-iskedyul na delivery: **09/15, umaga (AM)** -- ibig sabihin, dapat nakarating na ito sa hotel BAGO kayo dumating. Sa check-in, itanong sa reception kung nasa kanila na ito.\n- Resibo sa pangalan ni Juan Carlos Rodríguez Pérez, nagpadala Hotel Keihan Kyoto Hachijoguchi.\n- 5 pirasong bagahe (品名: Clothes), kabuuang halaga ¥13,060 (bayad na sa hotel sa Kyoto nang ipadala)."

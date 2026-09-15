@@ -887,4 +887,36 @@ export const guides = {
     tip: "Takeshita Dori est très étroite et se remplit beaucoup, surtout le week-end -- pour des photos sans foule, mieux vaut y aller tôt le matin en semaine.",
   },
 
+  "tokyo-skytree": {
+    name: "Tokyo Skytree",
+    jp: "東京スカイツリー",
+    founded: "2008-2012 (construction) · Inaugurée le 22 mai 2012",
+    wiki: "Tokyo Skytree",
+    tagline: "634 mètres choisis exprès pour sonner comme \"Musashi\" -- la tour autoportante la plus haute du monde.",
+    sections: [
+      {
+        title: "Pourquoi elle a été construite",
+        body: "Le Skytree est né en remplacement de la Tour de Tokyo (333 m, 1958) : à mesure que les gratte-ciel de la ville grandissaient, le signal de diffusion de la vieille tour commençait à être bloqué par les bâtiments plus hauts. Il fallait une nouvelle tour de transmission, plus haute, et le projet -- initialement appelé \"New Tokyo Tower\" -- a fini par devenir un symbole à part entière, bien au-delà de sa fonction technique d'origine.",
+      },
+      {
+        title: "Pourquoi elle mesure exactement 634 mètres",
+        body: "Le chiffre n'est pas anodin : dans la prononciation classique japonaise des nombres, 6-3-4 se lit \"mu-sa-shi\", en référence à l'ancienne province de Musashi, qui couvrait ce qui est aujourd'hui Tokyo, Saitama et une partie de Kanagawa. Les ingénieurs ont délibérément ajusté la hauteur finale pour obtenir ce jeu de mots, tout en s'assurant qu'elle serait la tour autoportante la plus haute du monde -- un record Guinness certifié le 17 novembre 2011.",
+      },
+      {
+        title: "Une construction qui a survécu à un séisme",
+        body: "Les travaux ont commencé le 14 juillet 2008 et se sont achevés le 29 février 2012, la structure atteignant sa hauteur finale en mars 2011 -- juste au moment où le grand séisme de Tōhoku a frappé le Japon. Le bâtiment, encore en construction, en est sorti indemne grâce à un système d'amortissement sismique inspiré du principe de construction des anciennes pagodes japonaises à cinq étages, qui résistent aux séismes depuis des siècles grâce à une colonne centrale servant de contrepoids.",
+      },
+      {
+        title: "Les belvédères",
+        body: "Elle possède deux belvédères vitrés : le Tembo Deck, à 350 m, et le Tembo Galleria, à 450 m -- les plus hauts du Japon. Les ascenseurs parcourent les 350 m en moins d'une minute. Les jours d'hiver dégagés, on peut même apercevoir le mont Fuji, à plus de 100 km de distance.",
+      },
+    ],
+    curiosities: [
+      "Le nom \"Skytree\" a été choisi par vote public parmi plusieurs options, avec 30% des voix (environ 33 000) -- la deuxième option la plus votée était \"Tokyo Edo Tower\".",
+      "Avec ses 634 m, c'est la 3e structure la plus haute du monde, derrière le Burj Khalifa (829,8 m) et le Merdeka 118 (678,9 m) -- mais elle reste la tour autoportante (pas un gratte-ciel habitable) la plus haute de la planète.",
+      "Lors de sa première semaine ouverte au public, en mai 2012, environ 1,6 million de personnes sont montées au belvédère.",
+    ],
+    tip: "Les billets datés à heure fixe peuvent s'acheter à l'avance pour éviter la plus longue file d'attente -- si vous ne montez pas, il suffit de la voir de près et de flâner dans Tokyo Solamachi, à sa base.",
+  },
+
 };

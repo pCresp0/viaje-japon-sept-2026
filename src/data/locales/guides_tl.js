@@ -896,4 +896,36 @@ export const guides = {
     tip: "Napakakitid ng Takeshita Dori at napupuno ito, lalo na sa weekend -- kung gusto ninyo ng litrato na walang maraming tao, mas mabuting pumunta nang maaga sa umaga sa weekday.",
   },
 
+  "tokyo-skytree": {
+    name: "Tokyo Skytree",
+    jp: "東京スカイツリー",
+    founded: "2008-2012 (konstruksyon) · Binuksan Mayo 22, 2012",
+    wiki: "Tokyo Skytree",
+    tagline: "634 metro, sinadyang pumili para tumunog na parang \"Musashi\" -- ang pinakamataas na free-standing na tore sa mundo.",
+    sections: [
+      {
+        title: "Bakit ito itinayo",
+        body: "Ipinanganak ang Skytree bilang kapalit ng Tokyo Tower (333m, 1958): habang lumalaki ang mga skyscraper ng lungsod, nagsimulang harangan ng mas matataas na gusali ang broadcast signal ng lumang tore. Kailangan ng bagong, mas mataas na transmission tower, at ang proyekto -- orihinal na tinawag na \"New Tokyo Tower\" -- ay naging sariling landmark sa sarili nitong karapatan, higit pa sa orihinal na teknikal na function nito.",
+      },
+      {
+        title: "Bakit eksaktong 634 metro ang taas nito",
+        body: "Hindi random ang bilang: sa klasikong pagbigkas ng bilang sa Hapon, ang 6-3-4 ay binabasang \"mu-sa-shi\", na tumutukoy sa lumang Musashi Province, na sumasaklaw sa kasalukuyang Tokyo, Saitama, at bahagi ng Kanagawa. Sinadya ng mga engineer na i-adjust ang huling taas para makamit ang word play na ito, habang tinitiyak din na ito ang magiging pinakamataas na free-standing tower sa mundo -- Guinness World Record na naka-certify noong Nobyembre 17, 2011.",
+      },
+      {
+        title: "Konstruksyong nakaligtas sa lindol",
+        body: "Nagsimula ang gawain noong Hulyo 14, 2008 at natapos noong Pebrero 29, 2012, na naabot ng istruktura ang buong taas nito noong Marso 2011 -- mismong nang tumama ang malaking lindol ng Tōhoku sa Japan. Ang gusali, habang binubuo pa, ay hindi nasaktan salamat sa seismic damping system na inspirado sa construction principle ng sinaunang 5-palapag na pagoda ng Hapon, na matagal nang nakakaligtas sa mga lindol gamit ang sentral na haligi bilang counterweight.",
+      },
+      {
+        title: "Ang mga observation deck",
+        body: "May dalawang glass-walled na observation deck ito: ang Tembo Deck, sa 350m, at ang Tembo Galleria, sa 450m -- ang pinakamataas sa Japan. Ang mga elevator ay umaabot sa 350m sa loob ng isang minuto. Sa malinaw na araw ng taglamig, makikita pa ang Mount Fuji, mahigit 100 km ang layo.",
+      },
+    ],
+    curiosities: [
+      "Ang pangalang \"Skytree\" ay pinili sa pamamagitan ng public vote sa iba't ibang opsyon, may 30% ng boto (mga 33,000) -- ang pangalawang pinakasikat na opsyon ay \"Tokyo Edo Tower\".",
+      "Sa 634m, ito ang ika-3 pinakamataas na istruktura sa mundo, sa likod ng Burj Khalifa (829.8m) at Merdeka 118 (678.9m) -- pero nananatili itong ang pinakamataas na free-standing tower (hindi matirahang skyscraper) sa planeta.",
+      "Sa unang linggo nitong bukas sa publiko, noong Mayo 2012, mga 1.6 milyong tao ang umakyat sa observation deck.",
+    ],
+    tip: "Puwedeng bumili nang maaga ng naka-schedule na tiket para maiwasan ang pinakamahabang pila -- kung hindi umakyat, sapat nang makita ito nang malapitan at maglakad-lakad sa Tokyo Solamachi sa paanan nito.",
+  },
+
 };
