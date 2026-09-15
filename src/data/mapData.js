@@ -297,34 +297,41 @@ export const stops = [
     detail: "Enlace en tránsito · parada de ekiben antes del Shinkansen",
   },
   {
-    id: "akihabara", name: "Akihabara", city: "Tokio",
-    lat: 35.6984, lng: 139.7731,
-    emoji: "🎮", color: "#1d3557",
+    id: "tokyo-skytree", name: "Tokyo Skytree", city: "Tokio",
+    lat: 35.7101, lng: 139.8107,
+    emoji: "🗼", color: "#1d3557",
     day: "Día 9",
-    detail: "Electric Town, tiendas de electrónica, figuras y cultura otaku",
+    detail: "Paseo por el río Sumida hasta la base de la torre y Tokyo Solamachi",
   },
 
-  // ── DÍA 10: Asakusa, Ueno y Odaiba ───────────────────────────────
+  // ── DÍA 10: Excursión al Monte Fuji ──────────────────────────────
   {
-    id: "senso-ji", name: "Asakusa y Senso-ji", city: "Tokio",
-    lat: 35.7148, lng: 139.7967,
-    emoji: "🗼", color: "#1d3557",
+    id: "tokyo-mode-gakuen", name: "Punto de encuentro (Shinjuku)", city: "Tokio",
+    lat: 35.6912, lng: 139.6997,
+    emoji: "🚌", color: "#1d3557",
     day: "Día 10",
-    detail: "Templo Senso-ji, puerta Kaminarimon y calle Nakamise",
+    detail: "Tokyo Mode Gakuen — salida del autobús de la excursión a las 08:30",
   },
   {
-    id: "ueno", name: "Ueno y Ameyoko", city: "Tokio",
-    lat: 35.7141, lng: 139.7744,
-    emoji: "🌳", color: "#1d3557",
+    id: "kawaguchiko", name: "Lago Kawaguchiko y Parque Oishi", city: "Yamanashi",
+    lat: 35.5326, lng: 138.7423,
+    emoji: "🗻", color: "#1d3557",
     day: "Día 10",
-    detail: "Parque de Ueno y mercadillo callejero de Ameyoko",
+    detail: "Vistas clásicas del Fuji y campos de flores junto al lago",
   },
   {
-    id: "odaiba", name: "Odaiba y Bahía de Tokio", city: "Tokio",
-    lat: 35.6295, lng: 139.7794,
-    emoji: "🌉", color: "#1d3557",
+    id: "oshino-hakkai", name: "Oshino Hakkai", city: "Yamanashi",
+    lat: 35.4547, lng: 138.8425,
+    emoji: "💧", color: "#1d3557",
     day: "Día 10",
-    detail: "Tren Yurikamome, estatua Gundam y atardecer en la bahía",
+    detail: "Ocho estanques de agua cristalina alimentados por el deshielo del Fuji",
+  },
+  {
+    id: "chureito-pagoda", name: "Pagoda Chureito", city: "Yamanashi",
+    lat: 35.4903, lng: 138.8006,
+    emoji: "⛩️", color: "#1d3557",
+    day: "Día 10",
+    detail: "La imagen postal más icónica de Japón: la pagoda de cinco pisos con el Fuji al fondo",
   },
 
   // ── DÍA 11: Shibuya, Harajuku y Shinjuku ─────────────────────────
@@ -357,7 +364,7 @@ export const stops = [
     detail: "Mirador del Gobierno Metropolitano, Omoide Yokocho y Kabukicho",
   },
 
-  // ── DÍA 12: Gastronomía, Lujo y Miradores ────────────────────────
+  // ── DÍA 12: Toyosu, Ueno y Odaiba ─────────────────────────────────
   {
     id: "toyosu", name: "Mercado de Toyosu", city: "Tokio",
     lat: 35.6433, lng: 139.7817,
@@ -366,25 +373,18 @@ export const stops = [
     detail: "Sucesor de Tsukiji, lonja mayorista y desayuno de sushi fresco",
   },
   {
-    id: "tokyo-station", name: "Estación de Tokio y Shiodome", city: "Tokio",
-    lat: 35.6852, lng: 139.7528,
-    emoji: "🏛️", color: "#1d3557",
+    id: "ueno", name: "Ueno y Ameyoko", city: "Tokio",
+    lat: 35.7141, lng: 139.7744,
+    emoji: "🌳", color: "#1d3557",
     day: "Día 12",
-    detail: "Explanada del palacio imperial, fachada de ladrillo y rascacielos de Shiodome",
+    detail: "Parque de Ueno y mercadillo callejero de Ameyoko",
   },
   {
-    id: "ginza", name: "Ginza", city: "Tokio",
-    lat: 35.6717, lng: 139.765,
-    emoji: "💎", color: "#1d3557",
+    id: "odaiba", name: "Odaiba y Bahía de Tokio", city: "Tokio",
+    lat: 35.6295, lng: 139.7794,
+    emoji: "🌉", color: "#1d3557",
     day: "Día 12",
-    detail: "Arquitectura contemporánea y tiendas emblemáticas",
-  },
-  {
-    id: "roppongi", name: "Roppongi (Torre Mori)", city: "Tokio",
-    lat: 35.6606, lng: 139.7292,
-    emoji: "🌆", color: "#1d3557",
-    day: "Día 12",
-    detail: "Mirador Tokyo City View con vistas panorámicas y Torre de Tokio",
+    detail: "Tren Yurikamome, DiverCity y atardecer en la bahía",
   },
 
   // ── DÍA 13: Ruta Nintendo y Compras ──────────────────────────────
@@ -393,7 +393,14 @@ export const stops = [
     lat: 35.7295, lng: 139.7189,
     emoji: "🕹️", color: "#1d3557",
     day: "Día 13",
-    detail: "Mega Pokémon Center Ikebukuro y tiendas de anime",
+    detail: "Mega Pokémon Center Ikebukuro y Nintendo Store Tokyo",
+  },
+  {
+    id: "akihabara", name: "Akihabara", city: "Tokio",
+    lat: 35.6984, lng: 139.7731,
+    emoji: "🎮", color: "#1d3557",
+    day: "Día 13",
+    detail: "Electric Town: Mandarake, Super Potato y arcades japoneses",
   },
   {
     id: "nakano", name: "Nakano Broadway", city: "Tokio",
@@ -442,6 +449,13 @@ export const stops = [
   
   // ── DÍA 15: Vuelta a casa ────────────────────────────────────────
   {
+    id: "senso-ji", name: "Asakusa y Senso-ji", city: "Tokio",
+    lat: 35.7148, lng: 139.7967,
+    emoji: "🗼", color: "#1d3557",
+    day: "Día 15",
+    detail: "Última mañana: puerta Kaminarimon, calle Nakamise y Kappabashi Dori",
+  },
+  {
     id: "keisei-ueno", name: "Estación Keisei-Ueno", city: "Tokio",
     lat: 35.7112, lng: 139.7735,
     emoji: "🚆", color: "#1d3557",
@@ -466,6 +480,7 @@ export const filterData = {
     { id: "e-osaka", name: "Osaka", day: "Día 5", lat: 34.6873, lng: 135.5262, emoji: "🏯", color: "#bc4749", detail: "Castillo y Dotonbori" },
     { id: "e-shirakawa", name: "Shirakawa-go", day: "Día 7", lat: 36.2577, lng: 136.9063, emoji: "🏡", color: "#2e7d5b", detail: "Aldea gassho-zukuri tradicional" },
     { id: "e-tsumago", name: "Ruta Nakasendo", day: "Día 8", lat: 35.5776, lng: 137.5957, emoji: "🚶", color: "#2e7d5b", detail: "Caminata de 8 km Magome → Tsumago" },
+    { id: "e-fuji", name: "Monte Fuji", day: "Día 10", lat: 35.4903, lng: 138.8006, emoji: "🗻", color: "#1d3557", detail: "Kawaguchiko, Parque Oishi, Oshino Hakkai y Pagoda Chureito" },
     { id: "e-nikko", name: "Nikko", day: "Día 14", lat: 36.7573, lng: 139.6122, emoji: "⛩️", color: "#1d3557", detail: "Santuario Toshogu, Puente Shinkyo y cataratas Kegon" },
   ],
   transportes: [
