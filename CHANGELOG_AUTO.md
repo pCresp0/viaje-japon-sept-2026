@@ -78,3 +78,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-15 07:04 UTC** — fix: anonimizar apellidos completos en toda la web (solo inicial), ... (`9d770a7`)
 - **2026-09-15 07:17 UTC** — fix(mapa): sincronizar puntos con el itinerario actual (Fuji, Toyosu/Ueno/Odaiba, Akihabara ... (`637dc7a`)
 - **2026-09-15 07:20 UTC** — feat: añadir cards de Shinjuku y Ueno (ES/EN) con guidesByDay ... (`8ff58ab`)
+- **2026-09-15 07:21 UTC** — feat: completar cards de Shinjuku y Ueno en francés y ... (`cf97025`)
