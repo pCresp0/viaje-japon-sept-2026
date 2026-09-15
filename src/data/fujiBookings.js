@@ -30,7 +30,7 @@ export const gygFujiActivity = {
     weatherNotice: "Se espera lluvia mañana. Llevar chubasquero o paraguas y calzado adecuado. El tiempo alrededor del Monte Fuji puede ser más frío y cambiar rápido -- vestir por capas.",
     restroomNotice: "Ir al baño antes de llegar al punto de encuentro: el trayecto en autobús hasta la primera parada dura aprox. 2 horas.",
   },
-  hotelDepartureAdvice: "Desde el KOKO HOTEL Residence Asakusa Kappabashi, el trayecto hasta Shinjuku ronda los 40-45 minutos en metro/JR. Dado que hay que pasar por la Estación de Shinjuku (grande y fácil de perderse) y llegar con margen antes de las 08:10, se recomienda salir del hotel como muy tarde a las 07:10 -- idealmente hacia las 07:00 para ir sin agobios.",
+  hotelDepartureAdvice: "Salir del hotel a las 07:00 -- desde el KOKO HOTEL Residence Asakusa Kappabashi el trayecto hasta Shinjuku ronda los 40-45 minutos en metro/JR, y con margen extra por si acaso al pasar por la Estación de Shinjuku (grande, más de 200 salidas).",
   itineraryStops: [
     "Lago Kawaguchiko y Parque Oishi (40 min - campos florales y vistas)",
     "Saiko Iyashi-no-Sato Nenba (1 hora - pueblo tradicional de tejados de paja con entrada incluida)",

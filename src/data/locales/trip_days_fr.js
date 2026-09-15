@@ -604,13 +604,13 @@ export const days = [
     "history": "Le mont Fuji (3 776 m), volcan actif et point culminant du Japon, est vénéré comme sacré depuis l'Antiquité et inscrit au Patrimoine mondial de l'UNESCO depuis 2013 -- en tant que site culturel, et non naturel, pour son rôle de source d'inspiration artistique et religieuse.",
     "schedule": [
       {
-        "text": "Réveil et petit-déjeuner rapide à l'hôtel ou en chemin."
+        "text": "🍙 Petit-déjeuner dans la chambre avec ce qu'on a acheté la veille au konbini."
       },
       {
-        "text": "🚇 **Départ de l'hôtel vers Shinjuku.** Depuis le KOKO HOTEL Residence Asakusa Kappabashi, le trajet en métro/JR prend environ 40-45 min -- et avec la gare de Shinjuku entre les deux (l'une des plus grandes et déroutantes du Japon, plus de 200 sorties), mieux vaut partir avec une marge supplémentaire. Voir la carte ci-dessous pour le message complet du guide avec le point de rendez-vous exact.\n\n⚠️ **HORAIRE MIS À JOUR PAR LE GUIDE (15 sept.) :** rendez-vous à **08h10**, départ du bus ponctuel à **08h20** -- ce n'est plus 08h30 comme indiqué précédemment."
+        "text": "🚇 **Départ de l'hôtel vers Shinjuku.** Depuis le KOKO HOTEL Residence Asakusa Kappabashi, le trajet en métro/JR prend environ 40-45 min -- et avec la gare de Shinjuku entre les deux (l'une des plus grandes du Japon, plus de 200 sorties), on part avec une bonne marge."
       },
       {
-        "text": "📍 **POINT DE RENDEZ-VOUS AVEC LE GUIDE.** Chercher le drapeau orange portant le numéro **19** (guide : Omar). Voir la carte ci-dessous pour le message complet, avec un lien direct vers l'emplacement exact sur la carte."
+        "text": "📍 **POINT DE RENDEZ-VOUS : TOKYO MODE GAKUEN.**\n\nhttps://maps.google.com/?q=35.691490,139.696457\n\nChercher le drapeau orange portant le numéro **19** (guide : Omar)."
       },
       {
         "text": "🚌 **DÉPART DE L'EXCURSION AU MONT FUJI** (réservation confirmée). Le premier trajet en bus dure environ 2 heures sans arrêt -- passer aux toilettes avant de monter. Voir la carte ci-dessous pour tous les détails : arrêts du circuit (Kawaguchiko, Parc Oishi, Oshino Hakkai, Pagode Chureito), alerte pluie pour demain et contact du prestataire."

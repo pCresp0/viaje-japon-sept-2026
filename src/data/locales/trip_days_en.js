@@ -604,13 +604,13 @@ export const days = [
     "history": "Mount Fuji (3,776 m), an active volcano and Japan's tallest mountain, has been revered as sacred since ancient times and has been a UNESCO World Heritage Site since 2013 -- listed as a cultural site, not a natural one, for its role as a source of artistic and religious inspiration.",
     "schedule": [
       {
-        "text": "Wake up and quick breakfast at the hotel or on the way."
+        "text": "🍙 Breakfast in the room with what we bought the night before at the konbini."
       },
       {
-        "text": "🚇 **Leaving the hotel toward Shinjuku.** From KOKO HOTEL Residence Asakusa Kappabashi the metro/JR ride takes around 40-45 min -- and with Shinjuku Station in between (one of the largest and most confusing in Japan, with over 200 exits), it's worth leaving with extra buffer. See the card below for the guide's full message with the exact meeting point.\n\n⚠️ **SCHEDULE UPDATED BY THE GUIDE (Sept 15):** meeting at **08:10**, bus departs punctually at **08:20** -- no longer 08:30 as previously stated."
+        "text": "🚇 **Leaving the hotel toward Shinjuku.** From KOKO HOTEL Residence Asakusa Kappabashi the metro/JR ride takes around 40-45 min -- and with Shinjuku Station in between (one of the largest in Japan, with over 200 exits), we're leaving with plenty of buffer."
       },
       {
-        "text": "📍 **MEETING POINT WITH THE GUIDE.** Look for the orange flag with the number **19** (guide: Omar). See the card below for the full message, with a direct link to the exact spot on the map."
+        "text": "📍 **MEETING POINT: TOKYO MODE GAKUEN.**\n\nhttps://maps.google.com/?q=35.691490,139.696457\n\nLook for the orange flag with the number **19** (guide: Omar)."
       },
       {
         "text": "🚌 **DEPARTURE OF THE MT. FUJI EXCURSION** (confirmed reservation). The first bus leg runs about 2 hours with no stop -- use the restroom before boarding. See the card below for all the details: tour stops (Kawaguchiko, Oishi Park, Oshino Hakkai, Chureito Pagoda), tomorrow's rain notice and provider contact."

@@ -604,13 +604,13 @@ export const days = [
     "history": "Ang Mount Fuji (3,776 m), aktibong bulkan at pinakamataas na bundok sa Japan, ay pinararangalan bilang sagrado mula pa noong sinaunang panahon at UNESCO World Heritage Site mula 2013 -- nakalista bilang cultural site, hindi natural, dahil sa papel nito bilang pinagmumulan ng inspirasyong pansining at panrelihiyon.",
     "schedule": [
       {
-        "text": "Gising na at mabilisang almusal sa hotel o habang naglalakad."
+        "text": "🍙 Almusal sa kuwarto gamit ang binili noong gabing nakaraan sa konbini."
       },
       {
-        "text": "🚇 **Aalis mula sa hotel papuntang Shinjuku.** Mula sa KOKO HOTEL Residence Asakusa Kappabashi, mga 40-45 min ang biyahe sa metro/JR -- at dahil kasama ang Shinjuku Station sa ruta (isa sa pinakamalaki at pinaka-nakakalitong estasyon sa Japan, may mahigit 200 exit), mainam na umalis nang may extra margin. Tingnan ang card sa ibaba para sa buong mensahe ng guide kasama ang eksaktong meeting point.\n\n⚠️ **NA-UPDATE NA ORAS NG GUIDE (Set. 15):** meeting sa **08:10**, eksaktong aalis ang bus ng **08:20** -- hindi na 08:30 gaya ng dati."
+        "text": "🚇 **Aalis mula sa hotel papuntang Shinjuku.** Mula sa KOKO HOTEL Residence Asakusa Kappabashi, mga 40-45 min ang biyahe sa metro/JR -- at dahil kasama ang Shinjuku Station sa ruta (isa sa pinakamalaking estasyon sa Japan, may mahigit 200 exit), aalis tayo nang may sapat na margin."
       },
       {
-        "text": "📍 **MEETING POINT KASAMA ANG GUIDE.** Hanapin ang orange na bandila na may numerong **19** (guide: Omar). Tingnan ang card sa ibaba para sa buong mensahe, may direktang link sa eksaktong lokasyon sa mapa."
+        "text": "📍 **MEETING POINT: TOKYO MODE GAKUEN.**\n\nhttps://maps.google.com/?q=35.691490,139.696457\n\nHanapin ang orange na bandila na may numerong **19** (guide: Omar)."
       },
       {
         "text": "🚌 **ALIS NG EXCURSION SA MOUNT FUJI** (nakumpirmang reserbasyon). Ang unang bahagi ng byahe sa bus ay mga 2 oras nang walang hinto -- pumunta sa banyo bago sumakay. Tingnan ang card sa ibaba para sa lahat ng detalye: mga hintuan ng tour (Kawaguchiko, Oishi Park, Oshino Hakkai, Chureito Pagoda), babala sa ulan bukas, at contact ng provider."
