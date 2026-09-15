@@ -884,7 +884,7 @@ export const guides = {
       "En su primera semana abierta al público, en mayo de 2012, subieron al mirador unos 1,6 millones de personas.",
       "Cruzando el puente Azumabashi hacia la torre está el edificio de la cervecera Asahi, coronado por una escultura dorada gigante (la \"Flamme d'Or\", diseñada por Philippe Starck) que representa una llama -- pero cuya forma ha hecho que los propios tokiotas la apoden cariñosamente \"la boñiga dorada\" (kin no unko).",
     ],
-    tip: "Los tickets con fecha y hora fija se pueden comprar con antelación para saltarse la cola más larga -- si no vais a subir, basta con verla de cerca y pasear por Tokyo Solamachi, en su base.",
+    tip: "Los tickets con fecha y hora fija se pueden comprar con antelación para saltarse la cola más larga -- muy recomendable para el turno de atardecer, que se agota con facilidad en días de buena previsión.",
   },
 
   // ══════════════════════════════════════════════════════════════════
