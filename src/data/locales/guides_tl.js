@@ -919,11 +919,16 @@ export const guides = {
         title: "Ang mga observation deck",
         body: "May dalawang glass-walled na observation deck ito: ang Tembo Deck, sa 350m, at ang Tembo Galleria, sa 450m -- ang pinakamataas sa Japan. Ang mga elevator ay umaabot sa 350m sa loob ng isang minuto. Sa malinaw na araw ng taglamig, makikita pa ang Mount Fuji, mahigit 100 km ang layo.",
       },
+      {
+        title: "Tokyo Solamachi, ang shopping base",
+        body: "Sa paanan ng tore ay naglalatag ang Tokyo Solamachi, isang shopping mall na may mahigit 300 tindahan at restaurant sa ilang palapag, kasama ang Sumida Aquarium at isang Konica Minolta planetarium sa mismong complex. Hindi na kailangang umakyat sa observation deck para masulit ang bisita -- sapat na ang maglakad-lakad sa paanan nito at makita ito nang malapitan.",
+      },
     ],
     curiosities: [
       "Ang pangalang \"Skytree\" ay pinili sa pamamagitan ng public vote sa iba't ibang opsyon, may 30% ng boto (mga 33,000) -- ang pangalawang pinakasikat na opsyon ay \"Tokyo Edo Tower\".",
       "Sa 634m, ito ang ika-3 pinakamataas na istruktura sa mundo, sa likod ng Burj Khalifa (829.8m) at Merdeka 118 (678.9m) -- pero nananatili itong ang pinakamataas na free-standing tower (hindi matirahang skyscraper) sa planeta.",
       "Sa unang linggo nitong bukas sa publiko, noong Mayo 2012, mga 1.6 milyong tao ang umakyat sa observation deck.",
+      "Sa kabilang panig ng Azumabashi bridge papunta sa tore ay nakatayo ang gusali ng Asahi Breweries, na may napakalaking gintong iskultura sa taas (ang \"Flamme d'Or\", dinisenyo ni Philippe Starck) na dapat sana ay kumakatawan sa apoy -- pero ang hugis nito ay nagbunga ng palayaw ng mga taga-Tokyo dito bilang \"ang gintong dumi\" (kin no unko).",
     ],
     tip: "Puwedeng bumili nang maaga ng naka-schedule na tiket para maiwasan ang pinakamahabang pila -- kung hindi umakyat, sapat nang makita ito nang malapitan at maglakad-lakad sa Tokyo Solamachi sa paanan nito.",
   },

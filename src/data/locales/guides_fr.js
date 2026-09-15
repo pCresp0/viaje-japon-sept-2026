@@ -910,11 +910,16 @@ export const guides = {
         title: "Les belvédères",
         body: "Elle possède deux belvédères vitrés : le Tembo Deck, à 350 m, et le Tembo Galleria, à 450 m -- les plus hauts du Japon. Les ascenseurs parcourent les 350 m en moins d'une minute. Les jours d'hiver dégagés, on peut même apercevoir le mont Fuji, à plus de 100 km de distance.",
       },
+      {
+        title: "Tokyo Solamachi, la base commerciale",
+        body: "Au pied de la tour s'étend Tokyo Solamachi, un centre commercial de plus de 300 boutiques et restaurants répartis sur plusieurs étages, avec l'aquarium de Sumida et un planétarium Konica Minolta dans le même complexe. Pas besoin de monter au belvédère pour que la visite en vaille la peine : il suffit de flâner à sa base et de la voir de près.",
+      },
     ],
     curiosities: [
       "Le nom \"Skytree\" a été choisi par vote public parmi plusieurs options, avec 30% des voix (environ 33 000) -- la deuxième option la plus votée était \"Tokyo Edo Tower\".",
       "Avec ses 634 m, c'est la 3e structure la plus haute du monde, derrière le Burj Khalifa (829,8 m) et le Merdeka 118 (678,9 m) -- mais elle reste la tour autoportante (pas un gratte-ciel habitable) la plus haute de la planète.",
       "Lors de sa première semaine ouverte au public, en mai 2012, environ 1,6 million de personnes sont montées au belvédère.",
+      "En traversant le pont Azumabashi vers la tour se dresse le bâtiment de la brasserie Asahi, surmonté d'une immense sculpture dorée (la \"Flamme d'Or\", dessinée par Philippe Starck) censée représenter une flamme -- mais dont la forme a valu aux habitants de Tokyo de la surnommer affectueusement \"la crotte dorée\" (kin no unko).",
     ],
     tip: "Les billets datés à heure fixe peuvent s'acheter à l'avance pour éviter la plus longue file d'attente -- si vous ne montez pas, il suffit de la voir de près et de flâner dans Tokyo Solamachi, à sa base.",
   },

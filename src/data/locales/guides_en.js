@@ -910,11 +910,16 @@ export const guides = {
         title: "The observation decks",
         body: "It has two glass-walled observation decks: the Tembo Deck, at 350m, and the Tembo Galleria, at 450m -- the highest in Japan. The elevators cover the 350m climb in under a minute. On clear winter days you can even see Mount Fuji, over 100 km away.",
       },
+      {
+        title: "Tokyo Solamachi, the shopping base",
+        body: "At the foot of the tower spreads Tokyo Solamachi, a shopping mall with over 300 stores and restaurants across several floors, plus the Sumida Aquarium and a Konica Minolta planetarium in the same complex. You don't need to go up to the observation deck for the visit to be worth it -- just strolling through its base and seeing the tower up close is enough.",
+      },
     ],
     curiosities: [
       "The name \"Skytree\" was chosen by public vote among several options, with 30% of the votes (about 33,000) -- the second most popular option was \"Tokyo Edo Tower\".",
       "At 634m it's the 3rd tallest structure in the world, behind the Burj Khalifa (829.8m) and Merdeka 118 (678.9m) -- but it remains the tallest free-standing tower (not habitable skyscraper) on the planet.",
       "In its first week open to the public, in May 2012, about 1.6 million people rode up to the observation deck.",
+      "Crossing the Azumabashi bridge toward the tower stands the Asahi Breweries building, topped by a giant golden sculpture (the \"Flamme d'Or\", designed by Philippe Starck) meant to represent a flame -- but its shape has led Tokyoites to affectionately nickname it \"the golden turd\" (kin no unko).",
     ],
     tip: "Dated, timed tickets can be bought in advance to skip the longest queue -- if you're not going up, it's enough to see it up close and stroll through Tokyo Solamachi at its base.",
   },

@@ -809,11 +809,16 @@ export const guides = {
         title: "Los miradores",
         body: "Tiene dos miradores acristalados: el Tembo Deck, a 350 m, y el Tembo Galleria, a 450 m -- los más altos de Japón. Los ascensores suben los 350 m en menos de un minuto. En días despejados de invierno se puede llegar a ver el monte Fuji, a más de 100 km de distancia.",
       },
+      {
+        title: "Tokyo Solamachi, la base comercial",
+        body: "A los pies de la torre se extiende Tokyo Solamachi, un centro comercial de más de 300 tiendas y restaurantes repartido en varias plantas, con el acuario Sumida y un planetario Konica Minolta incluidos en el mismo complejo. No hace falta subir al mirador para que la visita merezca la pena: basta con pasear por su base y verla de cerca.",
+      },
     ],
     curiosities: [
       "El nombre \"Skytree\" se eligió por votación pública entre varias opciones, con un 30% de los votos (unos 33.000) -- la segunda opción más votada fue \"Tokyo Edo Tower\".",
       "Con 634 m es la 3ª estructura más alta del mundo, por detrás del Burj Khalifa (829,8 m) y el Merdeka 118 (678,9 m) -- pero sigue siendo la torre autoportante (no rascacielos habitable) más alta del planeta.",
       "En su primera semana abierta al público, en mayo de 2012, subieron al mirador unos 1,6 millones de personas.",
+      "Cruzando el puente Azumabashi hacia la torre está el edificio de la cervecera Asahi, coronado por una escultura dorada gigante (la \"Flamme d'Or\", diseñada por Philippe Starck) que representa una llama -- pero cuya forma ha hecho que los propios tokiotas la apoden cariñosamente \"la boñiga dorada\" (kin no unko).",
     ],
     tip: "Los tickets con fecha y hora fija se pueden comprar con antelación para saltarse la cola más larga -- si no vais a subir, basta con verla de cerca y pasear por Tokyo Solamachi, en su base.",
   },
