@@ -82,3 +82,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-15 09:38 UTC** — fix(Día 10): actualizar con el mensaje real del guía (Omar, ... (`9741bf8`)
 - **2026-09-15 12:45 UTC** — fix(Día 10): botón directo de Maps al punto de encuentro, ... (`8ffffe2`)
 - **2026-09-15 13:11 UTC** — fix(Día 10): despertar 06:20, desayuno 06:40, 'hacia el punto de ... (`f2f409e`)
+- **2026-09-15 13:30 UTC** — fix: reconocer también maps.google.com en el detector de botones de ... (`ca39aa4`)
