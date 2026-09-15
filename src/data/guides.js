@@ -786,6 +786,38 @@ export const guides = {
     tip: "Takeshita Dori es muy estrecha y se llena mucho, sobre todo los findes -- si buscáis fotos sin aglomeraciones, mejor ir a primera hora de la mañana entre semana.",
   },
 
+  "tokyo-skytree": {
+    name: "Tokyo Skytree",
+    jp: "東京スカイツリー",
+    founded: "2008-2012 (construcción) · Inaugurada el 22 de mayo de 2012",
+    wiki: "Tokyo Skytree",
+    tagline: "634 metros elegidos a propósito para sonar como \"Musashi\" -- la torre autoportante más alta del mundo.",
+    sections: [
+      {
+        title: "Por qué se construyó",
+        body: "El Skytree nació como sustituto de la Torre de Tokio (333 m, 1958): a medida que crecían los rascacielos de la ciudad, la señal de radiodifusión de la vieja torre empezó a quedar bloqueada por los edificios más altos. Se necesitaba una nueva torre de transmisión, más alta, y el proyecto -- originalmente llamado \"New Tokyo Tower\" -- acabó convirtiéndose en un símbolo por derecho propio, mucho más allá de su función técnica original.",
+      },
+      {
+        title: "Por qué mide exactamente 634 metros",
+        body: "La cifra no es casual: en la pronunciación clásica japonesa de los números, 6-3-4 se lee \"mu-sa-shi\", en referencia a la antigua provincia de Musashi, que cubría lo que hoy es Tokio, Saitama y parte de Kanagawa. Los ingenieros ajustaron la altura final expresamente para lograr este juego de palabras, además de asegurarse de que fuera la torre autoportante más alta del mundo -- un récord Guinness certificado el 17 de noviembre de 2011.",
+      },
+      {
+        title: "Una construcción que sobrevivió a un terremoto",
+        body: "La obra empezó el 14 de julio de 2008 y se completó el 29 de febrero de 2012, con la estructura alcanzando su altura final en marzo de 2011 -- justo cuando el gran terremoto de Tōhoku sacudió Japón. El edificio, todavía en obras, resistió sin daños gracias a un sistema de amortiguación sísmica inspirado en el principio constructivo de las antiguas pagodas japonesas de cinco pisos, que llevan siglos resistiendo terremotos con una columna central que actúa como contrapeso.",
+      },
+      {
+        title: "Los miradores",
+        body: "Tiene dos miradores acristalados: el Tembo Deck, a 350 m, y el Tembo Galleria, a 450 m -- los más altos de Japón. Los ascensores suben los 350 m en menos de un minuto. En días despejados de invierno se puede llegar a ver el monte Fuji, a más de 100 km de distancia.",
+      },
+    ],
+    curiosities: [
+      "El nombre \"Skytree\" se eligió por votación pública entre varias opciones, con un 30% de los votos (unos 33.000) -- la segunda opción más votada fue \"Tokyo Edo Tower\".",
+      "Con 634 m es la 3ª estructura más alta del mundo, por detrás del Burj Khalifa (829,8 m) y el Merdeka 118 (678,9 m) -- pero sigue siendo la torre autoportante (no rascacielos habitable) más alta del planeta.",
+      "En su primera semana abierta al público, en mayo de 2012, subieron al mirador unos 1,6 millones de personas.",
+    ],
+    tip: "Los tickets con fecha y hora fija se pueden comprar con antelación para saltarse la cola más larga -- si no vais a subir, basta con verla de cerca y pasear por Tokyo Solamachi, en su base.",
+  },
+
   // ══════════════════════════════════════════════════════════════════
   // TOKIO
   // ══════════════════════════════════════════════════════════════════
@@ -1045,7 +1077,7 @@ export const guidesByDay = {
   6: ["kanazawa", "kenroku-en", "nagamachi", "higashi-chaya"],
   7: ["shirakawa-go", "takayama"],
   8: ["nakasendo", "magome", "tsumago"],
-  9: [],
+  9: ["tokyo-skytree"],
   10: ["senso-ji", "fuji"],
   11: ["meiji-jingu", "shibuya", "harajuku"],
   12: ["odaiba", "toyosu"],
@@ -1179,5 +1211,9 @@ export const guideMeta = {
   "harajuku": {
     shortName: "Harajuku",
     keywords: ["harajuku", "takeshita", "takeshita dori", "omotesando", "kawaii"],
+  },
+  "tokyo-skytree": {
+    shortName: "Tokyo Skytree",
+    keywords: ["tokyo skytree", "skytree", "musashi", "tembo deck", "torre de tokio"],
   },
 };
