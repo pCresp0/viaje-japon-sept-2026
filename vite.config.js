@@ -48,6 +48,10 @@ export default defineConfig({
         clientsClaim: true,
         globPatterns: ['**/*.{js,css,html,png,svg,ico,webp}'],
         navigateFallback: '/index.html',
+        // El contenido del sitio (itinerario, guías, mapa) ha crecido más
+        // allá del límite por defecto de precaché de Workbox (2 MiB) --
+        // sin esto el build falla en vez de simplemente avisar.
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
       },
     }),
   ],

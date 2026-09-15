@@ -51,14 +51,14 @@ export const stops = [
   { id: "toyosu", name: "Toyosu Market", city: "Tokyo", day: "Araw 12", detail: "Kahalili ng Tsukiji, wholesale market at sariwang sushi breakfast" },
   { id: "ueno", name: "Ueno at Ameyoko", city: "Tokyo", day: "Araw 12", detail: "Ueno Park at ang street market na Ameyoko" },
   { id: "odaiba", name: "Odaiba at Tokyo Bay", city: "Tokyo", day: "Araw 12", detail: "Yurikamome train, DiverCity at sunset sa bay" },
-  { id: "ikebukuro", name: "Ikebukuro", city: "Tokyo", day: "Araw 13", detail: "Mega Pokémon Center Ikebukuro at Nintendo Store Tokyo" },
-  { id: "akihabara", name: "Akihabara", city: "Tokyo", day: "Araw 13", detail: "Electric Town: Mandarake, Super Potato at Japanese arcades" },
-  { id: "nakano", name: "Nakano Broadway", city: "Tokyo", day: "Araw 13", detail: "Mecca ng retro collectibles, vintage figures at manga" },
-  { id: "tobu-nikko-sta", name: "Tobu-Nikko Station", city: "Tochigi", day: "Araw 14", detail: "Pagdating sa direktang tren mula Tobu-Asakusa (mga 2 oras)" },
-  { id: "shinkyo-bridge", name: "Shinkyo Bridge", city: "Tochigi", day: "Araw 14", detail: "Ang kilalang pulang tulay sa Ilog Daiya, simbolo ng Nikko" },
-  { id: "toshogu", name: "Toshogu Shrine", city: "Tochigi", day: "Araw 14", detail: "Mausoleum ni Tokugawa Ieyasu, UNESCO World Heritage Site" },
-  { id: "lake-chuzenji", name: "Lake Chuzenji", city: "Tochigi", day: "Araw 14", detail: "Lawa sa paanan ng Mount Nantai, lampas sa Irohazaka mountain road" },
-  { id: "kegon-falls", name: "Kegon Falls", city: "Tochigi", day: "Araw 14", detail: "97m na talon, isa sa pinakasikat sa Japan" },
+  { id: "ikebukuro", name: "Ikebukuro", city: "Tokyo", day: "Araw 14", detail: "Mega Pokémon Center Ikebukuro at Nintendo Store Tokyo" },
+  { id: "akihabara", name: "Akihabara", city: "Tokyo", day: "Araw 14", detail: "Electric Town: Mandarake, Super Potato at Japanese arcades" },
+  { id: "nakano", name: "Nakano Broadway", city: "Tokyo", day: "Araw 14", detail: "Mecca ng retro collectibles, vintage figures at manga" },
+  { id: "tobu-nikko-sta", name: "Tobu-Nikko Station", city: "Tochigi", day: "Araw 13", detail: "Pagdating sa direktang tren mula Tobu-Asakusa (mga 2 oras)" },
+  { id: "shinkyo-bridge", name: "Shinkyo Bridge", city: "Tochigi", day: "Araw 13", detail: "Ang kilalang pulang tulay sa Ilog Daiya, simbolo ng Nikko" },
+  { id: "toshogu", name: "Toshogu Shrine", city: "Tochigi", day: "Araw 13", detail: "Mausoleum ni Tokugawa Ieyasu, UNESCO World Heritage Site" },
+  { id: "lake-chuzenji", name: "Lake Chuzenji", city: "Tochigi", day: "Araw 13", detail: "Lawa sa paanan ng Mount Nantai, lampas sa Irohazaka mountain road" },
+  { id: "kegon-falls", name: "Kegon Falls", city: "Tochigi", day: "Araw 13", detail: "97m na talon, isa sa pinakasikat sa Japan" },
   { id: "senso-ji", name: "Asakusa at Senso-ji", city: "Tokyo", day: "Araw 15", detail: "Huling umaga: Kaminarimon gate, Nakamise street at Kappabashi Dori" },
   { id: "keisei-ueno", name: "Keisei-Ueno Station", city: "Tokyo", day: "Araw 15", detail: "Alis ng Keisei Skyliner diretso papuntang Narita (may bagahe)" },
 ];
@@ -78,7 +78,7 @@ export const filterData = {
     { id: "e-shirakawa", name: "Shirakawa-go", day: "Araw 7", detail: "UNESCO gassho-zukuri village" },
     { id: "e-tsumago", name: "Nakasendo Route", day: "Araw 8", detail: "8 km hike Magome → Tsumago" },
     { id: "e-fuji", name: "Mount Fuji", day: "Araw 10", detail: "Kawaguchiko, Oishi Park, Oshino Hakkai at Chureito Pagoda" },
-    { id: "e-nikko", name: "Nikko", day: "Araw 14", detail: "Toshogu Shrine, Shinkyo Bridge at Kegon Falls" },
+    { id: "e-nikko", name: "Nikko", day: "Araw 13", detail: "Toshogu Shrine, Shinkyo Bridge at Kegon Falls" },
   ],
   transportes: [
     { id: "t-narita", name: "Narita Airport", day: "Araw 1 at 15", detail: "Internasyonal na flight QR808 (dating) / QR809 (alis)" },
@@ -87,7 +87,7 @@ export const filterData = {
     { id: "t-takayama", name: "Takayama Nohi Bus Center", day: "Araw 7–8", detail: "Mga bus papuntang Shirakawa-go at Magome" },
     { id: "t-nagoya", name: "Estasyon ng Nagoya", day: "Araw 9", detail: "Transit Shinano 4 → Tokaido Shinkansen" },
     { id: "t-tokio", name: "Estasyon ng Tokyo", day: "Araw 9–15", detail: "Shinkansen at mga linyang JR" },
-    { id: "t-tobu-asakusa", name: "Estasyon ng Tobu-Asakusa", day: "Araw 14", detail: "Alis papuntang Nikko sa Tobu Limited Express" },
+    { id: "t-tobu-asakusa", name: "Estasyon ng Tobu-Asakusa", day: "Araw 13", detail: "Alis papuntang Nikko sa Tobu Limited Express" },
   ]
 };
 
