@@ -520,29 +520,6 @@ export const guides = {
     tip: "Au Golden Gai, cherchez des bars avec des panneaux en anglais ou 'no cover charge' (pas de frais de couverture) à l'extérieur si vous voulez y entrer facilement ; certains bars sont réservés aux habitués.",
   },
 
-  "odaiba": {
-    name: "Odaiba",
-    tagline: "Un centre de divertissement futuriste sur une île artificielle dans la baie de Tokyo.",
-    sections: [
-      {
-        title: "Histoire",
-        body: "Odaiba ('Daiba' signifie fort) a été construit à l'origine comme une série d'îles-forts défensives dans les années 1850 pour protéger Edo des attaques navales (en particulier les 'navires noirs' du commodore Perry). À la fin du XXe siècle, il a été agrandi et développé pour devenir une grande zone commerciale et de loisirs.",
-      },
-      {
-        title: "Le Yurikamome",
-        body: "La meilleure façon d'arriver est par le Yurikamome, un système de transport automatisé sans conducteur qui offre des vues spectaculaires alors qu'il traverse le Rainbow Bridge (pont arc-en-ciel) vers l'île. Essayez de prendre la place à l'avant.",
-      },
-      {
-        title: "Le Gundam grandeur nature",
-        body: "À l'extérieur du DiverCity Tokyo Plaza se dresse une statue d'Unicorn Gundam de 19,7 mètres de haut. Elle se transforme entre son 'Mode Licorne' et son 'Mode Destruction' à des heures programmées pendant la journée, avec des lumières et de la musique.",
-      },
-    ],
-    curiosities: [
-      "Il y a une réplique de 12 mètres de la Statue de la Liberté à Odaiba, érigée temporairement à l'origine pour célébrer 'l'Année de la France au Japon', puis rendue permanente en raison de sa popularité.",
-      "Le siège de Fuji TV est situé ici, avec une immense sphère métallique suspendue dans la structure en treillis du bâtiment, qui sert de plate-forme d'observation.",
-    ],
-    tip: "Odaiba est l'un des meilleurs endroits de Tokyo pour le coucher du soleil, en regardant le soleil se coucher derrière le Rainbow Bridge et la ligne d'horizon de la ville.",
-  },
 
     "osaka": {
     name: "Osaka : château et Dotonbori",
@@ -750,5 +727,164 @@ export const guides = {
     ],
     tip: "Descendez à la gare de Nakano sur la ligne JR Chuo. L'entrée du Broadway se trouve au bout de la galerie marchande couverte Sun Mall, à 5 minutes à pied de la gare. Parfait à combiner avec Akihabara pour une journée complète de culture otaku.",
   },
-};
+  "nikko": {
+    name: "Nikko",
+    jp: "日光",
+    founded: "Sanctuaire Toshogu : 1617",
+    wiki: "Nikko, Tochigi",
+    tagline: "Le mausolée le plus somptueux du Japon, niché dans les montagnes à 2 heures de Tokyo.",
+    sections: [
+      {
+        title: "Le sanctuaire Toshogu",
+        body: "Construit en 1617 comme mausolée de Tokugawa Ieyasu, fondateur du shogunat qui gouverna le Japon pendant plus de 250 ans. Son petit-fils Iemitsu l'agrandit entre 1634 et 1636 jusqu'à en faire le complexe richement décoré que l'on voit aujourd'hui, avec plus de 5 millions de feuilles d'or réparties sur ses bâtiments -- un contraste délibéré avec la sobriété habituelle de l'architecture religieuse japonaise, pensé pour projeter la puissance du clan Tokugawa.",
+      },
+      {
+        title: "La porte Yomeimon et les trois singes",
+        body: "La porte Yomeimon, avec plus de 500 sculptures distinctes d'animaux, de plantes et de figures mythologiques, est si détaillée qu'on la surnomme \"la porte qu'on contemple jusqu'au crépuscule\" (higurashi-mon). Dans les écuries sacrées de l'enceinte se trouve le relief original des trois singes sages -- \"ne rien voir, ne rien entendre, ne rien dire\" (mizaru, kikazaru, iwazaru) -- une sculpture du XVIIe siècle devenue célèbre dans le monde entier bien après sa création.",
+      },
+      {
+        title: "Rinno-ji et Futarasan",
+        body: "L'ensemble de Nikko, classé au patrimoine mondial de l'UNESCO en 1999, comprend aussi le temple Rinno-ji (avec le hall Sanbutsudo et ses trois grands bouddhas dorés) et le sanctuaire shinto Futarasan, dédié aux montagnes sacrées de la région -- une cohabitation du bouddhisme et du shintoïsme dans la même enceinte, typique du Japon d'avant la séparation forcée des deux religions à l'époque Meiji.",
+      },
+      {
+        title: "Au-delà du sanctuaire : Chuzenji et Kegon",
+        body: "Ceux qui ont le temps peuvent monter par la route de montagne Irohazaka (48 virages serrés, une route pour monter et une autre pour descendre) jusqu'au lac Chuzenji, formé il y a environ 20 000 ans lorsqu'une éruption du mont Nantai voisin a bloqué la rivière Daiya. Tout près se trouvent les chutes de Kegon, d'une hauteur de 97 m, considérées comme l'une des trois grandes cascades du Japon.",
+      },
+    ],
+    curiosities: [
+      "Il existe un dicton japonais : \"Nikko wo minai uchi wa, kekkou to iu na\" -- \"ne dis pas 'magnifique' avant d'avoir vu Nikko\".",
+      "Le nom Nikko lui-même signifie \"lumière du soleil\", et bien qu'il s'écrive aujourd'hui avec les caractères de ce sens, la montagne s'appelait à l'origine Futara-san (d'où le sanctuaire Futarasan), et le changement de nom en Nikko est attribué au moine bouddhiste Kukai au IXe siècle.",
+      "Le mont Nantai, sacré depuis le VIIIe siècle, fait toujours l'objet d'un pèlerinage religieux chaque année, avec une cérémonie d'ascension rituelle en été.",
+    ],
+    tip: "Si le groupe préfère ne pas rallonger la journée avec Chuzenji/Kegon, l'ensemble Toshogu-Rinno-ji-Futarasan justifie déjà largement l'excursion -- pas besoin de se sentir frustré de ne pas monter sur la route de montagne.",
+  },
 
+  "odaiba": {
+    name: "Odaiba",
+    jp: "お台場",
+    founded: "1853 (îles-forteresses) / années 90 (reconversion moderne)",
+    wiki: "Odaiba",
+    tagline: "D'îles-forteresses défensives du XIXe siècle au quartier futuriste préféré de Tokyo.",
+    sections: [
+      {
+        title: "Des îles construites pour la guerre",
+        body: "Odaiba est née en 1853 comme un ensemble d'îles artificielles de défense (\"odaiba\" signifie littéralement \"batterie de canons\"), construites sur ordre du shogunat après l'arrivée des \"navires noirs\" du commodore américain Matthew Perry, qui forcèrent le Japon à s'ouvrir au commerce extérieur. Onze forts étaient prévus ; seuls quelques-uns furent achevés avant que le shogunat ne tombe et que la menace ne s'estompe.",
+      },
+      {
+        title: "De zone industrielle à quartier futuriste",
+        body: "Pendant une bonne partie du XXe siècle, la zone fut utilisée pour des activités industrielles et le remblaiement de terres. Dans les années 80 et 90, le gouvernement métropolitain de Tokyo impulsa sa reconversion en quartier de loisirs et de technologie, misant sur une architecture spectaculaire (comme le siège de Fuji TV, avec sa sphère métallique suspendue) et de grands espaces commerciaux en bord de mer.",
+      },
+      {
+        title: "Le Gundam grandeur nature : une histoire à la fin ouverte",
+        body: "De 2009 à 2017, il y eut une statue grandeur nature (18 m) du RX-78-2, le Gundam original de la série de 1979, installée d'abord à Shiokaze Park puis devant DiverCity Tokyo Plaza. En septembre 2017, elle fut remplacée par le Unicorn Gundam (RX-0), 1,7 m plus haut et doté d'un véritable mécanisme de transformation entre \"Unicorn Mode\" et \"Destroy Mode\" plusieurs fois par jour. ⚠️ **Cette deuxième statue a terminé son exposition publique le 31 août 2026, juste avant ce voyage** -- à la date de ce guide, aucune remplaçante n'est confirmée, donc ne comptez pas voir de Gundam à Odaiba pendant la visite.",
+      },
+      {
+        title: "Le Rainbow Bridge",
+        body: "Le pont suspendu qui relie Odaiba au reste de Tokyo, inauguré en 1993, doit son nom à un système d'éclairage à trois couleurs (blanc, rouge et vert) alimenté par de l'énergie solaire stockée pendant la journée. Le train automatique Yurikamome le traverse sans conducteur, offrant l'une des meilleures vues gratuites de la baie de Tokyo.",
+      },
+    ],
+    curiosities: [
+      "Le nom officiel complet de la zone dans les documents est \"Daiba\", sans le \"O\" honorifique -- \"Odaiba\" est la forme familière, mais c'est celle qui s'est imposée dans l'usage quotidien.",
+      "Une partie de l'éclairage du Rainbow Bridge a été éteinte pendant un temps après le séisme et le tsunami de 2011, dans le cadre d'une mesure nationale d'économie d'énergie.",
+      "La réplique de la Statue de la Liberté d'Odaiba, plus petite que l'originale, fut installée à l'origine en 1998 de façon temporaire dans le cadre d'un événement culturel franco-japonais, et devint si populaire qu'elle resta de façon permanente.",
+    ],
+    tip: "Le coucher de soleil vu depuis la promenade en bord de mer d'Odaiba, avec le Rainbow Bridge et la ligne d'horizon de Tokyo en arrière-plan, reste l'une des vues les plus photographiées de la ville -- ça vaut le coup d'arriver avec de la marge avant le coucher du soleil, Gundam ou pas.",
+  },
+
+  "toyosu": {
+    name: "Marché de Toyosu",
+    jp: "豊洲市場",
+    founded: "2018 (successeur du marché historique de Tsukiji)",
+    wiki: "Toyosu Market",
+    tagline: "Le plus grand marché aux poissons du monde, héritier de plus de 400 ans d'histoire.",
+    sections: [
+      {
+        title: "Plus de 400 ans d'histoire",
+        body: "L'origine du marché remonte à l'époque Edo, quand la demande croissante en poisson de la ville conduisit à établir un marché de gros à Nihonbashi. De là, il déménagea à Tsukiji, où il fonctionna pendant plus de 80 ans et devint l'une des attractions touristiques les plus célèbres de Tokyo, jusqu'à son transfert définitif à Toyosu en octobre 2018.",
+      },
+      {
+        title: "Pourquoi il a déménagé",
+        body: "Les installations de Tsukiji, conçues à l'origine pour un système de transport ferroviaire, étaient devenues obsolètes face au transport moderne par camion, et le marché souffrait de problèmes d'espace, d'hygiène et de rongeurs. Le déménagement, déjà envisagé en 2001, fut retardé plusieurs années à cause de la pollution du sol du nouveau site -- une ancienne usine de Tokyo Gas -- qui nécessita un nettoyage complet avant de pouvoir construire.",
+      },
+      {
+        title: "Le nouveau marché",
+        body: "Toyosu est presque deux fois plus grand que Tsukiji, et est considéré comme le plus grand marché aux poissons du monde. Contrairement à l'espace ouvert de Tsukiji, Toyosu se compose de bâtiments entièrement fermés et climatisés, répondant aux normes internationales de sécurité alimentaire HACCP, avec un meilleur contrôle de la température et un risque de contamination réduit. Il comprend trois bâtiments reliés entre eux et à la gare de Shijo-mae sur la ligne Yurikamome.",
+      },
+      {
+        title: "La vente aux enchères de thon",
+        body: "La fameuse vente aux enchères de thon, l'une des grandes attractions touristiques de l'époque de Tsukiji, reprit à Toyosu en janvier 2019, quelques mois après la réouverture du marché. On peut l'observer depuis une plateforme vitrée, sans accès direct à la salle, ce qui limite un peu l'expérience par rapport à la proximité que permettait l'ancien Tsukiji.",
+      },
+    ],
+    curiosities: [
+      "Le coût total de construction du nouveau marché avoisina les 5,1 milliards de dollars.",
+      "Bien que le marché de gros ait déménagé, le célèbre \"marché extérieur\" de Tsukiji (Tsukiji Outer Market), avec ses étals de street food, resta à son emplacement d'origine et demeure une destination gastronomique à part entière, désormais approvisionnée en poisson livré directement depuis Toyosu.",
+      "Plus de 80% des grossistes en poisson s'opposèrent au déménagement à l'époque, selon une enquête d'un collectif qui lutta activement contre le changement de site.",
+    ],
+    tip: "L'entrée est gratuite et se visite sans réservation, mais pour le petit-déjeuner sushi, mieux vaut arriver tôt -- les restaurants les plus connus ont généralement la queue dès les premières heures du matin.",
+  },
+
+  "kappabashi": {
+    name: "Kappabashi Dori",
+    jp: "かっぱ橋道具街",
+    founded: "Vers 1912",
+    wiki: "Kappabashi-dori",
+    tagline: "\"La rue de la cuisine\" : 800 mètres entièrement dédiés au monde de la restauration, avec pour mascotte un esprit aquatique mythique.",
+    sections: [
+      {
+        title: "D'un marécage à la capitale des arts de la table",
+        body: "La zone commença à se développer vers 1912 comme marché d'outils et d'ustensiles d'occasion, sur un terrain marécageux propice aux inondations entre les quartiers d'Ueno et d'Asakusa. Après la Seconde Guerre mondiale, avec l'expansion du secteur de la restauration à Tokyo, la rue se spécialisa entièrement dans l'approvisionnement des cuisiniers et restaurateurs, devenant le plus grand quartier d'arts de la table professionnels du Japon, avec plus de 170 boutiques sur à peine 800 mètres.",
+      },
+      {
+        title: "D'où vient le nom",
+        body: "L'origine du nom \"Kappabashi\" (littéralement \"pont de l'imperméable\") est disputée entre deux versions : qu'il vient des imperméables (kappa, 合羽) que les habitants faisaient sécher sur un pont voisin, ou qu'il est dû à un marchand du XIXe siècle appelé Kihachi Kappaya, qui finança des travaux de canalisation de la rivière dans la zone. Comme \"kappa\" est aussi le nom d'un esprit aquatique espiègle de la mythologie japonaise (河童, avec d'autres caractères mais prononcé de la même façon), les boutiques de la rue elles-mêmes adoptèrent cette créature comme mascotte officielle, et on trouve ses statues dispersées dans tout le quartier -- dont une dorée dans un petit parc de poche.",
+      },
+      {
+        title: "Les sampuru : de la nourriture en plastique hyperréaliste",
+        body: "Kappabashi est le lieu de naissance des sampuru (de l'anglais \"sample\"), les répliques de nourriture hyperréalistes exposées dans les vitrines de restaurants à travers tout le Japon. Fabriquées artisanalement en cire ou en plastique, une seule pièce de faux sushi peut coûter environ 2 000 ¥ (~13€). Plusieurs boutiques de la rue, comme Gansho Shokuhin Sample-ya, proposent même des ateliers pour fabriquer sa propre réplique.",
+      },
+      {
+        title: "Ce qu'on trouve d'autre dans la rue",
+        body: "Outre les sampuru, Kappabashi est célèbre pour ses couteaux japonais forgés à la main -- des boutiques spécialisées proposent un affûtage sur place et une gravure personnalisée du nom sur la lame. On y trouve aussi de la vaisselle en gros, des uniformes de serveur et de cuisinier, des lanternes en papier (chōchin) pour décorer l'entrée des izakayas, et toutes sortes de mobilier et d'équipements de cuisine professionnelle. À l'entrée sud de la rue se dresse une gigantesque tête de cuisinier au sommet du bâtiment Niimi Cooker, impossible à manquer.",
+      },
+    ],
+    curiosities: [
+      "Près de la rue se trouve le temple Sōgen-ji, populairement connu sous le nom de \"Kappa-dera\" (le temple du kappa), où les habitants laissent encore des concombres en offrande pour apaiser l'esprit -- la nourriture préférée du kappa selon la tradition.",
+      "Chaque juillet, la rue se remplit de décorations suspendues colorées pour le Shitamachi Tanabata Matsuri, le festival des étoiles du vieux centre-ville de Tokyo.",
+      "La rue se trouve exactement à mi-chemin entre Asakusa et Ueno, ce qui en faisait traditionnellement un bon arrêt pour reprendre des forces entre les deux quartiers -- un rôle qu'elle continue de jouer aujourd'hui.",
+    ],
+    tip: "Pas besoin d'acheter quoi que ce soit pour profiter de la rue -- se promener simplement en regardant les vitrines pleines de sampuru est déjà une expérience en soi, et c'est gratuit.",
+  },
+
+  "harajuku": {
+    name: "Harajuku et la rue Takeshita",
+    jp: "原宿・竹下通り",
+    founded: "Comme épicentre de la mode jeune : années 70-80",
+    wiki: "Harajuku",
+    tagline: "Le laboratoire de la mode de rue la plus extravagante du Japon, sur à peine 400 mètres de rue piétonne.",
+    sections: [
+      {
+        title: "D'une gare tranquille à l'épicentre de la mode",
+        body: "Harajuku était une zone résidentielle tranquille jusqu'à l'occupation américaine après la Seconde Guerre mondiale, quand le Washington Heights voisin (une base militaire avec des logements pour les familles d'officiers) introduisit dans la zone des boutiques et des modes occidentales qui n'existaient pas ailleurs au Japon. Avec le retrait de la base dans les années 60 et les Jeux Olympiques de Tokyo de 1964, la zone se libéra pour un développement commercial qui, dans les années 70-80, en fit l'épicentre des modes juvéniles les plus audacieuses du pays.",
+      },
+      {
+        title: "La rue Takeshita",
+        body: "Cette rue piétonne de à peine 400 mètres concentre des boutiques de mode alternative, de cosmétiques kawaii, des crêpes et des produits dérivés de la culture pop, et est historiquement la vitrine de sous-cultures comme le gothic lolita, le decora ou le visual-kei -- des styles nés précisément ici avant de se diffuser dans le reste du Japon puis, plus tard, à l'international grâce à internet.",
+      },
+      {
+        title: "Omotesando, l'autre visage d'Harajuku",
+        body: "À quelques mètres de Takeshita Dori, l'avenue Omotesando offre un contraste total : un boulevard arboré bordé de boutiques phares de marques de luxe internationales, conçu dans les années 20 comme le chemin d'accès cérémoniel au sanctuaire Meiji. Harajuku et Omotesando coexistent ainsi comme les deux faces d'une même pièce : la mode de rue la plus extrême et le luxe le plus établi, séparés par à peine un pâté de maisons.",
+      },
+      {
+        title: "Le quartier aujourd'hui",
+        body: "Bien que les sous-cultures les plus extrêmes des années 90 et 2000 aient perdu un peu de visibilité sur la rue Takeshita elle-même (aujourd'hui plus orientée vers un public touristique et jeune en général), Harajuku reste un bon baromètre des tendances émergentes japonaises, et le point de départ obligé avant de traverser vers le calme du sanctuaire Meiji, à seulement quelques minutes à pied.",
+      },
+    ],
+    curiosities: [
+      "La crêpe fourrée à la mode Harajuku (roulée en cône avec crème, fruits et garnitures sucrées) devint populaire précisément dans cette rue dans les années 70, et reste l'un des en-cas les plus photographiés du quartier.",
+      "Le mot \"kawaii\" (\"mignon\"/\"adorable\"), aujourd'hui un concept culturel exporté dans le monde entier, a l'un de ses berceaux urbains les plus importants dans l'esthétique qui s'est développée à Harajuku à partir des années 90.",
+      "Le dimanche, avant la pandémie, il était courant de voir des jeunes en tenues élaborées de cosplay ou de sous-cultures spécifiques se rassembler près du pont Jingu-bashi, à l'entrée du sanctuaire Meiji -- une coutume qui a nettement décliné mais que l'on peut encore parfois observer.",
+    ],
+    tip: "Takeshita Dori est très étroite et se remplit beaucoup, surtout le week-end -- pour des photos sans foule, mieux vaut y aller tôt le matin en semaine.",
+  },
+
+};

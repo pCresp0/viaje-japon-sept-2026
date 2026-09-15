@@ -715,14 +715,14 @@ export const days = [
     title: "Toyosu, Ueno y Odaiba",
     cities: "Toyosu, Ueno, Odaiba",
     summary:
-      "Madrugón para el mejor sushi fresco del mundo en Toyosu. Por la mañana, parque de Ueno y el mercadillo de Ameyoko. Por la tarde, tren futurista sin conductor hacia Odaiba para ver el Gundam a tamaño real y el atardecer sobre la bahía de Tokio.",
+      "Madrugón para el mejor sushi fresco del mundo en Toyosu. Por la mañana, parque de Ueno y el mercadillo de Ameyoko. Por la tarde, tren futurista sin conductor hacia Odaiba para el atardecer sobre la bahía de Tokio.",
     history:
       "El parque de Ueno, uno de los primeros parques públicos de Japón (1873), reúne templos, museos y el zoo más antiguo del país. Odaiba nació en el siglo XIX como islas-fortaleza para defender Tokio de los barcos occidentales, y hoy es un símbolo de la Tokio futurista.",
     schedule: [
       { time: "08:30", text: "Desayuno premium de sushi en el mercado mayorista de Toyosu (sucesor de Tsukiji)." },
       { time: "10:30", text: "Parque de Ueno y mercadillo de Ameyoko, ideal para compras baratas de té y dulces. Buena zona verde para pasear con calma tras el madrugón.\n\n🦪 **PICOTEO EN AMEYOKO** (recomendación de amiga quesito de Thibaut): los puestos del mercado son también muy conocidos por el marisco a la brasa -- ostras y anguila asadas, entre otras cosas. Si no habéis probado la anguila (unagi), es una buena ocasión.\n\n🎮 **YAMASHIROYA** (recomendación de amiga quesito de Thibaut): tienda de 6 plantas de figuras, juguetes y merchandising de anime/videojuegos, a solo 1 minuto andando de la Estación de Ueno. Confirmado que los precios suelen ser más baratos que en Akihabara, y está bastante menos masificada." },
       { time: "13:30", text: "Tren Yurikamome hacia Odaiba cruzando el Rainbow Bridge (sentaos en el primer vagón).\n\n🎫 **SUICA:** ✅ SÍ; pasar la tarjeta directamente por los tornos." },
-      { time: "14:30", text: "Gundam a tamaño real y atardecer desde el paseo marítimo con el skyline de Tokio." },
+      { time: "14:30", text: "Paseo por Odaiba y atardecer desde el paseo marítimo con el skyline de Tokio.\n\n⚠️ **SOBRE EL GUNDAM: ya no está.** La estatua a tamaño real del Unicorn Gundam que llevaba desde 2017 frente al DiverCity Tokyo Plaza terminó su exhibición pública el 31 de agosto de 2026 -- justo antes de vuestro viaje. A fecha de esta actualización no hay confirmación de una estatua sustituta, así que no contéis con verla. Seguid disfrutando de DiverCity igualmente (tiendas, Gundam Base Tokyo con merchandising) y del resto de Odaiba." },
       { time: "19:00–21:00", text: "🍜 Cena en Odaiba (Aqua City / DiverCity con vistas a la bahía de Tokio)." },
       { time: "~21:30", text: "🏨 **REGRESO AL HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nRegreso en metro/Yurikamome a nuestra residencia en Asakusa Kappabashi para descansar (4ª noche en Tokio)." },
     ],

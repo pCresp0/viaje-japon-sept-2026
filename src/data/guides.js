@@ -673,8 +673,8 @@ export const guides = {
         body: "Durante buena parte del siglo XX la zona se usó para actividades industriales y de relleno de tierra. En los años 80 y 90, el gobierno metropolitano de Tokio impulsó su reconversión en un distrito de ocio y tecnología, apostando por edificios de arquitectura llamativa (como la sede de Fuji TV, con su esfera metálica suspendida) y grandes espacios comerciales frente al mar.",
       },
       {
-        title: "El Gundam a tamaño real",
-        body: "La estatua de RX-78-2 Gundam a escala 1:1 (18 metros) frente al centro comercial DiverCity es una réplica del robot protagonista de la serie de anime Mobile Suit Gundam (1979), un pilar de la cultura pop japonesa. No es la primera versión que se instala en Odaiba -- ha habido varias desde 2009, cada una sustituyendo a la anterior tras un periodo limitado.",
+        title: "El Gundam a tamaño real: una historia con final abierto",
+        body: "Desde 2009 hasta 2017 hubo una estatua a tamaño real (18 m) del RX-78-2, el Gundam original de la serie de 1979, instalada primero en el Shiokaze Park y luego frente al DiverCity Tokyo Plaza. En septiembre de 2017 la sustituyó el Unicorn Gundam (RX-0), 1,7 m más alto y con un mecanismo real de transformación entre \"Unicorn Mode\" y \"Destroy Mode\" varias veces al día. ⚠️ **Esta segunda estatua terminó su exhibición pública el 31 de agosto de 2026, justo antes de este viaje** -- a fecha de esta guía no hay confirmación de ninguna sustituta, así que no contéis con ver ningún Gundam en Odaiba durante la visita.",
       },
       {
         title: "El Rainbow Bridge",
@@ -686,8 +686,9 @@ export const guides = {
       "Parte de la iluminación del Rainbow Bridge se apagó durante un tiempo tras el terremoto y tsunami de 2011, como medida de ahorro energético a nivel nacional.",
       "La réplica de la Estatua de la Libertad de Odaiba, más pequeña que el original, se instaló originalmente en 1998 de forma temporal como parte de un evento cultural franco-japonés, y se hizo tan popular que se quedó de forma permanente.",
     ],
-    tip: "El atardecer visto desde el paseo marítimo de Odaiba, con el Rainbow Bridge y el skyline de Tokio de fondo, es de las vistas más fotografiadas de la ciudad -- merece la pena llegar con margen antes de que se ponga el sol.",
+    tip: "El atardecer visto desde el paseo marítimo de Odaiba, con el Rainbow Bridge y el skyline de Tokio de fondo, sigue siendo de las vistas más fotografiadas de la ciudad -- merece la pena llegar con margen antes de que se ponga el sol, con o sin Gundam.",
   },
+
 
   "toyosu": {
     name: "Mercado de Toyosu",

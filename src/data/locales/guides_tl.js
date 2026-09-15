@@ -529,29 +529,6 @@ export const guides = {
     tip: "The of buong na (the The the The) buong of buong na buong The na of (the buong The the) buong of buong buong The na of buong (buong).",
   },
 
-  "odaiba": {
-    name: "The buong",
-    tagline: "Natatanging (na buong) buong of (the The) buong na of buong The (the) na buong.",
-    sections: [
-      {
-        title: "Natatanging the",
-        body: "The of buong na buong (the The the buong The buong the The The) buong of buong na buong the buong (the) na buong the The na buong (buong) buong na buong (the The The The the The buong the The The) na buong the buong buong buong na (the The) of The of (the The).",
-      },
-      {
-        title: "Natatanging (The The the)",
-        body: "The of buong (the The The) na buong buong na of buong (the The) na of buong (the The buong buong buong buong buong na The) na of buong buong The of na of buong (the) The buong The (the) na buong.",
-      },
-      {
-        title: "Natatanging buong na",
-        body: "Natatanging buong (The the the) na buong buong na of buong the na (The The The) na of buong na buong buong na of (buong na of buong buong The na of) buong na of (buong buong na buong buong) na buong.",
-      },
-    ],
-    curiosities: [
-      "The of buong (the The the The buong) na buong The of (the The buong) na of buong The na of buong The of (the) na of buong na of buong The na buong na of buong The (the).",
-      "Natatanging (na buong) the buong The na (the The the the buong buong buong) of (the The) buong na buong (the) na buong The of na buong (the The).",
-    ],
-    tip: "The of buong na (the The the The) buong of buong na buong The na of (the buong The the) buong of buong buong The na of buong (buong).",
-  },
 
     "osaka": {
     name: "Osaka: kastilyo at Dotonbori",
@@ -759,5 +736,164 @@ export const guides = {
     ],
     tip: "Bumaba sa Nakano Station sa JR Chuo Line. Ang pasukan ng Broadway ay nasa dulo ng Sun Mall covered shopping street, 5-minutong lakad mula sa istasyon. Perpekto para pagsamahin sa Akihabara para sa isang buong araw ng otaku culture.",
   },
-};
+  "nikko": {
+    name: "Nikko",
+    jp: "日光",
+    founded: "Toshogu Shrine: 1617",
+    wiki: "Nikko, Tochigi",
+    tagline: "Ang pinakamayamang mausoleum sa Japan, nakatago sa gitna ng mga bundok, 2 oras mula Tokyo.",
+    sections: [
+      {
+        title: "Ang Toshogu Shrine",
+        body: "Itinayo noong 1617 bilang mausoleum ni Tokugawa Ieyasu, ang tagapagtatag ng shogunate na namuno sa Japan nang mahigit 250 taon. Pinalawak ito ng apo niyang si Iemitsu sa pagitan ng 1634 at 1636 hanggang maging ang mayamang dekorasyon na kumplex na nakikita ngayon, na may mahigit 5 milyong piraso ng gold leaf na nakakalat sa mga gusali nito -- sinadyang kaibahan sa karaniwang kasimplehan ng relihiyosong arkitektura ng Japan, para ipakita ang kapangyarihan ng Tokugawa clan.",
+      },
+      {
+        title: "Ang Yomeimon Gate at ang tatlong unggoy",
+        body: "Ang Yomeimon Gate, na may mahigit 500 magkakaibang ukit ng hayop, halaman, at mitolohikal na pigura, ay napakadetalyado kaya tinatawag itong \"ang gate na puwedeng tingnan hanggang sa dapithapon\" (higurashi-mon). Sa mga sagradong kuwadra ng dambana ay ang orihinal na relief ng tatlong matalinong unggoy -- \"walang nakita, walang narinig, walang sinabi\" (mizaru, kikazaru, iwazaru) -- isang ukit mula ika-17 siglo na naging sikat sa buong mundo matagal pagkatapos itong gawin.",
+      },
+      {
+        title: "Rinno-ji at Futarasan",
+        body: "Ang Nikko complex, idineklarang UNESCO World Heritage Site noong 1999, ay may kasama ring Rinno-ji Temple (na may Sanbutsudo hall at ang tatlong malaking gintong Buddha nito) at ang Shinto shrine na Futarasan, na nakatuon sa mga sagradong bundok ng lugar -- isang pagsasama ng Buddhism at Shinto sa iisang lugar, tipikal sa Japan bago mahigpit na pinaghiwalay ang dalawang relihiyon noong Meiji period.",
+      },
+      {
+        title: "Higit pa sa dambana: Chuzenji at Kegon",
+        body: "Ang mga may oras ay puwedeng umakyat sa Irohazaka mountain road (48 matarik na kurbada, isang daan pataas at ibang daan pababa) papunta sa Lake Chuzenji, na nabuo mga 20,000 taon na ang nakalipas nang harangin ng pagsabog ng kalapit na Mount Nantai ang Ilog Daiya. Napakalapit dito ang Kegon Falls, 97m ang taas, itinuturing na isa sa tatlong dakilang talon ng Japan.",
+      },
+    ],
+    curiosities: [
+      "May kasabihan sa Japan: \"Nikko wo minai uchi wa, kekkou to iu na\" -- \"huwag sabihing 'napakaganda' hangga't hindi mo pa nakikita ang Nikko\".",
+      "Ang mismong pangalang Nikko ay nangangahulugang \"liwanag ng araw\", at bagama't isinusulat ito ngayon gamit ang mga karakter para sa kahulugang iyon, ang bundok ay dating tinatawag na Futara-san (kaya ang Futarasan shrine), at ang pagbabago ng pangalan sa Nikko ay ipinapalagay na dahil sa Buddhist monk na si Kukai noong ika-9 siglo.",
+      "Ang Mount Nantai, sagrado mula ika-8 siglo, ay tinatambakan pa rin ng relihiyosong pilgrimage bawat taon, na may seremonya ng ritwal na pag-akyat tuwing tag-init.",
+    ],
+    tip: "Kung mas gusto ng grupo na hindi masyadong patagalin ang araw sa Chuzenji/Kegon, ang Toshogu-Rinno-ji-Futarasan complex mismo ay sapat na dahilan para sa biyahe -- hindi na kailangang maramdaman na may kulang dahil hindi umakyat sa mountain road.",
+  },
 
+  "odaiba": {
+    name: "Odaiba",
+    jp: "お台場",
+    founded: "1853 (fortress islands) / 1990s (modernong pagpapaunlad)",
+    wiki: "Odaiba",
+    tagline: "Mula depensang fortress islands ng ika-19 siglo hanggang paboritong futuristic district ng Tokyo.",
+    sections: [
+      {
+        title: "Mga isla na ginawa para sa digmaan",
+        body: "Ipinanganak ang Odaiba noong 1853 bilang isang set ng artipisyal na depensang isla (\"odaiba\" ay literal na nangangahulugang \"cannon battery\"), itinayo sa utos ng shogunate matapos ang pagdating ng \"black ships\" ni Commodore Matthew Perry ng Estados Unidos, na pumilit sa Japan na buksan ang kalakalan sa ibang bansa. May binalak na 11 fort; ilan lang ang natapos bago bumagsak ang shogunate at nawala ang banta.",
+      },
+      {
+        title: "Mula industrial zone hanggang futuristic district",
+        body: "Sa mahabang bahagi ng ika-20 siglo, ginamit ang lugar para sa industrial na aktibidad at land reclamation. Noong dekada '80 at '90, itinulak ng gobyerno ng Tokyo ang muling pagpapaunlad nito bilang leisure at technology district, pabor sa kahanga-hangang arkitektura (tulad ng Fuji TV headquarters, na may nakabitin na metal na bilog) at malalaking waterfront shopping space.",
+      },
+      {
+        title: "Ang life-size na Gundam: kwentong bukas ang ending",
+        body: "Mula 2009 hanggang 2017, may 18m na life-size na estatwa ng RX-78-2, ang orihinal na Gundam mula sa 1979 series, unang inilagay sa Shiokaze Park at pagkatapos sa harap ng DiverCity Tokyo Plaza. Noong Setyembre 2017, pinalitan ito ng Unicorn Gundam (RX-0), 1.7m na mas mataas at may tunay na transformation mechanism sa pagitan ng \"Unicorn Mode\" at \"Destroy Mode\" ilang beses sa isang araw. ⚠️ **Natapos ang public display ng pangalawang estatwang ito noong Agosto 31, 2026, bago pa dumating ang biyahe na ito** -- sa petsa ng gabay na ito, walang nakumpirmang kapalit, kaya huwag umasang may makikitang Gundam sa Odaiba habang bumibisita.",
+      },
+      {
+        title: "Ang Rainbow Bridge",
+        body: "Ang suspension bridge na nagdudugtong sa Odaiba sa iba pang bahagi ng Tokyo, binuksan noong 1993, ay kinuha ang pangalan mula sa three-color na lighting system (puti, pula, at berde) na pinapatakbo ng solar energy na na-store sa maghapon. Ang walang driver na tren na Yurikamome ay tumatawid dito nang awtomatiko, nagbibigay ng isa sa pinakamagandang libreng tanawin ng Tokyo Bay.",
+      },
+    ],
+    curiosities: [
+      "Ang buong opisyal na pangalan ng lugar sa mga dokumento ay \"Daiba\", walang honorific na \"O\" -- ang \"Odaiba\" ay ang karaniwang tawag, pero ito na ang naging tanyag sa pang-araw-araw na paggamit.",
+      "Bahagi ng ilaw ng Rainbow Bridge ay pinatay sandali pagkatapos ng lindol at tsunami noong 2011, bilang panlahat na hakbang sa pagtitipid ng enerhiya.",
+      "Ang replica ng Statue of Liberty sa Odaiba, na mas maliit kaysa sa orihinal, ay unang inilagay noong 1998 bilang pansamantala bilang bahagi ng French-Japanese cultural event, at naging napakasikat kaya nanatili na ito nang permanente.",
+    ],
+    tip: "Ang paglubog ng araw na makikita mula sa waterfront promenade ng Odaiba, kasama ang Rainbow Bridge at ang skyline ng Tokyo sa likod, ay nananatiling isa sa mga pinaka-litratuhang tanawin sa lungsod -- sulit dumating nang maaga bago lumubog ang araw, Gundam man o wala.",
+  },
+
+  "toyosu": {
+    name: "Toyosu Market",
+    jp: "豊洲市場",
+    founded: "2018 (kahalili ng makasaysayang Tsukiji market)",
+    wiki: "Toyosu Market",
+    tagline: "Ang pinakamalaking fish market sa mundo, tagapagmana ng mahigit 400 taong kasaysayan.",
+    sections: [
+      {
+        title: "Mahigit 400 taong kasaysayan",
+        body: "Ang pinagmulan ng market ay bumabalik sa Edo period, nang ang lumalaking pangangailangan ng lungsod para sa isda ay humantong sa pagtatatag ng wholesale market sa Nihonbashi. Mula doon, lumipat ito sa Tsukiji, kung saan gumana ito nang mahigit 80 taon at naging isa sa pinakasikat na tourist attraction ng Tokyo, hanggang lumipat na ito nang permanente sa Toyosu noong Oktubre 2018.",
+      },
+      {
+        title: "Bakit ito lumipat",
+        body: "Ang mga pasilidad ng Tsukiji, orihinal na dinisenyo para sa railway-based na transportasyon, ay naging luma na kumpara sa modernong truck transport, at nahihirapan ang market sa espasyo, kalinisan, at problema sa daga. Ang paglipat, iminungkahi na noong 2001, ay na-delay ng ilang taon dahil sa polusyon ng lupa sa bagong lugar -- dating planta ng Tokyo Gas -- na kailangan ng masinsinang paglilinis bago makapagtayo.",
+      },
+      {
+        title: "Ang bagong market",
+        body: "Ang Toyosu ay halos dalawang beses kalakihan ng Tsukiji, at itinuturing na pinakamalaking fish market sa mundo. Hindi tulad ng open-air space ng Tsukiji, ang Toyosu ay binubuo ng ganap na sarado at may air-conditioning na gusali, na sumusunod sa international HACCP food safety standards, na may mas magandang temperature control at mas mababang panganib ng kontaminasyon. Binubuo ito ng tatlong gusaling magkakaugnay at konektado sa Shijo-mae Station sa Yurikamome Line.",
+      },
+      {
+        title: "Ang tuna auction",
+        body: "Ang sikat na tuna auction, isa sa mga dakilang tourist attraction ng panahon ng Tsukiji, ay nagpatuloy sa Toyosu noong Enero 2019, ilang buwan pagkatapos muling buksan ang market. Puwede itong panoorin mula sa isang glass-walled platform, walang direktang access sa sahig, na medyo naglilimita sa karanasan kumpara sa kalapitan na pinapayagan ng lumang Tsukiji.",
+      },
+    ],
+    curiosities: [
+      "Ang kabuuang gastos sa konstruksyon ng bagong market ay umabot sa mga $5.1 bilyon.",
+      "Bagama't lumipat ang wholesale market, ang sikat na \"outer market\" ng Tsukiji (Tsukiji Outer Market), na may mga street food stall, ay nanatili sa orihinal nitong lokasyon at nananatiling destinasyon ng pagkain sa sariling karapatan, ngayo'y sinusuplay ng isda na direktang inihahatid mula sa Toyosu.",
+      "Mahigit 80% ng mga wholesaler ng isda ang tumutol sa paglipat noong panahong iyon, batay sa survey ng isang grupo na aktibong lumaban sa relocation.",
+    ],
+    tip: "Libre ang pasukan at puwedeng bisitahin nang walang reserbasyon, pero para sa sushi breakfast, mainam na dumating nang maaga -- karaniwang may pila na ang mga sikat na restaurant simula umaga pa lang.",
+  },
+
+  "kappabashi": {
+    name: "Kappabashi Dori",
+    jp: "かっぱ橋道具街",
+    founded: "Mga 1912",
+    wiki: "Kappabashi-dori",
+    tagline: "\"Kitchen Town\": 800 metro na buong-buo na nakatuon sa mundo ng restawran, na may mitikal na water spirit bilang mascot.",
+    sections: [
+      {
+        title: "Mula latian hanggang kabisera ng kagamitang pangkusina",
+        body: "Nagsimulang umunlad ang lugar noong mga 1912 bilang merkado ng segundamanong kasangkapan at gamit, sa maputik na lugar na madaling bahain sa pagitan ng Ueno at Asakusa districts. Pagkatapos ng World War II, habang lumalawak ang restaurant industry sa Tokyo, buong-buong nag-specialize ang kalye sa pagsuplay ng mga chef at may-ari ng restawran, naging pinakamalaking propesyonal na kitchenware district sa Japan, may mahigit 170 tindahan sa loob lamang ng 800 metro.",
+      },
+      {
+        title: "Saan galing ang pangalan",
+        body: "Ang pinagmulan ng pangalang \"Kappabashi\" (literal na \"raincoat bridge\") ay pinagtatalunan sa pagitan ng dalawang bersyon: na galing ito sa mga raincoat (kappa, 合羽) na sinasabit ng mga residente para matuyo sa isang malapit na tulay, o dahil sa isang mangangalakal noong ika-19 siglo na si Kihachi Kappaya, na nagpondo ng mga gawaing pagpapaandar ng ilog sa lugar. Dahil ang \"kappa\" ay pangalan din ng isang mapaglarong water spirit sa mitolohiyang Hapon (河童, may ibang karakter pero pareho ang bigkas), inampon ng mismong mga tindahan sa kalye ang nilalang na ito bilang opisyal na mascot, at may mga estatwa nito na nakakalat sa buong kapitbahayan -- kasama ang isang gintong estatwa sa isang maliit na pocket park.",
+      },
+      {
+        title: "Ang sampuru: hyper-realistikong plastic na pagkain",
+        body: "Ang Kappabashi ang lugar kung saan ipinanganak ang sampuru (mula sa English na \"sample\"), ang hyper-realistikong food replica na inihahain sa mga bintana ng restawran sa buong Japan. Ginawang pang-kamay sa wax o plastic, ang isang piraso ng huwad na sushi ay puwedeng magkahalaga ng mga ¥2,000 (~13€). Maraming tindahan sa kalye, tulad ng Gansho Shokuhin Sample-ya, ang nag-aalok pa ng workshop para makagawa ng sariling replica.",
+      },
+      {
+        title: "Ano pang meron sa kalye",
+        body: "Bukod sa sampuru, kilala ang Kappabashi sa mga kamay-gawang kutsilyong Hapon -- nag-aalok ang mga espesyalisadong tindahan ng agarang paghasa at personalisadong ukit ng pangalan sa talim. May wholesale na kagamitang kainan din, uniporme ng waiter at chef, papel na parol (chōchin) para dekorasyon sa pasukan ng izakaya, at lahat ng uri ng propesyonal na kasangkapan at kagamitang pangkusina. Sa timog na pasukan ng kalye ay may higanteng ulo ng chef sa ibabaw ng gusaling Niimi Cooker, hindi mapapalampas.",
+      },
+    ],
+    curiosities: [
+      "Malapit sa kalye ay ang Sōgen-ji Temple, kilala sa katawagang \"Kappa-dera\" (ang templo ng kappa), kung saan naglalagay pa rin ang mga residente ng pipino bilang handog para pagbutihin ang loob ng espiritu -- ang paboritong pagkain ng kappa ayon sa tradisyon.",
+      "Tuwing Hulyo, napupuno ang kalye ng makulay na nakabiting dekorasyon para sa Shitamachi Tanabata Matsuri, ang festival ng bituin ng lumang bahagi ng Tokyo.",
+      "Ang kalye ay eksaktong nasa kalagitnaan ng Asakusa at Ueno, kaya't tradisyunal itong magandang paghintuan para mag-recharge sa pagitan ng dalawang kapitbahayan -- papel na ginagampanan pa rin nito ngayon.",
+    ],
+    tip: "Hindi na kailangang bumili ng anuman para matangkilik ang kalye -- ang paglalakad-lakad lang at pagmamasid sa mga bintanang puno ng sampuru ay isa nang karanasan sa sarili nito, at libre ito.",
+  },
+
+  "harajuku": {
+    name: "Harajuku at Takeshita Street",
+    jp: "原宿・竹下通り",
+    founded: "Bilang sentro ng kabataang fashion: dekada '70-'80",
+    wiki: "Harajuku",
+    tagline: "Ang laboratoryo ng Japan para sa pinaka-ekstrang street fashion, nakasiksik sa 400 metro lang ng pedestrian street.",
+    sections: [
+      {
+        title: "Mula tahimik na estasyon hanggang epicenter ng fashion",
+        body: "Tahimik na residential area ang Harajuku hanggang sa American occupation matapos ang World War II, nang ang malapit na Washington Heights (isang military base na may tirahan para sa pamilya ng mga opisyal) ay nagpakilala sa lugar ng mga tindahan at fashion na Western na wala pa sa ibang bahagi ng Japan. Sa pag-alis ng base noong dekada '60 at ang 1964 Tokyo Olympics, napalaya ang lugar para sa komersyal na pagpapaunlad na noong dekada '70-'80 ay ginawa itong epicenter ng pinaka-matapang na kabataang fashion ng bansa.",
+      },
+      {
+        title: "Ang Takeshita Street",
+        body: "Ang pedestrian street na ito, halos 400 metro lang, ay puno ng mga tindahan ng alternative fashion, kawaii cosmetics, crepe, at pop culture merchandise, at kasaysayan itong showcase ng mga subculture tulad ng gothic lolita, decora, o visual-kei -- mga istilong umusbong mismo dito bago kumalat sa ibang bahagi ng Japan at, mamaya, internasyonal salamat sa internet.",
+      },
+      {
+        title: "Omotesando, ang kabilang mukha ng Harajuku",
+        body: "Ilang metro lang mula sa Takeshita Dori, ang Omotesando avenue ay nag-aalok ng kabuuang kaibahan: isang punuan ng puno na boulevard na napapalibutan ng flagship store ng mga internasyonal na luxury brand, dinisenyo noong dekada '20 bilang seremonyal na daan patungo sa Meiji Shrine. Kaya't nagsasabay ang Harajuku at Omotesando bilang dalawang mukha ng isang barya: ang pinaka-ekstrang street fashion at ang pinaka-established na luxury, pinaghihiwalay ng isang bloke lang.",
+      },
+      {
+        title: "Ang kapitbahayan ngayon",
+        body: "Bagama't nawala ang bahagi ng kakitaan ng pinaka-ekstrang subculture ng dekada '90 at 2000 sa mismong Takeshita Street (mas nakatuon na ngayon sa turista at pangkalahatang kabataang audience), ang Harajuku ay nananatiling magandang barometer ng umuusbong na Japanese trend, at ang di-maiiwasang pasimula bago tumawid sa katahimikan ng Meiji Shrine, ilang minuto lang na lakad.",
+      },
+    ],
+    curiosities: [
+      "Ang inasarapan na crepe na Harajuku-style (naka-roll sa cone na may cream, prutas, at matamis na toppings) ay naging sikat mismo sa kalyeng ito noong dekada '70, at nananatiling isa sa pinaka-litratuhang meryenda sa lugar.",
+      "Ang salitang \"kawaii\" (\"cute\"/\"adorable\"), ngayon ay isang cultural concept na na-export sa buong mundo, ay may isa sa pinakamahalagang urban cradle nito sa aesthetic na umunlad sa Harajuku mula dekada '90 pataas.",
+      "Tuwing Linggo, bago ang pandemya, karaniwang nakikita ang mga kabataang naka-elaborate na cosplay o partikular na subculture look na nagtitipon malapit sa Jingu-bashi bridge, sa tabi ng pasukan ng Meiji Shrine -- isang kaugaliang lubhang bumaba pero paminsan-minsan pa ring makikita.",
+      ],
+    tip: "Napakakitid ng Takeshita Dori at napupuno ito, lalo na sa weekend -- kung gusto ninyo ng litrato na walang maraming tao, mas mabuting pumunta nang maaga sa umaga sa weekday.",
+  },
+
+};
