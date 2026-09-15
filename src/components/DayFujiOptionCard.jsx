@@ -31,14 +31,14 @@ export default function DayFujiOptionCard({ dayNum }) {
           <div className="min-w-0">
             <div className="flex items-center gap-1.5 flex-wrap">
               <span className="text-[10px] bg-white text-sky-900 font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">
-                Opción Monte Fuji GYG
+                Excursión Monte Fuji · Confirmada
               </span>
               <span className="text-xs text-sky-100 font-semibold hidden sm:inline">
                 Reserva {booking.code}
               </span>
             </div>
             <p className="text-xs sm:text-sm font-bold text-white leading-tight mt-0.5 truncate">
-              {open ? "Excursión GetYourGuide disponible hoy si el cielo está despejado" : "Posibilidad de Excursión Monte Fuji hoy (Pulsa para ver detalles)"}
+              {open ? "Guía asignado y horario actualizado -- toda la info aquí" : "Mañana: excursión al Monte Fuji (Pulsa para ver el mensaje del guía)"}
             </p>
           </div>
         </div>
@@ -78,7 +78,7 @@ export default function DayFujiOptionCard({ dayNum }) {
       {open && (
         <div className="p-4 space-y-3.5 text-xs animate-fadeIn" style={{ color: "var(--ink)" }}>
           <p style={{ color: "var(--ink)", lineHeight: 1.5, margin: 0 }}>
-            Si 24h antes comprobamos que la previsión meteorológica es excelente, realizaremos esta excursión de 10h desde Shinjuku en lugar de la ruta prevista en Tokio.
+            Excursión de día completo confirmada, con guía asignado para mañana. Toda la información: horario actualizado, punto de encuentro y aviso de lluvia.
           </p>
 
           {/* Punto de encuentro y horario */}
@@ -91,7 +91,31 @@ export default function DayFujiOptionCard({ dayNum }) {
               <strong>Tokyo Mode Gakuen</strong> (1-7-3 Nishishinjuku, Shinjuku City, Tokio).
             </p>
             <p style={{ color: "var(--ink-soft)", margin: 0 }}>
-              ⏰ Llegar antes de las <strong>08:25 AM</strong> (salida puntual en autobús a las 08:30 AM). Regreso aprox. 18:30.
+              ⏰ Encuentro a las <strong>08:10 AM</strong> (salida puntual en autobús a las <strong>08:20 AM</strong>). Regreso aprox. 18:30.
+            </p>
+          </div>
+
+          {/* Mensaje del guía (recibido la víspera) */}
+          <div className="p-3 rounded-xl border space-y-1.5" style={{ background: "rgba(234, 88, 12, 0.06)", borderColor: "rgba(234, 88, 12, 0.35)" }}>
+            <p className="font-bold flex items-center gap-1.5" style={{ margin: 0, color: "#c2410c" }}>
+              🧡 Mensaje del guía ({gygFujiActivity.guideMessage.receivedDate}):
+            </p>
+            <ul className="pl-4 space-y-1 list-disc" style={{ margin: 0, color: "var(--ink)" }}>
+              <li>Guía: <strong>{gygFujiActivity.guideMessage.guideName}</strong> -- sostendrá una bandera <strong>{gygFujiActivity.guideMessage.flagColor.toLowerCase()}</strong> con el número <strong>{gygFujiActivity.guideMessage.flagNumber}</strong>.</li>
+              <li><strong>⚠️ {gygFujiActivity.guideMessage.lateWarning}</strong></li>
+              <li>🚉 {gygFujiActivity.guideMessage.stationWarning}</li>
+              <li>🌧️ <strong>Aviso de lluvia:</strong> {gygFujiActivity.guideMessage.weatherNotice}</li>
+              <li>🚻 {gygFujiActivity.guideMessage.restroomNotice}</li>
+            </ul>
+          </div>
+
+          {/* Recomendación de salida del hotel */}
+          <div className="p-3 rounded-xl border space-y-1.5" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
+            <p className="font-bold flex items-center gap-1.5" style={{ color: "var(--indigo)", margin: 0 }}>
+              🕖 ¿A qué hora salir del hotel?
+            </p>
+            <p style={{ color: "var(--ink)", margin: 0 }}>
+              {gygFujiActivity.hotelDepartureAdvice}
             </p>
           </div>
 

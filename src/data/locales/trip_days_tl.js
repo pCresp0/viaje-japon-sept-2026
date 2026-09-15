@@ -607,10 +607,13 @@ export const days = [
         "text": "Gising na at mabilisang almusal sa hotel o habang naglalakad."
       },
       {
-        "text": "Papuntang Shinjuku Station / meeting point (Tokyo Mode Gakuen). Dumating nang may sapat na oras: eksakto ang alis ng bus ng 08:30."
+        "text": "🚇 **Aalis mula sa hotel papuntang Shinjuku.** Mula sa KOKO HOTEL Residence Asakusa Kappabashi, mga 40-45 min ang biyahe sa metro/JR -- at dahil kasama ang Shinjuku Station sa ruta (isa sa pinakamalaki at pinaka-nakakalitong estasyon sa Japan, may mahigit 200 exit), mainam na umalis nang may extra margin. Tingnan ang card sa ibaba para sa buong mensahe ng guide kasama ang eksaktong meeting point.\n\n⚠️ **NA-UPDATE NA ORAS NG GUIDE (Set. 15):** meeting sa **08:10**, eksaktong aalis ang bus ng **08:20** -- hindi na 08:30 gaya ng dati."
       },
       {
-        "text": "🚌 **ALIS NG EXCURSION SA MOUNT FUJI** (nakumpirmang reserbasyon). Tingnan ang card sa ibaba para sa lahat ng detalye: eksaktong meeting point, mga hintuan ng tour (Kawaguchiko, Oishi Park, Oshino Hakkai, Chureito Pagoda), tagal, at contact ng provider."
+        "text": "📍 **MEETING POINT KASAMA ANG GUIDE.** Hanapin ang orange na bandila na may numerong **19** (guide: Omar). Tingnan ang card sa ibaba para sa buong mensahe, may direktang link sa eksaktong lokasyon sa mapa."
+      },
+      {
+        "text": "🚌 **ALIS NG EXCURSION SA MOUNT FUJI** (nakumpirmang reserbasyon). Ang unang bahagi ng byahe sa bus ay mga 2 oras nang walang hinto -- pumunta sa banyo bago sumakay. Tingnan ang card sa ibaba para sa lahat ng detalye: mga hintuan ng tour (Kawaguchiko, Oishi Park, Oshino Hakkai, Chureito Pagoda), babala sa ulan bukas, at contact ng provider."
       },
       {
         "text": "Inaasahang pagbalik sa Shinjuku, pagkatapos ng mga 10 oras na excursion."

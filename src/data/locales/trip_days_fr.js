@@ -607,10 +607,13 @@ export const days = [
         "text": "Réveil et petit-déjeuner rapide à l'hôtel ou en chemin."
       },
       {
-        "text": "Vers la gare de Shinjuku / point de rendez-vous (Tokyo Mode Gakuen). Arriver avec de la marge : le départ en bus est ponctuel à 08h30."
+        "text": "🚇 **Départ de l'hôtel vers Shinjuku.** Depuis le KOKO HOTEL Residence Asakusa Kappabashi, le trajet en métro/JR prend environ 40-45 min -- et avec la gare de Shinjuku entre les deux (l'une des plus grandes et déroutantes du Japon, plus de 200 sorties), mieux vaut partir avec une marge supplémentaire. Voir la carte ci-dessous pour le message complet du guide avec le point de rendez-vous exact.\n\n⚠️ **HORAIRE MIS À JOUR PAR LE GUIDE (15 sept.) :** rendez-vous à **08h10**, départ du bus ponctuel à **08h20** -- ce n'est plus 08h30 comme indiqué précédemment."
       },
       {
-        "text": "🚌 **DÉPART DE L'EXCURSION AU MONT FUJI** (réservation confirmée). Voir la carte ci-dessous pour tous les détails : point de rendez-vous exact, arrêts du circuit (Kawaguchiko, Parc Oishi, Oshino Hakkai, Pagode Chureito), durée et contact du prestataire."
+        "text": "📍 **POINT DE RENDEZ-VOUS AVEC LE GUIDE.** Chercher le drapeau orange portant le numéro **19** (guide : Omar). Voir la carte ci-dessous pour le message complet, avec un lien direct vers l'emplacement exact sur la carte."
+      },
+      {
+        "text": "🚌 **DÉPART DE L'EXCURSION AU MONT FUJI** (réservation confirmée). Le premier trajet en bus dure environ 2 heures sans arrêt -- passer aux toilettes avant de monter. Voir la carte ci-dessous pour tous les détails : arrêts du circuit (Kawaguchiko, Parc Oishi, Oshino Hakkai, Pagode Chureito), alerte pluie pour demain et contact du prestataire."
       },
       {
         "text": "Retour prévu à Shinjuku, après environ 10 heures d'excursion."

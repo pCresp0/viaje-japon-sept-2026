@@ -607,10 +607,13 @@ export const days = [
         "text": "Wake up and quick breakfast at the hotel or on the way."
       },
       {
-        "text": "To Shinjuku Station / meeting point (Tokyo Mode Gakuen). Arrive with time to spare: the bus departs punctually at 08:30."
+        "text": "🚇 **Leaving the hotel toward Shinjuku.** From KOKO HOTEL Residence Asakusa Kappabashi the metro/JR ride takes around 40-45 min -- and with Shinjuku Station in between (one of the largest and most confusing in Japan, with over 200 exits), it's worth leaving with extra buffer. See the card below for the guide's full message with the exact meeting point.\n\n⚠️ **SCHEDULE UPDATED BY THE GUIDE (Sept 15):** meeting at **08:10**, bus departs punctually at **08:20** -- no longer 08:30 as previously stated."
       },
       {
-        "text": "🚌 **DEPARTURE OF THE MT. FUJI EXCURSION** (confirmed reservation). See the card below for all the details: exact meeting point, tour stops (Kawaguchiko, Oishi Park, Oshino Hakkai, Chureito Pagoda), duration and provider contact."
+        "text": "📍 **MEETING POINT WITH THE GUIDE.** Look for the orange flag with the number **19** (guide: Omar). See the card below for the full message, with a direct link to the exact spot on the map."
+      },
+      {
+        "text": "🚌 **DEPARTURE OF THE MT. FUJI EXCURSION** (confirmed reservation). The first bus leg runs about 2 hours with no stop -- use the restroom before boarding. See the card below for all the details: tour stops (Kawaguchiko, Oishi Park, Oshino Hakkai, Chureito Pagoda), tomorrow's rain notice and provider contact."
       },
       {
         "text": "Expected return to Shinjuku, after approx. 10 hours of excursion."
