@@ -823,6 +823,38 @@ export const guides = {
     tip: "L'entrée est gratuite et se visite sans réservation, mais pour le petit-déjeuner sushi, mieux vaut arriver tôt -- les restaurants les plus connus ont généralement la queue dès les premières heures du matin.",
   },
 
+  "ueno": {
+    name: "Ueno",
+    jp: "上野",
+    founded: "Parc depuis 1873 · sur les terrains du temple Kan'ei-ji (XVIIe s.)",
+    wiki: "Ueno, Tokyo",
+    tagline: "D'un temple funéraire des Tokugawa à un champ de bataille, puis au premier parc public du Japon.",
+    sections: [
+      {
+        title: "Le temple qui dominait la colline",
+        body: "Avant de devenir un parc, la colline d'Ueno abritait le Kan'ei-ji, l'un des temples les plus puissants d'Edo et temple funéraire de plusieurs shoguns Tokugawa, avec un domaine qui, à son apogée, rivalisait en taille avec le château d'Edo lui-même. Du complexe d'origine, presque entièrement rasé en 1868, il ne subsiste aujourd'hui que très peu de choses -- notamment une pagode à cinq étages, désormais située, curieusement, à l'intérieur de l'enceinte du zoo.",
+      },
+      {
+        title: "La bataille qui a scellé la fin du shogunat",
+        body: "En juillet 1868, pendant la guerre de Boshin qui mit fin à plus de 250 ans de pouvoir Tokugawa, le Kan'ei-ji devint le dernier bastion des Shogitai, un groupe de samouraïs fidèles au shogun vaincu. Les forces impériales écrasèrent la résistance en une seule journée de combats, et le terrain dévasté resta à l'abandon jusqu'à ce que, quelques années plus tard, le nouveau gouvernement Meiji décide d'en faire un parc public à l'occidentale.",
+      },
+      {
+        title: "Le premier parc public du Japon",
+        body: "Inauguré en 1873, Ueno fut l'un des premiers parcs publics de tout le Japon, dans le cadre des efforts du gouvernement Meiji pour moderniser le pays à l'image des capitales européennes. Aujourd'hui, une seule promenade permet de découvrir le Musée national de Tokyo (1872, le plus ancien et le plus grand du pays), le plus vieux zoo du Japon (1882), et l'étang de Shinobazu, avec son sanctuaire sur une île dédié à la déesse Benzaiten.",
+      },
+      {
+        title: "Ameyoko, le marché né du marché noir",
+        body: "Juste à la sortie de la gare, la rue d'Ameyoko ('Ameya Yokocho') est née dans l'après-guerre comme marché noir, à une époque où tout manquait et où l'on y vendait aussi bien des bonbons artisanaux que des surplus de l'armée américaine -- ces deux usages se disputent d'ailleurs l'explication de son nom, puisque 'ame' signifie à la fois 'bonbon' et est l'abréviation d''Amérique'. C'est aujourd'hui encore un marché de rue animé, avec du poisson frais, des fruits de mer grillés, des vêtements bon marché et des étals de street food, bien plus informel que n'importe quel centre commercial de Tokyo.",
+      },
+    ],
+    curiosities: [
+      "La statue la plus photographiée du parc est celle de Saigo Takamori, le samouraï qui contribua à renverser le shogunat -- et qui, quelques années plus tard, mena lui-même une rébellion contre le gouvernement qu'il avait aidé à instaurer. Il est représenté promenant son chien, dans une pose délibérément simple et peu héroïque.",
+      "Ueno reçut en 1972 le premier couple de pandas géants arrivé au Japon, cadeau du gouvernement chinois après la normalisation des relations diplomatiques -- depuis, le zoo d'Ueno est synonyme de pandas pour le public japonais.",
+      "L'étang de Shinobazu se couvre chaque été de fleurs de lotus qui le recouvrent presque entièrement, un spectacle bien différent de la nappe d'eau dégagée que l'on voit le reste de l'année.",
+    ],
+    tip: "Si l'envie de grignoter vous prend en chemin, les étals d'Ameyoko sont une bonne halte pour des fruits de mer grillés (huîtres, anguille) à prix de rue, bien moins cher qu'au restaurant.",
+  },
+
   "kappabashi": {
     name: "Kappabashi Dori",
     jp: "かっぱ橋道具街",
@@ -885,6 +917,38 @@ export const guides = {
       "Le dimanche, avant la pandémie, il était courant de voir des jeunes en tenues élaborées de cosplay ou de sous-cultures spécifiques se rassembler près du pont Jingu-bashi, à l'entrée du sanctuaire Meiji -- une coutume qui a nettement décliné mais que l'on peut encore parfois observer.",
     ],
     tip: "Takeshita Dori est très étroite et se remplit beaucoup, surtout le week-end -- pour des photos sans foule, mieux vaut y aller tôt le matin en semaine.",
+  },
+
+  "shinjuku": {
+    name: "Shinjuku",
+    jp: "新宿",
+    founded: "Gare depuis 1885 · quartier de vie nocturne depuis l'après-guerre",
+    wiki: "Shinjuku",
+    tagline: "La gare la plus fréquentée de la planète et, la nuit, la concentration de néons la plus dense de Tokyo.",
+    sections: [
+      {
+        title: "La gare la plus fréquentée du monde",
+        body: "La gare de Shinjuku détient le record du monde Guinness de la gare la plus fréquentée, avec une moyenne historique de plus de 3,5 millions de voyageurs par jour avant la pandémie -- plus de monde en une seule journée que la population totale de nombreux pays. Le complexe relie plusieurs lignes JR, Metro et privées via plus de 200 sorties, au point que s'y perdre est presque un rite de passage pour tout visiteur qui y vient pour la première fois.",
+      },
+      {
+        title: "Kabukicho, le quartier qui n'a jamais eu son théâtre kabuki",
+        body: "Après la Seconde Guerre mondiale, un plan de reconstruction de 1948 prévoyait d'y construire un grand théâtre de kabuki comme ancrage culturel du nouveau quartier. Le théâtre ne vit jamais le jour, mais le nom 'Kabukicho' resta pour de bon. Avec le temps, le quartier devint le plus grand district de vie nocturne et de divertissement pour adultes du Japon, surnommé 'la ville qui ne dort jamais' -- aujourd'hui restaurants, karaokés, cinémas, bars à thème et salles de pachinko y côtoient le quartier rouge.",
+      },
+      {
+        title: "Omoide Yokocho, la ruelle qui a survécu au marché noir",
+        body: "Collée aux voies ferrées, cette grappe de ruelles étroites bordées de minuscules stands de yakitori est née comme marché noir dans les années d'après-guerre, quand la nourriture manquait et que le quartier n'avait même pas ses propres toilettes -- d'où son surnom informel chez les étrangers, 'Piss Alley'. Elle a survécu à plusieurs tentatives de démolition et reste aujourd'hui l'un des rares coins de Shinjuku à conserver l'échelle et l'ambiance du Tokyo du milieu du XXe siècle.",
+      },
+      {
+        title: "Le bâtiment du gouvernement métropolitain",
+        body: "Conçu par l'architecte Kenzo Tange et inauguré en 1991, le Tocho (Tokyo Metropolitan Government Building) possède deux tours jumelles de 243 mètres que Tange lui-même disait inspirées à la fois d'un circuit imprimé et des cathédrales gothiques européennes. Ses deux belvédères gratuits, à 202 mètres de hauteur, offrent l'une des rares vues panoramiques de Tokyo sans aucun coût -- les jours très dégagés, on peut même apercevoir le mont Fuji.",
+      },
+    ],
+    curiosities: [
+      "Golden Gai, à deux pas de Kabukicho, regroupe environ 200 bars minuscules répartis dans six ruelles incroyablement étroites -- beaucoup n'accueillent littéralement que 5-6 personnes. Depuis les années 60, c'est un lieu de rendez-vous pour écrivains, cinéastes et musiciens, et l'un des coins les plus attachants de tout Tokyo.",
+      "Le carrefour de Kabukicho possède un écran géant en 3D avec un chat immense (le 'Shinjuku Cat') qui semble surgir au-dessus des immeubles -- c'est devenu l'un des endroits les plus photographiés du quartier depuis ses débuts en 2021.",
+      "Avant l'ère Meiji, Shinjuku (littéralement 'nouvelle station de poste') était l'une des quatre stations de poste qui approvisionnaient en voyageurs et en marchandises la route reliant Edo au reste du Japon.",
+    ],
+    tip: "Le belvédère gratuit du Tocho est l'alternative parfaite au Shibuya Sky payant : mêmes vues de la ville illuminée, coût zéro -- attendez-vous juste à faire la queue pour l'ascenseur à l'heure du coucher de soleil.",
   },
 
   "tokyo-skytree": {

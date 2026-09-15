@@ -832,6 +832,38 @@ export const guides = {
     tip: "Libre ang pasukan at puwedeng bisitahin nang walang reserbasyon, pero para sa sushi breakfast, mainam na dumating nang maaga -- karaniwang may pila na ang mga sikat na restaurant simula umaga pa lang.",
   },
 
+  "ueno": {
+    name: "Ueno",
+    jp: "上野",
+    founded: "Parke mula 1873 · sa lupain ng templong Kan'ei-ji (ika-17 siglo)",
+    wiki: "Ueno, Tokyo",
+    tagline: "Mula funerary temple ng mga Tokugawa hanggang battlefield, at pagkatapos, sa unang pampublikong parke ng Japan.",
+    sections: [
+      {
+        title: "Ang templo na dating nangibabaw sa burol",
+        body: "Bago naging parke, ang burol ng Ueno ay tahanan ng Kan'ei-ji, isa sa pinaka-makapangyarihang templo sa Edo at funerary temple ng ilang Tokugawa shogun, na may lupain na noong kasukdulan nito ay katumbas ang laki ng Edo Castle mismo. Halos wala nang natira sa orihinal na complex matapos itong halos ganap na masira noong 1868 -- kabilang sa ilang natirang piraso ay isang five-story pagoda, na ngayon ay matatagpuan, kakaiba man, sa loob ng lugar ng zoo.",
+      },
+      {
+        title: "Ang labanan na nagpasya sa katapusan ng shogunate",
+        body: "Noong Hulyo 1868, sa panahon ng Boshin War na nagtapos sa mahigit 250 taong pamumuno ng Tokugawa, naging huling kuta ng Shogitai ang Kan'ei-ji, isang grupo ng mga samurai na tapat sa natalong shogun. Winasak ng imperial forces ang resistensya sa iisang araw ng labanan, at ang winasak na lupain ay naiwang abandonado hanggang, ilang taon pagkatapos, nagpasya ang bagong gobyernong Meiji na gawin itong Western-style na pampublikong parke.",
+      },
+      {
+        title: "Ang unang pampublikong parke ng Japan",
+        body: "Binuksan noong 1873, ang Ueno ay isa sa mga unang pampublikong parke sa buong Japan, bahagi ng pagsisikap ng gobyernong Meiji na i-modernize ang bansa ayon sa larawan ng mga kabisera ng Europa. Ngayon, iisang paglalakad lang ang kailangan para makita ang Tokyo National Museum (1872, ang pinakamatanda at pinakamalaking museo sa bansa), ang pinakamatandang zoo sa Japan (1882), at ang Shinobazu Pond, na may santuwaryo sa isla nito na nakatuon sa diyosang si Benzaiten.",
+      },
+      {
+        title: "Ameyoko, ang market na isinilang mula sa black market",
+        body: "Sa mismong labasan ng estasyon, ang kalyeng Ameyoko ('Ameya Yokocho') ay umusbong bilang black market noong postwar years, nang kakaunti ang lahat at ipinagbibili dito mula sa gawang-kamay na kendi hanggang sa surplus na kagamitan ng US Army -- parehong paggamit ay nagkukumpitensya sa pagpapaliwanag ng pangalan ng kalye, dahil ang 'ame' ay nangangahulugang parehong 'kendi' at pinaikling anyo ng 'America'. Nananatili itong maingay na street market ngayon, may sariwang isda, inihaw na seafood, murang damit, at food stall, mas informal kaysa sa kahit anong shopping mall sa Tokyo.",
+      },
+    ],
+    curiosities: [
+      "Ang pinaka-litratuhang estatwa ng parke ay kay Saigo Takamori, ang samurai na tumulong pabagsakin ang shogunate -- at pagkalipas ng ilang taon, pinangunahan mismo ang sarili niyang rebelyon laban sa gobyernong tinulungan niyang itatag. Inilalarawan siyang naglalakad kasama ang kanyang aso, sa deliberadong simple at hindi-mabayaning pose.",
+      "Natanggap ng Ueno ang unang pares ng giant panda sa Japan noong 1972, regalo ng gobyerno ng Tsina matapos ang normalisasyon ng diplomatic relations -- mula noon, ang Ueno Zoo ay sinonimo na ng panda para sa publikong Hapones.",
+      "Napupuno ng bulaklak ng lotus ang Shinobazu Pond tuwing tag-init, halos ganap na tinatakpan ang ibabaw ng tubig -- ibang-iba sa malinaw na tubig na nakikita sa buong taon.",
+    ],
+    tip: "Kung gusto ninyong mag-meryenda habang naglalakad, magandang paradahan ang mga puwesto ng Ameyoko para sa inihaw na seafood (talaba, igat) sa presyo ng kalye, mas mura kaysa umupo sa restaurant.",
+  },
+
   "kappabashi": {
     name: "Kappabashi Dori",
     jp: "かっぱ橋道具街",
@@ -894,6 +926,38 @@ export const guides = {
       "Tuwing Linggo, bago ang pandemya, karaniwang nakikita ang mga kabataang naka-elaborate na cosplay o partikular na subculture look na nagtitipon malapit sa Jingu-bashi bridge, sa tabi ng pasukan ng Meiji Shrine -- isang kaugaliang lubhang bumaba pero paminsan-minsan pa ring makikita.",
       ],
     tip: "Napakakitid ng Takeshita Dori at napupuno ito, lalo na sa weekend -- kung gusto ninyo ng litrato na walang maraming tao, mas mabuting pumunta nang maaga sa umaga sa weekday.",
+  },
+
+  "shinjuku": {
+    name: "Shinjuku",
+    jp: "新宿",
+    founded: "Estasyon mula 1885 · nightlife district mula postwar years",
+    wiki: "Shinjuku",
+    tagline: "Ang pinaka-busy na train station sa mundo at, sa gabi, ang pinaka-makapal na neon sa Tokyo.",
+    sections: [
+      {
+        title: "Ang pinaka-busy na estasyon sa mundo",
+        body: "May hawak ang Shinjuku Station ng Guinness World Record bilang pinaka-busy na train station, na may historical average na mahigit 3.5 milyong pasahero kada araw bago ang pandemya -- mas maraming tao sa isang araw kaysa sa buong populasyon ng maraming bansa. Kinokonekta ng complex ang ilang linya ng JR, Metro, at pribado sa pamamagitan ng mahigit 200 exit, kaya't ang maligaw sa loob mismo ng estasyon ay halos rite of passage na para sa sinumang bisitang bago.",
+      },
+      {
+        title: "Kabukicho, ang distrito na hindi nagkaroon ng kabuki theater nito",
+        body: "Pagkatapos ng World War II, layunin ng isang 1948 reconstruction plan na magtayo dito ng malaking kabuki theater bilang cultural anchor ng bagong distrito. Hindi kailanman naitayo ang teatro, pero nanatili ang pangalang 'Kabukicho' magpakailanman. Sa paglipas ng panahon, ito ang naging pinakamalaking nightlife at adult entertainment district sa Japan, na napalayaw na 'ang bayan na hindi natutulog' -- ngayon magkakasama rito ang mga restaurant, karaoke box, sinehan, themed bar, at pachinko parlor kasama ang red-light area.",
+      },
+      {
+        title: "Omoide Yokocho, ang eskinita na nakaligtas sa black market",
+        body: "Nakadiin sa tabi ng train tracks, ang kumpol na ito ng makikitid na eskinita na puno ng maliliit na yakitori stall ay nagsimula bilang black market noong postwar years, nang kakaunti ang pagkain at wala pa ngang sariling banyo ang lugar -- kaya lumitaw ang di-opisyal na palayaw nito sa mga dayuhan, 'Piss Alley'. Nakaligtas ito sa ilang tangkang giba at ngayon isa sa iilang sulok ng Shinjuku na nananatiling may sukat at atmospera ng Tokyo noong kalagitnaan ng ika-20 siglo.",
+      },
+      {
+        title: "Ang Metropolitan Government Building",
+        body: "Dinisenyo ng arkitektong si Kenzo Tange at binuksan noong 1991, ang Tocho (Tokyo Metropolitan Government Building) ay may kambal na tore na 243 metro ang taas na, ayon mismo kay Tange, inspirasyon ng parehong printed circuit board at European gothic cathedral. Ang dalawang libreng observation deck nito, sa 202 metro, ay nag-aalok ng isa sa iilang panoramic view ng Tokyo nang walang bayad -- sa mga araw na napakalinaw, makikita pa ang Mount Fuji.",
+      },
+    ],
+    curiosities: [
+      "Ang Golden Gai, isang hakbang lang mula Kabukicho, ay may humigit-kumulang 200 maliliit na bar sa anim na napakakitid na eskinita -- marami ang literal na tanging kasya sa 5-6 tao. Mula dekada '60, ito ang pinagtitipunan ng mga manunulat, filmmaker, at musikero, at nananatiling isa sa mga sulok na may pinaka-karakter sa buong Tokyo.",
+      "May malaking 3D screen ang crossing ng Kabukicho na may napakalaking pusa (ang 'Shinjuku Cat') na parang sumusungaw sa ibabaw ng mga gusali -- naging isa ito sa mga pinaka-litratuhang lugar sa area mula noong debut nito noong 2021.",
+      "Bago ang Meiji era, ang Shinjuku (literal na 'bagong post station') ay isa sa apat na post station na nagbibigay ng mga manlalakbay at kalakal sa ruta na kumokonekta sa Edo sa iba pang bahagi ng Japan.",
+    ],
+    tip: "Ang libreng observation deck ng Tocho ang perpektong alternatibo sa may-bayad na Shibuya Sky: parehong tanawin ng naiilawang lungsod, zero ang gastos -- inaasahan lang ang pila para sa elevator sa sunset rush.",
   },
 
   "tokyo-skytree": {
