@@ -76,3 +76,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-15 06:58 UTC** — fix(Día 9): sincronizar traducciones EN/FR/TL con el plan actual (Skytree, ... (`55c381f`)
 - **2026-09-15 07:02 UTC** — fix: sincronizar traducciones EN/FR/TL de los Días 10-15 con el ... (`653cabd`)
 - **2026-09-15 07:04 UTC** — fix: anonimizar apellidos completos en toda la web (solo inicial), ... (`9d770a7`)
+- **2026-09-15 07:17 UTC** — fix(mapa): sincronizar puntos con el itinerario actual (Fuji, Toyosu/Ueno/Odaiba, Akihabara ... (`637dc7a`)
