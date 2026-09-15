@@ -120,14 +120,18 @@ export default function DayFujiOptionCard({ dayNum }) {
           </div>
 
           {/* Paradas del tour */}
-          <div className="p-3 rounded-xl border space-y-1.5" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
-            <p className="font-bold" style={{ color: "var(--indigo)", margin: 0 }}>🗺️ Lugares que se visitan:</p>
-            <ol className="pl-4 space-y-1 list-decimal" style={{ color: "var(--ink)" }}>
-              <li><strong>Lago Kawaguchiko y Parque Oishi:</strong> Paseo junto al lago, campos de flores de temporada y vistas panorámicas.</li>
-              <li><strong>Saiko Iyashi-no-Sato Nenba:</strong> Aldea tradicional reconstruida con casas de tejado de paja y talleres artesanos (entrada incluida).</li>
-              <li><strong>Manantiales de Oshino Hakkai:</strong> 8 estanques cristalinos alimentados por el agua de deshielo del volcán (Patrimonio UNESCO).</li>
-              <li><strong>Parque Arakurayama Sengen y Pagoda Chureito:</strong> Subida de 400 escalones para capturar la postal icónica de Japón.</li>
-            </ol>
+          <div className="p-3 rounded-xl border space-y-2.5" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
+            <p className="font-bold" style={{ color: "var(--indigo)", margin: 0 }}>🗺️ Qué vamos a ver, parada a parada:</p>
+            {gygFujiActivity.itineraryStopsDetailed.map((stop, i) => (
+              <div key={i} className="pl-2 border-l-2 space-y-0.5" style={{ borderColor: "rgba(2, 132, 199, 0.35)" }}>
+                <p className="font-bold flex items-center gap-1.5 flex-wrap" style={{ color: "var(--ink)", margin: 0 }}>
+                  <span>{stop.emoji}</span>
+                  <span>{i + 1}. {stop.name}</span>
+                  <span className="text-[10.5px] font-semibold" style={{ color: "var(--ink-soft)" }}>({stop.duration})</span>
+                </p>
+                <p style={{ color: "var(--ink-soft)", margin: 0, lineHeight: 1.5 }}>{stop.detail}</p>
+              </div>
+            ))}
           </div>
 
           {/* Aviso importante de comidas y dinero */}

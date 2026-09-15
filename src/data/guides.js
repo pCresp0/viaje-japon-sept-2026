@@ -1072,7 +1072,7 @@ export const guides = {
       },
       {
         title: "Logística y precios",
-        body: "• Precio: 42€ / persona (~210€ grupo), ya pagado.\n• Punto de encuentro: Tokyo Mode Gakuen (1-7-3 Nishishinjuku, Shinjuku), frente a la estación. Llegar antes de las 08:25 (salida 08:30).\n• Duración: aproximadamente 10 horas, con regreso previsto a Shinjuku sobre las 18:30.\n• Idioma: guía en inglés.\n• Comida NO incluida: no se puede comer en el autobús, conviene desayunar bien y llevar efectivo en yenes para los puestos locales de las paradas.",
+        body: "• Precio: 42€ / persona (~210€ grupo), ya pagado.\n• Punto de encuentro: Tokyo Mode Gakuen (1-7-3 Nishishinjuku, Shinjuku), frente a la estación. Encuentro a las 08:10 (salida puntual del autobús a las 08:20).\n• Duración: aproximadamente 10 horas, con regreso previsto a Shinjuku sobre las 18:30.\n• Idioma: guía en inglés.\n• Comida NO incluida: no se puede comer en el autobús, conviene desayunar bien y llevar efectivo en yenes para los puestos locales de las paradas.",
       },
       {
         title: "Predicción de Visibilidad y Cámaras Web",

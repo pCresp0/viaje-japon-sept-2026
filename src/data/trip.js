@@ -678,10 +678,11 @@ export const days = [
     history:
       "El Monte Fuji (3.776 m), volcán activo y la montaña más alta de Japón, es venerado como sagrado desde tiempos antiguos y es Patrimonio de la Humanidad de la UNESCO desde 2013 -- inscrito como sitio cultural, no natural, por su papel como fuente de inspiración artística y religiosa.",
     schedule: [
-      { time: "07:00", text: "🍙 Desayuno en la habitación con lo comprado la noche anterior en el konbini." },
-      { time: "07:00", text: "🚇 **Salida del hotel hacia Shinjuku.** Desde el KOKO HOTEL Residence Asakusa Kappabashi el trayecto en metro/JR ronda los 40-45 min -- con la estación de Shinjuku de por medio (una de las más grandes de Japón, con más de 200 salidas), salimos con margen de sobra." },
+      { time: "06:20", text: "⏰ Despertar." },
+      { time: "06:40", text: "🍙 Desayuno en la habitación con lo comprado la noche anterior en el konbini." },
+      { time: "07:00", text: "🚇 **Salida hacia el punto de encuentro.** Desde el KOKO HOTEL Residence Asakusa Kappabashi el trayecto en metro/JR ronda los 40-45 min -- con la estación de Shinjuku de por medio (una de las más grandes de Japón, con más de 200 salidas), salimos con margen de sobra." },
       { time: "08:10", text: "📍 **PUNTO DE ENCUENTRO: TOKYO MODE GAKUEN.**\n\nhttps://maps.google.com/?q=35.691490,139.696457\n\nBuscar la bandera naranja con el número **19** (guía: Omar)." },
-      { time: "08:20", text: "🚌 **SALIDA DE LA EXCURSIÓN AL MONTE FUJI** (reserva confirmada). El primer tramo en autobús dura aprox. 2 horas sin parada -- ir al baño antes de subir. Ver más abajo la tarjeta con todos los detalles: paradas del recorrido (Kawaguchiko, Parque Oishi, Oshino Hakkai, Pagoda Chureito), aviso de lluvia para mañana y contacto del proveedor." },
+      { time: "08:20", text: "🚌 **SALIDA DE LA EXCURSIÓN AL MONTE FUJI** (reserva confirmada). El primer tramo en autobús dura aprox. 2 horas sin parada -- ir al baño antes de subir.\n\n🗺️ **Qué vamos a ver hoy:**\n- Lago Kawaguchiko y Parque Oishi\n- Aldea tradicional Saiko Iyashi-no-Sato Nenba\n- Manantiales de Oshino Hakkai\n- Parque Arakurayama Sengen y Pagoda Chureito\n\nVer más abajo la tarjeta con el detalle completo de cada parada, aviso de lluvia para mañana y contacto del proveedor." },
       { time: "~18:30", text: "Regreso previsto a Shinjuku, tras aprox. 10 horas de excursión." },
       { time: "19:30–21:00", text: "🍜 Cena por Shinjuku o de camino de vuelta al hotel." },
       { time: "~21:30", text: "🏨 **REGRESO AL HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nRegreso a nuestra residencia en Asakusa Kappabashi para descansar (2ª noche en Tokio)." },

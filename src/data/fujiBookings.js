@@ -31,6 +31,32 @@ export const gygFujiActivity = {
     restroomNotice: "Ir al baño antes de llegar al punto de encuentro: el trayecto en autobús hasta la primera parada dura aprox. 2 horas.",
   },
   hotelDepartureAdvice: "Salir del hotel a las 07:00 -- desde el KOKO HOTEL Residence Asakusa Kappabashi el trayecto hasta Shinjuku ronda los 40-45 minutos en metro/JR, y con margen extra por si acaso al pasar por la Estación de Shinjuku (grande, más de 200 salidas).",
+  itineraryStopsDetailed: [
+    {
+      emoji: "🌸",
+      name: "Lago Kawaguchiko y Parque Oishi",
+      duration: "~40 min",
+      detail: "El más accesible de los Cinco Lagos del Fuji y el más famoso por sus vistas -- el propio lago actúa de espejo del volcán en días despejados. El Parque Oishi ocupa la orilla norte, con hileras de flores de temporada (en septiembre, sobre todo cosmos rosas y kochia) que enmarcan el Fuji al fondo, una de las estampas más fotografiadas de la región. Hay puestos de helado de soft-cream con sabores locales (uva Kyoho, wasabi) y una pequeña zona de tiendas.",
+    },
+    {
+      emoji: "🏘️",
+      name: "Aldea Saiko Iyashi-no-Sato Nenba",
+      duration: "~1 hora (entrada incluida)",
+      detail: "Un pueblo tradicional de unas 20 casas con tejado de paja (gassho-zukuri, el mismo estilo que Shirakawa-go), reconstruido en el emplazamiento de un poblado real destruido por un tifón en 1966. Cada casa funciona hoy como taller o pequeño museo: tejido, cerámica, cestería de bambú, catas de té -- y varias ofrecen la posibilidad de probar o comprar directamente lo que elaboran. Al fondo del pueblo el Fuji vuelve a asomar entre los tejados.",
+    },
+    {
+      emoji: "💧",
+      name: "Manantiales de Oshino Hakkai",
+      duration: "~1 hora",
+      detail: "Ocho estanques de agua cristalina repartidos por el pueblo de Oshino, alimentados por el deshielo y la lluvia que se filtran durante unos 20 años a través de la roca volcánica del Fuji antes de aflorar aquí. El agua es tan transparente que se ven perfectamente las truchas que nadan en el fondo. Declarado uno de los 'Lugares de Belleza Natural' de Japón y, junto con el propio Fuji, parte de su inscripción como Patrimonio de la Humanidad UNESCO. El pueblo conserva casas tradicionales y puestos de comida alrededor de los estanques.",
+    },
+    {
+      emoji: "⛩️",
+      name: "Parque Arakurayama Sengen y Pagoda Chureito",
+      duration: "~1 hora (subida de 400 escalones)",
+      detail: "La imagen más icónica de todo Japón: la pagoda de cinco pisos Chureito (construida en 1963 como monumento a la paz, no es un templo antiguo) enmarcada con el Fuji al fondo, vista desde el mirador del parque. Para llegar hay que subir unos 400 escalones desde el Santuario Arakura Fuji Sengen, a los pies de la colina -- unos 15-20 min a paso normal. Merece la pena el esfuerzo: es la fotografía que sale en prácticamente todas las postales y campañas turísticas de Japón.",
+    },
+  ],
   itineraryStops: [
     "Lago Kawaguchiko y Parque Oishi (40 min - campos florales y vistas)",
     "Saiko Iyashi-no-Sato Nenba (1 hora - pueblo tradicional de tejados de paja con entrada incluida)",

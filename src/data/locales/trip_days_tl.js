@@ -604,16 +604,19 @@ export const days = [
     "history": "Ang Mount Fuji (3,776 m), aktibong bulkan at pinakamataas na bundok sa Japan, ay pinararangalan bilang sagrado mula pa noong sinaunang panahon at UNESCO World Heritage Site mula 2013 -- nakalista bilang cultural site, hindi natural, dahil sa papel nito bilang pinagmumulan ng inspirasyong pansining at panrelihiyon.",
     "schedule": [
       {
+        "text": "⏰ Gising."
+      },
+      {
         "text": "🍙 Almusal sa kuwarto gamit ang binili noong gabing nakaraan sa konbini."
       },
       {
-        "text": "🚇 **Aalis mula sa hotel papuntang Shinjuku.** Mula sa KOKO HOTEL Residence Asakusa Kappabashi, mga 40-45 min ang biyahe sa metro/JR -- at dahil kasama ang Shinjuku Station sa ruta (isa sa pinakamalaking estasyon sa Japan, may mahigit 200 exit), aalis tayo nang may sapat na margin."
+        "text": "🚇 **Aalis patungong meeting point.** Mula sa KOKO HOTEL Residence Asakusa Kappabashi, mga 40-45 min ang biyahe sa metro/JR -- at dahil kasama ang Shinjuku Station sa ruta (isa sa pinakamalaking estasyon sa Japan, may mahigit 200 exit), aalis tayo nang may sapat na margin."
       },
       {
         "text": "📍 **MEETING POINT: TOKYO MODE GAKUEN.**\n\nhttps://maps.google.com/?q=35.691490,139.696457\n\nHanapin ang orange na bandila na may numerong **19** (guide: Omar)."
       },
       {
-        "text": "🚌 **ALIS NG EXCURSION SA MOUNT FUJI** (nakumpirmang reserbasyon). Ang unang bahagi ng byahe sa bus ay mga 2 oras nang walang hinto -- pumunta sa banyo bago sumakay. Tingnan ang card sa ibaba para sa lahat ng detalye: mga hintuan ng tour (Kawaguchiko, Oishi Park, Oshino Hakkai, Chureito Pagoda), babala sa ulan bukas, at contact ng provider."
+        "text": "🚌 **ALIS NG EXCURSION SA MOUNT FUJI** (nakumpirmang reserbasyon). Ang unang bahagi ng byahe sa bus ay mga 2 oras nang walang hinto -- pumunta sa banyo bago sumakay.\n\n🗺️ **Ano ang makikita natin ngayon:**\n- Lake Kawaguchiko at Oishi Park\n- Tradisyunal na nayon na Saiko Iyashi-no-Sato Nenba\n- Bukal ng Oshino Hakkai\n- Arakurayama Sengen Park at Chureito Pagoda\n\nTingnan ang card sa ibaba para sa buong detalye ng bawat hintuan, babala sa ulan bukas, at contact ng provider."
       },
       {
         "text": "Inaasahang pagbalik sa Shinjuku, pagkatapos ng mga 10 oras na excursion."
