@@ -397,8 +397,8 @@ export const furtherReading = {
     {
       title: "Los mejores lugares para ver el Monte Fuji",
       show: "Japón a fondo · Japonismo",
-      dayBadge: "Día 14 · Excursión Monte Fuji",
-      dayNum: 14,
+      dayBadge: "Día 10 · Excursión Monte Fuji",
+      dayNum: 10,
       url: "https://podcasts.apple.com/es/podcast/jap%C3%B3n-a-fondo/id1545542012?i=1000740790906",
       note: "Consejos clave para avistar el cono sagrado del Fuji: mejores miradores (Chureito Pagoda, lago Kawaguchiko, Mishima Skywalk), cómo comprobar la visibilidad meteorológica y qué lado del Shinkansen elegir para verlo desde el tren bala.",
     },
