@@ -387,13 +387,20 @@ export const stops = [
     detail: "Tren Yurikamome, DiverCity y atardecer en la bahía",
   },
 
-  // ── DÍA 13: Excursión a Nikko ──────────────────────────────
+  // ── DÍA 14: Ruta Nintendo, Compras y Skytree ──────────────────────
   {
     id: "ikebukuro", name: "Ikebukuro", city: "Tokio",
     lat: 35.7295, lng: 139.7189,
     emoji: "🕹️", color: "#1d3557",
     day: "Día 14",
     detail: "Mega Pokémon Center Ikebukuro y Nintendo Store Tokyo",
+  },
+  {
+    id: "nakano", name: "Nakano Broadway", city: "Tokio",
+    lat: 35.7078, lng: 139.6656,
+    emoji: "🧸", color: "#1d3557",
+    day: "Día 14",
+    detail: "Meca del coleccionismo retro, figuras vintage y manga",
   },
   {
     id: "akihabara", name: "Akihabara", city: "Tokio",
@@ -403,14 +410,14 @@ export const stops = [
     detail: "Electric Town: Mandarake, Super Potato y arcades japoneses",
   },
   {
-    id: "nakano", name: "Nakano Broadway", city: "Tokio",
-    lat: 35.7078, lng: 139.6656,
-    emoji: "🧸", color: "#1d3557",
+    id: "tokyo-skytree-sunset", name: "Tokyo Skytree (atardecer)", city: "Tokio",
+    lat: 35.7101, lng: 139.8107,
+    emoji: "🌇", color: "#1d3557",
     day: "Día 14",
-    detail: "Meca del coleccionismo retro, figuras vintage y manga",
+    detail: "Subida con entradas para ver la puesta de sol -- cierre del viaje por Tokio",
   },
 
-  // ── DÍA 14: Ruta Nintendo y Compras ────────────────────────────────────
+  // ── DÍA 13: Excursión a Nikko ────────────────────────────────────
   {
     id: "tobu-nikko-sta", name: "Estación de Tobu-Nikko", city: "Tochigi",
     lat: 36.7573, lng: 139.6122,

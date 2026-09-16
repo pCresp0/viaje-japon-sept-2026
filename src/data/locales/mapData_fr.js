@@ -53,6 +53,7 @@ export const stops = [
   { id: "odaiba", name: "Odaiba et la baie de Tokyo", city: "Tokyo", day: "Jour 12", detail: "Train Yurikamome, DiverCity et coucher de soleil sur la baie" },
   { id: "ikebukuro", name: "Ikebukuro", city: "Tokyo", day: "Jour 14", detail: "Méga Pokémon Center Ikebukuro et Nintendo Store Tokyo" },
   { id: "akihabara", name: "Akihabara", city: "Tokyo", day: "Jour 14", detail: "Electric Town : Mandarake, Super Potato et arcades japonaises" },
+  { id: "tokyo-skytree-sunset", name: "Tokyo Skytree (coucher de soleil)", city: "Tokyo", day: "Jour 14", detail: "Montée avec billets pour voir le coucher de soleil -- clôture du séjour à Tokyo" },
   { id: "nakano", name: "Nakano Broadway", city: "Tokyo", day: "Jour 14", detail: "Mecque des objets rétro, figurines vintage et manga" },
   { id: "tobu-nikko-sta", name: "Gare de Tobu-Nikko", city: "Tochigi", day: "Jour 13", detail: "Arrivée en train direct depuis Tobu-Asakusa (environ 2h)" },
   { id: "shinkyo-bridge", name: "Pont Shinkyo", city: "Tochigi", day: "Jour 13", detail: "Le célèbre pont rouge sur la rivière Daiya, symbole de Nikko" },

@@ -63,12 +63,12 @@ export const pendingItems = [
   },
   {
     id: "entradas-tokio",
-    phase: "antes",
+    phase: "durante",
     category: "reserva",
-    urgency: "media",
-    title: "🟠 Comprar Entradas TeamLab / Shibuya Sky / Mori Tower",
-    detail: "📅 Durante los días de Tokio (16-19 sep)\n👥 5 personas\n🎟️ Entradas digitales\n📍 Tokio\n⚠️ Shibuya Sky (atardecer) y Mori Tower se agotan con rapidez. Comprar en cuanto abran ventas (habitualmente 4 semanas antes a medianoche en Japón).",
-    deadline: "4 semanas antes (~18/08/2026)",
+    urgency: "alta",
+    title: "🔴 Comprar Entradas Skytree (atardecer) + Pase Tobu Nikko",
+    detail: "📅 Durante los días de Tokio\n👥 5 personas\n🎟️ Entradas digitales\n📍 Tokio\n⚠️ Dos pendientes reales ahora mismo: entrada al Tokyo Skytree para el atardecer del día 14, y el Tobu World Heritage Pass para la excursión a Nikko del día 13 (~¥4.160/persona, incluye tren + bus). Ambas se agotan con más facilidad en días de buena previsión o fin de semana -- comprar con unos días de margen si se puede. Shibuya Sky (día 11) es opcional y se decide sobre la marcha.",
+    deadline: "Antes de cada excursión (Nikko: sábado · Skytree: domingo)",
   },
   {
     id: "cena-takayama",

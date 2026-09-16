@@ -53,6 +53,7 @@ export const stops = [
   { id: "odaiba", name: "Odaiba at Tokyo Bay", city: "Tokyo", day: "Araw 12", detail: "Yurikamome train, DiverCity at sunset sa bay" },
   { id: "ikebukuro", name: "Ikebukuro", city: "Tokyo", day: "Araw 14", detail: "Mega Pokémon Center Ikebukuro at Nintendo Store Tokyo" },
   { id: "akihabara", name: "Akihabara", city: "Tokyo", day: "Araw 14", detail: "Electric Town: Mandarake, Super Potato at Japanese arcades" },
+  { id: "tokyo-skytree-sunset", name: "Tokyo Skytree (sunset)", city: "Tokyo", day: "Araw 14", detail: "Pag-akyat na may ticket para panoorin ang sunset -- pangwakas na hakbang sa Tokyo bago umuwi" },
   { id: "nakano", name: "Nakano Broadway", city: "Tokyo", day: "Araw 14", detail: "Mecca ng retro collectibles, vintage figures at manga" },
   { id: "tobu-nikko-sta", name: "Tobu-Nikko Station", city: "Tochigi", day: "Araw 13", detail: "Pagdating sa direktang tren mula Tobu-Asakusa (mga 2 oras)" },
   { id: "shinkyo-bridge", name: "Shinkyo Bridge", city: "Tochigi", day: "Araw 13", detail: "Ang kilalang pulang tulay sa Ilog Daiya, simbolo ng Nikko" },

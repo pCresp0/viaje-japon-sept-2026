@@ -333,7 +333,7 @@ function buildSearchIndex(lang) {
     { terms: ["kioto", "kyoto", "keihan", "hachijoguchi", "uogashi", "kaiten sushi", "pontocho", "gion", "inari"], day: 1, title: "Kioto", subtitle: "Base días 1–5" },
     { terms: ["tokio", "tokyo", "koko hotel", "asakusa"], day: 9, title: "Tokio", subtitle: "Base días 9–15" },
     { terms: ["nara", "todai", "todaiji", "ciervos", "daibutsuden", "gran buda", "gran buddha", "shika senbei"], day: 2, title: "Nara", subtitle: "Día 2 · Todai-ji y ciervos" },
-    { terms: ["arashiyama", "bambu", "bambú", "tenryu-ji", "kinkaku", "kinkakuji", "ginkaku", "ginkakuji", "nishiki", "mercado nishiki", "filo de la filosofia", "heian"], day: 3, title: "Arashiyama", subtitle: "Día 3 · bosque de bambú" },
+    { terms: ["arashiyama", "bambu", "bambú", "tenryu-ji", "kinkaku", "kinkakuji", "ginkaku", "ginkakuji", "nishiki", "mercado nishiki", "filo de la filosofia", "heian"], day: 4, title: "Arashiyama", subtitle: "Día 4 · bosque de bambú" },
     { terms: ["osaka", "dotonbori", "shinsekai", "kuromon", "namba", "takoyaki"], day: 5, title: "Osaka", subtitle: "Día 5" },
     { terms: ["kanazawa", "kenroku-en", "kenrokuен", "higashichaya"], day: 6, title: "Kanazawa", subtitle: "Día 6" },
     { terms: ["shirakawa", "shirakawa-go", "gassho", "minka"], day: 7, title: "Shirakawa-go", subtitle: "Día 7" },
@@ -341,9 +341,9 @@ function buildSearchIndex(lang) {
     { terms: ["magome", "tsumago", "nakasendo", "magome chaya", "cena minshuku", "jeng", "juan carlos"], day: 8, title: "Magome / Tsumago", subtitle: "Día 8 · Nakasendo" },
     { terms: ["asakusa", "senso", "senso-ji", "narita airport", "narita", "n'ex", "nex", "narita express"], day: 1, title: "Llegada · Narita", subtitle: "Día 1 · Aterrizaje y traslado a Kioto" },
     { terms: ["odaiba", "gundam", "teamlab", "teamlab planets", "yurikamome"], day: 10, title: "Odaiba / teamLab", subtitle: "Día 10" },
-    { terms: ["shibuya", "harajuku", "shinjuku", "meiji", "takeshita", "omoide", "shibuya sky", "shibuya crossing", "cat street"], day: 11, title: "Shibuya / Harajuku / Shinjuku", subtitle: "Día 11" },
-    { terms: ["toyosu", "ginza", "roppongi", "mori tower", "sushi", "sashimi", "tsukiji", "teamlab borderless"], day: 12, title: "Toyosu / Ginza / Roppongi", subtitle: "Día 12" },
-    { terms: ["ikebukuro", "nakano", "nintendo", "pokemon", "sunshine", "animate", "mandarake", "broadway"], day: 13, title: "Ikebukuro / Nakano", subtitle: "Día 13" },
+    { terms: ["shibuya", "harajuku", "shinjuku", "meiji", "takeshita", "omoide", "shibuya sky", "shibuya crossing", "cat street", "tocho", "gobierno metropolitano", "mirador gratuito", "kabukicho"], day: 11, title: "Shibuya / Harajuku / Shinjuku", subtitle: "Día 11" },
+    { terms: ["toyosu", "ueno", "ameyoko", "odaiba", "teamlab", "teamlab planets", "yurikamome", "rainbow bridge"], day: 12, title: "Toyosu / Ueno / Odaiba", subtitle: "Día 12" },
+    { terms: ["ikebukuro", "nakano", "nintendo", "pokemon", "sunshine", "animate", "mandarake", "broadway", "akihabara", "skytree"], day: 14, title: "Ikebukuro / Nakano / Akihabara / Skytree", subtitle: "Día 14" },
     { terms: ["fuji", "monte fuji", "fujiyama", "chureito", "oshino hakkai", "kawaguchiko", "getyourguide", "gyg", "gygx7m7nzbnl", "visionary", "saiko", "oishi", "mode gakuen", "isfujivisible", "mtfujitoday"], day: 10, title: "Monte Fuji", subtitle: "Día 10 · excursión confirmada GetYourGuide" },
     // Transportes clave buscables por nombre y números de reserva/asiento
     { terms: ["nozomi", "nozomi 53", "shinkansen", "shinagawa", "17:19", "smart ex", "smart ex 2000", "2000", "coche 13", "13c", "13d", "13e", "14d", "14e"], day: 1, title: "Shinkansen Nozomi 53", subtitle: "Día 1 · Shinagawa → Kyoto 17:19" },
@@ -356,7 +356,7 @@ function buildSearchIndex(lang) {
     { terms: ["nohi bus", "nohi", "bus magome", "takayama magome", "08:00", "08302008262", "reserva 08302008262", "coche 1", "car 01", "2c", "2d", "3b", "3c", "3d"], day: 8, title: "Nohi Bus Takayama → Magome", subtitle: "Día 8 · 08:00" },
     { terms: ["shinano", "express shinano", "nakatsugawa", "nagoya", "09:57", "42093", "reserva 42093", "aee6606m", "car 4", "coche 4"], day: 9, title: "JR Shinano 4 → Nagoya", subtitle: "Día 9 · ✅ Reservado 42093 · 🎫 Recoger billetes" },
     { terms: ["nozomi 358", "nozomi", "shinkansen nagoya", "smart ex 2002", "2002", "11:29", "13:06", "coche 12", "car 12", "11-d", "11-e", "12-c", "12-d", "12-e"], day: 9, title: "Shinkansen Nozomi 358", subtitle: "Día 9 · ✅ Smart EX 2002 · Nagoya 11:29 → Tokyo 13:06" },
-    { terms: ["tobu nikko", "nikko express", "tobu asakusa", "toshogu"], day: 14, title: "Tobu Limited Express a Nikko", subtitle: "Día 14 · Tobu-Asakusa → Tobu-Nikko" },
+    { terms: ["tobu nikko", "nikko express", "tobu asakusa", "toshogu", "world heritage pass", "kegon", "cataratas kegon", "chuzenji", "lago chuzenji", "shinkyo", "puente shinkyo", "irohazaka"], day: 13, title: "Tobu Limited Express a Nikko", subtitle: "Día 13 · Tobu-Asakusa → Tobu-Nikko" },
   ];
   for (const c of cityDayHints) {
     items.push(entry({

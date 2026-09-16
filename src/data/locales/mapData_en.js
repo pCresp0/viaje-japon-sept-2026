@@ -53,6 +53,7 @@ export const stops = [
   { id: "odaiba", name: "Odaiba and Tokyo Bay", city: "Tokyo", day: "Day 12", detail: "Yurikamome train, DiverCity and sunset over the bay" },
   { id: "ikebukuro", name: "Ikebukuro", city: "Tokyo", day: "Day 14", detail: "Mega Pokémon Center Ikebukuro and Nintendo Store Tokyo" },
   { id: "akihabara", name: "Akihabara", city: "Tokyo", day: "Day 14", detail: "Electric Town: Mandarake, Super Potato and Japanese arcades" },
+  { id: "tokyo-skytree-sunset", name: "Tokyo Skytree (sunset)", city: "Tokyo", day: "Day 14", detail: "Going up with tickets to watch the sunset -- closing out the Tokyo leg of the trip" },
   { id: "nakano", name: "Nakano Broadway", city: "Tokyo", day: "Day 14", detail: "Mecca of retro collectibles, vintage figures and manga" },
   { id: "tobu-nikko-sta", name: "Tobu-Nikko Station", city: "Tochigi", day: "Day 13", detail: "Arrival by direct train from Tobu-Asakusa (approx. 2h)" },
   { id: "shinkyo-bridge", name: "Shinkyo Bridge", city: "Tochigi", day: "Day 13", detail: "The iconic red bridge over the Daiya River, symbol of Nikko" },
