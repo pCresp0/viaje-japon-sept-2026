@@ -741,9 +741,9 @@ export const days = [
     "money": "Humigit-kumulang €74/tao sa kabuuan (€40 pagkain + €11,40 Toshogu admission + €22,60 Tobu World Heritage Pass) -- 🔴 ang Tobu Pass ay BIBILHIN PA; opsyonal ang Kegon elevator (~€3,10/tao)."
   },
   {
-    "title": "Ruta sa Nintendo at Pamimili",
-    "cities": "Ikebukuro, Nakano",
-    "summary": "Araw ng koleksyon at video games: Mega Pokémon Center sa Ikebukuro (may life-size na estatwa nina Mewtwo, Charizard at Lucario) at Nintendo Store Tokyo. Sa hapon, Nakano Broadway, ang pinakamagandang lugar sa Tokyo para sa orihinal na Pokémon cards, Dragon Ball figures, at retro/geek na bagay sa tamang presyo -- perpekto para sa mga regalo sa mga kaibigan. Farewell dinner ng grupo sa gabi, sa huling buong araw bago bumalik sa Spain.",
+    "title": "Ruta sa Nintendo, Pamimili at Skytree",
+    "cities": "Ikebukuro, Nakano, Akihabara",
+    "summary": "Araw ng koleksyon at video games: Mega Pokémon Center sa Ikebukuro (may life-size na estatwa nina Mewtwo, Charizard at Lucario) at Nintendo Store Tokyo. Pagkatapos, Nakano Broadway, ang pinakamagandang lugar sa Tokyo para sa orihinal na Pokémon cards, Dragon Ball figures, at retro/geek na bagay sa tamang presyo, at Akihabara, ang pinakamahusay na otaku district -- perpekto para sa mga regalo sa mga kaibigan. Pagsara ng biyahe nang maayos: pag-akyat sa Tokyo Skytree para sa sunset, at farewell dinner ng grupo, sa huling buong araw bago bumalik sa Spain.",
     "history": "Ang industriya ng video game sa Japan, na pinamunuan ng Nintendo, ay muling nagbigay-buhay sa kultural na ekonomiya ng bansa noong dekada '80. Ang Nakano Broadway ay isinilang noong dekada '60 bilang luxury residential complex, ngayon ay mecca ng underground collecting.",
     "schedule": [
       {

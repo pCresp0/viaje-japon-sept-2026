@@ -741,9 +741,9 @@ export const days = [
     "money": "Approx. €74/person total (€40 meals + €11.40 Toshogu admission + €22.60 Tobu World Heritage Pass) -- 🔴 the Tobu Pass is STILL NEED TO BUY; optional Kegon elevator extra (~€3.10/person)."
   },
   {
-    "title": "Nintendo Route and Shopping",
-    "cities": "Ikebukuro, Nakano",
-    "summary": "Day of collecting and video games: Mega Pokémon Center in Ikebukuro (with its life-size Mewtwo, Charizard and Lucario statues) and Nintendo Store Tokyo. In the afternoon, Nakano Broadway, Tokyo's best spot for original Pokémon cards, Dragon Ball figures and retro/geek items at a fair price -- great for gifts for friends. Farewell group dinner in the evening, on the last full day before heading back to Spain.",
+    "title": "Nintendo Route, Shopping and Skytree",
+    "cities": "Ikebukuro, Nakano, Akihabara",
+    "summary": "Day of collecting and video games: Mega Pokémon Center in Ikebukuro (with its life-size Mewtwo, Charizard and Lucario statues) and Nintendo Store Tokyo. Afterward, Nakano Broadway, Tokyo's best spot for original Pokémon cards, Dragon Ball figures and retro/geek items at a fair price, and Akihabara, the ultimate otaku district -- great for gifts for friends. Closing out the trip in style: going up Tokyo Skytree for sunset, and a farewell group dinner, on the last full day before heading back to Spain.",
     "history": "The Japanese video game industry, led by Nintendo, revitalized the country's cultural economy in the 80s. Nakano Broadway was born in the 60s as a luxury residential complex, today a mecca for underground collecting.",
     "schedule": [
       {
