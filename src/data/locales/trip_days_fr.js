@@ -643,6 +643,18 @@ export const days = [
     "history": "Ces quartiers se sont développés après le grand tremblement de terre de Kanto de 1923.",
     "schedule": [
       {
+        "text": "Réveil."
+      },
+      {
+        "text": "Point de rendez-vous à l'entrée de l'hôtel."
+      },
+      {
+        "text": "🍙 Petit-déjeuner au Lawson (konbini) près de l'hôtel."
+      },
+      {
+        "text": "🚇 Vers Shibuya en métro."
+      },
+      {
         "text": "Croisement de Shibuya et Miyashita Park. Arrêt au Pokémon Center Shibuya (Shibuya Parco, 6e étage) — célèbre pour sa grande statue de Mewtwo (dans un tube en verre, idéale pour les photos) et son style néon futuriste. Nintendo TOKYO se trouve au même étage. Attention, Sergio va sûrement vouloir monter un jardin urbain ici pour ses plantes d'Aluche.\n\n🏙️ **OPTIONNEL : SHIBUYA SKY** (à décider sur place). Belvédère payant juste au-dessus de la gare de Shibuya, 229 m de haut, 360°. Vous avez déjà un mirador GRATUIT ce soir-là à Shinjuku, donc c'est un extra si l'envie vous prend.\n💰 Prix : ¥2 700 en ligne avant 15h00 / ¥3 400 à partir de 15h00 (au guichet, +¥300). Horaires : 10h00–22h30, dernière entrée 21h20.\n⚠️ Les créneaux au coucher du soleil se vendent facilement les jours de beau temps annoncé -- si vous tenez vraiment à y aller à ce moment précis, mieux vaut réserver à l'avance sur le site officiel plutôt que de décider à l'improviste."
       },
       {

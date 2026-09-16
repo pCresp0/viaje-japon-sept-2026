@@ -643,6 +643,18 @@ export const days = [
     "history": "These districts grew after the Great Kanto Earthquake of 1923, driven by urban train expansion. Shinjuku today hosts the busiest train station on the planet.",
     "schedule": [
       {
+        "text": "Wake up."
+      },
+      {
+        "text": "Meeting point at the hotel entrance."
+      },
+      {
+        "text": "🍙 Breakfast at the Lawson (konbini) near the hotel."
+      },
+      {
+        "text": "🚇 To Shibuya by subway."
+      },
+      {
         "text": "Shibuya Crossing and Miyashita Park. Stop at the Pokémon Center Shibuya (Shibuya Parco, 6th floor) — famous for its large Mewtwo statue (inside a glass tube, great for photos) and its futuristic neon style. Nintendo TOKYO is on the same floor. Watch out, Sergio will probably want to set up an urban garden here for his Aluche plants.\n\n🏙️ **OPTIONAL: SHIBUYA SKY** (decide on the spot). Paid observation deck right above Shibuya Station, 229m high, 360°. You already have a FREE viewpoint that evening in Shinjuku, so this is an extra if you feel like it.\n💰 Price: ¥2,700 online before 15:00 / ¥3,400 from 15:00 (at the counter, +¥300). Hours: 10:00–22:30, last entry 21:20.\n⚠️ Sunset slots sell out easily on days with good weather forecasts -- if you really want to go at that specific time, better to book in advance on the official site rather than deciding on the fly."
       },
       {

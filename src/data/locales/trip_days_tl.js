@@ -643,6 +643,18 @@ export const days = [
     "history": "Lumago ang mga distritong ito pagkatapos ng Great Kanto Earthquake noong 1923, dahil sa paglawak ng urban train. Ang Shinjuku ngayon ang tahanan ng pinaka-abalang train station sa mundo.",
     "schedule": [
       {
+        "text": "Gising na."
+      },
+      {
+        "text": "Meeting point sa pintuan ng hotel."
+      },
+      {
+        "text": "🍙 Almusal sa Lawson (konbini) malapit sa hotel."
+      },
+      {
+        "text": "🚇 Papuntang Shibuya sakay ng subway."
+      },
+      {
         "text": "Shibuya Crossing at Miyashita Park. Hintuan sa Pokémon Center Shibuya (Shibuya Parco, 6th floor) — kilala sa malaking Mewtwo statue nito (nasa loob ng glass tube, maganda para sa litrato) at futuristic neon style. Sa parehong palapag din ang Nintendo TOKYO. Mag-ingat, malamang gagawa si Sergio ng urban garden dito para sa mga halaman niya sa Aluche.\n\n🏙️ **OPSYONAL: SHIBUYA SKY** (magdesisyon sa mismong oras). May bayad na observation deck sa ibabaw mismo ng Shibuya Station, 229m ang taas, 360°. May libre na kayong viewpoint sa gabing iyon sa Shinjuku, kaya extra na lang ito kung gusto ninyo.\n💰 Presyo: ¥2,700 online bago mag-15:00 / ¥3,400 mula 15:00 (sa counter, +¥300). Oras: 10:00–22:30, huling entry 21:20.\n⚠️ Madaling maubos ang mga sunset slot kapag maganda ang forecast -- kung talagang gusto ninyo pumunta sa eksaktong oras na iyon, mas mabuting mag-book nang maaga sa opisyal na website kaysa magdesisyon na lang bigla."
       },
       {
