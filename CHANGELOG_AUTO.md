@@ -87,3 +87,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-15 14:16 UTC** — feat: completar intercambio Días 13/14 en FR/TL -- Nikko al ... (`689f6c7`)
 - **2026-09-15 14:19 UTC** — feat(Día 11): añadir subida al mirador gratuito del Tocho de ... (`8e84cc2`)
 - **2026-09-15 14:23 UTC** — feat(Día 9): confirmar subida al Skytree con entradas a las ... (`6f5953a`)
+- **2026-09-16 00:27 UTC** — fix: corregir searchIndex.js y popCulture.js (referencias desfasadas a días tras ... (`6024db7`)
