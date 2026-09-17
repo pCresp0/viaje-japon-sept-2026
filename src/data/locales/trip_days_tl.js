@@ -693,11 +693,20 @@ export const days = [
   {
     "title": "Toyosu, Ueno at Odaiba",
     "cities": "Toyosu, Ueno, Odaiba",
-    "summary": "Maagang gising para sa pinakasariwang sushi sa mundo sa Toyosu. Sa umaga, Ueno Park at ang Ameyoko street market. Sa hapon, driverless futuristic na tren papuntang Odaiba para sa paglubog ng araw sa Tokyo Bay.",
+    "summary": "Umaga na may 3 opsyon na pipiliin para sa unang hintuan (Ueno Zoo, Toyosu na walang sushi, o Tsukiji outer market), sundan ng Ueno Park at ang Ameyoko street market. Sa hapon, driverless futuristic na tren papuntang Odaiba para sa paglubog ng araw sa Tokyo Bay.",
     "history": "Ang Ueno Park, isa sa mga unang pampublikong parke sa Japan (1873), pinagsasama ang mga templo, museo at ang pinakalumang zoo sa bansa. Ang Odaiba ay isinilang noong ika-19 na siglo bilang kuta ng mga isla upang ipagtanggol ang Tokyo mula sa mga barko ng Kanluran, at ngayon ay simbolo ng futuristic na Tokyo.",
     "schedule": [
       {
-        "text": "Premium na sushi breakfast sa Toyosu wholesale market (kahalili ng Tsukiji)."
+        "text": "Gising na."
+      },
+      {
+        "text": "Meeting point sa pintuan ng hotel."
+      },
+      {
+        "text": "🍙 Almusal sa Lawson (konbini) malapit sa hotel."
+      },
+      {
+        "text": "🚇 **ALIS -- PUMILI NG ISA SA 3 OPSYON NA ITO PARA SA UNANG HINTUAN** (walang sushi, dahil hindi gusto ng kapatid ko):\n\n**Opsyon 1 — Ueno Zoo 🐼** (pagdating ~09:05, bukas ng 09:30). Ang pinakamatandang zoo sa Japan (1882), na may giant panda bilang pangunahing atraksyon. Nasa parehong lugar kung saan naroon na naman kayo sa 10:30 (Ueno Park/Ameyoko), kaya't ang opsyong ito ay pina-mabilis lang ang pagdating sa lugar na iyon -- ang pinaka-simple logistically. Walang reserbasyon, babayaran sa gate (~¥600).\n\n**Opsyon 2 — Toyosu na walang sushi** (pagdating ~09:25). Panatilihin ang hintuan sa market pero walang sushi breakfast: rooftop garden na may tanawin, libreng bintana kung saan makikita ang tuna auction (kung tutugma ang oras), at mga puwesto ng tamagoyaki, ramen at iba pang bagay na hindi hilaw na isda. Kailangang bumalik papuntang Ueno pagkatapos (~25-30 min), na dadating doon ng mga 10:35.\n\n**Opsyon 3 — Tsukiji outer market** (pagdating ~09:15). Ang lumang market, na patuloy pa ring tumatakbo bilang food street: mas maraming variety kaysa sa Toyosu (mochi, tamagoyaki, prutas, tsaa, inihaw na skewer, hindi lang hilaw). Ito ang opsyon na pinaka-nagdaragdag ng oras sa tatlo -- kailangan din bumalik papuntang Ueno (~25-30 min), na dadating ng mga 10:30."
       },
       {
         "text": "Ueno Park at Ameyoko street market, maganda para sa murang tsaa at matamis. Magandang berdeng lugar para maglakad-lakad nang tahimik pagkatapos ng maagang gising.\n\n🦪 **MERYENDA SA AMEYOKO** (rekomendasyon ng kaibigang keso-palayaw ni Thibaut): kilala rin ang mga puwesto ng palengke sa inihaw na seafood -- inihaw na talaba at igat, bukod sa iba pa. Kung hindi pa ninyo natikman ang igat (unagi), ito ang magandang pagkakataon.\n\n🎮 **YAMASHIROYA** (rekomendasyon ng kaibigang keso-palayaw ni Thibaut): 6-palapag na tindahan ng anime/video game figure, laruan at merchandise, 1 minuto lang na lakad mula sa Ueno Station. Nakumpirma na mas mura ang presyo kaysa sa Akihabara, at halatang hindi masyadong siksikan."

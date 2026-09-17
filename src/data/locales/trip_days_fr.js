@@ -693,11 +693,20 @@ export const days = [
   {
     "title": "Toyosu, Ueno et Odaiba",
     "cities": "Toyosu, Ueno, Odaiba",
-    "summary": "Lever tôt pour le sushi le plus frais du monde à Toyosu. Le matin, parc d'Ueno et marché de rue d'Ameyoko. L'après-midi, train futuriste sans conducteur vers Odaiba pour le coucher de soleil sur la baie de Tokyo.",
+    "summary": "Une matinée avec 3 options au choix pour le premier arrêt (Zoo d'Ueno, Toyosu sans sushi, ou le marché extérieur de Tsukiji), suivie du parc d'Ueno et du marché de rue d'Ameyoko. L'après-midi, train futuriste sans conducteur vers Odaiba pour le coucher de soleil sur la baie de Tokyo.",
     "history": "Le parc d'Ueno, l'un des premiers parcs publics du Japon (1873), réunit temples, musées et le plus vieux zoo du pays. Odaiba est née au XIXe siècle comme îles-forteresses pour défendre Tokyo des navires occidentaux, et symbolise aujourd'hui le Tokyo futuriste.",
     "schedule": [
       {
-        "text": "Petit-déjeuner sushi premium au marché de gros de Toyosu (successeur de Tsukiji)."
+        "text": "Réveil."
+      },
+      {
+        "text": "Point de rendez-vous à l'entrée de l'hôtel."
+      },
+      {
+        "text": "🍙 Petit-déjeuner au Lawson (konbini) près de l'hôtel."
+      },
+      {
+        "text": "🚇 **DÉPART -- CHOISIR L'UNE DE CES 3 OPTIONS POUR LE PREMIER ARRÊT** (sans sushi, puisque mon frère n'aime pas ça) :\n\n**Option 1 — Zoo d'Ueno 🐼** (arrivée ~09h05, ouvre à 09h30). Le plus vieux zoo du Japon (1882), avec les pandas géants comme grande attraction. Il se trouve dans le même secteur où vous seriez de toute façon à 10h30 (parc d'Ueno/Ameyoko), donc cette option ne fait qu'avancer l'arrivée dans ce secteur -- la plus simple d'un point de vue logistique. Sans réservation, entrée sur place (~¥600).\n\n**Option 2 — Toyosu sans sushi** (arrivée ~09h25). Garder l'arrêt au marché mais sans le petit-déjeuner sushi : un jardin sur le toit avec vue, une fenêtre gratuite donnant sur la criée au thon (si l'horaire coïncide), et des étals de tamagoyaki, ramen et autres choses qui ne sont pas du poisson cru. Nécessite de revenir vers Ueno ensuite (~25-30 min), en arrivant vers 10h35.\n\n**Option 3 — Marché extérieur de Tsukiji** (arrivée ~09h15). L'ancien marché, toujours en activité comme rue gastronomique : bien plus de variété qu'à Toyosu (mochi, tamagoyaki, fruits, thé, brochettes grillées, pas seulement du cru). C'est l'option qui ajoute le plus de temps des trois -- retour vers Ueno également nécessaire (~25-30 min), en arrivant vers 10h30."
       },
       {
         "text": "Parc d'Ueno et marché de rue d'Ameyoko, parfait pour du thé et des douceurs pas chers. Bel espace vert pour se promener tranquillement après le réveil matinal.\n\n🦪 **GRIGNOTER À AMEYOKO** (recommandation de l'amie petit-fromage de Thibaut) : les étals du marché sont aussi très réputés pour les fruits de mer grillés -- huîtres et anguilles grillées, entre autres. Si vous n'avez pas encore goûté l'anguille (unagi), c'est une bonne occasion.\n\n🎮 **YAMASHIROYA** (recommandation de l'amie petit-fromage de Thibaut) : un magasin de 6 étages de figurines, jouets et produits dérivés d'anime/jeux vidéo, à seulement 1 minute à pied de la gare d'Ueno. Confirmé que les prix sont généralement moins chers qu'à Akihabara, et c'est nettement moins fréquenté."
