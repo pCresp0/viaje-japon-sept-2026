@@ -715,7 +715,19 @@ export const days = [
         "text": "🎫 **SUICA:** ✅ OO; i-tap ang card nang direkta sa mga gate.\n\nYurikamome train papuntang Odaiba na tatawid sa Rainbow Bridge (umupo sa unang kotse)."
       },
       {
-        "text": "Paglalakad sa Odaiba at paglubog ng araw mula sa tabing-dagat na promenade na may Tokyo skyline.\n\n⚠️ **TUNGKOL SA GUNDAM: wala na ito.** Ang life-size na Unicorn Gundam statue na nandoon mula 2017 sa harap ng DiverCity Tokyo Plaza ay natapos ang public display nito noong Agosto 31, 2026 -- bago pa ang inyong biyahe. Sa petsa ng update na ito, walang kumpirmadong kapalit na estatwa, kaya huwag umasang makikita ito. Tamasahin pa rin ang DiverCity (mga tindahan, Gundam Base Tokyo na may merchandise) at ang natitirang bahagi ng Odaiba."
+        "text": "🤖 **DIVERCITY TOKYO PLAZA.** Shopping mall katabi ng Odaiba-Kaihinkoen Station. Dito dati nakatayo ang life-size na Unicorn Gundam statue -- pero ⚠️ **WALA NA ITO**: inanunsyo ng opisyal na website ang pagtatapos ng public display nito noong Agosto 31, 2026, bago pa ang inyong biyahe, at sa petsa ng update na ito, walang kumpirmadong kapalit. Sulit pa ring pumasok sa **Gundam Base Tokyo**, ang opisyal na 3-palapag na tindahan na may lahat ng merchandise at Gunpla kits, at ang natitirang mga tindahan ng mall."
+      },
+      {
+        "text": "🛍️ **AQUA CITY ODAIBA.** Shopping mall sa tabing-dagat, 5 min na lakad mula DiverCity. Magandang tanawin ng Rainbow Bridge mula sa terrace nito, at may 1/4-scale na replica ng Statue of Liberty katabi lang (ang dahilan: nandito ito noon bilang hiram mula sa France sa pagitan ng 1998 at 1999, at nanatili ang replica bilang permanenteng alaala)."
+      },
+      {
+        "text": "🌊 **ODAIBA KAIHIN KOEN (SEASIDE PARK).** Paglalakad sa artificial beach at boardwalk, na may pinaka-bukas na tanawin ng Rainbow Bridge at ang Tokyo skyline sa likuran -- perpektong lugar para maglibang bago ang paglubog ng araw nang hindi nagmamadali."
+      },
+      {
+        "text": "🌇 **SUNSET MULA SA TABING-DAGAT NA PROMENADE.** Lumulubog ang araw mga **17:45-17:50** sa panahong ito (mas maaga kaysa sa inaakala) -- mainam nang naka-settle sa boardwalk mula 17:15-17:30 para hindi mahuli ang pagbabago ng liwanag. Kasama ang Rainbow Bridge at ang bay sa likuran, isa ito sa pinakamagagandang sunset sa biyahe."
+      },
+      {
+        "text": "🕐 **LIBRENG ORAS BAGO ANG HAPUNAN.** Pagkakataong maglakad nang tahimik, kumuha ng mas maraming litrato ngayong naiilawan na ang lungsod, o pumunta na sa Aqua City/DiverCity restaurant area bago ang hapunan ng 19:00."
       },
       {
         "text": "🍜 Hapunan sa Odaiba (Aqua City / DiverCity na may tanawin ng Tokyo Bay)."

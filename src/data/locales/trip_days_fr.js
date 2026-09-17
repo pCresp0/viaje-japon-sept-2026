@@ -715,7 +715,19 @@ export const days = [
         "text": "🎫 **SUICA :** ✅ OUI ; passer la carte directement aux portillons.\n\nTrain Yurikamome vers Odaiba en traversant le Rainbow Bridge (asseyez-vous dans le premier wagon)."
       },
       {
-        "text": "Promenade à Odaiba et coucher de soleil depuis le front de mer avec la skyline de Tokyo.\n\n⚠️ **À PROPOS DU GUNDAM : il n'est plus là.** La statue grandeur nature de l'Unicorn Gundam, présente depuis 2017 devant le DiverCity Tokyo Plaza, a terminé son exposition publique le 31 août 2026 -- juste avant votre voyage. À la date de cette mise à jour, aucune statue de remplacement n'est confirmée, ne comptez donc pas la voir. Profitez quand même de DiverCity (boutiques, Gundam Base Tokyo avec ses produits dérivés) et du reste d'Odaiba."
+        "text": "🤖 **DIVERCITY TOKYO PLAZA.** Centre commercial à côté de la gare d'Odaiba-Kaihinkoen. C'est ici que se trouvait la statue grandeur nature de l'Unicorn Gundam -- mais ⚠️ **ELLE N'EST PLUS LÀ** : le site officiel a annoncé la fin de son exposition publique le 31 août 2026, juste avant votre voyage, et à la date de cette mise à jour aucun remplacement n'est confirmé. Ça vaut quand même le coup d'entrer dans **Gundam Base Tokyo**, la boutique officielle sur 3 étages avec tous les produits dérivés et kits Gunpla, et le reste des boutiques du centre commercial."
+      },
+      {
+        "text": "🛍️ **AQUA CITY ODAIBA.** Centre commercial en bord de mer, à 5 min à pied de DiverCity. Belle vue sur le Rainbow Bridge depuis sa terrasse, et une réplique à l'échelle 1/4 de la Statue de la Liberté juste à côté (la raison : elle était ici prêtée par la France entre 1998 et 1999, et la réplique est restée comme souvenir permanent)."
+      },
+      {
+        "text": "🌊 **PARC MARITIME D'ODAIBA (ODAIBA KAIHIN KOEN).** Promenade le long de la plage artificielle et de la digue, avec les vues les plus dégagées sur le Rainbow Bridge et la skyline de Tokyo en arrière-plan -- l'endroit parfait pour patienter avant le coucher de soleil sans se presser."
+      },
+      {
+        "text": "🌇 **COUCHER DE SOLEIL DEPUIS LE FRONT DE MER.** Le soleil se couche vers **17h45-17h50** à cette période de l'année (plus tôt qu'il n'y paraît) -- mieux vaut être installés sur la digue dès 17h15-17h30 pour ne pas rater le changement de lumière. Avec le Rainbow Bridge et la baie en arrière-plan, c'est l'un des plus beaux couchers de soleil du voyage."
+      },
+      {
+        "text": "🕐 **TEMPS LIBRE AVANT LE DÎNER.** Un moment pour flâner tranquillement, prendre d'autres photos avec la ville désormais illuminée, ou vous diriger vers le quartier des restaurants d'Aqua City/DiverCity avant le dîner de 19h00."
       },
       {
         "text": "🍜 Dîner à Odaiba (Aqua City / DiverCity avec vue sur la baie de Tokyo)."
