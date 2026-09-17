@@ -664,19 +664,28 @@ export const days = [
         "text": "🎮 **POKÉMON CENTER SHIBUYA AT NINTENDO TOKYO** (Shibuya Parco, 6th floor, ~10 min na lakad mula sa Miyashita Park) — kilala sa malaking Mewtwo statue nito (nasa loob ng glass tube, maganda para sa litrato) at futuristic neon style. Sa parehong palapag din ang Nintendo TOKYO. Mag-ingat, malamang gagawa si Sergio ng urban garden dito para sa mga halaman niya sa Aluche."
       },
       {
-        "text": "🏙️ **OPSYONAL: SHIBUYA SKY** (magdesisyon sa mismong oras). May bayad na observation deck sa ibabaw mismo ng Shibuya Station, 229m ang taas, 360°. May libre na kayong viewpoint sa gabing iyon sa Shinjuku, kaya extra na lang ito kung gusto ninyo.\n\n💰 Presyo: ¥2,700 online bago mag-15:00 / ¥3,400 mula 15:00 (sa counter, +¥300). Oras: 10:00–22:30, huling entry 21:20.\n⚠️ Madaling maubos ang mga sunset slot kapag maganda ang forecast -- kung talagang gusto ninyo pumunta sa eksaktong oras na iyon, mas mabuting mag-book nang maaga sa opisyal na website kaysa magdesisyon na lang bigla."
+        "text": "🚶 **PAGLALAKAD PATUNGONG HARAJUKU.** Mahinahong ruta ng lakad sa Cat Street at Aoyama (sa halip na direktang sumakay ng tren), may oras para tumingin sa mga shop window at design store sa daan -- ibang klaseng ambiance kaysa sa mas siksik na Takeshita Dori."
       },
       {
-        "text": "Maglakad papuntang Harajuku sa Takeshita Street, patungo sa Meiji Shrine sa Yoyogi Park."
+        "text": "⛩️ **MGA TEMPLO AT PAGLALAKAD SA HARAJUKU.** Takeshita Street (youth fashion, crepes, kawaii shops), patungo sa Meiji Shrine, sa loob ng gubat ng Yoyogi Park -- ganap na pagbabago ng bilis mula sa ingay ng kalye."
+      },
+      {
+        "text": "🍜 Tanghalian sa paligid ng Harajuku."
       },
       {
         "text": "🏙️ **LIBRENG OBSERVATION DECK NG TOKYO METROPOLITAN GOVERNMENT BUILDING (TOCHO), SA ARAW.** Umakyat sa alinman sa dalawang tore (202m), libre, walang reserbasyon. Sa pag-akyat sa araw, makikita pa ang Tokyo na may natural na liwanag, bago dumilim (~17:50 sa Setyembre) -- ang libreng alternatibo sa may-bayad na Shibuya Sky.\n\n🍱 Mahalagang malaman: sa palapag ng observation deck may maliit na lugar na may mesa kung saan puwedeng umupo at kumain ng pagkaing dala mula sa labas -- magandang lugar para sa meryenda na may tanawin bago ituloy ang plano sa hapon."
       },
       {
-        "text": "Gabi sa Shinjuku: paglalakad sa ilalim ng neon lights ng Kabukicho.\n\n🍜 **HAPUNAN: MGA OPSYON SA LUGAR.**\n• **Omoide Yokocho**: ang klasikong yakitori alley, tradisyunal na yokocho ambiance.\n• **Okinawa Paradise** (rekomendasyon ng kaibigang keso-palayaw ni Thibaut): nasa 3rd floor ng isang gusali sa Kabukicho (mahirap makita mula sa kalye, kailangang hanapin), Okinawan cuisine at live na tradisyunal na kanta halos gabi-gabi mga 21:00. Hindi masyadong turista. Inirerekomenda ang reserbasyon, lalo na sa weekend.\n\n🛍️ **PAMIMILI: UNIQLO AT DON QUIJOTE (SEIKO WATCH).** Samantalahin ang lugar para sa dalawang mabilisang hintuan: may malaking Uniqlo malapit sa Shinjuku Station (magandang kalidad na basics sa magandang presyo), at ang Don Quijote sa Kabukicho ay may watch section sa itaas na palapag (4th floor) na may Seiko, Citizen at Casio sa mas murang presyo -- nakumpirma ng iba't ibang source bilang isa sa pinakamagaganda sa gitna ng Tokyo para dito. Pareho silang bukas hanggang gabi, bagay na bagay sa gabing paglalakad.\n\n💡 **Alternatibo (kung mas gusto ninyong manatili sa Shibuya sa halip na lumipat sa Shinjuku ngayong gabi):** Creoru Dogenzaka (rekomendasyon ng kaibigang keso-palayaw ni Thibaut), sangay sa Shibuya ng sikat na okonomiyaki/takoyaki chain mula Dotonbori (Osaka) -- counter sa baba, kwarto sa itaas. Pumunta nang maaga, mga 18:00-18:30, dahil maliit ito at sikat. Babaguhin nito ang plano sa hapon: manatili sa Shibuya para sa hapunan sa halip na umakyat sa Shinjuku."
+        "text": "Gabi sa Shinjuku: paglalakad sa ilalim ng neon lights ng Kabukicho.\n\n🍜 **HAPUNAN: MGA OPSYON SA LUGAR.**\n• **Omoide Yokocho**: ang klasikong yakitori alley, tradisyunal na yokocho ambiance.\n• **Okinawa Paradise** (rekomendasyon ng kaibigang keso-palayaw ni Thibaut): nasa 3rd floor ng isang gusali sa Kabukicho (mahirap makita mula sa kalye, kailangang hanapin), Okinawan cuisine at live na tradisyunal na kanta halos gabi-gabi mga 21:00. Hindi masyadong turista. Inirerekomenda ang reserbasyon, lalo na sa weekend.\n\n🛍️ **PAMIMILI: UNIQLO AT DON QUIJOTE (SEIKO WATCH).** Samantalahin ang lugar para sa dalawang mabilisang hintuan: may malaking Uniqlo malapit sa Shinjuku Station (magandang kalidad na basics sa magandang presyo), at ang Don Quijote sa Kabukicho ay may watch section sa itaas na palapag (4th floor) na may Seiko, Citizen at Casio sa mas murang presyo -- nakumpirma ng iba't ibang source bilang isa sa pinakamagaganda sa gitna ng Tokyo para dito. Pareho silang bukas hanggang gabi, bagay na bagay sa gabing paglalakad."
       },
       {
-        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nPagbalik gamit ang metro mula Shinjuku papunta sa ating residence sa Asakusa Kappabashi para magpahinga (3rd gabi sa Tokyo)."
+        "text": "🚇 **BALIK SA SHIBUYA, PARA MAKITA ITO SA GABI.** 2 estasyon lang mula Shinjuku sa JR Yamanote Line (o Saikyo Line), walang transfer -- mga 10 min na biyahe. Sulit talaga: ang Shibuya Crossing sa gabi, may mga higanteng neon screen na naka-on sa ibabaw ng mga gusali, ay ibang-iba sa nakita kaninang umaga at isa sa pinakamagandang gabing karanasan sa Tokyo."
+      },
+      {
+        "text": "🌃 **SHIBUYA SA GABI.** Balik sa crossing para makita itong naiilawan -- dito talaga maiintindihan kung bakit ito napaka-kilala. Magandang oras din para sa litrato mula sa Starbucks sa loob ng Tsutaya (2nd floor, direktang tanawin sa crossing) o mula sa libreng viewing area ng Shibuya Scramble Square (ground floor, may lugar na may tanawin nang hindi nagbabayad ng entrance sa Sky)."
+      },
+      {
+        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nPagbalik gamit ang metro mula Shibuya papunta sa ating residence sa Asakusa Kappabashi para magpahinga (3rd gabi sa Tokyo)."
       }
     ],
     "money": "Humigit-kumulang €40 (pagkain)"

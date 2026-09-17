@@ -664,19 +664,28 @@ export const days = [
         "text": "🎮 **POKÉMON CENTER SHIBUYA ET NINTENDO TOKYO** (Shibuya Parco, 6e étage, ~10 min à pied depuis Miyashita Park) — célèbre pour sa grande statue de Mewtwo (dans un tube en verre, idéale pour les photos) et son style néon futuriste. Nintendo TOKYO se trouve au même étage. Attention, Sergio va sûrement vouloir monter un jardin urbain ici pour ses plantes d'Aluche."
       },
       {
-        "text": "🏙️ **OPTIONNEL : SHIBUYA SKY** (à décider sur place). Belvédère payant juste au-dessus de la gare de Shibuya, 229 m de haut, 360°. Vous avez déjà un mirador GRATUIT ce soir-là à Shinjuku, donc c'est un extra si l'envie vous prend.\n\n💰 Prix : ¥2 700 en ligne avant 15h00 / ¥3 400 à partir de 15h00 (au guichet, +¥300). Horaires : 10h00–22h30, dernière entrée 21h20.\n⚠️ Les créneaux au coucher du soleil se vendent facilement les jours de beau temps annoncé -- si vous tenez vraiment à y aller à ce moment précis, mieux vaut réserver à l'avance sur le site officiel plutôt que de décider à l'improviste."
+        "text": "🚶 **PROMENADE VERS HARAJUKU.** Itinéraire tranquille à pied par Cat Street et Aoyama (plutôt que de prendre le train directement), avec le temps de flâner devant les vitrines et les boutiques de design en chemin -- une ambiance bien différente de la rue Takeshita, plus fréquentée."
       },
       {
-        "text": "Promenade vers Harajuku par la rue Takeshita, sanctuaire Meiji dans le parc Yoyogi."
+        "text": "⛩️ **TEMPLES ET PROMENADE À HARAJUKU.** Rue Takeshita (mode jeune, crêpes, boutiques kawaii), se terminant au sanctuaire Meiji, dans la forêt du parc Yoyogi -- un changement de rythme total par rapport à l'agitation de la rue."
+      },
+      {
+        "text": "🍜 Déjeuner dans le quartier d'Harajuku."
       },
       {
         "text": "🏙️ **BELVÉDÈRE GRATUIT DU GOUVERNEMENT MÉTROPOLITAIN DE TOKYO (TOCHO), DE JOUR.** Montée dans l'une des deux tours (202 m), gratuite, sans réservation. Y aller de jour permet de voir Tokyo encore en pleine lumière, avant la tombée de la nuit (~17h50 en septembre) -- l'alternative gratuite au Shibuya Sky payant.\n\n🍱 Bon à savoir : à l'étage du belvédère se trouve un petit coin avec des tables où l'on peut s'asseoir et manger de la nourriture apportée de l'extérieur -- un bon endroit pour un en-cas avec vue avant de continuer le programme de l'après-midi."
       },
       {
-        "text": "Soirée à Shinjuku : promenade sous les néons de Kabukicho.\n\n🍜 **DÎNER : OPTIONS DU QUARTIER.**\n• **Omoide Yokocho** : la classique ruelle de yakitori, ambiance typique de yokocho.\n• **Okinawa Paradise** (recommandation de l'amie petit-fromage de Thibaut) : au 3e étage d'un immeuble à Kabukicho (difficile à repérer depuis la rue, il faut le chercher), cuisine okinawaïenne et spectacle de chants traditionnels en direct presque tous les soirs vers 21h00. Très peu touristique. Réservation conseillée, surtout le week-end.\n\n🛍️ **SHOPPING : UNIQLO ET DON QUIJOTE (MONTRE SEIKO).** Profiter du coin pour deux arrêts rapides : il y a un grand Uniqlo près de la gare de Shinjuku (basiques de qualité à bon prix), et le Don Quijote de Kabukicho a un rayon montres à l'étage supérieur (4e étage) avec des Seiko, Citizen et Casio à prix réduits -- confirmé par plusieurs sources comme l'un des meilleurs du centre de Tokyo pour ça. Les deux sont ouverts tard, ce qui s'accorde bien avec la promenade nocturne.\n\n💡 **Alternative (si vous préférez rester à Shibuya plutôt que de vous déplacer à Shinjuku ce soir-là) :** Creoru Dogenzaka (recommandation de l'amie petit-fromage de Thibaut), succursale à Shibuya de la célèbre chaîne d'okonomiyaki/takoyaki de Dotonbori (Osaka) -- comptoir en bas, salle en haut. Y aller tôt, vers 18h00-18h30, car c'est petit et réputé. Cela changerait le plan de l'après-midi : rester à Shibuya pour dîner au lieu de monter à Shinjuku."
+        "text": "Soirée à Shinjuku : promenade sous les néons de Kabukicho.\n\n🍜 **DÎNER : OPTIONS DU QUARTIER.**\n• **Omoide Yokocho** : la classique ruelle de yakitori, ambiance typique de yokocho.\n• **Okinawa Paradise** (recommandation de l'amie petit-fromage de Thibaut) : au 3e étage d'un immeuble à Kabukicho (difficile à repérer depuis la rue, il faut le chercher), cuisine okinawaïenne et spectacle de chants traditionnels en direct presque tous les soirs vers 21h00. Très peu touristique. Réservation conseillée, surtout le week-end.\n\n🛍️ **SHOPPING : UNIQLO ET DON QUIJOTE (MONTRE SEIKO).** Profiter du coin pour deux arrêts rapides : il y a un grand Uniqlo près de la gare de Shinjuku (basiques de qualité à bon prix), et le Don Quijote de Kabukicho a un rayon montres à l'étage supérieur (4e étage) avec des Seiko, Citizen et Casio à prix réduits -- confirmé par plusieurs sources comme l'un des meilleurs du centre de Tokyo pour ça. Les deux sont ouverts tard, ce qui s'accorde bien avec la promenade nocturne."
       },
       {
-        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nRetour en métro depuis Shinjuku vers notre résidence à Asakusa Kappabashi pour se reposer (3e nuit à Tokyo)."
+        "text": "🚇 **RETOUR À SHIBUYA, POUR LE VOIR DE NUIT.** Seulement 2 stations depuis Shinjuku sur la ligne JR Yamanote (ou la Saikyo Line), sans correspondance -- environ 10 min de trajet. Ça vaut vraiment le coup : le carrefour de Shibuya la nuit, avec tous les écrans géants au néon allumés au-dessus des immeubles, offre une image complètement différente de ce matin, et c'est l'une des meilleures expériences nocturnes de Tokyo."
+      },
+      {
+        "text": "🌃 **SHIBUYA DE NUIT.** Retour au carrefour pour le voir illuminé -- c'est là qu'on comprend vraiment pourquoi il est si emblématique. Bon moment aussi pour des photos depuis le Starbucks du Tsutaya (2e étage, vue directe sur le carrefour) ou depuis l'espace d'observation gratuit du Shibuya Scramble Square (rez-de-chaussée, un endroit avec vue sans payer l'entrée du Sky)."
+      },
+      {
+        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nRetour en métro depuis Shibuya vers notre résidence à Asakusa Kappabashi pour se reposer (3e nuit à Tokyo)."
       }
     ],
     "money": "Env. 40 € (repas)"
