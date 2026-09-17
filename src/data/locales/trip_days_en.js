@@ -664,19 +664,28 @@ export const days = [
         "text": "🎮 **POKÉMON CENTER SHIBUYA AND NINTENDO TOKYO** (Shibuya Parco, 6th floor, ~10 min on foot from Miyashita Park) — famous for its large Mewtwo statue (inside a glass tube, great for photos) and its futuristic neon style. Nintendo TOKYO is on the same floor. Watch out, Sergio will probably want to set up an urban garden here for his Aluche plants."
       },
       {
-        "text": "🏙️ **OPTIONAL: SHIBUYA SKY** (decide on the spot). Paid observation deck right above Shibuya Station, 229m high, 360°. You already have a FREE viewpoint that evening in Shinjuku, so this is an extra if you feel like it.\n\n💰 Price: ¥2,700 online before 15:00 / ¥3,400 from 15:00 (at the counter, +¥300). Hours: 10:00–22:30, last entry 21:20.\n⚠️ Sunset slots sell out easily on days with good weather forecasts -- if you really want to go at that specific time, better to book in advance on the official site rather than deciding on the fly."
+        "text": "🚶 **WALK TOWARD HARAJUKU.** A relaxed route on foot through Cat Street and Aoyama (instead of taking the train directly), with time to browse shop windows and design stores along the way -- a very different vibe from the more crowded Takeshita Dori."
       },
       {
-        "text": "Walk to Harajuku via Takeshita Street, ending at the Meiji Shrine in Yoyogi Park."
+        "text": "⛩️ **TEMPLES AND STROLL THROUGH HARAJUKU.** Takeshita Street (youth fashion, crepes, kawaii shops), ending at the Meiji Shrine, within the forest of Yoyogi Park -- a complete change of pace from the bustle of the street."
+      },
+      {
+        "text": "🍜 Lunch around the Harajuku area."
       },
       {
         "text": "🏙️ **FREE OBSERVATION DECK AT THE TOKYO METROPOLITAN GOVERNMENT BUILDING (TOCHO), BY DAY.** Go up either of the two towers (202m), free, no reservation needed. Going by day means seeing Tokyo still in natural light, before it gets dark (~17:50 in September) -- the free alternative to the paid Shibuya Sky.\n\n🍱 Good to know: on the observation floor there's a small area with tables where you can sit and eat food brought from outside -- a nice spot for a snack with a view before continuing the afternoon plan."
       },
       {
-        "text": "Night in Shinjuku: a stroll under the neon lights of Kabukicho.\n\n🍜 **DINNER: OPTIONS IN THE AREA.**\n• **Omoide Yokocho**: the classic yakitori alley, typical yokocho atmosphere.\n• **Okinawa Paradise** (friend's cheese-nickname recommendation from Thibaut): on the 3rd floor of a building in Kabukicho (hard to spot from the street, you have to look for it), Okinawan cuisine and live traditional song performances almost every night around 21:00. Very off the tourist path. Reservations recommended, especially on weekends.\n\n🛍️ **SHOPPING: UNIQLO AND DON QUIJOTE (SEIKO WATCH).** Take the chance for two quick stops: there's a large Uniqlo near Shinjuku Station (good-quality basics at a good price), and the Don Quijote in Kabukicho has a watch section on the upper floor (4th floor) with Seiko, Citizen and Casio at discounted prices -- confirmed by several sources as one of the best in central Tokyo for this. Both open late, fitting well with the evening stroll.\n\n💡 **Alternative (if you'd rather stay in Shibuya instead of moving to Shinjuku that night):** Creoru Dogenzaka (friend's cheese-nickname recommendation from Thibaut), a Shibuya branch of the famous okonomiyaki/takoyaki chain from Dotonbori (Osaka) -- counter downstairs, room upstairs. Go early, around 18:00-18:30, because it's small and popular. This would change the afternoon plan: staying in Shibuya for dinner instead of heading up to Shinjuku."
+        "text": "Night in Shinjuku: a stroll under the neon lights of Kabukicho.\n\n🍜 **DINNER: OPTIONS IN THE AREA.**\n• **Omoide Yokocho**: the classic yakitori alley, typical yokocho atmosphere.\n• **Okinawa Paradise** (friend's cheese-nickname recommendation from Thibaut): on the 3rd floor of a building in Kabukicho (hard to spot from the street, you have to look for it), Okinawan cuisine and live traditional song performances almost every night around 21:00. Very off the tourist path. Reservations recommended, especially on weekends.\n\n🛍️ **SHOPPING: UNIQLO AND DON QUIJOTE (SEIKO WATCH).** Take the chance for two quick stops: there's a large Uniqlo near Shinjuku Station (good-quality basics at a good price), and the Don Quijote in Kabukicho has a watch section on the upper floor (4th floor) with Seiko, Citizen and Casio at discounted prices -- confirmed by several sources as one of the best in central Tokyo for this. Both open late, fitting well with the evening stroll."
       },
       {
-        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nBack by metro from Shinjuku to our residence in Asakusa Kappabashi to rest (3rd night in Tokyo)."
+        "text": "🚇 **BACK TO SHIBUYA, TO SEE IT AT NIGHT.** Just 2 stops from Shinjuku on the JR Yamanote Line (or Saikyo Line), no transfer needed -- about 10 min. Totally worth it: Shibuya Crossing at night, with all the giant neon screens lit up over the buildings, is a completely different sight from this morning and one of the best nighttime experiences in Tokyo."
+      },
+      {
+        "text": "🌃 **SHIBUYA AT NIGHT.** Back to the crossing to see it lit up -- this is when you really understand why it's so iconic. Also a good time for photos from the Starbucks inside Tsutaya (2nd floor, direct views of the crossing) or from the free viewing area at Shibuya Scramble Square (ground floor, a spot with views without paying for the Sky entrance)."
+      },
+      {
+        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nBack by metro from Shibuya to our residence in Asakusa Kappabashi to rest (3rd night in Tokyo)."
       }
     ],
     "money": "Approx. €40 (meals)"
