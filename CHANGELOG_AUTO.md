@@ -100,3 +100,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-17 12:57 UTC** — feat(Día 12): completar en FR/TL -- horarios reales de la ... (`24322be`)
 - **2026-09-17 13:00 UTC** — feat(Día 12): separar el bloque de Odaiba en paradas concretas ... (`6aa0bae`)
 - **2026-09-17 13:01 UTC** — feat(Día 12): completar en FR/TL -- Odaiba dividido en paradas ... (`af0f75e`)
+- **2026-09-17 13:20 UTC** — feat(Día 12): sustituir cena en Odaiba por vuelta a Asakusa ... (`6eac564`)
