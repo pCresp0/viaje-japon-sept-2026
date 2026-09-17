@@ -727,13 +727,19 @@ export const days = [
         "text": "🌇 **SUNSET FROM THE SEASIDE PROMENADE.** The sun sets around **17:45-17:50** at this time of year (earlier than it seems) -- worth being settled on the boardwalk by around 17:15-17:30 so you don't miss the shift in light. With the Rainbow Bridge and the bay in the background, it's one of the best sunsets of the trip."
       },
       {
-        "text": "🕐 **FREE TIME BEFORE DINNER.** A window to stroll calmly, take more photos with the city now lit up, or head toward the Aqua City/DiverCity restaurant area ahead of the 19:00 dinner."
+        "text": "Wrap up and head toward Odaiba-Kaihinkoen Station."
       },
       {
-        "text": "🍜 Dinner in Odaiba (Aqua City / DiverCity with views of Tokyo Bay)."
+        "text": "🚇 **BACK TOWARD ASAKUSA.** Yurikamome to Shimbashi + transfer to the Ginza Line (or Asakusa Line) -- a single transfer, about 40-45 min total."
       },
       {
-        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nBack by metro/Yurikamome to our residence in Asakusa Kappabashi to rest (4th night in Tokyo)."
+        "text": "🛍️ **UNIQLO ASAKUSA STORE.** Shopping until closing at 20:00 -- over an hour to spare.\n\nhttps://maps.app.goo.gl/uAJszQKRPMjwdudx5?g_st=ic"
+      },
+      {
+        "text": "🍜 Dinner around the hotel area."
+      },
+      {
+        "text": "🏨 **KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nAlready in the hotel area after dinner -- no extra trip back (4th night in Tokyo)."
       }
     ],
     "money": "Approx. €45 (meals)"
