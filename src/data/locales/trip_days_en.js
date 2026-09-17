@@ -715,7 +715,19 @@ export const days = [
         "text": "🎫 **SUICA:** ✅ YES; tap the card directly at the gates.\n\nYurikamome train to Odaiba crossing the Rainbow Bridge (sit in the first car)."
       },
       {
-        "text": "Stroll through Odaiba and sunset from the seaside promenade with the Tokyo skyline.\n\n⚠️ **ABOUT THE GUNDAM: it's gone.** The life-size Unicorn Gundam statue that had stood since 2017 in front of DiverCity Tokyo Plaza ended its public display on August 31, 2026 -- right before your trip. As of this update there's no confirmation of a replacement statue, so don't count on seeing it. Still enjoy DiverCity all the same (shops, Gundam Base Tokyo with merchandise) and the rest of Odaiba."
+        "text": "🤖 **DIVERCITY TOKYO PLAZA.** Shopping mall next to Odaiba-Kaihinkoen Station. This is where the life-size Unicorn Gundam statue used to stand -- but ⚠️ **IT'S GONE**: the official site announced the end of its public display on August 31, 2026, right before your trip, and as of this update there's no confirmation of a replacement. Still worth stepping into **Gundam Base Tokyo**, the official 3-floor store with all the merchandise and Gunpla kits, and the rest of the mall's shops."
+      },
+      {
+        "text": "🛍️ **AQUA CITY ODAIBA.** Seaside mall, 5 min on foot from DiverCity. Good views of the Rainbow Bridge from its terrace, and a 1/4-scale replica of the Statue of Liberty right next to it (the reason: it was here on loan from France between 1998 and 1999, and the replica stayed as a permanent souvenir)."
+      },
+      {
+        "text": "🌊 **ODAIBA KAIHIN KOEN (SEASIDE PARK).** Stroll along the artificial beach and the boardwalk, with the widest open views of the Rainbow Bridge and the Tokyo skyline behind it -- the perfect spot to kill time before sunset without rushing."
+      },
+      {
+        "text": "🌇 **SUNSET FROM THE SEASIDE PROMENADE.** The sun sets around **17:45-17:50** at this time of year (earlier than it seems) -- worth being settled on the boardwalk by around 17:15-17:30 so you don't miss the shift in light. With the Rainbow Bridge and the bay in the background, it's one of the best sunsets of the trip."
+      },
+      {
+        "text": "🕐 **FREE TIME BEFORE DINNER.** A window to stroll calmly, take more photos with the city now lit up, or head toward the Aqua City/DiverCity restaurant area ahead of the 19:00 dinner."
       },
       {
         "text": "🍜 Dinner in Odaiba (Aqua City / DiverCity with views of Tokyo Bay)."
