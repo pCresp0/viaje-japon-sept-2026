@@ -97,3 +97,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-17 04:16 UTC** — fix(Día 11): reordenar comida (13:00-14:00, cerca de Cat Street) antes ... (`8c3360a`)
 - **2026-09-17 05:08 UTC** — feat(Día 11): añadir Roast Beef Ohno Harajuku Store como el ... (`9f8ec16`)
 - **2026-09-17 12:55 UTC** — feat(Día 12): quitar sushi de Toyosu como parada fija, añadir ... (`ea1a2e7`)
+- **2026-09-17 12:57 UTC** — feat(Día 12): completar en FR/TL -- horarios reales de la ... (`24322be`)
