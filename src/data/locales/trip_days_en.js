@@ -652,10 +652,19 @@ export const days = [
         "text": "🍙 Breakfast at the Lawson (konbini) near the hotel."
       },
       {
-        "text": "🚇 To Shibuya by subway."
+        "text": "🚇 **To Shibuya by subway.** The actual ride from the hotel is around 55 min (transfer included) -- longer than it looks on the map, so no need to rush out, but no point lingering either."
       },
       {
-        "text": "Shibuya Crossing and Miyashita Park. Stop at the Pokémon Center Shibuya (Shibuya Parco, 6th floor) — famous for its large Mewtwo statue (inside a glass tube, great for photos) and its futuristic neon style. Nintendo TOKYO is on the same floor. Watch out, Sergio will probably want to set up an urban garden here for his Aluche plants.\n\n🏙️ **OPTIONAL: SHIBUYA SKY** (decide on the spot). Paid observation deck right above Shibuya Station, 229m high, 360°. You already have a FREE viewpoint that evening in Shinjuku, so this is an extra if you feel like it.\n💰 Price: ¥2,700 online before 15:00 / ¥3,400 from 15:00 (at the counter, +¥300). Hours: 10:00–22:30, last entry 21:20.\n⚠️ Sunset slots sell out easily on days with good weather forecasts -- if you really want to go at that specific time, better to book in advance on the official site rather than deciding on the fly."
+        "text": "🚏 **ARRIVAL AT SHIBUYA CROSSING.** The busiest pedestrian crossing in the world -- up to 3,000 people cross at once during rush hour, in every direction at the same time, when the light turns green for pedestrians on all four sides at once. Right next to it, the Hachiko statue (the loyal dog who waited for his owner at the station for years) is Tokyo's most famous meeting spot -- no wonder it's always surrounded by people."
+      },
+      {
+        "text": "🌳 **MIYASHITA PARK.** On foot from the crossing (~5 min). A park raised above a shopping mall, with a skate area, sports court and terraces -- a curious way to make use of space in such a dense city. A good short stop to stretch your legs before continuing."
+      },
+      {
+        "text": "🎮 **POKÉMON CENTER SHIBUYA AND NINTENDO TOKYO** (Shibuya Parco, 6th floor, ~10 min on foot from Miyashita Park) — famous for its large Mewtwo statue (inside a glass tube, great for photos) and its futuristic neon style. Nintendo TOKYO is on the same floor. Watch out, Sergio will probably want to set up an urban garden here for his Aluche plants."
+      },
+      {
+        "text": "🏙️ **OPTIONAL: SHIBUYA SKY** (decide on the spot). Paid observation deck right above Shibuya Station, 229m high, 360°. You already have a FREE viewpoint that evening in Shinjuku, so this is an extra if you feel like it.\n\n💰 Price: ¥2,700 online before 15:00 / ¥3,400 from 15:00 (at the counter, +¥300). Hours: 10:00–22:30, last entry 21:20.\n⚠️ Sunset slots sell out easily on days with good weather forecasts -- if you really want to go at that specific time, better to book in advance on the official site rather than deciding on the fly."
       },
       {
         "text": "Walk to Harajuku via Takeshita Street, ending at the Meiji Shrine in Yoyogi Park."

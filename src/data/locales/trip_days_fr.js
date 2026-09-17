@@ -652,10 +652,19 @@ export const days = [
         "text": "🍙 Petit-déjeuner au Lawson (konbini) près de l'hôtel."
       },
       {
-        "text": "🚇 Vers Shibuya en métro."
+        "text": "🚇 **Vers Shibuya en métro.** Le trajet réel depuis l'hôtel est d'environ 55 min (correspondance incluse) -- plus long qu'il n'y paraît sur la carte, donc pas besoin de se précipiter, mais pas la peine de traîner non plus."
       },
       {
-        "text": "Croisement de Shibuya et Miyashita Park. Arrêt au Pokémon Center Shibuya (Shibuya Parco, 6e étage) — célèbre pour sa grande statue de Mewtwo (dans un tube en verre, idéale pour les photos) et son style néon futuriste. Nintendo TOKYO se trouve au même étage. Attention, Sergio va sûrement vouloir monter un jardin urbain ici pour ses plantes d'Aluche.\n\n🏙️ **OPTIONNEL : SHIBUYA SKY** (à décider sur place). Belvédère payant juste au-dessus de la gare de Shibuya, 229 m de haut, 360°. Vous avez déjà un mirador GRATUIT ce soir-là à Shinjuku, donc c'est un extra si l'envie vous prend.\n💰 Prix : ¥2 700 en ligne avant 15h00 / ¥3 400 à partir de 15h00 (au guichet, +¥300). Horaires : 10h00–22h30, dernière entrée 21h20.\n⚠️ Les créneaux au coucher du soleil se vendent facilement les jours de beau temps annoncé -- si vous tenez vraiment à y aller à ce moment précis, mieux vaut réserver à l'avance sur le site officiel plutôt que de décider à l'improviste."
+        "text": "🚏 **ARRIVÉE AU CARREFOUR DE SHIBUYA.** Le carrefour piéton le plus fréquenté du monde -- jusqu'à 3 000 personnes le traversent en même temps aux heures de pointe, dans toutes les directions à la fois, quand le feu passe au vert pour les piétons des quatre côtés simultanément. Juste à côté, la statue de Hachiko (le chien fidèle qui a attendu son maître à la gare pendant des années) est le point de rendez-vous le plus célèbre de Tokyo -- normal qu'elle soit toujours entourée de monde."
+      },
+      {
+        "text": "🌳 **MIYASHITA PARK.** À pied depuis le carrefour (~5 min). Un parc surélevé au-dessus d'un centre commercial, avec zone de skate, terrain de sport et terrasses -- une façon curieuse d'exploiter l'espace dans une ville aussi dense. Bon arrêt court pour se dégourdir les jambes avant de continuer."
+      },
+      {
+        "text": "🎮 **POKÉMON CENTER SHIBUYA ET NINTENDO TOKYO** (Shibuya Parco, 6e étage, ~10 min à pied depuis Miyashita Park) — célèbre pour sa grande statue de Mewtwo (dans un tube en verre, idéale pour les photos) et son style néon futuriste. Nintendo TOKYO se trouve au même étage. Attention, Sergio va sûrement vouloir monter un jardin urbain ici pour ses plantes d'Aluche."
+      },
+      {
+        "text": "🏙️ **OPTIONNEL : SHIBUYA SKY** (à décider sur place). Belvédère payant juste au-dessus de la gare de Shibuya, 229 m de haut, 360°. Vous avez déjà un mirador GRATUIT ce soir-là à Shinjuku, donc c'est un extra si l'envie vous prend.\n\n💰 Prix : ¥2 700 en ligne avant 15h00 / ¥3 400 à partir de 15h00 (au guichet, +¥300). Horaires : 10h00–22h30, dernière entrée 21h20.\n⚠️ Les créneaux au coucher du soleil se vendent facilement les jours de beau temps annoncé -- si vous tenez vraiment à y aller à ce moment précis, mieux vaut réserver à l'avance sur le site officiel plutôt que de décider à l'improviste."
       },
       {
         "text": "Promenade vers Harajuku par la rue Takeshita, sanctuaire Meiji dans le parc Yoyogi."

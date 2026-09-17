@@ -652,10 +652,19 @@ export const days = [
         "text": "🍙 Almusal sa Lawson (konbini) malapit sa hotel."
       },
       {
-        "text": "🚇 Papuntang Shibuya sakay ng subway."
+        "text": "🚇 **Papuntang Shibuya sakay ng subway.** Ang aktwal na biyahe mula sa hotel ay mga 55 min (kasama ang transfer) -- mas mahaba kaysa sa nakikita sa mapa, kaya hindi kailangang magmadali, pero hindi rin dapat maglaan ng sobrang oras."
       },
       {
-        "text": "Shibuya Crossing at Miyashita Park. Hintuan sa Pokémon Center Shibuya (Shibuya Parco, 6th floor) — kilala sa malaking Mewtwo statue nito (nasa loob ng glass tube, maganda para sa litrato) at futuristic neon style. Sa parehong palapag din ang Nintendo TOKYO. Mag-ingat, malamang gagawa si Sergio ng urban garden dito para sa mga halaman niya sa Aluche.\n\n🏙️ **OPSYONAL: SHIBUYA SKY** (magdesisyon sa mismong oras). May bayad na observation deck sa ibabaw mismo ng Shibuya Station, 229m ang taas, 360°. May libre na kayong viewpoint sa gabing iyon sa Shinjuku, kaya extra na lang ito kung gusto ninyo.\n💰 Presyo: ¥2,700 online bago mag-15:00 / ¥3,400 mula 15:00 (sa counter, +¥300). Oras: 10:00–22:30, huling entry 21:20.\n⚠️ Madaling maubos ang mga sunset slot kapag maganda ang forecast -- kung talagang gusto ninyo pumunta sa eksaktong oras na iyon, mas mabuting mag-book nang maaga sa opisyal na website kaysa magdesisyon na lang bigla."
+        "text": "🚏 **PAGDATING SA SHIBUYA CROSSING.** Ang pinaka-busy na pedestrian crossing sa mundo -- hanggang 3,000 tao ang tumatawid nang sabay-sabay sa rush hour, sa lahat ng direksyon nang sabay, kapag naging berde ang ilaw para sa mga pedestrian mula sa lahat ng apat na panig nang sabay. Katabi lang, ang estatwa ni Hachiko (ang tapat na aso na naghintay sa amo niya sa estasyon sa loob ng maraming taon) ang pinaka-kilalang meeting spot sa Tokyo -- kaya naman laging napapaligiran ito ng tao."
+      },
+      {
+        "text": "🌳 **MIYASHITA PARK.** Lakad mula sa crossing (~5 min). Isang parke na nakataas sa ibabaw ng isang shopping mall, may skate area, sports court, at mga terrace -- kakaibang paraan ng paggamit ng espasyo sa isang napakasiksik na lungsod. Magandang maikling hintuan para mag-inat bago magpatuloy."
+      },
+      {
+        "text": "🎮 **POKÉMON CENTER SHIBUYA AT NINTENDO TOKYO** (Shibuya Parco, 6th floor, ~10 min na lakad mula sa Miyashita Park) — kilala sa malaking Mewtwo statue nito (nasa loob ng glass tube, maganda para sa litrato) at futuristic neon style. Sa parehong palapag din ang Nintendo TOKYO. Mag-ingat, malamang gagawa si Sergio ng urban garden dito para sa mga halaman niya sa Aluche."
+      },
+      {
+        "text": "🏙️ **OPSYONAL: SHIBUYA SKY** (magdesisyon sa mismong oras). May bayad na observation deck sa ibabaw mismo ng Shibuya Station, 229m ang taas, 360°. May libre na kayong viewpoint sa gabing iyon sa Shinjuku, kaya extra na lang ito kung gusto ninyo.\n\n💰 Presyo: ¥2,700 online bago mag-15:00 / ¥3,400 mula 15:00 (sa counter, +¥300). Oras: 10:00–22:30, huling entry 21:20.\n⚠️ Madaling maubos ang mga sunset slot kapag maganda ang forecast -- kung talagang gusto ninyo pumunta sa eksaktong oras na iyon, mas mabuting mag-book nang maaga sa opisyal na website kaysa magdesisyon na lang bigla."
       },
       {
         "text": "Maglakad papuntang Harajuku sa Takeshita Street, patungo sa Meiji Shrine sa Yoyogi Park."
