@@ -667,10 +667,10 @@ export const days = [
         "text": "🚶 **PAGLALAKAD PATUNGONG HARAJUKU.** Mahinahong ruta ng lakad sa Cat Street at Aoyama (sa halip na direktang sumakay ng tren), may oras para tumingin sa mga shop window at design store sa daan -- ibang klaseng ambiance kaysa sa mas siksik na Takeshita Dori."
       },
       {
-        "text": "⛩️ **MGA TEMPLO AT PAGLALAKAD SA HARAJUKU.** Takeshita Street (youth fashion, crepes, kawaii shops), patungo sa Meiji Shrine, sa loob ng gubat ng Yoyogi Park -- ganap na pagbabago ng bilis mula sa ingay ng kalye."
+        "text": "🍜 Tanghalian sa paligid ng Cat Street."
       },
       {
-        "text": "🍜 Tanghalian sa paligid ng Harajuku."
+        "text": "⛩️ **MGA TEMPLO AT PAGLALAKAD SA HARAJUKU.** Takeshita Street (youth fashion, crepes, kawaii shops), patungo sa Meiji Shrine, sa loob ng gubat ng Yoyogi Park -- ganap na pagbabago ng bilis mula sa ingay ng kalye."
       },
       {
         "text": "🏙️ **LIBRENG OBSERVATION DECK NG TOKYO METROPOLITAN GOVERNMENT BUILDING (TOCHO), SA ARAW.** Umakyat sa alinman sa dalawang tore (202m), libre, walang reserbasyon. Sa pag-akyat sa araw, makikita pa ang Tokyo na may natural na liwanag, bago dumilim (~17:50 sa Setyembre) -- ang libreng alternatibo sa may-bayad na Shibuya Sky.\n\n🍱 Mahalagang malaman: sa palapag ng observation deck may maliit na lugar na may mesa kung saan puwedeng umupo at kumain ng pagkaing dala mula sa labas -- magandang lugar para sa meryenda na may tanawin bago ituloy ang plano sa hapon."

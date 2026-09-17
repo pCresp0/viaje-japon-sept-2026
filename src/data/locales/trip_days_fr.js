@@ -667,10 +667,10 @@ export const days = [
         "text": "🚶 **PROMENADE VERS HARAJUKU.** Itinéraire tranquille à pied par Cat Street et Aoyama (plutôt que de prendre le train directement), avec le temps de flâner devant les vitrines et les boutiques de design en chemin -- une ambiance bien différente de la rue Takeshita, plus fréquentée."
       },
       {
-        "text": "⛩️ **TEMPLES ET PROMENADE À HARAJUKU.** Rue Takeshita (mode jeune, crêpes, boutiques kawaii), se terminant au sanctuaire Meiji, dans la forêt du parc Yoyogi -- un changement de rythme total par rapport à l'agitation de la rue."
+        "text": "🍜 Déjeuner dans le quartier de Cat Street."
       },
       {
-        "text": "🍜 Déjeuner dans le quartier d'Harajuku."
+        "text": "⛩️ **TEMPLES ET PROMENADE À HARAJUKU.** Rue Takeshita (mode jeune, crêpes, boutiques kawaii), se terminant au sanctuaire Meiji, dans la forêt du parc Yoyogi -- un changement de rythme total par rapport à l'agitation de la rue."
       },
       {
         "text": "🏙️ **BELVÉDÈRE GRATUIT DU GOUVERNEMENT MÉTROPOLITAIN DE TOKYO (TOCHO), DE JOUR.** Montée dans l'une des deux tours (202 m), gratuite, sans réservation. Y aller de jour permet de voir Tokyo encore en pleine lumière, avant la tombée de la nuit (~17h50 en septembre) -- l'alternative gratuite au Shibuya Sky payant.\n\n🍱 Bon à savoir : à l'étage du belvédère se trouve un petit coin avec des tables où l'on peut s'asseoir et manger de la nourriture apportée de l'extérieur -- un bon endroit pour un en-cas avec vue avant de continuer le programme de l'après-midi."

@@ -667,10 +667,10 @@ export const days = [
         "text": "🚶 **WALK TOWARD HARAJUKU.** A relaxed route on foot through Cat Street and Aoyama (instead of taking the train directly), with time to browse shop windows and design stores along the way -- a very different vibe from the more crowded Takeshita Dori."
       },
       {
-        "text": "⛩️ **TEMPLES AND STROLL THROUGH HARAJUKU.** Takeshita Street (youth fashion, crepes, kawaii shops), ending at the Meiji Shrine, within the forest of Yoyogi Park -- a complete change of pace from the bustle of the street."
+        "text": "🍜 Lunch around the Cat Street area."
       },
       {
-        "text": "🍜 Lunch around the Harajuku area."
+        "text": "⛩️ **TEMPLES AND STROLL THROUGH HARAJUKU.** Takeshita Street (youth fashion, crepes, kawaii shops), ending at the Meiji Shrine, within the forest of Yoyogi Park -- a complete change of pace from the bustle of the street."
       },
       {
         "text": "🏙️ **FREE OBSERVATION DECK AT THE TOKYO METROPOLITAN GOVERNMENT BUILDING (TOCHO), BY DAY.** Go up either of the two towers (202m), free, no reservation needed. Going by day means seeing Tokyo still in natural light, before it gets dark (~17:50 in September) -- the free alternative to the paid Shibuya Sky.\n\n🍱 Good to know: on the observation floor there's a small area with tables where you can sit and eat food brought from outside -- a nice spot for a snack with a view before continuing the afternoon plan."
