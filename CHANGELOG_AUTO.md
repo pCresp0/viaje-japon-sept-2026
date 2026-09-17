@@ -103,3 +103,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-17 13:20 UTC** — feat(Día 12): sustituir cena en Odaiba por vuelta a Asakusa ... (`6eac564`)
 - **2026-09-17 13:20 UTC** — feat(Día 12): completar cambio de plan nocturno en FR/TL -- ... (`c1e8c72`)
 - **2026-09-17 13:29 UTC** — fix(Día 14): sincronizar EN con la reestructuración real (Nakano antes ... (`44da2e3`)
+- **2026-09-17 13:30 UTC** — fix(Día 14): sincronizar FR con la reestructuración real (`f0c1bad`)
