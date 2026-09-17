@@ -92,3 +92,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-16 00:54 UTC** — fix: corregir día del podcast del Monte Fuji (día 14 ... (`57df6cb`)
 - **2026-09-16 23:23 UTC** — fix(Día 11): añadir horarios reales de esta mañana -- despertar ... (`ad91d71`)
 - **2026-09-17 00:12 UTC** — fix(Día 11): corregir tiempo real hasta Shibuya (55 min, llegada ... (`10628a0`)
+- **2026-09-17 00:28 UTC** — feat(Día 11): tiempos exactos por parada (30 min c/u), quitar ... (`7d3b1ae`)
