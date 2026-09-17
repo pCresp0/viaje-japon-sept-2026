@@ -727,13 +727,19 @@ export const days = [
         "text": "🌇 **COUCHER DE SOLEIL DEPUIS LE FRONT DE MER.** Le soleil se couche vers **17h45-17h50** à cette période de l'année (plus tôt qu'il n'y paraît) -- mieux vaut être installés sur la digue dès 17h15-17h30 pour ne pas rater le changement de lumière. Avec le Rainbow Bridge et la baie en arrière-plan, c'est l'un des plus beaux couchers de soleil du voyage."
       },
       {
-        "text": "🕐 **TEMPS LIBRE AVANT LE DÎNER.** Un moment pour flâner tranquillement, prendre d'autres photos avec la ville désormais illuminée, ou vous diriger vers le quartier des restaurants d'Aqua City/DiverCity avant le dîner de 19h00."
+        "text": "Rassemblement et direction vers la gare d'Odaiba-Kaihinkoen."
       },
       {
-        "text": "🍜 Dîner à Odaiba (Aqua City / DiverCity avec vue sur la baie de Tokyo)."
+        "text": "🚇 **RETOUR VERS ASAKUSA.** Yurikamome jusqu'à Shimbashi + correspondance vers la ligne Ginza (ou la ligne Asakusa) -- un seul changement, environ 40-45 min au total."
       },
       {
-        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nRetour en métro/Yurikamome à notre résidence à Asakusa Kappabashi pour se reposer (4e nuit à Tokyo)."
+        "text": "🛍️ **UNIQLO ASAKUSA STORE.** Shopping jusqu'à la fermeture à 20h00 -- plus d'une heure devant vous.\n\nhttps://maps.app.goo.gl/uAJszQKRPMjwdudx5?g_st=ic"
+      },
+      {
+        "text": "🍜 Dîner dans le quartier de l'hôtel."
+      },
+      {
+        "text": "🏨 **KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nDéjà dans le quartier de l'hôtel après le dîner -- sans trajet retour supplémentaire (4e nuit à Tokyo)."
       }
     ],
     "money": "Env. 45 € (repas)"

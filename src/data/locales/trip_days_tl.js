@@ -727,13 +727,19 @@ export const days = [
         "text": "🌇 **SUNSET MULA SA TABING-DAGAT NA PROMENADE.** Lumulubog ang araw mga **17:45-17:50** sa panahong ito (mas maaga kaysa sa inaakala) -- mainam nang naka-settle sa boardwalk mula 17:15-17:30 para hindi mahuli ang pagbabago ng liwanag. Kasama ang Rainbow Bridge at ang bay sa likuran, isa ito sa pinakamagagandang sunset sa biyahe."
       },
       {
-        "text": "🕐 **LIBRENG ORAS BAGO ANG HAPUNAN.** Pagkakataong maglakad nang tahimik, kumuha ng mas maraming litrato ngayong naiilawan na ang lungsod, o pumunta na sa Aqua City/DiverCity restaurant area bago ang hapunan ng 19:00."
+        "text": "Mag-ayos at pumunta sa Odaiba-Kaihinkoen Station."
       },
       {
-        "text": "🍜 Hapunan sa Odaiba (Aqua City / DiverCity na may tanawin ng Tokyo Bay)."
+        "text": "🚇 **BALIK PATUNGONG ASAKUSA.** Yurikamome hanggang Shimbashi + transfer papuntang Ginza Line (o Asakusa Line) -- iisang transfer lang, mga 40-45 min lahat-lahat."
       },
       {
-        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nBalik sa pamamagitan ng metro/Yurikamome sa ating tinutuluyan sa Asakusa Kappabashi para magpahinga (4th gabi sa Tokyo)."
+        "text": "🛍️ **UNIQLO ASAKUSA STORE.** Pamimili hanggang sa pagsara ng 20:00 -- mahigit isang oras pa.\n\nhttps://maps.app.goo.gl/uAJszQKRPMjwdudx5?g_st=ic"
+      },
+      {
+        "text": "🍜 Hapunan sa paligid ng hotel."
+      },
+      {
+        "text": "🏨 **KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nNasa lugar na ng hotel matapos ang hapunan -- walang dagdag na biyahe pabalik (4th gabi sa Tokyo)."
       }
     ],
     "money": "Humigit-kumulang €45 (pagkain)"
