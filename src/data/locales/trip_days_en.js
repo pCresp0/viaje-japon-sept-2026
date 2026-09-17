@@ -693,11 +693,20 @@ export const days = [
   {
     "title": "Toyosu, Ueno and Odaiba",
     "cities": "Toyosu, Ueno, Odaiba",
-    "summary": "Early start for the freshest sushi in the world at Toyosu. In the morning, Ueno Park and the Ameyoko street market. In the afternoon, a driverless futuristic train to Odaiba for sunset over Tokyo Bay.",
+    "summary": "A morning with 3 options to choose for the first stop (Ueno Zoo, Toyosu without sushi, or the Tsukiji outer market), followed by Ueno Park and the Ameyoko street market. In the afternoon, a driverless futuristic train to Odaiba for sunset over Tokyo Bay.",
     "history": "Ueno Park, one of Japan's first public parks (1873), brings together temples, museums and the country's oldest zoo. Odaiba was born in the 19th century as fortress islands to defend Tokyo from Western ships, and today is a symbol of futuristic Tokyo.",
     "schedule": [
       {
-        "text": "Premium sushi breakfast at the Toyosu wholesale market (Tsukiji's successor)."
+        "text": "Wake up."
+      },
+      {
+        "text": "Meeting point at the hotel entrance."
+      },
+      {
+        "text": "🍙 Breakfast at the Lawson (konbini) near the hotel."
+      },
+      {
+        "text": "🚇 **DEPARTURE -- CHOOSE ONE OF THESE 3 OPTIONS FOR THE FIRST STOP** (no sushi, since my brother doesn't like it):\n\n**Option 1 — Ueno Zoo 🐼** (arrival ~09:05, opens at 09:30). Japan's oldest zoo (1882), with giant pandas as the main draw. It's in the same area where you'd already be at 10:30 (Ueno Park/Ameyoko), so this option simply moves the arrival to that area earlier -- the simplest logistically. No reservation, pay at the gate (~¥600).\n\n**Option 2 — Toyosu without sushi** (arrival ~09:25). Keep the market stop but skip the sushi breakfast: a rooftop garden with views, a free window overlooking the tuna auction (if the timing lines up), and stalls selling tamagoyaki, ramen and other things that aren't raw fish. Requires heading back toward Ueno afterward (~25-30 min), arriving there around 10:35.\n\n**Option 3 — Tsukiji outer market** (arrival ~09:15). The old market, still running as a food street: much more variety than Toyosu (mochi, tamagoyaki, fruit, tea, grilled skewers, not just raw fish). This is the option that adds the most time of the three -- also needs a trip back to Ueno (~25-30 min), arriving around 10:30."
       },
       {
         "text": "Ueno Park and Ameyoko street market, great for cheap tea and sweets. Nice green area to stroll calmly after the early start.\n\n🦪 **SNACKING AT AMEYOKO** (friend's cheese-nickname recommendation from Thibaut): the market stalls are also well known for grilled seafood -- grilled oysters and eel, among other things. If you haven't tried eel (unagi) yet, this is a good chance.\n\n🎮 **YAMASHIROYA** (friend's cheese-nickname recommendation from Thibaut): a 6-floor store of anime/video game figures, toys and merchandise, just 1 minute on foot from Ueno Station. Confirmed that prices tend to be cheaper than in Akihabara, and it's noticeably less crowded."
