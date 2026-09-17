@@ -822,7 +822,10 @@ export const days = [
         "text": "**PUMILI NG ISA SA 2 OPSYON NA ITO PARA ISARA ANG BAHAGING TOKYO NG BIYAHE:**\n\n**Opsyon A — 🗼 Pag-akyat sa Tokyo Skytree na may ticket, para sa sunset.** Lumulubog ang araw mga ~17:50 sa Setyembre -- kung 17:00 ang entry, may sapat na oras para maka-settle sa itaas bago ito magsimulang lumubog. Perpektong pagsara ng biyahe: ang huling hapon sa Tokyo, na nakikita ang buong lungsod mula sa itaas.\n\n🎟️ Bumili ng ticket doon mismo o maaga sa opisyal na website (inirerekomenda kung maganda ang forecast, mabilis maubos ang sunset slots). Ang Tembo Deck (350m) ang standard na observation deck; ang Tembo Galleria (450m) ay dagdag na antas kung gusto pang umakyat nang mas mataas.\n\n**Opsyon B — 🛍️ Huling-minutong pamimili.** Kung mas gusto ninyong samantalahin ang oras kaysa umakyat sa observation deck: Uniqlo Asakusa Store (sakaling may kulang pa matapos ang bisita kahapon), at ang souvenir area ng Kappabashi-dori (kagamitan sa kusina, plastic food replicas, Japanese knives) o Nakamise-dori katabi ng Sensō-ji Temple, ang klasikong lugar para sa huling-minutong regalo -- lahat malapit lang sa hotel."
       },
       {
-        "text": "🍜 Farewell dinner ng grupo sa Tokyo (Asakusa), sa huling buong araw bago bumalik sa Spain."
+        "text": "🍜 **FAREWELL DINNER: HIMURO HOKKAIDO RAMEN ASAKUSA.** Sobrang sarap at mura -- nakumpirma ng grupo. Sa huling buong araw bago bumalik sa Spain.\n\nhttps://maps.google.com?q=Himuro%20Hokkaido%20Ramen%20Asakusa,%202%20Chome-1-11%20Nishiasakusa,%20Taito%20City,%20Tokyo%20111-0035,%20Jap%C3%B3n&ftid=0x60188f70d778df93:0xdcb74fed22702d18&entry=gps&shh=CAE&lucs=,94297699,94231188,94280568,47071704,94218641,94282134,100835699,94286869,100820247,100822504&g_st=ic"
+      },
+      {
+        "text": "🎲 Gabi ng board games -- perpektong pagsara para sa huling gabing magkasama sa Tokyo."
       },
       {
         "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nHuling gabi sa Tokyo bago bumalik sa Spain."

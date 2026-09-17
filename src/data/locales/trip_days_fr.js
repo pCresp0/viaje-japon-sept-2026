@@ -822,7 +822,10 @@ export const days = [
         "text": "**CHOISIR L'UNE DE CES 2 OPTIONS POUR CLÔTURER LE SÉJOUR À TOKYO :**\n\n**Option A — 🗼 Montée au Tokyo Skytree avec billets, pour le coucher de soleil.** Le soleil se couche vers ~17h50 en septembre -- avec une entrée à 17h00, il y a largement le temps de s'installer en haut avant qu'il ne commence à descendre. Une clôture parfaite pour le voyage : le dernier après-midi à Tokyo, à voir toute la ville d'en haut.\n\n🎟️ Acheter les billets sur place ou à l'avance sur le site officiel (recommandé si la météo s'annonce bonne, les créneaux du coucher de soleil partent vite). Le Tembo Deck (350 m) est le belvédère standard ; le Tembo Galleria (450 m) est un niveau supplémentaire si vous avez envie de monter encore plus haut.\n\n**Option B — 🛍️ Shopping de dernière minute.** Si vous préférez profiter du temps plutôt que de monter dans un belvédère : Uniqlo Asakusa Store (au cas où il manquerait quelque chose après la visite d'hier), et le quartier des souvenirs de Kappabashi-dori (ustensiles de cuisine, répliques d'aliments en plastique, couteaux japonais) ou Nakamise-dori à côté du temple Sensō-ji, l'endroit classique pour les cadeaux de dernière minute -- tout à quelques pas de l'hôtel."
       },
       {
-        "text": "🍜 Dîner d'adieu du groupe à Tokyo (Asakusa), lors de la dernière journée complète avant de rentrer en Espagne."
+        "text": "🍜 **DÎNER D'ADIEU : HIMURO HOKKAIDO RAMEN ASAKUSA.** Vraiment excellent et pas cher -- confirmé par le groupe. Lors de la dernière journée complète avant de rentrer en Espagne.\n\nhttps://maps.google.com?q=Himuro%20Hokkaido%20Ramen%20Asakusa,%202%20Chome-1-11%20Nishiasakusa,%20Taito%20City,%20Tokyo%20111-0035,%20Jap%C3%B3n&ftid=0x60188f70d778df93:0xdcb74fed22702d18&entry=gps&shh=CAE&lucs=,94297699,94231188,94280568,47071704,94218641,94282134,100835699,94286869,100820247,100822504&g_st=ic"
+      },
+      {
+        "text": "🎲 Soirée jeux de société -- une clôture parfaite pour la dernière soirée ensemble à Tokyo."
       },
       {
         "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nDernière nuit à Tokyo avant de rentrer en Espagne."

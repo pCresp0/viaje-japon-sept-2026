@@ -822,7 +822,10 @@ export const days = [
         "text": "**CHOOSE ONE OF THESE 2 OPTIONS TO CLOSE OUT THE TOKYO LEG OF THE TRIP:**\n\n**Option A — 🗼 Going up Tokyo Skytree with tickets, for sunset.** The sun sets around ~17:50 in September -- with entry at 17:00 there's plenty of time to get settled up top before it starts going down. A perfect way to close out the trip: the last afternoon in Tokyo, seeing the whole city from above.\n\n🎟️ Buy tickets there on the spot or in advance on the official website (recommended if the forecast looks good, as sunset slots sell out). Tembo Deck (350m) is the standard observation deck; Tembo Galleria (450m) is an extra step up if you feel like going even higher.\n\n**Option B — 🛍️ Last-minute shopping.** If you'd rather make the most of the time than go up an observation deck: Uniqlo Asakusa Store (in case anything's missing after yesterday's visit), and the souvenir area of Kappabashi-dori (kitchenware, plastic food replicas, Japanese knives) or Nakamise-dori next to Sensō-ji Temple, the classic spot for last-minute gifts -- all a short distance from the hotel."
       },
       {
-        "text": "🍜 Farewell group dinner in Tokyo (Asakusa), on the last full day before heading back to Spain."
+        "text": "🍜 **FAREWELL DINNER: HIMURO HOKKAIDO RAMEN ASAKUSA.** Really, really great and cheap -- confirmed by the group. On the last full day before heading back to Spain.\n\nhttps://maps.google.com?q=Himuro%20Hokkaido%20Ramen%20Asakusa,%202%20Chome-1-11%20Nishiasakusa,%20Taito%20City,%20Tokyo%20111-0035,%20Jap%C3%B3n&ftid=0x60188f70d778df93:0xdcb74fed22702d18&entry=gps&shh=CAE&lucs=,94297699,94231188,94280568,47071704,94218641,94282134,100835699,94286869,100820247,100822504&g_st=ic"
+      },
+      {
+        "text": "🎲 Board game night -- a perfect way to close out the last evening together in Tokyo."
       },
       {
         "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nLast night in Tokyo before heading back to Spain."
