@@ -667,7 +667,7 @@ export const days = [
         "text": "🚶 **WALK TOWARD HARAJUKU.** A relaxed route on foot through Cat Street and Aoyama (instead of taking the train directly), with time to browse shop windows and design stores along the way -- a very different vibe from the more crowded Takeshita Dori."
       },
       {
-        "text": "🍜 Lunch around the Cat Street area."
+        "text": "🍜 **LUNCH: ROAST BEEF OHNO HARAJUKU STORE.** Delicious -- confirmed by the group.\n\nhttps://maps.app.goo.gl/JTsdy13vc7tvtTcP9?g_st=aw"
       },
       {
         "text": "⛩️ **TEMPLES AND STROLL THROUGH HARAJUKU.** Takeshita Street (youth fashion, crepes, kawaii shops), ending at the Meiji Shrine, within the forest of Yoyogi Park -- a complete change of pace from the bustle of the street."

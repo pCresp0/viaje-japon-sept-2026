@@ -667,7 +667,7 @@ export const days = [
         "text": "🚶 **PAGLALAKAD PATUNGONG HARAJUKU.** Mahinahong ruta ng lakad sa Cat Street at Aoyama (sa halip na direktang sumakay ng tren), may oras para tumingin sa mga shop window at design store sa daan -- ibang klaseng ambiance kaysa sa mas siksik na Takeshita Dori."
       },
       {
-        "text": "🍜 Tanghalian sa paligid ng Cat Street."
+        "text": "🍜 **TANGHALIAN: ROAST BEEF OHNO HARAJUKU STORE.** Masarap -- nakumpirma ng grupo.\n\nhttps://maps.app.goo.gl/JTsdy13vc7tvtTcP9?g_st=aw"
       },
       {
         "text": "⛩️ **MGA TEMPLO AT PAGLALAKAD SA HARAJUKU.** Takeshita Street (youth fashion, crepes, kawaii shops), patungo sa Meiji Shrine, sa loob ng gubat ng Yoyogi Park -- ganap na pagbabago ng bilis mula sa ingay ng kalye."

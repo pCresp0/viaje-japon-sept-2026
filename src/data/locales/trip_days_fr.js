@@ -667,7 +667,7 @@ export const days = [
         "text": "🚶 **PROMENADE VERS HARAJUKU.** Itinéraire tranquille à pied par Cat Street et Aoyama (plutôt que de prendre le train directement), avec le temps de flâner devant les vitrines et les boutiques de design en chemin -- une ambiance bien différente de la rue Takeshita, plus fréquentée."
       },
       {
-        "text": "🍜 Déjeuner dans le quartier de Cat Street."
+        "text": "🍜 **DÉJEUNER : ROAST BEEF OHNO HARAJUKU STORE.** Délicieux -- confirmé par le groupe.\n\nhttps://maps.app.goo.gl/JTsdy13vc7tvtTcP9?g_st=aw"
       },
       {
         "text": "⛩️ **TEMPLES ET PROMENADE À HARAJUKU.** Rue Takeshita (mode jeune, crêpes, boutiques kawaii), se terminant au sanctuaire Meiji, dans la forêt du parc Yoyogi -- un changement de rythme total par rapport à l'agitation de la rue."
