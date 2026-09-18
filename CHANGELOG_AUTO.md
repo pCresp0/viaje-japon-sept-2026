@@ -107,3 +107,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-17 13:31 UTC** — fix(Día 14): sincronizar TL con la reestructuración real -- Nakano/Akihabara ... (`8d166a5`)
 - **2026-09-17 13:35 UTC** — feat(Día 14): añadir Himuro Hokkaido Ramen Asakusa como cena de ... (`c16d755`)
 - **2026-09-18 01:29 UTC** — fix: mover cena de ramen del Día 14 al Día ... (`a56f771`)
+- **2026-09-18 01:31 UTC** — fix: completar en FR/TL -- ramen movido al Día 11 ... (`8ccc9ea`)
