@@ -769,32 +769,40 @@ export const days = [
         "text": "Mega Pokémon Center Ikebukuro (Sunshine City, 2nd floor) and Nintendo Store Tokyo. The Mega Center is the largest in Japan: life-size statues of Charizard, Lucario and Mewtwo, the Pokémon Card Station, and exclusive merchandise not found in other stores."
       },
       {
-        "time": "11:00–12:00",
-        "text": "🚃 Train to Nakano (~20-25 min) and lunch in the area before starting to explore."
+        "time": "11:00–11:40",
+        "text": "🚃 Train to Nakano (~40 min)."
       },
       {
-        "time": "12:00–13:45",
-        "text": "Collectible shopping at Nakano Broadway: Tokyo's best spot for original Pokémon cards (specialized trading card shops with display cases of individual cards and booster packs), Dragon Ball figures and merchandise, and retro/manga items in general at fair prices. Several floors of small independent shops — worth exploring all of them.\n\n🛍️ **NAKANO SUN MALL** (friend's cheese-nickname recommendation from Thibaut): the covered shopping arcade that runs straight from the station to the entrance of Nakano Broadway (~5 min on foot) -- confirmed geographically, it's the natural route. Much less touristy than Akihabara, with more locally-flavored restaurants and izakayas."
+        "time": "11:40–12:40",
+        "text": "First look around Nakano Broadway: Tokyo's best spot for original Pokémon cards (specialized trading card shops with display cases of individual cards and booster packs), Dragon Ball figures and merchandise, and retro/manga items in general at fair prices. Several floors of small independent shops — worth exploring all of them.\n\n🛍️ **NAKANO SUN MALL** (friend's cheese-nickname recommendation from Thibaut): the covered shopping arcade that runs straight from the station to the entrance of Nakano Broadway (~5 min on foot) -- confirmed geographically, it's the natural route. Much less touristy than Akihabara, with more locally-flavored restaurants and izakayas."
       },
       {
-        "time": "13:45–14:10",
+        "time": "12:40–13:20",
+        "text": "🍜 Lunch in Nakano (30-45 min)."
+      },
+      {
+        "time": "13:20–13:45",
         "text": "🚃 Train to Akihabara (~20-25 min)."
       },
       {
-        "time": "14:10–16:10",
+        "time": "13:45–15:45",
         "text": "🎮 **AKIHABARA -- 2 HOURS.** The ultimate otaku district -- different from Nakano Broadway, here it's more of a street experience with large specialized stores than secondhand collecting.\n\n• Mandarake Complex: 8 floors of manga, figures and collectibles from every era.\n• Super Potato: retro video games (NES, SNES, Game Boy...) in a setting straight out of the 90s.\n• Official Pokémon-related shops (several specialized trading card shops).\n• Japanese arcades (Taito Station, GiGO) for UFO catcher, rhythm, or fighting games.\n• Main street (Chuo-dori), closed to traffic on Sunday afternoons -- today is Saturday, so it may not apply."
       },
       {
-        "time": "16:10–16:25",
-        "text": "🚃 Short train ride to the Skytree (~10-15 min from Akihabara)."
+        "time": "15:45–16:15",
+        "text": "🚃 Train to the Skytree (~10-15 min from Akihabara, with buffer before entry)."
       },
       {
         "time": "🟢 16:30",
         "text": "🗼 **CONFIRMED ENTRY: TOKYO SKYTREE -- TEMBO DECK & GALLERY (ADULT).** Ticket already purchased for 09/19/2026, entry window 16:30-16:59. Arrive a few minutes before 16:30 so as not to eat into the window."
       },
       {
-        "time": "16:30–18:30",
-        "text": "🗼 Visit to both Skytree observation decks (Tembo Deck, 350m, and Tembo Galleria, 450m) -- with plenty of time to enjoy them calmly."
+        "time": "16:30–18:15",
+        "text": "🗼 Visit to both Skytree observation decks (Tembo Deck, 350m, and Tembo Galleria, 450m)."
+      },
+      {
+        "time": "18:15–18:45",
+        "text": "🛍️ **SOUVENIRS IF SOMETHING CATCHES YOUR EYE.** Tokyo Solamachi, the mall at the base of the tower, in case you feel like a look before heading back -- no obligation, only if something's interesting."
       },
       {
         "time": "~18:45",
