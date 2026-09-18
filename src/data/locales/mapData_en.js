@@ -51,15 +51,15 @@ export const stops = [
   { id: "toyosu", name: "Toyosu Market", city: "Tokyo", day: "Day 12", detail: "Tsukiji's successor, wholesale market and fresh sushi breakfast" },
   { id: "ueno", name: "Ueno and Ameyoko", city: "Tokyo", day: "Day 12", detail: "Ueno Park and the Ameyoko street market" },
   { id: "odaiba", name: "Odaiba and Tokyo Bay", city: "Tokyo", day: "Day 12", detail: "Yurikamome train, DiverCity and sunset over the bay" },
-  { id: "ikebukuro", name: "Ikebukuro", city: "Tokyo", day: "Day 14", detail: "Mega Pokémon Center Ikebukuro and Nintendo Store Tokyo" },
-  { id: "akihabara", name: "Akihabara", city: "Tokyo", day: "Day 14", detail: "Electric Town: Mandarake, Super Potato and Japanese arcades" },
-  { id: "tokyo-skytree-sunset", name: "Tokyo Skytree (sunset)", city: "Tokyo", day: "Day 14", detail: "Going up with tickets to watch the sunset -- closing out the Tokyo leg of the trip" },
-  { id: "nakano", name: "Nakano Broadway", city: "Tokyo", day: "Day 14", detail: "Mecca of retro collectibles, vintage figures and manga" },
-  { id: "tobu-nikko-sta", name: "Tobu-Nikko Station", city: "Tochigi", day: "Day 13", detail: "Arrival by direct train from Tobu-Asakusa (approx. 2h)" },
-  { id: "shinkyo-bridge", name: "Shinkyo Bridge", city: "Tochigi", day: "Day 13", detail: "The iconic red bridge over the Daiya River, symbol of Nikko" },
-  { id: "toshogu", name: "Toshogu Shrine", city: "Tochigi", day: "Day 13", detail: "Mausoleum of Tokugawa Ieyasu, UNESCO World Heritage Site" },
-  { id: "lake-chuzenji", name: "Lake Chuzenji", city: "Tochigi", day: "Day 13", detail: "Lake at the foot of Mt. Nantai, past the Irohazaka mountain road" },
-  { id: "kegon-falls", name: "Kegon Falls", city: "Tochigi", day: "Day 13", detail: "A 97m waterfall, one of the most famous in Japan" },
+  { id: "ikebukuro", name: "Ikebukuro", city: "Tokyo", day: "Day 13", detail: "Mega Pokémon Center Ikebukuro and Nintendo Store Tokyo" },
+  { id: "akihabara", name: "Akihabara", city: "Tokyo", day: "Day 13", detail: "Electric Town: Mandarake, Super Potato and Japanese arcades" },
+  { id: "tokyo-skytree-sunset", name: "Tokyo Skytree (sunset)", city: "Tokyo", day: "Day 13", detail: "Going up with tickets to watch the sunset -- closing out the Tokyo leg of the trip" },
+  { id: "nakano", name: "Nakano Broadway", city: "Tokyo", day: "Day 13", detail: "Mecca of retro collectibles, vintage figures and manga" },
+  { id: "tobu-nikko-sta", name: "Tobu-Nikko Station", city: "Tochigi", day: "Day 14", detail: "Arrival by direct train from Tobu-Asakusa (approx. 2h)" },
+  { id: "shinkyo-bridge", name: "Shinkyo Bridge", city: "Tochigi", day: "Day 14", detail: "The iconic red bridge over the Daiya River, symbol of Nikko" },
+  { id: "toshogu", name: "Toshogu Shrine", city: "Tochigi", day: "Day 14", detail: "Mausoleum of Tokugawa Ieyasu, UNESCO World Heritage Site" },
+  { id: "lake-chuzenji", name: "Lake Chuzenji", city: "Tochigi", day: "Day 14", detail: "Lake at the foot of Mt. Nantai, past the Irohazaka mountain road" },
+  { id: "kegon-falls", name: "Kegon Falls", city: "Tochigi", day: "Day 14", detail: "A 97m waterfall, one of the most famous in Japan" },
   { id: "senso-ji", name: "Asakusa and Senso-ji", city: "Tokyo", day: "Day 15", detail: "Last morning: Kaminarimon gate, Nakamise street and Kappabashi Dori" },
   { id: "keisei-ueno", name: "Keisei-Ueno Station", city: "Tokyo", day: "Day 15", detail: "Departure of the Keisei Skyliner direct to Narita (with luggage)" },
 ];
@@ -79,7 +79,7 @@ export const filterData = {
     { id: "e-shirakawa", name: "Shirakawa-go", day: "Day 7", detail: "UNESCO gassho-zukuri village" },
     { id: "e-tsumago", name: "Nakasendo Route", day: "Day 8", detail: "8 km hike Magome → Tsumago" },
     { id: "e-fuji", name: "Mount Fuji", day: "Day 10", detail: "Kawaguchiko, Oishi Park, Oshino Hakkai and Chureito Pagoda" },
-    { id: "e-nikko", name: "Nikko", day: "Day 13", detail: "Toshogu Shrine, Shinkyo Bridge and Kegon Falls" },
+    { id: "e-nikko", name: "Nikko", day: "Day 14", detail: "Toshogu Shrine, Shinkyo Bridge and Kegon Falls" },
   ],
   transportes: [
     { id: "t-narita", name: "Narita Airport", day: "Days 1 and 15", detail: "International flights QR808 (arrival) / QR809 (departure)" },
@@ -88,7 +88,7 @@ export const filterData = {
     { id: "t-takayama", name: "Takayama Nohi Bus Center", day: "Days 7–8", detail: "Buses to Shirakawa-go and Magome" },
     { id: "t-nagoya", name: "Nagoya Station", day: "Day 9", detail: "Transit Shinano 4 → Tokaido Shinkansen" },
     { id: "t-tokio", name: "Tokyo Station", day: "Days 9–15", detail: "Shinkansen and JR connections" },
-    { id: "t-tobu-asakusa", name: "Tobu-Asakusa Station", day: "Day 13", detail: "Departure to Nikko on the Tobu Limited Express" },
+    { id: "t-tobu-asakusa", name: "Tobu-Asakusa Station", day: "Day 14", detail: "Departure to Nikko on the Tobu Limited Express" },
   ]
 };
 

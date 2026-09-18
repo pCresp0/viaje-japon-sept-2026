@@ -1155,8 +1155,8 @@ export const guidesByDay = {
   10: ["senso-ji", "fuji"],
   11: ["meiji-jingu", "shibuya", "harajuku", "shinjuku"],
   12: ["odaiba", "toyosu", "ueno", "tokyo-tower"],
-  13: ["nikko"],
-  14: ["nakano-broadway", "akihabara", "tokyo-skytree"],
+  13: ["nakano-broadway", "akihabara", "tokyo-skytree"],
+  14: ["nikko"],
   15: ["kappabashi", "senso-ji"],
 };
 
