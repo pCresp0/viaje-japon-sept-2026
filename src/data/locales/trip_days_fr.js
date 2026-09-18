@@ -751,9 +751,42 @@ export const days = [
     "money": "Env. 45 € (repas)"
   },
   {
+    "title": "Route Nintendo, Shopping et Skytree",
+    "cities": "Ikebukuro, Nakano, Akihabara",
+    "summary": "Journée de collection et de jeux vidéo : Mega Pokémon Center d'Ikebukuro (avec ses statues grandeur nature de Mewtwo, Dracaufeu et Lucario) et Nintendo Store Tokyo. Ensuite, Nakano Broadway, le meilleur endroit de Tokyo pour les cartes Pokémon originales, les figurines Dragon Ball et les articles rétro/geek à prix juste, et Akihabara, le quartier otaku par excellence -- idéal pour les cadeaux des amis. Clôture de l'après-midi en beauté : au choix, montée au Tokyo Skytree pour le coucher de soleil ou shopping de dernière minute.",
+    "history": "L'industrie japonaise du jeu vidéo, menée par Nintendo, a revitalisé l'économie culturelle du pays dans les années 80. Nakano Broadway est né dans les années 60 comme complexe résidentiel de luxe, aujourd'hui mecque du collectionnisme underground.",
+    "schedule": [
+      {
+        "text": "Mega Pokémon Center Ikebukuro (Sunshine City, 2e étage) et Nintendo Store Tokyo. Le Mega Center est le plus grand du Japon : statues grandeur nature de Dracaufeu, Lucario et Mewtwo, la Pokémon Card Station, et des produits exclusifs introuvables ailleurs."
+      },
+      {
+        "text": "🚃 Train vers Nakano. Déjeuner dans le quartier avant de commencer à explorer."
+      },
+      {
+        "text": "Après-midi de shopping collector à Nakano Broadway : le meilleur endroit de Tokyo pour les cartes Pokémon originales (boutiques spécialisées de trading cards avec vitrines de cartes à l'unité et boosters), les figurines et produits dérivés Dragon Ball, et les articles rétro/manga en général à prix juste. Plusieurs étages de petites boutiques indépendantes — ça vaut le coup de toutes les faire.\n\n🛍️ **NAKANO SUN MALL** (recommandation de l'amie petit-fromage de Thibaut) : la galerie marchande couverte qui mène directement de la gare à l'entrée de Nakano Broadway (~5 min à pied) -- confirmé géographiquement, c'est le chemin naturel. Bien moins touristique qu'Akihabara, avec des restaurants et izakayas à l'ambiance plus locale.\n\n🚃 Ensuite, train vers Akihabara."
+      },
+      {
+        "text": "🎮 **AKIHABARA**, le quartier otaku par excellence -- différent de Nakano Broadway, ici c'est plus une expérience de rue avec de grandes boutiques spécialisées que de la collection d'occasion.\n\n• Mandarake Complex : 8 étages de manga, figurines et objets de collection de toutes les époques.\n• Super Potato : jeux vidéo rétro (NES, SNES, Game Boy...) dans une ambiance tout droit sortie des années 90.\n• Boutiques officielles liées à Pokémon (pas le Pokémon Center lui-même, mais plusieurs boutiques spécialisées de trading cards).\n• Arcades japonaises (Taito Station, GiGO) pour des parties d'UFO catcher, de rythme ou de combat.\n• Rue principale (Chuo-dori), fermée à la circulation le dimanche après-midi -- aujourd'hui c'est samedi, donc ça pourrait ne pas s'appliquer.\n\n💡 Akihabara n'est qu'à un saut d'Asakusa (~10-15 min) -- la journée shopping se termine ici car c'est l'arrêt le plus proche de la maison, sur le chemin du Skytree et du dîner."
+      },
+      {
+        "text": "🚃 Court trajet en train vers Asakusa/Skytree (~10-15 min depuis Akihabara)."
+      },
+      {
+        "text": "**CHOISIR L'UNE DE CES 2 OPTIONS POUR CLÔTURER L'APRÈS-MIDI :**\n\n**Option A — 🗼 Montée au Tokyo Skytree avec billets, pour le coucher de soleil.** Le soleil se couche vers ~17h50 en septembre -- avec une entrée à 17h00, il y a largement le temps de s'installer en haut avant qu'il ne commence à descendre.\n\n🎟️ Acheter les billets sur place ou à l'avance sur le site officiel (recommandé si la météo s'annonce bonne, les créneaux du coucher de soleil partent vite). Le Tembo Deck (350 m) est le belvédère standard ; le Tembo Galleria (450 m) est un niveau supplémentaire si vous avez envie de monter encore plus haut.\n\n**Option B — 🛍️ Shopping de dernière minute.** Si vous préférez profiter du temps plutôt que de monter dans un belvédère : Uniqlo Asakusa Store, et le quartier des souvenirs de Kappabashi-dori (ustensiles de cuisine, répliques d'aliments en plastique, couteaux japonais) ou Nakamise-dori à côté du temple Sensō-ji, l'endroit classique pour les cadeaux de dernière minute -- tout à quelques pas de l'hôtel."
+      },
+      {
+        "text": "🍜 Dîner du côté d'Asakusa."
+      },
+      {
+        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nRetour à la résidence pour se reposer et se préparer pour demain : excursion à Nikko, si la météo le permet (5e nuit à Tokyo)."
+      }
+    ],
+    "money": "Env. 40 € (repas) + shopping + entrée Skytree si cette option est choisie"
+  },
+  {
     "title": "Excursion à Nikko",
     "cities": "Nikko",
-    "summary": "Une journée complète de nature et de temples à 2 heures de Tokyo en train direct depuis Asakusa (littéralement à côté de l'hôtel) : le sanctuaire Toshogu, mausolée du shogun Tokugawa Ieyasu et site du patrimoine mondial, le pont Shinkyo, et si le temps le permet, les chutes de Kegon et le lac Chuzenji par la route de montagne Irohazaka.",
+    "summary": "⚠️ Déplacée du samedi au dimanche faute de disponibilité de trains -- si la météo le permet. Une journée complète de nature et de temples à 2 heures de Tokyo en train direct depuis Asakusa (littéralement à côté de l'hôtel) : le sanctuaire Toshogu, mausolée du shogun Tokugawa Ieyasu et site du patrimoine mondial, le pont Shinkyo, les chutes de Kegon et le lac Chuzenji par la route de montagne Irohazaka. Dîner d'adieu du groupe le soir, lors de la dernière journée complète avant de rentrer en Espagne.",
     "history": "Nikko s'est développée autour du sanctuaire Toshogu, construit en 1617 comme mausolée de Tokugawa Ieyasu, fondateur du shogunat qui a gouverné le Japon pendant plus de 250 ans. Son petit-fils Iemitsu l'a agrandi jusqu'à en faire le complexe richement décoré que l'on voit aujourd'hui, avec plus de 5 millions de feuilles d'or réparties sur ses bâtiments.",
     "schedule": [
       {
@@ -770,7 +803,7 @@ export const days = [
       },
       {
         "time": "🟢 07:30",
-        "text": "🚅 **TRAIN CONFIRMÉ : LIMITED EXPRESS KEGON, ASAKUSA → TOBU-NIKKO.** Vérifié sur l'horaire officiel de Tobu Railway (service quotidien, pas seulement le week-end) -- arrivée à Tobu-Nikko à **09h20** (1h50 de trajet).\n\n🎫 **SUICA :** ❌ NON (nécessite un billet express avec place)\n📅 **RÉSERVATION :** 🔴 ENCORE À ACHETER -- recommandé : le **Tobu World Heritage Pass** (~¥4 160/personne ≈ 22,60 €), qui inclut l'aller-retour en Limited Express PLUS des bus illimités dans Nikko pendant 2 jours. En l'achetant, demander une place sur le Kegon de 07h30.\n📅 **ACHAT :** Aux distributeurs ou guichets de la gare de Tobu Asakusa, ou à l'avance via l'appli/le site de Tobu Railway. Comme c'est un samedi, mieux vaut l'acheter quelques jours à l'avance pour garantir les 5 places ensemble."
+        "text": "🚅 **TRAIN CONFIRMÉ : LIMITED EXPRESS KEGON, ASAKUSA → TOBU-NIKKO.** Vérifié sur l'horaire officiel de Tobu Railway (service quotidien) -- arrivée à Tobu-Nikko à **09h20** (1h50 de trajet).\n\n🎫 **SUICA :** ❌ NON (nécessite un billet express avec place)\n📅 **RÉSERVATION :** 🔴 ENCORE À ACHETER -- recommandé : le **Tobu World Heritage Pass** (~¥4 160/personne ≈ 22,60 €), qui inclut l'aller-retour en Limited Express PLUS des bus illimités dans Nikko pendant 2 jours. En l'achetant, demander une place sur le Kegon de 07h30.\n📅 **ACHAT :** Aux distributeurs ou guichets de la gare de Tobu Asakusa, ou à l'avance via l'appli/le site de Tobu Railway. Comme c'est un dimanche, mieux vaut l'acheter quelques jours à l'avance pour garantir les 5 places ensemble."
       },
       {
         "time": "09:20",
@@ -810,7 +843,7 @@ export const days = [
       },
       {
         "time": "🟢 17:44",
-        "text": "🚅 **TRAIN CONFIRMÉ : LIMITED EXPRESS REVATY KEGON, TOBU-NIKKO → ASAKUSA.** Vérifié sur l'horaire officiel de Tobu Railway (données de septembre 2026) -- arrivée à Asakusa à **19h35** (1h51 de trajet). Exactement le créneau horaire que vous cherchiez, pas besoin de vous presser pour un train plus tôt."
+        "text": "🚅 **TRAIN CONFIRMÉ : LIMITED EXPRESS REVATY KEGON, TOBU-NIKKO → ASAKUSA.** Vérifié sur l'horaire officiel de Tobu Railway (données de septembre 2026) -- arrivée à Asakusa à **19h35** (1h51 de trajet)."
       },
       {
         "time": "19:35",
@@ -818,47 +851,14 @@ export const days = [
       },
       {
         "time": "~20:00–21:00",
-        "text": "🍜 Dîner du côté de Nakano ou Asakusa."
-      },
-      {
-        "time": "~21:15",
-        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nRetour à la résidence pour se reposer et se préparer pour demain : Route Nintendo, Ikebukuro et Akihabara, dernière journée complète avant de rentrer (5e nuit à Tokyo)."
-      }
-    ],
-    "money": "Env. 74 €/personne au total (40 € repas + 11,40 € entrées Toshogu + 22,60 € Tobu World Heritage Pass) -- 🔴 le Pass Tobu est ENCORE À ACHETER (demander une place sur le Kegon de 07h30 et le Revaty Kegon de 17h44, tous deux confirmés) ; ascenseur Kegon optionnel en plus (~3,10 €/personne)."
-  },
-  {
-    "title": "Route Nintendo, Shopping et Skytree",
-    "cities": "Ikebukuro, Nakano, Akihabara",
-    "summary": "Journée de collection et de jeux vidéo : Mega Pokémon Center d'Ikebukuro (avec ses statues grandeur nature de Mewtwo, Dracaufeu et Lucario) et Nintendo Store Tokyo. Ensuite, Nakano Broadway, le meilleur endroit de Tokyo pour les cartes Pokémon originales, les figurines Dragon Ball et les articles rétro/geek à prix juste, et Akihabara, le quartier otaku par excellence -- idéal pour les cadeaux des amis. Clôture du voyage en beauté : au choix, montée au Tokyo Skytree pour le coucher de soleil ou shopping de dernière minute, et dîner d'adieu du groupe, lors de la dernière journée complète avant de rentrer en Espagne.",
-    "history": "L'industrie japonaise du jeu vidéo, menée par Nintendo, a revitalisé l'économie culturelle du pays dans les années 80. Nakano Broadway est né dans les années 60 comme complexe résidentiel de luxe, aujourd'hui mecque du collectionnisme underground.",
-    "schedule": [
-      {
-        "text": "Mega Pokémon Center Ikebukuro (Sunshine City, 2e étage) et Nintendo Store Tokyo. Le Mega Center est le plus grand du Japon : statues grandeur nature de Dracaufeu, Lucario et Mewtwo, la Pokémon Card Station, et des produits exclusifs introuvables ailleurs."
-      },
-      {
-        "text": "🚃 Train vers Nakano. Déjeuner dans le quartier avant de commencer à explorer."
-      },
-      {
-        "text": "Après-midi de shopping collector à Nakano Broadway : le meilleur endroit de Tokyo pour les cartes Pokémon originales (boutiques spécialisées de trading cards avec vitrines de cartes à l'unité et boosters), les figurines et produits dérivés Dragon Ball, et les articles rétro/manga en général à prix juste. Plusieurs étages de petites boutiques indépendantes — ça vaut le coup de toutes les faire.\n\n🛍️ **NAKANO SUN MALL** (recommandation de l'amie petit-fromage de Thibaut) : la galerie marchande couverte qui mène directement de la gare à l'entrée de Nakano Broadway (~5 min à pied) -- confirmé géographiquement, c'est le chemin naturel. Bien moins touristique qu'Akihabara, avec des restaurants et izakayas à l'ambiance plus locale.\n\n🚃 Ensuite, train vers Akihabara."
-      },
-      {
-        "text": "🎮 **AKIHABARA**, le quartier otaku par excellence -- différent de Nakano Broadway, ici c'est plus une expérience de rue avec de grandes boutiques spécialisées que de la collection d'occasion.\n\n• Mandarake Complex : 8 étages de manga, figurines et objets de collection de toutes les époques.\n• Super Potato : jeux vidéo rétro (NES, SNES, Game Boy...) dans une ambiance tout droit sortie des années 90.\n• Boutiques officielles liées à Pokémon (pas le Pokémon Center lui-même, mais plusieurs boutiques spécialisées de trading cards).\n• Arcades japonaises (Taito Station, GiGO) pour des parties d'UFO catcher, de rythme ou de combat.\n• Rue principale (Chuo-dori), fermée à la circulation le dimanche après-midi -- aujourd'hui c'est dimanche, ça devrait s'appliquer.\n\n💡 Akihabara n'est qu'à un saut d'Asakusa (~10-15 min) -- la journée shopping se termine ici car c'est l'arrêt le plus proche de la maison, sur le chemin du Skytree et du dîner."
-      },
-      {
-        "text": "🚃 Court trajet en train vers Asakusa/Skytree (~10-15 min depuis Akihabara)."
-      },
-      {
-        "text": "**CHOISIR L'UNE DE CES 2 OPTIONS POUR CLÔTURER LE SÉJOUR À TOKYO :**\n\n**Option A — 🗼 Montée au Tokyo Skytree avec billets, pour le coucher de soleil.** Le soleil se couche vers ~17h50 en septembre -- avec une entrée à 17h00, il y a largement le temps de s'installer en haut avant qu'il ne commence à descendre. Une clôture parfaite pour le voyage : le dernier après-midi à Tokyo, à voir toute la ville d'en haut.\n\n🎟️ Acheter les billets sur place ou à l'avance sur le site officiel (recommandé si la météo s'annonce bonne, les créneaux du coucher de soleil partent vite). Le Tembo Deck (350 m) est le belvédère standard ; le Tembo Galleria (450 m) est un niveau supplémentaire si vous avez envie de monter encore plus haut.\n\n**Option B — 🛍️ Shopping de dernière minute.** Si vous préférez profiter du temps plutôt que de monter dans un belvédère : Uniqlo Asakusa Store (au cas où il manquerait quelque chose après la visite d'hier), et le quartier des souvenirs de Kappabashi-dori (ustensiles de cuisine, répliques d'aliments en plastique, couteaux japonais) ou Nakamise-dori à côté du temple Sensō-ji, l'endroit classique pour les cadeaux de dernière minute -- tout à quelques pas de l'hôtel."
-      },
-      {
         "text": "🍜 Dîner d'adieu du groupe à Tokyo (Asakusa), lors de la dernière journée complète avant de rentrer en Espagne."
       },
       {
+        "time": "~21:15",
         "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nDernière nuit à Tokyo avant de rentrer en Espagne."
       }
     ],
-    "money": "Env. 40 € (repas, dîner d'adieu inclus) + shopping"
+    "money": "Env. 74 €/personne au total (40 € repas, dîner d'adieu inclus + 11,40 € entrées Toshogu + 22,60 € Tobu World Heritage Pass) -- 🔴 le Pass Tobu est ENCORE À ACHETER (demander une place sur le Kegon de 07h30 et le Revaty Kegon de 17h44, tous deux confirmés) ; ascenseur Kegon optionnel en plus (~3,10 €/personne)."
   },
   {
     "title": "Retour à la maison",
