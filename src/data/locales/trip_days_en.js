@@ -751,9 +751,42 @@ export const days = [
     "money": "Approx. €45 (meals)"
   },
   {
+    "title": "Nintendo Route, Shopping and Skytree",
+    "cities": "Ikebukuro, Nakano, Akihabara",
+    "summary": "Day of collecting and video games: Mega Pokémon Center in Ikebukuro (with its life-size Mewtwo, Charizard and Lucario statues) and Nintendo Store Tokyo. Afterward, Nakano Broadway, Tokyo's best spot for original Pokémon cards, Dragon Ball figures and retro/geek items at a fair price, and Akihabara, the ultimate otaku district -- great for gifts for friends. Closing out the afternoon in style: a choice between going up Tokyo Skytree for sunset or last-minute shopping.",
+    "history": "The Japanese video game industry, led by Nintendo, revitalized the country's cultural economy in the 80s. Nakano Broadway was born in the 60s as a luxury residential complex, today a mecca for underground collecting.",
+    "schedule": [
+      {
+        "text": "Mega Pokémon Center Ikebukuro (Sunshine City, 2nd floor) and Nintendo Store Tokyo. The Mega Center is the largest in Japan: life-size statues of Charizard, Lucario and Mewtwo, the Pokémon Card Station, and exclusive merchandise not found in other stores."
+      },
+      {
+        "text": "🚃 Train to Nakano. Lunch in the area before starting to explore."
+      },
+      {
+        "text": "Afternoon of collectible shopping at Nakano Broadway: Tokyo's best spot for original Pokémon cards (specialized trading card shops with display cases of individual cards and booster packs), Dragon Ball figures and merchandise, and retro/manga items in general at fair prices. Several floors of small independent shops — worth exploring all of them.\n\n🛍️ **NAKANO SUN MALL** (friend's cheese-nickname recommendation from Thibaut): the covered shopping arcade that runs straight from the station to the entrance of Nakano Broadway (~5 min on foot) -- confirmed geographically, it's the natural route. Much less touristy than Akihabara, with more locally-flavored restaurants and izakayas.\n\n🚃 Afterward, train to Akihabara."
+      },
+      {
+        "text": "🎮 **AKIHABARA**, the ultimate otaku district -- different from Nakano Broadway, here it's more of a street experience with large specialized stores than secondhand collecting.\n\n• Mandarake Complex: 8 floors of manga, figures and collectibles from every era.\n• Super Potato: retro video games (NES, SNES, Game Boy...) in a setting straight out of the 90s.\n• Official Pokémon-related shops (not the Pokémon Center itself, but several specialized trading card shops).\n• Japanese arcades (Taito Station, GiGO) for UFO catcher, rhythm, or fighting games.\n• Main street (Chuo-dori), closed to traffic on Sunday afternoons -- today is Saturday, so it may not apply.\n\n💡 Akihabara is just a hop from Asakusa (~10-15 min) -- the shopping day wraps up here because it's the stop closest to home, on the way to the Skytree and dinner."
+      },
+      {
+        "text": "🚃 Short train ride to Asakusa/Skytree (~10-15 min from Akihabara)."
+      },
+      {
+        "text": "**CHOOSE ONE OF THESE 2 OPTIONS TO CLOSE OUT THE AFTERNOON:**\n\n**Option A — 🗼 Going up Tokyo Skytree with tickets, for sunset.** The sun sets around ~17:50 in September -- with entry at 17:00 there's plenty of time to get settled up top before it starts going down.\n\n🎟️ Buy tickets there on the spot or in advance on the official website (recommended if the forecast looks good, as sunset slots sell out). Tembo Deck (350m) is the standard observation deck; Tembo Galleria (450m) is an extra step up if you feel like going even higher.\n\n**Option B — 🛍️ Last-minute shopping.** If you'd rather make the most of the time than go up an observation deck: Uniqlo Asakusa Store, and the souvenir area of Kappabashi-dori (kitchenware, plastic food replicas, Japanese knives) or Nakamise-dori next to Sensō-ji Temple, the classic spot for last-minute gifts -- all a short distance from the hotel."
+      },
+      {
+        "text": "🍜 Dinner around the Asakusa area."
+      },
+      {
+        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nBack to the residence to rest and get ready for tomorrow: excursion to Nikko, weather permitting (5th night in Tokyo)."
+      }
+    ],
+    "money": "Approx. €40 (meals) + shopping + Skytree entry if that option is chosen"
+  },
+  {
     "title": "Nikko Day Trip",
     "cities": "Nikko",
-    "summary": "A full day of nature and temples 2 hours from Tokyo by direct train from Asakusa (literally next to the hotel): Toshogu Shrine, mausoleum of shogun Tokugawa Ieyasu and World Heritage Site, Shinkyo Bridge, and if time allows, Kegon Falls and Lake Chuzenji via the Irohazaka mountain road.",
+    "summary": "⚠️ Moved from Saturday to Sunday due to train availability -- weather permitting. A full day of nature and temples 2 hours from Tokyo by direct train from Asakusa (literally next to the hotel): Toshogu Shrine, mausoleum of shogun Tokugawa Ieyasu and World Heritage Site, Shinkyo Bridge, Kegon Falls and Lake Chuzenji via the Irohazaka mountain road. Farewell group dinner in the evening, on the last full day before heading back to Spain.",
     "history": "Nikko grew up around Toshogu Shrine, built in 1617 as the mausoleum of Tokugawa Ieyasu, founder of the shogunate that ruled Japan for over 250 years. His grandson Iemitsu expanded it into the lavishly decorated complex seen today, with over 5 million sheets of gold leaf spread across its buildings.",
     "schedule": [
       {
@@ -770,7 +803,7 @@ export const days = [
       },
       {
         "time": "🟢 07:30",
-        "text": "🚅 **CONFIRMED TRAIN: LIMITED EXPRESS KEGON, ASAKUSA → TOBU-NIKKO.** Verified on Tobu Railway's official timetable (daily service, not just weekends) -- arrival at Tobu-Nikko at **09:20** (1h 50min journey).\n\n🎫 **SUICA:** ❌ NO (requires an express ticket with a seat)\n📅 **RESERVATION:** 🔴 STILL NEED TO BUY -- recommended: the **Tobu World Heritage Pass** (~¥4,160/person ≈ €22.60), which includes the round trip Limited Express PLUS unlimited buses around Nikko for 2 days. When buying it, ask for a seat on the 07:30 Kegon.\n📅 **PURCHASE:** At the machines or ticket counters at Tobu Asakusa Station, or in advance via the Tobu Railway app/website. Since it's a Saturday, better to buy it a few days ahead to secure all 5 seats together."
+        "text": "🚅 **CONFIRMED TRAIN: LIMITED EXPRESS KEGON, ASAKUSA → TOBU-NIKKO.** Verified on Tobu Railway's official timetable (daily service) -- arrival at Tobu-Nikko at **09:20** (1h 50min journey).\n\n🎫 **SUICA:** ❌ NO (requires an express ticket with a seat)\n📅 **RESERVATION:** 🔴 STILL NEED TO BUY -- recommended: the **Tobu World Heritage Pass** (~¥4,160/person ≈ €22.60), which includes the round trip Limited Express PLUS unlimited buses around Nikko for 2 days. When buying it, ask for a seat on the 07:30 Kegon.\n📅 **PURCHASE:** At the machines or ticket counters at Tobu Asakusa Station, or in advance via the Tobu Railway app/website. Since it's a Sunday, better to buy it a few days ahead to secure all 5 seats together."
       },
       {
         "time": "09:20",
@@ -810,7 +843,7 @@ export const days = [
       },
       {
         "time": "🟢 17:44",
-        "text": "🚅 **CONFIRMED TRAIN: LIMITED EXPRESS REVATY KEGON, TOBU-NIKKO → ASAKUSA.** Verified on Tobu Railway's official timetable (data as of September 2026) -- arrival at Asakusa at **19:35** (1h 51min journey). Exactly the time window you were looking for, no need to rush for an earlier train."
+        "text": "🚅 **CONFIRMED TRAIN: LIMITED EXPRESS REVATY KEGON, TOBU-NIKKO → ASAKUSA.** Verified on Tobu Railway's official timetable (data as of September 2026) -- arrival at Asakusa at **19:35** (1h 51min journey)."
       },
       {
         "time": "19:35",
@@ -818,47 +851,14 @@ export const days = [
       },
       {
         "time": "~20:00–21:00",
-        "text": "🍜 Dinner around Nakano or Asakusa."
-      },
-      {
-        "time": "~21:15",
-        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nBack to the residence to rest and get ready for tomorrow: Nintendo Route, Ikebukuro and Akihabara, the last full day before heading home (5th night in Tokyo)."
-      }
-    ],
-    "money": "Approx. €74/person total (€40 meals + €11.40 Toshogu admission + €22.60 Tobu World Heritage Pass) -- 🔴 the Tobu Pass is STILL NEED TO BUY (ask for a seat on the 07:30 Kegon and the 17:44 Revaty Kegon, both confirmed); optional Kegon elevator extra (~€3.10/person)."
-  },
-  {
-    "title": "Nintendo Route, Shopping and Skytree",
-    "cities": "Ikebukuro, Nakano, Akihabara",
-    "summary": "Day of collecting and video games: Mega Pokémon Center in Ikebukuro (with its life-size Mewtwo, Charizard and Lucario statues) and Nintendo Store Tokyo. Afterward, Nakano Broadway, Tokyo's best spot for original Pokémon cards, Dragon Ball figures and retro/geek items at a fair price, and Akihabara, the ultimate otaku district -- great for gifts for friends. Closing out the trip in style: a choice between going up Tokyo Skytree for sunset or last-minute shopping, and a farewell group dinner, on the last full day before heading back to Spain.",
-    "history": "The Japanese video game industry, led by Nintendo, revitalized the country's cultural economy in the 80s. Nakano Broadway was born in the 60s as a luxury residential complex, today a mecca for underground collecting.",
-    "schedule": [
-      {
-        "text": "Mega Pokémon Center Ikebukuro (Sunshine City, 2nd floor) and Nintendo Store Tokyo. The Mega Center is the largest in Japan: life-size statues of Charizard, Lucario and Mewtwo, the Pokémon Card Station, and exclusive merchandise not found in other stores."
-      },
-      {
-        "text": "🚃 Train to Nakano. Lunch in the area before starting to explore."
-      },
-      {
-        "text": "Afternoon of collectible shopping at Nakano Broadway: Tokyo's best spot for original Pokémon cards (specialized trading card shops with display cases of individual cards and booster packs), Dragon Ball figures and merchandise, and retro/manga items in general at fair prices. Several floors of small independent shops — worth exploring all of them.\n\n🛍️ **NAKANO SUN MALL** (friend's cheese-nickname recommendation from Thibaut): the covered shopping arcade that runs straight from the station to the entrance of Nakano Broadway (~5 min on foot) -- confirmed geographically, it's the natural route. Much less touristy than Akihabara, with more locally-flavored restaurants and izakayas.\n\n🚃 Afterward, train to Akihabara."
-      },
-      {
-        "text": "🎮 **AKIHABARA**, the ultimate otaku district -- different from Nakano Broadway, here it's more of a street experience with large specialized stores than secondhand collecting.\n\n• Mandarake Complex: 8 floors of manga, figures and collectibles from every era.\n• Super Potato: retro video games (NES, SNES, Game Boy...) in a setting straight out of the 90s.\n• Official Pokémon-related shops (not the Pokémon Center itself, but several specialized trading card shops).\n• Japanese arcades (Taito Station, GiGO) for UFO catcher, rhythm, or fighting games.\n• Main street (Chuo-dori), closed to traffic on Sunday afternoons -- today is Sunday, so it should apply.\n\n💡 Akihabara is just a hop from Asakusa (~10-15 min) -- the shopping day wraps up here because it's the stop closest to home, on the way to the Skytree and dinner."
-      },
-      {
-        "text": "🚃 Short train ride to Asakusa/Skytree (~10-15 min from Akihabara)."
-      },
-      {
-        "text": "**CHOOSE ONE OF THESE 2 OPTIONS TO CLOSE OUT THE TOKYO LEG OF THE TRIP:**\n\n**Option A — 🗼 Going up Tokyo Skytree with tickets, for sunset.** The sun sets around ~17:50 in September -- with entry at 17:00 there's plenty of time to get settled up top before it starts going down. A perfect way to close out the trip: the last afternoon in Tokyo, seeing the whole city from above.\n\n🎟️ Buy tickets there on the spot or in advance on the official website (recommended if the forecast looks good, as sunset slots sell out). Tembo Deck (350m) is the standard observation deck; Tembo Galleria (450m) is an extra step up if you feel like going even higher.\n\n**Option B — 🛍️ Last-minute shopping.** If you'd rather make the most of the time than go up an observation deck: Uniqlo Asakusa Store (in case anything's missing after yesterday's visit), and the souvenir area of Kappabashi-dori (kitchenware, plastic food replicas, Japanese knives) or Nakamise-dori next to Sensō-ji Temple, the classic spot for last-minute gifts -- all a short distance from the hotel."
-      },
-      {
         "text": "🍜 Farewell group dinner in Tokyo (Asakusa), on the last full day before heading back to Spain."
       },
       {
+        "time": "~21:15",
         "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nLast night in Tokyo before heading back to Spain."
       }
     ],
-    "money": "Approx. €40 (meals, includes farewell dinner) + shopping"
+    "money": "Approx. €74/person total (€40 meals, includes farewell dinner + €11.40 Toshogu admission + €22.60 Tobu World Heritage Pass) -- 🔴 the Tobu Pass is STILL NEED TO BUY (ask for a seat on the 07:30 Kegon and the 17:44 Revaty Kegon, both confirmed); optional Kegon elevator extra (~€3.10/person)."
   },
   {
     "title": "Return Home",
