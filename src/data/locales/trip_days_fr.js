@@ -753,35 +753,63 @@ export const days = [
   {
     "title": "Route Nintendo, Shopping et Skytree",
     "cities": "Ikebukuro, Nakano, Akihabara",
-    "summary": "Journée de collection et de jeux vidéo : Mega Pokémon Center d'Ikebukuro (avec ses statues grandeur nature de Mewtwo, Dracaufeu et Lucario) et Nintendo Store Tokyo. Ensuite, Nakano Broadway, le meilleur endroit de Tokyo pour les cartes Pokémon originales, les figurines Dragon Ball et les articles rétro/geek à prix juste, et Akihabara, le quartier otaku par excellence -- idéal pour les cadeaux des amis. Clôture de l'après-midi en beauté : au choix, montée au Tokyo Skytree pour le coucher de soleil ou shopping de dernière minute.",
+    "summary": "Journée de collection et de jeux vidéo : Mega Pokémon Center d'Ikebukuro (avec ses statues grandeur nature de Mewtwo, Dracaufeu et Lucario) et Nintendo Store Tokyo. Ensuite, Nakano Broadway et Akihabara, avec largement le temps dans ce dernier. Clôture de l'après-midi avec l'entrée déjà achetée pour le belvédère du Tokyo Skytree.",
     "history": "L'industrie japonaise du jeu vidéo, menée par Nintendo, a revitalisé l'économie culturelle du pays dans les années 80. Nakano Broadway est né dans les années 60 comme complexe résidentiel de luxe, aujourd'hui mecque du collectionnisme underground.",
     "schedule": [
       {
+        "time": "08:35",
+        "text": "Réveil."
+      },
+      {
+        "time": "09:20",
+        "text": "Départ de l'hôtel vers Ikebukuro (premier arrêt de la journée)."
+      },
+      {
+        "time": "10:00–11:00",
         "text": "Mega Pokémon Center Ikebukuro (Sunshine City, 2e étage) et Nintendo Store Tokyo. Le Mega Center est le plus grand du Japon : statues grandeur nature de Dracaufeu, Lucario et Mewtwo, la Pokémon Card Station, et des produits exclusifs introuvables ailleurs."
       },
       {
-        "text": "🚃 Train vers Nakano. Déjeuner dans le quartier avant de commencer à explorer."
+        "time": "11:00–12:00",
+        "text": "🚃 Train vers Nakano (~20-25 min) et déjeuner dans le quartier avant de commencer à explorer."
       },
       {
-        "text": "Après-midi de shopping collector à Nakano Broadway : le meilleur endroit de Tokyo pour les cartes Pokémon originales (boutiques spécialisées de trading cards avec vitrines de cartes à l'unité et boosters), les figurines et produits dérivés Dragon Ball, et les articles rétro/manga en général à prix juste. Plusieurs étages de petites boutiques indépendantes — ça vaut le coup de toutes les faire.\n\n🛍️ **NAKANO SUN MALL** (recommandation de l'amie petit-fromage de Thibaut) : la galerie marchande couverte qui mène directement de la gare à l'entrée de Nakano Broadway (~5 min à pied) -- confirmé géographiquement, c'est le chemin naturel. Bien moins touristique qu'Akihabara, avec des restaurants et izakayas à l'ambiance plus locale.\n\n🚃 Ensuite, train vers Akihabara."
+        "time": "12:00–13:45",
+        "text": "Shopping collector à Nakano Broadway : le meilleur endroit de Tokyo pour les cartes Pokémon originales (boutiques spécialisées de trading cards avec vitrines de cartes à l'unité et boosters), les figurines et produits dérivés Dragon Ball, et les articles rétro/manga en général à prix juste. Plusieurs étages de petites boutiques indépendantes — ça vaut le coup de toutes les faire.\n\n🛍️ **NAKANO SUN MALL** (recommandation de l'amie petit-fromage de Thibaut) : la galerie marchande couverte qui mène directement de la gare à l'entrée de Nakano Broadway (~5 min à pied) -- confirmé géographiquement, c'est le chemin naturel. Bien moins touristique qu'Akihabara, avec des restaurants et izakayas à l'ambiance plus locale."
       },
       {
-        "text": "🎮 **AKIHABARA**, le quartier otaku par excellence -- différent de Nakano Broadway, ici c'est plus une expérience de rue avec de grandes boutiques spécialisées que de la collection d'occasion.\n\n• Mandarake Complex : 8 étages de manga, figurines et objets de collection de toutes les époques.\n• Super Potato : jeux vidéo rétro (NES, SNES, Game Boy...) dans une ambiance tout droit sortie des années 90.\n• Boutiques officielles liées à Pokémon (pas le Pokémon Center lui-même, mais plusieurs boutiques spécialisées de trading cards).\n• Arcades japonaises (Taito Station, GiGO) pour des parties d'UFO catcher, de rythme ou de combat.\n• Rue principale (Chuo-dori), fermée à la circulation le dimanche après-midi -- aujourd'hui c'est samedi, donc ça pourrait ne pas s'appliquer.\n\n💡 Akihabara n'est qu'à un saut d'Asakusa (~10-15 min) -- la journée shopping se termine ici car c'est l'arrêt le plus proche de la maison, sur le chemin du Skytree et du dîner."
+        "time": "13:45–14:10",
+        "text": "🚃 Train vers Akihabara (~20-25 min)."
       },
       {
-        "text": "🚃 Court trajet en train vers Asakusa/Skytree (~10-15 min depuis Akihabara)."
+        "time": "14:10–16:10",
+        "text": "🎮 **AKIHABARA -- 2 HEURES.** Le quartier otaku par excellence -- différent de Nakano Broadway, ici c'est plus une expérience de rue avec de grandes boutiques spécialisées que de la collection d'occasion.\n\n• Mandarake Complex : 8 étages de manga, figurines et objets de collection de toutes les époques.\n• Super Potato : jeux vidéo rétro (NES, SNES, Game Boy...) dans une ambiance tout droit sortie des années 90.\n• Boutiques officielles liées à Pokémon (plusieurs boutiques spécialisées de trading cards).\n• Arcades japonaises (Taito Station, GiGO) pour des parties d'UFO catcher, de rythme ou de combat.\n• Rue principale (Chuo-dori), fermée à la circulation le dimanche après-midi -- aujourd'hui c'est samedi, donc ça pourrait ne pas s'appliquer."
       },
       {
-        "text": "**CHOISIR L'UNE DE CES 2 OPTIONS POUR CLÔTURER L'APRÈS-MIDI :**\n\n**Option A — 🗼 Montée au Tokyo Skytree avec billets, pour le coucher de soleil.** Le soleil se couche vers ~17h50 en septembre -- avec une entrée à 17h00, il y a largement le temps de s'installer en haut avant qu'il ne commence à descendre.\n\n🎟️ Acheter les billets sur place ou à l'avance sur le site officiel (recommandé si la météo s'annonce bonne, les créneaux du coucher de soleil partent vite). Le Tembo Deck (350 m) est le belvédère standard ; le Tembo Galleria (450 m) est un niveau supplémentaire si vous avez envie de monter encore plus haut.\n\n**Option B — 🛍️ Shopping de dernière minute.** Si vous préférez profiter du temps plutôt que de monter dans un belvédère : Uniqlo Asakusa Store, et le quartier des souvenirs de Kappabashi-dori (ustensiles de cuisine, répliques d'aliments en plastique, couteaux japonais) ou Nakamise-dori à côté du temple Sensō-ji, l'endroit classique pour les cadeaux de dernière minute -- tout à quelques pas de l'hôtel."
+        "time": "16:10–16:25",
+        "text": "🚃 Court trajet en train vers le Skytree (~10-15 min depuis Akihabara)."
       },
       {
+        "time": "🟢 16:30",
+        "text": "🗼 **ENTRÉE CONFIRMÉE : TOKYO SKYTREE -- TEMBO DECK & GALERIE (ADULTE).** Billet déjà acheté pour le 19/09/2026, créneau d'accès 16h30-16h59. Arriver quelques minutes avant 16h30 pour ne pas empiéter sur le créneau."
+      },
+      {
+        "time": "16:30–18:30",
+        "text": "🗼 Visite des deux belvédères du Skytree (Tembo Deck, 350 m, et Tembo Galleria, 450 m) -- largement le temps d'en profiter tranquillement."
+      },
+      {
+        "time": "~18:45",
+        "text": "🚶 Retour vers le quartier de l'hôtel (le Skytree n'est qu'à ~15-20 min à pied d'Asakusa)."
+      },
+      {
+        "time": "19:00–20:30",
         "text": "🍜 Dîner du côté d'Asakusa."
       },
       {
+        "time": "~21:00",
         "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nRetour à la résidence pour se reposer et se préparer pour demain : excursion à Nikko, si la météo le permet (5e nuit à Tokyo)."
       }
     ],
-    "money": "Env. 40 € (repas) + shopping + entrée Skytree si cette option est choisie"
+    "money": "Env. 40 € (repas) + shopping + entrée Skytree (déjà payée)"
   },
   {
     "title": "Excursion à Nikko",
