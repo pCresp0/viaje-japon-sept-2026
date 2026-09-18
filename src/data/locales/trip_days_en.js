@@ -777,12 +777,12 @@ export const days = [
         "text": "First look around Nakano Broadway: Tokyo's best spot for original Pokémon cards (specialized trading card shops with display cases of individual cards and booster packs), Dragon Ball figures and merchandise, and retro/manga items in general at fair prices. Several floors of small independent shops — worth exploring all of them.\n\n🛍️ **NAKANO SUN MALL** (friend's cheese-nickname recommendation from Thibaut): the covered shopping arcade that runs straight from the station to the entrance of Nakano Broadway (~5 min on foot) -- confirmed geographically, it's the natural route. Much less touristy than Akihabara, with more locally-flavored restaurants and izakayas."
       },
       {
-        "time": "12:40–13:20",
-        "text": "🍜 Lunch in Nakano (30-45 min)."
+        "time": "12:40–13:05",
+        "text": "🚃 Train to Akihabara (~20-25 min)."
       },
       {
-        "time": "13:20–13:45",
-        "text": "🚃 Train to Akihabara (~20-25 min)."
+        "time": "13:05–13:45",
+        "text": "🍜 **LUNCH: GYUKATSU ICHINISAN** (recommended by a friend -- the best tonkatsu, according to him).\n\nhttps://maps.app.goo.gl/VgfUPTrjPzz4dQpHA?g_st=ic"
       },
       {
         "time": "13:45–15:45",
