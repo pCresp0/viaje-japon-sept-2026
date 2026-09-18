@@ -753,35 +753,63 @@ export const days = [
   {
     "title": "Ruta sa Nintendo, Pamimili at Skytree",
     "cities": "Ikebukuro, Nakano, Akihabara",
-    "summary": "Araw ng koleksyon at video games: Mega Pokémon Center sa Ikebukuro (may life-size na estatwa nina Mewtwo, Charizard at Lucario) at Nintendo Store Tokyo. Pagkatapos, Nakano Broadway, ang pinakamagandang lugar sa Tokyo para sa orihinal na Pokémon cards, Dragon Ball figures, at retro/geek na bagay sa tamang presyo, at Akihabara, ang pinakamahusay na otaku district -- perpekto para sa mga regalo sa mga kaibigan. Pagsara ng hapon nang maayos: pagpili sa pag-akyat sa Tokyo Skytree para sa sunset o huling-minutong pamimili.",
+    "summary": "Araw ng koleksyon at video games: Mega Pokémon Center sa Ikebukuro (may life-size na estatwa nina Mewtwo, Charizard at Lucario) at Nintendo Store Tokyo. Pagkatapos, Nakano Broadway at Akihabara, na may sapat na oras sa huli. Pagsara ng hapon gamit ang nabili nang ticket para sa observation deck ng Tokyo Skytree.",
     "history": "Ang industriya ng video game sa Japan, na pinamunuan ng Nintendo, ay muling nagbigay-buhay sa kultural na ekonomiya ng bansa noong dekada '80. Ang Nakano Broadway ay isinilang noong dekada '60 bilang luxury residential complex, ngayon ay mecca ng underground collecting.",
     "schedule": [
       {
+        "time": "08:35",
+        "text": "Gising na."
+      },
+      {
+        "time": "09:20",
+        "text": "Aalis sa hotel patungong Ikebukuro (unang hintuan ng araw)."
+      },
+      {
+        "time": "10:00–11:00",
         "text": "Mega Pokémon Center Ikebukuro (Sunshine City, 2nd floor) at Nintendo Store Tokyo. Ang Mega Center ang pinakamalaki sa Japan: life-size na estatwa nina Charizard, Lucario at Mewtwo, ang Pokémon Card Station, at exclusive na merchandise na wala sa ibang tindahan."
       },
       {
-        "text": "🚃 Tren papuntang Nakano. Tanghalian sa lugar bago magsimulang mag-explore."
+        "time": "11:00–12:00",
+        "text": "🚃 Tren papuntang Nakano (~20-25 min) at tanghalian sa lugar bago magsimulang mag-explore."
       },
       {
-        "text": "Hapon ng pamimili ng koleksyon sa Nakano Broadway: ang pinakamagandang lugar sa Tokyo para sa orihinal na Pokémon card (mga espesyalisadong trading card shop na may display case ng indibidwal na card at booster pack), mga figure at merchandise ng Dragon Ball, at retro/manga na bagay sa pangkalahatan sa tamang presyo. Maraming palapag ng maliliit na independent na tindahan — sulit puntahan lahat.\n\n🛍️ **NAKANO SUN MALL** (rekomendasyon ng kaibigang keso-palayaw ni Thibaut): ang covered shopping arcade na diretsong dumadaan mula sa estasyon hanggang sa pasukan ng Nakano Broadway (~5 min na lakad) -- nakumpirma ang geography, ito ang natural na daan. Mas hindi turista kaysa Akihabara, may mga restaurant at izakaya na mas lokal ang vibe.\n\n🚃 Pagkatapos, tren papuntang Akihabara."
+        "time": "12:00–13:45",
+        "text": "Pamimili ng koleksyon sa Nakano Broadway: ang pinakamagandang lugar sa Tokyo para sa orihinal na Pokémon card (mga espesyalisadong trading card shop na may display case ng indibidwal na card at booster pack), mga figure at merchandise ng Dragon Ball, at retro/manga na bagay sa pangkalahatan sa tamang presyo. Maraming palapag ng maliliit na independent na tindahan — sulit puntahan lahat.\n\n🛍️ **NAKANO SUN MALL** (rekomendasyon ng kaibigang keso-palayaw ni Thibaut): ang covered shopping arcade na diretsong dumadaan mula sa estasyon hanggang sa pasukan ng Nakano Broadway (~5 min na lakad) -- nakumpirma ang geography, ito ang natural na daan. Mas hindi turista kaysa Akihabara, may mga restaurant at izakaya na mas lokal ang vibe."
       },
       {
-        "text": "🎮 **AKIHABARA**, ang pinakamahusay na otaku district -- iba sa Nakano Broadway, dito mas street experience at malalaking espesyalisadong tindahan kaysa sa secondhand na koleksyon.\n\n• Mandarake Complex: 8 palapag ng manga, figure at koleksyon mula sa lahat ng panahon.\n• Super Potato: retro video games (NES, SNES, Game Boy...) sa isang ambiance na parang mula sa dekada '90.\n• Opisyal na mga tindahang may kaugnayan sa Pokémon (hindi mismo ang Pokémon Center, pero maraming espesyalisadong tindahan ng trading card).\n• Japanese arcade (Taito Station, GiGO) para sa UFO catcher, rhythm, o fighting games.\n• Pangunahing kalye (Chuo-dori), sarado sa sasakyan tuwing hapon ng Linggo -- Sabado ngayon, kaya maaaring hindi applicable.\n\n💡 Isang hakbang lang ang Akihabara mula Asakusa (~10-15 min) -- dito natatapos ang araw ng pamimili dahil ito ang pinakamalapit na hintuan papunta sa bahay, patungo sa Skytree at hapunan."
+        "time": "13:45–14:10",
+        "text": "🚃 Tren papuntang Akihabara (~20-25 min)."
       },
       {
-        "text": "🚃 Maikling biyahe sa tren papuntang Asakusa/Skytree (~10-15 min mula Akihabara)."
+        "time": "14:10–16:10",
+        "text": "🎮 **AKIHABARA -- 2 ORAS.** Ang pinakamahusay na otaku district -- iba sa Nakano Broadway, dito mas street experience at malalaking espesyalisadong tindahan kaysa sa secondhand na koleksyon.\n\n• Mandarake Complex: 8 palapag ng manga, figure at koleksyon mula sa lahat ng panahon.\n• Super Potato: retro video games (NES, SNES, Game Boy...) sa isang ambiance na parang mula sa dekada '90.\n• Opisyal na mga tindahang may kaugnayan sa Pokémon (maraming espesyalisadong tindahan ng trading card).\n• Japanese arcade (Taito Station, GiGO) para sa UFO catcher, rhythm, o fighting games.\n• Pangunahing kalye (Chuo-dori), sarado sa sasakyan tuwing hapon ng Linggo -- Sabado ngayon, kaya maaaring hindi applicable."
       },
       {
-        "text": "**PUMILI NG ISA SA 2 OPSYON NA ITO PARA ISARA ANG HAPON:**\n\n**Opsyon A — 🗼 Pag-akyat sa Tokyo Skytree na may ticket, para sa sunset.** Lumulubog ang araw mga ~17:50 sa Setyembre -- kung 17:00 ang entry, may sapat na oras para maka-settle sa itaas bago ito magsimulang lumubog.\n\n🎟️ Bumili ng ticket doon mismo o maaga sa opisyal na website (inirerekomenda kung maganda ang forecast, mabilis maubos ang sunset slots). Ang Tembo Deck (350m) ang standard na observation deck; ang Tembo Galleria (450m) ay dagdag na antas kung gusto pang umakyat nang mas mataas.\n\n**Opsyon B — 🛍️ Huling-minutong pamimili.** Kung mas gusto ninyong samantalahin ang oras kaysa umakyat sa observation deck: Uniqlo Asakusa Store, at ang souvenir area ng Kappabashi-dori (kagamitan sa kusina, plastic food replicas, Japanese knives) o Nakamise-dori katabi ng Sensō-ji Temple, ang klasikong lugar para sa huling-minutong regalo -- lahat malapit lang sa hotel."
+        "time": "16:10–16:25",
+        "text": "🚃 Maikling biyahe sa tren papuntang Skytree (~10-15 min mula Akihabara)."
       },
       {
+        "time": "🟢 16:30",
+        "text": "🗼 **KUMPIRMADONG ENTRY: TOKYO SKYTREE -- TEMBO DECK & GALLERY (ADULT).** Nabili na ang ticket para sa 09/19/2026, entry window na 16:30-16:59. Dumating ng ilang minuto bago mag-16:30 para hindi maubos ang window."
+      },
+      {
+        "time": "16:30–18:30",
+        "text": "🗼 Pagbisita sa dalawang observation deck ng Skytree (Tembo Deck, 350m, at Tembo Galleria, 450m) -- may sapat na oras para masiyahan nang tahimik."
+      },
+      {
+        "time": "~18:45",
+        "text": "🚶 Balik patungong lugar ng hotel (ang Skytree ay ~15-20 min lang na lakad mula Asakusa)."
+      },
+      {
+        "time": "19:00–20:30",
         "text": "🍜 Hapunan sa paligid ng Asakusa."
       },
       {
+        "time": "~21:00",
         "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nPagbalik sa residence para magpahinga at maghanda para bukas: excursion sa Nikko, kung papayag ang panahon (5th gabi sa Tokyo)."
       }
     ],
-    "money": "Humigit-kumulang €40 (pagkain) + pamimili + entrance sa Skytree kung piliin ang opsyong iyon"
+    "money": "Humigit-kumulang €40 (pagkain) + pamimili + entrance sa Skytree (bayad na)"
   },
   {
     "title": "Nikko Day Trip",
