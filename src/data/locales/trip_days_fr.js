@@ -777,12 +777,12 @@ export const days = [
         "text": "Premier coup d'œil à Nakano Broadway : le meilleur endroit de Tokyo pour les cartes Pokémon originales (boutiques spécialisées de trading cards avec vitrines de cartes à l'unité et boosters), les figurines et produits dérivés Dragon Ball, et les articles rétro/manga en général à prix juste. Plusieurs étages de petites boutiques indépendantes — ça vaut le coup de toutes les faire.\n\n🛍️ **NAKANO SUN MALL** (recommandation de l'amie petit-fromage de Thibaut) : la galerie marchande couverte qui mène directement de la gare à l'entrée de Nakano Broadway (~5 min à pied) -- confirmé géographiquement, c'est le chemin naturel. Bien moins touristique qu'Akihabara, avec des restaurants et izakayas à l'ambiance plus locale."
       },
       {
-        "time": "12:40–13:20",
-        "text": "🍜 Déjeuner à Nakano (30-45 min)."
+        "time": "12:40–13:05",
+        "text": "🚃 Train vers Akihabara (~20-25 min)."
       },
       {
-        "time": "13:20–13:45",
-        "text": "🚃 Train vers Akihabara (~20-25 min)."
+        "time": "13:05–13:45",
+        "text": "🍜 **DÉJEUNER : GYUKATSU ICHINISAN** (recommandé par un ami -- le meilleur tonkatsu, d'après lui).\n\nhttps://maps.app.goo.gl/VgfUPTrjPzz4dQpHA?g_st=ic"
       },
       {
         "time": "13:45–15:45",
