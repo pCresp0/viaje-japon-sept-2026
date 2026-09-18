@@ -724,19 +724,22 @@ export const days = [
         "text": "🤖 **ANG PINAKAMAHALAGA SA ODAIBA: DIVERCITY TOKYO PLAZA.** Shopping mall katabi ng Odaiba-Kaihinkoen Station. Dito dati nakatayo ang life-size na Unicorn Gundam statue -- pero ⚠️ **WALA NA ITO**: inanunsyo ng opisyal na website ang pagtatapos ng public display nito noong Agosto 31, 2026, bago pa ang inyong biyahe, at sa petsa ng update na ito, walang kumpirmadong kapalit. Sulit pa ring pumasok sa **Gundam Base Tokyo**, ang opisyal na 3-palapag na tindahan na may lahat ng merchandise at Gunpla kits.\n\n🛍️ Kung may oras pa, mabilisang tingin sa **Aqua City Odaiba** (5 min na lakad): tanawin ng Rainbow Bridge at ang Statue of Liberty replica."
       },
       {
-        "text": "🍜 **TANGHALIAN: KATSUEMON** (DiverCity Tokyo Plaza).\n\nhttps://maps.app.goo.gl/LFswXe7ofaSSnbKY8?g_st=ic"
+        "text": "🍜🤖 **TANGHALIAN AT MGA TINDAHAN: KATSUEMON AT DIVERCITY TOKYO PLAZA.**\n\nhttps://maps.app.goo.gl/LFswXe7ofaSSnbKY8?g_st=ic\n\nPagkatapos ng tanghalian, oras para lakarin ang mga tindahan ng mall -- kabilang ang **Gundam Base Tokyo** (3 palapag ng merchandise at Gunpla kits), dahil ang life-size na estatwa na dati ay nasa labas ⚠️ **wala na ito** (natapos ang public display noong Agosto 31, 2026, walang kumpirmadong kapalit sa petsa ng update na ito)."
       },
       {
-        "text": "🚇 **PATUNGONG TOKYO TOWER.** Yurikamome hanggang Shimbashi + transfer papuntang Toei Oedo Line hanggang Akabanebashi (o Hibiya Line hanggang Kamiyacho) -- iisang transfer lang, mga 25-30 min lahat-lahat."
+        "text": "🚇 **TREN PATUNGONG TOKYO TOWER.** Yurikamome hanggang Shimbashi + transfer papuntang Toei Oedo Line hanggang Akabanebashi (o Mita Line hanggang Onarimon) -- iisang transfer lang, mga 30-40 min lahat-lahat."
       },
       {
-        "text": "🗼 **TOKYO TOWER, KASAMA ANG SUNSET.** Binuksan noong 1958, sa 333m ito ay mga 20m mas mataas kaysa sa Eiffel Tower na inspirasyon nito -- pininturahan ng international orange at white dahil sa regulasyon ng aviation safety, hindi dahil sa aesthetic choice.\n\n🎟️ **Main Deck** (150m, ~¥1,200, normal na entrance walang reserbasyon): ang standard na observation deck. **Top Deck** (150-250m, ~¥3,000, may glass floor sections): mas mahal at kailangan ng timed-slot na reserbasyon -- tingnan ang last-minute availability bago umasa dito.\n\n🌇 Lumulubog ang araw mga **17:45-17:50** sa panahong ito -- sapat na oras mula 14:00 para mamasyal nang tahimik at manatili sa itaas para makita itong lumubog sa lungsod."
+        "text": "🚶 **PAGLALAKAD PATUNGO SA TORE, DUMADAAN SA ZOJOJI TEMPLE.** Ang Zojoji ang funerary temple ng pamilyang Tokugawa sa silangang Tokyo -- katumbas ng Kan'ei-ji sa Ueno. Itinatag noong 1393 at inilipat sa lugar na ito noong 1598, 6 sa 15 Tokugawa shogun ang nakalibing dito. Ang pangunahing gate nito, ang Sangedatsumon (1622), ay isa sa pinakamatandang kahoy na istruktura sa Tokyo at isa sa iilang sa lugar na nakaligtas sa lindol ng 1923 at sa pambobomba noong WWII.\n\n📸 Ang klasikong litrato: ang pagoda o gate ng templo na may Tokyo Tower na sumusungaw sa likuran -- isa sa pinaka-litratuhang kontra ng tradisyon at modernidad sa lungsod."
       },
       {
-        "text": "🚇 **PATUNGONG ASAKUSA (UNIQLO).** Mula sa Tokyo Tower, mga 25-30 min na may isang transfer (Oedo/Hibiya + Ginza o Asakusa Line)."
+        "text": "🗼 **TOKYO TOWER.** Binuksan noong 1958, sa 333m ito ay mga 20m mas mataas kaysa sa Eiffel Tower na inspirasyon nito -- pininturahan ng international orange at white dahil sa regulasyon ng aviation safety, hindi dahil sa aesthetic choice.\n\n🎟️ **Main Deck** (150m, ~¥1,200, normal na entrance walang reserbasyon): ang standard na observation deck. **Top Deck** (150-250m, ~¥3,000, may glass floor sections): mas mahal at kailangan ng timed-slot na reserbasyon -- dahil 45 min lang ang oras, mas mainam sa Main Deck na lang."
       },
       {
-        "text": "🛍️ **UNIQLO ASAKUSA STORE.** Pamimili hanggang sa pagsara ng 20:00 -- sapat na oras.\n\nhttps://maps.app.goo.gl/uAJszQKRPMjwdudx5?g_st=ic"
+        "text": "🚇 **BALIK PATUNGONG ASAKUSA (UNIQLO).** Mula sa Tokyo Tower, mga 25-30 min na may isang transfer (Oedo/Mita + Ginza o Asakusa Line)."
+      },
+      {
+        "text": "🛍️ **UNIQLO ASAKUSA STORE.** Pamimili hanggang sa pagsara ng 20:00 -- sapat na oras sa pagkakataong ito.\n\nhttps://maps.app.goo.gl/uAJszQKRPMjwdudx5?g_st=ic"
       },
       {
         "text": "🍜 Hapunan sa paligid ng hotel."
