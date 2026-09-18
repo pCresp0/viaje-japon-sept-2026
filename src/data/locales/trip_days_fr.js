@@ -724,19 +724,22 @@ export const days = [
         "text": "🤖 **LE PLUS IMPORTANT À ODAIBA : DIVERCITY TOKYO PLAZA.** Centre commercial à côté de la gare d'Odaiba-Kaihinkoen. C'est ici que se trouvait la statue grandeur nature de l'Unicorn Gundam -- mais ⚠️ **ELLE N'EST PLUS LÀ** : le site officiel a annoncé la fin de son exposition publique le 31 août 2026, juste avant votre voyage, et à la date de cette mise à jour aucun remplacement n'est confirmé. Ça vaut quand même le coup d'entrer dans **Gundam Base Tokyo**, la boutique officielle sur 3 étages avec tous les produits dérivés et kits Gunpla.\n\n🛍️ S'il reste du temps, un coup d'œil rapide à **Aqua City Odaiba** (5 min à pied) : vue sur le Rainbow Bridge et la réplique de la Statue de la Liberté."
       },
       {
-        "text": "🍜 **DÉJEUNER : KATSUEMON** (DiverCity Tokyo Plaza).\n\nhttps://maps.app.goo.gl/LFswXe7ofaSSnbKY8?g_st=ic"
+        "text": "🍜🤖 **DÉJEUNER ET BOUTIQUES : KATSUEMON ET DIVERCITY TOKYO PLAZA.**\n\nhttps://maps.app.goo.gl/LFswXe7ofaSSnbKY8?g_st=ic\n\nAprès le déjeuner, du temps pour parcourir les boutiques du centre commercial -- dont **Gundam Base Tokyo** (3 étages de produits dérivés et de kits Gunpla), puisque la statue grandeur nature qui se trouvait dehors ⚠️ **n'est plus là** (son exposition publique s'est terminée le 31 août 2026, sans remplacement confirmé à la date de cette mise à jour)."
       },
       {
-        "text": "🚇 **VERS LA TOUR DE TOKYO.** Yurikamome jusqu'à Shimbashi + correspondance vers la ligne Toei Oedo jusqu'à Akabanebashi (ou la ligne Hibiya jusqu'à Kamiyacho) -- un seul changement, environ 25-30 min au total."
+        "text": "🚇 **TRAIN VERS LA TOUR DE TOKYO.** Yurikamome jusqu'à Shimbashi + correspondance vers la ligne Toei Oedo jusqu'à Akabanebashi (ou la ligne Mita jusqu'à Onarimon) -- un seul changement, environ 30-40 min au total."
       },
       {
-        "text": "🗼 **TOUR DE TOKYO, COUCHER DE SOLEIL INCLUS.** Inaugurée en 1958, avec ses 333 m elle est environ 20 m plus haute que la Tour Eiffel dont elle s'inspire -- peinte en blanc et orange international par réglementation de sécurité aérienne, pas par choix esthétique.\n\n🎟️ **Main Deck** (150 m, ~¥1 200, entrée normale sans réservation) : le belvédère standard. **Top Deck** (150-250 m, ~¥3 000, avec des sections de sol en verre) : plus cher et nécessite une réservation de créneau horaire -- vérifier la disponibilité de dernière minute avant d'y compter.\n\n🌇 Le soleil se couche vers **17h45-17h50** à cette période de l'année -- largement le temps depuis 14h00 pour visiter tranquillement et rester en haut pour le voir descendre sur la ville."
+        "text": "🚶 **PROMENADE JUSQU'À LA TOUR, EN PASSANT PAR LE TEMPLE ZOJOJI.** Zojoji est le temple funéraire de la famille Tokugawa dans l'est de Tokyo -- l'équivalent du Kan'ei-ji à Ueno. Fondé en 1393 et déplacé sur ce site en 1598, 6 des 15 shoguns Tokugawa y sont enterrés. Sa porte principale, la Sangedatsumon (1622), est l'une des plus anciennes structures en bois de Tokyo et l'une des rares du quartier à avoir survécu au séisme de 1923 et aux bombardements de la Seconde Guerre mondiale.\n\n📸 La photo classique : la pagode ou la porte du temple avec la Tour de Tokyo qui pointe juste derrière -- l'un des contrastes les plus photographiés entre tradition et modernité de la ville."
       },
       {
-        "text": "🚇 **VERS ASAKUSA (UNIQLO).** Depuis la Tour de Tokyo, environ 25-30 min avec une correspondance (Oedo/Hibiya + ligne Ginza ou Asakusa)."
+        "text": "🗼 **TOUR DE TOKYO.** Inaugurée en 1958, avec ses 333 m elle est environ 20 m plus haute que la Tour Eiffel dont elle s'inspire -- peinte en blanc et orange international par réglementation de sécurité aérienne, pas par choix esthétique.\n\n🎟️ **Main Deck** (150 m, ~¥1 200, entrée normale sans réservation) : le belvédère standard. **Top Deck** (150-250 m, ~¥3 000, avec des sections de sol en verre) : plus cher et nécessite une réservation de créneau horaire -- avec seulement 45 min disponibles, mieux vaut s'en tenir au Main Deck."
       },
       {
-        "text": "🛍️ **UNIQLO ASAKUSA STORE.** Shopping jusqu'à la fermeture à 20h00 -- largement le temps.\n\nhttps://maps.app.goo.gl/uAJszQKRPMjwdudx5?g_st=ic"
+        "text": "🚇 **RETOUR VERS ASAKUSA (UNIQLO).** Depuis la Tour de Tokyo, environ 25-30 min avec une correspondance (Oedo/Mita + ligne Ginza ou Asakusa)."
+      },
+      {
+        "text": "🛍️ **UNIQLO ASAKUSA STORE.** Shopping jusqu'à la fermeture à 20h00 -- largement le temps cette fois-ci.\n\nhttps://maps.app.goo.gl/uAJszQKRPMjwdudx5?g_st=ic"
       },
       {
         "text": "🍜 Dîner dans le quartier de l'hôtel."
