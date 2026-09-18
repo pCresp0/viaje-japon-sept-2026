@@ -777,12 +777,12 @@ export const days = [
         "text": "Unang tingin sa Nakano Broadway: ang pinakamagandang lugar sa Tokyo para sa orihinal na Pokémon card (mga espesyalisadong trading card shop na may display case ng indibidwal na card at booster pack), mga figure at merchandise ng Dragon Ball, at retro/manga na bagay sa pangkalahatan sa tamang presyo. Maraming palapag ng maliliit na independent na tindahan — sulit puntahan lahat.\n\n🛍️ **NAKANO SUN MALL** (rekomendasyon ng kaibigang keso-palayaw ni Thibaut): ang covered shopping arcade na diretsong dumadaan mula sa estasyon hanggang sa pasukan ng Nakano Broadway (~5 min na lakad) -- nakumpirma ang geography, ito ang natural na daan. Mas hindi turista kaysa Akihabara, may mga restaurant at izakaya na mas lokal ang vibe."
       },
       {
-        "time": "12:40–13:20",
-        "text": "🍜 Tanghalian sa Nakano (30-45 min)."
+        "time": "12:40–13:05",
+        "text": "🚃 Tren papuntang Akihabara (~20-25 min)."
       },
       {
-        "time": "13:20–13:45",
-        "text": "🚃 Tren papuntang Akihabara (~20-25 min)."
+        "time": "13:05–13:45",
+        "text": "🍜 **TANGHALIAN: GYUKATSU ICHINISAN** (rekomendasyon ng isang kaibigan -- ang pinakamahusay na tonkatsu, ayon sa kanya).\n\nhttps://maps.app.goo.gl/VgfUPTrjPzz4dQpHA?g_st=ic"
       },
       {
         "time": "13:45–15:45",
