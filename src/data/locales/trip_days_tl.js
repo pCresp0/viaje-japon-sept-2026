@@ -751,9 +751,42 @@ export const days = [
     "money": "Humigit-kumulang €45 (pagkain)"
   },
   {
+    "title": "Ruta sa Nintendo, Pamimili at Skytree",
+    "cities": "Ikebukuro, Nakano, Akihabara",
+    "summary": "Araw ng koleksyon at video games: Mega Pokémon Center sa Ikebukuro (may life-size na estatwa nina Mewtwo, Charizard at Lucario) at Nintendo Store Tokyo. Pagkatapos, Nakano Broadway, ang pinakamagandang lugar sa Tokyo para sa orihinal na Pokémon cards, Dragon Ball figures, at retro/geek na bagay sa tamang presyo, at Akihabara, ang pinakamahusay na otaku district -- perpekto para sa mga regalo sa mga kaibigan. Pagsara ng hapon nang maayos: pagpili sa pag-akyat sa Tokyo Skytree para sa sunset o huling-minutong pamimili.",
+    "history": "Ang industriya ng video game sa Japan, na pinamunuan ng Nintendo, ay muling nagbigay-buhay sa kultural na ekonomiya ng bansa noong dekada '80. Ang Nakano Broadway ay isinilang noong dekada '60 bilang luxury residential complex, ngayon ay mecca ng underground collecting.",
+    "schedule": [
+      {
+        "text": "Mega Pokémon Center Ikebukuro (Sunshine City, 2nd floor) at Nintendo Store Tokyo. Ang Mega Center ang pinakamalaki sa Japan: life-size na estatwa nina Charizard, Lucario at Mewtwo, ang Pokémon Card Station, at exclusive na merchandise na wala sa ibang tindahan."
+      },
+      {
+        "text": "🚃 Tren papuntang Nakano. Tanghalian sa lugar bago magsimulang mag-explore."
+      },
+      {
+        "text": "Hapon ng pamimili ng koleksyon sa Nakano Broadway: ang pinakamagandang lugar sa Tokyo para sa orihinal na Pokémon card (mga espesyalisadong trading card shop na may display case ng indibidwal na card at booster pack), mga figure at merchandise ng Dragon Ball, at retro/manga na bagay sa pangkalahatan sa tamang presyo. Maraming palapag ng maliliit na independent na tindahan — sulit puntahan lahat.\n\n🛍️ **NAKANO SUN MALL** (rekomendasyon ng kaibigang keso-palayaw ni Thibaut): ang covered shopping arcade na diretsong dumadaan mula sa estasyon hanggang sa pasukan ng Nakano Broadway (~5 min na lakad) -- nakumpirma ang geography, ito ang natural na daan. Mas hindi turista kaysa Akihabara, may mga restaurant at izakaya na mas lokal ang vibe.\n\n🚃 Pagkatapos, tren papuntang Akihabara."
+      },
+      {
+        "text": "🎮 **AKIHABARA**, ang pinakamahusay na otaku district -- iba sa Nakano Broadway, dito mas street experience at malalaking espesyalisadong tindahan kaysa sa secondhand na koleksyon.\n\n• Mandarake Complex: 8 palapag ng manga, figure at koleksyon mula sa lahat ng panahon.\n• Super Potato: retro video games (NES, SNES, Game Boy...) sa isang ambiance na parang mula sa dekada '90.\n• Opisyal na mga tindahang may kaugnayan sa Pokémon (hindi mismo ang Pokémon Center, pero maraming espesyalisadong tindahan ng trading card).\n• Japanese arcade (Taito Station, GiGO) para sa UFO catcher, rhythm, o fighting games.\n• Pangunahing kalye (Chuo-dori), sarado sa sasakyan tuwing hapon ng Linggo -- Sabado ngayon, kaya maaaring hindi applicable.\n\n💡 Isang hakbang lang ang Akihabara mula Asakusa (~10-15 min) -- dito natatapos ang araw ng pamimili dahil ito ang pinakamalapit na hintuan papunta sa bahay, patungo sa Skytree at hapunan."
+      },
+      {
+        "text": "🚃 Maikling biyahe sa tren papuntang Asakusa/Skytree (~10-15 min mula Akihabara)."
+      },
+      {
+        "text": "**PUMILI NG ISA SA 2 OPSYON NA ITO PARA ISARA ANG HAPON:**\n\n**Opsyon A — 🗼 Pag-akyat sa Tokyo Skytree na may ticket, para sa sunset.** Lumulubog ang araw mga ~17:50 sa Setyembre -- kung 17:00 ang entry, may sapat na oras para maka-settle sa itaas bago ito magsimulang lumubog.\n\n🎟️ Bumili ng ticket doon mismo o maaga sa opisyal na website (inirerekomenda kung maganda ang forecast, mabilis maubos ang sunset slots). Ang Tembo Deck (350m) ang standard na observation deck; ang Tembo Galleria (450m) ay dagdag na antas kung gusto pang umakyat nang mas mataas.\n\n**Opsyon B — 🛍️ Huling-minutong pamimili.** Kung mas gusto ninyong samantalahin ang oras kaysa umakyat sa observation deck: Uniqlo Asakusa Store, at ang souvenir area ng Kappabashi-dori (kagamitan sa kusina, plastic food replicas, Japanese knives) o Nakamise-dori katabi ng Sensō-ji Temple, ang klasikong lugar para sa huling-minutong regalo -- lahat malapit lang sa hotel."
+      },
+      {
+        "text": "🍜 Hapunan sa paligid ng Asakusa."
+      },
+      {
+        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nPagbalik sa residence para magpahinga at maghanda para bukas: excursion sa Nikko, kung papayag ang panahon (5th gabi sa Tokyo)."
+      }
+    ],
+    "money": "Humigit-kumulang €40 (pagkain) + pamimili + entrance sa Skytree kung piliin ang opsyong iyon"
+  },
+  {
     "title": "Nikko Day Trip",
     "cities": "Nikko",
-    "summary": "Buong araw ng kalikasan at mga templo, 2 oras mula Tokyo sa direktang tren mula Asakusa (literal na katabi ng hotel): ang Toshogu Shrine, mausoleum ng shogun na si Tokugawa Ieyasu at UNESCO World Heritage Site, ang Shinkyo Bridge, at kung may oras pa, ang Kegon Falls at Lake Chuzenji sa Irohazaka mountain road.",
+    "summary": "⚠️ Inilipat mula Sabado papuntang Linggo dahil sa kakulangan ng available na tren -- kung papayag ang panahon. Buong araw ng kalikasan at mga templo, 2 oras mula Tokyo sa direktang tren mula Asakusa (literal na katabi ng hotel): ang Toshogu Shrine, mausoleum ng shogun na si Tokugawa Ieyasu at UNESCO World Heritage Site, ang Shinkyo Bridge, ang Kegon Falls at Lake Chuzenji sa Irohazaka mountain road. Farewell dinner ng grupo sa gabi, sa huling buong araw bago bumalik sa Spain.",
     "history": "Umunlad ang Nikko sa paligid ng Toshogu Shrine, itinayo noong 1617 bilang mausoleum ni Tokugawa Ieyasu, ang tagapagtatag ng shogunate na namuno sa Japan nang mahigit 250 taon. Pinalawak ito ng apo niyang si Iemitsu hanggang maging ang mayamang dekorasyon na kumplex na nakikita ngayon, na may mahigit 5 milyong piraso ng gold leaf na nakakalat sa mga gusali nito.",
     "schedule": [
       {
@@ -770,7 +803,7 @@ export const days = [
       },
       {
         "time": "🟢 07:30",
-        "text": "🚅 **KUMPIRMADONG TREN: LIMITED EXPRESS KEGON, ASAKUSA → TOBU-NIKKO.** Na-verify sa opisyal na timetable ng Tobu Railway (araw-araw na serbisyo, hindi lang weekend) -- pagdating sa Tobu-Nikko ng **09:20** (1h 50min na biyahe).\n\n🎫 **SUICA:** ❌ HINDI (kailangan ng express ticket na may upuan)\n📅 **RESERBASYON:** 🔴 BIBILHIN PA -- inirerekomenda ang **Tobu World Heritage Pass** (~¥4,160/tao ≈ 22,60€), na kasama ang round trip sa Limited Express PLUS unlimited na bus sa Nikko sa loob ng 2 araw. Sa pagbili, humingi ng upuan sa Kegon ng 07:30.\n📅 **PAMBILI:** Sa mga makina o ticket counter sa Tobu Asakusa Station, o maaga sa app/website ng Tobu Railway. Dahil Sabado ito, mainam bilhin ilang araw bago para masiguro ang 5 upuan na magkakasama."
+        "text": "🚅 **KUMPIRMADONG TREN: LIMITED EXPRESS KEGON, ASAKUSA → TOBU-NIKKO.** Na-verify sa opisyal na timetable ng Tobu Railway (araw-araw na serbisyo) -- pagdating sa Tobu-Nikko ng **09:20** (1h 50min na biyahe).\n\n🎫 **SUICA:** ❌ HINDI (kailangan ng express ticket na may upuan)\n📅 **RESERBASYON:** 🔴 BIBILHIN PA -- inirerekomenda ang **Tobu World Heritage Pass** (~¥4,160/tao ≈ 22,60€), na kasama ang round trip sa Limited Express PLUS unlimited na bus sa Nikko sa loob ng 2 araw. Sa pagbili, humingi ng upuan sa Kegon ng 07:30.\n📅 **PAMBILI:** Sa mga makina o ticket counter sa Tobu Asakusa Station, o maaga sa app/website ng Tobu Railway. Dahil Linggo ito, mainam bilhin ilang araw bago para masiguro ang 5 upuan na magkakasama."
       },
       {
         "time": "09:20",
@@ -810,7 +843,7 @@ export const days = [
       },
       {
         "time": "🟢 17:44",
-        "text": "🚅 **KUMPIRMADONG TREN: LIMITED EXPRESS REVATY KEGON, TOBU-NIKKO → ASAKUSA.** Na-verify sa opisyal na timetable ng Tobu Railway (datos noong Setyembre 2026) -- pagdating sa Asakusa ng **19:35** (1h 51min na biyahe). Eksakto ang oras na hinahanap ninyo, hindi na kailangang magmadali para sa mas maagang tren."
+        "text": "🚅 **KUMPIRMADONG TREN: LIMITED EXPRESS REVATY KEGON, TOBU-NIKKO → ASAKUSA.** Na-verify sa opisyal na timetable ng Tobu Railway (datos noong Setyembre 2026) -- pagdating sa Asakusa ng **19:35** (1h 51min na biyahe)."
       },
       {
         "time": "19:35",
@@ -818,47 +851,14 @@ export const days = [
       },
       {
         "time": "~20:00–21:00",
-        "text": "🍜 Hapunan sa paligid ng Nakano o Asakusa."
-      },
-      {
-        "time": "~21:15",
-        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nPagbalik sa residence para magpahinga at maghanda para bukas: Ruta sa Nintendo, Ikebukuro at Akihabara, ang huling buong araw bago umuwi (5th gabi sa Tokyo)."
-      }
-    ],
-    "money": "Humigit-kumulang €74/tao sa kabuuan (€40 pagkain + €11,40 Toshogu admission + €22,60 Tobu World Heritage Pass) -- 🔴 ang Tobu Pass ay BIBILHIN PA (humingi ng upuan sa Kegon ng 07:30 at Revaty Kegon ng 17:44, parehong kumpirmado); opsyonal ang Kegon elevator (~€3,10/tao)."
-  },
-  {
-    "title": "Ruta sa Nintendo, Pamimili at Skytree",
-    "cities": "Ikebukuro, Nakano, Akihabara",
-    "summary": "Araw ng koleksyon at video games: Mega Pokémon Center sa Ikebukuro (may life-size na estatwa nina Mewtwo, Charizard at Lucario) at Nintendo Store Tokyo. Pagkatapos, Nakano Broadway, ang pinakamagandang lugar sa Tokyo para sa orihinal na Pokémon cards, Dragon Ball figures, at retro/geek na bagay sa tamang presyo, at Akihabara, ang pinakamahusay na otaku district -- perpekto para sa mga regalo sa mga kaibigan. Pagsara ng biyahe nang maayos: pagpili sa pag-akyat sa Tokyo Skytree para sa sunset o huling-minutong pamimili, at farewell dinner ng grupo, sa huling buong araw bago bumalik sa Spain.",
-    "history": "Ang industriya ng video game sa Japan, na pinamunuan ng Nintendo, ay muling nagbigay-buhay sa kultural na ekonomiya ng bansa noong dekada '80. Ang Nakano Broadway ay isinilang noong dekada '60 bilang luxury residential complex, ngayon ay mecca ng underground collecting.",
-    "schedule": [
-      {
-        "text": "Mega Pokémon Center Ikebukuro (Sunshine City, 2nd floor) at Nintendo Store Tokyo. Ang Mega Center ang pinakamalaki sa Japan: life-size na estatwa nina Charizard, Lucario at Mewtwo, ang Pokémon Card Station, at exclusive na merchandise na wala sa ibang tindahan."
-      },
-      {
-        "text": "🚃 Tren papuntang Nakano. Tanghalian sa lugar bago magsimulang mag-explore."
-      },
-      {
-        "text": "Hapon ng pamimili ng koleksyon sa Nakano Broadway: ang pinakamagandang lugar sa Tokyo para sa orihinal na Pokémon card (mga espesyalisadong trading card shop na may display case ng indibidwal na card at booster pack), mga figure at merchandise ng Dragon Ball, at retro/manga na bagay sa pangkalahatan sa tamang presyo. Maraming palapag ng maliliit na independent na tindahan — sulit puntahan lahat.\n\n🛍️ **NAKANO SUN MALL** (rekomendasyon ng kaibigang keso-palayaw ni Thibaut): ang covered shopping arcade na diretsong dumadaan mula sa estasyon hanggang sa pasukan ng Nakano Broadway (~5 min na lakad) -- nakumpirma ang geography, ito ang natural na daan. Mas hindi turista kaysa Akihabara, may mga restaurant at izakaya na mas lokal ang vibe.\n\n🚃 Pagkatapos, tren papuntang Akihabara."
-      },
-      {
-        "text": "🎮 **AKIHABARA**, ang pinakamahusay na otaku district -- iba sa Nakano Broadway, dito mas street experience at malalaking espesyalisadong tindahan kaysa sa secondhand na koleksyon.\n\n• Mandarake Complex: 8 palapag ng manga, figure at koleksyon mula sa lahat ng panahon.\n• Super Potato: retro video games (NES, SNES, Game Boy...) sa isang ambiance na parang mula sa dekada '90.\n• Opisyal na mga tindahang may kaugnayan sa Pokémon (hindi mismo ang Pokémon Center, pero maraming espesyalisadong tindahan ng trading card).\n• Japanese arcade (Taito Station, GiGO) para sa UFO catcher, rhythm, o fighting games.\n• Pangunahing kalye (Chuo-dori), sarado sa sasakyan tuwing hapon ng Linggo -- Linggo ngayon, kaya dapat applicable.\n\n💡 Isang hakbang lang ang Akihabara mula Asakusa (~10-15 min) -- dito natatapos ang araw ng pamimili dahil ito ang pinakamalapit na hintuan papunta sa bahay, patungo sa Skytree at hapunan."
-      },
-      {
-        "text": "🚃 Maikling biyahe sa tren papuntang Asakusa/Skytree (~10-15 min mula Akihabara)."
-      },
-      {
-        "text": "**PUMILI NG ISA SA 2 OPSYON NA ITO PARA ISARA ANG BAHAGING TOKYO NG BIYAHE:**\n\n**Opsyon A — 🗼 Pag-akyat sa Tokyo Skytree na may ticket, para sa sunset.** Lumulubog ang araw mga ~17:50 sa Setyembre -- kung 17:00 ang entry, may sapat na oras para maka-settle sa itaas bago ito magsimulang lumubog. Perpektong pagsara ng biyahe: ang huling hapon sa Tokyo, na nakikita ang buong lungsod mula sa itaas.\n\n🎟️ Bumili ng ticket doon mismo o maaga sa opisyal na website (inirerekomenda kung maganda ang forecast, mabilis maubos ang sunset slots). Ang Tembo Deck (350m) ang standard na observation deck; ang Tembo Galleria (450m) ay dagdag na antas kung gusto pang umakyat nang mas mataas.\n\n**Opsyon B — 🛍️ Huling-minutong pamimili.** Kung mas gusto ninyong samantalahin ang oras kaysa umakyat sa observation deck: Uniqlo Asakusa Store (sakaling may kulang pa matapos ang bisita kahapon), at ang souvenir area ng Kappabashi-dori (kagamitan sa kusina, plastic food replicas, Japanese knives) o Nakamise-dori katabi ng Sensō-ji Temple, ang klasikong lugar para sa huling-minutong regalo -- lahat malapit lang sa hotel."
-      },
-      {
         "text": "🍜 Farewell dinner ng grupo sa Tokyo (Asakusa), sa huling buong araw bago bumalik sa Spain."
       },
       {
+        "time": "~21:15",
         "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nHuling gabi sa Tokyo bago bumalik sa Spain."
       }
     ],
-    "money": "Humigit-kumulang €40 (pagkain, kasama ang farewell dinner) + pamimili"
+    "money": "Humigit-kumulang €74/tao sa kabuuan (€40 pagkain, kasama ang farewell dinner + €11,40 Toshogu admission + €22,60 Tobu World Heritage Pass) -- 🔴 ang Tobu Pass ay BIBILHIN PA (humingi ng upuan sa Kegon ng 07:30 at Revaty Kegon ng 17:44, parehong kumpirmado); opsyonal ang Kegon elevator (~€3,10/tao)."
   },
   {
     "title": "Pag-uwi",
