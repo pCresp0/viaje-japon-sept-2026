@@ -124,3 +124,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-18 11:17 UTC** — feat(Día 13/Nikko): completar en francés (`a7178da`)
 - **2026-09-18 11:18 UTC** — feat(Día 13/Nikko): completar en tagalo -- itinerario completo con horarios ... (`dbebde1`)
 - **2026-09-18 13:03 UTC** — feat: intercambiar Días 13/14 de vuelta (Nikko al domingo por ... (`4527da8`)
+- **2026-09-18 13:04 UTC** — feat: intercambiar Días 13/14 en inglés (`6e0a89d`)
