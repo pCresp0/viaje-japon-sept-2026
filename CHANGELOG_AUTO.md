@@ -122,3 +122,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-18 07:29 UTC** — fix: restaurar el nombre completo (Pablo Crespo Bellido) en el ... (`0ff500a`)
 - **2026-09-18 11:17 UTC** — feat(Día 13/Nikko): actualizar con horarios reales verificados de Tobu Railway ... (`f961c07`)
 - **2026-09-18 11:17 UTC** — feat(Día 13/Nikko): completar en francés (`a7178da`)
+- **2026-09-18 11:18 UTC** — feat(Día 13/Nikko): completar en tagalo -- itinerario completo con horarios ... (`dbebde1`)
