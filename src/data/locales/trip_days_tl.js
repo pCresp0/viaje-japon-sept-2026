@@ -757,51 +757,75 @@ export const days = [
     "history": "Umunlad ang Nikko sa paligid ng Toshogu Shrine, itinayo noong 1617 bilang mausoleum ni Tokugawa Ieyasu, ang tagapagtatag ng shogunate na namuno sa Japan nang mahigit 250 taon. Pinalawak ito ng apo niyang si Iemitsu hanggang maging ang mayamang dekorasyon na kumplex na nakikita ngayon, na may mahigit 5 milyong piraso ng gold leaf na nakakalat sa mga gusali nito.",
     "schedule": [
       {
-        "time": "06:45",
-        "text": "Gising na at mabilisang almusal sa hotel."
+        "time": "06:30",
+        "text": "Gising na."
       },
       {
-        "time": "07:15",
-        "text": "Papuntang Tobu-Asakusa Station (parehong lugar ng hotel, ilang minuto lang na lakad)."
+        "time": "06:50",
+        "text": "Papuntang Tobu-Asakusa Station (parehong lugar ng hotel, 15-25 min na lakad)."
       },
       {
-        "time": "~07:30",
-        "text": "🚅 Tobu Limited Express papuntang Tobu-Nikko Station.\n\n🎫 **SUICA:** ❌ HINDI (kailangan ng express ticket na may upuan)\n📅 **RESERBASYON:** 🔴 BIBILHIN PA -- inirerekomenda ang **Tobu World Heritage Pass** (~¥4,160/tao ≈ 22,60€), na kasama ang round trip sa Tobu Limited Express PLUS unlimited na bus sa Nikko sa loob ng 2 araw -- ang bus na iyon ang eksaktong kailangan para makarating sa Lake Chuzenji at Kegon Falls, kaya mas sulit kaysa magbayad ng hiwalay na tren at bus.\n📅 **PAMBILI:** Sa mga makina o ticket counter sa Tobu Asakusa Station, o maaga sa app/website ng Tobu Railway. Dahil Sabado ito (mas maraming tao kaysa weekday), mainam bilhin ilang araw bago para masiguro ang 5 upuan na magkakasama.\n\nBiyahe nang mga 2 oras."
+        "time": "~07:15",
+        "text": "Pagdating sa estasyon. Kunin ang physical tickets kung kailangan, bago sumakay."
       },
       {
-        "time": "~09:30",
+        "time": "🟢 07:30",
+        "text": "🚅 **KUMPIRMADONG TREN: LIMITED EXPRESS KEGON, ASAKUSA → TOBU-NIKKO.** Na-verify sa opisyal na timetable ng Tobu Railway (araw-araw na serbisyo, hindi lang weekend) -- pagdating sa Tobu-Nikko ng **09:20** (1h 50min na biyahe).\n\n🎫 **SUICA:** ❌ HINDI (kailangan ng express ticket na may upuan)\n📅 **RESERBASYON:** 🔴 BIBILHIN PA -- inirerekomenda ang **Tobu World Heritage Pass** (~¥4,160/tao ≈ 22,60€), na kasama ang round trip sa Limited Express PLUS unlimited na bus sa Nikko sa loob ng 2 araw. Sa pagbili, humingi ng upuan sa Kegon ng 07:30.\n📅 **PAMBILI:** Sa mga makina o ticket counter sa Tobu Asakusa Station, o maaga sa app/website ng Tobu Railway. Dahil Sabado ito, mainam bilhin ilang araw bago para masiguro ang 5 upuan na magkakasama."
+      },
+      {
+        "time": "09:20",
         "text": "Pagdating sa Tobu-Nikko Station. Kumuha ng brochure/mapa sa tourist center ng estasyon."
+      },
+      {
+        "time": "~09:40",
+        "text": "🚌 **BUS PATUNGO SA TEMPLE AREA.** Hintuan mismo sa harap ng estasyon, patungong Chuzenji-onsen/Yumoto-onsen -- bumaba sa \"Shinkyo\" o \"Nishisando-iriguchi\" (ang huli ang pinakamalapit na hintuan sa Toshogu, Rinno-ji at Futarasan). Base sa opisyal na timetable ng Tobu Bus, may alis tuwing 15-30 min buong umaga, kaya hindi na kailangang habulin ang eksaktong isa -- sakyan na lang ang susunod. Mga 10 minutong byahe.\n\n🎫 Kasama na sa Tobu World Heritage Pass."
       },
       {
         "time": "10:00–13:00",
         "text": "🏯 **TOSHOGU SHRINE AT PALIGID NITO.** Shinkyo Bridge (ang kilalang pulang tulay sa Ilog Daiya, simbolo ng Nikko). Toshogu complex: ang mayamang dekorasyon na Yomeimon Gate, ang relief ng mga unggoy na 'walang nakita, walang narinig, walang sinabi', at ang mausoleum ni Tokugawa Ieyasu. Rinno-ji at Futarasan Jinja, ang dalawa pang templo sa World Heritage ensemble.\n\n🎫 Kombinadong entrance sa Toshogu + Futarasan + Taiyuin: mga ¥2,100/tao (≈11,40€). Toshogu lang: mga ¥1,600/tao. Hindi puwedeng i-reserve -- babayaran on the spot.\n\n💡 Kailangan umakyat ng maraming hagdan at maglakad sa hindi pantay na lupa -- kailangan ng komportableng sapatos."
       },
       {
-        "time": "13:00–14:00",
+        "time": "13:00–13:45",
         "text": "🍜 Lokal na tanghalian: subukan ang yuba (balat ng tofu), specialty ng Nikko sa loob ng mga siglo, sa alinman sa mga restaurant malapit sa pasukan ng dambana."
       },
       {
-        "time": "14:00–17:00",
-        "text": "🚌 **OPSYONAL KUNG MAY ORAS: LAKE CHUZENJI AT KEGON FALLS.** Bus mula Tobu-Nikko Station papunta sa Irohazaka mountain road (matatarik na kurbada, magagandang tanawin) hanggang sa Lake Chuzenji, sa paanan ng Mount Nantai -- kasama na sa Tobu World Heritage Pass. Ang Kegon Falls, 97m ang taas, ay ilang hakbang lang mula sa lawa; malinaw itong makikita nang libre mula sa itaas na plataporma, o puwedeng bumaba gamit ang elevator papunta sa mas mababang plataporma para makita ito nang malapitan (entrance mga ¥570 ≈ 3,10€, hindi puwedeng i-reserve, babayaran on the spot).\n\n💡 Kung mas gusto ng grupo na hindi masyadong patagalin ang araw, puwedeng laktawan ang bahaging ito at mas magpahinga sa palibot ng Toshogu, o maglakad-lakad sa gitna ng Nikko."
+        "time": "~13:55",
+        "text": "🚌 **BUS PATUNGO SA LAKE CHUZENJI.** Mula sa parehong Nishisando/Shinkyo na hintuan, patungong Chuzenji-onsen -- sa Irohazaka mountain road (matatarik na kurbada, magagandang tanawin). Madalas ding may biyahe sa hapon, base sa opisyal na timetable. 40-50 min na biyahe, kasama na sa pass."
+      },
+      {
+        "time": "~14:40",
+        "text": "Pagdating sa Chuzenji-onsen."
+      },
+      {
+        "time": "14:40–16:30",
+        "text": "🏔️ **LAKE CHUZENJI AT KEGON FALLS.** Ang lawa, sa paanan ng Mount Nantai, may paglalakad sa tabi ng dalampasigan. Ang Kegon Falls, 97m ang taas, ay ilang hakbang lang mula sa lawa; malinaw itong makikita nang libre mula sa itaas na plataporma, o puwedeng bumaba gamit ang elevator papunta sa mas mababang plataporma para makita ito nang malapitan (entrance mga ¥570 ≈ 3,10€, hindi puwedeng i-reserve, babayaran on the spot)."
+      },
+      {
+        "time": "~16:40",
+        "text": "🚌 **BUS PABALIK SA TOBU-NIKKO.** Parehong hintuan sa Chuzenji-onsen, patungong Tobu-Nikko -- madalas na biyahe base sa opisyal na timetable. 40-50 min na biyahe."
       },
       {
         "time": "~17:30",
-        "text": "Bumalik gamit ang bus sa Tobu-Nikko Station."
+        "text": "Pagdating sa Tobu-Nikko Station. Sapat na oras bago ang tren pabalik."
       },
       {
-        "time": "~18:00",
-        "text": "🚅 Tobu Limited Express pabalik sa Tobu-Asakusa Station (mga 2 oras)."
+        "time": "🟢 17:44",
+        "text": "🚅 **KUMPIRMADONG TREN: LIMITED EXPRESS REVATY KEGON, TOBU-NIKKO → ASAKUSA.** Na-verify sa opisyal na timetable ng Tobu Railway (datos noong Setyembre 2026) -- pagdating sa Asakusa ng **19:35** (1h 51min na biyahe). Eksakto ang oras na hinahanap ninyo, hindi na kailangang magmadali para sa mas maagang tren."
       },
       {
-        "time": "~20:00",
+        "time": "19:35",
+        "text": "Pagdating sa Asakusa Station."
+      },
+      {
+        "time": "~20:00–21:00",
         "text": "🍜 Hapunan sa paligid ng Nakano o Asakusa."
       },
       {
-        "time": "~21:30",
+        "time": "~21:15",
         "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nPagbalik sa residence para magpahinga at maghanda para bukas: Ruta sa Nintendo, Ikebukuro at Akihabara, ang huling buong araw bago umuwi (5th gabi sa Tokyo)."
       }
     ],
-    "money": "Humigit-kumulang €74/tao sa kabuuan (€40 pagkain + €11,40 Toshogu admission + €22,60 Tobu World Heritage Pass) -- 🔴 ang Tobu Pass ay BIBILHIN PA; opsyonal ang Kegon elevator (~€3,10/tao)."
+    "money": "Humigit-kumulang €74/tao sa kabuuan (€40 pagkain + €11,40 Toshogu admission + €22,60 Tobu World Heritage Pass) -- 🔴 ang Tobu Pass ay BIBILHIN PA (humingi ng upuan sa Kegon ng 07:30 at Revaty Kegon ng 17:44, parehong kumpirmado); opsyonal ang Kegon elevator (~€3,10/tao)."
   },
   {
     "title": "Ruta sa Nintendo, Pamimili at Skytree",
