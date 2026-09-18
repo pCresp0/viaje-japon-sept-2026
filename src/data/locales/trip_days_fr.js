@@ -724,7 +724,7 @@ export const days = [
         "text": "🤖 **LE PLUS IMPORTANT À ODAIBA : DIVERCITY TOKYO PLAZA.** Centre commercial à côté de la gare d'Odaiba-Kaihinkoen. C'est ici que se trouvait la statue grandeur nature de l'Unicorn Gundam -- mais ⚠️ **ELLE N'EST PLUS LÀ** : le site officiel a annoncé la fin de son exposition publique le 31 août 2026, juste avant votre voyage, et à la date de cette mise à jour aucun remplacement n'est confirmé. Ça vaut quand même le coup d'entrer dans **Gundam Base Tokyo**, la boutique officielle sur 3 étages avec tous les produits dérivés et kits Gunpla.\n\n🛍️ S'il reste du temps, un coup d'œil rapide à **Aqua City Odaiba** (5 min à pied) : vue sur le Rainbow Bridge et la réplique de la Statue de la Liberté."
       },
       {
-        "text": "🍜 Déjeuner à Odaiba (foodcourt de DiverCity ou Aqua City) -- puisque vous êtes déjà sur place, plus simple que de chercher quelque chose près de la Tour de Tokyo."
+        "text": "🍜 **DÉJEUNER : KATSUEMON** (DiverCity Tokyo Plaza).\n\nhttps://maps.app.goo.gl/LFswXe7ofaSSnbKY8?g_st=ic"
       },
       {
         "text": "🚇 **VERS LA TOUR DE TOKYO.** Yurikamome jusqu'à Shimbashi + correspondance vers la ligne Toei Oedo jusqu'à Akabanebashi (ou la ligne Hibiya jusqu'à Kamiyacho) -- un seul changement, environ 25-30 min au total."

@@ -724,7 +724,7 @@ export const days = [
         "text": "🤖 **ANG PINAKAMAHALAGA SA ODAIBA: DIVERCITY TOKYO PLAZA.** Shopping mall katabi ng Odaiba-Kaihinkoen Station. Dito dati nakatayo ang life-size na Unicorn Gundam statue -- pero ⚠️ **WALA NA ITO**: inanunsyo ng opisyal na website ang pagtatapos ng public display nito noong Agosto 31, 2026, bago pa ang inyong biyahe, at sa petsa ng update na ito, walang kumpirmadong kapalit. Sulit pa ring pumasok sa **Gundam Base Tokyo**, ang opisyal na 3-palapag na tindahan na may lahat ng merchandise at Gunpla kits.\n\n🛍️ Kung may oras pa, mabilisang tingin sa **Aqua City Odaiba** (5 min na lakad): tanawin ng Rainbow Bridge at ang Statue of Liberty replica."
       },
       {
-        "text": "🍜 Tanghalian sa Odaiba (foodcourt ng DiverCity o Aqua City) -- dahil nandito na kayo, mas simple kaysa maghanap ng makakain malapit sa Tokyo Tower."
+        "text": "🍜 **TANGHALIAN: KATSUEMON** (DiverCity Tokyo Plaza).\n\nhttps://maps.app.goo.gl/LFswXe7ofaSSnbKY8?g_st=ic"
       },
       {
         "text": "🚇 **PATUNGONG TOKYO TOWER.** Yurikamome hanggang Shimbashi + transfer papuntang Toei Oedo Line hanggang Akabanebashi (o Hibiya Line hanggang Kamiyacho) -- iisang transfer lang, mga 25-30 min lahat-lahat."
