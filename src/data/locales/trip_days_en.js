@@ -757,51 +757,75 @@ export const days = [
     "history": "Nikko grew up around Toshogu Shrine, built in 1617 as the mausoleum of Tokugawa Ieyasu, founder of the shogunate that ruled Japan for over 250 years. His grandson Iemitsu expanded it into the lavishly decorated complex seen today, with over 5 million sheets of gold leaf spread across its buildings.",
     "schedule": [
       {
-        "time": "06:45",
-        "text": "Wake up and quick breakfast at the hotel."
+        "time": "06:30",
+        "text": "Wake up."
       },
       {
-        "time": "07:15",
-        "text": "To Tobu-Asakusa Station (same area as the hotel, just a few minutes on foot)."
+        "time": "06:50",
+        "text": "Head to Tobu-Asakusa Station (same area as the hotel, 15-25 min on foot)."
       },
       {
-        "time": "~07:30",
-        "text": "🚅 Tobu Limited Express to Tobu-Nikko Station.\n\n🎫 **SUICA:** ❌ NO (requires an express ticket with a seat)\n📅 **RESERVATION:** 🔴 STILL NEED TO BUY -- recommended: the **Tobu World Heritage Pass** (~¥4,160/person ≈ €22.60), which includes the Tobu Limited Express round trip PLUS unlimited buses around Nikko for 2 days -- that bus is exactly what's needed to reach Lake Chuzenji and Kegon Falls, so it works out cheaper than paying for train and bus separately.\n📅 **PURCHASE:** At the machines or ticket counters at Tobu Asakusa Station, or in advance via the Tobu Railway app/website. Since it's a Saturday (busier than a weekday), it's worth buying it a few days ahead to secure all 5 seats together.\n\nJourney of approximately 2 hours."
+        "time": "~07:15",
+        "text": "Arrival at the station. Pick up physical tickets if needed, before boarding."
       },
       {
-        "time": "~09:30",
+        "time": "🟢 07:30",
+        "text": "🚅 **CONFIRMED TRAIN: LIMITED EXPRESS KEGON, ASAKUSA → TOBU-NIKKO.** Verified on Tobu Railway's official timetable (daily service, not just weekends) -- arrival at Tobu-Nikko at **09:20** (1h 50min journey).\n\n🎫 **SUICA:** ❌ NO (requires an express ticket with a seat)\n📅 **RESERVATION:** 🔴 STILL NEED TO BUY -- recommended: the **Tobu World Heritage Pass** (~¥4,160/person ≈ €22.60), which includes the round trip Limited Express PLUS unlimited buses around Nikko for 2 days. When buying it, ask for a seat on the 07:30 Kegon.\n📅 **PURCHASE:** At the machines or ticket counters at Tobu Asakusa Station, or in advance via the Tobu Railway app/website. Since it's a Saturday, better to buy it a few days ahead to secure all 5 seats together."
+      },
+      {
+        "time": "09:20",
         "text": "Arrival at Tobu-Nikko Station. Pick up brochures/map at the station's tourist center."
+      },
+      {
+        "time": "~09:40",
+        "text": "🚌 **BUS TOWARD THE TEMPLE AREA.** Stop right in front of the station, bound for Chuzenji-onsen/Yumoto-onsen -- get off at \"Shinkyo\" or \"Nishisando-iriguchi\" (the latter is the closest stop to Toshogu, Rinno-ji and Futarasan). Per Tobu Bus's official timetable there are departures every 15-30 min all morning, so no need to catch a specific one -- just take the next one. About a 10-minute ride.\n\n🎫 Included in the Tobu World Heritage Pass."
       },
       {
         "time": "10:00–13:00",
         "text": "🏯 **TOSHOGU SHRINE AND SURROUNDINGS.** Shinkyo Bridge (the iconic red bridge over the Daiya River, symbol of Nikko). Toshogu complex: the lavishly decorated Yomeimon Gate, the relief of the 'see no evil, hear no evil, speak no evil' monkeys, and the mausoleum of Tokugawa Ieyasu. Rinno-ji and Futarasan Jinja, the other two temples in the World Heritage ensemble.\n\n🎫 Combined admission Toshogu + Futarasan + Taiyuin: approx. ¥2,100/person (≈€11.40). Toshogu only: approx. ¥1,600/person. Cannot be reserved -- pay on site.\n\n💡 Involves climbing many steps and walking on uneven ground -- comfortable shoes essential."
       },
       {
-        "time": "13:00–14:00",
+        "time": "13:00–13:45",
         "text": "🍜 Local lunch: try yuba (tofu skin), a Nikko specialty for centuries, at any of the restaurants near the shrine entrance."
       },
       {
-        "time": "14:00–17:00",
-        "text": "🚌 **OPTIONAL IF THERE'S TIME: LAKE CHUZENJI AND KEGON FALLS.** Bus from Tobu-Nikko Station along the Irohazaka mountain road (very sharp curves, spectacular views) to Lake Chuzenji, at the foot of Mount Nantai -- included in the Tobu World Heritage Pass. Kegon Falls, a 97m drop, is a short walk from the lake; it's clearly visible for free from the upper platform, or you can take an elevator down to the lower platform to see it up close (admission approx. ¥570 ≈ €3.10, not reservable, pay on site).\n\n💡 If the group prefers not to stretch the day too long, this block can be skipped in favor of spending more relaxed time around Toshogu, or strolling through central Nikko."
+        "time": "~13:55",
+        "text": "🚌 **BUS TOWARD LAKE CHUZENJI.** From the same Nishisando/Shinkyo stop, bound for Chuzenji-onsen -- along the Irohazaka mountain road (very sharp curves, spectacular views). Frequent departures in the afternoon too, per the official timetable. 40-50 min ride, included in the pass."
+      },
+      {
+        "time": "~14:40",
+        "text": "Arrival at Chuzenji-onsen."
+      },
+      {
+        "time": "14:40–16:30",
+        "text": "🏔️ **LAKE CHUZENJI AND KEGON FALLS.** The lake, at the foot of Mount Nantai, with a stroll along the shore. Kegon Falls, a 97m drop, is a short walk from the lake; it's clearly visible for free from the upper platform, or you can take an elevator down to the lower platform to see it up close (admission approx. ¥570 ≈ €3.10, not reservable, pay on site)."
+      },
+      {
+        "time": "~16:40",
+        "text": "🚌 **BUS BACK TO TOBU-NIKKO.** Same Chuzenji-onsen stop, bound for Tobu-Nikko -- frequent departures per the official timetable. 40-50 min ride."
       },
       {
         "time": "~17:30",
-        "text": "Return by bus to Tobu-Nikko Station."
+        "text": "Arrival at Tobu-Nikko Station. Plenty of time before the return train."
       },
       {
-        "time": "~18:00",
-        "text": "🚅 Tobu Limited Express back to Tobu-Asakusa Station (approx. 2 hours)."
+        "time": "🟢 17:44",
+        "text": "🚅 **CONFIRMED TRAIN: LIMITED EXPRESS REVATY KEGON, TOBU-NIKKO → ASAKUSA.** Verified on Tobu Railway's official timetable (data as of September 2026) -- arrival at Asakusa at **19:35** (1h 51min journey). Exactly the time window you were looking for, no need to rush for an earlier train."
       },
       {
-        "time": "~20:00",
+        "time": "19:35",
+        "text": "Arrival at Asakusa Station."
+      },
+      {
+        "time": "~20:00–21:00",
         "text": "🍜 Dinner around Nakano or Asakusa."
       },
       {
-        "time": "~21:30",
+        "time": "~21:15",
         "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nBack to the residence to rest and get ready for tomorrow: Nintendo Route, Ikebukuro and Akihabara, the last full day before heading home (5th night in Tokyo)."
       }
     ],
-    "money": "Approx. €74/person total (€40 meals + €11.40 Toshogu admission + €22.60 Tobu World Heritage Pass) -- 🔴 the Tobu Pass is STILL NEED TO BUY; optional Kegon elevator extra (~€3.10/person)."
+    "money": "Approx. €74/person total (€40 meals + €11.40 Toshogu admission + €22.60 Tobu World Heritage Pass) -- 🔴 the Tobu Pass is STILL NEED TO BUY (ask for a seat on the 07:30 Kegon and the 17:44 Revaty Kegon, both confirmed); optional Kegon elevator extra (~€3.10/person)."
   },
   {
     "title": "Nintendo Route, Shopping and Skytree",
