@@ -1087,26 +1087,31 @@ export const guides = {
     tip: "Excursión confirmada para el miércoles 16 de septiembre (Día 10) con GetYourGuide (reserva GYGX7M7NZBNL). Comprobar cámaras web a las 06:30 AM la mañana del día.",
   },
   "tokyo-tower": {
-    name: "Roppongi Hills y la Torre de Tokio",
+    name: "Torre de Tokio",
     jp: "東京タワー",
-    founded: "1958 (Torre) / 2003 (Roppongi Hills)",
+    founded: "1958",
     wiki: "Torre de Tokio",
-    tagline: "El símbolo del renacimiento de posguerra visto desde el mejor mirador panorámico de la ciudad.",
+    tagline: "El símbolo del renacimiento económico de posguerra de Japón, inspirado en la Torre Eiffel pero más alta.",
     sections: [
       {
-        title: "El mirador Tokyo City View",
-        body: "Situado en la planta 52 de la Torre Mori (250 metros de altura), este mirador interior acristalado de 360 grados tiene una ventaja fundamental sobre el Tokyo Skytree o Shibuya Sky: su ubicación. Al estar en Roppongi, sitúa a la icónica Torre de Tokio justo en el primer plano del horizonte, permitiendo ver cómo se ilumina con la inmensidad de la bahía y Odaiba de fondo.",
+        title: "Una torre más alta que su inspiración",
+        body: "Construida en 1958, mide 333 metros -- unos 20 metros más que la Torre Eiffel, en la que se inspira claramente su diseño. Fue el símbolo del renacimiento económico de Japón tras la devastación de la Segunda Guerra Mundial, y durante décadas la estructura más alta del país, hasta que el propio Tokyo Skytree la sustituyó como torre de transmisión principal en 2012. Un dato curioso: un tercio del acero utilizado en su construcción se recicló de tanques estadounidenses dañados durante la Guerra de Corea.",
       },
       {
-        title: "La Torre de Tokio",
-        body: "Construida en 1958, mide 333 metros (13 metros más que la Torre Eiffel, en la que se inspira claramente). Fue el símbolo del renacimiento económico de Japón tras la devastación de la Segunda Guerra Mundial. Un tercio del acero utilizado en su construcción se recicló de tanques estadounidenses dañados durante la Guerra de Corea. Está pintada de blanco y naranja internacional para cumplir con las normativas de seguridad aérea.",
+        title: "Los dos miradores",
+        body: "El Main Deck, a 150 metros, es el mirador estándar, con entrada normal sin reserva. El Top Deck, entre 150 y 250 metros, incluye tramos de suelo de cristal y requiere reservar una franja horaria con antelación -- más caro, pero con las vistas más altas de la torre.",
+      },
+      {
+        title: "Por qué es blanca y naranja",
+        body: "El color no es una elección estética: la normativa japonesa de seguridad aérea obliga a pintar de blanco y naranja internacional cualquier estructura de más de 60 metros, para que sea bien visible para los aviones. El mismo motivo por el que el Skytree, más moderno, lleva un tono de blanco distinto (el 'Skytree White').",
       },
     ],
     curiosities: [
-      "El atardecer es el momento más codiciado en el Tokyo City View; es imprescindible llegar unos 45 minutos antes de la puesta de sol para coger sitio junto a los cristales.",
-      "La Torre de Tokio tiene dos patrones de iluminación: el \"Landmark Light\" (el clásico naranja cálido) y el \"Infinity Diamond Veil\" (luces LED de colores que cambian según el mes o eventos especiales).",
-      "Roppongi Hills fue uno de los primeros \"megacomplejos\" urbanos de Tokio, integrando oficinas, viviendas, museo (Mori Art Museum) y mirador en una sola estructura vertical.",
+      "El atardecer es el momento más codiciado en los miradores; conviene llegar con margen para hacerse con un buen sitio junto a los cristales antes de que se ponga el sol.",
+      "La Torre de Tokio tiene dos patrones de iluminación nocturna: el 'Landmark Light' (el clásico naranja cálido) y el 'Infinity Diamond Veil' (luces LED de colores que cambian según el mes o eventos especiales).",
+      "A pesar de la llegada del Skytree, la Torre de Tokio sigue en activo como torre de transmisión de reserva y sigue siendo uno de los símbolos más reconocibles de la ciudad, con más de 150 millones de visitantes acumulados desde su apertura.",
     ],
+    tip: "El Main Deck no requiere reserva y suele bastar para disfrutar del atardecer -- el Top Deck merece la pena solo si hay disponibilidad de última hora y apetece pagar el extra por subir más alto.",
   },
   "nakano-broadway": {
     name: "Nakano Broadway",
@@ -1149,7 +1154,7 @@ export const guidesByDay = {
   9: ["tokyo-skytree"],
   10: ["senso-ji", "fuji"],
   11: ["meiji-jingu", "shibuya", "harajuku", "shinjuku"],
-  12: ["odaiba", "toyosu", "ueno"],
+  12: ["odaiba", "toyosu", "ueno", "tokyo-tower"],
   13: ["nikko"],
   14: ["nakano-broadway", "akihabara", "tokyo-skytree"],
   15: ["kappabashi", "senso-ji"],
@@ -1255,7 +1260,7 @@ export const guideMeta = {
   },
   "tokyo-tower": {
     shortName: "Torre de Tokio",
-    keywords: ["tokyo tower", "roppongi", "tokyo city view", "roppongi hills"],
+    keywords: ["tokyo tower", "torre de tokio", "main deck", "top deck"],
   },
   "nakano-broadway": {
     shortName: "Nakano Broadway",
