@@ -115,7 +115,7 @@ export default function Footer() {
         }}>
           <p style={{ margin: 0, marginBottom: 4 }}>
             Web diseñada y desarrollada por{" "}
-            <strong style={{ color: "#fff", fontWeight: 600 }}>Pablo C.</strong>
+            <strong style={{ color: "#fff", fontWeight: 600 }}>Pablo Crespo Bellido</strong>
           </p>
           <p style={{ margin: 0, fontSize: 11, color: "rgba(255,255,255,0.4)" }}>
             © 2026 · Viaje Japón
