@@ -115,3 +115,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-18 02:56 UTC** — feat(Día 12): actualizar tarde con Torre de Tokio en inglés (`ef84491`)
 - **2026-09-18 02:57 UTC** — feat(Día 12): actualizar tarde con Torre de Tokio en francés (`84b792d`)
 - **2026-09-18 02:58 UTC** — feat(Día 12): completar Torre de Tokio en tagalo -- itinerario ... (`a2e9737`)
+- **2026-09-18 03:51 UTC** — feat(Día 12): añadir Katsuemon (DiverCity Tokyo Plaza) como restaurante real ... (`d08b9e4`)
