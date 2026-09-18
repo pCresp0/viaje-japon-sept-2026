@@ -769,32 +769,40 @@ export const days = [
         "text": "Mega Pokémon Center Ikebukuro (Sunshine City, 2nd floor) at Nintendo Store Tokyo. Ang Mega Center ang pinakamalaki sa Japan: life-size na estatwa nina Charizard, Lucario at Mewtwo, ang Pokémon Card Station, at exclusive na merchandise na wala sa ibang tindahan."
       },
       {
-        "time": "11:00–12:00",
-        "text": "🚃 Tren papuntang Nakano (~20-25 min) at tanghalian sa lugar bago magsimulang mag-explore."
+        "time": "11:00–11:40",
+        "text": "🚃 Tren papuntang Nakano (~40 min)."
       },
       {
-        "time": "12:00–13:45",
-        "text": "Pamimili ng koleksyon sa Nakano Broadway: ang pinakamagandang lugar sa Tokyo para sa orihinal na Pokémon card (mga espesyalisadong trading card shop na may display case ng indibidwal na card at booster pack), mga figure at merchandise ng Dragon Ball, at retro/manga na bagay sa pangkalahatan sa tamang presyo. Maraming palapag ng maliliit na independent na tindahan — sulit puntahan lahat.\n\n🛍️ **NAKANO SUN MALL** (rekomendasyon ng kaibigang keso-palayaw ni Thibaut): ang covered shopping arcade na diretsong dumadaan mula sa estasyon hanggang sa pasukan ng Nakano Broadway (~5 min na lakad) -- nakumpirma ang geography, ito ang natural na daan. Mas hindi turista kaysa Akihabara, may mga restaurant at izakaya na mas lokal ang vibe."
+        "time": "11:40–12:40",
+        "text": "Unang tingin sa Nakano Broadway: ang pinakamagandang lugar sa Tokyo para sa orihinal na Pokémon card (mga espesyalisadong trading card shop na may display case ng indibidwal na card at booster pack), mga figure at merchandise ng Dragon Ball, at retro/manga na bagay sa pangkalahatan sa tamang presyo. Maraming palapag ng maliliit na independent na tindahan — sulit puntahan lahat.\n\n🛍️ **NAKANO SUN MALL** (rekomendasyon ng kaibigang keso-palayaw ni Thibaut): ang covered shopping arcade na diretsong dumadaan mula sa estasyon hanggang sa pasukan ng Nakano Broadway (~5 min na lakad) -- nakumpirma ang geography, ito ang natural na daan. Mas hindi turista kaysa Akihabara, may mga restaurant at izakaya na mas lokal ang vibe."
       },
       {
-        "time": "13:45–14:10",
+        "time": "12:40–13:20",
+        "text": "🍜 Tanghalian sa Nakano (30-45 min)."
+      },
+      {
+        "time": "13:20–13:45",
         "text": "🚃 Tren papuntang Akihabara (~20-25 min)."
       },
       {
-        "time": "14:10–16:10",
+        "time": "13:45–15:45",
         "text": "🎮 **AKIHABARA -- 2 ORAS.** Ang pinakamahusay na otaku district -- iba sa Nakano Broadway, dito mas street experience at malalaking espesyalisadong tindahan kaysa sa secondhand na koleksyon.\n\n• Mandarake Complex: 8 palapag ng manga, figure at koleksyon mula sa lahat ng panahon.\n• Super Potato: retro video games (NES, SNES, Game Boy...) sa isang ambiance na parang mula sa dekada '90.\n• Opisyal na mga tindahang may kaugnayan sa Pokémon (maraming espesyalisadong tindahan ng trading card).\n• Japanese arcade (Taito Station, GiGO) para sa UFO catcher, rhythm, o fighting games.\n• Pangunahing kalye (Chuo-dori), sarado sa sasakyan tuwing hapon ng Linggo -- Sabado ngayon, kaya maaaring hindi applicable."
       },
       {
-        "time": "16:10–16:25",
-        "text": "🚃 Maikling biyahe sa tren papuntang Skytree (~10-15 min mula Akihabara)."
+        "time": "15:45–16:15",
+        "text": "🚃 Tren papuntang Skytree (~10-15 min mula Akihabara, may margin bago ang entry)."
       },
       {
         "time": "🟢 16:30",
         "text": "🗼 **KUMPIRMADONG ENTRY: TOKYO SKYTREE -- TEMBO DECK & GALLERY (ADULT).** Nabili na ang ticket para sa 09/19/2026, entry window na 16:30-16:59. Dumating ng ilang minuto bago mag-16:30 para hindi maubos ang window."
       },
       {
-        "time": "16:30–18:30",
-        "text": "🗼 Pagbisita sa dalawang observation deck ng Skytree (Tembo Deck, 350m, at Tembo Galleria, 450m) -- may sapat na oras para masiyahan nang tahimik."
+        "time": "16:30–18:15",
+        "text": "🗼 Pagbisita sa dalawang observation deck ng Skytree (Tembo Deck, 350m, at Tembo Galleria, 450m)."
+      },
+      {
+        "time": "18:15–18:45",
+        "text": "🛍️ **SOUVENIRS KUNG MAY MAKITANG INTERESANTE.** Tokyo Solamachi, ang mall sa paanan ng tore, kung sakaling gusto tumingin bago umuwi -- hindi obligado, kung may kumuha lang ng atensyon."
       },
       {
         "time": "~18:45",
