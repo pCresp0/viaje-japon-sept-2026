@@ -676,16 +676,22 @@ export const days = [
         "text": "🏙️ **FREE OBSERVATION DECK AT THE TOKYO METROPOLITAN GOVERNMENT BUILDING (TOCHO), BY DAY.** Go up either of the two towers (202m), free, no reservation needed. Going by day means seeing Tokyo still in natural light, before it gets dark (~17:50 in September) -- the free alternative to the paid Shibuya Sky.\n\n🍱 Good to know: on the observation floor there's a small area with tables where you can sit and eat food brought from outside -- a nice spot for a snack with a view before continuing the afternoon plan."
       },
       {
-        "text": "Night in Shinjuku: a stroll under the neon lights of Kabukicho.\n\n🍜 **DINNER: OPTIONS IN THE AREA.**\n• **Omoide Yokocho**: the classic yakitori alley, typical yokocho atmosphere.\n• **Okinawa Paradise** (friend's cheese-nickname recommendation from Thibaut): on the 3rd floor of a building in Kabukicho (hard to spot from the street, you have to look for it), Okinawan cuisine and live traditional song performances almost every night around 21:00. Very off the tourist path. Reservations recommended, especially on weekends.\n\n🛍️ **SHOPPING: UNIQLO AND DON QUIJOTE (SEIKO WATCH).** Take the chance for two quick stops: there's a large Uniqlo near Shinjuku Station (good-quality basics at a good price), and the Don Quijote in Kabukicho has a watch section on the upper floor (4th floor) with Seiko, Citizen and Casio at discounted prices -- confirmed by several sources as one of the best in central Tokyo for this. Both open late, fitting well with the evening stroll."
+        "text": "Night in Shinjuku: a stroll under the neon lights of Kabukicho.\n\n🛍️ **SHOPPING: UNIQLO AND DON QUIJOTE (SEIKO WATCH).** Take the chance for two quick stops: there's a large Uniqlo near Shinjuku Station (good-quality basics at a good price), and the Don Quijote in Kabukicho has a watch section on the upper floor (4th floor) with Seiko, Citizen and Casio at discounted prices -- confirmed by several sources as one of the best in central Tokyo for this. Both open late, fitting well with the evening stroll."
       },
       {
-        "text": "🚇 **BACK TO SHIBUYA, TO SEE IT AT NIGHT.** Just 2 stops from Shinjuku on the JR Yamanote Line (or Saikyo Line), no transfer needed -- about 10 min. Totally worth it: Shibuya Crossing at night, with all the giant neon screens lit up over the buildings, is a completely different sight from this morning and one of the best nighttime experiences in Tokyo."
+        "text": "🚇 **BACK TO SHIBUYA, TO SEE IT AT NIGHT.** Just 2 stops from Shinjuku on the JR Yamanote Line (or Saikyo Line), no transfer needed."
       },
       {
         "text": "🌃 **SHIBUYA AT NIGHT.** Back to the crossing to see it lit up -- this is when you really understand why it's so iconic. Also a good time for photos from the Starbucks inside Tsutaya (2nd floor, direct views of the crossing) or from the free viewing area at Shibuya Scramble Square (ground floor, a spot with views without paying for the Sky entrance)."
       },
       {
-        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nBack by metro from Shibuya to our residence in Asakusa Kappabashi to rest (3rd night in Tokyo)."
+        "text": "🚇 Ride back toward Asakusa (~55 min)."
+      },
+      {
+        "text": "🍜 **DINNER: HIMURO HOKKAIDO RAMEN ASAKUSA.** Really, really great and cheap -- confirmed by the group.\n\nhttps://maps.google.com?q=Himuro%20Hokkaido%20Ramen%20Asakusa,%202%20Chome-1-11%20Nishiasakusa,%20Taito%20City,%20Tokyo%20111-0035,%20Jap%C3%B3n&ftid=0x60188f70d778df93:0xdcb74fed22702d18&entry=gps&shh=CAE&lucs=,94297699,94231188,94280568,47071704,94218641,94282134,100835699,94286869,100820247,100822504&g_st=ic"
+      },
+      {
+        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nBack to our residence in Asakusa Kappabashi to rest (3rd night in Tokyo)."
       }
     ],
     "money": "Approx. €40 (meals)"
@@ -822,10 +828,7 @@ export const days = [
         "text": "**CHOOSE ONE OF THESE 2 OPTIONS TO CLOSE OUT THE TOKYO LEG OF THE TRIP:**\n\n**Option A — 🗼 Going up Tokyo Skytree with tickets, for sunset.** The sun sets around ~17:50 in September -- with entry at 17:00 there's plenty of time to get settled up top before it starts going down. A perfect way to close out the trip: the last afternoon in Tokyo, seeing the whole city from above.\n\n🎟️ Buy tickets there on the spot or in advance on the official website (recommended if the forecast looks good, as sunset slots sell out). Tembo Deck (350m) is the standard observation deck; Tembo Galleria (450m) is an extra step up if you feel like going even higher.\n\n**Option B — 🛍️ Last-minute shopping.** If you'd rather make the most of the time than go up an observation deck: Uniqlo Asakusa Store (in case anything's missing after yesterday's visit), and the souvenir area of Kappabashi-dori (kitchenware, plastic food replicas, Japanese knives) or Nakamise-dori next to Sensō-ji Temple, the classic spot for last-minute gifts -- all a short distance from the hotel."
       },
       {
-        "text": "🍜 **FAREWELL DINNER: HIMURO HOKKAIDO RAMEN ASAKUSA.** Really, really great and cheap -- confirmed by the group. On the last full day before heading back to Spain.\n\nhttps://maps.google.com?q=Himuro%20Hokkaido%20Ramen%20Asakusa,%202%20Chome-1-11%20Nishiasakusa,%20Taito%20City,%20Tokyo%20111-0035,%20Jap%C3%B3n&ftid=0x60188f70d778df93:0xdcb74fed22702d18&entry=gps&shh=CAE&lucs=,94297699,94231188,94280568,47071704,94218641,94282134,100835699,94286869,100820247,100822504&g_st=ic"
-      },
-      {
-        "text": "🎲 Board game night -- a perfect way to close out the last evening together in Tokyo."
+        "text": "🍜 Farewell group dinner in Tokyo (Asakusa), on the last full day before heading back to Spain."
       },
       {
         "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nLast night in Tokyo before heading back to Spain."
