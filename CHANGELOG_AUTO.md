@@ -120,3 +120,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-18 07:02 UTC** — feat(Día 12): reestructurar tarde en francés (`9d39ccc`)
 - **2026-09-18 07:02 UTC** — feat(Día 12): completar en tagalo -- Templo Zojoji, torre 15:45-16:30, ... (`890806a`)
 - **2026-09-18 07:29 UTC** — fix: restaurar el nombre completo (Pablo Crespo Bellido) en el ... (`0ff500a`)
+- **2026-09-18 11:17 UTC** — feat(Día 13/Nikko): actualizar con horarios reales verificados de Tobu Railway ... (`f961c07`)
