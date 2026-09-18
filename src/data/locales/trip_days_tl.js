@@ -721,28 +721,22 @@ export const days = [
         "text": "🎫 **SUICA:** ✅ OO; i-tap ang card nang direkta sa mga gate.\n\nYurikamome train papuntang Odaiba na tatawid sa Rainbow Bridge (umupo sa unang kotse)."
       },
       {
-        "text": "🤖 **DIVERCITY TOKYO PLAZA.** Shopping mall katabi ng Odaiba-Kaihinkoen Station. Dito dati nakatayo ang life-size na Unicorn Gundam statue -- pero ⚠️ **WALA NA ITO**: inanunsyo ng opisyal na website ang pagtatapos ng public display nito noong Agosto 31, 2026, bago pa ang inyong biyahe, at sa petsa ng update na ito, walang kumpirmadong kapalit. Sulit pa ring pumasok sa **Gundam Base Tokyo**, ang opisyal na 3-palapag na tindahan na may lahat ng merchandise at Gunpla kits, at ang natitirang mga tindahan ng mall.\n\n🍜 Magandang oras din para kumain ng konti sa lugar (foodcourt ng DiverCity o Aqua City)."
+        "text": "🤖 **ANG PINAKAMAHALAGA SA ODAIBA: DIVERCITY TOKYO PLAZA.** Shopping mall katabi ng Odaiba-Kaihinkoen Station. Dito dati nakatayo ang life-size na Unicorn Gundam statue -- pero ⚠️ **WALA NA ITO**: inanunsyo ng opisyal na website ang pagtatapos ng public display nito noong Agosto 31, 2026, bago pa ang inyong biyahe, at sa petsa ng update na ito, walang kumpirmadong kapalit. Sulit pa ring pumasok sa **Gundam Base Tokyo**, ang opisyal na 3-palapag na tindahan na may lahat ng merchandise at Gunpla kits.\n\n🛍️ Kung may oras pa, mabilisang tingin sa **Aqua City Odaiba** (5 min na lakad): tanawin ng Rainbow Bridge at ang Statue of Liberty replica."
       },
       {
-        "text": "🛍️ **AQUA CITY ODAIBA.** Shopping mall sa tabing-dagat, 5 min na lakad mula DiverCity. Magandang tanawin ng Rainbow Bridge mula sa terrace nito, at may 1/4-scale na replica ng Statue of Liberty katabi lang (ang dahilan: nandito ito noon bilang hiram mula sa France sa pagitan ng 1998 at 1999, at nanatili ang replica bilang permanenteng alaala)."
+        "text": "🍜 Tanghalian sa Odaiba (foodcourt ng DiverCity o Aqua City) -- dahil nandito na kayo, mas simple kaysa maghanap ng makakain malapit sa Tokyo Tower."
       },
       {
-        "text": "🔮 **FUJI TV BUILDING.** Ang gusaling may malaking pilak na bola na nakikita mula sa buong bay, punong-tanggapan ng Fuji TV network -- futuristic na disenyo ni arkitekto Kenzo Tange (pareho sa Tocho sa Shinjuku). May bayad na observation deck sa loob ng bola (~¥1,000, walang reserbasyon, hindi nakadepende sa panahon) na may 360° na tanawin ng Odaiba at ang bay; may mga libreng lugar din na may mga set mula sa mga palabas ng network."
+        "text": "🚇 **PATUNGONG TOKYO TOWER.** Yurikamome hanggang Shimbashi + transfer papuntang Toei Oedo Line hanggang Akabanebashi (o Hibiya Line hanggang Kamiyacho) -- iisang transfer lang, mga 25-30 min lahat-lahat."
       },
       {
-        "text": "🌊 **ODAIBA KAIHIN KOEN (SEASIDE PARK).** Paglalakad sa artificial beach at boardwalk, na may pinaka-bukas na tanawin ng Rainbow Bridge at ang Tokyo skyline sa likuran."
+        "text": "🗼 **TOKYO TOWER, KASAMA ANG SUNSET.** Binuksan noong 1958, sa 333m ito ay mga 20m mas mataas kaysa sa Eiffel Tower na inspirasyon nito -- pininturahan ng international orange at white dahil sa regulasyon ng aviation safety, hindi dahil sa aesthetic choice.\n\n🎟️ **Main Deck** (150m, ~¥1,200, normal na entrance walang reserbasyon): ang standard na observation deck. **Top Deck** (150-250m, ~¥3,000, may glass floor sections): mas mahal at kailangan ng timed-slot na reserbasyon -- tingnan ang last-minute availability bago umasa dito.\n\n🌇 Lumulubog ang araw mga **17:45-17:50** sa panahong ito -- sapat na oras mula 14:00 para mamasyal nang tahimik at manatili sa itaas para makita itong lumubog sa lungsod."
       },
       {
-        "text": "🌇 **LIBRENG ORAS -- MAGDESISYON BATAY SA PANAHON.** Lumulubog ang araw mga **17:45-17:50** sa panahong ito.\n\n☀️ **Kung maaraw:** sulit manatili sa lugar (mas maraming oras sa Aqua City/DiverCity, o balik sa boardwalk) at maka-settle na sa tabing-dagat mga 17:15-17:30 para sa sunset -- kasama ang Rainbow Bridge sa likuran, isa ito sa pinakamaganda sa biyahe.\n\n☁️ **Kung maulap:** hindi na kailangang maghintay nang walang gaanong makikita. Mas mabuting bumalik nang mas maaga papuntang Asakusa at samantalahin ang gabi doon: mas relaks na oras sa Uniqlo (sa halip na magmadali bago mag-20:00), paglalakad sa Sensō-ji at Nakamise-dori habang maaraw pa sa halip na sa gabi, o ang Kappabashi area para sa souvenir na pang-kusina."
+        "text": "🚇 **PATUNGONG ASAKUSA (UNIQLO).** Mula sa Tokyo Tower, mga 25-30 min na may isang transfer (Oedo/Hibiya + Ginza o Asakusa Line)."
       },
       {
-        "text": "Mag-ayos at pumunta sa Odaiba-Kaihinkoen Station (o mas maaga, mga 16:00, kung maulap at mas gusto nang umalis nang mas maaga)."
-      },
-      {
-        "text": "🚇 **BALIK PATUNGONG ASAKUSA.** Yurikamome hanggang Shimbashi + transfer papuntang Ginza Line (o Asakusa Line) -- iisang transfer lang, mga 40-45 min lahat-lahat."
-      },
-      {
-        "text": "🛍️ **UNIQLO ASAKUSA STORE.** Pamimili hanggang sa pagsara ng 20:00 -- sapat na oras, at mas marami pa kung umuwi nang mas maaga dahil sa maulap na panahon.\n\nhttps://maps.app.goo.gl/uAJszQKRPMjwdudx5?g_st=ic"
+        "text": "🛍️ **UNIQLO ASAKUSA STORE.** Pamimili hanggang sa pagsara ng 20:00 -- sapat na oras.\n\nhttps://maps.app.goo.gl/uAJszQKRPMjwdudx5?g_st=ic"
       },
       {
         "text": "🍜 Hapunan sa paligid ng hotel."
