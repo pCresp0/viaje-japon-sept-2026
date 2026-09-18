@@ -757,51 +757,75 @@ export const days = [
     "history": "Nikko s'est développée autour du sanctuaire Toshogu, construit en 1617 comme mausolée de Tokugawa Ieyasu, fondateur du shogunat qui a gouverné le Japon pendant plus de 250 ans. Son petit-fils Iemitsu l'a agrandi jusqu'à en faire le complexe richement décoré que l'on voit aujourd'hui, avec plus de 5 millions de feuilles d'or réparties sur ses bâtiments.",
     "schedule": [
       {
-        "time": "06:45",
-        "text": "Réveil et petit-déjeuner rapide à l'hôtel."
+        "time": "06:30",
+        "text": "Réveil."
       },
       {
-        "time": "07:15",
-        "text": "Vers la gare de Tobu-Asakusa (même zone que l'hôtel, à quelques minutes à pied)."
+        "time": "06:50",
+        "text": "Direction la gare de Tobu-Asakusa (même zone que l'hôtel, 15-25 min à pied)."
       },
       {
-        "time": "~07:30",
-        "text": "🚅 Tobu Limited Express vers la gare de Tobu-Nikko.\n\n🎫 **SUICA :** ❌ NON (nécessite un billet express avec place)\n📅 **RÉSERVATION :** 🔴 ENCORE À ACHETER -- recommandé : le **Tobu World Heritage Pass** (~¥4 160/personne ≈ 22,60 €), qui inclut l'aller-retour en Tobu Limited Express PLUS des bus illimités dans Nikko pendant 2 jours -- ce bus est justement ce qu'il faut pour atteindre le lac Chuzenji et les chutes de Kegon, donc c'est plus rentable que de payer train et bus séparément.\n📅 **ACHAT :** Aux distributeurs ou guichets de la gare de Tobu Asakusa, ou à l'avance via l'appli/le site de Tobu Railway. Comme c'est un samedi (plus de monde qu'en semaine), mieux vaut l'acheter quelques jours à l'avance pour garantir les 5 places ensemble.\n\nTrajet d'environ 2 heures."
+        "time": "~07:15",
+        "text": "Arrivée à la gare. Récupération des billets physiques si nécessaire, avant d'embarquer."
       },
       {
-        "time": "~09:30",
+        "time": "🟢 07:30",
+        "text": "🚅 **TRAIN CONFIRMÉ : LIMITED EXPRESS KEGON, ASAKUSA → TOBU-NIKKO.** Vérifié sur l'horaire officiel de Tobu Railway (service quotidien, pas seulement le week-end) -- arrivée à Tobu-Nikko à **09h20** (1h50 de trajet).\n\n🎫 **SUICA :** ❌ NON (nécessite un billet express avec place)\n📅 **RÉSERVATION :** 🔴 ENCORE À ACHETER -- recommandé : le **Tobu World Heritage Pass** (~¥4 160/personne ≈ 22,60 €), qui inclut l'aller-retour en Limited Express PLUS des bus illimités dans Nikko pendant 2 jours. En l'achetant, demander une place sur le Kegon de 07h30.\n📅 **ACHAT :** Aux distributeurs ou guichets de la gare de Tobu Asakusa, ou à l'avance via l'appli/le site de Tobu Railway. Comme c'est un samedi, mieux vaut l'acheter quelques jours à l'avance pour garantir les 5 places ensemble."
+      },
+      {
+        "time": "09:20",
         "text": "Arrivée à la gare de Tobu-Nikko. Récupération de brochures/carte au centre touristique de la gare."
+      },
+      {
+        "time": "~09:40",
+        "text": "🚌 **BUS VERS LA ZONE DES TEMPLES.** Arrêt juste devant la gare, direction Chuzenji-onsen/Yumoto-onsen -- descendre à \"Shinkyo\" ou \"Nishisando-iriguchi\" (ce dernier est l'arrêt le plus proche de Toshogu, Rinno-ji et Futarasan). Selon l'horaire officiel de Tobu Bus, il y a des départs toutes les 15-30 min toute la matinée, pas besoin de viser un bus précis -- prenez simplement le suivant. Environ 10 min de trajet.\n\n🎫 Inclus dans le Tobu World Heritage Pass."
       },
       {
         "time": "10:00–13:00",
         "text": "🏯 **SANCTUAIRE TOSHOGU ET ALENTOURS.** Pont Shinkyo (le célèbre pont rouge sur la rivière Daiya, symbole de Nikko). Complexe de Toshogu : la porte Yomeimon richement décorée, le relief des singes 'je ne vois rien, je n'entends rien, je ne dis rien', et le mausolée de Tokugawa Ieyasu. Rinno-ji et Futarasan Jinja, les deux autres temples de l'ensemble du patrimoine mondial.\n\n🎫 Entrée combinée Toshogu + Futarasan + Taiyuin : environ ¥2 100/personne (≈11,40 €). Toshogu seul : environ ¥1 600/personne. Non réservable -- se paie sur place.\n\n💡 Nécessite de monter beaucoup de marches et de marcher sur un sol irrégulier -- chaussures confortables indispensables."
       },
       {
-        "time": "13:00–14:00",
+        "time": "13:00–13:45",
         "text": "🍜 Déjeuner local : goûter le yuba (peau de tofu), spécialité de Nikko depuis des siècles, dans l'un des restaurants près de l'entrée du sanctuaire."
       },
       {
-        "time": "14:00–17:00",
-        "text": "🚌 **OPTIONNEL SI LE TEMPS LE PERMET : LAC CHUZENJI ET CHUTES DE KEGON.** Bus depuis la gare de Tobu-Nikko par la route de montagne Irohazaka (virages très serrés, vues spectaculaires) jusqu'au lac Chuzenji, au pied du mont Nantai -- inclus dans le Tobu World Heritage Pass. Les chutes de Kegon, une chute de 97 m, sont à quelques pas du lac ; bien visibles gratuitement depuis la plateforme supérieure, ou on peut descendre en ascenseur jusqu'à la plateforme inférieure pour les voir de près (entrée environ ¥570 ≈ 3,10 €, non réservable, se paie sur place).\n\n💡 Si le groupe préfère ne pas trop rallonger la journée, ce bloc peut être sauté au profit de plus de temps tranquille autour de Toshogu, ou d'une promenade dans le centre de Nikko."
+        "time": "~13:55",
+        "text": "🚌 **BUS VERS LE LAC CHUZENJI.** Depuis le même arrêt Nishisando/Shinkyo, direction Chuzenji-onsen -- par la route de montagne Irohazaka (virages très serrés, vues spectaculaires). Départs fréquents l'après-midi aussi, selon l'horaire officiel. 40-50 min de trajet, inclus dans le pass."
+      },
+      {
+        "time": "~14:40",
+        "text": "Arrivée à Chuzenji-onsen."
+      },
+      {
+        "time": "14:40–16:30",
+        "text": "🏔️ **LAC CHUZENJI ET CHUTES DE KEGON.** Le lac, au pied du mont Nantai, avec une promenade le long de la rive. Les chutes de Kegon, une chute de 97 m, sont à quelques pas du lac ; bien visibles gratuitement depuis la plateforme supérieure, ou on peut descendre en ascenseur jusqu'à la plateforme inférieure pour les voir de près (entrée environ ¥570 ≈ 3,10 €, non réservable, se paie sur place)."
+      },
+      {
+        "time": "~16:40",
+        "text": "🚌 **BUS RETOUR VERS TOBU-NIKKO.** Même arrêt de Chuzenji-onsen, direction Tobu-Nikko -- départs fréquents selon l'horaire officiel. 40-50 min de trajet."
       },
       {
         "time": "~17:30",
-        "text": "Retour en bus à la gare de Tobu-Nikko."
+        "text": "Arrivée à la gare de Tobu-Nikko. Largement le temps avant le train de retour."
       },
       {
-        "time": "~18:00",
-        "text": "🚅 Tobu Limited Express retour vers la gare de Tobu-Asakusa (environ 2 heures)."
+        "time": "🟢 17:44",
+        "text": "🚅 **TRAIN CONFIRMÉ : LIMITED EXPRESS REVATY KEGON, TOBU-NIKKO → ASAKUSA.** Vérifié sur l'horaire officiel de Tobu Railway (données de septembre 2026) -- arrivée à Asakusa à **19h35** (1h51 de trajet). Exactement le créneau horaire que vous cherchiez, pas besoin de vous presser pour un train plus tôt."
       },
       {
-        "time": "~20:00",
+        "time": "19:35",
+        "text": "Arrivée à la gare d'Asakusa."
+      },
+      {
+        "time": "~20:00–21:00",
         "text": "🍜 Dîner du côté de Nakano ou Asakusa."
       },
       {
-        "time": "~21:30",
+        "time": "~21:15",
         "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nRetour à la résidence pour se reposer et se préparer pour demain : Route Nintendo, Ikebukuro et Akihabara, dernière journée complète avant de rentrer (5e nuit à Tokyo)."
       }
     ],
-    "money": "Env. 74 €/personne au total (40 € repas + 11,40 € entrées Toshogu + 22,60 € Tobu World Heritage Pass) -- 🔴 le Pass Tobu est ENCORE À ACHETER ; ascenseur Kegon optionnel en plus (~3,10 €/personne)."
+    "money": "Env. 74 €/personne au total (40 € repas + 11,40 € entrées Toshogu + 22,60 € Tobu World Heritage Pass) -- 🔴 le Pass Tobu est ENCORE À ACHETER (demander une place sur le Kegon de 07h30 et le Revaty Kegon de 17h44, tous deux confirmés) ; ascenseur Kegon optionnel en plus (~3,10 €/personne)."
   },
   {
     "title": "Route Nintendo, Shopping et Skytree",
