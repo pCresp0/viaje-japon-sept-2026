@@ -676,16 +676,22 @@ export const days = [
         "text": "🏙️ **LIBRENG OBSERVATION DECK NG TOKYO METROPOLITAN GOVERNMENT BUILDING (TOCHO), SA ARAW.** Umakyat sa alinman sa dalawang tore (202m), libre, walang reserbasyon. Sa pag-akyat sa araw, makikita pa ang Tokyo na may natural na liwanag, bago dumilim (~17:50 sa Setyembre) -- ang libreng alternatibo sa may-bayad na Shibuya Sky.\n\n🍱 Mahalagang malaman: sa palapag ng observation deck may maliit na lugar na may mesa kung saan puwedeng umupo at kumain ng pagkaing dala mula sa labas -- magandang lugar para sa meryenda na may tanawin bago ituloy ang plano sa hapon."
       },
       {
-        "text": "Gabi sa Shinjuku: paglalakad sa ilalim ng neon lights ng Kabukicho.\n\n🍜 **HAPUNAN: MGA OPSYON SA LUGAR.**\n• **Omoide Yokocho**: ang klasikong yakitori alley, tradisyunal na yokocho ambiance.\n• **Okinawa Paradise** (rekomendasyon ng kaibigang keso-palayaw ni Thibaut): nasa 3rd floor ng isang gusali sa Kabukicho (mahirap makita mula sa kalye, kailangang hanapin), Okinawan cuisine at live na tradisyunal na kanta halos gabi-gabi mga 21:00. Hindi masyadong turista. Inirerekomenda ang reserbasyon, lalo na sa weekend.\n\n🛍️ **PAMIMILI: UNIQLO AT DON QUIJOTE (SEIKO WATCH).** Samantalahin ang lugar para sa dalawang mabilisang hintuan: may malaking Uniqlo malapit sa Shinjuku Station (magandang kalidad na basics sa magandang presyo), at ang Don Quijote sa Kabukicho ay may watch section sa itaas na palapag (4th floor) na may Seiko, Citizen at Casio sa mas murang presyo -- nakumpirma ng iba't ibang source bilang isa sa pinakamagaganda sa gitna ng Tokyo para dito. Pareho silang bukas hanggang gabi, bagay na bagay sa gabing paglalakad."
+        "text": "Gabi sa Shinjuku: paglalakad sa ilalim ng neon lights ng Kabukicho.\n\n🛍️ **PAMIMILI: UNIQLO AT DON QUIJOTE (SEIKO WATCH).** Samantalahin ang lugar para sa dalawang mabilisang hintuan: may malaking Uniqlo malapit sa Shinjuku Station (magandang kalidad na basics sa magandang presyo), at ang Don Quijote sa Kabukicho ay may watch section sa itaas na palapag (4th floor) na may Seiko, Citizen at Casio sa mas murang presyo -- nakumpirma ng iba't ibang source bilang isa sa pinakamagaganda sa gitna ng Tokyo para dito. Pareho silang bukas hanggang gabi, bagay na bagay sa gabing paglalakad."
       },
       {
-        "text": "🚇 **BALIK SA SHIBUYA, PARA MAKITA ITO SA GABI.** 2 estasyon lang mula Shinjuku sa JR Yamanote Line (o Saikyo Line), walang transfer -- mga 10 min na biyahe. Sulit talaga: ang Shibuya Crossing sa gabi, may mga higanteng neon screen na naka-on sa ibabaw ng mga gusali, ay ibang-iba sa nakita kaninang umaga at isa sa pinakamagandang gabing karanasan sa Tokyo."
+        "text": "🚇 **BALIK SA SHIBUYA, PARA MAKITA ITO SA GABI.** 2 estasyon lang mula Shinjuku sa JR Yamanote Line (o Saikyo Line), walang transfer."
       },
       {
         "text": "🌃 **SHIBUYA SA GABI.** Balik sa crossing para makita itong naiilawan -- dito talaga maiintindihan kung bakit ito napaka-kilala. Magandang oras din para sa litrato mula sa Starbucks sa loob ng Tsutaya (2nd floor, direktang tanawin sa crossing) o mula sa libreng viewing area ng Shibuya Scramble Square (ground floor, may lugar na may tanawin nang hindi nagbabayad ng entrance sa Sky)."
       },
       {
-        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nPagbalik gamit ang metro mula Shibuya papunta sa ating residence sa Asakusa Kappabashi para magpahinga (3rd gabi sa Tokyo)."
+        "text": "🚇 Biyahe pabalik patungong Asakusa (~55 min)."
+      },
+      {
+        "text": "🍜 **HAPUNAN: HIMURO HOKKAIDO RAMEN ASAKUSA.** Sobrang sarap at mura -- nakumpirma ng grupo.\n\nhttps://maps.google.com?q=Himuro%20Hokkaido%20Ramen%20Asakusa,%202%20Chome-1-11%20Nishiasakusa,%20Taito%20City,%20Tokyo%20111-0035,%20Jap%C3%B3n&ftid=0x60188f70d778df93:0xdcb74fed22702d18&entry=gps&shh=CAE&lucs=,94297699,94231188,94280568,47071704,94218641,94282134,100835699,94286869,100820247,100822504&g_st=ic"
+      },
+      {
+        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nPagbalik sa ating residence sa Asakusa Kappabashi para magpahinga (3rd gabi sa Tokyo)."
       }
     ],
     "money": "Humigit-kumulang €40 (pagkain)"

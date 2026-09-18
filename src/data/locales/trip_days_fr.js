@@ -676,16 +676,22 @@ export const days = [
         "text": "🏙️ **BELVÉDÈRE GRATUIT DU GOUVERNEMENT MÉTROPOLITAIN DE TOKYO (TOCHO), DE JOUR.** Montée dans l'une des deux tours (202 m), gratuite, sans réservation. Y aller de jour permet de voir Tokyo encore en pleine lumière, avant la tombée de la nuit (~17h50 en septembre) -- l'alternative gratuite au Shibuya Sky payant.\n\n🍱 Bon à savoir : à l'étage du belvédère se trouve un petit coin avec des tables où l'on peut s'asseoir et manger de la nourriture apportée de l'extérieur -- un bon endroit pour un en-cas avec vue avant de continuer le programme de l'après-midi."
       },
       {
-        "text": "Soirée à Shinjuku : promenade sous les néons de Kabukicho.\n\n🍜 **DÎNER : OPTIONS DU QUARTIER.**\n• **Omoide Yokocho** : la classique ruelle de yakitori, ambiance typique de yokocho.\n• **Okinawa Paradise** (recommandation de l'amie petit-fromage de Thibaut) : au 3e étage d'un immeuble à Kabukicho (difficile à repérer depuis la rue, il faut le chercher), cuisine okinawaïenne et spectacle de chants traditionnels en direct presque tous les soirs vers 21h00. Très peu touristique. Réservation conseillée, surtout le week-end.\n\n🛍️ **SHOPPING : UNIQLO ET DON QUIJOTE (MONTRE SEIKO).** Profiter du coin pour deux arrêts rapides : il y a un grand Uniqlo près de la gare de Shinjuku (basiques de qualité à bon prix), et le Don Quijote de Kabukicho a un rayon montres à l'étage supérieur (4e étage) avec des Seiko, Citizen et Casio à prix réduits -- confirmé par plusieurs sources comme l'un des meilleurs du centre de Tokyo pour ça. Les deux sont ouverts tard, ce qui s'accorde bien avec la promenade nocturne."
+        "text": "Soirée à Shinjuku : promenade sous les néons de Kabukicho.\n\n🛍️ **SHOPPING : UNIQLO ET DON QUIJOTE (MONTRE SEIKO).** Profiter du coin pour deux arrêts rapides : il y a un grand Uniqlo près de la gare de Shinjuku (basiques de qualité à bon prix), et le Don Quijote de Kabukicho a un rayon montres à l'étage supérieur (4e étage) avec des Seiko, Citizen et Casio à prix réduits -- confirmé par plusieurs sources comme l'un des meilleurs du centre de Tokyo pour ça. Les deux sont ouverts tard, ce qui s'accorde bien avec la promenade nocturne."
       },
       {
-        "text": "🚇 **RETOUR À SHIBUYA, POUR LE VOIR DE NUIT.** Seulement 2 stations depuis Shinjuku sur la ligne JR Yamanote (ou la Saikyo Line), sans correspondance -- environ 10 min de trajet. Ça vaut vraiment le coup : le carrefour de Shibuya la nuit, avec tous les écrans géants au néon allumés au-dessus des immeubles, offre une image complètement différente de ce matin, et c'est l'une des meilleures expériences nocturnes de Tokyo."
+        "text": "🚇 **RETOUR À SHIBUYA, POUR LE VOIR DE NUIT.** Seulement 2 stations depuis Shinjuku sur la ligne JR Yamanote (ou la Saikyo Line), sans correspondance."
       },
       {
         "text": "🌃 **SHIBUYA DE NUIT.** Retour au carrefour pour le voir illuminé -- c'est là qu'on comprend vraiment pourquoi il est si emblématique. Bon moment aussi pour des photos depuis le Starbucks du Tsutaya (2e étage, vue directe sur le carrefour) ou depuis l'espace d'observation gratuit du Shibuya Scramble Square (rez-de-chaussée, un endroit avec vue sans payer l'entrée du Sky)."
       },
       {
-        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nRetour en métro depuis Shibuya vers notre résidence à Asakusa Kappabashi pour se reposer (3e nuit à Tokyo)."
+        "text": "🚇 Trajet retour vers Asakusa (~55 min)."
+      },
+      {
+        "text": "🍜 **DÎNER : HIMURO HOKKAIDO RAMEN ASAKUSA.** Vraiment excellent et pas cher -- confirmé par le groupe.\n\nhttps://maps.google.com?q=Himuro%20Hokkaido%20Ramen%20Asakusa,%202%20Chome-1-11%20Nishiasakusa,%20Taito%20City,%20Tokyo%20111-0035,%20Jap%C3%B3n&ftid=0x60188f70d778df93:0xdcb74fed22702d18&entry=gps&shh=CAE&lucs=,94297699,94231188,94280568,47071704,94218641,94282134,100835699,94286869,100820247,100822504&g_st=ic"
+      },
+      {
+        "text": "🏨 **RETOUR À L'HÔTEL : KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nRetour vers notre résidence à Asakusa Kappabashi pour se reposer (3e nuit à Tokyo)."
       }
     ],
     "money": "Env. 40 € (repas)"
