@@ -769,32 +769,40 @@ export const days = [
         "text": "Mega Pokémon Center Ikebukuro (Sunshine City, 2e étage) et Nintendo Store Tokyo. Le Mega Center est le plus grand du Japon : statues grandeur nature de Dracaufeu, Lucario et Mewtwo, la Pokémon Card Station, et des produits exclusifs introuvables ailleurs."
       },
       {
-        "time": "11:00–12:00",
-        "text": "🚃 Train vers Nakano (~20-25 min) et déjeuner dans le quartier avant de commencer à explorer."
+        "time": "11:00–11:40",
+        "text": "🚃 Train vers Nakano (~40 min)."
       },
       {
-        "time": "12:00–13:45",
-        "text": "Shopping collector à Nakano Broadway : le meilleur endroit de Tokyo pour les cartes Pokémon originales (boutiques spécialisées de trading cards avec vitrines de cartes à l'unité et boosters), les figurines et produits dérivés Dragon Ball, et les articles rétro/manga en général à prix juste. Plusieurs étages de petites boutiques indépendantes — ça vaut le coup de toutes les faire.\n\n🛍️ **NAKANO SUN MALL** (recommandation de l'amie petit-fromage de Thibaut) : la galerie marchande couverte qui mène directement de la gare à l'entrée de Nakano Broadway (~5 min à pied) -- confirmé géographiquement, c'est le chemin naturel. Bien moins touristique qu'Akihabara, avec des restaurants et izakayas à l'ambiance plus locale."
+        "time": "11:40–12:40",
+        "text": "Premier coup d'œil à Nakano Broadway : le meilleur endroit de Tokyo pour les cartes Pokémon originales (boutiques spécialisées de trading cards avec vitrines de cartes à l'unité et boosters), les figurines et produits dérivés Dragon Ball, et les articles rétro/manga en général à prix juste. Plusieurs étages de petites boutiques indépendantes — ça vaut le coup de toutes les faire.\n\n🛍️ **NAKANO SUN MALL** (recommandation de l'amie petit-fromage de Thibaut) : la galerie marchande couverte qui mène directement de la gare à l'entrée de Nakano Broadway (~5 min à pied) -- confirmé géographiquement, c'est le chemin naturel. Bien moins touristique qu'Akihabara, avec des restaurants et izakayas à l'ambiance plus locale."
       },
       {
-        "time": "13:45–14:10",
+        "time": "12:40–13:20",
+        "text": "🍜 Déjeuner à Nakano (30-45 min)."
+      },
+      {
+        "time": "13:20–13:45",
         "text": "🚃 Train vers Akihabara (~20-25 min)."
       },
       {
-        "time": "14:10–16:10",
+        "time": "13:45–15:45",
         "text": "🎮 **AKIHABARA -- 2 HEURES.** Le quartier otaku par excellence -- différent de Nakano Broadway, ici c'est plus une expérience de rue avec de grandes boutiques spécialisées que de la collection d'occasion.\n\n• Mandarake Complex : 8 étages de manga, figurines et objets de collection de toutes les époques.\n• Super Potato : jeux vidéo rétro (NES, SNES, Game Boy...) dans une ambiance tout droit sortie des années 90.\n• Boutiques officielles liées à Pokémon (plusieurs boutiques spécialisées de trading cards).\n• Arcades japonaises (Taito Station, GiGO) pour des parties d'UFO catcher, de rythme ou de combat.\n• Rue principale (Chuo-dori), fermée à la circulation le dimanche après-midi -- aujourd'hui c'est samedi, donc ça pourrait ne pas s'appliquer."
       },
       {
-        "time": "16:10–16:25",
-        "text": "🚃 Court trajet en train vers le Skytree (~10-15 min depuis Akihabara)."
+        "time": "15:45–16:15",
+        "text": "🚃 Train vers le Skytree (~10-15 min depuis Akihabara, avec de la marge avant l'entrée)."
       },
       {
         "time": "🟢 16:30",
         "text": "🗼 **ENTRÉE CONFIRMÉE : TOKYO SKYTREE -- TEMBO DECK & GALERIE (ADULTE).** Billet déjà acheté pour le 19/09/2026, créneau d'accès 16h30-16h59. Arriver quelques minutes avant 16h30 pour ne pas empiéter sur le créneau."
       },
       {
-        "time": "16:30–18:30",
-        "text": "🗼 Visite des deux belvédères du Skytree (Tembo Deck, 350 m, et Tembo Galleria, 450 m) -- largement le temps d'en profiter tranquillement."
+        "time": "16:30–18:15",
+        "text": "🗼 Visite des deux belvédères du Skytree (Tembo Deck, 350 m, et Tembo Galleria, 450 m)."
+      },
+      {
+        "time": "18:15–18:45",
+        "text": "🛍️ **SOUVENIRS SI QUELQUE CHOSE ATTIRE L'ŒIL.** Tokyo Solamachi, le centre commercial à la base de la tour, si l'envie vient d'y jeter un œil avant de repartir -- sans obligation, seulement si quelque chose est intéressant."
       },
       {
         "time": "~18:45",
