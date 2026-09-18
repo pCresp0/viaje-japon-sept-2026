@@ -721,28 +721,22 @@ export const days = [
         "text": "🎫 **SUICA:** ✅ YES; tap the card directly at the gates.\n\nYurikamome train to Odaiba crossing the Rainbow Bridge (sit in the first car)."
       },
       {
-        "text": "🤖 **DIVERCITY TOKYO PLAZA.** Shopping mall next to Odaiba-Kaihinkoen Station. This is where the life-size Unicorn Gundam statue used to stand -- but ⚠️ **IT'S GONE**: the official site announced the end of its public display on August 31, 2026, right before your trip, and as of this update there's no confirmation of a replacement. Still worth stepping into **Gundam Base Tokyo**, the official 3-floor store with all the merchandise and Gunpla kits, and the rest of the mall's shops.\n\n🍜 Also a good time to grab something to eat in the area (DiverCity or Aqua City food court)."
+        "text": "🤖 **THE MOST IMPORTANT PART OF ODAIBA: DIVERCITY TOKYO PLAZA.** Shopping mall next to Odaiba-Kaihinkoen Station. This is where the life-size Unicorn Gundam statue used to stand -- but ⚠️ **IT'S GONE**: the official site announced the end of its public display on August 31, 2026, right before your trip, and as of this update there's no confirmation of a replacement. Still worth stepping into **Gundam Base Tokyo**, the official 3-floor store with all the merchandise and Gunpla kits.\n\n🛍️ If there's time, a quick look at **Aqua City Odaiba** (5 min on foot): views of the Rainbow Bridge and the Statue of Liberty replica."
       },
       {
-        "text": "🛍️ **AQUA CITY ODAIBA.** Seaside mall, 5 min on foot from DiverCity. Good views of the Rainbow Bridge from its terrace, and a 1/4-scale replica of the Statue of Liberty right next to it (the reason: it was here on loan from France between 1998 and 1999, and the replica stayed as a permanent souvenir)."
+        "text": "🍜 Lunch in Odaiba (DiverCity or Aqua City food court) -- since you're already here, simpler than looking for something near Tokyo Tower."
       },
       {
-        "text": "🔮 **FUJI TV BUILDING.** The building with the giant silver sphere visible from all over the bay, headquarters of the Fuji TV network -- a futuristic design by architect Kenzo Tange (the same one behind the Tocho in Shinjuku). Paid observation deck inside the sphere (~¥1,000, no reservation, not weather-dependent) with 360° views over Odaiba and the bay; there are also free areas with sets from the network's shows."
+        "text": "🚇 **TOWARD TOKYO TOWER.** Yurikamome to Shimbashi + transfer to the Toei Oedo Line to Akabanebashi (or Hibiya Line to Kamiyacho) -- a single transfer, about 25-30 min total."
       },
       {
-        "text": "🌊 **ODAIBA KAIHIN KOEN (SEASIDE PARK).** Stroll along the artificial beach and the boardwalk, with the widest open views of the Rainbow Bridge and the Tokyo skyline behind it."
+        "text": "🗼 **TOKYO TOWER, SUNSET INCLUDED.** Opened in 1958, at 333m it's about 20m taller than the Eiffel Tower it was inspired by -- painted international orange and white by aviation safety regulation, not by aesthetic choice.\n\n🎟️ **Main Deck** (150m, ~¥1,200, standard admission, no reservation): the standard observation deck. **Top Deck** (150-250m, ~¥3,000, with glass floor sections): pricier and requires a timed-slot reservation -- check last-minute availability before counting on it.\n\n🌇 The sun sets around **17:45-17:50** at this time of year -- plenty of time from 14:00 to visit calmly and stay up top to watch it go down over the city."
       },
       {
-        "text": "🌇 **FREE TIME -- DECIDE BASED ON THE WEATHER.** The sun sets around **17:45-17:50** at this time of year.\n\n☀️ **If it's clear:** worth staying in the area (more time at Aqua City/DiverCity, or back to the boardwalk) and being settled by the sea around 17:15-17:30 for sunset -- with the Rainbow Bridge in the background it's one of the best of the trip.\n\n☁️ **If it's cloudy:** no need to wait around for nothing much to see. Better to head back to Asakusa earlier and make the most of the evening there: more relaxed time at Uniqlo (instead of rushing before 20:00), a stroll through Sensō-ji and Nakamise-dori in daylight instead of at night, or the Kappabashi area for kitchen souvenirs."
+        "text": "🚇 **TOWARD ASAKUSA (UNIQLO).** From Tokyo Tower, about 25-30 min with one transfer (Oedo/Hibiya + Ginza or Asakusa Line)."
       },
       {
-        "text": "Wrap up and head toward Odaiba-Kaihinkoen Station (or earlier, around 16:00, if it's cloudy and you'd rather head back sooner)."
-      },
-      {
-        "text": "🚇 **BACK TOWARD ASAKUSA.** Yurikamome to Shimbashi + transfer to the Ginza Line (or Asakusa Line) -- a single transfer, about 40-45 min total."
-      },
-      {
-        "text": "🛍️ **UNIQLO ASAKUSA STORE.** Shopping until closing at 20:00 -- plenty of time to spare, and even more if you headed back early because of clouds.\n\nhttps://maps.app.goo.gl/uAJszQKRPMjwdudx5?g_st=ic"
+        "text": "🛍️ **UNIQLO ASAKUSA STORE.** Shopping until closing at 20:00 -- plenty of time to spare.\n\nhttps://maps.app.goo.gl/uAJszQKRPMjwdudx5?g_st=ic"
       },
       {
         "text": "🍜 Dinner around the hotel area."
