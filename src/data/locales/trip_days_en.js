@@ -724,19 +724,22 @@ export const days = [
         "text": "🤖 **THE MOST IMPORTANT PART OF ODAIBA: DIVERCITY TOKYO PLAZA.** Shopping mall next to Odaiba-Kaihinkoen Station. This is where the life-size Unicorn Gundam statue used to stand -- but ⚠️ **IT'S GONE**: the official site announced the end of its public display on August 31, 2026, right before your trip, and as of this update there's no confirmation of a replacement. Still worth stepping into **Gundam Base Tokyo**, the official 3-floor store with all the merchandise and Gunpla kits.\n\n🛍️ If there's time, a quick look at **Aqua City Odaiba** (5 min on foot): views of the Rainbow Bridge and the Statue of Liberty replica."
       },
       {
-        "text": "🍜 **LUNCH: KATSUEMON** (DiverCity Tokyo Plaza).\n\nhttps://maps.app.goo.gl/LFswXe7ofaSSnbKY8?g_st=ic"
+        "text": "🍜🤖 **LUNCH AND SHOPS: KATSUEMON AND DIVERCITY TOKYO PLAZA.**\n\nhttps://maps.app.goo.gl/LFswXe7ofaSSnbKY8?g_st=ic\n\nAfter lunch, time to browse the mall's shops -- including **Gundam Base Tokyo** (3 floors of merchandise and Gunpla kits), since the life-size statue that used to stand outside ⚠️ **is gone** (its public display ended on August 31, 2026, with no replacement confirmed as of this update)."
       },
       {
-        "text": "🚇 **TOWARD TOKYO TOWER.** Yurikamome to Shimbashi + transfer to the Toei Oedo Line to Akabanebashi (or Hibiya Line to Kamiyacho) -- a single transfer, about 25-30 min total."
+        "text": "🚇 **TRAIN TOWARD TOKYO TOWER.** Yurikamome to Shimbashi + transfer to the Toei Oedo Line to Akabanebashi (or Mita Line to Onarimon) -- a single transfer, about 30-40 min total."
       },
       {
-        "text": "🗼 **TOKYO TOWER, SUNSET INCLUDED.** Opened in 1958, at 333m it's about 20m taller than the Eiffel Tower it was inspired by -- painted international orange and white by aviation safety regulation, not by aesthetic choice.\n\n🎟️ **Main Deck** (150m, ~¥1,200, standard admission, no reservation): the standard observation deck. **Top Deck** (150-250m, ~¥3,000, with glass floor sections): pricier and requires a timed-slot reservation -- check last-minute availability before counting on it.\n\n🌇 The sun sets around **17:45-17:50** at this time of year -- plenty of time from 14:00 to visit calmly and stay up top to watch it go down over the city."
+        "text": "🚶 **WALK TO THE TOWER, PASSING BY ZOJOJI TEMPLE.** Zojoji is the Tokugawa family's funerary temple in eastern Tokyo -- the counterpart to Kan'ei-ji in Ueno. Founded in 1393 and moved to this site in 1598, 6 of the 15 Tokugawa shoguns are buried here. Its main gate, the Sangedatsumon (1622), is one of the oldest wooden structures in Tokyo and one of the few in the area to survive both the 1923 earthquake and WWII bombing.\n\n📸 The classic shot: the temple's pagoda or gate with Tokyo Tower peeking out right behind it -- one of the most photographed contrasts of old and new in the city."
       },
       {
-        "text": "🚇 **TOWARD ASAKUSA (UNIQLO).** From Tokyo Tower, about 25-30 min with one transfer (Oedo/Hibiya + Ginza or Asakusa Line)."
+        "text": "🗼 **TOKYO TOWER.** Opened in 1958, at 333m it's about 20m taller than the Eiffel Tower it was inspired by -- painted international orange and white by aviation safety regulation, not by aesthetic choice.\n\n🎟️ **Main Deck** (150m, ~¥1,200, standard admission, no reservation): the standard observation deck. **Top Deck** (150-250m, ~¥3,000, with glass floor sections): pricier and requires a timed-slot reservation -- with only 45 min available, better to stick to the Main Deck."
       },
       {
-        "text": "🛍️ **UNIQLO ASAKUSA STORE.** Shopping until closing at 20:00 -- plenty of time to spare.\n\nhttps://maps.app.goo.gl/uAJszQKRPMjwdudx5?g_st=ic"
+        "text": "🚇 **BACK TOWARD ASAKUSA (UNIQLO).** From Tokyo Tower, about 25-30 min with one transfer (Oedo/Mita + Ginza or Asakusa Line)."
+      },
+      {
+        "text": "🛍️ **UNIQLO ASAKUSA STORE.** Shopping until closing at 20:00 -- with plenty of time this round.\n\nhttps://maps.app.goo.gl/uAJszQKRPMjwdudx5?g_st=ic"
       },
       {
         "text": "🍜 Dinner around the hotel area."
