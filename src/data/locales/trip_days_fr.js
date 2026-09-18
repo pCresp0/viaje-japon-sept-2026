@@ -721,25 +721,28 @@ export const days = [
         "text": "🎫 **SUICA :** ✅ OUI ; passer la carte directement aux portillons.\n\nTrain Yurikamome vers Odaiba en traversant le Rainbow Bridge (asseyez-vous dans le premier wagon)."
       },
       {
-        "text": "🤖 **DIVERCITY TOKYO PLAZA.** Centre commercial à côté de la gare d'Odaiba-Kaihinkoen. C'est ici que se trouvait la statue grandeur nature de l'Unicorn Gundam -- mais ⚠️ **ELLE N'EST PLUS LÀ** : le site officiel a annoncé la fin de son exposition publique le 31 août 2026, juste avant votre voyage, et à la date de cette mise à jour aucun remplacement n'est confirmé. Ça vaut quand même le coup d'entrer dans **Gundam Base Tokyo**, la boutique officielle sur 3 étages avec tous les produits dérivés et kits Gunpla, et le reste des boutiques du centre commercial."
+        "text": "🤖 **DIVERCITY TOKYO PLAZA.** Centre commercial à côté de la gare d'Odaiba-Kaihinkoen. C'est ici que se trouvait la statue grandeur nature de l'Unicorn Gundam -- mais ⚠️ **ELLE N'EST PLUS LÀ** : le site officiel a annoncé la fin de son exposition publique le 31 août 2026, juste avant votre voyage, et à la date de cette mise à jour aucun remplacement n'est confirmé. Ça vaut quand même le coup d'entrer dans **Gundam Base Tokyo**, la boutique officielle sur 3 étages avec tous les produits dérivés et kits Gunpla, et le reste des boutiques du centre commercial.\n\n🍜 Bon moment aussi pour manger un morceau dans le coin (foodcourt de DiverCity ou Aqua City)."
       },
       {
         "text": "🛍️ **AQUA CITY ODAIBA.** Centre commercial en bord de mer, à 5 min à pied de DiverCity. Belle vue sur le Rainbow Bridge depuis sa terrasse, et une réplique à l'échelle 1/4 de la Statue de la Liberté juste à côté (la raison : elle était ici prêtée par la France entre 1998 et 1999, et la réplique est restée comme souvenir permanent)."
       },
       {
-        "text": "🌊 **PARC MARITIME D'ODAIBA (ODAIBA KAIHIN KOEN).** Promenade le long de la plage artificielle et de la digue, avec les vues les plus dégagées sur le Rainbow Bridge et la skyline de Tokyo en arrière-plan -- l'endroit parfait pour patienter avant le coucher de soleil sans se presser."
+        "text": "🔮 **FUJI TV BUILDING.** Le bâtiment à la sphère argentée géante visible depuis toute la baie, siège de la chaîne Fuji TV -- design futuriste de l'architecte Kenzo Tange (le même que pour le Tocho à Shinjuku). Belvédère payant à l'intérieur de la sphère (~¥1 000, sans réservation, indépendant de la météo) avec vue à 360° sur Odaiba et la baie ; il y a aussi des espaces gratuits avec des décors d'émissions de la chaîne."
       },
       {
-        "text": "🌇 **COUCHER DE SOLEIL DEPUIS LE FRONT DE MER.** Le soleil se couche vers **17h45-17h50** à cette période de l'année (plus tôt qu'il n'y paraît) -- mieux vaut être installés sur la digue dès 17h15-17h30 pour ne pas rater le changement de lumière. Avec le Rainbow Bridge et la baie en arrière-plan, c'est l'un des plus beaux couchers de soleil du voyage."
+        "text": "🌊 **PARC MARITIME D'ODAIBA (ODAIBA KAIHIN KOEN).** Promenade le long de la plage artificielle et de la digue, avec les vues les plus dégagées sur le Rainbow Bridge et la skyline de Tokyo en arrière-plan."
       },
       {
-        "text": "Rassemblement et direction vers la gare d'Odaiba-Kaihinkoen."
+        "text": "🌇 **TEMPS LIBRE -- À DÉCIDER SELON LA MÉTÉO.** Le soleil se couche vers **17h45-17h50** à cette période de l'année.\n\n☀️ **S'il fait beau :** ça vaut le coup de rester dans le coin (plus de temps à Aqua City/DiverCity, ou retour sur la digue) et d'être installés au bord de mer vers 17h15-17h30 pour le coucher de soleil -- avec le Rainbow Bridge en arrière-plan, c'est l'un des plus beaux du voyage.\n\n☁️ **S'il fait nuageux :** pas la peine d'attendre pour pas grand-chose à voir. Mieux vaut rentrer plus tôt vers Asakusa et profiter de la soirée là-bas : plus de temps tranquille chez Uniqlo (au lieu de se presser avant 20h00), une promenade à Sensō-ji et Nakamise-dori de jour plutôt que de nuit, ou le quartier de Kappabashi pour des souvenirs de cuisine."
+      },
+      {
+        "text": "Rassemblement et direction vers la gare d'Odaiba-Kaihinkoen (ou plus tôt, vers 16h00, s'il fait nuageux et que vous préférez rentrer plus tôt)."
       },
       {
         "text": "🚇 **RETOUR VERS ASAKUSA.** Yurikamome jusqu'à Shimbashi + correspondance vers la ligne Ginza (ou la ligne Asakusa) -- un seul changement, environ 40-45 min au total."
       },
       {
-        "text": "🛍️ **UNIQLO ASAKUSA STORE.** Shopping jusqu'à la fermeture à 20h00 -- plus d'une heure devant vous.\n\nhttps://maps.app.goo.gl/uAJszQKRPMjwdudx5?g_st=ic"
+        "text": "🛍️ **UNIQLO ASAKUSA STORE.** Shopping jusqu'à la fermeture à 20h00 -- largement le temps, et encore plus si vous êtes rentrés plus tôt à cause des nuages.\n\nhttps://maps.app.goo.gl/uAJszQKRPMjwdudx5?g_st=ic"
       },
       {
         "text": "🍜 Dîner dans le quartier de l'hôtel."
