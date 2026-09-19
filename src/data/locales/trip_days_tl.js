@@ -820,81 +820,73 @@ export const days = [
     "money": "Humigit-kumulang €40 (pagkain) + pamimili + entrance sa Skytree (bayad na)"
   },
   {
-    "title": "Nikko Day Trip",
-    "cities": "Nikko",
-    "summary": "⚠️ Inilipat mula Sabado papuntang Linggo dahil sa kakulangan ng available na tren -- kung papayag ang panahon. Buong araw ng kalikasan at mga templo, 2 oras mula Tokyo sa direktang tren mula Asakusa (literal na katabi ng hotel): ang Toshogu Shrine, mausoleum ng shogun na si Tokugawa Ieyasu at UNESCO World Heritage Site, ang Shinkyo Bridge, ang Kegon Falls at Lake Chuzenji sa Irohazaka mountain road. Farewell dinner ng grupo sa gabi, sa huling buong araw bago bumalik sa Spain.",
-    "history": "Umunlad ang Nikko sa paligid ng Toshogu Shrine, itinayo noong 1617 bilang mausoleum ni Tokugawa Ieyasu, ang tagapagtatag ng shogunate na namuno sa Japan nang mahigit 250 taon. Pinalawak ito ng apo niyang si Iemitsu hanggang maging ang mayamang dekorasyon na kumplex na nakikita ngayon, na may mahigit 5 milyong piraso ng gold leaf na nakakalat sa mga gusali nito.",
+    "title": "Imperial Palace, Tokyo Station at Ginza",
+    "cities": "Otemachi, Marunouchi, Ginza, Hibiya",
+    "summary": "⚠️ Pagbabago ng plano: hindi natuloy ang excursion sa Nikko dahil sa masamang panahon (nasa 'Mga Pending para sa Susunod' para sa susunod na biyahe). Sa halip, araw ng paglalakad sa makasaysayan at komersyal na sentro ng Tokyo: ang Imperial Palace East Gardens, Tokyo Character Street, KITTE at ang Intermediatheque museum, at mahabang hapon sa Ginza, na magtatapos sa paglalakad sa Hibiya/Yurakucho. Halos lahat ay lakad lang -- napakalohikal na ruta sa tuwid na linya, walang walang-kabuluhang paglipat.",
+    "history": "Ang Imperial Palace ay nakatayo sa lugar ng lumang Edo Castle, ang punong-tanggapan ng Tokugawa shogunate sa loob ng mahigit 250 taon at, sa kasukdulan nito, ang pinakamalaking kuta sa mundo. Ang Ginza naman ay literal na nangangahulugang 'ang bahay ng pilak' -- dito nakatayo ang silver mint ng shogunate noong panahon ng Edo, bago ito naging pinaka-elegante na shopping district ng Tokyo matapos itong muling itayo gamit ang Western architecture noong huling bahagi ng ika-19 na siglo.",
     "schedule": [
       {
-        "time": "06:30",
+        "time": "08:15",
         "text": "Gising na."
       },
       {
-        "time": "06:50",
-        "text": "Papuntang Tobu-Asakusa Station (parehong lugar ng hotel, 15-25 min na lakad)."
+        "time": "09:00",
+        "text": "🚇 Aalis sa hotel patungong Otemachi gamit ang subway. Mula Asakusa/Kappabashi, mga 25-35 min door-to-door (paglakad papuntang estasyon, paghihintay, at paglabas)."
       },
       {
-        "time": "~07:15",
-        "text": "Pagdating sa estasyon. Kunin ang physical tickets kung kailangan, bago sumakay."
+        "time": "~09:30–09:40",
+        "text": "Pagdating sa Otemachi."
       },
       {
-        "time": "🟢 07:30",
-        "text": "🚅 **KUMPIRMADONG TREN: LIMITED EXPRESS KEGON, ASAKUSA → TOBU-NIKKO.** Na-verify sa opisyal na timetable ng Tobu Railway (araw-araw na serbisyo) -- pagdating sa Tobu-Nikko ng **09:20** (1h 50min na biyahe).\n\n🎫 **SUICA:** ❌ HINDI (kailangan ng express ticket na may upuan)\n📅 **RESERBASYON:** 🔴 BIBILHIN PA -- inirerekomenda ang **Tobu World Heritage Pass** (~¥4,160/tao ≈ 22,60€), na kasama ang round trip sa Limited Express PLUS unlimited na bus sa Nikko sa loob ng 2 araw. Sa pagbili, humingi ng upuan sa Kegon ng 07:30.\n📅 **PAMBILI:** Sa mga makina o ticket counter sa Tobu Asakusa Station, o maaga sa app/website ng Tobu Railway. Dahil Linggo ito, mainam bilhin ilang araw bago para masiguro ang 5 upuan na magkakasama."
+        "time": "09:40–11:00",
+        "text": "🏯 **IMPERIAL PALACE (EAST GARDENS).** Mula Otemachi hanggang Ote-mon gate ay mga 5-10 min na lakad. Sinasakop ng hardin ang bahagi ng lumang lupain ng Edo Castle -- mga moat, higanteng bato na pader, at natitira sa base ng lumang main keep (tenshu), ang pinakamataas na nagkaroon ang Japan bago ito nasunog sa malaking sunog ng Meireki (1657) at hindi na muling itinayo.\n\n🎫 Libreng pasukan, walang reserbasyon. Sarado tuwing Lunes at Biyernes -- Linggo ngayon, kaya bukas ito gaya ng dati."
       },
       {
-        "time": "09:20",
-        "text": "Pagdating sa Tobu-Nikko Station. Kumuha ng brochure/mapa sa tourist center ng estasyon."
+        "time": "11:00–11:20",
+        "text": "🚶 Paglalakad mula sa Palace papuntang Tokyo Station, dumadaan sa Marunouchi. Mga 15-20 min na lakad -- direktang inuugnay ng opisyal na tourism route ng Tokyo ang East Gardens, Marunouchi at KITTE bilang natural na daan ng paglalakad, kaya hindi na kailangan ng subway sa bahaging ito."
       },
       {
-        "time": "~09:40",
-        "text": "🚌 **BUS PATUNGO SA TEMPLE AREA.** Hintuan mismo sa harap ng estasyon, patungong Chuzenji-onsen/Yumoto-onsen -- bumaba sa \"Shinkyo\" o \"Nishisando-iriguchi\" (ang huli ang pinakamalapit na hintuan sa Toshogu, Rinno-ji at Futarasan). Base sa opisyal na timetable ng Tobu Bus, may alis tuwing 15-30 min buong umaga, kaya hindi na kailangang habulin ang eksaktong isa -- sakyan na lang ang susunod. Mga 10 minutong byahe.\n\n🎫 Kasama na sa Tobu World Heritage Pass."
+        "time": "11:20–12:30",
+        "text": "🐉 **TOKYO CHARACTER STREET.** Sa basement ng Tokyo Station (Tokyo Station Ichibangai B1). Isang buong pasilyo ng opisyal na tindahan ng Pokémon, Dragon Ball, Jump, One Piece, Sanrio, at marami pa -- isa sa pinakamagandang merchandise stop sa buong biyahe. Bukas mula 10:00 hanggang 20:30."
       },
       {
-        "time": "10:00–13:00",
-        "text": "🏯 **TOSHOGU SHRINE AT PALIGID NITO.** Shinkyo Bridge (ang kilalang pulang tulay sa Ilog Daiya, simbolo ng Nikko). Toshogu complex: ang mayamang dekorasyon na Yomeimon Gate, ang relief ng mga unggoy na 'walang nakita, walang narinig, walang sinabi', at ang mausoleum ni Tokugawa Ieyasu. Rinno-ji at Futarasan Jinja, ang dalawa pang templo sa World Heritage ensemble.\n\n🎫 Kombinadong entrance sa Toshogu + Futarasan + Taiyuin: mga ¥2,100/tao (≈11,40€). Toshogu lang: mga ¥1,600/tao. Hindi puwedeng i-reserve -- babayaran on the spot.\n\n💡 Kailangan umakyat ng maraming hagdan at maglakad sa hindi pantay na lupa -- kailangan ng komportableng sapatos."
+        "time": "12:30–12:40",
+        "text": "🚶 Tokyo Station → KITTE. 1 minuto lang na lakad base sa opisyal na signage, pero kung isasama ang oras para makahanap ng daan sa loob ng estasyon, mag-allow ng 10 minutong aktwal."
       },
       {
-        "time": "13:00–13:45",
-        "text": "🍜 Lokal na tanghalian: subukan ang yuba (balat ng tofu), specialty ng Nikko sa loob ng mga siglo, sa alinman sa mga restaurant malapit sa pasukan ng dambana."
+        "time": "12:40–13:25",
+        "text": "🦴 **INTERMEDIATHEQUE.** Museo sa loob mismo ng gusaling KITTE, pinapatakbo ng University of Tokyo -- scientific at historical collections (skeleton, lumang instrumento, taxidermy) sa maingat na pagkakaayos, libre. Bukas tuwing Linggo mula 11:00 hanggang 18:00."
       },
       {
-        "time": "~13:55",
-        "text": "🚌 **BUS PATUNGO SA LAKE CHUZENJI.** Mula sa parehong Nishisando/Shinkyo na hintuan, patungong Chuzenji-onsen -- sa Irohazaka mountain road (matatarik na kurbada, magagandang tanawin). Madalas ding may biyahe sa hapon, base sa opisyal na timetable. 40-50 min na biyahe, kasama na sa pass."
+        "time": "13:25–14:25",
+        "text": "🍛 Tanghalian: Japanese curry o ramen, magdedesisyon na lang sa lugar -- hindi na kailangang lumiko nang malayo."
       },
       {
-        "time": "~14:40",
-        "text": "Pagdating sa Chuzenji-onsen."
+        "time": "14:25–14:50",
+        "text": "🚶 KITTE → Ginza, dumadaan sa Kyobashi. Lakad, mga 1.5-2 km (20-25 minutong aktwal) -- bahagi ito ng paglalakad, hindi nasayang na oras."
       },
       {
-        "time": "14:40–16:30",
-        "text": "🏔️ **LAKE CHUZENJI AT KEGON FALLS.** Ang lawa, sa paanan ng Mount Nantai, may paglalakad sa tabi ng dalampasigan. Ang Kegon Falls, 97m ang taas, ay ilang hakbang lang mula sa lawa; malinaw itong makikita nang libre mula sa itaas na plataporma, o puwedeng bumaba gamit ang elevator papunta sa mas mababang plataporma para makita ito nang malapitan (entrance mga ¥570 ≈ 3,10€, hindi puwedeng i-reserve, babayaran on the spot)."
+        "time": "14:50–18:00",
+        "text": "🛍️ **GINZA (3h 10min).**\n\n• **14:50–15:20 · Ginza-dori / Chuo-dori:** ang pangunahing kalye, pedestrian lang tuwing Linggo mula 12:00 hanggang 18:00 (maliban kung ma-cancel dahil sa masamang panahon) -- tamasahin lang.\n• **15:20–15:50 · Itoya:** ang pinaka-kilalang stationery department store sa Japan, 9 palapag ng lahat ng klaseng gamit sa pagsusulat at disenyo.\n• **15:50–16:30 · Ginza Six:** ang pinakamalaking luxury mall sa Ginza, may art installation na nagbabago sa gitnang atrium. Bukas hanggang 20:30.\n• **16:30–17:00 · Ginza Sony Park:** experimental na urban space sa dating lugar ng Sony Building, na may mga installation na nagbabago bawat season. Bukas 11:00 hanggang 19:00.\n• **17:00–18:00 · Libreng oras sa Ginza:** sadyang walang plano -- para sa kahit anong lumabas: isa pang tindahan, geeky na makikita, kape, matamis, litrato."
       },
       {
-        "time": "~16:40",
-        "text": "🚌 **BUS PABALIK SA TOBU-NIKKO.** Parehong hintuan sa Chuzenji-onsen, patungong Tobu-Nikko -- madalas na biyahe base sa opisyal na timetable. 40-50 min na biyahe."
+        "time": "18:00–18:30",
+        "text": "🚶 Ginza → Yurakucho/Hibiya na lakad, mga 10-15 min depende sa kung saan aalis sa Ginza."
       },
       {
-        "time": "~17:30",
-        "text": "Pagdating sa Tobu-Nikko Station. Sapat na oras bago ang tren pabalik."
+        "time": "18:30–19:30",
+        "text": "🌆 **HIBIYA/YURAKUCHO, LIBRENG ORAS.** Isang buong libreng oras: magpatuloy maglakad, uminom ng kahit ano, bumili ng matamis, umupo sandali, o basta magdesisyon nang tahimik kung saan maghahapunan."
       },
       {
-        "time": "🟢 17:44",
-        "text": "🚅 **KUMPIRMADONG TREN: LIMITED EXPRESS REVATY KEGON, TOBU-NIKKO → ASAKUSA.** Na-verify sa opisyal na timetable ng Tobu Railway (datos noong Setyembre 2026) -- pagdating sa Asakusa ng **19:35** (1h 51min na biyahe)."
+        "time": "19:30–21:00",
+        "text": "🍜 Farewell dinner ng grupo sa lugar, sa huling buong araw bago bumalik sa Spain."
       },
       {
-        "time": "19:35",
-        "text": "Pagdating sa Asakusa Station."
-      },
-      {
-        "time": "~20:00–21:00",
-        "text": "🍜 Farewell dinner ng grupo sa Tokyo (Asakusa), sa huling buong araw bago bumalik sa Spain."
-      },
-      {
-        "time": "~21:15",
-        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nHuling gabi sa Tokyo bago bumalik sa Spain."
+        "time": "~21:30",
+        "text": "🏨 **BALIK SA HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nSa subway mula Hibiya/Yurakucho. Huling gabi sa Tokyo bago bumalik sa Spain."
       }
     ],
-    "money": "Humigit-kumulang €74/tao sa kabuuan (€40 pagkain, kasama ang farewell dinner + €11,40 Toshogu admission + €22,60 Tobu World Heritage Pass) -- 🔴 ang Tobu Pass ay BIBILHIN PA (humingi ng upuan sa Kegon ng 07:30 at Revaty Kegon ng 17:44, parehong kumpirmado); opsyonal ang Kegon elevator (~€3,10/tao)."
+    "money": "Humigit-kumulang €40 (pagkain) + pamimili sa Ginza ayon sa gusto"
   },
   {
     "title": "Pag-uwi",
