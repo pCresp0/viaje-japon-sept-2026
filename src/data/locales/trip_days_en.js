@@ -820,81 +820,73 @@ export const days = [
     "money": "Approx. €40 (meals) + shopping + Skytree entry (already paid)"
   },
   {
-    "title": "Nikko Day Trip",
-    "cities": "Nikko",
-    "summary": "⚠️ Moved from Saturday to Sunday due to train availability -- weather permitting. A full day of nature and temples 2 hours from Tokyo by direct train from Asakusa (literally next to the hotel): Toshogu Shrine, mausoleum of shogun Tokugawa Ieyasu and World Heritage Site, Shinkyo Bridge, Kegon Falls and Lake Chuzenji via the Irohazaka mountain road. Farewell group dinner in the evening, on the last full day before heading back to Spain.",
-    "history": "Nikko grew up around Toshogu Shrine, built in 1617 as the mausoleum of Tokugawa Ieyasu, founder of the shogunate that ruled Japan for over 250 years. His grandson Iemitsu expanded it into the lavishly decorated complex seen today, with over 5 million sheets of gold leaf spread across its buildings.",
+    "title": "Imperial Palace, Tokyo Station and Ginza",
+    "cities": "Otemachi, Marunouchi, Ginza, Hibiya",
+    "summary": "⚠️ Change of plans: the Nikko excursion isn't happening due to bad weather (kept under 'Pending for next time' for a future trip). Instead, a walking day through Tokyo's historic and commercial center: the Imperial Palace East Gardens, Tokyo Character Street, KITTE and the Intermediatheque museum, and a long afternoon in Ginza, ending with a stroll through Hibiya/Yurakucho. Almost everything is done on foot -- a very logical straight-line route, with no pointless back-and-forth.",
+    "history": "The Imperial Palace stands on the site of the old Edo Castle, seat of the Tokugawa shogunate for over 250 years and, at its peak, the largest fortress in the world. Ginza, meanwhile, literally means 'the silver mint house' -- the shogunate's silver mint stood here during the Edo period, before it became Tokyo's most elegant shopping district after being rebuilt with Western architecture in the late 19th century.",
     "schedule": [
       {
-        "time": "06:30",
+        "time": "08:15",
         "text": "Wake up."
       },
       {
-        "time": "06:50",
-        "text": "Head to Tobu-Asakusa Station (same area as the hotel, 15-25 min on foot)."
+        "time": "09:00",
+        "text": "🚇 Leave the hotel toward Otemachi by subway. From Asakusa/Kappabashi, count on about 25-35 min door to door (walking to the station, waiting and exiting)."
       },
       {
-        "time": "~07:15",
-        "text": "Arrival at the station. Pick up physical tickets if needed, before boarding."
+        "time": "~09:30–09:40",
+        "text": "Arrival at Otemachi."
       },
       {
-        "time": "🟢 07:30",
-        "text": "🚅 **CONFIRMED TRAIN: LIMITED EXPRESS KEGON, ASAKUSA → TOBU-NIKKO.** Verified on Tobu Railway's official timetable (daily service) -- arrival at Tobu-Nikko at **09:20** (1h 50min journey).\n\n🎫 **SUICA:** ❌ NO (requires an express ticket with a seat)\n📅 **RESERVATION:** 🔴 STILL NEED TO BUY -- recommended: the **Tobu World Heritage Pass** (~¥4,160/person ≈ €22.60), which includes the round trip Limited Express PLUS unlimited buses around Nikko for 2 days. When buying it, ask for a seat on the 07:30 Kegon.\n📅 **PURCHASE:** At the machines or ticket counters at Tobu Asakusa Station, or in advance via the Tobu Railway app/website. Since it's a Sunday, better to buy it a few days ahead to secure all 5 seats together."
+        "time": "09:40–11:00",
+        "text": "🏯 **IMPERIAL PALACE (EAST GARDENS).** From Otemachi to Ote-mon gate is about 5-10 min on foot. The gardens occupy part of the old Edo Castle grounds -- moats, cyclopean stone walls and the remains of the base of the old main keep (tenshu), the tallest Japan ever had before it burned down in the great Meireki fire (1657) and was never rebuilt.\n\n🎫 Free admission, no reservation. Closed Mondays and Fridays -- today is Sunday, so it's open as usual."
       },
       {
-        "time": "09:20",
-        "text": "Arrival at Tobu-Nikko Station. Pick up brochures/map at the station's tourist center."
+        "time": "11:00–11:20",
+        "text": "🚶 Walk from the Palace to Tokyo Station, passing through Marunouchi. About 15-20 min on foot -- Tokyo's official tourism route itself connects East Gardens, Marunouchi and KITTE as a natural walking route, so no subway needed for this leg."
       },
       {
-        "time": "~09:40",
-        "text": "🚌 **BUS TOWARD THE TEMPLE AREA.** Stop right in front of the station, bound for Chuzenji-onsen/Yumoto-onsen -- get off at \"Shinkyo\" or \"Nishisando-iriguchi\" (the latter is the closest stop to Toshogu, Rinno-ji and Futarasan). Per Tobu Bus's official timetable there are departures every 15-30 min all morning, so no need to catch a specific one -- just take the next one. About a 10-minute ride.\n\n🎫 Included in the Tobu World Heritage Pass."
+        "time": "11:20–12:30",
+        "text": "🐉 **TOKYO CHARACTER STREET.** In the basement of Tokyo Station (Tokyo Station Ichibangai B1). A whole corridor of official Pokémon, Dragon Ball, Jump, One Piece, Sanrio and more shops -- one of the best merchandise stops of the whole trip. Open from 10:00 to 20:30."
       },
       {
-        "time": "10:00–13:00",
-        "text": "🏯 **TOSHOGU SHRINE AND SURROUNDINGS.** Shinkyo Bridge (the iconic red bridge over the Daiya River, symbol of Nikko). Toshogu complex: the lavishly decorated Yomeimon Gate, the relief of the 'see no evil, hear no evil, speak no evil' monkeys, and the mausoleum of Tokugawa Ieyasu. Rinno-ji and Futarasan Jinja, the other two temples in the World Heritage ensemble.\n\n🎫 Combined admission Toshogu + Futarasan + Taiyuin: approx. ¥2,100/person (≈€11.40). Toshogu only: approx. ¥1,600/person. Cannot be reserved -- pay on site.\n\n💡 Involves climbing many steps and walking on uneven ground -- comfortable shoes essential."
+        "time": "12:30–12:40",
+        "text": "🚶 Tokyo Station → KITTE. Barely 1 minute on foot per the official signage, but counting getting oriented inside the station, allow 10 real minutes."
       },
       {
-        "time": "13:00–13:45",
-        "text": "🍜 Local lunch: try yuba (tofu skin), a Nikko specialty for centuries, at any of the restaurants near the shrine entrance."
+        "time": "12:40–13:25",
+        "text": "🦴 **INTERMEDIATHEQUE.** A museum inside the KITTE building itself, run by the University of Tokyo -- scientific and historical collections (skeletons, antique instruments, taxidermy) in a very carefully staged, free display. Open Sundays from 11:00 to 18:00."
       },
       {
-        "time": "~13:55",
-        "text": "🚌 **BUS TOWARD LAKE CHUZENJI.** From the same Nishisando/Shinkyo stop, bound for Chuzenji-onsen -- along the Irohazaka mountain road (very sharp curves, spectacular views). Frequent departures in the afternoon too, per the official timetable. 40-50 min ride, included in the pass."
+        "time": "13:25–14:25",
+        "text": "🍛 Lunch: Japanese curry or ramen, to decide on the spot in the area -- no need to go far out of the way."
       },
       {
-        "time": "~14:40",
-        "text": "Arrival at Chuzenji-onsen."
+        "time": "14:25–14:50",
+        "text": "🚶 KITTE → Ginza, passing through Kyobashi. On foot, approx. 1.5-2 km (20-25 real minutes) -- this stretch is part of the stroll, not lost time."
       },
       {
-        "time": "14:40–16:30",
-        "text": "🏔️ **LAKE CHUZENJI AND KEGON FALLS.** The lake, at the foot of Mount Nantai, with a stroll along the shore. Kegon Falls, a 97m drop, is a short walk from the lake; it's clearly visible for free from the upper platform, or you can take an elevator down to the lower platform to see it up close (admission approx. ¥570 ≈ €3.10, not reservable, pay on site)."
+        "time": "14:50–18:00",
+        "text": "🛍️ **GINZA (3h 10min).**\n\n• **14:50–15:20 · Ginza-dori / Chuo-dori:** the main street, pedestrian-only on Sundays from 12:00 to 18:00 (unless cancelled for bad weather) -- just enjoy it.\n• **15:20–15:50 · Itoya:** Japan's most famous stationery department store, 9 floors of every kind of writing and design material.\n• **15:50–16:30 · Ginza Six:** Ginza's biggest luxury mall, with an art installation that changes in the central atrium. Open until 20:30.\n• **16:30–17:00 · Ginza Sony Park:** an experimental urban space on the site of the old Sony Building, with installations that change by season. Open 11:00 to 19:00.\n• **17:00–18:00 · Free time in Ginza:** deliberately left unplanned -- for whatever comes up: one more shop, some geeky find, coffee, a sweet, photos."
       },
       {
-        "time": "~16:40",
-        "text": "🚌 **BUS BACK TO TOBU-NIKKO.** Same Chuzenji-onsen stop, bound for Tobu-Nikko -- frequent departures per the official timetable. 40-50 min ride."
+        "time": "18:00–18:30",
+        "text": "🚶 Ginza → Yurakucho/Hibiya on foot, about 10-15 min depending on where you leave Ginza from."
       },
       {
-        "time": "~17:30",
-        "text": "Arrival at Tobu-Nikko Station. Plenty of time before the return train."
+        "time": "18:30–19:30",
+        "text": "🌆 **HIBIYA/YURAKUCHO, FREE TIME.** A fully open hour: keep strolling, grab a drink, buy a sweet, sit down for a while, or just decide calmly where to have dinner."
       },
       {
-        "time": "🟢 17:44",
-        "text": "🚅 **CONFIRMED TRAIN: LIMITED EXPRESS REVATY KEGON, TOBU-NIKKO → ASAKUSA.** Verified on Tobu Railway's official timetable (data as of September 2026) -- arrival at Asakusa at **19:35** (1h 51min journey)."
+        "time": "19:30–21:00",
+        "text": "🍜 Farewell group dinner around the area, on the last full day before heading back to Spain."
       },
       {
-        "time": "19:35",
-        "text": "Arrival at Asakusa Station."
-      },
-      {
-        "time": "~20:00–21:00",
-        "text": "🍜 Farewell group dinner in Tokyo (Asakusa), on the last full day before heading back to Spain."
-      },
-      {
-        "time": "~21:15",
-        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nLast night in Tokyo before heading back to Spain."
+        "time": "~21:30",
+        "text": "🏨 **BACK TO THE HOTEL: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\nBy subway from Hibiya/Yurakucho. Last night in Tokyo before heading back to Spain."
       }
     ],
-    "money": "Approx. €74/person total (€40 meals, includes farewell dinner + €11.40 Toshogu admission + €22.60 Tobu World Heritage Pass) -- 🔴 the Tobu Pass is STILL NEED TO BUY (ask for a seat on the 07:30 Kegon and the 17:44 Revaty Kegon, both confirmed); optional Kegon elevator extra (~€3.10/person)."
+    "money": "Approx. €40 (meals) + shopping in Ginza to taste"
   },
   {
     "title": "Return Home",
