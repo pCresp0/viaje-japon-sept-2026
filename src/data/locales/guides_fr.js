@@ -727,6 +727,91 @@ export const guides = {
     ],
     tip: "Descendez à la gare de Nakano sur la ligne JR Chuo. L'entrée du Broadway se trouve au bout de la galerie marchande couverte Sun Mall, à 5 minutes à pied de la gare. Parfait à combiner avec Akihabara pour une journée complète de culture otaku.",
   },
+
+  "imperial-palace": {
+    name: "Palais Impérial (East Gardens)",
+    jp: "皇居東御苑",
+    founded: "Jardins ouverts au public depuis 1968, sur le site de l'ancien château d'Edo",
+    wiki: "Palais impérial de Tokyo",
+    tagline: "Les jardins du plus grand château que le Japon ait jamais eu, et résidence de l'empereur depuis 1868.",
+    sections: [
+      {
+        title: "Le château qui fut le plus grand du monde",
+        body: "Le domaine occupe le site du château d'Edo, siège du shogunat Tokugawa à partir de 1603 et, à son apogée, la plus grande forteresse jamais construite au monde -- avec plusieurs anneaux concentriques de douves et de murailles qui délimitent encore aujourd'hui une bonne partie du centre de Tokyo. Après la Restauration Meiji de 1868, l'empereur s'y installa depuis Kyoto et le château devint le Palais Impérial.",
+      },
+      {
+        title: "Le donjon qui ne fut jamais reconstruit",
+        body: "Les East Gardens conservent la base en pierre (ishigaki) de l'ancien donjon (tenshu), qui avec plus de 50 mètres fut le plus haut qu'ait jamais eu un château japonais. Il brûla entièrement lors du grand incendie de Meireki de 1657, l'une des plus grandes catastrophes urbaines de l'histoire du Japon, et le shogunat décida de ne jamais le reconstruire -- signe qu'il n'était plus nécessaire de projeter une puissance militaire en temps de paix.",
+      },
+    ],
+    curiosities: [
+      "Les East Gardens sont l'une des rares parties du domaine impérial ouvertes au public sans restriction toute l'année ; le reste du palais ne se visite que sur réservation préalable ou les 2 janvier et 23 février (anniversaire de l'empereur).",
+      "Fermé les lundis et vendredis, ainsi qu'à l'occasion d'événements spéciaux -- à vérifier en cas de visite en semaine.",
+    ],
+    tip: "L'entrée est gratuite et ne nécessite pas de réservation -- il suffit de récupérer un jeton numéroté à l'entrée (Ote-mon, Hirakawa-mon ou Kita-hanebashi-mon), rendu à la sortie, un système pensé pour contrôler l'affluence.",
+  },
+
+  "tokyo-character-street": {
+    name: "Tokyo Character Street",
+    jp: "東京キャラクターストリート",
+    founded: "2010",
+    wiki: "Tokyo Character Street",
+    tagline: "Tout un couloir de boutiques officielles des personnages les plus célèbres du Japon, au sous-sol même de la gare de Tokyo.",
+    sections: [
+      {
+        title: "Ce que c'est",
+        body: "Une galerie souterraine à l'intérieur de Tokyo Station Ichibangai, avec plus de 30 boutiques officielles, chacune dédiée à une franchise différente : Pokémon, Dragon Ball, One Piece, Jump (le magazine qui publie la plupart des mangas les plus populaires du Japon), Studio Ghibli, Sanrio (Hello Kitty et compagnie) et bien d'autres, toutes avec des produits exclusifs qu'on ne trouve pas toujours ailleurs.",
+      },
+    ],
+    curiosities: [
+      "C'est juste à côté d'une autre galerie thématique, Tokyo Ramen Street, donc facile de combiner shopping et déjeuner sans sortir de la gare.",
+      "Étant à l'intérieur même de la gare de Tokyo, c'est un bon plan de secours pour un jour de pluie -- on y accède sans sortir dans la rue.",
+    ],
+  },
+
+  "kitte": {
+    name: "KITTE et Intermediatheque",
+    jp: "KITTE / インターメディアテク",
+    founded: "KITTE : 2013 (sur le site de l'ancien bureau central de poste de Tokyo, construit en 1931) · Intermediatheque : 2013",
+    wiki: "KITTE (shopping mall)",
+    tagline: "Un centre commercial construit dans la façade de l'ancien bureau central de poste, avec un musée scientifique gratuit à l'intérieur.",
+    sections: [
+      {
+        title: "Un bâtiment recyclé",
+        body: "KITTE occupe l'ancien bureau central de poste de Tokyo (1931), juste en face de la gare de Tokyo. Lors de la rénovation de 2013, la façade historique a été conservée et le centre commercial construit à l'intérieur, autour d'un atrium triangulaire qui s'élève sur plusieurs étages jusqu'à un toit de verre. Le nom 'KITTE' joue sur le mot japonais pour 'timbre-poste' (切手, kitte) et 'venir' (来て, kite), une invitation à le visiter.",
+      },
+      {
+        title: "Intermediatheque, le musée dans le centre commercial",
+        body: "Aux 2e et 3e étages de KITTE, géré conjointement par l'Université de Tokyo et Japan Post, ce musée gratuit expose des pièces des collections scientifiques et historiques de l'université -- squelettes d'animaux, instruments de mesure anciens, minéraux, taxidermie du XIXe siècle -- dans une mise en scène délibérément atmosphérique, avec un éclairage tamisé et presque aucun panneau explicatif, très différent d'un musée pédagogique classique.",
+      },
+    ],
+    curiosities: [
+      "Depuis la terrasse de KITTE, on a l'une des meilleures vues gratuites sur les Shinkansen entrant et sortant de la gare de Tokyo.",
+    ],
+    tip: "Intermediatheque est gratuit mais ferme plus tôt que le reste de KITTE -- mieux vaut vérifier les horaires du jour avant de planifier la visite.",
+  },
+
+  "ginza": {
+    name: "Ginza",
+    jp: "銀座",
+    founded: "Ceca d'argent depuis 1612 · reconstruit en architecture occidentale après 1872",
+    wiki: "Ginza",
+    tagline: "'La maison de l'argent' : de la ceca du shogunat à la rue commerçante la plus élégante du Japon.",
+    sections: [
+      {
+        title: "D'où vient le nom",
+        body: "Ginza signifie littéralement 'siège d'argent' ou 'maison de l'argent' -- le shogunat Tokugawa y installa sa ceca d'argent en 1612, l'institution chargée de frapper la monnaie d'argent qui circulait dans tout le Japon pendant la période Edo. La ceca déménagea ailleurs en 1800, mais le nom du quartier est resté pour de bon.",
+      },
+      {
+        title: "L'incendie qui a tout changé",
+        body: "En 1872, un incendie détruisit une bonne partie du quartier. Le gouvernement Meiji, en pleine modernisation du pays, en profita pour le reconstruire avec une architecture de brique à l'occidentale -- la première zone de Tokyo à avoir cette apparence -- faisant de Ginza la vitrine de la modernité japonaise et, avec le temps, l'adresse commerçante la plus chère et prestigieuse du pays.",
+      },
+    ],
+    curiosities: [
+      "Le dimanche (et certains samedis selon la saison), Chuo-dori, la rue principale, est fermée à la circulation entre 12h00 et 18h00 pour devenir entièrement piétonne (Hokosha Tengoku, 'paradis des piétons') -- sauf annulation pour cause de mauvais temps.",
+      "Le prix du foncier à Ginza compte depuis des décennies parmi les plus élevés du monde ; près de Kyukyodo, non loin de l'intersection de Ginza 4-chome, on a payé plus de 40 millions de yens le mètre carré.",
+    ],
+  },
   "nikko": {
     name: "Nikko",
     jp: "日光",
