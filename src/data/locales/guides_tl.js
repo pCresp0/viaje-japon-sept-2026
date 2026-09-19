@@ -736,6 +736,91 @@ export const guides = {
     ],
     tip: "Bumaba sa Nakano Station sa JR Chuo Line. Ang pasukan ng Broadway ay nasa dulo ng Sun Mall covered shopping street, 5-minutong lakad mula sa istasyon. Perpekto para pagsamahin sa Akihabara para sa isang buong araw ng otaku culture.",
   },
+
+  "imperial-palace": {
+    name: "Imperial Palace (East Gardens)",
+    jp: "皇居東御苑",
+    founded: "Bukas ang mga hardin sa publiko simula 1968, sa lugar ng lumang Edo Castle",
+    wiki: "Tokyo Imperial Palace",
+    tagline: "Ang mga hardin ng pinakamalaking kastilyo na nagkaroon ang Japan, at tahanan ng emperador simula 1868.",
+    sections: [
+      {
+        title: "Ang kastilyo na noo'y pinakamalaki sa mundo",
+        body: "Ang lupain ay sinasakop ng lugar ng Edo Castle, punong-tanggapan ng Tokugawa shogunate mula 1603 at, sa kasukdulan nito, ang pinakamalaking kuta na naitayo kahit saan sa mundo -- may ilang concentric na moat at pader na hanggang ngayon ay humuhubog sa malaking bahagi ng gitnang Tokyo. Matapos ang Meiji Restoration noong 1868, lumipat dito ang emperador mula Kyoto at naging Imperial Palace ang kastilyo.",
+      },
+      {
+        title: "Ang keep na hindi na muling itinayo",
+        body: "Iniingatan ng East Gardens ang stone base (ishigaki) ng lumang main keep (tenshu), na sa higit 50 metro ang taas ay ang pinakamataas na nagkaroon ang kahit anong kastilyo ng Japan. Ganap itong nasunog sa malaking sunog ng Meireki noong 1657, isa sa pinakamalaking urban disaster sa kasaysayan ng Japan, at nagpasya ang shogunate na hindi na ito muling itayo -- tanda na hindi na kailangang ipakita ang military power sa panahon ng kapayapaan.",
+      },
+    ],
+    curiosities: [
+      "Ang East Gardens ay isa sa iilang bahagi ng imperial grounds na bukas sa publiko nang walang restriksyon sa buong taon; ang natitirang bahagi ng palasyo ay puwede lang bisitahin sa pamamagitan ng paunang reserbasyon o tuwing Enero 2 at Pebrero 23 (kaarawan ng emperador).",
+      "Sarado tuwing Lunes at Biyernes, bukod pa sa mga espesyal na okasyon -- mainam suriin kung bibisita sa weekday.",
+    ],
+    tip: "Libre ang pasukan at hindi kailangan ng reserbasyon -- kumuha lang ng numbered token sa gate (Ote-mon, Hirakawa-mon o Kita-hanebashi-mon), na isasauli pagkalabas, isang sistemang dinisenyo para bantayan ang bilang ng tao sa loob.",
+  },
+
+  "tokyo-character-street": {
+    name: "Tokyo Character Street",
+    jp: "東京キャラクターストリート",
+    founded: "2010",
+    wiki: "Tokyo Character Street",
+    tagline: "Isang buong pasilyo ng opisyal na tindahan ng pinakasikat na mga karakter sa Japan, sa basement mismo ng Tokyo Station.",
+    sections: [
+      {
+        title: "Ano ito",
+        body: "Isang underground gallery sa loob ng Tokyo Station Ichibangai, may mahigit 30 opisyal na tindahan, bawat isa nakatuon sa ibang franchise: Pokémon, Dragon Ball, One Piece, Jump (ang magazine na naglalathala ng karamihan sa pinakasikat na manga sa Japan), Studio Ghibli, Sanrio (Hello Kitty at mga kasama nito) at marami pa, lahat may exclusive na item na hindi laging matatagpuan sa ibang tindahan.",
+      },
+    ],
+    curiosities: [
+      "Katabi lang nito ang isa pang themed gallery, ang Tokyo Ramen Street, kaya madaling pagsamahin ang pamimili at tanghalian nang hindi lumalabas sa estasyon.",
+      "Dahil nasa loob mismo ng Tokyo Station, magandang backup plan ito para sa maulang araw -- makakarating doon nang hindi lumalabas sa kalye.",
+    ],
+  },
+
+  "kitte": {
+    name: "KITTE at Intermediatheque",
+    jp: "KITTE / インターメディアテク",
+    founded: "KITTE: 2013 (sa dating lugar ng Central Post Office ng Tokyo, itinayo 1931) · Intermediatheque: 2013",
+    wiki: "KITTE (shopping mall)",
+    tagline: "Isang shopping mall na itinayo sa loob ng facade ng dating Central Post Office, may libreng science museum sa loob.",
+    sections: [
+      {
+        title: "Isang recycled na gusali",
+        body: "Sinasakop ng KITTE ang dating Central Post Office building ng Tokyo (1931), katapat mismo ng Tokyo Station. Sa renovation noong 2013, napanatili ang makasaysayang facade at itinayo ang mall sa loob nito, sa paligid ng triangular na atrium na umaakyat ng ilang palapag hanggang sa glass roof. Ang pangalang 'KITTE' ay laro sa salitang Japanese para sa 'selyo' (切手, kitte) at 'pumunta' (来て, kite), na parang paanyaya para bisitahin ito.",
+      },
+      {
+        title: "Intermediatheque, ang museo sa loob ng mall",
+        body: "Sa 2nd at 3rd floor ng KITTE, pinapatakbo nang magkasama ng University of Tokyo at Japan Post, ipinapakita ng libreng museong ito ang mga piraso mula sa scientific at historical collections ng unibersidad -- skeleton ng hayop, lumang instrumento sa pagsukat, mineral, taxidermy mula ika-19 siglo -- sa isang sadyang atmospheric na pagkakaayos, may mahinang ilaw at halos walang explanatory signage, ibang-iba sa karaniwang educational museum.",
+      },
+    ],
+    curiosities: [
+      "Mula sa terrace ng KITTE, isa ito sa pinakamagandang libreng tanawin ng mga Shinkansen na papasok at palabas ng Tokyo Station.",
+    ],
+    tip: "Libre ang Intermediatheque pero mas maagang nagsasara kaysa sa natitirang bahagi ng KITTE -- mainam suriin ang oras ng araw na iyon bago i-plano ang bisita.",
+  },
+
+  "ginza": {
+    name: "Ginza",
+    jp: "銀座",
+    founded: "Silver mint mula 1612 · muling itinayo gamit ang Western architecture matapos ang 1872",
+    wiki: "Ginza",
+    tagline: "'Ang bahay ng pilak': mula sa mint ng shogunate hanggang sa pinaka-elegante na shopping street ng Japan.",
+    sections: [
+      {
+        title: "Saan nagmula ang pangalan",
+        body: "Ang Ginza ay literal na nangangahulugang 'upuan ng pilak' o 'bahay ng pilak' -- dito itinayo ng Tokugawa shogunate ang silver mint nito noong 1612, ang institusyong responsable sa pag-mint ng barya ng pilak na umiikot sa buong Japan noong panahon ng Edo. Lumipat ang mint sa ibang lugar noong 1800, pero nanatili ang pangalan ng distrito magpakailanman.",
+      },
+      {
+        title: "Ang sunog na nagbago ng lahat",
+        body: "Noong 1872, isang sunog ang sumira sa malaking bahagi ng distrito. Sinamantala ito ng gobyernong Meiji, na noon nasa gitna ng modernisasyon ng bansa, para muling itayo ito gamit ang Western-style na brick architecture -- ang unang bahagi ng Tokyo na ganito ang itsura -- na ginawang showcase ng Japanese modernity ang Ginza, at sa paglipas ng panahon, ang pinaka-mahal at prestihiyosong shopping address sa bansa.",
+      },
+    ],
+    curiosities: [
+      "Tuwing Linggo (at ilang Sabado depende sa season), sarado sa trapiko ang Chuo-dori, ang pangunahing kalye, mula 12:00 hanggang 18:00 para maging ganap na pedestrian zone (Hokosha Tengoku, 'paraiso ng pedestrian') -- maliban kung ma-cancel dahil sa masamang panahon.",
+      "Ang presyo ng lupa sa Ginza ay isa sa pinakamataas sa mundo sa loob ng maraming dekada; malapit sa Kyukyodo, malapit sa Ginza 4-chome intersection, umabot ang presyo sa mahigit ¥40 milyon kada square meter.",
+    ],
+  },
   "nikko": {
     name: "Nikko",
     jp: "日光",
