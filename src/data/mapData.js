@@ -417,41 +417,41 @@ export const stops = [
     detail: "Subida con entradas para ver la puesta de sol -- cierre del viaje por Tokio",
   },
 
-  // ── DÍA 14: Excursión a Nikko ────────────────────────────────────
+  // ── DÍA 14: Palacio Imperial, Tokyo Station y Ginza ──────────────
   {
-    id: "tobu-nikko-sta", name: "Estación de Tobu-Nikko", city: "Tochigi",
-    lat: 36.7573, lng: 139.6122,
-    emoji: "🚅", color: "#1d3557",
+    id: "imperial-palace", name: "Palacio Imperial (East Gardens)", city: "Tokio",
+    lat: 35.6852, lng: 139.7594,
+    emoji: "🏯", color: "#1d3557",
     day: "Día 14",
-    detail: "Llegada en tren directo desde Tobu-Asakusa (aprox. 2h)",
+    detail: "Jardines sobre el antiguo Castillo de Edo, entrada gratuita",
   },
   {
-    id: "shinkyo-bridge", name: "Puente Shinkyo", city: "Tochigi",
-    lat: 36.7567, lng: 139.5989,
-    emoji: "🌉", color: "#1d3557",
+    id: "tokyo-station", name: "Estación de Tokio", city: "Tokio",
+    lat: 35.6812, lng: 139.7671,
+    emoji: "🚉", color: "#1d3557",
     day: "Día 14",
-    detail: "El puente rojo icónico sobre el río Daiya, símbolo de Nikko",
+    detail: "Tokyo Character Street, en el sótano (Ichibangai B1)",
   },
   {
-    id: "toshogu", name: "Santuario Toshogu", city: "Tochigi",
-    lat: 36.7581, lng: 139.5992,
-    emoji: "⛩️", color: "#1d3557",
+    id: "kitte", name: "KITTE e Intermediatheque", city: "Tokio",
+    lat: 35.6786, lng: 139.7645,
+    emoji: "📬", color: "#1d3557",
     day: "Día 14",
-    detail: "Mausoleo de Tokugawa Ieyasu, Patrimonio de la Humanidad UNESCO",
+    detail: "Antiguo edificio de Correos, con museo gratuito dentro",
   },
   {
-    id: "lake-chuzenji", name: "Lago Chuzenji", city: "Tochigi",
-    lat: 36.7275, lng: 139.4767,
-    emoji: "🏞️", color: "#1d3557",
+    id: "ginza", name: "Ginza", city: "Tokio",
+    lat: 35.6717, lng: 139.7650,
+    emoji: "💎", color: "#1d3557",
     day: "Día 14",
-    detail: "Lago a los pies del monte Nantai, tras la carretera Irohazaka",
+    detail: "Chuo-dori peatonal, Itoya, Ginza Six y Sony Park",
   },
   {
-    id: "kegon-falls", name: "Cataratas Kegon", city: "Tochigi",
-    lat: 36.7386, lng: 139.4989,
-    emoji: "🌊", color: "#1d3557",
+    id: "hibiya-yurakucho", name: "Hibiya / Yurakucho", city: "Tokio",
+    lat: 35.6745, lng: 139.7595,
+    emoji: "🌆", color: "#1d3557",
     day: "Día 14",
-    detail: "Cascada de 97 m de caída, una de las más famosas de Japón",
+    detail: "Paseo final de la tarde, tiempo libre antes de cenar",
   },
   
   // ── DÍA 15: Vuelta a casa ────────────────────────────────────────
@@ -488,7 +488,6 @@ export const filterData = {
     { id: "e-shirakawa", name: "Shirakawa-go", day: "Día 7", lat: 36.2577, lng: 136.9063, emoji: "🏡", color: "#2e7d5b", detail: "Aldea gassho-zukuri tradicional" },
     { id: "e-tsumago", name: "Ruta Nakasendo", day: "Día 8", lat: 35.5776, lng: 137.5957, emoji: "🚶", color: "#2e7d5b", detail: "Caminata de 8 km Magome → Tsumago" },
     { id: "e-fuji", name: "Monte Fuji", day: "Día 10", lat: 35.4903, lng: 138.8006, emoji: "🗻", color: "#1d3557", detail: "Kawaguchiko, Parque Oishi, Oshino Hakkai y Pagoda Chureito" },
-    { id: "e-nikko", name: "Nikko", day: "Día 14", lat: 36.7573, lng: 139.6122, emoji: "⛩️", color: "#1d3557", detail: "Santuario Toshogu, Puente Shinkyo y cataratas Kegon" },
   ],
   transportes: [
     { id: "t-narita", name: "Aeropuerto Narita", day: "Días 1 y 15", lat: 35.7719, lng: 140.3929, emoji: "✈️", color: "#c9a227", detail: "Vuelos internacionales QR808 (llegada) / QR809 (salida)" },
@@ -497,7 +496,6 @@ export const filterData = {
     { id: "t-takayama", name: "Takayama Nohi Bus Center", day: "Días 7–8", lat: 36.1415, lng: 137.2513, emoji: "🚌", color: "#2e7d5b", detail: "Buses a Shirakawa-go y Magome" },
     { id: "t-nagoya", name: "Estación de Nagoya", day: "Día 9", lat: 35.1709, lng: 136.8815, emoji: "🚄", color: "#2e7d5b", detail: "Transbordo Shinano 4 → Tokaido Shinkansen" },
     { id: "t-tokio", name: "Estación de Tokio", day: "Días 9–15", lat: 35.6812, lng: 139.7671, emoji: "🚄", color: "#1d3557", detail: "Shinkansen y conexiones JR" },
-    { id: "t-tobu-asakusa", name: "Estación de Tobu-Asakusa", day: "Día 14", lat: 35.7108, lng: 139.8006, emoji: "🚅", color: "#1d3557", detail: "Salida hacia Nikko en Tobu Limited Express" },
   ]
 };
 
