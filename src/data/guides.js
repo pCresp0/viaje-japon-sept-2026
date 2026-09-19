@@ -1139,6 +1139,91 @@ export const guides = {
       "La icónica tienda de relojes JackRoad, situada en la tercera planta, es mundialmente conocida entre los coleccionistas de Rolex y Omega vintage.",
     ],
   },
+
+  "imperial-palace": {
+    name: "Palacio Imperial (East Gardens)",
+    jp: "皇居東御苑",
+    founded: "Jardines abiertos al público desde 1968, sobre el antiguo Castillo de Edo",
+    wiki: "Palacio Imperial de Tokio",
+    tagline: "Los jardines del castillo más grande que existió en Japón, y hogar del emperador desde 1868.",
+    sections: [
+      {
+        title: "El castillo que fue el más grande del mundo",
+        body: "El recinto ocupa el emplazamiento del Castillo de Edo, sede del shogunato Tokugawa desde 1603 y, en su momento de máxima extensión, la fortaleza más grande jamás construida en el mundo -- con varios anillos de fosos y murallas concéntricas que hoy todavía delimitan buena parte del centro de Tokio. Tras la Restauración Meiji de 1868, el emperador se trasladó aquí desde Kioto y el castillo se convirtió en Palacio Imperial.",
+      },
+      {
+        title: "La torre que nunca se reconstruyó",
+        body: "En los East Gardens se conserva la base de piedra (ishigaki) de la antigua torre del homenaje (tenshu), que con sus más de 50 metros fue la más alta que tuvo jamás un castillo japonés. Ardió por completo en el gran incendio de Meireki de 1657, uno de los mayores desastres urbanos de la historia de Japón, y el shogunato decidió no reconstruirla nunca -- una muestra de que ya no hacía falta proyectar poder militar en tiempos de paz.",
+      },
+    ],
+    curiosities: [
+      "Los East Gardens son una de las pocas zonas del recinto imperial abiertas al público sin restricciones todo el año; el resto del palacio solo se puede visitar con reserva previa o los días 2 de enero y 23 de febrero (cumpleaños del emperador).",
+      "Cierran los lunes y los viernes, además de en ocasiones especiales -- conviene comprobarlo si se visita entre semana.",
+    ],
+    tip: "La entrada es gratuita y no requiere reserva -- basta con recoger una ficha numerada en la puerta (Ote-mon, Hirakawa-mon o Kita-hanebashi-mon) que se devuelve al salir, un sistema pensado para llevar el control de aforo.",
+  },
+
+  "tokyo-character-street": {
+    name: "Tokyo Character Street",
+    jp: "東京キャラクターストリート",
+    founded: "2010",
+    wiki: "Tokyo Character Street",
+    tagline: "Un pasillo entero de tiendas oficiales de los personajes más famosos de Japón, en el sótano de la propia Estación de Tokio.",
+    sections: [
+      {
+        title: "Qué es",
+        body: "Una galería subterránea dentro de Tokyo Station Ichibangai, con más de 30 tiendas oficiales dedicadas cada una a una franquicia distinta: Pokémon, Dragon Ball, One Piece, Jump (la revista que publica la mayoría del manga más popular de Japón), Studio Ghibli, Sanrio (Hello Kitty y compañía) y muchas más, todas con productos exclusivos que no siempre se encuentran en otras tiendas.",
+      },
+    ],
+    curiosities: [
+      "Está justo al lado de otra galería temática, Tokyo Ramen Street, así que es fácil combinar las compras con la comida sin salir de la estación.",
+      "Al estar dentro de la propia Estación de Tokio, es un buen plan de reserva para un día de lluvia -- se accede sin salir a la calle.",
+    ],
+  },
+
+  "kitte": {
+    name: "KITTE e Intermediatheque",
+    jp: "KITTE / インターメディアテク",
+    founded: "KITTE: 2013 (sobre el antiguo edificio de Correos de Tokio, de 1931) · Intermediatheque: 2013",
+    wiki: "KITTE (shopping mall)",
+    tagline: "Un centro comercial construido dentro de la fachada del antiguo edificio central de Correos, con un museo científico gratuito en su interior.",
+    sections: [
+      {
+        title: "Un edificio reciclado",
+        body: "KITTE ocupa el antiguo edificio central de Correos de Tokio (1931), justo enfrente de la Estación de Tokio. En la reforma de 2013 se conservó la fachada histórica y se construyó el centro comercial dentro de ella, con un atrio triangular que sube varias plantas hasta un techo de cristal. El nombre 'KITTE' juega con la palabra japonesa para 'sello postal' (切手, kitte) y con 'venir' (来て, kite), invitando a visitarlo.",
+      },
+      {
+        title: "Intermediatheque, el museo dentro del centro comercial",
+        body: "En las plantas 2ª y 3ª de KITTE, gestionado conjuntamente por la Universidad de Tokio y Japan Post, este museo gratuito expone piezas de las colecciones científicas e históricas de la universidad -- esqueletos de animales, instrumentos de medición antiguos, minerales, taxidermia decimonónica -- en un montaje deliberadamente atmosférico, con iluminación tenue y sin apenas carteles explicativos, muy distinto al típico museo didáctico.",
+      },
+    ],
+    curiosities: [
+      "Desde la terraza de KITTE hay una de las mejores vistas gratuitas de los andenes del Shinkansen entrando y saliendo de la Estación de Tokio.",
+    ],
+    tip: "Intermediatheque es gratuito pero cierra antes que el resto de KITTE -- conviene comprobar el horario del día concreto antes de planificar la visita.",
+  },
+
+  "ginza": {
+    name: "Ginza",
+    jp: "銀座",
+    founded: "Ceca de plata desde 1612 · reconstruido con arquitectura occidental tras 1872",
+    wiki: "Ginza",
+    tagline: "'La casa de la plata': de ceca del shogunato a la calle comercial más elegante de Japón.",
+    sections: [
+      {
+        title: "De dónde viene el nombre",
+        body: "Ginza significa literalmente 'asiento de plata' o 'casa de la plata' -- aquí instaló el shogunato Tokugawa su ceca de plata en 1612, la institución encargada de acuñar la moneda de plata que circulaba por todo Japón durante el periodo Edo. La ceca se trasladó de sitio en 1800, pero el nombre del barrio se quedó para siempre.",
+      },
+      {
+        title: "El incendio que lo cambió todo",
+        body: "En 1872 un incendio arrasó buena parte del barrio. El gobierno Meiji, en pleno proceso de modernización del país, aprovechó para reconstruirlo con arquitectura de ladrillo al estilo occidental -- la primera zona de Tokio con ese aspecto -- convirtiendo Ginza en el escaparate de la modernidad japonesa y, con el tiempo, en la dirección comercial más cara y prestigiosa del país.",
+      },
+    ],
+    curiosities: [
+      "Los domingos (y sábados en algunas épocas) Chuo-dori, la calle principal, se cierra al tráfico entre las 12:00 y las 18:00 para convertirse en una zona totalmente peatonal (Hokosha Tengoku, 'paraíso de los peatones') -- salvo que el mal tiempo obligue a cancelarlo.",
+      "El precio del suelo en Ginza ha sido durante décadas de los más altos del mundo; en la zona de Kyukyodo, cerca de la intersección de Ginza 4-chome, se han llegado a pagar más de 40 millones de yenes por metro cuadrado.",
+    ],
+  },
 };
 
 // Mapa de qué guías corresponden a cada día del itinerario
@@ -1156,7 +1241,7 @@ export const guidesByDay = {
   11: ["meiji-jingu", "shibuya", "harajuku", "shinjuku"],
   12: ["odaiba", "toyosu", "ueno", "tokyo-tower"],
   13: ["nakano-broadway", "akihabara", "tokyo-skytree"],
-  14: ["nikko"],
+  14: ["imperial-palace", "tokyo-character-street", "kitte", "ginza"],
   15: ["kappabashi", "senso-ji"],
 };
 
@@ -1265,6 +1350,22 @@ export const guideMeta = {
   "nakano-broadway": {
     shortName: "Nakano Broadway",
     keywords: ["nakano", "nakano broadway", "mandarake", "coleccionismo", "retro"],
+  },
+  "imperial-palace": {
+    shortName: "Palacio Imperial",
+    keywords: ["palacio imperial", "east gardens", "castillo de edo", "otemachi", "ote-mon"],
+  },
+  "tokyo-character-street": {
+    shortName: "Tokyo Character Street",
+    keywords: ["tokyo character street", "character street", "ichibangai"],
+  },
+  "kitte": {
+    shortName: "KITTE",
+    keywords: ["kitte", "intermediatheque", "marunouchi"],
+  },
+  "ginza": {
+    shortName: "Ginza",
+    keywords: ["ginza", "chuo-dori", "ginza six", "sony park", "itoya", "kyobashi"],
   },
   "nikko": {
     shortName: "Nikko",

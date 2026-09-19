@@ -5,6 +5,7 @@ import DayCard from "../components/DayCard";
 import PlaceText from "../components/PlaceText";
 import ItineraryPrintView from "../components/ItineraryPrintView";
 import ItineraryQuickView from "../components/ItineraryQuickView";
+import PendingDaysSection from "../components/PendingDaysSection";
 import { ChevronRight, FileDown, Loader2, List, LayoutList } from "lucide-react";
 import { useHighlight } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
@@ -180,6 +181,8 @@ export default function Itinerary({ openDay, setOpenDay, quickView, setQuickView
           })}
         </div>
       )}
+
+      <PendingDaysSection />
     </div>
   );
 }
