@@ -146,3 +146,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-19 04:52 UTC** — fix(Día 13): completar reformateo de la lista de Akihabara en ... (`46bfa9d`)
 - **2026-09-19 14:25 UTC** — feat: Día 14 cambiado de Nikko (cancelada por mal tiempo) ... (`33a69fa`)
 - **2026-09-19 14:26 UTC** — feat: actualizar mapa del Día 14 (Palacio Imperial, Estación de ... (`263a79e`)
+- **2026-09-19 14:27 UTC** — feat(Día 14): plan de Palacio Imperial/Tokyo Station/Ginza en inglés (`d9810de`)
