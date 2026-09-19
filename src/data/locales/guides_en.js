@@ -727,6 +727,91 @@ export const guides = {
     ],
     tip: "Get off at Nakano Station on the JR Chuo Line. The Broadway entrance is at the end of the Sun Mall covered shopping street, a 5-minute walk from the station. Perfect to combine with Akihabara for a full day of otaku culture.",
   },
+
+  "imperial-palace": {
+    name: "Imperial Palace (East Gardens)",
+    jp: "皇居東御苑",
+    founded: "Gardens open to the public since 1968, on the site of the old Edo Castle",
+    wiki: "Tokyo Imperial Palace",
+    tagline: "The gardens of the largest castle Japan ever had, and home to the emperor since 1868.",
+    sections: [
+      {
+        title: "The castle that was once the largest in the world",
+        body: "The grounds occupy the site of Edo Castle, seat of the Tokugawa shogunate from 1603 and, at its peak, the largest fortress ever built anywhere in the world -- with several concentric rings of moats and walls that still shape much of central Tokyo today. After the Meiji Restoration of 1868, the emperor moved here from Kyoto and the castle became the Imperial Palace.",
+      },
+      {
+        title: "The keep that was never rebuilt",
+        body: "The East Gardens preserve the stone base (ishigaki) of the old main keep (tenshu), which at over 50 meters was the tallest any Japanese castle ever had. It burned down completely in the great Meireki fire of 1657, one of the largest urban disasters in Japanese history, and the shogunate decided never to rebuild it -- a sign that projecting military power no longer mattered in peacetime.",
+      },
+    ],
+    curiosities: [
+      "The East Gardens are one of the few parts of the imperial grounds open to the public without restriction year-round; the rest of the palace can only be visited by prior reservation or on January 2 and February 23 (the emperor's birthday).",
+      "Closed on Mondays and Fridays, plus special occasions -- worth checking if visiting on a weekday.",
+    ],
+    tip: "Admission is free and needs no reservation -- just pick up a numbered token at the gate (Ote-mon, Hirakawa-mon or Kita-hanebashi-mon), which is returned on exit, a system designed to track how many people are inside.",
+  },
+
+  "tokyo-character-street": {
+    name: "Tokyo Character Street",
+    jp: "東京キャラクターストリート",
+    founded: "2010",
+    wiki: "Tokyo Character Street",
+    tagline: "A whole corridor of official stores for Japan's most famous characters, in the basement of Tokyo Station itself.",
+    sections: [
+      {
+        title: "What it is",
+        body: "An underground gallery inside Tokyo Station Ichibangai, with over 30 official stores each dedicated to a different franchise: Pokémon, Dragon Ball, One Piece, Jump (the magazine that publishes most of Japan's most popular manga), Studio Ghibli, Sanrio (Hello Kitty and friends) and many more, all with exclusive items not always found in other stores.",
+      },
+    ],
+    curiosities: [
+      "It's right next to another themed gallery, Tokyo Ramen Street, so it's easy to combine shopping with lunch without leaving the station.",
+      "Being inside Tokyo Station itself, it's a good backup plan for a rainy day -- you get there without stepping outside.",
+    ],
+  },
+
+  "kitte": {
+    name: "KITTE and Intermediatheque",
+    jp: "KITTE / インターメディアテク",
+    founded: "KITTE: 2013 (on the site of Tokyo's old Central Post Office, built 1931) · Intermediatheque: 2013",
+    wiki: "KITTE (shopping mall)",
+    tagline: "A shopping mall built inside the facade of the old Central Post Office, with a free science museum inside.",
+    sections: [
+      {
+        title: "A recycled building",
+        body: "KITTE occupies Tokyo's old Central Post Office building (1931), right across from Tokyo Station. In the 2013 renovation, the historic facade was preserved and the mall was built inside it, around a triangular atrium that rises several floors to a glass roof. The name 'KITTE' plays on the Japanese word for 'postage stamp' (切手, kitte) and 'come' (来て, kite), inviting people to visit.",
+      },
+      {
+        title: "Intermediatheque, the museum inside the mall",
+        body: "On KITTE's 2nd and 3rd floors, jointly run by the University of Tokyo and Japan Post, this free museum displays pieces from the university's scientific and historical collections -- animal skeletons, antique measuring instruments, minerals, 19th-century taxidermy -- in a deliberately atmospheric setting, with dim lighting and almost no explanatory signage, very different from a typical educational museum.",
+      },
+    ],
+    curiosities: [
+      "From KITTE's terrace there's one of the best free views of Shinkansen trains pulling in and out of Tokyo Station.",
+    ],
+    tip: "Intermediatheque is free but closes earlier than the rest of KITTE -- worth checking that day's specific hours before planning the visit.",
+  },
+
+  "ginza": {
+    name: "Ginza",
+    jp: "銀座",
+    founded: "Silver mint since 1612 · rebuilt with Western architecture after 1872",
+    wiki: "Ginza",
+    tagline: "'The silver mint house': from the shogunate's mint to Japan's most elegant shopping street.",
+    sections: [
+      {
+        title: "Where the name comes from",
+        body: "Ginza literally means 'silver seat' or 'silver mint house' -- the Tokugawa shogunate set up its silver mint here in 1612, the institution responsible for minting the silver coins that circulated across Japan during the Edo period. The mint moved elsewhere in 1800, but the district's name stuck for good.",
+      },
+      {
+        title: "The fire that changed everything",
+        body: "In 1872 a fire destroyed much of the district. The Meiji government, in the middle of modernizing the country, seized the chance to rebuild it with Western-style brick architecture -- the first part of Tokyo to look that way -- turning Ginza into a showcase of Japanese modernity and, over time, the most expensive and prestigious shopping address in the country.",
+      },
+    ],
+    curiosities: [
+      "On Sundays (and some Saturdays depending on the season), Chuo-dori, the main street, closes to traffic between 12:00 and 18:00 to become a fully pedestrian zone (Hokosha Tengoku, 'pedestrian paradise') -- unless bad weather forces a cancellation.",
+      "Land prices in Ginza have been among the highest in the world for decades; near Kyukyodo, close to the Ginza 4-chome intersection, prices have topped ¥40 million per square meter.",
+    ],
+  },
   "nikko": {
     name: "Nikko",
     jp: "日光",
