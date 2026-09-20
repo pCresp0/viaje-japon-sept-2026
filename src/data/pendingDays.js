@@ -75,6 +75,33 @@ export const pendingDays = {
       schedule: nikkoSchedule.es,
       money: "Aprox. 40€ (comidas) + 11,40€ entradas Toshogu + 22,60€ Tobu World Heritage Pass (por persona)",
     },
+    {
+      id: "fuji-hiking",
+      title: "Senderismo por el Monte Fuji",
+      cities: "Monte Fuji",
+      reason: "Idea para un futuro viaje -- no formaba parte del itinerario de este viaje (esta vez solo se vio desde Kawaguchiko/Oshino Hakkai, sin subir).",
+      summary: "Subir de verdad al Monte Fuji, no solo verlo de lejos: la ascensión clásica se hace de noche desde la 5ª estación (Fuji Subaru Line, ~2.300 m) por la ruta Yoshida, la más popular, para llegar a la cima a tiempo de ver el goraiko (amanecer) desde los 3.776 m -- el punto más alto de Japón.",
+      history: "La temporada oficial de ascenso es muy corta: normalmente de principios de julio a principios de septiembre, así que un viaje en septiembre como este ya llega casi al límite o fuera de temporada -- fuera de esas fechas el sendero está cerrado y no hay refugios ni asistencia. Desde 2024, la ruta Yoshida exige reserva previa online y una franja horaria de entrada, además de una tasa de conservación.",
+      schedule: [
+        { time: "Tarde", text: "Subida hasta un refugio de montaña sobre la 7ª-8ª estación (~3.000-3.400 m), para descansar unas horas antes del tramo final nocturno." },
+        { time: "Madrugada", text: "Última subida hasta la cima con linternas frontales, cronometrada para llegar justo antes del amanecer." },
+        { time: "Amanecer", text: "Goraiko desde la cima (3.776 m), y bajada por una ruta distinta a la de subida." },
+      ],
+      money: "Variable según refugio reservado; conservation fee y reserva de franja horaria obligatorias desde 2024 en la ruta Yoshida.",
+    },
+    {
+      id: "hiroshima-nagasaki",
+      title: "Hiroshima y Nagasaki",
+      cities: "Hiroshima, Nagasaki",
+      reason: "Idea para un futuro viaje -- no formaba parte del itinerario de este viaje (ninguna de las dos ciudades se visitó).",
+      summary: "Las dos ciudades sobre las que se lanzaron las bombas atómicas en agosto de 1945, hoy centradas en la memoria y la paz -- y con motivos de sobra para visitarlas más allá de esa historia: la isla de Miyajima con su torii flotante junto a Hiroshima, y el pasado único de Nagasaki como una de las pocas ventanas de Japón al mundo exterior durante siglos de aislamiento.",
+      history: "Hiroshima fue arrasada por la primera bomba atómica usada en un conflicto, el 6 de agosto de 1945; el Parque Memorial de la Paz y la Cúpula Genbaku (una de las pocas estructuras que quedó en pie cerca del hipocentro) son hoy testimonio de ello. Nagasaki, bombardeada tres días después, tiene además una historia distinta y más larga: durante el periodo de aislamiento (sakoku) de los siglos XVII-XIX, la isla artificial de Dejima fue durante generaciones el único punto de contacto comercial autorizado entre Japón y Occidente (los neerlandeses).",
+      schedule: [
+        { time: "Hiroshima", text: "Parque Memorial de la Paz, Cúpula Genbaku y Museo Memorial de la Paz; excursión a la isla de Miyajima (santuario Itsukushima y su torii flotante)." },
+        { time: "Nagasaki", text: "Parque de la Paz y museo de la bomba atómica; isla de Dejima, reconstruida como museo al aire libre del antiguo enclave comercial neerlandés." },
+      ],
+      money: "Variable -- ambas ciudades bien conectadas por Shinkansen (Hiroshima) y tren limitado exprés (Nagasaki) desde Osaka/Fukuoka.",
+    },
   ],
   en: [
     {
@@ -86,6 +113,33 @@ export const pendingDays = {
       history: "Nikko grew up around Toshogu Shrine, built in 1617 as the mausoleum of Tokugawa Ieyasu, founder of the shogunate that ruled Japan for over 250 years. His grandson Iemitsu expanded it into the lavishly decorated complex seen today, with over 5 million sheets of gold leaf spread across its buildings.",
       schedule: nikkoSchedule.en,
       money: "Approx. €40 (meals) + €11.40 Toshogu admission + €22.60 Tobu World Heritage Pass (per person)",
+    },
+    {
+      id: "fuji-hiking",
+      title: "Mount Fuji Hiking",
+      cities: "Mount Fuji",
+      reason: "An idea for a future trip -- not part of this trip's itinerary (this time it was only seen from Kawaguchiko/Oshino Hakkai, without climbing).",
+      summary: "Actually climbing Mount Fuji, not just seeing it from afar: the classic ascent is done overnight from the 5th station (Fuji Subaru Line, ~2,300m) via the Yoshida Trail, the most popular route, timed to reach the summit for the goraiko (sunrise) at 3,776m -- Japan's highest point.",
+      history: "The official climbing season is very short: normally early July to early September, so a September trip like this one is already at the edge of, or past, the season -- outside those dates the trail is closed with no huts or assistance. Since 2024, the Yoshida Trail requires an advance online reservation and an entry time slot, plus a conservation fee.",
+      schedule: [
+        { time: "Afternoon", text: "Climb up to a mountain hut around the 7th-8th station (~3,000-3,400m), to rest a few hours before the final overnight push." },
+        { time: "Pre-dawn", text: "Final climb to the summit with headlamps, timed to arrive just before sunrise." },
+        { time: "Sunrise", text: "Goraiko from the summit (3,776m), then descent via a different route than the ascent." },
+      ],
+      money: "Varies depending on hut booked; conservation fee and time-slot reservation mandatory since 2024 on the Yoshida Trail.",
+    },
+    {
+      id: "hiroshima-nagasaki",
+      title: "Hiroshima and Nagasaki",
+      cities: "Hiroshima, Nagasaki",
+      reason: "An idea for a future trip -- not part of this trip's itinerary (neither city was visited).",
+      summary: "The two cities the atomic bombs were dropped on in August 1945, today centered on memory and peace -- and with plenty of reasons to visit beyond that history: Miyajima island with its floating torii gate near Hiroshima, and Nagasaki's unique past as one of Japan's few windows to the outside world during centuries of isolation.",
+      history: "Hiroshima was destroyed by the first atomic bomb used in conflict, on August 6, 1945; the Peace Memorial Park and the Genbaku Dome (one of the few structures left standing near the hypocenter) stand as testimony today. Nagasaki, bombed three days later, also has a distinct and longer history: during the sakoku isolation period of the 17th-19th centuries, the artificial island of Dejima was for generations the only authorized point of trade contact between Japan and the West (the Dutch).",
+      schedule: [
+        { time: "Hiroshima", text: "Peace Memorial Park, Genbaku Dome and Peace Memorial Museum; excursion to Miyajima island (Itsukushima Shrine and its floating torii gate)." },
+        { time: "Nagasaki", text: "Peace Park and atomic bomb museum; Dejima island, rebuilt as an open-air museum of the old Dutch trading enclave." },
+      ],
+      money: "Varies -- both cities well connected by Shinkansen (Hiroshima) and limited express train (Nagasaki) from Osaka/Fukuoka.",
     },
   ],
   fr: [
@@ -99,6 +153,33 @@ export const pendingDays = {
       schedule: nikkoSchedule.fr,
       money: "Env. 40 € (repas) + 11,40 € entrées Toshogu + 22,60 € Tobu World Heritage Pass (par personne)",
     },
+    {
+      id: "fuji-hiking",
+      title: "Randonnée au Mont Fuji",
+      cities: "Mont Fuji",
+      reason: "Une idée pour un futur voyage -- ne faisait pas partie de l'itinéraire de ce voyage (cette fois vu seulement depuis Kawaguchiko/Oshino Hakkai, sans faire l'ascension).",
+      summary: "Faire vraiment l'ascension du Mont Fuji, pas seulement le voir de loin : l'ascension classique se fait de nuit depuis la 5e station (Fuji Subaru Line, ~2 300 m) par le sentier Yoshida, le plus fréquenté, chronométrée pour atteindre le sommet à temps pour le goraiko (lever du soleil) à 3 776 m -- le point le plus haut du Japon.",
+      history: "La saison officielle d'ascension est très courte : normalement début juillet à début septembre, donc un voyage en septembre comme celui-ci arrive déjà en fin, voire hors saison -- en dehors de ces dates, le sentier est fermé, sans refuge ni assistance. Depuis 2024, le sentier Yoshida exige une réservation en ligne à l'avance et un créneau horaire d'entrée, ainsi qu'une taxe de conservation.",
+      schedule: [
+        { time: "Après-midi", text: "Montée jusqu'à un refuge de montagne vers la 7e-8e station (~3 000-3 400 m), pour se reposer quelques heures avant le dernier tronçon nocturne." },
+        { time: "Avant l'aube", text: "Dernière montée jusqu'au sommet avec lampes frontales, chronométrée pour arriver juste avant le lever du soleil." },
+        { time: "Lever du soleil", text: "Goraiko depuis le sommet (3 776 m), puis descente par un itinéraire différent de la montée." },
+      ],
+      money: "Variable selon le refuge réservé ; taxe de conservation et réservation de créneau horaire obligatoires depuis 2024 sur le sentier Yoshida.",
+    },
+    {
+      id: "hiroshima-nagasaki",
+      title: "Hiroshima et Nagasaki",
+      cities: "Hiroshima, Nagasaki",
+      reason: "Une idée pour un futur voyage -- ne faisait pas partie de l'itinéraire de ce voyage (aucune des deux villes n'a été visitée).",
+      summary: "Les deux villes sur lesquelles les bombes atomiques ont été larguées en août 1945, aujourd'hui centrées sur la mémoire et la paix -- et avec largement de quoi les visiter au-delà de cette histoire : l'île de Miyajima et son torii flottant près d'Hiroshima, et le passé unique de Nagasaki comme l'une des rares fenêtres du Japon sur le monde extérieur pendant des siècles d'isolement.",
+      history: "Hiroshima a été rasée par la première bombe atomique utilisée dans un conflit, le 6 août 1945 ; le Parc Mémorial de la Paix et le Dôme de Genbaku (l'une des rares structures restées debout près de l'hypocentre) en témoignent aujourd'hui. Nagasaki, bombardée trois jours plus tard, a en plus une histoire différente et plus longue : pendant la période d'isolement (sakoku) des XVIIe-XIXe siècles, l'île artificielle de Dejima fut pendant des générations le seul point de contact commercial autorisé entre le Japon et l'Occident (les Néerlandais).",
+      schedule: [
+        { time: "Hiroshima", text: "Parc Mémorial de la Paix, Dôme de Genbaku et musée Mémorial de la Paix ; excursion à l'île de Miyajima (sanctuaire Itsukushima et son torii flottant)." },
+        { time: "Nagasaki", text: "Parc de la Paix et musée de la bombe atomique ; île de Dejima, reconstruite en musée à ciel ouvert de l'ancien comptoir commercial néerlandais." },
+      ],
+      money: "Variable -- les deux villes bien reliées par Shinkansen (Hiroshima) et train limited express (Nagasaki) depuis Osaka/Fukuoka.",
+    },
   ],
   tl: [
     {
@@ -111,19 +192,46 @@ export const pendingDays = {
       schedule: nikkoSchedule.tl,
       money: "Humigit-kumulang €40 (pagkain) + €11,40 Toshogu admission + €22,60 Tobu World Heritage Pass (bawat tao)",
     },
+    {
+      id: "fuji-hiking",
+      title: "Pag-akyat sa Mount Fuji",
+      cities: "Mount Fuji",
+      reason: "Ideya para sa susunod na biyahe -- hindi bahagi ng itinerary ng biyaheng ito (ngayong beses nakita lang mula Kawaguchiko/Oshino Hakkai, hindi umakyat).",
+      summary: "Talagang umakyat sa Mount Fuji, hindi lang tingnan mula sa malayo: ang klasikong pag-akyat ay ginagawa nang gabi mula sa 5th station (Fuji Subaru Line, ~2,300m) sa Yoshida Trail, ang pinakasikat na ruta, na naka-oras para makarating sa tuktok bago ang goraiko (sunrise) sa 3,776m -- ang pinakamataas na punto sa Japan.",
+      history: "Napakaikli ng opisyal na climbing season: karaniwan mula unang bahagi ng Hulyo hanggang unang bahagi ng Setyembre, kaya ang biyaheng ito sa Setyembre ay malapit na sa dulo o labas na ng season -- sa labas ng mga petsang iyon, sarado ang trail, walang hut o assistance. Simula 2024, kailangan ng maagang online na reserbasyon at entry time slot sa Yoshida Trail, kasama ang conservation fee.",
+      schedule: [
+        { time: "Hapon", text: "Pag-akyat papunta sa mountain hut malapit sa 7th-8th station (~3,000-3,400m), para magpahinga ng ilang oras bago ang huling gabing pag-akyat." },
+        { time: "Bago sumikat ang araw", text: "Huling pag-akyat papunta sa tuktok gamit ang headlamp, naka-oras para makarating bago sumikat ang araw." },
+        { time: "Sunrise", text: "Goraiko mula sa tuktok (3,776m), pagkatapos ay pababa sa ibang ruta kaysa sa pag-akyat." },
+      ],
+      money: "Depende sa na-book na hut; obligado ang conservation fee at reserbasyon ng time slot simula 2024 sa Yoshida Trail.",
+    },
+    {
+      id: "hiroshima-nagasaki",
+      title: "Hiroshima at Nagasaki",
+      cities: "Hiroshima, Nagasaki",
+      reason: "Ideya para sa susunod na biyahe -- hindi bahagi ng itinerary ng biyaheng ito (wala sa dalawang lungsod ang nabisita).",
+      summary: "Ang dalawang lungsod kung saan bumagsak ang atomic bomb noong Agosto 1945, ngayon ay nakatuon sa memoria at kapayapaan -- at may sapat na dahilan para bisitahin lampas sa kasaysayang iyon: ang Miyajima island na may floating torii gate malapit sa Hiroshima, at ang natatanging nakaraan ng Nagasaki bilang isa sa iilang bintana ng Japan sa labas ng mundo sa loob ng mga siglo ng pagkakahiwalay.",
+      history: "Winasak ang Hiroshima ng unang atomic bomb na ginamit sa alitan, noong Agosto 6, 1945; ang Peace Memorial Park at ang Genbaku Dome (isa sa iilang istrukturang natirang nakatayo malapit sa hypocenter) ay patotoo ngayon dito. Ang Nagasaki, na binomba tatlong araw pagkatapos, ay may kaibahan at mas mahabang kasaysayan din: sa panahon ng sakoku isolation ng ika-17 hanggang ika-19 siglo, ang artificial island ng Dejima ay sa loob ng maraming henerasyon ang tanging awtorisadong punto ng ugnayang pangkalakalan sa pagitan ng Japan at Kanluran (ang mga Dutch).",
+      schedule: [
+        { time: "Hiroshima", text: "Peace Memorial Park, Genbaku Dome at Peace Memorial Museum; excursion sa Miyajima island (Itsukushima Shrine at ang floating torii gate nito)." },
+        { time: "Nagasaki", text: "Peace Park at atomic bomb museum; Dejima island, muling itinayo bilang open-air museum ng dating Dutch trading enclave." },
+      ],
+      money: "Depende -- pareho ang lungsod ay maayos na konektado sa Shinkansen (Hiroshima) at limited express train (Nagasaki) mula Osaka/Fukuoka.",
+    },
   ],
 };
 
 export const pendingSectionLabel = {
-  es: "Cosas pendientes",
-  en: "Pending for next time",
-  fr: "À faire une prochaine fois",
-  tl: "Mga Pending para sa Susunod",
+  es: "Para viajes futuros",
+  en: "For Future Trips",
+  fr: "Pour de futurs voyages",
+  tl: "Para sa Susunod na Biyahe",
 };
 
 export const pendingSectionSubtitle = {
-  es: "Días que se habían planeado pero no se hicieron en este viaje -- quedan aquí como referencia para un futuro viaje a Japón.",
-  en: "Days that were planned but didn't happen on this trip -- kept here as a reference for a future trip to Japan.",
-  fr: "Journées qui avaient été prévues mais qui n'ont pas eu lieu lors de ce voyage -- conservées ici comme référence pour un prochain voyage au Japon.",
-  tl: "Mga araw na naplano pero hindi natuloy sa biyaheng ito -- nandito bilang reference para sa susunod na biyahe sa Japan.",
+  es: "Nikko, que se había planeado pero no se hizo en este viaje, y otras ideas guardadas para un futuro viaje a Japón.",
+  en: "Nikko, which was planned but didn't happen on this trip, plus other ideas kept for a future trip to Japan.",
+  fr: "Nikko, qui avait été prévue mais qui n'a pas eu lieu lors de ce voyage, ainsi que d'autres idées gardées pour un prochain voyage au Japon.",
+  tl: "Ang Nikko, na naplano pero hindi natuloy sa biyaheng ito, at iba pang ideya na naka-save para sa susunod na biyahe sa Japan.",
 };
