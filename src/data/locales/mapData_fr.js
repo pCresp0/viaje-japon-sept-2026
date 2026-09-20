@@ -55,11 +55,11 @@ export const stops = [
   { id: "akihabara", name: "Akihabara", city: "Tokyo", day: "Jour 13", detail: "Electric Town : Mandarake, Super Potato et arcades japonaises" },
   { id: "tokyo-skytree-sunset", name: "Tokyo Skytree (coucher de soleil)", city: "Tokyo", day: "Jour 13", detail: "Montée avec billets pour voir le coucher de soleil -- clôture du séjour à Tokyo" },
   { id: "nakano", name: "Nakano Broadway", city: "Tokyo", day: "Jour 13", detail: "Mecque des objets rétro, figurines vintage et manga" },
-  { id: "tobu-nikko-sta", name: "Gare de Tobu-Nikko", city: "Tochigi", day: "Jour 14", detail: "Arrivée en train direct depuis Tobu-Asakusa (environ 2h)" },
-  { id: "shinkyo-bridge", name: "Pont Shinkyo", city: "Tochigi", day: "Jour 14", detail: "Le célèbre pont rouge sur la rivière Daiya, symbole de Nikko" },
-  { id: "toshogu", name: "Sanctuaire Toshogu", city: "Tochigi", day: "Jour 14", detail: "Mausolée de Tokugawa Ieyasu, site du patrimoine mondial de l'UNESCO" },
-  { id: "lake-chuzenji", name: "Lac Chuzenji", city: "Tochigi", day: "Jour 14", detail: "Lac au pied du mont Nantai, après la route de montagne Irohazaka" },
-  { id: "kegon-falls", name: "Chutes de Kegon", city: "Tochigi", day: "Jour 14", detail: "Chute d'eau de 97 m, l'une des plus célèbres du Japon" },
+  { id: "imperial-palace", name: "Palais Impérial (East Gardens)", city: "Tokyo", day: "Jour 14", detail: "Jardins sur le site de l'ancien château d'Edo, entrée gratuite" },
+  { id: "tokyo-station", name: "Gare de Tokyo", city: "Tokyo", day: "Jour 14", detail: "Tokyo Character Street, au sous-sol (Ichibangai B1)" },
+  { id: "kitte", name: "KITTE et Intermediatheque", city: "Tokyo", day: "Jour 14", detail: "Ancien bureau central de poste, avec un musée gratuit à l'intérieur" },
+  { id: "ginza", name: "Ginza", city: "Tokyo", day: "Jour 14", detail: "Chuo-dori piétonne, Itoya, Ginza Six et Sony Park" },
+  { id: "hibiya-yurakucho", name: "Hibiya / Yurakucho", city: "Tokyo", day: "Jour 14", detail: "Dernière promenade de l'après-midi, temps libre avant le dîner" },
   { id: "senso-ji", name: "Asakusa et Senso-ji", city: "Tokyo", day: "Jour 15", detail: "Dernière matinée : porte Kaminarimon, rue Nakamise et Kappabashi Dori" },
   { id: "keisei-ueno", name: "Gare de Keisei-Ueno", city: "Tokyo", day: "Jour 15", detail: "Départ du Keisei Skyliner direct vers Narita (avec les bagages)" },
 ];
@@ -79,7 +79,6 @@ export const filterData = {
     { id: "e-shirakawa", name: "Shirakawa-go", day: "Jour 7", detail: "Village gassho-zukuri UNESCO" },
     { id: "e-tsumago", name: "Route du Nakasendo", day: "Jour 8", detail: "Randonnée de 8 km Magome → Tsumago" },
     { id: "e-fuji", name: "Mont Fuji", day: "Jour 10", detail: "Kawaguchiko, Parc Oishi, Oshino Hakkai et Pagode Chureito" },
-    { id: "e-nikko", name: "Nikko", day: "Jour 14", detail: "Sanctuaire Toshogu, pont Shinkyo et chutes de Kegon" },
   ],
   transportes: [
     { id: "t-narita", name: "Aéroport de Narita", day: "Jours 1 et 15", detail: "Vols internationaux QR808 (arrivée) / QR809 (départ)" },
@@ -88,7 +87,6 @@ export const filterData = {
     { id: "t-takayama", name: "Takayama Nohi Bus Center", day: "Jours 7–8", detail: "Bus vers Shirakawa-go et Magome" },
     { id: "t-nagoya", name: "Gare de Nagoya", day: "Jour 9", detail: "Correspondance Shinano 4 → Tokaido Shinkansen" },
     { id: "t-tokio", name: "Gare de Tokyo", day: "Jours 9–15", detail: "Shinkansen et lignes JR" },
-    { id: "t-tobu-asakusa", name: "Gare de Tobu-Asakusa", day: "Jour 14", detail: "Départ vers Nikko en Tobu Limited Express" },
   ]
 };
 

@@ -55,11 +55,11 @@ export const stops = [
   { id: "akihabara", name: "Akihabara", city: "Tokyo", day: "Araw 13", detail: "Electric Town: Mandarake, Super Potato at Japanese arcades" },
   { id: "tokyo-skytree-sunset", name: "Tokyo Skytree (sunset)", city: "Tokyo", day: "Araw 13", detail: "Pag-akyat na may ticket para panoorin ang sunset -- pangwakas na hakbang sa Tokyo bago umuwi" },
   { id: "nakano", name: "Nakano Broadway", city: "Tokyo", day: "Araw 13", detail: "Mecca ng retro collectibles, vintage figures at manga" },
-  { id: "tobu-nikko-sta", name: "Tobu-Nikko Station", city: "Tochigi", day: "Araw 14", detail: "Pagdating sa direktang tren mula Tobu-Asakusa (mga 2 oras)" },
-  { id: "shinkyo-bridge", name: "Shinkyo Bridge", city: "Tochigi", day: "Araw 14", detail: "Ang kilalang pulang tulay sa Ilog Daiya, simbolo ng Nikko" },
-  { id: "toshogu", name: "Toshogu Shrine", city: "Tochigi", day: "Araw 14", detail: "Mausoleum ni Tokugawa Ieyasu, UNESCO World Heritage Site" },
-  { id: "lake-chuzenji", name: "Lake Chuzenji", city: "Tochigi", day: "Araw 14", detail: "Lawa sa paanan ng Mount Nantai, lampas sa Irohazaka mountain road" },
-  { id: "kegon-falls", name: "Kegon Falls", city: "Tochigi", day: "Araw 14", detail: "97m na talon, isa sa pinakasikat sa Japan" },
+  { id: "imperial-palace", name: "Imperial Palace (East Gardens)", city: "Tokyo", day: "Araw 14", detail: "Hardin sa lugar ng dating Edo Castle, libreng entrance" },
+  { id: "tokyo-station", name: "Tokyo Station", city: "Tokyo", day: "Araw 14", detail: "Tokyo Character Street, sa basement (Ichibangai B1)" },
+  { id: "kitte", name: "KITTE at Intermediatheque", city: "Tokyo", day: "Araw 14", detail: "Dating Central Post Office building, may libreng museo sa loob" },
+  { id: "ginza", name: "Ginza", city: "Tokyo", day: "Araw 14", detail: "Pedestrian na Chuo-dori, Itoya, Ginza Six at Sony Park" },
+  { id: "hibiya-yurakucho", name: "Hibiya / Yurakucho", city: "Tokyo", day: "Araw 14", detail: "Huling paglalakad ng hapon, libreng oras bago ang hapunan" },
   { id: "senso-ji", name: "Asakusa at Senso-ji", city: "Tokyo", day: "Araw 15", detail: "Huling umaga: Kaminarimon gate, Nakamise street at Kappabashi Dori" },
   { id: "keisei-ueno", name: "Keisei-Ueno Station", city: "Tokyo", day: "Araw 15", detail: "Alis ng Keisei Skyliner diretso papuntang Narita (may bagahe)" },
 ];
@@ -79,7 +79,6 @@ export const filterData = {
     { id: "e-shirakawa", name: "Shirakawa-go", day: "Araw 7", detail: "UNESCO gassho-zukuri village" },
     { id: "e-tsumago", name: "Nakasendo Route", day: "Araw 8", detail: "8 km hike Magome → Tsumago" },
     { id: "e-fuji", name: "Mount Fuji", day: "Araw 10", detail: "Kawaguchiko, Oishi Park, Oshino Hakkai at Chureito Pagoda" },
-    { id: "e-nikko", name: "Nikko", day: "Araw 14", detail: "Toshogu Shrine, Shinkyo Bridge at Kegon Falls" },
   ],
   transportes: [
     { id: "t-narita", name: "Narita Airport", day: "Araw 1 at 15", detail: "Internasyonal na flight QR808 (dating) / QR809 (alis)" },
@@ -88,7 +87,6 @@ export const filterData = {
     { id: "t-takayama", name: "Takayama Nohi Bus Center", day: "Araw 7–8", detail: "Mga bus papuntang Shirakawa-go at Magome" },
     { id: "t-nagoya", name: "Estasyon ng Nagoya", day: "Araw 9", detail: "Transit Shinano 4 → Tokaido Shinkansen" },
     { id: "t-tokio", name: "Estasyon ng Tokyo", day: "Araw 9–15", detail: "Shinkansen at mga linyang JR" },
-    { id: "t-tobu-asakusa", name: "Estasyon ng Tobu-Asakusa", day: "Araw 14", detail: "Alis papuntang Nikko sa Tobu Limited Express" },
   ]
 };
 
