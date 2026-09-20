@@ -895,7 +895,7 @@ export const days = [
     "history": "After two intense weeks touring the history of the shoguns, Zen philosophy, and the technology of the archipelago, the trip concludes. Narita has been the main international entry and exit port of the Kanto region since 1978.",
     "schedule": [
       {
-        "text": "🏮 **A REAL VISIT TO ASAKUSA AND SENSŌ-JI** (not as a backup plan from another day -- last morning, with time to spare and the shops already open).\n\n• **Kaminarimon Gate**: the great red lantern, the iconic entrance to the temple grounds.\n• **Nakamise Street**: almost 200 meters of traditional little shops -- sweets, crafts, souvenirs, fans, yukata -- all the way to the temple gate. Great for last-minute shopping (flavored Kit-Kats, matcha).\n• **Sensō-ji Temple**: Tokyo's oldest Buddhist temple (year 628), with the large incense burner and main hall.\n• A quiet stroll through the traditional side streets around it, before heading back to the hotel.\n\n🍽️ **KAPPABASHI DORI** (friend of Thibaut's): the street entirely dedicated to the world of cooking, literally next to your hotel (it's in the same neighborhood, Nishi-Asakusa). The place to bring back real Japanese ceramics, and also the famous plastic food replicas (sampuru) -- a very typical Japanese curiosity, even if it's not to everyone's taste. Can be added without needing transport, extending this same morning's walk.\n\n💡 Since the hotel is only a 10-minute walk away, no transport is needed for this -- you can go back for the luggage at a relaxed pace before the airport transfer."
+        "text": "🧳 **LAST-MINUTE SHOPPING, PACKING AND CHECK-OUT.** A relaxed last morning before the airport transfer:\n\n• Last-minute shopping around the hotel (pharmacies, Kappabashi-dori for kitchenware or the plastic food replicas, or anything still pending).\n• Pack and close the suitcases at a relaxed pace.\n• Check out at the front desk of KOKO HOTEL Residence Asakusa Kappabashi.\n\n💡 Since it's all within the neighborhood, no transport is needed for this -- plenty of time before heading to Narita."
       },
       {
         "text": "🚆 TRANSFER TO NARITA AIRPORT — 2 OPTIONS (Recommended: Keisei Skyliner)\n\n🟢 **RECOMMENDED OPTION: KEISEI SKYLINER (from Keisei-Ueno)**\n- Transfer to the train: KOKO HOTEL Residence Asakusa Kappabashi → Keisei-Ueno Station. For 5 people with large suitcases, it's well worth considering a direct taxi from the hotel door to Keisei-Ueno (~10 min), notably simplifying the logistics.\n- Train: Keisei Skyliner from Keisei-Ueno direct to Narita Airport (~41 min). Express train with reserved seat and plenty of luggage space.\n- Advantage: Avoids having to drag large luggage through corridors and transfers to reach Tokyo Station.\n- Final schedule: Check and book once the definitive September 2026 timetable is published, making sure to arrive at Narita with enough margin for the 17:25 flight.\n\n🟡 **VALID ALTERNATIVE: JR NARITA EXPRESS (N'EX)**\n- Transfer: Hotel → Tokyo Station (metro or taxi) → JR Narita Express (N'EX) direct to Narita (~1h by train, reserved seat required).\n- The N'EX is still a perfectly valid option if you'd rather leave from Tokyo Station.\n\n💡 Keep enough margin to be at the Narita terminal before 14:30 for check-in and security."
@@ -904,7 +904,10 @@ export const days = [
         "text": "Check-in and security checks at Narita."
       },
       {
-        "text": "Flight QR809 Narita → Doha (Qatar Airways, 10h 55m · 17:25 → 22:20). Tracking: https://www.google.com/search?q=flight+QR809. Layover in Doha of 2h 50m (22:20 → 01:10), then flight QR147 Doha → Madrid (Qatar Airways / Iberia, 7h 25m · 01:10 → 07:35). Tracking: https://www.google.com/search?q=flight+QR147. Arrival in Madrid (T4S) on Tue Sept 22 at 07:35."
+        "text": "✈️ Flight QR809 Narita → Doha (Qatar Airways, 10h 55m). Arrival in Doha at 22:20."
+      },
+      {
+        "text": "✈️ Layover in Doha of 2h 50m (22:20 → 01:10), then flight QR147 Doha → Madrid (Qatar Airways, 7h 25m). Arrival in Madrid (T4S) on Tue Sept 22 at 07:35."
       }
     ],
     "money": "Approx. €40 (meals)"

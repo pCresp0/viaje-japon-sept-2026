@@ -8,6 +8,7 @@ import DayFujiOptionCard from "./DayFujiOptionCard";
 import VisitJapanQRCard from "./VisitJapanQRCard";
 import ShinkansenTicketCard from "./ShinkansenTicketCard";
 import ThunderbirdTicketCard from "./ThunderbirdTicketCard";
+import FlightTicketCard from "./FlightTicketCard";
 import NohiMagomeTicketCard from "./NohiMagomeTicketCard";
 import TicketDownloadButton from "./TicketDownloadButton";
 import ShinanoTicketCard from "./ShinanoTicketCard";
@@ -429,6 +430,42 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
                   {day.num === 9 && s.time === "11:29" && (
                     <div className="mt-3 relative z-10">
                       <NozomiNagoyaTicketCard />
+                    </div>
+                  )}
+
+                  {day.num === 15 && s.time === "17:25" && (
+                    <div className="mt-3 relative z-10">
+                      <FlightTicketCard
+                        legNumber="1 de 2"
+                        route="Narita → Doha"
+                        flightNumber="QR 809"
+                        date="21 sept 2026"
+                        depTime="17:25"
+                        arrTime="22:20"
+                        duration="10h 55m"
+                        seat="32J"
+                        bookingRef="YQXPVE"
+                        eticket="1579424794235"
+                        trackUrl="https://www.google.com/search?q=vuelo+QR809"
+                      />
+                    </div>
+                  )}
+
+                  {day.num === 15 && s.time === "01:10" && (
+                    <div className="mt-3 relative z-10">
+                      <FlightTicketCard
+                        legNumber="2 de 2"
+                        route="Doha → Madrid"
+                        flightNumber="QR 147"
+                        date="22 sept 2026"
+                        depTime="01:10"
+                        arrTime="07:35"
+                        duration="7h 25m"
+                        seat="31A"
+                        bookingRef="YQXPVE"
+                        eticket="1579424794235"
+                        trackUrl="https://www.google.com/search?q=vuelo+QR147"
+                      />
                     </div>
                   )}
                 </li>
