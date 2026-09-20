@@ -7,6 +7,7 @@ export default {
   "nav.group.guia": "GUIDE",
   "nav.group.prep": "PREPARATION",
   "nav.group.util": "UTILITIES",
+  "nav.group.futuro": "FOR FUTURE TRIPS",
 
   "nav.pendientes": "To do",
   "nav.inicio": "Home",
@@ -24,6 +25,8 @@ export default {
   "nav.frikadas": "Geek stops",
   "nav.about": "About this web",
   "nav.desc.about": "Technical details, stack and repository of the project",
+  "nav.futuroViajes": "For future trips",
+  "nav.desc.futuroViajes": "Nikko, Hokkaido, Okinawa and other ideas for next time",
   "nav.desc.frikadas": "Pokémon, Digimon, Dragon Ball, and geek spots near the route",
   "nav.rainToday": "Rain today",
   "nav.frases": "Phrases",
