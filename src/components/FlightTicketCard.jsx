@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Plane, Ticket, CheckCircle2, Armchair, CalendarDays, ExternalLink } from "lucide-react";
+import { Plane, Ticket, CheckCircle2, CalendarDays, ExternalLink } from "lucide-react";
 import TicketCardHeader from "./TicketCardHeader";
 
 // Granate Qatar Airways -- tono propio para las tarjetas de vuelo,
@@ -17,7 +17,6 @@ export default function FlightTicketCard({
   depTime,
   arrTime,
   duration,
-  seat,
   bookingRef,
   eticket,
   checkedIn = true,
@@ -62,19 +61,11 @@ export default function FlightTicketCard({
             )}
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
-            <div className="border rounded-xl p-3" style={{ borderColor: "var(--line)" }}>
-              <p className="text-[10px] font-bold text-gray-500 uppercase tracking-wider m-0 mb-1 flex items-center gap-1">
-                <Armchair size={12} /> Asiento
-              </p>
-              <p className="text-sm font-bold m-0" style={{ color: ACCENT }}>{seat}</p>
-            </div>
-            <div className="border rounded-xl p-3" style={{ borderColor: "var(--line)" }}>
-              <p className="text-[10px] font-bold text-gray-500 uppercase tracking-wider m-0 mb-1 flex items-center gap-1">
-                <Ticket size={12} /> E-ticket
-              </p>
-              <p className="text-sm font-bold font-mono m-0" style={{ color: ACCENT }}>{eticket}</p>
-            </div>
+          <div className="border rounded-xl p-3" style={{ borderColor: "var(--line)" }}>
+            <p className="text-[10px] font-bold text-gray-500 uppercase tracking-wider m-0 mb-1 flex items-center gap-1">
+              <Ticket size={12} /> E-ticket
+            </p>
+            <p className="text-sm font-bold font-mono m-0" style={{ color: ACCENT }}>{eticket}</p>
           </div>
 
           {trackUrl && (

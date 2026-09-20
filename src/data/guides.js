@@ -1242,7 +1242,7 @@ export const guidesByDay = {
   12: ["odaiba", "toyosu", "ueno", "tokyo-tower"],
   13: ["nakano-broadway", "akihabara", "tokyo-skytree"],
   14: ["imperial-palace", "tokyo-character-street", "kitte", "ginza"],
-  15: ["kappabashi", "senso-ji"],
+  15: ["kappabashi"],
 };
 
 // Metadatos y palabras clave para vincular cada guía con los eventos del itinerario
