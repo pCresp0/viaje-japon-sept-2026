@@ -12,6 +12,7 @@ export default {
   "nav.group.guia": "GABAY",
   "nav.group.prep": "PAGHAHANDA",
   "nav.group.util": "MGA KAGAMITAN",
+  "nav.group.futuro": "PARA SA SUSUNOD NA BIYAHE",
 
   "nav.pendientes": "Mga dapat gawin",
   "nav.inicio": "Simula",
@@ -29,6 +30,8 @@ export default {
   "nav.frikadas": "Geek na hinto",
   "nav.about": "Tungkol sa web",
   "nav.desc.about": "Mga teknikal na detalye, stack at repository ng proyekto",
+  "nav.futuroViajes": "Para sa susunod na biyahe",
+  "nav.desc.futuroViajes": "Nikko, Hokkaido, Okinawa at iba pang ideya para sa susunod",
   "nav.desc.frikadas": "Pokémon, Digimon, Dragon Ball at mga geek spot sa ruta",
   "nav.rainToday": "Ulan ngayong araw",
   "nav.frases": "Mga parirala",
