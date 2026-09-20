@@ -160,3 +160,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-20 10:16 UTC** — feat(Día 15): completar en tagalo -- compras/maleta/check-out y vuelo dividido ... (`7de96fb`)
 - **2026-09-20 10:19 UTC** — feat: renombrar la sección a 'Para viajes futuros' y añadir ... (`f9f4a45`)
 - **2026-09-20 10:23 UTC** — fix: quitar senso-ji del día 15 (ya está en el ... (`8b6bb2b`)
+- **2026-09-20 10:24 UTC** — fix(Día 15): separar check-out a las 11:00 en inglés (`0ec2e25`)
