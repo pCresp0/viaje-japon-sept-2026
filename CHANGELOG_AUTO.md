@@ -166,3 +166,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-20 14:15 UTC** — feat: añadir Hokkaido, Okinawa e Iriomote (cielos oscuros para astrofotografía) ... (`242c7fd`)
 - **2026-09-20 14:15 UTC** — feat: añadir Hokkaido, Okinawa e Iriomote en inglés (`9aea121`)
 - **2026-09-20 14:16 UTC** — feat: añadir Hokkaido, Okinawa e Iriomote en francés (`40518c5`)
+- **2026-09-20 14:17 UTC** — feat: completar Hokkaido, Okinawa e Iriomote en tagalo -- Para ... (`063ee92`)
