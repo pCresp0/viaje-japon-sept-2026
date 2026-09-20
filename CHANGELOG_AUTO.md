@@ -153,3 +153,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-19 14:31 UTC** — feat: añadir 4 nuevas guías en francés (`8bdb7a9`)
 - **2026-09-19 14:32 UTC** — feat: completar 4 nuevas guías en tagalo -- guías completas ... (`455631c`)
 - **2026-09-19 14:33 UTC** — feat: actualizar mapa del Día 14 en inglés (Palacio Imperial/Tokyo ... (`15fb0b9`)
+- **2026-09-20 04:04 UTC** — feat: completar mapa del Día 14 en francés y tagalo ... (`cd59960`)
