@@ -31,6 +31,8 @@ export default {
   "nav.about": "Tungkol sa web",
   "nav.desc.about": "Mga teknikal na detalye, stack at repository ng proyekto",
   "nav.futuroViajes": "Para sa susunod na biyahe",
+  "day.now": "NGAYON",
+  "day.upcoming": "MALAPIT NA",
   "nav.desc.futuroViajes": "Nikko, Hokkaido, Okinawa at iba pang ideya para sa susunod",
   "nav.desc.frikadas": "Pokémon, Digimon, Dragon Ball at mga geek spot sa ruta",
   "nav.rainToday": "Ulan ngayong araw",

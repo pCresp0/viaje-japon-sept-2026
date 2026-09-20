@@ -358,6 +358,8 @@ export default {
 
   "nav.about": "Sobre la web",
   "nav.futuroViajes": "Para viajes futuros",
+  "day.now": "AHORA",
+  "day.upcoming": "PRÓXIMAMENTE",
   "frikadas.eyebrow": "Para frikis",
   "frikadas.title": "Frikadas",
   "about.eyebrow": "Desarrollo",

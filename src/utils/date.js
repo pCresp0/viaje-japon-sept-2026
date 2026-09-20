@@ -82,13 +82,13 @@ export function getCurrentMinutesTokyo() {
   }
 }
 
-// Dado el horario de un día (array de { time, text }), devuelve el índice (dentro
-// de las entradas que SÍ tienen una hora real) de la parada correspondiente al
-// momento actual: la última parada cuya hora de inicio ya ha pasado -- es decir,
-// el punto ANTERIOR a la hora actual, nunca uno posterior, para no adelantarse a
-// algo que todavía no ha pasado. Si la hora actual es anterior a la primera
-// parada del día, devuelve 0 (la primera). Devuelve null si no hay ninguna
-// entrada con hora reconocible.
+// Dado el horario de un día (array de { time, text }), devuelve { index, status }
+// para la parada correspondiente al momento actual, donde `index` es la posición
+// (dentro de las entradas que SÍ tienen una hora real) y `status` es "now" si ya
+// ha empezado esa parada, o "upcoming" si todavía no ha empezado ninguna del día
+// (la hora actual es anterior a la primera parada con hora) -- en ese caso apunta
+// a la primera parada, pero como "próxima", no como "en curso". Devuelve null si
+// no hay ninguna entrada con hora reconocible.
 export function findCurrentScheduleIndex(schedule) {
   if (!schedule || schedule.length === 0) return null;
   const timed = schedule
@@ -104,7 +104,7 @@ export function findCurrentScheduleIndex(schedule) {
     return Number(match[1]) * 60 + Number(match[2]);
   };
 
-  let bestFilteredIndex = 0;
+  let bestFilteredIndex = null;
   let bestMinutes = -Infinity;
   timed.forEach((s, filteredIdx) => {
     const startMinutes = parseStartMinutes(s.time);
@@ -114,7 +114,12 @@ export function findCurrentScheduleIndex(schedule) {
       bestFilteredIndex = filteredIdx;
     }
   });
-  return bestFilteredIndex;
+
+  if (bestFilteredIndex == null) {
+    // Ningún hito del día ha empezado todavía -- el primero con hora es el próximo.
+    return { index: 0, status: "upcoming" };
+  }
+  return { index: bestFilteredIndex, status: "now" };
 }
 
 export function diffDays(fromISO, toISO) {

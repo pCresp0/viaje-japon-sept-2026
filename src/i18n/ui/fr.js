@@ -26,6 +26,8 @@ export default {
   "nav.about": "À propos du site",
   "nav.desc.about": "Détails techniques, stack et dépôt GitHub du projet",
   "nav.futuroViajes": "Pour de futurs voyages",
+  "day.now": "MAINTENANT",
+  "day.upcoming": "À VENIR",
   "nav.desc.futuroViajes": "Nikko, Hokkaido, Okinawa et d'autres idées pour la prochaine fois",
   "nav.desc.frikadas": "Pokémon, Digimon, Dragon Ball et tous les lieux geek du parcours",
   "nav.rainToday": "Pluie aujourd'hui",

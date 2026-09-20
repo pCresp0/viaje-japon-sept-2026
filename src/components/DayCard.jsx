@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { ScrollText, ChevronDown, ChevronUp, Map, BookOpen, List, X } from "lucide-react";
-import { useContent } from "../i18n/LanguageContext";
+import { useContent, useT } from "../i18n/LanguageContext";
 import { useHighlight } from "../context/HighlightContext";
 import { guidesByDay, guideMeta } from "../data/guides";
 import DayFujiOptionCard from "./DayFujiOptionCard";
@@ -146,6 +146,7 @@ function CollapsibleScheduleItem({ s, color }) {
 }
 
 export default function DayCard({ day, defaultOpenHistory = false, onClose, onViewMap, onShowQuickView }) {
+  const t = useT();
   const [showHistory, setShowHistory] = useState(defaultOpenHistory);
   const [showStay, setShowStay] = useState(false);
   // Ir directos al punto del horario en el que estamos ahora mismo, sólo
@@ -154,6 +155,7 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
   // por su cuenta).
   const scheduleItemRefs = useRef([]);
   const [nowIndex, setNowIndex] = useState(null);
+  const [nowStatus, setNowStatus] = useState("now");
   const hasScrolledToNow = useRef(false);
 
   useEffect(() => {
@@ -161,10 +163,12 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
     const status = getTripStatus();
     const isToday = status.phase === "during" && status.dayNum === day.num;
     if (!isToday) return;
-    const idx = findCurrentScheduleIndex(day.schedule);
-    if (idx == null) return;
+    const found = findCurrentScheduleIndex(day.schedule);
+    if (found == null) return;
+    const { index: idx, status: matchStatus } = found;
     hasScrolledToNow.current = true;
     setNowIndex(idx);
+    setNowStatus(matchStatus);
     // Pequeño margen para que el DOM ya tenga las referencias montadas.
     const timer = setTimeout(() => {
       scheduleItemRefs.current[idx]?.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -337,7 +341,7 @@ export default function DayCard({ day, defaultOpenHistory = false, onClose, onVi
                         className="ml-1 text-[10px] font-bold px-1.5 py-0.5 rounded-full"
                         style={{ background: "var(--gold, #c9a227)", color: "#3a2e05" }}
                       >
-                        AHORA
+                        {nowStatus === "upcoming" ? t("day.upcoming") : t("day.now")}
                       </span>
                     )}
                   </p>
