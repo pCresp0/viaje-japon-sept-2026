@@ -102,6 +102,46 @@ export const pendingDays = {
       ],
       money: "Variable -- ambas ciudades bien conectadas por Shinkansen (Hiroshima) y tren limitado exprés (Nagasaki) desde Osaka/Fukuoka.",
     },
+    {
+      id: "hokkaido",
+      title: "Hokkaido",
+      cities: "Sapporo, Furano, Shiretoko",
+      reason: "Idea para un futuro viaje -- naturaleza completamente distinta al resto de Japón, no visitada esta vez.",
+      summary: "La isla más al norte, con un paisaje que no tiene nada que ver con el resto del país: los campos de lavanda de Furano y Biei en verano, el parque nacional de Shiretoko (Patrimonio de la Humanidad, con osos pardos salvajes), aguas termales (onsen) en pleno campo, y si se viaja en invierno, nieve polvo de referencia mundial y el Festival de la Nieve de Sapporo.",
+      history: "Hokkaido fue la última de las grandes islas de Japón en integrarse formalmente en el país, colonizada de forma activa a partir de la era Meiji (desde 1869). Es la tierra ancestral del pueblo ainu, indígenas con lengua y cultura propias muy distintas de la japonesa mayoritaria, y hoy oficialmente reconocidos como pueblo indígena de Japón.",
+      schedule: [
+        { time: "Sapporo", text: "Capital de la isla, cervecerías históricas, mercado de pescado de Nijo, y el Festival de la Nieve en febrero si coincide con las fechas." },
+        { time: "Furano/Biei", text: "Campos de lavanda y colinas de cultivos de colores (temporada: junio-agosto)." },
+        { time: "Shiretoko", text: "Península declarada Patrimonio de la Humanidad por la UNESCO; cruceros de avistamiento de osos pardos y águilas marinas." },
+      ],
+      money: "Variable -- requiere vuelo interno o Shinkansen hasta Hakodate/Sapporo; alquiler de coche muy recomendable fuera de las ciudades.",
+    },
+    {
+      id: "okinawa",
+      title: "Okinawa",
+      cities: "Naha, Ishigaki, Miyako",
+      reason: "Idea para un futuro viaje -- playas, islas y cultura Ryukyu, no visitada esta vez.",
+      summary: "El archipiélago subtropical del sur, con playas y arrecifes de coral que no encajan con la imagen habitual de Japón, y una cultura propia -- la Ryukyu -- con siglos de historia distinta a la del resto del país: idioma, gastronomía, música y arquitectura tradicional (los castillos gusuku) diferenciados.",
+      history: "Okinawa fue el Reino Ryukyu, un estado independiente con relación tributaria con China durante siglos, hasta su anexión forzosa por Japón en 1879. En 1945 fue escenario de una de las batallas más sangrientas del Pacífico (la Batalla de Okinawa), y no volvió a la soberanía japonesa hasta 1972, tras casi 30 años bajo administración estadounidense.",
+      schedule: [
+        { time: "Naha", text: "Castillo de Shuri (reconstruido, antigua residencia real del Reino Ryukyu, Patrimonio de la Humanidad), mercado Makishi, gastronomía okinawense (soba, goya champuru)." },
+        { time: "Islas Yaeyama (Ishigaki/Miyako)", text: "Playas y arrecifes de coral entre los mejores de Japón para bucear o hacer snorkel." },
+      ],
+      money: "Variable -- vuelo directo desde Tokio/Osaka a Naha o Ishigaki (~2-3h), sin necesidad de pase de tren.",
+    },
+    {
+      id: "iriomote-stargazing",
+      title: "Iriomote: cielos oscuros para astrofotografía",
+      cities: "Iriomote (Islas Yaeyama, Okinawa)",
+      reason: "Idea para un futuro viaje, pensada especialmente para ti -- con el telescopio y el dron, esto tiene toda la pinta de flipar.",
+      summary: "El Parque Nacional de Iriomote-Ishigaki fue el primer lugar de Asia certificado como 'International Dark Sky Park' por DarkSky International (2018), con niveles de contaminación lumínica casi nulos. La isla está cubierta en un 90% por selva subtropical casi virgen (hogar del gato de Iriomote, un felino salvaje en peligro de extinción que solo vive aquí), así que de día se puede hacer kayak por los manglares y de noche montar el equipo sin apenas luz artificial alrededor.",
+      history: "Por su latitud, desde Iriomote se puede ver parte del año la Cruz del Sur (Crux) asomando sobre el horizonte -- una constelación que, desde España, es sencillamente invisible por la latitud. Es una de las pocas zonas de Japón desde donde eso es posible.",
+      schedule: [
+        { time: "Día", text: "Kayak por los manglares del río Nakama, selva y cascadas del interior de la isla." },
+        { time: "Noche", text: "Sesión de astrofotografía en alguna de las zonas certificadas de cielo oscuro -- llevar el telescopio y el dron." },
+      ],
+      money: "Variable -- acceso en ferry desde Ishigaki (~40 min); pocos alojamientos, conviene reservar con antelación.",
+    },
   ],
   en: [
     {
