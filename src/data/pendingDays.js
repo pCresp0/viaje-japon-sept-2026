@@ -339,6 +339,46 @@ export const pendingDays = {
       ],
       money: "Depende -- pareho ang lungsod ay maayos na konektado sa Shinkansen (Hiroshima) at limited express train (Nagasaki) mula Osaka/Fukuoka.",
     },
+    {
+      id: "hokkaido",
+      title: "Hokkaido",
+      cities: "Sapporo, Furano, Shiretoko",
+      reason: "Ideya para sa susunod na biyahe -- ganap na ibang klase ng kalikasan kumpara sa natitirang bahagi ng Japan, hindi nabisita ngayong beses.",
+      summary: "Ang pinaka-hilagang isla, na may tanawing ibang-iba sa natitirang bahagi ng bansa: ang lavender fields ng Furano at Biei sa tag-init, ang Shiretoko National Park (World Heritage Site, may ligaw na brown bear), hot springs (onsen) sa kanayunan, at kung sa taglamig maglalakbay, world-class na powder snow at ang Sapporo Snow Festival.",
+      history: "Ang Hokkaido ang huli sa mga pangunahing isla ng Japan na pormal na naisama sa bansa, aktibong kinolonisa simula sa Meiji era (mula 1869). Ito ang ninuno-lupain ng Ainu people, isang katutubong grupo na may sariling wika at kultura na ibang-iba sa karamihang Japanese, ngayon opisyal na kinikilala bilang katutubong mamamayan ng Japan.",
+      schedule: [
+        { time: "Sapporo", text: "Kabisera ng isla, makasaysayang brewery, Nijo fish market, at ang Snow Festival tuwing Pebrero kung magtutugma ang petsa." },
+        { time: "Furano/Biei", text: "Lavender fields at mga burol ng makukulay na pananim (season: Hunyo-Agosto)." },
+        { time: "Shiretoko", text: "Peninsula na idineklarang UNESCO World Heritage Site; brown bear at sea eagle spotting cruise." },
+      ],
+      money: "Depende -- kailangan ng domestic flight o Shinkansen papuntang Hakodate/Sapporo; inirerekomenda ang rental car sa labas ng mga lungsod.",
+    },
+    {
+      id: "okinawa",
+      title: "Okinawa",
+      cities: "Naha, Ishigaki, Miyako",
+      reason: "Ideya para sa susunod na biyahe -- mga beach, isla at Ryukyu culture, hindi nabisita ngayong beses.",
+      summary: "Ang subtropical archipelago sa timog, may beach at coral reef na hindi bagay sa karaniwang imahe ng Japan, at may sariling kultura -- ang Ryukyu -- na may mga siglo ng kasaysayang iba sa natitirang bahagi ng bansa: ibang wika, pagkain, musika, at tradisyunal na arkitektura (ang gusuku castles).",
+      history: "Ang Okinawa ay dating Ryukyu Kingdom, isang independiyenteng estado na may tributary relationship sa China sa loob ng mga siglo, hanggang sa sapilitang anexation ng Japan noong 1879. Noong 1945, ito ang naging tagpuan ng isa sa pinakamadugong labanan sa Pacific (ang Battle of Okinawa), at hindi na bumalik sa Japanese sovereignty hanggang 1972, matapos ang halos 30 taon sa ilalim ng US administration.",
+      schedule: [
+        { time: "Naha", text: "Shuri Castle (muling itinayo, dating royal residence ng Ryukyu Kingdom, World Heritage Site), Makishi Market, Okinawan cuisine (soba, goya champuru)." },
+        { time: "Yaeyama Islands (Ishigaki/Miyako)", text: "Mga beach at coral reef na kabilang sa pinakamaganda sa Japan para sa diving o snorkeling." },
+      ],
+      money: "Depende -- direktang flight mula Tokyo/Osaka papuntang Naha o Ishigaki (~2-3h), hindi na kailangan ng train pass.",
+    },
+    {
+      id: "iriomote-stargazing",
+      title: "Iriomote: Madidilim na Kalangitan para sa Astrophotography",
+      cities: "Iriomote (Yaeyama Islands, Okinawa)",
+      reason: "Ideya para sa susunod na biyahe, espesyal na napili para sa'yo -- kasama ang telescope at drone, tila talagang magugustuhan mo ito.",
+      summary: "Ang Iriomote-Ishigaki National Park ang unang lugar sa Asia na na-certify bilang 'International Dark Sky Park' ng DarkSky International (2018), na halos walang light pollution. 90% ng isla ay natatakpan ng halos hindi pa nagagalaw na subtropical jungle (tahanan ng Iriomote wildcat, isang endangered species na wala kahit saan pa), kaya sa umaga puwedeng mag-kayak sa mangroves at sa gabi ay i-set up ang gamit nang halos walang artificial light sa paligid.",
+      history: "Dahil sa latitude nito, sa ilang bahagi ng taon makikita mula sa Iriomote ang Southern Cross (Crux) na sumusungaw sa abot-tanaw -- isang konstelasyong hindi talaga makikita mula sa Spain dahil sa latitude. Isa ito sa iilang lugar sa Japan kung saan posible ito.",
+      schedule: [
+        { time: "Araw", text: "Pag-kayak sa mangroves ng Ilog Nakama, jungle at talon sa loob ng isla." },
+        { time: "Gabi", text: "Astrophotography session sa isa sa mga certified na dark-sky zone -- dalhin ang telescope at drone." },
+      ],
+      money: "Depende -- sakay ng ferry mula Ishigaki (~40 min); kaunti lang ang lodging, mainam mag-book nang maaga.",
+    },
   ],
 };
 
