@@ -202,7 +202,7 @@ export const budget = {
       details: [
         "Qatar Airways Madrid ↔ Tokyo (via Doha). 5 personnes × 890€.",
         "Aller : QR148 MAD→DOH + QR808 DOH→NRT (6 sept, 09:05 → 7 sept, 12:55, 20h 50m).",
-        "Retour : QR809 NRT→DOH + QR6952 DOH→MAD (21 sept, 17:25 → 22 sept, 07:35, 21h 10m).",
+        "Retour : QR809 NRT→DOH + QR147 DOH→MAD (21 sept, 17:25 → 22 sept, 07:35, 21h 10m).",
         "Réservation : réf. 40-892227078 · PIN 2534.",
       ],
     },

@@ -202,7 +202,7 @@ export const budget = {
       details: [
         "Qatar Airways Madrid ↔ Tokyo (via Doha). 5 tao × 890€.",
         "Papunta: QR148 MAD→DOH + QR808 DOH→NRT (Set 6, 09:05 → Set 7, 12:55, 20h 50m).",
-        "Pauwi: QR809 NRT→DOH + QR6952 DOH→MAD (Set 21, 17:25 → Set 22, 07:35, 21h 10m).",
+        "Pauwi: QR809 NRT→DOH + QR147 DOH→MAD (Set 21, 17:25 → Set 22, 07:35, 21h 10m).",
         "Booking: ref. 40-892227078 · PIN 2534.",
       ],
     },

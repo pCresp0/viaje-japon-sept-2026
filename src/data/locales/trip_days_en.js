@@ -904,7 +904,7 @@ export const days = [
         "text": "Check-in and security checks at Narita."
       },
       {
-        "text": "Flight QR809 Narita → Doha (Qatar Airways, 10h 55m · 17:25 → 22:20). Tracking: https://www.google.com/search?q=flight+QR809. Layover in Doha of 2h 50m (22:20 → 01:10), then flight QR6952 Doha → Madrid (Qatar Airways / Iberia, 7h 25m · 01:10 → 07:35). Tracking: https://www.google.com/search?q=flight+IB6952. Arrival in Madrid (T4S) on Tue Sept 22 at 07:35."
+        "text": "Flight QR809 Narita → Doha (Qatar Airways, 10h 55m · 17:25 → 22:20). Tracking: https://www.google.com/search?q=flight+QR809. Layover in Doha of 2h 50m (22:20 → 01:10), then flight QR147 Doha → Madrid (Qatar Airways / Iberia, 7h 25m · 01:10 → 07:35). Tracking: https://www.google.com/search?q=flight+QR147. Arrival in Madrid (T4S) on Tue Sept 22 at 07:35."
       }
     ],
     "money": "Approx. €40 (meals)"
