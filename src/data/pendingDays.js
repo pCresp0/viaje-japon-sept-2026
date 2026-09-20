@@ -260,6 +260,46 @@ export const pendingDays = {
       ],
       money: "Variable -- les deux villes bien reliées par Shinkansen (Hiroshima) et train limited express (Nagasaki) depuis Osaka/Fukuoka.",
     },
+    {
+      id: "hokkaido",
+      title: "Hokkaido",
+      cities: "Sapporo, Furano, Shiretoko",
+      reason: "Une idée pour un futur voyage -- une nature complètement différente du reste du Japon, non visitée cette fois.",
+      summary: "L'île la plus septentrionale, avec un paysage qui n'a rien à voir avec le reste du pays : les champs de lavande de Furano et Biei en été, le parc national de Shiretoko (site du patrimoine mondial, avec des ours bruns sauvages), des sources chaudes (onsen) en pleine campagne, et si l'on voyage en hiver, une neige poudreuse de référence mondiale et le Festival de la Neige de Sapporo.",
+      history: "Hokkaido fut la dernière des grandes îles du Japon à être formellement intégrée au pays, colonisée activement à partir de l'ère Meiji (depuis 1869). C'est la terre ancestrale du peuple aïnou, un groupe indigène à la langue et à la culture propres, bien distinctes de celles du Japon majoritaire, aujourd'hui officiellement reconnu comme peuple indigène du Japon.",
+      schedule: [
+        { time: "Sapporo", text: "Capitale de l'île, brasseries historiques, marché aux poissons de Nijo, et le Festival de la Neige en février si les dates coïncident." },
+        { time: "Furano/Biei", text: "Champs de lavande et collines de cultures colorées (saison : juin-août)." },
+        { time: "Shiretoko", text: "Péninsule classée au patrimoine mondial de l'UNESCO ; croisières d'observation des ours bruns et des aigles de mer." },
+      ],
+      money: "Variable -- nécessite un vol intérieur ou le Shinkansen jusqu'à Hakodate/Sapporo ; location de voiture vivement recommandée hors des villes.",
+    },
+    {
+      id: "okinawa",
+      title: "Okinawa",
+      cities: "Naha, Ishigaki, Miyako",
+      reason: "Une idée pour un futur voyage -- plages, îles et culture Ryukyu, non visitée cette fois.",
+      summary: "L'archipel subtropical du sud, avec des plages et des récifs coralliens qui ne correspondent pas à l'image habituelle du Japon, et une culture propre -- la Ryukyu -- avec des siècles d'histoire distincts du reste du pays : langue, gastronomie, musique et architecture traditionnelle (les châteaux gusuku) différenciées.",
+      history: "Okinawa fut le Royaume Ryukyu, un état indépendant en relation tributaire avec la Chine pendant des siècles, jusqu'à son annexion forcée par le Japon en 1879. En 1945, elle fut le théâtre de l'une des batailles les plus sanglantes du Pacifique (la bataille d'Okinawa), et ne revint sous souveraineté japonaise qu'en 1972, après près de 30 ans sous administration américaine.",
+      schedule: [
+        { time: "Naha", text: "Château de Shuri (reconstruit, ancienne résidence royale du Royaume Ryukyu, site du patrimoine mondial), marché de Makishi, gastronomie okinawaïenne (soba, goya champuru)." },
+        { time: "Îles Yaeyama (Ishigaki/Miyako)", text: "Plages et récifs coralliens parmi les meilleurs du Japon pour la plongée ou le snorkeling." },
+      ],
+      money: "Variable -- vol direct depuis Tokyo/Osaka vers Naha ou Ishigaki (~2-3h), pas besoin de pass ferroviaire.",
+    },
+    {
+      id: "iriomote-stargazing",
+      title: "Iriomote : ciels étoilés pour l'astrophotographie",
+      cities: "Iriomote (îles Yaeyama, Okinawa)",
+      reason: "Une idée pour un futur voyage, pensée spécialement pour toi -- avec le télescope et le drone, ça a tout pour te plaire.",
+      summary: "Le parc national d'Iriomote-Ishigaki a été le premier endroit d'Asie certifié 'International Dark Sky Park' par DarkSky International (2018), avec une pollution lumineuse quasi nulle. L'île est couverte à 90% d'une jungle subtropicale presque vierge (refuge du chat d'Iriomote, une espèce en danger qu'on ne trouve nulle part ailleurs), donc de jour on fait du kayak dans les mangroves, et de nuit on installe son matériel avec presque aucune lumière artificielle alentour.",
+      history: "Grâce à sa latitude, on peut voir une partie de l'année la Croix du Sud (Crux) pointer à l'horizon depuis Iriomote -- une constellation tout simplement invisible depuis l'Espagne, en raison de la latitude. C'est l'un des rares endroits du Japon où c'est possible.",
+      schedule: [
+        { time: "Jour", text: "Kayak dans les mangroves de la rivière Nakama, jungle et cascades à l'intérieur de l'île." },
+        { time: "Nuit", text: "Séance d'astrophotographie dans l'une des zones certifiées de ciel étoilé -- emporter le télescope et le drone." },
+      ],
+      money: "Variable -- accès en ferry depuis Ishigaki (~40 min) ; peu d'hébergements, mieux vaut réserver à l'avance.",
+    },
   ],
   tl: [
     {
