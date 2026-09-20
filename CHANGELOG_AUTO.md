@@ -164,3 +164,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-20 10:24 UTC** — fix(Día 15): separar check-out a las 11:00 en francés (`b1286df`)
 - **2026-09-20 10:25 UTC** — fix(Día 15): completar en tagalo -- check-out separado a las ... (`f5b57b4`)
 - **2026-09-20 14:15 UTC** — feat: añadir Hokkaido, Okinawa e Iriomote (cielos oscuros para astrofotografía) ... (`242c7fd`)
+- **2026-09-20 14:15 UTC** — feat: añadir Hokkaido, Okinawa e Iriomote en inglés (`9aea121`)
