@@ -170,3 +170,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-20 14:20 UTC** — feat: mover 'Para viajes futuros' fuera del Itinerario a su ... (`466fe56`)
 - **2026-09-20 14:20 UTC** — feat: añadir etiquetas de navegación 'Para viajes futuros' en inglés ... (`b2a0a7a`)
 - **2026-09-20 14:21 UTC** — feat: completar etiquetas de navegación 'Para viajes futuros' en tagalo ... (`13d4cfa`)
+- **2026-09-20 23:34 UTC** — feat: cuando ningún hito del día ha empezado aún, mostrar ... (`2c00303`)
