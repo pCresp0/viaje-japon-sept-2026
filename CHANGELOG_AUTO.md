@@ -157,3 +157,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-20 04:08 UTC** — fix: corregir vuelo de vuelta Doha->Madrid -- era QR6952/IB6952, el ... (`9df7441`)
 - **2026-09-20 10:14 UTC** — feat(Día 15): sustituir visita a Sensō-ji por compras/maleta/check-out; dividir el ... (`803f268`)
 - **2026-09-20 10:15 UTC** — feat(Día 15): completar en francés -- compras/maleta/check-out y vuelo dividido ... (`64aa390`)
+- **2026-09-20 10:16 UTC** — feat(Día 15): completar en tagalo -- compras/maleta/check-out y vuelo dividido ... (`7de96fb`)
