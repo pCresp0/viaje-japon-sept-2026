@@ -181,6 +181,46 @@ export const pendingDays = {
       ],
       money: "Varies -- both cities well connected by Shinkansen (Hiroshima) and limited express train (Nagasaki) from Osaka/Fukuoka.",
     },
+    {
+      id: "hokkaido",
+      title: "Hokkaido",
+      cities: "Sapporo, Furano, Shiretoko",
+      reason: "An idea for a future trip -- completely different nature from the rest of Japan, not visited this time.",
+      summary: "Japan's northernmost island, with scenery unlike anywhere else in the country: the lavender fields of Furano and Biei in summer, Shiretoko National Park (a World Heritage Site, with wild brown bears), hot springs (onsen) out in the countryside, and if traveling in winter, world-class powder snow and the Sapporo Snow Festival.",
+      history: "Hokkaido was the last of Japan's main islands to be formally integrated into the country, actively colonized from the Meiji era onward (from 1869). It's the ancestral homeland of the Ainu people, an indigenous group with their own language and culture quite distinct from mainstream Japanese, today officially recognized as an indigenous people of Japan.",
+      schedule: [
+        { time: "Sapporo", text: "The island's capital, historic breweries, Nijo fish market, and the Snow Festival in February if the dates line up." },
+        { time: "Furano/Biei", text: "Lavender fields and rolling hills of colorful crops (season: June-August)." },
+        { time: "Shiretoko", text: "Peninsula declared a UNESCO World Heritage Site; brown bear and sea eagle spotting cruises." },
+      ],
+      money: "Varies -- requires a domestic flight or Shinkansen to Hakodate/Sapporo; a rental car is highly recommended outside the cities.",
+    },
+    {
+      id: "okinawa",
+      title: "Okinawa",
+      cities: "Naha, Ishigaki, Miyako",
+      reason: "An idea for a future trip -- beaches, islands and Ryukyu culture, not visited this time.",
+      summary: "The subtropical archipelago in the south, with beaches and coral reefs that don't fit the usual image of Japan, and its own culture -- the Ryukyu -- with centuries of history distinct from the rest of the country: a different language, cuisine, music and traditional architecture (the gusuku castles).",
+      history: "Okinawa was the Ryukyu Kingdom, an independent state with a tributary relationship to China for centuries, until its forced annexation by Japan in 1879. In 1945 it was the site of one of the bloodiest battles of the Pacific (the Battle of Okinawa), and didn't return to Japanese sovereignty until 1972, after nearly 30 years under U.S. administration.",
+      schedule: [
+        { time: "Naha", text: "Shuri Castle (reconstructed, the former royal residence of the Ryukyu Kingdom, a World Heritage Site), Makishi Market, Okinawan cuisine (soba, goya champuru)." },
+        { time: "Yaeyama Islands (Ishigaki/Miyako)", text: "Beaches and coral reefs among the best in Japan for diving or snorkeling." },
+      ],
+      money: "Varies -- direct flight from Tokyo/Osaka to Naha or Ishigaki (~2-3h), no train pass needed.",
+    },
+    {
+      id: "iriomote-stargazing",
+      title: "Iriomote: Dark Skies for Astrophotography",
+      cities: "Iriomote (Yaeyama Islands, Okinawa)",
+      reason: "An idea for a future trip, picked especially for you -- with the telescope and drone, this one really seems like it'll blow you away.",
+      summary: "Iriomote-Ishigaki National Park was the first place in Asia certified as an 'International Dark Sky Park' by DarkSky International (2018), with near-zero light pollution. The island is 90% covered in nearly untouched subtropical jungle (home to the Iriomote wildcat, an endangered species found nowhere else), so by day it's kayaking through the mangroves, and by night, setting up gear with almost no artificial light around.",
+      history: "Because of its latitude, part of the year you can see the Southern Cross (Crux) peeking over the horizon from Iriomote -- a constellation that's simply invisible from Spain, latitude-wise. It's one of the very few places in Japan where that's possible.",
+      schedule: [
+        { time: "Day", text: "Kayaking along the Nakama River's mangroves, jungle and waterfalls in the island's interior." },
+        { time: "Night", text: "Astrophotography session in one of the certified dark-sky zones -- bring the telescope and the drone." },
+      ],
+      money: "Varies -- accessed by ferry from Ishigaki (~40 min); few lodging options, worth booking ahead.",
+    },
   ],
   fr: [
     {
