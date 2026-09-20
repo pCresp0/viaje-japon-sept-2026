@@ -8,6 +8,7 @@ export default {
   "nav.group.guia": "GUÍA",
   "nav.group.prep": "PREPARACIÓN",
   "nav.group.util": "UTILIDADES",
+  "nav.group.futuro": "PARA VIAJES FUTUROS",
 
   "nav.pendientes": "Cosas pendientes",
   "nav.inicio": "Inicio",
@@ -315,6 +316,7 @@ export default {
   "nav.desc.herramientas": "Hora JST y conversor de moneda JPY-EUR",
   "nav.desc.emergencias": "Seguro médico, embajada y teléfonos útiles",
   "nav.desc.about": "Detalles técnicos, stack y repositorio del proyecto",
+  "nav.desc.futuroViajes": "Nikko, Hokkaido, Okinawa y otras ideas para la próxima vez",
   "nav.desc.frikadas": "Pokémon, Digimon, Dragon Ball y todo lo freak que hay cerca de la ruta",
 
   "today.previewTitle": "Vista previa · aún no ha empezado el viaje",
@@ -355,6 +357,7 @@ export default {
   "places.all": "Todos los lugares",
 
   "nav.about": "Sobre la web",
+  "nav.futuroViajes": "Para viajes futuros",
   "frikadas.eyebrow": "Para frikis",
   "frikadas.title": "Frikadas",
   "about.eyebrow": "Desarrollo",

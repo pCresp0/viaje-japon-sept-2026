@@ -210,6 +210,14 @@ function buildSearchIndex(lang) {
       tab: "about",
       terms: ["sobre la web", "about", "creditos", "info app", "version", "pwa"],
     },
+    {
+      id: "nav-futuro-viajes",
+      title: "Para viajes futuros",
+      subtitle: "Nikko, Hokkaido, Okinawa e ideas guardadas para la próxima vez",
+      category: "Apartados",
+      tab: "futuro-viajes",
+      terms: ["viajes futuros", "nikko", "hokkaido", "okinawa", "iriomote", "fuji hiking", "hiroshima", "nagasaki", "proximo viaje", "ideas"],
+    },
   ];
 
   for (const n of navSections) {

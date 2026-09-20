@@ -40,6 +40,10 @@ export const navStructure = [
       { id: "about", labelKey: "nav.about", descKey: "nav.desc.about", icon: Info },
     ]
   },
+  { type: "group", id: "futuro", labelKey: "nav.group.futuro", items: [
+      { id: "futuro-viajes", labelKey: "nav.futuroViajes", descKey: "nav.desc.futuroViajes", icon: Compass },
+    ]
+  },
 ];
 
 export const tabs = navStructure.reduce((acc, curr) => {

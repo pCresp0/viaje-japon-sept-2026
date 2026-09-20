@@ -1,27 +1,29 @@
 import { useState } from "react";
-import { ChevronDown, ChevronRight, CalendarX2 } from "lucide-react";
+import { ChevronDown, ChevronRight, CalendarX2, Compass } from "lucide-react";
 import { useLang } from "../i18n/LanguageContext";
 import { pendingDays, pendingSectionLabel, pendingSectionSubtitle } from "../data/pendingDays";
-import PlaceText from "./PlaceText";
+import PlaceText from "../components/PlaceText";
 
-export default function PendingDaysSection() {
+export default function FutureTripsPage() {
   const { lang } = useLang();
   const days = pendingDays[lang] || pendingDays.es;
   const [openId, setOpenId] = useState(null);
 
-  if (!days.length) return null;
-
   return (
-    <div className="mt-8">
-      <div className="flex items-center gap-2 mb-1.5">
-        <CalendarX2 size={16} style={{ color: "var(--ink-soft)" }} />
-        <h2 className="font-display text-base" style={{ color: "var(--ink)" }}>
-          {pendingSectionLabel[lang] || pendingSectionLabel.es}
-        </h2>
+    <div className="px-4 pt-3 pb-12 max-w-5xl mx-auto">
+      {/* Header */}
+      <div className="mb-4">
+        <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Utilidades · Ideas</p>
+        <div className="flex items-center gap-2">
+          <Compass size={20} style={{ color: "var(--indigo)" }} />
+          <h2 className="font-display text-2xl" style={{ color: "var(--indigo)", margin: 0 }}>
+            {pendingSectionLabel[lang] || pendingSectionLabel.es}
+          </h2>
+        </div>
+        <p style={{ fontSize: 13.5, color: "var(--ink-soft)", margin: "4px 0 0" }}>
+          {pendingSectionSubtitle[lang] || pendingSectionSubtitle.es}
+        </p>
       </div>
-      <p className="text-xs mb-3" style={{ color: "var(--ink-soft)" }}>
-        {pendingSectionSubtitle[lang] || pendingSectionSubtitle.es}
-      </p>
 
       <div className="space-y-2.5">
         {days.map((d) => {
