@@ -91,12 +91,10 @@ export default function BuildInfoButton() {
         disabled={refreshing}
         aria-label="Ir al inicio (toque) o ver registro de cambios (mantener pulsado)"
         style={{
-          position: "absolute",
-          left: "50%",
-          top: "50%",
-          transform: "translate(-50%, -50%)",
-          fontSize: 28, lineHeight: 1, padding: 6,
+          position: "relative",
           zIndex: 1,
+          fontSize: 28, lineHeight: 1, padding: 6,
+          flexShrink: 0,
           background: "transparent", border: "none",
           WebkitTapHighlightColor: "transparent",
         }}
