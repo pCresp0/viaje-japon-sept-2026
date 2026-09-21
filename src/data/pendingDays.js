@@ -142,6 +142,21 @@ export const pendingDays = {
       ],
       money: "Variable -- acceso en ferry desde Ishigaki (~40 min); pocos alojamientos, conviene reservar con antelación.",
     },
+    {
+      id: "miyajima",
+      title: "Miyajima",
+      cities: "Miyajima (Itsukushima), Hiroshima",
+      reason: "Idea para un futuro viaje -- la isla del torii flotante, con más cosas de las que parece a primera vista.",
+      summary: "La isla sagrada de la bahía de Hiroshima, conocida sobre todo por el gran torii rojo del santuario Itsukushima, que parece flotar sobre el agua con la marea alta -- uno de los 'Tres Paisajes de Japón' (Nihon Sankei) desde hace siglos, junto con Matsushima y Amanohashidate. Pero hay mucho más alrededor: el monte Misen con su teleférico y vistas a toda la bahía, los ciervos sika que campan a sus anchas por el pueblo (más domesticados y confiados que los de Nara), el momiji manju (pastelito relleno con forma de hoja de arce, especialidad local), y las ostras de Hiroshima, consideradas de las mejores de Japón.",
+      history: "El santuario Itsukushima tiene origen en el siglo VI, pero su estructura actual sobre el agua se debe a Taira no Kiyomori, quien lo reconstruyó en 1168 con ese diseño porque la isla entera se consideraba tan sagrada que no se podía pisar directamente -- de ahí que el santuario y el torii se construyeran sobre el mar. Patrimonio de la Humanidad UNESCO desde 1996.",
+      schedule: [
+        { time: "Santuario Itsukushima y torii flotante", text: "Mejor con marea alta para el efecto de flotar sobre el agua; con marea baja se puede caminar hasta la base del torii." },
+        { time: "Monte Misen", text: "Teleférico (ropeway) hasta cerca de la cima, con posibilidad de seguir a pie hasta el mirador de la cumbre -- vistas de toda la bahía de Hiroshima y, en días claros, hasta Shikoku." },
+        { time: "Senjokaku", text: "El 'salón de las mil esteras de tatami', un pabellón inacabado encargado por Toyotomi Hideyoshi en 1587, junto a una pagoda de cinco pisos." },
+        { time: "Comer", text: "Momiji manju recién hecho en la calle principal, y ostras a la parrilla en cualquiera de los puestos junto al muelle." },
+      ],
+      money: "Variable -- ferry desde Miyajimaguchi (~10 min, muy frecuente) tras llegar en tren desde Hiroshima (~25-30 min desde la estación).",
+    },
   ],
   en: [
     {
