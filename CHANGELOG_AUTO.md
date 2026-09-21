@@ -179,3 +179,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-21 04:14 UTC** — fix(Día 15): añadir coste del Uber en inglés (`c9d6ea7`)
 - **2026-09-21 04:15 UTC** — fix(Día 15): añadir coste del Uber en francés (`6cc15f2`)
 - **2026-09-21 04:15 UTC** — fix(Día 15): completar coste del Uber en tagalo -- 4 ... (`d685238`)
+- **2026-09-21 04:27 UTC** — fix(Día 15): corregir coste real del taxi (14,50€ con taxímetro, ... (`218e86d`)
