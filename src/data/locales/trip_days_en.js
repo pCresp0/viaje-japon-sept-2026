@@ -568,7 +568,10 @@ export const days = [
         "text": "🍜 **LUNCH: NIKUJIRU GYOZA DANDADAN KAPPABASHI.** Juicy handmade gyoza, cooked in front of you on a special grill -- they also have noodles, salads and chicken wings. Right in Kappabashi, just a 6-minute walk from the hotel.\n\nhttps://maps.app.goo.gl/6u6EkzqoowquijNY8?g_st=ic"
       },
       {
-        "text": "🚶 Walk to the hotel (6 min).\n\n🏨 **CHECK-IN: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\n✅ Hotel already paid (€1,927.13 via Booking · 6 nights).\n\nCheck-in (official from 15:00), about 1 hour to drop off the luggage, unpack a little and shower after the whole day of trains.\n\nAddress: 3-24-2 Nishi-Asakusa, Taito-ku.\n\n🧳 **The 5 large suitcases sent from Kyoto (Takkyubin/Yamato):**\n- Tracking number: **753-3690-9535**.\n- Scheduled delivery: **09/15, morning slot (AM)** -- meaning they should have arrived at the hotel BEFORE you do. When checking in, ask at reception if they already have them stored.\n- Receipt under the name Juan Carlos R., sender Hotel Keihan Kyoto Hachijoguchi.\n- 5 pieces (品名: Clothes), total cost ¥13,060 (already paid at the Kyoto hotel when shipping them)."
+        "text": "🥢 **STROLL THROUGH KAPPABASHI-DORI.** Since you're right there after lunch: the street entirely dedicated to the world of cooking, with statues of the kappa (the mischievous water spirit the neighborhood is named after) scattered along the way. This is where sampuru were born, the hyperrealistic food replicas seen in Japanese restaurant windows -- a single piece of imitation sushi can cost around ¥2,000. There are also handmade Japanese knives with on-the-spot sharpening and engraving, and at the south end, a giant chef's head on top of the Niimi Cooker building, impossible to miss."
+      },
+      {
+        "text": "🚶 Walk to the hotel (6 min).\n\n🏨 **CHECK-IN: KOKO HOTEL RESIDENCE ASAKUSA KAPPABASHI** (https://maps.app.goo.gl/ccK7MTfGL6HJXFf76?g_st=ic)\n\n✅ Hotel already paid (€1,927.13 via Booking · 6 nights).\n\nCheck-in (official from 15:00), time to drop off the luggage, unpack a little and shower after the whole day of trains.\n\nAddress: 3-24-2 Nishi-Asakusa, Taito-ku.\n\n🧳 **The 5 large suitcases sent from Kyoto (Takkyubin/Yamato):**\n- Tracking number: **753-3690-9535**.\n- Scheduled delivery: **09/15, morning slot (AM)** -- meaning they should have arrived at the hotel BEFORE you do. When checking in, ask at reception if they already have them stored.\n- Receipt under the name Juan Carlos R., sender Hotel Keihan Kyoto Hachijoguchi.\n- 5 pieces (品名: Clothes), total cost ¥13,060 (already paid at the Kyoto hotel when shipping them)."
       },
       {
         "text": "🌉 **WALK TO TOKYO SKYTREE, ALONG THE SUMIDA RIVER.** A very simple and pretty walking route (~15-20 min) from the hotel: crossing the iconic red Azumabashi Bridge next to the Asahi Beer building, then following the Sumida River promenade to the base of the tower."
@@ -895,7 +898,7 @@ export const days = [
     "history": "After two intense weeks touring the history of the shoguns, Zen philosophy, and the technology of the archipelago, the trip concludes. Narita has been the main international entry and exit port of the Kanto region since 1978.",
     "schedule": [
       {
-        "text": "🧳 **LAST-MINUTE SHOPPING AND PACKING.** A relaxed last morning before the airport transfer:\n\n• Last-minute shopping around the hotel (pharmacies, Kappabashi-dori for kitchenware or the plastic food replicas, or anything still pending).\n• Pack and close the suitcases at a relaxed pace.\n\n💡 Since it's all within the neighborhood, no transport is needed for this."
+        "text": "🧳 **LAST-MINUTE SHOPPING AND PACKING.** A relaxed last morning before the airport transfer:\n\n• Last-minute shopping around the hotel (pharmacies, or anything still pending).\n• Pack and close the suitcases at a relaxed pace.\n\n💡 Since it's all within the neighborhood, no transport is needed for this."
       },
       {
         "text": "🏨 **CHECK-OUT at the front desk of KOKO HOTEL Residence Asakusa Kappabashi.**\n\nPlenty of time before heading to Narita."
