@@ -172,3 +172,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-20 14:21 UTC** — feat: completar etiquetas de navegación 'Para viajes futuros' en tagalo ... (`13d4cfa`)
 - **2026-09-20 23:34 UTC** — feat: cuando ningún hito del día ha empezado aún, mostrar ... (`2c00303`)
 - **2026-09-21 03:29 UTC** — fix: mover el paseo por Kappabashi-dori del Día 15 (donde ... (`d46bba0`)
+- **2026-09-21 03:30 UTC** — fix: mover Kappabashi-dori del Día 15 al Día 9 en ... (`06ed709`)
