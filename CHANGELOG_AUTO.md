@@ -182,3 +182,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-21 04:27 UTC** — fix(Día 15): corregir coste real del taxi (14,50€ con taxímetro, ... (`218e86d`)
 - **2026-09-21 04:27 UTC** — fix(Día 15): corregir coste real del taxi en francés (`29c865b`)
 - **2026-09-21 04:28 UTC** — fix(Día 15): completar corrección del coste real del taxi en ... (`bfb3ca7`)
+- **2026-09-21 04:29 UTC** — feat: añadir Miyajima a Para viajes futuros (solo en español, ... (`dd99eb7`)
