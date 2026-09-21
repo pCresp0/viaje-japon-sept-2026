@@ -1236,13 +1236,13 @@ export const guidesByDay = {
   6: ["kanazawa", "kenroku-en", "nagamachi", "higashi-chaya"],
   7: ["shirakawa-go", "takayama"],
   8: ["nakasendo", "magome", "tsumago"],
-  9: ["tokyo-skytree"],
+  9: ["kappabashi", "tokyo-skytree"],
   10: ["senso-ji", "fuji"],
   11: ["meiji-jingu", "shibuya", "harajuku", "shinjuku"],
   12: ["odaiba", "toyosu", "ueno", "tokyo-tower"],
   13: ["nakano-broadway", "akihabara", "tokyo-skytree"],
   14: ["imperial-palace", "tokyo-character-street", "kitte", "ginza"],
-  15: ["kappabashi"],
+  15: [],
 };
 
 // Metadatos y palabras clave para vincular cada guía con los eventos del itinerario
