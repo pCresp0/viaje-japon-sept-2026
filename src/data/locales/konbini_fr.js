@@ -21,6 +21,11 @@ export const konbiniRules = [
     title: "Réductions du soir (Mikiri Hin)",
     desc: "Dès 19h30–20h00, les supermarchés et certains konbinis collent des étiquettes à -20 %, -30 % ou -50 % (半額, hangaku) sur les sushis frais et bentos du jour.",
   },
+  {
+    icon: "🏧",
+    title: "Distributeurs ATM (Revolut) et change de devises",
+    desc: "Chez 7-Eleven et Lawson, vous trouverez des distributeurs ATM (Seven Bank / Lawson Bank) et des bornes de change (EUR → JPY). Le plus avantageux est de retirer des yens au distributeur avec Revolut. Les distributeurs appliquant des frais fixes d'environ 660 yens par retrait, il est conseillé de retirer une somme conséquente en une seule fois.",
+  },
 ];
 
 export const konbiniChains = [
@@ -64,6 +69,13 @@ export const konbiniChains = [
         desc: "Bols de ramen élaborés en collaboration directe avec des institutions légendaires (le bouillon Dandan épicé au sésame étoilé de Nakiryu, ou le tsukemen dense de Tomita).",
         tag: "Dîner rapide",
         tip: "Emportez-le à l'hôtel, versez l'eau bouillante de la bouilloire et ajoutez les sachets de bouillon concentré.",
+      },
+      {
+        name: "Seven Bank ATM & Bornes de change (Euros en Yens)",
+        highlight: "🏧 Le moyen le plus avantageux pour le liquide : retirer avec Revolut",
+        desc: "Presque tous les 7-Eleven possèdent un distributeur Seven Bank (le plus compatible avec les cartes étrangères au Japon) et des bornes de change. Retirer avec Revolut est sans conteste l'option la plus économique. Les distributeurs prélevant une commission fixe de ~660 yens par retrait, retirez un montant important en une fois pour limiter les frais.",
+        tag: "DAB / Espèces",
+        tip: "Sélectionnez toujours la devise locale (JPY) sans accepter la conversion proposée par la machine pour bénéficier du taux interbancaire Revolut.",
       },
     ],
   },
@@ -185,6 +197,13 @@ export const konbiniChains = [
         desc: "À Tokyo et Kyoto, repérez les devantures bordeaux 'Natural Lawson'. Ils proposent jus pressés à froid, salades bio, pains au levain et snacks équilibrés.",
         tag: "Santé / Bio",
         tip: "Idéal pour compenser après plusieurs repas riches en ramen et fritures.",
+      },
+      {
+        name: "Lawson Bank ATM & Bornes de change (Euros en Yens)",
+        highlight: "🏧 Retirez des yens avec Revolut en une fois pour minimiser les frais",
+        desc: "Comme chez 7-Eleven, Lawson dispose de distributeurs internationaux et de bornes de change de devises. Retirer au distributeur avec Revolut est la méthode la plus rentable. La commission fixe s'élevant à environ 660 yens par opération, privilégiez un retrait groupé pour vos dépenses en espèces.",
+        tag: "DAB / Espèces",
+        tip: "Refusez la conversion dynamique du distributeur (« Without conversion ») afin de laisser Revolut effectuer le change.",
       },
     ],
   },

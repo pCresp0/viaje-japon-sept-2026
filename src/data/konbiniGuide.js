@@ -23,6 +23,11 @@ export const konbiniRules = [
     title: "Descuentos nocturnos (Mikiri Hin)",
     desc: "A partir de las 19:30-20:00, los supermercados y algunos konbinis pegan pegatinas con -20%, -30% o -50% (半額, hangaku) en bentos y sushi fresco.",
   },
+  {
+    icon: "🏧",
+    title: "Cajeros ATM (Revolut) y cambio de divisas",
+    desc: "En 7-Eleven y Lawson siempre hay cajeros ATM (Seven Bank / Lawson Bank) y máquinas para cambiar euros a yenes. Lo más rentable con diferencia es sacar del ATM con Revolut. Como el cajero suele cobrar una comisión fija de ~¥660 por retirada, lo mejor para tener efectivo es sacar bastante dinero en yenes de una sola vez.",
+  },
 ];
 
 export const konbiniChains = [
@@ -85,6 +90,15 @@ export const konbiniChains = [
         desc: "Cazoletas de ramen diseñadas mano a mano con templos del ramen japonés (Nakiryu con su caldo Dandan de sésamo y picante con estrella Michelin, o Tomita con su tsukemen denso).",
         tag: "Cena rápida",
         tip: "Llévalo al hotel, echa agua hirviendo del hervidor de la habitación y añade los 3 o 4 sobres de caldo concentrado.",
+      },
+      {
+        name: "Seven Bank ATM & Máquinas de cambio (Euros a Yenes)",
+        jp: "セブン銀行ATM / 外貨両替機",
+        price: "Comisión ATM: ~¥660 / extracción",
+        highlight: "🏧 La forma más rentable de tener efectivo: retirar con Revolut",
+        desc: "Prácticamente todos los 7-Eleven cuentan con cajeros Seven Bank (los más compatibles con tarjetas extranjeras de todo Japón) y muchos disponen de máquinas de cambio de divisas (de euros a yenes). Sin duda, lo que mejor sale es sacar dinero del ATM con tarjeta Revolut. Como el cajero cobra una comisión fija de unos 660 yenes por retirada, lo mejor para no perder dinero es sacar bastante efectivo en yenes de una sola vez en lugar de hacer muchas retiradas pequeñas.",
+        tag: "Cajero / Efectivo",
+        tip: "En la pantalla del cajero elige tu idioma, selecciona 'Credit/Debit Card' y retira siempre en moneda local (JPY) sin aceptar la conversión de divisa que ofrece el propio cajero para que el cambio lo haga Revolut.",
       },
     ],
   },
@@ -254,6 +268,15 @@ export const konbiniChains = [
         desc: "En Tokio y Kioto verás sucursales granates 'Natural Lawson'. Tienen zumos prensados en frío, ensaladas ecológicas, pan de masa madre y snacks con menos calorías.",
         tag: "Saludable",
         tip: "Ideal para compensar días de excesos de fritos y ramen.",
+      },
+      {
+        name: "Lawson Bank ATM & Máquinas de cambio (Euros a Yenes)",
+        jp: "ローソン銀行ATM / 外貨両替機",
+        price: "Comisión ATM: ~¥660 / extracción",
+        highlight: "🏧 Saca yenes con Revolut de una vez para minimizar la comisión",
+        desc: "Al igual que 7-Eleven, Lawson dispone de cajeros automáticos internacionales y máquinas de cambio de euros a yenes. Sacar del ATM con tarjeta Revolut es la opción más económica y con mejor tipo de cambio. Dado que el cajero aplica una comisión de ~¥660 por operación, compensa retirar una buena cantidad de yenes de golpe para cubrir los gastos en efectivo (minshukus, templos, puestos callejeros).",
+        tag: "Cajero / Efectivo",
+        tip: "Rechaza siempre la conversión de divisa dinámica del cajero («Without conversion») para que aplique el tipo interbancario de Revolut.",
       },
     ],
   },

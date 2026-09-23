@@ -336,9 +336,12 @@ export default function UtilsPage() {
           </div>
         </div>
 
-        <div className="rounded-xl p-4 mt-4" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
-          <p style={{ fontSize: 12, color: "var(--ink-soft)", margin: 0 }}>
+        <div className="rounded-xl p-4 mt-4 space-y-2.5" style={{ background: "var(--paper-raised)", border: "1px solid var(--line)" }}>
+          <p style={{ fontSize: 12, color: "var(--ink-soft)", margin: 0, lineHeight: 1.5 }}>
             💱 Tipo de cambio oficial obtenido en directo desde API pública (ExchangeRate-API). Si no hay cobertura en el metro o montaña, se utiliza automáticamente la última cotización guardada en el dispositivo.
+          </p>
+          <p style={{ fontSize: 12, color: "var(--ink)", margin: 0, lineHeight: 1.5, borderTop: "1px dashed var(--line)", paddingTop: 10 }}>
+            🏧 <strong>Consejo para sacar efectivo (Revolut):</strong> Tanto en <strong>7-Eleven</strong> como en <strong>Lawson</strong> siempre hay cajeros automáticos (ATM) y máquinas para cambiar divisas (EUR → JPY). Lo que mejor sale, sin duda, es <strong>sacar del ATM con tarjeta Revolut</strong>. Los cajeros suelen cobrar una comisión fija de <strong>~¥660 por retirada</strong>, por lo que lo más rentable para tener efectivo es sacar una cantidad generosa de yenes de una sola vez y no pagar esa comisión en repetidas ocasiones.
           </p>
         </div>
       </div>

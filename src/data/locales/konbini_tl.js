@@ -21,6 +21,11 @@ export const konbiniRules = [
     title: "Diskwento sa gabi (Mikiri Hin)",
     desc: "Mula 19:30–20:00, ang mga supermarket at ilang konbini ay naglalagay ng sticker na -20%, -30% o -50% (半額, hangaku) sa sariwang sushi at bento box.",
   },
+  {
+    icon: "🏧",
+    title: "ATM Cash Withdrawals (Revolut) at Palitan ng Pera",
+    desc: "Sa 7-Eleven at Lawson ay laging may mga ATM (Seven Bank / Lawson Bank) at money exchange machines (EUR → JPY). Pinakasulit ang mag-withdraw ng yen sa ATM gamit ang Revolut. Dahil may flat fee na ~¥660 bawat withdrawal, pinakamainam na maglabas ng malaking halaga nang isahan upang hindi paulit-ulit ang bayad.",
+  },
 ];
 
 export const konbiniChains = [
@@ -64,6 +69,13 @@ export const konbiniChains = [
         desc: "Mangkok ng ramen na dinisenyo kasama ang pinakamagagaling na ramen master (Michelin-starred spicy Dandan ng Nakiryu, o malapot na tsukemen ng Tomita).",
         tag: "Mabilisang Hapunan",
         tip: "Dalhin sa hotel, buhusan ng kumukulong tubig mula sa takure ng kuwarto at ihalo ang concentrated soup sachets.",
+      },
+      {
+        name: "Seven Bank ATM & Palitan ng Pera (Euros sa Yenes)",
+        highlight: "🏧 Pinakasulit na paraan para sa cash: mag-withdraw gamit ang Revolut",
+        desc: "Halos lahat ng 7-Eleven ay may Seven Bank ATM (pinakamaaasahan para sa dayuhang card) at money exchange machine. Pinakamaganda ang mag-withdraw ng pera gamit ang Revolut card. Dahil may fixed fee na humigit-kumulang 660 yen bawat withdrawal, maglabas ng sapat na pera nang minsanan upang makatipid.",
+        tag: "ATM / Cash",
+        tip: "Piliin palagi ang local currency (JPY) nang walang conversion mula sa ATM para Revolut rate ang gamitin.",
       },
     ],
   },
@@ -185,6 +197,13 @@ export const konbiniChains = [
         desc: "Sa Tokyo at Kyoto makikita ang mga pulang tindahan ng 'Natural Lawson'. Mayroon silang cold-pressed juices, organic salads, at masusustansyang meryenda.",
         tag: "Healthy",
         tip: "Tamang-tama para makabawi sa mga araw na puro prito at ramen.",
+      },
+      {
+        name: "Lawson Bank ATM & Palitan ng Pera (Euros sa Yenes)",
+        highlight: "🏧 Mag-withdraw ng yenes gamit ang Revolut nang isahan para makatipid sa fee",
+        desc: "Tulad ng 7-Eleven, mayroong international ATM at currency exchange machine sa Lawson. Ang pag-withdraw sa ATM gamit ang Revolut ang pinakasulit na paraan. Dahil may singil na ~¥660 kada transaksyon, magandang mag-withdraw ng malaking halaga nang minsanan para sa cash expenses.",
+        tag: "ATM / Cash",
+        tip: "Tanggihan ang inaalok na conversion ng ATM («Without conversion») para interbank rate ng Revolut ang pumasok.",
       },
     ],
   },

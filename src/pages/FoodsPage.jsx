@@ -165,23 +165,26 @@ function KonbiniView() {
           {t("foods.konbiniIntro")}
         </p>
 
-        {/* 4 Reglas de Oro */}
+        {/* Reglas de Oro */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-          {konbiniRules.map((rule, idx) => (
-            <div
-              key={idx}
-              className="p-2.5 rounded-xl border flex gap-2.5 items-start"
-              style={{ background: "var(--paper-raised)", borderColor: "rgba(0,0,0,0.06)" }}
-            >
-              <span className="text-lg leading-none mt-0.5">{rule.icon}</span>
-              <div>
-                <h4 className="text-xs font-bold mb-0.5" style={{ color: "var(--ink)" }}>{rule.title}</h4>
-                <p className="text-[11.5px] leading-relaxed" style={{ color: "var(--ink-soft)", margin: 0 }}>
-                  {rule.desc}
-                </p>
+          {konbiniRules.map((rule, idx) => {
+            const isFull = idx === konbiniRules.length - 1 && konbiniRules.length % 2 !== 0;
+            return (
+              <div
+                key={idx}
+                className={`p-2.5 rounded-xl border flex gap-2.5 items-start ${isFull ? "sm:col-span-2" : ""}`}
+                style={{ background: "var(--paper-raised)", borderColor: "rgba(0,0,0,0.06)" }}
+              >
+                <span className="text-lg leading-none mt-0.5">{rule.icon}</span>
+                <div>
+                  <h4 className="text-xs font-bold mb-0.5" style={{ color: "var(--ink)" }}>{rule.title}</h4>
+                  <p className="text-[11.5px] leading-relaxed" style={{ color: "var(--ink-soft)", margin: 0 }}>
+                    {rule.desc}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
