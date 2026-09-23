@@ -242,6 +242,12 @@ export const budget = {
       ],
     },
     {
+      title: "Konbini et en-cas",
+      details: [
+        "En plus des repas principaux : cafés, en-cas, boissons et petits achats chez Lawson/7-Eleven/FamilyMart entre les repas -- ça finit par peser plus qu'il n'y paraît à coup de petits tickets. Chiffre représentatif, calculé à partir des dépenses réelles enregistrées par Pablo (~144€ en konbini et petits cafés sur tout le voyage).",
+      ],
+    },
+    {
       title: "Assurance, eSIM et extras",
       details: [
         "Assurance Heymondo Japon : 273,60€ (4 personnes · Revolut).",
@@ -249,7 +255,13 @@ export const budget = {
         "Entrées (temples, TeamLab, belvédères), Takkyubin Kyoto→Tokyo et divers ~150€/personne à titre indicatif.",
       ],
     },
+    {
+      title: "Achats personnels (vêtements, souvenirs)",
+      details: [
+        "Catégorie ajoutée a posteriori avec les dépenses réelles du voyage (vêtements, souvenirs, objets de collection...) -- non prévue dans l'estimation initiale. La dépense réelle varie beaucoup selon la personne ; ce chiffre est une moyenne représentative, pas une dépense obligatoire ni un plafond.",
+      ],
+    },
   ],
-  totalPerPerson: "~2 735€ – 2 880€ (tout inclus)",
-  totalGroup: "~13 680€ – 14 400€ (5 personnes)",
+  totalPerPerson: "~2 965€ – 3 110€ (tout inclus)",
+  totalGroup: "~14 825€ – 15 550€ (5 personnes)",
 };
