@@ -197,3 +197,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-23 14:28 UTC** — feat(map): default to full route (ruta completa) on map open (`879d94b`)
 - **2026-09-23 15:31 UTC** — feat(Presupuesto): añadir categorías 'Konbini y tentempiés' (~30€/pax) y 'Compras personales' ... (`2585f92`)
 - **2026-09-23 15:31 UTC** — feat(Presupuesto): añadir las 2 categorías nuevas en inglés (`8bc04df`)
+- **2026-09-23 15:32 UTC** — feat(Presupuesto): añadir las 2 categorías nuevas en francés (`bc1d2a3`)
