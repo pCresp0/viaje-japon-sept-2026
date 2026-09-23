@@ -81,20 +81,17 @@ function NavItems({ active, onChange, onClose, isMobile }) {
   const t = useT();
   const [openGroup, setOpenGroup] = useState(null);
 
-  // Auto-expand active group on mount/change in mobile
+  // Auto-expand active group on mount/change
   useEffect(() => {
-    if (isMobile) {
-      for (const node of navStructure) {
-        if (node.type === "group" && node.items.some(i => i.id === active)) {
-          setOpenGroup(node.id);
-          break;
-        }
+    for (const node of navStructure) {
+      if (node.type === "group" && node.items.some(i => i.id === active)) {
+        setOpenGroup(node.id);
+        break;
       }
     }
-  }, [active, isMobile]);
+  }, [active]);
 
   function toggleGroup(id) {
-    if (!isMobile) return;
     setOpenGroup(prev => prev === id ? null : id);
   }
 
@@ -128,18 +125,19 @@ function NavItems({ active, onChange, onClose, isMobile }) {
             </button>
           );
         } else if (node.type === "group") {
-          const isOpen = !isMobile || openGroup === node.id;
+          const isOpen = openGroup === node.id;
           const hasActiveItem = node.items.some(i => i.id === active);
           
           return (
             <div key={node.id} className="mb-2 mt-1">
               <button
+                type="button"
                 onClick={() => toggleGroup(node.id)}
-                className={`flex items-center justify-between w-full text-left px-4 py-2 ${!isMobile ? "cursor-default" : "cursor-pointer"} select-none transition-opacity hover:opacity-80`}
+                className="flex items-center justify-between w-full text-left px-4 py-2 cursor-pointer select-none transition-all hover:opacity-90 rounded-lg"
                 style={{
-                  color: (hasActiveItem && !isOpen) ? "#e8b74a" : "rgba(255,255,255,0.5)",
+                  color: (hasActiveItem && !isOpen) ? "#e8b74a" : "rgba(255,255,255,0.55)",
+                  background: isOpen ? "rgba(255,255,255,0.04)" : "transparent",
                 }}
-                disabled={!isMobile}
               >
                 <div className="flex items-center gap-1.5">
                   <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.1em" }}>
@@ -149,11 +147,9 @@ function NavItems({ active, onChange, onClose, isMobile }) {
                     <span className="alert-dot" aria-hidden="true" style={{ width: 6, height: 6 }} />
                   )}
                 </div>
-                {isMobile && (
-                  <span style={{ opacity: 0.5 }}>
-                    {isOpen ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
-                  </span>
-                )}
+                <span style={{ opacity: 0.6 }}>
+                  {isOpen ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
+                </span>
               </button>
               
               <div 
