@@ -190,3 +190,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-23 13:58 UTC** — feat(foods): update Lawson header and add breakfast favorites (coffee, melon ... (`1eea1a7`)
 - **2026-09-23 14:16 UTC** — feat: add ATM and Revolut cash withdrawal tips for 7-Eleven ... (`3a99ab7`)
 - **2026-09-23 14:17 UTC** — docs(rules): avoid opening chrome for testing unless requested (`dba5961`)
+- **2026-09-23 14:20 UTC** — feat(home): make days counter prominently larger and highlighted (`aa9601d`)
