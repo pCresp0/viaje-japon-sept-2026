@@ -193,3 +193,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-23 14:20 UTC** — feat(home): make days counter prominently larger and highlighted (`aa9601d`)
 - **2026-09-23 14:22 UTC** — feat(nav): remove drawer weather widget completely from mobile and desktop (`09df676`)
 - **2026-09-23 14:25 UTC** — feat(nav): add centered japan flag build info button to desktop ... (`05069e1`)
+- **2026-09-23 14:27 UTC** — fix(foods): keep logo and name in konbini header without japanese ... (`05380e5`)
