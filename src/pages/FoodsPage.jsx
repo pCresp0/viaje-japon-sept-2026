@@ -272,9 +272,6 @@ function KonbiniView() {
                         {chain.name}
                       </span>
                     )}
-                    <span className="text-xs font-medium" style={{ color: "var(--ink-soft)" }}>
-                      {chain.jp}
-                    </span>
 
                     {/* Botón Ver cercanos en Google Maps */}
                     <a
