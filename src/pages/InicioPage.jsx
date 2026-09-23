@@ -74,21 +74,52 @@ export default function InicioPage({ onNavigate }) {
             )}
           </div>
 
-          <div style={{ display: "flex", gap: 12, justifyContent: "space-between" }}>
-            {units.map((u) => (
-              <div key={u.label} style={{ textAlign: "center", flex: 1 }}>
-                <p style={{
-                  fontFamily: "var(--font-display)", fontSize: 32, fontWeight: 400,
-                  fontVariantNumeric: "tabular-nums", lineHeight: 1, margin: 0,
-                  color: "#ffffff",
-                }}>
-                  {String(u.value).padStart(2, "0")}
-                </p>
-                <p style={{ fontSize: 10, color: "rgba(255,255,255,0.6)", letterSpacing: "0.08em", textTransform: "uppercase", marginTop: 6, margin: "6px 0 0" }}>
-                  {u.label}
-                </p>
-              </div>
-            ))}
+          <div style={{ display: "flex", gap: 8, justifyContent: "space-between", alignItems: "center" }}>
+            {units.map((u, i) => {
+              const isDays = i === 0;
+              return (
+                <div
+                  key={u.label}
+                  style={{
+                    textAlign: "center",
+                    flex: isDays ? 1.6 : 1,
+                    padding: isDays ? "10px 8px" : "6px 2px",
+                    background: isDays ? "rgba(255, 255, 255, 0.09)" : "transparent",
+                    borderRadius: isDays ? 14 : 0,
+                    border: isDays ? "1px solid rgba(255, 255, 255, 0.18)" : "none",
+                    boxShadow: isDays ? "0 2px 10px rgba(0, 0, 0, 0.2)" : "none",
+                  }}
+                >
+                  <p
+                    style={{
+                      fontFamily: "var(--font-display)",
+                      fontSize: isDays ? "clamp(38px, 5.5vw, 56px)" : "clamp(19px, 3vw, 26px)",
+                      fontWeight: isDays ? 700 : 400,
+                      fontVariantNumeric: "tabular-nums",
+                      lineHeight: 1,
+                      margin: 0,
+                      color: isDays ? "#fde047" : "#ffffff",
+                      textShadow: isDays ? "0 2px 16px rgba(253, 224, 71, 0.35)" : "none",
+                    }}
+                  >
+                    {String(u.value).padStart(2, "0")}
+                  </p>
+                  <p
+                    style={{
+                      fontSize: isDays ? "clamp(10.5px, 1.4vw, 12px)" : "clamp(9px, 1.2vw, 10px)",
+                      fontWeight: isDays ? 800 : 500,
+                      color: isDays ? "#fde047" : "rgba(255,255,255,0.6)",
+                      letterSpacing: isDays ? "0.12em" : "0.08em",
+                      textTransform: "uppercase",
+                      marginTop: 6,
+                      margin: "6px 0 0",
+                    }}
+                  >
+                    {u.label}
+                  </p>
+                </div>
+              );
+            })}
           </div>
 
           <p style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", marginTop: 16, marginBottom: 0, textAlign: "center" }}>
