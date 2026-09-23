@@ -922,6 +922,14 @@ export const budget = {
       ],
     },
     {
+      title: "Konbini y tentempiés",
+      perPerson: "~30€",
+      total: "~150€",
+      details: [
+        "Aparte de las comidas principales: cafés, snacks, bebidas y compras sueltas en Lawson/7-Eleven/FamilyMart entre horas -- suma más de lo que parece a base de tickets pequeños. Cifra representativa, calculada a partir del gasto real registrado por Pablo (~144€ en konbini y cafés sueltos en todo el viaje).",
+      ],
+    },
+    {
       title: "Seguro, eSIM y extras",
       perPerson: "~200€",
       total: "~1.000€",
@@ -931,7 +939,15 @@ export const budget = {
         "Entradas (templos, TeamLab, miradores), Takkyubin Kioto→Tokio y extras varios ~150€/persona orientativo.",
       ],
     },
+    {
+      title: "Compras personales (ropa, souvenirs)",
+      perPerson: "~200€",
+      total: "~1.000€",
+      details: [
+        "Categoría añadida a posteriori con los gastos reales del viaje (ropa, souvenirs, coleccionismo...) -- no estaba contemplada en la estimación inicial. El gasto real varía mucho según la persona; esta cifra es una media representativa, no un gasto obligatorio ni un tope.",
+      ],
+    },
   ],
-  totalPerPerson: "~2.735€ – 2.880€ (todo incluido)",
-  totalGroup: "~13.680€ – 14.400€ (5 personas)",
+  totalPerPerson: "~2.965€ – 3.110€ (todo incluido)",
+  totalGroup: "~14.825€ – 15.550€ (5 personas)",
 };
