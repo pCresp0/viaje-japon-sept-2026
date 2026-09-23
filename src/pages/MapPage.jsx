@@ -62,8 +62,15 @@ function FitBounds({ markers }) {
 export default function MapPage({ onGoToDay, initialDay }) {
   const defaultDay = initialDay ?? (getTripStatus().dayNum || 1);
   const [selected, setSelected] = useState(null);
-  const [filter, setFilter] = useState("dias");
-  const [subDay, setSubDay] = useState(defaultDay); // día concreto dentro del filtro "dias", null = todos
+  const [filter, setFilter] = useState(initialDay != null ? "dias" : "ruta");
+  const [subDay, setSubDay] = useState(initialDay != null ? defaultDay : null); // día concreto dentro del filtro "dias", null = todos
+
+  useEffect(() => {
+    if (initialDay != null) {
+      setFilter("dias");
+      setSubDay(initialDay);
+    }
+  }, [initialDay]);
 
   const { mapStops, mapFilterData, mapLabels, days } = useContent();
   const dayInfo = Object.fromEntries(days.map((d) => [d.num, d]));
