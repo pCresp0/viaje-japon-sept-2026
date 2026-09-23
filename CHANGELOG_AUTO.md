@@ -199,3 +199,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-23 15:31 UTC** — feat(Presupuesto): añadir las 2 categorías nuevas en inglés (`8bc04df`)
 - **2026-09-23 15:32 UTC** — feat(Presupuesto): añadir las 2 categorías nuevas en francés (`bc1d2a3`)
 - **2026-09-23 15:32 UTC** — feat(Presupuesto): completar las 2 categorías nuevas en tagalo -- Presupuesto ... (`832594a`)
+- **2026-09-23 19:10 UTC** — feat(budget): finalize post-trip transport and JR Pass savings analysis (`21cad8f`)
