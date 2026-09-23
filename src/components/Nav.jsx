@@ -348,7 +348,7 @@ export function DesktopTopBar({ active, onNavigate }) {
   const currentTab = tabs.find((tab) => tab.id === active);
   return (
     <header
-      className="hidden md:flex items-center gap-5 px-6 shrink-0"
+      className="hidden md:flex items-center gap-5 px-6 shrink-0 relative"
       style={{
         height: 68,
         boxSizing: "border-box",
@@ -365,7 +365,6 @@ export function DesktopTopBar({ active, onNavigate }) {
         display: "flex", alignItems: "center", gap: 10,
         flex: 1, minWidth: 0,
       }}>
-        <span style={{ fontSize: 26, lineHeight: 1 }}>🇯🇵</span>
         <span style={{
           fontFamily: "var(--font-display)", fontSize: 22,
           fontWeight: 700, color: "#fff", letterSpacing: "0.01em",
@@ -385,6 +384,15 @@ export function DesktopTopBar({ active, onNavigate }) {
           </>
         )}
       </div>
+
+      {/* Bandera de Japón centrada arriba en PC */}
+      <div
+        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-auto"
+        style={{ zIndex: 2 }}
+      >
+        <BuildInfoButton />
+      </div>
+
       <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", gap: 10 }}>
         <GlobalSearch variant="desktop" onNavigate={onNavigate} />
         <LanguageSwitcher variant="desktop" />

@@ -96,6 +96,7 @@ export default function BuildInfoButton() {
           fontSize: 28, lineHeight: 1, padding: 6,
           flexShrink: 0,
           background: "transparent", border: "none",
+          cursor: "pointer",
           WebkitTapHighlightColor: "transparent",
         }}
       >
