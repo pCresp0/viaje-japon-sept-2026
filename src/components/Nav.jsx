@@ -4,7 +4,6 @@ import { useT } from "../i18n";
 import LanguageSwitcher from "./LanguageSwitcher";
 import GlobalSearch from "./GlobalSearch";
 import BuildInfoButton from "./BuildInfoButton";
-import DrawerWeatherWidget from "./DrawerWeatherWidget";
 
 // El campo `labelKey` se resuelve en tiempo de render con la función de
 // traducción, para que el menú cambie de idioma sin recargar la página.
@@ -244,17 +243,6 @@ function Drawer({ active, onChange, open, onClose }) {
           >
             <NavItems active={active} onChange={onChange} onClose={onClose} isMobile={true} />
           </nav>
-
-          {/* Widget del tiempo — con degradado y por debajo de los apartados si coinciden */}
-          <div 
-            className="shrink-0 px-3 pb-2 pt-2 relative" 
-            style={{ 
-              zIndex: 1,
-              background: "linear-gradient(to bottom, rgba(77, 28, 30, 0) 0%, rgba(68, 25, 27, 0.72) 28%, rgba(45, 16, 18, 0.96) 100%)",
-            }}
-          >
-            <DrawerWeatherWidget onNavigate={onChange} onClose={onClose} />
-          </div>
           
           {/* Quick access bottom bar — pie fijo siempre visible en la base */}
           <div className="shrink-0 flex items-center justify-around px-2 py-3"
@@ -419,15 +407,6 @@ export function Sidebar({ active, onChange }) {
         >
           <NavItems active={active} onChange={onChange} isMobile={false} />
         </nav>
-        <div 
-          className="shrink-0 px-3 pb-3 pt-2 relative"
-          style={{
-            zIndex: 1,
-            background: "linear-gradient(to bottom, rgba(77, 28, 30, 0) 0%, rgba(68, 25, 27, 0.72) 28%, rgba(45, 16, 18, 0.96) 100%)",
-          }}
-        >
-          <DrawerWeatherWidget onNavigate={onChange} />
-        </div>
       </div>
     </aside>
   );
