@@ -185,3 +185,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-21 04:29 UTC** — feat: añadir Miyajima a Para viajes futuros (solo en español, ... (`dd99eb7`)
 - **2026-09-21 05:23 UTC** — fix: el botón oculto de la bandera de Japón en ... (`344763c`)
 - **2026-09-23 13:29 UTC** — feat: default to inicio page post-trip with live count-up elapsed ... (`56c08a8`)
+- **2026-09-23 13:34 UTC** — feat: make desktop sidebar navigation groups collapsible by default (`0b09a39`)
