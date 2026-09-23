@@ -6,9 +6,9 @@ export const tripMeta = {
   end: "2026-09-21",
   people: 5,
   welcomeParagraphs: [
-    "¡Bienvenidos al Viaje Morisqueño a Japón! Esta web es la <strong>base del viaje de los 5</strong>. Aquí están los vuelos, hoteles con PIN y confirmación, buses ya reservados, el plan día a día y lo que aún falta por cerrar.",
-    "Es la <strong>guía privada del grupo</strong>: itinerario, reservas, hoteles, transporte, mapa y tips. Todo lo que necesitamos en el móvil, sin depender de chats ni PDFs sueltos.",
-    "Todos los apartados de abajo son clicables para entrar al detalle de cada sección. También puedes usar el <strong>menú de la parte superior izquierda</strong> para navegar rápidamente por todos los apartados en cualquier momento. La web abre directamente en el <strong>Itinerario</strong>, con el detalle del día que toque en cada momento (abriendo por defecto el Día 0 de viaje).",
+    "¡Bienvenidos a la web del Viaje Morisqueño a Japón! Esta aplicación es la <strong>memoria y guía definitiva de los 5 viajeros</strong> (Pablo, Sergio, Juan Carlos, Randy y Thibaut).",
+    "Aquí está recopilada toda la experiencia vivida: el <strong>itinerario real día a día</strong> con horarios ajustados al minuto, los hoteles donde nos alojamos con sus direcciones en japonés, todos los transportes y trenes bala tomados, los restaurantes y comidas probadas, y la guía histórica de Japón.",
+    "Todos los apartados son interactivos y clicables. Puedes explorar el <strong>itinerario completo</strong> (con todos los días listos para consultar), revivir los lugares en el <strong>mapa interactivo</strong> o usar el <strong>buscador global</strong> para encontrar cualquier recuerdo, anécdota o recomendación.",
     "Además, puedes <strong>cambiar el idioma</strong> de la aplicación en cualquier momento (Español, English, Français, Tagalog) usando el botón de la parte superior."
   ],
   about: {

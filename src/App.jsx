@@ -32,8 +32,11 @@ import { slug } from "./utils/slug";
 import { getTripStatus, getDefaultTripDay } from "./utils/date";
 
 function defaultTab() {
-  // Por defecto ir al itinerario, al día correspondiente
-  return "itinerario";
+  const status = getTripStatus();
+  if (status.phase === "during") {
+    return "itinerario";
+  }
+  return "inicio";
 }
 
 export default function App() {
@@ -87,6 +90,13 @@ export default function App() {
         delay,
       );
     }
+  }
+
+  function handleTabChange(nextTab) {
+    if (nextTab === "itinerario" && getTripStatus().phase === "after") {
+      setOpenDay(null);
+    }
+    setTab(nextTab);
   }
 
   // Scroll to top of the scrollable container when tab changes
@@ -183,10 +193,10 @@ export default function App() {
       <div style={{ display: "flex", flex: 1, minHeight: 0 }}>
 
         {/* Mobile top bar + drawer */}
-        <Nav active={tab} onChange={setTab} onNavigate={handleSearchNavigate} open={menuOpen} setOpen={setMenuOpen} />
+        <Nav active={tab} onChange={handleTabChange} onNavigate={handleSearchNavigate} open={menuOpen} setOpen={setMenuOpen} />
 
         {/* Desktop sidebar */}
-        <Sidebar active={tab} onChange={setTab} />
+        <Sidebar active={tab} onChange={handleTabChange} />
 
         {/* Right column — scrollable */}
         <div id="main-scroll-container" ref={scrollContainerRef} style={{
@@ -206,7 +216,7 @@ export default function App() {
               <div>
                 {tab === "pendientes"   && <PendingPage />}
                 {tab === "historia"     && <HistoryPage />}
-                {tab === "inicio"       && <InicioPage onNavigate={setTab} />}
+                {tab === "inicio"       && <InicioPage onNavigate={handleTabChange} />}
                 {tab === "hoy"          && <Home onGoToDay={goToDay} />}
                 {tab === "calendario"   && <CalendarPage onGoToMapDay={goToMapDay} />}
                 {tab === "itinerario"   && <Itinerary openDay={openDay} setOpenDay={setOpenDay} quickView={quickView} setQuickView={setQuickView} onGoToMapDay={goToMapDay} />}

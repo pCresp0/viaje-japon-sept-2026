@@ -51,8 +51,9 @@ export function getDefaultTripDay() {
   if (status.phase === "during") {
     return status.dayNum ?? 0;
   }
+  // Tras finalizar el viaje: ningún día abierto por defecto en el itinerario
   if (status.phase === "after") {
-    return 15;
+    return null;
   }
   // Antes del inicio del viaje: abrir por defecto el Día 0
   return 0;

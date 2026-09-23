@@ -2,9 +2,9 @@ export const tripMeta = {
   title: "Morisqueño Trip to Japan",
   subtitle: "September 2026",
   welcomeParagraphs: [
-    "Welcome to the Morisqueño Trip to Japan! This website is the <strong>base for the 5 of us</strong>. Here you can find our flights, hotels with PINs and confirmations, booked buses, the day-by-day plan, and what's still pending.",
-    "This is our <strong>private group guide</strong>: itinerary, reservations, hotels, transport, map, and tips. Everything we need on our phones, without relying on chats or loose PDFs.",
-    "All the sections below are clickable so you can see the details. You can also use the <strong>menu on the top left</strong> to quickly navigate through all sections at any time. The web opens directly on the <strong>Itinerary</strong>, displaying the details for the current day (opening Day 0 by default before departure).",
+    "Welcome to the Morisqueño Trip to Japan website! This app serves as the <strong>definitive memory and complete guide for the 5 travelers</strong> (Pablo, Sergio, Juan Carlos, Randy, and Thibaut).",
+    "Here you will find our entire lived journey: the <strong>real day-by-day itinerary</strong> with minute-by-minute schedules, the hotels where we stayed with Japanese addresses, all transit and bullet trains taken, restaurants and meals enjoyed, and the complete historical guide to Japan.",
+    "All sections below are interactive and clickable. You can explore the <strong>complete itinerary</strong> (with all days ready to consult), revisit the stops on the <strong>interactive map</strong>, or use the <strong>global search</strong> to find any memory, lore, or recommendation.",
     "Additionally, you can <strong>change the application language</strong> at any time (Español, English, Français, Tagalog) using the button at the top."
   ],
   about: {

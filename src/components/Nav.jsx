@@ -9,6 +9,7 @@ import DrawerWeatherWidget from "./DrawerWeatherWidget";
 // El campo `labelKey` se resuelve en tiempo de render con la función de
 // traducción, para que el menú cambie de idioma sin recargar la página.
 export const navStructure = [
+  { type: "item", id: "inicio", labelKey: "nav.inicio", descKey: "nav.desc.inicio", icon: Home },
   { type: "item", id: "itinerario", labelKey: "nav.itinerario", descKey: "nav.desc.itinerario", icon: Route },
   { type: "item", id: "calendario", labelKey: "nav.calendario", descKey: "nav.desc.calendario", icon: CalendarDays },
   { type: "item", id: "mapa", labelKey: "nav.mapa", descKey: "nav.desc.mapa", icon: Map },
