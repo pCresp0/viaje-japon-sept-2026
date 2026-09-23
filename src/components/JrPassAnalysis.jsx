@@ -109,12 +109,11 @@ export default function JrPassAnalysis({ defaultOpen = false }) {
               </div>
               <div
                 className="flex items-center gap-2 px-3.5 py-2 rounded-xl"
-                style={{ background: "rgba(188,71,73,0.1)", border: "1px solid rgba(188,71,73,0.2)" }}
+                style={{ background: "rgba(46,125,91,0.1)", border: "1px solid rgba(46,125,91,0.25)" }}
               >
-                <span style={{ fontSize: 16 }}>❌</span>
-                <p className="text-sm font-bold m-0" style={{ color: "var(--shu)" }}>
-                  NO COMPENSA — billetes JR ~{formatJpyEur(coveredTotalJpy, coveredTotalEur)}/pax vs Pass 7d{" "}
-                  {formatJpyEur(PASS_7_JPY, PASS_7_EUR)} (+{formatEur(saveCoveredOnlyEur)} más caro).
+                <span style={{ fontSize: 16 }}>✅</span>
+                <p className="text-sm font-bold m-0" style={{ color: "var(--forest)" }}>
+                  BALANCE FINAL: NO COMPENSABA EN ABSOLUTO — Ahorro real de {formatEur(saveVs14Eur)}/pax ({formatEur(saveVs14Eur * PEOPLE)} grupo) vs Pass 14d y viajando en Nozomi.
                 </p>
               </div>
             </div>
@@ -129,12 +128,10 @@ export default function JrPassAnalysis({ defaultOpen = false }) {
         {open && (
           <div className="px-5 sm:px-6 pb-6 space-y-6">
             <p className="text-xs leading-relaxed m-0" style={{ color: "var(--ink-soft)" }}>
-              Cálculo con <strong>precios reales Revolut</strong> de billetes ya comprados + estimaciones del resto.
-              Tipo de cambio aprox. {YEN_PER_EUR} ¥/€ para el resto del viaje. Precios JR Pass Ordinary adulto
-              (agencia <a href={JR_PASS_SOURCE_EUR} target="_blank" rel="noopener noreferrer" className="underline">jrpass.com</a>, ago 2026):
+              Cálculo definitivo post-viaje con <strong>gastos 100% reales de Revolut y Splitwise</strong> (incluyendo todas las recargas de Suica para el transporte urbano). Precios oficiales JR Pass Ordinary adulto:
               {" "}7 días {formatEur(PASS_7_EUR)} · 14 días {formatEur(PASS_14_EUR)} · 21 días {formatEur(PASS_21_EUR)}
               {" "}(grupo ×5: {formatEur(PASS_7_EUR * PEOPLE)} / {formatEur(PASS_14_EUR * PEOPLE)} / {formatEur(PASS_21_EUR * PEOPLE)}).
-              El Pass <strong>no incluye Nozomi</strong>.
+              El Pass <strong>no incluye Nozomi</strong> ni autobuses de los Alpes ni el metro urbano.
             </p>
 
             <div>
@@ -143,22 +140,22 @@ export default function JrPassAnalysis({ defaultOpen = false }) {
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div className="p-4 rounded-xl border" style={{ background: "rgba(46,125,91,0.06)", borderColor: "rgba(46,125,91,0.25)" }}>
-                  <p className="text-[11px] font-bold uppercase tracking-wider m-0" style={{ color: "var(--forest)" }}>Ya pagado</p>
+                  <p className="text-[11px] font-bold uppercase tracking-wider m-0" style={{ color: "var(--forest)" }}>Total Pagado Real</p>
                   <p className="font-display text-lg font-bold m-0 mt-1" style={{ color: "var(--ink)" }}>{formatJpyEur(paidJpy, paidEur)}</p>
                   <p className="text-xs m-0 mt-1" style={{ color: "var(--ink-soft)" }}>/persona · grupo {formatGroupJpyEur(paidJpy, paidEur, PEOPLE)}</p>
-                  <p className="text-[11px] m-0 mt-2" style={{ color: "var(--ink-soft)" }}>{purchased.length} trayectos confirmados</p>
+                  <p className="text-[11px] m-0 mt-2" style={{ color: "var(--forest)", fontWeight: 600 }}>{purchased.length} transportes confirmados (100%)</p>
                 </div>
-                <div className="p-4 rounded-xl border" style={{ background: "rgba(201,162,39,0.08)", borderColor: "rgba(201,162,39,0.3)" }}>
-                  <p className="text-[11px] font-bold uppercase tracking-wider m-0" style={{ color: "#8a6d1a" }}>Queda por pagar (est.)</p>
-                  <p className="font-display text-lg font-bold m-0 mt-1" style={{ color: "var(--ink)" }}>{formatJpyEur(pendingJpy, pendingEur)}</p>
-                  <p className="text-xs m-0 mt-1" style={{ color: "var(--ink-soft)" }}>/persona · grupo {formatGroupJpyEur(pendingJpy, pendingEur, PEOPLE)}</p>
-                  <p className="text-[11px] m-0 mt-2" style={{ color: "var(--ink-soft)" }}>{pending.length} trayectos pendientes</p>
+                <div className="p-4 rounded-xl border" style={{ background: "rgba(46,125,91,0.06)", borderColor: "rgba(46,125,91,0.25)" }}>
+                  <p className="text-[11px] font-bold uppercase tracking-wider m-0" style={{ color: "var(--forest)" }}>Ahorro vs JR Pass 14d</p>
+                  <p className="font-display text-lg font-bold m-0 mt-1" style={{ color: "var(--forest)" }}>+{formatEur(saveVs14Eur)}</p>
+                  <p className="text-xs m-0 mt-1" style={{ color: "var(--ink-soft)" }}>/persona · grupo {formatEur(saveVs14Eur * PEOPLE)}</p>
+                  <p className="text-[11px] m-0 mt-2" style={{ color: "var(--forest)", fontWeight: 600 }}>✅ Dinero ahorrado por no coger el pase</p>
                 </div>
                 <div className="p-4 rounded-xl border" style={{ background: "rgba(29,53,87,0.06)", borderColor: "rgba(29,53,87,0.2)" }}>
-                  <p className="text-[11px] font-bold uppercase tracking-wider m-0" style={{ color: "var(--indigo)" }}>Total transporte est.</p>
-                  <p className="font-display text-lg font-bold m-0 mt-1" style={{ color: "var(--ink)" }}>{formatJpyEur(allJpy, allEur)}</p>
-                  <p className="text-xs m-0 mt-1" style={{ color: "var(--ink-soft)" }}>/persona · grupo {formatGroupJpyEur(allJpy, allEur, PEOPLE)}</p>
-                  <p className="text-[11px] m-0 mt-2" style={{ color: "var(--ink-soft)" }}>Sin vuelos ni excursiones Fuji</p>
+                  <p className="text-[11px] font-bold uppercase tracking-wider m-0" style={{ color: "var(--indigo)" }}>Coste si hubierais comprado Pass 14d</p>
+                  <p className="font-display text-lg font-bold m-0 mt-1" style={{ color: "var(--shu)" }}>{formatJpyEur(withPass14Jpy, withPass14Eur)}</p>
+                  <p className="text-xs m-0 mt-1" style={{ color: "var(--ink-soft)" }}>/persona · grupo {formatGroupJpyEur(withPass14Jpy, withPass14Eur, PEOPLE)}</p>
+                  <p className="text-[11px] m-0 mt-2" style={{ color: "var(--ink-soft)" }}>Pass (455€) + extras no cubiertos (171€)</p>
                 </div>
               </div>
             </div>
@@ -349,13 +346,14 @@ export default function JrPassAnalysis({ defaultOpen = false }) {
 
             <div className="p-4 rounded-xl border" style={{ background: "rgba(29,53,87,0.05)", borderColor: "var(--indigo)" }}>
               <p className="text-sm font-bold mb-2 flex items-center gap-1.5 m-0" style={{ color: "var(--indigo)" }}>
-                <span>✅</span> Recomendación final
+                <span>✅</span> Conclusión y balance final post-viaje
               </p>
               <ul className="text-xs space-y-2 pl-2 m-0" style={{ color: "var(--ink)" }}>
-                <li>• <strong>No comprar Japan Rail Pass.</strong> Los trayectos JR de este viaje suman ~{formatJpyEur(coveredTotalJpy, coveredTotalEur)}/pax frente a {formatJpyEur(PASS_7_JPY, PASS_7_EUR)} (7d) o {formatJpyEur(PASS_14_JPY, PASS_14_EUR)} (14d).</li>
-                <li>• Ya llevamos comprados Nozomi + Thunderbird + Shinano + Nohi: el Pass no los “recupera”.</li>
-                <li>• Seguir con billetes individuales + Suica/Welcome Suica para urbano.</li>
-                <li>• Pendiente de pagar estimado: {formatJpyEur(pendingJpy, pendingEur)}/persona (N'EX, locales, Fuji, Skyliner, metro…).</li>
+                <li>• <strong>No comprar el Japan Rail Pass fue la decisión más rentable del viaje.</strong> El JR Pass de 14 días ({formatJpyEur(PASS_14_JPY, PASS_14_EUR)}) habría costado casi el doble que todos los trenes JR del viaje combinados ({formatJpyEur(coveredTotalJpy + nozomiJpy, coveredTotalEur + nozomiEur)}).</li>
+                <li>• <strong>Autobuses de montaña en los Alpes:</strong> Los traslados entre Kanazawa, Shirakawa-go, Takayama y Magome (Nohi Bus y bus local) sumaron ~71€/persona y el JR Pass NO los cubre en absoluto (habría habido que pagarlos íntegros de bolsillo igualmente).</li>
+                <li>• <strong>Movilidad urbana y Suica:</strong> El gasto total en Suica (~69€/persona verificado en Revolut) cubrió toda la red de metro de Kioto, buses urbanos, tranvía Randen, metro de Osaka, toda la red de Metro de Tokio (Tokyo Metro / Toei Subway) y cercanías. Casi ninguna de estas redes municipales/privadas está incluida en el JR Pass.</li>
+                <li>• <strong>Ventaja Shinkansen Nozomi:</strong> Comprando billetes individuales pudisteis viajar en el Shinkansen Nozomi (el más rápido de Japón, 2h Shinagawa→Kioto) con asientos reservados juntos, sin suplementos y sin las restricciones del tren lento Hikari.</li>
+                <li>• <strong>Ahorro total verificado:</strong> {formatEur(saveVs14Eur)} por persona, es decir, <strong>{formatEur(saveVs14Eur * PEOPLE)} ahorrados en total para el grupo de 5</strong>.</li>
               </ul>
             </div>
 

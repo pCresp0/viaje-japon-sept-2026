@@ -4,7 +4,7 @@ import { Train, Bus, Zap, FileDown, CheckCircle2, Clock, AlertCircle, Smartphone
 import { Highlightable, useHighlight } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 import { formatEur, formatJpyEur } from "../utils/money";
-import { PASS_7_JPY, PASS_7_EUR } from "../data/jrPass";
+import { PASS_7_JPY, PASS_7_EUR, PASS_14_EUR } from "../data/jrPass";
 import { getDefaultTripDay, getTripStatus } from "../utils/date";
 import ShinkansenTicketCard from "../components/ShinkansenTicketCard";
 import ThunderbirdTicketCard from "../components/ThunderbirdTicketCard";
@@ -499,10 +499,10 @@ export default function TransportPage({ onNavigate }) {
                   </h3>
                 </div>
                 <p className="text-sm m-0 mb-1.5" style={{ color: "var(--ink-soft)" }}>
-                  Análisis completo en Presupuesto · Pass 7d: {formatJpyEur(PASS_7_JPY, PASS_7_EUR)}/persona · {formatEur(PASS_7_EUR * 5)} grupo.
+                  Balance final post-viaje · Billetes individuales + Suica vs Pass 14d ({formatEur(PASS_14_EUR)}/persona).
                 </p>
-                <p className="text-sm font-bold m-0" style={{ color: "var(--shu)" }}>
-                  ❌ NO COMPENSA — ver detalle →
+                <p className="text-sm font-bold m-0" style={{ color: "var(--forest)" }}>
+                  ✅ NO COMPENSABA — Ahorro confirmado de ~219€/pax (+1.095€ grupo) →
                 </p>
               </div>
               <span className="shrink-0 text-sm font-semibold" style={{ color: "var(--indigo)", marginTop: 3 }}>Ver →</span>
