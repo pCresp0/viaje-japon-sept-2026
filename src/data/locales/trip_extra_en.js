@@ -242,6 +242,12 @@ export const budget = {
       ],
     },
     {
+      title: "Konbini and snacks",
+      details: [
+        "On top of main meals: coffee, snacks, drinks and small purchases at Lawson/7-Eleven/FamilyMart between meals -- adds up more than it seems through lots of small tickets. Representative figure, calculated from Pablo's actual recorded spending (~144€ on konbini and small cafés over the whole trip).",
+      ],
+    },
+    {
       title: "Insurance, eSIM and extras",
       details: [
         "Heymondo Japan insurance: 273.60€ (4 people · Revolut).",
@@ -249,7 +255,13 @@ export const budget = {
         "Tickets (temples, TeamLab, viewpoints), Takkyubin Kyoto→Tokyo and misc. extras ~150€/person orientative.",
       ],
     },
+    {
+      title: "Personal shopping (clothes, souvenirs)",
+      details: [
+        "Category added after the fact with real trip spending (clothes, souvenirs, collectibles...) -- not part of the original estimate. Actual spending varies a lot by person; this figure is a representative average, not a required spend or a cap.",
+      ],
+    },
   ],
-  totalPerPerson: "~2,735€ – 2,880€ (all included)",
-  totalGroup: "~13,680€ – 14,400€ (5 people)",
+  totalPerPerson: "~2,965€ – 3,110€ (all included)",
+  totalGroup: "~14,825€ – 15,550€ (5 people)",
 };
