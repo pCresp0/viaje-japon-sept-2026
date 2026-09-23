@@ -188,3 +188,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-23 13:34 UTC** — feat: make desktop sidebar navigation groups collapsible by default (`0b09a39`)
 - **2026-09-23 13:45 UTC** — fix: keep flights, hotels and transport items collapsed by default ... (`9b43c86`)
 - **2026-09-23 13:58 UTC** — feat(foods): update Lawson header and add breakfast favorites (coffee, melon ... (`1eea1a7`)
+- **2026-09-23 14:16 UTC** — feat: add ATM and Revolut cash withdrawal tips for 7-Eleven ... (`3a99ab7`)
