@@ -287,7 +287,7 @@ export default function HotelsPage() {
         }}
       >
         {stays.map((stay, i) => {
-          const isToday = stay.id === todayHotelId;
+          const isToday = todayHotelId != null && stay.id === todayHotelId;
           return (
             <HotelCard 
               key={stay.id} 

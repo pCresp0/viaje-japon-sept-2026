@@ -5,7 +5,7 @@ import { Highlightable, useHighlight } from "../context/HighlightContext";
 import { slug } from "../utils/slug";
 import { formatEur, formatJpyEur } from "../utils/money";
 import { PASS_7_JPY, PASS_7_EUR } from "../data/jrPass";
-import { getDefaultTripDay } from "../utils/date";
+import { getDefaultTripDay, getTripStatus } from "../utils/date";
 import ShinkansenTicketCard from "../components/ShinkansenTicketCard";
 import ThunderbirdTicketCard from "../components/ThunderbirdTicketCard";
 import NohiMagomeTicketCard from "../components/NohiMagomeTicketCard";
@@ -25,8 +25,9 @@ export default function TransportPage({ onNavigate }) {
   const t = useT();
   const { highlightId } = useHighlight();
   const blockById = Object.fromEntries(blocks.map((b) => [b.id, b]));
+  const isAfterTrip = getTripStatus().phase === "after";
   const currentDay = getDefaultTripDay();
-  const hasTicketTab = [0, 1, 6, 8, 9].includes(currentDay);
+  const hasTicketTab = !isAfterTrip && [0, 1, 6, 8, 9].includes(currentDay);
   const [activeTab, setActiveTab] = useState(() => hasTicketTab ? "billetes" : "trayectos");
 
   const handleTabChange = (tab) => {
@@ -46,11 +47,7 @@ export default function TransportPage({ onNavigate }) {
   }, [highlightId]);
 
   // Auto-scroll al transporte del día actual al entrar (o al cambiar de pestaña
-  // manualmente) -- es la ÚNICA fuente de scroll de esta página. Antes había
-  // otro scroll-a-cero disparado al pulsar la pestaña, que competía con este
-  // mismo useEffect (ambos con animación 'smooth' a la vez) y el resultado
-  // final se quedaba a medio camino entre los dos destinos. Ahora sólo hay un
-  // scroll: al billete/transporte concreto si existe, o arriba del todo si no.
+  // manualmente) -- si el viaje ya ha terminado, siempre va arriba del todo (top: 0).
   useEffect(() => {
     if (highlightId) return; // si viene de búsqueda o highlight, no interferir
     const t = window.setTimeout(() => {
@@ -58,6 +55,10 @@ export default function TransportPage({ onNavigate }) {
         const scrollContainer = document.getElementById("main-scroll-container");
         scrollContainer?.scrollTo({ top: 0, behavior: "smooth" });
       };
+      if (isAfterTrip || currentDay == null) {
+        scrollToTop();
+        return;
+      }
       if (activeTab === "billetes") {
         const ticketDay = [0, 1].includes(currentDay) ? 1 : currentDay;
         const el = document.getElementById(`ticket-day-${ticketDay}`);
@@ -77,7 +78,7 @@ export default function TransportPage({ onNavigate }) {
       }
     }, 140);
     return () => window.clearTimeout(t);
-  }, [activeTab, currentDay, highlightId]);
+  }, [activeTab, currentDay, highlightId, isAfterTrip]);
 
   const seenKeys = [];
   const groups = {};
@@ -170,7 +171,7 @@ export default function TransportPage({ onNavigate }) {
           <Highlightable id="ticket-day-1">
             <div id="ticket-day-1" className="transport-anchor">
               <ShinkansenTicketCard
-                defaultExpanded={currentDay === 1 || currentDay === 0}
+                defaultExpanded={!isAfterTrip && (currentDay === 1 || currentDay === 0)}
                 onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 1, targetId: slug("itinerary-day", 1) }) : undefined}
               />
             </div>
@@ -178,7 +179,7 @@ export default function TransportPage({ onNavigate }) {
           <Highlightable id="ticket-day-6">
             <div id="ticket-day-6" className="transport-anchor">
               <ThunderbirdTicketCard
-                defaultExpanded={currentDay === 6}
+                defaultExpanded={!isAfterTrip && currentDay === 6}
                 onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 6, targetId: slug("itinerary-day", 6) }) : undefined}
               />
             </div>
@@ -186,7 +187,7 @@ export default function TransportPage({ onNavigate }) {
           <Highlightable id="ticket-day-8">
             <div id="ticket-day-8" className="transport-anchor">
               <NohiMagomeTicketCard
-                defaultExpanded={currentDay === 8}
+                defaultExpanded={!isAfterTrip && currentDay === 8}
                 onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 8, targetId: slug("itinerary-day", 8) }) : undefined}
               />
             </div>
@@ -194,7 +195,7 @@ export default function TransportPage({ onNavigate }) {
           <Highlightable id="ticket-day-9">
             <div id="ticket-day-9" className="transport-anchor">
               <ShinanoTicketCard
-                defaultExpanded={currentDay === 9}
+                defaultExpanded={!isAfterTrip && currentDay === 9}
                 onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 9, targetId: slug("itinerary-day", 9) }) : undefined}
               />
             </div>
@@ -202,7 +203,7 @@ export default function TransportPage({ onNavigate }) {
           <Highlightable id="ticket-day-9-nozomi">
             <div id="ticket-day-9-nozomi" className="transport-anchor">
               <NozomiNagoyaTicketCard
-                defaultExpanded={currentDay === 9}
+                defaultExpanded={!isAfterTrip && currentDay === 9}
                 onGoToDay={onNavigate ? () => onNavigate({ tab: "itinerario", day: 9, targetId: slug("itinerary-day", 9) }) : undefined}
               />
             </div>
@@ -277,7 +278,7 @@ export default function TransportPage({ onNavigate }) {
             {seenKeys.map(key => {
               const { badge, title, sub, color } = headerFor(key);
               const items = groups[key];
-              const isToday = String(currentDay === 0 ? 1 : currentDay) === key;
+              const isToday = !isAfterTrip && currentDay != null && String(currentDay === 0 ? 1 : currentDay) === key;
 
               return (
                 <div

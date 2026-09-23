@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { useContent, useT } from "../i18n/LanguageContext";
-import { fmtDate, getDefaultTripDay } from "../utils/date";
+import { fmtDate, getDefaultTripDay, getTripStatus } from "../utils/date";
 import { PlaneTakeoff, PlaneLanding, ChevronDown } from "lucide-react";
 import VisitJapanQRCard from "../components/VisitJapanQRCard";
 
@@ -8,13 +8,15 @@ export default function InfoPage() {
   const { flights } = useContent();
   const t = useT();
   const currentDay = getDefaultTripDay();
+  const isAfterTrip = getTripStatus().phase === "after";
 
   // Día 0 (salida Madrid 6 sept) o Día 1 (llegada 7 sept): ida activa
   // Día 1 (llegada a Narita) o Día 0 (vuelo): Visit Japan Web activo
   // Día 15 (21 sept) o posterior: vuelta activa
-  const isOutboundActive = currentDay <= 1;
-  const isVisitJapanActive = currentDay === 1 || currentDay === 0;
-  const isReturnActive = currentDay >= 15;
+  // Tras finalizar el viaje: ninguna tarjeta activa por defecto
+  const isOutboundActive = !isAfterTrip && currentDay != null && currentDay <= 1;
+  const isVisitJapanActive = !isAfterTrip && currentDay != null && (currentDay === 1 || currentDay === 0);
+  const isReturnActive = !isAfterTrip && currentDay != null && currentDay >= 15;
 
   return (
     <div className="px-4 pt-3 pb-8">
