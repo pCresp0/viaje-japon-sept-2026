@@ -242,6 +242,12 @@ export const budget = {
       ],
     },
     {
+      title: "Konbini at meryenda",
+      details: [
+        "Bukod sa pangunahing pagkain: kape, meryenda, inumin at maliliit na bilihan sa Lawson/7-Eleven/FamilyMart sa pagitan ng mga oras -- mas malaki pala kapag pinagsama-sama ang maliliit na resibo. Representative na figure, kinalkula mula sa aktwal na gastos ni Pablo (~144€ sa konbini at maliliit na cafe sa buong biyahe).",
+      ],
+    },
+    {
       title: "Insurance, eSIM at extras",
       details: [
         "Heymondo Japan insurance: 273.60€ (4 tao · Revolut).",
@@ -249,7 +255,13 @@ export const budget = {
         "Tickets (templo, TeamLab, viewpoints), Takkyubin Kyoto→Tokyo at iba pa ~150€/tao orientative.",
       ],
     },
+    {
+      title: "Personal na pamimili (damit, souvenirs)",
+      details: [
+        "Kategoryang idinagdag pagkatapos, gamit ang aktwal na gastos sa biyahe (damit, souvenirs, koleksyon...) -- hindi bahagi ng orihinal na estimate. Malaki ang pagkakaiba-iba ng aktwal na gastos depende sa tao; ang figure na ito ay representative na average, hindi obligadong gastusin o isang hangganan.",
+      ],
+    },
   ],
-  totalPerPerson: "~2,735€ – 2,880€ (lahat kasama)",
-  totalGroup: "~13,680€ – 14,400€ (5 tao)",
+  totalPerPerson: "~2,965€ – 3,110€ (lahat kasama)",
+  totalGroup: "~14,825€ – 15,550€ (5 tao)",
 };
