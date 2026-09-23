@@ -261,12 +261,14 @@ function KonbiniView() {
                         />
                       </div>
                     )}
-                    <span
-                      className="px-2.5 py-1 rounded-lg text-xs font-black tracking-wider text-white uppercase shadow-sm"
-                      style={{ backgroundColor: chain.themeColor }}
-                    >
-                      {chain.name}
-                    </span>
+                    {chain.id !== "lawson" && (
+                      <span
+                        className="px-2.5 py-1 rounded-lg text-xs font-black tracking-wider text-white uppercase shadow-sm"
+                        style={{ backgroundColor: chain.themeColor }}
+                      >
+                        {chain.name}
+                      </span>
+                    )}
                     <span className="text-xs font-medium" style={{ color: "var(--ink-soft)" }}>
                       {chain.jp}
                     </span>
