@@ -213,3 +213,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-25 10:09 UTC** — fix(future-trips): import missing useEffect hook in FutureTripsPage (`6c3d5b4`)
 - **2026-09-25 10:13 UTC** — feat(future-trips): auto-scroll smoothly to expanded day matching original itinerary (`f0b50f9`)
 - **2026-09-25 10:23 UTC** — refactor(future-trips): remove redundant filter pills as they are already navigation ... (`5e027b2`)
+- **2026-09-25 10:25 UTC** — feat(future-trips): add Narita arrival day (Day 1) and return to ... (`148eb4e`)
