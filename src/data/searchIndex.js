@@ -212,7 +212,7 @@ function buildSearchIndex(lang) {
     },
     {
       id: "nav-futuro-viajes",
-      title: "Para viajes futuros",
+      title: "Viajes futuros",
       subtitle: "Nikko, Hokkaido, Okinawa e ideas guardadas para la próxima vez",
       category: "Apartados",
       tab: "futuro-viajes",

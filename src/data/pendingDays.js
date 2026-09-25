@@ -1153,11 +1153,28 @@ export const pendingDays = {
   ]
 };
 
+export const futureLocationCoords = {
+  nikko: { lat: 36.7580, lng: 139.5989, emoji: "🏯", color: "#c1121f" },
+  "fuji-hiking": { lat: 35.3606, lng: 138.7274, emoji: "🏔️", color: "#2a9d8f" },
+  "hiroshima-nagasaki": { lat: 34.3928, lng: 132.4526, emoji: "🕊️", color: "#457b9d" },
+  hokkaido: { lat: 43.0598, lng: 141.3533, emoji: "❄️", color: "#1d3557" },
+  okinawa: { lat: 26.2170, lng: 127.7195, emoji: "🌺", color: "#e76f51" },
+  "iriomote-stargazing": { lat: 24.3333, lng: 123.8167, emoji: "✨", color: "#6a4c93" },
+  miyajima: { lat: 34.2959, lng: 132.3197, emoji: "⛩️", color: "#b91c1c" },
+};
+
 export const pendingSectionLabel = {
-  es: "Para viajes futuros",
-  en: "For Future Trips",
-  fr: "Pour de futurs voyages",
-  tl: "Para sa Susunod na Biyahe",
+  es: "Viajes futuros",
+  en: "Future Trips",
+  fr: "Voyages futurs",
+  tl: "Susunod na Biyahe",
+};
+
+export const futureSectionTabs = {
+  es: { itinerary: "Itinerario futuro", map: "Mapa futuro" },
+  en: { itinerary: "Future Itinerary", map: "Future Map" },
+  fr: { itinerary: "Itinéraire futur", map: "Carte future" },
+  tl: { itinerary: "Susunod na Itinerary", map: "Susunod na Mapa" },
 };
 
 export const pendingSectionSubtitle = {

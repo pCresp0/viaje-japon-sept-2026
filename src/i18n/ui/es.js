@@ -8,7 +8,7 @@ export default {
   "nav.group.guia": "GUÍA",
   "nav.group.prep": "PREPARACIÓN",
   "nav.group.util": "UTILIDADES",
-  "nav.group.futuro": "PARA VIAJES FUTUROS",
+  "nav.group.futuro": "VIAJES FUTUROS",
 
   "nav.pendientes": "Cosas pendientes",
   "nav.inicio": "Inicio",
@@ -363,7 +363,7 @@ export default {
   "places.all": "Todos los lugares",
 
   "nav.about": "Sobre la web",
-  "nav.futuroViajes": "Para viajes futuros",
+  "nav.futuroViajes": "Viajes futuros",
   "day.now": "AHORA",
   "day.upcoming": "PRÓXIMAMENTE",
   "frikadas.eyebrow": "Para frikis",
