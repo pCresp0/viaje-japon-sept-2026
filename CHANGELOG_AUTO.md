@@ -210,3 +210,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-25 10:04 UTC** — refactor(future-trips): sequence 11 days geographically with seamless transport connections (`63beb77`)
 - **2026-09-25 10:05 UTC** — feat(future-trips): adopt collapsible cards layout identical to original itinerary (`c9e432a`)
 - **2026-09-25 10:08 UTC** — feat(future-trips): add Día 1..11 numbering and complete transit guides (`4da4128`)
+- **2026-09-25 10:09 UTC** — fix(future-trips): import missing useEffect hook in FutureTripsPage (`6c3d5b4`)
