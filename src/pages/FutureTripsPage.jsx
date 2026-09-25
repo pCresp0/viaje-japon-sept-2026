@@ -78,42 +78,52 @@ export default function FutureTripsPage() {
                   />
 
                   {d.history && (
-                    <p className="text-xs leading-relaxed" style={{ color: "var(--ink-soft)" }}>
-                      {d.history}
-                    </p>
+                    <div className="pt-1">
+                      <p
+                        className="font-display font-bold text-[15px] sm:text-[15.5px] mb-1.5"
+                        style={{ color: "var(--shu)", letterSpacing: "0.01em" }}
+                      >
+                        {lang === "en" ? "History & Context" : lang === "fr" ? "Histoire & Contexte" : lang === "tl" ? "Kasaysayan at Konteksto" : "Historia y contexto"}
+                      </p>
+                      <PlaceText
+                        as="p"
+                        text={d.history}
+                        className="text-[13.5px] leading-[1.65] m-0"
+                        style={{ color: "var(--ink)", whiteSpace: "pre-wrap" }}
+                        linkStyle={{ color: "var(--shu)", fontWeight: 600 }}
+                      />
+                    </div>
                   )}
 
-                  <div className="space-y-2 pt-1">
+                  <div className="pt-2 pb-1 space-y-4">
                     {d.schedule.map((item, i) => (
-                      <div
-                        key={i}
-                        className="p-3 rounded-xl border flex flex-col gap-1"
-                        style={{
-                          background: "var(--paper)",
-                          borderColor: "var(--line)",
-                        }}
-                      >
-                        <span
-                          className="font-display font-bold text-[13.5px] sm:text-[14px]"
-                          style={{ color: "var(--shu)" }}
+                      <div key={i}>
+                        <p
+                          className="font-display font-bold text-[15px] sm:text-[15.5px] mb-1.5"
+                          style={{
+                            color: "var(--shu)",
+                            letterSpacing: "0.01em",
+                          }}
                         >
                           {item.time}
-                        </span>
+                        </p>
                         <PlaceText
                           as="p"
                           text={item.text}
-                          className="text-xs sm:text-[13px] leading-relaxed m-0"
-                          style={{ color: "var(--ink)" }}
-                          linkStyle={{ color: "var(--shu)" }}
+                          className="text-[13.5px] leading-[1.65] m-0"
+                          style={{ color: "var(--ink)", whiteSpace: "pre-wrap" }}
+                          linkStyle={{ color: "var(--shu)", fontWeight: 600 }}
                         />
                       </div>
                     ))}
                   </div>
 
                   {d.money && (
-                    <p className="text-xs pt-1" style={{ color: "var(--ink-soft)", borderTop: "1px solid var(--line)" }}>
-                      💰 {d.money}
-                    </p>
+                    <div className="pt-3 mt-1" style={{ borderTop: "1px solid var(--line)" }}>
+                      <p className="text-xs sm:text-[13px] leading-relaxed" style={{ color: "var(--ink-soft)" }}>
+                        💰 {d.money}
+                      </p>
+                    </div>
                   )}
                 </div>
               )}

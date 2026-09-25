@@ -1,400 +1,1156 @@
 // Días que se habían planeado pero que finalmente no se hicieron en este viaje
-// (por ejemplo, por mal tiempo). Se guardan aquí, fuera del itinerario de los
-// 15 días, como referencia para un futuro viaje -- no se borran, solo se
-// ocultan de la vista principal. Estructura multilingüe propia (no pasa por
-// el sistema de fusión de content.js).
-
-const nikkoSchedule = {
-  es: [
-    { time: "06:30", text: "Despertar." },
-    { time: "06:50", text: "Salida hacia la Estación de Tobu-Asakusa (misma zona que el hotel, 15-25 min andando)." },
-    { time: "~07:15", text: "Llegada a la estación. Recogida de billetes físicos si es necesario, antes de embarcar." },
-    { time: "07:30", text: "🚅 Limited Express Kegon, Asakusa → Tobu-Nikko. Llegada a Tobu-Nikko a las 09:20 (1 h 50 min de trayecto). Recomendado el Tobu World Heritage Pass (~¥4.160/persona ≈ 22,60€), que incluye ida y vuelta en Limited Express más autobuses ilimitados por Nikko durante 2 días." },
-    { time: "09:20", text: "Llegada a Tobu-Nikko Station. Recogida de folletos/mapa en el centro de turismo de la estación." },
-    { time: "~09:40", text: "🚌 Bus hacia la zona de templos. Parada justo enfrente de la estación, dirección Chuzenji-onsen/Yumoto-onsen -- bajar en \"Shinkyo\" o \"Nishisando-iriguchi\". Salidas cada 15-30 min durante toda la mañana." },
-    { time: "10:00–13:00", text: "🏯 Santuario Toshogu y alrededores. Puente Shinkyo (el puente rojo icónico sobre el río Daiya, símbolo de Nikko). Complejo de Toshogu: la puerta Yomeimon profusamente decorada, el relieve del 'mono que no ve, no oye, no habla', y el mausoleo de Tokugawa Ieyasu. Rinno-ji y Futarasan Jinja, los otros dos templos del conjunto Patrimonio de la Humanidad. Entrada combinada aprox. ¥2.100/persona." },
-    { time: "13:00–13:45", text: "🍜 Almuerzo local: probar el yuba (piel de tofu), especialidad de Nikko desde hace siglos." },
-    { time: "~13:55", text: "🚌 Bus hacia el lago Chuzenji, por la carretera de montaña Irohazaka (curvas muy pronunciadas, vistas espectaculares). Trayecto de 40-50 min." },
-    { time: "14:40–16:30", text: "🏔️ Lago Chuzenji y cataratas Kegon. El lago, a los pies del monte Nantai. Las cataratas Kegon, de 97 m de caída, se ven bien de forma gratuita desde la plataforma superior, o con ascensor a la plataforma inferior (entrada aprox. ¥570)." },
-    { time: "~16:40", text: "🚌 Bus de vuelta a Tobu-Nikko. Trayecto de 40-50 min." },
-    { time: "17:44", text: "🚅 Limited Express Revaty Kegon, Tobu-Nikko → Asakusa. Llegada a Asakusa a las 19:35 (1 h 51 min de trayecto)." },
-  ],
-  en: [
-    { time: "06:30", text: "Wake up." },
-    { time: "06:50", text: "Head to Tobu-Asakusa Station (same area as the hotel, 15-25 min on foot)." },
-    { time: "~07:15", text: "Arrival at the station. Pick up physical tickets if needed, before boarding." },
-    { time: "07:30", text: "🚅 Limited Express Kegon, Asakusa → Tobu-Nikko. Arrival at Tobu-Nikko at 09:20 (1h 50min journey). Recommended: the Tobu World Heritage Pass (~¥4,160/person ≈ €22.60), including the round trip Limited Express plus unlimited buses around Nikko for 2 days." },
-    { time: "09:20", text: "Arrival at Tobu-Nikko Station. Pick up brochures/map at the station's tourist center." },
-    { time: "~09:40", text: "🚌 Bus toward the temple area. Stop right in front of the station, bound for Chuzenji-onsen/Yumoto-onsen -- get off at \"Shinkyo\" or \"Nishisando-iriguchi\". Departures every 15-30 min all morning." },
-    { time: "10:00–13:00", text: "🏯 Toshogu Shrine and surroundings. Shinkyo Bridge (the iconic red bridge over the Daiya River, symbol of Nikko). Toshogu complex: the lavishly decorated Yomeimon Gate, the relief of the 'see no evil, hear no evil, speak no evil' monkeys, and the mausoleum of Tokugawa Ieyasu. Rinno-ji and Futarasan Jinja, the other two temples in the World Heritage ensemble. Combined admission approx. ¥2,100/person." },
-    { time: "13:00–13:45", text: "🍜 Local lunch: try yuba (tofu skin), a Nikko specialty for centuries." },
-    { time: "~13:55", text: "🚌 Bus toward Lake Chuzenji, along the Irohazaka mountain road (very sharp curves, spectacular views). 40-50 min ride." },
-    { time: "14:40–16:30", text: "🏔️ Lake Chuzenji and Kegon Falls. The lake, at the foot of Mount Nantai. Kegon Falls, a 97m drop, is clearly visible for free from the upper platform, or by elevator to the lower platform (admission approx. ¥570)." },
-    { time: "~16:40", text: "🚌 Bus back to Tobu-Nikko. 40-50 min ride." },
-    { time: "17:44", text: "🚅 Limited Express Revaty Kegon, Tobu-Nikko → Asakusa. Arrival at Asakusa at 19:35 (1h 51min journey)." },
-  ],
-  fr: [
-    { time: "06:30", text: "Réveil." },
-    { time: "06:50", text: "Direction la gare de Tobu-Asakusa (même zone que l'hôtel, 15-25 min à pied)." },
-    { time: "~07:15", text: "Arrivée à la gare. Récupération des billets physiques si nécessaire, avant d'embarquer." },
-    { time: "07:30", text: "🚅 Limited Express Kegon, Asakusa → Tobu-Nikko. Arrivée à Tobu-Nikko à 09h20 (1h50 de trajet). Recommandé : le Tobu World Heritage Pass (~¥4 160/personne ≈ 22,60 €), incluant l'aller-retour en Limited Express plus des bus illimités dans Nikko pendant 2 jours." },
-    { time: "09:20", text: "Arrivée à la gare de Tobu-Nikko. Récupération de brochures/carte au centre touristique de la gare." },
-    { time: "~09:40", text: "🚌 Bus vers la zone des temples. Arrêt juste devant la gare, direction Chuzenji-onsen/Yumoto-onsen -- descendre à \"Shinkyo\" ou \"Nishisando-iriguchi\". Départs toutes les 15-30 min toute la matinée." },
-    { time: "10:00–13:00", text: "🏯 Sanctuaire Toshogu et alentours. Pont Shinkyo (le célèbre pont rouge sur la rivière Daiya, symbole de Nikko). Complexe de Toshogu : la porte Yomeimon richement décorée, le relief des singes 'je ne vois rien, je n'entends rien, je ne dis rien', et le mausolée de Tokugawa Ieyasu. Rinno-ji et Futarasan Jinja, les deux autres temples de l'ensemble du patrimoine mondial. Entrée combinée environ ¥2 100/personne." },
-    { time: "13:00–13:45", text: "🍜 Déjeuner local : goûter le yuba (peau de tofu), spécialité de Nikko depuis des siècles." },
-    { time: "~13:55", text: "🚌 Bus vers le lac Chuzenji, par la route de montagne Irohazaka (virages très serrés, vues spectaculaires). 40-50 min de trajet." },
-    { time: "14:40–16:30", text: "🏔️ Lac Chuzenji et chutes de Kegon. Le lac, au pied du mont Nantai. Les chutes de Kegon, une chute de 97 m, bien visibles gratuitement depuis la plateforme supérieure, ou en ascenseur jusqu'à la plateforme inférieure (entrée environ ¥570)." },
-    { time: "~16:40", text: "🚌 Bus retour vers Tobu-Nikko. 40-50 min de trajet." },
-    { time: "17:44", text: "🚅 Limited Express Revaty Kegon, Tobu-Nikko → Asakusa. Arrivée à Asakusa à 19h35 (1h51 de trajet)." },
-  ],
-  tl: [
-    { time: "06:30", text: "Gising na." },
-    { time: "06:50", text: "Papuntang Tobu-Asakusa Station (parehong lugar ng hotel, 15-25 min na lakad)." },
-    { time: "~07:15", text: "Pagdating sa estasyon. Kunin ang physical tickets kung kailangan, bago sumakay." },
-    { time: "07:30", text: "🚅 Limited Express Kegon, Asakusa → Tobu-Nikko. Pagdating sa Tobu-Nikko ng 09:20 (1h 50min na biyahe). Inirerekomenda ang Tobu World Heritage Pass (~¥4,160/tao ≈ 22,60€), kasama ang round trip sa Limited Express plus unlimited na bus sa Nikko sa loob ng 2 araw." },
-    { time: "09:20", text: "Pagdating sa Tobu-Nikko Station. Kumuha ng brochure/mapa sa tourist center ng estasyon." },
-    { time: "~09:40", text: "🚌 Bus patungo sa temple area. Hintuan mismo sa harap ng estasyon, patungong Chuzenji-onsen/Yumoto-onsen -- bumaba sa \"Shinkyo\" o \"Nishisando-iriguchi\". May alis tuwing 15-30 min buong umaga." },
-    { time: "10:00–13:00", text: "🏯 Toshogu Shrine at paligid nito. Shinkyo Bridge (ang kilalang pulang tulay sa Ilog Daiya, simbolo ng Nikko). Toshogu complex: ang mayamang dekorasyon na Yomeimon Gate, ang relief ng mga unggoy na 'walang nakita, walang narinig, walang sinabi', at ang mausoleum ni Tokugawa Ieyasu. Rinno-ji at Futarasan Jinja, ang dalawa pang templo sa World Heritage ensemble. Kombinadong entrance mga ¥2,100/tao." },
-    { time: "13:00–13:45", text: "🍜 Lokal na tanghalian: subukan ang yuba (balat ng tofu), specialty ng Nikko sa loob ng mga siglo." },
-    { time: "~13:55", text: "🚌 Bus patungo sa Lake Chuzenji, sa Irohazaka mountain road (matatarik na kurbada, magagandang tanawin). 40-50 min na biyahe." },
-    { time: "14:40–16:30", text: "🏔️ Lake Chuzenji at Kegon Falls. Ang lawa, sa paanan ng Mount Nantai. Ang Kegon Falls, 97m ang taas, malinaw na makikita nang libre mula sa itaas na plataporma, o gamit ang elevator papunta sa mas mababang plataporma (entrance mga ¥570)." },
-    { time: "~16:40", text: "🚌 Bus pabalik sa Tobu-Nikko. 40-50 min na biyahe." },
-    { time: "17:44", text: "🚅 Limited Express Revaty Kegon, Tobu-Nikko → Asakusa. Pagdating sa Asakusa ng 19:35 (1h 51min na biyahe)." },
-  ],
-};
+// (por ejemplo, por mal tiempo) o ideas seleccionadas para futuros viajes.
+// Formato editorial enriquecido con títulos temáticos e información cultural, práctica e histórica.
 
 export const pendingDays = {
   es: [
     {
       id: "nikko",
       title: "Excursión a Nikko",
-      cities: "Nikko",
+      cities: "Nikko (Tochigi)",
       reason: "No se hizo por mal tiempo (estaba prevista el domingo 20 de septiembre de 2026, movida desde el sábado por falta de disponibilidad de trenes).",
-      summary: "Día completo de naturaleza y templos a 2 horas de Tokio en tren directo desde Asakusa (literalmente al lado del hotel): el santuario Toshogu, mausoleo del shogun Tokugawa Ieyasu y Patrimonio de la Humanidad, el Puente Shinkyo, las cataratas Kegon y el lago Chuzenji por la carretera de montaña Irohazaka.",
-      history: "Nikko se desarrolló en torno al santuario Toshogu, construido en 1617 como mausoleo de Tokugawa Ieyasu, fundador del shogunato que gobernó Japón durante más de 250 años. Su nieto Iemitsu lo amplió hasta convertirlo en el complejo profusamente decorado que se ve hoy, con más de 5 millones de hojas de pan de oro repartidas entre sus edificios.",
-      schedule: nikkoSchedule.es,
-      money: "Aprox. 40€ (comidas) + 11,40€ entradas Toshogu + 22,60€ Tobu World Heritage Pass (por persona)",
+      summary: "Excursión de un día completo desde Tokio hacia las montañas sagradas de Tochigi. Nikko combina algunos de los santuarios y templos más suntuosos y ricamente decorados de todo Japón (Patrimonio de la Humanidad UNESCO) con un espectacular entorno natural de cascadas alpinas, lagos volcánicos y bosques de cedros centenarios.",
+      history: "Nikko floreció en el siglo VIII como centro eremítico budista fundado por el monje Shodo Shonin. En 1617 fue elegido como lugar de descanso final de Tokugawa Ieyasu, el gran unificador de Japón y fundador del shogunato Tokugawa que trajo más de 250 años de paz durante el periodo Edo. Su nieto Iemitsu transformó el modesto mausoleo inicial en el deslumbrante complejo de Toshogu con más de 5 millones de láminas de pan de oro, consagrando a su abuelo como la deidad tutelar de Japón (Tosho Daigongen).",
+      schedule: [
+        {
+          time: "Acceso rápido en Limited Express y Nikko Pass",
+          text: "El tren Limited Express (Spacia X o Revaty) parte directamente de la estación Tobu-Asakusa y llega a Tobu-Nikko en 1 h 50 min sin transbordos. La opción más cómoda y económica es el Tobu Nikko World Heritage Area Pass (o el All Area Pass para subir a Chuzenji), que incluye el viaje de ida y vuelta en tren y autobuses ilimitados por toda la zona durante 2 días."
+        },
+        {
+          time: "Puente Shinkyo: La pasarela sagrada bermellón",
+          text: "El icónico puente de madera roja que cruza el torrente del río Daiya a la entrada del recinto sagrado. Cuenta la leyenda que en el año 766 el monje Shodo Shonin no podía cruzar las aguas embravecidas hasta que dos serpientes enviadas por los dioses se entrelazaron formando este puente. Es considerado uno de los tres puentes más hermosos de todo Japón."
+        },
+        {
+          time: "Templo Rinno-ji y el Pabellón Sanbutsudo",
+          text: "El templo budista más importante de Nikko, fundado hace más de 1.200 años. Su sala principal, Sanbutsudo, es uno de los mayores edificios de madera del este de Japón y custodia tres colosales estatuas doradas de 8,5 metros de altura que representan a Amida Buda, Senju-Kannon (Kannon de mil brazos) y Bato-Kannon (con cabeza de caballo), correspondientes a los tres montes sagrados de Nikko."
+        },
+        {
+          time: "Santuario Toshogu: El mausoleo dorado de Ieyasu",
+          text: "El epicentro monumental de Nikko. A diferencia de la habitual sobriedad zen japonesa, Toshogu es una explosión deslumbrante de estilo barroco japonés con más de 500 esculturas policromadas encajadas entre gigantescos cedros centenarios. Destaca la Puerta Yomeimon ('la puerta del atardecer'), apodada así porque uno podría pasar un día entero contemplando sus 508 tallas minuciosas de dragones, sabios y niños jugando sin llegar a cansarse."
+        },
+        {
+          time: "Los Tres Monos Sabios y Nemuri-neko",
+          text: "En los antiguos establos sagrados de Toshogu se encuentra el famoso friso tallado de los tres monos místicos: Mizaru (no ve el mal), Kikazaru (no oye el mal) e Iwazaru (no habla el mal), parte de una secuencia de 8 paneles que alegorizan las etapas de la vida humana. Junto a la escalinata que sube a la tumba del shogun en la cima del bosque se halla 'Nemuri-neko' (el gato dormido), diminuta obra maestra tallada por Hidari Jingoro con un gato durmiendo y gorriones esculpidos en su reverso, simbolizando la paz duradera del país."
+        },
+        {
+          time: "Carretera Irohazaka y mirador Akechidaira",
+          text: "Una de las carreteras panorámicas más célebres de Japón: 48 curvas cerradas de montaña de sentido único (tantas como letras del antiguo silabario japonés 'Iroha'). En la subida, una parada en el teleférico de Akechidaira permite acceder a un mirador con la postal definitiva: las cataratas Kegon emergiendo del lago Chuzenji con el imponente monte volcánico Nantai recortado al fondo."
+        },
+        {
+          time: "Cataratas Kegon y Lago Chuzenji",
+          text: "A 1.269 metros de altitud, el lago Chuzenji se formó hace 20.000 años tras la erupción del volcán Nantai. Su desagüe natural se precipita por las cataratas Kegon, una impresionante caída vertical de 97 metros flanqueada por doce cascadas menores que brotan entre columnas de basalto. Hay una plataforma panorámica superior gratuita y un ascensor subterráneo que desciende 100 metros por el interior de la roca hasta la base del cañón."
+        },
+        {
+          time: "Gastronomía tradicional: Yuba y Soba artesanal",
+          text: "La especialidad histórica por excelencia de Nikko es el Yuba (la delicada piel que se forma en la superficie al hervir la leche de soja), alimento fundamental de los monjes budistas vegetarianos (shojin ryori) desde hace siglos. Se sirve frita, en rollitos glaseados, en sopa o sobre cuencos humeantes de soba fresca de montaña elaborada con el agua cristalina de los manantiales locales."
+        }
+      ],
+      money: "Aprox. 40€ (comidas) + 11,40€ (entradas Toshogu y templos) + 22,60€ (Tobu World Heritage Pass ida/vuelta con buses ilimitados por persona).",
     },
     {
       id: "fuji-hiking",
-      title: "Senderismo por el Monte Fuji",
-      cities: "Monte Fuji",
-      reason: "Idea para un futuro viaje -- no formaba parte del itinerario de este viaje (esta vez solo se vio desde Kawaguchiko/Oshino Hakkai, sin subir).",
-      summary: "Subir de verdad al Monte Fuji, no solo verlo de lejos: la ascensión clásica se hace de noche desde la 5ª estación (Fuji Subaru Line, ~2.300 m) por la ruta Yoshida, la más popular, para llegar a la cima a tiempo de ver el goraiko (amanecer) desde los 3.776 m -- el punto más alto de Japón.",
-      history: "La temporada oficial de ascenso es muy corta: normalmente de principios de julio a principios de septiembre, así que un viaje en septiembre como este ya llega casi al límite o fuera de temporada -- fuera de esas fechas el sendero está cerrado y no hay refugios ni asistencia. Desde 2024, la ruta Yoshida exige reserva previa online y una franja horaria de entrada, además de una tasa de conservación.",
+      title: "Senderismo y ascensión al Monte Fuji",
+      cities: "Monte Fuji (Yamanashi / Shizuoka)",
+      reason: "Idea para un futuro viaje -- en este viaje se contempló la silueta del volcán desde el lago Kawaguchiko y Oshino Hakkai, pero subir a la cumbre es una experiencia totalmente diferente.",
+      summary: "Coronar el pico más alto de Japón (3.776 m) es una de las aventuras y peregrinaciones más memorables del país. La ascensión clásica se realiza al atardecer y de noche por la ruta Yoshida desde la 5ª estación, pernoctando unas horas en un refugio a gran altitud para emprender el tramo final de madrugada y contemplar el mar de nubes iluminado por el sol naciente.",
+      history: "Venerado como montaña sagrada desde tiempos inmemoriales y hogar espiritual de la diosa sintoísta Konohanasakuya-hime, el Fuji fue durante siglos un santuario natural reservado a monjes ascetas (yamabushi). Hoy es una peregrinación nacional abierta a senderistas de todo el mundo; un célebre proverbio japonés dice: 'Quien sube al monte Fuji una vez es un sabio, quien lo sube dos veces es un necio' (por la exigencia física y la rudeza de sus laderas volcánicas).",
       schedule: [
-        { time: "Tarde", text: "Subida hasta un refugio de montaña sobre la 7ª-8ª estación (~3.000-3.400 m), para descansar unas horas antes del tramo final nocturno." },
-        { time: "Madrugada", text: "Última subida hasta la cima con linternas frontales, cronometrada para llegar justo antes del amanecer." },
-        { time: "Amanecer", text: "Goraiko desde la cima (3.776 m), y bajada por una ruta distinta a la de subida." },
+        {
+          time: "Ruta Yoshida: La senda clásica desde la 5ª Estación (2.300 m)",
+          text: "La ruta tradicional de peregrinación que parte de la 5ª Estación Fuji Subaru Line. El sendero serpentea primero entre alerces y matorrales volcánicos para adentrarse rápidamente en una pendiente rojiza de ceniza y bloques de lava andesítica, jalonada por refugios escalonados entre la 7ª y la 8ª estación."
+        },
+        {
+          time: "Pernocta en un refugio de montaña (Yamagoya)",
+          text: "Una experiencia comunitaria auténtica a más de 3.000 metros de altitud en literas de madera con mantas térmicas. Se sirve una cena caliente tradicional de curry japonés con arroz y se descansa unas pocas horas mientras el cuerpo se aclimata a la falta de oxígeno y a las bajas temperaturas nocturnas (que rondan los 0 °C incluso en agosto)."
+        },
+        {
+          time: "El ascenso nocturno con frontales",
+          text: "Hacia la medianoche o la 1:00 am los senderistas encienden sus linternas frontales y emprenden la última subida. Desde la ladera se observa un río serpenteante de cientos de luces brillantes que ascienden en la oscuridad absoluta bajo una cúpula infinita de estrellas hasta las puertas torii que marcan la entrada al recinto de la cumbre."
+        },
+        {
+          time: "Goraiko: El amanecer sagrado en la cumbre (3.776 m)",
+          text: "La culminación del esfuerzo. Desde el borde del cráter, a 3.776 metros, se presencia el 'Goraiko' (la llegada de la luz sagrada): el sol naciente emerge sobre un océano blanco de nubes que cubre todo Japón, proyectando la gigantesca sombra piramidal del monte Fuji (Kagefuji) sobre el horizonte opuesto."
+        },
+        {
+          time: "Ohachi-meguri: Vuelta al cráter y Pico Kengamine",
+          text: "Un circuito de senderismo de unos 90 minutos que bordea el perímetro del inmenso cráter volcánico de 500 metros de diámetro y 250 metros de profundidad. Culmina en Kengamine, el punto geográfico más alto de Japón, donde se ubica la histórica estación meteorológica del Fuji."
+        },
+        {
+          time: "Kongo-zue: El bastón de madera del peregrino",
+          text: "En la 5ª estación se compra un bastón de madera octogonal de peregrino (kongo-zue) rematado con una campanilla. En cada refugio alcanzado durante la subida, los monjes y guardas marcan a fuego sellos únicos con hierros candentes que acreditan la altitud alcanzada, convirtiendo el bastón en el recuerdo más personal y valioso de la aventura."
+        },
+        {
+          time: "Sunabashiri: El vertiginoso descenso por la ceniza volcánica",
+          text: "La bajada se realiza por una ruta separada de pendientes de grava y ceniza suelta volcánica. Utilizando polainas en las botas y bastones de senderismo, se puede descender a gran velocidad dando largas zancadas sobre la ceniza suave (la técnica conocida como 'sunabashiri'), reduciendo el tiempo de descenso a unas 3 horas."
+        },
+        {
+          time: "Normativa y reservas (temporada y tasa oficial)",
+          text: "La temporada oficial va desde principios de julio hasta principios de septiembre. Desde 2024, para evitar la masificación y las peligrosas ascensiones exprés sin descanso ('bullet climbing'), el gobierno de Yamanashi exige reserva online previa de cupo diario (límite de 4.000 escaladores/día), el abono de una tasa de entrada de ¥2.000 más la contribución voluntaria de conservación de ¥1.000."
+        }
       ],
-      money: "Variable según refugio reservado; conservation fee y reserva de franja horaria obligatorias desde 2024 en la ruta Yoshida.",
+      money: "Alojamiento en refugio con cena y desayuno (~¥10.000-14.000) + tasa obligatoria de acceso y conservación (¥3.000) + transporte en autobús desde Tokio/Kawaguchiko.",
     },
     {
       id: "hiroshima-nagasaki",
-      title: "Hiroshima y Nagasaki",
+      title: "Hiroshima y Nagasaki: Memoria, Paz e Historia",
       cities: "Hiroshima, Nagasaki",
-      reason: "Idea para un futuro viaje -- no formaba parte del itinerario de este viaje (ninguna de las dos ciudades se visitó).",
-      summary: "Las dos ciudades sobre las que se lanzaron las bombas atómicas en agosto de 1945, hoy centradas en la memoria y la paz -- y con motivos de sobra para visitarlas más allá de esa historia: la isla de Miyajima con su torii flotante junto a Hiroshima, y el pasado único de Nagasaki como una de las pocas ventanas de Japón al mundo exterior durante siglos de aislamiento.",
-      history: "Hiroshima fue arrasada por la primera bomba atómica usada en un conflicto, el 6 de agosto de 1945; el Parque Memorial de la Paz y la Cúpula Genbaku (una de las pocas estructuras que quedó en pie cerca del hipocentro) son hoy testimonio de ello. Nagasaki, bombardeada tres días después, tiene además una historia distinta y más larga: durante el periodo de aislamiento (sakoku) de los siglos XVII-XIX, la isla artificial de Dejima fue durante generaciones el único punto de contacto comercial autorizado entre Japón y Occidente (los neerlandeses).",
+      reason: "Idea para un futuro viaje -- dos ciudades profundamente conmovedoras y vitales que no formaron parte del itinerario de este viaje.",
+      summary: "Las dos únicas ciudades del mundo marcadas por los bombardeos atómicos de agosto de 1945, hoy convertidas en faros globales de paz, reconciliación y memoria. Además de sus museos imprescindibles, ofrecen un patrimonio cultural fascinante: la exuberante gastronomía de Hiroshima y el legado multicultural único de Nagasaki como única ventana de Japón al mundo occidental durante siglos.",
+      history: "El 6 de agosto de 1945, Hiroshima fue devastada por la primera bomba atómica de la historia bélica; tres días después, el 9 de agosto, Nagasaki sufrió el segundo impacto. Ambas ciudades transformaron la tragedia en un mensaje mundial de abolición nuclear. Nagasaki, además, atesora una historia única: durante los más de 200 años de la estricta política de aislamiento nacional (sakoku), la pequeña isla artificial de Dejima fue la única puerta de entrada para comerciantes holandeses, científicos y médicos occidentales en todo Japón.",
       schedule: [
-        { time: "Hiroshima", text: "Parque Memorial de la Paz, Cúpula Genbaku y Museo Memorial de la Paz; excursión a la isla de Miyajima (santuario Itsukushima y su torii flotante)." },
-        { time: "Nagasaki", text: "Parque de la Paz y museo de la bomba atómica; isla de Dejima, reconstruida como museo al aire libre del antiguo enclave comercial neerlandés." },
+        {
+          time: "Hiroshima: Parque y Museo Memorial de la Paz",
+          text: "Ubicado en el delta del río Motoyasu, justo bajo el hipocentro de la explosión del 6 de agosto de 1945. El parque alberga el Cenotafio con los nombres de todas las víctimas y la Llama de la Paz, encendida en 1964 con la promesa de no apagarse hasta que todas las armas nucleares del planeta sean destruidas. El Museo Memorial exhibe testimonios desgarradores, objetos personales de supervivientes (hibakusha) y una cronología rigurosa del horror atómico."
+        },
+        {
+          time: "Cúpula Genbaku (A-Bomb Dome)",
+          text: "Antiguo Salón de Promoción Industrial de la Prefectura de Hiroshima, diseñado por el arquitecto checo Jan Letzel en 1915. Fue uno de los escasos edificios cercanos a la zona cero que no quedó completamente pulverizado porque la bomba explotó casi directamente encima (a unos 600 metros en el aire). Declarado Patrimonio de la Humanidad por la UNESCO en 1996, se conserva en su estado exacto de ruina como sobrecogedor símbolo universal de paz."
+        },
+        {
+          time: "Monumento a Sadako Sasaki y las mil grullas",
+          text: "Estatua dedicada a Sadako Sasaki, una niña de 2 años que sobrevivió a la bomba pero desarrolló leucemia diez años después. Inspirada por la leyenda japonesa del Senbazuru (quien pliegue mil grullas de origami verá concedido un deseo de salud), dobló grullas de papel medicinal con incansable esperanza hasta su muerte. Hoy en día, niños de escuelas de todo el mundo envían millones de grullas de colores que se exponen en vitrinas de cristal alrededor del monumento."
+        },
+        {
+          time: "Okonomiyaki estilo Hiroshima en Okonomimura",
+          text: "A diferencia del estilo de Osaka (donde todos los ingredientes se mezclan antes de ir a la plancha), el okonomiyaki de Hiroshima se elabora en delicadas capas sobre el teppan: una fina crepe de masa, montaña de col rallada, panceta de cerdo crujiente, fideos yakisoba dorados al dente, un huevo frito aplastado, cebolleta y abundante salsa Otafuku con mayonesa japonesa y alga aonori. En Okonomimura ('el pueblo del okonomiyaki'), un edificio entero de cuatro plantas alberga decenas de pequeños mostradores tradicionales compitiendo con sus recetas secretas."
+        },
+        {
+          time: "Nagasaki: Parque de la Paz y la Estatua de Seibo Kitamura",
+          text: "El Parque de la Paz de Nagasaki marca el hipocentro del bombardeo del 9 de agosto de 1945. Su elemento central es la monumental Estatua de la Paz de bronce de 10 metros creada por Seibo Kitamura: su mano derecha apunta al cielo recordando la amenaza nuclear, su brazo izquierdo se extiende horizontalmente simbolizando la paz eterna, y sus ojos entrecerrados transmiten una oración silenciosa por las víctimas."
+        },
+        {
+          time: "Isla de Dejima: La puerta de Occidente durante el Sakoku",
+          text: "Durante más de dos siglos de estricto aislamiento nacional (periodo Edo, 1641–1854), la isla artificial de Dejima en la bahía de Nagasaki fue el único punto de contacto comercial y científico autorizado entre Japón y Europa a través de la Compañía Neerlandesa de las Indias Orientales. Hoy ha sido meticulosamente reconstruida como un fascinante museo al aire libre con almacenes de madera, residencias de época y talleres donde entraron por primera vez a Japón el café, el billar, el vidrio y la medicina occidental (Rangaku)."
+        },
+        {
+          time: "Glover Garden y las colinas coloniales de Nagasaki",
+          text: "En lo alto de las colinas sobre el puerto se extienden los jardines y mansiones de comerciantes occidentales del siglo XIX, entre ellas la casa de Thomas Glover, comerciante escocés clave en la modernización naval e industrial de Japón. Sus balcones victorianos rodeados de jardines floridos ofrecen vistas espectaculares del puerto de Nagasaki y sirvieron de inspiración visual para la célebre ópera Madama Butterfly de Puccini."
+        },
+        {
+          time: "Fusión culinaria única: Champon, Sara Udon y Castella",
+          text: "Nagasaki cuenta con la cocina de fusión más singular de Japón: 1) Champon: contundente sopa de fideos gruesos en caldo de cerdo y pollo cargada de marisco fresco, verduras y cerdo, creada a finales del siglo XIX para alimentar a estudiantes chinos con poco presupuesto. 2) Sara Udon: fideos crujientes fritos bañados en un espeso salteado de verduras y calamares. 3) Castella (Kasutera): delicioso bizcocho esponjoso introducido por misioneros y navegantes portugueses en el siglo XVI, horneado con una fina capa crujiente de azúcar candi en la base."
+        }
       ],
-      money: "Variable -- ambas ciudades bien conectadas por Shinkansen (Hiroshima) y tren limitado exprés (Nagasaki) desde Osaka/Fukuoka.",
+      money: "Conexión directa en Shinkansen desde Shin-Osaka a Hiroshima (1 h 25 min) y tren exprés a Nagasaki; entradas a museos muy accesibles (~¥200-600).",
     },
     {
       id: "hokkaido",
-      title: "Hokkaido",
-      cities: "Sapporo, Furano, Shiretoko",
-      reason: "Idea para un futuro viaje -- naturaleza completamente distinta al resto de Japón, no visitada esta vez.",
-      summary: "La isla más al norte, con un paisaje que no tiene nada que ver con el resto del país: los campos de lavanda de Furano y Biei en verano, el parque nacional de Shiretoko (Patrimonio de la Humanidad, con osos pardos salvajes), aguas termales (onsen) en pleno campo, y si se viaja en invierno, nieve polvo de referencia mundial y el Festival de la Nieve de Sapporo.",
-      history: "Hokkaido fue la última de las grandes islas de Japón en integrarse formalmente en el país, colonizada de forma activa a partir de la era Meiji (desde 1869). Es la tierra ancestral del pueblo ainu, indígenas con lengua y cultura propias muy distintas de la japonesa mayoritaria, y hoy oficialmente reconocidos como pueblo indígena de Japón.",
+      title: "Hokkaido: Naturaleza indómita, nieve y volcanes",
+      cities: "Sapporo, Furano, Shiretoko, Otaru, Noboribetsu",
+      reason: "Idea para un futuro viaje -- la gran isla del norte ofrece un Japón radicalmente distinto al resto del archipiélago, con naturaleza virgen y paisajes alpinos.",
+      summary: "La frontera norte de Japón cautiva con su inmensidad espacial, sus volcanes humeantes, sus parques nacionales protegidos y su gastronomía legendaria basada en el marisco más fresco del país y productos lácteos de primera calidad. Un destino espectacular tanto en verano (campos de flores infinitos) como en invierno (la mejor nieve polvo del planeta y festivales de hielo).",
+      history: "Hokkaido ('camino del mar del norte') fue colonizada e incorporada plenamente a Japón a partir de la Restauración Meiji a finales del siglo XIX. Antes de ello era conocida como Ezochi, tierra ancestral del pueblo indígena Ainu, una cultura con cosmovisión animista, tradiciones orales y lengua propias que hoy cuenta con museos y centros culturales dedicados como Upopoy en Shiraoi.",
       schedule: [
-        { time: "Sapporo", text: "Capital de la isla, cervecerías históricas, mercado de pescado de Nijo, y el Festival de la Nieve en febrero si coincide con las fechas." },
-        { time: "Furano/Biei", text: "Campos de lavanda y colinas de cultivos de colores (temporada: junio-agosto)." },
-        { time: "Shiretoko", text: "Península declarada Patrimonio de la Humanidad por la UNESCO; cruceros de avistamiento de osos pardos y águilas marinas." },
+        {
+          time: "Sapporo: Parque Odori, Torre del Reloj y antigua sede de gobierno",
+          text: "La capital de Hokkaido es una ciudad abierta y cuadriculada, con una atmósfera muy distinta a Honshu. El Parque Odori cruza el centro como un oasis verde de 1,5 km que en febrero acoge el colosal Festival de la Nieve (Yuki Matsuri), con esculturas gigantes de hielo talladas a escala real. La Torre del Reloj de madera (1878) y el edificio de ladrillo rojo de la antigua sede del gobierno recuerdan los orígenes coloniales de la isla en la era Meiji."
+        },
+        {
+          time: "Miso Ramen en Ganso Ramen Yokocho y Mercado Nijo",
+          text: "Sapporo es la cuna del ramen de pasta de miso: fideos ondulados en caldo espeso sazonado con ajo, brotes de soja crujientes, maíz dulce de Hokkaido y una nuez de mantequilla fundente local. El legendario callejón Ganso Ramen Yokocho en Susukino reúne las tabernas históricas. Para el desayuno, el Mercado Nijo ofrece donburi (kaisen-don) repletos del mejor marisco de aguas frías: huevas de salmón ikura brillantes, erizo de mar dulce (uni) y patas de cangrejo de las nieves."
+        },
+        {
+          time: "Museo de la Cerveza Sapporo y festín Jingisukan (Genghis Khan)",
+          text: "La fábrica original de ladrillo rojo de 1876 es el único museo de la cerveza de Japón. En su histórica cervecería anexa se degusta el plato más popular de la isla: 'Jingisukan', finas tiras de cordero asadas en parrillas de hierro convexas con forma de casco mongol junto a cebollas, calabaza y brotes de soja, acompañadas de cerveza Sapporo recién tirada."
+        },
+        {
+          time: "Furano y Biei: Campos de lavanda y el Estanque Azul (Blue Pond)",
+          text: "En verano (julio-agosto), las colinas onduladas de Furano (Granja Tomita) se cubren de alfombras multicolores de lavanda, amapolas y girasoles. Muy cerca, en Biei, se encuentra el Shirogane Blue Pond, un estanque de agua turquesa lechosa irreal formada tras obras volcánicas en el río Bieigawa, del que emergen troncos esqueléticos de alerces sumergidos creando un paisaje de fantasía."
+        },
+        {
+          time: "Parque Nacional de Shiretoko: La última frontera salvaje (UNESCO)",
+          text: "En el extremo nororiental de la isla, Shiretoko significa 'el fin de la Tierra' en lengua ainu. Es uno de los ecosistemas más puros y vírgenes del hemisferio norte: acantilados volcánicos donde habitan la mayor densidad de osos pardos salvajes de Japón, águilas marinas de Steller y zorros rojos de Ezo. Se exploran en cruceros costeros desde Utoro y en senderos elevados de madera alrededor de los Cinco Lagos de Shiretoko."
+        },
+        {
+          time: "Otaru: Canal histórico, música mecánica y vidrio soplado",
+          text: "A 40 minutos de Sapporo se encuentra Otaru, un romántico puerto mercantil de principios del siglo XX. Su canal de piedra flanqueado por antiguos almacenes de arenque iluminados por farolas de gas al anochecer es una visita imprescindible, junto con los talleres artesanales de cristal soplado y el Museo de Cajas de Música."
+        },
+        {
+          time: "Valle del Infierno (Jigokudani) y Onsen en Noboribetsu",
+          text: "El principal destino termal de Hokkaido. Un sobrecogedor cráter volcánico activo con fumarolas de azufre, géiseres hirvientes y ríos de agua termal humeante que serpentean entre valles boscosos, abasteciendo decenas de baños onsen tradicionales al aire libre (rotenburo) con aguas ricas en minerales."
+        }
       ],
-      money: "Variable -- requiere vuelo interno o Shinkansen hasta Hakodate/Sapporo; alquiler de coche muy recomendable fuera de las ciudades.",
+      money: "Vuelo interno desde Tokio a Sapporo (~1 h 30 min) o Shinkansen hasta Hakodate; se recomienda alquilar coche para recorrer parques y zonas rurales.",
     },
     {
       id: "okinawa",
-      title: "Okinawa",
-      cities: "Naha, Ishigaki, Miyako",
-      reason: "Idea para un futuro viaje -- playas, islas y cultura Ryukyu, no visitada esta vez.",
-      summary: "El archipiélago subtropical del sur, con playas y arrecifes de coral que no encajan con la imagen habitual de Japón, y una cultura propia -- la Ryukyu -- con siglos de historia distinta a la del resto del país: idioma, gastronomía, música y arquitectura tradicional (los castillos gusuku) diferenciados.",
-      history: "Okinawa fue el Reino Ryukyu, un estado independiente con relación tributaria con China durante siglos, hasta su anexión forzosa por Japón en 1879. En 1945 fue escenario de una de las batallas más sangrientas del Pacífico (la Batalla de Okinawa), y no volvió a la soberanía japonesa hasta 1972, tras casi 30 años bajo administración estadounidense.",
+      title: "Okinawa y el Archipiélago Ryukyu",
+      cities: "Naha, Ishigaki, Miyakojima, Taketomi",
+      reason: "Idea para un futuro viaje -- playas paradisíacas, arrecifes de coral y una cultura ancestral independiente que no pudimos incluir esta vez.",
+      summary: "El archipiélago subtropical de Okinawa sorprende por su atmósfera caribeña, sus aguas turquesa cristalinas apodadas 'Miyako Blue', su música de sanshin que flota en el aire cálido y su propia arquitectura tradicional protegida por leones guardianes (shisa).",
+      history: "Durante más de 450 años, estas islas conformaron el independiente y próspero Reino de Ryukyu, un emporio comercial marítimo que comerciaba libremente con China, Japón, Corea y el sudeste asiático. Anexionado a Japón en 1879, Okinawa sufrió la devastadora Batalla de Okinawa en 1945 y permaneció bajo administración militar estadounidense hasta 1972, forjando una identidad cultural mestiza y resiliente.",
       schedule: [
-        { time: "Naha", text: "Castillo de Shuri (reconstruido, antigua residencia real del Reino Ryukyu, Patrimonio de la Humanidad), mercado Makishi, gastronomía okinawense (soba, goya champuru)." },
-        { time: "Islas Yaeyama (Ishigaki/Miyako)", text: "Playas y arrecifes de coral entre los mejores de Japón para bucear o hacer snorkel." },
+        {
+          time: "Naha y el Castillo de Shuri: El corazón del Reino Ryukyu",
+          text: "Antigua capital del Reino Ryukyu, un estado insular que prosperó durante siglos como puente marítimo comercial entre China, Japón y el Sudeste Asiático. El Castillo de Shuri (Gusuku), Patrimonio de la Humanidad, es una maravilla arquitectónica que combina motivos de dragones chinos con técnicas tradicionales de madera japonesa y fortificaciones de piedra caliza coralina."
+        },
+        {
+          time: "Calle Kokusai Dori y Mercado Público Makishi",
+          text: "La arteria más vibrante de Naha: tiendas de licores Awamori envejecidos en vasijas de barro, artesanía de vidrio Ryukyu soplado y dulces tradicionales chinsuko. El Mercado Público Makishi es el mercado de abasto popular donde señalar pescados tropicales (como el pez loro azul Gurukun) y mariscos vivos en la planta baja para que te los preparen al momento en los comedores de la primera planta."
+        },
+        {
+          time: "Miyakojima: Aguas turquesa 'Miyako Blue' y tortugas marinas",
+          text: "Famosa por tener las mejores playas de arena blanca y los arrecifes más vírgenes de todo Japón. La playa de Yonaha Maehama (7 km de arena blanca impoluta) y Sunayama Beach con su arco natural de roca coralina ofrecen aguas de una transparencia deslumbrante donde nadar habitualmente junto a tortugas marinas verdes en libertad en bahías como Shigira y Yoshino."
+        },
+        {
+          time: "Ishigaki y la paradisíaca Bahía de Kabira",
+          text: "La isla principal del archipiélago Yaeyama. Kabira Bay es una bahía de aguas verde esmeralda y colinas selváticas donde está prohibido el baño para proteger sus legendarias perlas negras cultivadas; se recorre en barcos con fondo de cristal para contemplar corales cerebro gigantes, anémonas y peces payaso. Por la noche, el mirador de Tamatorizaki ofrece una panorámica estelar de ensueño."
+        },
+        {
+          time: "Isla Taketomi: Casas tradicionales ryukyu y carretas de búfalos",
+          text: "A solo 10 minutos en ferry de Ishigaki, Taketomi conserva intacto el pueblo tradicional ryukyu: casas de madera de una sola planta con tejados de tejas rojas coronadas por estatuillas guardianas de león-dragón (Shisa), rodeadas de muros de piedra de coral sin argamasa y calles de arena blanca que los lugareños barren cada mañana. El transporte tradicional por el pueblo se hace en carretas tiradas por tranquilos búfalos de agua mientras el carretero toca el sanshin (banjo tradicional de tres cuerdas de piel de serpiente)."
+        },
+        {
+          time: "Gastronomía de la longevidad: Okinawa Soba, Goya Champuru y Umi-budo",
+          text: "Okinawa es una de las famosas 'Zonas Azules' del planeta por la excepcional longevidad de sus habitantes, muy vinculada a su dieta: 1) Okinawa Soba: fideos gruesos de trigo en caldo suave de costilla de cerdo y escamas de bonito con trozos tiernísimos de panceta confitada (soki). 2) Goya Champuru: salteado tradicional de melón amargo (goya) con tofu firme isleño, huevo y panceta. 3) Umi-budo ('uvas de mar'): alga verde fresca que estalla en boca como diminutas perlas crujientes de caviar marino, acompañadas de vinagre de soja y cítrico shikuwasa."
+        }
       ],
-      money: "Variable -- vuelo directo desde Tokio/Osaka a Naha o Ishigaki (~2-3h), sin necesidad de pase de tren.",
+      money: "Vuelos directos desde Tokio u Osaka hacia Naha, Miyako o Ishigaki (~2 h 30 min-3 h); transporte local en ferry interislas muy frecuente.",
     },
     {
       id: "iriomote-stargazing",
-      title: "Iriomote: cielos oscuros para astrofotografía",
-      cities: "Iriomote (Islas Yaeyama, Okinawa)",
-      reason: "Idea para un futuro viaje, pensada especialmente para ti -- con el telescopio y el dron, esto tiene toda la pinta de flipar.",
-      summary: "El Parque Nacional de Iriomote-Ishigaki fue el primer lugar de Asia certificado como 'International Dark Sky Park' por DarkSky International (2018), con niveles de contaminación lumínica casi nulos. La isla está cubierta en un 90% por selva subtropical casi virgen (hogar del gato de Iriomote, un felino salvaje en peligro de extinción que solo vive aquí), así que de día se puede hacer kayak por los manglares y de noche montar el equipo sin apenas luz artificial alrededor.",
-      history: "Por su latitud, desde Iriomote se puede ver parte del año la Cruz del Sur (Crux) asomando sobre el horizonte -- una constelación que, desde España, es sencillamente invisible por la latitud. Es una de las pocas zonas de Japón desde donde eso es posible.",
+      title: "Iriomote: Astrofotografía y expedición selvática",
+      cities: "Isla de Iriomote (Archipiélago Yaeyama, Okinawa)",
+      reason: "Idea para un futuro viaje, pensada especialmente para ti -- con telescopio, dron y equipo fotográfico es una de las experiencias nocturnas más sobrecogedoras del planeta.",
+      summary: "La isla más salvaje de Japón, cubierta en un 90% por una selva subtropical impenetrable y manglares vírgenes. El Parque Nacional Iriomote-Ishigaki está certificado por DarkSky International como Dark Sky Park internacional por sus niveles nulos de contaminación lumínica. De día se navega en kayak por estuarios selváticos y de noche se montan los trípodes bajo un firmamento donde la Vía Láctea se percibe en tres dimensiones.",
+      history: "Iriomote es famosa en el mundo zoológico por ser el único hogar del gato de Iriomote (Prionailurus bengalensis iriomotensis), un felino salvaje nocturno descubierto apenas en 1967 que representa un linaje evolutivo aislado durante milenios. Su latitud meridional (24° N) permite divisar la Cruz del Sur a ras del horizonte marino, una constelación imposible de observar desde España o Europa continental.",
       schedule: [
-        { time: "Día", text: "Kayak por los manglares del río Nakama, selva y cascadas del interior de la isla." },
-        { time: "Noche", text: "Sesión de astrofotografía en alguna de las zonas certificadas de cielo oscuro -- llevar el telescopio y el dron." },
+        {
+          time: "Reserva Internacional de Cielo Oscuro (Dark Sky Park)",
+          text: "El Parque Nacional Iriomote-Ishigaki fue el primer territorio de toda Asia reconocido y certificado por DarkSky International (2018). Con el 90% de su superficie cubierta por jungla deshabitada y situada a cientos de kilómetros de cualquier gran urbe, la oscuridad es total (Bortle 1-2). La Vía Láctea no se ve como una mancha difusa, sino como una estructura densa y tridimensional con relieve, polvo estelar y cúmulos globulares visibles a simple vista."
+        },
+        {
+          time: "Avistamiento de la Cruz del Sur (Crux) sobre el mar",
+          text: "Por encontrarse a tan solo 24 grados de latitud norte, Iriomote es uno de los rarísimos lugares de Japón donde la Cruz del Sur (Crux) asoma limpia por encima de la línea del horizonte marino meridional entre febrero y junio. Una constelación imposible de observar desde España o Europa continental, convirtiendo la isla en un lugar de peregrinación para astrónomos y astrofotógrafos."
+        },
+        {
+          time: "Astrofotografía y vuelos panorámicos con dron",
+          text: "La combinación de costas solitarias orientadas hacia mar abierto (como la playa de Hoshisuna o la ensenada de Shirahama) y cumbres despejadas ofrece un entorno inmejorable para montar monturas ecuatoriales, telescopios y cámaras para tomas de larga exposición. Los drones permiten capturar la transición del atardecer sobre los estuarios y manglares antes de que caiga la noche cósmica."
+        },
+        {
+          time: "Expedición en kayak por los ríos Nakama y Urauchi",
+          text: "Los dos ríos más caudalosos de Okinawa atraviesan el corazón de la isla. Remar en kayak por sus aguas en calma permite adentrarse bajo bóvedas de densos manglares (especies Bruguiera y Rhizophora) con enormes raíces zancudas aéreas y ver el árbol sagrado Sakishima Suounoki, con raíces tabulares ondulantes de más de 3 metros de altura."
+        },
+        {
+          time: "Trekking selvático hasta la Cascada Pinaisara (55 m)",
+          text: "La mayor cascada de la prefectura de Okinawa, con una caída vertical limpia de 55 metros. La excursión combina un primer tramo en kayak por el río Mare y una ruta a pie por senderos de selva subtropical entre helechos gigantes y lianas. Se puede acceder tanto a la base de la cascada para nadar en su poza profunda como a lo alto del acantilado para disfrutar de una vista sobrecogedora sobre el arrecife y el mar turquesa."
+        },
+        {
+          time: "El esquivo Gato de Iriomote (Yamaneko)",
+          text: "Un felino salvaje nocturno del tamaño de un gato doméstico pero con orejas redondeadas y manchas parduzcas, exclusivo de esta isla y en peligro crítico de extinción (apenas sobreviven unos 100 ejemplares). Toda la infraestructura vial de la isla cuenta con pasos subterráneos y señales de velocidad reducida para proteger a este fósil viviente que evolucionó aislado durante cientos de miles de años."
+        },
+        {
+          time: "Playa Hoshisuna: La arena con forma de estrellas",
+          text: "En el extremo norte de la isla, la arena de esta tranquila cala costera no está compuesta de cuarzo o roca triturada, sino de los exoesqueletos calcáreos fosilizados de foraminíferos microscópicos (Baculogypsina sphaerulata) que vivían en las praderas de algas marinas. Al posar la palma de la mano sobre la arena mojada, decenas de minúsculos granos con la forma perfecta de estrellas de 5 y 6 puntas quedan pegados a la piel."
+        }
       ],
-      money: "Variable -- acceso en ferry desde Ishigaki (~40 min); pocos alojamientos, conviene reservar con antelación.",
+      money: "Ferry rápido desde Ishigaki (40-45 min, ~¥2.500); oferta de alojamientos limitada en la isla, imprescindible reservar con antelación.",
     },
     {
       id: "miyajima",
-      title: "Miyajima",
-      cities: "Miyajima (Itsukushima), Hiroshima",
-      reason: "Idea para un futuro viaje -- la isla del torii flotante, con más cosas de las que parece a primera vista.",
-      summary: "La isla sagrada de la bahía de Hiroshima, conocida sobre todo por el gran torii rojo del santuario Itsukushima, que parece flotar sobre el agua con la marea alta -- uno de los 'Tres Paisajes de Japón' (Nihon Sankei) desde hace siglos, junto con Matsushima y Amanohashidate. Pero hay mucho más alrededor: el monte Misen con su teleférico y vistas a toda la bahía, los ciervos sika que campan a sus anchas por el pueblo (más domesticados y confiados que los de Nara), el momiji manju (pastelito relleno con forma de hoja de arce, especialidad local), y las ostras de Hiroshima, consideradas de las mejores de Japón.",
-      history: "El santuario Itsukushima tiene origen en el siglo VI, pero su estructura actual sobre el agua se debe a Taira no Kiyomori, quien lo reconstruyó en 1168 con ese diseño porque la isla entera se consideraba tan sagrada que no se podía pisar directamente -- de ahí que el santuario y el torii se construyeran sobre el mar. Patrimonio de la Humanidad UNESCO desde 1996.",
+      title: "Isla de Miyajima (Itsukushima)",
+      cities: "Miyajima, Bahía de Hiroshima",
+      reason: "Idea para un futuro viaje -- la isla sagrada donde conviven los santuarios sobre el agua, las montañas de cedros y los ciervos sika en libertad.",
+      summary: "Considerada uno de los Tres Grandes Paisajes de Japón (Nihon Sankei), Miyajima es una joya espiritual en el mar interior de Seto. Célebre por el colosal torii bermellón que parece flotar sobre el agua con marea alta, la isla esconde templos con cientos de esculturas budistas, senderos panorámicos hacia el monte Misen y una gastronomía de ostras a la brasa y dulces recién horneados insuperable.",
+      history: "En la antigüedad, la isla entera era considerada un kami (deidad viviente) tan sagrado que ningún ser humano tenía permitido pisarla ni nacer o morir en ella. Para que los fieles pudieran rezar sin profanar el suelo sagrado, Taira no Kiyomori remodeló en 1168 el santuario Itsukushima enteramente sobre pilotes de madera clavados en la arena de la bahía. Declarada Patrimonio de la Humanidad por la UNESCO en 1996.",
       schedule: [
-        { time: "Santuario Itsukushima y torii flotante", text: "Mejor con marea alta para el efecto de flotar sobre el agua; con marea baja se puede caminar hasta la base del torii." },
-        { time: "Monte Misen", text: "Teleférico (ropeway) hasta cerca de la cima, con posibilidad de seguir a pie hasta el mirador de la cumbre -- vistas de toda la bahía de Hiroshima y, en días claros, hasta Shikoku." },
-        { time: "Senjokaku", text: "El 'salón de las mil esteras de tatami', un pabellón inacabado encargado por Toyotomi Hideyoshi en 1587, junto a una pagoda de cinco pisos." },
-        { time: "Comer", text: "Momiji manju recién hecho en la calle principal, y ostras a la parrilla en cualquiera de los puestos junto al muelle." },
+        {
+          time: "Santuario Itsukushima y el Gran Torii flotante",
+          text: "Construido sobre pilotes en la pequeña bahía, el santuario se fundó en 593 y fue remodelado en 1168 por Taira no Kiyomori. Al subir la marea, el agua inunda los pasillos de madera de ciprés y el enorme torii bermellón parece flotar mágicamente en el mar interior de Seto. El torii actual mide 16,6 metros, pesa 60 toneladas y se sostiene únicamente por su propio peso sobre 6 pilares de alcanfor milenario, sin estar anclado ni clavado en el fondo marino. Con marea baja, el agua se retira por completo y es posible descender a la arena para tocar los troncos de alcanfor y contemplar de cerca las monedas incrustadas en sus hendiduras."
+        },
+        {
+          time: "Monte Misen y el teleférico panorámico (535 m)",
+          text: "La cumbre más alta de la isla (535 m), considerada sagrada desde tiempos inmemoriales. Se asciende combinando dos tramos de teleférico (Ropeway) hasta la estación Shishiiwa, seguido de una caminata de unos 30 minutos entre gigantescos peñascos de granito y bosques vírgenes. Desde el mirador de la cumbre se tiene una vista de 360 grados de toda la bahía de Hiroshima, salpicada de islotes y criaderos de ostras, y en días despejados se divisa la cordillera de la isla de Shikoku."
+        },
+        {
+          time: "Reikado: El salón con la llama eterna de 1.200 años",
+          text: "Ubicado a medio camino hacia la cima del Monte Misen, este pequeño templo cobija el fuego sagrado que el monje Kobo Daishi (Kukai), fundador del budismo Shingon, encendió en el año 806 al meditar aquí durante 100 días. La llama no se ha apagado jamás en más de 1.200 años. De hecho, fue de esta llama de donde se tomó el fuego sagrado que hoy arde permanentemente en la Llama de la Paz del Parque Memorial de Hiroshima. Se puede beber agua hervida en el caldero gigante de hierro de la sala, que la tradición local considera medicinal y purificadora."
+        },
+        {
+          time: "Templo Daisho-in y los 500 monjes Rakan",
+          text: "A los pies del monte, es el templo budista más importante y atmosférico de la isla, a menudo pasado por alto por quienes solo visitan la costa. Cuenta con una sobrecogedora escalinata custodiada por 500 estatuas de piedra de discípulos de Buda (Rakan), cada uno con una expresión facial única y muchos ataviados con gorros y baberos de lana tejidos a mano. En su interior alberga molinillos de oraciones tibetanos que transmiten bendiciones al hacerlos girar, una cueva oscura que contiene arena traída de los 88 templos de la peregrinación de Shikoku, y una campana de la paz que los visitantes pueden tañer."
+        },
+        {
+          time: "Pabellón Senjokaku y Pagoda Gojunoto",
+          text: "Conocido como el 'salón de las mil esteras', es una colosal estructura de madera abierta encargada en 1587 por Toyotomi Hideyoshi como lugar de oración para los guerreros caídos. Tras la repentina muerte de Hideyoshi en 1598, la construcción quedó inconclusa: carece de paredes y de techo decorado, dejando a la vista enormes vigas de madera sin pulir de las que cuelgan antiguos lienzos votivos de samuráis. Justo al lado se eleva la esbelta pagoda bermellón de cinco pisos (Gojunoto), construida en 1407 combinando estilos arquitectónicos japoneses y chinos."
+        },
+        {
+          time: "Parque Momijidani y los Ciervos Sika en libertad",
+          text: "Un frondoso valle al pie de la montaña atravesado por un arroyo de montaña y puentes de madera roja, célebre por sus cientos de arces japoneses (momiji) que en otoño arden en tonos rojos y dorados. Por todo el pueblo y el parque merodean cientos de ciervos sika en total libertad. En el sintoísmo son mensajeros de los dioses; a diferencia de los de Nara, aquí está estrictamente prohibido alimentarlos para preservar su instinto salvaje, por lo que suelen ser más tranquilos (¡aunque conviene vigilar mapas y billetes de papel, que se comen al menor descuido!)."
+        },
+        {
+          time: "Gastronomía local: Ostras a la brasa, Momiji Manju y Anago Meshi",
+          text: "La calle comercial Omotesando es un festín callejero: 1) Ostras de Hiroshima (kaki): asadas a la brasa con salsa de soja y limón, fritas en tempura o al gratén en puestos humeantes junto al mar. 2) Age-Momiji: la versión frita y crujiente de los pasteles con forma de hoja de arce, servidos calientes en brocheta y rellenos de pasta de judía roja (anko), crema pastelera, matcha o queso fundido. 3) Anago Meshi: anguila de agua salada asada con un glaseado dulce sobre una cama de arroz cocinado con caldo de anguila, plato insignia de los restaurantes tradicionales de la isla."
+        },
+        {
+          time: "Ferry y mareas: Cómo ver el torii flotante y caminar bajo él",
+          text: "Desde la estación de Hiroshima, se toma el tren local JR San-yo Line hasta Miyajimaguchi (25-30 min). Justo al lado del puerto zarpan los ferris: el de JR (cubierto por JR Pass) y el Matsudai (10 min de travesía, ~¥200 + tasa turística de la isla de ¥100). El ferry de JR pasa deliberadamente más cerca del torii en el trayecto de ida para permitir fotografías óptimas. Se recomienda encarecidamente consultar la tabla de mareas de Miyajima antes de la visita para coordinar y presenciar tanto la pleamar (santuario flotante) como la bajamar (paseo a pie bajo el torii)."
+        }
       ],
-      money: "Variable -- ferry desde Miyajimaguchi (~10 min, muy frecuente) tras llegar en tren desde Hiroshima (~25-30 min desde la estación).",
-    },
+      money: "Tren JR desde Hiroshima a Miyajimaguchi (~¥420) + ferry (~¥200 + ¥100 tasa visitante); teleférico de ida y vuelta al Monte Misen (~¥2.000).",
+    }
   ],
   en: [
     {
       id: "nikko",
       title: "Nikko Day Trip",
-      cities: "Nikko",
-      reason: "Didn't happen due to bad weather (was planned for Sunday, September 20, 2026, moved from Saturday due to train availability).",
-      summary: "A full day of nature and temples 2 hours from Tokyo by direct train from Asakusa (literally next to the hotel): Toshogu Shrine, mausoleum of shogun Tokugawa Ieyasu and World Heritage Site, Shinkyo Bridge, Kegon Falls and Lake Chuzenji via the Irohazaka mountain road.",
-      history: "Nikko grew up around Toshogu Shrine, built in 1617 as the mausoleum of Tokugawa Ieyasu, founder of the shogunate that ruled Japan for over 250 years. His grandson Iemitsu expanded it into the lavishly decorated complex seen today, with over 5 million sheets of gold leaf spread across its buildings.",
-      schedule: nikkoSchedule.en,
-      money: "Approx. €40 (meals) + €11.40 Toshogu admission + €22.60 Tobu World Heritage Pass (per person)",
+      cities: "Nikko (Tochigi)",
+      reason: "Didn't happen due to bad weather (originally planned for Sunday, September 20, 2026, moved from Saturday due to train availability).",
+      summary: "A full day excursion from Tokyo into the sacred mountains of Tochigi. Nikko brings together some of the most lavishly decorated shrines and temples in all of Japan (UNESCO World Heritage) with a breathtaking natural backdrop of alpine waterfalls, volcanic lakes, and ancient cedar forests.",
+      history: "Nikko flourished in the 8th century as a Buddhist hermitage founded by the monk Shodo Shonin. In 1617 it was chosen as the final resting place of Tokugawa Ieyasu, the great unifier of Japan and founder of the Tokugawa shogunate that brought over 250 years of peace during the Edo period. His grandson Iemitsu transformed the original modest mausoleum into the glittering Toshogu complex with over 5 million sheets of gold leaf, enshrining his grandfather as Japan's tutelary deity (Tosho Daigongen).",
+      schedule: [
+        {
+          time: "Fast Access via Limited Express & Nikko Pass",
+          text: "The Limited Express train (Spacia X or Revaty) departs directly from Tobu-Asakusa Station and reaches Tobu-Nikko in 1h 50min with no transfers. The most convenient and economical choice is the Tobu Nikko World Heritage Area Pass (or the All Area Pass to head up to Lake Chuzenji), which covers round-trip train travel and unlimited local Tobu buses for 2 days."
+        },
+        {
+          time: "Shinkyo Bridge: The Sacred Vermilion Footbridge",
+          text: "The iconic red wooden bridge crossing the Daiya River torrent at the entrance to the sacred precinct. Legend has it that in 766 the monk Shodo Shonin could not cross the raging waters until two serpents sent by the gods intertwined to form this bridge. It is considered one of Japan's three most beautiful bridges."
+        },
+        {
+          time: "Rinno-ji Temple & Sanbutsudo Hall",
+          text: "Nikko's premier Buddhist temple, founded over 1,200 years ago. Its main hall, Sanbutsudo, is one of eastern Japan's largest wooden structures and houses three colossal 8.5-meter gold-lacquered statues representing Amida Buddha, Senju-Kannon (Thousand-Armed Kannon), and Bato-Kannon (Horse-Headed Kannon), embodying the three sacred mountains of Nikko."
+        },
+        {
+          time: "Toshogu Shrine: Ieyasu's Gilded Mausoleum",
+          text: "The monumental heart of Nikko. Unlike the usual understated Japanese Zen aesthetic, Toshogu is a dazzling explosion of Japanese Baroque craftsmanship featuring over 500 polychrome sculptures framed by towering ancient cedars. Highlights include the Yomeimon Gate ('Sunset Gate'), so named because one could spend an entire day marveling at its 508 intricate carvings of dragons, sages, and playful children without tiring."
+        },
+        {
+          time: "The Three Wise Monkeys & Nemuri-neko",
+          text: "Inside Toshogu's sacred stables sits the renowned carved frieze of the three mystical monkeys: Mizaru (see no evil), Kikazaru (hear no evil), and Iwazaru (speak no evil), part of an 8-panel visual allegory of the human lifecycle. Along the stairs leading up to the shogun's forest tomb rests 'Nemuri-neko' (the sleeping cat), a miniature masterpiece carved by Hidari Jingoro depicting a peacefully dozing cat with sparrows carved on the reverse, symbolizing an era of enduring peace."
+        },
+        {
+          time: "Irohazaka Mountain Road & Akechidaira Lookout",
+          text: "One of Japan's most scenic driving routes: 48 one-way hairpin curves snaking up the mountainside (matching the 48 characters of the ancient Japanese 'Iroha' syllabary). On the way up, a quick ride on the Akechidaira Ropeway leads to a panoramic lookout showcasing the ultimate postcard: Kegon Falls cascading out of Lake Chuzenji against the majestic volcanic peak of Mount Nantai."
+        },
+        {
+          time: "Kegon Falls & Lake Chuzenji",
+          text: "Sitting at 1,269 meters altitude, Lake Chuzenji was created 20,000 years ago by an eruption of Mount Nantai. Its natural outlet plunges down Kegon Falls, an awe-inspiring 97-meter vertical drop flanked by a dozen smaller cascades bursting through basalt rock columns. Enjoy the free upper observation deck or ride the 100-meter underground rock elevator to the base of the canyon."
+        },
+        {
+          time: "Traditional Cuisine: Yuba & Artisan Soba",
+          text: "Nikko's signature culinary treasure is Yuba (the delicate skin harvested from simmering soymilk), a staple of vegetarian Buddhist temple cuisine (shojin ryori) for centuries. Savor it fried, rolled in savory glazes, in comforting broths, or atop steaming bowls of mountain soba crafted with pure local spring water."
+        }
+      ],
+      money: "Approx. €40 (meals) + €11.40 (Toshogu and temple admissions) + €22.60 (Tobu World Heritage Pass round trip with unlimited buses per person).",
     },
     {
       id: "fuji-hiking",
-      title: "Mount Fuji Hiking",
-      cities: "Mount Fuji",
-      reason: "An idea for a future trip -- not part of this trip's itinerary (this time it was only seen from Kawaguchiko/Oshino Hakkai, without climbing).",
-      summary: "Actually climbing Mount Fuji, not just seeing it from afar: the classic ascent is done overnight from the 5th station (Fuji Subaru Line, ~2,300m) via the Yoshida Trail, the most popular route, timed to reach the summit for the goraiko (sunrise) at 3,776m -- Japan's highest point.",
-      history: "The official climbing season is very short: normally early July to early September, so a September trip like this one is already at the edge of, or past, the season -- outside those dates the trail is closed with no huts or assistance. Since 2024, the Yoshida Trail requires an advance online reservation and an entry time slot, plus a conservation fee.",
+      title: "Mount Fuji Summit Hiking",
+      cities: "Mount Fuji (Yamanashi / Shizuoka)",
+      reason: "Idea for a future trip -- on this journey we admired the volcano's silhouette from Lake Kawaguchiko and Oshino Hakkai, but climbing to the summit is a completely different adventure.",
+      summary: "Reaching the highest point in Japan (3,776m) is one of the country's most legendary pilgrimages. The classic ascent takes place from the 5th station along the Yoshida Trail, resting briefly at a high-altitude mountain hut before the final pre-dawn push to witness the sea of clouds bathed in the golden light of the rising sun.",
+      history: "Venerated as a sacred mountain since antiquity and spiritual home to Shinto goddess Konohanasakuya-hime, Mount Fuji was for centuries reserved for ascetic mountain monks (yamabushi). Today it is a national pilgrimage; an old Japanese proverb states: 'A wise man climbs Mount Fuji once; a fool climbs it twice' (acknowledging the sheer physical grit required on its barren volcanic slopes).",
       schedule: [
-        { time: "Afternoon", text: "Climb up to a mountain hut around the 7th-8th station (~3,000-3,400m), to rest a few hours before the final overnight push." },
-        { time: "Pre-dawn", text: "Final climb to the summit with headlamps, timed to arrive just before sunrise." },
-        { time: "Sunrise", text: "Goraiko from the summit (3,776m), then descent via a different route than the ascent." },
+        {
+          time: "Yoshida Trail: The Classic Ascent from 5th Station (2,300m)",
+          text: "The traditional pilgrimage route starting at the Fuji Subaru Line 5th Station. The path winds past subalpine larch forests before turning into an open volcanic incline of reddish cinders and andesitic lava blocks, punctuated by stepped mountain huts between the 7th and 8th stations."
+        },
+        {
+          time: "Overnight at a Mountain Hut (Yamagoya)",
+          text: "An authentic, communal experience above 3,000 meters in rustic wooden bunks with thermal quilts. Enjoy a hot curry-and-rice dinner and rest for a few precious hours while your body acclimatizes to the thinning air and near-freezing summit temperatures."
+        },
+        {
+          time: "Headlamp Night Climb Under the Stars",
+          text: "Around midnight to 1:00 am, hikers switch on their headlamps and begin the final summit ascent. Looking down along the slopes reveals a mesmerizing ribbon of hundreds of tiny lights winding through the pitch black under a breathtaking cosmic canopy."
+        },
+        {
+          time: "Goraiko: The Sacred Summit Sunrise (3,776m)",
+          text: "The emotional climax of the trek. From the crater rim at 3,776 meters, witness 'Goraiko' (the arrival of the sacred light): the rising sun crests over an ocean of clouds blanketing eastern Japan, casting the immense triangular shadow of Mount Fuji (Kagefuji) across the opposite horizon."
+        },
+        {
+          time: "Ohachi-meguri: Crater Rim Circuit & Kengamine Peak",
+          text: "A 90-minute hiking circuit tracing the perimeter of the giant 500-meter-wide, 250-meter-deep volcanic crater. It leads to Kengamine, the exact geographical apex of Japan where the historic Fuji weather observatory is perched."
+        },
+        {
+          time: "Kongo-zue: The Wooden Pilgrim's Staff",
+          text: "Purchase an octagonal wooden staff (kongo-zue) with a bell at the 5th station. At each mountain hut reached during the climb, monks and hut keepers burn distinct summit stamps into the wood using red-hot branding irons, creating an indelible personal keepsake."
+        },
+        {
+          time: "Sunabashiri: Gliding Down the Volcanic Scree",
+          text: "The descent follows a separate gravel track of loose volcanic cinders. Equipped with gaiters and trekking poles, hikers can take long, soft strides gliding swiftly downhill (the 'sunabashiri' slide), making the descent in roughly 3 exhilarating hours."
+        },
+        {
+          time: "Regulations & Booking (Season & Conservation Fee)",
+          text: "The official climbing season runs from early July to early September. Starting in 2024, to prevent overcrowding and unsafe non-stop climbs ('bullet climbing'), Yamanashi Prefecture enforces online time-slot reservations (capped at 4,000 hikers/day), an entry fee of ¥2,000, and a voluntary ¥1,000 conservation contribution."
+        }
       ],
-      money: "Varies depending on hut booked; conservation fee and time-slot reservation mandatory since 2024 on the Yoshida Trail.",
+      money: "Mountain hut stay with dinner/breakfast (~¥10,000-14,000) + mandatory entry and conservation fees (¥3,000) + bus transfer from Tokyo/Kawaguchiko.",
     },
     {
       id: "hiroshima-nagasaki",
-      title: "Hiroshima and Nagasaki",
+      title: "Hiroshima & Nagasaki: Memory, Peace & Heritage",
       cities: "Hiroshima, Nagasaki",
-      reason: "An idea for a future trip -- not part of this trip's itinerary (neither city was visited).",
-      summary: "The two cities the atomic bombs were dropped on in August 1945, today centered on memory and peace -- and with plenty of reasons to visit beyond that history: Miyajima island with its floating torii gate near Hiroshima, and Nagasaki's unique past as one of Japan's few windows to the outside world during centuries of isolation.",
-      history: "Hiroshima was destroyed by the first atomic bomb used in conflict, on August 6, 1945; the Peace Memorial Park and the Genbaku Dome (one of the few structures left standing near the hypocenter) stand as testimony today. Nagasaki, bombed three days later, also has a distinct and longer history: during the sakoku isolation period of the 17th-19th centuries, the artificial island of Dejima was for generations the only authorized point of trade contact between Japan and the West (the Dutch).",
+      reason: "Idea for a future trip -- two deeply moving and culturally rich cities not included in this trip's itinerary.",
+      summary: "The only two cities on Earth shaped by wartime atomic bombings, today reborn as world capitals of peace, reconciliation, and resilience. Beyond their solemn historical monuments, they offer incredible cultural richness: Hiroshima's layered cuisine and Nagasaki's rare status as Japan's sole gateway to the Western world across centuries of isolation.",
+      history: "On August 6, 1945, Hiroshima was devastated by the first wartime atomic bomb; three days later, on August 9, Nagasaki suffered the second bombing. Both cities transformed this harrowing chapter into a global campaign for nuclear disarmament. Nagasaki also boasts a much older cosmopolitan heritage: for more than 200 years of strict national isolation (sakoku), the man-made fan-shaped island of Dejima was Japan's only authorized window for Dutch trade, medicine, and scientific exchange.",
       schedule: [
-        { time: "Hiroshima", text: "Peace Memorial Park, Genbaku Dome and Peace Memorial Museum; excursion to Miyajima island (Itsukushima Shrine and its floating torii gate)." },
-        { time: "Nagasaki", text: "Peace Park and atomic bomb museum; Dejima island, rebuilt as an open-air museum of the old Dutch trading enclave." },
+        {
+          time: "Hiroshima: Peace Memorial Park & Museum",
+          text: "Located on the delta of the Motoyasu River directly beneath the August 6 hypocenter. The park features the Cenotaph commemorating all victims and the Peace Flame, lit in 1964 with the solemn pledge to burn until all nuclear weapons on Earth are dismantled. The Peace Memorial Museum showcases poignant personal artifacts from survivors (hibakusha) and a deeply moving timeline of events."
+        },
+        {
+          time: "Genbaku Dome (A-Bomb Dome)",
+          text: "Originally the Hiroshima Prefectural Commercial Exhibition Hall designed by Czech architect Jan Letzel in 1915. It was one of the few standing structures near ground zero because the blast detonated nearly directly overhead (approx. 600m in the air). Declared a UNESCO World Heritage Site in 1996, its preserved skeleton stands as a universal symbol of hope."
+        },
+        {
+          time: "Sadako Sasaki Memorial & Thousand Origami Cranes",
+          text: "Dedicated to Sadako Sasaki, who survived the blast at age 2 but developed leukemia ten years later. Inspired by the Japanese legend that folding 1,000 origami cranes grants a wish, she folded medicine wrappers tirelessly until her passing. Today children from around the globe send millions of colorful folded paper cranes displayed in glass pavilions surrounding her statue."
+        },
+        {
+          time: "Hiroshima-Style Layered Okonomiyaki at Okonomimura",
+          text: "Unlike Osaka okonomiyaki (where batter and ingredients are mixed together), Hiroshima okonomiyaki is constructed in artful layers on the flat-top griddle: a paper-thin crepe, an alpine mound of shredded cabbage, crispy pork belly, crisp yakisoba noodles, a fried egg, green onions, and savory Otafuku sauce. At Okonomimura ('Okonomiyaki Village'), an entire 4-story building is packed with competing chef counters."
+        },
+        {
+          time: "Nagasaki: Peace Park & Seibo Kitamura's Peace Statue",
+          text: "Nagasaki Peace Park marks the August 9 hypocenter. Its focal point is the 10-meter bronze Peace Statue sculpted by Seibo Kitamura: its right hand points to the sky warning of the atomic threat, its left arm stretches out horizontally symbolizing eternal peace, and its gentle closed eyes offer a quiet prayer for victims."
+        },
+        {
+          time: "Dejima Island: Japan's Gateway During Sakoku",
+          text: "For over two centuries of total national seclusion (Edo period, 1641–1854), this fan-shaped artificial island was the only place in Japan where Westerners (the Dutch East India Company) were permitted to reside and trade. Now meticulously restored as an open-air museum, it showcases historic warehouses, Dutch residences, and exhibits on how coffee, glass, billiards, and Western medicine (Rangaku) first arrived in Japan."
+        },
+        {
+          time: "Glover Garden & Nagasaki's Hillside Mansions",
+          text: "Perched high above the harbor, Glover Garden preserves 19th-century Western merchant mansions, including the home of Scottish entrepreneur Thomas Glover, a pivotal figure in Japan's modern industrialization. Its Victorian verandas surrounded by blooming gardens look out over the bay and provided visual inspiration for Puccini's opera Madama Butterfly."
+        },
+        {
+          time: "Culinary Fusion: Champon, Sara Udon & Castella Cake",
+          text: "Nagasaki is home to Japan's most vibrant culinary fusion: 1) Champon: hearty ramen-like noodles in a rich pork-chicken broth loaded with seafood and vegetables, created in the late 19th century for Chinese students on a budget. 2) Sara Udon: crispy fried noodles smothered in a savory seafood-vegetable gravy. 3) Castella (Kasutera): moist, honey-sweet sponge cake with crunchy sugar crystals on the bottom, introduced by Portuguese traders in the 16th century."
+        }
       ],
-      money: "Varies -- both cities well connected by Shinkansen (Hiroshima) and limited express train (Nagasaki) from Osaka/Fukuoka.",
+      money: "Direct Shinkansen from Shin-Osaka to Hiroshima (1h 25min) and express connection to Nagasaki; museum entry fees are very economical (~¥200-600).",
     },
     {
       id: "hokkaido",
-      title: "Hokkaido",
-      cities: "Sapporo, Furano, Shiretoko",
-      reason: "An idea for a future trip -- completely different nature from the rest of Japan, not visited this time.",
-      summary: "Japan's northernmost island, with scenery unlike anywhere else in the country: the lavender fields of Furano and Biei in summer, Shiretoko National Park (a World Heritage Site, with wild brown bears), hot springs (onsen) out in the countryside, and if traveling in winter, world-class powder snow and the Sapporo Snow Festival.",
-      history: "Hokkaido was the last of Japan's main islands to be formally integrated into the country, actively colonized from the Meiji era onward (from 1869). It's the ancestral homeland of the Ainu people, an indigenous group with their own language and culture quite distinct from mainstream Japanese, today officially recognized as an indigenous people of Japan.",
+      title: "Hokkaido: Wild Frontiers, Snow & Calderas",
+      cities: "Sapporo, Furano, Shiretoko, Otaru, Noboribetsu",
+      reason: "Idea for a future trip -- Japan's wild northern island offers an untamed landscape completely unlike the rest of the country.",
+      summary: "Japan's northernmost wilderness enchants travelers with vast open horizons, steaming volcanic calderas, pristine national parks, and legendary seafood and dairy. A breathtaking escape in both summer (blooming flower fields) and winter (world-renowned dry powder snow and ice carving festivals).",
+      history: "Hokkaido ('Circuit of the Northern Sea') was formally colonized and integrated during the Meiji Restoration in the late 19th century. Formerly known as Ezochi, it is the ancestral homeland of the indigenous Ainu people, whose animist spiritual beliefs, oral folklore, and distinct language are celebrated at cultural centers such as Upopoy in Shiraoi.",
       schedule: [
-        { time: "Sapporo", text: "The island's capital, historic breweries, Nijo fish market, and the Snow Festival in February if the dates line up." },
-        { time: "Furano/Biei", text: "Lavender fields and rolling hills of colorful crops (season: June-August)." },
-        { time: "Shiretoko", text: "Peninsula declared a UNESCO World Heritage Site; brown bear and sea eagle spotting cruises." },
+        {
+          time: "Sapporo: Odori Park, Clock Tower & Old Government Hall",
+          text: "Hokkaido's capital is a spacious, grid-planned city with a crisp northern feel. Odori Park cuts through the center as a 1.5km green boulevard, hosting the legendary Sapporo Snow Festival (Yuki Matsuri) in February with life-sized snow and ice sculptures. The 1878 wooden Clock Tower and the red-brick Former Government Building reflect its Meiji pioneering roots."
+        },
+        {
+          time: "Miso Ramen in Ramen Alley & Nijo Seafood Market",
+          text: "Sapporo gave birth to rich miso ramen: wavy egg noodles in savory broth spiked with garlic, crunchy bean sprouts, sweet local corn, and a melting pat of Hokkaido butter. The Ganso Ramen Yokocho alley in Susukino gathers historic vendors. In the morning, Nijo Market serves breakfast kaisen-don bowls overflowing with glistening salmon roe (ikura), sweet sea urchin (uni), and snow crab."
+        },
+        {
+          time: "Sapporo Beer Museum & Genghis Khan (Jingisukan) Feast",
+          text: "Housed in an 1876 red-brick sugar factory, this is Japan's only beer museum. In the adjacent beer hall, feast on 'Jingisukan': thin strips of mutton barbecued over domed helmet-shaped iron griddles with onions, pumpkin, and bean sprouts, paired with fresh-poured Sapporo draft beer."
+        },
+        {
+          time: "Furano & Biei: Rolling Rainbow Hills & Shirogane Blue Pond",
+          text: "In mid-summer (July–August), Furano's rolling hills (Farm Tomita) blossom into ribbons of lavender, poppies, and sunflowers. Nearby in Biei lies the Shirogane Blue Pond, an otherworldly turquoise body of water created after volcanic works on the Bieigawa River, with submerged skeletal larch trunks creating a surreal fairy-tale aesthetic."
+        },
+        {
+          time: "Shiretoko National Park: The Edge of the Earth (UNESCO)",
+          text: "Located at the far northeastern tip of Hokkaido, Shiretoko means 'the end of the Earth' in the Ainu tongue. It is one of the Northern Hemisphere's most pristine wilderness reserves: sheer coastal cliffs inhabited by Japan's densest wild brown bear population, Steller's sea eagles, and Ezo red foxes, explored by boat from Utoro and on elevated boardwalks around the Shiretoko Five Lakes."
+        },
+        {
+          time: "Otaru: Romantic Canal, Music Boxes & Blown Glass",
+          text: "Just 40 minutes from Sapporo, Otaru is a nostalgic early-20th-century port town. Its central stone-lined canal is flanked by historic herring warehouses lit by gas lanterns at dusk, alongside artisan blown-glass workshops and the beloved Otaru Music Box Museum."
+        },
+        {
+          time: "Hell Valley (Jigokudani) & Hot Springs in Noboribetsu",
+          text: "Hokkaido's premier onsen resort. A dramatic, smoking volcanic crater boiling with sulfur vents, geysers, and steaming thermal rivers winding through lush forests, feeding mineral-rich natural open-air baths (rotenburo) across the valley."
+        }
       ],
-      money: "Varies -- requires a domestic flight or Shinkansen to Hakodate/Sapporo; a rental car is highly recommended outside the cities.",
+      money: "Domestic flight Tokyo-Sapporo (~1h 30min) or Hokkaido Shinkansen to Hakodate; rental car is strongly recommended for exploring national parks and scenic countryside.",
     },
     {
       id: "okinawa",
-      title: "Okinawa",
-      cities: "Naha, Ishigaki, Miyako",
-      reason: "An idea for a future trip -- beaches, islands and Ryukyu culture, not visited this time.",
-      summary: "The subtropical archipelago in the south, with beaches and coral reefs that don't fit the usual image of Japan, and its own culture -- the Ryukyu -- with centuries of history distinct from the rest of the country: a different language, cuisine, music and traditional architecture (the gusuku castles).",
-      history: "Okinawa was the Ryukyu Kingdom, an independent state with a tributary relationship to China for centuries, until its forced annexation by Japan in 1879. In 1945 it was the site of one of the bloodiest battles of the Pacific (the Battle of Okinawa), and didn't return to Japanese sovereignty until 1972, after nearly 30 years under U.S. administration.",
+      title: "Okinawa & The Ryukyu Archipelago",
+      cities: "Naha, Ishigaki, Miyakojima, Taketomi",
+      reason: "Idea for a future trip -- pristine coral reefs, turquoise waters, and an independent indigenous culture we couldn't fit into this journey.",
+      summary: "Japan's subtropical southern islands welcome travelers with warm trade winds, crystal-clear 'Miyako Blue' shallows, sanshin banjo ballads echoing through coral villages, and distinct Ryukyu architecture guarded by winged shisa lion statues.",
+      history: "For more than 450 years, these islands formed the prosperous Ryukyu Kingdom, an independent maritime trading hub linking China, Japan, Korea, and Southeast Asia. Annexed by Japan in 1879, Okinawa endured the horrific Battle of Okinawa in 1945 and was administered by the US military until 1972, cultivating a resilient, multicultural identity celebrated for longevity and community spirit.",
       schedule: [
-        { time: "Naha", text: "Shuri Castle (reconstructed, the former royal residence of the Ryukyu Kingdom, a World Heritage Site), Makishi Market, Okinawan cuisine (soba, goya champuru)." },
-        { time: "Yaeyama Islands (Ishigaki/Miyako)", text: "Beaches and coral reefs among the best in Japan for diving or snorkeling." },
+        {
+          time: "Naha & Shuri Castle: Seat of the Ryukyu Kingdom",
+          text: "The former royal capital of the Ryukyu Kingdom. Shuri Castle (Gusuku), a UNESCO World Heritage Site, is an architectural marvel blending Chinese crimson imperial dragon motifs, Japanese joinery techniques, and sweeping limestone coral fortifications."
+        },
+        {
+          time: "Kokusai Dori Street & Makishi Public Market",
+          text: "Naha's bustling central corridor: lined with Awamori rice spirit shops aging liquor in earthen jars, vibrant Ryukyu blown glass, and chinsuko lard shortbread. Makishi Market lets visitors pick out vibrant tropical fish (like the neon-blue Gurukun) and spiny lobsters on the ground floor to be cooked fresh upstairs."
+        },
+        {
+          time: "Miyakojima: 'Miyako Blue' Waters & Sea Turtle Snorkeling",
+          text: "Celebrated for the purest white sand beaches and clearest waters in Japan. Yonaha Maehama (7km of powder sand) and Sunayama Beach with its natural limestone arch offer dazzling visibility where you can regularly snorkel alongside wild green sea turtles in bays like Shigira and Yoshino."
+        },
+        {
+          time: "Ishigaki & The Emerald Waters of Kabira Bay",
+          text: "The main gateway to the Yaeyama archipelago. Kabira Bay features emerald-green waters and jungle-draped islets where swimming is prohibited to protect black pearl cultivation; glass-bottom boats reveal giant brain corals, sea anemones, and clownfish. At night, Tamatorizaki viewpoint offers world-class stargazing."
+        },
+        {
+          time: "Taketomi Island: Traditional Coral Village & Water Buffalo Carts",
+          text: "A 10-minute ferry from Ishigaki, Taketomi preserves an untouched Ryukyu village: single-story wooden cottages with red-tiled roofs topped with protective Shisa lions, bounded by mortarless coral stone walls and white sand streets swept clean each morning. Tour the village in wooden carts drawn by docile water buffalo while the driver strums a snake-skin sanshin."
+        },
+        {
+          time: "Longevity Cuisine: Okinawa Soba, Goya Champuru & Umi-budo",
+          text: "Okinawa is one of the world's famous 'Blue Zones' for exceptional life expectancy, closely tied to its nutrient-rich diet: 1) Okinawa Soba: thick wheat noodles in a savory pork-and-bonito broth topped with melt-in-your-mouth stewed pork spare ribs (soki). 2) Goya Champuru: stir-fry of bitter melon with island tofu, egg, and pork. 3) Umi-budo ('sea grapes'): fresh green sea algae that pops like crisp marine caviar, dipped in soy-shikuwasa citrus sauce."
+        }
       ],
-      money: "Varies -- direct flight from Tokyo/Osaka to Naha or Ishigaki (~2-3h), no train pass needed.",
+      money: "Direct flights from Tokyo or Osaka to Naha, Miyako, or Ishigaki (~2h 30min-3h); inter-island ferries are frequent and affordable.",
     },
     {
       id: "iriomote-stargazing",
-      title: "Iriomote: Dark Skies for Astrophotography",
-      cities: "Iriomote (Yaeyama Islands, Okinawa)",
-      reason: "An idea for a future trip, picked especially for you -- with the telescope and drone, this one really seems like it'll blow you away.",
-      summary: "Iriomote-Ishigaki National Park was the first place in Asia certified as an 'International Dark Sky Park' by DarkSky International (2018), with near-zero light pollution. The island is 90% covered in nearly untouched subtropical jungle (home to the Iriomote wildcat, an endangered species found nowhere else), so by day it's kayaking through the mangroves, and by night, setting up gear with almost no artificial light around.",
-      history: "Because of its latitude, part of the year you can see the Southern Cross (Crux) peeking over the horizon from Iriomote -- a constellation that's simply invisible from Spain, latitude-wise. It's one of the very few places in Japan where that's possible.",
+      title: "Iriomote: Astrophotography & Jungle Expedition",
+      cities: "Iriomote Island (Yaeyama, Okinawa)",
+      reason: "Idea for a future trip, picked especially for you -- with a telescope, camera, and drone, this is one of the world's most breathtaking night-sky destinations.",
+      summary: "Japan's wildest island, 90% enveloped in untouched subtropical jungle and primary mangroves. Certified as an International Dark Sky Park by DarkSky International, its near-zero light pollution lets you capture the Milky Way with three-dimensional depth and photograph the Southern Cross over the open sea.",
+      history: "Iriomote is biologically famous as the sole habitat of the Iriomote wildcat (Yamaneko), a critically endangered nocturnal feline discovered only in 1967 representing an ancient lineage isolated for thousands of years. Its southerly latitude (24°N) allows stargazers to observe the Southern Cross constellation on the horizon between February and June, an impossible sight from Europe.",
       schedule: [
-        { time: "Day", text: "Kayaking along the Nakama River's mangroves, jungle and waterfalls in the island's interior." },
-        { time: "Night", text: "Astrophotography session in one of the certified dark-sky zones -- bring the telescope and the drone." },
+        {
+          time: "International Dark Sky Park Certification",
+          text: "Iriomote-Ishigaki National Park was the very first territory in Asia certified by DarkSky International (2018). With pristine jungle interior and hundreds of miles of open sea around it, light pollution is virtually zero (Bortle Class 1–2). The Milky Way stands out not as a faint haze, but as a textured, high-contrast band with visible interstellar dust lanes."
+        },
+        {
+          time: "Spotting the Southern Cross (Crux) Over the Ocean",
+          text: "Thanks to its southerly 24° latitude, Iriomote is one of the few places in Japan where the Southern Cross (Crux) crests clearly above the southern sea horizon from February through June. Completely invisible from Spain and mainland Europe, it makes the island a revered destination for astronomers."
+        },
+        {
+          time: "Astrophotography & Drone Landscape Sessions",
+          text: "Remote, unlit beaches facing open waters (such as Hoshisuna Beach or Shirahama Inlet) offer ideal platforms for equatorial tracking mounts, telescopes, and long-exposure timelapse rigs. Drones capture dramatic sunset transitions over sweeping mangrove estuaries before total night falls."
+        },
+        {
+          time: "Kayak Expeditions on the Nakama & Urauchi Rivers",
+          text: "Okinawa's two longest rivers cut through the island's heart. Kayaking their tranquil waters leads under dense canopies of Bruguiera and Rhizophora mangroves with dramatic stilt root systems, including the ancient Sakishima Suounoki tree with wave-like buttress roots towering over 3 meters."
+        },
+        {
+          time: "Jungle Trekking to Pinaisara Falls (55m)",
+          text: "Okinawa's tallest waterfall with a sheer 55-meter plunge. The day trip pairs flatwater kayaking up the Mare River with a hike through subtropical rainforest past giant ferns and vines. You can swim in the cool basin pool at the base or climb to the cliff top for an unforgettable panorama of the coral reef."
+        },
+        {
+          time: "The Elusive Iriomote Wildcat (Yamaneko)",
+          text: "A critically endangered nocturnal wildcat roughly the size of a domestic cat with rounded ears and brown leopard-like spots, found nowhere else on Earth (fewer than 100 survive). Roads across the island feature underpasses, fences, and speed limits specifically designed to protect this living fossil."
+        },
+        {
+          time: "Hoshisuna Beach: The Star-Shaped Sand",
+          text: "At the northern tip of the island, this tranquil cove features sand formed not from crushed rock, but from the fossilized calcium shells of microscopic foraminifera (Baculogypsina sphaerulata). Press your palm into the damp sand to find dozens of tiny, perfect 5- and 6-pointed star grains clinging to your skin."
+        }
       ],
-      money: "Varies -- accessed by ferry from Ishigaki (~40 min); few lodging options, worth booking ahead.",
+      money: "High-speed ferry from Ishigaki (40-45min, ~¥2,500); island accommodation is limited, so early booking is essential.",
     },
+    {
+      id: "miyajima",
+      title: "Miyajima Island (Itsukushima)",
+      cities: "Miyajima, Hiroshima Bay",
+      reason: "Idea for a future trip -- the sacred island where floating shrines, cedar peaks, and friendly sika deer coexist.",
+      summary: "Ranked as one of the Three Great Views of Japan (Nihon Sankei), Miyajima is a spiritual sanctuary in the Seto Inland Sea. Famous for its colossal vermilion torii gate that seems to float on seawater at high tide, the island also conceals ancient mountain temples, panoramic trails to Mount Misen, and irresistible grilled oyster stalls.",
+      history: "In ancient times, the entire island was worshipped as a living kami (Shinto deity) so sacred that humans were forbidden from setting foot on its soil, and neither births nor deaths were permitted. To allow worshippers to pray without desecrating the sacred ground, warlord Taira no Kiyomori rebuilt Itsukushima Shrine in 1168 entirely on wooden pilings over the tidal flats. Designated a UNESCO World Heritage Site in 1996.",
+      schedule: [
+        {
+          time: "Itsukushima Shrine & The Floating Torii Gate",
+          text: "Built on stilts over the tidal inlet, Itsukushima Shrine was founded in 593 and expanded in 1168 by Taira no Kiyomori. At high tide, seawater floods the cypress boardwalks, making both the shrine and its massive vermilion torii gate appear to float magically on the Seto Inland Sea. The 16.6-meter gate weighs 60 tons and stands solely by its own weight on six thousand-year-old camphor tree trunks without being buried into the seabed. At low tide, the sea recedes completely, allowing visitors to walk out across the sand to touch the mossy camphor wood and inspect coins pressed into its bark."
+        },
+        {
+          time: "Mount Misen & The Scenic Ropeway (535m)",
+          text: "The island's highest peak (535m), considered sacred for millennia. Ride two scenic ropeway segments to Shishiiwa Station, followed by a rewarding 30-minute hike through primeval forest and giant granite boulders. The summit observation deck provides a 360-degree panorama of Hiroshima Bay dotted with oyster farming rafts and, on clear days, the distant mountains of Shikoku."
+        },
+        {
+          time: "Reikado: Hall of the 1,200-Year Eternal Flame",
+          text: "Perched near the summit of Mount Misen, this small wooden temple protects the sacred flame lit by monk Kobo Daishi (Kukai), founder of Shingon Buddhism, during a 100-day meditation in 806 AD. The flame has burned continuously for over 1,200 years. In fact, this was the flame used to light the Peace Flame in Hiroshima's Peace Memorial Park. Visitors can sample water boiled in the hall's giant iron kettle, believed to hold curative powers."
+        },
+        {
+          time: "Daisho-in Temple & The 500 Rakan Monks",
+          text: "Nestled at the mountain base, Daisho-in is Miyajima's most atmospheric Buddhist temple, often missed by day-trippers. Its winding hillside stairways are lined with 500 individualized stone statues of Buddha's disciples (Rakan), many adorned with hand-knit woolen caps and bibs. Features include Tibetan prayer wheels that grant blessings when spun, a dark subterranean cave containing sand from all 88 Shikoku pilgrimage temples, and a peace bell visitors can strike."
+        },
+        {
+          time: "Senjokaku Pavilion & Gojunoto Pagoda",
+          text: "Known as the 'Pavilion of 1,000 Tatami Mats', this massive open-sided wooden hall was commissioned in 1587 by warlord Toyotomi Hideyoshi as a memorial for fallen samurai. Following Hideyoshi's sudden death in 1598, construction was halted; it remains intentionally unfinished without walls or ceiling panels, exposing massive raw cedar beams hung with historic samurai votive paintings. Beside it stands the graceful 1407 five-story Gojunoto Pagoda blending Japanese and Chinese architectural styles."
+        },
+        {
+          time: "Momijidani Park & Roaming Sika Deer",
+          text: "A lush mountain valley laced with babbling streams and red wooden bridges, famous for its hundreds of Japanese maple trees (momiji) that blaze in brilliant reds and oranges in autumn. Friendly sika deer roam freely throughout the town and park. Regarded as sacred messengers of the gods in Shinto, feeding them is strictly prohibited to keep them healthy and wild (keep an eye on paper tickets and maps, which they love to nibble!)."
+        },
+        {
+          time: "Local Treats: Grilled Oysters, Fried Momiji & Anago Meshi",
+          text: "Omotesando shopping street is a foodie haven: 1) Hiroshima Oysters (kaki): grilled piping hot over charcoal with lemon and soy sauce, or fried in golden tempura at steaming dockside stalls. 2) Age-Momiji: deep-fried maple leaf cakes served hot on skewers with fillings like sweet red bean (anko), custard, matcha, or melted cheese. 3) Anago Meshi: tender salt-water eel grilled with a sweet glaze over rice cooked in rich eel stock, a century-old island specialty."
+        },
+        {
+          time: "Ferry & Tides: How to Experience Both High & Low Tide",
+          text: "From Hiroshima Station, take the JR San-yo Line to Miyajimaguchi Station (25-30min). Right outside the station, choose between the JR Ferry (covered by JR Pass) and the Matsudai Ferry (10min crossing, ~¥200 + ¥100 island visitor tax). The JR ferry steers closer to the floating torii for classic photos on the outbound leg. Always check the Miyajima tide forecast online to catch both high tide (floating shrine) and low tide (walking beneath the gate)."
+        }
+      ],
+      money: "JR train Hiroshima-Miyajimaguchi (~¥420) + ferry (~¥200 + ¥100 tax); Mount Misen round-trip ropeway (~¥2,000).",
+    }
   ],
   fr: [
     {
       id: "nikko",
       title: "Excursion à Nikko",
-      cities: "Nikko",
+      cities: "Nikko (Tochigi)",
       reason: "Non réalisée à cause du mauvais temps (prévue le dimanche 20 septembre 2026, déplacée du samedi faute de disponibilité des trains).",
-      summary: "Une journée complète de nature et de temples à 2 heures de Tokyo en train direct depuis Asakusa (littéralement à côté de l'hôtel) : le sanctuaire Toshogu, mausolée du shogun Tokugawa Ieyasu et site du patrimoine mondial, le pont Shinkyo, les chutes de Kegon et le lac Chuzenji par la route de montagne Irohazaka.",
-      history: "Nikko s'est développée autour du sanctuaire Toshogu, construit en 1617 comme mausolée de Tokugawa Ieyasu, fondateur du shogunat qui a gouverné le Japon pendant plus de 250 ans. Son petit-fils Iemitsu l'a agrandi jusqu'à en faire le complexe richement décoré que l'on voit aujourd'hui, avec plus de 5 millions de feuilles d'or réparties sur ses bâtiments.",
-      schedule: nikkoSchedule.fr,
-      money: "Env. 40 € (repas) + 11,40 € entrées Toshogu + 22,60 € Tobu World Heritage Pass (par personne)",
+      summary: "Une journée complète d'excursion depuis Tokyo vers les montagnes sacrées de Tochigi. Nikko réunit certains des sanctuaires et temples les plus somptueux et richement décorés de tout le Japon (patrimoine mondial de l'UNESCO) au cœur d'un environnement grandiose de cascades alpines, de lacs volcaniques et de cèdres séculaires.",
+      history: "Nikko s'est développée au VIIIe siècle sous l'impulsion du moine Shodo Shonin. En 1617, le site fut choisi pour accueillir le mausolée de Tokugawa Ieyasu, grand unificateur du Japon et fondateur du shogunat Tokugawa qui instaura plus de deux siècles et demi de paix. Son petit-fils Iemitsu transforma l'austère tombe initiale en un complexe éblouissant orné de plus de 5 millions de feuilles d'or, consacrant son grand-père comme divinité protectrice du Japon (Tosho Daigongen).",
+      schedule: [
+        {
+          time: "Accès rapide en Limited Express & Nikko Pass",
+          text: "Le train Limited Express (Spacia X ou Revaty) part directement de la gare de Tobu-Asakusa et arrive à Tobu-Nikko en 1h50 sans correspondance. La formule la plus pratique et économique est le Tobu Nikko World Heritage Area Pass (ou l'All Area Pass pour monter au lac Chuzenji), incluant l'aller-retour en train et des trajets illimités en bus Tobu pendant 2 jours."
+        },
+        {
+          time: "Pont Shinkyo : La passerelle sacrée vermillon",
+          text: "L'emblématique pont de bois rouge qui enjambe le torrent de la rivière Daiya à l'entrée du domaine sacré. Selon la légende, le moine Shodo Shonin ne parvenait pas à franchir les flots tumultueux en l'an 766 jusqu'à ce que deux serpents divins s'entrelacent pour former ce pont. Il est considéré comme l'un des trois plus beaux ponts du Japon."
+        },
+        {
+          time: "Temple Rinno-ji & Pavillon Sanbutsudo",
+          text: "Le principal temple bouddhique de Nikko, fondé il y a plus de 1 200 ans. Son pavillon principal, le Sanbutsudo, est l'un des plus grands édifices en bois de l'est du Japon et abrite trois statues dorées monumentales de 8,5 mètres de haut représentant Amida Bouddha, Senju-Kannon (aux mille bras) et Bato-Kannon (à tête de cheval), associées aux trois sommets sacrés de Nikko."
+        },
+        {
+          time: "Sanctuaire Toshogu : Le mausolée doré d'Ieyasu",
+          text: "Le cœur monumental de Nikko. Loin de l'épure zen classique, le Toshogu est un chef-d'œuvre du baroque japonais avec plus de 500 sculptures polychromes nichées sous d'immenses cèdres. À ne pas manquer : la porte Yomeimon ('porte du couchant'), surnommée ainsi car on pourrait contempler toute une journée ses 508 bas-reliefs détaillés de dragons et de sages sans s'en lasser."
+        },
+        {
+          time: "Les Trois Singes de la Sagesse & Nemuri-neko",
+          text: "Dans les anciennes écuries sacrées se trouve la célèbre frise sculptée des trois singes mystiques : Mizaru (l'aveugle au mal), Kikazaru (le sourd au mal) et Iwazaru (le muet au mal), allégorie des étapes de la vie humaine. Près de l'escalier menant au tombeau du shogun repose 'Nemuri-neko' (le chat qui dort), minuscule chef-d'œuvre de Hidari Jingoro figurant un félin endormi avec des moineaux au dos, symbole d'une paix retrouvée."
+        },
+        {
+          time: "Route de montagne Irohazaka & Belvédère d'Akechidaira",
+          text: "L'une des routes panoramiques les plus réputées du Japon : 48 virages en épingle à sens unique (autant que les caractères de l'ancien alphabet japonais 'Iroha'). En montant, un arrêt au téléphérique d'Akechidaira permet d'accéder au panorama d'anthologie : les chutes de Kegon s'écoulant du lac Chuzenji avec le majestueux volcan Nantai en toile de fond."
+        },
+        {
+          time: "Chutes de Kegon & Lac Chuzenji",
+          text: "Niché à 1 269 mètres d'altitude, le lac Chuzenji est né il y a 20 000 ans lors d'une éruption du mont Nantai. Son déversoir naturel alimente les chutes de Kegon, un gouffre vertigineux de 97 mètres de haut flanqué d'une douzaine de cascades secondaires jaillissant des orgues basaltiques. Plateforme supérieure gratuite et ascenseur souterrain descendant 100 mètres au fond des gorges."
+        },
+        {
+          time: "Cuisine locale : Yuba & Soba artisanaux",
+          text: "La grande spécialité séculaire de Nikko est le Yuba (la fine peau récoltée à la surface du lait de soja bouilli), élément essentiel de la cuisine végétarienne des moines bouddhistes (shojin ryori). Elle se déguste frite, mijotée, en soupe ou déposée sur des nouilles soba fraîches préparées avec l'eau de source des montagnes."
+        }
+      ],
+      money: "Env. 40 € (repas) + 11,40 € (entrées Toshogu) + 22,60 € (Tobu World Heritage Pass aller-retour avec bus illimités par personne).",
     },
     {
       id: "fuji-hiking",
-      title: "Randonnée au Mont Fuji",
-      cities: "Mont Fuji",
-      reason: "Une idée pour un futur voyage -- ne faisait pas partie de l'itinéraire de ce voyage (cette fois vu seulement depuis Kawaguchiko/Oshino Hakkai, sans faire l'ascension).",
-      summary: "Faire vraiment l'ascension du Mont Fuji, pas seulement le voir de loin : l'ascension classique se fait de nuit depuis la 5e station (Fuji Subaru Line, ~2 300 m) par le sentier Yoshida, le plus fréquenté, chronométrée pour atteindre le sommet à temps pour le goraiko (lever du soleil) à 3 776 m -- le point le plus haut du Japon.",
-      history: "La saison officielle d'ascension est très courte : normalement début juillet à début septembre, donc un voyage en septembre comme celui-ci arrive déjà en fin, voire hors saison -- en dehors de ces dates, le sentier est fermé, sans refuge ni assistance. Depuis 2024, le sentier Yoshida exige une réservation en ligne à l'avance et un créneau horaire d'entrée, ainsi qu'une taxe de conservation.",
+      title: "Randonnée et ascension du Mont Fuji",
+      cities: "Mont Fuji (Yamanashi / Shizuoka)",
+      reason: "Idée pour un prochain voyage -- lors de ce séjour nous avons admiré la silhouette du volcan depuis Kawaguchiko et Oshino Hakkai, mais grimper au sommet est une aventure tout autre.",
+      summary: "Atteindre le toit du Japon (3 776 m) constitue l'un des pèlerinages les plus mémorables du pays. L'ascension classique débute en fin d'après-midi depuis la 5e station via le sentier Yoshida, avec une courte nuit en refuge en altitude avant l'assaut nocturne pour contempler la mer de nuages embrasée par le lever du soleil.",
+      history: "Montagne sacrée vénérée depuis des siècles et demeure spirituelle de la déesse Konohanasakuya-hime, le Fuji fut longtemps réservé aux pèlerins ascètes (yamabushi). Aujourd'hui accompli par des randonneurs du monde entier, un dicton japonais rappelle : 'Celui qui gravit le mont Fuji une fois est un sage, celui qui le gravit deux fois est un fou' (en référence à la rudesse de ses pentes volcaniques).",
       schedule: [
-        { time: "Après-midi", text: "Montée jusqu'à un refuge de montagne vers la 7e-8e station (~3 000-3 400 m), pour se reposer quelques heures avant le dernier tronçon nocturne." },
-        { time: "Avant l'aube", text: "Dernière montée jusqu'au sommet avec lampes frontales, chronométrée pour arriver juste avant le lever du soleil." },
-        { time: "Lever du soleil", text: "Goraiko depuis le sommet (3 776 m), puis descente par un itinéraire différent de la montée." },
+        {
+          time: "Sentier Yoshida : La voie classique depuis la 5e Station (2 300 m)",
+          text: "La voie historique au départ de la 5e station Fuji Subaru Line. Le sentier traverse d'abord des mélèzes avant d'entamer une montée minérale de scories rouges et de blocs de lave andésitique jalonnée de refuges entre la 7e et la 8e station."
+        },
+        {
+          time: "Nuitée en refuge de haute montagne (Yamagoya)",
+          text: "Une expérience collective rustique à plus de 3 000 mètres d'altitude dans des dortoirs en bois. On y sert un plat chaud de curry japonais avec du riz avant quelques heures de repos pour s'acclimater à l'altitude et au froid nocturne (proche de 0 °C même en plein été)."
+        },
+        {
+          time: "L'ascension nocturne à la lampe frontale",
+          text: "Vers minuit ou 1 h du matin, les marcheurs allument leurs lampes frontales pour entamer l'ultime tronçon. Depuis la pente se dessine un ruban scintillant de centaines de lumières serpentant dans la nuit noire sous une voûte céleste étincelante."
+        },
+        {
+          time: "Goraiko : Le lever de soleil sacré au sommet (3 776 m)",
+          text: "L'apogée du pèlerinage. Depuis le bord du cratère, assistez au 'Goraiko' (la venue de la lumière sacrée) : le soleil levant émerge au-dessus d'une mer de nuages infinie, projetant l'immense ombre pyramidale du mont Fuji (Kagefuji) à l'horizon opposé."
+        },
+        {
+          time: "Ohachi-meguri : Tour du cratère & Pic Kengamine",
+          text: "Une boucle pédestre d'environ 90 minutes longeant le cratère géant de 500 mètres de diamètre et 250 mètres de profondeur. Elle culmine à Kengamine, le point culminant géographique du Japon où se dresse l'ancienne station météo."
+        },
+        {
+          time: "Kongo-zue : Le bâton de pèlerin en bois",
+          text: "Achetez à la 5e station un bâton octogonal en bois surmonté d'un grelot. À chaque refuge franchi, les gardiens y apposent des sceaux uniques au fer rouge attestant de l'altitude atteinte, transformant le bâton en un précieux souvenir personnalisé."
+        },
+        {
+          time: "Sunabashiri : La descente rapide dans la cendre volcanique",
+          text: "La descente s'effectue par une piste distincte de gravillons et de cendres meubles. Muni de guêtres et de bâtons de marche, on dévale la pente à grandes enjambées souples (le 'sunabashiri'), bouclant le retour en seulement 3 heures environ."
+        },
+        {
+          time: "Réglementation & Réservation (Saison et taxe)",
+          text: "La saison officielle s'étend de début juillet à début septembre. Depuis 2024, pour éviter la surfréquentation et les ascensions d'une traite sans repos ('bullet climbing'), la préfecture de Yamanashi impose une réservation en ligne (limite de 4 000 randonneurs/jour), une taxe d'accès de 2 000 ¥ et une contribution volontaire de 1 000 ¥."
+        }
       ],
-      money: "Variable selon le refuge réservé ; taxe de conservation et réservation de créneau horaire obligatoires depuis 2024 sur le sentier Yoshida.",
+      money: "Refuge avec dîner et petit-déjeuner (~10 000-14 000 ¥) + droits d'accès et conservation obligatoires (3 000 ¥) + bus depuis Tokyo/Kawaguchiko.",
     },
     {
       id: "hiroshima-nagasaki",
-      title: "Hiroshima et Nagasaki",
+      title: "Hiroshima et Nagasaki : Mémoire, Paix et Histoire",
       cities: "Hiroshima, Nagasaki",
-      reason: "Une idée pour un futur voyage -- ne faisait pas partie de l'itinéraire de ce voyage (aucune des deux villes n'a été visitée).",
-      summary: "Les deux villes sur lesquelles les bombes atomiques ont été larguées en août 1945, aujourd'hui centrées sur la mémoire et la paix -- et avec largement de quoi les visiter au-delà de cette histoire : l'île de Miyajima et son torii flottant près d'Hiroshima, et le passé unique de Nagasaki comme l'une des rares fenêtres du Japon sur le monde extérieur pendant des siècles d'isolement.",
-      history: "Hiroshima a été rasée par la première bombe atomique utilisée dans un conflit, le 6 août 1945 ; le Parc Mémorial de la Paix et le Dôme de Genbaku (l'une des rares structures restées debout près de l'hypocentre) en témoignent aujourd'hui. Nagasaki, bombardée trois jours plus tard, a en plus une histoire différente et plus longue : pendant la période d'isolement (sakoku) des XVIIe-XIXe siècles, l'île artificielle de Dejima fut pendant des générations le seul point de contact commercial autorisé entre le Japon et l'Occident (les Néerlandais).",
+      reason: "Idée pour un futur voyage -- deux cités bouleversantes et lumineuses qui n'étaient pas au programme de ce voyage.",
+      summary: "Les deux seules villes au monde meurtries par l'arme atomique en 1945, aujourd'hui devenues des capitales mondiales de la paix et de la mémoire. Au-delà de leurs mémoriaux émouvants, elles révèlent une incroyable richesse culturelle : la gastronomie conviviale d'Hiroshima et l'héritage cosmopolite unique de Nagasaki, porte d'entrée de l'Occident au Japon pendant deux siècles.",
+      history: "Le 6 août 1945, Hiroshima fut anéantie par la première bombe atomique ; trois jours plus tard, Nagasaki subissait le second bombardement. Les deux cités ont métamorphosé ce drame en un plaidoyer universel pour le désarmement nucléaire. Nagasaki possède en outre un passé singulier : durant les plus de deux siècles de fermeture totale du pays (sakoku), l'île artificielle de Dejima fut l'unique enclave autorisée pour le commerce avec les marchands néerlandais et l'introduction des sciences occidentales (Rangaku).",
       schedule: [
-        { time: "Hiroshima", text: "Parc Mémorial de la Paix, Dôme de Genbaku et musée Mémorial de la Paix ; excursion à l'île de Miyajima (sanctuaire Itsukushima et son torii flottant)." },
-        { time: "Nagasaki", text: "Parc de la Paix et musée de la bombe atomique ; île de Dejima, reconstruite en musée à ciel ouvert de l'ancien comptoir commercial néerlandais." },
+        {
+          time: "Hiroshima : Parc et Musée du Mémorial de la Paix",
+          text: "Situé sur le delta du fleuve Motoyasu, directement sous l'hypocentre du 6 août 1945. Le parc abrite le Cénotaphe en mémoire de toutes les victimes et la Flamme de la Paix, allumée en 1964 avec le vœu de brûler jusqu'à l'éradication totale des armes nucléaires. Le musée présente des objets poignants ayant appartenu aux victimes (hibakusha) et un récit historique rigoureux."
+        },
+        {
+          time: "Dôme de Genbaku (A-Bomb Dome)",
+          text: "Ancien Palais d'exposition industrielle d'Hiroshima conçu par l'architecte tchèque Jan Letzel en 1915. L'édifice a miraculeusement résisté car le souffle de la déflagration s'est produit presque à la verticale (à environ 600 mètres d'altitude). Inscrit au patrimoine mondial de l'UNESCO en 1996, ses ruines préservées sont devenues un symbole universel d'espoir."
+        },
+        {
+          time: "Monument de Sadako Sasaki et les mille grues en papier",
+          text: "Dédié à Sadako Sasaki, enfant survivante de la bombe qui développa une leucémie dix ans plus tard. S'inspirant de la légende japonaise du Senbazuru (plier mille grues en origami pour voir son vœu de guérison exaucé), elle en confectionna inlassablement jusqu'à son décès. Aujourd'hui, des enfants du monde entier y envoient des millions de grues multicolores disposées dans des vitrines."
+        },
+        {
+          time: "Okonomiyaki à la mode d'Hiroshima à Okonomimura",
+          text: "Contrairement à la version d'Osaka où la pâte et les garnitures sont mélangées, l'okonomiyaki d'Hiroshima est monté en étages successifs sur la plaque teppan : une fine crêpe, une montagne de chou blanc émincé, de la poitrine de porc croustillante, des nouilles yakisoba dorées, un œuf au plat et une généreuse couche de sauce Otafuku. Le bâtiment Okonomimura réunit sur quatre étages des dizaines de comptoirs d'artisans passionnés."
+        },
+        {
+          time: "Nagasaki : Parc de la Paix et Statue de Seibo Kitamura",
+          text: "Le Parc de la Paix de Nagasaki marque l'hypocentre du 9 août 1945. Il est dominé par la monumentale statue en bronze de 10 mètres sculptée par Seibo Kitamura : son bras droit pointé vers le ciel rappelle la menace de la bombe, son bras gauche étendu prône la paix éternelle et ses paupières closes esquissent une prière pour les défunts."
+        },
+        {
+          time: "Île de Dejima : L'unique fenêtre sur le monde durant le Sakoku",
+          text: "Pendant plus de deux cents ans d'isolement national décrété par les shoguns Tokugawa (1641–1854), cette île artificielle en forme d'éventail fut le seul point de contact commercial et culturel entre le Japon et l'Europe via la Compagnie néerlandaise des Indes orientales. Reconstruite à l'identique en musée de plein air, elle témoigne de l'introduction du café, du verre, du billard et de la médecine occidentale."
+        },
+        {
+          time: "Glover Garden et les collines résidentielles de Nagasaki",
+          text: "Sur les hauteurs surplombant la rade se déploient les élégantes demeures des marchands occidentaux du XIXe siècle, dont celle de l'Écossais Thomas Glover, pionnier de l'industrialisation japonaise. Ses vérandas victoriennes fleuries offrent un panorama exceptionnel sur le port et ont inspiré le décor de l'opéra Madama Butterfly de Puccini."
+        },
+        {
+          time: "Fusion culinaire singulière : Champon, Sara Udon et Castella",
+          text: "Nagasaki possède une gastronomie métissée : 1) Champon : généreux bol de nouilles épaisses dans un bouillon de porc et volaille garni de fruits de mer et de légumes frais. 2) Sara Udon : nouilles croustillantes frites nappées d'une sauce onctueuse aux fruits de mer. 3) Castella (Kasutera) : gâteau génoise moelleux et aéré introduit au XVIe siècle par les marins portugais, caramélisé à sa base par de gros cristaux de sucre."
+        }
       ],
-      money: "Variable -- les deux villes bien reliées par Shinkansen (Hiroshima) et train limited express (Nagasaki) depuis Osaka/Fukuoka.",
+      money: "Liaison directe en Shinkansen de Shin-Osaka à Hiroshima (1h25) puis train express vers Nagasaki ; entrées des musées très économiques (~200-600 ¥).",
     },
     {
       id: "hokkaido",
-      title: "Hokkaido",
-      cities: "Sapporo, Furano, Shiretoko",
-      reason: "Une idée pour un futur voyage -- une nature complètement différente du reste du Japon, non visitée cette fois.",
-      summary: "L'île la plus septentrionale, avec un paysage qui n'a rien à voir avec le reste du pays : les champs de lavande de Furano et Biei en été, le parc national de Shiretoko (site du patrimoine mondial, avec des ours bruns sauvages), des sources chaudes (onsen) en pleine campagne, et si l'on voyage en hiver, une neige poudreuse de référence mondiale et le Festival de la Neige de Sapporo.",
-      history: "Hokkaido fut la dernière des grandes îles du Japon à être formellement intégrée au pays, colonisée activement à partir de l'ère Meiji (depuis 1869). C'est la terre ancestrale du peuple aïnou, un groupe indigène à la langue et à la culture propres, bien distinctes de celles du Japon majoritaire, aujourd'hui officiellement reconnu comme peuple indigène du Japon.",
+      title: "Hokkaido : Terres sauvages, neige et caldeiras",
+      cities: "Sapporo, Furano, Shiretoko, Otaru, Noboribetsu",
+      reason: "Idée pour un futur voyage -- l'île septentrionale dévoile un Japon insolite aux grands espaces et à la nature boréale préservée.",
+      summary: "La dernière frontière du Japon subjugue par ses horizons infinis, ses volcans actifs fumants, ses réserves naturelles intactes et sa réputation gastronomique axée sur les fruits de mer d'eaux froides et les produits laitiers renommés. Éblouissant en été (champs fleuris à perte de vue) comme en hiver (poudreuse de classe mondiale et sculptures sur glace).",
+      history: "Hokkaido ('le chemin de la mer du Nord') fut colonisée et pleinement rattachée au Japon à l'ère Meiji à la fin du XIXe siècle. Auparavant appelée Ezochi, c'est la terre des Aïnous, peuple indigène aux croyances animistes, aux traditions orales et à la langue uniques, aujourd'hui mis à l'honneur dans des musées spécialisés comme le centre Upopoy à Shiraoi.",
       schedule: [
-        { time: "Sapporo", text: "Capitale de l'île, brasseries historiques, marché aux poissons de Nijo, et le Festival de la Neige en février si les dates coïncident." },
-        { time: "Furano/Biei", text: "Champs de lavande et collines de cultures colorées (saison : juin-août)." },
-        { time: "Shiretoko", text: "Péninsule classée au patrimoine mondial de l'UNESCO ; croisières d'observation des ours bruns et des aigles de mer." },
+        {
+          time: "Sapporo : Parc Odori, Tour de l'Horloge et ancien siège gouvernemental",
+          text: "La métropole d'Hokkaido surprend par son plan en damier aéré. Le parc Odori traverse le centre sur 1,5 km et accueille en février le gigantesque Festival de la Neige (Yuki Matsuri) et ses sculptures de glace grandeur nature. La Tour de l'Horloge en bois (1878) et l'ancien siège du gouvernement en briques rouges rappellent les débuts de la colonisation pionnière."
+        },
+        {
+          time: "Miso Ramen à Ramen Yokocho et Marché aux poissons de Nijo",
+          text: "Sapporo est la patrie du ramen au miso : nouilles ondulées servies dans un bouillon savoureux aillé, pousses de soja croquantes, maïs doux local et une généreuse noisette de beurre d'Hokkaido. La ruelle Ganso Ramen Yokocho à Susukino concentre les échoppes historiques. Au petit matin, le marché Nijo régale de kaisen-don débordant d'œufs de saumon scintillants (ikura), d'oursin crémeux (uni) et de crabe des neiges."
+        },
+        {
+          time: "Musée de la Bière Sapporo et festin Genghis Khan (Jingisukan)",
+          text: "Installé dans une ancienne usine en briques rouges de 1876, c'est l'unique musée brassicole du pays. Dans la brasserie attenante, goûtez au 'Jingisukan' : fines tranches de mouton grillées sur des dômes en fonte en forme de casque mongol avec oignons et potiron, accompagnées d'une bière pression fraîchement tirée."
+        },
+        {
+          time: "Furano et Biei : Collines arc-en-ciel et Étang Bleu de Shirogane",
+          text: "En plein été (juillet-août), les collines vallonnées de Furano (Ferme Tomita) se couvrent de tapis chatoyants de lavande, de tournesols et de coquelicots. À proximité, à Biei, se trouve le Blue Pond de Shirogane, une retenue d'eau bleu turquoise laiteuse aux troncs de mélèzes immergés créant un décor féerique."
+        },
+        {
+          time: "Parc National de Shiretoko : Le bout du monde (UNESCO)",
+          text: "À la pointe nord-est de l'île, Shiretoko signifie 'le bout de la Terre' en langue aïnoue. C'est l'un des sanctuaires naturels les plus sauvages de l'hémisphère nord : falaises abruptes abritant la plus forte concentration d'ours bruns sauvages du Japon, aigles de mer de Steller et renards roux d'Ezo, observables en croisière côtière depuis Utoro et sur les pontons en bois des Cinq Lacs."
+        },
+        {
+          time: "Otaru : Canal romantique, boîtes à musique et verre soufflé",
+          text: "À 40 minutes de Sapporo, Otaru est un port marchand au charme désuet du début du XXe siècle. Son canal de pierre bordé d'anciens entrepôts de harengs illuminés par des réverbères à gaz au crépuscule est incontournable, tout comme ses ateliers artisanaux de cristal soufflé et son musée de boîtes à musique."
+        },
+        {
+          time: "Vallée de l'Enfer (Jigokudani) et Onsen à Noboribetsu",
+          text: "La station thermale reine d'Hokkaido. Un spectaculaire cratère volcanique actif aux fumerolles de soufre, geysers bouillonnants et rivières d'eau chaude serpentant dans les forêts, alimentant de merveilleux bains extérieurs en bois (rotenburo) réputés pour leurs bienfaits thérapeutiques."
+        }
       ],
-      money: "Variable -- nécessite un vol intérieur ou le Shinkansen jusqu'à Hakodate/Sapporo ; location de voiture vivement recommandée hors des villes.",
+      money: "Vol intérieur Tokyo-Sapporo (~1h30) ou Shinkansen jusqu'à Hakodate ; location de voiture vivement conseillée pour explorer la nature et les parcs.",
     },
     {
       id: "okinawa",
-      title: "Okinawa",
-      cities: "Naha, Ishigaki, Miyako",
-      reason: "Une idée pour un futur voyage -- plages, îles et culture Ryukyu, non visitée cette fois.",
-      summary: "L'archipel subtropical du sud, avec des plages et des récifs coralliens qui ne correspondent pas à l'image habituelle du Japon, et une culture propre -- la Ryukyu -- avec des siècles d'histoire distincts du reste du pays : langue, gastronomie, musique et architecture traditionnelle (les châteaux gusuku) différenciées.",
-      history: "Okinawa fut le Royaume Ryukyu, un état indépendant en relation tributaire avec la Chine pendant des siècles, jusqu'à son annexion forcée par le Japon en 1879. En 1945, elle fut le théâtre de l'une des batailles les plus sanglantes du Pacifique (la bataille d'Okinawa), et ne revint sous souveraineté japonaise qu'en 1972, après près de 30 ans sous administration américaine.",
+      title: "Okinawa et l'Archipel des Ryukyu",
+      cities: "Naha, Ishigaki, Miyakojima, Taketomi",
+      reason: "Idée pour un futur voyage -- des lagons turquoise, des récifs coralliens et une culture indigène chaleureuse non explorés cette fois-ci.",
+      summary: "L'archipel subtropical d'Okinawa séduit par ses airs insulaires décontractés, ses fonds marins étincelants 'Miyako Blue', ses airs de sanshin s'élevant dans les ruelles de corail et son architecture ryukyu coiffée de statues de lions protecteurs (shisa).",
+      history: "Pendant plus de 450 ans, ces îles constituèrent le prospère Royaume des Ryukyu, carrefour maritime marchand indépendant entre la Chine, le Japon et l'Asie du Sud-Est. Annexée par le Japon en 1879, Okinawa traversa la dramatique bataille d'Okinawa en 1945 avant de demeurer sous tutelle américaine jusqu'en 1972, forgeant une culture métissée et renommée pour l'exceptionnelle longévité de ses aînés.",
       schedule: [
-        { time: "Naha", text: "Château de Shuri (reconstruit, ancienne résidence royale du Royaume Ryukyu, site du patrimoine mondial), marché de Makishi, gastronomie okinawaïenne (soba, goya champuru)." },
-        { time: "Îles Yaeyama (Ishigaki/Miyako)", text: "Plages et récifs coralliens parmi les meilleurs du Japon pour la plongée ou le snorkeling." },
+        {
+          time: "Naha et le Château de Shuri : Cœur du Royaume Ryukyu",
+          text: "L'ancienne capitale royale des Ryukyu. Le château de Shuri (Gusuku), inscrit au patrimoine mondial de l'UNESCO, est un joyau d'architecture mariant laque vermillon et motifs de dragons impériaux chinois avec la menuiserie japonaise et d'imposants remparts en calcaire corallien."
+        },
+        {
+          time: "Avenue Kokusai Dori et Marché Makishi",
+          text: "L'artère commerçante festive de Naha : échoppes d'alcool Awamori vieilli en jarres de terre cuite, verrerie artisanale Ryukyu et sablés traditionnels chinsuko. Au marché Makishi, choisissez vos poissons tropicaux colorés (comme le perroquet bleu Gurukun) et crustacés vivants au rez-de-chaussée pour les faire cuisiner à l'étage."
+        },
+        {
+          time: "Miyakojima : Eaux turquoise 'Miyako Blue' et tortues marines",
+          text: "Réputée pour abriter les plus belles plages de sable blanc du Japon. Yonaha Maehama (7 km de sable fin) et Sunayama Beach avec son arche naturelle de calcaire dévoilent des eaux d'une clarté irréelle où l'on nage régulièrement en compagnie de tortues vertes sauvages dans les baies de Shigira et Yoshino."
+        },
+        {
+          time: "Ishigaki et la baie féerique de Kabira",
+          text: "L'île principale de l'archipel Yaeyama. La baie de Kabira offre un spectacle émeraude bordé de collines luxuriantes où la baignade est proscrite pour protéger la culture de perles noires ; des bateaux à fond de verre permettent d'observer des coraux cerveaux géants, des anémones et des poissons-clowns. Le soir, le belvédère de Tamatorizaki offre un ciel étoilé spectaculaire."
+        },
+        {
+          time: "Île de Taketomi : Village traditionnel en corail et chars à buffles",
+          text: "À 10 minutes en ferry d'Ishigaki, Taketomi conserve intact un village ryukyu traditionnel : maisons basses en bois aux toits de tuiles rouges gardées par des lions Shisa, encloses de murets de corail sans mortier et ruelles de sable blanc balayées chaque matin. On s'y déplace en char à buffle d'eau au rythme du sanshin joué par le cocher."
+        },
+        {
+          time: "Cuisine de la longévité : Okinawa Soba, Goya Champuru et Umi-budo",
+          text: "Okinawa compte parmi les célèbres 'Zones Bleues' de la planète grâce à son régime alimentaire réputé sain : 1) Okinawa Soba : épaisses nouilles de blé dans un bouillon savoureux de porc et bonite séchée garni de tendres travers de porc braisés (soki). 2) Goya Champuru : poêlée traditionnelle de melon amer (goya) avec tofu insulaire, œuf et porc. 3) Umi-budo ('raisin de mer') : algue fraîche croquante qui éclate en bouche comme un caviar végétal iodé avec une touche d'agrumes shikuwasa."
+        }
       ],
-      money: "Variable -- vol direct depuis Tokyo/Osaka vers Naha ou Ishigaki (~2-3h), pas besoin de pass ferroviaire.",
+      money: "Vols directs depuis Tokyo ou Osaka vers Naha, Miyako ou Ishigaki (~2h30-3h) ; liaisons maritimes rapides et très fréquentes entre les îles.",
     },
     {
       id: "iriomote-stargazing",
-      title: "Iriomote : ciels étoilés pour l'astrophotographie",
-      cities: "Iriomote (îles Yaeyama, Okinawa)",
-      reason: "Une idée pour un futur voyage, pensée spécialement pour toi -- avec le télescope et le drone, ça a tout pour te plaire.",
-      summary: "Le parc national d'Iriomote-Ishigaki a été le premier endroit d'Asie certifié 'International Dark Sky Park' par DarkSky International (2018), avec une pollution lumineuse quasi nulle. L'île est couverte à 90% d'une jungle subtropicale presque vierge (refuge du chat d'Iriomote, une espèce en danger qu'on ne trouve nulle part ailleurs), donc de jour on fait du kayak dans les mangroves, et de nuit on installe son matériel avec presque aucune lumière artificielle alentour.",
-      history: "Grâce à sa latitude, on peut voir une partie de l'année la Croix du Sud (Crux) pointer à l'horizon depuis Iriomote -- une constellation tout simplement invisible depuis l'Espagne, en raison de la latitude. C'est l'un des rares endroits du Japon où c'est possible.",
+      title: "Iriomote : Astrophotographie et exploration sauvage",
+      cities: "Île d'Iriomote (Archipel Yaeyama, Okinawa)",
+      reason: "Idée pour un futur voyage, pensée spécialement pour toi -- avec télescope, appareil photo et drone, c'est l'un des spots d'observation nocturne les plus fabuleux au monde.",
+      summary: "L'île la plus sauvage du Japon, recouverte à 90 % d'une jungle subtropicale primaire et de mangroves vierges. Reconnue 'Dark Sky Park' international par DarkSky International pour son absence totale de pollution lumineuse, elle permet de photographier la Voie lactée avec une netteté saisissante et d'apercevoir la Croix du Sud au ras des flots.",
+      history: "Iriomote est mondialement réputée comme l'unique sanctuaire du chat sauvage d'Iriomote (Yamaneko), félin nocturne découvert en 1967 et en danger critique d'extinction. Sa situation méridionale (24° N) offre le privilège d'observer la constellation de la Croix du Sud entre février et juin, invisible depuis la France ou l'Europe continentale.",
       schedule: [
-        { time: "Jour", text: "Kayak dans les mangroves de la rivière Nakama, jungle et cascades à l'intérieur de l'île." },
-        { time: "Nuit", text: "Séance d'astrophotographie dans l'une des zones certifiées de ciel étoilé -- emporter le télescope et le drone." },
+        {
+          time: "Réserve Internationale de Ciel Étoilé (Dark Sky Park)",
+          text: "Le parc national d'Iriomote-Ishigaki fut le premier site de toute l'Asie labellisé par DarkSky International (2018). Avec une jungle inhabitée et des centaines de kilomètres d'océan aux alentours, l'obscurité est totale (Bortle 1-2). La Voie lactée ne se devine pas, elle s'impose avec un relief tridimensionnel spectaculaire et des nébuleuses perceptibles à l'œil nu."
+        },
+        {
+          time: "Observation de la Croix du Sud (Crux) sur l'horizon marin",
+          text: "Grâce à sa latitude très basse de 24 degrés nord, Iriomote est l'un des rares coins du Japon où la Croix du Sud pointe nettement au-dessus de l'horizon maritime méridional entre février et juin. Une expérience céleste inaccessible depuis l'Europe qui attire astronomes et passionnés du monde entier."
+        },
+        {
+          time: "Astrophotographie et prises de vue au drone",
+          text: "Des plages désertes orientées vers le large (comme Hoshisuna ou Shirahama) offrent des plateformes parfaites pour installer montures équatoriales, télescopes et trépieds pour poses longues. Les drones permettent de saisir la lumière dorée du crépuscule sur les estuaires de mangroves avant l'allumage des étoiles."
+        },
+        {
+          time: "Expédition en kayak sur les rivières Nakama et Urauchi",
+          text: "Les deux cours d'eau les plus abondants d'Okinawa s'enfoncent au cœur de la forêt primaire. Ramer en kayak sur ces eaux calmes permet de glisser sous d'impressionnantes voûtes de palétuviers aux racines aériennes géantes et d'admirer le Sakishima Suounoki aux racines tabulaires s'élevant à plus de 3 mètres."
+        },
+        {
+          time: "Randonnée dans la jungle vers les chutes de Pinaisara (55 m)",
+          text: "La cascade la plus haute de la préfecture d'Okinawa avec un saut vertical de 55 mètres. L'excursion combine kayak sur la rivière Mare et trek sous les fougères géantes et lianes tropicales. Baignade possible dans la vasque fraîche au pied de la cascade et panorama saisissant depuis le sommet de la falaise sur le lagon."
+        },
+        {
+          time: "Le mystérieux Chat sauvage d'Iriomote (Yamaneko)",
+          text: "Un petit félin nocturne endémique aux oreilles arrondies et au pelage tacheté, dont il ne subsiste qu'une centaine d'individus sur l'île. Toute l'infrastructure routière comporte des passages souterrains spéciaux et des zones à vitesse réduite pour protéger ce trésor biologique préservé depuis la préhistoire."
+        },
+        {
+          time: "Plage d'Hoshisuna : Le sable en forme d'étoiles",
+          text: "À la pointe nord de l'île, cette crique paisible ne doit pas son sable au quartz érodé, mais aux minuscules coquilles fossilisées de foraminifères marins (Baculogypsina sphaerulata). Posez la paume de votre main sur le sable humide : des dizaines de minuscules grains en forme d'étoiles parfaites à 5 ou 6 branches y restent collés."
+        }
       ],
-      money: "Variable -- accès en ferry depuis Ishigaki (~40 min) ; peu d'hébergements, mieux vaut réserver à l'avance.",
+      money: "Ferry rapide depuis Ishigaki (40-45 min, ~2 500 ¥) ; capacité d'hébergement très restreinte sur l'île, réservation indispensable plusieurs mois à l'avance.",
     },
+    {
+      id: "miyajima",
+      title: "Île de Miyajima (Itsukushima)",
+      cities: "Miyajima, Baie d'Hiroshima",
+      reason: "Idée pour un futur voyage -- l'île sacrée où se côtoient le grand sanctuaire sur pilotis, les monts boisés et les daims sika en liberté.",
+      summary: "Classée parmi les Trois Plus Beaux Paysages du Japon (Nihon Sankei), Miyajima est un joyau spirituel lové dans la mer intérieure de Seto. Rendu célèbre par son monumental torii vermillon semblant flotter sur les flots à marée haute, ce sanctuaire naturel abrite des temples bouddhiques secrets, des sentiers panoramiques vers le mont Misen et des délices iodés inégalés.",
+      history: "Dans les temps anciens, l'île tout entière était vénérée comme un kami vivant si sacré qu'aucun mortel n'avait le droit d'y poser le pied, d'y naître ou d'y mourir. Afin que les pèlerins puissent prier sans profaner la terre sacrée, le chef de guerre Taira no Kiyomori fit reconstruire en 1168 le sanctuaire d'Itsukushima entièrement sur pilotis au-dessus de l'estran. Classé au patrimoine mondial de l'UNESCO en 1996.",
+      schedule: [
+        {
+          time: "Sanctuaire d'Itsukushima et le Grand Torii flottant",
+          text: "Érigé sur pilotis dans une anse protégée, le sanctuaire fut fondé en 593 puis magnifié en 1168 par Taira no Kiyomori. À marée haute, les coursives en cyprès sont léchées par l'eau et le grand torii vermillon semble flotter sur la mer intérieure de Seto. Haut de 16,6 mètres pour 60 tonnes, ce géant en bois de camphrier repose uniquement sous son propre poids sur six piliers, sans être scellé dans le fond marin. À marée basse, la mer se retire complètement et l'on peut marcher jusqu'au pied du portique pour toucher son bois séculaire incrusté de pièces votives."
+        },
+        {
+          time: "Mont Misen et son téléphérique panoramique (535 m)",
+          text: "Le point culminant de l'île (535 m), vénéré depuis des millénaires. L'ascension combine deux tronçons de téléphérique (Ropeway) jusqu'à la gare de Shishiiwa, suivis d'une marche d'environ 30 minutes au milieu d'énormes rochers de granit et de forêts primaires. Depuis l'observatoire du sommet, profitez d'une vue à 360 degrés sur toute la baie d'Hiroshima parsemée de parcs à huîtres et, par temps clair, sur les reliefs de l'île de Shikoku."
+        },
+        {
+          time: "Reikado : Le pavillon de la Flamme éternelle millénaire",
+          text: "Niché à mi-chemin du sommet du mont Misen, ce petit temple abrite le feu sacré allumé par le moine Kobo Daishi (Kukai), fondateur du bouddhisme Shingon, lors d'une retraite de 100 jours en l'an 806. Cette flamme ne s'est jamais éteinte depuis plus de 1 200 ans. C'est d'ailleurs à ce foyer que fut prélevée la Flamme de la Paix qui brûle aujourd'hui dans le parc mémorial d'Hiroshima. On peut y boire l'eau bouillie dans le chaudron géant en fonte, réputée bienfaisante et purificatrice."
+        },
+        {
+          time: "Temple Daisho-in et les 500 disciples Rakan",
+          text: "Au pied de la montagne, ce temple bouddhique est sans doute le plus fascinant et atmosphérique de l'île. Ses escaliers en sous-bois sont bordés par 500 statues de pierre uniques de disciples de Bouddha (Rakan), coiffés de bonnets et bavoirs en laine tricotés avec ferveur. On y découvre des moulins à prières tibétains bienfaiteurs, une caverne obscure contenant du sable recueilli dans les 88 temples du pèlerinage de Shikoku et une cloche de la paix que chacun peut faire tinter."
+        },
+        {
+          time: "Pavillon Senjokaku et Pagode Gojunoto",
+          text: "Surnommé le 'pavillon aux mille tatamis', ce colossal édifice en bois ouvert fut commandé en 1587 par Toyotomi Hideyoshi pour honorer les guerriers défunts. La disparition subite de Hideyoshi en 1598 laissa le monument inachevé : dépourvu de cloisons et de plafond orné, il dévoile de puissantes poutres de cèdre brut ornées d'anciennes peintures votives de samouraïs. À ses côtés se dresse la pagode rouge à cinq étages (Gojunoto), érigée en 1407 dans un élégant métissage architectural sino-japonais."
+        },
+        {
+          time: "Parc Momijidani et les Daims Sika en liberté",
+          text: "Un vallon verdoyant traversé par un ruisseau et de pittoresques ponts de bois vermillon, célèbre pour ses centaines d'érables japonais (momiji) s'embrasant de rouge et d'or à l'automne. De nombreux daims sika s'y promènent en toute quiétude. Considérés comme des messagers divins par le shintoïsme, il est formellement interdit de les nourrir afin de préserver leur instinct sauvage (attention aux cartes et billets de train en papier qu'ils tentent parfois de grignoter !)."
+        },
+        {
+          time: "Saveurs locales : Huîtres grillées, Momiji Manju et Anago Meshi",
+          text: "L'artère commerçante Omotesando regorge de spécialités irrésistibles : 1) Les huîtres d'Hiroshima (kaki) : grillées à la braise avec un filet de jus de citron et soja, ou en beignets croustillants servis fumants sur le port. 2) Les Age-Momiji : succulents petits gâteaux frits en forme de feuille d'érable piqués sur une brochette, fourrés à la pâte de haricot rouge (anko), à la crème pâtissière, au matcha ou au fromage fondu. 3) L'Anago Meshi : anguille de mer grillée et laquée posée sur un lit de riz parfumé au bouillon d'anguille, spécialité emblématique de l'île."
+        },
+        {
+          time: "Traversée en ferry et gestion des marées",
+          text: "Depuis la gare d'Hiroshima, empruntez la ligne JR San-yo jusqu'à Miyajimaguchi (25-30 min). L'embarcadère se trouve juste en face : les ferries JR (inclus dans le JR Pass) et Matsudai assurent la traversée en 10 minutes (~200 ¥ + 100 ¥ de taxe touristique insulaire). Le ferry JR s'approche au plus près du torii à l'aller pour offrir les meilleures prises de vue. Consultez impérativement les tables des marées pour vivre la magie de la pleine mer (sanctuaire flottant) et de la marée basse (marche sous le torii)."
+        }
+      ],
+      money: "Train JR Hiroshima-Miyajimaguchi (~420 ¥) + ferry (~200 ¥ + 100 ¥ taxe) ; téléphérique aller-retour vers le mont Misen (~2 000 ¥).",
+    }
   ],
   tl: [
     {
       id: "nikko",
       title: "Nikko Day Trip",
-      cities: "Nikko",
+      cities: "Nikko (Tochigi)",
       reason: "Hindi natuloy dahil sa masamang panahon (nakatakda sana noong Linggo, Setyembre 20, 2026, inilipat mula Sabado dahil sa kakulangan ng available na tren).",
-      summary: "Buong araw ng kalikasan at mga templo, 2 oras mula Tokyo sa direktang tren mula Asakusa (literal na katabi ng hotel): ang Toshogu Shrine, mausoleum ng shogun na si Tokugawa Ieyasu at UNESCO World Heritage Site, ang Shinkyo Bridge, ang Kegon Falls at Lake Chuzenji sa Irohazaka mountain road.",
-      history: "Umunlad ang Nikko sa paligid ng Toshogu Shrine, itinayo noong 1617 bilang mausoleum ni Tokugawa Ieyasu, ang tagapagtatag ng shogunate na namuno sa Japan nang mahigit 250 taon. Pinalawak ito ng apo niyang si Iemitsu hanggang maging ang mayamang dekorasyon na kumplex na nakikita ngayon, na may mahigit 5 milyong piraso ng gold leaf na nakakalat sa mga gusali nito.",
-      schedule: nikkoSchedule.tl,
-      money: "Humigit-kumulang €40 (pagkain) + €11,40 Toshogu admission + €22,60 Tobu World Heritage Pass (bawat tao)",
+      summary: "Buong araw na excursion mula Tokyo patungo sa sagradong kabundukan ng Tochigi. Pinagsasama ng Nikko ang ilan sa pinakamayaman at pinakamaringal na pinalamutiang dambana at templo sa buong Japan (UNESCO World Heritage) kasama ang kahanga-hangang kalikasan ng talon, lawang bulkan, at mga dantaong cedar tree.",
+      history: "Umunlad ang Nikko noong ika-8 siglo bilang sentro ng Budismo na itinatag ng mongheng si Shodo Shonin. Noong 1617, napili ito bilang huling himlayan ni Tokugawa Ieyasu, ang dakilang unifier ng Japan at nagtatag ng Tokugawa shogunate na nagdala ng mahigit 250 taong kapayapaan sa panahon ng Edo. Pinalawak ito ng apo niyang si Iemitsu at naging maningning na Toshogu complex na may mahigit 5 milyong piraso ng gold leaf.",
+      schedule: [
+        {
+          time: "Mabilis na Byahe sa Limited Express at Nikko Pass",
+          text: "Ang Limited Express train (Spacia X o Revaty) ay direktang umaalis mula Tobu-Asakusa Station at dumarating sa Tobu-Nikko sa loob ng 1 oras at 50 minuto nang walang lipat ng tren. Ang pinaka-sulit na opsyon ay ang Tobu Nikko World Heritage Area Pass (o All Area Pass papuntang Lake Chuzenji), na may kasamang round-trip train at unlimited Tobu buses sa loob ng 2 araw."
+        },
+        {
+          time: "Shinkyo Bridge: Ang Sagradong Pulang Tulay",
+          text: "Ang kilalang pulang tulay na gawa sa kahoy sa ibabaw ng Ilog Daiya sa bukana ng sagradong dambana. Ayon sa alamat noong taong 766, hindi makatawid ang mongheng si Shodo Shonin sa rumaragasang tubig hanggang sa may dalawang sagradong ahas na nagpulupot upang bumuo ng tulay na ito. Kinikilala ito bilang isa sa tatlong pinakamagagandang tulay sa Japan."
+        },
+        {
+          time: "Rinno-ji Temple at Sanbutsudo Hall",
+          text: "Ang pangunahing templong Budista ng Nikko, itinatag mahigit 1,200 taon na ang nakalilipas. Ang Sanbutsudo hall ay isa sa pinakamalaking istrukturang gawa sa kahoy sa silangang Japan at tahanan ng tatlong gintong estatwa na may taas na 8.5 metro: Amida Buddha, Senju-Kannon (may 1,000 kamay), at Bato-Kannon (may ulong kabayo)."
+        },
+        {
+          time: "Toshogu Shrine: Ang Ginintuang Mausoleum ni Ieyasu",
+          text: "Ang puso ng Nikko. Ibang-iba sa karaniwang payak na Zen aesthetics, ang Toshogu ay isang marangyang obra ng Japanese Baroque na may mahigit 500 ukit na may kulay sa gitna ng matatayog na cedar tree. Tampok dito ang Yomeimon Gate ('Sunset Gate'), na tinawag nang ganoon dahil maaari mong tingnan ang 508 ukit nito ng mga dragon at pantas nang buong araw nang hindi nababato."
+        },
+        {
+          time: "Ang Tatlong Matalinong Unggoy at Nemuri-neko",
+          text: "Sa banal na kuwadra ng Toshogu makikita ang tanyag na ukit ng tatlong unggoy: Mizaru (walang nakitang masama), Kikazaru (walang narinig na masama), at Iwazaru (walang sinabing masama). Sa daan patungo sa puntod ng shogun, makikita naman ang 'Nemuri-neko' (ang natutulog na pusa), isang munting obra na gawa ni Hidari Jingoro na may natutulog na pusa sa harap at mga maya sa likod, sumisimbolo sa walang-hanggang kapayapaan."
+        },
+        {
+          time: "Irohazaka Mountain Road at Akechidaira Lookout",
+          text: "Isa sa pinakasikat na kalsada sa kabundukan ng Japan: may 48 matatarik na kurbada (katumbas ng 48 titik sa sinaunang alpabetong 'Iroha'). Sa pag-akyat, ang pagsakay sa Akechidaira Ropeway ay magdadala sa iyo sa viewing deck kung saan makikita ang Kegon Falls na bumubuhos mula sa Lake Chuzenji katapat ang Mount Nantai."
+        },
+        {
+          time: "Kegon Falls at Lake Chuzenji",
+          text: "Nasa taas na 1,269 metro mula sa sea level, ang Lake Chuzenji ay nabuo 20,000 taon na ang nakalipas dahil sa pagputok ng bulkang Nantai. Ang tubig nito ay bumubuhos sa Kegon Falls na may taas na 97 metro sa gitna ng matatayog na basalt rock. May libreng viewing deck sa itaas at may elevator na bumababa ng 100 metro sa ilalim ng bato papunta sa paanan ng talon."
+        },
+        {
+          time: "Tradisyunal na Pagkain: Yuba at Handmade Soba",
+          text: "Ang pinakatanyag na pagkain sa Nikko ay ang Yuba (ang manipis na balat na nabubuo sa ibabaw ng kumukulong soy milk), pangunahing pagkain ng mga mongheng vegetarian (shojin ryori). Inihahain itong prito, may glaze, sa mainit na sabaw, o ibinubudbod sa sariwang mountain soba na gawa sa malinis na tubig bukal."
+        }
+      ],
+      money: "Humigit-kumulang €40 (pagkain) + €11.40 (entrance sa Toshogu) + €22.60 (Tobu World Heritage Pass round trip kasama ang unlimited bus bawat tao).",
     },
     {
       id: "fuji-hiking",
-      title: "Pag-akyat sa Mount Fuji",
-      cities: "Mount Fuji",
-      reason: "Ideya para sa susunod na biyahe -- hindi bahagi ng itinerary ng biyaheng ito (ngayong beses nakita lang mula Kawaguchiko/Oshino Hakkai, hindi umakyat).",
-      summary: "Talagang umakyat sa Mount Fuji, hindi lang tingnan mula sa malayo: ang klasikong pag-akyat ay ginagawa nang gabi mula sa 5th station (Fuji Subaru Line, ~2,300m) sa Yoshida Trail, ang pinakasikat na ruta, na naka-oras para makarating sa tuktok bago ang goraiko (sunrise) sa 3,776m -- ang pinakamataas na punto sa Japan.",
-      history: "Napakaikli ng opisyal na climbing season: karaniwan mula unang bahagi ng Hulyo hanggang unang bahagi ng Setyembre, kaya ang biyaheng ito sa Setyembre ay malapit na sa dulo o labas na ng season -- sa labas ng mga petsang iyon, sarado ang trail, walang hut o assistance. Simula 2024, kailangan ng maagang online na reserbasyon at entry time slot sa Yoshida Trail, kasama ang conservation fee.",
+      title: "Pag-akyat sa Tuktok ng Mount Fuji",
+      cities: "Mount Fuji (Yamanashi / Shizuoka)",
+      reason: "Ideya para sa susunod na biyahe -- sa biyaheng ito tiningnan lamang ang bulkan mula Lake Kawaguchiko at Oshino Hakkai, ngunit ang pag-akyat sa tuktok ay ganap na kakaibang karanasan.",
+      summary: "Ang pagtuntong sa pinakamataas na punto ng Japan (3,776m) ay isa sa pinakatanyag na pilgrimage sa bansa. Karaniwang sinisimulan ang pag-akyat sa hapon mula sa 5th station sa Yoshida Trail, nagpapahinga nang ilang oras sa mountain hut sa itaas bago ang hatinggabi upang masaksihan ang dagat ng ulap na sinisinagan ng sumisikat na araw.",
+      history: "Itinuturing na sagradong bundok at tahanan ng Shinto goddess na si Konohanasakuya-hime, ang Mount Fuji ay dating nakalaan lamang sa mga ermitanyong monghe (yamabushi). Ngayon ay inaakyat na ito ng mga hiker mula sa buong daigdig. May kasabihan sa Japan: 'Matalino ang umakyat sa Fuji nang minsan; mangmang ang umakyat nang makalawa' (dahil sa matinding hirap ng daan).",
       schedule: [
-        { time: "Hapon", text: "Pag-akyat papunta sa mountain hut malapit sa 7th-8th station (~3,000-3,400m), para magpahinga ng ilang oras bago ang huling gabing pag-akyat." },
-        { time: "Bago sumikat ang araw", text: "Huling pag-akyat papunta sa tuktok gamit ang headlamp, naka-oras para makarating bago sumikat ang araw." },
-        { time: "Sunrise", text: "Goraiko mula sa tuktok (3,776m), pagkatapos ay pababa sa ibang ruta kaysa sa pag-akyat." },
+        {
+          time: "Yoshida Trail: Ang Klasikong Daan mula 5th Station (2,300m)",
+          text: "Ang tradisyunal na ruta mula sa Fuji Subaru Line 5th Station. Nagsisimula ito sa kakahuyan bago pumasok sa mapulang volcanic ash at mga batong lava, na may mga hut sa 7th at 8th station."
+        },
+        {
+          time: "Pagtulog sa Mountain Hut (Yamagoya)",
+          text: "Isang tunay na karanasan sa taas na mahigit 3,000 metro sa simpleng kahoy na tulugan. Inihahain ang mainit na Japanese curry at kanin bago magpahinga nang ilang oras upang masanay ang katawan sa manipis na hangin at lamig (malapit sa 0 °C kahit Agosto)."
+        },
+        {
+          time: "Pag-akyat sa Gabi Gamit ang Headlamp",
+          text: "Sa pagitan ng hatinggabi at 1:00 am, bubuksan ng mga hiker ang kanilang headlamp para sa huling bahagi ng pag-akyat. Sa malayo, makikita ang parang ilog ng daan-daang ilaw na gumagapang sa dilim sa ilalim ng kalangitang puno ng bituin."
+        },
+        {
+          time: "Goraiko: Ang Banal na Pagsikat ng Araw sa Tuktok (3,776m)",
+          text: "Ang pinakatampok na bahagi. Mula sa bunganga ng bulkan sa taas na 3,776 metro, masisilayan ang 'Goraiko' (ang pagdating ng banal na liwanag): ang sumisikat na araw sa ibabaw ng dagat ng ulap na nagtatapon ng higanteng anino ng Mount Fuji (Kagefuji) sa kabila."
+        },
+        {
+          time: "Ohachi-meguri: Pag-ikot sa Bunganga at Kengamine Peak",
+          text: "Isang 90-minutong paglalakad paikot sa higanteng bunganga ng bulkan na may laking 500 metro at lalim na 250 metro. Dito mararating ang Kengamine, ang pinakamataas na punto sa buong Japan kung saan nakatayo ang dating weather station."
+        },
+        {
+          time: "Kongo-zue: Ang Kahoy na Tungkod ng Peregrino",
+          text: "Bumili ng walong-sulok na kahoy na tungkod (kongo-zue) sa 5th station. Sa bawat hut na mararating mo, tatakan ito ng mainit na bakal na nagpapatunay ng taas na naabot, na magiging natatanging alaala ng iyong tagumpay."
+        },
+        {
+          time: "Sunabashiri: Mabilis na Pagbaba sa Buha-buhang Bulkan",
+          text: "Ang pagbaba ay dumaraan sa hiwalay na daan na puno ng malambot na buhangin at abo ng bulkan. Gamit ang gaiters at trekking poles, puwedeng humakbang nang malalaki at mabilis dumulas pababa (ang 'sunabashiri'), na matatapos sa loob lamang ng 3 oras."
+        },
+        {
+          time: "Mga Patakaran at Reserbasyon (Season at Bayarin)",
+          text: "Ang opisyal na climbing season ay mula unang bahagi ng Hulyo hanggang unang bahagi ng Setyembre. Simula 2024, ipinag-uutos ang maagang online reservation (hanggang 4,000 hiker kada araw), may bayad sa pagpasok na ¥2,000 at voluntary conservation fee na ¥1,000 upang maiwasan ang overcrowding."
+        }
       ],
-      money: "Depende sa na-book na hut; obligado ang conservation fee at reserbasyon ng time slot simula 2024 sa Yoshida Trail.",
+      money: "Mountain hut stay na may hapunan at almusal (~¥10,000-14,000) + opisyal na bayarin (¥3,000) + bus fare mula Tokyo o Kawaguchiko.",
     },
     {
       id: "hiroshima-nagasaki",
-      title: "Hiroshima at Nagasaki",
+      title: "Hiroshima at Nagasaki: Alaala, Kapayapaan at Kasaysayan",
       cities: "Hiroshima, Nagasaki",
-      reason: "Ideya para sa susunod na biyahe -- hindi bahagi ng itinerary ng biyaheng ito (wala sa dalawang lungsod ang nabisita).",
-      summary: "Ang dalawang lungsod kung saan bumagsak ang atomic bomb noong Agosto 1945, ngayon ay nakatuon sa memoria at kapayapaan -- at may sapat na dahilan para bisitahin lampas sa kasaysayang iyon: ang Miyajima island na may floating torii gate malapit sa Hiroshima, at ang natatanging nakaraan ng Nagasaki bilang isa sa iilang bintana ng Japan sa labas ng mundo sa loob ng mga siglo ng pagkakahiwalay.",
-      history: "Winasak ang Hiroshima ng unang atomic bomb na ginamit sa alitan, noong Agosto 6, 1945; ang Peace Memorial Park at ang Genbaku Dome (isa sa iilang istrukturang natirang nakatayo malapit sa hypocenter) ay patotoo ngayon dito. Ang Nagasaki, na binomba tatlong araw pagkatapos, ay may kaibahan at mas mahabang kasaysayan din: sa panahon ng sakoku isolation ng ika-17 hanggang ika-19 siglo, ang artificial island ng Dejima ay sa loob ng maraming henerasyon ang tanging awtorisadong punto ng ugnayang pangkalakalan sa pagitan ng Japan at Kanluran (ang mga Dutch).",
+      reason: "Ideya para sa susunod na biyahe -- dalawang makabuluhan at makasaysayang lungsod na hindi napuntahan sa biyaheng ito.",
+      summary: "Ang dalawang natatanging lungsod sa daigdig na dumanas ng pagsabog ng atomic bomb noong 1945, ngayon ay naging tanglaw ng kapayapaan at pag-asa. Bukod sa kanilang mga museo, mayroon silang kahanga-hangang kultura: ang layered okonomiyaki ng Hiroshima at ang natatanging kasaysayan ng Nagasaki bilang nag-iisang daungan na bukas sa Europa sa loob ng 200 taon.",
+      history: "Noong Agosto 6, 1945, nawasak ang Hiroshima ng unang atomic bomb; makalipas ang tatlong araw, noong Agosto 9, binomba rin ang Nagasaki. Ginawa ng dalawang lungsod ang trahedya bilang panawagan para sa kapayapaan ng buong mundo. Bukod dito, ang Nagasaki ay naging bukod-tanging daungan ng Japan sa panahon ng mahigit 200 taon ng sakoku isolation kung saan ang artificial island ng Dejima ang tanging lugar ng kalakalan sa pagitan ng mga Dutch at Japan.",
       schedule: [
-        { time: "Hiroshima", text: "Peace Memorial Park, Genbaku Dome at Peace Memorial Museum; excursion sa Miyajima island (Itsukushima Shrine at ang floating torii gate nito)." },
-        { time: "Nagasaki", text: "Peace Park at atomic bomb museum; Dejima island, muling itinayo bilang open-air museum ng dating Dutch trading enclave." },
+        {
+          time: "Hiroshima: Peace Memorial Park at Museum",
+          text: "Matatagpuan sa delta ng Ilog Motoyasu sa ilalim mismo ng hypocenter ng pagsabog noong Agosto 6, 1945. Tampok dito ang Cenotaph na naglalaman ng mga pangalan ng lahat ng biktima at ang Peace Flame na sinindihan noong 1964 na mananatiling may alab hanggang mawala ang lahat ng nuclear weapons sa mundo. Ipinapakita sa museo ang mga personal na gamit ng mga nakaligtas (hibakusha)."
+        },
+        {
+          time: "Genbaku Dome (A-Bomb Dome)",
+          text: "Dating Industrial Exhibition Hall na dinisenyo ng Czech architect na si Jan Letzel noong 1915. Isa ito sa iilang gusali malapit sa ground zero na hindi ganap na napatag dahil sumabog ang bomba halos diretso sa ibabaw nito (mga 600m sa himpapawid). Idineklarang UNESCO World Heritage Site noong 1996 bilang pandaigdigang paalala sa kapayapaan."
+        },
+        {
+          time: "Bantayog ni Sadako Sasaki at ang Isang Libong Paper Cranes",
+          text: "Inialay kay Sadako Sasaki, isang batang 2 taong gulang na nakaligtas sa pagsabog ngunit nagkaroon ng leukemia makalipas ang sampung taon. Inspirado ng alamat ng Senbazuru (na ang pagtiklop ng 1,000 origami cranes ay magbibigay ng hiling sa kalusugan), nagtiklop siya ng mga papel ng gamot hanggang sa pumanaw. Ngayon, nagpapadala ang mga kabataan mula sa buong mundo ng milyun-milyong makukulay na origami cranes."
+        },
+        {
+          time: "Hiroshima-Style Okonomiyaki sa Okonomimura",
+          text: "Hindi tulad ng sa Osaka (kung saan pinaghahalo ang lahat ng sangkap bago lutuin), ang okonomiyaki sa Hiroshima ay inilalatag nang patong-patong sa teppan: manipis na crepe, bunton ng repolyo, malulutong na hiwa ng baboy, yakisoba noodles, itlog, at sarsa ng Otafuku. Sa Okonomimura, isang buong gusali na may 4 na palapag ang puno ng maliliit na kainan na naglalaban-laban sa pinakamasarap na timpla."
+        },
+        {
+          time: "Nagasaki: Peace Park at ang Estatwa ni Seibo Kitamura",
+          text: "Minamarkahan ng Nagasaki Peace Park ang hypocenter ng pambobomba noong Agosto 9, 1945. Ang gitna nito ay ang 10-metrong bronseng Peace Statue na ginawa ni Seibo Kitamura: nakaturo ang kanang kamay sa langit bilang paalala sa banta ng bomba, nakaunat ang kaliwang kamay para sa kapayapaan, at nakapikit ang mga mata sa tahimik na panalangin."
+        },
+        {
+          time: "Dejima Island: Ang Bintana ng Japan sa Kanluran noong Sakoku",
+          text: "Sa loob ng mahigit 200 taon ng mahigpit na isolation (panahon ng Edo, 1641–1854), ang hugis-pamaypay na artificial island ng Dejima ang naging nag-iisang lugar sa Japan kung saan pinayagang manirahan at makipagkalakalan ang mga banyaga (Dutch East India Company). Ngayon ay muli itong itinayo bilang open-air museum na nagpapakita kung paano pumasok ang kape, bilyar, salamin, at medisina sa bansa."
+        },
+        {
+          time: "Glover Garden at mga Mansiyon sa Burol ng Nagasaki",
+          text: "Nasa mataas na burol kung saan matatanaw ang daungan, narito ang mga mansiyon ng mga mangangalakal noong ika-19 na siglo, kabilang ang bahay ng Scottish merchant na si Thomas Glover. Ang mga balkon nito na may tanawin sa daungan ang naging inspirasyon sa tanyag na opera ni Puccini na Madama Butterfly."
+        },
+        {
+          time: "Natatanging Pagkain: Champon, Sara Udon at Castella Cake",
+          text: "May kakaibang fusion cuisine ang Nagasaki: 1) Champon: makapal na noodles sa sabaw ng baboy at manok na puno ng sariwang seafood at gulay. 2) Sara Udon: malutong na pritong noodles na may malapot na sarsa ng seafood at gulay. 3) Castella (Kasutera): malambot at matamis na sponge cake na dinala ng mga Portuguese noong ika-16 na siglo, na may malulutong na butil ng asukal sa ilalim."
+        }
       ],
-      money: "Depende -- pareho ang lungsod ay maayos na konektado sa Shinkansen (Hiroshima) at limited express train (Nagasaki) mula Osaka/Fukuoka.",
+      money: "Direktang Shinkansen mula Shin-Osaka papuntang Hiroshima (1h 25min) at express train papuntang Nagasaki; abot-kaya ang mga entrance fee sa museo (~¥200-600).",
     },
     {
       id: "hokkaido",
-      title: "Hokkaido",
-      cities: "Sapporo, Furano, Shiretoko",
-      reason: "Ideya para sa susunod na biyahe -- ganap na ibang klase ng kalikasan kumpara sa natitirang bahagi ng Japan, hindi nabisita ngayong beses.",
-      summary: "Ang pinaka-hilagang isla, na may tanawing ibang-iba sa natitirang bahagi ng bansa: ang lavender fields ng Furano at Biei sa tag-init, ang Shiretoko National Park (World Heritage Site, may ligaw na brown bear), hot springs (onsen) sa kanayunan, at kung sa taglamig maglalakbay, world-class na powder snow at ang Sapporo Snow Festival.",
-      history: "Ang Hokkaido ang huli sa mga pangunahing isla ng Japan na pormal na naisama sa bansa, aktibong kinolonisa simula sa Meiji era (mula 1869). Ito ang ninuno-lupain ng Ainu people, isang katutubong grupo na may sariling wika at kultura na ibang-iba sa karamihang Japanese, ngayon opisyal na kinikilala bilang katutubong mamamayan ng Japan.",
+      title: "Hokkaido: Ligaw na Kalikasan, Niyebe at Bulkan",
+      cities: "Sapporo, Furano, Shiretoko, Otaru, Noboribetsu",
+      reason: "Ideya para sa susunod na biyahe -- ang hilagang isla ay nag-aalok ng ibang-ibang mukha ng Japan na may malalawak na tanawin at likas na kagandahan.",
+      summary: "Ang pinaka-hilagang isla ng Japan ay nakabibighani dahil sa malalawak nitong lupain, umuusok na bulkan, protektadong national parks, at tanyag na sariwang pagkaing-dagat at dairy products. Maganda itong puntahan sa tag-araw (mga bukid ng bulaklak) at sa taglamig (world-class powder snow at mga ice festival).",
+      history: "Ang Hokkaido ('daan ng hilagang dagat') ay pormal na naging bahagi ng Japan noong panahon ng Meiji noong huling bahagi ng ika-19 siglo. Dati itong kilala bilang Ezochi, ang ninunong lupain ng mga Ainu, isang katutubong lahi na may sariling wika, paniniwala, at kultura na ipinagdiriwang ngayon sa mga sentro tulad ng Upopoy sa Shiraoi.",
       schedule: [
-        { time: "Sapporo", text: "Kabisera ng isla, makasaysayang brewery, Nijo fish market, at ang Snow Festival tuwing Pebrero kung magtutugma ang petsa." },
-        { time: "Furano/Biei", text: "Lavender fields at mga burol ng makukulay na pananim (season: Hunyo-Agosto)." },
-        { time: "Shiretoko", text: "Peninsula na idineklarang UNESCO World Heritage Site; brown bear at sea eagle spotting cruise." },
+        {
+          time: "Sapporo: Odori Park, Clock Tower at Lumang Gusali ng Pamahalaan",
+          text: "Ang kabisera ng Hokkaido ay may maluwang na disenyo ng mga kalsada. Ang Odori Park ay 1.5 km na berdeng liwasan sa gitna ng lungsod kung saan idinaraos tuwing Pebrero ang sikat na Sapporo Snow Festival (Yuki Matsuri) na may higanteng mga lilok ng niyebe at yelo. Ang kahoy na Clock Tower (1878) at ang red-brick government building ay nagpapakita ng kasaysayan ng lungsod."
+        },
+        {
+          time: "Miso Ramen sa Ramen Alley at Nijo Fish Market",
+          text: "Dito sa Sapporo ipinanganak ang miso ramen: kulot na noodles sa malapot na sabaw na may bawang, toge, matamis na mais ng Hokkaido, at butter. Ang eskinita ng Ganso Ramen Yokocho sa Susukino ang pugad ng mga lumang kainan. Sa umaga, nag-aalok ang Nijo Market ng kaisen-don na punong-puno ng salmon roe (ikura), sea urchin (uni), at snow crab."
+        },
+        {
+          time: "Sapporo Beer Museum at Pagkaing Genghis Khan (Jingisukan)",
+          text: "Nasa loob ng lumang 1876 red-brick building, ito ang nag-iisang beer museum sa Japan. Sa katabing beer hall, tikman ang 'Jingisukan': maninipis na hiwa ng karne ng tupa na inihaw sa hugis-helmet na bakal kasama ang sibuyas, kalabasa, at toge, sabayan ng sariwang Sapporo draft beer."
+        },
+        {
+          time: "Furano at Biei: Mga Bukid ng Lavender at Shirogane Blue Pond",
+          text: "Sa kalagitnaan ng tag-araw (Hulyo-Agosto), ang mga burol ng Furano (Farm Tomita) ay napupuno ng makukulay na lavender, poppies, at sunflowers. Sa kalapit na Biei, matatagpuan ang Shirogane Blue Pond, isang lawa na may kulay asul-turkesa kung saan nakatayo ang mga tuyong puno ng larch sa gitna ng tubig."
+        },
+        {
+          time: "Shiretoko National Park: Dulo ng Daigdig (UNESCO)",
+          text: "Nasa dulong hilagang-silangan ng Hokkaido, ang ibig sabihin ng Shiretoko sa wikang Ainu ay 'dulo ng daigdig'. Isa ito sa pinaka-birheng kalikasan sa daigdig: may matatarik na bangin kung saan naninirahan ang mga ligaw na brown bear, sea eagles, at pulang fox na makikita sa pamamagitan ng cruise boat mula Utoro o sa elevated boardwalks sa Shiretoko Five Lakes."
+        },
+        {
+          time: "Otaru: Romantikong Kanal, Music Boxes at Blown Glass",
+          text: "40 minuto lang mula Sapporo, ang Otaru ay lumang daungan noong ika-20 siglo. Ang kanal nito na pinalilibutan ng mga lumang imbakan ng isda at may mga ilaw na gasera sa gabi ay paboritong pasyalan, kasama ang mga tindahan ng blown glass at music box museum."
+        },
+        {
+          time: "Hell Valley (Jigokudani) at Onsen sa Noboribetsu",
+          text: "Ang nangungunang onsen resort sa Hokkaido. Isang nakamamanghang bunganga ng bulkan na umuusok ng asupre, may kumukulong geysers at mainit na ilog sa gitna ng kakahuyan na nagpapadaloy ng tubig sa mga tradisyunal na open-air hot spring bath (rotenburo)."
+        }
       ],
-      money: "Depende -- kailangan ng domestic flight o Shinkansen papuntang Hakodate/Sapporo; inirerekomenda ang rental car sa labas ng mga lungsod.",
+      money: "Domestic flight mula Tokyo papuntang Sapporo (~1h 30min) o Shinkansen papuntang Hakodate; inirerekomenda ang magrenta ng kotse para sa pamamasyal sa kalikasan.",
     },
     {
       id: "okinawa",
-      title: "Okinawa",
-      cities: "Naha, Ishigaki, Miyako",
-      reason: "Ideya para sa susunod na biyahe -- mga beach, isla at Ryukyu culture, hindi nabisita ngayong beses.",
-      summary: "Ang subtropical archipelago sa timog, may beach at coral reef na hindi bagay sa karaniwang imahe ng Japan, at may sariling kultura -- ang Ryukyu -- na may mga siglo ng kasaysayang iba sa natitirang bahagi ng bansa: ibang wika, pagkain, musika, at tradisyunal na arkitektura (ang gusuku castles).",
-      history: "Ang Okinawa ay dating Ryukyu Kingdom, isang independiyenteng estado na may tributary relationship sa China sa loob ng mga siglo, hanggang sa sapilitang anexation ng Japan noong 1879. Noong 1945, ito ang naging tagpuan ng isa sa pinakamadugong labanan sa Pacific (ang Battle of Okinawa), at hindi na bumalik sa Japanese sovereignty hanggang 1972, matapos ang halos 30 taon sa ilalim ng US administration.",
+      title: "Okinawa at ang Arkipelago ng Ryukyu",
+      cities: "Naha, Ishigaki, Miyakojima, Taketomi",
+      reason: "Ideya para sa susunod na biyahe -- magagandang beach, coral reef, at sariling mayamang kultura na hindi naisama sa biyaheng ito.",
+      summary: "Ang subtropical archipelago ng Okinawa ay kinagigiliwan dahil sa preskong simoy ng hangin, tubig na kulay 'Miyako Blue', tugtog ng sanshin, at tradisyunal na mga bahay na binabantayan ng mga estatwa ng Shisa lion.",
+      history: "Sa loob ng mahigit 450 taon, ang mga islang ito ay naging malayang Ryukyu Kingdom na nakikipagkalakalan sa China, Japan, Korea, at Timog-Silangang Asya. Noong 1879 ay sapilitang isinama sa Japan, dumanas ng matinding labanan noong Battle of Okinawa noong 1945, at pinamahalaan ng US militar hanggang 1972, dahilan upang magkaroon ito ng kakaiba at makulay na pagkakakilanlan.",
       schedule: [
-        { time: "Naha", text: "Shuri Castle (muling itinayo, dating royal residence ng Ryukyu Kingdom, World Heritage Site), Makishi Market, Okinawan cuisine (soba, goya champuru)." },
-        { time: "Yaeyama Islands (Ishigaki/Miyako)", text: "Mga beach at coral reef na kabilang sa pinakamaganda sa Japan para sa diving o snorkeling." },
+        {
+          time: "Naha at Shuri Castle: Puso ng Ryukyu Kingdom",
+          text: "Ang dating kabisera ng Ryukyu Kingdom. Ang Shuri Castle (Gusuku), isang UNESCO World Heritage Site, ay kahanga-hangang pinaghalong disenyong Tsino na may pulang dragon, kahoy na arkitekturang Hapon, at matitibay na pader na gawa sa coral limestone."
+        },
+        {
+          time: "Kokusai Dori Street at Makishi Public Market",
+          text: "Ang masiglang kalsada ng Naha: may mga tindahan ng Awamori liquor na nakaimbak sa banga, Ryukyu blown glass, at chinsuko cookies. Sa Makishi Market, maaaring pumili ng sariwang tropical fish (tulad ng asul na Gurukun) at alimango sa ibaba upang lutuin at kainin sa ikalawang palapag."
+        },
+        {
+          time: "Miyakojima: Tubig 'Miyako Blue' at Snorkel Kasama ang Pawikan",
+          text: "Tanyag sa pagkakaroon ng pinakaputing buhangin at pinakamalinaw na dagat sa buong Japan. Ang Yonaha Maehama (7 km ng pinong buhangin) at Sunayama Beach na may natural na arko ng bato ay may kristal na tubig kung saan madalas makasabay lumangoy ang mga mailap na pawikan sa Shigira at Yoshino bay."
+        },
+        {
+          time: "Ishigaki at ang Magandang Kabira Bay",
+          text: "Ang pangunahing daungan ng Yaeyama islands. Ang Kabira Bay ay may kulay-esmeraldang tubig at luntiang burol kung saan ipinagbabawal ang paglangoy upang protektahan ang mga itim na perlas; sumasakay ang mga bisita sa glass-bottom boat upang makita ang higanteng coral at clownfish. Sa gabi, maganda ang stargazing sa Tamatorizaki viewpoint."
+        },
+        {
+          time: "Taketomi Island: Tradisyunal na Baryo at Kariton ng Kalabaw",
+          text: "10 minutong ferry lang mula Ishigaki, napanatili ng Taketomi ang tradisyunal na nayon ng Ryukyu: mabababang bahay na may pulang bubong na binabantayan ng Shisa, bakod na gawa sa bato ng coral, at kalyeng may puting buhangin na w创业wina-walisan tuwing umaga. Pasyalan ang nayon sakay ng karitong hila ng kalabaw habang tumutugtog ng sanshin ang kutsero."
+        },
+        {
+          time: "Pagkain para sa Mahabang Buhay: Okinawa Soba, Goya Champuru at Umi-budo",
+          text: "Isa ang Okinawa sa mga kinikilalang 'Blue Zones' ng mundo dahil sa mahabang buhay ng mga naninirahan dito: 1) Okinawa Soba: makakapal na noodles sa sabaw ng baboy at bonito na may napakalambot na soki (stewed pork ribs). 2) Goya Champuru: ginisang ampalaya kasama ang tokwa, itlog, at baboy. 3) Umi-budo ('sea grapes'): sariwang berdeng sea algae na pumuputok sa bibig na parang caviar kapag isinawsaw sa soy sauce at shikuwasa citrus."
+        }
       ],
-      money: "Depende -- direktang flight mula Tokyo/Osaka papuntang Naha o Ishigaki (~2-3h), hindi na kailangan ng train pass.",
+      money: "Direktang flight mula Tokyo o Osaka papuntang Naha, Miyako, o Ishigaki (~2h 30min-3h); mabilis at madalas ang biyahe ng ferry sa pagitan ng mga isla.",
     },
     {
       id: "iriomote-stargazing",
-      title: "Iriomote: Madidilim na Kalangitan para sa Astrophotography",
-      cities: "Iriomote (Yaeyama Islands, Okinawa)",
-      reason: "Ideya para sa susunod na biyahe, espesyal na napili para sa'yo -- kasama ang telescope at drone, tila talagang magugustuhan mo ito.",
-      summary: "Ang Iriomote-Ishigaki National Park ang unang lugar sa Asia na na-certify bilang 'International Dark Sky Park' ng DarkSky International (2018), na halos walang light pollution. 90% ng isla ay natatakpan ng halos hindi pa nagagalaw na subtropical jungle (tahanan ng Iriomote wildcat, isang endangered species na wala kahit saan pa), kaya sa umaga puwedeng mag-kayak sa mangroves at sa gabi ay i-set up ang gamit nang halos walang artificial light sa paligid.",
-      history: "Dahil sa latitude nito, sa ilang bahagi ng taon makikita mula sa Iriomote ang Southern Cross (Crux) na sumusungaw sa abot-tanaw -- isang konstelasyong hindi talaga makikita mula sa Spain dahil sa latitude. Isa ito sa iilang lugar sa Japan kung saan posible ito.",
+      title: "Iriomote: Astrophotography at Ekspedisyon sa Kagubatan",
+      cities: "Iriomote Island (Yaeyama, Okinawa)",
+      reason: "Ideya para sa susunod na biyahe, espesyal na inihanda para sa iyo -- gamit ang telescope, camera, at drone, isa ito sa pinakamagandang lugar sa daigdig para sa pagkuha ng larawan sa gabi.",
+      summary: "Ang pinakaligaw na isla sa Japan, 90% ay nababalot ng kagubatan at bakawan. Sertipikado ng DarkSky International bilang International Dark Sky Park dahil sa kawalan ng light pollution, kaya malinaw na malinaw ang Milky Way at makikita ang Southern Cross sa ibabaw ng dagat.",
+      history: "Kilala sa buong daigdig ang Iriomote bilang nag-iisang tahanan ng Iriomote wildcat (Yamaneko), isang pusa sa gabi na natuklasan lamang noong 1967 at nanganganib nang maubos. Dahil sa timog na lokasyon nito (24° N), makikita mula rito ang Southern Cross constellation sa pagitan ng Pebrero at Hunyo, na hindi kailanman makikita mula sa Europa.",
       schedule: [
-        { time: "Araw", text: "Pag-kayak sa mangroves ng Ilog Nakama, jungle at talon sa loob ng isla." },
-        { time: "Gabi", text: "Astrophotography session sa isa sa mga certified na dark-sky zone -- dalhin ang telescope at drone." },
+        {
+          time: "International Dark Sky Park Certification",
+          text: "Ang Iriomote-Ishigaki National Park ang pinakaunang lugar sa buong Asya na kinilala ng DarkSky International (2018). Dahil walang nakatira sa gubat at daan-daang kilometro ang layo sa malalaking lungsod, ganap ang kadiliman (Bortle 1-2). Ang Milky Way ay hindi lang malabong ulap kundi may 3D na anyo na kitang-kita kahit sa hubad na mata."
+        },
+        {
+          time: "Pagmamasid sa Southern Cross (Crux) sa Ibabaw ng Dagat",
+          text: "Dahil nasa 24 degrees north latitude lamang, ang Iriomote ay isa sa iilang lugar sa Japan kung saan ang Southern Cross ay sumisilip sa abot-tanaw sa timog mula Pebrero hanggang Hunyo. Isang pambihirang pagkakataon para sa mga astrophotographer."
+        },
+        {
+          time: "Astrophotography at Pagpapalipad ng Drone",
+          text: "Ang mga liblib na dalampasigan (tulad ng Hoshisuna Beach at Shirahama) ay perpektong lugar para mag-set up ng tripod, telescope, at long-exposure cameras. Ang mga drone ay nakakakuha ng magagandang kuha ng paglubog ng araw sa mga bakawan bago dumilim."
+        },
+        {
+          time: "Kayak Expedition sa mga Ilog ng Nakama at Urauchi",
+          text: "Ang dalawang pinakamahabang ilog sa Okinawa ay bumabagtas sa puso ng isla. Ang pagka-kayak sa tahimik na tubig ay magdadala sa iyo sa ilalim ng mayayabong na bakawan na may malalaking ugat, pati na ang sagradong puno ng Sakishima Suounoki na may matataas na ugat na parang dingding."
+        },
+        {
+          time: "Trekking sa Kagubatan Patungong Pinaisara Falls (55m)",
+          text: "Ang pinakamataas na talon sa buong Okinawa na may taas na 55 metro. Pinagsasama sa tour ang kayaking sa Ilog Mare at paglalakad sa rainforest sa gitna ng malalaking pako at baging. Puwedeng lumangoy sa malamig na pool sa paanan o umakyat sa itaas para sa tanawin ng coral reef."
+        },
+        {
+          time: "Ang Mailap na Pusa ng Iriomote (Yamaneko)",
+          text: "Isang endangered na pusang-gubat na kasinglaki ng pusang-bahay ngunit may bilugang tainga at mga batik sa balahibo (wala pang 100 ang natitira). May mga lagusan sa ilalim ng kalsada at mababang speed limit sa buong isla upang protektahan ang sinaunang hayop na ito."
+        },
+        {
+          time: "Hoshisuna Beach: Buhangin na Hugis Bituin",
+          text: "Sa dulong hilaga ng isla, ang buhangin sa dalampasigang ito ay hindi gawa sa durog na bato, kundi sa mga fossil ng microscopic organisms (foraminifera). Kapag idiniin mo ang iyong palad sa basang buhangin, may didikit na maliliit na butil na may perpektong hugis na bituin na may 5 o 6 na dulo."
+        }
       ],
-      money: "Depende -- sakay ng ferry mula Ishigaki (~40 min); kaunti lang ang lodging, mainam mag-book nang maaga.",
+      money: "Ferry mula Ishigaki (40-45 min, ~¥2,500); kaunti lamang ang tutuluyan sa isla kaya kailangang mag-book nang maaga.",
     },
-  ],
+    {
+      id: "miyajima",
+      title: "Isla ng Miyajima (Itsukushima)",
+      cities: "Miyajima, Hiroshima Bay",
+      reason: "Ideya para sa susunod na biyahe -- ang sagradong isla kung saan nagtatagpo ang lumulutang na dambana, matatayog na bundok, at malalayang sika deer.",
+      summary: "Itinuturing na isa sa Tatlong Magagandang Tanawin ng Japan (Nihon Sankei), ang Miyajima ay sagradong isla sa Seto Inland Sea. Tanyag sa napakalaking pulang torii gate na parang lumulutang sa dagat kapag high tide, mayroon din itong mga lumang templo, hiking trails sa Mount Misen, at masasarap na inihaw na talaba.",
+      history: "Noong sinaunang panahon, ang buong isla ay itinuturing na isang buhay na kami (diyos) kaya bawal apakan ng tao o magsilang o mamatay rito. Upang makapanalangin ang mga deboto nang hindi nilalapastangan ang lupa, muling itinayo ni Taira no Kiyomori ang Itsukushima Shrine noong 1168 sa ibabaw ng tubig sa pamamagitan ng mga haliging kahoy. Idineklarang UNESCO World Heritage Site noong 1996.",
+      schedule: [
+        {
+          time: "Itsukushima Shrine at ang Lumulutang na Torii Gate",
+          text: "Itinayo sa ibabaw ng tubig sa look, ang dambana ay itinatag noong 593 at pinalaki noong 1168 ni Taira no Kiyomori. Kapag high tide, pumapasok ang tubig-dagat sa ilalim ng sahig na kahoy at ang malaking pulang torii ay mistulang lumulutang sa dagat. Ang torii ay may taas na 16.6 metro, may bigat na 60 tonelada, at nakatayo lamang sa sarili nitong bigat sa 6 na dambuhalang puno ng camphor nang hindi nakabaon sa ilalim ng dagat. Kapag low tide, humuhupa ang tubig at puwedeng maglakad sa buhangin upang hawakan ang mga haligi ng torii."
+        },
+        {
+          time: "Mount Misen at ang Cable Car (535m)",
+          text: "Ang pinakamataas na bundok sa isla (535m), sagrado sa loob ng libu-libong taon. Sumakay sa dalawang bahagi ng ropeway patungong Shishiiwa Station, kasunod ang 30-minutong pag-akyat sa gitna ng malalaking batong granite at birheng gubat. Mula sa tuktok, may 360-degree view sa buong Hiroshima Bay at sa isla ng Shikoku sa maaliwalas na panahon."
+        },
+        {
+          time: "Reikado: Bulwagan ng 1,200 Taong Banal na Apoy",
+          text: "Nasa daan paakyat sa Mount Misen, iniingatan ng maliit na templong ito ang banal na apoy na sinindihan ng mongheng si Kobo Daishi (Kukai) noong 806 AD habang nagninilay nang 100 araw. Hindi pa namamatay ang apoy sa loob ng mahigit 1,200 taon. Mula sa apoy na ito kinuha ang alab ng Peace Flame sa Hiroshima Peace Park. Puwedeng uminom ng pinakuluang tubig mula sa higanteng bakal na kaldero na pinaniniwalaang nagpapagaling ng karamdaman."
+        },
+        {
+          time: "Daisho-in Temple at ang 500 Rakan Monks",
+          text: "Nasa paanan ng bundok, ito ang pinakamakasaysayang templong Budista sa isla. Ang mga hagdan nito sa gitna ng kakahuyan ay may 500 lilok na estatwa ng mga disipulo ni Buddha (Rakan), na may iba't ibang mukha at may suot na niniting na sombrero. Tampok din dito ang mga prayer wheel na umiikot para magbigay ng biyaya, madilim na kuweba na may buhangin mula sa 88 templo ng Shikoku, at peace bell na puwedeng patunugin."
+        },
+        {
+          time: "Senjokaku Pavilion at Gojunoto Pagoda",
+          text: "Kilala bilang 'Bulwagan ng 1,000 Tatami Mats', ang malaking kahoy na bulwagang ito ay ipinagawa noong 1587 ng pinunong si Toyotomi Hideyoshi para sa mga sundalong nasawi. Nang mamatay si Hideyoshi noong 1598, hindi na ito natapos kaya walang dingding o kisame, at nakikita ang malalaking kahoy na poste na may mga lumang painting ng samurai. Sa tabi nito nakatayo ang limang palapag na Gojunoto Pagoda na itinayo noong 1407."
+        },
+        {
+          time: "Momijidani Park at Malalayang Sika Deer",
+          text: "Isang lambak sa tabi ng bundok na may malinis na batis at pulang tulay, kilala sa daan-daang puno ng maple (momiji) na nagiging matingkad na pula at kahel sa taglagas. Maraming sika deer ang malayang naglalakad sa bayan at parke. Itinuturing silang banal na mensahero ng mga diyos sa Shinto, kaya mahigpit na ipinagbabawal ang pagpapakain sa kanila (bantayan ang mga tiket at papel dahil mahilig silang ngumata nito!)."
+        },
+        {
+          time: "Masasarap na Pagkain: Inihaw na Talaba, Age-Momiji at Anago Meshi",
+          text: "Ang Omotesando street ay puno ng masasarap na pagkain: 1) Hiroshima Oysters (kaki): inihaw sa uling na may kalamansi at toyo, o pritong tempura. 2) Age-Momiji: pritong pastry na hugis dahon ng maple na may palamang red bean paste (anko), custard, matcha, o keso na nakatuhog sa stick. 3) Anago Meshi: inihaw na sea eel na may matamis na glaze sa ibabaw ng kaning niluto sa sabaw ng igat."
+        },
+        {
+          time: "Ferry at Tides: Gabay sa High Tide at Low Tide",
+          text: "Mula Hiroshima Station, sumakay ng JR San-yo Line papuntang Miyajimaguchi Station (25-30 min). Sa pantalan, sumakay ng JR Ferry (kasama sa JR Pass) o Matsudai Ferry (10 min na tawid, ~¥200 + ¥100 island tax). Ang JR ferry ay mas lumalapit sa torii gate para sa magagandang litrato. Tingnan ang tide forecast para masaksihan ang dambana kapag high tide at makapaglakad sa ilalim ng torii kapag low tide."
+        }
+      ],
+      money: "JR train mula Hiroshima papuntang Miyajimaguchi (~¥420) + ferry (~¥200 + ¥100 tax); ropeway sa Mount Misen (~¥2,000 round trip).",
+    }
+  ]
 };
 
 export const pendingSectionLabel = {
