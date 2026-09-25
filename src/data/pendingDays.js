@@ -5,6 +5,34 @@
 export const pendingDays = {
   "es": [
     {
+      "id": "narita-arrival",
+      "num": 1,
+      "title": "Llegada a Japón: Aterrizaje en Narita y traslado a Tokio",
+      "cities": "Aeropuerto de Narita (NRT) → Tokio (Shinjuku / Asakusa)",
+      "reason": "Día de llegada imprescindible: Trámites de aduana, traslado en tren express a Tokio y primera toma de contacto nocturna.",
+      "summary": "Aterrizaje en el Aeropuerto Internacional de Narita (NRT), aduanas y recogida de equipajes con el código QR de Visit Japan Web. Traslado directo a Tokio en el tren Narita Express (JR N'EX) o Keisei Skyliner. Check-in en el hotel de Tokio, paseo tranquilo para estirar las piernas y primera cena con un reconfortante cuenco de ramen.",
+      "history": "El Aeropuerto Internacional de Narita (inaugurado en 1978 tras intensos debates y protestas campesinas conocidas como las luchas de Sanrizuka) es la principal puerta de entrada internacional a la región de Kanto y la megalópolis de Tokio. Conecta el mundo con la capital japonesa mediante dos corredores ferroviarios de alta velocidad: la red de JR East (con el Narita Express) y la línea Keisei (con el veloz tren Skyliner, que alcanza los 160 km/h).",
+      "schedule": [
+        {
+          "time": "🛬 Transporte y traslado desde Narita a Tokio (Día 1)",
+          "text": "• Aterrizaje en Narita (NRT): Tras desembarcar, pasar control de pasaportes con el código QR de Visit Japan Web y recoger maletas facturadas.\n• En el aeropuerto: Retirar Pocket WiFi o activar eSIM, y cargar la tarjeta Suica/Pasmo (o Welcome Suica) en el móvil o máquinas de la estación.\n• Tren Narita Express (JR N'EX): Directo desde la estación subterránea de Narita Airport hasta Tokyo Station (58 min) o Shinjuku (75 min). Asientos reservados numerados, amplios portaequipajes con cerradura de seguridad.\n• Alternativa Keisei Skyliner: Conecta Narita con Nippori/Ueno en solo 36 minutos (ideal si tu hotel está en Ueno, Asakusa o el este de Tokio)."
+        },
+        {
+          "time": "Check-in en el hotel de Tokio y acomodación",
+          "text": "Llegada al hotel base en Tokio (zonas recomendadas: Shinjuku por su conectividad de transportes, o Asakusa/Ueno por su encanto tradicional). Dejar las maletas en la habitación, una ducha reparadora para combatir el desfase horario (jet lag) y ponerse ropa cómoda."
+        },
+        {
+          "time": "Paseo nocturno y primera cena de bienvenida",
+          "text": "Primera inmersión en la atmósfera japonesa: luces de neón en los rascacielos, silencio en las calles residenciales y cena en un restaurante local cercano. Un bol de ramen humeante de caldo tonkotsu o fideos soba, acompañado de gyozas crujientes y cerveza japonesa de grifo (nama biiru)."
+        },
+        {
+          "time": "Parada en Konbini antes de descansar",
+          "text": "Visita obligada al konbini de la esquina (7-Eleven, Lawson o FamilyMart): comprar botellas de té verde frío, agua, algo de fruta y unos snacks tradicionales para la habitación. Descanso temprano para empezar con energía la ruta intensa del día siguiente."
+        }
+      ],
+      "money": "Aprox. 20€ tren Narita Express / Skyliner + 15€–20€ cena de bienvenida + 5€ compras en konbini."
+    },
+    {
       "id": "tokyo-highlights",
       "title": "Tokio imprescindible: Iconos, templos y miradores",
       "cities": "Tokio (Asakusa, Shibuya, Shinjuku, Harajuku)",
@@ -13,7 +41,7 @@ export const pendingDays = {
       "history": "Fundada originalmente como un humilde pueblo pesquero llamado Edo, la ciudad creció vertiginosamente cuando Tokugawa Ieyasu estableció aquí el cuartel general del shogunato en 1603. En 1868, con la Restauración Meiji, el Emperador trasladó la corte desde Kioto y rebautizó la urbe como Tokio ('Capital del Este'). Pese a ser arrasada por el Gran Terremoto de Kanto de 1923 y los bombardeos de 1945, renació como una megalópolis fascinante donde templos de madera conviven en armonía con rascacielos vanguardistas.",
       "schedule": [
         {
-          "time": "🚆 Transporte y cómo moverse (Día 1)",
+          "time": "🚆 Transporte y cómo moverse (Día 2)",
           "text": "• Base y alojamiento: Hotel en Tokio (zonas recomendadas: Shinjuku, Asakusa, Ueno o Ginza).\n• Transporte del día: Metro de Tokio (Tokyo Metro y Línea Toei). La opción más rentable es el billete Tokyo Subway Ticket de 24 horas (~800¥ / ~5€) o pagar con tarjeta Suica/Pasmo/ICOCA.\n• Conexiones clave: De Asakusa (Senso-ji) a Harajuku (Meiji Jingu) en línea Ginza hasta Omotesando y transbordo a Chiyoda (25 min). De Harajuku a Shibuya son solo 15 min a pie o 2 min en JR Yamanote. De Shibuya a Shinjuku son 7 min en JR Yamanote."
         },
         {
@@ -38,7 +66,7 @@ export const pendingDays = {
         }
       ],
       "money": "Aprox. 5€ en metro de 24h + 25€–40€ en comidas y snacks callejeros + entrada opcional a Shibuya Sky (~15€).",
-      "num": 1
+      "num": 2
     },
     {
       "id": "nikko",
@@ -49,7 +77,7 @@ export const pendingDays = {
       "history": "Nikko floreció en el siglo VIII como centro eremítico budista fundado por el monje Shodo Shonin. En 1617 fue elegido como lugar de descanso final de Tokugawa Ieyasu, el gran unificador de Japón y fundador del shogunato Tokugawa que trajo más de 250 años de paz durante el periodo Edo. Su nieto Iemitsu transformó el modesto mausoleo inicial en el deslumbrante complejo de Toshogu con más de 5 millones de láminas de pan de oro, consagrando a su abuelo como la deidad tutelar de Japón (Tosho Daigongen).",
       "schedule": [
         {
-          "time": "🚆 Transporte y cómo moverse (Día 2)",
+          "time": "🚆 Transporte y cómo moverse (Día 3)",
           "text": "• Excursión sin cambio de hotel: Salida matinal y regreso nocturno a Tokio manteniendo el mismo hotel.\n• Transporte de ida y vuelta: Tren Limited Express Spacia X o Revaty desde la estación Tobu-Asakusa directo a Tobu-Nikko (1h 50 min sin transbordos). Salida recomendada a las 07:50 o 08:30.\n• Desplazamientos en Nikko: Pase Tobu Nikko World Heritage Area Pass (o All Area Pass para subir en autobús por la carretera Irohazaka al lago Chuzenji y cataratas Kegon). Incluye viaje en tren y autobuses ilimitados."
         },
         {
@@ -86,7 +114,7 @@ export const pendingDays = {
         }
       ],
       "money": "Tobu Nikko Pass (~22,60€) + entradas santuarios (~11,40€) + comidas y degustación de yuba (~25€).",
-      "num": 2
+      "num": 3
     },
     {
       "id": "tokyo-kamakura",
@@ -97,7 +125,7 @@ export const pendingDays = {
       "history": "Kamakura fue la sede del primer gobierno militar (bakufu) de Japón entre 1185 y 1333, establecido por Minamoto no Yoritomo. Rodeada de colinas escarpadas y el mar, se convirtió en una fortaleza natural y en la cuna de la expansión del budismo zen entre la casta guerrera samurái. Por su parte, Yanaka es uno de los pocos distritos de Tokio que sobrevivió tanto al terremoto de 1923 como a la Segunda Guerra Mundial, conservando el auténtico ambiente 'shitamachi' de la era Showa.",
       "schedule": [
         {
-          "time": "🚆 Transporte y cómo moverse (Día 3)",
+          "time": "🚆 Transporte y cómo moverse (Día 4)",
           "text": "• Excursión costera con base en Tokio: Última noche en el hotel de Tokio.\n• Traslado Tokio → Kamakura: Tren JR Yokosuka Line directo desde Tokyo Station o Shinjuku hasta Kamakura Station (55 min, ~950¥ con tarjeta Suica o JR Pass).\n• Desplazamientos en Kamakura: Tren retro Enoden (10 min de Kamakura a Hase para ver el Gran Buda Kotoku-in y Hasedera).\n• Regreso a Tokio: Tren JR de vuelta a media tarde (55 min) hasta la estación de Nippori para pasear por Yanaka Ginza o la meca de Akihabara.\n• 💡 Consejo logístico de oro: Esta noche en el hotel de Tokio se preparan las maletas grandes para enviarlas directamente al hotel de Osaka por Yamato Takkyubin (~2.000¥/maleta). Así mañana viajas al Monte Fuji solo con una mochila ligera."
         },
         {
@@ -122,7 +150,7 @@ export const pendingDays = {
         }
       ],
       "money": "Aprox. 12€ en trenes JR y Enoden + 5€ entradas a Kotoku-in y Hasedera + 25€ comida local.",
-      "num": 3
+      "num": 4
     },
     {
       "id": "fuji-hiking",
@@ -133,7 +161,7 @@ export const pendingDays = {
       "history": "Venerado como montaña sagrada desde tiempos inmemoriales y hogar espiritual de la diosa sintoísta Konohanasakuya-hime, el Fuji fue durante siglos un santuario natural reservado a monjes ascetas (yamabushi). Hoy es una peregrinación nacional abierta a senderistas de todo el mundo; un célebre proverbio japonés dice: 'Quien sube al monte Fuji una vez es un sabio, quien lo sube dos veces es un necio' (por la exigencia física y la rudeza de sus laderas volcánicas).",
       "schedule": [
         {
-          "time": "🏔️ Transporte y enlace Tokio → Monte Fuji (Día 4)",
+          "time": "🏔️ Transporte y enlace Tokio → Monte Fuji (Día 5)",
           "text": "• Salida de Tokio hacia la montaña sagrada: Check-out temprano en Tokio con mochila de senderismo (las maletas ya viajan a Osaka por Takkyubin).\n• Autobús directo al Fuji: Bus express de montaña desde la terminal Shinjuku Expressway Bus Terminal (Busta Shinjuku) directo hasta la 5ª Estación Fuji Subaru Line (2h 20 min, salidas recomendadas: 06:45, 07:45 o 08:45, ~3.800¥/persona).\n• En la 5ª Estación (2.300 m): Climatización a la altitud durante 1–2 horas, almuerzo y compra del bastón de madera peregrino (Kongo-zue).\n• Ascensión: Ruta Yoshida (aprox. 4–5 horas a ritmo constante) hasta el refugio de montaña reservado en la 7ª u 8ª estación (3.000–3.400 m) para cenar y dormir unas horas."
         },
         {
@@ -170,7 +198,7 @@ export const pendingDays = {
         }
       ],
       "money": "Aprox. 24€ bus express Shinjuku-Fuji + 12€ tasa de conservación y entrada al sendero + 70€–95€ noche en refugio con cena y desayuno.",
-      "num": 4
+      "num": 5
     },
     {
       "id": "osaka-classic",
@@ -181,7 +209,7 @@ export const pendingDays = {
       "history": "Osaka (antigua Naniwa) fue capital imperial en el siglo VII y el principal centro mercantil de Japón durante el periodo Edo, apodada 'la cocina de la nación' (Tenka no Daidokoro) porque todo el arroz y las mercancías del país se distribuían a través de sus canales. El Castillo de Osaka fue la gran obra del unificador Toyotomi Hideyoshi en 1583 para consolidar su poder sobre todo el archipiélago, con muros de bloques de granito de hasta 130 toneladas traídos por mar.",
       "schedule": [
         {
-          "time": "🚄 Transporte y enlace Monte Fuji → Osaka clásico (Día 5)",
+          "time": "🚄 Transporte y enlace Monte Fuji → Osaka clásico (Día 6)",
           "text": "• Madrugada: Cumbre del Fuji (3.776 m), amanecer sagrado Goraiko y ruta del cráter Ohachi-meguri.\n• Mañana (Descenso): Bajada por la pista de ceniza hasta la 5ª Estación Fuji Subaru (aprox. 3 h, llegada sobre las 09:30–10:30).\n• Conexión directa Fuji → Osaka:\n  1. Autobús Fujikyu desde la 5ª Estación hasta la estación de Shinkansen de Mishima (1h 45 min, ~3.300¥).\n  2. En Mishima Station: Shinkansen Tokaido (Hikari o Nozomi) directo a Shin-Osaka en solo 1h 50 min.\n• Llegada a Osaka sobre las 14:00: Check-in en el hotel de Osaka (¡donde ya te esperan las maletas que enviaste desde Tokio!).\n• Tarde/Noche en Osaka: Castillo de Osaka, Shitenno-ji y cena de Takoyaki y Kushikatsu en Dotonbori."
         },
         {
@@ -206,7 +234,7 @@ export const pendingDays = {
         }
       ],
       "money": "Aprox. 20€ bus Fuji-Mishima + 80€ Shinkansen Mishima-Osaka (cubierto por JR Pass) + 4€ Castillo + 20€–30€ cena Dotonbori.",
-      "num": 5
+      "num": 6
     },
     {
       "id": "osaka-temples",
@@ -217,7 +245,7 @@ export const pendingDays = {
       "history": "A diferencia de Kioto, donde los templos son palaciegos y monumentales, los templos y santuarios de Osaka están profundamente integrados en la vida cotidiana de los vecinos, comerciantes y gremios del pueblo llano. Lugares como Hozenji o Namba Yasaka sobrevivieron a incendios y reconstrucciones manteniendo vivas tradiciones populares únicas donde la fe se vive a pie de calle entre aromas a incienso y comida casera.",
       "schedule": [
         {
-          "time": "🦁 Transporte y cómo moverse por Osaka (Día 6)",
+          "time": "🦁 Transporte y cómo moverse por Osaka (Día 7)",
           "text": "• Jornada completa en Osaka: Mismo hotel en Osaka (sin cambios de alojamiento).\n• Transporte urbano: Metro de Osaka (Líneas Midosuji y Tanimachi). Se recomienda el pase de metro Osaka 1-Day Pass (~650¥ en fin de semana / 820¥ laborable) o tarjeta Suica/ICOCA.\n• Ruta a pie y en metro: De Namba Yasaka al templo Isshin-ji son 15 min en metro o 25 min paseando por Nipponbashi Den Den Town. De Kuromon a Hozenji Yokocho son 10 min a pie. Por la tarde, metro línea Midosuji directa hasta Umeda para subir al rascacielos Umeda Sky Building."
         },
         {
@@ -242,7 +270,7 @@ export const pendingDays = {
         }
       ],
       "money": "Aprox. 4,50€ pase metro + entradas gratuitas a santuarios + 10€ mirador Umeda Sky + 25€ almuerzo en Mercado Kuromon.",
-      "num": 6
+      "num": 7
     },
     {
       "id": "hiroshima-nagasaki",
@@ -253,7 +281,7 @@ export const pendingDays = {
       "history": "El 6 de agosto de 1945, Hiroshima fue devastada por la primera bomba atómica de la historia bélica; tres días después, el 9 de agosto, Nagasaki sufrió el segundo impacto. Ambas ciudades transformaron la tragedia en un mensaje mundial de abolición nuclear. Nagasaki, además, atesora una historia única: durante los más de 200 años de la estricta política de aislamiento nacional (sakoku), la pequeña isla artificial de Dejima fue la única puerta de entrada para comerciantes holandeses, científicos y médicos occidentales en todo Japón.",
       "schedule": [
         {
-          "time": "🕊️ Transporte y enlace Osaka → Hiroshima (Día 7)",
+          "time": "🕊️ Transporte y enlace Osaka → Hiroshima (Día 8)",
           "text": "• Salida matinal hacia el oeste: Check-out en el hotel de Osaka.\n• Conexión en tren bala Shinkansen: Shinkansen Sanyo (trenes frecuentes Nozomi, Sakura o Mizuho) directo desde Shin-Osaka hasta Hiroshima Station en **solo 1 hora y 25 minutos** (aprox. 10.000¥, cubierto por JR Pass).\n• Transporte en Hiroshima: Al salir de la estación de Hiroshima, tomar el tranvía urbano Hiroden (líneas 2 o 6) hasta la parada Genbaku Dome-mae (15 min, ~220¥).\n• Visitas: Parque y Museo Memorial de la Paz, Cúpula de la Bomba Atómica, y cena de okonomiyaki estilo Hiroshima en el edificio gastronómico Okonomimura.\n• Alojamiento: Hotel en Hiroshima (cerca de la estación JR o cerca del muelle de Miyajimaguchi)."
         },
         {
@@ -290,7 +318,7 @@ export const pendingDays = {
         }
       ],
       "money": "Shinkansen incluido en JR Pass (o ~65€) + 3€ tranvía Hiroden + 1,20€ Museo de la Paz + 20€ cena en Okonomimura.",
-      "num": 7
+      "num": 8
     },
     {
       "id": "miyajima",
@@ -301,7 +329,7 @@ export const pendingDays = {
       "history": "En la antigüedad, la isla entera era considerada un kami (deidad viviente) tan sagrado que ningún ser humano tenía permitido pisarla ni nacer o morir en ella. Para que los fieles pudieran rezar sin profanar el suelo sagrado, Taira no Kiyomori remodeló en 1168 el santuario Itsukushima enteramente sobre pilotes de madera clavados en la arena de la bahía. Declarada Patrimonio de la Humanidad por la UNESCO en 1996.",
       "schedule": [
         {
-          "time": "⛩️ Transporte y enlace Hiroshima → Isla de Miyajima (Día 8)",
+          "time": "⛩️ Transporte y enlace Hiroshima → Isla de Miyajima (Día 9)",
           "text": "• Enlace ultra corto desde Hiroshima: Miyajima se encuentra justo frente a la costa de Hiroshima.\n• Tren de cercanías: Línea JR Sanyo Main Line desde Hiroshima Station hasta Miyajimaguchi Station (**28 minutos**, trenes cada 10 min, ~420¥ con Suica/JR Pass).\n• Ferry panorámico a la isla: A 2 minutos a pie de la estación está el muelle. Tomar el ferry JR West Miyajima Ferry (**10 minutos**; este ferry navega haciendo una curva especial pegada al Gran Torii Flotante para la mejor foto desde el agua; 100% incluido en el JR Pass o ~200¥ con Suica).\n• En la isla: Todo se recorre a pie entre ciervos sika (Santuario Itsukushima, templo Daisho-in, pabellón Senjokaku). Para subir al Monte Misen (535 m): Teleférico Miyajima Ropeway (~2.000¥ ida/vuelta).\n• Alojamiento: Noche mágica en ryokan tradicional en la isla de Miyajima (o regreso en 28 min a hotel en Hiroshima)."
         },
         {
@@ -338,7 +366,7 @@ export const pendingDays = {
         }
       ],
       "money": "Tren y ferry incluidos en JR Pass (o ~5€) + 2€ entrada Itsukushima + 12€ teleférico Monte Misen + 25€ ostras a la plancha y Momiji manju.",
-      "num": 8
+      "num": 9
     },
     {
       "id": "okinawa",
@@ -349,7 +377,7 @@ export const pendingDays = {
       "history": "Durante más de 450 años, estas islas conformaron el independiente y próspero Reino de Ryukyu, un emporio comercial marítimo que comerciaba libremente con China, Japón, Corea y el sudeste asiático. Anexionado a Japón en 1879, Okinawa sufrió la devastadora Batalla de Okinawa en 1945 y permaneció bajo administración militar estadounidense hasta 1972, forjando una identidad cultural mestiza y resiliente.",
       "schedule": [
         {
-          "time": "🌺 Transporte y enlace hacia Okinawa (Día 9)",
+          "time": "🌺 Transporte y enlace hacia Okinawa (Día 10)",
           "text": "• Enlace aéreo hacia el trópico: Check-out temprano en Hiroshima.\n• Vuelo directo a Okinawa: Traslado en autobús express al Aeropuerto de Hiroshima (HIJ, 45 min) o tren rápido al Aeropuerto de Osaka Kansai (KIX). Vuelo doméstico directo a Naha Airport (OKA) en Okinawa (**1 hora y 55 minutos de vuelo**, operado por ANA, JAL o Peach).\n• Transporte en Okinawa: Monorraíl elevado Yui Rail directo desde la terminal del aeropuerto hasta el centro de Naha (estación Kencho-mae para Kokusai-dori en 12 min, y estación Shuri para el Castillo de Shuri en 27 min, ~300¥).\n• Visitas: Castillo de Shuri (antiguo palacio imperial del Reino de Ryukyu), calle comercial Kokusai-dori, degustación de Okinawa Soba y playas de aguas cristalinas.\n• Alojamiento: Hotel o resort costero en Naha / costa de Okinawa."
         },
         {
@@ -378,7 +406,7 @@ export const pendingDays = {
         }
       ],
       "money": "Vuelo interno Hiroshima/Osaka-Naha (~60€–90€) + 3€ monorraíl Yui Rail + 3€ entrada Shuri Castle + 25€ gastronomía Ryukyu.",
-      "num": 9
+      "num": 10
     },
     {
       "id": "iriomote-stargazing",
@@ -389,7 +417,7 @@ export const pendingDays = {
       "history": "Iriomote es famosa en el mundo zoológico por ser el único hogar del gato de Iriomote (Prionailurus bengalensis iriomotensis), un felino salvaje nocturno descubierto apenas en 1967 que representa un linaje evolutivo aislado durante milenios. Su latitud meridional (24° N) permite divisar la Cruz del Sur a ras del horizonte marino, una constelación imposible de observar desde España o Europa continental.",
       "schedule": [
         {
-          "time": "✨ Transporte y enlace a la Isla de Iriomote (Día 10)",
+          "time": "✨ Transporte y enlace a la Isla de Iriomote (Día 11)",
           "text": "• Conexión interinsular en el Archipiélago de Yaeyama: El Japón más virgen y salvaje.\n• Vuelo Naha → Ishigaki: Vuelo corto desde Naha Airport (OKA) hasta el Aeropuerto de New Ishigaki (ISG) (**55 minutos**, operado por JTA/ANA, con vistas aéreas de los atolones de coral).\n• Ferry a Iriomote: Autobús del aeropuerto de Ishigaki al puerto de ferrys (30 min). En el muelle, tomar el ferry rápido de alta velocidad hasta la isla de Iriomote (**45 minutos**, hacia el puerto de Ohara o Uehara, ~2.500¥).\n• Actividades: Kayak guiado por los ríos de manglares vírgenes (Nakama o Urauchi) y caminata hacia la cascada Pinaisara (55 m).\n• Noche estelar: Observación de estrellas en la Reserva Internacional de Cielo Oscuro (DarkSky Park) contemplando la Vía Láctea y la Cruz del Sur sobre el mar.\n• Alojamiento: Eco-lodge integrado en la naturaleza en Iriomote o regreso en ferry a Ishigaki."
         },
         {
@@ -422,7 +450,7 @@ export const pendingDays = {
         }
       ],
       "money": "Vuelo Naha-Ishigaki (~45€) + ferry a Iriomote (~16€) + tour guiado en kayak (~45€) + cena local.",
-      "num": 10
+      "num": 11
     },
     {
       "id": "hokkaido",
@@ -433,7 +461,7 @@ export const pendingDays = {
       "history": "Hokkaido ('camino del mar del norte') fue colonizada e incorporada plenamente a Japón a partir de la Restauración Meiji a finales del siglo XIX. Antes de ello era conocida como Ezochi, tierra ancestral del pueblo indígena Ainu, una cultura con cosmovisión animista, tradiciones orales y lengua propias que hoy cuenta con museos y centros culturales dedicados como Upopoy en Shiraoi.",
       "schedule": [
         {
-          "time": "❄️ Transporte y enlace hacia Hokkaido (Día 11)",
+          "time": "❄️ Transporte y enlace hacia Hokkaido (Día 12)",
           "text": "• Del extremo sur subtropical al gran norte alpino: El gran colofón del viaje.\n• Vuelo hacia Hokkaido: Traslado al aeropuerto de Ishigaki o Naha y vuelo directo o con escala rápida vía Tokio Haneda hacia el Aeropuerto de Sapporo New Chitose (CTS).\n• Tren rápido a Sapporo: En la terminal del aeropuerto de Chitose, tomar el tren rápido JR Rapid Airport directo hasta Sapporo Station (**37 minutos**, trenes cada 12 min, ~1.150¥ con Suica/JR Pass).\n• Transporte en Sapporo: Red de metro de Sapporo (líneas Namboku y Tozai) y tranvía municipal.\n• Visitas: Parque Odori, Torre de televisión, Mercado Nijo de marisco fresco (cangrejo gigante y donburi de salmón), Museo de la Cerveza de Sapporo, callejón Ganso Ramen Yokocho en Susukino y onsen de aguas termales en Jozankei.\n• Vuelo de regreso internacional: Desde el aeropuerto de Sapporo New Chitose (CTS) con enlace a Tokio o vuelos directos intercontinentales."
         },
         {
@@ -466,10 +494,66 @@ export const pendingDays = {
         }
       ],
       "money": "Vuelo interno a Sapporo (~75€–110€) + 7€ tren JR Airport + 25€–35€ cuenco de marisco fresco en Mercado Nijo y ramen de miso.",
-      "num": 11
+      "num": 12
+    },
+    {
+      "id": "tokyo-departure",
+      "num": 13,
+      "title": "Regreso a Tokio, noche de despedida y vuelo de vuelta desde Narita",
+      "cities": "Hokkaido / Tokio → Aeropuerto de Narita (NRT) → Vuelo internacional",
+      "reason": "Día final imprescindible: Vuelo de regreso a Tokio, compras de última hora (omiyage), noche de despedida y traslado a Narita para volar a casa.",
+      "summary": "Vuelo doméstico desde Hokkaido de regreso a Tokio. Tarde libre en la capital para compras de recuerdos (Don Quijote, Ginza o Akihabara), cena especial de despedida (sukiyaki, wagyu o sushi selecto) y noche en Tokio si el vuelo internacional sale a la mañana siguiente, o traslado directo en tren Narita Express (JR N'EX) al Aeropuerto de Narita (NRT) para embarcar en el vuelo internacional de regreso.",
+      "history": "Comprar regalos de recuerdo, conocidos en Japón como 'omiyage' (お土産), es una de las tradiciones sociales más arraigadas del país. Los viajeros japoneses siempre llevan dulces y especialidades locales empaquetadas con primor a sus familiares y compañeros de trabajo. Despedirse de Japón recorriendo por última vez las calles de Tokio y tomando el tren hacia Narita completa un viaje inolvidable por todo el archipiélago.",
+      "schedule": [
+        {
+          "time": "🛫 Transporte y enlace hacia Tokio y Narita (Día 13)",
+          "text": "• Vuelo doméstico Hokkaido → Tokio: Vuelo desde Sapporo New Chitose (CTS) a Tokio Haneda (HND, 1h 40m) o Tokio Narita (NRT).\n• Noche en Tokio (opcional/recomendada): Si el vuelo internacional es al día siguiente o nocturno, hacer base en Tokio para disfrutar de las últimas horas sin estrés de conexiones.\n• Traslado final a Narita: Tomar el tren Narita Express (JR N'EX) desde Tokyo Station (58 min) o Shinjuku (75 min) directo a la terminal de Narita Airport (NRT).\n• En Narita: Facturación de maletas, devolución de Pocket WiFi en los buzones de la terminal, paso por control de seguridad y compras libres de impuestos (Duty Free) de dulces tradicionales como Royce Nama Chocolate o Tokyo Banana."
+        },
+        {
+          "time": "Compras de última hora y souvenirs (Omiyage)",
+          "text": "Recorrido por las tiendas insignia para llevarse los mejores recuerdos de Japón: mega-tienda Don Quijote (snacks matcha, KitKats de sabores insólitos, cosmética y figuras), papelerías centenarias de Ginza (Itoya) o tiendas de electrónica y coleccionismo en Akihabara."
+        },
+        {
+          "time": "Cena de despedida: Gran banquete japonés",
+          "text": "Celebración del viaje con una cena memorable: Sukiyaki tradicional cocinado en mesa con finas láminas de carne Wagyu, parrillada Yakiniku o una barra de sushi artesanal con brindis final con sake o cerveza japonesa."
+        },
+        {
+          "time": "Embarque y vuelo internacional de regreso",
+          "text": "Llegada al Aeropuerto de Narita con al menos 2h 30m de antelación. Facturación, control de pasaportes automatizado y embarque en el vuelo internacional de regreso a casa con la maleta llena de recuerdos y vivencias inolvidables."
+        }
+      ],
+      "money": "Aprox. 20€ tren Narita Express + 35€–50€ cena especial de despedida + presupuesto personal de compras y souvenirs."
     }
   ],
   "en": [
+    {
+      "id": "narita-arrival",
+      "num": 1,
+      "title": "Arrival in Japan: Narita Landing & Tokyo Transfer",
+      "cities": "Narita Airport (NRT) → Tokyo (Shinjuku / Asakusa)",
+      "reason": "Essential arrival day: Immigration, customs, direct express train to Tokyo, and first evening ramen.",
+      "summary": "Touch down at Narita International Airport (NRT), clear customs and baggage claim using Visit Japan Web QR codes. Board the sleek Narita Express (JR N'EX) or Keisei Skyliner straight into central Tokyo. Check in at your hotel, shake off jet lag, and enjoy your first authentic bowl of steaming ramen.",
+      "history": "Opened in 1978, Narita International Airport serves as the premier international gateway to Greater Tokyo and the Kanto plain. It is seamlessly linked to the metropolis via two high-speed train networks: JR East's comfortable Narita Express and Keisei's 160 km/h Skyliner.",
+      "schedule": [
+        {
+          "time": "🛬 Transport & Transfer Narita → Tokyo (Day 1)",
+          "text": "• Landing at Narita (NRT): Clear passport control and baggage claim using Visit Japan Web QR codes.\n• At the Terminal: Pick up Pocket WiFi / activate eSIM, and top up your digital Suica or IC card.\n• Narita Express (JR N'EX): Direct train from Narita underground station to Tokyo Station (58 min) or Shinjuku (75 min). Features spacious luggage racks with digital locks.\n• Keisei Skyliner Alternative: Connects Narita to Nippori/Ueno in just 36 minutes at 160 km/h."
+        },
+        {
+          "time": "Hotel Check-In & Settling In",
+          "text": "Arrive at your Tokyo base hotel (Shinjuku, Asakusa, or Ueno recommended). Drop off your bags, refresh after the long international flight, and get ready for a relaxing evening."
+        },
+        {
+          "time": "First Evening Stroll & Welcome Dinner",
+          "text": "Experience Tokyo's evening glow: neon billboards reflecting on clean pavements, quiet alleyways, and a comforting dinner of steaming tonkotsu ramen and crispy pan-fried gyoza."
+        },
+        {
+          "time": "Night Konbini Stop",
+          "text": "Drop by a local 24-hour convenience store (7-Eleven, Lawson, or FamilyMart) for bottled green tea, onigiri, and water before an early night's sleep."
+        }
+      ],
+      "money": "Approx. €20 Narita Express / Skyliner ticket + €15–€20 welcome dinner + €5 convenience store snacks."
+    },
     {
       "id": "tokyo-highlights",
       "title": "Tokyo Highlights: Shrines, Icons & City Views",
@@ -479,7 +563,7 @@ export const pendingDays = {
       "history": "Originally a humble fishing village named Edo, the city expanded rapidly when Tokugawa Ieyasu made it the shogun's headquarters in 1603. With the 1868 Meiji Restoration, the Emperor moved the court from Kyoto and renamed it Tokyo ('Eastern Capital'). Despite devastating destruction during the 1923 earthquake and World War II, it rose as a vibrant megalopolis where centuries-old wooden shrines stand alongside soaring glass skyscrapers.",
       "schedule": [
         {
-          "time": "🚆 Transport & Getting Around (Day 1)",
+          "time": "🚆 Transport & Getting Around (Day 2)",
           "text": "• Base & Accommodation: Hotel in Tokyo (Shinjuku, Asakusa, Ueno or Ginza recommended).\n• Daily Transport: Tokyo Subway (Tokyo Metro & Toei Lines). Recommended: Tokyo Subway 24-Hour Ticket (~¥800 / ~€5) or IC card (Suica/Pasmo).\n• Key Connections: Asakusa to Harajuku via Ginza line to Omotesando, transfer to Chiyoda (25 min). Harajuku to Shibuya: 15 min walk or 2 min on JR Yamanote Line. Shibuya to Shinjuku: 7 min on JR Yamanote Line."
         },
         {
@@ -504,7 +588,7 @@ export const pendingDays = {
         }
       ],
       "money": "Approx. €5 metro pass + €25–€40 food & snacks + optional Shibuya Sky entry (~€15).",
-      "num": 1
+      "num": 2
     },
     {
       "id": "nikko",
@@ -515,7 +599,7 @@ export const pendingDays = {
       "history": "Nikko flourished in the 8th century as a Buddhist hermitage founded by the monk Shodo Shonin. In 1617 it was chosen as the final resting place of Tokugawa Ieyasu, the great unifier of Japan and founder of the Tokugawa shogunate that brought over 250 years of peace during the Edo period. His grandson Iemitsu transformed the original modest mausoleum into the glittering Toshogu complex with over 5 million sheets of gold leaf, enshrining his grandfather as Japan's tutelary deity (Tosho Daigongen).",
       "schedule": [
         {
-          "time": "🚆 Transport & Getting Around (Day 2)",
+          "time": "🚆 Transport & Getting Around (Day 3)",
           "text": "• Day trip without hotel change: Depart from and return to your Tokyo hotel.\n• Round-Trip Train: Limited Express Spacia X or Revaty from Tobu-Asakusa Station direct to Tobu-Nikko (1h 50 min non-stop). Recommended departures: 07:50 or 08:30.\n• Getting Around Nikko: Tobu Nikko World Heritage Area Pass (or All Area Pass for Chuzenji buses up Irohazaka highway). Includes train and unlimited regional buses."
         },
         {
@@ -552,7 +636,7 @@ export const pendingDays = {
         }
       ],
       "money": "Tobu Nikko Pass (~€22.60) + shrine entries (~€11.40) + yuba meals (~€25).",
-      "num": 2
+      "num": 3
     },
     {
       "id": "tokyo-kamakura",
@@ -563,7 +647,7 @@ export const pendingDays = {
       "history": "Kamakura was Japan's first military government seat (bakufu) from 1185 to 1333 under Minamoto no Yoritomo. Surrounded by forested hills and the sea, it served as a natural citadel and center of Zen Buddhism. Meanwhile, Yanaka is one of Tokyo's few surviving pre-war neighborhoods, preserving authentic Showa-era shitamachi charm.",
       "schedule": [
         {
-          "time": "🚆 Transport & Getting Around (Day 3)",
+          "time": "🚆 Transport & Getting Around (Day 4)",
           "text": "• Coastal day trip based in Tokyo: Final night in your Tokyo hotel.\n• Tokyo to Kamakura: Direct JR Yokosuka Line from Tokyo Station or Shinjuku to Kamakura Station (55 min, ~¥950 via Suica or JR Pass).\n• In Kamakura: Vintage Enoden electric railway (10 min from Kamakura to Hase Station for the Great Buddha and Hasedera).\n• Return to Tokyo: JR train back by mid-afternoon (55 min) to Nippori Station for Yanaka Ginza or Akihabara.\n• 💡 Golden Luggage Tip: Forward your large suitcases tonight from your Tokyo hotel to your Osaka hotel via Yamato Takkyubin (~¥2,000/bag). You will climb Mount Fuji tomorrow with just a light daypack!"
         },
         {
@@ -588,7 +672,7 @@ export const pendingDays = {
         }
       ],
       "money": "Approx. €12 JR/Enoden trains + €5 temple entries + €25 meals.",
-      "num": 3
+      "num": 4
     },
     {
       "id": "fuji-hiking",
@@ -599,7 +683,7 @@ export const pendingDays = {
       "history": "Venerated as a sacred mountain since antiquity and spiritual home to Shinto goddess Konohanasakuya-hime, Mount Fuji was for centuries reserved for ascetic mountain monks (yamabushi). Today it is a national pilgrimage; an old Japanese proverb states: 'A wise man climbs Mount Fuji once; a fool climbs it twice' (acknowledging the sheer physical grit required on its barren volcanic slopes).",
       "schedule": [
         {
-          "time": "🏔️ Transport & Link Tokyo → Mount Fuji (Day 4)",
+          "time": "🏔️ Transport & Link Tokyo → Mount Fuji (Day 5)",
           "text": "• Heading to the sacred volcano: Early check-out in Tokyo with a light hiking pack (suitcases already sent to Osaka).\n• Direct Mountain Bus: Highway express bus from Shinjuku Expressway Bus Terminal (Busta Shinjuku) direct to Fuji Subaru Line 5th Station (2h 20 min, recommended: 06:45, 07:45 or 08:45, ~¥3,800/person).\n• At 5th Station (2,300 m): Acclimate to altitude for 1–2 hours, have lunch, and buy your wooden pilgrim staff (Kongo-zue).\n• The Climb: Yoshida Trail (approx. 4–5 hours steady ascent) up to your reserved mountain hut at the 7th or 8th station (3,000–3,400 m) for dinner and short rest."
         },
         {
@@ -636,7 +720,7 @@ export const pendingDays = {
         }
       ],
       "money": "Approx. €24 highway bus + €12 trail conservation fee + €70–€95 mountain hut stay with meals.",
-      "num": 4
+      "num": 5
     },
     {
       "id": "osaka-classic",
@@ -647,7 +731,7 @@ export const pendingDays = {
       "history": "Formerly known as Naniwa, Osaka served as an imperial capital in the 7th century and later blossomed as Edo Japan's commercial capital, known as 'the nation's kitchen' (Tenka no Daidokoro). Toyotomi Hideyoshi built Osaka Castle in 1583 with immense granite blocks weighing up to 130 tons brought by sea, making it the supreme fortress of feudal Japan.",
       "schedule": [
         {
-          "time": "🚄 Transport & Link Mount Fuji → Classic Osaka (Day 5)",
+          "time": "🚄 Transport & Link Mount Fuji → Classic Osaka (Day 6)",
           "text": "• Pre-dawn: Summit Mount Fuji (3,776 m) for the Goraiko sunrise and crater rim loop.\n• Morning (Descent): Descend volcanic scree trail to Fuji 5th Station (approx. 3 hrs, arriving ~09:30–10:30).\n• Direct Fuji → Osaka Connection:\n  1. Fujikyu mountain bus from 5th Station to Mishima Shinkansen Station (1h 45 min, ~¥3,300).\n  2. At Mishima: Tokaido Shinkansen (Hikari or Nozomi) direct to Shin-Osaka in just 1h 50 min.\n• Arrival in Osaka by ~14:00: Check in at your Osaka hotel (where your forwarded suitcases are already waiting!).\n• Afternoon/Evening: Osaka Castle, Shitenno-ji, and lively street food feast in Dotonbori."
         },
         {
@@ -672,7 +756,7 @@ export const pendingDays = {
         }
       ],
       "money": "Approx. €20 Fuji-Mishima bus + €80 Shinkansen (JR Pass covered) + €4 Castle + €20–€30 Dotonbori dinner.",
-      "num": 5
+      "num": 6
     },
     {
       "id": "osaka-temples",
@@ -683,7 +767,7 @@ export const pendingDays = {
       "history": "Unlike Kyoto's imperial, aristocratic temples, Osaka's spiritual sites are woven directly into the daily lives of local merchants and working neighborhoods. Sites like Hozenji and Namba Yasaka survived wartime fires and urban sprawl, preserving unique popular devotions where spirituality and neighborhood warmth meet.",
       "schedule": [
         {
-          "time": "🦁 Transport & Getting Around Osaka (Day 6)",
+          "time": "🦁 Transport & Getting Around Osaka (Day 7)",
           "text": "• Full Day in Osaka: Same Osaka hotel (no luggage changes).\n• City Transport: Osaka Metro (Midosuji & Tanimachi lines). Recommended: Osaka 1-Day Eco Card (~¥650 weekends / ¥820 weekdays) or IC card (Suica/ICOCA).\n• Walk & Metro Route: Namba Yasaka to Isshin-ji is 15 min via metro or 25 min walking through Den Den Town. Kuromon Market to Hozenji Yokocho is a 10 min walk. Later, take Midosuji line straight up to Umeda for Umeda Sky Building."
         },
         {
@@ -708,7 +792,7 @@ export const pendingDays = {
         }
       ],
       "money": "Approx. €4.50 metro pass + free shrine entries + €10 Umeda Sky deck + €25 Kuromon Market lunch.",
-      "num": 6
+      "num": 7
     },
     {
       "id": "hiroshima-nagasaki",
@@ -719,7 +803,7 @@ export const pendingDays = {
       "history": "On August 6, 1945, Hiroshima was devastated by the first wartime atomic bomb; three days later, on August 9, Nagasaki suffered the second bombing. Both cities transformed this harrowing chapter into a global campaign for nuclear disarmament. Nagasaki also boasts a much older cosmopolitan heritage: for more than 200 years of strict national isolation (sakoku), the man-made fan-shaped island of Dejima was Japan's only authorized window for Dutch trade, medicine, and scientific exchange.",
       "schedule": [
         {
-          "time": "🕊️ Transport & Link Osaka → Hiroshima (Day 7)",
+          "time": "🕊️ Transport & Link Osaka → Hiroshima (Day 8)",
           "text": "• Heading West: Morning check-out from your Osaka hotel.\n• Shinkansen Bullet Train: Sanyo Shinkansen (Nozomi, Sakura or Mizuho) direct from Shin-Osaka to Hiroshima Station in **just 1 hour 25 minutes** (~¥10,000, JR Pass covered).\n• In Hiroshima: Hop on the Hiroden streetcar (Line 2 or 6) right outside Hiroshima Station to Genbaku Dome-mae stop (15 min, ~¥220).\n• Sights: Peace Memorial Park, Museum, A-Bomb Dome, and Hiroshima-style layered okonomiyaki at Okonomimura.\n• Accommodation: Hotel in Hiroshima (near JR Station or Miyajimaguchi port)."
         },
         {
@@ -756,7 +840,7 @@ export const pendingDays = {
         }
       ],
       "money": "Shinkansen (JR Pass or ~€65) + €3 streetcar + €1.20 Peace Museum + €20 okonomiyaki dinner.",
-      "num": 7
+      "num": 8
     },
     {
       "id": "miyajima",
@@ -767,7 +851,7 @@ export const pendingDays = {
       "history": "In ancient times, the entire island was worshipped as a living kami (Shinto deity) so sacred that humans were forbidden from setting foot on its soil, and neither births nor deaths were permitted. To allow worshippers to pray without desecrating the sacred ground, warlord Taira no Kiyomori rebuilt Itsukushima Shrine in 1168 entirely on wooden pilings over the tidal flats. Designated a UNESCO World Heritage Site in 1996.",
       "schedule": [
         {
-          "time": "⛩️ Transport & Link Hiroshima → Miyajima Island (Day 8)",
+          "time": "⛩️ Transport & Link Hiroshima → Miyajima Island (Day 9)",
           "text": "• Seamless connection right next to Hiroshima: Miyajima sits just across the bay.\n• Local Commuter Train: JR Sanyo Main Line from Hiroshima Station to Miyajimaguchi Station (**28 minutes**, trains every 10 min, ~¥420 or JR Pass).\n• Scenic Ferry to Island: 2 min walk from station to pier. Board the JR West Miyajima Ferry (**10 minutes**; sails close to the Floating Torii Gate for breathtaking water views; JR Pass covered or ~¥200).\n• On the Island: Walkable pathways shared with wild deer. Take the Miyajima Ropeway to Mount Misen summit (535 m, ~¥2,000 round-trip).\n• Accommodation: Traditional ryokan on Miyajima island (or 28 min return to Hiroshima hotel)."
         },
         {
@@ -804,7 +888,7 @@ export const pendingDays = {
         }
       ],
       "money": "Train & ferry covered by JR Pass (or ~€5) + €2 Itsukushima + €12 ropeway + €25 grilled oysters & momiji cakes.",
-      "num": 8
+      "num": 9
     },
     {
       "id": "okinawa",
@@ -815,7 +899,7 @@ export const pendingDays = {
       "history": "For more than 450 years, these islands formed the prosperous Ryukyu Kingdom, an independent maritime trading hub linking China, Japan, Korea, and Southeast Asia. Annexed by Japan in 1879, Okinawa endured the horrific Battle of Okinawa in 1945 and was administered by the US military until 1972, cultivating a resilient, multicultural identity celebrated for longevity and community spirit.",
       "schedule": [
         {
-          "time": "🌺 Transport & Flight to Okinawa (Day 9)",
+          "time": "🌺 Transport & Flight to Okinawa (Day 10)",
           "text": "• Flying to the Subtropics: Morning check-out in Hiroshima.\n• Direct Flight to Okinawa: Express bus to Hiroshima Airport (HIJ, 45 min) or train to Kansai (KIX). Direct domestic flight to Naha Airport (OKA) in Okinawa (**1 hour 55 min flight**, via ANA, JAL or Peach).\n• In Okinawa: Elevated monorail Yui Rail runs directly from airport terminal to downtown Naha (Kencho-mae stop for Kokusai-dori in 12 min, Shuri stop for Shuri Castle in 27 min, ~¥300).\n• Sights: Shuri Castle (palace of the ancient Ryukyu Kingdom), bustling Kokusai-dori, Okinawa Soba, and turquoise coral shores.\n• Accommodation: Hotel or beach resort in Naha / Okinawa main island."
         },
         {
@@ -844,7 +928,7 @@ export const pendingDays = {
         }
       ],
       "money": "Domestic flight (~€60–€90) + €3 Yui Rail + €3 Shuri Castle + €25 Ryukyu dinner.",
-      "num": 9
+      "num": 10
     },
     {
       "id": "iriomote-stargazing",
@@ -855,7 +939,7 @@ export const pendingDays = {
       "history": "Iriomote is biologically famous as the sole habitat of the Iriomote wildcat (Yamaneko), a critically endangered nocturnal feline discovered only in 1967 representing an ancient lineage isolated for thousands of years. Its southerly latitude (24°N) allows stargazers to observe the Southern Cross constellation on the horizon between February and June, an impossible sight from Europe.",
       "schedule": [
         {
-          "time": "✨ Transport & Link to Iriomote Island (Day 10)",
+          "time": "✨ Transport & Link to Iriomote Island (Day 11)",
           "text": "• Island Hopping in the Yaeyama Archipelago: Japan's most untamed wilderness.\n• Flight Naha → Ishigaki: Short domestic flight from Naha (OKA) to New Ishigaki Airport (ISG) (**55 minutes**, breathtaking coral reef aerial views).\n• High-Speed Ferry to Iriomote: Airport bus to Ishigaki Ferry Terminal (30 min). Board high-speed catamaran ferry to Iriomote Island (**45 minutes** to Ohara or Uehara port, ~¥2,500).\n• Activities: Guided mangrove kayaking up Nakama or Urauchi River, jungle trek to Pinaisara Falls (55 m).\n• Stargazing Night: Explore the certified International Dark Sky Reserve, spotting the Milky Way and Southern Cross on the ocean horizon.\n• Accommodation: Eco-lodge immersed in nature on Iriomote or return ferry to Ishigaki."
         },
         {
@@ -888,7 +972,7 @@ export const pendingDays = {
         }
       ],
       "money": "Flight Naha-Ishigaki (~€45) + ferry to Iriomote (~€16) + guided kayak tour (~€45) + local dinner.",
-      "num": 10
+      "num": 11
     },
     {
       "id": "hokkaido",
@@ -899,7 +983,7 @@ export const pendingDays = {
       "history": "Hokkaido ('Circuit of the Northern Sea') was formally colonized and integrated during the Meiji Restoration in the late 19th century. Formerly known as Ezochi, it is the ancestral homeland of the indigenous Ainu people, whose animist spiritual beliefs, oral folklore, and distinct language are celebrated at cultural centers such as Upopoy in Shiraoi.",
       "schedule": [
         {
-          "time": "❄️ Transport & Flight to Hokkaido (Day 11)",
+          "time": "❄️ Transport & Flight to Hokkaido (Day 12)",
           "text": "• From Subtropical South to Alpine North: The grand finale journey.\n• Flight to Hokkaido: Flight from Ishigaki/Naha (direct or via Tokyo Haneda) to Sapporo New Chitose Airport (CTS).\n• Rapid Train to Sapporo: Direct JR Rapid Airport train from airport terminal to Sapporo Station (**37 minutes**, departures every 12 min, ~¥1,150, JR Pass covered).\n• In Sapporo: Sapporo Subway (Namboku & Tozai lines) and streetcar.\n• Sights: Odori Park, Nijo Seafood Market (fresh king crab & salmon roe donburi), Sapporo Beer Museum, Ganso Ramen Yokocho in Susukino, and Jozankei hot springs.\n• International Return Flight: Depart from New Chitose Airport (CTS) connecting through Tokyo or direct international routes."
         },
         {
@@ -932,10 +1016,66 @@ export const pendingDays = {
         }
       ],
       "money": "Domestic flight to Sapporo (~€75–€110) + €7 JR train + €25–€35 Nijo Market seafood & miso ramen.",
-      "num": 11
+      "num": 12
+    },
+    {
+      "id": "tokyo-departure",
+      "num": 13,
+      "title": "Return to Tokyo, Farewell Night & Narita Departure",
+      "cities": "Hokkaido / Tokyo → Narita Airport (NRT) → International Flight",
+      "reason": "Essential finale: Domestic flight back to Tokyo, last-minute souvenir shopping (omiyage), farewell dinner, and transfer to Narita Airport.",
+      "summary": "Fly back from Hokkaido to Tokyo. Spend a relaxed afternoon picking up souvenirs (Don Quijote, Ginza, or Akihabara), savor a farewell dinner of authentic sukiyaki or wagyu, spend the final night in Tokyo if your flight is the next morning, and board the Narita Express (JR N'EX) directly to Narita Airport (NRT) for your flight home.",
+      "history": "The tradition of 'omiyage' (souvenir gifting) is a cherished Japanese cultural practice where travelers bring home meticulously wrapped delicacies and regional crafts. Wrapping up your journey in Tokyo before heading to Narita creates the perfect full-circle itinerary.",
+      "schedule": [
+        {
+          "time": "🛫 Transport & Transfer to Tokyo and Narita (Day 13)",
+          "text": "• Domestic Flight Hokkaido → Tokyo: Short flight from Sapporo (CTS) to Tokyo Haneda (HND, 1h 40m) or Narita (NRT).\n• Farewell Night in Tokyo: Highly recommended to unwind, shop, and pack without same-day connection anxiety.\n• Final Transfer to Narita: Board the direct Narita Express (JR N'EX) from Tokyo Station (58 min) or Shinjuku (75 min) to Narita Airport terminals.\n• At Narita: Drop off Pocket WiFi, check bags, clear security, and pick up duty-free treats like Royce Matcha Chocolate and Tokyo Banana."
+        },
+        {
+          "time": "Last-Minute Souvenir Shopping (Omiyage)",
+          "text": "Explore multi-level stores like Don Quijote for rare KitKat flavors, traditional cosmetics, ceramics, and Japanese stationery at Ginza Itoya."
+        },
+        {
+          "time": "Farewell Feast",
+          "text": "Celebrate the expedition with a memorable final meal: tableside simmered A5 Wagyu Sukiyaki, sizzling Yakiniku, or artisanal Edo-mae sushi."
+        },
+        {
+          "time": "Check-in & International Flight Home",
+          "text": "Arrive at Narita Airport 2.5 hours prior to departure, check baggage, clear automated passport exit, and board your long-haul flight home."
+        }
+      ],
+      "money": "Approx. €20 Narita Express + €35–€50 farewell dinner + personal souvenir budget."
     }
   ],
   "fr": [
+    {
+      "id": "narita-arrival",
+      "num": 1,
+      "title": "Arrivée au Japon : Atterrissage à Narita et transfert à Tokyo",
+      "cities": "Aéroport de Narita (NRT) → Tokyo (Shinjuku / Asakusa)",
+      "reason": "Jour d'arrivée indispensable : Formalités, train express vers Tokyo et premier dîner de ramen.",
+      "summary": "Atterrissage à l'aéroport international de Narita (NRT), passage de l'immigration et récupération des bagages avec le QR code Visit Japan Web. Trajet direct vers Tokyo à bord du Narita Express ou du Keisei Skyliner. Installation à l'hôtel et premier contact chaleureux avec la capitale.",
+      "history": "Inauguré en 1978, l'aéroport international de Narita est la principale porte d'entrée aérienne du Japon pour les vols long-courriers. Il est relié au cœur de la capitale par le Narita Express de la JR et le Keisei Skyliner roulant à 160 km/h.",
+      "schedule": [
+        {
+          "time": "🛬 Transports et transfert Narita → Tokyo (Jour 1)",
+          "text": "• Atterrissage à Narita (NRT) : Contrôle des passeports et douane via le code QR Visit Japan Web.\n• À l'aéroport : Retrait du Pocket WiFi ou activation de l'eSIM, recharge de la carte Suica.\n• Train Narita Express (JR N'EX) : Direct depuis le sous-sol de l'aéroport jusqu'à Tokyo Station (58 min) ou Shinjuku (75 min).\n• Option Keisei Skyliner : Relie Narita à Nippori/Ueno en seulement 36 minutes."
+        },
+        {
+          "time": "Check-in à l'hôtel et installation",
+          "text": "Arrivée à votre hôtel à Tokyo (Shinjuku ou Asakusa). Déposez vos bagages et prenez une douche revigorante pour effacer la fatigue du vol."
+        },
+        {
+          "time": "Balade du soir et dîner de bienvenue",
+          "text": "Première immersion parmi les néons tokyoïtes et savoureux bol de ramen fumant accompagné de gyozas dorés."
+        },
+        {
+          "time": "Passage au Konbini",
+          "text": "Arrêt au konbini du coin (7-Eleven, Lawson) pour acheter du thé vert frais et de l'eau avant une bonne nuit réparatrice."
+        }
+      ],
+      "money": "Env. 20€ train express Narita + 15€–20€ dîner de bienvenue + 5€ konbini."
+    },
     {
       "id": "tokyo-highlights",
       "title": "Tokyo Incontournable : Sanctuaires, Icônes et Panoramas",
@@ -945,7 +1085,7 @@ export const pendingDays = {
       "history": "Simple village de pêcheurs sous le nom d'Edo, la cité devint le centre du pouvoir shogunal en 1603 sous Tokugawa Ieyasu. Rebaptisée Tokyo en 1868 lorsque l'Empereur y installa la capitale, la ville a sans cesse su renaître après le séisme de 1923 et les ravages de 1945 pour devenir cette mégalopole fascinante mêlant sanctuaires de bois et gratte-ciel futuristes.",
       "schedule": [
         {
-          "time": "🚆 Transports et déplacements (Jour 1)",
+          "time": "🚆 Transports et déplacements (Jour 2)",
           "text": "• Hébergement : Hôtel à Tokyo (quartiers recommandés : Shinjuku, Asakusa, Ueno ou Ginza).\n• Transports du jour : Métro de Tokyo (lignes Tokyo Metro et Toei). Idéal : Tokyo Subway Ticket 24h (~800¥ / ~5€) ou carte Suica/Pasmo.\n• Liaisons clés : D'Asakusa à Harajuku en 25 min (ligne Ginza puis Chiyoda). De Harajuku à Shibuya : 15 min à pied ou 2 min en JR Yamanote. De Shibuya à Shinjuku : 7 min en JR Yamanote."
         },
         {
@@ -970,7 +1110,7 @@ export const pendingDays = {
         }
       ],
       "money": "Env. 5€ pass métro 24h + 25€–40€ repas et en-cas + entrée facultative Shibuya Sky (~15€).",
-      "num": 1
+      "num": 2
     },
     {
       "id": "nikko",
@@ -981,7 +1121,7 @@ export const pendingDays = {
       "history": "Nikko s'est développée au VIIIe siècle sous l'impulsion du moine Shodo Shonin. En 1617, le site fut choisi pour accueillir le mausolée de Tokugawa Ieyasu, grand unificateur du Japon et fondateur du shogunat Tokugawa qui instaura plus de deux siècles et demi de paix. Son petit-fils Iemitsu transforma l'austère tombe initiale en un complexe éblouissant orné de plus de 5 millions de feuilles d'or, consacrant son grand-père comme divinité protectrice du Japon (Tosho Daigongen).",
       "schedule": [
         {
-          "time": "🚆 Transports et déplacements (Jour 2)",
+          "time": "🚆 Transports et déplacements (Jour 3)",
           "text": "• Excursion à la journée : Départ et retour à Tokyo le soir, sans changer d'hôtel.\n• Trajet A/R : Train Limited Express Spacia X ou Revaty depuis la gare de Tobu-Asakusa direct vers Tobu-Nikko (1h 50 min). Départs conseillés : 07h50 ou 08h30.\n• Sur place à Nikko : Pass Tobu Nikko World Heritage ou All Area Pass (comprenant le train et les bus illimités pour monter au lac Chuzenji et aux chutes de Kegon)."
         },
         {
@@ -1018,7 +1158,7 @@ export const pendingDays = {
         }
       ],
       "money": "Pass Tobu Nikko (~22,60€) + entrées sanctuaires (~11,40€) + repas (~25€).",
-      "num": 2
+      "num": 3
     },
     {
       "id": "tokyo-kamakura",
@@ -1029,7 +1169,7 @@ export const pendingDays = {
       "history": "Siège du premier gouvernement militaire féodal de 1185 à 1333 fondé par Minamoto no Yoritomo, Kamakura s'est développée comme une forteresse naturelle entre collines et océan, berceau du bouddhisme zen guerrier. De son côté, Yanaka est l'un des très rares quartiers de Tokyo épargnés par les destructions du XXe siècle.",
       "schedule": [
         {
-          "time": "🚆 Transports et déplacements (Jour 3)",
+          "time": "🚆 Transports et déplacements (Jour 4)",
           "text": "• Escapade côtière : Dernière nuit à Tokyo.\n• Tokyo → Kamakura : Ligne directe JR Yokosuka depuis Tokyo Station ou Shinjuku (55 min, ~950¥ avec Suica ou JR Pass).\n• À Kamakura : Ligne rétro Enoden (10 min jusqu'à la gare de Hase pour le Grand Bouddha et Hasedera).\n• Retour à Tokyo : Train JR en milieu d'après-midi (55 min) vers Nippori pour visiter Yanaka Ginza ou Akihabara.\n• 💡 Conseil bagages : Expédiez vos grosses valises ce soir depuis l'hôtel de Tokyo vers votre hôtel d'Osaka via Takkyubin (~2 000¥/valise). Vous monterez au mont Fuji demain avec un sac à dos léger !"
         },
         {
@@ -1054,7 +1194,7 @@ export const pendingDays = {
         }
       ],
       "money": "Env. 12€ trains JR et Enoden + 5€ entrées sanctuaires + 25€ repas.",
-      "num": 3
+      "num": 4
     },
     {
       "id": "fuji-hiking",
@@ -1065,7 +1205,7 @@ export const pendingDays = {
       "history": "Montagne sacrée vénérée depuis des siècles et demeure spirituelle de la déesse Konohanasakuya-hime, le Fuji fut longtemps réservé aux pèlerins ascètes (yamabushi). Aujourd'hui accompli par des randonneurs du monde entier, un dicton japonais rappelle : 'Celui qui gravit le mont Fuji une fois est un sage, celui qui le gravit deux fois est un fou' (en référence à la rudesse de ses pentes volcaniques).",
       "schedule": [
         {
-          "time": "🏔️ Transports et liaison Tokyo → Mont Fuji (Jour 4)",
+          "time": "🏔️ Transports et liaison Tokyo → Mont Fuji (Jour 5)",
           "text": "• Départ vers le volcan sacré : Check-out matinal à Tokyo avec sac à dos léger (valises déjà envoyées à Osaka).\n• Bus direct vers le Fuji : Bus express depuis le terminal de Busta Shinjuku direct vers la 5e station Fuji Subaru Line (2h 20 min, départs conseillés : 06h45, 07h45 ou 08h45, ~3 800¥/personne).\n• À la 5e station (2 300 m) : Acclimatation à l'altitude pendant 1 à 2 h, déjeuner et achat du bâton de pèlerin en bois (Kongo-zue).\n• L'ascension : Sentier Yoshida (env. 4–5 h de marche régulière) jusqu'au refuge réservé à la 7e ou 8e station (3 000–3 400 m)."
         },
         {
@@ -1102,7 +1242,7 @@ export const pendingDays = {
         }
       ],
       "money": "Env. 24€ bus express Busta Shinjuku + 12€ taxe de sentier + 70€–95€ nuit en refuge avec repas.",
-      "num": 4
+      "num": 5
     },
     {
       "id": "osaka-classic",
@@ -1113,7 +1253,7 @@ export const pendingDays = {
       "history": "Ancienne Naniwa, Osaka fut la capitale impériale au VIIe siècle puis la 'cuisine de la nation' sous les shoguns Tokugawa. Toyotomi Hideyoshi y bâtit son colossal château en 1583 avec des blocs de granit de plus de 100 tonnes acheminés par voie maritime.",
       "schedule": [
         {
-          "time": "🚄 Transports et liaison Mont Fuji → Osaka (Jour 5)",
+          "time": "🚄 Transports et liaison Mont Fuji → Osaka (Jour 6)",
           "text": "• Aube : Sommet du mont Fuji (3 776 m) pour le lever de soleil Goraiko.\n• Matin (Descente) : Descente jusqu'à la 5e station (env. 3 h, arrivée vers 09h30–10h30).\n• Liaison rapide Fuji → Osaka :\n  1. Bus Fujikyu depuis la 5e station jusqu'à la gare Shinkansen de Mishima (1h 45 min).\n  2. À Mishima : Shinkansen Tokaido direct vers Shin-Osaka en seulement 1h 50 min.\n• Arrivée à Osaka vers 14h00 : Check-in à l'hôtel (vos valises envoyées de Tokyo vous y attendent déjà !).\n• Après-midi/Soirée : Château d'Osaka, Shitenno-ji et dîner street food à Dotonbori."
         },
         {
@@ -1138,7 +1278,7 @@ export const pendingDays = {
         }
       ],
       "money": "Env. 20€ bus Fuji-Mishima + 80€ Shinkansen (inclus JR Pass) + 4€ château + 20€–30€ repas Dotonbori.",
-      "num": 5
+      "num": 6
     },
     {
       "id": "osaka-temples",
@@ -1149,7 +1289,7 @@ export const pendingDays = {
       "history": "À la différence des palais de Kyoto, les temples d'Osaka sont ancrés dans le quotidien des commerçants et du peuple. Lieux de piété vivante au cœur des ruelles, ils témoignent de traditions populaires intactes.",
       "schedule": [
         {
-          "time": "🦁 Transports et déplacements dans Osaka (Jour 6)",
+          "time": "🦁 Transports et déplacements dans Osaka (Jour 7)",
           "text": "• Journée complète à Osaka : Même hôtel sans déménagement de valises.\n• Transports urbains : Métro d'Osaka (lignes Midosuji et Tanimachi). Pass métro 1 jour conseillé (~650¥ le week-end / 820¥ en semaine) ou carte Suica/ICOCA.\n• Parcours : De Namba Yasaka au temple Isshin-ji en 15 min de métro. Du marché Kuromon à la ruelle de Hozenji en 10 min à pied. En fin d'après-midi, métro direct vers Umeda pour la tour Umeda Sky."
         },
         {
@@ -1174,7 +1314,7 @@ export const pendingDays = {
         }
       ],
       "money": "Env. 4,50€ pass métro + sanctuaires gratuits + 10€ observatoire Umeda Sky + 25€ déjeuner à Kuromon.",
-      "num": 6
+      "num": 7
     },
     {
       "id": "hiroshima-nagasaki",
@@ -1185,7 +1325,7 @@ export const pendingDays = {
       "history": "Le 6 août 1945, Hiroshima fut anéantie par la première bombe atomique ; trois jours plus tard, Nagasaki subissait le second bombardement. Les deux cités ont métamorphosé ce drame en un plaidoyer universel pour le désarmement nucléaire. Nagasaki possède en outre un passé singulier : durant les plus de deux siècles de fermeture totale du pays (sakoku), l'île artificielle de Dejima fut l'unique enclave autorisée pour le commerce avec les marchands néerlandais et l'introduction des sciences occidentales (Rangaku).",
       "schedule": [
         {
-          "time": "🕊️ Transports et liaison Osaka → Hiroshima (Jour 7)",
+          "time": "🕊️ Transports et liaison Osaka → Hiroshima (Jour 8)",
           "text": "• Cap vers l'ouest : Départ matinal d'Osaka.\n• Train Shinkansen Sanyo : Direct depuis Shin-Osaka jusqu'à la gare d'Hiroshima en **seulement 1h 25 min** (inclus avec le JR Pass).\n• À Hiroshima : Tramway urbain Hiroden (lignes 2 ou 6) jusqu'à l'arrêt Genbaku Dome-mae (15 min).\n• Visites : Parc mémorial de la Paix, Musée, Dôme de Genbaku et dîner d'okonomiyaki feuilleté à Okonomimura.\n• Hébergement : Hôtel à Hiroshima (près de la gare ou du port de Miyajimaguchi)."
         },
         {
@@ -1222,7 +1362,7 @@ export const pendingDays = {
         }
       ],
       "money": "Shinkansen (inclus JR Pass ou ~65€) + 3€ tramway + 1,20€ musée + 20€ repas Okonomimura.",
-      "num": 7
+      "num": 8
     },
     {
       "id": "miyajima",
@@ -1233,7 +1373,7 @@ export const pendingDays = {
       "history": "Dans les temps anciens, l'île tout entière était vénérée comme un kami vivant si sacré qu'aucun mortel n'avait le droit d'y poser le pied, d'y naître ou d'y mourir. Afin que les pèlerins puissent prier sans profaner la terre sacrée, le chef de guerre Taira no Kiyomori fit reconstruire en 1168 le sanctuaire d'Itsukushima entièrement sur pilotis au-dessus de l'estran. Classé au patrimoine mondial de l'UNESCO en 1996.",
       "schedule": [
         {
-          "time": "⛩️ Transports et liaison Hiroshima → Île de Miyajima (Jour 8)",
+          "time": "⛩️ Transports et liaison Hiroshima → Île de Miyajima (Jour 9)",
           "text": "• Trajet ultra-fluide : L'île sacrée se trouve juste en face de la baie d'Hiroshima.\n• Train de banlieue : Ligne JR Sanyo depuis Hiroshima Station jusqu'à Miyajimaguchi (**28 minutes**).\n• Ferry panoramique : À 2 min de la gare. Prendre le ferry JR West (**10 minutes** ; il effectue une courbe spectaculaire au plus près du Torii flottant ; inclus dans le JR Pass ou ~200¥).\n• Sur l'île : Tout se visite à pied parmi les cerfs en liberté. Téléphérique Miyajima Ropeway pour le mont Misen (535 m).\n• Hébergement : Nuit en ryokan traditionnel sur l'île de Miyajima ou retour en 28 min à Hiroshima."
         },
         {
@@ -1270,7 +1410,7 @@ export const pendingDays = {
         }
       ],
       "money": "Train et ferry inclus avec JR Pass (ou ~5€) + 2€ Itsukushima + 12€ téléphérique + 25€ huîtres grillées et gâteaux momiji.",
-      "num": 8
+      "num": 9
     },
     {
       "id": "okinawa",
@@ -1281,7 +1421,7 @@ export const pendingDays = {
       "history": "Pendant plus de 450 ans, ces îles constituèrent le prospère Royaume des Ryukyu, carrefour maritime marchand indépendant entre la Chine, le Japon et l'Asie du Sud-Est. Annexée par le Japon en 1879, Okinawa traversa la dramatique bataille d'Okinawa en 1945 avant de demeurer sous tutelle américaine jusqu'en 1972, forgeant une culture métissée et renommée pour l'exceptionnelle longévité de ses aînés.",
       "schedule": [
         {
-          "time": "🌺 Transports et vol vers Okinawa (Jour 9)",
+          "time": "🌺 Transports et vol vers Okinawa (Jour 10)",
           "text": "• Cap vers les tropiques : Check-out matinal à Hiroshima.\n• Vol direct vers Okinawa : Navette vers l'aéroport d'Hiroshima (45 min) ou Osaka Kansai (KIX). Vol direct vers l'aéroport de Naha (OKA) en **1h 55 min** (vols ANA, JAL ou Peach).\n• À Okinawa : Monorail aérien Yui Rail reliant directement l'aéroport au centre de Naha (Kokusai-dori en 12 min, château de Shuri en 27 min, ~300¥).\n• Visites : Château royal de Shuri, artère animée de Kokusai-dori et cuisine de longévité okinawaïenne.\n• Hébergement : Hôtel ou resort en bord de mer à Naha / Okinawa."
         },
         {
@@ -1310,7 +1450,7 @@ export const pendingDays = {
         }
       ],
       "money": "Vol intérieur (~60€–90€) + 3€ monorail Yui Rail + 3€ château de Shuri + 25€ spécialités culinaires.",
-      "num": 9
+      "num": 10
     },
     {
       "id": "iriomote-stargazing",
@@ -1321,7 +1461,7 @@ export const pendingDays = {
       "history": "Iriomote est mondialement réputée comme l'unique sanctuaire du chat sauvage d'Iriomote (Yamaneko), félin nocturne découvert en 1967 et en danger critique d'extinction. Sa situation méridionale (24° N) offre le privilège d'observer la constellation de la Croix du Sud entre février et juin, invisible depuis la France ou l'Europe continentale.",
       "schedule": [
         {
-          "time": "✨ Transports et liaison vers l'île d'Iriomote (Jour 10)",
+          "time": "✨ Transports et liaison vers l'île d'Iriomote (Jour 11)",
           "text": "• Liaison inter-îles dans l'archipel Yaeyama : La nature sauvage absolue du Japon.\n• Vol Naha → Ishigaki : Court vol de **55 minutes** au-dessus des lagons turquoise.\n• Ferry rapide vers Iriomote : Navette jusqu'au port d'Ishigaki (30 min), puis ferry rapide vers l'île d'Iriomote (**45 minutes** vers le port d'Ohara ou Uehara, ~2 500¥).\n• Activités : Kayak au cœur de la mangrove vierge et randonnée vers la cascade de Pinaisara (55 m).\n• Nuit étoilée : Réserve internationale de ciel étoilé (Dark Sky Park), vue sur la Voie lactée et la Croix du Sud.\n• Hébergement : Éco-lodge au cœur de la jungle à Iriomote ou nuit à Ishigaki."
         },
         {
@@ -1354,7 +1494,7 @@ export const pendingDays = {
         }
       ],
       "money": "Vol Naha-Ishigaki (~45€) + ferry vers Iriomote (~16€) + excursion kayak (~45€) + dîner local.",
-      "num": 10
+      "num": 11
     },
     {
       "id": "hokkaido",
@@ -1365,7 +1505,7 @@ export const pendingDays = {
       "history": "Hokkaido ('le chemin de la mer du Nord') fut colonisée et pleinement rattachée au Japon à l'ère Meiji à la fin du XIXe siècle. Auparavant appelée Ezochi, c'est la terre des Aïnous, peuple indigène aux croyances animistes, aux traditions orales et à la langue uniques, aujourd'hui mis à l'honneur dans des musées spécialisés comme le centre Upopoy à Shiraoi.",
       "schedule": [
         {
-          "time": "❄️ Transports et vol vers Hokkaido (Jour 11)",
+          "time": "❄️ Transports et vol vers Hokkaido (Jour 12)",
           "text": "• Du sud subtropical au grand nord : L'apothéose du voyage au Japon.\n• Vol vers Hokkaido : Vol depuis Ishigaki/Naha (direct ou via Tokyo Haneda) vers l'aéroport de Sapporo New Chitose (CTS).\n• Train rapide vers Sapporo : Train direct JR Rapid Airport depuis le terminal jusqu'à la gare de Sapporo (**37 minutes**, trains toutes les 12 min, inclus JR Pass).\n• À Sapporo : Métro de Sapporo et tramway urbain.\n• Visites : Parc Odori, marché aux poissons de Nijo (crabe royal et donburi de saumon), musée de la bière de Sapporo et venelle Ganso Ramen Yokocho à Susukino.\n• Vol retour : Départ depuis Sapporo New Chitose (CTS) via Tokyo."
         },
         {
@@ -1398,10 +1538,66 @@ export const pendingDays = {
         }
       ],
       "money": "Vol vers Sapporo (~75€–110€) + 7€ train JR Airport + 25€–35€ festin de crabe et ramen.",
-      "num": 11
+      "num": 12
+    },
+    {
+      "id": "tokyo-departure",
+      "num": 13,
+      "title": "Retour à Tokyo, soirée d'adieu et vol retour depuis Narita",
+      "cities": "Hokkaido / Tokyo → Aéroport de Narita (NRT) → Vol international",
+      "reason": "Journée finale indispensable : Vol intérieur vers Tokyo, derniers achats de souvenirs (omiyage), dîner d'adieu et transfert à Narita.",
+      "summary": "Vol de retour d'Hokkaido vers Tokyo. Après-midi d'achats de souvenirs à Don Quijote ou Ginza, dîner d'adieu autour d'un sukiyaki de bœuf Wagyu, nuit à Tokyo si le vol est le lendemain, et transfert direct en Narita Express vers l'aéroport de Narita (NRT) pour embarquer sur votre vol international.",
+      "history": "La tradition des 'omiyage' (cadeaux de retour) est incontournable au Japon : gâteaux régionaux et objets d'artisanat soigneusement emballés pour ses proches. Boucler la boucle à Tokyo avant de rejoindre Narita conclut ce grand périple en beauté.",
+      "schedule": [
+        {
+          "time": "🛫 Transports et liaison vers Tokyo et Narita (Jour 13)",
+          "text": "• Vol intérieur Hokkaido → Tokyo : Vol Sapporo (CTS) vers Tokyo Haneda ou Narita (1h 40 min).\n• Nuit à Tokyo : Idéale pour profiter d'une dernière soirée sereine sans stress de correspondance.\n• Transfert vers Narita : Narita Express direct depuis Tokyo Station (58 min) ou Shinjuku (75 min).\n• À l'aéroport : Dépôt du boîtier Pocket WiFi, enregistrement et derniers achats Duty Free (Tokyo Banana, chocolats Royce)."
+        },
+        {
+          "time": "Derniers achats de souvenirs (Omiyage)",
+          "text": "Arrêt au célèbre magasin Don Quijote pour les snacks insolites et thés matcha, ou papeteries traditionnelles de Ginza."
+        },
+        {
+          "time": "Dîner d'adieu mémorable",
+          "text": "Un grand festin de clôture : Sukiyaki mijoté de bœuf Wagyu ou comptoir de sushis raffinés pour célébrer le voyage."
+        },
+        {
+          "time": "Embarquement et vol international",
+          "text": "Arrivée à Narita 2h30 avant le départ, passage de sécurité et envol vers la France des souvenirs plein la tête."
+        }
+      ],
+      "money": "Env. 20€ Narita Express + 35€–50€ dîner d'adieu + budget souvenirs."
     }
   ],
   "tl": [
+    {
+      "id": "narita-arrival",
+      "num": 1,
+      "title": "Pagdating sa Japan: Paglapag sa Narita at Byahe sa Tokyo",
+      "cities": "Narita Airport (NRT) → Tokyo (Shinjuku / Asakusa)",
+      "reason": "Mahalagang araw ng pagdating: Immigration, express train papuntang Tokyo, at unang hapunan ng ramen.",
+      "summary": "Paglapag sa Narita International Airport (NRT), mabilis na immigration gamit ang Visit Japan Web QR code. Sakay ng Narita Express o Keisei Skyliner diretso sa sentro ng Tokyo. Check-in sa hotel at unang tikim ng mainit na ramen.",
+      "history": "Binuksan noong 1978, ang Narita Airport ang pangunahing paliparan para sa mga international flights papuntang Tokyo, na may mabilis na koneksyon sa tren patungong kabisera.",
+      "schedule": [
+        {
+          "time": "🛬 Transportasyon mula Narita hanggang Tokyo (Araw 1)",
+          "text": "• Paglapag sa Narita (NRT): Immigration at baggage claim gamit ang QR code ng Visit Japan Web.\n• Sa Paliparan: Kunin ang Pocket WiFi o i-activate ang eSIM, kumuha ng Suica card.\n• Narita Express (JR N'EX): Tren mula paliparan diretso sa Tokyo Station (58 min) o Shinjuku (75 min).\n• Keisei Skyliner: Mabilis na tren papuntang Nippori/Ueno sa loob ng 36 minuto."
+        },
+        {
+          "time": "Check-in sa Hotel sa Tokyo",
+          "text": "Pagdating sa hotel sa Shinjuku o Asakusa, iwanan ang maleta at magpahinga pagkatapos ng mahabang byahe sa eroplano."
+        },
+        {
+          "time": "Unang Gabi at Masarap na Hapunan",
+          "text": "Maikling lakad sa ilalim ng makukulay na ilaw at hapunan ng mainit na tonkotsu ramen at gyoza."
+        },
+        {
+          "time": "Meryenda sa Konbini",
+          "text": "Bumili ng inumin at meryenda sa 7-Eleven o Lawson bago matulog nang maaga."
+        }
+      ],
+      "money": "Tinatayang ¥3,200 express train + ¥2,500 hapunan + ¥600 meryenda sa konbini."
+    },
     {
       "id": "tokyo-highlights",
       "title": "Pangunahing Tokyo: Templo, Tanawin at mga Kalsada",
@@ -1411,7 +1607,7 @@ export const pendingDays = {
       "history": "Nagsimula bilang maliit na nayon ng pangingisda na tinawag na Edo bago naging sentro ng shogunato noong 1603. Noong 1868, inilipat ang kabisera at pinangalanang Tokyo ('Silangang Kabisera'). Sa kabila ng mga kalamidad at digmaan, muling bumangon ang lungsod bilang sentro ng modernong teknolohiya at kultura.",
       "schedule": [
         {
-          "time": "🚆 Transportasyon at Paglibot (Araw 1)",
+          "time": "🚆 Transportasyon at Paglibot (Araw 2)",
           "text": "• Tuluyan: Hotel sa Tokyo (Shinjuku, Asakusa, Ueno o Ginza).\n• Transportasyon: Tokyo Subway 24-Hour Ticket (~¥800 / ~€5) o Suica/Pasmo card.\n• Ruta: Mula Asakusa papuntang Harajuku (25 min). Mula Harajuku hanggang Shibuya (15 min lakad o 2 min sa JR Yamanote). Mula Shibuya hanggang Shinjuku (7 min sa JR Yamanote)."
         },
         {
@@ -1436,7 +1632,7 @@ export const pendingDays = {
         }
       ],
       "money": "Tinatayang ¥800 metro pass + ¥4,000–¥6,000 pagkain + tiket sa Shibuya Sky (~¥2,200).",
-      "num": 1
+      "num": 2
     },
     {
       "id": "nikko",
@@ -1447,7 +1643,7 @@ export const pendingDays = {
       "history": "Umunlad ang Nikko noong ika-8 siglo bilang sentro ng Budismo na itinatag ng mongheng si Shodo Shonin. Noong 1617, napili ito bilang huling himlayan ni Tokugawa Ieyasu, ang dakilang unifier ng Japan at nagtatag ng Tokugawa shogunate na nagdala ng mahigit 250 taong kapayapaan sa panahon ng Edo. Pinalawak ito ng apo niyang si Iemitsu at naging maningning na Toshogu complex na may mahigit 5 milyong piraso ng gold leaf.",
       "schedule": [
         {
-          "time": "🚆 Transportasyon at Paglibot (Araw 2)",
+          "time": "🚆 Transportasyon at Paglibot (Araw 3)",
           "text": "• Day trip mula sa Tokyo: Balikan sa parehong hotel sa Tokyo.\n• Tren: Limited Express Spacia X mula Tobu-Asakusa patungong Tobu-Nikko (1h 50 min). Rekomendadong umalis ng 07:50 o 08:30 ng umaga.\n• Sa Nikko: Tobu Nikko Pass para sa libreng bus paakyat ng Irohazaka road patungong Lake Chuzenji at Kegon Falls."
         },
         {
@@ -1484,7 +1680,7 @@ export const pendingDays = {
         }
       ],
       "money": "Tobu Nikko Pass (~¥3,500) + tiket sa templo (~¥1,800) + pagkain (~¥4,000).",
-      "num": 2
+      "num": 3
     },
     {
       "id": "tokyo-kamakura",
@@ -1495,7 +1691,7 @@ export const pendingDays = {
       "history": "Ang Kamakura ang naging sentro ng unang pamahalaang militar (bakufu) ng Japan mula 1185 hanggang 1333 sa pamumuno ni Minamoto no Yoritomo. Ang Yanaka naman ay isa sa mga natitirang lumang distrito ng Tokyo na nakaligtas sa mga digmaan.",
       "schedule": [
         {
-          "time": "🚆 Transportasyon at Paglibot (Araw 3)",
+          "time": "🚆 Transportasyon at Paglibot (Araw 4)",
           "text": "• Day trip sa baybayin: Huling gabi sa hotel sa Tokyo.\n• Tokyo papuntang Kamakura: JR Yokosuka Line mula Tokyo Station (55 min, ~¥950 gamit ang Suica).\n• Sa Kamakura: Enoden electric train (10 min papuntang Hase Station para sa Great Buddha at Hasedera).\n• Pagbalik sa Tokyo: Tren papuntang Nippori para sa Yanaka Ginza o Akihabara sa gabi.\n• 💡 Tip sa Maleta: Ipadala ngayong gabi ang malalaking maleta papuntang Osaka gamit ang Takkyubin (~¥2,000/maleta) para backpack lang ang dala sa Mount Fuji bukas."
         },
         {
@@ -1520,7 +1716,7 @@ export const pendingDays = {
         }
       ],
       "money": "Tinatayang ¥1,800 pamasahe sa tren + ¥700 tiket sa templo + ¥4,000 pagkain.",
-      "num": 3
+      "num": 4
     },
     {
       "id": "fuji-hiking",
@@ -1531,7 +1727,7 @@ export const pendingDays = {
       "history": "Itinuturing na sagradong bundok at tahanan ng Shinto goddess na si Konohanasakuya-hime, ang Mount Fuji ay dating nakalaan lamang sa mga ermitanyong monghe (yamabushi). Ngayon ay inaakyat na ito ng mga hiker mula sa buong daigdig. May kasabihan sa Japan: 'Matalino ang umakyat sa Fuji nang minsan; mangmang ang umakyat nang makalawa' (dahil sa matinding hirap ng daan).",
       "schedule": [
         {
-          "time": "🏔️ Transportasyon Tokyo → Mount Fuji (Araw 4)",
+          "time": "🏔️ Transportasyon Tokyo → Mount Fuji (Araw 5)",
           "text": "• Pag-alis sa Tokyo: Check-out na may dalang hiking backpack (ang malalaking maleta ay naipadala na sa Osaka).\n• Direktang Bus: Express bus mula Busta Shinjuku papuntang Fuji Subaru Line 5th Station (2h 20 min, ~¥3,800).\n• Sa 5th Station (2,300 m): Magpahinga ng 1–2 oras para masanay sa taas ng bundok, bumili ng kahoy na baston (Kongo-zue).\n• Pag-akyat: Yoshida Trail (4–5 oras na paglalakad) paakyat sa mountain hut sa 7th o 8th station (3,000–3,400 m) para matulog at maghapunan."
         },
         {
@@ -1568,7 +1764,7 @@ export const pendingDays = {
         }
       ],
       "money": "Tinatayang ¥3,800 express bus + ¥2,000 conservation fee + ¥11,000–¥14,000 bayad sa mountain hut.",
-      "num": 4
+      "num": 5
     },
     {
       "id": "osaka-classic",
@@ -1579,7 +1775,7 @@ export const pendingDays = {
       "history": "Kilala noong una bilang Naniwa, naging sentro ng kalakalan ang Osaka at tinawag na 'kusina ng bansa'. Ipinatayo ni Toyotomi Hideyoshi ang Kastilyo ng Osaka noong 1583 gamit ang dambuhalang mga tipak ng bato.",
       "schedule": [
         {
-          "time": "🚄 Transportasyon Mount Fuji → Osaka (Araw 5)",
+          "time": "🚄 Transportasyon Mount Fuji → Osaka (Araw 6)",
           "text": "• Madaling araw: Tuktok ng Mount Fuji (3,776 m) para sa Goraiko sunrise.\n• Umaga: Pagbaba pabalik sa 5th Station (mga 3 oras, dating bandang 10:00 AM).\n• Byahe papuntang Osaka:\n  1. Bus mula 5th Station hanggang Mishima Shinkansen Station (1h 45 min).\n  2. Sa Mishima: Sakay ng Tokaido Shinkansen diretso sa Shin-Osaka (1h 50 min).\n• Pagdating sa Osaka bandang 2:00 PM: Check-in sa hotel (nandoon na ang mga maleta mula sa Tokyo!).\n• Hapon at Gabi: Osaka Castle, Shitenno-ji, at masarap na hapunan sa Dotonbori."
         },
         {
@@ -1604,7 +1800,7 @@ export const pendingDays = {
         }
       ],
       "money": "Tinatayang ¥3,300 bus papuntang Mishima + ¥12,500 Shinkansen (kasama sa JR Pass) + pagkain sa Dotonbori (~¥4,000).",
-      "num": 5
+      "num": 6
     },
     {
       "id": "osaka-temples",
@@ -1615,7 +1811,7 @@ export const pendingDays = {
       "history": "Hindi tulad ng Kyoto, ang mga templo sa Osaka ay bahagi ng pang-araw-araw na buhay ng mga karaniwang mangangalakal at mamamayan, na nagpapakita ng buhay na pananampalataya.",
       "schedule": [
         {
-          "time": "🦁 Transportasyon at Paglibot sa Osaka (Araw 6)",
+          "time": "🦁 Transportasyon at Paglibot sa Osaka (Araw 7)",
           "text": "• Buong Araw sa Osaka: Sa parehong hotel pa rin tutuloy.\n• Transportasyon: Osaka Metro 1-Day Pass (~¥650 Sabado-Linggo / ¥820 karaniwang araw) o ICOCA card.\n• Ruta: Mula Namba Yasaka hanggang Isshin-ji (15 min sa tren). Mula Kuromon Market hanggang Hozenji Yokocho (10 min lakad). Pagsapit ng hapon, sakay ng Midosuji line papuntang Umeda Sky Building."
         },
         {
@@ -1640,7 +1836,7 @@ export const pendingDays = {
         }
       ],
       "money": "Tinatayang ¥650 metro pass + libreng pasok sa dambana + ¥1,500 Umeda Sky + tanghalian sa Kuromon (~¥3,500).",
-      "num": 6
+      "num": 7
     },
     {
       "id": "hiroshima-nagasaki",
@@ -1651,7 +1847,7 @@ export const pendingDays = {
       "history": "Noong Agosto 6, 1945, nawasak ang Hiroshima ng unang atomic bomb; makalipas ang tatlong araw, noong Agosto 9, binomba rin ang Nagasaki. Ginawa ng dalawang lungsod ang trahedya bilang panawagan para sa kapayapaan ng buong mundo. Bukod dito, ang Nagasaki ay naging bukod-tanging daungan ng Japan sa panahon ng mahigit 200 taon ng sakoku isolation kung saan ang artificial island ng Dejima ang tanging lugar ng kalakalan sa pagitan ng mga Dutch at Japan.",
       "schedule": [
         {
-          "time": "🕊️ Transportasyon Osaka → Hiroshima (Araw 7)",
+          "time": "🕊️ Transportasyon Osaka → Hiroshima (Araw 8)",
           "text": "• Byahe pakanluran: Umagang check-out sa hotel sa Osaka.\n• Shinkansen Bullet Train: Sanyo Shinkansen mula Shin-Osaka diretso sa Hiroshima Station sa loob ng **1 oras at 25 minuto lang** (kasama sa JR Pass).\n• Sa Hiroshima: Sakay ng Hiroden streetcar (Line 2 o 6) hanggang Genbaku Dome-mae stop (15 min).\n• Mga Pupuntahan: Peace Memorial Park, Museum, Atomic Bomb Dome, at masarap na Hiroshima-style okonomiyaki sa Okonomimura.\n• Tuluyan: Hotel sa Hiroshima (malapit sa JR Station o Miyajimaguchi)."
         },
         {
@@ -1688,7 +1884,7 @@ export const pendingDays = {
         }
       ],
       "money": "Shinkansen (JR Pass o ~¥10,000) + ¥440 streetcar + ¥200 museo + pagkain sa Okonomimura (~¥2,800).",
-      "num": 7
+      "num": 8
     },
     {
       "id": "miyajima",
@@ -1699,7 +1895,7 @@ export const pendingDays = {
       "history": "Noong sinaunang panahon, ang buong isla ay itinuturing na isang buhay na kami (diyos) kaya bawal apakan ng tao o magsilang o mamatay rito. Upang makapanalangin ang mga deboto nang hindi nilalapastangan ang lupa, muling itinayo ni Taira no Kiyomori ang Itsukushima Shrine noong 1168 sa ibabaw ng tubig sa pamamagitan ng mga haliging kahoy. Idineklarang UNESCO World Heritage Site noong 1996.",
       "schedule": [
         {
-          "time": "⛩️ Transportasyon Hiroshima → Miyajima Island (Araw 8)",
+          "time": "⛩️ Transportasyon Hiroshima → Miyajima Island (Araw 9)",
           "text": "• Napakadaling byahe: Katapat lang ng baybayin ng Hiroshima ang isla ng Miyajima.\n• Tren: JR Sanyo Main Line mula Hiroshima Station hanggang Miyajimaguchi (**28 minuto**, ~¥420 o JR Pass).\n• Ferry papuntang Isla: 2 minutong lakad papuntang pantalan. Sakay ng JR West Ferry (**10 minuto**; dumaraan malapit sa Floating Torii Gate; libre sa JR Pass o ~¥200).\n• Sa Isla: Malalakad ang Itsukushima Shrine at Daisho-in kasama ang mga maamong usa. Miyajima Ropeway paakyat ng Mount Misen (535 m).\n• Tuluyan: Tradisyonal na ryokan sa Miyajima o balik sa hotel sa Hiroshima."
         },
         {
@@ -1736,7 +1932,7 @@ export const pendingDays = {
         }
       ],
       "money": "Tren at ferry libre sa JR Pass (o ~¥650) + ¥300 Itsukushima + ¥2,000 ropeway + pagkain (~¥3,500).",
-      "num": 8
+      "num": 9
     },
     {
       "id": "okinawa",
@@ -1747,7 +1943,7 @@ export const pendingDays = {
       "history": "Sa loob ng mahigit 450 taon, ang mga islang ito ay naging malayang Ryukyu Kingdom na nakikipagkalakalan sa China, Japan, Korea, at Timog-Silangang Asya. Noong 1879 ay sapilitang isinama sa Japan, dumanas ng matinding labanan noong Battle of Okinawa noong 1945, at pinamahalaan ng US militar hanggang 1972, dahilan upang magkaroon ito ng kakaiba at makulay na pagkakakilanlan.",
       "schedule": [
         {
-          "time": "🌺 Transportasyon at Byahe papuntang Okinawa (Araw 9)",
+          "time": "🌺 Transportasyon at Byahe papuntang Okinawa (Araw 10)",
           "text": "• Byahe sa Isla: Check-out sa Hiroshima sa umaga.\n• Eroplano papuntang Okinawa: Bus papuntang Hiroshima Airport (HIJ) o Osaka Kansai (KIX). Direktang flight papuntang Naha Airport (OKA) sa loob ng **1 oras at 55 minuto** (ANA, JAL o Peach).\n• Sa Okinawa: Yui Rail monorail diretso mula airport papuntang sentro ng Naha (Kokusai-dori sa 12 min, Shuri Castle sa 27 min, ~¥300).\n• Mga Pupuntahan: Shuri Castle (palasyo ng Ryukyu Kingdom), Kokusai-dori, masarap na Okinawa Soba, at asul na dagat.\n• Tuluyan: Hotel o resort sa Naha / baybayin ng Okinawa."
         },
         {
@@ -1776,7 +1972,7 @@ export const pendingDays = {
         }
       ],
       "money": "Domestic flight (~¥10,000–¥14,000) + ¥300 monorail + ¥400 Shuri Castle + pagkain (~¥3,500).",
-      "num": 9
+      "num": 10
     },
     {
       "id": "iriomote-stargazing",
@@ -1787,7 +1983,7 @@ export const pendingDays = {
       "history": "Kilala sa buong daigdig ang Iriomote bilang nag-iisang tahanan ng Iriomote wildcat (Yamaneko), isang pusa sa gabi na natuklasan lamang noong 1967 at nanganganib nang maubos. Dahil sa timog na lokasyon nito (24° N), makikita mula rito ang Southern Cross constellation sa pagitan ng Pebrero at Hunyo, na hindi kailanman makikita mula sa Europa.",
       "schedule": [
         {
-          "time": "✨ Transportasyon papuntang Iriomote Island (Araw 10)",
+          "time": "✨ Transportasyon papuntang Iriomote Island (Araw 11)",
           "text": "• Byahe sa Yaeyama Archipelago: Ang pinakalikas at ligaw na bahagi ng Japan.\n• Flight Naha → Ishigaki: Maikling flight mula Naha papuntang Ishigaki (**55 minuto**).\n• High-Speed Ferry papuntang Iriomote: Bus mula airport papuntang port (30 min). Sakay ng fast ferry papuntang Iriomote Island (**45 minuto**, ~¥2,500).\n• Mga Gawain: Mangrove kayaking sa Nakama o Urauchi River at trekking papuntang Pinaisara Falls (55 m).\n• Gabi sa ilalim ng mga Bituin: International Dark Sky Park para makita ang Milky Way at Southern Cross sa kalangitan.\n• Tuluyan: Eco-lodge sa gitna ng kagubatan sa Iriomote o balik sa Ishigaki."
         },
         {
@@ -1820,7 +2016,7 @@ export const pendingDays = {
         }
       ],
       "money": "Flight Naha-Ishigaki (~¥6,500) + ferry papuntang Iriomote (~¥2,500) + kayak tour (~¥6,500) + pagkain.",
-      "num": 10
+      "num": 11
     },
     {
       "id": "hokkaido",
@@ -1831,7 +2027,7 @@ export const pendingDays = {
       "history": "Ang Hokkaido ('daan ng hilagang dagat') ay pormal na naging bahagi ng Japan noong panahon ng Meiji noong huling bahagi ng ika-19 siglo. Dati itong kilala bilang Ezochi, ang ninunong lupain ng mga Ainu, isang katutubong lahi na may sariling wika, paniniwala, at kultura na ipinagdiriwang ngayon sa mga sentro tulad ng Upopoy sa Shiraoi.",
       "schedule": [
         {
-          "time": "❄️ Transportasyon at Byahe papuntang Hokkaido (Araw 11)",
+          "time": "❄️ Transportasyon at Byahe papuntang Hokkaido (Araw 12)",
           "text": "• Mula Timog hanggang Hilaga: Ang huling yugto ng paglalakbay.\n• Eroplano papuntang Hokkaido: Flight mula Ishigaki/Naha (diretso o via Tokyo) patungong Sapporo New Chitose Airport (CTS).\n• Tren papuntang Sapporo: JR Rapid Airport train diretso mula airport terminal hanggang Sapporo Station (**37 minuto**, ~¥1,150 o JR Pass).\n• Sa Sapporo: Sapporo Subway at streetcar.\n• Mga Pupuntahan: Odori Park, Nijo Seafood Market (king crab at salmon roe donburi), Sapporo Beer Museum, at ramen sa Susukino.\n• Pag-uwi: Flight pabalik mula sa New Chitose Airport (CTS) via Tokyo."
         },
         {
@@ -1864,12 +2060,46 @@ export const pendingDays = {
         }
       ],
       "money": "Domestic flight (~¥12,000–¥16,000) + ¥1,150 JR train + pagkain sa Nijo Market (~¥4,500).",
-      "num": 11
+      "num": 12
+    },
+    {
+      "id": "tokyo-departure",
+      "num": 13,
+      "title": "Pagbalik sa Tokyo, Huling Gabi at Paglipad mula sa Narita",
+      "cities": "Hokkaido / Tokyo → Narita Airport (NRT) → International Flight",
+      "reason": "Mahalagang huling araw: Domestic flight pabalik sa Tokyo, pamimili ng pasalubong (omiyage), huling hapunan, at byahe sa Narita.",
+      "summary": "Eroplano mula Hokkaido pabalik sa Tokyo. Huling pamimili ng pasalubong sa Don Quijote o Ginza, masarap na huling hapunan ng Wagyu Sukiyaki, pagpalipas ng gabi sa Tokyo kung kinakailangan, at tren na Narita Express papuntang Narita Airport para sa flight pauwi.",
+      "history": "Ang kultura ng 'omiyage' o pagdadala ng masasarap na pasalubong sa pamilya at kaibigan ay mahalagang bahagi ng bawat paglalakbay sa Japan.",
+      "schedule": [
+        {
+          "time": "🛫 Transportasyon papuntang Tokyo at Narita (Araw 13)",
+          "text": "• Domestic Flight Hokkaido → Tokyo: Flight mula Sapporo (CTS) papuntang Tokyo (1h 40 min).\n• Huling Gabi sa Tokyo: Mas maganda para mag-enjoy bago ang flight pauwi.\n• Tren papuntang Narita: Sakay ng Narita Express (JR N'EX) mula Tokyo Station (58 min) o Shinjuku (75 min).\n• Sa Narita Airport: Ibalik ang Pocket WiFi, check-in ng maleta, at Duty Free shopping ng Tokyo Banana at Royce Chocolates."
+        },
+        {
+          "time": "Pamimili ng Pasalubong (Omiyage)",
+          "text": "Bumili ng KitKat matcha, Japanese skincare, at mga souvenir sa sikat na Don Quijote."
+        },
+        {
+          "time": "Huling Salu-salo",
+          "text": "Masarap na hapunan ng Sukiyaki o Yakiniku para sa pagtatapos ng masayang biyahe."
+        },
+        {
+          "time": "Paglipad Pauwi",
+          "text": "Pagdating sa Narita Airport 2.5 oras bago ang flight, immigration, at pagsakay sa eroplano pauwi ng Pilipinas."
+        }
+      ],
+      "money": "Tinatayang ¥3,200 Narita Express + ¥5,000 espesyal na hapunan + badyet para sa pasalubong."
     }
   ]
 };
 
 export const futureLocationCoords = {
+  "narita-arrival": {
+    "lat": 35.7647,
+    "lng": 140.3863,
+    "emoji": "🛬",
+    "color": "#0077b6"
+  },
   "tokyo-highlights": {
     "lat": 35.7148,
     "lng": 139.7967,
@@ -1935,6 +2165,12 @@ export const futureLocationCoords = {
     "lng": 141.3533,
     "emoji": "❄️",
     "color": "#1d3557"
+  },
+  "tokyo-departure": {
+    "lat": 35.6812,
+    "lng": 139.7671,
+    "emoji": "🛫",
+    "color": "#1b263b"
   }
 };
 
@@ -1965,8 +2201,8 @@ export const futureSectionTabs = {
 };
 
 export const pendingSectionSubtitle = {
-  "es": "Itinerario lógico de 11 días organizado geográficamente con conexiones de transporte directas: Kanto (Tokio, Nikko, Kamakura) → Monte Fuji → Kansai (Osaka) → Chugoku (Hiroshima y Miyajima) → Islas Ryukyu (Okinawa e Iriomote) → Hokkaido.",
-  "en": "A 11-day logically sequenced itinerary with direct transport links: Kanto (Tokyo, Nikko, Kamakura) → Mount Fuji → Kansai (Osaka) → Chugoku (Hiroshima & Miyajima) → Ryukyu Islands (Okinawa & Iriomote) → Hokkaido.",
-  "fr": "Itinéraire de 11 jours ordonné géographiquement avec transports fluides : Kanto (Tokyo, Nikko, Kamakura) → Mont Fuji → Kansai (Osaka) → Chugoku (Hiroshima et Miyajima) → Îles Ryukyu (Okinawa et Iriomote) → Hokkaido.",
-  "tl": "Lohikal na 11-araw na itinerary na may direktang transportasyon: Kanto (Tokyo, Nikko, Kamakura) → Mount Fuji → Kansai (Osaka) → Chugoku (Hiroshima at Miyajima) → Ryukyu Islands (Okinawa at Iriomote) → Hokkaido."
+  "es": "Itinerario completo de 13 días con vuelos internacionales y conexiones óptimas: Llegada a Narita (NRT) y traslado a Tokio → Kanto (Tokio, Nikko, Kamakura) → Monte Fuji → Kansai (Osaka) → Chugoku (Hiroshima y Miyajima) → Islas Ryukyu (Okinawa e Iriomote) → Hokkaido → Noche de despedida en Tokio y vuelo de regreso desde Narita.",
+  "en": "Complete 13-day journey with international flights and seamless connections: Narita (NRT) arrival and transfer to Tokyo → Kanto (Tokyo, Nikko, Kamakura) → Mount Fuji → Kansai (Osaka) → Chugoku (Hiroshima & Miyajima) → Ryukyu Islands (Okinawa & Iriomote) → Hokkaido → Farewell night in Tokyo and departure flight from Narita.",
+  "fr": "Grand voyage de 13 jours avec vols et liaisons complètes : Arrivée à Narita (NRT) et transfert à Tokyo → Kanto (Tokyo, Nikko, Kamakura) → Mont Fuji → Kansai (Osaka) → Chugoku (Hiroshima et Miyajima) → Îles Ryukyu (Okinawa et Iriomote) → Hokkaido → Nuit d'adieu à Tokyo et vol retour depuis Narita.",
+  "tl": "Kumpletong 13-araw na biyahe kasama ang international flights: Pagdating sa Narita (NRT) at byahe sa Tokyo → Kanto (Tokyo, Nikko, Kamakura) → Mount Fuji → Kansai (Osaka) → Chugoku (Hiroshima at Miyajima) → Ryukyu Islands (Okinawa at Iriomote) → Hokkaido → Huling gabi sa Tokyo at flight pauwi mula sa Narita."
 };
