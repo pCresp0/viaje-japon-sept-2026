@@ -321,13 +321,16 @@ export default function FutureTripsPage({ initialTab = "itinerario", onTabChange
                       {index + 1}
                     </span>
                     <span className="flex-1 min-w-0">
-                      <PlaceText
-                        as="span"
-                        text={d.title}
-                        className="block text-[15px] font-medium truncate"
-                        style={{ color: "var(--ink)" }}
-                        linkStyle={{ color: "var(--shu)" }}
-                      />
+                      <span className="block text-[15px] font-medium truncate" style={{ color: "var(--ink)" }}>
+                        <span style={{ color: meta.color, fontWeight: 700, marginRight: 6 }}>
+                          {lang === "en" ? `Day ${d.num || index + 1}:` : lang === "fr" ? `Jour ${d.num || index + 1} :` : lang === "tl" ? `Araw ${d.num || index + 1}:` : `Día ${d.num || index + 1}:`}
+                        </span>
+                        <PlaceText
+                          as="span"
+                          text={d.title}
+                          linkStyle={{ color: "var(--shu)" }}
+                        />
+                      </span>
                       <span className="block text-xs" style={{ color: "var(--ink-soft)" }}>
                         {d.cities}
                       </span>

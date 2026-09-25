@@ -6,15 +6,15 @@ export const pendingDays = {
   "es": [
     {
       "id": "tokyo-highlights",
-      "title": "Día 1 · Tokio imprescindible: Iconos, templos y miradores",
+      "title": "Tokio imprescindible: Iconos, templos y miradores",
       "cities": "Tokio (Asakusa, Shibuya, Shinjuku, Harajuku)",
       "reason": "Día 1 de Tokio para recorrer los contrastes más emblemáticos de la mayor metrópoli del mundo en una sola jornada intensa.",
       "summary": "Ruta esencial por los hitos que definen Tokio: desde la espiritualidad centenaria de Asakusa y el silencio sagrado del bosque de Meiji Jingu, hasta el bullicio futurista del cruce de Shibuya y las vistas infinitas desde las alturas de Shinjuku.",
       "history": "Fundada originalmente como un humilde pueblo pesquero llamado Edo, la ciudad creció vertiginosamente cuando Tokugawa Ieyasu estableció aquí el cuartel general del shogunato en 1603. En 1868, con la Restauración Meiji, el Emperador trasladó la corte desde Kioto y rebautizó la urbe como Tokio ('Capital del Este'). Pese a ser arrasada por el Gran Terremoto de Kanto de 1923 y los bombardeos de 1945, renació como una megalópolis fascinante donde templos de madera conviven en armonía con rascacielos vanguardistas.",
       "schedule": [
         {
-          "time": "Transporte y conexión (Día 1)",
-          "text": "Transporte urbano: Tarjeta Suica/Pasmo o Tokyo Subway Ticket de 24h (~800¥ / 5€) para viajes ilimitados en el metro Toei y Tokyo Metro."
+          "time": "🚆 Transporte y cómo moverse (Día 1)",
+          "text": "• Base y alojamiento: Hotel en Tokio (zonas recomendadas: Shinjuku, Asakusa, Ueno o Ginza).\n• Transporte del día: Metro de Tokio (Tokyo Metro y Línea Toei). La opción más rentable es el billete Tokyo Subway Ticket de 24 horas (~800¥ / ~5€) o pagar con tarjeta Suica/Pasmo/ICOCA.\n• Conexiones clave: De Asakusa (Senso-ji) a Harajuku (Meiji Jingu) en línea Ginza hasta Omotesando y transbordo a Chiyoda (25 min). De Harajuku a Shibuya son solo 15 min a pie o 2 min en JR Yamanote. De Shibuya a Shinjuku son 7 min en JR Yamanote."
         },
         {
           "time": "Templo Senso-ji y la gran linterna de Kaminarimon",
@@ -37,19 +37,20 @@ export const pendingDays = {
           "text": "El atardecer desde el mirador del Edificio del Gobierno Metropolitano de Tokio (Torre de TMG, acceso gratuito). Al caer la noche, inmersión en los callejones estrechos de Omoide Yokocho con brochetas de yakitori a la brasa y la cabeza gigante de Godzilla en Kabukicho."
         }
       ],
-      "money": "Aprox. 25€–40€ en comidas y snacks callejeros + billete de metro de 24h Tokio Subway Ticket (~5€) + entrada opcional a Shibuya Sky (~15€)."
+      "money": "Aprox. 5€ en metro de 24h + 25€–40€ en comidas y snacks callejeros + entrada opcional a Shibuya Sky (~15€).",
+      "num": 1
     },
     {
       "id": "nikko",
-      "title": "Día 2 · Excursión a Nikko: Mausoleo de Ieyasu y naturaleza sagrada",
+      "title": "Excursión a Nikko: Mausoleo de Ieyasu y naturaleza sagrada",
       "cities": "Nikko (Tochigi)",
       "reason": "Excursión de 1 día desde Tokio: Salida y regreso en tren express desde Asakusa sin cambiar de hotel.",
       "summary": "Excursión de un día completo desde Tokio hacia las montañas sagradas de Tochigi. Nikko combina algunos de los santuarios y templos más suntuosos y ricamente decorados de todo Japón (Patrimonio de la Humanidad UNESCO) con un espectacular entorno natural de cascadas alpinas, lagos volcánicos y bosques de cedros centenarios.",
       "history": "Nikko floreció en el siglo VIII como centro eremítico budista fundado por el monje Shodo Shonin. En 1617 fue elegido como lugar de descanso final de Tokugawa Ieyasu, el gran unificador de Japón y fundador del shogunato Tokugawa que trajo más de 250 años de paz durante el periodo Edo. Su nieto Iemitsu transformó el modesto mausoleo inicial en el deslumbrante complejo de Toshogu con más de 5 millones de láminas de pan de oro, consagrando a su abuelo como la deidad tutelar de Japón (Tosho Daigongen).",
       "schedule": [
         {
-          "time": "Transporte y conexión (Día 2)",
-          "text": "Transporte desde Tokio: Tren Limited Express Spacia X o Revaty desde Tobu-Asakusa (1h 50m directo a Tobu-Nikko). Incluido en el pase Tobu Nikko World Heritage Area Pass."
+          "time": "🚆 Transporte y cómo moverse (Día 2)",
+          "text": "• Excursión sin cambio de hotel: Salida matinal y regreso nocturno a Tokio manteniendo el mismo hotel.\n• Transporte de ida y vuelta: Tren Limited Express Spacia X o Revaty desde la estación Tobu-Asakusa directo a Tobu-Nikko (1h 50 min sin transbordos). Salida recomendada a las 07:50 o 08:30.\n• Desplazamientos en Nikko: Pase Tobu Nikko World Heritage Area Pass (o All Area Pass para subir en autobús por la carretera Irohazaka al lago Chuzenji y cataratas Kegon). Incluye viaje en tren y autobuses ilimitados."
         },
         {
           "time": "Acceso rápido en Limited Express y Nikko Pass",
@@ -84,19 +85,20 @@ export const pendingDays = {
           "text": "La especialidad histórica por excelencia de Nikko es el Yuba (la delicada piel que se forma en la superficie al hervir la leche de soja), alimento fundamental de los monjes budistas vegetarianos (shojin ryori) desde hace siglos. Se sirve frita, en rollitos glaseados, en sopa o sobre cuencos humeantes de soba fresca de montaña elaborada con el agua cristalina de los manantiales locales."
         }
       ],
-      "money": "Aprox. 40€ (comidas) + 11,40€ (entradas Toshogu y templos) + 22,60€ (Tobu World Heritage Pass ida/vuelta con buses ilimitados por persona)."
+      "money": "Tobu Nikko Pass (~22,60€) + entradas santuarios (~11,40€) + comidas y degustación de yuba (~25€).",
+      "num": 2
     },
     {
       "id": "tokyo-kamakura",
-      "title": "Día 3 · Tokio alternativo y escapada costera a Kamakura",
+      "title": "Tokio alternativo y escapada costera a Kamakura",
       "cities": "Kamakura & Tokio (Yanaka, Akihabara)",
       "reason": "Día 3 con base en Tokio: Excursión de medio día al sur (Kamakura) y tarde en los barrios con más encanto de Tokio.",
       "summary": "Excursión matutina a Kamakura, la histórica capital costera de los guerreros medievales, famosa por su colosal Gran Buda de bronce al aire libre, santuarios envueltos en bambú y vistas al mar, complementada por la tarde con el Tokio nostálgico de Yanaka Ginza o la cultura otaku de Akihabara.",
       "history": "Kamakura fue la sede del primer gobierno militar (bakufu) de Japón entre 1185 y 1333, establecido por Minamoto no Yoritomo. Rodeada de colinas escarpadas y el mar, se convirtió en una fortaleza natural y en la cuna de la expansión del budismo zen entre la casta guerrera samurái. Por su parte, Yanaka es uno de los pocos distritos de Tokio que sobrevivió tanto al terremoto de 1923 como a la Segunda Guerra Mundial, conservando el auténtico ambiente 'shitamachi' de la era Showa.",
       "schedule": [
         {
-          "time": "Transporte y conexión (Día 3)",
-          "text": "Transporte: Tren JR Yokosuka Line directo desde Tokyo Station o Shinjuku a Kamakura Station (55 min). Regreso a media tarde para recorrer Yanaka Ginza o Akihabara."
+          "time": "🚆 Transporte y cómo moverse (Día 3)",
+          "text": "• Excursión costera con base en Tokio: Última noche en el hotel de Tokio.\n• Traslado Tokio → Kamakura: Tren JR Yokosuka Line directo desde Tokyo Station o Shinjuku hasta Kamakura Station (55 min, ~950¥ con tarjeta Suica o JR Pass).\n• Desplazamientos en Kamakura: Tren retro Enoden (10 min de Kamakura a Hase para ver el Gran Buda Kotoku-in y Hasedera).\n• Regreso a Tokio: Tren JR de vuelta a media tarde (55 min) hasta la estación de Nippori para pasear por Yanaka Ginza o la meca de Akihabara.\n• 💡 Consejo logístico de oro: Esta noche en el hotel de Tokio se preparan las maletas grandes para enviarlas directamente al hotel de Osaka por Yamato Takkyubin (~2.000¥/maleta). Así mañana viajas al Monte Fuji solo con una mochila ligera."
         },
         {
           "time": "Kotoku-in y el Gran Buda Daibutsu de Kamakura",
@@ -119,19 +121,20 @@ export const pendingDays = {
           "text": "El epicentro mundial de la electrónica retro, tiendas de figuras de coleccionismo (Mandarake, Radio Kaikan), edificios de máquinas recreativas arcade (Gigo) y ambiente nocturno futurista iluminado por pantallas gigantes."
         }
       ],
-      "money": "Aprox. 8€ tren JR ida/vuelta desde Tokio a Kamakura (cubierto por Suica o JR Pass) + 2€ entrada Kotoku-in + 3€ Hasedera + 25€ comida/gastronomía local."
+      "money": "Aprox. 12€ en trenes JR y Enoden + 5€ entradas a Kotoku-in y Hasedera + 25€ comida local.",
+      "num": 3
     },
     {
       "id": "fuji-hiking",
-      "title": "Día 4 · Ascensión al Monte Fuji: De Tokio a la cumbre (3.776 m)",
+      "title": "Ascensión al Monte Fuji: De Tokio a la cumbre (3.776 m)",
       "cities": "Monte Fuji (Yamanashi / Shizuoka)",
       "reason": "Enlace Tokio → Fuji: Salida directa en autobús express por la mañana desde Tokio hasta la 5ª Estación para iniciar el ascenso y pernoctar en refugio.",
       "summary": "Coronar el pico más alto de Japón (3.776 m) es una de las aventuras y peregrinaciones más memorables del país. La ascensión clásica se realiza al atardecer y de noche por la ruta Yoshida desde la 5ª estación, pernoctando unas horas en un refugio a gran altitud para emprender el tramo final de madrugada y contemplar el mar de nubes iluminado por el sol naciente.",
       "history": "Venerado como montaña sagrada desde tiempos inmemoriales y hogar espiritual de la diosa sintoísta Konohanasakuya-hime, el Fuji fue durante siglos un santuario natural reservado a monjes ascetas (yamabushi). Hoy es una peregrinación nacional abierta a senderistas de todo el mundo; un célebre proverbio japonés dice: 'Quien sube al monte Fuji una vez es un sabio, quien lo sube dos veces es un necio' (por la exigencia física y la rudeza de sus laderas volcánicas).",
       "schedule": [
         {
-          "time": "Transporte y conexión (Día 4)",
-          "text": "Transporte desde Tokio: Bus express directo desde Shinjuku Expressway Bus Terminal (Busta Shinjuku) hasta la 5ª Estación Fuji Subaru Line (2h 20m, ~3.800¥)."
+          "time": "🏔️ Transporte y enlace Tokio → Monte Fuji (Día 4)",
+          "text": "• Salida de Tokio hacia la montaña sagrada: Check-out temprano en Tokio con mochila de senderismo (las maletas ya viajan a Osaka por Takkyubin).\n• Autobús directo al Fuji: Bus express de montaña desde la terminal Shinjuku Expressway Bus Terminal (Busta Shinjuku) directo hasta la 5ª Estación Fuji Subaru Line (2h 20 min, salidas recomendadas: 06:45, 07:45 o 08:45, ~3.800¥/persona).\n• En la 5ª Estación (2.300 m): Climatización a la altitud durante 1–2 horas, almuerzo y compra del bastón de madera peregrino (Kongo-zue).\n• Ascensión: Ruta Yoshida (aprox. 4–5 horas a ritmo constante) hasta el refugio de montaña reservado en la 7ª u 8ª estación (3.000–3.400 m) para cenar y dormir unas horas."
         },
         {
           "time": "Ruta Yoshida: La senda clásica desde la 5ª Estación (2.300 m)",
@@ -166,19 +169,20 @@ export const pendingDays = {
           "text": "La temporada oficial va desde principios de julio hasta principios de septiembre. Desde 2024, para evitar la masificación y las peligrosas ascensiones exprés sin descanso ('bullet climbing'), el gobierno de Yamanashi exige reserva online previa de cupo diario (límite de 4.000 escaladores/día), el abono de una tasa de entrada de ¥2.000 más la contribución voluntaria de conservación de ¥1.000."
         }
       ],
-      "money": "Alojamiento en refugio con cena y desayuno (~¥10.000-14.000) + tasa obligatoria de acceso y conservación (¥3.000) + transporte en autobús desde Tokio/Kawaguchiko."
+      "money": "Aprox. 24€ bus express Shinjuku-Fuji + 12€ tasa de conservación y entrada al sendero + 70€–95€ noche en refugio con cena y desayuno.",
+      "num": 4
     },
     {
       "id": "osaka-classic",
-      "title": "Día 5 · Monte Fuji → Osaka clásico: Castillo feudal y Dotonbori",
+      "title": "Monte Fuji → Osaka clásico: Castillo feudal y Dotonbori",
       "cities": "Osaka (Chuo, Tennoji, Namba)",
       "reason": "Enlace Fuji → Kansai: Tras ver el amanecer y descender del Fuji, enlace en Shinkansen directo a Osaka para disfrutar del castillo y su gastronomía.",
       "summary": "Un recorrido imprescindible por los orígenes feudales y espirituales de Osaka. Comenzando en la imponente fortaleza del Castillo de Osaka con sus murallas ciclópeas, pasando por el templo budista administrado oficialmente más antiguo de Japón (Shitenno-ji), hasta culminar con la explosión de luces de neón, olores y comida callejera de Dotonbori.",
       "history": "Osaka (antigua Naniwa) fue capital imperial en el siglo VII y el principal centro mercantil de Japón durante el periodo Edo, apodada 'la cocina de la nación' (Tenka no Daidokoro) porque todo el arroz y las mercancías del país se distribuían a través de sus canales. El Castillo de Osaka fue la gran obra del unificador Toyotomi Hideyoshi en 1583 para consolidar su poder sobre todo el archipiélago, con muros de bloques de granito de hasta 130 toneladas traídos por mar.",
       "schedule": [
         {
-          "time": "Transporte y conexión (Día 5)",
-          "text": "Transporte de enlace: Tras descender del Fuji a la 5ª Estación por la mañana, autobús a la estación de tren bala de Mishima (1h 45m). Desde Mishima, Shinkansen Tokaido (Hikari/Nozomi) directo a Shin-Osaka en 1h 50m."
+          "time": "🚄 Transporte y enlace Monte Fuji → Osaka clásico (Día 5)",
+          "text": "• Madrugada: Cumbre del Fuji (3.776 m), amanecer sagrado Goraiko y ruta del cráter Ohachi-meguri.\n• Mañana (Descenso): Bajada por la pista de ceniza hasta la 5ª Estación Fuji Subaru (aprox. 3 h, llegada sobre las 09:30–10:30).\n• Conexión directa Fuji → Osaka:\n  1. Autobús Fujikyu desde la 5ª Estación hasta la estación de Shinkansen de Mishima (1h 45 min, ~3.300¥).\n  2. En Mishima Station: Shinkansen Tokaido (Hikari o Nozomi) directo a Shin-Osaka en solo 1h 50 min.\n• Llegada a Osaka sobre las 14:00: Check-in en el hotel de Osaka (¡donde ya te esperan las maletas que enviaste desde Tokio!).\n• Tarde/Noche en Osaka: Castillo de Osaka, Shitenno-ji y cena de Takoyaki y Kushikatsu en Dotonbori."
         },
         {
           "time": "Castillo de Osaka y foso de piedras gigantes",
@@ -201,19 +205,20 @@ export const pendingDays = {
           "text": "Paseo junto al canal iluminado bajo el legendario cartel del atleta de Glico Man y el cangrejo móvil Kani Doraku. Cena a base de Takoyaki cremoso recién hecho, Kushikatsu (brochetas de carne y verduras crujientes con la regla sagrada de 'no mojar dos veces en la salsa') y Okonomiyaki al estilo Osaka con mayonesa japonesa y copos de bonito danzantes (katsuobushi)."
         }
       ],
-      "money": "Aprox. 4€ entrada Castillo de Osaka + 2€ entrada interior Shitenno-ji + 20€–30€ en comida callejera variada y cena en Dotonbori."
+      "money": "Aprox. 20€ bus Fuji-Mishima + 80€ Shinkansen Mishima-Osaka (cubierto por JR Pass) + 4€ Castillo + 20€–30€ cena Dotonbori.",
+      "num": 5
     },
     {
       "id": "osaka-temples",
-      "title": "Día 6 · Templos ocultos y misterios de Osaka: Namba Yasaka y Hozenji",
+      "title": "Templos ocultos y misterios de Osaka: Namba Yasaka y Hozenji",
       "cities": "Osaka (Namba, Tennoji, Kita-Umeda)",
       "reason": "Día 2 en Osaka sin cambios de hotel: Jornada a pie y en metro para descubrir los santuarios más místicos y el ambiente local.",
       "summary": "Una jornada fascinante por los santuarios más insólitos y sobrecogedores de Osaka: la gigantesca cabeza de león que devora la mala suerte en Namba Yasaka, el templo de las esculturas de Buda moldeadas con cenizas humanas en Isshin-ji, el callejón iluminado de Hozenji cubierto de musgo vivo y las mejores vistas panorámicas de Kansai.",
       "history": "A diferencia de Kioto, donde los templos son palaciegos y monumentales, los templos y santuarios de Osaka están profundamente integrados en la vida cotidiana de los vecinos, comerciantes y gremios del pueblo llano. Lugares como Hozenji o Namba Yasaka sobrevivieron a incendios y reconstrucciones manteniendo vivas tradiciones populares únicas donde la fe se vive a pie de calle entre aromas a incienso y comida casera.",
       "schedule": [
         {
-          "time": "Transporte y conexión (Día 6)",
-          "text": "Transporte urbano: Metro de Osaka (líneas Midosuji y Tanimachi) o pase Osaka 1-Day Pass (~650¥–820¥). Gran parte del recorrido se realiza a pie entre callejones peatonales."
+          "time": "🦁 Transporte y cómo moverse por Osaka (Día 6)",
+          "text": "• Jornada completa en Osaka: Mismo hotel en Osaka (sin cambios de alojamiento).\n• Transporte urbano: Metro de Osaka (Líneas Midosuji y Tanimachi). Se recomienda el pase de metro Osaka 1-Day Pass (~650¥ en fin de semana / 820¥ laborable) o tarjeta Suica/ICOCA.\n• Ruta a pie y en metro: De Namba Yasaka al templo Isshin-ji son 15 min en metro o 25 min paseando por Nipponbashi Den Den Town. De Kuromon a Hozenji Yokocho son 10 min a pie. Por la tarde, metro línea Midosuji directa hasta Umeda para subir al rascacielos Umeda Sky Building."
         },
         {
           "time": "Santuario Namba Yasaka y el gran león devorador de espíritus",
@@ -236,19 +241,20 @@ export const pendingDays = {
           "text": "Subida a las escaleras mecánicas acristaladas suspendidas en el aire que cruzan entre las dos torres de Umeda Sky Building (173 m) para ver la puesta de sol sobre la bahía de Osaka y las luces de los rascacielos de Kita, o al rascacielos Abeno Harukas (300 m, el más alto de Osaka)."
         }
       ],
-      "money": "Entradas a santuarios gratuitas + 10€ mirador Umeda Sky (o Harukas) + 25€ almuerzo en mercado Kuromon + transporte en metro con pase diario (~4,50€)."
+      "money": "Aprox. 4,50€ pase metro + entradas gratuitas a santuarios + 10€ mirador Umeda Sky + 25€ almuerzo en Mercado Kuromon.",
+      "num": 6
     },
     {
       "id": "hiroshima-nagasaki",
-      "title": "Día 7 · Osaka → Hiroshima y Nagasaki: Memoria de paz e historia",
+      "title": "Osaka → Hiroshima y Nagasaki: Memoria de paz e historia",
       "cities": "Hiroshima, Nagasaki",
       "reason": "Enlace Osaka → Oeste de Japón: Salida en Shinkansen directo desde Shin-Osaka hacia Hiroshima por la mañana temprano.",
       "summary": "Las dos únicas ciudades del mundo marcadas por los bombardeos atómicos de agosto de 1945, hoy convertidas en faros globales de paz, reconciliación y memoria. Además de sus museos imprescindibles, ofrecen un patrimonio cultural fascinante: la exuberante gastronomía de Hiroshima y el legado multicultural único de Nagasaki como única ventana de Japón al mundo occidental durante siglos.",
       "history": "El 6 de agosto de 1945, Hiroshima fue devastada por la primera bomba atómica de la historia bélica; tres días después, el 9 de agosto, Nagasaki sufrió el segundo impacto. Ambas ciudades transformaron la tragedia en un mensaje mundial de abolición nuclear. Nagasaki, además, atesora una historia única: durante los más de 200 años de la estricta política de aislamiento nacional (sakoku), la pequeña isla artificial de Dejima fue la única puerta de entrada para comerciantes holandeses, científicos y médicos occidentales en todo Japón.",
       "schedule": [
         {
-          "time": "Transporte y conexión (Día 7)",
-          "text": "Transporte de enlace: Shinkansen Sanyo (Nozomi/Sakura) desde Shin-Osaka hasta Hiroshima Station en solo 1h 25 min (frecuente y ultra rápido). Tranvía urbano Hiroden al Parque Memorial de la Paz."
+          "time": "🕊️ Transporte y enlace Osaka → Hiroshima (Día 7)",
+          "text": "• Salida matinal hacia el oeste: Check-out en el hotel de Osaka.\n• Conexión en tren bala Shinkansen: Shinkansen Sanyo (trenes frecuentes Nozomi, Sakura o Mizuho) directo desde Shin-Osaka hasta Hiroshima Station en **solo 1 hora y 25 minutos** (aprox. 10.000¥, cubierto por JR Pass).\n• Transporte en Hiroshima: Al salir de la estación de Hiroshima, tomar el tranvía urbano Hiroden (líneas 2 o 6) hasta la parada Genbaku Dome-mae (15 min, ~220¥).\n• Visitas: Parque y Museo Memorial de la Paz, Cúpula de la Bomba Atómica, y cena de okonomiyaki estilo Hiroshima en el edificio gastronómico Okonomimura.\n• Alojamiento: Hotel en Hiroshima (cerca de la estación JR o cerca del muelle de Miyajimaguchi)."
         },
         {
           "time": "Hiroshima: Parque y Museo Memorial de la Paz",
@@ -283,19 +289,20 @@ export const pendingDays = {
           "text": "Nagasaki cuenta con la cocina de fusión más singular de Japón: 1) Champon: contundente sopa de fideos gruesos en caldo de cerdo y pollo cargada de marisco fresco, verduras y cerdo, creada a finales del siglo XIX para alimentar a estudiantes chinos con poco presupuesto. 2) Sara Udon: fideos crujientes fritos bañados en un espeso salteado de verduras y calamares. 3) Castella (Kasutera): delicioso bizcocho esponjoso introducido por misioneros y navegantes portugueses en el siglo XVI, horneado con una fina capa crujiente de azúcar candi en la base."
         }
       ],
-      "money": "Conexión directa en Shinkansen desde Shin-Osaka a Hiroshima (1 h 25 min) y tren exprés a Nagasaki; entradas a museos muy accesibles (~¥200-600)."
+      "money": "Shinkansen incluido en JR Pass (o ~65€) + 3€ tranvía Hiroden + 1,20€ Museo de la Paz + 20€ cena en Okonomimura.",
+      "num": 7
     },
     {
       "id": "miyajima",
-      "title": "Día 8 · Isla sagrada de Miyajima: Torii flotante y Monte Misen",
+      "title": "Isla sagrada de Miyajima: Torii flotante y Monte Misen",
       "cities": "Miyajima, Bahía de Hiroshima",
       "reason": "Vecina inmediata de Hiroshima: A solo 28 minutos en tren local de cercanías más 10 minutos de ferry panorámico.",
       "summary": "Considerada uno de los Tres Grandes Paisajes de Japón (Nihon Sankei), Miyajima es una joya espiritual en el mar interior de Seto. Célebre por el colosal torii bermellón que parece flotar sobre el agua con marea alta, la isla esconde templos con cientos de esculturas budistas, senderos panorámicos hacia el monte Misen y una gastronomía de ostras a la brasa y dulces recién horneados insuperable.",
       "history": "En la antigüedad, la isla entera era considerada un kami (deidad viviente) tan sagrado que ningún ser humano tenía permitido pisarla ni nacer o morir en ella. Para que los fieles pudieran rezar sin profanar el suelo sagrado, Taira no Kiyomori remodeló en 1168 el santuario Itsukushima enteramente sobre pilotes de madera clavados en la arena de la bahía. Declarada Patrimonio de la Humanidad por la UNESCO en 1996.",
       "schedule": [
         {
-          "time": "Transporte y conexión (Día 8)",
-          "text": "Transporte local desde Hiroshima: Tren JR Sanyo Main Line desde Hiroshima Station hasta Miyajimaguchi (28 min). En el muelle, Ferry JR a la isla de Miyajima (10 min, pasa justo frente al torii; cubierto por JR Pass o tarjeta Suica)."
+          "time": "⛩️ Transporte y enlace Hiroshima → Isla de Miyajima (Día 8)",
+          "text": "• Enlace ultra corto desde Hiroshima: Miyajima se encuentra justo frente a la costa de Hiroshima.\n• Tren de cercanías: Línea JR Sanyo Main Line desde Hiroshima Station hasta Miyajimaguchi Station (**28 minutos**, trenes cada 10 min, ~420¥ con Suica/JR Pass).\n• Ferry panorámico a la isla: A 2 minutos a pie de la estación está el muelle. Tomar el ferry JR West Miyajima Ferry (**10 minutos**; este ferry navega haciendo una curva especial pegada al Gran Torii Flotante para la mejor foto desde el agua; 100% incluido en el JR Pass o ~200¥ con Suica).\n• En la isla: Todo se recorre a pie entre ciervos sika (Santuario Itsukushima, templo Daisho-in, pabellón Senjokaku). Para subir al Monte Misen (535 m): Teleférico Miyajima Ropeway (~2.000¥ ida/vuelta).\n• Alojamiento: Noche mágica en ryokan tradicional en la isla de Miyajima (o regreso en 28 min a hotel en Hiroshima)."
         },
         {
           "time": "Santuario Itsukushima y el Gran Torii flotante",
@@ -330,19 +337,20 @@ export const pendingDays = {
           "text": "Desde la estación de Hiroshima, se toma el tren local JR San-yo Line hasta Miyajimaguchi (25-30 min). Justo al lado del puerto zarpan los ferris: el de JR (cubierto por JR Pass) y el Matsudai (10 min de travesía, ~¥200 + tasa turística de la isla de ¥100). El ferry de JR pasa deliberadamente más cerca del torii en el trayecto de ida para permitir fotografías óptimas. Se recomienda encarecidamente consultar la tabla de mareas de Miyajima antes de la visita para coordinar y presenciar tanto la pleamar (santuario flotante) como la bajamar (paseo a pie bajo el torii)."
         }
       ],
-      "money": "Tren JR desde Hiroshima a Miyajimaguchi (~¥420) + ferry (~¥200 + ¥100 tasa visitante); teleférico de ida y vuelta al Monte Misen (~¥2.000)."
+      "money": "Tren y ferry incluidos en JR Pass (o ~5€) + 2€ entrada Itsukushima + 12€ teleférico Monte Misen + 25€ ostras a la plancha y Momiji manju.",
+      "num": 8
     },
     {
       "id": "okinawa",
-      "title": "Día 9 · Hacia el sur subtropical: Okinawa y Archipiélago Ryukyu",
+      "title": "Hacia el sur subtropical: Okinawa y Archipiélago Ryukyu",
       "cities": "Naha, Ishigaki, Miyakojima, Taketomi",
       "reason": "Enlace Hiroshima/Kansai → Islas de Okinawa: Vuelo directo desde el aeropuerto de Hiroshima (o enlace vía Osaka) hacia Naha.",
       "summary": "El archipiélago subtropical de Okinawa sorprende por su atmósfera caribeña, sus aguas turquesa cristalinas apodadas 'Miyako Blue', su música de sanshin que flota en el aire cálido y su propia arquitectura tradicional protegida por leones guardianes (shisa).",
       "history": "Durante más de 450 años, estas islas conformaron el independiente y próspero Reino de Ryukyu, un emporio comercial marítimo que comerciaba libremente con China, Japón, Corea y el sudeste asiático. Anexionado a Japón en 1879, Okinawa sufrió la devastadora Batalla de Okinawa en 1945 y permaneció bajo administración militar estadounidense hasta 1972, forjando una identidad cultural mestiza y resiliente.",
       "schedule": [
         {
-          "time": "Transporte y conexión (Día 9)",
-          "text": "Transporte aéreo: Vuelo directo desde el aeropuerto de Hiroshima (HIJ) o Osaka Kansai (KIX) hacia Naha Airport (OKA) en 1h 55 min. Monorraíl elevado Yui Rail directo desde el aeropuerto al centro histórico y Castillo de Shuri."
+          "time": "🌺 Transporte y enlace hacia Okinawa (Día 9)",
+          "text": "• Enlace aéreo hacia el trópico: Check-out temprano en Hiroshima.\n• Vuelo directo a Okinawa: Traslado en autobús express al Aeropuerto de Hiroshima (HIJ, 45 min) o tren rápido al Aeropuerto de Osaka Kansai (KIX). Vuelo doméstico directo a Naha Airport (OKA) en Okinawa (**1 hora y 55 minutos de vuelo**, operado por ANA, JAL o Peach).\n• Transporte en Okinawa: Monorraíl elevado Yui Rail directo desde la terminal del aeropuerto hasta el centro de Naha (estación Kencho-mae para Kokusai-dori en 12 min, y estación Shuri para el Castillo de Shuri en 27 min, ~300¥).\n• Visitas: Castillo de Shuri (antiguo palacio imperial del Reino de Ryukyu), calle comercial Kokusai-dori, degustación de Okinawa Soba y playas de aguas cristalinas.\n• Alojamiento: Hotel o resort costero en Naha / costa de Okinawa."
         },
         {
           "time": "Naha y el Castillo de Shuri: El corazón del Reino Ryukyu",
@@ -369,19 +377,20 @@ export const pendingDays = {
           "text": "Okinawa es una de las famosas 'Zonas Azules' del planeta por la excepcional longevidad de sus habitantes, muy vinculada a su dieta: 1) Okinawa Soba: fideos gruesos de trigo en caldo suave de costilla de cerdo y escamas de bonito con trozos tiernísimos de panceta confitada (soki). 2) Goya Champuru: salteado tradicional de melón amargo (goya) con tofu firme isleño, huevo y panceta. 3) Umi-budo ('uvas de mar'): alga verde fresca que estalla en boca como diminutas perlas crujientes de caviar marino, acompañadas de vinagre de soja y cítrico shikuwasa."
         }
       ],
-      "money": "Vuelos directos desde Tokio u Osaka hacia Naha, Miyako o Ishigaki (~2 h 30 min-3 h); transporte local en ferry interislas muy frecuente."
+      "money": "Vuelo interno Hiroshima/Osaka-Naha (~60€–90€) + 3€ monorraíl Yui Rail + 3€ entrada Shuri Castle + 25€ gastronomía Ryukyu.",
+      "num": 9
     },
     {
       "id": "iriomote-stargazing",
-      "title": "Día 10 · Isla de Iriomote: Dark Sky Park, estrellas y selva virgen",
+      "title": "Isla salvaje de Iriomote: Dark Sky Park, estrellas y selva virgen",
       "cities": "Isla de Iriomote (Archipiélago Yaeyama, Okinawa)",
       "reason": "Enlace interno en las Islas Yaeyama: El paraíso más remoto, virgen y oscuro de Japón.",
       "summary": "La isla más salvaje de Japón, cubierta en un 90% por una selva subtropical impenetrable y manglares vírgenes. El Parque Nacional Iriomote-Ishigaki está certificado por DarkSky International como Dark Sky Park internacional por sus niveles nulos de contaminación lumínica. De día se navega en kayak por estuarios selváticos y de noche se montan los trípodes bajo un firmamento donde la Vía Láctea se percibe en tres dimensiones.",
       "history": "Iriomote es famosa en el mundo zoológico por ser el único hogar del gato de Iriomote (Prionailurus bengalensis iriomotensis), un felino salvaje nocturno descubierto apenas en 1967 que representa un linaje evolutivo aislado durante milenios. Su latitud meridional (24° N) permite divisar la Cruz del Sur a ras del horizonte marino, una constelación imposible de observar desde España o Europa continental.",
       "schedule": [
         {
-          "time": "Transporte y conexión (Día 10)",
-          "text": "Transporte interinsular: Vuelo corto de Naha a Ishigaki (55 min, Japan Transocean Air/ANA) + Ferry rápido desde el puerto de Ishigaki hasta la isla de Iriomote (45 min al puerto de Ohara o Uehara)."
+          "time": "✨ Transporte y enlace a la Isla de Iriomote (Día 10)",
+          "text": "• Conexión interinsular en el Archipiélago de Yaeyama: El Japón más virgen y salvaje.\n• Vuelo Naha → Ishigaki: Vuelo corto desde Naha Airport (OKA) hasta el Aeropuerto de New Ishigaki (ISG) (**55 minutos**, operado por JTA/ANA, con vistas aéreas de los atolones de coral).\n• Ferry a Iriomote: Autobús del aeropuerto de Ishigaki al puerto de ferrys (30 min). En el muelle, tomar el ferry rápido de alta velocidad hasta la isla de Iriomote (**45 minutos**, hacia el puerto de Ohara o Uehara, ~2.500¥).\n• Actividades: Kayak guiado por los ríos de manglares vírgenes (Nakama o Urauchi) y caminata hacia la cascada Pinaisara (55 m).\n• Noche estelar: Observación de estrellas en la Reserva Internacional de Cielo Oscuro (DarkSky Park) contemplando la Vía Láctea y la Cruz del Sur sobre el mar.\n• Alojamiento: Eco-lodge integrado en la naturaleza en Iriomote o regreso en ferry a Ishigaki."
         },
         {
           "time": "Reserva Internacional de Cielo Oscuro (Dark Sky Park)",
@@ -412,19 +421,20 @@ export const pendingDays = {
           "text": "En el extremo norte de la isla, la arena de esta tranquila cala costera no está compuesta de cuarzo o roca triturada, sino de los exoesqueletos calcáreos fosilizados de foraminíferos microscópicos (Baculogypsina sphaerulata) que vivían en las praderas de algas marinas. Al posar la palma de la mano sobre la arena mojada, decenas de minúsculos granos con la forma perfecta de estrellas de 5 y 6 puntas quedan pegados a la piel."
         }
       ],
-      "money": "Ferry rápido desde Ishigaki (40-45 min, ~¥2.500); oferta de alojamientos limitada en la isla, imprescindible reservar con antelación."
+      "money": "Vuelo Naha-Ishigaki (~45€) + ferry a Iriomote (~16€) + tour guiado en kayak (~45€) + cena local.",
+      "num": 10
     },
     {
       "id": "hokkaido",
-      "title": "Día 11 · Gran extensión norte: Hokkaido, Sapporo y naturaleza salvaje",
+      "title": "Gran extensión norte: Hokkaido, Sapporo y naturaleza salvaje",
       "cities": "Sapporo, Furano, Shiretoko, Otaru, Noboribetsu",
       "reason": "El contrapunto alpino definitivo: Vuelo hacia el gran norte indómito de Japón para culminar la aventura.",
       "summary": "La frontera norte de Japón cautiva con su inmensidad espacial, sus volcanes humeantes, sus parques nacionales protegidos y su gastronomía legendaria basada en el marisco más fresco del país y productos lácteos de primera calidad. Un destino espectacular tanto en verano (campos de flores infinitos) como en invierno (la mejor nieve polvo del planeta y festivales de hielo).",
       "history": "Hokkaido ('camino del mar del norte') fue colonizada e incorporada plenamente a Japón a partir de la Restauración Meiji a finales del siglo XIX. Antes de ello era conocida como Ezochi, tierra ancestral del pueblo indígena Ainu, una cultura con cosmovisión animista, tradiciones orales y lengua propias que hoy cuenta con museos y centros culturales dedicados como Upopoy en Shiraoi.",
       "schedule": [
         {
-          "time": "Transporte y conexión (Día 11)",
-          "text": "Transporte aéreo: Vuelo directo desde Naha o vía Tokio/Osaka hacia el aeropuerto de Sapporo New Chitose (CTS). Tren JR Rapid Airport desde la terminal a Sapporo Station en 37 min."
+          "time": "❄️ Transporte y enlace hacia Hokkaido (Día 11)",
+          "text": "• Del extremo sur subtropical al gran norte alpino: El gran colofón del viaje.\n• Vuelo hacia Hokkaido: Traslado al aeropuerto de Ishigaki o Naha y vuelo directo o con escala rápida vía Tokio Haneda hacia el Aeropuerto de Sapporo New Chitose (CTS).\n• Tren rápido a Sapporo: En la terminal del aeropuerto de Chitose, tomar el tren rápido JR Rapid Airport directo hasta Sapporo Station (**37 minutos**, trenes cada 12 min, ~1.150¥ con Suica/JR Pass).\n• Transporte en Sapporo: Red de metro de Sapporo (líneas Namboku y Tozai) y tranvía municipal.\n• Visitas: Parque Odori, Torre de televisión, Mercado Nijo de marisco fresco (cangrejo gigante y donburi de salmón), Museo de la Cerveza de Sapporo, callejón Ganso Ramen Yokocho en Susukino y onsen de aguas termales en Jozankei.\n• Vuelo de regreso internacional: Desde el aeropuerto de Sapporo New Chitose (CTS) con enlace a Tokio o vuelos directos intercontinentales."
         },
         {
           "time": "Sapporo: Parque Odori, Torre del Reloj y antigua sede de gobierno",
@@ -455,18 +465,23 @@ export const pendingDays = {
           "text": "El principal destino termal de Hokkaido. Un sobrecogedor cráter volcánico activo con fumarolas de azufre, géiseres hirvientes y ríos de agua termal humeante que serpentean entre valles boscosos, abasteciendo decenas de baños onsen tradicionales al aire libre (rotenburo) con aguas ricas en minerales."
         }
       ],
-      "money": "Vuelo interno desde Tokio a Sapporo (~1 h 30 min) o Shinkansen hasta Hakodate; se recomienda alquilar coche para recorrer parques y zonas rurales."
+      "money": "Vuelo interno a Sapporo (~75€–110€) + 7€ tren JR Airport + 25€–35€ cuenco de marisco fresco en Mercado Nijo y ramen de miso.",
+      "num": 11
     }
   ],
   "en": [
     {
       "id": "tokyo-highlights",
-      "title": "Day 1: Tokyo Highlights: Shrines, Icons & City Views",
+      "title": "Tokyo Highlights: Shrines, Icons & City Views",
       "cities": "Tokyo (Asakusa, Shibuya, Shinjuku, Harajuku)",
       "reason": "Tokyo Day 1: Explore the most iconic contrasts of the world's greatest metropolis in one vibrant day.",
       "summary": "An essential route covering Tokyo's defining landmarks: ancient spirituality at Senso-ji, sacred stillness in Meiji Jingu's forest, futuristic energy at Shibuya Crossing, and sweeping skyline views over Shinjuku.",
       "history": "Originally a humble fishing village named Edo, the city expanded rapidly when Tokugawa Ieyasu made it the shogun's headquarters in 1603. With the 1868 Meiji Restoration, the Emperor moved the court from Kyoto and renamed it Tokyo ('Eastern Capital'). Despite devastating destruction during the 1923 earthquake and World War II, it rose as a vibrant megalopolis where centuries-old wooden shrines stand alongside soaring glass skyscrapers.",
       "schedule": [
+        {
+          "time": "🚆 Transport & Getting Around (Day 1)",
+          "text": "• Base & Accommodation: Hotel in Tokyo (Shinjuku, Asakusa, Ueno or Ginza recommended).\n• Daily Transport: Tokyo Subway (Tokyo Metro & Toei Lines). Recommended: Tokyo Subway 24-Hour Ticket (~¥800 / ~€5) or IC card (Suica/Pasmo).\n• Key Connections: Asakusa to Harajuku via Ginza line to Omotesando, transfer to Chiyoda (25 min). Harajuku to Shibuya: 15 min walk or 2 min on JR Yamanote Line. Shibuya to Shinjuku: 7 min on JR Yamanote Line."
+        },
         {
           "time": "Senso-ji Temple and the Giant Kaminarimon Lantern",
           "text": "Tokyo's oldest and most revered Buddhist temple (founded in 645 AD). Walk through Kaminarimon Gate with its 700 kg red paper lantern, explore Nakamise-dori shopping street with fresh senbei crackers and melon pan, and view the five-story pagoda."
@@ -488,16 +503,21 @@ export const pendingDays = {
           "text": "Take in dusk panoramas from the Tokyo Metropolitan Government Building (free observation deck), followed by yakitori skewers in the intimate lantern-lit alleys of Omoide Yokocho and Kabukicho's Godzilla landmark."
         }
       ],
-      "money": "Approx. ¥4,000–¥6,000 (~€25–€40) meals/street food + Tokyo Subway 24h Ticket (~€5) + optional Shibuya Sky entry (~€15)."
+      "money": "Approx. €5 metro pass + €25–€40 food & snacks + optional Shibuya Sky entry (~€15).",
+      "num": 1
     },
     {
       "id": "nikko",
-      "title": "Day 2: Nikko Day Trip",
+      "title": "Nikko Day Trip: Ieyasu's Golden Shrine & Sacred Nature",
       "cities": "Nikko (Tochigi)",
       "reason": "Didn't happen due to bad weather (originally planned for Sunday, September 20, 2026, moved from Saturday due to train availability).",
       "summary": "A full day excursion from Tokyo into the sacred mountains of Tochigi. Nikko brings together some of the most lavishly decorated shrines and temples in all of Japan (UNESCO World Heritage) with a breathtaking natural backdrop of alpine waterfalls, volcanic lakes, and ancient cedar forests.",
       "history": "Nikko flourished in the 8th century as a Buddhist hermitage founded by the monk Shodo Shonin. In 1617 it was chosen as the final resting place of Tokugawa Ieyasu, the great unifier of Japan and founder of the Tokugawa shogunate that brought over 250 years of peace during the Edo period. His grandson Iemitsu transformed the original modest mausoleum into the glittering Toshogu complex with over 5 million sheets of gold leaf, enshrining his grandfather as Japan's tutelary deity (Tosho Daigongen).",
       "schedule": [
+        {
+          "time": "🚆 Transport & Getting Around (Day 2)",
+          "text": "• Day trip without hotel change: Depart from and return to your Tokyo hotel.\n• Round-Trip Train: Limited Express Spacia X or Revaty from Tobu-Asakusa Station direct to Tobu-Nikko (1h 50 min non-stop). Recommended departures: 07:50 or 08:30.\n• Getting Around Nikko: Tobu Nikko World Heritage Area Pass (or All Area Pass for Chuzenji buses up Irohazaka highway). Includes train and unlimited regional buses."
+        },
         {
           "time": "Fast Access via Limited Express & Nikko Pass",
           "text": "The Limited Express train (Spacia X or Revaty) departs directly from Tobu-Asakusa Station and reaches Tobu-Nikko in 1h 50min with no transfers. The most convenient and economical choice is the Tobu Nikko World Heritage Area Pass (or the All Area Pass to head up to Lake Chuzenji), which covers round-trip train travel and unlimited local Tobu buses for 2 days."
@@ -531,16 +551,21 @@ export const pendingDays = {
           "text": "Nikko's signature culinary treasure is Yuba (the delicate skin harvested from simmering soymilk), a staple of vegetarian Buddhist temple cuisine (shojin ryori) for centuries. Savor it fried, rolled in savory glazes, in comforting broths, or atop steaming bowls of mountain soba crafted with pure local spring water."
         }
       ],
-      "money": "Approx. €40 (meals) + €11.40 (Toshogu and temple admissions) + €22.60 (Tobu World Heritage Pass round trip with unlimited buses per person)."
+      "money": "Tobu Nikko Pass (~€22.60) + shrine entries (~€11.40) + yuba meals (~€25).",
+      "num": 2
     },
     {
       "id": "tokyo-kamakura",
-      "title": "Day 3: Alternative Tokyo & Coastal Kamakura Day Trip",
+      "title": "Alternative Tokyo & Coastal Kamakura Day Trip",
       "cities": "Kamakura & Tokyo (Yanaka, Akihabara)",
       "reason": "Tokyo Day 3: Step out to the coastal samurai capital and experience Tokyo's charming retro neighborhoods.",
       "summary": "Morning coastal excursion to historic Kamakura, home of the Great Bronze Buddha and coastal temples, followed by an afternoon in nostalgic Yanaka Ginza or electronic Akihabara.",
       "history": "Kamakura was Japan's first military government seat (bakufu) from 1185 to 1333 under Minamoto no Yoritomo. Surrounded by forested hills and the sea, it served as a natural citadel and center of Zen Buddhism. Meanwhile, Yanaka is one of Tokyo's few surviving pre-war neighborhoods, preserving authentic Showa-era shitamachi charm.",
       "schedule": [
+        {
+          "time": "🚆 Transport & Getting Around (Day 3)",
+          "text": "• Coastal day trip based in Tokyo: Final night in your Tokyo hotel.\n• Tokyo to Kamakura: Direct JR Yokosuka Line from Tokyo Station or Shinjuku to Kamakura Station (55 min, ~¥950 via Suica or JR Pass).\n• In Kamakura: Vintage Enoden electric railway (10 min from Kamakura to Hase Station for the Great Buddha and Hasedera).\n• Return to Tokyo: JR train back by mid-afternoon (55 min) to Nippori Station for Yanaka Ginza or Akihabara.\n• 💡 Golden Luggage Tip: Forward your large suitcases tonight from your Tokyo hotel to your Osaka hotel via Yamato Takkyubin (~¥2,000/bag). You will climb Mount Fuji tomorrow with just a light daypack!"
+        },
         {
           "time": "Kotoku-in and the Great Buddha of Kamakura",
           "text": "The monumental 13.35 m, 93-ton bronze statue of Amida Buddha cast in 1252. Originally housed indoors, a massive 1498 tsunami swept the wooden hall away, leaving the Buddha serenely meditating under the open sky ever since."
@@ -562,16 +587,21 @@ export const pendingDays = {
           "text": "Vibrant neon-lit arcade towers, retro video game shops (Super Potato), and hobby stores in the world capital of anime and gaming culture."
         }
       ],
-      "money": "Approx. €8 JR train round-trip + €2 Kotoku-in entry + €3 Hasedera + €25 food/snacks."
+      "money": "Approx. €12 JR/Enoden trains + €5 temple entries + €25 meals.",
+      "num": 3
     },
     {
       "id": "fuji-hiking",
-      "title": "Day 4: Mount Fuji Summit Hiking",
+      "title": "Climbing Mount Fuji: From Tokyo to the 3,776 m Summit",
       "cities": "Mount Fuji (Yamanashi / Shizuoka)",
       "reason": "Idea for a future trip -- on this journey we admired the volcano's silhouette from Lake Kawaguchiko and Oshino Hakkai, but climbing to the summit is a completely different adventure.",
       "summary": "Reaching the highest point in Japan (3,776m) is one of the country's most legendary pilgrimages. The classic ascent takes place from the 5th station along the Yoshida Trail, resting briefly at a high-altitude mountain hut before the final pre-dawn push to witness the sea of clouds bathed in the golden light of the rising sun.",
       "history": "Venerated as a sacred mountain since antiquity and spiritual home to Shinto goddess Konohanasakuya-hime, Mount Fuji was for centuries reserved for ascetic mountain monks (yamabushi). Today it is a national pilgrimage; an old Japanese proverb states: 'A wise man climbs Mount Fuji once; a fool climbs it twice' (acknowledging the sheer physical grit required on its barren volcanic slopes).",
       "schedule": [
+        {
+          "time": "🏔️ Transport & Link Tokyo → Mount Fuji (Day 4)",
+          "text": "• Heading to the sacred volcano: Early check-out in Tokyo with a light hiking pack (suitcases already sent to Osaka).\n• Direct Mountain Bus: Highway express bus from Shinjuku Expressway Bus Terminal (Busta Shinjuku) direct to Fuji Subaru Line 5th Station (2h 20 min, recommended: 06:45, 07:45 or 08:45, ~¥3,800/person).\n• At 5th Station (2,300 m): Acclimate to altitude for 1–2 hours, have lunch, and buy your wooden pilgrim staff (Kongo-zue).\n• The Climb: Yoshida Trail (approx. 4–5 hours steady ascent) up to your reserved mountain hut at the 7th or 8th station (3,000–3,400 m) for dinner and short rest."
+        },
         {
           "time": "Yoshida Trail: The Classic Ascent from 5th Station (2,300m)",
           "text": "The traditional pilgrimage route starting at the Fuji Subaru Line 5th Station. The path winds past subalpine larch forests before turning into an open volcanic incline of reddish cinders and andesitic lava blocks, punctuated by stepped mountain huts between the 7th and 8th stations."
@@ -605,16 +635,21 @@ export const pendingDays = {
           "text": "The official climbing season runs from early July to early September. Starting in 2024, to prevent overcrowding and unsafe non-stop climbs ('bullet climbing'), Yamanashi Prefecture enforces online time-slot reservations (capped at 4,000 hikers/day), an entry fee of ¥2,000, and a voluntary ¥1,000 conservation contribution."
         }
       ],
-      "money": "Mountain hut stay with dinner/breakfast (~¥10,000-14,000) + mandatory entry and conservation fees (¥3,000) + bus transfer from Tokyo/Kawaguchiko."
+      "money": "Approx. €24 highway bus + €12 trail conservation fee + €70–€95 mountain hut stay with meals.",
+      "num": 4
     },
     {
       "id": "osaka-classic",
-      "title": "Day 5: Classic Osaka: Feudal Castle, Shitenno-ji & Dotonbori",
+      "title": "Mount Fuji → Classic Osaka: Feudal Castle & Dotonbori",
       "cities": "Osaka (Chuo, Tennoji, Namba)",
       "reason": "Osaka Day 1: Discover the vibrant merchant soul, majestic castle, and culinary wonders of Kansai.",
       "summary": "An essential exploration of Osaka's historic grandeur and unbeatable street food. Begin at the monumental Osaka Castle with its colossal stone walls, visit Japan's oldest official Buddhist temple (Shitenno-ji), and end with Dotonbori's glowing neon canal.",
       "history": "Formerly known as Naniwa, Osaka served as an imperial capital in the 7th century and later blossomed as Edo Japan's commercial capital, known as 'the nation's kitchen' (Tenka no Daidokoro). Toyotomi Hideyoshi built Osaka Castle in 1583 with immense granite blocks weighing up to 130 tons brought by sea, making it the supreme fortress of feudal Japan.",
       "schedule": [
+        {
+          "time": "🚄 Transport & Link Mount Fuji → Classic Osaka (Day 5)",
+          "text": "• Pre-dawn: Summit Mount Fuji (3,776 m) for the Goraiko sunrise and crater rim loop.\n• Morning (Descent): Descend volcanic scree trail to Fuji 5th Station (approx. 3 hrs, arriving ~09:30–10:30).\n• Direct Fuji → Osaka Connection:\n  1. Fujikyu mountain bus from 5th Station to Mishima Shinkansen Station (1h 45 min, ~¥3,300).\n  2. At Mishima: Tokaido Shinkansen (Hikari or Nozomi) direct to Shin-Osaka in just 1h 50 min.\n• Arrival in Osaka by ~14:00: Check in at your Osaka hotel (where your forwarded suitcases are already waiting!).\n• Afternoon/Evening: Osaka Castle, Shitenno-ji, and lively street food feast in Dotonbori."
+        },
         {
           "time": "Osaka Castle and Massive Stone Moats",
           "text": "The eight-story white and gold keep adorned with golden Shachihoko roof ornaments, surrounded by cherry orchards in Nishinomaru Garden and colossal defense walls."
@@ -636,16 +671,21 @@ export const pendingDays = {
           "text": "Stand beneath the glowing Glico Running Man billboard, sample piping hot octopus balls (takoyaki), crispy kushikatsu skewers, and sizzling Osaka-style okonomiyaki."
         }
       ],
-      "money": "Approx. €4 Osaka Castle entry + €2 Shitenno-ji inner grounds + €20–€30 street food & Dotonbori dinner."
+      "money": "Approx. €20 Fuji-Mishima bus + €80 Shinkansen (JR Pass covered) + €4 Castle + €20–€30 Dotonbori dinner.",
+      "num": 5
     },
     {
       "id": "osaka-temples",
-      "title": "Day 6: Hidden Temples & Secrets of Osaka: Namba Yasaka & Hozenji",
+      "title": "Hidden Temples & Secrets of Osaka: Namba Yasaka & Hozenji",
       "cities": "Osaka (Namba, Tennoji, Kita-Umeda)",
       "reason": "Osaka Day 2: Uncover mystical, atmospheric shrines and secret alleys that most visitors completely overlook.",
       "summary": "A captivating journey through Osaka's most extraordinary shrines: the giant lion-head shrine that devours bad fortune at Namba Yasaka, the sacred bone-ash Buddha statues of Isshin-ji, the moss-carpeted deity of Hozenji Yokocho, and sweeping city vistas.",
       "history": "Unlike Kyoto's imperial, aristocratic temples, Osaka's spiritual sites are woven directly into the daily lives of local merchants and working neighborhoods. Sites like Hozenji and Namba Yasaka survived wartime fires and urban sprawl, preserving unique popular devotions where spirituality and neighborhood warmth meet.",
       "schedule": [
+        {
+          "time": "🦁 Transport & Getting Around Osaka (Day 6)",
+          "text": "• Full Day in Osaka: Same Osaka hotel (no luggage changes).\n• City Transport: Osaka Metro (Midosuji & Tanimachi lines). Recommended: Osaka 1-Day Eco Card (~¥650 weekends / ¥820 weekdays) or IC card (Suica/ICOCA).\n• Walk & Metro Route: Namba Yasaka to Isshin-ji is 15 min via metro or 25 min walking through Den Den Town. Kuromon Market to Hozenji Yokocho is a 10 min walk. Later, take Midosuji line straight up to Umeda for Umeda Sky Building."
+        },
         {
           "time": "Namba Yasaka Shrine: The Giant Spirit-Devouring Lion",
           "text": "Osaka's most striking shrine. Its 12-meter-high, 11-meter-wide lion head stage stands with mouth agape; folklore holds that its roar banishes evil spirits and swallows bad luck, attracting prosperity and success."
@@ -667,16 +707,21 @@ export const pendingDays = {
           "text": "Ascend glass escalators suspended in mid-air between two 173-meter towers to catch sunset across Osaka Bay and the glittering city skyline."
         }
       ],
-      "money": "Free shrine admissions + €10 Umeda Sky observatory + €25 Kuromon Market lunch + €4.50 metro pass."
+      "money": "Approx. €4.50 metro pass + free shrine entries + €10 Umeda Sky deck + €25 Kuromon Market lunch.",
+      "num": 6
     },
     {
       "id": "hiroshima-nagasaki",
-      "title": "Day 7: Hiroshima & Nagasaki: Memory, Peace & Heritage",
+      "title": "Osaka → Hiroshima & Nagasaki: Peace Memorial & History",
       "cities": "Hiroshima, Nagasaki",
       "reason": "Idea for a future trip -- two deeply moving and culturally rich cities not included in this trip's itinerary.",
       "summary": "The only two cities on Earth shaped by wartime atomic bombings, today reborn as world capitals of peace, reconciliation, and resilience. Beyond their solemn historical monuments, they offer incredible cultural richness: Hiroshima's layered cuisine and Nagasaki's rare status as Japan's sole gateway to the Western world across centuries of isolation.",
       "history": "On August 6, 1945, Hiroshima was devastated by the first wartime atomic bomb; three days later, on August 9, Nagasaki suffered the second bombing. Both cities transformed this harrowing chapter into a global campaign for nuclear disarmament. Nagasaki also boasts a much older cosmopolitan heritage: for more than 200 years of strict national isolation (sakoku), the man-made fan-shaped island of Dejima was Japan's only authorized window for Dutch trade, medicine, and scientific exchange.",
       "schedule": [
+        {
+          "time": "🕊️ Transport & Link Osaka → Hiroshima (Day 7)",
+          "text": "• Heading West: Morning check-out from your Osaka hotel.\n• Shinkansen Bullet Train: Sanyo Shinkansen (Nozomi, Sakura or Mizuho) direct from Shin-Osaka to Hiroshima Station in **just 1 hour 25 minutes** (~¥10,000, JR Pass covered).\n• In Hiroshima: Hop on the Hiroden streetcar (Line 2 or 6) right outside Hiroshima Station to Genbaku Dome-mae stop (15 min, ~¥220).\n• Sights: Peace Memorial Park, Museum, A-Bomb Dome, and Hiroshima-style layered okonomiyaki at Okonomimura.\n• Accommodation: Hotel in Hiroshima (near JR Station or Miyajimaguchi port)."
+        },
         {
           "time": "Hiroshima: Peace Memorial Park & Museum",
           "text": "Located on the delta of the Motoyasu River directly beneath the August 6 hypocenter. The park features the Cenotaph commemorating all victims and the Peace Flame, lit in 1964 with the solemn pledge to burn until all nuclear weapons on Earth are dismantled. The Peace Memorial Museum showcases poignant personal artifacts from survivors (hibakusha) and a deeply moving timeline of events."
@@ -710,16 +755,21 @@ export const pendingDays = {
           "text": "Nagasaki is home to Japan's most vibrant culinary fusion: 1) Champon: hearty ramen-like noodles in a rich pork-chicken broth loaded with seafood and vegetables, created in the late 19th century for Chinese students on a budget. 2) Sara Udon: crispy fried noodles smothered in a savory seafood-vegetable gravy. 3) Castella (Kasutera): moist, honey-sweet sponge cake with crunchy sugar crystals on the bottom, introduced by Portuguese traders in the 16th century."
         }
       ],
-      "money": "Direct Shinkansen from Shin-Osaka to Hiroshima (1h 25min) and express connection to Nagasaki; museum entry fees are very economical (~¥200-600)."
+      "money": "Shinkansen (JR Pass or ~€65) + €3 streetcar + €1.20 Peace Museum + €20 okonomiyaki dinner.",
+      "num": 7
     },
     {
       "id": "miyajima",
-      "title": "Day 8: Miyajima Island (Itsukushima)",
+      "title": "Sacred Miyajima Island: Floating Torii & Mount Misen",
       "cities": "Miyajima, Hiroshima Bay",
       "reason": "Idea for a future trip -- the sacred island where floating shrines, cedar peaks, and friendly sika deer coexist.",
       "summary": "Ranked as one of the Three Great Views of Japan (Nihon Sankei), Miyajima is a spiritual sanctuary in the Seto Inland Sea. Famous for its colossal vermilion torii gate that seems to float on seawater at high tide, the island also conceals ancient mountain temples, panoramic trails to Mount Misen, and irresistible grilled oyster stalls.",
       "history": "In ancient times, the entire island was worshipped as a living kami (Shinto deity) so sacred that humans were forbidden from setting foot on its soil, and neither births nor deaths were permitted. To allow worshippers to pray without desecrating the sacred ground, warlord Taira no Kiyomori rebuilt Itsukushima Shrine in 1168 entirely on wooden pilings over the tidal flats. Designated a UNESCO World Heritage Site in 1996.",
       "schedule": [
+        {
+          "time": "⛩️ Transport & Link Hiroshima → Miyajima Island (Day 8)",
+          "text": "• Seamless connection right next to Hiroshima: Miyajima sits just across the bay.\n• Local Commuter Train: JR Sanyo Main Line from Hiroshima Station to Miyajimaguchi Station (**28 minutes**, trains every 10 min, ~¥420 or JR Pass).\n• Scenic Ferry to Island: 2 min walk from station to pier. Board the JR West Miyajima Ferry (**10 minutes**; sails close to the Floating Torii Gate for breathtaking water views; JR Pass covered or ~¥200).\n• On the Island: Walkable pathways shared with wild deer. Take the Miyajima Ropeway to Mount Misen summit (535 m, ~¥2,000 round-trip).\n• Accommodation: Traditional ryokan on Miyajima island (or 28 min return to Hiroshima hotel)."
+        },
         {
           "time": "Itsukushima Shrine & The Floating Torii Gate",
           "text": "Built on stilts over the tidal inlet, Itsukushima Shrine was founded in 593 and expanded in 1168 by Taira no Kiyomori. At high tide, seawater floods the cypress boardwalks, making both the shrine and its massive vermilion torii gate appear to float magically on the Seto Inland Sea. The 16.6-meter gate weighs 60 tons and stands solely by its own weight on six thousand-year-old camphor tree trunks without being buried into the seabed. At low tide, the sea recedes completely, allowing visitors to walk out across the sand to touch the mossy camphor wood and inspect coins pressed into its bark."
@@ -753,16 +803,21 @@ export const pendingDays = {
           "text": "From Hiroshima Station, take the JR San-yo Line to Miyajimaguchi Station (25-30min). Right outside the station, choose between the JR Ferry (covered by JR Pass) and the Matsudai Ferry (10min crossing, ~¥200 + ¥100 island visitor tax). The JR ferry steers closer to the floating torii for classic photos on the outbound leg. Always check the Miyajima tide forecast online to catch both high tide (floating shrine) and low tide (walking beneath the gate)."
         }
       ],
-      "money": "JR train Hiroshima-Miyajimaguchi (~¥420) + ferry (~¥200 + ¥100 tax); Mount Misen round-trip ropeway (~¥2,000)."
+      "money": "Train & ferry covered by JR Pass (or ~€5) + €2 Itsukushima + €12 ropeway + €25 grilled oysters & momiji cakes.",
+      "num": 8
     },
     {
       "id": "okinawa",
-      "title": "Day 9: Okinawa & The Ryukyu Archipelago",
+      "title": "Subtropical South: Okinawa & the Ryukyu Archipelago",
       "cities": "Naha, Ishigaki, Miyakojima, Taketomi",
       "reason": "Idea for a future trip -- pristine coral reefs, turquoise waters, and an independent indigenous culture we couldn't fit into this journey.",
       "summary": "Japan's subtropical southern islands welcome travelers with warm trade winds, crystal-clear 'Miyako Blue' shallows, sanshin banjo ballads echoing through coral villages, and distinct Ryukyu architecture guarded by winged shisa lion statues.",
       "history": "For more than 450 years, these islands formed the prosperous Ryukyu Kingdom, an independent maritime trading hub linking China, Japan, Korea, and Southeast Asia. Annexed by Japan in 1879, Okinawa endured the horrific Battle of Okinawa in 1945 and was administered by the US military until 1972, cultivating a resilient, multicultural identity celebrated for longevity and community spirit.",
       "schedule": [
+        {
+          "time": "🌺 Transport & Flight to Okinawa (Day 9)",
+          "text": "• Flying to the Subtropics: Morning check-out in Hiroshima.\n• Direct Flight to Okinawa: Express bus to Hiroshima Airport (HIJ, 45 min) or train to Kansai (KIX). Direct domestic flight to Naha Airport (OKA) in Okinawa (**1 hour 55 min flight**, via ANA, JAL or Peach).\n• In Okinawa: Elevated monorail Yui Rail runs directly from airport terminal to downtown Naha (Kencho-mae stop for Kokusai-dori in 12 min, Shuri stop for Shuri Castle in 27 min, ~¥300).\n• Sights: Shuri Castle (palace of the ancient Ryukyu Kingdom), bustling Kokusai-dori, Okinawa Soba, and turquoise coral shores.\n• Accommodation: Hotel or beach resort in Naha / Okinawa main island."
+        },
         {
           "time": "Naha & Shuri Castle: Seat of the Ryukyu Kingdom",
           "text": "The former royal capital of the Ryukyu Kingdom. Shuri Castle (Gusuku), a UNESCO World Heritage Site, is an architectural marvel blending Chinese crimson imperial dragon motifs, Japanese joinery techniques, and sweeping limestone coral fortifications."
@@ -788,16 +843,21 @@ export const pendingDays = {
           "text": "Okinawa is one of the world's famous 'Blue Zones' for exceptional life expectancy, closely tied to its nutrient-rich diet: 1) Okinawa Soba: thick wheat noodles in a savory pork-and-bonito broth topped with melt-in-your-mouth stewed pork spare ribs (soki). 2) Goya Champuru: stir-fry of bitter melon with island tofu, egg, and pork. 3) Umi-budo ('sea grapes'): fresh green sea algae that pops like crisp marine caviar, dipped in soy-shikuwasa citrus sauce."
         }
       ],
-      "money": "Direct flights from Tokyo or Osaka to Naha, Miyako, or Ishigaki (~2h 30min-3h); inter-island ferries are frequent and affordable."
+      "money": "Domestic flight (~€60–€90) + €3 Yui Rail + €3 Shuri Castle + €25 Ryukyu dinner.",
+      "num": 9
     },
     {
       "id": "iriomote-stargazing",
-      "title": "Day 10: Iriomote: Astrophotography & Jungle Expedition",
+      "title": "Wild Iriomote Island: Dark Sky Park, Stars & Jungle",
       "cities": "Iriomote Island (Yaeyama, Okinawa)",
       "reason": "Idea for a future trip, picked especially for you -- with a telescope, camera, and drone, this is one of the world's most breathtaking night-sky destinations.",
       "summary": "Japan's wildest island, 90% enveloped in untouched subtropical jungle and primary mangroves. Certified as an International Dark Sky Park by DarkSky International, its near-zero light pollution lets you capture the Milky Way with three-dimensional depth and photograph the Southern Cross over the open sea.",
       "history": "Iriomote is biologically famous as the sole habitat of the Iriomote wildcat (Yamaneko), a critically endangered nocturnal feline discovered only in 1967 representing an ancient lineage isolated for thousands of years. Its southerly latitude (24°N) allows stargazers to observe the Southern Cross constellation on the horizon between February and June, an impossible sight from Europe.",
       "schedule": [
+        {
+          "time": "✨ Transport & Link to Iriomote Island (Day 10)",
+          "text": "• Island Hopping in the Yaeyama Archipelago: Japan's most untamed wilderness.\n• Flight Naha → Ishigaki: Short domestic flight from Naha (OKA) to New Ishigaki Airport (ISG) (**55 minutes**, breathtaking coral reef aerial views).\n• High-Speed Ferry to Iriomote: Airport bus to Ishigaki Ferry Terminal (30 min). Board high-speed catamaran ferry to Iriomote Island (**45 minutes** to Ohara or Uehara port, ~¥2,500).\n• Activities: Guided mangrove kayaking up Nakama or Urauchi River, jungle trek to Pinaisara Falls (55 m).\n• Stargazing Night: Explore the certified International Dark Sky Reserve, spotting the Milky Way and Southern Cross on the ocean horizon.\n• Accommodation: Eco-lodge immersed in nature on Iriomote or return ferry to Ishigaki."
+        },
         {
           "time": "International Dark Sky Park Certification",
           "text": "Iriomote-Ishigaki National Park was the very first territory in Asia certified by DarkSky International (2018). With pristine jungle interior and hundreds of miles of open sea around it, light pollution is virtually zero (Bortle Class 1–2). The Milky Way stands out not as a faint haze, but as a textured, high-contrast band with visible interstellar dust lanes."
@@ -827,16 +887,21 @@ export const pendingDays = {
           "text": "At the northern tip of the island, this tranquil cove features sand formed not from crushed rock, but from the fossilized calcium shells of microscopic foraminifera (Baculogypsina sphaerulata). Press your palm into the damp sand to find dozens of tiny, perfect 5- and 6-pointed star grains clinging to your skin."
         }
       ],
-      "money": "High-speed ferry from Ishigaki (40-45min, ~¥2,500); island accommodation is limited, so early booking is essential."
+      "money": "Flight Naha-Ishigaki (~€45) + ferry to Iriomote (~€16) + guided kayak tour (~€45) + local dinner.",
+      "num": 10
     },
     {
       "id": "hokkaido",
-      "title": "Day 11: Hokkaido: Wild Frontiers, Snow & Calderas",
+      "title": "Great Northern Finale: Hokkaido, Sapporo & Wild Landscapes",
       "cities": "Sapporo, Furano, Shiretoko, Otaru, Noboribetsu",
       "reason": "Idea for a future trip -- Japan's wild northern island offers an untamed landscape completely unlike the rest of the country.",
       "summary": "Japan's northernmost wilderness enchants travelers with vast open horizons, steaming volcanic calderas, pristine national parks, and legendary seafood and dairy. A breathtaking escape in both summer (blooming flower fields) and winter (world-renowned dry powder snow and ice carving festivals).",
       "history": "Hokkaido ('Circuit of the Northern Sea') was formally colonized and integrated during the Meiji Restoration in the late 19th century. Formerly known as Ezochi, it is the ancestral homeland of the indigenous Ainu people, whose animist spiritual beliefs, oral folklore, and distinct language are celebrated at cultural centers such as Upopoy in Shiraoi.",
       "schedule": [
+        {
+          "time": "❄️ Transport & Flight to Hokkaido (Day 11)",
+          "text": "• From Subtropical South to Alpine North: The grand finale journey.\n• Flight to Hokkaido: Flight from Ishigaki/Naha (direct or via Tokyo Haneda) to Sapporo New Chitose Airport (CTS).\n• Rapid Train to Sapporo: Direct JR Rapid Airport train from airport terminal to Sapporo Station (**37 minutes**, departures every 12 min, ~¥1,150, JR Pass covered).\n• In Sapporo: Sapporo Subway (Namboku & Tozai lines) and streetcar.\n• Sights: Odori Park, Nijo Seafood Market (fresh king crab & salmon roe donburi), Sapporo Beer Museum, Ganso Ramen Yokocho in Susukino, and Jozankei hot springs.\n• International Return Flight: Depart from New Chitose Airport (CTS) connecting through Tokyo or direct international routes."
+        },
         {
           "time": "Sapporo: Odori Park, Clock Tower & Old Government Hall",
           "text": "Hokkaido's capital is a spacious, grid-planned city with a crisp northern feel. Odori Park cuts through the center as a 1.5km green boulevard, hosting the legendary Sapporo Snow Festival (Yuki Matsuri) in February with life-sized snow and ice sculptures. The 1878 wooden Clock Tower and the red-brick Former Government Building reflect its Meiji pioneering roots."
@@ -866,18 +931,23 @@ export const pendingDays = {
           "text": "Hokkaido's premier onsen resort. A dramatic, smoking volcanic crater boiling with sulfur vents, geysers, and steaming thermal rivers winding through lush forests, feeding mineral-rich natural open-air baths (rotenburo) across the valley."
         }
       ],
-      "money": "Domestic flight Tokyo-Sapporo (~1h 30min) or Hokkaido Shinkansen to Hakodate; rental car is strongly recommended for exploring national parks and scenic countryside."
+      "money": "Domestic flight to Sapporo (~€75–€110) + €7 JR train + €25–€35 Nijo Market seafood & miso ramen.",
+      "num": 11
     }
   ],
   "fr": [
     {
       "id": "tokyo-highlights",
-      "title": "Jour 1 : Tokyo Incontournable : Sanctuaires, Icônes et Panoramas",
+      "title": "Tokyo Incontournable : Sanctuaires, Icônes et Panoramas",
       "cities": "Tokyo (Asakusa, Shibuya, Shinjuku, Harajuku)",
       "reason": "Jour 1 à Tokyo pour découvrir les contrastes les plus saisissants de la plus grande métropole du monde.",
       "summary": "Parcours essentiel à travers les emblèmes de Tokyo : la ferveur séculaire du temple Senso-ji, la sérénité du sanctuaire Meiji Jingu, l'énergie folle du carrefour de Shibuya et les néons de Shinjuku.",
       "history": "Simple village de pêcheurs sous le nom d'Edo, la cité devint le centre du pouvoir shogunal en 1603 sous Tokugawa Ieyasu. Rebaptisée Tokyo en 1868 lorsque l'Empereur y installa la capitale, la ville a sans cesse su renaître après le séisme de 1923 et les ravages de 1945 pour devenir cette mégalopole fascinante mêlant sanctuaires de bois et gratte-ciel futuristes.",
       "schedule": [
+        {
+          "time": "🚆 Transports et déplacements (Jour 1)",
+          "text": "• Hébergement : Hôtel à Tokyo (quartiers recommandés : Shinjuku, Asakusa, Ueno ou Ginza).\n• Transports du jour : Métro de Tokyo (lignes Tokyo Metro et Toei). Idéal : Tokyo Subway Ticket 24h (~800¥ / ~5€) ou carte Suica/Pasmo.\n• Liaisons clés : D'Asakusa à Harajuku en 25 min (ligne Ginza puis Chiyoda). De Harajuku à Shibuya : 15 min à pied ou 2 min en JR Yamanote. De Shibuya à Shinjuku : 7 min en JR Yamanote."
+        },
         {
           "time": "Temple Senso-ji et la lanterne monumentale de Kaminarimon",
           "text": "Le plus ancien temple bouddhiste de Tokyo (645). Passage sous l'imposante lanterne rouge de 700 kg de Kaminarimon, dégustation de gâteaux traditionnels le long de Nakamise-dori et vue sur la pagode à cinq étages."
@@ -899,16 +969,21 @@ export const pendingDays = {
           "text": "Coucher de soleil gratuit depuis les tours jumelles de la Mairie de Tokyo, suivi d'un dîner de brochettes yakitori au feu de bois dans les venelles étroites d'Omoide Yokocho."
         }
       ],
-      "money": "Env. 25€–40€ repas et en-cas + pass métro 24h (~5€) + entrée Shibuya Sky (~15€)."
+      "money": "Env. 5€ pass métro 24h + 25€–40€ repas et en-cas + entrée facultative Shibuya Sky (~15€).",
+      "num": 1
     },
     {
       "id": "nikko",
-      "title": "Jour 2 : Excursion à Nikko",
+      "title": "Excursion à Nikko : Mausolée doré d'Ieyasu et nature sacrée",
       "cities": "Nikko (Tochigi)",
       "reason": "Non réalisée à cause du mauvais temps (prévue le dimanche 20 septembre 2026, déplacée du samedi faute de disponibilité des trains).",
       "summary": "Une journée complète d'excursion depuis Tokyo vers les montagnes sacrées de Tochigi. Nikko réunit certains des sanctuaires et temples les plus somptueux et richement décorés de tout le Japon (patrimoine mondial de l'UNESCO) au cœur d'un environnement grandiose de cascades alpines, de lacs volcaniques et de cèdres séculaires.",
       "history": "Nikko s'est développée au VIIIe siècle sous l'impulsion du moine Shodo Shonin. En 1617, le site fut choisi pour accueillir le mausolée de Tokugawa Ieyasu, grand unificateur du Japon et fondateur du shogunat Tokugawa qui instaura plus de deux siècles et demi de paix. Son petit-fils Iemitsu transforma l'austère tombe initiale en un complexe éblouissant orné de plus de 5 millions de feuilles d'or, consacrant son grand-père comme divinité protectrice du Japon (Tosho Daigongen).",
       "schedule": [
+        {
+          "time": "🚆 Transports et déplacements (Jour 2)",
+          "text": "• Excursion à la journée : Départ et retour à Tokyo le soir, sans changer d'hôtel.\n• Trajet A/R : Train Limited Express Spacia X ou Revaty depuis la gare de Tobu-Asakusa direct vers Tobu-Nikko (1h 50 min). Départs conseillés : 07h50 ou 08h30.\n• Sur place à Nikko : Pass Tobu Nikko World Heritage ou All Area Pass (comprenant le train et les bus illimités pour monter au lac Chuzenji et aux chutes de Kegon)."
+        },
         {
           "time": "Accès rapide en Limited Express & Nikko Pass",
           "text": "Le train Limited Express (Spacia X ou Revaty) part directement de la gare de Tobu-Asakusa et arrive à Tobu-Nikko en 1h50 sans correspondance. La formule la plus pratique et économique est le Tobu Nikko World Heritage Area Pass (ou l'All Area Pass pour monter au lac Chuzenji), incluant l'aller-retour en train et des trajets illimités en bus Tobu pendant 2 jours."
@@ -942,16 +1017,21 @@ export const pendingDays = {
           "text": "La grande spécialité séculaire de Nikko est le Yuba (la fine peau récoltée à la surface du lait de soja bouilli), élément essentiel de la cuisine végétarienne des moines bouddhistes (shojin ryori). Elle se déguste frite, mijotée, en soupe ou déposée sur des nouilles soba fraîches préparées avec l'eau de source des montagnes."
         }
       ],
-      "money": "Env. 40 € (repas) + 11,40 € (entrées Toshogu) + 22,60 € (Tobu World Heritage Pass aller-retour avec bus illimités par personne)."
+      "money": "Pass Tobu Nikko (~22,60€) + entrées sanctuaires (~11,40€) + repas (~25€).",
+      "num": 2
     },
     {
       "id": "tokyo-kamakura",
-      "title": "Jour 3 : Tokyo Insolite et Escapade Côtière à Kamakura",
+      "title": "Tokyo Insolite et Escapade Côtière à Kamakura",
       "cities": "Kamakura & Tokyo (Yanaka, Akihabara)",
       "reason": "Jour 3 à Tokyo pour visiter l'ancienne capitale féodale des samouraïs en bord d'océan et les quartiers rétro de Tokyo.",
       "summary": "Matinée à Kamakura auprès du Grand Bouddha de bronze et des sanctuaires côtiers, suivie d'une après-midi dans les ruelles préservées de Yanaka Ginza ou parmi les néons d'Akihabara.",
       "history": "Siège du premier gouvernement militaire féodal de 1185 à 1333 fondé par Minamoto no Yoritomo, Kamakura s'est développée comme une forteresse naturelle entre collines et océan, berceau du bouddhisme zen guerrier. De son côté, Yanaka est l'un des très rares quartiers de Tokyo épargnés par les destructions du XXe siècle.",
       "schedule": [
+        {
+          "time": "🚆 Transports et déplacements (Jour 3)",
+          "text": "• Escapade côtière : Dernière nuit à Tokyo.\n• Tokyo → Kamakura : Ligne directe JR Yokosuka depuis Tokyo Station ou Shinjuku (55 min, ~950¥ avec Suica ou JR Pass).\n• À Kamakura : Ligne rétro Enoden (10 min jusqu'à la gare de Hase pour le Grand Bouddha et Hasedera).\n• Retour à Tokyo : Train JR en milieu d'après-midi (55 min) vers Nippori pour visiter Yanaka Ginza ou Akihabara.\n• 💡 Conseil bagages : Expédiez vos grosses valises ce soir depuis l'hôtel de Tokyo vers votre hôtel d'Osaka via Takkyubin (~2 000¥/valise). Vous monterez au mont Fuji demain avec un sac à dos léger !"
+        },
         {
           "time": "Kotoku-in et le Grand Bouddha de Kamakura",
           "text": "L'impressionnante statue de bronze de 13,35 mètres coulée en 1252. Abritée à l'origine dans un pavillon de bois détruit par un tsunami en 1498, elle médite à ciel ouvert depuis plus de cinq siècles."
@@ -973,16 +1053,21 @@ export const pendingDays = {
           "text": "Immersion au cœur de la Mecque mondiale de l'électronique, des salles d'arcade et de la pop-culture manga."
         }
       ],
-      "money": "Env. 8€ train JR A/R + 2€ Kotoku-in + 3€ Hasedera + 25€ repas/spécialités."
+      "money": "Env. 12€ trains JR et Enoden + 5€ entrées sanctuaires + 25€ repas.",
+      "num": 3
     },
     {
       "id": "fuji-hiking",
-      "title": "Jour 4 : Randonnée et ascension du Mont Fuji",
+      "title": "Ascension du Mont Fuji : De Tokyo au sommet (3 776 m)",
       "cities": "Mont Fuji (Yamanashi / Shizuoka)",
       "reason": "Idée pour un prochain voyage -- lors de ce séjour nous avons admiré la silhouette du volcan depuis Kawaguchiko et Oshino Hakkai, mais grimper au sommet est une aventure tout autre.",
       "summary": "Atteindre le toit du Japon (3 776 m) constitue l'un des pèlerinages les plus mémorables du pays. L'ascension classique débute en fin d'après-midi depuis la 5e station via le sentier Yoshida, avec une courte nuit en refuge en altitude avant l'assaut nocturne pour contempler la mer de nuages embrasée par le lever du soleil.",
       "history": "Montagne sacrée vénérée depuis des siècles et demeure spirituelle de la déesse Konohanasakuya-hime, le Fuji fut longtemps réservé aux pèlerins ascètes (yamabushi). Aujourd'hui accompli par des randonneurs du monde entier, un dicton japonais rappelle : 'Celui qui gravit le mont Fuji une fois est un sage, celui qui le gravit deux fois est un fou' (en référence à la rudesse de ses pentes volcaniques).",
       "schedule": [
+        {
+          "time": "🏔️ Transports et liaison Tokyo → Mont Fuji (Jour 4)",
+          "text": "• Départ vers le volcan sacré : Check-out matinal à Tokyo avec sac à dos léger (valises déjà envoyées à Osaka).\n• Bus direct vers le Fuji : Bus express depuis le terminal de Busta Shinjuku direct vers la 5e station Fuji Subaru Line (2h 20 min, départs conseillés : 06h45, 07h45 ou 08h45, ~3 800¥/personne).\n• À la 5e station (2 300 m) : Acclimatation à l'altitude pendant 1 à 2 h, déjeuner et achat du bâton de pèlerin en bois (Kongo-zue).\n• L'ascension : Sentier Yoshida (env. 4–5 h de marche régulière) jusqu'au refuge réservé à la 7e ou 8e station (3 000–3 400 m)."
+        },
         {
           "time": "Sentier Yoshida : La voie classique depuis la 5e Station (2 300 m)",
           "text": "La voie historique au départ de la 5e station Fuji Subaru Line. Le sentier traverse d'abord des mélèzes avant d'entamer une montée minérale de scories rouges et de blocs de lave andésitique jalonnée de refuges entre la 7e et la 8e station."
@@ -1016,16 +1101,21 @@ export const pendingDays = {
           "text": "La saison officielle s'étend de début juillet à début septembre. Depuis 2024, pour éviter la surfréquentation et les ascensions d'une traite sans repos ('bullet climbing'), la préfecture de Yamanashi impose une réservation en ligne (limite de 4 000 randonneurs/jour), une taxe d'accès de 2 000 ¥ et une contribution volontaire de 1 000 ¥."
         }
       ],
-      "money": "Refuge avec dîner et petit-déjeuner (~10 000-14 000 ¥) + droits d'accès et conservation obligatoires (3 000 ¥) + bus depuis Tokyo/Kawaguchiko."
+      "money": "Env. 24€ bus express Busta Shinjuku + 12€ taxe de sentier + 70€–95€ nuit en refuge avec repas.",
+      "num": 4
     },
     {
       "id": "osaka-classic",
-      "title": "Jour 5 : Osaka Classique : Château Féodal, Shitenno-ji et Dotonbori",
+      "title": "Mont Fuji → Osaka Classique : Château Féodal et Dotonbori",
       "cities": "Osaka (Chuo, Tennoji, Namba)",
       "reason": "Jour 1 à Osaka : Prendre le temps d'explorer l'âme chaleureuse, gourmande et commerçante du Kansai.",
       "summary": "Parcours historique et gourmand : de la puissante forteresse du château d'Osaka au plus ancien temple bouddhiste officiel du Japon (Shitenno-ji), avant de plonger dans l'effervescence de Dotonbori.",
       "history": "Ancienne Naniwa, Osaka fut la capitale impériale au VIIe siècle puis la 'cuisine de la nation' sous les shoguns Tokugawa. Toyotomi Hideyoshi y bâtit son colossal château en 1583 avec des blocs de granit de plus de 100 tonnes acheminés par voie maritime.",
       "schedule": [
+        {
+          "time": "🚄 Transports et liaison Mont Fuji → Osaka (Jour 5)",
+          "text": "• Aube : Sommet du mont Fuji (3 776 m) pour le lever de soleil Goraiko.\n• Matin (Descente) : Descente jusqu'à la 5e station (env. 3 h, arrivée vers 09h30–10h30).\n• Liaison rapide Fuji → Osaka :\n  1. Bus Fujikyu depuis la 5e station jusqu'à la gare Shinkansen de Mishima (1h 45 min).\n  2. À Mishima : Shinkansen Tokaido direct vers Shin-Osaka en seulement 1h 50 min.\n• Arrivée à Osaka vers 14h00 : Check-in à l'hôtel (vos valises envoyées de Tokyo vous y attendent déjà !).\n• Après-midi/Soirée : Château d'Osaka, Shitenno-ji et dîner street food à Dotonbori."
+        },
         {
           "time": "Château d'Osaka et douves colossales",
           "text": "Donjon majestueux de huit étages couronné de dorures Shachihoko, entouré de douves monumentales aux murailles cyclopéennes."
@@ -1047,16 +1137,21 @@ export const pendingDays = {
           "text": "Balade au bord du canal sous le coureur Glico Man, bouchées de poulpe fondantes (takoyaki) et okonomiyaki crépitant sur plaque chauffante."
         }
       ],
-      "money": "Env. 4€ château d'Osaka + 2€ Shitenno-ji + 20€–30€ street food et dîner à Dotonbori."
+      "money": "Env. 20€ bus Fuji-Mishima + 80€ Shinkansen (inclus JR Pass) + 4€ château + 20€–30€ repas Dotonbori.",
+      "num": 5
     },
     {
       "id": "osaka-temples",
-      "title": "Jour 6 : Temples Secrets d'Osaka : Namba Yasaka, Isshin-ji et Hozenji",
+      "title": "Temples Secrets d'Osaka : Namba Yasaka, Isshin-ji et Hozenji",
       "cities": "Osaka (Namba, Tennoji, Kita-Umeda)",
       "reason": "Jour 2 à Osaka pour découvrir les sanctuaires mystiques et les venelles secrètes ignorés de la plupart des voyageurs.",
       "summary": "Voyage au cœur des sanctuaires les plus surprenants d'Osaka : la gueule de lion géante de Namba Yasaka, les statues de Bouddha façonnées avec des cendres sacrées à Isshin-ji et la statue recouverte de mousse vivante d'Hozenji Yokocho.",
       "history": "À la différence des palais de Kyoto, les temples d'Osaka sont ancrés dans le quotidien des commerçants et du peuple. Lieux de piété vivante au cœur des ruelles, ils témoignent de traditions populaires intactes.",
       "schedule": [
+        {
+          "time": "🦁 Transports et déplacements dans Osaka (Jour 6)",
+          "text": "• Journée complète à Osaka : Même hôtel sans déménagement de valises.\n• Transports urbains : Métro d'Osaka (lignes Midosuji et Tanimachi). Pass métro 1 jour conseillé (~650¥ le week-end / 820¥ en semaine) ou carte Suica/ICOCA.\n• Parcours : De Namba Yasaka au temple Isshin-ji en 15 min de métro. Du marché Kuromon à la ruelle de Hozenji en 10 min à pied. En fin d'après-midi, métro direct vers Umeda pour la tour Umeda Sky."
+        },
         {
           "time": "Sanctuaire Namba Yasaka et la tête de lion géante",
           "text": "Édifice surprenant en forme de tête de lion de 12 m de haut. Sa gueule ouverte avale la malchance et les mauvais esprits pour apporter réussite et prospérité."
@@ -1078,16 +1173,21 @@ export const pendingDays = {
           "text": "Observatoire suspendu à 173 m au-dessus du vide reliant deux gratte-ciel pour contempler les lumières de la ville et de la baie d'Osaka."
         }
       ],
-      "money": "Entrées aux sanctuaires gratuites + 10€ Umeda Sky + 25€ déjeuner à Kuromon + pass métro (~4,50€)."
+      "money": "Env. 4,50€ pass métro + sanctuaires gratuits + 10€ observatoire Umeda Sky + 25€ déjeuner à Kuromon.",
+      "num": 6
     },
     {
       "id": "hiroshima-nagasaki",
-      "title": "Jour 7 : Hiroshima et Nagasaki : Mémoire, Paix et Histoire",
+      "title": "Osaka → Hiroshima et Nagasaki : Devoir de mémoire et histoire",
       "cities": "Hiroshima, Nagasaki",
       "reason": "Idée pour un futur voyage -- deux cités bouleversantes et lumineuses qui n'étaient pas au programme de ce voyage.",
       "summary": "Les deux seules villes au monde meurtries par l'arme atomique en 1945, aujourd'hui devenues des capitales mondiales de la paix et de la mémoire. Au-delà de leurs mémoriaux émouvants, elles révèlent une incroyable richesse culturelle : la gastronomie conviviale d'Hiroshima et l'héritage cosmopolite unique de Nagasaki, porte d'entrée de l'Occident au Japon pendant deux siècles.",
       "history": "Le 6 août 1945, Hiroshima fut anéantie par la première bombe atomique ; trois jours plus tard, Nagasaki subissait le second bombardement. Les deux cités ont métamorphosé ce drame en un plaidoyer universel pour le désarmement nucléaire. Nagasaki possède en outre un passé singulier : durant les plus de deux siècles de fermeture totale du pays (sakoku), l'île artificielle de Dejima fut l'unique enclave autorisée pour le commerce avec les marchands néerlandais et l'introduction des sciences occidentales (Rangaku).",
       "schedule": [
+        {
+          "time": "🕊️ Transports et liaison Osaka → Hiroshima (Jour 7)",
+          "text": "• Cap vers l'ouest : Départ matinal d'Osaka.\n• Train Shinkansen Sanyo : Direct depuis Shin-Osaka jusqu'à la gare d'Hiroshima en **seulement 1h 25 min** (inclus avec le JR Pass).\n• À Hiroshima : Tramway urbain Hiroden (lignes 2 ou 6) jusqu'à l'arrêt Genbaku Dome-mae (15 min).\n• Visites : Parc mémorial de la Paix, Musée, Dôme de Genbaku et dîner d'okonomiyaki feuilleté à Okonomimura.\n• Hébergement : Hôtel à Hiroshima (près de la gare ou du port de Miyajimaguchi)."
+        },
         {
           "time": "Hiroshima : Parc et Musée du Mémorial de la Paix",
           "text": "Situé sur le delta du fleuve Motoyasu, directement sous l'hypocentre du 6 août 1945. Le parc abrite le Cénotaphe en mémoire de toutes les victimes et la Flamme de la Paix, allumée en 1964 avec le vœu de brûler jusqu'à l'éradication totale des armes nucléaires. Le musée présente des objets poignants ayant appartenu aux victimes (hibakusha) et un récit historique rigoureux."
@@ -1121,16 +1221,21 @@ export const pendingDays = {
           "text": "Nagasaki possède une gastronomie métissée : 1) Champon : généreux bol de nouilles épaisses dans un bouillon de porc et volaille garni de fruits de mer et de légumes frais. 2) Sara Udon : nouilles croustillantes frites nappées d'une sauce onctueuse aux fruits de mer. 3) Castella (Kasutera) : gâteau génoise moelleux et aéré introduit au XVIe siècle par les marins portugais, caramélisé à sa base par de gros cristaux de sucre."
         }
       ],
-      "money": "Liaison directe en Shinkansen de Shin-Osaka à Hiroshima (1h25) puis train express vers Nagasaki ; entrées des musées très économiques (~200-600 ¥)."
+      "money": "Shinkansen (inclus JR Pass ou ~65€) + 3€ tramway + 1,20€ musée + 20€ repas Okonomimura.",
+      "num": 7
     },
     {
       "id": "miyajima",
-      "title": "Jour 8 : Île de Miyajima (Itsukushima)",
+      "title": "Île sacrée de Miyajima : Torii flottant et mont Misen",
       "cities": "Miyajima, Baie d'Hiroshima",
       "reason": "Idée pour un futur voyage -- l'île sacrée où se côtoient le grand sanctuaire sur pilotis, les monts boisés et les daims sika en liberté.",
       "summary": "Classée parmi les Trois Plus Beaux Paysages du Japon (Nihon Sankei), Miyajima est un joyau spirituel lové dans la mer intérieure de Seto. Rendu célèbre par son monumental torii vermillon semblant flotter sur les flots à marée haute, ce sanctuaire naturel abrite des temples bouddhiques secrets, des sentiers panoramiques vers le mont Misen et des délices iodés inégalés.",
       "history": "Dans les temps anciens, l'île tout entière était vénérée comme un kami vivant si sacré qu'aucun mortel n'avait le droit d'y poser le pied, d'y naître ou d'y mourir. Afin que les pèlerins puissent prier sans profaner la terre sacrée, le chef de guerre Taira no Kiyomori fit reconstruire en 1168 le sanctuaire d'Itsukushima entièrement sur pilotis au-dessus de l'estran. Classé au patrimoine mondial de l'UNESCO en 1996.",
       "schedule": [
+        {
+          "time": "⛩️ Transports et liaison Hiroshima → Île de Miyajima (Jour 8)",
+          "text": "• Trajet ultra-fluide : L'île sacrée se trouve juste en face de la baie d'Hiroshima.\n• Train de banlieue : Ligne JR Sanyo depuis Hiroshima Station jusqu'à Miyajimaguchi (**28 minutes**).\n• Ferry panoramique : À 2 min de la gare. Prendre le ferry JR West (**10 minutes** ; il effectue une courbe spectaculaire au plus près du Torii flottant ; inclus dans le JR Pass ou ~200¥).\n• Sur l'île : Tout se visite à pied parmi les cerfs en liberté. Téléphérique Miyajima Ropeway pour le mont Misen (535 m).\n• Hébergement : Nuit en ryokan traditionnel sur l'île de Miyajima ou retour en 28 min à Hiroshima."
+        },
         {
           "time": "Sanctuaire d'Itsukushima et le Grand Torii flottant",
           "text": "Érigé sur pilotis dans une anse protégée, le sanctuaire fut fondé en 593 puis magnifié en 1168 par Taira no Kiyomori. À marée haute, les coursives en cyprès sont léchées par l'eau et le grand torii vermillon semble flotter sur la mer intérieure de Seto. Haut de 16,6 mètres pour 60 tonnes, ce géant en bois de camphrier repose uniquement sous son propre poids sur six piliers, sans être scellé dans le fond marin. À marée basse, la mer se retire complètement et l'on peut marcher jusqu'au pied du portique pour toucher son bois séculaire incrusté de pièces votives."
@@ -1164,16 +1269,21 @@ export const pendingDays = {
           "text": "Depuis la gare d'Hiroshima, empruntez la ligne JR San-yo jusqu'à Miyajimaguchi (25-30 min). L'embarcadère se trouve juste en face : les ferries JR (inclus dans le JR Pass) et Matsudai assurent la traversée en 10 minutes (~200 ¥ + 100 ¥ de taxe touristique insulaire). Le ferry JR s'approche au plus près du torii à l'aller pour offrir les meilleures prises de vue. Consultez impérativement les tables des marées pour vivre la magie de la pleine mer (sanctuaire flottant) et de la marée basse (marche sous le torii)."
         }
       ],
-      "money": "Train JR Hiroshima-Miyajimaguchi (~420 ¥) + ferry (~200 ¥ + 100 ¥ taxe) ; téléphérique aller-retour vers le mont Misen (~2 000 ¥)."
+      "money": "Train et ferry inclus avec JR Pass (ou ~5€) + 2€ Itsukushima + 12€ téléphérique + 25€ huîtres grillées et gâteaux momiji.",
+      "num": 8
     },
     {
       "id": "okinawa",
-      "title": "Jour 9 : Okinawa et l'Archipel des Ryukyu",
+      "title": "Vers le sud subtropical : Okinawa et l'archipel Ryukyu",
       "cities": "Naha, Ishigaki, Miyakojima, Taketomi",
       "reason": "Idée pour un futur voyage -- des lagons turquoise, des récifs coralliens et une culture indigène chaleureuse non explorés cette fois-ci.",
       "summary": "L'archipel subtropical d'Okinawa séduit par ses airs insulaires décontractés, ses fonds marins étincelants 'Miyako Blue', ses airs de sanshin s'élevant dans les ruelles de corail et son architecture ryukyu coiffée de statues de lions protecteurs (shisa).",
       "history": "Pendant plus de 450 ans, ces îles constituèrent le prospère Royaume des Ryukyu, carrefour maritime marchand indépendant entre la Chine, le Japon et l'Asie du Sud-Est. Annexée par le Japon en 1879, Okinawa traversa la dramatique bataille d'Okinawa en 1945 avant de demeurer sous tutelle américaine jusqu'en 1972, forgeant une culture métissée et renommée pour l'exceptionnelle longévité de ses aînés.",
       "schedule": [
+        {
+          "time": "🌺 Transports et vol vers Okinawa (Jour 9)",
+          "text": "• Cap vers les tropiques : Check-out matinal à Hiroshima.\n• Vol direct vers Okinawa : Navette vers l'aéroport d'Hiroshima (45 min) ou Osaka Kansai (KIX). Vol direct vers l'aéroport de Naha (OKA) en **1h 55 min** (vols ANA, JAL ou Peach).\n• À Okinawa : Monorail aérien Yui Rail reliant directement l'aéroport au centre de Naha (Kokusai-dori en 12 min, château de Shuri en 27 min, ~300¥).\n• Visites : Château royal de Shuri, artère animée de Kokusai-dori et cuisine de longévité okinawaïenne.\n• Hébergement : Hôtel ou resort en bord de mer à Naha / Okinawa."
+        },
         {
           "time": "Naha et le Château de Shuri : Cœur du Royaume Ryukyu",
           "text": "L'ancienne capitale royale des Ryukyu. Le château de Shuri (Gusuku), inscrit au patrimoine mondial de l'UNESCO, est un joyau d'architecture mariant laque vermillon et motifs de dragons impériaux chinois avec la menuiserie japonaise et d'imposants remparts en calcaire corallien."
@@ -1199,16 +1309,21 @@ export const pendingDays = {
           "text": "Okinawa compte parmi les célèbres 'Zones Bleues' de la planète grâce à son régime alimentaire réputé sain : 1) Okinawa Soba : épaisses nouilles de blé dans un bouillon savoureux de porc et bonite séchée garni de tendres travers de porc braisés (soki). 2) Goya Champuru : poêlée traditionnelle de melon amer (goya) avec tofu insulaire, œuf et porc. 3) Umi-budo ('raisin de mer') : algue fraîche croquante qui éclate en bouche comme un caviar végétal iodé avec une touche d'agrumes shikuwasa."
         }
       ],
-      "money": "Vols directs depuis Tokyo ou Osaka vers Naha, Miyako ou Ishigaki (~2h30-3h) ; liaisons maritimes rapides et très fréquentes entre les îles."
+      "money": "Vol intérieur (~60€–90€) + 3€ monorail Yui Rail + 3€ château de Shuri + 25€ spécialités culinaires.",
+      "num": 9
     },
     {
       "id": "iriomote-stargazing",
-      "title": "Jour 10 : Iriomote : Astrophotographie et exploration sauvage",
+      "title": "Île sauvage d'Iriomote : Dark Sky Park, étoiles et jungle",
       "cities": "Île d'Iriomote (Archipel Yaeyama, Okinawa)",
       "reason": "Idée pour un futur voyage, pensée spécialement pour toi -- avec télescope, appareil photo et drone, c'est l'un des spots d'observation nocturne les plus fabuleux au monde.",
       "summary": "L'île la plus sauvage du Japon, recouverte à 90 % d'une jungle subtropicale primaire et de mangroves vierges. Reconnue 'Dark Sky Park' international par DarkSky International pour son absence totale de pollution lumineuse, elle permet de photographier la Voie lactée avec une netteté saisissante et d'apercevoir la Croix du Sud au ras des flots.",
       "history": "Iriomote est mondialement réputée comme l'unique sanctuaire du chat sauvage d'Iriomote (Yamaneko), félin nocturne découvert en 1967 et en danger critique d'extinction. Sa situation méridionale (24° N) offre le privilège d'observer la constellation de la Croix du Sud entre février et juin, invisible depuis la France ou l'Europe continentale.",
       "schedule": [
+        {
+          "time": "✨ Transports et liaison vers l'île d'Iriomote (Jour 10)",
+          "text": "• Liaison inter-îles dans l'archipel Yaeyama : La nature sauvage absolue du Japon.\n• Vol Naha → Ishigaki : Court vol de **55 minutes** au-dessus des lagons turquoise.\n• Ferry rapide vers Iriomote : Navette jusqu'au port d'Ishigaki (30 min), puis ferry rapide vers l'île d'Iriomote (**45 minutes** vers le port d'Ohara ou Uehara, ~2 500¥).\n• Activités : Kayak au cœur de la mangrove vierge et randonnée vers la cascade de Pinaisara (55 m).\n• Nuit étoilée : Réserve internationale de ciel étoilé (Dark Sky Park), vue sur la Voie lactée et la Croix du Sud.\n• Hébergement : Éco-lodge au cœur de la jungle à Iriomote ou nuit à Ishigaki."
+        },
         {
           "time": "Réserve Internationale de Ciel Étoilé (Dark Sky Park)",
           "text": "Le parc national d'Iriomote-Ishigaki fut le premier site de toute l'Asie labellisé par DarkSky International (2018). Avec une jungle inhabitée et des centaines de kilomètres d'océan aux alentours, l'obscurité est totale (Bortle 1-2). La Voie lactée ne se devine pas, elle s'impose avec un relief tridimensionnel spectaculaire et des nébuleuses perceptibles à l'œil nu."
@@ -1238,16 +1353,21 @@ export const pendingDays = {
           "text": "À la pointe nord de l'île, cette crique paisible ne doit pas son sable au quartz érodé, mais aux minuscules coquilles fossilisées de foraminifères marins (Baculogypsina sphaerulata). Posez la paume de votre main sur le sable humide : des dizaines de minuscules grains en forme d'étoiles parfaites à 5 ou 6 branches y restent collés."
         }
       ],
-      "money": "Ferry rapide depuis Ishigaki (40-45 min, ~2 500 ¥) ; capacité d'hébergement très restreinte sur l'île, réservation indispensable plusieurs mois à l'avance."
+      "money": "Vol Naha-Ishigaki (~45€) + ferry vers Iriomote (~16€) + excursion kayak (~45€) + dîner local.",
+      "num": 10
     },
     {
       "id": "hokkaido",
-      "title": "Jour 11 : Hokkaido : Terres sauvages, neige et caldeiras",
+      "title": "Grand Nord Sauvage : Hokkaido, Sapporo et grands espaces",
       "cities": "Sapporo, Furano, Shiretoko, Otaru, Noboribetsu",
       "reason": "Idée pour un futur voyage -- l'île septentrionale dévoile un Japon insolite aux grands espaces et à la nature boréale préservée.",
       "summary": "La dernière frontière du Japon subjugue par ses horizons infinis, ses volcans actifs fumants, ses réserves naturelles intactes et sa réputation gastronomique axée sur les fruits de mer d'eaux froides et les produits laitiers renommés. Éblouissant en été (champs fleuris à perte de vue) comme en hiver (poudreuse de classe mondiale et sculptures sur glace).",
       "history": "Hokkaido ('le chemin de la mer du Nord') fut colonisée et pleinement rattachée au Japon à l'ère Meiji à la fin du XIXe siècle. Auparavant appelée Ezochi, c'est la terre des Aïnous, peuple indigène aux croyances animistes, aux traditions orales et à la langue uniques, aujourd'hui mis à l'honneur dans des musées spécialisés comme le centre Upopoy à Shiraoi.",
       "schedule": [
+        {
+          "time": "❄️ Transports et vol vers Hokkaido (Jour 11)",
+          "text": "• Du sud subtropical au grand nord : L'apothéose du voyage au Japon.\n• Vol vers Hokkaido : Vol depuis Ishigaki/Naha (direct ou via Tokyo Haneda) vers l'aéroport de Sapporo New Chitose (CTS).\n• Train rapide vers Sapporo : Train direct JR Rapid Airport depuis le terminal jusqu'à la gare de Sapporo (**37 minutes**, trains toutes les 12 min, inclus JR Pass).\n• À Sapporo : Métro de Sapporo et tramway urbain.\n• Visites : Parc Odori, marché aux poissons de Nijo (crabe royal et donburi de saumon), musée de la bière de Sapporo et venelle Ganso Ramen Yokocho à Susukino.\n• Vol retour : Départ depuis Sapporo New Chitose (CTS) via Tokyo."
+        },
         {
           "time": "Sapporo : Parc Odori, Tour de l'Horloge et ancien siège gouvernemental",
           "text": "La métropole d'Hokkaido surprend par son plan en damier aéré. Le parc Odori traverse le centre sur 1,5 km et accueille en février le gigantesque Festival de la Neige (Yuki Matsuri) et ses sculptures de glace grandeur nature. La Tour de l'Horloge en bois (1878) et l'ancien siège du gouvernement en briques rouges rappellent les débuts de la colonisation pionnière."
@@ -1277,18 +1397,23 @@ export const pendingDays = {
           "text": "La station thermale reine d'Hokkaido. Un spectaculaire cratère volcanique actif aux fumerolles de soufre, geysers bouillonnants et rivières d'eau chaude serpentant dans les forêts, alimentant de merveilleux bains extérieurs en bois (rotenburo) réputés pour leurs bienfaits thérapeutiques."
         }
       ],
-      "money": "Vol intérieur Tokyo-Sapporo (~1h30) ou Shinkansen jusqu'à Hakodate ; location de voiture vivement conseillée pour explorer la nature et les parcs."
+      "money": "Vol vers Sapporo (~75€–110€) + 7€ train JR Airport + 25€–35€ festin de crabe et ramen.",
+      "num": 11
     }
   ],
   "tl": [
     {
       "id": "tokyo-highlights",
-      "title": "Araw 1: Pangunahing Tokyo: Templo, Tanawin at mga Kalsada",
+      "title": "Pangunahing Tokyo: Templo, Tanawin at mga Kalsada",
       "cities": "Tokyo (Asakusa, Shibuya, Shinjuku, Harajuku)",
       "reason": "Araw 1 sa Tokyo para maranasan ang mga pinakasikat na lugar sa kabisera sa loob ng isang araw.",
       "summary": "Mahalagang ruta sa mga landmark ng Tokyo: mula sa tradisyonal na Senso-ji at tahimik na Meiji Jingu, hanggang sa masiglang Shibuya Crossing at matatayog na gusali sa Shinjuku.",
       "history": "Nagsimula bilang maliit na nayon ng pangingisda na tinawag na Edo bago naging sentro ng shogunato noong 1603. Noong 1868, inilipat ang kabisera at pinangalanang Tokyo ('Silangang Kabisera'). Sa kabila ng mga kalamidad at digmaan, muling bumangon ang lungsod bilang sentro ng modernong teknolohiya at kultura.",
       "schedule": [
+        {
+          "time": "🚆 Transportasyon at Paglibot (Araw 1)",
+          "text": "• Tuluyan: Hotel sa Tokyo (Shinjuku, Asakusa, Ueno o Ginza).\n• Transportasyon: Tokyo Subway 24-Hour Ticket (~¥800 / ~€5) o Suica/Pasmo card.\n• Ruta: Mula Asakusa papuntang Harajuku (25 min). Mula Harajuku hanggang Shibuya (15 min lakad o 2 min sa JR Yamanote). Mula Shibuya hanggang Shinjuku (7 min sa JR Yamanote)."
+        },
         {
           "time": "Templo Senso-ji at Kaminarimon Gate",
           "text": "Pinakamatandang templo sa Tokyo na itinatag noong 645 AD. Pagdaan sa Kaminarimon na may malaking pulang parol, pagtikim ng meryenda sa Nakamise-dori, at pagkuha ng litrato sa limang-palapag na pagoda."
@@ -1310,16 +1435,21 @@ export const pendingDays = {
           "text": "Papanaw na araw mula sa Tokyo Metropolitan Government Building (libreng view deck) at hapunan ng masasarap na yakitori sa makikitid na eskinita ng Omoide Yokocho."
         }
       ],
-      "money": "Tinatayang ¥4,000–¥6,000 para sa pagkain + Tokyo Subway 24h pass (~¥800) + tiket sa Shibuya Sky (~¥2,200)."
+      "money": "Tinatayang ¥800 metro pass + ¥4,000–¥6,000 pagkain + tiket sa Shibuya Sky (~¥2,200).",
+      "num": 1
     },
     {
       "id": "nikko",
-      "title": "Araw 2: Nikko Day Trip",
+      "title": "Day Trip sa Nikko: Gintong Dambana at Banal na Kalikasan",
       "cities": "Nikko (Tochigi)",
       "reason": "Hindi natuloy dahil sa masamang panahon (nakatakda sana noong Linggo, Setyembre 20, 2026, inilipat mula Sabado dahil sa kakulangan ng available na tren).",
       "summary": "Buong araw na excursion mula Tokyo patungo sa sagradong kabundukan ng Tochigi. Pinagsasama ng Nikko ang ilan sa pinakamayaman at pinakamaringal na pinalamutiang dambana at templo sa buong Japan (UNESCO World Heritage) kasama ang kahanga-hangang kalikasan ng talon, lawang bulkan, at mga dantaong cedar tree.",
       "history": "Umunlad ang Nikko noong ika-8 siglo bilang sentro ng Budismo na itinatag ng mongheng si Shodo Shonin. Noong 1617, napili ito bilang huling himlayan ni Tokugawa Ieyasu, ang dakilang unifier ng Japan at nagtatag ng Tokugawa shogunate na nagdala ng mahigit 250 taong kapayapaan sa panahon ng Edo. Pinalawak ito ng apo niyang si Iemitsu at naging maningning na Toshogu complex na may mahigit 5 milyong piraso ng gold leaf.",
       "schedule": [
+        {
+          "time": "🚆 Transportasyon at Paglibot (Araw 2)",
+          "text": "• Day trip mula sa Tokyo: Balikan sa parehong hotel sa Tokyo.\n• Tren: Limited Express Spacia X mula Tobu-Asakusa patungong Tobu-Nikko (1h 50 min). Rekomendadong umalis ng 07:50 o 08:30 ng umaga.\n• Sa Nikko: Tobu Nikko Pass para sa libreng bus paakyat ng Irohazaka road patungong Lake Chuzenji at Kegon Falls."
+        },
         {
           "time": "Mabilis na Byahe sa Limited Express at Nikko Pass",
           "text": "Ang Limited Express train (Spacia X o Revaty) ay direktang umaalis mula Tobu-Asakusa Station at dumarating sa Tobu-Nikko sa loob ng 1 oras at 50 minuto nang walang lipat ng tren. Ang pinaka-sulit na opsyon ay ang Tobu Nikko World Heritage Area Pass (o All Area Pass papuntang Lake Chuzenji), na may kasamang round-trip train at unlimited Tobu buses sa loob ng 2 araw."
@@ -1353,16 +1483,21 @@ export const pendingDays = {
           "text": "Ang pinakatanyag na pagkain sa Nikko ay ang Yuba (ang manipis na balat na nabubuo sa ibabaw ng kumukulong soy milk), pangunahing pagkain ng mga mongheng vegetarian (shojin ryori). Inihahain itong prito, may glaze, sa mainit na sabaw, o ibinubudbod sa sariwang mountain soba na gawa sa malinis na tubig bukal."
         }
       ],
-      "money": "Humigit-kumulang €40 (pagkain) + €11.40 (entrance sa Toshogu) + €22.60 (Tobu World Heritage Pass round trip kasama ang unlimited bus bawat tao)."
+      "money": "Tobu Nikko Pass (~¥3,500) + tiket sa templo (~¥1,800) + pagkain (~¥4,000).",
+      "num": 2
     },
     {
       "id": "tokyo-kamakura",
-      "title": "Araw 3: Alternatibong Tokyo at Day Trip sa Kamakura",
+      "title": "Alternatibong Tokyo at Day Trip sa Kamakura",
       "cities": "Kamakura & Tokyo (Yanaka, Akihabara)",
       "reason": "Araw 3 sa Tokyo para galugarin ang dating kabisera ng mga samurai sa baybayin at tradisyonal na mga kanto ng Tokyo.",
       "summary": "Umaga sa Kamakura kasama ang dambuhalang Bronze Buddha at mga templo sa tabi ng dagat, at hapon sa lumang kalsada ng Yanaka Ginza o makabagong Akihabara.",
       "history": "Ang Kamakura ang naging sentro ng unang pamahalaang militar (bakufu) ng Japan mula 1185 hanggang 1333 sa pamumuno ni Minamoto no Yoritomo. Ang Yanaka naman ay isa sa mga natitirang lumang distrito ng Tokyo na nakaligtas sa mga digmaan.",
       "schedule": [
+        {
+          "time": "🚆 Transportasyon at Paglibot (Araw 3)",
+          "text": "• Day trip sa baybayin: Huling gabi sa hotel sa Tokyo.\n• Tokyo papuntang Kamakura: JR Yokosuka Line mula Tokyo Station (55 min, ~¥950 gamit ang Suica).\n• Sa Kamakura: Enoden electric train (10 min papuntang Hase Station para sa Great Buddha at Hasedera).\n• Pagbalik sa Tokyo: Tren papuntang Nippori para sa Yanaka Ginza o Akihabara sa gabi.\n• 💡 Tip sa Maleta: Ipadala ngayong gabi ang malalaking maleta papuntang Osaka gamit ang Takkyubin (~¥2,000/maleta) para backpack lang ang dala sa Mount Fuji bukas."
+        },
         {
           "time": "Kotoku-in at Dakilang Buddha ng Kamakura",
           "text": "Ang bantog na 13.35-metrong tansong estatwa ng Amida Buddha na nilikha noong 1252. Noong 1498, naanod ng tsunami ang kahoy na bulwagan nito kaya naiwang nakatayo sa ilalim ng bukas na kalangitan."
@@ -1384,16 +1519,21 @@ export const pendingDays = {
           "text": "Pasyalan ng mga mahilig sa anime, video games, at retro electronics sa ilalim ng makukulay na ilaw."
         }
       ],
-      "money": "Tinatayang ¥1,200 tren papuntang Kamakura + ¥300 Kotoku-in + ¥400 Hasedera + pagkain (~¥3,500)."
+      "money": "Tinatayang ¥1,800 pamasahe sa tren + ¥700 tiket sa templo + ¥4,000 pagkain.",
+      "num": 3
     },
     {
       "id": "fuji-hiking",
-      "title": "Araw 4: Pag-akyat sa Tuktok ng Mount Fuji",
+      "title": "Pag-akyat sa Mount Fuji: Mula Tokyo hanggang Tuktok (3,776 m)",
       "cities": "Mount Fuji (Yamanashi / Shizuoka)",
       "reason": "Ideya para sa susunod na biyahe -- sa biyaheng ito tiningnan lamang ang bulkan mula Lake Kawaguchiko at Oshino Hakkai, ngunit ang pag-akyat sa tuktok ay ganap na kakaibang karanasan.",
       "summary": "Ang pagtuntong sa pinakamataas na punto ng Japan (3,776m) ay isa sa pinakatanyag na pilgrimage sa bansa. Karaniwang sinisimulan ang pag-akyat sa hapon mula sa 5th station sa Yoshida Trail, nagpapahinga nang ilang oras sa mountain hut sa itaas bago ang hatinggabi upang masaksihan ang dagat ng ulap na sinisinagan ng sumisikat na araw.",
       "history": "Itinuturing na sagradong bundok at tahanan ng Shinto goddess na si Konohanasakuya-hime, ang Mount Fuji ay dating nakalaan lamang sa mga ermitanyong monghe (yamabushi). Ngayon ay inaakyat na ito ng mga hiker mula sa buong daigdig. May kasabihan sa Japan: 'Matalino ang umakyat sa Fuji nang minsan; mangmang ang umakyat nang makalawa' (dahil sa matinding hirap ng daan).",
       "schedule": [
+        {
+          "time": "🏔️ Transportasyon Tokyo → Mount Fuji (Araw 4)",
+          "text": "• Pag-alis sa Tokyo: Check-out na may dalang hiking backpack (ang malalaking maleta ay naipadala na sa Osaka).\n• Direktang Bus: Express bus mula Busta Shinjuku papuntang Fuji Subaru Line 5th Station (2h 20 min, ~¥3,800).\n• Sa 5th Station (2,300 m): Magpahinga ng 1–2 oras para masanay sa taas ng bundok, bumili ng kahoy na baston (Kongo-zue).\n• Pag-akyat: Yoshida Trail (4–5 oras na paglalakad) paakyat sa mountain hut sa 7th o 8th station (3,000–3,400 m) para matulog at maghapunan."
+        },
         {
           "time": "Yoshida Trail: Ang Klasikong Daan mula 5th Station (2,300m)",
           "text": "Ang tradisyunal na ruta mula sa Fuji Subaru Line 5th Station. Nagsisimula ito sa kakahuyan bago pumasok sa mapulang volcanic ash at mga batong lava, na may mga hut sa 7th at 8th station."
@@ -1427,16 +1567,21 @@ export const pendingDays = {
           "text": "Ang opisyal na climbing season ay mula unang bahagi ng Hulyo hanggang unang bahagi ng Setyembre. Simula 2024, ipinag-uutos ang maagang online reservation (hanggang 4,000 hiker kada araw), may bayad sa pagpasok na ¥2,000 at voluntary conservation fee na ¥1,000 upang maiwasan ang overcrowding."
         }
       ],
-      "money": "Mountain hut stay na may hapunan at almusal (~¥10,000-14,000) + opisyal na bayarin (¥3,000) + bus fare mula Tokyo o Kawaguchiko."
+      "money": "Tinatayang ¥3,800 express bus + ¥2,000 conservation fee + ¥11,000–¥14,000 bayad sa mountain hut.",
+      "num": 4
     },
     {
       "id": "osaka-classic",
-      "title": "Araw 5: Klasikong Osaka: Kastilyo, Templo ng Shitenno-ji at Dotonbori",
+      "title": "Mount Fuji → Klasikong Osaka: Kastilyo at Dotonbori",
       "cities": "Osaka (Chuo, Tennoji, Namba)",
       "reason": "Araw 1 sa Osaka: Mas makabuluhang pagbisita sa kabisera ng masasarap na pagkain sa Kansai.",
       "summary": "Pangunahing paglalakbay sa makasaysayang kastilyo ng Osaka, pinakamatandang opisyal na templong Budista (Shitenno-ji), at makulay na gabi sa Dotonbori.",
       "history": "Kilala noong una bilang Naniwa, naging sentro ng kalakalan ang Osaka at tinawag na 'kusina ng bansa'. Ipinatayo ni Toyotomi Hideyoshi ang Kastilyo ng Osaka noong 1583 gamit ang dambuhalang mga tipak ng bato.",
       "schedule": [
+        {
+          "time": "🚄 Transportasyon Mount Fuji → Osaka (Araw 5)",
+          "text": "• Madaling araw: Tuktok ng Mount Fuji (3,776 m) para sa Goraiko sunrise.\n• Umaga: Pagbaba pabalik sa 5th Station (mga 3 oras, dating bandang 10:00 AM).\n• Byahe papuntang Osaka:\n  1. Bus mula 5th Station hanggang Mishima Shinkansen Station (1h 45 min).\n  2. Sa Mishima: Sakay ng Tokaido Shinkansen diretso sa Shin-Osaka (1h 50 min).\n• Pagdating sa Osaka bandang 2:00 PM: Check-in sa hotel (nandoon na ang mga maleta mula sa Tokyo!).\n• Hapon at Gabi: Osaka Castle, Shitenno-ji, at masarap na hapunan sa Dotonbori."
+        },
         {
           "time": "Kastilyo ng Osaka at Matatayog na Pader",
           "text": "Magarbong puti at gintong kastilyo na pinaliligiran ng malalawak na hardin at matitibay na pader ng bato."
@@ -1458,16 +1603,21 @@ export const pendingDays = {
           "text": "Pagkuha ng litrato sa tanyag na Glico Man sign, pagtikim ng mainit na takoyaki at masarap na Osaka-style okonomiyaki."
         }
       ],
-      "money": "Tinatayang ¥600 Osaka Castle + ¥300 Shitenno-ji + pagkain sa Dotonbori (~¥3,000–¥4,500)."
+      "money": "Tinatayang ¥3,300 bus papuntang Mishima + ¥12,500 Shinkansen (kasama sa JR Pass) + pagkain sa Dotonbori (~¥4,000).",
+      "num": 5
     },
     {
       "id": "osaka-temples",
-      "title": "Araw 6: Mga Lihim na Templo ng Osaka: Namba Yasaka at Hozenji",
+      "title": "Mga Lihim na Templo ng Osaka: Namba Yasaka at Hozenji",
       "cities": "Osaka (Namba, Tennoji, Kita-Umeda)",
       "reason": "Araw 2 sa Osaka para tuklasin ang kakaiba at espiritwal na mga dambana na bihirang puntahan ng turista.",
       "summary": "Kakaibang lakbay sa pinakahiwagang mga templo ng Osaka: ang dambuhalang bunganga ng leon sa Namba Yasaka, sagradong rebulto sa Isshin-ji, at lumot na rebulto sa Hozenji Yokocho.",
       "history": "Hindi tulad ng Kyoto, ang mga templo sa Osaka ay bahagi ng pang-araw-araw na buhay ng mga karaniwang mangangalakal at mamamayan, na nagpapakita ng buhay na pananampalataya.",
       "schedule": [
+        {
+          "time": "🦁 Transportasyon at Paglibot sa Osaka (Araw 6)",
+          "text": "• Buong Araw sa Osaka: Sa parehong hotel pa rin tutuloy.\n• Transportasyon: Osaka Metro 1-Day Pass (~¥650 Sabado-Linggo / ¥820 karaniwang araw) o ICOCA card.\n• Ruta: Mula Namba Yasaka hanggang Isshin-ji (15 min sa tren). Mula Kuromon Market hanggang Hozenji Yokocho (10 min lakad). Pagsapit ng hapon, sakay ng Midosuji line papuntang Umeda Sky Building."
+        },
         {
           "time": "Namba Yasaka Shrine: Ang Higanteng Leon",
           "text": "May 12-metrong taas na entablado na hugis ulo ng leon. Ayon sa paniniwala, nilalamon ng bunganga nito ang kamalasan at nagdadala ng tagumpay."
@@ -1489,16 +1639,21 @@ export const pendingDays = {
           "text": "Kamangha-manghang lumulutang na tulay at escalators sa taas na 173 metro na may malawak na tanawin ng Osaka Bay."
         }
       ],
-      "money": "Libreng dambana + ¥1,500 Umeda Sky + tanghalian sa Kuromon (~¥3,500) + metro pass (~¥700)."
+      "money": "Tinatayang ¥650 metro pass + libreng pasok sa dambana + ¥1,500 Umeda Sky + tanghalian sa Kuromon (~¥3,500).",
+      "num": 6
     },
     {
       "id": "hiroshima-nagasaki",
-      "title": "Araw 7: Hiroshima at Nagasaki: Alaala, Kapayapaan at Kasaysayan",
+      "title": "Osaka → Hiroshima at Nagasaki: Alaala ng Kapayapaan",
       "cities": "Hiroshima, Nagasaki",
       "reason": "Ideya para sa susunod na biyahe -- dalawang makabuluhan at makasaysayang lungsod na hindi napuntahan sa biyaheng ito.",
       "summary": "Ang dalawang natatanging lungsod sa daigdig na dumanas ng pagsabog ng atomic bomb noong 1945, ngayon ay naging tanglaw ng kapayapaan at pag-asa. Bukod sa kanilang mga museo, mayroon silang kahanga-hangang kultura: ang layered okonomiyaki ng Hiroshima at ang natatanging kasaysayan ng Nagasaki bilang nag-iisang daungan na bukas sa Europa sa loob ng 200 taon.",
       "history": "Noong Agosto 6, 1945, nawasak ang Hiroshima ng unang atomic bomb; makalipas ang tatlong araw, noong Agosto 9, binomba rin ang Nagasaki. Ginawa ng dalawang lungsod ang trahedya bilang panawagan para sa kapayapaan ng buong mundo. Bukod dito, ang Nagasaki ay naging bukod-tanging daungan ng Japan sa panahon ng mahigit 200 taon ng sakoku isolation kung saan ang artificial island ng Dejima ang tanging lugar ng kalakalan sa pagitan ng mga Dutch at Japan.",
       "schedule": [
+        {
+          "time": "🕊️ Transportasyon Osaka → Hiroshima (Araw 7)",
+          "text": "• Byahe pakanluran: Umagang check-out sa hotel sa Osaka.\n• Shinkansen Bullet Train: Sanyo Shinkansen mula Shin-Osaka diretso sa Hiroshima Station sa loob ng **1 oras at 25 minuto lang** (kasama sa JR Pass).\n• Sa Hiroshima: Sakay ng Hiroden streetcar (Line 2 o 6) hanggang Genbaku Dome-mae stop (15 min).\n• Mga Pupuntahan: Peace Memorial Park, Museum, Atomic Bomb Dome, at masarap na Hiroshima-style okonomiyaki sa Okonomimura.\n• Tuluyan: Hotel sa Hiroshima (malapit sa JR Station o Miyajimaguchi)."
+        },
         {
           "time": "Hiroshima: Peace Memorial Park at Museum",
           "text": "Matatagpuan sa delta ng Ilog Motoyasu sa ilalim mismo ng hypocenter ng pagsabog noong Agosto 6, 1945. Tampok dito ang Cenotaph na naglalaman ng mga pangalan ng lahat ng biktima at ang Peace Flame na sinindihan noong 1964 na mananatiling may alab hanggang mawala ang lahat ng nuclear weapons sa mundo. Ipinapakita sa museo ang mga personal na gamit ng mga nakaligtas (hibakusha)."
@@ -1532,16 +1687,21 @@ export const pendingDays = {
           "text": "May kakaibang fusion cuisine ang Nagasaki: 1) Champon: makapal na noodles sa sabaw ng baboy at manok na puno ng sariwang seafood at gulay. 2) Sara Udon: malutong na pritong noodles na may malapot na sarsa ng seafood at gulay. 3) Castella (Kasutera): malambot at matamis na sponge cake na dinala ng mga Portuguese noong ika-16 na siglo, na may malulutong na butil ng asukal sa ilalim."
         }
       ],
-      "money": "Direktang Shinkansen mula Shin-Osaka papuntang Hiroshima (1h 25min) at express train papuntang Nagasaki; abot-kaya ang mga entrance fee sa museo (~¥200-600)."
+      "money": "Shinkansen (JR Pass o ~¥10,000) + ¥440 streetcar + ¥200 museo + pagkain sa Okonomimura (~¥2,800).",
+      "num": 7
     },
     {
       "id": "miyajima",
-      "title": "Araw 8: Isla ng Miyajima (Itsukushima)",
+      "title": "Banal na Isla ng Miyajima: Floating Torii at Mount Misen",
       "cities": "Miyajima, Hiroshima Bay",
       "reason": "Ideya para sa susunod na biyahe -- ang sagradong isla kung saan nagtatagpo ang lumulutang na dambana, matatayog na bundok, at malalayang sika deer.",
       "summary": "Itinuturing na isa sa Tatlong Magagandang Tanawin ng Japan (Nihon Sankei), ang Miyajima ay sagradong isla sa Seto Inland Sea. Tanyag sa napakalaking pulang torii gate na parang lumulutang sa dagat kapag high tide, mayroon din itong mga lumang templo, hiking trails sa Mount Misen, at masasarap na inihaw na talaba.",
       "history": "Noong sinaunang panahon, ang buong isla ay itinuturing na isang buhay na kami (diyos) kaya bawal apakan ng tao o magsilang o mamatay rito. Upang makapanalangin ang mga deboto nang hindi nilalapastangan ang lupa, muling itinayo ni Taira no Kiyomori ang Itsukushima Shrine noong 1168 sa ibabaw ng tubig sa pamamagitan ng mga haliging kahoy. Idineklarang UNESCO World Heritage Site noong 1996.",
       "schedule": [
+        {
+          "time": "⛩️ Transportasyon Hiroshima → Miyajima Island (Araw 8)",
+          "text": "• Napakadaling byahe: Katapat lang ng baybayin ng Hiroshima ang isla ng Miyajima.\n• Tren: JR Sanyo Main Line mula Hiroshima Station hanggang Miyajimaguchi (**28 minuto**, ~¥420 o JR Pass).\n• Ferry papuntang Isla: 2 minutong lakad papuntang pantalan. Sakay ng JR West Ferry (**10 minuto**; dumaraan malapit sa Floating Torii Gate; libre sa JR Pass o ~¥200).\n• Sa Isla: Malalakad ang Itsukushima Shrine at Daisho-in kasama ang mga maamong usa. Miyajima Ropeway paakyat ng Mount Misen (535 m).\n• Tuluyan: Tradisyonal na ryokan sa Miyajima o balik sa hotel sa Hiroshima."
+        },
         {
           "time": "Itsukushima Shrine at ang Lumulutang na Torii Gate",
           "text": "Itinayo sa ibabaw ng tubig sa look, ang dambana ay itinatag noong 593 at pinalaki noong 1168 ni Taira no Kiyomori. Kapag high tide, pumapasok ang tubig-dagat sa ilalim ng sahig na kahoy at ang malaking pulang torii ay mistulang lumulutang sa dagat. Ang torii ay may taas na 16.6 metro, may bigat na 60 tonelada, at nakatayo lamang sa sarili nitong bigat sa 6 na dambuhalang puno ng camphor nang hindi nakabaon sa ilalim ng dagat. Kapag low tide, humuhupa ang tubig at puwedeng maglakad sa buhangin upang hawakan ang mga haligi ng torii."
@@ -1575,16 +1735,21 @@ export const pendingDays = {
           "text": "Mula Hiroshima Station, sumakay ng JR San-yo Line papuntang Miyajimaguchi Station (25-30 min). Sa pantalan, sumakay ng JR Ferry (kasama sa JR Pass) o Matsudai Ferry (10 min na tawid, ~¥200 + ¥100 island tax). Ang JR ferry ay mas lumalapit sa torii gate para sa magagandang litrato. Tingnan ang tide forecast para masaksihan ang dambana kapag high tide at makapaglakad sa ilalim ng torii kapag low tide."
         }
       ],
-      "money": "JR train mula Hiroshima papuntang Miyajimaguchi (~¥420) + ferry (~¥200 + ¥100 tax); ropeway sa Mount Misen (~¥2,000 round trip)."
+      "money": "Tren at ferry libre sa JR Pass (o ~¥650) + ¥300 Itsukushima + ¥2,000 ropeway + pagkain (~¥3,500).",
+      "num": 8
     },
     {
       "id": "okinawa",
-      "title": "Araw 9: Okinawa at ang Arkipelago ng Ryukyu",
+      "title": "Patungong Timog: Okinawa at Ryukyu Archipelago",
       "cities": "Naha, Ishigaki, Miyakojima, Taketomi",
       "reason": "Ideya para sa susunod na biyahe -- magagandang beach, coral reef, at sariling mayamang kultura na hindi naisama sa biyaheng ito.",
       "summary": "Ang subtropical archipelago ng Okinawa ay kinagigiliwan dahil sa preskong simoy ng hangin, tubig na kulay 'Miyako Blue', tugtog ng sanshin, at tradisyunal na mga bahay na binabantayan ng mga estatwa ng Shisa lion.",
       "history": "Sa loob ng mahigit 450 taon, ang mga islang ito ay naging malayang Ryukyu Kingdom na nakikipagkalakalan sa China, Japan, Korea, at Timog-Silangang Asya. Noong 1879 ay sapilitang isinama sa Japan, dumanas ng matinding labanan noong Battle of Okinawa noong 1945, at pinamahalaan ng US militar hanggang 1972, dahilan upang magkaroon ito ng kakaiba at makulay na pagkakakilanlan.",
       "schedule": [
+        {
+          "time": "🌺 Transportasyon at Byahe papuntang Okinawa (Araw 9)",
+          "text": "• Byahe sa Isla: Check-out sa Hiroshima sa umaga.\n• Eroplano papuntang Okinawa: Bus papuntang Hiroshima Airport (HIJ) o Osaka Kansai (KIX). Direktang flight papuntang Naha Airport (OKA) sa loob ng **1 oras at 55 minuto** (ANA, JAL o Peach).\n• Sa Okinawa: Yui Rail monorail diretso mula airport papuntang sentro ng Naha (Kokusai-dori sa 12 min, Shuri Castle sa 27 min, ~¥300).\n• Mga Pupuntahan: Shuri Castle (palasyo ng Ryukyu Kingdom), Kokusai-dori, masarap na Okinawa Soba, at asul na dagat.\n• Tuluyan: Hotel o resort sa Naha / baybayin ng Okinawa."
+        },
         {
           "time": "Naha at Shuri Castle: Puso ng Ryukyu Kingdom",
           "text": "Ang dating kabisera ng Ryukyu Kingdom. Ang Shuri Castle (Gusuku), isang UNESCO World Heritage Site, ay kahanga-hangang pinaghalong disenyong Tsino na may pulang dragon, kahoy na arkitekturang Hapon, at matitibay na pader na gawa sa coral limestone."
@@ -1610,16 +1775,21 @@ export const pendingDays = {
           "text": "Isa ang Okinawa sa mga kinikilalang 'Blue Zones' ng mundo dahil sa mahabang buhay ng mga naninirahan dito: 1) Okinawa Soba: makakapal na noodles sa sabaw ng baboy at bonito na may napakalambot na soki (stewed pork ribs). 2) Goya Champuru: ginisang ampalaya kasama ang tokwa, itlog, at baboy. 3) Umi-budo ('sea grapes'): sariwang berdeng sea algae na pumuputok sa bibig na parang caviar kapag isinawsaw sa soy sauce at shikuwasa citrus."
         }
       ],
-      "money": "Direktang flight mula Tokyo o Osaka papuntang Naha, Miyako, o Ishigaki (~2h 30min-3h); mabilis at madalas ang biyahe ng ferry sa pagitan ng mga isla."
+      "money": "Domestic flight (~¥10,000–¥14,000) + ¥300 monorail + ¥400 Shuri Castle + pagkain (~¥3,500).",
+      "num": 9
     },
     {
       "id": "iriomote-stargazing",
-      "title": "Araw 10: Iriomote: Astrophotography at Ekspedisyon sa Kagubatan",
+      "title": "Ligaw na Isla ng Iriomote: Dark Sky Park, Bituin at Kagubatan",
       "cities": "Iriomote Island (Yaeyama, Okinawa)",
       "reason": "Ideya para sa susunod na biyahe, espesyal na inihanda para sa iyo -- gamit ang telescope, camera, at drone, isa ito sa pinakamagandang lugar sa daigdig para sa pagkuha ng larawan sa gabi.",
       "summary": "Ang pinakaligaw na isla sa Japan, 90% ay nababalot ng kagubatan at bakawan. Sertipikado ng DarkSky International bilang International Dark Sky Park dahil sa kawalan ng light pollution, kaya malinaw na malinaw ang Milky Way at makikita ang Southern Cross sa ibabaw ng dagat.",
       "history": "Kilala sa buong daigdig ang Iriomote bilang nag-iisang tahanan ng Iriomote wildcat (Yamaneko), isang pusa sa gabi na natuklasan lamang noong 1967 at nanganganib nang maubos. Dahil sa timog na lokasyon nito (24° N), makikita mula rito ang Southern Cross constellation sa pagitan ng Pebrero at Hunyo, na hindi kailanman makikita mula sa Europa.",
       "schedule": [
+        {
+          "time": "✨ Transportasyon papuntang Iriomote Island (Araw 10)",
+          "text": "• Byahe sa Yaeyama Archipelago: Ang pinakalikas at ligaw na bahagi ng Japan.\n• Flight Naha → Ishigaki: Maikling flight mula Naha papuntang Ishigaki (**55 minuto**).\n• High-Speed Ferry papuntang Iriomote: Bus mula airport papuntang port (30 min). Sakay ng fast ferry papuntang Iriomote Island (**45 minuto**, ~¥2,500).\n• Mga Gawain: Mangrove kayaking sa Nakama o Urauchi River at trekking papuntang Pinaisara Falls (55 m).\n• Gabi sa ilalim ng mga Bituin: International Dark Sky Park para makita ang Milky Way at Southern Cross sa kalangitan.\n• Tuluyan: Eco-lodge sa gitna ng kagubatan sa Iriomote o balik sa Ishigaki."
+        },
         {
           "time": "International Dark Sky Park Certification",
           "text": "Ang Iriomote-Ishigaki National Park ang pinakaunang lugar sa buong Asya na kinilala ng DarkSky International (2018). Dahil walang nakatira sa gubat at daan-daang kilometro ang layo sa malalaking lungsod, ganap ang kadiliman (Bortle 1-2). Ang Milky Way ay hindi lang malabong ulap kundi may 3D na anyo na kitang-kita kahit sa hubad na mata."
@@ -1649,16 +1819,21 @@ export const pendingDays = {
           "text": "Sa dulong hilaga ng isla, ang buhangin sa dalampasigang ito ay hindi gawa sa durog na bato, kundi sa mga fossil ng microscopic organisms (foraminifera). Kapag idiniin mo ang iyong palad sa basang buhangin, may didikit na maliliit na butil na may perpektong hugis na bituin na may 5 o 6 na dulo."
         }
       ],
-      "money": "Ferry mula Ishigaki (40-45 min, ~¥2,500); kaunti lamang ang tutuluyan sa isla kaya kailangang mag-book nang maaga."
+      "money": "Flight Naha-Ishigaki (~¥6,500) + ferry papuntang Iriomote (~¥2,500) + kayak tour (~¥6,500) + pagkain.",
+      "num": 10
     },
     {
       "id": "hokkaido",
-      "title": "Araw 11: Hokkaido: Ligaw na Kalikasan, Niyebe at Bulkan",
+      "title": "Dakilang Hilaga: Hokkaido, Sapporo at Ligaw na Kalikasan",
       "cities": "Sapporo, Furano, Shiretoko, Otaru, Noboribetsu",
       "reason": "Ideya para sa susunod na biyahe -- ang hilagang isla ay nag-aalok ng ibang-ibang mukha ng Japan na may malalawak na tanawin at likas na kagandahan.",
       "summary": "Ang pinaka-hilagang isla ng Japan ay nakabibighani dahil sa malalawak nitong lupain, umuusok na bulkan, protektadong national parks, at tanyag na sariwang pagkaing-dagat at dairy products. Maganda itong puntahan sa tag-araw (mga bukid ng bulaklak) at sa taglamig (world-class powder snow at mga ice festival).",
       "history": "Ang Hokkaido ('daan ng hilagang dagat') ay pormal na naging bahagi ng Japan noong panahon ng Meiji noong huling bahagi ng ika-19 siglo. Dati itong kilala bilang Ezochi, ang ninunong lupain ng mga Ainu, isang katutubong lahi na may sariling wika, paniniwala, at kultura na ipinagdiriwang ngayon sa mga sentro tulad ng Upopoy sa Shiraoi.",
       "schedule": [
+        {
+          "time": "❄️ Transportasyon at Byahe papuntang Hokkaido (Araw 11)",
+          "text": "• Mula Timog hanggang Hilaga: Ang huling yugto ng paglalakbay.\n• Eroplano papuntang Hokkaido: Flight mula Ishigaki/Naha (diretso o via Tokyo) patungong Sapporo New Chitose Airport (CTS).\n• Tren papuntang Sapporo: JR Rapid Airport train diretso mula airport terminal hanggang Sapporo Station (**37 minuto**, ~¥1,150 o JR Pass).\n• Sa Sapporo: Sapporo Subway at streetcar.\n• Mga Pupuntahan: Odori Park, Nijo Seafood Market (king crab at salmon roe donburi), Sapporo Beer Museum, at ramen sa Susukino.\n• Pag-uwi: Flight pabalik mula sa New Chitose Airport (CTS) via Tokyo."
+        },
         {
           "time": "Sapporo: Odori Park, Clock Tower at Lumang Gusali ng Pamahalaan",
           "text": "Ang kabisera ng Hokkaido ay may maluwang na disenyo ng mga kalsada. Ang Odori Park ay 1.5 km na berdeng liwasan sa gitna ng lungsod kung saan idinaraos tuwing Pebrero ang sikat na Sapporo Snow Festival (Yuki Matsuri) na may higanteng mga lilok ng niyebe at yelo. Ang kahoy na Clock Tower (1878) at ang red-brick government building ay nagpapakita ng kasaysayan ng lungsod."
@@ -1688,7 +1863,8 @@ export const pendingDays = {
           "text": "Ang nangungunang onsen resort sa Hokkaido. Isang nakamamanghang bunganga ng bulkan na umuusok ng asupre, may kumukulong geysers at mainit na ilog sa gitna ng kakahuyan na nagpapadaloy ng tubig sa mga tradisyunal na open-air hot spring bath (rotenburo)."
         }
       ],
-      "money": "Domestic flight mula Tokyo papuntang Sapporo (~1h 30min) o Shinkansen papuntang Hakodate; inirerekomenda ang magrenta ng kotse para sa pamamasyal sa kalikasan."
+      "money": "Domestic flight (~¥12,000–¥16,000) + ¥1,150 JR train + pagkain sa Nijo Market (~¥4,500).",
+      "num": 11
     }
   ]
 };
@@ -1763,22 +1939,34 @@ export const futureLocationCoords = {
 };
 
 export const pendingSectionLabel = {
-  es: "Viajes futuros",
-  en: "Future Trips",
-  fr: "Voyages futurs",
-  tl: "Susunod na Biyahe",
+  "es": "Viajes futuros",
+  "en": "Future Trips",
+  "fr": "Voyages futurs",
+  "tl": "Susunod na Biyahe"
 };
 
 export const futureSectionTabs = {
-  es: { itinerary: "Itinerario futuro", map: "Mapa futuro" },
-  en: { itinerary: "Future Itinerary", map: "Future Map" },
-  fr: { itinerary: "Itinéraire futur", map: "Carte future" },
-  tl: { itinerary: "Susunod na Itinerary", map: "Susunod na Mapa" },
+  "es": {
+    "itinerary": "Itinerario futuro",
+    "map": "Mapa futuro"
+  },
+  "en": {
+    "itinerary": "Future Itinerary",
+    "map": "Future Map"
+  },
+  "fr": {
+    "itinerary": "Itinéraire futur",
+    "map": "Carte future"
+  },
+  "tl": {
+    "itinerary": "Susunod na Itinerary",
+    "map": "Susunod na Mapa"
+  }
 };
 
 export const pendingSectionSubtitle = {
-  es: "Itinerario lógico de 11 días organizado geográficamente con conexiones de transporte directas: Kanto (Tokio, Nikko, Kamakura) → Monte Fuji → Kansai (Osaka) → Chugoku (Hiroshima y Miyajima) → Islas Ryukyu (Okinawa e Iriomote) → Hokkaido.",
-  en: "A 11-day logically sequenced itinerary with direct transport links: Kanto (Tokyo, Nikko, Kamakura) → Mount Fuji → Kansai (Osaka) → Chugoku (Hiroshima & Miyajima) → Ryukyu Islands (Okinawa & Iriomote) → Hokkaido.",
-  fr: "Itinéraire de 11 jours ordonné géographiquement avec transports fluides : Kanto (Tokyo, Nikko, Kamakura) → Mont Fuji → Kansai (Osaka) → Chugoku (Hiroshima et Miyajima) → Îles Ryukyu (Okinawa et Iriomote) → Hokkaido.",
-  tl: "Lohikal na 11-araw na itinerary na may direktang transportasyon: Kanto (Tokyo, Nikko, Kamakura) → Mount Fuji → Kansai (Osaka) → Chugoku (Hiroshima at Miyajima) → Ryukyu Islands (Okinawa at Iriomote) → Hokkaido.",
+  "es": "Itinerario lógico de 11 días organizado geográficamente con conexiones de transporte directas: Kanto (Tokio, Nikko, Kamakura) → Monte Fuji → Kansai (Osaka) → Chugoku (Hiroshima y Miyajima) → Islas Ryukyu (Okinawa e Iriomote) → Hokkaido.",
+  "en": "A 11-day logically sequenced itinerary with direct transport links: Kanto (Tokyo, Nikko, Kamakura) → Mount Fuji → Kansai (Osaka) → Chugoku (Hiroshima & Miyajima) → Ryukyu Islands (Okinawa & Iriomote) → Hokkaido.",
+  "fr": "Itinéraire de 11 jours ordonné géographiquement avec transports fluides : Kanto (Tokyo, Nikko, Kamakura) → Mont Fuji → Kansai (Osaka) → Chugoku (Hiroshima et Miyajima) → Îles Ryukyu (Okinawa et Iriomote) → Hokkaido.",
+  "tl": "Lohikal na 11-araw na itinerary na may direktang transportasyon: Kanto (Tokyo, Nikko, Kamakura) → Mount Fuji → Kansai (Osaka) → Chugoku (Hiroshima at Miyajima) → Ryukyu Islands (Okinawa at Iriomote) → Hokkaido."
 };
