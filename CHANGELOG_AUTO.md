@@ -201,3 +201,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-23 15:32 UTC** — feat(Presupuesto): completar las 2 categorías nuevas en tagalo -- Presupuesto ... (`832594a`)
 - **2026-09-23 19:10 UTC** — feat(budget): finalize post-trip transport and JR Pass savings analysis (`21cad8f`)
 - **2026-09-25 09:24 UTC** — fix(future-trips): display schedule items as stacked info cards in separate ... (`f311a8f`)
+- **2026-09-25 09:48 UTC** — feat(future-trips): adopt guide card typography and enrich all destination guides (`f4d31c0`)
