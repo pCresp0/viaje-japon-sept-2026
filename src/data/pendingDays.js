@@ -1,17 +1,21 @@
 // Días que se habían planeado pero que finalmente no se hicieron en este viaje
 // (por ejemplo, por mal tiempo) o ideas seleccionadas para futuros viajes.
-// Formato editorial enriquecido con títulos temáticos e información cultural, práctica e histórica.
+// Formato editorial enriquecido con títulos temáticos, orden geográfico lógico y transportes detallados.
 
 export const pendingDays = {
   "es": [
     {
       "id": "tokyo-highlights",
-      "title": "Tokio imprescindible: Iconos, templos y miradores",
+      "title": "Día 1 · Tokio imprescindible: Iconos, templos y miradores",
       "cities": "Tokio (Asakusa, Shibuya, Shinjuku, Harajuku)",
       "reason": "Día 1 de Tokio para recorrer los contrastes más emblemáticos de la mayor metrópoli del mundo en una sola jornada intensa.",
       "summary": "Ruta esencial por los hitos que definen Tokio: desde la espiritualidad centenaria de Asakusa y el silencio sagrado del bosque de Meiji Jingu, hasta el bullicio futurista del cruce de Shibuya y las vistas infinitas desde las alturas de Shinjuku.",
       "history": "Fundada originalmente como un humilde pueblo pesquero llamado Edo, la ciudad creció vertiginosamente cuando Tokugawa Ieyasu estableció aquí el cuartel general del shogunato en 1603. En 1868, con la Restauración Meiji, el Emperador trasladó la corte desde Kioto y rebautizó la urbe como Tokio ('Capital del Este'). Pese a ser arrasada por el Gran Terremoto de Kanto de 1923 y los bombardeos de 1945, renació como una megalópolis fascinante donde templos de madera conviven en armonía con rascacielos vanguardistas.",
       "schedule": [
+        {
+          "time": "Transporte y conexión (Día 1)",
+          "text": "Transporte urbano: Tarjeta Suica/Pasmo o Tokyo Subway Ticket de 24h (~800¥ / 5€) para viajes ilimitados en el metro Toei y Tokyo Metro."
+        },
         {
           "time": "Templo Senso-ji y la gran linterna de Kaminarimon",
           "text": "El templo budista más venerado y antiguo de Tokio (fundado en 645 d.C.). Paseo temprano por la puerta Kaminarimon con su enorme farolillo de papel rojo de 700 kg, Nakamise-dori con dulces tradicionales de arroz senbei y melón pan, y la pagoda de cinco pisos."
@@ -37,12 +41,16 @@ export const pendingDays = {
     },
     {
       "id": "nikko",
-      "title": "Excursión a Nikko",
+      "title": "Día 2 · Excursión a Nikko: Mausoleo de Ieyasu y naturaleza sagrada",
       "cities": "Nikko (Tochigi)",
-      "reason": "No se hizo por mal tiempo (estaba prevista el domingo 20 de septiembre de 2026, movida desde el sábado por falta de disponibilidad de trenes).",
+      "reason": "Excursión de 1 día desde Tokio: Salida y regreso en tren express desde Asakusa sin cambiar de hotel.",
       "summary": "Excursión de un día completo desde Tokio hacia las montañas sagradas de Tochigi. Nikko combina algunos de los santuarios y templos más suntuosos y ricamente decorados de todo Japón (Patrimonio de la Humanidad UNESCO) con un espectacular entorno natural de cascadas alpinas, lagos volcánicos y bosques de cedros centenarios.",
       "history": "Nikko floreció en el siglo VIII como centro eremítico budista fundado por el monje Shodo Shonin. En 1617 fue elegido como lugar de descanso final de Tokugawa Ieyasu, el gran unificador de Japón y fundador del shogunato Tokugawa que trajo más de 250 años de paz durante el periodo Edo. Su nieto Iemitsu transformó el modesto mausoleo inicial en el deslumbrante complejo de Toshogu con más de 5 millones de láminas de pan de oro, consagrando a su abuelo como la deidad tutelar de Japón (Tosho Daigongen).",
       "schedule": [
+        {
+          "time": "Transporte y conexión (Día 2)",
+          "text": "Transporte desde Tokio: Tren Limited Express Spacia X o Revaty desde Tobu-Asakusa (1h 50m directo a Tobu-Nikko). Incluido en el pase Tobu Nikko World Heritage Area Pass."
+        },
         {
           "time": "Acceso rápido en Limited Express y Nikko Pass",
           "text": "El tren Limited Express (Spacia X o Revaty) parte directamente de la estación Tobu-Asakusa y llega a Tobu-Nikko en 1 h 50 min sin transbordos. La opción más cómoda y económica es el Tobu Nikko World Heritage Area Pass (o el All Area Pass para subir a Chuzenji), que incluye el viaje de ida y vuelta en tren y autobuses ilimitados por toda la zona durante 2 días."
@@ -80,12 +88,16 @@ export const pendingDays = {
     },
     {
       "id": "tokyo-kamakura",
-      "title": "Tokio alternativo y escapada a Kamakura",
+      "title": "Día 3 · Tokio alternativo y escapada costera a Kamakura",
       "cities": "Kamakura & Tokio (Yanaka, Akihabara)",
-      "reason": "Día 3 de Tokio para explorar la antigua capital feudal de los samuráis en la costa y los barrios con más personalidad y vida tradicional de Tokio.",
+      "reason": "Día 3 con base en Tokio: Excursión de medio día al sur (Kamakura) y tarde en los barrios con más encanto de Tokio.",
       "summary": "Excursión matutina a Kamakura, la histórica capital costera de los guerreros medievales, famosa por su colosal Gran Buda de bronce al aire libre, santuarios envueltos en bambú y vistas al mar, complementada por la tarde con el Tokio nostálgico de Yanaka Ginza o la cultura otaku de Akihabara.",
       "history": "Kamakura fue la sede del primer gobierno militar (bakufu) de Japón entre 1185 y 1333, establecido por Minamoto no Yoritomo. Rodeada de colinas escarpadas y el mar, se convirtió en una fortaleza natural y en la cuna de la expansión del budismo zen entre la casta guerrera samurái. Por su parte, Yanaka es uno de los pocos distritos de Tokio que sobrevivió tanto al terremoto de 1923 como a la Segunda Guerra Mundial, conservando el auténtico ambiente 'shitamachi' de la era Showa.",
       "schedule": [
+        {
+          "time": "Transporte y conexión (Día 3)",
+          "text": "Transporte: Tren JR Yokosuka Line directo desde Tokyo Station o Shinjuku a Kamakura Station (55 min). Regreso a media tarde para recorrer Yanaka Ginza o Akihabara."
+        },
         {
           "time": "Kotoku-in y el Gran Buda Daibutsu de Kamakura",
           "text": "La icónica estatua monumental de bronce de Amida Buda fundida en 1252 (13,35 m de altura y 93 toneladas). Originalmente albergada dentro de un colosal salón de madera, un gigantesco tsunami arrastró el edificio en 1498, dejando al Buda meditando sereno al aire libre frente al cielo desde hace más de cinco siglos."
@@ -110,75 +122,17 @@ export const pendingDays = {
       "money": "Aprox. 8€ tren JR ida/vuelta desde Tokio a Kamakura (cubierto por Suica o JR Pass) + 2€ entrada Kotoku-in + 3€ Hasedera + 25€ comida/gastronomía local."
     },
     {
-      "id": "osaka-classic",
-      "title": "Osaka clásico: Castillo feudal, templo Shitenno-ji y Dotonbori",
-      "cities": "Osaka (Chuo, Tennoji, Namba)",
-      "reason": "Día 1 en Osaka: En el viaje anterior apenas hubo tiempo para ver la ciudad; Osaka es la capital gastronómica y el alma rebelde de Kansai.",
-      "summary": "Un recorrido imprescindible por los orígenes feudales y espirituales de Osaka. Comenzando en la imponente fortaleza del Castillo de Osaka con sus murallas ciclópeas, pasando por el templo budista administrado oficialmente más antiguo de Japón (Shitenno-ji), hasta culminar con la explosión de luces de neón, olores y comida callejera de Dotonbori.",
-      "history": "Osaka (antigua Naniwa) fue capital imperial en el siglo VII y el principal centro mercantil de Japón durante el periodo Edo, apodada 'la cocina de la nación' (Tenka no Daidokoro) porque todo el arroz y las mercancías del país se distribuían a través de sus canales. El Castillo de Osaka fue la gran obra del unificador Toyotomi Hideyoshi en 1583 para consolidar su poder sobre todo el archipiélago, con muros de bloques de granito de hasta 130 toneladas traídos por mar.",
-      "schedule": [
-        {
-          "time": "Castillo de Osaka y foso de piedras gigantes",
-          "text": "La majestuosa fortaleza de ocho plantas con techos de remates dorados de Shachihoko (criaturas mitológicas con cabeza de tigre y cuerpo de pez). Paseo por los jardines Nishinomaru y las murallas de piedra defensivas Ote-mon, las más masivas del Japón feudal."
-        },
-        {
-          "time": "Templo Shitenno-ji: El primer templo oficial de Japón",
-          "text": "Fundado en el año 593 por el Príncipe Shotoku, introductor del budismo en el país. Su disposición simétrica de edificios (Garan) reproduce con fidelidad milenaria el diseño original continental, con la pagoda de cinco pisos abierta para subir al interior, el pabellón Dorado Kondo y el estanque sagrado con decenas de tortugas."
-        },
-        {
-          "time": "Santuario Sumiyoshi Taisha y puente Taiko-bashi",
-          "text": "Uno de los santuarios más antiguos e importantes de todo el país (fundado en 211 d.C., antes de la llegada del budismo), caracterizado por el estilo arquitectónico puro Sumiyoshi-zukuri con techos rectos sin adornos curvados. Cruzar su empinadísimo puente rojo arqueado Taiko-bashi purifica los pecados antes de rezar a las deidades protectoras de navegantes y viajeros."
-        },
-        {
-          "time": "Barrio retro de Shinsekai y Torre Tsutenkaku",
-          "text": "La estampa nostálgica de la Osaka de principios del siglo XX, con sus letreros de peces globo gigantes, salas de pachinko y la torre de hierro Tsutenkaku con la estatua de la suerte Billiken."
-        },
-        {
-          "time": "Noche mágica en Dotonbori: Takoyaki y neones",
-          "text": "Paseo junto al canal iluminado bajo el legendario cartel del atleta de Glico Man y el cangrejo móvil Kani Doraku. Cena a base de Takoyaki cremoso recién hecho, Kushikatsu (brochetas de carne y verduras crujientes con la regla sagrada de 'no mojar dos veces en la salsa') y Okonomiyaki al estilo Osaka con mayonesa japonesa y copos de bonito danzantes (katsuobushi)."
-        }
-      ],
-      "money": "Aprox. 4€ entrada Castillo de Osaka + 2€ entrada interior Shitenno-ji + 20€–30€ en comida callejera variada y cena en Dotonbori."
-    },
-    {
-      "id": "osaka-temples",
-      "title": "Templos ocultos y misterios de Osaka: Namba Yasaka, Isshin-ji y Hozenji",
-      "cities": "Osaka (Namba, Tennoji, Kita-Umeda)",
-      "reason": "Día 2 en Osaka para descubrir los templos y rincones con más encanto místico que la inmensa mayoría de turistas pasa por alto.",
-      "summary": "Una jornada fascinante por los santuarios más insólitos y sobrecogedores de Osaka: la gigantesca cabeza de león que devora la mala suerte en Namba Yasaka, el templo de las esculturas de Buda moldeadas con cenizas humanas en Isshin-ji, el callejón iluminado de Hozenji cubierto de musgo vivo y las mejores vistas panorámicas de Kansai.",
-      "history": "A diferencia de Kioto, donde los templos son palaciegos y monumentales, los templos y santuarios de Osaka están profundamente integrados en la vida cotidiana de los vecinos, comerciantes y gremios del pueblo llano. Lugares como Hozenji o Namba Yasaka sobrevivieron a incendios y reconstrucciones manteniendo vivas tradiciones populares únicas donde la fe se vive a pie de calle entre aromas a incienso y comida casera.",
-      "schedule": [
-        {
-          "time": "Santuario Namba Yasaka y el gran león devorador de espíritus",
-          "text": "El santuario más fotogénico y singular de Osaka. Su pabellón principal Shishiden tiene la forma de una colosal cabeza de león de 12 metros de altura y 11 metros de ancho con las fauces abiertas de par en par: se cree que su rugido ahuyenta a los demonios y que su boca abierta traga toda la mala suerte y los fracasos, dejando paso a la victoria, la salud y el éxito profesional."
-        },
-        {
-          "time": "Templo Isshin-ji y los 'Okotsu Butsu' de cenizas sagradas",
-          "text": "Templo de la escuela Jodo Shu con un legado sobrecogedor: desde 1887, cada diez años se funden y esculpen estatuas de Buda mezclando resina con las cenizas de más de 100.000 difuntos de familias que no tenían tumbas propias, logrando que alcancen la iluminación en paz. Sus puertas de entrada fueron esculpidas con figuras modernas de guardianes por el propio abad del templo, que era arquitecto."
-        },
-        {
-          "time": "Mercado Kuromon Ichiba: Almuerzo gourmet",
-          "text": "El legendario mercado de abastos de 600 metros de longitud conocido como 'la despensa de Osaka': degustación en directo de brochetas de carne Wagyu A5 a la brasa, vieiras gigantes a la plancha con mantequilla, erizo de mar fresco (*uni*) y cortes sashimi de atún toro."
-        },
-        {
-          "time": "Templo Hozenji y el callejón de musgo Hozenji Yokocho",
-          "text": "Escondido entre estrechas callejuelas empedradas tras los grandes almacenes de Namba, este templo guarda la venerada estatua del buda Fudo Myo-o (*Mizukake Fudo*). La tradición manda verter agua con un cazo sobre la deidad al pedir un deseo; con los siglos, el agua ha hecho florecer un manto espeso de musgo verde aterciopelado que cubre completamente la escultura de pies a cabeza."
-        },
-        {
-          "time": "Atardecer en Umeda Sky Building o Mirador Harukas 300",
-          "text": "Subida a las escaleras mecánicas acristaladas suspendidas en el aire que cruzan entre las dos torres de Umeda Sky Building (173 m) para ver la puesta de sol sobre la bahía de Osaka y las luces de los rascacielos de Kita, o al rascacielos Abeno Harukas (300 m, el más alto de Osaka)."
-        }
-      ],
-      "money": "Entradas a santuarios gratuitas + 10€ mirador Umeda Sky (o Harukas) + 25€ almuerzo en mercado Kuromon + transporte en metro con pase diario (~4,50€)."
-    },
-    {
       "id": "fuji-hiking",
-      "title": "Senderismo y ascensión al Monte Fuji",
+      "title": "Día 4 · Ascensión al Monte Fuji: De Tokio a la cumbre (3.776 m)",
       "cities": "Monte Fuji (Yamanashi / Shizuoka)",
-      "reason": "Idea para un futuro viaje -- en este viaje se contempló la silueta del volcán desde el lago Kawaguchiko y Oshino Hakkai, pero subir a la cumbre es una experiencia totalmente diferente.",
+      "reason": "Enlace Tokio → Fuji: Salida directa en autobús express por la mañana desde Tokio hasta la 5ª Estación para iniciar el ascenso y pernoctar en refugio.",
       "summary": "Coronar el pico más alto de Japón (3.776 m) es una de las aventuras y peregrinaciones más memorables del país. La ascensión clásica se realiza al atardecer y de noche por la ruta Yoshida desde la 5ª estación, pernoctando unas horas en un refugio a gran altitud para emprender el tramo final de madrugada y contemplar el mar de nubes iluminado por el sol naciente.",
       "history": "Venerado como montaña sagrada desde tiempos inmemoriales y hogar espiritual de la diosa sintoísta Konohanasakuya-hime, el Fuji fue durante siglos un santuario natural reservado a monjes ascetas (yamabushi). Hoy es una peregrinación nacional abierta a senderistas de todo el mundo; un célebre proverbio japonés dice: 'Quien sube al monte Fuji una vez es un sabio, quien lo sube dos veces es un necio' (por la exigencia física y la rudeza de sus laderas volcánicas).",
       "schedule": [
+        {
+          "time": "Transporte y conexión (Día 4)",
+          "text": "Transporte desde Tokio: Bus express directo desde Shinjuku Expressway Bus Terminal (Busta Shinjuku) hasta la 5ª Estación Fuji Subaru Line (2h 20m, ~3.800¥)."
+        },
         {
           "time": "Ruta Yoshida: La senda clásica desde la 5ª Estación (2.300 m)",
           "text": "La ruta tradicional de peregrinación que parte de la 5ª Estación Fuji Subaru Line. El sendero serpentea primero entre alerces y matorrales volcánicos para adentrarse rápidamente en una pendiente rojiza de ceniza y bloques de lava andesítica, jalonada por refugios escalonados entre la 7ª y la 8ª estación."
@@ -215,13 +169,87 @@ export const pendingDays = {
       "money": "Alojamiento en refugio con cena y desayuno (~¥10.000-14.000) + tasa obligatoria de acceso y conservación (¥3.000) + transporte en autobús desde Tokio/Kawaguchiko."
     },
     {
+      "id": "osaka-classic",
+      "title": "Día 5 · Monte Fuji → Osaka clásico: Castillo feudal y Dotonbori",
+      "cities": "Osaka (Chuo, Tennoji, Namba)",
+      "reason": "Enlace Fuji → Kansai: Tras ver el amanecer y descender del Fuji, enlace en Shinkansen directo a Osaka para disfrutar del castillo y su gastronomía.",
+      "summary": "Un recorrido imprescindible por los orígenes feudales y espirituales de Osaka. Comenzando en la imponente fortaleza del Castillo de Osaka con sus murallas ciclópeas, pasando por el templo budista administrado oficialmente más antiguo de Japón (Shitenno-ji), hasta culminar con la explosión de luces de neón, olores y comida callejera de Dotonbori.",
+      "history": "Osaka (antigua Naniwa) fue capital imperial en el siglo VII y el principal centro mercantil de Japón durante el periodo Edo, apodada 'la cocina de la nación' (Tenka no Daidokoro) porque todo el arroz y las mercancías del país se distribuían a través de sus canales. El Castillo de Osaka fue la gran obra del unificador Toyotomi Hideyoshi en 1583 para consolidar su poder sobre todo el archipiélago, con muros de bloques de granito de hasta 130 toneladas traídos por mar.",
+      "schedule": [
+        {
+          "time": "Transporte y conexión (Día 5)",
+          "text": "Transporte de enlace: Tras descender del Fuji a la 5ª Estación por la mañana, autobús a la estación de tren bala de Mishima (1h 45m). Desde Mishima, Shinkansen Tokaido (Hikari/Nozomi) directo a Shin-Osaka en 1h 50m."
+        },
+        {
+          "time": "Castillo de Osaka y foso de piedras gigantes",
+          "text": "La majestuosa fortaleza de ocho plantas con techos de remates dorados de Shachihoko (criaturas mitológicas con cabeza de tigre y cuerpo de pez). Paseo por los jardines Nishinomaru y las murallas de piedra defensivas Ote-mon, las más masivas del Japón feudal."
+        },
+        {
+          "time": "Templo Shitenno-ji: El primer templo oficial de Japón",
+          "text": "Fundado en el año 593 por el Príncipe Shotoku, introductor del budismo en el país. Su disposición simétrica de edificios (Garan) reproduce con fidelidad milenaria el diseño original continental, con la pagoda de cinco pisos abierta para subir al interior, el pabellón Dorado Kondo y el estanque sagrado con decenas de tortugas."
+        },
+        {
+          "time": "Santuario Sumiyoshi Taisha y puente Taiko-bashi",
+          "text": "Uno de los santuarios más antiguos e importantes de todo el país (fundado en 211 d.C., antes de la llegada del budismo), caracterizado por el estilo arquitectónico puro Sumiyoshi-zukuri con techos rectos sin adornos curvados. Cruzar su empinadísimo puente rojo arqueado Taiko-bashi purifica los pecados antes de rezar a las deidades protectoras de navegantes y viajeros."
+        },
+        {
+          "time": "Barrio retro de Shinsekai y Torre Tsutenkaku",
+          "text": "La estampa nostálgica de la Osaka de principios del siglo XX, con sus letreros de peces globo gigantes, salas de pachinko y la torre de hierro Tsutenkaku con la estatua de la suerte Billiken."
+        },
+        {
+          "time": "Noche mágica en Dotonbori: Takoyaki y neones",
+          "text": "Paseo junto al canal iluminado bajo el legendario cartel del atleta de Glico Man y el cangrejo móvil Kani Doraku. Cena a base de Takoyaki cremoso recién hecho, Kushikatsu (brochetas de carne y verduras crujientes con la regla sagrada de 'no mojar dos veces en la salsa') y Okonomiyaki al estilo Osaka con mayonesa japonesa y copos de bonito danzantes (katsuobushi)."
+        }
+      ],
+      "money": "Aprox. 4€ entrada Castillo de Osaka + 2€ entrada interior Shitenno-ji + 20€–30€ en comida callejera variada y cena en Dotonbori."
+    },
+    {
+      "id": "osaka-temples",
+      "title": "Día 6 · Templos ocultos y misterios de Osaka: Namba Yasaka y Hozenji",
+      "cities": "Osaka (Namba, Tennoji, Kita-Umeda)",
+      "reason": "Día 2 en Osaka sin cambios de hotel: Jornada a pie y en metro para descubrir los santuarios más místicos y el ambiente local.",
+      "summary": "Una jornada fascinante por los santuarios más insólitos y sobrecogedores de Osaka: la gigantesca cabeza de león que devora la mala suerte en Namba Yasaka, el templo de las esculturas de Buda moldeadas con cenizas humanas en Isshin-ji, el callejón iluminado de Hozenji cubierto de musgo vivo y las mejores vistas panorámicas de Kansai.",
+      "history": "A diferencia de Kioto, donde los templos son palaciegos y monumentales, los templos y santuarios de Osaka están profundamente integrados en la vida cotidiana de los vecinos, comerciantes y gremios del pueblo llano. Lugares como Hozenji o Namba Yasaka sobrevivieron a incendios y reconstrucciones manteniendo vivas tradiciones populares únicas donde la fe se vive a pie de calle entre aromas a incienso y comida casera.",
+      "schedule": [
+        {
+          "time": "Transporte y conexión (Día 6)",
+          "text": "Transporte urbano: Metro de Osaka (líneas Midosuji y Tanimachi) o pase Osaka 1-Day Pass (~650¥–820¥). Gran parte del recorrido se realiza a pie entre callejones peatonales."
+        },
+        {
+          "time": "Santuario Namba Yasaka y el gran león devorador de espíritus",
+          "text": "El santuario más fotogénico y singular de Osaka. Su pabellón principal Shishiden tiene la forma de una colosal cabeza de león de 12 metros de altura y 11 metros de ancho con las fauces abiertas de par en par: se cree que su rugido ahuyenta a los demonios y que su boca abierta traga toda la mala suerte y los fracasos, dejando paso a la victoria, la salud y el éxito profesional."
+        },
+        {
+          "time": "Templo Isshin-ji y los 'Okotsu Butsu' de cenizas sagradas",
+          "text": "Templo de la escuela Jodo Shu con un legado sobrecogedor: desde 1887, cada diez años se funden y esculpen estatuas de Buda mezclando resina con las cenizas de más de 100.000 difuntos de familias que no tenían tumbas propias, logrando que alcancen la iluminación en paz. Sus puertas de entrada fueron esculpidas con figuras modernas de guardianes por el propio abad del templo, que era arquitecto."
+        },
+        {
+          "time": "Mercado Kuromon Ichiba: Almuerzo gourmet",
+          "text": "El legendario mercado de abastos de 600 metros de longitud conocido como 'la despensa de Osaka': degustación en directo de brochetas de carne Wagyu A5 a la brasa, vieiras gigantes a la plancha con mantequilla, erizo de mar fresco (*uni*) y cortes sashimi de atún toro."
+        },
+        {
+          "time": "Templo Hozenji y el callejón de musgo Hozenji Yokocho",
+          "text": "Escondido entre estrechas callejuelas empedradas tras los grandes almacenes de Namba, este templo guarda la venerada estatua del buda Fudo Myo-o (*Mizukake Fudo*). La tradición manda verter agua con un cazo sobre la deidad al pedir un deseo; con los siglos, el agua ha hecho florecer un manto espeso de musgo verde aterciopelado que cubre completamente la escultura de pies a cabeza."
+        },
+        {
+          "time": "Atardecer en Umeda Sky Building o Mirador Harukas 300",
+          "text": "Subida a las escaleras mecánicas acristaladas suspendidas en el aire que cruzan entre las dos torres de Umeda Sky Building (173 m) para ver la puesta de sol sobre la bahía de Osaka y las luces de los rascacielos de Kita, o al rascacielos Abeno Harukas (300 m, el más alto de Osaka)."
+        }
+      ],
+      "money": "Entradas a santuarios gratuitas + 10€ mirador Umeda Sky (o Harukas) + 25€ almuerzo en mercado Kuromon + transporte en metro con pase diario (~4,50€)."
+    },
+    {
       "id": "hiroshima-nagasaki",
-      "title": "Hiroshima y Nagasaki: Memoria, Paz e Historia",
+      "title": "Día 7 · Osaka → Hiroshima y Nagasaki: Memoria de paz e historia",
       "cities": "Hiroshima, Nagasaki",
-      "reason": "Idea para un futuro viaje -- dos ciudades profundamente conmovedoras y vitales que no formaron parte del itinerario de este viaje.",
+      "reason": "Enlace Osaka → Oeste de Japón: Salida en Shinkansen directo desde Shin-Osaka hacia Hiroshima por la mañana temprano.",
       "summary": "Las dos únicas ciudades del mundo marcadas por los bombardeos atómicos de agosto de 1945, hoy convertidas en faros globales de paz, reconciliación y memoria. Además de sus museos imprescindibles, ofrecen un patrimonio cultural fascinante: la exuberante gastronomía de Hiroshima y el legado multicultural único de Nagasaki como única ventana de Japón al mundo occidental durante siglos.",
       "history": "El 6 de agosto de 1945, Hiroshima fue devastada por la primera bomba atómica de la historia bélica; tres días después, el 9 de agosto, Nagasaki sufrió el segundo impacto. Ambas ciudades transformaron la tragedia en un mensaje mundial de abolición nuclear. Nagasaki, además, atesora una historia única: durante los más de 200 años de la estricta política de aislamiento nacional (sakoku), la pequeña isla artificial de Dejima fue la única puerta de entrada para comerciantes holandeses, científicos y médicos occidentales en todo Japón.",
       "schedule": [
+        {
+          "time": "Transporte y conexión (Día 7)",
+          "text": "Transporte de enlace: Shinkansen Sanyo (Nozomi/Sakura) desde Shin-Osaka hasta Hiroshima Station en solo 1h 25 min (frecuente y ultra rápido). Tranvía urbano Hiroden al Parque Memorial de la Paz."
+        },
         {
           "time": "Hiroshima: Parque y Museo Memorial de la Paz",
           "text": "Ubicado en el delta del río Motoyasu, justo bajo el hipocentro de la explosión del 6 de agosto de 1945. El parque alberga el Cenotafio con los nombres de todas las víctimas y la Llama de la Paz, encendida en 1964 con la promesa de no apagarse hasta que todas las armas nucleares del planeta sean destruidas. El Museo Memorial exhibe testimonios desgarradores, objetos personales de supervivientes (hibakusha) y una cronología rigurosa del horror atómico."
@@ -259,12 +287,16 @@ export const pendingDays = {
     },
     {
       "id": "miyajima",
-      "title": "Isla de Miyajima (Itsukushima)",
+      "title": "Día 8 · Isla sagrada de Miyajima: Torii flotante y Monte Misen",
       "cities": "Miyajima, Bahía de Hiroshima",
-      "reason": "Idea para un futuro viaje -- la isla sagrada donde conviven los santuarios sobre el agua, las montañas de cedros y los ciervos sika en libertad.",
+      "reason": "Vecina inmediata de Hiroshima: A solo 28 minutos en tren local de cercanías más 10 minutos de ferry panorámico.",
       "summary": "Considerada uno de los Tres Grandes Paisajes de Japón (Nihon Sankei), Miyajima es una joya espiritual en el mar interior de Seto. Célebre por el colosal torii bermellón que parece flotar sobre el agua con marea alta, la isla esconde templos con cientos de esculturas budistas, senderos panorámicos hacia el monte Misen y una gastronomía de ostras a la brasa y dulces recién horneados insuperable.",
       "history": "En la antigüedad, la isla entera era considerada un kami (deidad viviente) tan sagrado que ningún ser humano tenía permitido pisarla ni nacer o morir en ella. Para que los fieles pudieran rezar sin profanar el suelo sagrado, Taira no Kiyomori remodeló en 1168 el santuario Itsukushima enteramente sobre pilotes de madera clavados en la arena de la bahía. Declarada Patrimonio de la Humanidad por la UNESCO en 1996.",
       "schedule": [
+        {
+          "time": "Transporte y conexión (Día 8)",
+          "text": "Transporte local desde Hiroshima: Tren JR Sanyo Main Line desde Hiroshima Station hasta Miyajimaguchi (28 min). En el muelle, Ferry JR a la isla de Miyajima (10 min, pasa justo frente al torii; cubierto por JR Pass o tarjeta Suica)."
+        },
         {
           "time": "Santuario Itsukushima y el Gran Torii flotante",
           "text": "Construido sobre pilotes en la pequeña bahía, el santuario se fundó en 593 y fue remodelado en 1168 por Taira no Kiyomori. Al subir la marea, el agua inunda los pasillos de madera de ciprés y el enorme torii bermellón parece flotar mágicamente en el mar interior de Seto. El torii actual mide 16,6 metros, pesa 60 toneladas y se sostiene únicamente por su propio peso sobre 6 pilares de alcanfor milenario, sin estar anclado ni clavado en el fondo marino. Con marea baja, el agua se retira por completo y es posible descender a la arena para tocar los troncos de alcanfor y contemplar de cerca las monedas incrustadas en sus hendiduras."
@@ -301,52 +333,17 @@ export const pendingDays = {
       "money": "Tren JR desde Hiroshima a Miyajimaguchi (~¥420) + ferry (~¥200 + ¥100 tasa visitante); teleférico de ida y vuelta al Monte Misen (~¥2.000)."
     },
     {
-      "id": "hokkaido",
-      "title": "Hokkaido: Naturaleza indómita, nieve y volcanes",
-      "cities": "Sapporo, Furano, Shiretoko, Otaru, Noboribetsu",
-      "reason": "Idea para un futuro viaje -- la gran isla del norte ofrece un Japón radicalmente distinto al resto del archipiélago, con naturaleza virgen y paisajes alpinos.",
-      "summary": "La frontera norte de Japón cautiva con su inmensidad espacial, sus volcanes humeantes, sus parques nacionales protegidos y su gastronomía legendaria basada en el marisco más fresco del país y productos lácteos de primera calidad. Un destino espectacular tanto en verano (campos de flores infinitos) como en invierno (la mejor nieve polvo del planeta y festivales de hielo).",
-      "history": "Hokkaido ('camino del mar del norte') fue colonizada e incorporada plenamente a Japón a partir de la Restauración Meiji a finales del siglo XIX. Antes de ello era conocida como Ezochi, tierra ancestral del pueblo indígena Ainu, una cultura con cosmovisión animista, tradiciones orales y lengua propias que hoy cuenta con museos y centros culturales dedicados como Upopoy en Shiraoi.",
-      "schedule": [
-        {
-          "time": "Sapporo: Parque Odori, Torre del Reloj y antigua sede de gobierno",
-          "text": "La capital de Hokkaido es una ciudad abierta y cuadriculada, con una atmósfera muy distinta a Honshu. El Parque Odori cruza el centro como un oasis verde de 1,5 km que en febrero acoge el colosal Festival de la Nieve (Yuki Matsuri), con esculturas gigantes de hielo talladas a escala real. La Torre del Reloj de madera (1878) y el edificio de ladrillo rojo de la antigua sede del gobierno recuerdan los orígenes coloniales de la isla en la era Meiji."
-        },
-        {
-          "time": "Miso Ramen en Ganso Ramen Yokocho y Mercado Nijo",
-          "text": "Sapporo es la cuna del ramen de pasta de miso: fideos ondulados en caldo espeso sazonado con ajo, brotes de soja crujientes, maíz dulce de Hokkaido y una nuez de mantequilla fundente local. El legendario callejón Ganso Ramen Yokocho en Susukino reúne las tabernas históricas. Para el desayuno, el Mercado Nijo ofrece donburi (kaisen-don) repletos del mejor marisco de aguas frías: huevas de salmón ikura brillantes, erizo de mar dulce (uni) y patas de cangrejo de las nieves."
-        },
-        {
-          "time": "Museo de la Cerveza Sapporo y festín Jingisukan (Genghis Khan)",
-          "text": "La fábrica original de ladrillo rojo de 1876 es el único museo de la cerveza de Japón. En su histórica cervecería anexa se degusta el plato más popular de la isla: 'Jingisukan', finas tiras de cordero asadas en parrillas de hierro convexas con forma de casco mongol junto a cebollas, calabaza y brotes de soja, acompañadas de cerveza Sapporo recién tirada."
-        },
-        {
-          "time": "Furano y Biei: Campos de lavanda y el Estanque Azul (Blue Pond)",
-          "text": "En verano (julio-agosto), las colinas onduladas de Furano (Granja Tomita) se cubren de alfombras multicolores de lavanda, amapolas y girasoles. Muy cerca, en Biei, se encuentra el Shirogane Blue Pond, un estanque de agua turquesa lechosa irreal formada tras obras volcánicas en el río Bieigawa, del que emergen troncos esqueléticos de alerces sumergidos creando un paisaje de fantasía."
-        },
-        {
-          "time": "Parque Nacional de Shiretoko: La última frontera salvaje (UNESCO)",
-          "text": "En el extremo nororiental de la isla, Shiretoko significa 'el fin de la Tierra' en lengua ainu. Es uno de los ecosistemas más puros y vírgenes del hemisferio norte: acantilados volcánicos donde habitan la mayor densidad de osos pardos salvajes de Japón, águilas marinas de Steller y zorros rojos de Ezo. Se exploran en cruceros costeros desde Utoro y en senderos elevados de madera alrededor de los Cinco Lagos de Shiretoko."
-        },
-        {
-          "time": "Otaru: Canal histórico, música mecánica y vidrio soplado",
-          "text": "A 40 minutos de Sapporo se encuentra Otaru, un romántico puerto mercantil de principios del siglo XX. Su canal de piedra flanqueado por antiguos almacenes de arenque iluminados por farolas de gas al anochecer es una visita imprescindible, junto con los talleres artesanales de cristal soplado y el Museo de Cajas de Música."
-        },
-        {
-          "time": "Valle del Infierno (Jigokudani) y Onsen en Noboribetsu",
-          "text": "El principal destino termal de Hokkaido. Un sobrecogedor cráter volcánico activo con fumarolas de azufre, géiseres hirvientes y ríos de agua termal humeante que serpentean entre valles boscosos, abasteciendo decenas de baños onsen tradicionales al aire libre (rotenburo) con aguas ricas en minerales."
-        }
-      ],
-      "money": "Vuelo interno desde Tokio a Sapporo (~1 h 30 min) o Shinkansen hasta Hakodate; se recomienda alquilar coche para recorrer parques y zonas rurales."
-    },
-    {
       "id": "okinawa",
-      "title": "Okinawa y el Archipiélago Ryukyu",
+      "title": "Día 9 · Hacia el sur subtropical: Okinawa y Archipiélago Ryukyu",
       "cities": "Naha, Ishigaki, Miyakojima, Taketomi",
-      "reason": "Idea para un futuro viaje -- playas paradisíacas, arrecifes de coral y una cultura ancestral independiente que no pudimos incluir esta vez.",
+      "reason": "Enlace Hiroshima/Kansai → Islas de Okinawa: Vuelo directo desde el aeropuerto de Hiroshima (o enlace vía Osaka) hacia Naha.",
       "summary": "El archipiélago subtropical de Okinawa sorprende por su atmósfera caribeña, sus aguas turquesa cristalinas apodadas 'Miyako Blue', su música de sanshin que flota en el aire cálido y su propia arquitectura tradicional protegida por leones guardianes (shisa).",
       "history": "Durante más de 450 años, estas islas conformaron el independiente y próspero Reino de Ryukyu, un emporio comercial marítimo que comerciaba libremente con China, Japón, Corea y el sudeste asiático. Anexionado a Japón en 1879, Okinawa sufrió la devastadora Batalla de Okinawa en 1945 y permaneció bajo administración militar estadounidense hasta 1972, forjando una identidad cultural mestiza y resiliente.",
       "schedule": [
+        {
+          "time": "Transporte y conexión (Día 9)",
+          "text": "Transporte aéreo: Vuelo directo desde el aeropuerto de Hiroshima (HIJ) o Osaka Kansai (KIX) hacia Naha Airport (OKA) en 1h 55 min. Monorraíl elevado Yui Rail directo desde el aeropuerto al centro histórico y Castillo de Shuri."
+        },
         {
           "time": "Naha y el Castillo de Shuri: El corazón del Reino Ryukyu",
           "text": "Antigua capital del Reino Ryukyu, un estado insular que prosperó durante siglos como puente marítimo comercial entre China, Japón y el Sudeste Asiático. El Castillo de Shuri (Gusuku), Patrimonio de la Humanidad, es una maravilla arquitectónica que combina motivos de dragones chinos con técnicas tradicionales de madera japonesa y fortificaciones de piedra caliza coralina."
@@ -376,12 +373,16 @@ export const pendingDays = {
     },
     {
       "id": "iriomote-stargazing",
-      "title": "Iriomote: Astrofotografía y expedición selvática",
+      "title": "Día 10 · Isla de Iriomote: Dark Sky Park, estrellas y selva virgen",
       "cities": "Isla de Iriomote (Archipiélago Yaeyama, Okinawa)",
-      "reason": "Idea para un futuro viaje, pensada especialmente para ti -- con telescopio, dron y equipo fotográfico es una de las experiencias nocturnas más sobrecogedoras del planeta.",
+      "reason": "Enlace interno en las Islas Yaeyama: El paraíso más remoto, virgen y oscuro de Japón.",
       "summary": "La isla más salvaje de Japón, cubierta en un 90% por una selva subtropical impenetrable y manglares vírgenes. El Parque Nacional Iriomote-Ishigaki está certificado por DarkSky International como Dark Sky Park internacional por sus niveles nulos de contaminación lumínica. De día se navega en kayak por estuarios selváticos y de noche se montan los trípodes bajo un firmamento donde la Vía Láctea se percibe en tres dimensiones.",
       "history": "Iriomote es famosa en el mundo zoológico por ser el único hogar del gato de Iriomote (Prionailurus bengalensis iriomotensis), un felino salvaje nocturno descubierto apenas en 1967 que representa un linaje evolutivo aislado durante milenios. Su latitud meridional (24° N) permite divisar la Cruz del Sur a ras del horizonte marino, una constelación imposible de observar desde España o Europa continental.",
       "schedule": [
+        {
+          "time": "Transporte y conexión (Día 10)",
+          "text": "Transporte interinsular: Vuelo corto de Naha a Ishigaki (55 min, Japan Transocean Air/ANA) + Ferry rápido desde el puerto de Ishigaki hasta la isla de Iriomote (45 min al puerto de Ohara o Uehara)."
+        },
         {
           "time": "Reserva Internacional de Cielo Oscuro (Dark Sky Park)",
           "text": "El Parque Nacional Iriomote-Ishigaki fue el primer territorio de toda Asia reconocido y certificado por DarkSky International (2018). Con el 90% de su superficie cubierta por jungla deshabitada y situada a cientos de kilómetros de cualquier gran urbe, la oscuridad es total (Bortle 1-2). La Vía Láctea no se ve como una mancha difusa, sino como una estructura densa y tridimensional con relieve, polvo estelar y cúmulos globulares visibles a simple vista."
@@ -412,12 +413,55 @@ export const pendingDays = {
         }
       ],
       "money": "Ferry rápido desde Ishigaki (40-45 min, ~¥2.500); oferta de alojamientos limitada en la isla, imprescindible reservar con antelación."
+    },
+    {
+      "id": "hokkaido",
+      "title": "Día 11 · Gran extensión norte: Hokkaido, Sapporo y naturaleza salvaje",
+      "cities": "Sapporo, Furano, Shiretoko, Otaru, Noboribetsu",
+      "reason": "El contrapunto alpino definitivo: Vuelo hacia el gran norte indómito de Japón para culminar la aventura.",
+      "summary": "La frontera norte de Japón cautiva con su inmensidad espacial, sus volcanes humeantes, sus parques nacionales protegidos y su gastronomía legendaria basada en el marisco más fresco del país y productos lácteos de primera calidad. Un destino espectacular tanto en verano (campos de flores infinitos) como en invierno (la mejor nieve polvo del planeta y festivales de hielo).",
+      "history": "Hokkaido ('camino del mar del norte') fue colonizada e incorporada plenamente a Japón a partir de la Restauración Meiji a finales del siglo XIX. Antes de ello era conocida como Ezochi, tierra ancestral del pueblo indígena Ainu, una cultura con cosmovisión animista, tradiciones orales y lengua propias que hoy cuenta con museos y centros culturales dedicados como Upopoy en Shiraoi.",
+      "schedule": [
+        {
+          "time": "Transporte y conexión (Día 11)",
+          "text": "Transporte aéreo: Vuelo directo desde Naha o vía Tokio/Osaka hacia el aeropuerto de Sapporo New Chitose (CTS). Tren JR Rapid Airport desde la terminal a Sapporo Station en 37 min."
+        },
+        {
+          "time": "Sapporo: Parque Odori, Torre del Reloj y antigua sede de gobierno",
+          "text": "La capital de Hokkaido es una ciudad abierta y cuadriculada, con una atmósfera muy distinta a Honshu. El Parque Odori cruza el centro como un oasis verde de 1,5 km que en febrero acoge el colosal Festival de la Nieve (Yuki Matsuri), con esculturas gigantes de hielo talladas a escala real. La Torre del Reloj de madera (1878) y el edificio de ladrillo rojo de la antigua sede del gobierno recuerdan los orígenes coloniales de la isla en la era Meiji."
+        },
+        {
+          "time": "Miso Ramen en Ganso Ramen Yokocho y Mercado Nijo",
+          "text": "Sapporo es la cuna del ramen de pasta de miso: fideos ondulados en caldo espeso sazonado con ajo, brotes de soja crujientes, maíz dulce de Hokkaido y una nuez de mantequilla fundente local. El legendario callejón Ganso Ramen Yokocho en Susukino reúne las tabernas históricas. Para el desayuno, el Mercado Nijo ofrece donburi (kaisen-don) repletos del mejor marisco de aguas frías: huevas de salmón ikura brillantes, erizo de mar dulce (uni) y patas de cangrejo de las nieves."
+        },
+        {
+          "time": "Museo de la Cerveza Sapporo y festín Jingisukan (Genghis Khan)",
+          "text": "La fábrica original de ladrillo rojo de 1876 es el único museo de la cerveza de Japón. En su histórica cervecería anexa se degusta el plato más popular de la isla: 'Jingisukan', finas tiras de cordero asadas en parrillas de hierro convexas con forma de casco mongol junto a cebollas, calabaza y brotes de soja, acompañadas de cerveza Sapporo recién tirada."
+        },
+        {
+          "time": "Furano y Biei: Campos de lavanda y el Estanque Azul (Blue Pond)",
+          "text": "En verano (julio-agosto), las colinas onduladas de Furano (Granja Tomita) se cubren de alfombras multicolores de lavanda, amapolas y girasoles. Muy cerca, en Biei, se encuentra el Shirogane Blue Pond, un estanque de agua turquesa lechosa irreal formada tras obras volcánicas en el río Bieigawa, del que emergen troncos esqueléticos de alerces sumergidos creando un paisaje de fantasía."
+        },
+        {
+          "time": "Parque Nacional de Shiretoko: La última frontera salvaje (UNESCO)",
+          "text": "En el extremo nororiental de la isla, Shiretoko significa 'el fin de la Tierra' en lengua ainu. Es uno de los ecosistemas más puros y vírgenes del hemisferio norte: acantilados volcánicos donde habitan la mayor densidad de osos pardos salvajes de Japón, águilas marinas de Steller y zorros rojos de Ezo. Se exploran en cruceros costeros desde Utoro y en senderos elevados de madera alrededor de los Cinco Lagos de Shiretoko."
+        },
+        {
+          "time": "Otaru: Canal histórico, música mecánica y vidrio soplado",
+          "text": "A 40 minutos de Sapporo se encuentra Otaru, un romántico puerto mercantil de principios del siglo XX. Su canal de piedra flanqueado por antiguos almacenes de arenque iluminados por farolas de gas al anochecer es una visita imprescindible, junto con los talleres artesanales de cristal soplado y el Museo de Cajas de Música."
+        },
+        {
+          "time": "Valle del Infierno (Jigokudani) y Onsen en Noboribetsu",
+          "text": "El principal destino termal de Hokkaido. Un sobrecogedor cráter volcánico activo con fumarolas de azufre, géiseres hirvientes y ríos de agua termal humeante que serpentean entre valles boscosos, abasteciendo decenas de baños onsen tradicionales al aire libre (rotenburo) con aguas ricas en minerales."
+        }
+      ],
+      "money": "Vuelo interno desde Tokio a Sapporo (~1 h 30 min) o Shinkansen hasta Hakodate; se recomienda alquilar coche para recorrer parques y zonas rurales."
     }
   ],
   "en": [
     {
       "id": "tokyo-highlights",
-      "title": "Tokyo Highlights: Shrines, Icons & City Views",
+      "title": "Day 1: Tokyo Highlights: Shrines, Icons & City Views",
       "cities": "Tokyo (Asakusa, Shibuya, Shinjuku, Harajuku)",
       "reason": "Tokyo Day 1: Explore the most iconic contrasts of the world's greatest metropolis in one vibrant day.",
       "summary": "An essential route covering Tokyo's defining landmarks: ancient spirituality at Senso-ji, sacred stillness in Meiji Jingu's forest, futuristic energy at Shibuya Crossing, and sweeping skyline views over Shinjuku.",
@@ -448,7 +492,7 @@ export const pendingDays = {
     },
     {
       "id": "nikko",
-      "title": "Nikko Day Trip",
+      "title": "Day 2: Nikko Day Trip",
       "cities": "Nikko (Tochigi)",
       "reason": "Didn't happen due to bad weather (originally planned for Sunday, September 20, 2026, moved from Saturday due to train availability).",
       "summary": "A full day excursion from Tokyo into the sacred mountains of Tochigi. Nikko brings together some of the most lavishly decorated shrines and temples in all of Japan (UNESCO World Heritage) with a breathtaking natural backdrop of alpine waterfalls, volcanic lakes, and ancient cedar forests.",
@@ -491,7 +535,7 @@ export const pendingDays = {
     },
     {
       "id": "tokyo-kamakura",
-      "title": "Alternative Tokyo & Coastal Kamakura Day Trip",
+      "title": "Day 3: Alternative Tokyo & Coastal Kamakura Day Trip",
       "cities": "Kamakura & Tokyo (Yanaka, Akihabara)",
       "reason": "Tokyo Day 3: Step out to the coastal samurai capital and experience Tokyo's charming retro neighborhoods.",
       "summary": "Morning coastal excursion to historic Kamakura, home of the Great Bronze Buddha and coastal temples, followed by an afternoon in nostalgic Yanaka Ginza or electronic Akihabara.",
@@ -521,70 +565,8 @@ export const pendingDays = {
       "money": "Approx. €8 JR train round-trip + €2 Kotoku-in entry + €3 Hasedera + €25 food/snacks."
     },
     {
-      "id": "osaka-classic",
-      "title": "Classic Osaka: Feudal Castle, Shitenno-ji & Dotonbori",
-      "cities": "Osaka (Chuo, Tennoji, Namba)",
-      "reason": "Osaka Day 1: Discover the vibrant merchant soul, majestic castle, and culinary wonders of Kansai.",
-      "summary": "An essential exploration of Osaka's historic grandeur and unbeatable street food. Begin at the monumental Osaka Castle with its colossal stone walls, visit Japan's oldest official Buddhist temple (Shitenno-ji), and end with Dotonbori's glowing neon canal.",
-      "history": "Formerly known as Naniwa, Osaka served as an imperial capital in the 7th century and later blossomed as Edo Japan's commercial capital, known as 'the nation's kitchen' (Tenka no Daidokoro). Toyotomi Hideyoshi built Osaka Castle in 1583 with immense granite blocks weighing up to 130 tons brought by sea, making it the supreme fortress of feudal Japan.",
-      "schedule": [
-        {
-          "time": "Osaka Castle and Massive Stone Moats",
-          "text": "The eight-story white and gold keep adorned with golden Shachihoko roof ornaments, surrounded by cherry orchards in Nishinomaru Garden and colossal defense walls."
-        },
-        {
-          "time": "Shitenno-ji: Japan's Oldest Official Buddhist Temple",
-          "text": "Founded in 593 AD by Prince Shotoku. Its symmetrical layout reflects ancient continental design, featuring a climbable five-story pagoda, the Golden Hall Kondo, and turtle ponds."
-        },
-        {
-          "time": "Sumiyoshi Taisha and the Arched Taiko-bashi Bridge",
-          "text": "One of Japan's oldest shrines (founded in 211 AD before Buddhism arrived), showcasing pure Sumiyoshi-zukuri architecture. Crossing its steep red arched bridge purifies visitors before prayer."
-        },
-        {
-          "time": "Retro Shinsekai & Tsutenkaku Tower",
-          "text": "A nostalgic 1920s neighborhood famed for retro pachinko parlors, giant pufferfish lanterns, Tsutenkaku iron tower, and the lucky Billiken deity."
-        },
-        {
-          "time": "Dotonbori Night Walk: Takoyaki & Neon Canal",
-          "text": "Stand beneath the glowing Glico Running Man billboard, sample piping hot octopus balls (takoyaki), crispy kushikatsu skewers, and sizzling Osaka-style okonomiyaki."
-        }
-      ],
-      "money": "Approx. €4 Osaka Castle entry + €2 Shitenno-ji inner grounds + €20–€30 street food & Dotonbori dinner."
-    },
-    {
-      "id": "osaka-temples",
-      "title": "Hidden Temples & Secrets of Osaka: Namba Yasaka & Hozenji",
-      "cities": "Osaka (Namba, Tennoji, Kita-Umeda)",
-      "reason": "Osaka Day 2: Uncover mystical, atmospheric shrines and secret alleys that most visitors completely overlook.",
-      "summary": "A captivating journey through Osaka's most extraordinary shrines: the giant lion-head shrine that devours bad fortune at Namba Yasaka, the sacred bone-ash Buddha statues of Isshin-ji, the moss-carpeted deity of Hozenji Yokocho, and sweeping city vistas.",
-      "history": "Unlike Kyoto's imperial, aristocratic temples, Osaka's spiritual sites are woven directly into the daily lives of local merchants and working neighborhoods. Sites like Hozenji and Namba Yasaka survived wartime fires and urban sprawl, preserving unique popular devotions where spirituality and neighborhood warmth meet.",
-      "schedule": [
-        {
-          "time": "Namba Yasaka Shrine: The Giant Spirit-Devouring Lion",
-          "text": "Osaka's most striking shrine. Its 12-meter-high, 11-meter-wide lion head stage stands with mouth agape; folklore holds that its roar banishes evil spirits and swallows bad luck, attracting prosperity and success."
-        },
-        {
-          "time": "Isshin-ji Temple and the Sacred 'Okotsu Butsu'",
-          "text": "A revered Pure Land temple with a unique tradition: every decade since 1887, statues of Buddha are molded from the mixed bone ashes of over 100,000 deceased whose families had no ancestral graves, granting them eternal rest."
-        },
-        {
-          "time": "Kuromon Ichiba Gourmet Market Lunch",
-          "text": "Known as 'Osaka's Kitchen', this bustling covered market offers freshly flame-seared A5 Wagyu beef, grilled scallops in butter, sea urchin, and fresh fatty tuna sashimi."
-        },
-        {
-          "time": "Hozenji Temple and Moss-Covered Mizukake Fudo",
-          "text": "Hidden in stone-paved Hozenji Yokocho alley, worshippers splash water over the statue of Fudo Myo-o while making wishes, cultivating a thick, emerald coat of living green moss."
-        },
-        {
-          "time": "Sunset at Umeda Sky Building Floating Observatory",
-          "text": "Ascend glass escalators suspended in mid-air between two 173-meter towers to catch sunset across Osaka Bay and the glittering city skyline."
-        }
-      ],
-      "money": "Free shrine admissions + €10 Umeda Sky observatory + €25 Kuromon Market lunch + €4.50 metro pass."
-    },
-    {
       "id": "fuji-hiking",
-      "title": "Mount Fuji Summit Hiking",
+      "title": "Day 4: Mount Fuji Summit Hiking",
       "cities": "Mount Fuji (Yamanashi / Shizuoka)",
       "reason": "Idea for a future trip -- on this journey we admired the volcano's silhouette from Lake Kawaguchiko and Oshino Hakkai, but climbing to the summit is a completely different adventure.",
       "summary": "Reaching the highest point in Japan (3,776m) is one of the country's most legendary pilgrimages. The classic ascent takes place from the 5th station along the Yoshida Trail, resting briefly at a high-altitude mountain hut before the final pre-dawn push to witness the sea of clouds bathed in the golden light of the rising sun.",
@@ -626,8 +608,70 @@ export const pendingDays = {
       "money": "Mountain hut stay with dinner/breakfast (~¥10,000-14,000) + mandatory entry and conservation fees (¥3,000) + bus transfer from Tokyo/Kawaguchiko."
     },
     {
+      "id": "osaka-classic",
+      "title": "Day 5: Classic Osaka: Feudal Castle, Shitenno-ji & Dotonbori",
+      "cities": "Osaka (Chuo, Tennoji, Namba)",
+      "reason": "Osaka Day 1: Discover the vibrant merchant soul, majestic castle, and culinary wonders of Kansai.",
+      "summary": "An essential exploration of Osaka's historic grandeur and unbeatable street food. Begin at the monumental Osaka Castle with its colossal stone walls, visit Japan's oldest official Buddhist temple (Shitenno-ji), and end with Dotonbori's glowing neon canal.",
+      "history": "Formerly known as Naniwa, Osaka served as an imperial capital in the 7th century and later blossomed as Edo Japan's commercial capital, known as 'the nation's kitchen' (Tenka no Daidokoro). Toyotomi Hideyoshi built Osaka Castle in 1583 with immense granite blocks weighing up to 130 tons brought by sea, making it the supreme fortress of feudal Japan.",
+      "schedule": [
+        {
+          "time": "Osaka Castle and Massive Stone Moats",
+          "text": "The eight-story white and gold keep adorned with golden Shachihoko roof ornaments, surrounded by cherry orchards in Nishinomaru Garden and colossal defense walls."
+        },
+        {
+          "time": "Shitenno-ji: Japan's Oldest Official Buddhist Temple",
+          "text": "Founded in 593 AD by Prince Shotoku. Its symmetrical layout reflects ancient continental design, featuring a climbable five-story pagoda, the Golden Hall Kondo, and turtle ponds."
+        },
+        {
+          "time": "Sumiyoshi Taisha and the Arched Taiko-bashi Bridge",
+          "text": "One of Japan's oldest shrines (founded in 211 AD before Buddhism arrived), showcasing pure Sumiyoshi-zukuri architecture. Crossing its steep red arched bridge purifies visitors before prayer."
+        },
+        {
+          "time": "Retro Shinsekai & Tsutenkaku Tower",
+          "text": "A nostalgic 1920s neighborhood famed for retro pachinko parlors, giant pufferfish lanterns, Tsutenkaku iron tower, and the lucky Billiken deity."
+        },
+        {
+          "time": "Dotonbori Night Walk: Takoyaki & Neon Canal",
+          "text": "Stand beneath the glowing Glico Running Man billboard, sample piping hot octopus balls (takoyaki), crispy kushikatsu skewers, and sizzling Osaka-style okonomiyaki."
+        }
+      ],
+      "money": "Approx. €4 Osaka Castle entry + €2 Shitenno-ji inner grounds + €20–€30 street food & Dotonbori dinner."
+    },
+    {
+      "id": "osaka-temples",
+      "title": "Day 6: Hidden Temples & Secrets of Osaka: Namba Yasaka & Hozenji",
+      "cities": "Osaka (Namba, Tennoji, Kita-Umeda)",
+      "reason": "Osaka Day 2: Uncover mystical, atmospheric shrines and secret alleys that most visitors completely overlook.",
+      "summary": "A captivating journey through Osaka's most extraordinary shrines: the giant lion-head shrine that devours bad fortune at Namba Yasaka, the sacred bone-ash Buddha statues of Isshin-ji, the moss-carpeted deity of Hozenji Yokocho, and sweeping city vistas.",
+      "history": "Unlike Kyoto's imperial, aristocratic temples, Osaka's spiritual sites are woven directly into the daily lives of local merchants and working neighborhoods. Sites like Hozenji and Namba Yasaka survived wartime fires and urban sprawl, preserving unique popular devotions where spirituality and neighborhood warmth meet.",
+      "schedule": [
+        {
+          "time": "Namba Yasaka Shrine: The Giant Spirit-Devouring Lion",
+          "text": "Osaka's most striking shrine. Its 12-meter-high, 11-meter-wide lion head stage stands with mouth agape; folklore holds that its roar banishes evil spirits and swallows bad luck, attracting prosperity and success."
+        },
+        {
+          "time": "Isshin-ji Temple and the Sacred 'Okotsu Butsu'",
+          "text": "A revered Pure Land temple with a unique tradition: every decade since 1887, statues of Buddha are molded from the mixed bone ashes of over 100,000 deceased whose families had no ancestral graves, granting them eternal rest."
+        },
+        {
+          "time": "Kuromon Ichiba Gourmet Market Lunch",
+          "text": "Known as 'Osaka's Kitchen', this bustling covered market offers freshly flame-seared A5 Wagyu beef, grilled scallops in butter, sea urchin, and fresh fatty tuna sashimi."
+        },
+        {
+          "time": "Hozenji Temple and Moss-Covered Mizukake Fudo",
+          "text": "Hidden in stone-paved Hozenji Yokocho alley, worshippers splash water over the statue of Fudo Myo-o while making wishes, cultivating a thick, emerald coat of living green moss."
+        },
+        {
+          "time": "Sunset at Umeda Sky Building Floating Observatory",
+          "text": "Ascend glass escalators suspended in mid-air between two 173-meter towers to catch sunset across Osaka Bay and the glittering city skyline."
+        }
+      ],
+      "money": "Free shrine admissions + €10 Umeda Sky observatory + €25 Kuromon Market lunch + €4.50 metro pass."
+    },
+    {
       "id": "hiroshima-nagasaki",
-      "title": "Hiroshima & Nagasaki: Memory, Peace & Heritage",
+      "title": "Day 7: Hiroshima & Nagasaki: Memory, Peace & Heritage",
       "cities": "Hiroshima, Nagasaki",
       "reason": "Idea for a future trip -- two deeply moving and culturally rich cities not included in this trip's itinerary.",
       "summary": "The only two cities on Earth shaped by wartime atomic bombings, today reborn as world capitals of peace, reconciliation, and resilience. Beyond their solemn historical monuments, they offer incredible cultural richness: Hiroshima's layered cuisine and Nagasaki's rare status as Japan's sole gateway to the Western world across centuries of isolation.",
@@ -670,7 +714,7 @@ export const pendingDays = {
     },
     {
       "id": "miyajima",
-      "title": "Miyajima Island (Itsukushima)",
+      "title": "Day 8: Miyajima Island (Itsukushima)",
       "cities": "Miyajima, Hiroshima Bay",
       "reason": "Idea for a future trip -- the sacred island where floating shrines, cedar peaks, and friendly sika deer coexist.",
       "summary": "Ranked as one of the Three Great Views of Japan (Nihon Sankei), Miyajima is a spiritual sanctuary in the Seto Inland Sea. Famous for its colossal vermilion torii gate that seems to float on seawater at high tide, the island also conceals ancient mountain temples, panoramic trails to Mount Misen, and irresistible grilled oyster stalls.",
@@ -712,47 +756,8 @@ export const pendingDays = {
       "money": "JR train Hiroshima-Miyajimaguchi (~¥420) + ferry (~¥200 + ¥100 tax); Mount Misen round-trip ropeway (~¥2,000)."
     },
     {
-      "id": "hokkaido",
-      "title": "Hokkaido: Wild Frontiers, Snow & Calderas",
-      "cities": "Sapporo, Furano, Shiretoko, Otaru, Noboribetsu",
-      "reason": "Idea for a future trip -- Japan's wild northern island offers an untamed landscape completely unlike the rest of the country.",
-      "summary": "Japan's northernmost wilderness enchants travelers with vast open horizons, steaming volcanic calderas, pristine national parks, and legendary seafood and dairy. A breathtaking escape in both summer (blooming flower fields) and winter (world-renowned dry powder snow and ice carving festivals).",
-      "history": "Hokkaido ('Circuit of the Northern Sea') was formally colonized and integrated during the Meiji Restoration in the late 19th century. Formerly known as Ezochi, it is the ancestral homeland of the indigenous Ainu people, whose animist spiritual beliefs, oral folklore, and distinct language are celebrated at cultural centers such as Upopoy in Shiraoi.",
-      "schedule": [
-        {
-          "time": "Sapporo: Odori Park, Clock Tower & Old Government Hall",
-          "text": "Hokkaido's capital is a spacious, grid-planned city with a crisp northern feel. Odori Park cuts through the center as a 1.5km green boulevard, hosting the legendary Sapporo Snow Festival (Yuki Matsuri) in February with life-sized snow and ice sculptures. The 1878 wooden Clock Tower and the red-brick Former Government Building reflect its Meiji pioneering roots."
-        },
-        {
-          "time": "Miso Ramen in Ramen Alley & Nijo Seafood Market",
-          "text": "Sapporo gave birth to rich miso ramen: wavy egg noodles in savory broth spiked with garlic, crunchy bean sprouts, sweet local corn, and a melting pat of Hokkaido butter. The Ganso Ramen Yokocho alley in Susukino gathers historic vendors. In the morning, Nijo Market serves breakfast kaisen-don bowls overflowing with glistening salmon roe (ikura), sweet sea urchin (uni), and snow crab."
-        },
-        {
-          "time": "Sapporo Beer Museum & Genghis Khan (Jingisukan) Feast",
-          "text": "Housed in an 1876 red-brick sugar factory, this is Japan's only beer museum. In the adjacent beer hall, feast on 'Jingisukan': thin strips of mutton barbecued over domed helmet-shaped iron griddles with onions, pumpkin, and bean sprouts, paired with fresh-poured Sapporo draft beer."
-        },
-        {
-          "time": "Furano & Biei: Rolling Rainbow Hills & Shirogane Blue Pond",
-          "text": "In mid-summer (July–August), Furano's rolling hills (Farm Tomita) blossom into ribbons of lavender, poppies, and sunflowers. Nearby in Biei lies the Shirogane Blue Pond, an otherworldly turquoise body of water created after volcanic works on the Bieigawa River, with submerged skeletal larch trunks creating a surreal fairy-tale aesthetic."
-        },
-        {
-          "time": "Shiretoko National Park: The Edge of the Earth (UNESCO)",
-          "text": "Located at the far northeastern tip of Hokkaido, Shiretoko means 'the end of the Earth' in the Ainu tongue. It is one of the Northern Hemisphere's most pristine wilderness reserves: sheer coastal cliffs inhabited by Japan's densest wild brown bear population, Steller's sea eagles, and Ezo red foxes, explored by boat from Utoro and on elevated boardwalks around the Shiretoko Five Lakes."
-        },
-        {
-          "time": "Otaru: Romantic Canal, Music Boxes & Blown Glass",
-          "text": "Just 40 minutes from Sapporo, Otaru is a nostalgic early-20th-century port town. Its central stone-lined canal is flanked by historic herring warehouses lit by gas lanterns at dusk, alongside artisan blown-glass workshops and the beloved Otaru Music Box Museum."
-        },
-        {
-          "time": "Hell Valley (Jigokudani) & Hot Springs in Noboribetsu",
-          "text": "Hokkaido's premier onsen resort. A dramatic, smoking volcanic crater boiling with sulfur vents, geysers, and steaming thermal rivers winding through lush forests, feeding mineral-rich natural open-air baths (rotenburo) across the valley."
-        }
-      ],
-      "money": "Domestic flight Tokyo-Sapporo (~1h 30min) or Hokkaido Shinkansen to Hakodate; rental car is strongly recommended for exploring national parks and scenic countryside."
-    },
-    {
       "id": "okinawa",
-      "title": "Okinawa & The Ryukyu Archipelago",
+      "title": "Day 9: Okinawa & The Ryukyu Archipelago",
       "cities": "Naha, Ishigaki, Miyakojima, Taketomi",
       "reason": "Idea for a future trip -- pristine coral reefs, turquoise waters, and an independent indigenous culture we couldn't fit into this journey.",
       "summary": "Japan's subtropical southern islands welcome travelers with warm trade winds, crystal-clear 'Miyako Blue' shallows, sanshin banjo ballads echoing through coral villages, and distinct Ryukyu architecture guarded by winged shisa lion statues.",
@@ -787,7 +792,7 @@ export const pendingDays = {
     },
     {
       "id": "iriomote-stargazing",
-      "title": "Iriomote: Astrophotography & Jungle Expedition",
+      "title": "Day 10: Iriomote: Astrophotography & Jungle Expedition",
       "cities": "Iriomote Island (Yaeyama, Okinawa)",
       "reason": "Idea for a future trip, picked especially for you -- with a telescope, camera, and drone, this is one of the world's most breathtaking night-sky destinations.",
       "summary": "Japan's wildest island, 90% enveloped in untouched subtropical jungle and primary mangroves. Certified as an International Dark Sky Park by DarkSky International, its near-zero light pollution lets you capture the Milky Way with three-dimensional depth and photograph the Southern Cross over the open sea.",
@@ -823,12 +828,51 @@ export const pendingDays = {
         }
       ],
       "money": "High-speed ferry from Ishigaki (40-45min, ~¥2,500); island accommodation is limited, so early booking is essential."
+    },
+    {
+      "id": "hokkaido",
+      "title": "Day 11: Hokkaido: Wild Frontiers, Snow & Calderas",
+      "cities": "Sapporo, Furano, Shiretoko, Otaru, Noboribetsu",
+      "reason": "Idea for a future trip -- Japan's wild northern island offers an untamed landscape completely unlike the rest of the country.",
+      "summary": "Japan's northernmost wilderness enchants travelers with vast open horizons, steaming volcanic calderas, pristine national parks, and legendary seafood and dairy. A breathtaking escape in both summer (blooming flower fields) and winter (world-renowned dry powder snow and ice carving festivals).",
+      "history": "Hokkaido ('Circuit of the Northern Sea') was formally colonized and integrated during the Meiji Restoration in the late 19th century. Formerly known as Ezochi, it is the ancestral homeland of the indigenous Ainu people, whose animist spiritual beliefs, oral folklore, and distinct language are celebrated at cultural centers such as Upopoy in Shiraoi.",
+      "schedule": [
+        {
+          "time": "Sapporo: Odori Park, Clock Tower & Old Government Hall",
+          "text": "Hokkaido's capital is a spacious, grid-planned city with a crisp northern feel. Odori Park cuts through the center as a 1.5km green boulevard, hosting the legendary Sapporo Snow Festival (Yuki Matsuri) in February with life-sized snow and ice sculptures. The 1878 wooden Clock Tower and the red-brick Former Government Building reflect its Meiji pioneering roots."
+        },
+        {
+          "time": "Miso Ramen in Ramen Alley & Nijo Seafood Market",
+          "text": "Sapporo gave birth to rich miso ramen: wavy egg noodles in savory broth spiked with garlic, crunchy bean sprouts, sweet local corn, and a melting pat of Hokkaido butter. The Ganso Ramen Yokocho alley in Susukino gathers historic vendors. In the morning, Nijo Market serves breakfast kaisen-don bowls overflowing with glistening salmon roe (ikura), sweet sea urchin (uni), and snow crab."
+        },
+        {
+          "time": "Sapporo Beer Museum & Genghis Khan (Jingisukan) Feast",
+          "text": "Housed in an 1876 red-brick sugar factory, this is Japan's only beer museum. In the adjacent beer hall, feast on 'Jingisukan': thin strips of mutton barbecued over domed helmet-shaped iron griddles with onions, pumpkin, and bean sprouts, paired with fresh-poured Sapporo draft beer."
+        },
+        {
+          "time": "Furano & Biei: Rolling Rainbow Hills & Shirogane Blue Pond",
+          "text": "In mid-summer (July–August), Furano's rolling hills (Farm Tomita) blossom into ribbons of lavender, poppies, and sunflowers. Nearby in Biei lies the Shirogane Blue Pond, an otherworldly turquoise body of water created after volcanic works on the Bieigawa River, with submerged skeletal larch trunks creating a surreal fairy-tale aesthetic."
+        },
+        {
+          "time": "Shiretoko National Park: The Edge of the Earth (UNESCO)",
+          "text": "Located at the far northeastern tip of Hokkaido, Shiretoko means 'the end of the Earth' in the Ainu tongue. It is one of the Northern Hemisphere's most pristine wilderness reserves: sheer coastal cliffs inhabited by Japan's densest wild brown bear population, Steller's sea eagles, and Ezo red foxes, explored by boat from Utoro and on elevated boardwalks around the Shiretoko Five Lakes."
+        },
+        {
+          "time": "Otaru: Romantic Canal, Music Boxes & Blown Glass",
+          "text": "Just 40 minutes from Sapporo, Otaru is a nostalgic early-20th-century port town. Its central stone-lined canal is flanked by historic herring warehouses lit by gas lanterns at dusk, alongside artisan blown-glass workshops and the beloved Otaru Music Box Museum."
+        },
+        {
+          "time": "Hell Valley (Jigokudani) & Hot Springs in Noboribetsu",
+          "text": "Hokkaido's premier onsen resort. A dramatic, smoking volcanic crater boiling with sulfur vents, geysers, and steaming thermal rivers winding through lush forests, feeding mineral-rich natural open-air baths (rotenburo) across the valley."
+        }
+      ],
+      "money": "Domestic flight Tokyo-Sapporo (~1h 30min) or Hokkaido Shinkansen to Hakodate; rental car is strongly recommended for exploring national parks and scenic countryside."
     }
   ],
   "fr": [
     {
       "id": "tokyo-highlights",
-      "title": "Tokyo Incontournable : Sanctuaires, Icônes et Panoramas",
+      "title": "Jour 1 : Tokyo Incontournable : Sanctuaires, Icônes et Panoramas",
       "cities": "Tokyo (Asakusa, Shibuya, Shinjuku, Harajuku)",
       "reason": "Jour 1 à Tokyo pour découvrir les contrastes les plus saisissants de la plus grande métropole du monde.",
       "summary": "Parcours essentiel à travers les emblèmes de Tokyo : la ferveur séculaire du temple Senso-ji, la sérénité du sanctuaire Meiji Jingu, l'énergie folle du carrefour de Shibuya et les néons de Shinjuku.",
@@ -859,7 +903,7 @@ export const pendingDays = {
     },
     {
       "id": "nikko",
-      "title": "Excursion à Nikko",
+      "title": "Jour 2 : Excursion à Nikko",
       "cities": "Nikko (Tochigi)",
       "reason": "Non réalisée à cause du mauvais temps (prévue le dimanche 20 septembre 2026, déplacée du samedi faute de disponibilité des trains).",
       "summary": "Une journée complète d'excursion depuis Tokyo vers les montagnes sacrées de Tochigi. Nikko réunit certains des sanctuaires et temples les plus somptueux et richement décorés de tout le Japon (patrimoine mondial de l'UNESCO) au cœur d'un environnement grandiose de cascades alpines, de lacs volcaniques et de cèdres séculaires.",
@@ -902,7 +946,7 @@ export const pendingDays = {
     },
     {
       "id": "tokyo-kamakura",
-      "title": "Tokyo Insolite et Escapade Côtière à Kamakura",
+      "title": "Jour 3 : Tokyo Insolite et Escapade Côtière à Kamakura",
       "cities": "Kamakura & Tokyo (Yanaka, Akihabara)",
       "reason": "Jour 3 à Tokyo pour visiter l'ancienne capitale féodale des samouraïs en bord d'océan et les quartiers rétro de Tokyo.",
       "summary": "Matinée à Kamakura auprès du Grand Bouddha de bronze et des sanctuaires côtiers, suivie d'une après-midi dans les ruelles préservées de Yanaka Ginza ou parmi les néons d'Akihabara.",
@@ -932,70 +976,8 @@ export const pendingDays = {
       "money": "Env. 8€ train JR A/R + 2€ Kotoku-in + 3€ Hasedera + 25€ repas/spécialités."
     },
     {
-      "id": "osaka-classic",
-      "title": "Osaka Classique : Château Féodal, Shitenno-ji et Dotonbori",
-      "cities": "Osaka (Chuo, Tennoji, Namba)",
-      "reason": "Jour 1 à Osaka : Prendre le temps d'explorer l'âme chaleureuse, gourmande et commerçante du Kansai.",
-      "summary": "Parcours historique et gourmand : de la puissante forteresse du château d'Osaka au plus ancien temple bouddhiste officiel du Japon (Shitenno-ji), avant de plonger dans l'effervescence de Dotonbori.",
-      "history": "Ancienne Naniwa, Osaka fut la capitale impériale au VIIe siècle puis la 'cuisine de la nation' sous les shoguns Tokugawa. Toyotomi Hideyoshi y bâtit son colossal château en 1583 avec des blocs de granit de plus de 100 tonnes acheminés par voie maritime.",
-      "schedule": [
-        {
-          "time": "Château d'Osaka et douves colossales",
-          "text": "Donjon majestueux de huit étages couronné de dorures Shachihoko, entouré de douves monumentales aux murailles cyclopéennes."
-        },
-        {
-          "time": "Temple Shitenno-ji : Premier sanctuaire officiel du Japon",
-          "text": "Fondé en 593 par le Prince Shotoku. Son plan architectural rigoureux comprend une haute pagode à cinq étages et un bassin sacré aux nombreuses tortues."
-        },
-        {
-          "time": "Sanctuaire Sumiyoshi Taisha et pont voûté Taiko-bashi",
-          "text": "L'un des plus vénérables sanctuaires du Japon (fondé en 211), pur exemple d'architecture Sumiyoshi-zukuri pré-bouddhique avec son spectaculaire pont rouge cambré."
-        },
-        {
-          "time": "Quartier rétro de Shinsekai et Tour Tsutenkaku",
-          "text": "Ambiance vintage du début du XXe siècle, enseignes de poissons-globes géants et dégustation de brochettes croustillantes Kushikatsu."
-        },
-        {
-          "time": "Soirée magique à Dotonbori : Takoyaki et néons",
-          "text": "Balade au bord du canal sous le coureur Glico Man, bouchées de poulpe fondantes (takoyaki) et okonomiyaki crépitant sur plaque chauffante."
-        }
-      ],
-      "money": "Env. 4€ château d'Osaka + 2€ Shitenno-ji + 20€–30€ street food et dîner à Dotonbori."
-    },
-    {
-      "id": "osaka-temples",
-      "title": "Temples Secrets d'Osaka : Namba Yasaka, Isshin-ji et Hozenji",
-      "cities": "Osaka (Namba, Tennoji, Kita-Umeda)",
-      "reason": "Jour 2 à Osaka pour découvrir les sanctuaires mystiques et les venelles secrètes ignorés de la plupart des voyageurs.",
-      "summary": "Voyage au cœur des sanctuaires les plus surprenants d'Osaka : la gueule de lion géante de Namba Yasaka, les statues de Bouddha façonnées avec des cendres sacrées à Isshin-ji et la statue recouverte de mousse vivante d'Hozenji Yokocho.",
-      "history": "À la différence des palais de Kyoto, les temples d'Osaka sont ancrés dans le quotidien des commerçants et du peuple. Lieux de piété vivante au cœur des ruelles, ils témoignent de traditions populaires intactes.",
-      "schedule": [
-        {
-          "time": "Sanctuaire Namba Yasaka et la tête de lion géante",
-          "text": "Édifice surprenant en forme de tête de lion de 12 m de haut. Sa gueule ouverte avale la malchance et les mauvais esprits pour apporter réussite et prospérité."
-        },
-        {
-          "time": "Temple Isshin-ji et les 'Okotsu Butsu'",
-          "text": "Sanctuaire de l'école Jodo Shu où, tous les dix ans depuis 1887, les cendres de plus de 100 000 défunts sont moulées en statues sacrées de Bouddha."
-        },
-        {
-          "time": "Marché Kuromon Ichiba : Festin gourmet",
-          "text": "Le ventre gourmand d'Osaka : bœuf Wagyu grillé minute, saint-jacques dorées au beurre et sashimis ultra-frais de thon gras."
-        },
-        {
-          "time": "Temple Hozenji et l'allée pavée Hozenji Yokocho",
-          "text": "Ruelle pavée secrète abritant la statue de Mizukake Fudo, entièrement recouverte d'une épaisse mousse verte vivante car les fidèles y versent de l'eau en faisant un vœu."
-        },
-        {
-          "time": "Coucher de soleil à l'Umeda Sky Building",
-          "text": "Observatoire suspendu à 173 m au-dessus du vide reliant deux gratte-ciel pour contempler les lumières de la ville et de la baie d'Osaka."
-        }
-      ],
-      "money": "Entrées aux sanctuaires gratuites + 10€ Umeda Sky + 25€ déjeuner à Kuromon + pass métro (~4,50€)."
-    },
-    {
       "id": "fuji-hiking",
-      "title": "Randonnée et ascension du Mont Fuji",
+      "title": "Jour 4 : Randonnée et ascension du Mont Fuji",
       "cities": "Mont Fuji (Yamanashi / Shizuoka)",
       "reason": "Idée pour un prochain voyage -- lors de ce séjour nous avons admiré la silhouette du volcan depuis Kawaguchiko et Oshino Hakkai, mais grimper au sommet est une aventure tout autre.",
       "summary": "Atteindre le toit du Japon (3 776 m) constitue l'un des pèlerinages les plus mémorables du pays. L'ascension classique débute en fin d'après-midi depuis la 5e station via le sentier Yoshida, avec une courte nuit en refuge en altitude avant l'assaut nocturne pour contempler la mer de nuages embrasée par le lever du soleil.",
@@ -1037,8 +1019,70 @@ export const pendingDays = {
       "money": "Refuge avec dîner et petit-déjeuner (~10 000-14 000 ¥) + droits d'accès et conservation obligatoires (3 000 ¥) + bus depuis Tokyo/Kawaguchiko."
     },
     {
+      "id": "osaka-classic",
+      "title": "Jour 5 : Osaka Classique : Château Féodal, Shitenno-ji et Dotonbori",
+      "cities": "Osaka (Chuo, Tennoji, Namba)",
+      "reason": "Jour 1 à Osaka : Prendre le temps d'explorer l'âme chaleureuse, gourmande et commerçante du Kansai.",
+      "summary": "Parcours historique et gourmand : de la puissante forteresse du château d'Osaka au plus ancien temple bouddhiste officiel du Japon (Shitenno-ji), avant de plonger dans l'effervescence de Dotonbori.",
+      "history": "Ancienne Naniwa, Osaka fut la capitale impériale au VIIe siècle puis la 'cuisine de la nation' sous les shoguns Tokugawa. Toyotomi Hideyoshi y bâtit son colossal château en 1583 avec des blocs de granit de plus de 100 tonnes acheminés par voie maritime.",
+      "schedule": [
+        {
+          "time": "Château d'Osaka et douves colossales",
+          "text": "Donjon majestueux de huit étages couronné de dorures Shachihoko, entouré de douves monumentales aux murailles cyclopéennes."
+        },
+        {
+          "time": "Temple Shitenno-ji : Premier sanctuaire officiel du Japon",
+          "text": "Fondé en 593 par le Prince Shotoku. Son plan architectural rigoureux comprend une haute pagode à cinq étages et un bassin sacré aux nombreuses tortues."
+        },
+        {
+          "time": "Sanctuaire Sumiyoshi Taisha et pont voûté Taiko-bashi",
+          "text": "L'un des plus vénérables sanctuaires du Japon (fondé en 211), pur exemple d'architecture Sumiyoshi-zukuri pré-bouddhique avec son spectaculaire pont rouge cambré."
+        },
+        {
+          "time": "Quartier rétro de Shinsekai et Tour Tsutenkaku",
+          "text": "Ambiance vintage du début du XXe siècle, enseignes de poissons-globes géants et dégustation de brochettes croustillantes Kushikatsu."
+        },
+        {
+          "time": "Soirée magique à Dotonbori : Takoyaki et néons",
+          "text": "Balade au bord du canal sous le coureur Glico Man, bouchées de poulpe fondantes (takoyaki) et okonomiyaki crépitant sur plaque chauffante."
+        }
+      ],
+      "money": "Env. 4€ château d'Osaka + 2€ Shitenno-ji + 20€–30€ street food et dîner à Dotonbori."
+    },
+    {
+      "id": "osaka-temples",
+      "title": "Jour 6 : Temples Secrets d'Osaka : Namba Yasaka, Isshin-ji et Hozenji",
+      "cities": "Osaka (Namba, Tennoji, Kita-Umeda)",
+      "reason": "Jour 2 à Osaka pour découvrir les sanctuaires mystiques et les venelles secrètes ignorés de la plupart des voyageurs.",
+      "summary": "Voyage au cœur des sanctuaires les plus surprenants d'Osaka : la gueule de lion géante de Namba Yasaka, les statues de Bouddha façonnées avec des cendres sacrées à Isshin-ji et la statue recouverte de mousse vivante d'Hozenji Yokocho.",
+      "history": "À la différence des palais de Kyoto, les temples d'Osaka sont ancrés dans le quotidien des commerçants et du peuple. Lieux de piété vivante au cœur des ruelles, ils témoignent de traditions populaires intactes.",
+      "schedule": [
+        {
+          "time": "Sanctuaire Namba Yasaka et la tête de lion géante",
+          "text": "Édifice surprenant en forme de tête de lion de 12 m de haut. Sa gueule ouverte avale la malchance et les mauvais esprits pour apporter réussite et prospérité."
+        },
+        {
+          "time": "Temple Isshin-ji et les 'Okotsu Butsu'",
+          "text": "Sanctuaire de l'école Jodo Shu où, tous les dix ans depuis 1887, les cendres de plus de 100 000 défunts sont moulées en statues sacrées de Bouddha."
+        },
+        {
+          "time": "Marché Kuromon Ichiba : Festin gourmet",
+          "text": "Le ventre gourmand d'Osaka : bœuf Wagyu grillé minute, saint-jacques dorées au beurre et sashimis ultra-frais de thon gras."
+        },
+        {
+          "time": "Temple Hozenji et l'allée pavée Hozenji Yokocho",
+          "text": "Ruelle pavée secrète abritant la statue de Mizukake Fudo, entièrement recouverte d'une épaisse mousse verte vivante car les fidèles y versent de l'eau en faisant un vœu."
+        },
+        {
+          "time": "Coucher de soleil à l'Umeda Sky Building",
+          "text": "Observatoire suspendu à 173 m au-dessus du vide reliant deux gratte-ciel pour contempler les lumières de la ville et de la baie d'Osaka."
+        }
+      ],
+      "money": "Entrées aux sanctuaires gratuites + 10€ Umeda Sky + 25€ déjeuner à Kuromon + pass métro (~4,50€)."
+    },
+    {
       "id": "hiroshima-nagasaki",
-      "title": "Hiroshima et Nagasaki : Mémoire, Paix et Histoire",
+      "title": "Jour 7 : Hiroshima et Nagasaki : Mémoire, Paix et Histoire",
       "cities": "Hiroshima, Nagasaki",
       "reason": "Idée pour un futur voyage -- deux cités bouleversantes et lumineuses qui n'étaient pas au programme de ce voyage.",
       "summary": "Les deux seules villes au monde meurtries par l'arme atomique en 1945, aujourd'hui devenues des capitales mondiales de la paix et de la mémoire. Au-delà de leurs mémoriaux émouvants, elles révèlent une incroyable richesse culturelle : la gastronomie conviviale d'Hiroshima et l'héritage cosmopolite unique de Nagasaki, porte d'entrée de l'Occident au Japon pendant deux siècles.",
@@ -1081,7 +1125,7 @@ export const pendingDays = {
     },
     {
       "id": "miyajima",
-      "title": "Île de Miyajima (Itsukushima)",
+      "title": "Jour 8 : Île de Miyajima (Itsukushima)",
       "cities": "Miyajima, Baie d'Hiroshima",
       "reason": "Idée pour un futur voyage -- l'île sacrée où se côtoient le grand sanctuaire sur pilotis, les monts boisés et les daims sika en liberté.",
       "summary": "Classée parmi les Trois Plus Beaux Paysages du Japon (Nihon Sankei), Miyajima est un joyau spirituel lové dans la mer intérieure de Seto. Rendu célèbre par son monumental torii vermillon semblant flotter sur les flots à marée haute, ce sanctuaire naturel abrite des temples bouddhiques secrets, des sentiers panoramiques vers le mont Misen et des délices iodés inégalés.",
@@ -1123,47 +1167,8 @@ export const pendingDays = {
       "money": "Train JR Hiroshima-Miyajimaguchi (~420 ¥) + ferry (~200 ¥ + 100 ¥ taxe) ; téléphérique aller-retour vers le mont Misen (~2 000 ¥)."
     },
     {
-      "id": "hokkaido",
-      "title": "Hokkaido : Terres sauvages, neige et caldeiras",
-      "cities": "Sapporo, Furano, Shiretoko, Otaru, Noboribetsu",
-      "reason": "Idée pour un futur voyage -- l'île septentrionale dévoile un Japon insolite aux grands espaces et à la nature boréale préservée.",
-      "summary": "La dernière frontière du Japon subjugue par ses horizons infinis, ses volcans actifs fumants, ses réserves naturelles intactes et sa réputation gastronomique axée sur les fruits de mer d'eaux froides et les produits laitiers renommés. Éblouissant en été (champs fleuris à perte de vue) comme en hiver (poudreuse de classe mondiale et sculptures sur glace).",
-      "history": "Hokkaido ('le chemin de la mer du Nord') fut colonisée et pleinement rattachée au Japon à l'ère Meiji à la fin du XIXe siècle. Auparavant appelée Ezochi, c'est la terre des Aïnous, peuple indigène aux croyances animistes, aux traditions orales et à la langue uniques, aujourd'hui mis à l'honneur dans des musées spécialisés comme le centre Upopoy à Shiraoi.",
-      "schedule": [
-        {
-          "time": "Sapporo : Parc Odori, Tour de l'Horloge et ancien siège gouvernemental",
-          "text": "La métropole d'Hokkaido surprend par son plan en damier aéré. Le parc Odori traverse le centre sur 1,5 km et accueille en février le gigantesque Festival de la Neige (Yuki Matsuri) et ses sculptures de glace grandeur nature. La Tour de l'Horloge en bois (1878) et l'ancien siège du gouvernement en briques rouges rappellent les débuts de la colonisation pionnière."
-        },
-        {
-          "time": "Miso Ramen à Ramen Yokocho et Marché aux poissons de Nijo",
-          "text": "Sapporo est la patrie du ramen au miso : nouilles ondulées servies dans un bouillon savoureux aillé, pousses de soja croquantes, maïs doux local et une généreuse noisette de beurre d'Hokkaido. La ruelle Ganso Ramen Yokocho à Susukino concentre les échoppes historiques. Au petit matin, le marché Nijo régale de kaisen-don débordant d'œufs de saumon scintillants (ikura), d'oursin crémeux (uni) et de crabe des neiges."
-        },
-        {
-          "time": "Musée de la Bière Sapporo et festin Genghis Khan (Jingisukan)",
-          "text": "Installé dans une ancienne usine en briques rouges de 1876, c'est l'unique musée brassicole du pays. Dans la brasserie attenante, goûtez au 'Jingisukan' : fines tranches de mouton grillées sur des dômes en fonte en forme de casque mongol avec oignons et potiron, accompagnées d'une bière pression fraîchement tirée."
-        },
-        {
-          "time": "Furano et Biei : Collines arc-en-ciel et Étang Bleu de Shirogane",
-          "text": "En plein été (juillet-août), les collines vallonnées de Furano (Ferme Tomita) se couvrent de tapis chatoyants de lavande, de tournesols et de coquelicots. À proximité, à Biei, se trouve le Blue Pond de Shirogane, une retenue d'eau bleu turquoise laiteuse aux troncs de mélèzes immergés créant un décor féerique."
-        },
-        {
-          "time": "Parc National de Shiretoko : Le bout du monde (UNESCO)",
-          "text": "À la pointe nord-est de l'île, Shiretoko signifie 'le bout de la Terre' en langue aïnoue. C'est l'un des sanctuaires naturels les plus sauvages de l'hémisphère nord : falaises abruptes abritant la plus forte concentration d'ours bruns sauvages du Japon, aigles de mer de Steller et renards roux d'Ezo, observables en croisière côtière depuis Utoro et sur les pontons en bois des Cinq Lacs."
-        },
-        {
-          "time": "Otaru : Canal romantique, boîtes à musique et verre soufflé",
-          "text": "À 40 minutes de Sapporo, Otaru est un port marchand au charme désuet du début du XXe siècle. Son canal de pierre bordé d'anciens entrepôts de harengs illuminés par des réverbères à gaz au crépuscule est incontournable, tout comme ses ateliers artisanaux de cristal soufflé et son musée de boîtes à musique."
-        },
-        {
-          "time": "Vallée de l'Enfer (Jigokudani) et Onsen à Noboribetsu",
-          "text": "La station thermale reine d'Hokkaido. Un spectaculaire cratère volcanique actif aux fumerolles de soufre, geysers bouillonnants et rivières d'eau chaude serpentant dans les forêts, alimentant de merveilleux bains extérieurs en bois (rotenburo) réputés pour leurs bienfaits thérapeutiques."
-        }
-      ],
-      "money": "Vol intérieur Tokyo-Sapporo (~1h30) ou Shinkansen jusqu'à Hakodate ; location de voiture vivement conseillée pour explorer la nature et les parcs."
-    },
-    {
       "id": "okinawa",
-      "title": "Okinawa et l'Archipel des Ryukyu",
+      "title": "Jour 9 : Okinawa et l'Archipel des Ryukyu",
       "cities": "Naha, Ishigaki, Miyakojima, Taketomi",
       "reason": "Idée pour un futur voyage -- des lagons turquoise, des récifs coralliens et une culture indigène chaleureuse non explorés cette fois-ci.",
       "summary": "L'archipel subtropical d'Okinawa séduit par ses airs insulaires décontractés, ses fonds marins étincelants 'Miyako Blue', ses airs de sanshin s'élevant dans les ruelles de corail et son architecture ryukyu coiffée de statues de lions protecteurs (shisa).",
@@ -1198,7 +1203,7 @@ export const pendingDays = {
     },
     {
       "id": "iriomote-stargazing",
-      "title": "Iriomote : Astrophotographie et exploration sauvage",
+      "title": "Jour 10 : Iriomote : Astrophotographie et exploration sauvage",
       "cities": "Île d'Iriomote (Archipel Yaeyama, Okinawa)",
       "reason": "Idée pour un futur voyage, pensée spécialement pour toi -- avec télescope, appareil photo et drone, c'est l'un des spots d'observation nocturne les plus fabuleux au monde.",
       "summary": "L'île la plus sauvage du Japon, recouverte à 90 % d'une jungle subtropicale primaire et de mangroves vierges. Reconnue 'Dark Sky Park' international par DarkSky International pour son absence totale de pollution lumineuse, elle permet de photographier la Voie lactée avec une netteté saisissante et d'apercevoir la Croix du Sud au ras des flots.",
@@ -1234,12 +1239,51 @@ export const pendingDays = {
         }
       ],
       "money": "Ferry rapide depuis Ishigaki (40-45 min, ~2 500 ¥) ; capacité d'hébergement très restreinte sur l'île, réservation indispensable plusieurs mois à l'avance."
+    },
+    {
+      "id": "hokkaido",
+      "title": "Jour 11 : Hokkaido : Terres sauvages, neige et caldeiras",
+      "cities": "Sapporo, Furano, Shiretoko, Otaru, Noboribetsu",
+      "reason": "Idée pour un futur voyage -- l'île septentrionale dévoile un Japon insolite aux grands espaces et à la nature boréale préservée.",
+      "summary": "La dernière frontière du Japon subjugue par ses horizons infinis, ses volcans actifs fumants, ses réserves naturelles intactes et sa réputation gastronomique axée sur les fruits de mer d'eaux froides et les produits laitiers renommés. Éblouissant en été (champs fleuris à perte de vue) comme en hiver (poudreuse de classe mondiale et sculptures sur glace).",
+      "history": "Hokkaido ('le chemin de la mer du Nord') fut colonisée et pleinement rattachée au Japon à l'ère Meiji à la fin du XIXe siècle. Auparavant appelée Ezochi, c'est la terre des Aïnous, peuple indigène aux croyances animistes, aux traditions orales et à la langue uniques, aujourd'hui mis à l'honneur dans des musées spécialisés comme le centre Upopoy à Shiraoi.",
+      "schedule": [
+        {
+          "time": "Sapporo : Parc Odori, Tour de l'Horloge et ancien siège gouvernemental",
+          "text": "La métropole d'Hokkaido surprend par son plan en damier aéré. Le parc Odori traverse le centre sur 1,5 km et accueille en février le gigantesque Festival de la Neige (Yuki Matsuri) et ses sculptures de glace grandeur nature. La Tour de l'Horloge en bois (1878) et l'ancien siège du gouvernement en briques rouges rappellent les débuts de la colonisation pionnière."
+        },
+        {
+          "time": "Miso Ramen à Ramen Yokocho et Marché aux poissons de Nijo",
+          "text": "Sapporo est la patrie du ramen au miso : nouilles ondulées servies dans un bouillon savoureux aillé, pousses de soja croquantes, maïs doux local et une généreuse noisette de beurre d'Hokkaido. La ruelle Ganso Ramen Yokocho à Susukino concentre les échoppes historiques. Au petit matin, le marché Nijo régale de kaisen-don débordant d'œufs de saumon scintillants (ikura), d'oursin crémeux (uni) et de crabe des neiges."
+        },
+        {
+          "time": "Musée de la Bière Sapporo et festin Genghis Khan (Jingisukan)",
+          "text": "Installé dans une ancienne usine en briques rouges de 1876, c'est l'unique musée brassicole du pays. Dans la brasserie attenante, goûtez au 'Jingisukan' : fines tranches de mouton grillées sur des dômes en fonte en forme de casque mongol avec oignons et potiron, accompagnées d'une bière pression fraîchement tirée."
+        },
+        {
+          "time": "Furano et Biei : Collines arc-en-ciel et Étang Bleu de Shirogane",
+          "text": "En plein été (juillet-août), les collines vallonnées de Furano (Ferme Tomita) se couvrent de tapis chatoyants de lavande, de tournesols et de coquelicots. À proximité, à Biei, se trouve le Blue Pond de Shirogane, une retenue d'eau bleu turquoise laiteuse aux troncs de mélèzes immergés créant un décor féerique."
+        },
+        {
+          "time": "Parc National de Shiretoko : Le bout du monde (UNESCO)",
+          "text": "À la pointe nord-est de l'île, Shiretoko signifie 'le bout de la Terre' en langue aïnoue. C'est l'un des sanctuaires naturels les plus sauvages de l'hémisphère nord : falaises abruptes abritant la plus forte concentration d'ours bruns sauvages du Japon, aigles de mer de Steller et renards roux d'Ezo, observables en croisière côtière depuis Utoro et sur les pontons en bois des Cinq Lacs."
+        },
+        {
+          "time": "Otaru : Canal romantique, boîtes à musique et verre soufflé",
+          "text": "À 40 minutes de Sapporo, Otaru est un port marchand au charme désuet du début du XXe siècle. Son canal de pierre bordé d'anciens entrepôts de harengs illuminés par des réverbères à gaz au crépuscule est incontournable, tout comme ses ateliers artisanaux de cristal soufflé et son musée de boîtes à musique."
+        },
+        {
+          "time": "Vallée de l'Enfer (Jigokudani) et Onsen à Noboribetsu",
+          "text": "La station thermale reine d'Hokkaido. Un spectaculaire cratère volcanique actif aux fumerolles de soufre, geysers bouillonnants et rivières d'eau chaude serpentant dans les forêts, alimentant de merveilleux bains extérieurs en bois (rotenburo) réputés pour leurs bienfaits thérapeutiques."
+        }
+      ],
+      "money": "Vol intérieur Tokyo-Sapporo (~1h30) ou Shinkansen jusqu'à Hakodate ; location de voiture vivement conseillée pour explorer la nature et les parcs."
     }
   ],
   "tl": [
     {
       "id": "tokyo-highlights",
-      "title": "Pangunahing Tokyo: Templo, Tanawin at mga Kalsada",
+      "title": "Araw 1: Pangunahing Tokyo: Templo, Tanawin at mga Kalsada",
       "cities": "Tokyo (Asakusa, Shibuya, Shinjuku, Harajuku)",
       "reason": "Araw 1 sa Tokyo para maranasan ang mga pinakasikat na lugar sa kabisera sa loob ng isang araw.",
       "summary": "Mahalagang ruta sa mga landmark ng Tokyo: mula sa tradisyonal na Senso-ji at tahimik na Meiji Jingu, hanggang sa masiglang Shibuya Crossing at matatayog na gusali sa Shinjuku.",
@@ -1270,7 +1314,7 @@ export const pendingDays = {
     },
     {
       "id": "nikko",
-      "title": "Nikko Day Trip",
+      "title": "Araw 2: Nikko Day Trip",
       "cities": "Nikko (Tochigi)",
       "reason": "Hindi natuloy dahil sa masamang panahon (nakatakda sana noong Linggo, Setyembre 20, 2026, inilipat mula Sabado dahil sa kakulangan ng available na tren).",
       "summary": "Buong araw na excursion mula Tokyo patungo sa sagradong kabundukan ng Tochigi. Pinagsasama ng Nikko ang ilan sa pinakamayaman at pinakamaringal na pinalamutiang dambana at templo sa buong Japan (UNESCO World Heritage) kasama ang kahanga-hangang kalikasan ng talon, lawang bulkan, at mga dantaong cedar tree.",
@@ -1313,7 +1357,7 @@ export const pendingDays = {
     },
     {
       "id": "tokyo-kamakura",
-      "title": "Alternatibong Tokyo at Day Trip sa Kamakura",
+      "title": "Araw 3: Alternatibong Tokyo at Day Trip sa Kamakura",
       "cities": "Kamakura & Tokyo (Yanaka, Akihabara)",
       "reason": "Araw 3 sa Tokyo para galugarin ang dating kabisera ng mga samurai sa baybayin at tradisyonal na mga kanto ng Tokyo.",
       "summary": "Umaga sa Kamakura kasama ang dambuhalang Bronze Buddha at mga templo sa tabi ng dagat, at hapon sa lumang kalsada ng Yanaka Ginza o makabagong Akihabara.",
@@ -1343,70 +1387,8 @@ export const pendingDays = {
       "money": "Tinatayang ¥1,200 tren papuntang Kamakura + ¥300 Kotoku-in + ¥400 Hasedera + pagkain (~¥3,500)."
     },
     {
-      "id": "osaka-classic",
-      "title": "Klasikong Osaka: Kastilyo, Templo ng Shitenno-ji at Dotonbori",
-      "cities": "Osaka (Chuo, Tennoji, Namba)",
-      "reason": "Araw 1 sa Osaka: Mas makabuluhang pagbisita sa kabisera ng masasarap na pagkain sa Kansai.",
-      "summary": "Pangunahing paglalakbay sa makasaysayang kastilyo ng Osaka, pinakamatandang opisyal na templong Budista (Shitenno-ji), at makulay na gabi sa Dotonbori.",
-      "history": "Kilala noong una bilang Naniwa, naging sentro ng kalakalan ang Osaka at tinawag na 'kusina ng bansa'. Ipinatayo ni Toyotomi Hideyoshi ang Kastilyo ng Osaka noong 1583 gamit ang dambuhalang mga tipak ng bato.",
-      "schedule": [
-        {
-          "time": "Kastilyo ng Osaka at Matatayog na Pader",
-          "text": "Magarbong puti at gintong kastilyo na pinaliligiran ng malalawak na hardin at matitibay na pader ng bato."
-        },
-        {
-          "time": "Templo Shitenno-ji: Unang Opisyal na Templo sa Japan",
-          "text": "Itinatag noong 593 AD ni Prinsipe Shotoku, may limang-palapag na pagoda at sagradong lawa na may mga pagong."
-        },
-        {
-          "time": "Sumiyoshi Taisha at Tulay na Taiko-bashi",
-          "text": "Isa sa pinakamatatandang dambana sa Japan (itinatag noong 211 AD) na may matarik na pulang arko na tulay."
-        },
-        {
-          "time": "Lumang Shinsekai at Tsutenkaku Tower",
-          "text": "Makulay at tradisyonal na kalsada na sikat sa masasarap na pritong kushikatsu at rebulto ni Billiken."
-        },
-        {
-          "time": "Gabi sa Dotonbori: Takoyaki at mga Ilaw",
-          "text": "Pagkuha ng litrato sa tanyag na Glico Man sign, pagtikim ng mainit na takoyaki at masarap na Osaka-style okonomiyaki."
-        }
-      ],
-      "money": "Tinatayang ¥600 Osaka Castle + ¥300 Shitenno-ji + pagkain sa Dotonbori (~¥3,000–¥4,500)."
-    },
-    {
-      "id": "osaka-temples",
-      "title": "Mga Lihim na Templo ng Osaka: Namba Yasaka at Hozenji",
-      "cities": "Osaka (Namba, Tennoji, Kita-Umeda)",
-      "reason": "Araw 2 sa Osaka para tuklasin ang kakaiba at espiritwal na mga dambana na bihirang puntahan ng turista.",
-      "summary": "Kakaibang lakbay sa pinakahiwagang mga templo ng Osaka: ang dambuhalang bunganga ng leon sa Namba Yasaka, sagradong rebulto sa Isshin-ji, at lumot na rebulto sa Hozenji Yokocho.",
-      "history": "Hindi tulad ng Kyoto, ang mga templo sa Osaka ay bahagi ng pang-araw-araw na buhay ng mga karaniwang mangangalakal at mamamayan, na nagpapakita ng buhay na pananampalataya.",
-      "schedule": [
-        {
-          "time": "Namba Yasaka Shrine: Ang Higanteng Leon",
-          "text": "May 12-metrong taas na entablado na hugis ulo ng leon. Ayon sa paniniwala, nilalamon ng bunganga nito ang kamalasan at nagdadala ng tagumpay."
-        },
-        {
-          "time": "Templo Isshin-ji at mga Sagradong Rebulto",
-          "text": "Templo kung saan bawat sampung taon mula 1887, ang abo ng mga pumanaw ay hinahalo upang lumikha ng mga banal na imahen ng Buddha."
-        },
-        {
-          "time": "Pamilihan ng Kuromon Ichiba: Tanghalian",
-          "text": "Tanyag na pamilihan kung saan matitikman ang inihaw na Wagyu beef, sariwang scallops, at sashimi."
-        },
-        {
-          "time": "Templo Hozenji sa Makipot na Hozenji Yokocho",
-          "text": "Makasaysayang kalsada kung saan binubuhusan ng tubig ang rebulto ng Fudo Myo-o na nababalutan na ng buhay na berdeng lumot."
-        },
-        {
-          "time": "Pagsapit ng Dilim sa Umeda Sky Building",
-          "text": "Kamangha-manghang lumulutang na tulay at escalators sa taas na 173 metro na may malawak na tanawin ng Osaka Bay."
-        }
-      ],
-      "money": "Libreng dambana + ¥1,500 Umeda Sky + tanghalian sa Kuromon (~¥3,500) + metro pass (~¥700)."
-    },
-    {
       "id": "fuji-hiking",
-      "title": "Pag-akyat sa Tuktok ng Mount Fuji",
+      "title": "Araw 4: Pag-akyat sa Tuktok ng Mount Fuji",
       "cities": "Mount Fuji (Yamanashi / Shizuoka)",
       "reason": "Ideya para sa susunod na biyahe -- sa biyaheng ito tiningnan lamang ang bulkan mula Lake Kawaguchiko at Oshino Hakkai, ngunit ang pag-akyat sa tuktok ay ganap na kakaibang karanasan.",
       "summary": "Ang pagtuntong sa pinakamataas na punto ng Japan (3,776m) ay isa sa pinakatanyag na pilgrimage sa bansa. Karaniwang sinisimulan ang pag-akyat sa hapon mula sa 5th station sa Yoshida Trail, nagpapahinga nang ilang oras sa mountain hut sa itaas bago ang hatinggabi upang masaksihan ang dagat ng ulap na sinisinagan ng sumisikat na araw.",
@@ -1448,8 +1430,70 @@ export const pendingDays = {
       "money": "Mountain hut stay na may hapunan at almusal (~¥10,000-14,000) + opisyal na bayarin (¥3,000) + bus fare mula Tokyo o Kawaguchiko."
     },
     {
+      "id": "osaka-classic",
+      "title": "Araw 5: Klasikong Osaka: Kastilyo, Templo ng Shitenno-ji at Dotonbori",
+      "cities": "Osaka (Chuo, Tennoji, Namba)",
+      "reason": "Araw 1 sa Osaka: Mas makabuluhang pagbisita sa kabisera ng masasarap na pagkain sa Kansai.",
+      "summary": "Pangunahing paglalakbay sa makasaysayang kastilyo ng Osaka, pinakamatandang opisyal na templong Budista (Shitenno-ji), at makulay na gabi sa Dotonbori.",
+      "history": "Kilala noong una bilang Naniwa, naging sentro ng kalakalan ang Osaka at tinawag na 'kusina ng bansa'. Ipinatayo ni Toyotomi Hideyoshi ang Kastilyo ng Osaka noong 1583 gamit ang dambuhalang mga tipak ng bato.",
+      "schedule": [
+        {
+          "time": "Kastilyo ng Osaka at Matatayog na Pader",
+          "text": "Magarbong puti at gintong kastilyo na pinaliligiran ng malalawak na hardin at matitibay na pader ng bato."
+        },
+        {
+          "time": "Templo Shitenno-ji: Unang Opisyal na Templo sa Japan",
+          "text": "Itinatag noong 593 AD ni Prinsipe Shotoku, may limang-palapag na pagoda at sagradong lawa na may mga pagong."
+        },
+        {
+          "time": "Sumiyoshi Taisha at Tulay na Taiko-bashi",
+          "text": "Isa sa pinakamatatandang dambana sa Japan (itinatag noong 211 AD) na may matarik na pulang arko na tulay."
+        },
+        {
+          "time": "Lumang Shinsekai at Tsutenkaku Tower",
+          "text": "Makulay at tradisyonal na kalsada na sikat sa masasarap na pritong kushikatsu at rebulto ni Billiken."
+        },
+        {
+          "time": "Gabi sa Dotonbori: Takoyaki at mga Ilaw",
+          "text": "Pagkuha ng litrato sa tanyag na Glico Man sign, pagtikim ng mainit na takoyaki at masarap na Osaka-style okonomiyaki."
+        }
+      ],
+      "money": "Tinatayang ¥600 Osaka Castle + ¥300 Shitenno-ji + pagkain sa Dotonbori (~¥3,000–¥4,500)."
+    },
+    {
+      "id": "osaka-temples",
+      "title": "Araw 6: Mga Lihim na Templo ng Osaka: Namba Yasaka at Hozenji",
+      "cities": "Osaka (Namba, Tennoji, Kita-Umeda)",
+      "reason": "Araw 2 sa Osaka para tuklasin ang kakaiba at espiritwal na mga dambana na bihirang puntahan ng turista.",
+      "summary": "Kakaibang lakbay sa pinakahiwagang mga templo ng Osaka: ang dambuhalang bunganga ng leon sa Namba Yasaka, sagradong rebulto sa Isshin-ji, at lumot na rebulto sa Hozenji Yokocho.",
+      "history": "Hindi tulad ng Kyoto, ang mga templo sa Osaka ay bahagi ng pang-araw-araw na buhay ng mga karaniwang mangangalakal at mamamayan, na nagpapakita ng buhay na pananampalataya.",
+      "schedule": [
+        {
+          "time": "Namba Yasaka Shrine: Ang Higanteng Leon",
+          "text": "May 12-metrong taas na entablado na hugis ulo ng leon. Ayon sa paniniwala, nilalamon ng bunganga nito ang kamalasan at nagdadala ng tagumpay."
+        },
+        {
+          "time": "Templo Isshin-ji at mga Sagradong Rebulto",
+          "text": "Templo kung saan bawat sampung taon mula 1887, ang abo ng mga pumanaw ay hinahalo upang lumikha ng mga banal na imahen ng Buddha."
+        },
+        {
+          "time": "Pamilihan ng Kuromon Ichiba: Tanghalian",
+          "text": "Tanyag na pamilihan kung saan matitikman ang inihaw na Wagyu beef, sariwang scallops, at sashimi."
+        },
+        {
+          "time": "Templo Hozenji sa Makipot na Hozenji Yokocho",
+          "text": "Makasaysayang kalsada kung saan binubuhusan ng tubig ang rebulto ng Fudo Myo-o na nababalutan na ng buhay na berdeng lumot."
+        },
+        {
+          "time": "Pagsapit ng Dilim sa Umeda Sky Building",
+          "text": "Kamangha-manghang lumulutang na tulay at escalators sa taas na 173 metro na may malawak na tanawin ng Osaka Bay."
+        }
+      ],
+      "money": "Libreng dambana + ¥1,500 Umeda Sky + tanghalian sa Kuromon (~¥3,500) + metro pass (~¥700)."
+    },
+    {
       "id": "hiroshima-nagasaki",
-      "title": "Hiroshima at Nagasaki: Alaala, Kapayapaan at Kasaysayan",
+      "title": "Araw 7: Hiroshima at Nagasaki: Alaala, Kapayapaan at Kasaysayan",
       "cities": "Hiroshima, Nagasaki",
       "reason": "Ideya para sa susunod na biyahe -- dalawang makabuluhan at makasaysayang lungsod na hindi napuntahan sa biyaheng ito.",
       "summary": "Ang dalawang natatanging lungsod sa daigdig na dumanas ng pagsabog ng atomic bomb noong 1945, ngayon ay naging tanglaw ng kapayapaan at pag-asa. Bukod sa kanilang mga museo, mayroon silang kahanga-hangang kultura: ang layered okonomiyaki ng Hiroshima at ang natatanging kasaysayan ng Nagasaki bilang nag-iisang daungan na bukas sa Europa sa loob ng 200 taon.",
@@ -1492,7 +1536,7 @@ export const pendingDays = {
     },
     {
       "id": "miyajima",
-      "title": "Isla ng Miyajima (Itsukushima)",
+      "title": "Araw 8: Isla ng Miyajima (Itsukushima)",
       "cities": "Miyajima, Hiroshima Bay",
       "reason": "Ideya para sa susunod na biyahe -- ang sagradong isla kung saan nagtatagpo ang lumulutang na dambana, matatayog na bundok, at malalayang sika deer.",
       "summary": "Itinuturing na isa sa Tatlong Magagandang Tanawin ng Japan (Nihon Sankei), ang Miyajima ay sagradong isla sa Seto Inland Sea. Tanyag sa napakalaking pulang torii gate na parang lumulutang sa dagat kapag high tide, mayroon din itong mga lumang templo, hiking trails sa Mount Misen, at masasarap na inihaw na talaba.",
@@ -1534,47 +1578,8 @@ export const pendingDays = {
       "money": "JR train mula Hiroshima papuntang Miyajimaguchi (~¥420) + ferry (~¥200 + ¥100 tax); ropeway sa Mount Misen (~¥2,000 round trip)."
     },
     {
-      "id": "hokkaido",
-      "title": "Hokkaido: Ligaw na Kalikasan, Niyebe at Bulkan",
-      "cities": "Sapporo, Furano, Shiretoko, Otaru, Noboribetsu",
-      "reason": "Ideya para sa susunod na biyahe -- ang hilagang isla ay nag-aalok ng ibang-ibang mukha ng Japan na may malalawak na tanawin at likas na kagandahan.",
-      "summary": "Ang pinaka-hilagang isla ng Japan ay nakabibighani dahil sa malalawak nitong lupain, umuusok na bulkan, protektadong national parks, at tanyag na sariwang pagkaing-dagat at dairy products. Maganda itong puntahan sa tag-araw (mga bukid ng bulaklak) at sa taglamig (world-class powder snow at mga ice festival).",
-      "history": "Ang Hokkaido ('daan ng hilagang dagat') ay pormal na naging bahagi ng Japan noong panahon ng Meiji noong huling bahagi ng ika-19 siglo. Dati itong kilala bilang Ezochi, ang ninunong lupain ng mga Ainu, isang katutubong lahi na may sariling wika, paniniwala, at kultura na ipinagdiriwang ngayon sa mga sentro tulad ng Upopoy sa Shiraoi.",
-      "schedule": [
-        {
-          "time": "Sapporo: Odori Park, Clock Tower at Lumang Gusali ng Pamahalaan",
-          "text": "Ang kabisera ng Hokkaido ay may maluwang na disenyo ng mga kalsada. Ang Odori Park ay 1.5 km na berdeng liwasan sa gitna ng lungsod kung saan idinaraos tuwing Pebrero ang sikat na Sapporo Snow Festival (Yuki Matsuri) na may higanteng mga lilok ng niyebe at yelo. Ang kahoy na Clock Tower (1878) at ang red-brick government building ay nagpapakita ng kasaysayan ng lungsod."
-        },
-        {
-          "time": "Miso Ramen sa Ramen Alley at Nijo Fish Market",
-          "text": "Dito sa Sapporo ipinanganak ang miso ramen: kulot na noodles sa malapot na sabaw na may bawang, toge, matamis na mais ng Hokkaido, at butter. Ang eskinita ng Ganso Ramen Yokocho sa Susukino ang pugad ng mga lumang kainan. Sa umaga, nag-aalok ang Nijo Market ng kaisen-don na punong-puno ng salmon roe (ikura), sea urchin (uni), at snow crab."
-        },
-        {
-          "time": "Sapporo Beer Museum at Pagkaing Genghis Khan (Jingisukan)",
-          "text": "Nasa loob ng lumang 1876 red-brick building, ito ang nag-iisang beer museum sa Japan. Sa katabing beer hall, tikman ang 'Jingisukan': maninipis na hiwa ng karne ng tupa na inihaw sa hugis-helmet na bakal kasama ang sibuyas, kalabasa, at toge, sabayan ng sariwang Sapporo draft beer."
-        },
-        {
-          "time": "Furano at Biei: Mga Bukid ng Lavender at Shirogane Blue Pond",
-          "text": "Sa kalagitnaan ng tag-araw (Hulyo-Agosto), ang mga burol ng Furano (Farm Tomita) ay napupuno ng makukulay na lavender, poppies, at sunflowers. Sa kalapit na Biei, matatagpuan ang Shirogane Blue Pond, isang lawa na may kulay asul-turkesa kung saan nakatayo ang mga tuyong puno ng larch sa gitna ng tubig."
-        },
-        {
-          "time": "Shiretoko National Park: Dulo ng Daigdig (UNESCO)",
-          "text": "Nasa dulong hilagang-silangan ng Hokkaido, ang ibig sabihin ng Shiretoko sa wikang Ainu ay 'dulo ng daigdig'. Isa ito sa pinaka-birheng kalikasan sa daigdig: may matatarik na bangin kung saan naninirahan ang mga ligaw na brown bear, sea eagles, at pulang fox na makikita sa pamamagitan ng cruise boat mula Utoro o sa elevated boardwalks sa Shiretoko Five Lakes."
-        },
-        {
-          "time": "Otaru: Romantikong Kanal, Music Boxes at Blown Glass",
-          "text": "40 minuto lang mula Sapporo, ang Otaru ay lumang daungan noong ika-20 siglo. Ang kanal nito na pinalilibutan ng mga lumang imbakan ng isda at may mga ilaw na gasera sa gabi ay paboritong pasyalan, kasama ang mga tindahan ng blown glass at music box museum."
-        },
-        {
-          "time": "Hell Valley (Jigokudani) at Onsen sa Noboribetsu",
-          "text": "Ang nangungunang onsen resort sa Hokkaido. Isang nakamamanghang bunganga ng bulkan na umuusok ng asupre, may kumukulong geysers at mainit na ilog sa gitna ng kakahuyan na nagpapadaloy ng tubig sa mga tradisyunal na open-air hot spring bath (rotenburo)."
-        }
-      ],
-      "money": "Domestic flight mula Tokyo papuntang Sapporo (~1h 30min) o Shinkansen papuntang Hakodate; inirerekomenda ang magrenta ng kotse para sa pamamasyal sa kalikasan."
-    },
-    {
       "id": "okinawa",
-      "title": "Okinawa at ang Arkipelago ng Ryukyu",
+      "title": "Araw 9: Okinawa at ang Arkipelago ng Ryukyu",
       "cities": "Naha, Ishigaki, Miyakojima, Taketomi",
       "reason": "Ideya para sa susunod na biyahe -- magagandang beach, coral reef, at sariling mayamang kultura na hindi naisama sa biyaheng ito.",
       "summary": "Ang subtropical archipelago ng Okinawa ay kinagigiliwan dahil sa preskong simoy ng hangin, tubig na kulay 'Miyako Blue', tugtog ng sanshin, at tradisyunal na mga bahay na binabantayan ng mga estatwa ng Shisa lion.",
@@ -1609,7 +1614,7 @@ export const pendingDays = {
     },
     {
       "id": "iriomote-stargazing",
-      "title": "Iriomote: Astrophotography at Ekspedisyon sa Kagubatan",
+      "title": "Araw 10: Iriomote: Astrophotography at Ekspedisyon sa Kagubatan",
       "cities": "Iriomote Island (Yaeyama, Okinawa)",
       "reason": "Ideya para sa susunod na biyahe, espesyal na inihanda para sa iyo -- gamit ang telescope, camera, at drone, isa ito sa pinakamagandang lugar sa daigdig para sa pagkuha ng larawan sa gabi.",
       "summary": "Ang pinakaligaw na isla sa Japan, 90% ay nababalot ng kagubatan at bakawan. Sertipikado ng DarkSky International bilang International Dark Sky Park dahil sa kawalan ng light pollution, kaya malinaw na malinaw ang Milky Way at makikita ang Southern Cross sa ibabaw ng dagat.",
@@ -1645,6 +1650,45 @@ export const pendingDays = {
         }
       ],
       "money": "Ferry mula Ishigaki (40-45 min, ~¥2,500); kaunti lamang ang tutuluyan sa isla kaya kailangang mag-book nang maaga."
+    },
+    {
+      "id": "hokkaido",
+      "title": "Araw 11: Hokkaido: Ligaw na Kalikasan, Niyebe at Bulkan",
+      "cities": "Sapporo, Furano, Shiretoko, Otaru, Noboribetsu",
+      "reason": "Ideya para sa susunod na biyahe -- ang hilagang isla ay nag-aalok ng ibang-ibang mukha ng Japan na may malalawak na tanawin at likas na kagandahan.",
+      "summary": "Ang pinaka-hilagang isla ng Japan ay nakabibighani dahil sa malalawak nitong lupain, umuusok na bulkan, protektadong national parks, at tanyag na sariwang pagkaing-dagat at dairy products. Maganda itong puntahan sa tag-araw (mga bukid ng bulaklak) at sa taglamig (world-class powder snow at mga ice festival).",
+      "history": "Ang Hokkaido ('daan ng hilagang dagat') ay pormal na naging bahagi ng Japan noong panahon ng Meiji noong huling bahagi ng ika-19 siglo. Dati itong kilala bilang Ezochi, ang ninunong lupain ng mga Ainu, isang katutubong lahi na may sariling wika, paniniwala, at kultura na ipinagdiriwang ngayon sa mga sentro tulad ng Upopoy sa Shiraoi.",
+      "schedule": [
+        {
+          "time": "Sapporo: Odori Park, Clock Tower at Lumang Gusali ng Pamahalaan",
+          "text": "Ang kabisera ng Hokkaido ay may maluwang na disenyo ng mga kalsada. Ang Odori Park ay 1.5 km na berdeng liwasan sa gitna ng lungsod kung saan idinaraos tuwing Pebrero ang sikat na Sapporo Snow Festival (Yuki Matsuri) na may higanteng mga lilok ng niyebe at yelo. Ang kahoy na Clock Tower (1878) at ang red-brick government building ay nagpapakita ng kasaysayan ng lungsod."
+        },
+        {
+          "time": "Miso Ramen sa Ramen Alley at Nijo Fish Market",
+          "text": "Dito sa Sapporo ipinanganak ang miso ramen: kulot na noodles sa malapot na sabaw na may bawang, toge, matamis na mais ng Hokkaido, at butter. Ang eskinita ng Ganso Ramen Yokocho sa Susukino ang pugad ng mga lumang kainan. Sa umaga, nag-aalok ang Nijo Market ng kaisen-don na punong-puno ng salmon roe (ikura), sea urchin (uni), at snow crab."
+        },
+        {
+          "time": "Sapporo Beer Museum at Pagkaing Genghis Khan (Jingisukan)",
+          "text": "Nasa loob ng lumang 1876 red-brick building, ito ang nag-iisang beer museum sa Japan. Sa katabing beer hall, tikman ang 'Jingisukan': maninipis na hiwa ng karne ng tupa na inihaw sa hugis-helmet na bakal kasama ang sibuyas, kalabasa, at toge, sabayan ng sariwang Sapporo draft beer."
+        },
+        {
+          "time": "Furano at Biei: Mga Bukid ng Lavender at Shirogane Blue Pond",
+          "text": "Sa kalagitnaan ng tag-araw (Hulyo-Agosto), ang mga burol ng Furano (Farm Tomita) ay napupuno ng makukulay na lavender, poppies, at sunflowers. Sa kalapit na Biei, matatagpuan ang Shirogane Blue Pond, isang lawa na may kulay asul-turkesa kung saan nakatayo ang mga tuyong puno ng larch sa gitna ng tubig."
+        },
+        {
+          "time": "Shiretoko National Park: Dulo ng Daigdig (UNESCO)",
+          "text": "Nasa dulong hilagang-silangan ng Hokkaido, ang ibig sabihin ng Shiretoko sa wikang Ainu ay 'dulo ng daigdig'. Isa ito sa pinaka-birheng kalikasan sa daigdig: may matatarik na bangin kung saan naninirahan ang mga ligaw na brown bear, sea eagles, at pulang fox na makikita sa pamamagitan ng cruise boat mula Utoro o sa elevated boardwalks sa Shiretoko Five Lakes."
+        },
+        {
+          "time": "Otaru: Romantikong Kanal, Music Boxes at Blown Glass",
+          "text": "40 minuto lang mula Sapporo, ang Otaru ay lumang daungan noong ika-20 siglo. Ang kanal nito na pinalilibutan ng mga lumang imbakan ng isda at may mga ilaw na gasera sa gabi ay paboritong pasyalan, kasama ang mga tindahan ng blown glass at music box museum."
+        },
+        {
+          "time": "Hell Valley (Jigokudani) at Onsen sa Noboribetsu",
+          "text": "Ang nangungunang onsen resort sa Hokkaido. Isang nakamamanghang bunganga ng bulkan na umuusok ng asupre, may kumukulong geysers at mainit na ilog sa gitna ng kakahuyan na nagpapadaloy ng tubig sa mga tradisyunal na open-air hot spring bath (rotenburo)."
+        }
+      ],
+      "money": "Domestic flight mula Tokyo papuntang Sapporo (~1h 30min) o Shinkansen papuntang Hakodate; inirerekomenda ang magrenta ng kotse para sa pamamasyal sa kalikasan."
     }
   ]
 };
@@ -1668,6 +1712,12 @@ export const futureLocationCoords = {
     "emoji": "⛩️",
     "color": "#8338ec"
   },
+  "fuji-hiking": {
+    "lat": 35.3606,
+    "lng": 138.7274,
+    "emoji": "🏔️",
+    "color": "#2a9d8f"
+  },
   "osaka-classic": {
     "lat": 34.6873,
     "lng": 135.526,
@@ -1679,12 +1729,6 @@ export const futureLocationCoords = {
     "lng": 135.4967,
     "emoji": "🦁",
     "color": "#d62828"
-  },
-  "fuji-hiking": {
-    "lat": 35.3606,
-    "lng": 138.7274,
-    "emoji": "🏔️",
-    "color": "#2a9d8f"
   },
   "hiroshima-nagasaki": {
     "lat": 34.3928,
@@ -1698,12 +1742,6 @@ export const futureLocationCoords = {
     "emoji": "⛩️",
     "color": "#b91c1c"
   },
-  "hokkaido": {
-    "lat": 43.0598,
-    "lng": 141.3533,
-    "emoji": "❄️",
-    "color": "#1d3557"
-  },
   "okinawa": {
     "lat": 26.217,
     "lng": 127.7195,
@@ -1715,6 +1753,12 @@ export const futureLocationCoords = {
     "lng": 123.8167,
     "emoji": "✨",
     "color": "#6a4c93"
+  },
+  "hokkaido": {
+    "lat": 43.0598,
+    "lng": 141.3533,
+    "emoji": "❄️",
+    "color": "#1d3557"
   }
 };
 
@@ -1733,8 +1777,8 @@ export const futureSectionTabs = {
 };
 
 export const pendingSectionSubtitle = {
-  es: "Propuestas de viaje para próximas aventuras: 3 días en Tokio (con Nikko y Kamakura), 2 días en Osaka y sus templos, ascensión al Monte Fuji, Hiroshima, Miyajima, Hokkaido, Okinawa e Iriomote.",
-  en: "Future journey ideas: 3 days in Tokyo (including Nikko and Kamakura), 2 days in Osaka and its temples, Mount Fuji hiking, Hiroshima, Miyajima, Hokkaido, Okinawa, and Iriomote.",
-  fr: "Idées pour de futurs séjours : 3 jours à Tokyo (avec Nikko et Kamakura), 2 jours à Osaka et ses temples, mont Fuji, Hiroshima, Miyajima, Hokkaido, Okinawa et Iriomote.",
-  tl: "Mga ideya para sa susunod na biyahe: 3 araw sa Tokyo (kasama ang Nikko at Kamakura), 2 araw sa Osaka at mga templo nito, Mount Fuji, Hiroshima, Miyajima, Hokkaido, Okinawa, at Iriomote.",
+  es: "Itinerario lógico de 11 días organizado geográficamente con conexiones de transporte directas: Kanto (Tokio, Nikko, Kamakura) → Monte Fuji → Kansai (Osaka) → Chugoku (Hiroshima y Miyajima) → Islas Ryukyu (Okinawa e Iriomote) → Hokkaido.",
+  en: "A 11-day logically sequenced itinerary with direct transport links: Kanto (Tokyo, Nikko, Kamakura) → Mount Fuji → Kansai (Osaka) → Chugoku (Hiroshima & Miyajima) → Ryukyu Islands (Okinawa & Iriomote) → Hokkaido.",
+  fr: "Itinéraire de 11 jours ordonné géographiquement avec transports fluides : Kanto (Tokyo, Nikko, Kamakura) → Mont Fuji → Kansai (Osaka) → Chugoku (Hiroshima et Miyajima) → Îles Ryukyu (Okinawa et Iriomote) → Hokkaido.",
+  tl: "Lohikal na 11-araw na itinerary na may direktang transportasyon: Kanto (Tokyo, Nikko, Kamakura) → Mount Fuji → Kansai (Osaka) → Chugoku (Hiroshima at Miyajima) → Ryukyu Islands (Okinawa at Iriomote) → Hokkaido.",
 };
