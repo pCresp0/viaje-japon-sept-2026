@@ -203,3 +203,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-25 09:24 UTC** — fix(future-trips): display schedule items as stacked info cards in separate ... (`f311a8f`)
 - **2026-09-25 09:48 UTC** — feat(future-trips): adopt guide card typography and enrich all destination guides (`f4d31c0`)
 - **2026-09-25 09:51 UTC** — feat(future-trips): rename to 'Viajes futuros' and add 'Mapa futuro' with ... (`51a2ca3`)
+- **2026-09-25 09:54 UTC** — feat(future-trips): add export PDF guide button and print view (`1112d2d`)
