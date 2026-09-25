@@ -205,3 +205,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-25 09:51 UTC** — feat(future-trips): rename to 'Viajes futuros' and add 'Mapa futuro' with ... (`51a2ca3`)
 - **2026-09-25 09:54 UTC** — feat(future-trips): add export PDF guide button and print view (`1112d2d`)
 - **2026-09-25 09:55 UTC** — fix(konbini): display Lawson text badge alongside logo like other chains (`cdbab6f`)
+- **2026-09-25 09:59 UTC** — feat(nav): add Itinerario and Mapa subitems under Viajes Futuros (`36afa12`)
