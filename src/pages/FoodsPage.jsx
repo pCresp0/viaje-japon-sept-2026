@@ -264,14 +264,12 @@ function KonbiniView() {
                         />
                       </div>
                     )}
-                    {chain.id !== "lawson" && (
-                      <span
-                        className="px-2.5 py-1 rounded-lg text-xs font-black tracking-wider text-white uppercase shadow-sm"
-                        style={{ backgroundColor: chain.themeColor }}
-                      >
-                        {chain.name}
-                      </span>
-                    )}
+                    <span
+                      className="px-2.5 py-1 rounded-lg text-xs font-black tracking-wider text-white uppercase shadow-sm"
+                      style={{ backgroundColor: chain.themeColor }}
+                    >
+                      {chain.name}
+                    </span>
 
                     {/* Botón Ver cercanos en Google Maps */}
                     <a
