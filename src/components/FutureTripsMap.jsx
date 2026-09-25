@@ -173,10 +173,10 @@ export default function FutureTripsMap({ days, selectedId, onSelectDay, onGoToIt
         </MapContainer>
       </div>
 
-      {/* 1 punto por día: lista rápida de los 7 destinos */}
+      {/* 1 punto por día: lista rápida de destinos */}
       <div className="pt-1">
         <p className="eyebrow mb-2" style={{ color: "var(--shu)" }}>
-          {lang === "en" ? "7 Destinations on the Map" : lang === "fr" ? "7 Destinations sur la carte" : lang === "tl" ? "7 Destinasyon sa Mapa" : "7 Destinos en el mapa"}
+          {lang === "en" ? `${markers.length} Destinations on the Map` : lang === "fr" ? `${markers.length} Destinations sur la carte` : lang === "tl" ? `${markers.length} Destinasyon sa Mapa` : `${markers.length} Destinos en el mapa`}
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
