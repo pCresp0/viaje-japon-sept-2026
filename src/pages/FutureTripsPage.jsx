@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ChevronDown, ChevronRight, CalendarX2, Compass, MapPin, List, FileDown, Loader2 } from "lucide-react";
 import { useLang } from "../i18n/LanguageContext";
 import {
@@ -21,12 +21,22 @@ export default function FutureTripsPage({ initialTab = "itinerario", onTabChange
   const [openId, setOpenId] = useState(null);
   const [selectedMapId, setSelectedMapId] = useState(null);
   const [exporting, setExporting] = useState(false);
+  const dayRefs = useRef({});
 
   useEffect(() => {
     if (initialTab) {
       setActiveTab(initialTab);
     }
   }, [initialTab]);
+
+  useEffect(() => {
+    if (!openId) return;
+    const t = window.setTimeout(() => {
+      const el = dayRefs.current[openId] || document.getElementById(`future-day-${openId}`);
+      el?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 120);
+    return () => window.clearTimeout(t);
+  }, [openId]);
 
   const handleTabSwitch = (t) => {
     setActiveTab(t);
@@ -147,6 +157,7 @@ export default function FutureTripsPage({ initialTab = "itinerario", onTabChange
               <div
                 key={d.id}
                 id={`future-day-${d.id}`}
+                ref={(el) => (dayRefs.current[d.id] = el)}
                 className="itinerary-day-anchor"
               >
                 {isOpen ? (
