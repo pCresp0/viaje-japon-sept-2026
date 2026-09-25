@@ -139,7 +139,7 @@ export default function FutureTripsPage({ initialTab = "itinerario", onTabChange
         />
       ) : (
         <div className="space-y-2.5">
-          {days.map((d) => {
+          {days.map((d, index) => {
             const isOpen = openId === d.id;
             const meta = futureLocationCoords[d.id] || { emoji: "📍", color: "#e63946" };
 
@@ -147,121 +147,193 @@ export default function FutureTripsPage({ initialTab = "itinerario", onTabChange
               <div
                 key={d.id}
                 id={`future-day-${d.id}`}
-                className="rounded-xl overflow-hidden transition-all"
-                style={{
-                  border: isOpen ? "1px solid var(--shu)" : "1px dashed var(--line)",
-                  background: "var(--paper-raised)",
-                }}
+                className="itinerary-day-anchor"
               >
-                <button
-                  onClick={() => setOpenId(isOpen ? null : d.id)}
-                  className="w-full flex items-center gap-3 p-3.5 text-left"
-                  style={{ background: "transparent", border: "none", cursor: "pointer" }}
-                >
-                  <span
-                    className="shrink-0 w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold shadow-sm"
-                    style={{ background: meta.color, color: "#fff" }}
+                {isOpen ? (
+                  <article
+                    className="rounded-2xl overflow-hidden border shadow-sm transition-all"
+                    style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}
                   >
-                    {meta.emoji}
-                  </span>
-                  <span className="flex-1 min-w-0">
-                    <span className="flex items-center gap-2">
-                      <span className="block text-[15px] font-medium truncate" style={{ color: "var(--ink)" }}>
-                        {d.title}
-                      </span>
-                    </span>
-                    <span className="block text-xs" style={{ color: "var(--ink-soft)" }}>
-                      {d.cities}
-                    </span>
-                  </span>
-                  {isOpen ? (
-                    <ChevronDown size={18} style={{ color: "var(--ink-soft)" }} />
-                  ) : (
-                    <ChevronRight size={18} style={{ color: "var(--ink-soft)" }} />
-                  )}
-                </button>
-
-                {isOpen && (
-                  <div className="px-3.5 pb-4 space-y-3">
-                    <div className="flex items-center justify-between gap-2">
-                      <p
-                        className="text-xs italic p-2.5 rounded-lg flex-1 m-0"
-                        style={{ color: "var(--ink-soft)", background: "var(--paper)", border: "1px solid var(--line)" }}
-                      >
-                        {d.reason}
-                      </p>
-                      <button
-                        onClick={() => handleViewOnMap(d.id)}
-                        className="shrink-0 py-2 px-3 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors"
-                        style={{
-                          background: "var(--paper)",
-                          border: "1px solid var(--line)",
-                          color: "var(--indigo)",
-                          cursor: "pointer",
-                        }}
-                      >
-                        <MapPin size={13} style={{ color: "var(--shu)" }} />
-                        <span>{lang === "en" ? "Map" : lang === "fr" ? "Carte" : lang === "tl" ? "Mapa" : "Ver en mapa"}</span>
-                      </button>
-                    </div>
-
-                    <PlaceText
-                      as="p"
-                      text={d.summary}
-                      className="text-sm leading-relaxed"
-                      style={{ color: "var(--ink)" }}
-                      linkStyle={{ color: "var(--shu)" }}
-                    />
-
-                    {d.history && (
-                      <div className="pt-1">
-                        <p
-                          className="font-display font-bold text-[15px] sm:text-[15.5px] mb-1.5"
-                          style={{ color: "var(--shu)", letterSpacing: "0.01em" }}
-                        >
-                          {lang === "en" ? "History & Context" : lang === "fr" ? "Histoire & Contexte" : lang === "tl" ? "Kasaysayan at Konteksto" : "Historia y contexto"}
+                    {/* Header con el color del destino / bloque */}
+                    <header
+                      className="px-5 pt-5 pb-4 flex items-start justify-between gap-3 text-white"
+                      style={{ background: meta.color }}
+                    >
+                      <div>
+                        <p className="eyebrow" style={{ color: "rgba(255,255,255,0.92)" }}>
+                          {meta.emoji} Día {index + 1} · {d.cities}
                         </p>
                         <PlaceText
+                          as="h2"
+                          text={d.title}
+                          className="font-display text-2xl text-white mt-1 leading-tight font-bold m-0"
+                          linkStyle={{ color: "white", textDecorationColor: "rgba(255,255,255,0.7)" }}
+                        />
+                        <PlaceText
                           as="p"
-                          text={d.history}
-                          className="text-[13.5px] leading-[1.65] m-0"
-                          style={{ color: "var(--ink)", whiteSpace: "pre-wrap" }}
-                          linkStyle={{ color: "var(--shu)", fontWeight: 600 }}
+                          text={d.cities}
+                          className="text-white/85 text-sm mt-1 m-0"
+                          linkStyle={{ color: "white", textDecorationColor: "rgba(255,255,255,0.7)" }}
                         />
                       </div>
-                    )}
 
-                    <div className="pt-2 pb-1 space-y-4">
-                      {d.schedule.map((item, i) => (
-                        <div key={i}>
+                      <div className="shrink-0 mt-0.5 flex items-center gap-1.5 sm:gap-2">
+                        {/* Botón Ver mapa */}
+                        <button
+                          type="button"
+                          onClick={() => handleViewOnMap(d.id)}
+                          className="px-3 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all active:scale-95 cursor-pointer shadow-xs"
+                          style={{
+                            background: "rgba(255, 255, 255, 0.2)",
+                            color: "#fff",
+                            border: "1px solid rgba(255, 255, 255, 0.4)",
+                            backdropFilter: "blur(4px)",
+                          }}
+                          title={lang === "en" ? "View on map" : lang === "fr" ? "Voir sur la carte" : lang === "tl" ? "Tingnan sa mapa" : "Ver en mapa"}
+                        >
+                          <MapPin size={13} />
+                          <span className="hidden sm:inline">
+                            {lang === "en" ? "Map" : lang === "fr" ? "Carte" : lang === "tl" ? "Mapa" : "Ver mapa"}
+                          </span>
+                        </button>
+
+                        {/* Botón Cerrar (colapsar) */}
+                        <button
+                          type="button"
+                          onClick={() => setOpenId(null)}
+                          className="w-8 h-8 rounded-full flex items-center justify-center transition-all active:scale-95 cursor-pointer"
+                          style={{
+                            background: "rgba(255, 255, 255, 0.2)",
+                            color: "#fff",
+                            border: "1px solid rgba(255, 255, 255, 0.4)",
+                          }}
+                          title={lang === "en" ? "Close" : lang === "fr" ? "Fermer" : lang === "tl" ? "Isara" : "Cerrar día"}
+                          aria-label="Cerrar día"
+                        >
+                          <ChevronDown size={18} />
+                        </button>
+                      </div>
+                    </header>
+
+                    {/* Cuerpo de la ficha de día */}
+                    <div className="p-4 sm:p-5 space-y-4">
+                      {/* Contexto del viaje */}
+                      <div
+                        className="text-xs p-3 rounded-xl border flex items-start gap-2.5"
+                        style={{
+                          background: "var(--paper)",
+                          borderColor: "var(--line)",
+                          color: "var(--ink-soft)",
+                        }}
+                      >
+                        <span className="text-base shrink-0 leading-none">💡</span>
+                        <span className="leading-relaxed">
+                          <strong style={{ color: "var(--ink)" }}>
+                            {lang === "en" ? "Context:" : lang === "fr" ? "Contexte :" : lang === "tl" ? "Konteksto:" : "Contexto:"}
+                          </strong>{" "}
+                          {d.reason}
+                        </span>
+                      </div>
+
+                      {/* Resumen */}
+                      <PlaceText
+                        as="p"
+                        text={d.summary}
+                        className="text-sm leading-relaxed m-0"
+                        style={{ color: "var(--ink)" }}
+                        linkStyle={{ color: "var(--shu)" }}
+                      />
+
+                      {/* Historia y contexto */}
+                      {d.history && (
+                        <div
+                          className="p-3.5 rounded-xl border"
+                          style={{
+                            background: "var(--paper)",
+                            borderColor: "var(--line)",
+                          }}
+                        >
                           <p
                             className="font-display font-bold text-[15px] sm:text-[15.5px] mb-1.5"
-                            style={{
-                              color: "var(--shu)",
-                              letterSpacing: "0.01em",
-                            }}
+                            style={{ color: "var(--shu)", letterSpacing: "0.01em" }}
                           >
-                            {item.time}
+                            📜 {lang === "en" ? "History & Context" : lang === "fr" ? "Histoire & Contexte" : lang === "tl" ? "Kasaysayan at Konteksto" : "Historia y contexto"}
                           </p>
                           <PlaceText
                             as="p"
-                            text={item.text}
+                            text={d.history}
                             className="text-[13.5px] leading-[1.65] m-0"
                             style={{ color: "var(--ink)", whiteSpace: "pre-wrap" }}
                             linkStyle={{ color: "var(--shu)", fontWeight: 600 }}
                           />
                         </div>
-                      ))}
-                    </div>
+                      )}
 
-                    {d.money && (
-                      <div className="pt-3 mt-1" style={{ borderTop: "1px solid var(--line)" }}>
-                        <p className="text-xs sm:text-[13px] leading-relaxed" style={{ color: "var(--ink-soft)" }}>
-                          💰 {d.money}
-                        </p>
+                      {/* Secciones del día / Itinerario paso a paso */}
+                      <div className="pt-2 space-y-4">
+                        {d.schedule.map((item, i) => (
+                          <div key={i}>
+                            <p
+                              className="font-display font-bold text-[15px] sm:text-[15.5px] mb-1.5"
+                              style={{
+                                color: "var(--shu)",
+                                letterSpacing: "0.01em",
+                              }}
+                            >
+                              {item.time}
+                            </p>
+                            <PlaceText
+                              as="p"
+                              text={item.text}
+                              className="text-[13.5px] leading-[1.65] m-0"
+                              style={{ color: "var(--ink)", whiteSpace: "pre-wrap" }}
+                              linkStyle={{ color: "var(--shu)", fontWeight: 600 }}
+                            />
+                          </div>
+                        ))}
                       </div>
-                    )}
-                  </div>
+
+                      {/* Presupuesto y logística */}
+                      {d.money && (
+                        <div className="pt-3.5 mt-2 border-t" style={{ borderColor: "var(--line)" }}>
+                          <p className="text-xs sm:text-[13px] leading-relaxed m-0" style={{ color: "var(--ink-soft)" }}>
+                            💰 <strong style={{ color: "var(--ink)" }}>{lang === "en" ? "Estimated budget:" : lang === "fr" ? "Budget estimé :" : lang === "tl" ? "Tinatayang badyet:" : "Presupuesto estimado:"}</strong> {d.money}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  </article>
+                ) : (
+                  <button
+                    onClick={() => setOpenId(d.id)}
+                    className="w-full flex items-center gap-3 rounded-xl p-3.5 text-left transition-all hover:border-[var(--shu)]"
+                    style={{
+                      background: "var(--paper-raised)",
+                      border: "1px solid var(--line)",
+                      boxShadow: "0 1px 3px rgba(0,0,0,0.02)",
+                      cursor: "pointer",
+                    }}
+                  >
+                    <span
+                      className="shrink-0 w-9 h-9 rounded-full flex items-center justify-center font-display text-sm font-bold text-white shadow-xs"
+                      style={{ background: meta.color }}
+                    >
+                      {index + 1}
+                    </span>
+                    <span className="flex-1 min-w-0">
+                      <PlaceText
+                        as="span"
+                        text={d.title}
+                        className="block text-[15px] font-medium truncate"
+                        style={{ color: "var(--ink)" }}
+                        linkStyle={{ color: "var(--shu)" }}
+                      />
+                      <span className="block text-xs" style={{ color: "var(--ink-soft)" }}>
+                        {d.cities}
+                      </span>
+                    </span>
+                    <ChevronRight size={18} style={{ color: "var(--ink-soft)" }} />
+                  </button>
                 )}
               </div>
             );
