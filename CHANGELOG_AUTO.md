@@ -209,3 +209,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-25 10:02 UTC** — feat(future-trips): add 3 days in Tokyo (highlights, Nikko, Kamakura) and ... (`01bdd22`)
 - **2026-09-25 10:04 UTC** — refactor(future-trips): sequence 11 days geographically with seamless transport connections (`63beb77`)
 - **2026-09-25 10:05 UTC** — feat(future-trips): adopt collapsible cards layout identical to original itinerary (`c9e432a`)
+- **2026-09-25 10:08 UTC** — feat(future-trips): add Día 1..11 numbering and complete transit guides (`4da4128`)
