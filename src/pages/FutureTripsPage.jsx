@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronDown, ChevronRight, CalendarX2, Compass, MapPin, List, FileDown, Loader2 } from "lucide-react";
 import { useLang } from "../i18n/LanguageContext";
 import {
