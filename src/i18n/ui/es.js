@@ -364,6 +364,10 @@ export default {
 
   "nav.about": "Sobre la web",
   "nav.futuroViajes": "Viajes futuros",
+  "nav.futuroItinerario": "Itinerario",
+  "nav.futuroMapa": "Mapa",
+  "nav.desc.futuroItinerario": "Nikko, Fuji, Hiroshima, Hokkaido, Okinawa y más ideas",
+  "nav.desc.futuroMapa": "Mapa interactivo con los 7 destinos para futuros viajes",
   "day.now": "AHORA",
   "day.upcoming": "PRÓXIMAMENTE",
   "frikadas.eyebrow": "Para frikis",

@@ -12,15 +12,26 @@ import PlaceText from "../components/PlaceText";
 import FutureTripsMap from "../components/FutureTripsMap";
 import FutureTripsPrintView from "../components/FutureTripsPrintView";
 
-export default function FutureTripsPage() {
+export default function FutureTripsPage({ initialTab = "itinerario", onTabChange }) {
   const { lang } = useLang();
   const days = pendingDays[lang] || pendingDays.es;
   const tabs = futureSectionTabs[lang] || futureSectionTabs.es;
 
-  const [activeTab, setActiveTab] = useState("itinerario"); // "itinerario" | "mapa"
+  const [activeTab, setActiveTab] = useState(initialTab);
   const [openId, setOpenId] = useState(null);
   const [selectedMapId, setSelectedMapId] = useState(null);
   const [exporting, setExporting] = useState(false);
+
+  useEffect(() => {
+    if (initialTab) {
+      setActiveTab(initialTab);
+    }
+  }, [initialTab]);
+
+  const handleTabSwitch = (t) => {
+    setActiveTab(t);
+    if (onTabChange) onTabChange(t);
+  };
 
   function handleExportPdf() {
     setExporting(true);
@@ -31,7 +42,7 @@ export default function FutureTripsPage() {
   }
 
   const handleGoToItinerary = (id) => {
-    setActiveTab("itinerario");
+    handleTabSwitch("itinerario");
     setOpenId(id);
     setTimeout(() => {
       const el = document.getElementById(`future-day-${id}`);
@@ -43,7 +54,7 @@ export default function FutureTripsPage() {
 
   const handleViewOnMap = (id) => {
     setSelectedMapId(id);
-    setActiveTab("mapa");
+    handleTabSwitch("mapa");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -81,7 +92,7 @@ export default function FutureTripsPage() {
       {/* Switcher pill buttons (Itinerario futuro / Mapa futuro) */}
       <div className="flex gap-2 pb-3 mb-3 border-b" style={{ borderColor: "var(--line)" }}>
         <button
-          onClick={() => setActiveTab("itinerario")}
+          onClick={() => handleTabSwitch("itinerario")}
           className="px-4 py-2 rounded-full font-medium transition-all flex items-center gap-2"
           style={{
             fontSize: 13.5,
@@ -99,7 +110,7 @@ export default function FutureTripsPage() {
         </button>
 
         <button
-          onClick={() => setActiveTab("mapa")}
+          onClick={() => handleTabSwitch("mapa")}
           className="px-4 py-2 rounded-full font-medium transition-all flex items-center gap-2"
           style={{
             fontSize: 13.5,

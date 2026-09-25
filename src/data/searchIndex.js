@@ -212,11 +212,19 @@ function buildSearchIndex(lang) {
     },
     {
       id: "nav-futuro-viajes",
-      title: "Viajes futuros",
-      subtitle: "Nikko, Hokkaido, Okinawa e ideas guardadas para la próxima vez",
+      title: "Viajes futuros: Itinerario",
+      subtitle: "Nikko, Fuji, Hiroshima, Hokkaido, Okinawa e ideas para la próxima vez",
       category: "Apartados",
       tab: "futuro-viajes",
-      terms: ["viajes futuros", "nikko", "hokkaido", "okinawa", "iriomote", "fuji hiking", "hiroshima", "nagasaki", "proximo viaje", "ideas"],
+      terms: ["viajes futuros", "itinerario futuro", "nikko", "hokkaido", "okinawa", "iriomote", "fuji hiking", "hiroshima", "nagasaki", "proximo viaje", "ideas"],
+    },
+    {
+      id: "nav-futuro-mapa",
+      title: "Viajes futuros: Mapa",
+      subtitle: "Mapa con los 7 destinos para futuras aventuras en Japón",
+      category: "Apartados",
+      tab: "futuro-mapa",
+      terms: ["mapa viajes futuros", "mapa futuro", "mapa nikko", "mapa hokkaido", "mapa okinawa", "mapa fuji", "mapa iriomote", "mapa miyajima"],
     },
   ];
 

@@ -233,8 +233,18 @@ export default function App() {
                 {tab === "herramientas" && <UtilsPage />}
                 {tab === "emergencias"  && <EmergencyPage />}
                 {tab === "frikadas"     && <FrikadasPage />}
-                {tab === "about"        && <AboutPage />}
-                {tab === "futuro-viajes" && <FutureTripsPage />}
+                {tab === "futuro-viajes" && (
+                  <FutureTripsPage
+                    initialTab="itinerario"
+                    onTabChange={(t) => setTab(t === "mapa" ? "futuro-mapa" : "futuro-viajes")}
+                  />
+                )}
+                {tab === "futuro-mapa" && (
+                  <FutureTripsPage
+                    initialTab="mapa"
+                    onTabChange={(t) => setTab(t === "mapa" ? "futuro-mapa" : "futuro-viajes")}
+                  />
+                )}
               </div>
             </ErrorBoundary>
           </main>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Compass, Route, Plane, Wallet, X, Menu, CalendarDays, MessageCircle, Backpack, ShieldAlert, Train, Heart, Map, Cloud, Clock, ListTodo, Landmark, Hotel, UtensilsCrossed, Home, Info, Sparkles, ChevronDown, ChevronRight } from "lucide-react";
+import { Compass, Route, Plane, Wallet, X, Menu, CalendarDays, MessageCircle, Backpack, ShieldAlert, Train, Heart, Map, MapPin, Cloud, Clock, ListTodo, Landmark, Hotel, UtensilsCrossed, Home, Info, Sparkles, ChevronDown, ChevronRight } from "lucide-react";
 import { useT } from "../i18n";
 import LanguageSwitcher from "./LanguageSwitcher";
 import GlobalSearch from "./GlobalSearch";
@@ -41,7 +41,8 @@ export const navStructure = [
     ]
   },
   { type: "group", id: "futuro", labelKey: "nav.group.futuro", items: [
-      { id: "futuro-viajes", labelKey: "nav.futuroViajes", descKey: "nav.desc.futuroViajes", icon: Compass },
+      { id: "futuro-viajes", labelKey: "nav.futuroItinerario", descKey: "nav.desc.futuroItinerario", icon: Compass },
+      { id: "futuro-mapa", labelKey: "nav.futuroMapa", descKey: "nav.desc.futuroMapa", icon: MapPin },
     ]
   },
 ];
