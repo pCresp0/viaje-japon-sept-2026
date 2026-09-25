@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, ChevronRight, CalendarX2, Compass, MapPin, List } from "lucide-react";
+import { ChevronDown, ChevronRight, CalendarX2, Compass, MapPin, List, FileDown, Loader2 } from "lucide-react";
 import { useLang } from "../i18n/LanguageContext";
 import {
   pendingDays,
@@ -10,6 +10,7 @@ import {
 } from "../data/pendingDays";
 import PlaceText from "../components/PlaceText";
 import FutureTripsMap from "../components/FutureTripsMap";
+import FutureTripsPrintView from "../components/FutureTripsPrintView";
 
 export default function FutureTripsPage() {
   const { lang } = useLang();
@@ -19,6 +20,15 @@ export default function FutureTripsPage() {
   const [activeTab, setActiveTab] = useState("itinerario"); // "itinerario" | "mapa"
   const [openId, setOpenId] = useState(null);
   const [selectedMapId, setSelectedMapId] = useState(null);
+  const [exporting, setExporting] = useState(false);
+
+  function handleExportPdf() {
+    setExporting(true);
+    window.setTimeout(() => {
+      window.print();
+      setExporting(false);
+    }, 100);
+  }
 
   const handleGoToItinerary = (id) => {
     setActiveTab("itinerario");
@@ -39,19 +49,34 @@ export default function FutureTripsPage() {
 
   return (
     <div className="px-4 pt-3 pb-12 max-w-5xl mx-auto">
-      {/* Header */}
-      <div className="mb-4">
-        <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Utilidades · Ideas</p>
-        <div className="flex items-center gap-2">
-          <Compass size={22} style={{ color: "var(--indigo)" }} />
-          <h2 className="font-display text-2xl" style={{ color: "var(--indigo)", margin: 0 }}>
-            {pendingSectionLabel[lang] || pendingSectionLabel.es}
-          </h2>
+      {/* Header con botón de exportar PDF */}
+      <div className="flex items-start justify-between gap-3 mb-4">
+        <div>
+          <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Utilidades · Ideas</p>
+          <div className="flex items-center gap-2">
+            <Compass size={22} style={{ color: "var(--indigo)" }} />
+            <h2 className="font-display text-2xl" style={{ color: "var(--indigo)", margin: 0 }}>
+              {pendingSectionLabel[lang] || pendingSectionLabel.es}
+            </h2>
+          </div>
+          <p style={{ fontSize: 13.5, color: "var(--ink-soft)", margin: "4px 0 0" }}>
+            {pendingSectionSubtitle[lang] || pendingSectionSubtitle.es}
+          </p>
         </div>
-        <p style={{ fontSize: 13.5, color: "var(--ink-soft)", margin: "4px 0 0" }}>
-          {pendingSectionSubtitle[lang] || pendingSectionSubtitle.es}
-        </p>
+
+        <button
+          onClick={handleExportPdf}
+          disabled={exporting}
+          className="shrink-0 flex items-center gap-1.5 rounded-full px-3.5 py-2 text-xs font-semibold cursor-pointer shadow-xs transition-opacity hover:opacity-90 active:scale-95"
+          style={{ background: "var(--indigo)", color: "white", border: "none" }}
+          title={lang === "en" ? "Export PDF Guide" : lang === "fr" ? "Exporter le guide PDF" : lang === "tl" ? "I-export ang PDF Guide" : "Exportar guía PDF"}
+        >
+          {exporting ? <Loader2 size={14} className="animate-spin" /> : <FileDown size={14} />}
+          <span>{lang === "en" ? "Export PDF Guide" : lang === "fr" ? "Exporter le guide PDF" : lang === "tl" ? "I-export ang PDF Guide" : "Exportar guía PDF"}</span>
+        </button>
       </div>
+
+      <FutureTripsPrintView days={days} lang={lang} />
 
       {/* Switcher pill buttons (Itinerario futuro / Mapa futuro) */}
       <div className="flex gap-2 pb-3 mb-3 border-b" style={{ borderColor: "var(--line)" }}>
