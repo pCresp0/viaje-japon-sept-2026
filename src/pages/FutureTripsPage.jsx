@@ -83,16 +83,26 @@ export default function FutureTripsPage() {
                     </p>
                   )}
 
-                  <div className="space-y-1.5">
+                  <div className="space-y-2 pt-1">
                     {d.schedule.map((item, i) => (
-                      <div key={i} className="flex gap-2 text-sm">
-                        <span className="shrink-0 font-mono text-xs pt-0.5" style={{ color: "var(--shu)", minWidth: "3.5rem" }}>
+                      <div
+                        key={i}
+                        className="p-3 rounded-xl border flex flex-col gap-1"
+                        style={{
+                          background: "var(--paper)",
+                          borderColor: "var(--line)",
+                        }}
+                      >
+                        <span
+                          className="font-display font-bold text-[13.5px] sm:text-[14px]"
+                          style={{ color: "var(--shu)" }}
+                        >
                           {item.time}
                         </span>
                         <PlaceText
-                          as="span"
+                          as="p"
                           text={item.text}
-                          className="flex-1"
+                          className="text-xs sm:text-[13px] leading-relaxed m-0"
                           style={{ color: "var(--ink)" }}
                           linkStyle={{ color: "var(--shu)" }}
                         />
