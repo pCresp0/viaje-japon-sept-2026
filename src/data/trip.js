@@ -792,7 +792,7 @@ export const days = [
     title: "Palacio Imperial, Tokyo Station y Ginza",
     cities: "Otemachi, Marunouchi, Ginza, Hibiya",
     summary:
-      "⚠️ Cambio de planes: la excursión a Nikko no se hace por mal tiempo (queda guardada en 'Cosas pendientes' para un futuro viaje). En su lugar, día a pie por el centro histórico y comercial de Tokio: los jardines del Palacio Imperial, Tokyo Character Street, KITTE y el museo Intermediatheque, y una tarde larga en Ginza, terminando con un paseo por Hibiya/Yurakucho y la cena de despedida del grupo, en el último día completo antes de volver a España. Casi todo se hace andando -- una ruta muy lógica en línea recta, sin desplazamientos absurdos.",
+      "⚠️ Cambio de planes: la excursión a Nikko no se hace por mal tiempo. En su lugar, día a pie por el centro histórico y comercial de Tokio: los jardines del Palacio Imperial, Tokyo Character Street, KITTE y el museo Intermediatheque, y una tarde larga en Ginza, terminando con un paseo por Hibiya/Yurakucho y la cena de despedida del grupo, en el último día completo antes de volver a España. Casi todo se hace andando -- una ruta muy lógica en línea recta, sin desplazamientos absurdos.",
     history:
       "El Palacio Imperial se levanta sobre el emplazamiento del antiguo Castillo de Edo, sede del shogunato Tokugawa durante más de 250 años y en su momento la fortaleza más grande del mundo. Ginza, por su parte, significa literalmente 'la casa de la plata' -- aquí estuvo la ceca de plata del shogunato durante el periodo Edo, antes de convertirse en el distrito comercial más elegante de Tokio tras la reconstrucción con arquitectura occidental de finales del s. XIX.",
     schedule: [

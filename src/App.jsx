@@ -25,7 +25,6 @@ import EmergencyPage from "./pages/EmergencyPage";
 import PendingPage from "./pages/PendingPage";
 import HistoryPage from "./pages/HistoryPage";
 import AboutPage from "./pages/AboutPage";
-import FutureTripsPage from "./pages/FutureTripsPage";
 import FrikadasPage from "./pages/FrikadasPage";
 import { useHighlight } from "./context/HighlightContext";
 import { slug } from "./utils/slug";
@@ -233,18 +232,6 @@ export default function App() {
                 {tab === "herramientas" && <UtilsPage />}
                 {tab === "emergencias"  && <EmergencyPage />}
                 {tab === "frikadas"     && <FrikadasPage />}
-                {tab === "futuro-viajes" && (
-                  <FutureTripsPage
-                    initialTab="itinerario"
-                    onTabChange={(t) => setTab(t === "mapa" ? "futuro-mapa" : "futuro-viajes")}
-                  />
-                )}
-                {tab === "futuro-mapa" && (
-                  <FutureTripsPage
-                    initialTab="mapa"
-                    onTabChange={(t) => setTab(t === "mapa" ? "futuro-mapa" : "futuro-viajes")}
-                  />
-                )}
               </div>
             </ErrorBoundary>
           </main>
