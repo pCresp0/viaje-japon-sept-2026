@@ -75,13 +75,27 @@ export default function FutureTripsPage({ initialTab = "itinerario", onTabChange
         <div>
           <p className="eyebrow mb-1" style={{ color: "var(--shu)" }}>Utilidades · Ideas</p>
           <div className="flex items-center gap-2">
-            <Compass size={22} style={{ color: "var(--indigo)" }} />
+            {activeTab === "mapa" ? (
+              <MapPin size={22} style={{ color: "var(--indigo)" }} />
+            ) : (
+              <Compass size={22} style={{ color: "var(--indigo)" }} />
+            )}
             <h2 className="font-display text-2xl" style={{ color: "var(--indigo)", margin: 0 }}>
-              {pendingSectionLabel[lang] || pendingSectionLabel.es}
+              {activeTab === "mapa"
+                ? (tabs.map || "Mapa futuro")
+                : (pendingSectionLabel[lang] || pendingSectionLabel.es)}
             </h2>
           </div>
           <p style={{ fontSize: 13.5, color: "var(--ink-soft)", margin: "4px 0 0" }}>
-            {pendingSectionSubtitle[lang] || pendingSectionSubtitle.es}
+            {activeTab === "mapa"
+              ? (lang === "en"
+                  ? "Interactive map with the 11 future stages and recommended journey route."
+                  : lang === "fr"
+                  ? "Carte interactive avec les 11 étapes futures et itinéraire recommandé."
+                  : lang === "tl"
+                  ? "Interactive na mapa na may 11 yugto para sa susunod na biyahe."
+                  : "Mapa interactivo con las 11 etapas y ruta geográfica recomendada para futuros viajes.")
+              : (pendingSectionSubtitle[lang] || pendingSectionSubtitle.es)}
           </p>
         </div>
 
@@ -98,45 +112,6 @@ export default function FutureTripsPage({ initialTab = "itinerario", onTabChange
       </div>
 
       <FutureTripsPrintView days={days} lang={lang} />
-
-      {/* Switcher pill buttons (Itinerario futuro / Mapa futuro) */}
-      <div className="flex gap-2 pb-3 mb-3 border-b" style={{ borderColor: "var(--line)" }}>
-        <button
-          onClick={() => handleTabSwitch("itinerario")}
-          className="px-4 py-2 rounded-full font-medium transition-all flex items-center gap-2"
-          style={{
-            fontSize: 13.5,
-            fontWeight: 600,
-            backgroundColor: activeTab === "itinerario" ? "var(--shu)" : "var(--paper-raised)",
-            color: activeTab === "itinerario" ? "#fff" : "var(--ink)",
-            border: activeTab === "itinerario" ? "1px solid var(--shu-deep)" : "1px solid var(--line)",
-            boxShadow: activeTab === "itinerario" ? "0 2px 8px rgba(185, 28, 28, 0.25)" : "none",
-            cursor: "pointer",
-            WebkitTapHighlightColor: "transparent",
-          }}
-        >
-          <List size={16} />
-          <span>{tabs.itinerary}</span>
-        </button>
-
-        <button
-          onClick={() => handleTabSwitch("mapa")}
-          className="px-4 py-2 rounded-full font-medium transition-all flex items-center gap-2"
-          style={{
-            fontSize: 13.5,
-            fontWeight: 600,
-            backgroundColor: activeTab === "mapa" ? "var(--shu)" : "var(--paper-raised)",
-            color: activeTab === "mapa" ? "#fff" : "var(--ink)",
-            border: activeTab === "mapa" ? "1px solid var(--shu-deep)" : "1px solid var(--line)",
-            boxShadow: activeTab === "mapa" ? "0 2px 8px rgba(185, 28, 28, 0.25)" : "none",
-            cursor: "pointer",
-            WebkitTapHighlightColor: "transparent",
-          }}
-        >
-          <MapPin size={16} />
-          <span>{tabs.map}</span>
-        </button>
-      </div>
 
       {/* Content depending on active tab */}
       {activeTab === "mapa" ? (
