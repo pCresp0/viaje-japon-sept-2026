@@ -215,3 +215,4 @@ Una línea por cada commit subido a main, generada sola por GitHub Actions en ca
 - **2026-09-25 10:23 UTC** — refactor(future-trips): remove redundant filter pills as they are already navigation ... (`5e027b2`)
 - **2026-09-25 10:25 UTC** — feat(future-trips): add Narita arrival day (Day 1) and return to ... (`148eb4e`)
 - **2026-09-25 11:51 UTC** — feat(future-trips): add full route and by-day filters with day pills ... (`529892f`)
+- **2026-09-25 16:03 UTC** — refactor: remove all future trips content, components and navigation (`be23750`)
