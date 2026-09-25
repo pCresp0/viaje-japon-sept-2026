@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { Compass, ExternalLink, MapPin } from "lucide-react";
+import { Compass, Calendar, ExternalLink, MapPin } from "lucide-react";
 import { futureLocationCoords } from "../data/pendingDays";
 import PlaceText from "./PlaceText";
 
@@ -44,23 +44,25 @@ function createIcon(emoji, color, order) {
   });
 }
 
-function MapController({ selectedMarker, markers }) {
+function MapController({ targetMarker, allMarkers, isSingleDay }) {
   const map = useMap();
   useEffect(() => {
-    if (selectedMarker) {
-      map.flyTo([selectedMarker.lat, selectedMarker.lng], 9, {
-        duration: 1.1,
+    if (isSingleDay && targetMarker) {
+      map.flyTo([targetMarker.lat, targetMarker.lng], 9.5, {
+        duration: 0.9,
       });
-    } else if (markers && markers.length > 0) {
-      const bounds = L.latLngBounds(markers.map((s) => [s.lat, s.lng]));
-      map.fitBounds(bounds, { padding: [50, 50], maxZoom: 14 });
+    } else if (allMarkers && allMarkers.length > 0) {
+      const bounds = L.latLngBounds(allMarkers.map((s) => [s.lat, s.lng]));
+      map.fitBounds(bounds, { padding: [40, 40], maxZoom: 14 });
     }
-  }, [map, selectedMarker, markers]);
+  }, [map, targetMarker, allMarkers, isSingleDay]);
 
   return null;
 }
 
 export default function FutureTripsMap({ days, selectedId, onSelectDay, onGoToItinerary, lang }) {
+  const [filter, setFilter] = useState("ruta"); // "ruta" | "dias"
+  const [subDay, setSubDay] = useState(null); // null = todos, or number 1..13
   const [activeId, setActiveId] = useState(selectedId || null);
   const markerRefs = useRef({});
 
@@ -75,30 +77,172 @@ export default function FutureTripsMap({ days, selectedId, onSelectDay, onGoToIt
   });
 
   const selectedMarker = markers.find((m) => m.id === activeId);
+  const selectedDayMarker = subDay != null ? markers.find((m) => m.order === subDay) : selectedMarker;
 
   useEffect(() => {
     if (selectedId) {
-      setActiveId(selectedId);
-      if (markerRefs.current[selectedId]) {
-        markerRefs.current[selectedId].openPopup();
+      const match = markers.find((m) => m.id === selectedId);
+      if (match) {
+        setFilter("dias");
+        setSubDay(match.order);
+        setActiveId(selectedId);
+        setTimeout(() => {
+          if (markerRefs.current[selectedId]) {
+            markerRefs.current[selectedId].openPopup();
+          }
+        }, 150);
       }
     }
   }, [selectedId]);
 
   const handleMarkerClick = (id) => {
     setActiveId(id);
+    const match = markers.find((m) => m.id === id);
+    if (match && filter === "dias") {
+      setSubDay(match.order);
+    }
     if (onSelectDay) onSelectDay(id);
   };
 
   const handleCardClick = (id) => {
     setActiveId(id);
+    const match = markers.find((m) => m.id === id);
+    if (match && filter === "dias") {
+      setSubDay(match.order);
+    }
     if (markerRefs.current[id]) {
       markerRefs.current[id].openPopup();
     }
   };
 
+  const isDaysFilter = filter === "dias";
+  const isRutaFilter = filter === "ruta";
+  const isSingleDay = isDaysFilter && subDay != null;
+
+  const displayedMarkers = isSingleDay
+    ? markers.filter((m) => m.order === subDay)
+    : markers;
+
   return (
-    <div className="space-y-4">
+    <div className="space-y-3">
+      {/* Selector de modo principal: Ruta completa vs Por días */}
+      <div className="flex gap-2 overflow-x-auto pb-1" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+        <button
+          onClick={() => {
+            setFilter("ruta");
+            setSubDay(null);
+          }}
+          className="px-4 py-2 rounded-full font-medium transition-all flex items-center gap-2 cursor-pointer"
+          style={{
+            fontSize: 13,
+            fontWeight: 600,
+            backgroundColor: isRutaFilter ? "var(--shu)" : "var(--paper-raised)",
+            color: isRutaFilter ? "#fff" : "var(--ink)",
+            border: isRutaFilter ? "1px solid var(--shu-deep)" : "1px solid var(--line)",
+            boxShadow: isRutaFilter ? "0 2px 8px rgba(185, 28, 28, 0.25)" : "none",
+          }}
+        >
+          <Compass size={15} />
+          <span>{lang === "en" ? "Full route" : lang === "fr" ? "Itinéraire complet" : lang === "tl" ? "Buong Ruta" : "Ruta completa"}</span>
+        </button>
+
+        <button
+          onClick={() => {
+            setFilter("dias");
+            if (subDay == null) setSubDay(1);
+          }}
+          className="px-4 py-2 rounded-full font-medium transition-all flex items-center gap-2 cursor-pointer"
+          style={{
+            fontSize: 13,
+            fontWeight: 600,
+            backgroundColor: isDaysFilter ? "var(--shu)" : "var(--paper-raised)",
+            color: isDaysFilter ? "#fff" : "var(--ink)",
+            border: isDaysFilter ? "1px solid var(--shu-deep)" : "1px solid var(--line)",
+            boxShadow: isDaysFilter ? "0 2px 8px rgba(185, 28, 28, 0.25)" : "none",
+          }}
+        >
+          <Calendar size={15} />
+          <span>{lang === "en" ? "By days" : lang === "fr" ? "Par jours" : lang === "tl" ? "Bawat Araw" : "Por días"}</span>
+        </button>
+      </div>
+
+      {/* Sub-selector de días cuando está activo "Por días" */}
+      {isDaysFilter && (
+        <div className="flex gap-1.5 overflow-x-auto pb-2" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+          <button
+            onClick={() => {
+              setSubDay(null);
+              setActiveId(null);
+            }}
+            className="px-3 py-1.5 rounded-full shrink-0 transition-all cursor-pointer font-semibold"
+            style={{
+              fontSize: 12.5,
+              backgroundColor: subDay == null ? "var(--indigo)" : "var(--paper-raised)",
+              color: subDay == null ? "#fff" : "var(--ink-soft)",
+              border: subDay == null ? "1px solid var(--indigo)" : "1px solid var(--line)",
+            }}
+          >
+            {lang === "en" ? "All days" : lang === "fr" ? "Tous les jours" : lang === "tl" ? "Lahat ng araw" : "Todos los días"}
+          </button>
+          {markers.map((m) => {
+            const isSelected = subDay === m.order;
+            return (
+              <button
+                key={m.id}
+                onClick={() => {
+                  setSubDay(m.order);
+                  setActiveId(m.id);
+                  setTimeout(() => {
+                    if (markerRefs.current[m.id]) {
+                      markerRefs.current[m.id].openPopup();
+                    }
+                  }, 120);
+                }}
+                className="px-3 py-1.5 rounded-full shrink-0 transition-all flex items-center gap-1.5 cursor-pointer font-semibold"
+                style={{
+                  fontSize: 12.5,
+                  backgroundColor: isSelected ? "var(--indigo)" : "var(--paper-raised)",
+                  color: isSelected ? "#fff" : "var(--ink-soft)",
+                  border: isSelected ? "1px solid var(--indigo)" : "1px solid var(--line)",
+                }}
+              >
+                <span>{m.emoji}</span>
+                <span>{lang === "en" ? `Day ${m.order}` : lang === "fr" ? `Jour ${m.order}` : lang === "tl" ? `Araw ${m.order}` : `Día ${m.order}`}</span>
+              </button>
+            );
+          })}
+        </div>
+      )}
+
+      {/* Ficha destacada del día seleccionado en "Por días" */}
+      {isSingleDay && selectedDayMarker && (
+        <div className="rounded-2xl p-4 border shadow-xs transition-all" style={{ background: "var(--paper-raised)", borderColor: "var(--line)" }}>
+          <div className="flex items-center justify-between gap-2 mb-1.5">
+            <p className="eyebrow m-0" style={{ color: "var(--shu)" }}>
+              {selectedDayMarker.emoji} {lang === "en" ? `Day ${selectedDayMarker.order}` : lang === "fr" ? `Jour ${selectedDayMarker.order}` : lang === "tl" ? `Araw ${selectedDayMarker.order}` : `Día ${selectedDayMarker.order}`} · {selectedDayMarker.cities}
+            </p>
+            <button
+              onClick={() => onGoToItinerary(selectedDayMarker.id)}
+              className="text-xs font-semibold px-3 py-1.5 rounded-full flex items-center gap-1.5 transition-all cursor-pointer shadow-xs active:scale-95"
+              style={{ background: "var(--shu)", color: "#fff", border: "none" }}
+            >
+              <span>{lang === "en" ? "View in itinerary" : lang === "fr" ? "Voir dans l'itinéraire" : lang === "tl" ? "Tingnan sa itinerary" : "Ver en el itinerario"}</span>
+              <ExternalLink size={12} />
+            </button>
+          </div>
+          <p style={{ fontSize: 16, fontWeight: 700, color: "var(--indigo)", fontFamily: "var(--font-display)", margin: "0 0 6px 0" }}>
+            {selectedDayMarker.title}
+          </p>
+          <PlaceText
+            as="p"
+            text={selectedDayMarker.summary}
+            className="text-sm leading-relaxed m-0"
+            style={{ color: "var(--ink)" }}
+            linkStyle={{ color: "var(--shu)" }}
+          />
+        </div>
+      )}
+
       {/* Map view matching MapPage styling */}
       <div
         className="rounded-2xl overflow-hidden border shadow-sm"
@@ -121,16 +265,20 @@ export default function FutureTripsMap({ days, selectedId, onSelectDay, onGoToIt
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
           />
 
-          {markers.length > 1 && (
+          {isRutaFilter && markers.length > 1 && (
             <Polyline
               positions={markers.map((s) => [s.lat, s.lng])}
               pathOptions={{ color: "#1d3557", weight: 3, opacity: 0.55, dashArray: "8, 8" }}
             />
           )}
 
-          <MapController selectedMarker={selectedMarker} markers={markers} />
+          <MapController
+            targetMarker={selectedDayMarker}
+            allMarkers={displayedMarkers}
+            isSingleDay={isSingleDay}
+          />
 
-          {markers.map((m) => (
+          {displayedMarkers.map((m) => (
             <Marker
               key={m.id}
               ref={(ref) => {
@@ -156,11 +304,10 @@ export default function FutureTripsMap({ days, selectedId, onSelectDay, onGoToIt
                   </p>
                   <button
                     onClick={() => onGoToItinerary(m.id)}
-                    className="w-full flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg text-xs font-semibold text-white transition-opacity"
+                    className="w-full flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg text-xs font-semibold text-white transition-opacity cursor-pointer"
                     style={{
                       background: "var(--shu)",
                       border: "none",
-                      cursor: "pointer",
                     }}
                   >
                     <span>{lang === "en" ? "View in Itinerary" : lang === "fr" ? "Voir dans l'itinéraire" : lang === "tl" ? "Tingnan sa Itinerary" : "Ver en el itinerario"}</span>
@@ -173,13 +320,14 @@ export default function FutureTripsMap({ days, selectedId, onSelectDay, onGoToIt
         </MapContainer>
       </div>
 
-      {/* 1 punto por día: lista rápida de destinos */}
-      <div className="pt-1">
-        <p className="eyebrow mb-2" style={{ color: "var(--shu)" }}>
-          {lang === "en" ? `${markers.length} Destinations on the Map` : lang === "fr" ? `${markers.length} Destinations sur la carte` : lang === "tl" ? `${markers.length} Destinasyon sa Mapa` : `${markers.length} Destinos en el mapa`}
-        </p>
+      {/* Grid de destinos (visible en Ruta Completa o cuando se eligen Todos los días) */}
+      {(!isSingleDay) && (
+        <div className="pt-1">
+          <p className="eyebrow mb-2" style={{ color: "var(--shu)" }}>
+            {lang === "en" ? `${displayedMarkers.length} Destinations on the Map` : lang === "fr" ? `${displayedMarkers.length} Destinations sur la carte` : lang === "tl" ? `${displayedMarkers.length} Destinasyon sa Mapa` : `${displayedMarkers.length} Destinos en el mapa`}
+          </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
           {markers.map((m) => {
             const isSelected = activeId === m.id;
             return (
@@ -249,6 +397,7 @@ export default function FutureTripsMap({ days, selectedId, onSelectDay, onGoToIt
           })}
         </div>
       </div>
-    </div>
-  );
+    )}
+  </div>
+);
 }
